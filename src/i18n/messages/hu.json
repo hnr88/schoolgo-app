@@ -1,0 +1,95 @@
+{
+  "Metadata": {
+    "title": "SchoolGo Ausztrália | Találd meg a legjobb iskolákat",
+    "description": "Keress és hasonlíts össze iskolákat szerte Ausztráliában. Szűrj tanterv, ár, helyszín és további szempontok szerint.",
+    "ogDescription": "Keress és hasonlíts össze iskolákat szerte Ausztráliában."
+  },
+  "Navbar": {
+    "brand": "School",
+    "brandAccent": "Go",
+    "region": "Ausztrália",
+    "findSchools": "Iskolák keresése",
+    "compare": "Összehasonlítás",
+    "scholarships": "Ösztöndíjak",
+    "admissions": "Felvételi",
+    "contactUs": "Kapcsolat",
+    "signIn": "Bejelentkezés"
+  },
+  "Footer": {
+    "brand": "School",
+    "brandAccent": "Go",
+    "region": "Ausztrália",
+    "tagline": "A jövő vezetőit kapcsoljuk össze a kontinens legjobb akadémiai alapjaival.",
+    "resources": "Források",
+    "directory": "Címtár",
+    "copyright": "© {year} SchoolGo Ausztrália. Minden jog fenntartva.",
+    "resourceLinks": {
+      "vceResources": "VCE források",
+      "hscGuides": "HSC útmutatók",
+      "ibRequirements": "IB követelmények"
+    },
+    "directoryLinks": {
+      "scholarshipTips": "Ösztöndíj-tippek",
+      "contactSupport": "Ügyfélszolgálat"
+    },
+    "social": {
+      "website": "Weboldal megnyitása",
+      "share": "Megosztás",
+      "email": "Küldj e-mailt"
+    }
+  },
+  "SchoolSearch": {
+    "searchPlaceholder": "Keress iskolanév, város vagy kerület alapján...",
+    "filters": {
+      "title": "Keresési szűrők",
+      "subtitle": "Ausztrál iskolák szűkítése",
+      "priceRangeLabel": "Ársáv (AUD)",
+      "priceRangeValue": "${min}e – ${max}e",
+      "priceMin": "5 000 $",
+      "priceMax": "60 000 $+",
+      "diagnosticTests": "Diagnosztikai tesztek",
+      "diagnosticTestsHint": "Elfogad külső tesztet",
+      "diagnosticTestsToggle": "Diagnosztikai tesztek ki/be",
+      "curriculum": "Tanterv",
+      "location": "Helyszín",
+      "apply": "Szűrők alkalmazása"
+    },
+    "chips": {
+      "topRated": "Legjobbra értékelt",
+      "boarding": "Kollégiumi szállás",
+      "coed": "Koedukált",
+      "scholarships": "Nyitott ösztöndíjak",
+      "openDays": "Nyílt napok"
+    },
+    "states": {
+      "VIC": "Victoria (VIC)",
+      "NSW": "New South Wales (NSW)",
+      "QLD": "Queensland (QLD)",
+      "SA": "Dél-Ausztrália (SA)",
+      "WA": "Nyugat-Ausztrália (WA)",
+      "TAS": "Tasmania (TAS)",
+      "ACT": "Ausztrál Fővárosi Terület (ACT)",
+      "NT": "Északi Terület (NT)"
+    },
+    "results": {
+      "title": "Elérhető iskolák",
+      "count": "{count, plural, one {# találat} other {# találat}}",
+      "viewAll": "Összes iskola megtekintése"
+    },
+    "map": {
+      "title": "Ausztrália — iskolatérkép",
+      "zoomIn": "Nagyítás",
+      "zoomOut": "Kicsinyítés"
+    },
+    "card": {
+      "currency": "AUD",
+      "viewDetails": "{name} megtekintése"
+    }
+  },
+  "Errors": {
+    "generic": "Hiba történt",
+    "tryAgain": "Próbáld újra",
+    "notFound": "Az oldal nem található",
+    "goHome": "Vissza a főoldalra"
+  }
+}

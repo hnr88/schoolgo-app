@@ -1,0 +1,95 @@
+{
+  "Metadata": {
+    "title": "SchoolGo Australia | Find the Best Schools",
+    "description": "Search and compare the best schools across Australia. Filter by curriculum, price, location and more.",
+    "ogDescription": "Search and compare the best schools across Australia."
+  },
+  "Navbar": {
+    "brand": "School",
+    "brandAccent": "Go",
+    "region": "Australia",
+    "findSchools": "Find Schools",
+    "compare": "Compare",
+    "scholarships": "Scholarships",
+    "admissions": "Admissions",
+    "contactUs": "Contact Us",
+    "signIn": "Sign In"
+  },
+  "Footer": {
+    "brand": "School",
+    "brandAccent": "Go",
+    "region": "Australia",
+    "tagline": "Connecting future leaders with the best academic foundations across the continent.",
+    "resources": "Resources",
+    "directory": "Directory",
+    "copyright": "© {year} SchoolGo Australia. All rights reserved.",
+    "resourceLinks": {
+      "vceResources": "VCE Resources",
+      "hscGuides": "HSC Guides",
+      "ibRequirements": "IB Requirements"
+    },
+    "directoryLinks": {
+      "scholarshipTips": "Scholarship Tips",
+      "contactSupport": "Contact Support"
+    },
+    "social": {
+      "website": "Visit website",
+      "share": "Share",
+      "email": "Email us"
+    }
+  },
+  "SchoolSearch": {
+    "searchPlaceholder": "Search by school name, city, or suburb...",
+    "filters": {
+      "title": "Search Filters",
+      "subtitle": "Refine Australian Schools",
+      "priceRangeLabel": "Price Range (AUD)",
+      "priceRangeValue": "${min}k – ${max}k",
+      "priceMin": "$5,000",
+      "priceMax": "$60,000+",
+      "diagnosticTests": "Diagnostic Tests",
+      "diagnosticTestsHint": "Accepts external testing",
+      "diagnosticTestsToggle": "Toggle diagnostic tests",
+      "curriculum": "Curriculum",
+      "location": "Location",
+      "apply": "Apply Filters"
+    },
+    "chips": {
+      "topRated": "Top Rated",
+      "boarding": "Boarding Available",
+      "coed": "Co-educational",
+      "scholarships": "Scholarships Open",
+      "openDays": "Open Days"
+    },
+    "states": {
+      "VIC": "Victoria (VIC)",
+      "NSW": "New South Wales (NSW)",
+      "QLD": "Queensland (QLD)",
+      "SA": "South Australia (SA)",
+      "WA": "Western Australia (WA)",
+      "TAS": "Tasmania (TAS)",
+      "ACT": "Australian Capital Territory (ACT)",
+      "NT": "Northern Territory (NT)"
+    },
+    "results": {
+      "title": "Available Schools",
+      "count": "{count, plural, one {# Result} other {# Results}}",
+      "viewAll": "View All Schools"
+    },
+    "map": {
+      "title": "Australia — School Map",
+      "zoomIn": "Zoom in",
+      "zoomOut": "Zoom out"
+    },
+    "card": {
+      "currency": "AUD",
+      "viewDetails": "View {name}"
+    }
+  },
+  "Errors": {
+    "generic": "Something went wrong",
+    "tryAgain": "Try again",
+    "notFound": "Page not found",
+    "goHome": "Go home"
+  }
+}
