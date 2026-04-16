@@ -1,5 +1,7 @@
-import { Globe, Share2, Mail } from 'lucide-react';
+import Image from 'next/image';
+import { GlobeAltIcon, ShareIcon, EnvelopeIcon } from '@heroicons/react/24/outline';
 import { getTranslations } from 'next-intl/server';
+import { LanguageSelector } from '@/modules/layout/components/LanguageSelector';
 
 export async function Footer() {
   const t = await getTranslations('Footer');
@@ -17,20 +19,23 @@ export async function Footer() {
   ];
 
   const socialLinks = [
-    { Icon: Globe, label: t('social.website'), href: '#' },
-    { Icon: Share2, label: t('social.share'), href: '#' },
-    { Icon: Mail, label: t('social.email'), href: 'mailto:hello@schoolgo.au' },
+    { Icon: GlobeAltIcon, label: t('social.website'), href: '#' },
+    { Icon: ShareIcon, label: t('social.share'), href: '#' },
+    { Icon: EnvelopeIcon, label: t('social.email'), href: 'mailto:hello@schoolgo.au' },
   ];
 
   return (
-    <footer className='w-full mt-20 pt-12 pb-8 bg-surface-container-low'>
-      <div className='grid grid-cols-1 md:grid-cols-4 gap-8 px-12 max-w-content mx-auto'>
-        <div className='flex flex-col gap-4'>
-          <span className='text-lg font-black text-on-surface'>
-            {t('brand')}
-            <span className='text-primary'>{t('brandAccent')}</span> {t('region')}
-          </span>
-          <p className='text-caption font-medium text-on-surface-variant uppercase tracking-widest leading-relaxed'>
+    <footer className='w-full mt-20 pt-12 pb-8 bg-surface-container-lowest'>
+      <div className='grid grid-cols-1 md:grid-cols-[2fr_1fr_1fr_1fr] gap-4 md:gap-x-6 px-12 max-w-content mx-auto'>
+        <div className='flex items-center gap-5'>
+          <Image
+            src='/images/logo.png'
+            alt='SchoolGo'
+            width={80}
+            height={80}
+            className='h-22 w-auto object-contain shrink-0'
+          />
+          <p className='text-caption font-medium text-on-surface-variant uppercase tracking-widest leading-relaxed pt-1'>
             {t('tagline')}
           </p>
         </div>
@@ -66,17 +71,20 @@ export async function Footer() {
         </div>
 
         <div className='flex flex-col gap-4'>
-          <div className='flex gap-4'>
-            {socialLinks.map(({ Icon, label, href }) => (
-              <a
-                key={label}
-                href={href}
-                aria-label={label}
-                className='text-on-surface-variant hover:text-primary transition-colors'
-              >
-                <Icon className='w-5 h-5' aria-hidden='true' />
-              </a>
-            ))}
+          <div className='flex items-center gap-4'>
+            <div className='flex gap-4'>
+              {socialLinks.map(({ Icon, label, href }) => (
+                <a
+                  key={label}
+                  href={href}
+                  aria-label={label}
+                  className='text-on-surface-variant hover:text-primary transition-colors'
+                >
+                  <Icon className='w-5 h-5' aria-hidden='true' />
+                </a>
+              ))}
+            </div>
+            <LanguageSelector />
           </div>
           <p className='text-caption-xs font-bold text-on-surface-variant uppercase tracking-widest'>
             {t('copyright', { year })}

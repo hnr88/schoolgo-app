@@ -1,5 +1,5 @@
 'use client';
-import { Search } from 'lucide-react';
+import { MagnifyingGlassIcon } from '@heroicons/react/24/outline';
 import { useTranslations } from 'next-intl';
 import { Input } from '@/components/ui/input';
 import { cn } from '@/lib/utils';
@@ -16,7 +16,7 @@ export function SearchBar({ className }: SearchBarProps) {
 
   return (
     <div className={cn('relative group', className)}>
-      <Search
+      <MagnifyingGlassIcon
         className='absolute left-6 top-1/2 -translate-y-1/2 w-5 h-5 text-on-surface-variant group-focus-within:text-primary transition-colors pointer-events-none'
         aria-hidden='true'
       />
@@ -26,7 +26,7 @@ export function SearchBar({ className }: SearchBarProps) {
         onChange={(e) => setQuery(e.target.value)}
         placeholder={t('searchPlaceholder')}
         aria-label={t('searchPlaceholder')}
-        className='w-full h-16 pl-16 pr-6 bg-surface-container-lowest rounded-3xl border-none shadow-lg shadow-primary/5 focus-visible:ring-2 focus-visible:ring-primary/20 focus-visible:border-transparent text-on-surface font-medium placeholder:text-on-surface-variant/50'
+        className='w-full h-16 pl-16 pr-6 bg-surface-container-lowest rounded-xl border-none shadow-xl shadow-on-surface/5 focus-visible:ring-2 focus-visible:ring-primary/20 focus-visible:border-transparent text-on-surface font-medium placeholder:text-on-surface-variant/50'
       />
     </div>
   );

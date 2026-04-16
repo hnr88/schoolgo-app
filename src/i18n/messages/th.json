@@ -1,0 +1,95 @@
+{
+  "Metadata": {
+    "title": "SchoolGo ออสเตรเลีย | ค้นหาโรงเรียนที่ดีที่สุด",
+    "description": "ค้นหาและเปรียบเทียบโรงเรียนที่ดีที่สุดทั่วออสเตรเลีย กรองตามหลักสูตร ราคา สถานที่ และอื่น ๆ",
+    "ogDescription": "ค้นหาและเปรียบเทียบโรงเรียนที่ดีที่สุดทั่วออสเตรเลีย"
+  },
+  "Navbar": {
+    "brand": "School",
+    "brandAccent": "Go",
+    "region": "ออสเตรเลีย",
+    "findSchools": "ค้นหาโรงเรียน",
+    "compare": "เปรียบเทียบ",
+    "scholarships": "ทุนการศึกษา",
+    "admissions": "การรับสมัคร",
+    "contactUs": "ติดต่อเรา",
+    "signIn": "เข้าสู่ระบบ"
+  },
+  "Footer": {
+    "brand": "School",
+    "brandAccent": "Go",
+    "region": "ออสเตรเลีย",
+    "tagline": "เชื่อมต่อผู้นำในอนาคตกับรากฐานการศึกษาที่ดีที่สุดทั่วทวีป",
+    "resources": "แหล่งข้อมูล",
+    "directory": "สารบัญ",
+    "copyright": "© {year} SchoolGo ออสเตรเลีย สงวนลิขสิทธิ์",
+    "resourceLinks": {
+      "vceResources": "แหล่งข้อมูล VCE",
+      "hscGuides": "คู่มือ HSC",
+      "ibRequirements": "ข้อกำหนด IB"
+    },
+    "directoryLinks": {
+      "scholarshipTips": "เคล็ดลับทุนการศึกษา",
+      "contactSupport": "ติดต่อฝ่ายสนับสนุน"
+    },
+    "social": {
+      "website": "เยี่ยมชมเว็บไซต์",
+      "share": "แชร์",
+      "email": "ส่งอีเมลถึงเรา"
+    }
+  },
+  "SchoolSearch": {
+    "searchPlaceholder": "ค้นหาตามชื่อโรงเรียน เมือง หรือชานเมือง...",
+    "filters": {
+      "title": "ตัวกรองการค้นหา",
+      "subtitle": "กรองโรงเรียนในออสเตรเลีย",
+      "priceRangeLabel": "ช่วงราคา (AUD)",
+      "priceRangeValue": "${min}k – ${max}k",
+      "priceMin": "$5,000",
+      "priceMax": "$60,000+",
+      "diagnosticTests": "การทดสอบวินิจฉัย",
+      "diagnosticTestsHint": "รับการทดสอบจากภายนอก",
+      "diagnosticTestsToggle": "สลับการทดสอบวินิจฉัย",
+      "curriculum": "หลักสูตร",
+      "location": "สถานที่",
+      "apply": "ใช้ตัวกรอง"
+    },
+    "chips": {
+      "topRated": "คะแนนสูงสุด",
+      "boarding": "มีหอพัก",
+      "coed": "สหศึกษา",
+      "scholarships": "เปิดรับทุน",
+      "openDays": "วันเปิดบ้าน"
+    },
+    "states": {
+      "VIC": "วิกตอเรีย (VIC)",
+      "NSW": "นิวเซาท์เวลส์ (NSW)",
+      "QLD": "ควีนส์แลนด์ (QLD)",
+      "SA": "เซาท์ออสเตรเลีย (SA)",
+      "WA": "เวสเทิร์นออสเตรเลีย (WA)",
+      "TAS": "แทสเมเนีย (TAS)",
+      "ACT": "เขตเมืองหลวงออสเตรเลีย (ACT)",
+      "NT": "นอร์เทิร์นเทร์ริทอรี (NT)"
+    },
+    "results": {
+      "title": "โรงเรียนที่มีอยู่",
+      "count": "{count, plural, one {# ผลลัพธ์} other {# ผลลัพธ์}}",
+      "viewAll": "ดูโรงเรียนทั้งหมด"
+    },
+    "map": {
+      "title": "ออสเตรเลีย — แผนที่โรงเรียน",
+      "zoomIn": "ซูมเข้า",
+      "zoomOut": "ซูมออก"
+    },
+    "card": {
+      "currency": "AUD",
+      "viewDetails": "ดู {name}"
+    }
+  },
+  "Errors": {
+    "generic": "เกิดข้อผิดพลาด",
+    "tryAgain": "ลองอีกครั้ง",
+    "notFound": "ไม่พบหน้า",
+    "goHome": "กลับหน้าหลัก"
+  }
+}

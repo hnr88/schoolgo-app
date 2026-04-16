@@ -1,0 +1,95 @@
+{
+  "Metadata": {
+    "title": "SchoolGo 澳大利亚 | 寻找最好的学校",
+    "description": "搜索和比较澳大利亚最好的学校。按课程、价格、地点等进行筛选。",
+    "ogDescription": "搜索和比较澳大利亚最好的学校。"
+  },
+  "Navbar": {
+    "brand": "School",
+    "brandAccent": "Go",
+    "region": "澳大利亚",
+    "findSchools": "查找学校",
+    "compare": "比较",
+    "scholarships": "奖学金",
+    "admissions": "招生",
+    "contactUs": "联系我们",
+    "signIn": "登录"
+  },
+  "Footer": {
+    "brand": "School",
+    "brandAccent": "Go",
+    "region": "澳大利亚",
+    "tagline": "连接未来领袖与大陆最好的学术基础。",
+    "resources": "资源",
+    "directory": "目录",
+    "copyright": "© {year} SchoolGo 澳大利亚。保留所有权利。",
+    "resourceLinks": {
+      "vceResources": "VCE 资源",
+      "hscGuides": "HSC 指南",
+      "ibRequirements": "IB 要求"
+    },
+    "directoryLinks": {
+      "scholarshipTips": "奖学金提示",
+      "contactSupport": "联系支持"
+    },
+    "social": {
+      "website": "访问网站",
+      "share": "分享",
+      "email": "给我们发邮件"
+    }
+  },
+  "SchoolSearch": {
+    "searchPlaceholder": "按学校名称、城市或郊区搜索...",
+    "filters": {
+      "title": "搜索筛选",
+      "subtitle": "筛选澳大利亚学校",
+      "priceRangeLabel": "价格范围 (AUD)",
+      "priceRangeValue": "${min}k – ${max}k",
+      "priceMin": "$5,000",
+      "priceMax": "$60,000+",
+      "diagnosticTests": "诊断测试",
+      "diagnosticTestsHint": "接受外部测试",
+      "diagnosticTestsToggle": "切换诊断测试",
+      "curriculum": "课程",
+      "location": "位置",
+      "apply": "应用筛选"
+    },
+    "chips": {
+      "topRated": "最高评分",
+      "boarding": "提供寄宿",
+      "coed": "男女同校",
+      "scholarships": "奖学金开放",
+      "openDays": "开放日"
+    },
+    "states": {
+      "VIC": "维多利亚州 (VIC)",
+      "NSW": "新南威尔士州 (NSW)",
+      "QLD": "昆士兰州 (QLD)",
+      "SA": "南澳大利亚州 (SA)",
+      "WA": "西澳大利亚州 (WA)",
+      "TAS": "塔斯马尼亚州 (TAS)",
+      "ACT": "澳大利亚首都领地 (ACT)",
+      "NT": "北领地 (NT)"
+    },
+    "results": {
+      "title": "可用学校",
+      "count": "{count, plural, one {# 个结果} other {# 个结果}}",
+      "viewAll": "查看所有学校"
+    },
+    "map": {
+      "title": "澳大利亚 — 学校地图",
+      "zoomIn": "放大",
+      "zoomOut": "缩小"
+    },
+    "card": {
+      "currency": "AUD",
+      "viewDetails": "查看 {name}"
+    }
+  },
+  "Errors": {
+    "generic": "出了点问题",
+    "tryAgain": "再试一次",
+    "notFound": "页面未找到",
+    "goHome": "回到首页"
+  }
+}

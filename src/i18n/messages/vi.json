@@ -1,0 +1,95 @@
+{
+  "Metadata": {
+    "title": "SchoolGo Úc | Tìm Trường Tốt Nhất",
+    "description": "Tìm kiếm và so sánh các trường tốt nhất trên toàn nước Úc. Lọc theo chương trình, giá cả, vị trí và nhiều hơn nữa.",
+    "ogDescription": "Tìm kiếm và so sánh các trường tốt nhất trên toàn nước Úc."
+  },
+  "Navbar": {
+    "brand": "School",
+    "brandAccent": "Go",
+    "region": "Úc",
+    "findSchools": "Tìm Trường",
+    "compare": "So Sánh",
+    "scholarships": "Học Bổng",
+    "admissions": "Tuyển Sinh",
+    "contactUs": "Liên Hệ",
+    "signIn": "Đăng Nhập"
+  },
+  "Footer": {
+    "brand": "School",
+    "brandAccent": "Go",
+    "region": "Úc",
+    "tagline": "Kết nối các nhà lãnh đạo tương lai với nền tảng học thuật tốt nhất trên toàn lục địa.",
+    "resources": "Tài Nguyên",
+    "directory": "Danh Mục",
+    "copyright": "© {year} SchoolGo Úc. Bảo lưu mọi quyền.",
+    "resourceLinks": {
+      "vceResources": "Tài Liệu VCE",
+      "hscGuides": "Hướng Dẫn HSC",
+      "ibRequirements": "Yêu Cầu IB"
+    },
+    "directoryLinks": {
+      "scholarshipTips": "Mẹo Học Bổng",
+      "contactSupport": "Liên Hệ Hỗ Trợ"
+    },
+    "social": {
+      "website": "Truy cập trang web",
+      "share": "Chia sẻ",
+      "email": "Gửi email cho chúng tôi"
+    }
+  },
+  "SchoolSearch": {
+    "searchPlaceholder": "Tìm theo tên trường, thành phố hoặc vùng ngoại ô...",
+    "filters": {
+      "title": "Bộ Lọc Tìm Kiếm",
+      "subtitle": "Lọc Trường Học Úc",
+      "priceRangeLabel": "Khoảng Giá (AUD)",
+      "priceRangeValue": "${min}k – ${max}k",
+      "priceMin": "$5.000",
+      "priceMax": "$60.000+",
+      "diagnosticTests": "Bài Kiểm Tra Chẩn Đoán",
+      "diagnosticTestsHint": "Chấp nhận kiểm tra bên ngoài",
+      "diagnosticTestsToggle": "Bật/tắt bài kiểm tra chẩn đoán",
+      "curriculum": "Chương Trình Học",
+      "location": "Vị Trí",
+      "apply": "Áp Dụng Bộ Lọc"
+    },
+    "chips": {
+      "topRated": "Đánh Giá Cao",
+      "boarding": "Có Nội Trú",
+      "coed": "Nam Nữ Chung",
+      "scholarships": "Đang Mở Học Bổng",
+      "openDays": "Ngày Mở Cửa"
+    },
+    "states": {
+      "VIC": "Victoria (VIC)",
+      "NSW": "New South Wales (NSW)",
+      "QLD": "Queensland (QLD)",
+      "SA": "Nam Úc (SA)",
+      "WA": "Tây Úc (WA)",
+      "TAS": "Tasmania (TAS)",
+      "ACT": "Lãnh Thổ Thủ Đô Úc (ACT)",
+      "NT": "Lãnh Thổ Bắc Úc (NT)"
+    },
+    "results": {
+      "title": "Trường Có Sẵn",
+      "count": "{count, plural, one {# Kết Quả} other {# Kết Quả}}",
+      "viewAll": "Xem Tất Cả Trường"
+    },
+    "map": {
+      "title": "Úc — Bản Đồ Trường Học",
+      "zoomIn": "Phóng to",
+      "zoomOut": "Thu nhỏ"
+    },
+    "card": {
+      "currency": "AUD",
+      "viewDetails": "Xem {name}"
+    }
+  },
+  "Errors": {
+    "generic": "Đã xảy ra lỗi",
+    "tryAgain": "Thử lại",
+    "notFound": "Không tìm thấy trang",
+    "goHome": "Về trang chủ"
+  }
+}

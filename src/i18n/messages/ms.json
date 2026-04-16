@@ -1,0 +1,95 @@
+{
+  "Metadata": {
+    "title": "SchoolGo Australia | Cari Sekolah Terbaik",
+    "description": "Cari dan bandingkan sekolah terbaik di seluruh Australia. Tapis mengikut kurikulum, harga, lokasi dan lain-lain.",
+    "ogDescription": "Cari dan bandingkan sekolah terbaik di seluruh Australia."
+  },
+  "Navbar": {
+    "brand": "School",
+    "brandAccent": "Go",
+    "region": "Australia",
+    "findSchools": "Cari Sekolah",
+    "compare": "Bandingkan",
+    "scholarships": "Biasiswa",
+    "admissions": "Kemasukan",
+    "contactUs": "Hubungi Kami",
+    "signIn": "Log Masuk"
+  },
+  "Footer": {
+    "brand": "School",
+    "brandAccent": "Go",
+    "region": "Australia",
+    "tagline": "Menghubungkan pemimpin masa depan dengan asas akademik terbaik di seluruh benua.",
+    "resources": "Sumber",
+    "directory": "Direktori",
+    "copyright": "© {year} SchoolGo Australia. Hak cipta terpelihara.",
+    "resourceLinks": {
+      "vceResources": "Sumber VCE",
+      "hscGuides": "Panduan HSC",
+      "ibRequirements": "Keperluan IB"
+    },
+    "directoryLinks": {
+      "scholarshipTips": "Tips Biasiswa",
+      "contactSupport": "Hubungi Sokongan"
+    },
+    "social": {
+      "website": "Lawati laman web",
+      "share": "Kongsi",
+      "email": "E-mel kami"
+    }
+  },
+  "SchoolSearch": {
+    "searchPlaceholder": "Cari mengikut nama sekolah, bandar, atau pinggir bandar...",
+    "filters": {
+      "title": "Penapis Carian",
+      "subtitle": "Tapis Sekolah Australia",
+      "priceRangeLabel": "Julat Harga (AUD)",
+      "priceRangeValue": "${min}k – ${max}k",
+      "priceMin": "$5,000",
+      "priceMax": "$60,000+",
+      "diagnosticTests": "Ujian Diagnostik",
+      "diagnosticTestsHint": "Menerima ujian luar",
+      "diagnosticTestsToggle": "Togol ujian diagnostik",
+      "curriculum": "Kurikulum",
+      "location": "Lokasi",
+      "apply": "Gunakan Penapis"
+    },
+    "chips": {
+      "topRated": "Penilaian Tertinggi",
+      "boarding": "Asrama Tersedia",
+      "coed": "Ko-edukasi",
+      "scholarships": "Biasiswa Dibuka",
+      "openDays": "Hari Terbuka"
+    },
+    "states": {
+      "VIC": "Victoria (VIC)",
+      "NSW": "New South Wales (NSW)",
+      "QLD": "Queensland (QLD)",
+      "SA": "South Australia (SA)",
+      "WA": "Western Australia (WA)",
+      "TAS": "Tasmania (TAS)",
+      "ACT": "Australian Capital Territory (ACT)",
+      "NT": "Northern Territory (NT)"
+    },
+    "results": {
+      "title": "Sekolah Tersedia",
+      "count": "{count, plural, one {# Keputusan} other {# Keputusan}}",
+      "viewAll": "Lihat Semua Sekolah"
+    },
+    "map": {
+      "title": "Australia — Peta Sekolah",
+      "zoomIn": "Zum masuk",
+      "zoomOut": "Zum keluar"
+    },
+    "card": {
+      "currency": "AUD",
+      "viewDetails": "Lihat {name}"
+    }
+  },
+  "Errors": {
+    "generic": "Sesuatu telah berlaku",
+    "tryAgain": "Cuba lagi",
+    "notFound": "Halaman tidak ditemui",
+    "goHome": "Ke laman utama"
+  }
+}

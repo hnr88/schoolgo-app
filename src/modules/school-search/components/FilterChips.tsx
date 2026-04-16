@@ -23,7 +23,7 @@ export function FilterChips() {
               'whitespace-nowrap px-6 py-2 rounded-full text-xs font-bold transition-colors',
               isActive
                 ? 'bg-primary text-on-primary shadow-md'
-                : 'bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container-high',
+                : 'bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container-high shadow-sm shadow-on-surface/5',
             )}
           >
             {t(id)}
