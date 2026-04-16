@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Plus_Jakarta_Sans } from 'next/font/google';
+import { Public_Sans } from 'next/font/google';
 import { NextIntlClientProvider, hasLocale } from 'next-intl';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
@@ -8,7 +8,7 @@ import { QueryProvider } from '@/modules/core';
 import { routing } from '@/i18n/routing';
 import '../globals.css';
 
-const jakarta = Plus_Jakarta_Sans({
+const publicSans = Public_Sans({
   subsets: ['latin'],
   variable: '--font-sans',
   display: 'swap',
@@ -49,7 +49,7 @@ export default async function LocaleLayout({
   setRequestLocale(locale);
 
   return (
-    <html lang={locale} className={`${jakarta.variable} h-full antialiased`}>
+    <html lang={locale} className={`${publicSans.variable} h-full antialiased`}>
       <body className='min-h-full flex flex-col'>
         <NextIntlClientProvider>
           <QueryProvider>{children}</QueryProvider>

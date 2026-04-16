@@ -1,0 +1,95 @@
+{
+  "Metadata": {
+    "title": "SchoolGo 호주 | 최고의 학교를 찾아보세요",
+    "description": "호주 전역의 최고의 학교를 검색하고 비교하세요. 커리큘럼, 가격, 위치 등으로 필터링하세요.",
+    "ogDescription": "호주 전역의 최고의 학교를 검색하고 비교하세요."
+  },
+  "Navbar": {
+    "brand": "School",
+    "brandAccent": "Go",
+    "region": "호주",
+    "findSchools": "학교 찾기",
+    "compare": "비교",
+    "scholarships": "장학금",
+    "admissions": "입학",
+    "contactUs": "문의하기",
+    "signIn": "로그인"
+  },
+  "Footer": {
+    "brand": "School",
+    "brandAccent": "Go",
+    "region": "호주",
+    "tagline": "미래의 리더들을 대륙 최고의 학술 기반과 연결합니다.",
+    "resources": "자료",
+    "directory": "디렉토리",
+    "copyright": "© {year} SchoolGo 호주. 모든 권리 보유.",
+    "resourceLinks": {
+      "vceResources": "VCE 자료",
+      "hscGuides": "HSC 가이드",
+      "ibRequirements": "IB 요건"
+    },
+    "directoryLinks": {
+      "scholarshipTips": "장학금 팁",
+      "contactSupport": "지원 문의"
+    },
+    "social": {
+      "website": "웹사이트 방문",
+      "share": "공유",
+      "email": "이메일 보내기"
+    }
+  },
+  "SchoolSearch": {
+    "searchPlaceholder": "학교 이름, 도시 또는 교외로 검색...",
+    "filters": {
+      "title": "검색 필터",
+      "subtitle": "호주 학교 필터링",
+      "priceRangeLabel": "가격 범위 (AUD)",
+      "priceRangeValue": "${min}k – ${max}k",
+      "priceMin": "$5,000",
+      "priceMax": "$60,000+",
+      "diagnosticTests": "진단 테스트",
+      "diagnosticTestsHint": "외부 테스트 수용",
+      "diagnosticTestsToggle": "진단 테스트 전환",
+      "curriculum": "커리큘럼",
+      "location": "위치",
+      "apply": "필터 적용"
+    },
+    "chips": {
+      "topRated": "최고 평점",
+      "boarding": "기숙 가능",
+      "coed": "남녀공학",
+      "scholarships": "장학금 모집 중",
+      "openDays": "오픈 데이"
+    },
+    "states": {
+      "VIC": "빅토리아 (VIC)",
+      "NSW": "뉴사우스웨일스 (NSW)",
+      "QLD": "퀸즐랜드 (QLD)",
+      "SA": "남호주 (SA)",
+      "WA": "서호주 (WA)",
+      "TAS": "태즈메이니아 (TAS)",
+      "ACT": "호주 수도 특별구 (ACT)",
+      "NT": "노던 테리토리 (NT)"
+    },
+    "results": {
+      "title": "이용 가능한 학교",
+      "count": "{count, plural, one {# 결과} other {# 결과}}",
+      "viewAll": "모든 학교 보기"
+    },
+    "map": {
+      "title": "호주 — 학교 지도",
+      "zoomIn": "확대",
+      "zoomOut": "축소"
+    },
+    "card": {
+      "currency": "AUD",
+      "viewDetails": "{name} 보기"
+    }
+  },
+  "Errors": {
+    "generic": "문제가 발생했습니다",
+    "tryAgain": "다시 시도",
+    "notFound": "페이지를 찾을 수 없습니다",
+    "goHome": "홈으로 이동"
+  }
+}

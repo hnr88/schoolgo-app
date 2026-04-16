@@ -1,4 +1,4 @@
-import { MapPin, Star, ClipboardCheck } from 'lucide-react';
+import { MapPinIcon, StarIcon, ClipboardDocumentCheckIcon } from '@heroicons/react/24/outline';
 import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import { cn } from '@/lib/utils';
@@ -51,7 +51,7 @@ export async function SchoolCard({ school }: SchoolCardProps) {
             {school.name}
           </h3>
           <p className='text-caption text-on-surface-variant flex items-center gap-1'>
-            <MapPin className='w-3 h-3 shrink-0' aria-hidden='true' />
+            <MapPinIcon className='w-3 h-3 shrink-0' aria-hidden='true' />
             {school.suburb}, {school.state}
           </p>
 
@@ -77,9 +77,9 @@ export async function SchoolCard({ school }: SchoolCardProps) {
                 aria-hidden='true'
               >
                 {school.isTopRated ? (
-                  <Star className='w-3 h-3 fill-current' />
+                  <StarIcon className='w-3 h-3 fill-current' />
                 ) : (
-                  <ClipboardCheck className='w-3 h-3' />
+                  <ClipboardDocumentCheckIcon className='w-3 h-3' />
                 )}
               </span>
             </div>

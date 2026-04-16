@@ -79,7 +79,7 @@ This is the **only** approved stack. Do NOT introduce alternatives. If a need ar
 - **shadcn/ui** — wrap, never replace.
 
 ### Icons
-- **lucide-react** — the ONLY icon library. No react-icons, Heroicons, Font Awesome, Material Icons.
+- **lucide-react** or **@heroicons/react** — the approved icon libraries. No react-icons, Font Awesome, Material Icons.
 
 ### Internationalization
 - **next-intl** — the only i18n library. No react-i18next, no LinguiJS, no Format.JS standalone.

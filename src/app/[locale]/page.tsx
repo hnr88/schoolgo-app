@@ -23,10 +23,10 @@ export default async function HomePage({
       <h1 className='sr-only'>{t('title')}</h1>
       <Navbar />
 
-      <main className='pt-20 min-h-screen flex max-w-content mx-auto w-full'>
+      <main className='pt-14 min-h-screen flex max-w-content mx-auto w-full'>
         <FilterSidebar />
 
-        <section className='flex-1 p-6 flex flex-col gap-4 overflow-hidden h-[calc(100vh-5rem)]'>
+        <section className='flex-1 p-6 flex flex-col gap-4 overflow-hidden h-[calc(100vh-3.5rem)]'>
           <div className='flex flex-col gap-4 shrink-0'>
             <SearchBar />
             <FilterChips />

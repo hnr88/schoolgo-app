@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import { Button } from '@/components/ui/button';
@@ -13,28 +14,29 @@ export async function Navbar() {
   ];
 
   return (
-    <nav className='fixed top-0 w-full z-50 bg-surface-container-lowest shadow-sm h-20'>
+    <nav className='fixed top-0 w-full z-50 bg-white/80 backdrop-blur-xl border-b border-outline-variant/30 h-14'>
       <div className='flex justify-between items-center px-8 h-full max-w-content mx-auto'>
-        <div className='flex items-center gap-8'>
-          <Link href='/' className='flex items-center gap-2'>
-            <span className='text-2xl font-black text-primary tracking-tight'>
-              {t('brand')}
-              <span className='text-on-surface'>{t('brandAccent')}</span>
-            </span>
-            <span className='text-caption font-bold text-on-surface-variant uppercase tracking-widest leading-none'>
-              {t('region')}
-            </span>
+        <div className='flex items-center gap-8 h-full'>
+          <Link href='/' className='flex items-center'>
+            <Image
+              src='/images/logo-horizontal.png'
+              alt='SchoolGo'
+              width={160}
+              height={40}
+              priority
+              className='h-8 w-auto'
+            />
           </Link>
 
-          <div className='hidden md:flex items-center gap-6'>
+          <div className='hidden md:flex items-center gap-6 h-full'>
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 className={
                   link.active
-                    ? 'text-primary font-bold border-b-2 border-primary tracking-tight py-2'
-                    : 'text-on-surface-variant hover:text-primary tracking-tight py-2 transition-colors font-medium'
+                    ? 'text-sm text-primary font-bold tracking-tight h-full flex items-center border-b-3 border-primary -mb-px px-2'
+                    : 'text-sm text-on-surface-variant hover:text-primary tracking-tight h-full flex items-center border-b-3 border-transparent transition-colors font-medium -mb-px px-2'
                 }
               >
                 {link.label}
@@ -43,14 +45,14 @@ export async function Navbar() {
           </div>
         </div>
 
-        <div className='flex items-center gap-3'>
+        <div className='flex items-center gap-2'>
           <Button
             variant='ghost'
-            className='rounded-full font-semibold text-on-surface-variant hover:text-on-surface'
+            className='rounded-lg font-semibold text-on-surface-variant hover:text-on-surface py-5'
           >
             {t('contactUs')}
           </Button>
-          <Button className='rounded-full bg-primary text-on-primary font-bold px-8 shadow-lg shadow-primary/20 hover:brightness-110 active:scale-95 transition-colors'>
+          <Button className='rounded-lg bg-primary text-on-primary font-bold px-6 py-5 shadow-lg shadow-primary/20 hover:brightness-110 active:scale-95 transition-colors'>
             {t('signIn')}
           </Button>
         </div>
