@@ -1,18 +1,14 @@
 import type { Metadata } from 'next';
-import { Public_Sans } from 'next/font/google';
 import { NextIntlClientProvider, hasLocale } from 'next-intl';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { Toaster } from '@/components/ui/sonner';
 import { QueryProvider } from '@/modules/core';
 import { routing } from '@/i18n/routing';
+import { env } from '@/lib/env';
 import '../globals.css';
 
-const publicSans = Public_Sans({
-  subsets: ['latin'],
-  variable: '--font-sans',
-  display: 'swap',
-});
+const siteUrl = env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000';
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -26,6 +22,7 @@ export async function generateMetadata({
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'Metadata' });
   return {
+    metadataBase: new URL(siteUrl),
     title: t('title'),
     description: t('description'),
     openGraph: {
@@ -49,7 +46,7 @@ export default async function LocaleLayout({
   setRequestLocale(locale);
 
   return (
-    <html lang={locale} className={`${publicSans.variable} h-full antialiased`}>
+    <html lang={locale} className='h-full antialiased'>
       <body className='min-h-full flex flex-col'>
         <NextIntlClientProvider>
           <QueryProvider>{children}</QueryProvider>

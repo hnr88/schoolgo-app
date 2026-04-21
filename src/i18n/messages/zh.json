@@ -4,6 +4,563 @@
     "description": "搜索和比较澳大利亚最好的学校。按课程、价格、地点等进行筛选。",
     "ogDescription": "搜索和比较澳大利亚最好的学校。"
   },
+  "ParentsMetadata": {
+    "title": "SchoolGo — 为孩子寻找澳大利亚学校",
+    "description": "搜索每一所CRICOS注册的澳大利亚学校。免费比较学费、英语考试要求及入学时间——支持七种语言。",
+    "ogDescription": "每一所CRICOS学校。已认证。用您的语言。"
+  },
+  "MarketingHeader": {
+    "findSchools": "查找学校",
+    "audiences": {
+      "parents": "家长",
+      "agents": "中介",
+      "schools": "学校"
+    },
+    "language": "语言",
+    "signIn": "登录",
+    "getStarted": "立即开始",
+    "openMenu": "打开菜单",
+    "closeMenu": "关闭菜单"
+  },
+  "MarketingFooter": {
+    "tagline": "连接未来领袖与澳大利亚最优秀的学校——横跨全境，支持七种语言。",
+    "columns": {
+      "parents": {
+        "title": "面向家长",
+        "links": {
+          "findSchools": "查找学校",
+          "compare": "比较",
+          "scholarships": "奖学金",
+          "english": "英语考试"
+        }
+      },
+      "agents": {
+        "title": "面向中介",
+        "links": {
+          "overview": "中介概览",
+          "qeac": "QEAC 认证",
+          "pipeline": "申请管理",
+          "login": "中介登录"
+        }
+      },
+      "schools": {
+        "title": "面向学校",
+        "links": {
+          "overview": "学校概览",
+          "claim": "认领主页",
+          "login": "学校登录",
+          "pricing": "定价"
+        }
+      },
+      "resources": {
+        "title": "资源",
+        "links": {
+          "help": "帮助中心",
+          "contact": "联系我们",
+          "privacy": "隐私政策",
+          "terms": "使用条款"
+        }
+      }
+    },
+    "language": "语言",
+    "copyright": "© {year, number} SchoolGo Australia。保留所有权利。",
+    "attribution": "数据来源：data.gov.au · CC BY 2.5 AU · 符合 ESOS 法案"
+  },
+  "ParentsHero": {
+    "trustPill": {
+      "brand": "CRICOS",
+      "brandAccent": "已认证",
+      "source": "数据来源 data.gov.au"
+    },
+    "headlinePrefix": "为您的孩子找到",
+    "headlineEmphasis": "澳大利亚",
+    "headlineSuffix": "学校。",
+    "lede": "在一处搜索澳大利亚每一所 CRICOS 注册的 K–12 学校。免费比较学费、寄宿、英语考试要求——支持普通话、韩语、泰语、越南语、马来语或英语搜索。",
+    "searchAriaLabel": "搜索学校",
+    "searchFields": {
+      "where": {
+        "label": "地点",
+        "value": "澳大利亚任意地点"
+      },
+      "yearLevel": {
+        "label": "年级",
+        "value": "Year 7 – Year 12"
+      },
+      "fees": {
+        "label": "学费",
+        "value": "$15k – $45k AUD"
+      }
+    },
+    "searchButtonLabel": "搜索",
+    "featured": {
+      "eyebrow": "精选",
+      "shortlistAdd": "将 {name} 加入候选名单",
+      "shortlistRemove": "从候选名单中移除 {name}",
+      "cards": {
+        "a": {
+          "name": "Scotch College Melbourne",
+          "location": "Hawthorn, VIC",
+          "curriculum": "VCE",
+          "fee": "$38.5k AUD",
+          "boarding": "寄宿"
+        },
+        "b": {
+          "name": "Sydney Grammar School",
+          "location": "Darlinghurst, NSW",
+          "curriculum": "HSC",
+          "fee": "$41.2k AUD",
+          "boarding": "仅走读"
+        },
+        "c": {
+          "name": "Brisbane Grammar School",
+          "location": "Spring Hill, QLD",
+          "curriculum": "QCE/IB",
+          "fee": "$35.8k AUD",
+          "boarding": "寄宿"
+        }
+      }
+    }
+  },
+  "ParentsFourSteps": {
+    "eyebrow": "使用方法",
+    "heading": "从初次浏览到录取通知——四个简单步骤。",
+    "subheading": "无隐藏费用。申请前无需登录。",
+    "steps": {
+      "browse": {
+        "title": "浏览每一所 CRICOS 学校",
+        "description": "按州份、学费、类别、课程、寄宿和奖学金筛选 {count, number} 所学校——用您的语言。"
+      },
+      "shortlist": {
+        "title": "收藏四所，并排比较",
+        "description": "对比学费、入学时间、ICSEA 及认可英语考试。几分钟内做决定，无需数月等待。"
+      },
+      "prepare": {
+        "title": "查看精确要求",
+        "description": "每条学校信息均列明认可考试、最低分数、所需材料及入学窗口。"
+      },
+      "apply": {
+        "title": "通过认证中介申请",
+        "description": "您的中介持有 QEAC 认证徽章。申请全程在一个控制台跟踪。"
+      }
+    },
+    "ctaBrowse": "开始浏览",
+    "ctaLearn": "查看使用方法"
+  },
+  "ParentsVerified": {
+    "eyebrow": "每一所 CRICOS 学校",
+    "heading": "已认证。用您的语言。",
+    "subheading": "真实建筑照片。真实学费。真实入学日历。学校数据来源于 CRICOS 和 ACARA，每月更新。",
+    "cards": {
+      "a": {
+        "name": "Scotch College",
+        "location": "Hawthorn, VIC",
+        "sector": "独立学校"
+      },
+      "b": {
+        "name": "Sydney Grammar",
+        "location": "Darlinghurst, NSW",
+        "sector": "独立学校"
+      },
+      "c": {
+        "name": "Brisbane Grammar",
+        "location": "Spring Hill, QLD",
+        "sector": "独立学校"
+      },
+      "d": {
+        "name": "Christ Church Grammar",
+        "location": "Claremont, WA",
+        "sector": "独立学校"
+      }
+    }
+  },
+  "ParentsComparison": {
+    "eyebrow": "比较",
+    "heading": "将学校并排对比。",
+    "headingAccent": "几分钟内做出决定，无需数月等待。",
+    "subheading": "最多并排比较四所学校的学费、ICSEA、认可英语考试、入学时间及寄宿情况。",
+    "columns": {
+      "school": "学校",
+      "location": "地点",
+      "sector": "类别",
+      "fee": "年费",
+      "icsea": "ICSEA",
+      "tests": "认可考试",
+      "intakes": "入学时间"
+    },
+    "notPublished": "未公开"
+  },
+  "ParentsPickATest": {
+    "eyebrow": "英语水平",
+    "heading": "选择考试，查看哪些学校认可——",
+    "headingAccent": "及最低分数要求。",
+    "subheading": "我们在每所学校的主页上列明认可的英语考试。无需再逐一浏览50个学校网站。",
+    "tests": {
+      "aeas": "AEAS",
+      "idat": "iDAT",
+      "duolingo": "Duolingo",
+      "ielts": "IELTS",
+      "pte": "PTE Academic",
+      "cambridge": "Cambridge",
+      "toefl": "TOEFL"
+    },
+    "cta": "查看认可该考试的学校"
+  },
+  "ParentsSevenLanguages": {
+    "eyebrow": "七种语言",
+    "heading": "家庭不应在午夜翻译学费单。",
+    "subheading": "SchoolGo 全程翻译为亚太地区最常用的七种语言。",
+    "languages": {
+      "en": "English",
+      "zh": "简体中文",
+      "vi": "Tiếng Việt",
+      "ko": "한국어",
+      "ms": "Bahasa Melayu",
+      "th": "ภาษาไทย",
+      "id": "Bahasa Indonesia"
+    }
+  },
+  "ParentsArticles": {
+    "eyebrow": "招生资料库",
+    "heading": "由招生官撰写，翻译成七种语言。",
+    "subheading": "关于签证、入学时间、英语考试和学费的简明指南。免费，无需登录。",
+    "items": {
+      "intakes": {
+        "title": "了解澳大利亚学校入学时间",
+        "meta": "阅读约6分钟 · 每月更新"
+      },
+      "englishTests": {
+        "title": "您的学校接受哪种英语考试？",
+        "meta": "阅读约8分钟 · 逐项考试分析"
+      },
+      "boarding": {
+        "title": "寄宿还是走读：家庭的选择与原因",
+        "meta": "阅读约5分钟 · 案例研究"
+      }
+    },
+    "readMore": "阅读文章"
+  },
+  "ParentsFinalCta": {
+    "eyebrow": "从这里开始",
+    "headingPrefix": "您的搜索，",
+    "headingEmphasis": "就此",
+    "headingSuffix": "开始，支持七种语言。",
+    "subheading": "免费。无需登录。更新至 {month} {year, number}。",
+    "ctaPrimary": "找到您的学校",
+    "ctaSecondary": "联系认证中介"
+  },
+  "AgentsMetadata": {
+    "title": "SchoolGo — 像管理投资组合一样经营您的中介业务",
+    "description": "面向将学生送入澳大利亚学校的教育中介的 QEAC 认证工具。标准化申请、实时进度追踪、全额佣金。",
+    "ogDescription": "像管理投资组合一样经营您的业务。保留 100% 的佣金。"
+  },
+  "AgentsHero": {
+    "eyebrow": "面向教育中介 · QEAC 认证",
+    "headlinePrefix": "像管理投资组合一样",
+    "headlineEmphasis": "经营您的业务。",
+    "lede": "一个认证主页。{count, number} 所 CRICOS 学校。一个家庭可查看的进度看板。SchoolGo 向学校收费，不向您收费。",
+    "ctaPrimary": "申请认证",
+    "ctaSecondary": "查看运作方式",
+    "stats": {
+      "schools": {
+        "value": "{count, number}",
+        "label": "已认证 CRICOS 学校"
+      },
+      "agents": {
+        "value": "2,400+",
+        "label": "APAC 认证中介"
+      },
+      "commission": {
+        "value": "100%",
+        "label": "佣金完整保留"
+      }
+    }
+  },
+  "AgentsPainPoints": {
+    "eyebrow": "旧有方式",
+    "heading": "不再在电子表格、微信群和招生邮箱之间疲于奔命。",
+    "subheading": "每位学生、每份申请、每项学校要求——全部在一个工作台中处理。",
+    "items": {
+      "spreadsheets": {
+        "title": "一个列表，而非十五个标签页",
+        "description": "追踪每位学生的进度、截止日期和文件——无需维护额外的电子表格。"
+      },
+      "wechat": {
+        "title": "家长看到的与您看到的一致",
+        "description": "状态更新自动以家长的语言推送。您无需再频繁回复「有消息了吗？」"
+      },
+      "admissions": {
+        "title": "标准化提交",
+        "description": "统一的申请格式。统一的文件上传入口。统一的回复收件箱——而非十五个。"
+      }
+    }
+  },
+  "AgentsMatching": {
+    "eyebrow": "匹配 · 申请 · 追踪",
+    "heading": "上午10点家长来电，10:30前匹配三所学校。",
+    "subheading": "SchoolGo 按州份、学费、英语水平和入学时间筛选出最合适的学校，并在几分钟内完成标准化申请提交。",
+    "steps": {
+      "listen": {
+        "title": "记录家庭需求",
+        "description": "预算、地点、英语水平、期望入学时间——用家长的语言填写一份表格。"
+      },
+      "match": {
+        "title": "查看最匹配的学校",
+        "description": "按学生档案筛选。查看每所学校认可的考试及最低分数要求。"
+      },
+      "deliver": {
+        "title": "交付精准候选名单，而非杂乱材料",
+        "description": "一份家庭可截图发给父亲的品牌 PDF。无需来自十五所学校的各自 PDF。"
+      }
+    },
+    "inboxLabel": "招生收件箱",
+    "inboxRows": {
+      "scotch": {
+        "school": "Scotch College",
+        "location": "Hawthorn, VIC",
+        "status": "匹配 · AEAS 70+"
+      },
+      "brisbane": {
+        "school": "Brisbane Grammar",
+        "location": "Spring Hill, QLD",
+        "status": "匹配 · AEAS 68+"
+      },
+      "sydney": {
+        "school": "Sydney Grammar",
+        "location": "Darlinghurst, NSW",
+        "status": "匹配 · AEAS 65+"
+      }
+    }
+  },
+  "AgentsCommission": {
+    "eyebrow": "定价",
+    "heading": "您保留 100% 的学校佣金。",
+    "subheading": "我们向学校收费，不向您收费。您与学校的商业关系保持直接。",
+    "statValue": "$36,480",
+    "statLabel": "2026年第一季度中介平均留存佣金",
+    "bullets": {
+      "zero": {
+        "title": "零每生收费",
+        "description": "无佣金分成。无安置费。无订阅费。"
+      },
+      "direct": {
+        "title": "与学校直接合作关系",
+        "description": "提交申请的瞬间，您的归属即已锁定。"
+      },
+      "audit": {
+        "title": "完整审计记录",
+        "description": "每次状态变更均带时间戳。争议止于文件记录。"
+      }
+    }
+  },
+  "AgentsQeacTrust": {
+    "eyebrow": "已认证",
+    "heading": "一个家长——和学校——真正信任的主页。",
+    "subheading": "您的 QEAC 资质一次性核实完成。您的徽章和业绩记录将出现在每一份申请中。",
+    "profile": {
+      "name": "中介主页",
+      "qeac": "QEAC 已认证",
+      "yearsActive": "从业年限",
+      "students": "已安置学生",
+      "placements": "已安置学校",
+      "languages": "所用语言"
+    }
+  },
+  "AgentsScale": {
+    "eyebrow": "网络",
+    "heading": "APAC 地区 2,400 名认证中介，每周持续增长。",
+    "subheading": "从 Shanghai 到 Jakarta，Ho Chi Minh 到 Seoul——中介正为家庭开启澳大利亚 K–12 的求学之路。",
+    "agents": {
+      "a": {
+        "name": "Li Wei",
+        "region": "Shanghai · 中国",
+        "meta": "QEAC 12年 · 148次安置"
+      },
+      "b": {
+        "name": "Nguyễn Minh",
+        "region": "Ho Chi Minh · Việt Nam",
+        "meta": "QEAC 8年 · 96次安置"
+      },
+      "c": {
+        "name": "Siti Rahman",
+        "region": "Kuala Lumpur · Malaysia",
+        "meta": "QEAC 6年 · 64次安置"
+      },
+      "d": {
+        "name": "Ji-eun Park",
+        "region": "Seoul · 대한민국",
+        "meta": "QEAC 9年 · 112次安置"
+      }
+    },
+    "cta": "申请认证"
+  },
+  "AgentsTestimonial": {
+    "quote": "以前我每周要在家长和六个招生办公室之间来回转发40份 PDF。现在我只需操作一次，家庭就能收到一条中文状态更新。我的安置量翻了三倍。",
+    "attribution": "Mei，Shanghai · QEAC 认证自2018年"
+  },
+  "AgentsFinalCta": {
+    "eyebrow": "获得认证",
+    "headingPrefix": "您的投资组合",
+    "headingEmphasis": "值得",
+    "headingSuffix": "更好的。",
+    "subheading": "免费。需要 QEAC 认证。入驻流程 48 小时内完成。",
+    "ctaPrimary": "申请认证",
+    "ctaSecondary": "预约演示"
+  },
+  "SchoolsMetadata": {
+    "title": "SchoolGo — 用更少的邮件填满您的国际生名额",
+    "description": "为澳大利亚学校提供统一的招生收件箱。QEAC 认证中介、真实申请，无需按生收费。",
+    "ogDescription": "填满您的国际生名额。用更少的邮件。"
+  },
+  "SchoolsHero": {
+    "eyebrow": "面向澳大利亚学校",
+    "headlinePrefix": "填满您的",
+    "headlineEmphasis": "国际生",
+    "headlineSuffix": "名额。用更少的邮件。",
+    "lede": "一个认证主页，被七个国家的家庭看到。从 QEAC 认证中介收取标准化申请——格式与您招生团队已在使用的一致。",
+    "ctaPrimary": "认领您的学校主页",
+    "ctaSecondary": "预约演示",
+    "inbox": {
+      "eyebrow": "申请收件箱",
+      "countLabel": "本月",
+      "rows": {
+        "a": {
+          "name": "Sophie Chen",
+          "status": "新申请",
+          "meta": "VIC · Year 9 · AEAS 78"
+        },
+        "b": {
+          "name": "Minh Tran",
+          "status": "审核中",
+          "meta": "VIC · Year 11 · IELTS 6.5"
+        },
+        "c": {
+          "name": "Ji-woo Park",
+          "status": "已发放录取",
+          "meta": "NSW · Year 10 · AEAS 74"
+        }
+      }
+    }
+  },
+  "SchoolsStats": {
+    "eyebrow": "网络效应",
+    "heading": "一个主页。被七个国家的家庭看到。",
+    "subheading": "您的学校信息出现在每一次搜索、每一次比较、每一份匹配候选名单中——以家庭的语言呈现。",
+    "items": {
+      "views": {
+        "value": "42,000+",
+        "label": "每月主页浏览量"
+      },
+      "countries": {
+        "value": "7",
+        "label": "来源国家"
+      },
+      "enquiries": {
+        "value": "168",
+        "label": "每个主页平均月询盘数"
+      },
+      "applications": {
+        "value": "4,200+",
+        "label": "2026年已处理申请数"
+      }
+    }
+  },
+  "SchoolsThreeTools": {
+    "eyebrow": "工具包",
+    "heading": "三项工具。一个目标：用更少的工作招到合适的学生。",
+    "subheading": "SchoolGo 为您的招生团队提供三项真正需要的功能。",
+    "tools": {
+      "profile": {
+        "title": "持续更新的学校主页",
+        "description": "学费、入学时间、认可考试、奖学金及相关文件——由您更新，以家庭语言展示。"
+      },
+      "applications": {
+        "title": "标准化申请",
+        "description": "每份申请均采用相同格式，附有 QEAC 认证中介归属及完整材料。"
+      },
+      "inbox": {
+        "title": "统一的招生收件箱",
+        "description": "追踪每份申请的状态。一键发放录取、候补或拒绝通知。家庭和中介即时看到状态更新。"
+      }
+    }
+  },
+  "SchoolsTimeline": {
+    "eyebrow": "招生旅程",
+    "heading": "从首份申请到开学第一天——无需陷入邮件乱局。",
+    "subheading": "国际招生全流程，尽在一处。",
+    "steps": {
+      "receive": {
+        "title": "收取",
+        "description": "申请附带英语成绩、相关材料及认证中介信息，直接进入您的收件箱。"
+      },
+      "review": {
+        "title": "审核",
+        "description": "您的团队按照自有标准进行评估。备注仅对内部可见。"
+      },
+      "decide": {
+        "title": "决定",
+        "description": "一键发放录取、候补或拒绝通知。状态即时同步至家庭和中介。"
+      },
+      "onboard": {
+        "title": "入学",
+        "description": "在同一线程中分享入学手续材料、住宿信息及迎新链接。"
+      }
+    }
+  },
+  "SchoolsPricing": {
+    "eyebrow": "定价",
+    "heading": "无中介费。无佣金。一项年度套餐。",
+    "subheading": "支持 SchoolGo 的学校支付一项透明年费。家庭和中介无需付费。",
+    "plans": {
+      "listing": {
+        "name": "基础列表",
+        "price": "Free",
+        "priceMeta": "永久免费",
+        "features": {
+          "a": "自动发布您的 CRICOS 主页",
+          "b": "认可英语考试及最低分数",
+          "c": "标准化申请收件箱"
+        },
+        "cta": "认领您的主页"
+      },
+      "admissions": {
+        "name": "招生版",
+        "price": "$12,800",
+        "priceMeta": "AUD / 年",
+        "badge": "最受欢迎",
+        "features": {
+          "a": "基础列表的全部功能",
+          "b": "录取 / 候补 / 拒绝工作流",
+          "c": "QEAC 认证中介目录",
+          "d": "每个主页页面的七语言翻译"
+        },
+        "cta": "开启招生版"
+      },
+      "network": {
+        "name": "网络版",
+        "price": "Custom",
+        "priceMeta": "适用于多校区集团",
+        "features": {
+          "a": "招生版的全部功能",
+          "b": "跨校区集中收件箱",
+          "c": "优先支持及定制报告"
+        },
+        "cta": "联系我们"
+      }
+    }
+  },
+  "SchoolsTestimonial": {
+    "quote": "我们在七月前就完成了2026年寄宿入学名额的招募。SchoolGo 不仅带来更多申请——更带来了我们真正可以录取的学生。",
+    "attribution": "招生主任 · 独立走读及寄宿学校，VIC"
+  },
+  "SchoolsFinalCta": {
+    "eyebrow": "从这里开始",
+    "headingPrefix": "您的下一届入学",
+    "headingEmphasis": "就此",
+    "headingSuffix": "开始。",
+    "subheading": "免费列表。无需信用卡。认领仅需10分钟。",
+    "ctaPrimary": "认领您的学校主页",
+    "ctaSecondary": "预约演示"
+  },
   "Navbar": {
     "brand": "School",
     "brandAccent": "Go",

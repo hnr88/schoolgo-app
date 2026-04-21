@@ -1,7 +1,6 @@
 'use client';
-import { MagnifyingGlassIcon } from '@heroicons/react/24/outline';
+import { Search } from 'lucide-react';
 import { useTranslations } from 'next-intl';
-import { Input } from '@/components/ui/input';
 import { cn } from '@/lib/utils';
 import { useSchoolSearchStore } from '@/modules/school-search/stores/use-school-search-store';
 
@@ -15,18 +14,24 @@ export function SearchBar({ className }: SearchBarProps) {
   const setQuery = useSchoolSearchStore((s) => s.setQuery);
 
   return (
-    <div className={cn('relative group', className)}>
-      <MagnifyingGlassIcon
-        className='absolute left-6 top-1/2 -translate-y-1/2 w-5 h-5 text-on-surface-variant group-focus-within:text-primary transition-colors pointer-events-none'
+    <div
+      className={cn(
+        'group relative flex items-center gap-3 rounded-pill border border-border bg-card px-5 py-3 shadow-2 transition-shadow focus-within:border-primary focus-within:shadow-3',
+        className,
+      )}
+    >
+      <Search
+        className='h-4 w-4 shrink-0 text-foggy transition-colors group-focus-within:text-primary'
+        strokeWidth={1.75}
         aria-hidden='true'
       />
-      <Input
-        type='text'
+      <input
+        type='search'
         value={query}
         onChange={(e) => setQuery(e.target.value)}
         placeholder={t('searchPlaceholder')}
         aria-label={t('searchPlaceholder')}
-        className='w-full h-16 pl-16 pr-6 bg-surface-container-lowest rounded-xl border-none shadow-xl shadow-on-surface/5 focus-visible:ring-2 focus-visible:ring-primary/20 focus-visible:border-transparent text-on-surface font-medium placeholder:text-on-surface-variant/50'
+        className='w-full border-0 bg-transparent text-body text-foreground placeholder:text-quill outline-none'
       />
     </div>
   );

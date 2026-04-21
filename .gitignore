@@ -41,3 +41,6 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 .env.local
+
+# raw source data (seeded into public/data/schools.json via scripts/seed-schools-from-csv.ts)
+/data/*.csv

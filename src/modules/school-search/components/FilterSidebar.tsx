@@ -1,9 +1,7 @@
 'use client';
-import { MapPinIcon, CheckCircleIcon } from '@heroicons/react/24/solid';
-import { MapPinIcon as MapPinOutlineIcon } from '@heroicons/react/24/outline';
+import { Check, MapPin } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { cn } from '@/lib/utils';
-import { Button } from '@/components/ui/button';
 import { Label } from '@/components/ui/label';
 import { Slider } from '@/components/ui/slider';
 import { Switch } from '@/components/ui/switch';
@@ -31,23 +29,24 @@ export function FilterSidebar() {
   const setDiagnosticTests = useSchoolSearchStore((s) => s.setDiagnosticTests);
 
   return (
-    <aside className='hidden lg:block lg:w-sidebar p-4 sticky top-14 h-[calc(100vh-3.5rem)] shrink-0'>
-      <div className='bg-surface-container-lowest rounded-3xl p-5 pb-6 flex flex-col gap-8 h-full shadow-xl shadow-on-surface/5 overflow-y-auto no-scrollbar'>
-        <div className='flex flex-col gap-0.5'>
-          <h2 className='text-base font-bold text-on-surface tracking-tight'>
-            {t('title')}
-          </h2>
-          <p className='text-caption text-on-surface-variant font-medium uppercase tracking-widest'>
+    <aside className='hidden shrink-0 lg:sticky lg:top-20 lg:block lg:h-[calc(100vh-5rem)] lg:w-sidebar lg:p-4'>
+      <div className='no-scrollbar flex h-full flex-col gap-8 overflow-y-auto rounded-lg border border-border bg-card p-5 pb-6 shadow-2'>
+        <div className='flex flex-col gap-1'>
+          <span
+            className='text-caption font-semibold uppercase text-foggy'
+            style={{ letterSpacing: '0.08em' }}
+          >
             {t('subtitle')}
-          </p>
+          </span>
+          <h2 className='text-h4 font-semibold text-ink-900'>{t('title')}</h2>
         </div>
 
-        <div className='space-y-2'>
-          <div className='flex justify-between items-center'>
-            <Label className='text-xs font-bold text-on-surface'>
+        <div className='space-y-3'>
+          <div className='flex items-center justify-between'>
+            <Label className='text-body-sm font-semibold text-ink-900'>
               {t('priceRangeLabel')}
             </Label>
-            <span className='text-xs font-mono text-primary'>
+            <span className='font-mono text-caption text-primary'>
               {t('priceRangeValue', {
                 min: Math.round(priceMin / 1000),
                 max: Math.round(priceMax / 1000),
@@ -66,23 +65,18 @@ export function FilterSidebar() {
             }}
             aria-label={t('priceRangeLabel')}
           />
-          <div className='flex justify-between text-caption-xs text-on-surface-variant font-bold uppercase'>
+          <div className='flex justify-between text-caption text-foggy'>
             <span>{t('priceMin')}</span>
             <span>{t('priceMax')}</span>
           </div>
         </div>
 
-        <div className='flex items-center justify-between bg-[oklch(0.985_0_0)] ps-5 pe-3 py-4 rounded-xl shadow-sm shadow-on-surface/5'>
+        <div className='flex items-center justify-between rounded-md border border-border bg-muted px-4 py-3'>
           <div className='flex flex-col'>
-            <Label
-              htmlFor='diagnostic-tests-switch'
-              className='text-xs font-bold text-on-surface'
-            >
+            <Label htmlFor='diagnostic-tests-switch' className='text-body-sm font-semibold text-ink-900'>
               {t('diagnosticTests')}
             </Label>
-            <span className='text-caption text-on-surface-variant'>
-              {t('diagnosticTestsHint')}
-            </span>
+            <span className='text-caption text-foggy'>{t('diagnosticTestsHint')}</span>
           </div>
           <Switch
             id='diagnostic-tests-switch'
@@ -93,8 +87,8 @@ export function FilterSidebar() {
         </div>
 
         <div className='space-y-2'>
-          <Label className='text-xs font-bold text-on-surface'>{t('curriculum')}</Label>
-          <div className='grid grid-cols-2 gap-1.5'>
+          <Label className='text-body-sm font-semibold text-ink-900'>{t('curriculum')}</Label>
+          <div className='grid grid-cols-2 gap-2'>
             {CURRICULUM_OPTIONS.map((c) => {
               const isSelected = curricula.includes(c);
               return (
@@ -104,18 +98,15 @@ export function FilterSidebar() {
                   onClick={() => toggleCurriculum(c)}
                   aria-pressed={isSelected}
                   className={cn(
-                    'rounded-xl ps-4 pe-3 py-2.5 text-xs font-bold text-left flex items-center justify-between transition-colors cursor-pointer',
+                    'flex items-center justify-between rounded-md border px-3 py-2 text-body-sm font-semibold transition-colors',
                     isSelected
-                      ? 'bg-primary/10 text-primary'
-                      : 'bg-[oklch(0.985_0_0)] text-on-surface-variant hover:bg-gray-200 shadow-sm shadow-on-surface/5',
+                      ? 'border-primary bg-rausch-50 text-primary'
+                      : 'border-border bg-card text-foreground hover:bg-muted',
                   )}
                 >
                   {c}
                   {isSelected && (
-                    <CheckCircleIcon
-                      className='w-4 h-4 shrink-0 text-primary'
-                      aria-hidden='true'
-                    />
+                    <Check className='h-4 w-4 shrink-0 text-primary' strokeWidth={2.25} aria-hidden='true' />
                   )}
                 </button>
               );
@@ -124,8 +115,8 @@ export function FilterSidebar() {
         </div>
 
         <div className='space-y-2'>
-          <Label className='text-xs font-bold text-on-surface'>{t('location')}</Label>
-          <div className='space-y-1.5'>
+          <Label className='text-body-sm font-semibold text-ink-900'>{t('location')}</Label>
+          <div className='flex flex-col gap-1.5'>
             {STATE_OPTIONS.slice(0, 4).map((value) => {
               const isSelected = selectedStates.includes(value as AustralianState);
               return (
@@ -135,36 +126,30 @@ export function FilterSidebar() {
                   onClick={() => toggleState(value as AustralianState)}
                   aria-pressed={isSelected}
                   className={cn(
-                    'rounded-xl ps-4 pe-3 py-2.5 text-xs font-bold text-left flex items-center gap-2 transition-colors cursor-pointer w-full',
+                    'flex w-full items-center gap-2 rounded-md border px-3 py-2 text-left text-body-sm font-medium transition-colors',
                     isSelected
-                      ? 'bg-primary/10 text-primary'
-                      : 'bg-[oklch(0.985_0_0)] text-on-surface-variant hover:bg-gray-200 shadow-sm shadow-on-surface/5',
+                      ? 'border-primary bg-rausch-50 text-primary'
+                      : 'border-border bg-card text-foreground hover:bg-muted',
                   )}
                 >
-                  {isSelected ? (
-                    <MapPinIcon
-                      className='w-3.5 h-3.5 shrink-0 text-primary'
-                      aria-hidden='true'
-                    />
-                  ) : (
-                    <MapPinOutlineIcon
-                      className='w-3.5 h-3.5 shrink-0'
-                      aria-hidden='true'
-                    />
-                  )}
-                  <span className='text-xs font-bold'>{tStates(value)}</span>
+                  <MapPin
+                    className={cn('h-3.5 w-3.5 shrink-0', isSelected ? 'text-primary' : 'text-foggy')}
+                    strokeWidth={isSelected ? 2.25 : 1.75}
+                    aria-hidden='true'
+                  />
+                  {tStates(value)}
                 </button>
               );
             })}
           </div>
         </div>
 
-        <Button
+        <button
           type='button'
-          className='w-full bg-primary text-on-primary py-5 rounded-lg font-bold text-sm tracking-wide shadow-lg shadow-primary/10 hover:brightness-110 active:scale-95 transition-colors mt-auto'
+          className='mt-auto inline-flex w-full items-center justify-center rounded-pill bg-primary px-6 py-3 text-sm font-semibold text-on-primary shadow-brand transition-colors hover:bg-rausch-600 active:bg-rausch-700'
         >
           {t('apply')}
-        </Button>
+        </button>
       </div>
     </aside>
   );

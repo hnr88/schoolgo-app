@@ -1,45 +1,59 @@
+import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
-import { Navbar } from '@/modules/navigation';
+import { MarketingFooter, MarketingHeader } from '@/modules/marketing-layout';
 import {
-  FilterSidebar,
-  SearchBar,
-  FilterChips,
-  MapView,
-  SchoolResultsPanel,
-} from '@/modules/school-search';
-import { Footer } from '@/modules/layout';
+  ParentsArticles,
+  ParentsComparison,
+  ParentsFinalCta,
+  ParentsFourSteps,
+  ParentsHero,
+  ParentsPickATest,
+  ParentsSevenLanguages,
+  ParentsVerified,
+} from '@/modules/parents-landing';
 
-export default async function HomePage({
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'ParentsMetadata' });
+  return {
+    title: t('title'),
+    description: t('description'),
+    alternates: { canonical: '/' },
+    openGraph: {
+      title: t('title'),
+      description: t('ogDescription'),
+      type: 'website',
+    },
+    twitter: { card: 'summary_large_image' },
+  };
+}
+
+export default async function ParentsLandingPage({
   params,
 }: {
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
   setRequestLocale(locale);
-  const t = await getTranslations('Metadata');
 
   return (
     <>
-      <h1 className='sr-only'>{t('title')}</h1>
-      <Navbar />
-
-      <main className='pt-14 min-h-screen flex max-w-content mx-auto w-full'>
-        <FilterSidebar />
-
-        <section className='flex-1 p-6 flex flex-col gap-4 overflow-hidden h-[calc(100vh-3.5rem)]'>
-          <div className='flex flex-col gap-4 shrink-0'>
-            <SearchBar />
-            <FilterChips />
-          </div>
-
-          <div className='relative flex-1 min-h-0'>
-            <MapView />
-            <SchoolResultsPanel />
-          </div>
-        </section>
+      <MarketingHeader />
+      <main>
+        <ParentsHero />
+        <ParentsFourSteps />
+        <ParentsVerified />
+        <ParentsComparison />
+        <ParentsPickATest />
+        <ParentsSevenLanguages />
+        <ParentsArticles />
+        <ParentsFinalCta />
       </main>
-
-      <Footer />
+      <MarketingFooter />
     </>
   );
 }

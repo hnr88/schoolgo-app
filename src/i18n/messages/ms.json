@@ -4,6 +4,563 @@
     "description": "Cari dan bandingkan sekolah terbaik di seluruh Australia. Tapis mengikut kurikulum, harga, lokasi dan lain-lain.",
     "ogDescription": "Cari dan bandingkan sekolah terbaik di seluruh Australia."
   },
+  "ParentsMetadata": {
+    "title": "SchoolGo — Cari sekolah Australia untuk anak anda",
+    "description": "Cari setiap sekolah Australia berdaftar CRICOS. Bandingkan yuran, keperluan ujian Bahasa Inggeris, dan sesi pengambilan — dalam tujuh bahasa, percuma.",
+    "ogDescription": "Setiap sekolah CRICOS. Disahkan. Dalam bahasa anda."
+  },
+  "MarketingHeader": {
+    "findSchools": "Cari Sekolah",
+    "audiences": {
+      "parents": "Ibu Bapa",
+      "agents": "Ejen",
+      "schools": "Sekolah"
+    },
+    "language": "Bahasa",
+    "signIn": "Log Masuk",
+    "getStarted": "Mulakan",
+    "openMenu": "Buka menu",
+    "closeMenu": "Tutup menu"
+  },
+  "MarketingFooter": {
+    "tagline": "Menghubungkan pemimpin masa depan dengan sekolah terbaik Australia — merentas negara, dalam tujuh bahasa.",
+    "columns": {
+      "parents": {
+        "title": "Untuk ibu bapa",
+        "links": {
+          "findSchools": "Cari sekolah",
+          "compare": "Bandingkan",
+          "scholarships": "Biasiswa",
+          "english": "Ujian Bahasa Inggeris"
+        }
+      },
+      "agents": {
+        "title": "Untuk ejen",
+        "links": {
+          "overview": "Gambaran ejen",
+          "qeac": "Pengesahan QEAC",
+          "pipeline": "Alat saluran",
+          "login": "Log masuk ejen"
+        }
+      },
+      "schools": {
+        "title": "Untuk sekolah",
+        "links": {
+          "overview": "Gambaran sekolah",
+          "claim": "Tuntut profil",
+          "login": "Log masuk sekolah",
+          "pricing": "Harga"
+        }
+      },
+      "resources": {
+        "title": "Sumber",
+        "links": {
+          "help": "Pusat bantuan",
+          "contact": "Hubungi",
+          "privacy": "Dasar privasi",
+          "terms": "Terma"
+        }
+      }
+    },
+    "language": "Bahasa",
+    "copyright": "© {year, number} SchoolGo Australia. Hak cipta terpelihara.",
+    "attribution": "Bersumber dari data.gov.au · CC BY 2.5 AU · Patuh Akta ESOS"
+  },
+  "ParentsHero": {
+    "trustPill": {
+      "brand": "CRICOS",
+      "brandAccent": "Disahkan",
+      "source": "data dari data.gov.au"
+    },
+    "headlinePrefix": "Cari sekolah",
+    "headlineEmphasis": "Australia",
+    "headlineSuffix": "untuk anak anda.",
+    "lede": "Setiap sekolah K–12 berdaftar CRICOS dalam satu tempat. Bandingkan yuran, asrama, ujian Bahasa Inggeris — cari dalam Mandarin, Korea, Thai, Vietnam, Melayu, Bahasa, atau Inggeris.",
+    "searchAriaLabel": "Cari sekolah",
+    "searchFields": {
+      "where": {
+        "label": "Di mana",
+        "value": "Di mana sahaja di Australia"
+      },
+      "yearLevel": {
+        "label": "Tahap tahun",
+        "value": "Year 7 – Year 12"
+      },
+      "fees": {
+        "label": "Yuran",
+        "value": "$15k – $45k AUD"
+      }
+    },
+    "searchButtonLabel": "Cari",
+    "featured": {
+      "eyebrow": "Pilihan utama",
+      "shortlistAdd": "Tambah {name} ke senarai pendek",
+      "shortlistRemove": "Buang {name} dari senarai pendek",
+      "cards": {
+        "a": {
+          "name": "Scotch College Melbourne",
+          "location": "Hawthorn, VIC",
+          "curriculum": "VCE",
+          "fee": "$38.5k AUD",
+          "boarding": "Asrama"
+        },
+        "b": {
+          "name": "Sydney Grammar School",
+          "location": "Darlinghurst, NSW",
+          "curriculum": "HSC",
+          "fee": "$41.2k AUD",
+          "boarding": "Harian sahaja"
+        },
+        "c": {
+          "name": "Brisbane Grammar School",
+          "location": "Spring Hill, QLD",
+          "curriculum": "QCE/IB",
+          "fee": "$35.8k AUD",
+          "boarding": "Asrama"
+        }
+      }
+    }
+  },
+  "ParentsFourSteps": {
+    "eyebrow": "Cara penggunaan",
+    "heading": "Dari pelayaran pertama hingga surat tawaran — empat langkah mudah.",
+    "subheading": "Tiada yuran tersembunyi. Log masuk tidak diperlukan sehingga anda memohon.",
+    "steps": {
+      "browse": {
+        "title": "Semak imbas setiap sekolah CRICOS",
+        "description": "Tapis {count, number} sekolah mengikut negeri, yuran, sektor, kurikulum, asrama, dan biasiswa — dalam bahasa anda."
+      },
+      "shortlist": {
+        "title": "Senarai pendek empat. Bandingkan serentak",
+        "description": "Susun yuran, sesi pengambilan, ICSEA, dan ujian Bahasa Inggeris yang diterima. Buat keputusan dalam minit, bukan bulan."
+      },
+      "prepare": {
+        "title": "Semak syarat tepat",
+        "description": "Setiap penyenaraian menunjukkan ujian yang diterima, markah minimum, dokumen, dan tempoh pengambilan."
+      },
+      "apply": {
+        "title": "Mohon melalui ejen yang disahkan",
+        "description": "Ejen anda membawa lencana QEAC. Permohonan dipantau dari awal hingga akhir dalam satu papan pemuka."
+      }
+    },
+    "ctaBrowse": "Mula semak imbas",
+    "ctaLearn": "Lihat cara penggunaan"
+  },
+  "ParentsVerified": {
+    "eyebrow": "Setiap sekolah CRICOS",
+    "heading": "Disahkan. Dalam bahasa anda.",
+    "subheading": "Foto bangunan sebenar. Yuran sebenar. Kalendar pengambilan sebenar. Data sekolah bersumber dari CRICOS dan ACARA, dikemas kini setiap bulan.",
+    "cards": {
+      "a": {
+        "name": "Scotch College",
+        "location": "Hawthorn, VIC",
+        "sector": "Swasta"
+      },
+      "b": {
+        "name": "Sydney Grammar",
+        "location": "Darlinghurst, NSW",
+        "sector": "Swasta"
+      },
+      "c": {
+        "name": "Brisbane Grammar",
+        "location": "Spring Hill, QLD",
+        "sector": "Swasta"
+      },
+      "d": {
+        "name": "Christ Church Grammar",
+        "location": "Claremont, WA",
+        "sector": "Swasta"
+      }
+    }
+  },
+  "ParentsComparison": {
+    "eyebrow": "Bandingkan",
+    "heading": "Susun sekolah bersebelahan.",
+    "headingAccent": "Buat keputusan dalam minit, bukan bulan.",
+    "subheading": "Perbandingan serentak sehingga empat sekolah. Yuran, ICSEA, ujian Bahasa Inggeris yang diterima, sesi pengambilan, asrama.",
+    "columns": {
+      "school": "Sekolah",
+      "location": "Lokasi",
+      "sector": "Sektor",
+      "fee": "Yuran tahunan",
+      "icsea": "ICSEA",
+      "tests": "Ujian diterima",
+      "intakes": "Sesi pengambilan"
+    },
+    "notPublished": "Tidak diterbitkan"
+  },
+  "ParentsPickATest": {
+    "eyebrow": "Kemahiran Bahasa Inggeris",
+    "heading": "Pilih ujian. Lihat sekolah mana yang menerimanya —",
+    "headingAccent": "dan markah minimum.",
+    "subheading": "Kami memetakan ujian Bahasa Inggeris yang diterima merentas setiap profil. Tidak perlu lagi menggali 50 laman web sekolah.",
+    "tests": {
+      "aeas": "AEAS",
+      "idat": "iDAT",
+      "duolingo": "Duolingo",
+      "ielts": "IELTS",
+      "pte": "PTE Academic",
+      "cambridge": "Cambridge",
+      "toefl": "TOEFL"
+    },
+    "cta": "Lihat sekolah yang menerima ujian ini"
+  },
+  "ParentsSevenLanguages": {
+    "eyebrow": "Tujuh bahasa",
+    "heading": "Keluarga tidak sepatutnya perlu menterjemah jadual yuran tengah malam.",
+    "subheading": "SchoolGo diterjemah sepenuhnya ke dalam tujuh bahasa yang paling lazim digunakan di koridor Asia-Pasifik.",
+    "languages": {
+      "en": "English",
+      "zh": "简体中文",
+      "vi": "Tiếng Việt",
+      "ko": "한국어",
+      "ms": "Bahasa Melayu",
+      "th": "ภาษาไทย",
+      "id": "Bahasa Indonesia"
+    }
+  },
+  "ParentsArticles": {
+    "eyebrow": "Perpustakaan kemasukan",
+    "heading": "Ditulis oleh pegawai kemasukan. Diterjemah ke dalam tujuh bahasa.",
+    "subheading": "Panduan mudah tentang visa, sesi pengambilan, ujian Bahasa Inggeris, dan jadual yuran. Percuma, tanpa log masuk.",
+    "items": {
+      "intakes": {
+        "title": "Memahami sesi pengambilan sekolah Australia",
+        "meta": "6 min baca · Dikemas kini setiap bulan"
+      },
+      "englishTests": {
+        "title": "Ujian Bahasa Inggeris mana yang diterima sekolah anda?",
+        "meta": "8 min baca · Pecahan mengikut ujian"
+      },
+      "boarding": {
+        "title": "Asrama vs harian: pilihan keluarga dan sebabnya",
+        "meta": "5 min baca · Kajian kes"
+      }
+    },
+    "readMore": "Baca artikel"
+  },
+  "ParentsFinalCta": {
+    "eyebrow": "Mulakan di sini",
+    "headingPrefix": "Carian anda",
+    "headingEmphasis": "bermula",
+    "headingSuffix": "dalam tujuh bahasa.",
+    "subheading": "Percuma. Tiada log masuk diperlukan. Dikemas kini {month} {year, number}.",
+    "ctaPrimary": "Cari sekolah anda",
+    "ctaSecondary": "Bercakap dengan ejen yang disahkan"
+  },
+  "AgentsMetadata": {
+    "title": "SchoolGo — Uruskan amalan ejen anda seperti portfolio",
+    "description": "Alat disahkan QEAC untuk ejen pendidikan yang menempatkan pelajar ke sekolah Australia. Permohonan piawai, saluran langsung, komisen penuh.",
+    "ogDescription": "Uruskan amalan anda seperti portfolio. Simpan 100% komisen anda."
+  },
+  "AgentsHero": {
+    "eyebrow": "Untuk ejen pendidikan · Disokong QEAC",
+    "headlinePrefix": "Uruskan amalan anda",
+    "headlineEmphasis": "seperti portfolio.",
+    "lede": "Satu profil yang disahkan. {count, number} sekolah CRICOS. Saluran yang boleh dilihat keluarga anda. SchoolGo mengenakan bayaran kepada sekolah, bukan anda.",
+    "ctaPrimary": "Mohon pengesahan",
+    "ctaSecondary": "Lihat cara ia berfungsi",
+    "stats": {
+      "schools": {
+        "value": "{count, number}",
+        "label": "Sekolah CRICOS yang disahkan"
+      },
+      "agents": {
+        "value": "2,400+",
+        "label": "Ejen disahkan seluruh APAC"
+      },
+      "commission": {
+        "value": "100%",
+        "label": "Komisen anda disimpan sepenuhnya"
+      }
+    }
+  },
+  "AgentsPainPoints": {
+    "eyebrow": "Cara lama",
+    "heading": "Berhenti bergelut dengan hamparan, utas WeChat, dan peti masuk kemasukan sekolah.",
+    "subheading": "Setiap pelajar, setiap permohonan, setiap syarat sekolah — dalam satu ruang kerja.",
+    "items": {
+      "spreadsheets": {
+        "title": "Satu senarai, bukan lima belas tab",
+        "description": "Jejaki peringkat, tarikh akhir, dan dokumen setiap pelajar — tanpa perlu menyelenggara hamparan berasingan."
+      },
+      "wechat": {
+        "title": "Keluarga melihat skrin yang sama seperti anda",
+        "description": "Kemas kini status dihantar kepada ibu bapa secara automatik, dalam bahasa mereka. Anda kurang masa menjawab 'ada berita?'"
+      },
+      "admissions": {
+        "title": "Penyerahan yang diseragamkan",
+        "description": "Satu format permohonan. Satu tempat untuk memuat naik dokumen. Satu peti masuk untuk balasan — bukan lima belas."
+      }
+    }
+  },
+  "AgentsMatching": {
+    "eyebrow": "Padanan · Mohon · Jejak",
+    "heading": "Panggilan ibu bapa pukul 10 pagi. Tiga sekolah sepadan menjelang 10:30.",
+    "subheading": "SchoolGo mengemukakan sekolah yang sesuai mengikut negeri, yuran, tahap Bahasa Inggeris, dan pengambilan — kemudian membolehkan anda menyerahkan permohonan piawai dalam beberapa minit.",
+    "steps": {
+      "listen": {
+        "title": "Tangkap keperluan keluarga",
+        "description": "Bajet, lokasi, tahap Bahasa Inggeris, pengambilan yang dikehendaki — dalam satu borang, dalam bahasa mereka."
+      },
+      "match": {
+        "title": "Lihat sekolah yang paling sesuai",
+        "description": "Ditapis mengikut profil pelajar anda. Lihat ujian yang diterima dan markah minimum bagi setiap sekolah."
+      },
+      "deliver": {
+        "title": "Hantar senarai pendek, bukan kekacauan",
+        "description": "Satu PDF berjenama yang boleh diambil skrin oleh keluarga dan dihantar kepada ayah. Tiada PDF daripada lima belas sekolah yang berbeza."
+      }
+    },
+    "inboxLabel": "Peti masuk kemasukan",
+    "inboxRows": {
+      "scotch": {
+        "school": "Scotch College",
+        "location": "Hawthorn, VIC",
+        "status": "Sepadan · AEAS 70+"
+      },
+      "brisbane": {
+        "school": "Brisbane Grammar",
+        "location": "Spring Hill, QLD",
+        "status": "Sepadan · AEAS 68+"
+      },
+      "sydney": {
+        "school": "Sydney Grammar",
+        "location": "Darlinghurst, NSW",
+        "status": "Sepadan · AEAS 65+"
+      }
+    }
+  },
+  "AgentsCommission": {
+    "eyebrow": "Harga",
+    "heading": "Anda menyimpan 100% komisen sekolah anda.",
+    "subheading": "Kami mengenakan bayaran kepada sekolah, bukan anda. Hubungan komersial anda dengan sekolah kekal terus.",
+    "statValue": "$36,480",
+    "statLabel": "Purata komisen 2026 yang disimpan setiap ejen, kohort Q1",
+    "bullets": {
+      "zero": {
+        "title": "Sifar yuran per pelajar",
+        "description": "Tiada pembahagian komisen. Tiada yuran penempatan. Tiada langganan."
+      },
+      "direct": {
+        "title": "Hubungan terus dengan sekolah",
+        "description": "Atribusi anda dikunci pada permohonan pada saat anda menyerahkannya."
+      },
+      "audit": {
+        "title": "Jejak audit penuh",
+        "description": "Setiap perubahan status dicap masa. Pertikaian tamat pada rekod bertulis."
+      }
+    }
+  },
+  "AgentsQeacTrust": {
+    "eyebrow": "Disahkan",
+    "heading": "Profil yang ibu bapa — dan sekolah — benar-benar percayai.",
+    "subheading": "Kelayakan QEAC anda disahkan sekali sahaja. Lencana dan rekod prestasi anda akan terpapar pada setiap permohonan yang anda serahkan.",
+    "profile": {
+      "name": "Profil ejen",
+      "qeac": "QEAC Disahkan",
+      "yearsActive": "Tahun aktif",
+      "students": "Pelajar ditempatkan",
+      "placements": "Sekolah ditempatkan",
+      "languages": "Bahasa yang dituturkan"
+    }
+  },
+  "AgentsScale": {
+    "eyebrow": "Rangkaian",
+    "heading": "2,400 ejen disahkan di seluruh APAC. Berkembang setiap minggu.",
+    "subheading": "Dari Shanghai ke Jakarta, Ho Chi Minh ke Seoul — ejen menempatkan keluarga ke dalam K–12 Australia.",
+    "agents": {
+      "a": {
+        "name": "Li Wei",
+        "region": "Shanghai · 中国",
+        "meta": "QEAC 12 tahun · 148 penempatan"
+      },
+      "b": {
+        "name": "Nguyễn Minh",
+        "region": "Ho Chi Minh · Việt Nam",
+        "meta": "QEAC 8 tahun · 96 penempatan"
+      },
+      "c": {
+        "name": "Siti Rahman",
+        "region": "Kuala Lumpur · Malaysia",
+        "meta": "QEAC 6 tahun · 64 penempatan"
+      },
+      "d": {
+        "name": "Ji-eun Park",
+        "region": "Seoul · 대한민국",
+        "meta": "QEAC 9 tahun · 112 penempatan"
+      }
+    },
+    "cta": "Mohon pengesahan"
+  },
+  "AgentsTestimonial": {
+    "quote": "Dulu saya menghantar 40 PDF seminggu antara ibu bapa dan enam pejabat kemasukan. Sekarang saya lakukan sekali sahaja, dan keluarga melihat satu kemas kini status dalam Bahasa Mandarin. Jumlah penempatan saya tiga kali ganda.",
+    "attribution": "Mei, Shanghai · QEAC-disahkan sejak 2018"
+  },
+  "AgentsFinalCta": {
+    "eyebrow": "Dapatkan pengesahan",
+    "headingPrefix": "Portfolio anda",
+    "headingEmphasis": "layak mendapat",
+    "headingSuffix": "yang lebih baik.",
+    "subheading": "Percuma. Pengesahan QEAC diperlukan. Onboarding mengambil masa 48 jam.",
+    "ctaPrimary": "Mohon pengesahan",
+    "ctaSecondary": "Tempah walkthrough"
+  },
+  "SchoolsMetadata": {
+    "title": "SchoolGo — Penuhkan tempat antarabangsa anda dengan lebih sedikit e-mel",
+    "description": "Satu peti masuk kemasukan yang diseragamkan untuk sekolah Australia. Ejen disahkan QEAC, permohonan sebenar, tiada yuran per pelajar.",
+    "ogDescription": "Penuhkan tempat antarabangsa anda. Dengan lebih sedikit e-mel."
+  },
+  "SchoolsHero": {
+    "eyebrow": "Untuk sekolah Australia",
+    "headlinePrefix": "Penuhkan",
+    "headlineEmphasis": "tempat antarabangsa",
+    "headlineSuffix": "anda. Dengan lebih sedikit e-mel.",
+    "lede": "Satu profil yang disahkan, dilihat oleh keluarga di tujuh negara. Terima permohonan yang diseragamkan daripada ejen disahkan QEAC — dalam format yang sudah digunakan oleh pasukan kemasukan anda.",
+    "ctaPrimary": "Tuntut profil sekolah anda",
+    "ctaSecondary": "Tempah walkthrough",
+    "inbox": {
+      "eyebrow": "Peti masuk permohonan",
+      "countLabel": "Bulan ini",
+      "rows": {
+        "a": {
+          "name": "Sophie Chen",
+          "status": "Baharu",
+          "meta": "VIC · Year 9 · AEAS 78"
+        },
+        "b": {
+          "name": "Minh Tran",
+          "status": "Sedang disemak",
+          "meta": "VIC · Year 11 · IELTS 6.5"
+        },
+        "c": {
+          "name": "Ji-woo Park",
+          "status": "Tawaran dihantar",
+          "meta": "NSW · Year 10 · AEAS 74"
+        }
+      }
+    }
+  },
+  "SchoolsStats": {
+    "eyebrow": "Kesan rangkaian",
+    "heading": "Satu profil. Dilihat oleh keluarga di tujuh negara.",
+    "subheading": "Penyenaraian anda muncul dalam setiap carian, setiap perbandingan, setiap senarai pendek yang dipadankan — dalam bahasa keluarga.",
+    "items": {
+      "views": {
+        "value": "42,000+",
+        "label": "Paparan profil bulanan"
+      },
+      "countries": {
+        "value": "7",
+        "label": "Negara sumber"
+      },
+      "enquiries": {
+        "value": "168",
+        "label": "Purata pertanyaan bulanan setiap profil"
+      },
+      "applications": {
+        "value": "4,200+",
+        "label": "Permohonan diproses pada 2026"
+      }
+    }
+  },
+  "SchoolsThreeTools": {
+    "eyebrow": "Peralatan",
+    "heading": "Tiga alat. Satu matlamat: pelajar yang tepat, dengan lebih sedikit kerja.",
+    "subheading": "SchoolGo memberi pasukan kemasukan anda tiga perkara yang benar-benar diperlukan.",
+    "tools": {
+      "profile": {
+        "title": "Profil sekolah yang sentiasa dikemas kini",
+        "description": "Yuran, sesi pengambilan, ujian yang diterima, tawaran biasiswa, dan dokumen — dikemas kini oleh anda, dipaparkan dalam bahasa keluarga."
+      },
+      "applications": {
+        "title": "Permohonan yang diseragamkan",
+        "description": "Setiap permohonan tiba dalam format yang sama, dengan atribusi ejen disahkan QEAC dan dokumentasi lengkap."
+      },
+      "inbox": {
+        "title": "Satu peti masuk kemasukan",
+        "description": "Jejak status setiap permohonan. Tawarkan, senarai tunggu, atau tolak dalam satu klik. Keluarga dan ejen melihat kemas kini status serta-merta."
+      }
+    }
+  },
+  "SchoolsTimeline": {
+    "eyebrow": "Perjalanan kemasukan",
+    "heading": "Dari permohonan pertama hingga hari pertama penggal — tanpa kekacauan peti masuk.",
+    "subheading": "Setiap langkah kitaran kemasukan antarabangsa, di satu tempat.",
+    "steps": {
+      "receive": {
+        "title": "Terima",
+        "description": "Permohonan tiba dalam peti masuk anda bersama markah Bahasa Inggeris, dokumen, dan ejen yang disahkan."
+      },
+      "review": {
+        "title": "Semak",
+        "description": "Pasukan anda menilai mengikut rubrik sendiri. Nota kekal dalaman."
+      },
+      "decide": {
+        "title": "Putuskan",
+        "description": "Tawarkan, senarai tunggu, atau tolak dalam satu klik. Status dihantar kepada keluarga dan ejen serta-merta."
+      },
+      "onboard": {
+        "title": "Daftarkan",
+        "description": "Kongsi kertas kerja hari pengambilan, maklumat penginapan, dan pautan orientasi — semuanya dalam satu utas."
+      }
+    }
+  },
+  "SchoolsPricing": {
+    "eyebrow": "Harga",
+    "heading": "Tiada yuran per ejen. Tiada komisen. Satu pelan tahunan.",
+    "subheading": "Sekolah yang menyokong SchoolGo membayar satu yuran tahunan yang telus. Keluarga dan ejen tidak perlu membayar.",
+    "plans": {
+      "listing": {
+        "name": "Penyenaraian",
+        "price": "Free",
+        "priceMeta": "Selamanya",
+        "features": {
+          "a": "Profil CRICOS anda, diterbitkan secara automatik",
+          "b": "Ujian Bahasa Inggeris yang diterima + markah minimum",
+          "c": "Peti masuk permohonan yang diseragamkan"
+        },
+        "cta": "Tuntut profil anda"
+      },
+      "admissions": {
+        "name": "Kemasukan",
+        "price": "$12,800",
+        "priceMeta": "AUD / tahun",
+        "badge": "Paling popular",
+        "features": {
+          "a": "Semua dalam Penyenaraian",
+          "b": "Aliran kerja tawaran / senarai tunggu / tolak",
+          "c": "Direktori ejen disahkan QEAC",
+          "d": "Terjemahan tujuh bahasa pada setiap halaman profil"
+        },
+        "cta": "Mulakan kemasukan"
+      },
+      "network": {
+        "name": "Rangkaian",
+        "price": "Custom",
+        "priceMeta": "Untuk kumpulan berbilang kampus",
+        "features": {
+          "a": "Semua dalam Kemasukan",
+          "b": "Peti masuk berpusat merentas kampus",
+          "c": "Sokongan keutamaan + laporan tersuai"
+        },
+        "cta": "Hubungi kami"
+      }
+    }
+  },
+  "SchoolsTestimonial": {
+    "quote": "Kami mengisi pengambilan asrama 2026 menjelang Julai. SchoolGo bukan sahaja membawa lebih banyak permohonan — ia membawa pemohon yang benar-benar boleh kami terima.",
+    "attribution": "Pengarah Kemasukan · Sekolah harian & asrama swasta, VIC"
+  },
+  "SchoolsFinalCta": {
+    "eyebrow": "Mulakan di sini",
+    "headingPrefix": "Pengambilan seterusnya anda",
+    "headingEmphasis": "bermula",
+    "headingSuffix": "di sini.",
+    "subheading": "Penyenaraian percuma. Tiada kad kredit. Tuntutan mengambil masa 10 minit.",
+    "ctaPrimary": "Tuntut profil sekolah anda",
+    "ctaSecondary": "Tempah walkthrough"
+  },
   "Navbar": {
     "brand": "School",
     "brandAccent": "Go",
