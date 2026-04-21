@@ -25,6 +25,6 @@ export interface SchoolFilters {
   priceMax: number;
   curricula: Curriculum[];
   states: AustralianState[];
-  diagnosticTests: boolean;
+  englishTests: boolean;
   activeChips: string[];
 }

@@ -743,9 +743,9 @@
       "priceRangeValue": "${min}k – ${max}k",
       "priceMin": "$5,000",
       "priceMax": "$60,000+",
-      "diagnosticTests": "Diagnostic Tests",
-      "diagnosticTestsHint": "Accepts external testing",
-      "diagnosticTestsToggle": "Toggle diagnostic tests",
+      "englishTests": "English Proficiency Tests",
+      "englishTestsHint": "School accepts recognised English tests",
+      "englishTestsToggle": "Toggle English proficiency tests filter",
       "curriculum": "Curriculum",
       "location": "Location",
       "apply": "Apply Filters"
