@@ -1,0 +1,8 @@
+export { ParentsHero } from '@/modules/parents-landing/components/ParentsHero';
+export { ParentsFourSteps } from '@/modules/parents-landing/components/ParentsFourSteps';
+export { ParentsVerified } from '@/modules/parents-landing/components/ParentsVerified';
+export { ParentsComparison } from '@/modules/parents-landing/components/ParentsComparison';
+export { ParentsPickATest } from '@/modules/parents-landing/components/ParentsPickATest';
+export { ParentsSevenLanguages } from '@/modules/parents-landing/components/ParentsSevenLanguages';
+export { ParentsArticles } from '@/modules/parents-landing/components/ParentsArticles';
+export { ParentsFinalCta } from '@/modules/parents-landing/components/ParentsFinalCta';

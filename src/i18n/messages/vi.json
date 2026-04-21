@@ -4,6 +4,563 @@
     "description": "Tìm kiếm và so sánh các trường tốt nhất trên toàn nước Úc. Lọc theo chương trình, giá cả, vị trí và nhiều hơn nữa.",
     "ogDescription": "Tìm kiếm và so sánh các trường tốt nhất trên toàn nước Úc."
   },
+  "ParentsMetadata": {
+    "title": "SchoolGo — Tìm trường Úc cho con bạn",
+    "description": "Tìm kiếm mọi trường học Úc đăng ký CRICOS. So sánh học phí, yêu cầu thi tiếng Anh và kỳ tuyển sinh — bằng bảy ngôn ngữ, miễn phí.",
+    "ogDescription": "Mọi trường CRICOS. Đã xác minh. Bằng ngôn ngữ của bạn."
+  },
+  "MarketingHeader": {
+    "findSchools": "Tìm trường",
+    "audiences": {
+      "parents": "Phụ huynh",
+      "agents": "Tư vấn",
+      "schools": "Trường học"
+    },
+    "language": "Ngôn ngữ",
+    "signIn": "Đăng nhập",
+    "getStarted": "Bắt đầu",
+    "openMenu": "Mở menu",
+    "closeMenu": "Đóng menu"
+  },
+  "MarketingFooter": {
+    "tagline": "Kết nối các nhà lãnh đạo tương lai với những trường học tốt nhất của Úc — khắp đất nước, bằng bảy ngôn ngữ.",
+    "columns": {
+      "parents": {
+        "title": "Dành cho phụ huynh",
+        "links": {
+          "findSchools": "Tìm trường",
+          "compare": "So sánh",
+          "scholarships": "Học bổng",
+          "english": "Thi tiếng Anh"
+        }
+      },
+      "agents": {
+        "title": "Dành cho tư vấn",
+        "links": {
+          "overview": "Tổng quan tư vấn",
+          "qeac": "Xác minh QEAC",
+          "pipeline": "Công cụ quản lý",
+          "login": "Đăng nhập tư vấn"
+        }
+      },
+      "schools": {
+        "title": "Dành cho trường",
+        "links": {
+          "overview": "Tổng quan trường",
+          "claim": "Xác nhận hồ sơ",
+          "login": "Đăng nhập trường",
+          "pricing": "Bảng giá"
+        }
+      },
+      "resources": {
+        "title": "Tài nguyên",
+        "links": {
+          "help": "Trung tâm hỗ trợ",
+          "contact": "Liên hệ",
+          "privacy": "Chính sách bảo mật",
+          "terms": "Điều khoản"
+        }
+      }
+    },
+    "language": "Ngôn ngữ",
+    "copyright": "© {year, number} SchoolGo Australia. Bảo lưu mọi quyền.",
+    "attribution": "Nguồn từ data.gov.au · CC BY 2.5 AU · Tuân thủ đạo luật ESOS"
+  },
+  "ParentsHero": {
+    "trustPill": {
+      "brand": "CRICOS",
+      "brandAccent": "Đã xác minh",
+      "source": "dữ liệu từ data.gov.au"
+    },
+    "headlinePrefix": "Tìm trường",
+    "headlineEmphasis": "Úc",
+    "headlineSuffix": "cho con bạn.",
+    "lede": "Mọi trường K–12 đăng ký CRICOS tại một nơi. So sánh học phí, nội trú, thi tiếng Anh — tìm kiếm bằng tiếng Trung, Hàn, Thái, Việt, Mã Lai, Bahasa hoặc tiếng Anh.",
+    "searchAriaLabel": "Tìm kiếm trường học",
+    "searchFields": {
+      "where": {
+        "label": "Nơi",
+        "value": "Bất kỳ nơi nào tại Úc"
+      },
+      "yearLevel": {
+        "label": "Năm học",
+        "value": "Year 7 – Year 12"
+      },
+      "fees": {
+        "label": "Học phí",
+        "value": "$15k – $45k AUD"
+      }
+    },
+    "searchButtonLabel": "Tìm kiếm",
+    "featured": {
+      "eyebrow": "Nổi bật",
+      "shortlistAdd": "Thêm {name} vào danh sách chọn",
+      "shortlistRemove": "Xóa {name} khỏi danh sách chọn",
+      "cards": {
+        "a": {
+          "name": "Scotch College Melbourne",
+          "location": "Hawthorn, VIC",
+          "curriculum": "VCE",
+          "fee": "$38.5k AUD",
+          "boarding": "Nội trú"
+        },
+        "b": {
+          "name": "Sydney Grammar School",
+          "location": "Darlinghurst, NSW",
+          "curriculum": "HSC",
+          "fee": "$41.2k AUD",
+          "boarding": "Chỉ ngoại trú"
+        },
+        "c": {
+          "name": "Brisbane Grammar School",
+          "location": "Spring Hill, QLD",
+          "curriculum": "QCE/IB",
+          "fee": "$35.8k AUD",
+          "boarding": "Nội trú"
+        }
+      }
+    }
+  },
+  "ParentsFourSteps": {
+    "eyebrow": "Cách thức hoạt động",
+    "heading": "Từ lần duyệt đầu tiên đến thư mời nhập học — bốn bước đơn giản.",
+    "subheading": "Không phí ẩn. Không cần đăng nhập cho đến khi nộp đơn.",
+    "steps": {
+      "browse": {
+        "title": "Duyệt mọi trường CRICOS",
+        "description": "Lọc {count, number} trường theo bang, học phí, loại hình, chương trình, nội trú và học bổng — bằng ngôn ngữ của bạn."
+      },
+      "shortlist": {
+        "title": "Chọn bốn trường. So sánh song song",
+        "description": "Đặt học phí, kỳ tuyển sinh, ICSEA và bài thi tiếng Anh được chấp nhận cạnh nhau. Quyết định trong vài phút, không phải vài tháng."
+      },
+      "prepare": {
+        "title": "Xem yêu cầu chính xác",
+        "description": "Mỗi hồ sơ trường đều hiển thị bài thi được chấp nhận, điểm tối thiểu, tài liệu và thời gian tuyển sinh."
+      },
+      "apply": {
+        "title": "Nộp đơn qua tư vấn đã xác minh",
+        "description": "Tư vấn của bạn có huy hiệu QEAC. Hồ sơ được theo dõi từ đầu đến cuối trên một bảng điều khiển."
+      }
+    },
+    "ctaBrowse": "Bắt đầu duyệt",
+    "ctaLearn": "Xem cách hoạt động"
+  },
+  "ParentsVerified": {
+    "eyebrow": "Mọi trường CRICOS",
+    "heading": "Đã xác minh. Bằng ngôn ngữ của bạn.",
+    "subheading": "Ảnh thực tế của tòa nhà. Học phí thực. Lịch tuyển sinh thực. Dữ liệu trường được lấy từ CRICOS và ACARA, cập nhật hàng tháng.",
+    "cards": {
+      "a": {
+        "name": "Scotch College",
+        "location": "Hawthorn, VIC",
+        "sector": "Tư thục"
+      },
+      "b": {
+        "name": "Sydney Grammar",
+        "location": "Darlinghurst, NSW",
+        "sector": "Tư thục"
+      },
+      "c": {
+        "name": "Brisbane Grammar",
+        "location": "Spring Hill, QLD",
+        "sector": "Tư thục"
+      },
+      "d": {
+        "name": "Christ Church Grammar",
+        "location": "Claremont, WA",
+        "sector": "Tư thục"
+      }
+    }
+  },
+  "ParentsComparison": {
+    "eyebrow": "So sánh",
+    "heading": "Đặt các trường cạnh nhau.",
+    "headingAccent": "Quyết định trong vài phút, không phải vài tháng.",
+    "subheading": "So sánh song song tối đa bốn trường. Học phí, ICSEA, bài thi tiếng Anh được chấp nhận, kỳ tuyển sinh, nội trú.",
+    "columns": {
+      "school": "Trường",
+      "location": "Vị trí",
+      "sector": "Loại hình",
+      "fee": "Học phí hàng năm",
+      "icsea": "ICSEA",
+      "tests": "Bài thi được chấp nhận",
+      "intakes": "Kỳ tuyển sinh"
+    },
+    "notPublished": "Chưa công bố"
+  },
+  "ParentsPickATest": {
+    "eyebrow": "Năng lực tiếng Anh",
+    "heading": "Chọn bài thi. Xem trường nào chấp nhận —",
+    "headingAccent": "và điểm tối thiểu.",
+    "subheading": "Chúng tôi tổng hợp bài thi tiếng Anh được chấp nhận trên mọi hồ sơ trường. Không còn phải lướt qua 50 website trường.",
+    "tests": {
+      "aeas": "AEAS",
+      "idat": "iDAT",
+      "duolingo": "Duolingo",
+      "ielts": "IELTS",
+      "pte": "PTE Academic",
+      "cambridge": "Cambridge",
+      "toefl": "TOEFL"
+    },
+    "cta": "Xem các trường chấp nhận bài thi này"
+  },
+  "ParentsSevenLanguages": {
+    "eyebrow": "Bảy ngôn ngữ",
+    "heading": "Gia đình không nên phải dịch bảng học phí lúc nửa đêm.",
+    "subheading": "SchoolGo được dịch toàn bộ sang bảy ngôn ngữ phổ biến nhất trong khu vực châu Á - Thái Bình Dương.",
+    "languages": {
+      "en": "English",
+      "zh": "简体中文",
+      "vi": "Tiếng Việt",
+      "ko": "한국어",
+      "ms": "Bahasa Melayu",
+      "th": "ภาษาไทย",
+      "id": "Bahasa Indonesia"
+    }
+  },
+  "ParentsArticles": {
+    "eyebrow": "Thư viện tuyển sinh",
+    "heading": "Do nhân viên tuyển sinh viết. Dịch sang bảy ngôn ngữ.",
+    "subheading": "Hướng dẫn đơn giản về visa, kỳ tuyển sinh, thi tiếng Anh và học phí. Miễn phí, không cần đăng nhập.",
+    "items": {
+      "intakes": {
+        "title": "Hiểu kỳ tuyển sinh của các trường Úc",
+        "meta": "6 phút đọc · Cập nhật hàng tháng"
+      },
+      "englishTests": {
+        "title": "Trường bạn chấp nhận bài thi tiếng Anh nào?",
+        "meta": "8 phút đọc · Phân tích từng bài thi"
+      },
+      "boarding": {
+        "title": "Nội trú hay ngoại trú: lựa chọn của gia đình và lý do",
+        "meta": "5 phút đọc · Các trường hợp thực tế"
+      }
+    },
+    "readMore": "Đọc bài viết"
+  },
+  "ParentsFinalCta": {
+    "eyebrow": "Bắt đầu tại đây",
+    "headingPrefix": "Hành trình tìm kiếm của bạn",
+    "headingEmphasis": "bắt đầu",
+    "headingSuffix": "bằng bảy ngôn ngữ.",
+    "subheading": "Miễn phí. Không cần đăng nhập. Cập nhật {month} {year, number}.",
+    "ctaPrimary": "Tìm trường của bạn",
+    "ctaSecondary": "Liên hệ tư vấn đã xác minh"
+  },
+  "AgentsMetadata": {
+    "title": "SchoolGo — Vận hành công ty tư vấn như một danh mục đầu tư",
+    "description": "Công cụ được xác minh QEAC dành cho tư vấn giáo dục đưa học sinh vào các trường Úc. Hồ sơ chuẩn hóa, theo dõi tiến trình trực tiếp, hoa hồng đầy đủ.",
+    "ogDescription": "Vận hành công việc như một danh mục đầu tư. Giữ lại 100% hoa hồng của bạn."
+  },
+  "AgentsHero": {
+    "eyebrow": "Dành cho tư vấn giáo dục · Được hỗ trợ bởi QEAC",
+    "headlinePrefix": "Vận hành công việc của bạn",
+    "headlineEmphasis": "như một danh mục đầu tư.",
+    "lede": "Một hồ sơ được xác minh. {count, number} trường CRICOS. Một bảng theo dõi mà gia đình có thể xem. SchoolGo thu phí từ các trường, không thu từ bạn.",
+    "ctaPrimary": "Đăng ký xác minh",
+    "ctaSecondary": "Xem cách hoạt động",
+    "stats": {
+      "schools": {
+        "value": "{count, number}",
+        "label": "Trường CRICOS đã xác minh"
+      },
+      "agents": {
+        "value": "2,400+",
+        "label": "Tư vấn được xác minh trên toàn APAC"
+      },
+      "commission": {
+        "value": "100%",
+        "label": "Hoa hồng được giữ lại hoàn toàn"
+      }
+    }
+  },
+  "AgentsPainPoints": {
+    "eyebrow": "Cách cũ",
+    "heading": "Không còn loay hoay với bảng tính, chuỗi WeChat và hộp thư tuyển sinh của trường.",
+    "subheading": "Mọi học sinh, mọi hồ sơ, mọi yêu cầu của trường — trong một không gian làm việc duy nhất.",
+    "items": {
+      "spreadsheets": {
+        "title": "Một danh sách, không phải mười lăm tab",
+        "description": "Theo dõi giai đoạn, hạn chót và hồ sơ của từng học sinh — không cần duy trì bảng tính riêng."
+      },
+      "wechat": {
+        "title": "Gia đình nhìn thấy cùng màn hình với bạn",
+        "description": "Cập nhật trạng thái tự động gửi đến phụ huynh bằng ngôn ngữ của họ. Bạn không còn mất nhiều thời gian trả lời 'có tin tức chưa?'"
+      },
+      "admissions": {
+        "title": "Hồ sơ được chuẩn hóa",
+        "description": "Một định dạng hồ sơ. Một nơi tải lên tài liệu. Một hộp thư nhận phản hồi — thay vì mười lăm."
+      }
+    }
+  },
+  "AgentsMatching": {
+    "eyebrow": "Ghép trường · Nộp hồ sơ · Theo dõi",
+    "heading": "Phụ huynh gọi lúc 10 giờ sáng. Ba trường phù hợp trước 10:30.",
+    "subheading": "SchoolGo gợi ý các trường phù hợp theo bang, học phí, trình độ tiếng Anh và kỳ tuyển sinh — rồi cho phép bạn nộp hồ sơ chuẩn hóa trong vài phút.",
+    "steps": {
+      "listen": {
+        "title": "Ghi lại nhu cầu của gia đình",
+        "description": "Ngân sách, địa điểm, trình độ tiếng Anh, kỳ nhập học mong muốn — trong một biểu mẫu duy nhất, bằng ngôn ngữ của họ."
+      },
+      "match": {
+        "title": "Xem các trường phù hợp nhất",
+        "description": "Lọc theo hồ sơ của học sinh. Xem bài thi được chấp nhận và điểm tối thiểu của từng trường."
+      },
+      "deliver": {
+        "title": "Giao danh sách gọn gàng, không lộn xộn",
+        "description": "Một file PDF có thương hiệu mà gia đình có thể chụp màn hình và gửi cho bố. Không cần PDF từ mười lăm trường khác nhau."
+      }
+    },
+    "inboxLabel": "Hộp thư tuyển sinh",
+    "inboxRows": {
+      "scotch": {
+        "school": "Scotch College",
+        "location": "Hawthorn, VIC",
+        "status": "Phù hợp · AEAS 70+"
+      },
+      "brisbane": {
+        "school": "Brisbane Grammar",
+        "location": "Spring Hill, QLD",
+        "status": "Phù hợp · AEAS 68+"
+      },
+      "sydney": {
+        "school": "Sydney Grammar",
+        "location": "Darlinghurst, NSW",
+        "status": "Phù hợp · AEAS 65+"
+      }
+    }
+  },
+  "AgentsCommission": {
+    "eyebrow": "Phí dịch vụ",
+    "heading": "Bạn giữ lại 100% hoa hồng từ trường.",
+    "subheading": "Chúng tôi thu phí từ trường, không từ bạn. Mối quan hệ thương mại của bạn với các trường vẫn trực tiếp.",
+    "statValue": "$36,480",
+    "statLabel": "Hoa hồng trung bình 2026 được giữ lại mỗi tư vấn, nhóm Q1",
+    "bullets": {
+      "zero": {
+        "title": "Không phí theo từng học sinh",
+        "description": "Không chia hoa hồng. Không phí xếp chỗ. Không phí đăng ký."
+      },
+      "direct": {
+        "title": "Quan hệ trực tiếp với trường",
+        "description": "Quyền ghi nhận của bạn được khóa vào hồ sơ ngay khi bạn nộp."
+      },
+      "audit": {
+        "title": "Lịch sử kiểm tra đầy đủ",
+        "description": "Mọi thay đổi trạng thái đều có dấu thời gian. Tranh chấp kết thúc tại hồ sơ giấy tờ."
+      }
+    }
+  },
+  "AgentsQeacTrust": {
+    "eyebrow": "Đã xác minh",
+    "heading": "Một hồ sơ mà phụ huynh — và nhà trường — thực sự tin tưởng.",
+    "subheading": "Chứng chỉ QEAC của bạn được xác minh một lần. Huy hiệu và thành tích của bạn sẽ xuất hiện trên mọi hồ sơ bạn nộp.",
+    "profile": {
+      "name": "Hồ sơ tư vấn",
+      "qeac": "QEAC đã xác minh",
+      "yearsActive": "Năm hoạt động",
+      "students": "Học sinh đã xếp chỗ",
+      "placements": "Trường đã xếp chỗ",
+      "languages": "Ngôn ngữ sử dụng"
+    }
+  },
+  "AgentsScale": {
+    "eyebrow": "Mạng lưới",
+    "heading": "2.400 tư vấn được xác minh trên toàn APAC. Tăng trưởng mỗi tuần.",
+    "subheading": "Từ Shanghai đến Jakarta, Ho Chi Minh đến Seoul — các tư vấn đang kết nối gia đình với K–12 Australia.",
+    "agents": {
+      "a": {
+        "name": "Li Wei",
+        "region": "Shanghai · 中国",
+        "meta": "QEAC 12 năm · 148 lần xếp chỗ"
+      },
+      "b": {
+        "name": "Nguyễn Minh",
+        "region": "Ho Chi Minh · Việt Nam",
+        "meta": "QEAC 8 năm · 96 lần xếp chỗ"
+      },
+      "c": {
+        "name": "Siti Rahman",
+        "region": "Kuala Lumpur · Malaysia",
+        "meta": "QEAC 6 năm · 64 lần xếp chỗ"
+      },
+      "d": {
+        "name": "Ji-eun Park",
+        "region": "Seoul · 대한민국",
+        "meta": "QEAC 9 năm · 112 lần xếp chỗ"
+      }
+    },
+    "cta": "Đăng ký xác minh"
+  },
+  "AgentsTestimonial": {
+    "quote": "Trước đây tôi chuyển tiếp 40 file PDF mỗi tuần giữa phụ huynh và sáu phòng tuyển sinh. Bây giờ tôi chỉ làm một lần, và gia đình nhận được một thông báo trạng thái bằng tiếng Mandarin. Số lượng xếp chỗ của tôi tăng gấp ba.",
+    "attribution": "Mei, Shanghai · QEAC được xác minh từ 2018"
+  },
+  "AgentsFinalCta": {
+    "eyebrow": "Được xác minh",
+    "headingPrefix": "Danh mục của bạn",
+    "headingEmphasis": "xứng đáng",
+    "headingSuffix": "hơn thế.",
+    "subheading": "Miễn phí. Yêu cầu xác minh QEAC. Onboarding trong 48 giờ.",
+    "ctaPrimary": "Đăng ký xác minh",
+    "ctaSecondary": "Đặt lịch giới thiệu"
+  },
+  "SchoolsMetadata": {
+    "title": "SchoolGo — Lấp đầy chỉ tiêu quốc tế với ít email hơn",
+    "description": "Hộp thư tuyển sinh thống nhất cho các trường Úc. Tư vấn được xác minh QEAC, hồ sơ thực, không phí theo từng học sinh.",
+    "ogDescription": "Lấp đầy chỉ tiêu quốc tế của bạn. Với ít email hơn."
+  },
+  "SchoolsHero": {
+    "eyebrow": "Dành cho các trường Úc",
+    "headlinePrefix": "Lấp đầy",
+    "headlineEmphasis": "chỉ tiêu quốc tế",
+    "headlineSuffix": "của bạn. Với ít email hơn.",
+    "lede": "Một hồ sơ được xác minh, được các gia đình ở bảy quốc gia nhìn thấy. Nhận hồ sơ chuẩn hóa từ tư vấn được xác minh QEAC — đúng định dạng mà đội tuyển sinh của bạn đang dùng.",
+    "ctaPrimary": "Xác nhận hồ sơ trường",
+    "ctaSecondary": "Đặt lịch giới thiệu",
+    "inbox": {
+      "eyebrow": "Hộp thư hồ sơ",
+      "countLabel": "Tháng này",
+      "rows": {
+        "a": {
+          "name": "Sophie Chen",
+          "status": "Mới",
+          "meta": "VIC · Year 9 · AEAS 78"
+        },
+        "b": {
+          "name": "Minh Tran",
+          "status": "Đang xét",
+          "meta": "VIC · Year 11 · IELTS 6.5"
+        },
+        "c": {
+          "name": "Ji-woo Park",
+          "status": "Đã gửi thư mời",
+          "meta": "NSW · Year 10 · AEAS 74"
+        }
+      }
+    }
+  },
+  "SchoolsStats": {
+    "eyebrow": "Hiệu ứng mạng lưới",
+    "heading": "Một hồ sơ. Được các gia đình ở bảy quốc gia nhìn thấy.",
+    "subheading": "Thông tin trường của bạn xuất hiện trong mọi tìm kiếm, mọi so sánh, mọi danh sách gợi ý — bằng ngôn ngữ của gia đình.",
+    "items": {
+      "views": {
+        "value": "42,000+",
+        "label": "Lượt xem hồ sơ hàng tháng"
+      },
+      "countries": {
+        "value": "7",
+        "label": "Quốc gia nguồn"
+      },
+      "enquiries": {
+        "value": "168",
+        "label": "Trung bình hỏi thăm hàng tháng mỗi hồ sơ"
+      },
+      "applications": {
+        "value": "4,200+",
+        "label": "Hồ sơ được xử lý năm 2026"
+      }
+    }
+  },
+  "SchoolsThreeTools": {
+    "eyebrow": "Bộ công cụ",
+    "heading": "Ba công cụ. Một mục tiêu: đúng học sinh, ít việc hơn.",
+    "subheading": "SchoolGo cung cấp cho đội tuyển sinh ba thứ họ thực sự cần.",
+    "tools": {
+      "profile": {
+        "title": "Hồ sơ trường luôn cập nhật",
+        "description": "Học phí, kỳ tuyển sinh, bài thi được chấp nhận, học bổng và tài liệu — do bạn cập nhật, hiển thị bằng ngôn ngữ của gia đình."
+      },
+      "applications": {
+        "title": "Hồ sơ được chuẩn hóa",
+        "description": "Mọi hồ sơ đều đến theo cùng định dạng, với quy gán tư vấn được xác minh QEAC và đầy đủ tài liệu."
+      },
+      "inbox": {
+        "title": "Hộp thư tuyển sinh duy nhất",
+        "description": "Theo dõi trạng thái mọi hồ sơ. Mời nhập học, xếp danh sách chờ hoặc từ chối chỉ bằng một cú nhấp. Gia đình và tư vấn nhận cập nhật ngay lập tức."
+      }
+    }
+  },
+  "SchoolsTimeline": {
+    "eyebrow": "Hành trình tuyển sinh",
+    "heading": "Từ hồ sơ đầu tiên đến ngày khai giảng — không loay hoay với hộp thư.",
+    "subheading": "Toàn bộ chu trình tuyển sinh quốc tế, trong một nơi.",
+    "steps": {
+      "receive": {
+        "title": "Nhận hồ sơ",
+        "description": "Hồ sơ đến hộp thư kèm điểm tiếng Anh, tài liệu và tư vấn đã xác minh."
+      },
+      "review": {
+        "title": "Xét duyệt",
+        "description": "Đội của bạn đánh giá theo tiêu chí riêng. Ghi chú chỉ hiển thị nội bộ."
+      },
+      "decide": {
+        "title": "Quyết định",
+        "description": "Mời nhập học, xếp danh sách chờ hoặc từ chối chỉ bằng một cú nhấp. Trạng thái gửi ngay đến gia đình và tư vấn."
+      },
+      "onboard": {
+        "title": "Nhập học",
+        "description": "Chia sẻ giấy tờ ngày nhập học, thông tin chỗ ở và đường dẫn định hướng — tất cả trong một luồng hội thoại."
+      }
+    }
+  },
+  "SchoolsPricing": {
+    "eyebrow": "Bảng giá",
+    "heading": "Không phí theo tư vấn. Không hoa hồng. Một gói hàng năm.",
+    "subheading": "Các trường hỗ trợ SchoolGo trả một khoản phí hàng năm minh bạch. Gia đình và tư vấn không phải trả.",
+    "plans": {
+      "listing": {
+        "name": "Đăng ký cơ bản",
+        "price": "Free",
+        "priceMeta": "Vĩnh viễn",
+        "features": {
+          "a": "Hồ sơ CRICOS của bạn, tự động xuất bản",
+          "b": "Bài thi tiếng Anh được chấp nhận + điểm tối thiểu",
+          "c": "Hộp thư hồ sơ chuẩn hóa"
+        },
+        "cta": "Xác nhận hồ sơ của bạn"
+      },
+      "admissions": {
+        "name": "Tuyển sinh",
+        "price": "$12,800",
+        "priceMeta": "AUD / năm",
+        "badge": "Phổ biến nhất",
+        "features": {
+          "a": "Tất cả trong Đăng ký cơ bản",
+          "b": "Quy trình mời / danh sách chờ / từ chối",
+          "c": "Thư mục tư vấn được xác minh QEAC",
+          "d": "Dịch sang bảy ngôn ngữ trên mọi trang hồ sơ"
+        },
+        "cta": "Bắt đầu tuyển sinh"
+      },
+      "network": {
+        "name": "Mạng lưới",
+        "price": "Custom",
+        "priceMeta": "Dành cho tập đoàn nhiều cơ sở",
+        "features": {
+          "a": "Tất cả trong Tuyển sinh",
+          "b": "Hộp thư tập trung giữa các cơ sở",
+          "c": "Hỗ trợ ưu tiên + báo cáo tùy chỉnh"
+        },
+        "cta": "Liên hệ với chúng tôi"
+      }
+    }
+  },
+  "SchoolsTestimonial": {
+    "quote": "Chúng tôi lấp đầy chỉ tiêu nội trú 2026 vào tháng Bảy. SchoolGo không chỉ mang đến nhiều hồ sơ hơn — mà mang đến những ứng viên chúng tôi thực sự có thể nhận.",
+    "attribution": "Giám đốc Tuyển sinh · Trường ngày và nội trú tư thục, VIC"
+  },
+  "SchoolsFinalCta": {
+    "eyebrow": "Bắt đầu tại đây",
+    "headingPrefix": "Kỳ tuyển sinh tiếp theo của bạn",
+    "headingEmphasis": "bắt đầu",
+    "headingSuffix": "ở đây.",
+    "subheading": "Đăng ký miễn phí. Không cần thẻ tín dụng. Xác nhận trong 10 phút.",
+    "ctaPrimary": "Xác nhận hồ sơ trường",
+    "ctaSecondary": "Đặt lịch giới thiệu"
+  },
   "Navbar": {
     "brand": "School",
     "brandAccent": "Go",

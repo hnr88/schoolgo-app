@@ -16,7 +16,11 @@ const LOCALE_LABELS: Record<string, string> = {
   th: 'ภาษาไทย',
 };
 
-export function LanguageSelector() {
+interface LanguageSelectorProps {
+  placement?: 'up' | 'down';
+}
+
+export function LanguageSelector({ placement = 'up' }: LanguageSelectorProps = {}) {
   const locale = useLocale();
   const router = useRouter();
   const pathname = usePathname();
@@ -61,7 +65,10 @@ export function LanguageSelector() {
         <ul
           role='listbox'
           aria-label='Select language'
-          className='absolute bottom-full mb-2 left-0 min-w-48 bg-surface-container-lowest rounded-xl shadow-xl shadow-on-surface/10 border border-outline-variant/20 z-50 overflow-hidden'
+          className={cn(
+            'absolute left-0 min-w-48 bg-surface-container-lowest rounded-xl shadow-xl shadow-on-surface/10 border border-outline-variant/20 z-50 overflow-hidden',
+            placement === 'up' ? 'bottom-full mb-2' : 'top-full mt-2',
+          )}
         >
           {routing.locales.map((loc) => (
             <li key={loc} role='option' aria-selected={loc === locale}>

@@ -4,6 +4,563 @@
     "description": "Search and compare the best schools across Australia. Filter by curriculum, price, location and more.",
     "ogDescription": "Search and compare the best schools across Australia."
   },
+  "ParentsMetadata": {
+    "title": "SchoolGo — Find your child's Australian school",
+    "description": "Search every CRICOS-registered Australian school. Compare fees, English test requirements, and intakes — in seven languages, for free.",
+    "ogDescription": "Every CRICOS school. Verified. In your language."
+  },
+  "MarketingHeader": {
+    "findSchools": "Find schools",
+    "audiences": {
+      "parents": "Parents",
+      "agents": "Agents",
+      "schools": "Schools"
+    },
+    "language": "Language",
+    "signIn": "Sign in",
+    "getStarted": "Get started",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "MarketingFooter": {
+    "tagline": "Connecting future leaders with Australia's best schools — across the continent, in seven languages.",
+    "columns": {
+      "parents": {
+        "title": "For parents",
+        "links": {
+          "findSchools": "Find schools",
+          "compare": "Compare",
+          "scholarships": "Scholarships",
+          "english": "English tests"
+        }
+      },
+      "agents": {
+        "title": "For agents",
+        "links": {
+          "overview": "Agents overview",
+          "qeac": "QEAC verification",
+          "pipeline": "Pipeline tools",
+          "login": "Agent login"
+        }
+      },
+      "schools": {
+        "title": "For schools",
+        "links": {
+          "overview": "Schools overview",
+          "claim": "Claim profile",
+          "login": "School login",
+          "pricing": "Pricing"
+        }
+      },
+      "resources": {
+        "title": "Resources",
+        "links": {
+          "help": "Help centre",
+          "contact": "Contact",
+          "privacy": "Privacy",
+          "terms": "Terms"
+        }
+      }
+    },
+    "language": "Language",
+    "copyright": "© {year, number} SchoolGo Australia. All rights reserved.",
+    "attribution": "Sourced from data.gov.au · CC BY 2.5 AU · ESOS Act compliant"
+  },
+  "ParentsHero": {
+    "trustPill": {
+      "brand": "CRICOS",
+      "brandAccent": "Verified",
+      "source": "data from data.gov.au"
+    },
+    "headlinePrefix": "Find your child's",
+    "headlineEmphasis": "Australian",
+    "headlineSuffix": "school.",
+    "lede": "Every CRICOS-registered K–12 school in one place. Compare fees, boarding, English tests — search in Mandarin, Korean, Thai, Vietnamese, Malay, Bahasa, or English.",
+    "searchAriaLabel": "Search schools",
+    "searchFields": {
+      "where": {
+        "label": "Where",
+        "value": "Anywhere in Australia"
+      },
+      "yearLevel": {
+        "label": "Year level",
+        "value": "Year 7 – Year 12"
+      },
+      "fees": {
+        "label": "Fees",
+        "value": "$15k – $45k AUD"
+      }
+    },
+    "searchButtonLabel": "Search",
+    "featured": {
+      "eyebrow": "Featured",
+      "shortlistAdd": "Add {name} to shortlist",
+      "shortlistRemove": "Remove {name} from shortlist",
+      "cards": {
+        "a": {
+          "name": "Scotch College Melbourne",
+          "location": "Hawthorn, VIC",
+          "curriculum": "VCE",
+          "fee": "$38.5k AUD",
+          "boarding": "Boarding"
+        },
+        "b": {
+          "name": "Sydney Grammar School",
+          "location": "Darlinghurst, NSW",
+          "curriculum": "HSC",
+          "fee": "$41.2k AUD",
+          "boarding": "Day only"
+        },
+        "c": {
+          "name": "Brisbane Grammar School",
+          "location": "Spring Hill, QLD",
+          "curriculum": "QCE/IB",
+          "fee": "$35.8k AUD",
+          "boarding": "Boarding"
+        }
+      }
+    }
+  },
+  "ParentsFourSteps": {
+    "eyebrow": "How it works",
+    "heading": "From first browse to offer letter — four simple steps.",
+    "subheading": "No hidden fees. No login required until you apply.",
+    "steps": {
+      "browse": {
+        "title": "Browse every CRICOS school",
+        "description": "Filter {count, number} schools by state, fees, sector, curriculum, boarding, and scholarships — in your language."
+      },
+      "shortlist": {
+        "title": "Shortlist four. Compare side by side",
+        "description": "Line up fees, intakes, ICSEA, and accepted English tests. Decide in minutes, not months."
+      },
+      "prepare": {
+        "title": "See exact requirements",
+        "description": "Every listing shows accepted tests, minimum scores, documents, and intake windows."
+      },
+      "apply": {
+        "title": "Apply through a verified agent",
+        "description": "Your agent carries a QEAC badge. Applications are tracked end-to-end in one dashboard."
+      }
+    },
+    "ctaBrowse": "Start browsing",
+    "ctaLearn": "See how it works"
+  },
+  "ParentsVerified": {
+    "eyebrow": "Every CRICOS school",
+    "heading": "Verified. In your language.",
+    "subheading": "Real building photos. Real fees. Real intake calendars. School data is sourced from CRICOS and ACARA, refreshed monthly.",
+    "cards": {
+      "a": {
+        "name": "Scotch College",
+        "location": "Hawthorn, VIC",
+        "sector": "Independent"
+      },
+      "b": {
+        "name": "Sydney Grammar",
+        "location": "Darlinghurst, NSW",
+        "sector": "Independent"
+      },
+      "c": {
+        "name": "Brisbane Grammar",
+        "location": "Spring Hill, QLD",
+        "sector": "Independent"
+      },
+      "d": {
+        "name": "Christ Church Grammar",
+        "location": "Claremont, WA",
+        "sector": "Independent"
+      }
+    }
+  },
+  "ParentsComparison": {
+    "eyebrow": "Compare",
+    "heading": "Put the schools next to each other.",
+    "headingAccent": "Decide in minutes, not months.",
+    "subheading": "Side-by-side comparison of up to four schools. Fees, ICSEA, accepted English tests, intakes, boarding.",
+    "columns": {
+      "school": "School",
+      "location": "Location",
+      "sector": "Sector",
+      "fee": "Annual fee",
+      "icsea": "ICSEA",
+      "tests": "Accepted tests",
+      "intakes": "Intakes"
+    },
+    "notPublished": "Not published"
+  },
+  "ParentsPickATest": {
+    "eyebrow": "English proficiency",
+    "heading": "Pick a test. See which schools accept it —",
+    "headingAccent": "and the minimum scores.",
+    "subheading": "We map accepted English tests across every profile. No more digging through 50 school websites.",
+    "tests": {
+      "aeas": "AEAS",
+      "idat": "iDAT",
+      "duolingo": "Duolingo",
+      "ielts": "IELTS",
+      "pte": "PTE Academic",
+      "cambridge": "Cambridge",
+      "toefl": "TOEFL"
+    },
+    "cta": "See schools accepting this test"
+  },
+  "ParentsSevenLanguages": {
+    "eyebrow": "Seven languages",
+    "heading": "Families shouldn't need to translate a fee schedule at midnight.",
+    "subheading": "SchoolGo is translated end-to-end into seven of the most common languages across the Asia-Pacific corridor.",
+    "languages": {
+      "en": "English",
+      "zh": "简体中文",
+      "vi": "Tiếng Việt",
+      "ko": "한국어",
+      "ms": "Bahasa Melayu",
+      "th": "ภาษาไทย",
+      "id": "Bahasa Indonesia"
+    }
+  },
+  "ParentsArticles": {
+    "eyebrow": "Admissions library",
+    "heading": "Written by admissions officers. Translated into seven languages.",
+    "subheading": "Plain-English guides to visas, intakes, English tests, and fee schedules. Free, no login.",
+    "items": {
+      "intakes": {
+        "title": "Understanding Australian school intakes",
+        "meta": "6 min read · Updated monthly"
+      },
+      "englishTests": {
+        "title": "Which English test does your school accept?",
+        "meta": "8 min read · Test-by-test breakdown"
+      },
+      "boarding": {
+        "title": "Boarding vs day: what families choose and why",
+        "meta": "5 min read · Case studies"
+      }
+    },
+    "readMore": "Read article"
+  },
+  "ParentsFinalCta": {
+    "eyebrow": "Start here",
+    "headingPrefix": "Your search",
+    "headingEmphasis": "starts",
+    "headingSuffix": "in seven languages.",
+    "subheading": "Free. No login required. Updated {month} {year, number}.",
+    "ctaPrimary": "Find your school",
+    "ctaSecondary": "Talk to a verified agent"
+  },
+  "AgentsMetadata": {
+    "title": "SchoolGo — Run your agent practice like a portfolio",
+    "description": "QEAC-verified tools for education agents placing students into Australian schools. Standardised applications, live pipeline, full commission.",
+    "ogDescription": "Run your practice like a portfolio. Keep 100% of your commission."
+  },
+  "AgentsHero": {
+    "eyebrow": "For education agents · QEAC-backed",
+    "headlinePrefix": "Run your practice",
+    "headlineEmphasis": "like a portfolio.",
+    "lede": "One verified profile. {count, number} CRICOS schools. A pipeline your families can see. SchoolGo charges the schools, not you.",
+    "ctaPrimary": "Apply for verification",
+    "ctaSecondary": "See how it works",
+    "stats": {
+      "schools": {
+        "value": "{count, number}",
+        "label": "Verified CRICOS schools"
+      },
+      "agents": {
+        "value": "2,400+",
+        "label": "Verified agents across APAC"
+      },
+      "commission": {
+        "value": "100%",
+        "label": "Of your commission kept"
+      }
+    }
+  },
+  "AgentsPainPoints": {
+    "eyebrow": "The old way",
+    "heading": "Stop juggling spreadsheets, WeChat threads, and school admission inboxes.",
+    "subheading": "Every student, every application, every school requirement — in one workspace.",
+    "items": {
+      "spreadsheets": {
+        "title": "One list, not fifteen tabs",
+        "description": "Track every student's stage, deadlines, and documents — without maintaining a parallel spreadsheet."
+      },
+      "wechat": {
+        "title": "Families see the same screen you do",
+        "description": "Status updates flow to parents automatically, in their language. You spend less time answering 'any news yet?'"
+      },
+      "admissions": {
+        "title": "Standardised submissions",
+        "description": "One application format. One place to upload documents. One inbox for replies — instead of fifteen."
+      }
+    }
+  },
+  "AgentsMatching": {
+    "eyebrow": "Match · Apply · Track",
+    "heading": "Parent call at 10am. Three matched schools by 10:30.",
+    "subheading": "SchoolGo surfaces the right schools by state, fees, English level, and intake — then lets you submit a standardised application in minutes.",
+    "steps": {
+      "listen": {
+        "title": "Capture what the family wants",
+        "description": "Budget, location, English level, desired intake — in one form, in their language."
+      },
+      "match": {
+        "title": "See best-fit schools",
+        "description": "Filtered by your student's profile. See accepted tests and minimum scores per school."
+      },
+      "deliver": {
+        "title": "Deliver a shortlist, not a mess",
+        "description": "A branded PDF the family can screenshot and send to Dad. No PDFs from fifteen different schools."
+      }
+    },
+    "inboxLabel": "Admissions inbox",
+    "inboxRows": {
+      "scotch": {
+        "school": "Scotch College",
+        "location": "Hawthorn, VIC",
+        "status": "Match · AEAS 70+"
+      },
+      "brisbane": {
+        "school": "Brisbane Grammar",
+        "location": "Spring Hill, QLD",
+        "status": "Match · AEAS 68+"
+      },
+      "sydney": {
+        "school": "Sydney Grammar",
+        "location": "Darlinghurst, NSW",
+        "status": "Match · AEAS 65+"
+      }
+    }
+  },
+  "AgentsCommission": {
+    "eyebrow": "Pricing",
+    "heading": "You keep 100% of your school commission.",
+    "subheading": "We charge the schools, not you. Your commercial relationship with schools stays direct.",
+    "statValue": "$36,480",
+    "statLabel": "Average 2026 commission retained per agent, Q1 cohort",
+    "bullets": {
+      "zero": {
+        "title": "Zero per-student fees",
+        "description": "No commission split. No placement fee. No subscription."
+      },
+      "direct": {
+        "title": "Direct relationship with schools",
+        "description": "Your attribution is locked to the application the moment you submit."
+      },
+      "audit": {
+        "title": "Full audit trail",
+        "description": "Every status change timestamped. Disputes end at the paper trail."
+      }
+    }
+  },
+  "AgentsQeacTrust": {
+    "eyebrow": "Verified",
+    "heading": "A profile parents — and schools — actually trust.",
+    "subheading": "Your QEAC credential is verified once. Your badge and track record appear on every application you submit.",
+    "profile": {
+      "name": "Agent profile",
+      "qeac": "QEAC Verified",
+      "yearsActive": "Years active",
+      "students": "Students placed",
+      "placements": "Schools placed into",
+      "languages": "Spoken languages"
+    }
+  },
+  "AgentsScale": {
+    "eyebrow": "Network",
+    "heading": "2,400 verified agents across APAC. Growing every week.",
+    "subheading": "From Shanghai to Jakarta, Ho Chi Minh to Seoul — agents placing families into Australian K–12.",
+    "agents": {
+      "a": {
+        "name": "Li Wei",
+        "region": "Shanghai · 中国",
+        "meta": "QEAC 12 years · 148 placements"
+      },
+      "b": {
+        "name": "Nguyễn Minh",
+        "region": "Ho Chi Minh · Việt Nam",
+        "meta": "QEAC 8 years · 96 placements"
+      },
+      "c": {
+        "name": "Siti Rahman",
+        "region": "Kuala Lumpur · Malaysia",
+        "meta": "QEAC 6 years · 64 placements"
+      },
+      "d": {
+        "name": "Ji-eun Park",
+        "region": "Seoul · 대한민국",
+        "meta": "QEAC 9 years · 112 placements"
+      }
+    },
+    "cta": "Apply for verification"
+  },
+  "AgentsTestimonial": {
+    "quote": "I used to forward 40 PDFs a week between parents and six admissions offices. Now I do it once, and the families see one status update in Mandarin. My placement volume tripled.",
+    "attribution": "Mei, Shanghai · QEAC-verified since 2018"
+  },
+  "AgentsFinalCta": {
+    "eyebrow": "Get verified",
+    "headingPrefix": "Your portfolio",
+    "headingEmphasis": "deserves",
+    "headingSuffix": "better.",
+    "subheading": "Free. QEAC verification required. Onboarding takes 48 hours.",
+    "ctaPrimary": "Apply for verification",
+    "ctaSecondary": "Book a walkthrough"
+  },
+  "SchoolsMetadata": {
+    "title": "SchoolGo — Fill your international seats with less email",
+    "description": "One standardised admissions inbox for Australian schools. QEAC-verified agents, real applications, no per-student fees.",
+    "ogDescription": "Fill your international seats. With less email."
+  },
+  "SchoolsHero": {
+    "eyebrow": "For Australian schools",
+    "headlinePrefix": "Fill your",
+    "headlineEmphasis": "international",
+    "headlineSuffix": "seats. With less email.",
+    "lede": "One verified profile, seen by families in seven countries. Receive standardised applications from QEAC-verified agents — in the formats your admissions team already uses.",
+    "ctaPrimary": "Claim your school profile",
+    "ctaSecondary": "Book a walkthrough",
+    "inbox": {
+      "eyebrow": "Applications inbox",
+      "countLabel": "This month",
+      "rows": {
+        "a": {
+          "name": "Sophie Chen",
+          "status": "New",
+          "meta": "VIC · Year 9 · AEAS 78"
+        },
+        "b": {
+          "name": "Minh Tran",
+          "status": "Reviewing",
+          "meta": "VIC · Year 11 · IELTS 6.5"
+        },
+        "c": {
+          "name": "Ji-woo Park",
+          "status": "Offer sent",
+          "meta": "NSW · Year 10 · AEAS 74"
+        }
+      }
+    }
+  },
+  "SchoolsStats": {
+    "eyebrow": "The network effect",
+    "heading": "One profile. Seen by families in seven countries.",
+    "subheading": "Your listing shows up in every search, every comparison, every matched shortlist — in the family's language.",
+    "items": {
+      "views": {
+        "value": "42,000+",
+        "label": "Monthly profile views"
+      },
+      "countries": {
+        "value": "7",
+        "label": "Source countries"
+      },
+      "enquiries": {
+        "value": "168",
+        "label": "Avg monthly enquiries per profile"
+      },
+      "applications": {
+        "value": "4,200+",
+        "label": "Applications processed in 2026"
+      }
+    }
+  },
+  "SchoolsThreeTools": {
+    "eyebrow": "The toolkit",
+    "heading": "Three tools. One goal: the right students, with less work.",
+    "subheading": "SchoolGo gives your admissions team the three things they actually need.",
+    "tools": {
+      "profile": {
+        "title": "A living school profile",
+        "description": "Fees, intakes, accepted tests, scholarship offers, and documents — updated by you, displayed in the family's language."
+      },
+      "applications": {
+        "title": "Standardised applications",
+        "description": "Every application arrives in the same format, with QEAC-verified agent attribution and complete documentation."
+      },
+      "inbox": {
+        "title": "A single admissions inbox",
+        "description": "Status-track every application. Offer, waitlist, or decline in one click. Families and agents see the status update instantly."
+      }
+    }
+  },
+  "SchoolsTimeline": {
+    "eyebrow": "The journey",
+    "heading": "From first application to first day of term — without the inbox soup.",
+    "subheading": "Every step of the international admissions lifecycle, in one place.",
+    "steps": {
+      "receive": {
+        "title": "Receive",
+        "description": "Application lands in your inbox with English scores, documents, and verified agent."
+      },
+      "review": {
+        "title": "Review",
+        "description": "Your team assesses against your own rubric. Notes stay internal."
+      },
+      "decide": {
+        "title": "Decide",
+        "description": "Offer, waitlist, or decline in one click. Status flows to family and agent instantly."
+      },
+      "onboard": {
+        "title": "Onboard",
+        "description": "Share intake-day paperwork, accommodation info, and orientation links — all in one thread."
+      }
+    }
+  },
+  "SchoolsPricing": {
+    "eyebrow": "Pricing",
+    "heading": "No per-agent fees. No commissions. One annual plan.",
+    "subheading": "The schools that power SchoolGo pay one transparent annual fee. Families and agents never pay.",
+    "plans": {
+      "listing": {
+        "name": "Listing",
+        "price": "Free",
+        "priceMeta": "Forever",
+        "features": {
+          "a": "Your CRICOS profile, auto-published",
+          "b": "Accepted English tests + minimum scores",
+          "c": "Standardised application inbox"
+        },
+        "cta": "Claim your profile"
+      },
+      "admissions": {
+        "name": "Admissions",
+        "price": "$12,800",
+        "priceMeta": "AUD / year",
+        "badge": "Most popular",
+        "features": {
+          "a": "Everything in Listing",
+          "b": "Offer / waitlist / decline workflow",
+          "c": "QEAC-verified agent directory",
+          "d": "Seven-language translation on every profile page"
+        },
+        "cta": "Start admissions"
+      },
+      "network": {
+        "name": "Network",
+        "price": "Custom",
+        "priceMeta": "For multi-campus groups",
+        "features": {
+          "a": "Everything in Admissions",
+          "b": "Centralised inbox across campuses",
+          "c": "Priority support + custom reports"
+        },
+        "cta": "Talk to us"
+      }
+    }
+  },
+  "SchoolsTestimonial": {
+    "quote": "We filled our 2026 boarding intake by July. SchoolGo didn't just bring us more applications — it brought us applicants we could actually say yes to.",
+    "attribution": "Director of Admissions · Independent day & boarding school, VIC"
+  },
+  "SchoolsFinalCta": {
+    "eyebrow": "Start here",
+    "headingPrefix": "Your next intake",
+    "headingEmphasis": "starts",
+    "headingSuffix": "here.",
+    "subheading": "Free listing. No credit card. Claim takes 10 minutes.",
+    "ctaPrimary": "Claim your school profile",
+    "ctaSecondary": "Book a walkthrough"
+  },
   "Navbar": {
     "brand": "School",
     "brandAccent": "Go",

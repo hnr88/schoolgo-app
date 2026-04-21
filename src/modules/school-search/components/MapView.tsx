@@ -11,9 +11,12 @@ const LeafletMap = dynamic(
   {
     ssr: false,
     loading: () => (
-      <div className='w-full h-full bg-surface-container-low rounded-3xl flex items-center justify-center'>
-        <span className='text-xs font-bold text-on-surface-variant uppercase tracking-widest animate-pulse'>
-          Loading map...
+      <div className='flex h-full w-full items-center justify-center rounded-lg bg-muted'>
+        <span
+          className='animate-pulse text-caption font-semibold uppercase text-foggy'
+          style={{ letterSpacing: '0.08em' }}
+        >
+          Loading map…
         </span>
       </div>
     ),
@@ -22,7 +25,7 @@ const LeafletMap = dynamic(
 
 export function MapView() {
   return (
-    <div className='w-full h-full rounded-3xl overflow-hidden shadow-xl shadow-on-surface/5'>
+    <div className='h-full w-full overflow-hidden rounded-lg border border-border shadow-2'>
       <LeafletMap schools={MOCK_SCHOOLS} />
     </div>
   );

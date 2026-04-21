@@ -2,24 +2,55 @@
 @import 'tw-animate-css';
 @import 'shadcn/tailwind.css';
 
+/* =========================================================
+   SchoolGo · Airbnb-inspired Design System
+   Palette + radii + shadows verbatim from /Users/zsolt.ienei/Desktop/
+   SchoolGo Design System (1)/colors_and_type.css.
+   Hex values converted to OKLCH per project rules.
+   ========================================================= */
+
+@font-face {
+  font-family: 'Google Sans';
+  src: url('/fonts/GoogleSans-Variable.ttf') format('truetype-variations'),
+       url('/fonts/GoogleSans-Variable.ttf') format('truetype');
+  font-weight: 400 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Google Sans';
+  src: url('/fonts/GoogleSans-Italic-Variable.ttf') format('truetype-variations'),
+       url('/fonts/GoogleSans-Italic-Variable.ttf') format('truetype');
+  font-weight: 400 800;
+  font-style: italic;
+  font-display: swap;
+}
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  /* Font */
-  --font-sans: var(--font-sans);
-  --font-mono: var(--font-mono);
-  --font-heading: var(--font-sans);
+  /* Fonts */
+  --font-sans: 'Google Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', sans-serif;
+  --font-display: 'Google Sans', sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+  --font-heading: var(--font-display);
 
-  /* SchoolGo design tokens */
-  --container-content: 90rem;
+  /* Layout tokens */
+  --container-content: 75rem;             /* 1200px — Airbnb marketing max */
+  --container-wide: 85rem;                /* 1360px — dashboards */
+  --max-width-content: 75rem;
+  --max-width-wide: 85rem;
   --spacing-sidebar: 18rem;
   --spacing-results-panel: 18.75rem;
-  --text-caption: 0.625rem;
-  --text-caption-line-height: 0.875rem;
-  --text-caption-xs: 0.5rem;
-  --text-caption-xs-line-height: 0.75rem;
 
-  /* Shadcn standard color mappings */
+  /* Type scale micros (Airbnb eyebrow) */
+  --text-caption: 0.6875rem;              /* 11px */
+  --text-caption-line-height: 0.875rem;
+  --text-label: 0.75rem;                  /* 12px */
+  --text-label-line-height: 1rem;
+
+  /* Shadcn semantic mapping */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -56,16 +87,20 @@
   --color-chart-4: var(--chart-4);
   --color-chart-5: var(--chart-5);
 
-  /* Border radii */
-  --radius-sm: calc(var(--radius) * 0.5);
-  --radius-md: calc(var(--radius) * 0.75);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) * 1.5);
-  --radius-2xl: calc(var(--radius) * 2);
-  --radius-3xl: calc(var(--radius) * 2.5);
-  --radius-4xl: calc(var(--radius) * 3);
+  /* Radii (Airbnb) */
+  --radius-xs: 0.25rem;      /*  4px */
+  --radius-sm: 0.5rem;       /*  8px */
+  --radius-md: 0.75rem;      /* 12px — inputs */
+  --radius-lg: 1rem;         /* 16px — cards */
+  --radius-xl: 1.25rem;      /* 20px */
+  --radius-2xl: 1.75rem;     /* 28px — modal */
+  --radius-pill: 999px;      /* pill buttons / chips */
+  /* Legacy aliases (keep existing components compiling) */
+  --radius-3xl: 1.75rem;
+  --radius-4xl: 2.25rem;
 
-  /* SchoolGo extended surface scale */
+  /* Material-ish surface / foreground aliases — re-mapped to Airbnb values so
+     existing components compile but render with the new palette. */
   --color-surface: var(--surface);
   --color-surface-bright: var(--surface-bright);
   --color-surface-dim: var(--surface-dim);
@@ -76,174 +111,248 @@
   --color-surface-container-highest: var(--surface-container-highest);
   --color-surface-variant: var(--surface-variant);
 
-  /* SchoolGo on-surface */
   --color-on-surface: var(--on-surface);
   --color-on-surface-variant: var(--on-surface-variant);
   --color-on-background: var(--on-background);
 
-  /* SchoolGo primary extended */
   --color-on-primary: var(--on-primary);
   --color-primary-container: var(--primary-container);
   --color-on-primary-container: var(--on-primary-container);
 
-  /* SchoolGo secondary extended */
   --color-secondary-container: var(--secondary-container);
   --color-on-secondary-container: var(--on-secondary-container);
 
-  /* SchoolGo outline */
   --color-outline: var(--outline);
   --color-outline-variant: var(--outline-variant);
+
+  /* Brand scales — Airbnb Rausch + Babu + Arches */
+  --color-rausch-50: var(--rausch-50);
+  --color-rausch-100: var(--rausch-100);
+  --color-rausch-200: var(--rausch-200);
+  --color-rausch-300: var(--rausch-300);
+  --color-rausch-400: var(--rausch-400);
+  --color-rausch-500: var(--rausch-500);
+  --color-rausch-600: var(--rausch-600);
+  --color-rausch-700: var(--rausch-700);
+  --color-rausch-800: var(--rausch-800);
+
+  --color-babu-50: var(--babu-50);
+  --color-babu-100: var(--babu-100);
+  --color-babu-500: var(--babu-500);
+  --color-babu-600: var(--babu-600);
+  --color-babu-700: var(--babu-700);
+
+  --color-arches-50: var(--arches-50);
+  --color-arches-100: var(--arches-100);
+  --color-arches-500: var(--arches-500);
+  --color-arches-600: var(--arches-600);
+  --color-arches-700: var(--arches-700);
+
+  /* Trust + featured semantic aliases */
+  --color-trust: var(--babu-500);
+  --color-trust-soft: var(--babu-50);
+  --color-trust-ink: var(--babu-700);
+  --color-featured: var(--arches-500);
+  --color-featured-soft: var(--arches-50);
+  --color-featured-ink: var(--arches-700);
+
+  /* Neutral ink + greys (Airbnb) */
+  --color-ink-900: var(--ink-900);
+  --color-hof: var(--hof);
+  --color-foggy: var(--foggy);
+  --color-quill: var(--quill);
+  --color-divider: var(--divider);
 }
 
 :root {
   /* Base */
   --radius: 1rem;
 
-  /* Shadcn standard vars — SchoolGo "Red & Bone" palette (OKLCH) */
-  /* Extracted from DESIGN.md "Academic Luminary" spec */
-  --background: oklch(0.993 0.003 27.2);     /* near-white with subtle warmth */
-  --foreground: oklch(0.321 0.022 27.1);     /* #3e2f2d — warm charcoal */
-  --card: oklch(1.000 0 0);                   /* #ffffff */
-  --card-foreground: oklch(0.321 0.022 27.1); /* #3e2f2d */
-  --popover: oklch(1.000 0 0);                /* #ffffff */
-  --popover-foreground: oklch(0.321 0.022 27.1); /* #3e2f2d */
-  --primary: oklch(0.509 0.192 26.2);         /* #bb1b21 — Signature red */
-  --primary-foreground: oklch(0.982 0.009 26.0); /* #fff7f6 */
-  --secondary: oklch(0.491 0.044 24.7);       /* #785754 */
-  --secondary-foreground: oklch(0.982 0.009 26.0); /* #fff7f6 */
-  --muted: oklch(0.950 0.023 24.1);           /* #fee9e7 — surface-container */
-  --muted-foreground: oklch(0.488 0.024 25.5); /* #6d5b59 — on-surface-variant */
-  --accent: oklch(0.933 0.024 23.9);           /* #f9e3e1 — surface-container-high */
-  --accent-foreground: oklch(0.321 0.022 27.1); /* #3e2f2d */
-  --destructive: oklch(0.505 0.149 13.5);      /* #a8364b */
-  --border: oklch(0.766 0.026 27.0);           /* #c3adaa — outline-variant */
-  --input: oklch(0.917 0.028 25.9);            /* #f6ddda — surface-container-highest */
-  --ring: oklch(0.509 0.192 26.2);             /* #bb1b21 */
+  /* ========== Rausch scale (coral red, hue ≈ 18) ========== */
+  --rausch-50:  oklch(0.956 0.014 18);   /* #FFF1F2 */
+  --rausch-100: oklch(0.916 0.033 18);   /* #FFE0E2 */
+  --rausch-200: oklch(0.852 0.066 18);   /* #FFC2C5 */
+  --rausch-300: oklch(0.770 0.114 18);   /* #FF9498 */
+  --rausch-400: oklch(0.725 0.156 18);   /* #FF7478 */
+  --rausch-500: oklch(0.685 0.188 18);   /* #FF5A5F — Rausch */
+  --rausch-600: oklch(0.610 0.195 22);   /* #E84349 — hover */
+  --rausch-700: oklch(0.497 0.195 26);   /* #C02B30 — pressed */
+  --rausch-800: oklch(0.382 0.156 27);   /* #8F1F22 */
 
-  /* Charts */
-  --chart-1: oklch(0.509 0.192 26.2);         /* primary */
-  --chart-2: oklch(0.672 0.213 26.3);         /* primary-container */
-  --chart-3: oklch(0.491 0.044 24.7);         /* secondary */
-  --chart-4: oklch(0.489 0.080 71.8);         /* tertiary #7c5828 */
-  --chart-5: oklch(0.584 0.025 24.7);         /* outline */
+  /* ========== Babu teal (hue ≈ 176) ========== */
+  --babu-50:  oklch(0.951 0.015 174);    /* #E7F4F1 */
+  --babu-100: oklch(0.901 0.032 174);    /* #CBE8E1 */
+  --babu-500: oklch(0.556 0.086 176);    /* #1F8E7D — Babu */
+  --babu-600: oklch(0.456 0.072 176);    /* #167264 */
+  --babu-700: oklch(0.358 0.054 177);    /* #0F574C */
+
+  /* ========== Arches orange (hue ≈ 38) ========== */
+  --arches-50:  oklch(0.960 0.013 48);   /* #FFF2EC */
+  --arches-100: oklch(0.908 0.041 47);   /* #FFDDCC */
+  --arches-500: oklch(0.672 0.186 38);   /* #FC642D — Arches */
+  --arches-600: oklch(0.593 0.190 35);   /* #E34E17 */
+  --arches-700: oklch(0.479 0.160 34);   /* #B13A0E */
+
+  /* ========== Neutrals (Airbnb) ========== */
+  --ink-900: oklch(0.236 0 0);           /* #222222 — headings deeper than Hof */
+  --hof:     oklch(0.357 0 0);           /* #484848 — body text */
+  --foggy:   oklch(0.546 0 0);           /* #767676 — secondary */
+  --quill:   oklch(0.737 0 0);           /* #B0B0B0 — disabled / placeholder */
+  --divider: oklch(0.931 0 0);           /* #EBEBEB — hairline */
+
+  /* ========== Shadcn semantic tokens ========== */
+  --background: oklch(1 0 0);                      /* #FFFFFF */
+  --foreground: var(--hof);                        /* Hof */
+  --card: oklch(1 0 0);                            /* #FFFFFF */
+  --card-foreground: var(--hof);
+  --popover: oklch(1 0 0);
+  --popover-foreground: var(--hof);
+  --primary: var(--rausch-500);
+  --primary-foreground: oklch(1 0 0);              /* white on Rausch */
+  --secondary: oklch(0.972 0 0);                   /* #F7F7F7 surface */
+  --secondary-foreground: var(--hof);
+  --muted: oklch(0.972 0 0);                       /* #F7F7F7 */
+  --muted-foreground: var(--foggy);
+  --accent: oklch(0.972 0 0);                      /* #F7F7F7 */
+  --accent-foreground: var(--hof);
+  --destructive: var(--rausch-700);
+  --border: oklch(0.878 0 0);                      /* #DDDDDD */
+  --input: oklch(0.878 0 0);
+  --ring: var(--rausch-500);
+
+  /* Charts (tasteful brand-adjacent) */
+  --chart-1: var(--rausch-500);
+  --chart-2: var(--babu-500);
+  --chart-3: var(--arches-500);
+  --chart-4: var(--rausch-300);
+  --chart-5: var(--babu-700);
 
   /* Sidebar */
-  --sidebar: oklch(0.967 0.016 22.1);         /* #fff0ef — surface-container-low */
-  --sidebar-foreground: oklch(0.321 0.022 27.1); /* #3e2f2d */
-  --sidebar-primary: oklch(0.509 0.192 26.2); /* #bb1b21 */
-  --sidebar-primary-foreground: oklch(0.982 0.009 26.0); /* #fff7f6 */
-  --sidebar-accent: oklch(0.933 0.024 23.9);  /* #f9e3e1 */
-  --sidebar-accent-foreground: oklch(0.321 0.022 27.1); /* #3e2f2d */
-  --sidebar-border: oklch(0.766 0.026 27.0);  /* #c3adaa */
-  --sidebar-ring: oklch(0.509 0.192 26.2);    /* #bb1b21 */
+  --sidebar: oklch(0.972 0 0);                     /* #F7F7F7 */
+  --sidebar-foreground: var(--hof);
+  --sidebar-primary: var(--rausch-500);
+  --sidebar-primary-foreground: oklch(1 0 0);
+  --sidebar-accent: oklch(1 0 0);
+  --sidebar-accent-foreground: var(--hof);
+  --sidebar-border: var(--divider);
+  --sidebar-ring: var(--rausch-500);
 
-  /* SchoolGo extended surface scale */
-  --surface: oklch(0.993 0.003 27.2);         /* near-white with subtle warmth */
-  --surface-bright: oklch(0.993 0.003 27.2);
-  --surface-dim: oklch(0.892 0.027 26.2);     /* #edd5d2 */
-  --surface-container-lowest: oklch(1.000 0 0); /* #ffffff */
-  --surface-container-low: oklch(0.967 0.016 22.1); /* #fff0ef */
-  --surface-container: oklch(0.950 0.023 24.1); /* #fee9e7 */
-  --surface-container-high: oklch(0.933 0.024 23.9); /* #f9e3e1 */
-  --surface-container-highest: oklch(0.917 0.028 25.9); /* #f6ddda */
-  --surface-variant: oklch(0.917 0.028 25.9); /* #f6ddda */
+  /* ========== Extended surface scale — remapped to Airbnb values
+     (preserves existing `bg-surface-container-*` class names across the app) ========== */
+  --surface: oklch(1 0 0);                         /* #FFFFFF */
+  --surface-bright: oklch(1 0 0);
+  --surface-dim: oklch(0.931 0 0);                 /* #EBEBEB */
+  --surface-container-lowest: oklch(1 0 0);        /* #FFFFFF — card surface */
+  --surface-container-low: oklch(0.972 0 0);       /* #F7F7F7 — section tone */
+  --surface-container: oklch(0.972 0 0);           /* #F7F7F7 */
+  --surface-container-high: oklch(0.931 0 0);      /* #EBEBEB */
+  --surface-container-highest: oklch(0.878 0 0);   /* #DDDDDD */
+  --surface-variant: oklch(0.931 0 0);             /* #EBEBEB */
 
-  /* On-surface */
-  --on-surface: oklch(0.321 0.022 27.1);      /* #3e2f2d */
-  --on-surface-variant: oklch(0.488 0.024 25.5); /* #6d5b59 */
-  --on-background: oklch(0.321 0.022 27.1);   /* #3e2f2d */
+  /* On-surface ink */
+  --on-surface: var(--hof);                        /* #484848 */
+  --on-surface-variant: var(--foggy);              /* #767676 */
+  --on-background: var(--hof);
 
   /* Primary extended */
-  --on-primary: oklch(0.982 0.009 26.0);      /* #fff7f6 */
-  --primary-container: oklch(0.672 0.213 26.3); /* #fe4e49 */
-  --on-primary-container: oklch(0.151 0.061 25.4); /* #1f0001 */
+  --on-primary: oklch(1 0 0);                      /* white on Rausch */
+  --primary-container: var(--rausch-100);
+  --on-primary-container: var(--rausch-800);
 
   /* Secondary extended */
-  --secondary-container: oklch(0.918 0.042 25.2); /* #ffdad6 */
-  --on-secondary-container: oklch(0.442 0.043 25.2); /* #694a47 */
+  --secondary-container: oklch(0.972 0 0);
+  --on-secondary-container: var(--hof);
 
   /* Outline */
-  --outline: oklch(0.584 0.025 24.7);         /* #8a7674 */
-  --outline-variant: oklch(0.766 0.026 27.0); /* #c3adaa */
+  --outline: var(--quill);                         /* #B0B0B0 */
+  --outline-variant: var(--divider);               /* #EBEBEB */
+
+  /* ========== Airbnb shadows (5 stops) ========== */
+  --shadow-1: 0 1px 2px rgba(0, 0, 0, 0.04), 0 1px 1px rgba(0, 0, 0, 0.03);
+  --shadow-2: 0 2px 8px rgba(0, 0, 0, 0.08);                                    /* card rest */
+  --shadow-3: 0 6px 16px rgba(0, 0, 0, 0.12);                                   /* card hover */
+  --shadow-4: 0 16px 32px rgba(0, 0, 0, 0.15), 0 3px 8px rgba(0, 0, 0, 0.06);   /* modal */
+  --shadow-5: 0 28px 56px rgba(0, 0, 0, 0.22), 0 8px 16px rgba(0, 0, 0, 0.08);  /* sheet */
+  --shadow-brand: 0 6px 16px oklch(0.685 0.188 18 / 0.32);
+
+  /* ========== Motion ========== */
+  --ease-standard:   cubic-bezier(0.2, 0, 0, 1);
+  --ease-emphasized: cubic-bezier(0.3, 0, 0, 1);
+  --ease-out:        cubic-bezier(0, 0, 0, 1);
+  --dur-1: 120ms;
+  --dur-2: 200ms;
+  --dur-3: 320ms;
+  --dur-4: 520ms;
 }
 
+/* Dark mode disabled for v1 — marketing pages stay light. Keep vars in place
+   so shadcn primitives don't explode if .dark is ever applied. */
 .dark {
-  --background: oklch(0.164 0.012 18.5);       /* inverse-surface base */
-  --foreground: oklch(0.917 0.028 25.9);
-  --card: oklch(0.200 0.016 25);
-  --card-foreground: oklch(0.917 0.028 25.9);
-  --popover: oklch(0.200 0.016 25);
-  --popover-foreground: oklch(0.917 0.028 25.9);
-  --primary: oklch(0.672 0.213 26.3);           /* primary-container as dark primary */
-  --primary-foreground: oklch(0.151 0.061 25.4); /* on-primary-container */
-  --secondary: oklch(0.280 0.025 25);
-  --secondary-foreground: oklch(0.917 0.028 25.9);
-  --muted: oklch(0.280 0.025 25);
-  --muted-foreground: oklch(0.650 0.025 25);
-  --accent: oklch(0.280 0.025 25);
-  --accent-foreground: oklch(0.917 0.028 25.9);
-  --destructive: oklch(0.719 0.164 13.4);       /* error-container */
-  --border: oklch(0.280 0.025 25);
-  --input: oklch(0.280 0.025 25);
-  --ring: oklch(0.672 0.213 26.3);
+  --background: oklch(0.164 0 0);
+  --foreground: oklch(0.931 0 0);
+  --card: oklch(0.200 0 0);
+  --card-foreground: oklch(0.931 0 0);
+  --popover: oklch(0.200 0 0);
+  --popover-foreground: oklch(0.931 0 0);
+  --primary: var(--rausch-500);
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.260 0 0);
+  --secondary-foreground: oklch(0.931 0 0);
+  --muted: oklch(0.260 0 0);
+  --muted-foreground: oklch(0.700 0 0);
+  --accent: oklch(0.260 0 0);
+  --accent-foreground: oklch(0.931 0 0);
+  --destructive: var(--rausch-700);
+  --border: oklch(0.280 0 0);
+  --input: oklch(0.280 0 0);
+  --ring: var(--rausch-500);
 
-  --chart-1: oklch(0.672 0.213 26.3);
-  --chart-2: oklch(0.584 0.025 24.7);
-  --chart-3: oklch(0.488 0.024 25.5);
-  --chart-4: oklch(0.489 0.080 71.8);
-  --chart-5: oklch(0.321 0.022 27.1);
-
-  --sidebar: oklch(0.180 0.014 25);
-  --sidebar-foreground: oklch(0.892 0.027 26.2);
-  --sidebar-primary: oklch(0.672 0.213 26.3);
-  --sidebar-primary-foreground: oklch(0.151 0.061 25.4);
-  --sidebar-accent: oklch(0.250 0.020 25);
-  --sidebar-accent-foreground: oklch(0.892 0.027 26.2);
-  --sidebar-border: oklch(0.280 0.025 25);
-  --sidebar-ring: oklch(0.672 0.213 26.3);
-
-  --surface: oklch(0.164 0.012 18.5);
-  --surface-bright: oklch(0.240 0.020 25);
-  --surface-dim: oklch(0.140 0.012 25);
-  --surface-container-lowest: oklch(0.130 0.010 25);
-  --surface-container-low: oklch(0.180 0.014 25);
-  --surface-container: oklch(0.210 0.018 25);
-  --surface-container-high: oklch(0.250 0.020 25);
-  --surface-container-highest: oklch(0.290 0.024 25);
-  --surface-variant: oklch(0.290 0.024 25);
-
-  --on-surface: oklch(0.892 0.027 26.2);
-  --on-surface-variant: oklch(0.697 0.016 28.1); /* inverse-on-surface */
-  --on-background: oklch(0.892 0.027 26.2);
-
-  --on-primary: oklch(0.151 0.061 25.4);
-  --primary-container: oklch(0.509 0.192 26.2);
-  --on-primary-container: oklch(0.982 0.009 26.0);
-
-  --secondary-container: oklch(0.300 0.035 25);
-  --on-secondary-container: oklch(0.918 0.042 25.2);
-
-  --outline: oklch(0.520 0.022 25);
-  --outline-variant: oklch(0.350 0.025 25);
+  --surface: oklch(0.164 0 0);
+  --surface-container-lowest: oklch(0.200 0 0);
+  --surface-container-low: oklch(0.220 0 0);
+  --surface-container: oklch(0.240 0 0);
+  --surface-container-high: oklch(0.260 0 0);
+  --surface-container-highest: oklch(0.300 0 0);
+  --on-surface: oklch(0.931 0 0);
+  --on-surface-variant: oklch(0.700 0 0);
+  --on-background: oklch(0.931 0 0);
+  --outline: oklch(0.520 0 0);
+  --outline-variant: oklch(0.350 0 0);
 }
 
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
-  a, button, input, select, textarea,
-  [role="button"], [tabindex] {
-    transition: color 150ms ease, background-color 150ms ease, border-color 150ms ease, opacity 150ms ease, box-shadow 150ms ease, transform 100ms ease;
+  a,
+  button,
+  input,
+  select,
+  textarea,
+  [role='button'],
+  [tabindex] {
+    transition: color 200ms var(--ease-standard), background-color 200ms var(--ease-standard),
+      border-color 200ms var(--ease-standard), opacity 200ms var(--ease-standard),
+      box-shadow 200ms var(--ease-standard), transform 120ms var(--ease-standard);
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans antialiased;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
   }
   html {
     @apply font-sans;
   }
   ::selection {
-    background-color: var(--surface-container-highest);
-    color: var(--on-surface);
+    background-color: var(--rausch-100);
+    color: var(--ink-900);
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    color: var(--ink-900);
+    letter-spacing: -0.015em;
   }
 }
 
@@ -265,4 +374,5 @@
   .custom-scrollbar::-webkit-scrollbar-thumb {
     background-color: var(--surface-container-highest);
     border-radius: 10px;
-  }}
+  }
+}

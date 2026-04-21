@@ -2,8 +2,31 @@ import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import { Button } from '@/components/ui/button';
+import { MarketingNav } from '@/modules/navigation/components/MarketingNav';
 
-export async function Navbar() {
+interface NavbarProps {
+  variant?: 'dashboard' | 'marketing';
+}
+
+export async function Navbar({ variant = 'dashboard' }: NavbarProps = {}) {
+  if (variant === 'marketing') {
+    const t = await getTranslations('LandingNavbar');
+    return (
+      <MarketingNav
+        labels={{
+          findSchools: t('findSchools'),
+          howItWorks: t('howItWorks'),
+          forAgents: t('forAgents'),
+          forSchools: t('forSchools'),
+          logIn: t('logIn'),
+          getStarted: t('getStarted'),
+          openMenu: t('openMenu'),
+          closeMenu: t('closeMenu'),
+        }}
+      />
+    );
+  }
+
   const t = await getTranslations('Navbar');
 
   const navLinks = [
