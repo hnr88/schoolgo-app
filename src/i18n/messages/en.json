@@ -380,6 +380,14 @@
       }
     }
   },
+  "AgentsStatsBar": {
+    "items": {
+      "schools": "{count, number}+ School Profiles",
+      "requirements": "Entry Requirements Mapped",
+      "tests": "English Test Requirements Listed",
+      "free": "Free for Agents"
+    }
+  },
   "AgentsMatching": {
     "eyebrow": "Match · Apply · Track",
     "heading": "Parent call at 10am. Three matched schools by 10:30.",
