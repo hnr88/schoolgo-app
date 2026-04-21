@@ -11,6 +11,7 @@ const CARDS: Array<{ key: 'a' | 'b' | 'c' | 'd'; seed: string }> = [
 
 export async function ParentsVerified() {
   const t = await getTranslations('ParentsVerified');
+  const tc = await getTranslations('Common');
   return (
     <section className='bg-muted py-20 md:py-28'>
       <SectionContainer className='flex flex-col gap-10'>
@@ -46,7 +47,7 @@ export async function ParentsVerified() {
                   {t(`cards.${card.key}.location`)} · {t(`cards.${card.key}.sector`)}
                 </p>
                 <div className='mt-auto pt-3'>
-                  <TrustBadge variant='cricos' />
+                  <TrustBadge variant='cricos' label={tc('cricosVerified')} />
                 </div>
               </div>
             </article>

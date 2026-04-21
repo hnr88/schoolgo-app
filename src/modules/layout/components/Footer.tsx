@@ -29,11 +29,11 @@ export async function Footer() {
       <div className='grid grid-cols-1 md:grid-cols-[2fr_1fr_1fr_1fr] gap-4 md:gap-x-6 px-12 max-w-content mx-auto'>
         <div className='flex items-center gap-5'>
           <Image
-            src='/images/logo.png'
+            src='/logos/logo-black.png'
             alt='SchoolGo'
-            width={80}
-            height={80}
-            className='h-22 w-auto object-contain shrink-0'
+            width={120}
+            height={120}
+            className='h-28 w-auto object-contain shrink-0'
           />
           <p className='text-caption font-medium text-on-surface-variant uppercase tracking-widest leading-relaxed pt-1'>
             {t('tagline')}

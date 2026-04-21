@@ -17,6 +17,7 @@ const STEPS: Array<{ key: string; icon: IconComponent; interpolate?: true; comin
 
 export async function ParentsFourSteps() {
   const t = await getTranslations('ParentsFourSteps');
+  const tc = await getTranslations('Common');
   const schools = await loadSchools();
   const stats = computeSchoolStats(schools);
 
@@ -48,7 +49,7 @@ export async function ParentsFourSteps() {
                       className='text-caption font-semibold uppercase text-foggy'
                       style={{ letterSpacing: '0.08em' }}
                     >
-                      Step {index + 1}
+                      {tc('step', { number: index + 1 })}
                     </span>
                     <h3 className='flex items-center gap-2 text-h4 font-semibold text-ink-900'>
                       {t(`steps.${step.key}.title`)}
@@ -103,9 +104,9 @@ export async function ParentsFourSteps() {
               </div>
               <div className='flex flex-col'>
                 <span className='text-body-sm font-semibold text-ink-900'>
-                  CRICOS Verified · Claimed by school
+                  {t('badge.cricosVerified')}
                 </span>
-                <span className='text-caption text-foggy'>Updated April 2026</span>
+                <span className='text-caption text-foggy'>{t('badge.updated')}</span>
               </div>
             </div>
           </div>

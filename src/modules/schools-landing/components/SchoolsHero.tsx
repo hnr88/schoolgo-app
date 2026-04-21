@@ -18,6 +18,7 @@ const TONE_CLASSES: Record<(typeof ROWS)[number]['tone'], string> = {
 
 export async function SchoolsHero() {
   const t = await getTranslations('SchoolsHero');
+  const tc = await getTranslations('Common');
   return (
     <section className='relative overflow-hidden pt-28 pb-16 md:pt-36 md:pb-24'>
       <div
@@ -68,7 +69,7 @@ export async function SchoolsHero() {
               </div>
               <span className='inline-flex items-center gap-1.5 rounded-pill bg-babu-50 px-2.5 py-1 text-caption font-semibold text-babu-700'>
                 <BadgeCheck className='h-3.5 w-3.5' strokeWidth={2} aria-hidden='true' />
-                QEAC Verified
+                {tc('qeacVerified')}
               </span>
             </div>
             <ul className='divide-y divide-divider'>

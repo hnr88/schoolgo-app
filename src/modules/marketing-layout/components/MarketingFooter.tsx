@@ -63,11 +63,11 @@ export async function MarketingFooter() {
           <div className='flex flex-col gap-4 md:col-span-4'>
             <Link href='/' className='inline-flex' aria-label='SchoolGo home'>
               <Image
-                src='/ds/logos/logo-black.png'
+                src='/logos/logo-black.png'
                 alt='SchoolGo'
-                width={140}
-                height={32}
-                className='h-8 w-auto'
+                width={220}
+                height={48}
+                className='h-12 w-auto'
               />
             </Link>
             <p className='max-w-xs text-body-sm text-foggy'>{t('tagline')}</p>
@@ -116,7 +116,7 @@ export async function MarketingFooter() {
                 className='inline-flex items-center gap-2 text-body-sm text-foggy no-underline transition-colors hover:text-primary'
               >
                 <Image
-                  src={`/ds/flags/${lang.code}.svg`}
+                  src={`/flags/${lang.code}.svg`}
                   alt=''
                   width={20}
                   height={14}

@@ -4,6 +4,15 @@
     "description": "Search and compare the best schools across Australia. Filter by curriculum, price, location and more.",
     "ogDescription": "Search and compare the best schools across Australia."
   },
+  "Common": {
+    "step": "Step {number, number}",
+    "cricosVerified": "CRICOS Verified",
+    "qeacVerified": "QEAC Verified",
+    "claimedBySchool": "Claimed by school",
+    "addToShortlist": "Add to shortlist",
+    "removeFromShortlist": "Remove from shortlist",
+    "comingSoon": "Coming soon"
+  },
   "ParentsMetadata": {
     "title": "SchoolGo — Find your child's Australian school",
     "description": "Search every CRICOS-registered Australian school. Compare fees, English test requirements, and intakes — in seven languages, for free.",
@@ -20,7 +29,8 @@
     "signIn": "Sign in",
     "getStarted": "Get started",
     "openMenu": "Open menu",
-    "closeMenu": "Close menu"
+    "closeMenu": "Close menu",
+    "menu": "Menu"
   },
   "MarketingFooter": {
     "tagline": "Connecting future leaders with Australia's best schools — across the continent, in seven languages.",
@@ -169,7 +179,11 @@
       }
     },
     "ctaBrowse": "Start browsing",
-    "ctaLearn": "See how it works"
+    "ctaLearn": "See how it works",
+    "badge": {
+      "cricosVerified": "CRICOS Verified · Claimed by school",
+      "updated": "Updated April 2026"
+    }
   },
   "ParentsVerified": {
     "eyebrow": "Every CRICOS school",
@@ -363,6 +377,7 @@
     "lede": "One verified profile. {count, number} CRICOS schools. A pipeline your families can see. SchoolGo charges the schools, not you.",
     "ctaPrimary": "Apply for verification",
     "ctaSecondary": "See how it works",
+    "badgeMeta": "Sample agent profile",
     "stats": {
       "schools": {
         "value": "{count, number}",
@@ -476,11 +491,13 @@
     "sampleLabel": "Sample profile",
     "profile": {
       "name": "Agent profile",
+      "agentName": "Mei Lin",
       "qeac": "QEAC Verified",
       "yearsActive": "Years active",
       "students": "Students placed",
       "placements": "Schools placed into",
-      "languages": "Spoken languages"
+      "languages": "Spoken languages",
+      "languagesValue": "中 · EN"
     }
   },
   "AgentsScale": {
@@ -762,7 +779,8 @@
     },
     "card": {
       "currency": "AUD",
-      "viewDetails": "View {name}"
+      "viewDetails": "View {name}",
+      "topRated": "Top rated"
     }
   },
   "Errors": {

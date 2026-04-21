@@ -7,6 +7,7 @@ import { Eyebrow, SectionContainer } from '@/modules/design-system';
 
 export async function AgentsHero() {
   const t = await getTranslations('AgentsHero');
+  const tc = await getTranslations('Common');
   const schools = await loadSchools();
   const stats = computeSchoolStats(schools);
 
@@ -77,8 +78,8 @@ export async function AgentsHero() {
               <BadgeCheck className='h-5 w-5' strokeWidth={2} aria-hidden='true' />
             </div>
             <div className='flex flex-col'>
-              <span className='text-body-sm font-semibold text-ink-900'>QEAC Verified</span>
-              <span className='text-caption text-foggy'>Since 2018 · Shanghai</span>
+              <span className='text-body-sm font-semibold text-ink-900'>{tc('qeacVerified')}</span>
+              <span className='text-caption text-foggy'>{t('badgeMeta')}</span>
             </div>
           </div>
         </div>

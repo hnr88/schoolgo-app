@@ -9,6 +9,9 @@ interface SchoolCardProps {
   meta: string;
   feeAud?: string;
   cricosVerified?: boolean;
+  cricosLabel?: string;
+  shortlistAddLabel?: string;
+  shortlistRemoveLabel?: string;
   onShortlist?: () => void;
   shortlisted?: boolean;
   className?: string;
@@ -20,6 +23,9 @@ export function SchoolCard({
   meta,
   feeAud,
   cricosVerified = true,
+  cricosLabel = '',
+  shortlistAddLabel = '',
+  shortlistRemoveLabel = '',
   onShortlist,
   shortlisted = false,
   className,
@@ -50,7 +56,7 @@ export function SchoolCard({
             type='button'
             onClick={onShortlist}
             aria-pressed={shortlisted}
-            aria-label={shortlisted ? 'Remove from shortlist' : 'Add to shortlist'}
+            aria-label={shortlisted ? shortlistRemoveLabel : shortlistAddLabel}
             className='absolute right-3 top-3 flex h-10 w-10 items-center justify-center rounded-pill bg-white/90 shadow-2 transition-colors hover:bg-white'
           >
             <Heart
@@ -66,7 +72,7 @@ export function SchoolCard({
         <h3 className='text-base font-semibold leading-snug text-ink-900'>{name}</h3>
         <p className='text-body-sm text-foggy'>{meta}</p>
         <div className='mt-auto flex items-center justify-between pt-3'>
-          {cricosVerified && <TrustBadge variant='cricos' />}
+          {cricosVerified && <TrustBadge variant='cricos' label={cricosLabel} />}
           {feeAud && (
             <span className='text-body-sm font-semibold text-ink-900'>{feeAud}</span>
           )}

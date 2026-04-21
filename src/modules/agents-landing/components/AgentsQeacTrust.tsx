@@ -38,7 +38,7 @@ export async function AgentsQeacTrust() {
                 >
                   {t('profile.name')}
                 </span>
-                <span className='text-h4 font-semibold text-ink-900'>Mei Lin</span>
+                <span className='text-h4 font-semibold text-ink-900'>{t('profile.agentName')}</span>
               </div>
               <TrustBadge variant='qeac' label={t('profile.qeac')} />
             </header>
@@ -78,7 +78,7 @@ export async function AgentsQeacTrust() {
                 >
                   {t('profile.languages')}
                 </dt>
-                <dd className='text-h3 font-bold text-ink-900'>中 · EN</dd>
+                <dd className='text-h3 font-bold text-ink-900'>{t('profile.languagesValue')}</dd>
               </div>
             </dl>
           </article>

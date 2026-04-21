@@ -14,6 +14,7 @@ const STEPS: Array<{ key: 'receive' | 'review' | 'decide' | 'onboard'; icon: Ico
 
 export async function SchoolsTimeline() {
   const t = await getTranslations('SchoolsTimeline');
+  const tc = await getTranslations('Common');
   return (
     <section className='bg-muted py-20 md:py-28'>
       <SectionContainer className='flex flex-col gap-10'>
@@ -45,7 +46,7 @@ export async function SchoolsTimeline() {
                   className='text-caption font-semibold uppercase text-foggy'
                   style={{ letterSpacing: '0.08em' }}
                 >
-                  Step {index + 1}
+                  {tc('step', { number: index + 1 })}
                 </span>
                 {step.comingSoon && (
                   <span className='rounded-pill bg-arches-50 px-2.5 py-0.5 text-caption font-semibold text-arches-700'>

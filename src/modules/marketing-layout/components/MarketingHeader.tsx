@@ -11,6 +11,7 @@ export async function MarketingHeader() {
         getStarted: t('getStarted'),
         openMenu: t('openMenu'),
         closeMenu: t('closeMenu'),
+        menu: t('menu'),
         audiences: {
           parents: t('audiences.parents'),
           agents: t('audiences.agents'),

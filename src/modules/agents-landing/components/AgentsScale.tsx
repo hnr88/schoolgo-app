@@ -13,6 +13,7 @@ const AGENTS: Array<{ key: 'a' | 'b' | 'c' | 'd'; seed: string }> = [
 
 export async function AgentsScale() {
   const t = await getTranslations('AgentsScale');
+  const tc = await getTranslations('Common');
   return (
     <section className='bg-muted py-20 md:py-28'>
       <SectionContainer className='flex flex-col gap-10'>
@@ -41,7 +42,7 @@ export async function AgentsScale() {
                     aria-hidden='true'
                   />
                 </div>
-                <TrustBadge variant='qeac' />
+                <TrustBadge variant='qeac' label={tc('qeacVerified')} />
               </div>
               <div className='flex flex-col'>
                 <span className='text-body-sm font-semibold text-ink-900'>

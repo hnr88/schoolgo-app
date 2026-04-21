@@ -20,6 +20,7 @@ const INBOX_ROWS: Array<{ key: 'scotch' | 'brisbane' | 'sydney'; seed: string }>
 
 export async function AgentsMatching() {
   const t = await getTranslations('AgentsMatching');
+  const tc = await getTranslations('Common');
   return (
     <section id='how-it-works' className='py-20 md:py-28'>
       <SectionContainer className='grid grid-cols-1 items-center gap-12 md:grid-cols-12 md:gap-16'>
@@ -64,7 +65,7 @@ export async function AgentsMatching() {
               >
                 {t('inboxLabel')}
               </span>
-              <TrustBadge variant='qeac' />
+              <TrustBadge variant='qeac' label={tc('qeacVerified')} />
             </div>
             <ul className='divide-y divide-divider'>
               {INBOX_ROWS.map((row) => (

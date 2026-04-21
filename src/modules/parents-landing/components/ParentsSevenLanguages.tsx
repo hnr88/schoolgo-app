@@ -37,7 +37,7 @@ export async function ParentsSevenLanguages() {
               className='inline-flex items-center gap-2 rounded-pill border border-background/15 bg-background/5 px-4 py-2 text-body-sm font-medium text-background'
             >
               <Image
-                src={`/ds/flags/${lang.code}.svg`}
+                src={`/flags/${lang.code}.svg`}
                 alt=''
                 width={20}
                 height={14}
