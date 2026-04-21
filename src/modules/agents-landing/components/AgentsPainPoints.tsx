@@ -1,14 +1,15 @@
 import type { ComponentType, SVGProps } from 'react';
-import { Inbox, MessagesSquare, TableProperties } from 'lucide-react';
+import { FileSearch, Inbox, MessagesSquare, ShieldCheck } from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
 import { Eyebrow, SectionContainer } from '@/modules/design-system';
 
 type IconComponent = ComponentType<SVGProps<SVGSVGElement>>;
 
-const ITEMS: Array<{ key: 'spreadsheets' | 'wechat' | 'admissions'; icon: IconComponent }> = [
-  { key: 'spreadsheets', icon: TableProperties },
-  { key: 'wechat', icon: MessagesSquare },
-  { key: 'admissions', icon: Inbox },
+const ITEMS: Array<{ key: 'email' | 'status' | 'trust' | 'requirements'; icon: IconComponent }> = [
+  { key: 'email', icon: Inbox },
+  { key: 'status', icon: MessagesSquare },
+  { key: 'trust', icon: ShieldCheck },
+  { key: 'requirements', icon: FileSearch },
 ];
 
 export async function AgentsPainPoints() {
@@ -24,7 +25,7 @@ export async function AgentsPainPoints() {
           <p className='text-body text-foggy md:text-lg'>{t('subheading')}</p>
         </div>
 
-        <div className='grid grid-cols-1 gap-5 md:grid-cols-3'>
+        <div className='grid grid-cols-1 gap-5 md:grid-cols-2'>
           {ITEMS.map(({ key, icon: Icon }) => (
             <article
               key={key}
@@ -34,9 +35,9 @@ export async function AgentsPainPoints() {
                 <Icon className='h-5 w-5' strokeWidth={1.75} aria-hidden='true' />
               </span>
               <h3 className='text-h4 font-semibold text-ink-900'>
-                {t(`items.${key}.title`)}
+                {t(`items.${key}.question`)}
               </h3>
-              <p className='text-body-sm text-foggy'>{t(`items.${key}.description`)}</p>
+              <p className='text-body-sm text-foggy'>{t(`items.${key}.answer`)}</p>
             </article>
           ))}
         </div>

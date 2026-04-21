@@ -358,21 +358,25 @@
     }
   },
   "AgentsPainPoints": {
-    "eyebrow": "The old way",
-    "heading": "Stop juggling spreadsheets, WeChat threads, and school admission inboxes.",
-    "subheading": "Every student, every application, every school requirement — in one workspace.",
+    "eyebrow": "Why agents switch",
+    "heading": "Built for Education Agents Who Manage Real Pipelines",
+    "subheading": "76% of international school enrolments come through education agents. SchoolGo is built to make you more effective, not to replace you.",
     "items": {
-      "spreadsheets": {
-        "title": "One list, not fifteen tabs",
-        "description": "Track every student's stage, deadlines, and documents — without maintaining a parallel spreadsheet."
+      "email": {
+        "question": "Tired of emailing 15 admissions offices?",
+        "answer": "One platform, one application workflow. Submit to multiple schools and track responses in real time. Every application carries your verified agent attribution."
       },
-      "wechat": {
-        "title": "Families see the same screen you do",
-        "description": "Status updates flow to parents automatically, in their language. You spend less time answering 'any news yet?'"
+      "status": {
+        "question": "Students keep asking 'did you hear back?'",
+        "answer": "Live application tracker your students can see. Status updates flow automatically — you spend less time chasing and more time advising."
       },
-      "admissions": {
-        "title": "Standardised submissions",
-        "description": "One application format. One place to upload documents. One inbox for replies — instead of fifteen."
+      "trust": {
+        "question": "Schools don't know if you're legitimate?",
+        "answer": "SchoolGo agent verification with your QEAC credentials. Your verified badge and track record appear on every application you submit."
+      },
+      "requirements": {
+        "question": "Different requirements for every school?",
+        "answer": "SchoolGo maps each school's specific entry requirements: accepted English tests, minimum scores, required documents, intake dates, and application fees. No more digging through 50 school websites."
       }
     }
   },
