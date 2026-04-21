@@ -8,11 +8,11 @@ import { Eyebrow, SectionContainer } from '@/modules/design-system';
 
 type IconComponent = ComponentType<SVGProps<SVGSVGElement>>;
 
-const STEPS: Array<{ key: string; icon: IconComponent; interpolate?: true }> = [
+const STEPS: Array<{ key: string; icon: IconComponent; interpolate?: true; comingSoon?: true }> = [
   { key: 'browse', icon: Search, interpolate: true },
   { key: 'shortlist', icon: LayoutGrid },
   { key: 'prepare', icon: ListChecks },
-  { key: 'apply', icon: BadgeCheck },
+  { key: 'apply', icon: BadgeCheck, comingSoon: true },
 ];
 
 export async function ParentsFourSteps() {
@@ -50,8 +50,13 @@ export async function ParentsFourSteps() {
                     >
                       Step {index + 1}
                     </span>
-                    <h3 className='text-h4 font-semibold text-ink-900'>
+                    <h3 className='flex items-center gap-2 text-h4 font-semibold text-ink-900'>
                       {t(`steps.${step.key}.title`)}
+                      {step.comingSoon && (
+                        <span className='rounded-pill bg-arches-50 px-2.5 py-0.5 text-caption font-semibold text-arches-700'>
+                          {t(`steps.${step.key}.comingSoon`)}
+                        </span>
+                      )}
                     </h3>
                     <p className='text-body-sm text-foggy'>
                       {t(

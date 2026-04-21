@@ -5,11 +5,11 @@ import { Eyebrow, SectionContainer } from '@/modules/design-system';
 
 type IconComponent = ComponentType<SVGProps<SVGSVGElement>>;
 
-const STEPS: Array<{ key: 'receive' | 'review' | 'decide' | 'onboard'; icon: IconComponent }> = [
-  { key: 'receive', icon: Inbox },
-  { key: 'review', icon: ListChecks },
-  { key: 'decide', icon: CheckCircle2 },
-  { key: 'onboard', icon: School },
+const STEPS: Array<{ key: 'receive' | 'review' | 'decide' | 'onboard'; icon: IconComponent; comingSoon?: true }> = [
+  { key: 'receive', icon: Inbox, comingSoon: true },
+  { key: 'review', icon: ListChecks, comingSoon: true },
+  { key: 'decide', icon: CheckCircle2, comingSoon: true },
+  { key: 'onboard', icon: School, comingSoon: true },
 ];
 
 export async function SchoolsTimeline() {
@@ -30,9 +30,11 @@ export async function SchoolsTimeline() {
             className='pointer-events-none absolute left-6 top-6 hidden h-px w-[calc(100%-3rem)] bg-border md:block'
             aria-hidden='true'
           />
-          {STEPS.map(({ key, icon: Icon }, index) => (
+          {STEPS.map((step, index) => {
+            const Icon = step.icon;
+            return (
             <li
-              key={key}
+              key={step.key}
               className='relative flex flex-col gap-3 rounded-lg border border-border bg-card p-5 shadow-2'
             >
               <div className='flex items-center gap-3'>
@@ -45,11 +47,17 @@ export async function SchoolsTimeline() {
                 >
                   Step {index + 1}
                 </span>
+                {step.comingSoon && (
+                  <span className='rounded-pill bg-arches-50 px-2.5 py-0.5 text-caption font-semibold text-arches-700'>
+                    {t(`steps.${step.key}.comingSoon`)}
+                  </span>
+                )}
               </div>
-              <h3 className='text-h4 font-semibold text-ink-900'>{t(`steps.${key}.title`)}</h3>
-              <p className='text-body-sm text-foggy'>{t(`steps.${key}.description`)}</p>
+              <h3 className='text-h4 font-semibold text-ink-900'>{t(`steps.${step.key}.title`)}</h3>
+              <p className='text-body-sm text-foggy'>{t(`steps.${step.key}.description`)}</p>
             </li>
-          ))}
+            );
+          })}
         </ol>
       </SectionContainer>
     </section>

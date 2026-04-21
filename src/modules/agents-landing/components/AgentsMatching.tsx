@@ -6,10 +6,10 @@ import { Eyebrow, SectionContainer, TrustBadge } from '@/modules/design-system';
 
 type IconComponent = ComponentType<SVGProps<SVGSVGElement>>;
 
-const STEPS: Array<{ key: 'listen' | 'match' | 'deliver'; icon: IconComponent }> = [
+const STEPS: Array<{ key: 'listen' | 'match' | 'deliver'; icon: IconComponent; comingSoon?: true }> = [
   { key: 'listen', icon: Headphones },
-  { key: 'match', icon: Filter },
-  { key: 'deliver', icon: Send },
+  { key: 'match', icon: Filter, comingSoon: true },
+  { key: 'deliver', icon: Send, comingSoon: true },
 ];
 
 const INBOX_ROWS: Array<{ key: 'scotch' | 'brisbane' | 'sydney'; seed: string }> = [
@@ -31,17 +31,27 @@ export async function AgentsMatching() {
           <p className='max-w-lg text-body text-foggy md:text-lg'>{t('subheading')}</p>
 
           <ol className='mt-4 flex flex-col gap-6'>
-            {STEPS.map(({ key, icon: Icon }) => (
-              <li key={key} className='flex gap-4'>
+            {STEPS.map((step) => {
+              const Icon = step.icon;
+              return (
+              <li key={step.key} className='flex gap-4'>
                 <span className='flex h-11 w-11 shrink-0 items-center justify-center rounded-pill bg-babu-50 text-babu-700'>
                   <Icon className='h-5 w-5' strokeWidth={1.75} aria-hidden='true' />
                 </span>
                 <div className='flex flex-col gap-1'>
-                  <h3 className='text-h4 font-semibold text-ink-900'>{t(`steps.${key}.title`)}</h3>
-                  <p className='text-body-sm text-foggy'>{t(`steps.${key}.description`)}</p>
+                  <h3 className='flex items-center gap-2 text-h4 font-semibold text-ink-900'>
+                    {t(`steps.${step.key}.title`)}
+                    {step.comingSoon && (
+                      <span className='rounded-pill bg-arches-50 px-2.5 py-0.5 text-caption font-semibold text-arches-700'>
+                        {t(`steps.${step.key}.comingSoon`)}
+                      </span>
+                    )}
+                  </h3>
+                  <p className='text-body-sm text-foggy'>{t(`steps.${step.key}.description`)}</p>
                 </div>
               </li>
-            ))}
+              );
+            })}
           </ol>
         </div>
 

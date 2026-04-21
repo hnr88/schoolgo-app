@@ -39,8 +39,8 @@
         "links": {
           "overview": "Agents overview",
           "qeac": "QEAC verification",
-          "pipeline": "Pipeline tools",
-          "login": "Agent login"
+          "pipeline": "Pipeline tools [Soon]",
+          "login": "Agent login [Soon]"
         }
       },
       "schools": {
@@ -48,7 +48,7 @@
         "links": {
           "overview": "Schools overview",
           "claim": "Claim profile",
-          "login": "School login",
+          "login": "School login [Soon]",
           "pricing": "Pricing"
         }
       },
@@ -140,7 +140,8 @@
       },
       "apply": {
         "title": "Apply through a verified agent",
-        "description": "Your agent carries a QEAC badge. Applications are tracked end-to-end in one dashboard."
+        "description": "Your agent carries a QEAC badge. Applications are tracked end-to-end in one dashboard.",
+        "comingSoon": "Coming soon"
       }
     },
     "ctaBrowse": "Start browsing",
@@ -305,11 +306,13 @@
       },
       "match": {
         "title": "See best-fit schools",
-        "description": "Filtered by your student's profile. See accepted tests and minimum scores per school."
+        "description": "Filtered by your student's profile. See accepted tests and minimum scores per school.",
+        "comingSoon": "Coming soon"
       },
       "deliver": {
         "title": "Deliver a shortlist, not a mess",
-        "description": "A branded PDF the family can screenshot and send to Dad. No PDFs from fifteen different schools."
+        "description": "A branded PDF the family can screenshot and send to Dad. No PDFs from fifteen different schools.",
+        "comingSoon": "Coming soon"
       }
     },
     "inboxLabel": "Admissions inbox",
@@ -491,19 +494,23 @@
     "steps": {
       "receive": {
         "title": "Receive",
-        "description": "Application lands in your inbox with English scores, documents, and verified agent."
+        "description": "Application lands in your inbox with English scores, documents, and verified agent.",
+        "comingSoon": "Coming soon"
       },
       "review": {
         "title": "Review",
-        "description": "Your team assesses against your own rubric. Notes stay internal."
+        "description": "Your team assesses against your own rubric. Notes stay internal.",
+        "comingSoon": "Coming soon"
       },
       "decide": {
         "title": "Decide",
-        "description": "Offer, waitlist, or decline in one click. Status flows to family and agent instantly."
+        "description": "Offer, waitlist, or decline in one click. Status flows to family and agent instantly.",
+        "comingSoon": "Coming soon"
       },
       "onboard": {
         "title": "Onboard",
-        "description": "Share intake-day paperwork, accommodation info, and orientation links — all in one thread."
+        "description": "Share intake-day paperwork, accommodation info, and orientation links — all in one thread.",
+        "comingSoon": "Coming soon"
       }
     }
   },
