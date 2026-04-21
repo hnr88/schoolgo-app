@@ -6,5 +6,6 @@ export { ParentsComparison } from '@/modules/parents-landing/components/ParentsC
 export { ParentsPickATest } from '@/modules/parents-landing/components/ParentsPickATest';
 export { ParentsSevenLanguages } from '@/modules/parents-landing/components/ParentsSevenLanguages';
 export { ParentsArticles } from '@/modules/parents-landing/components/ParentsArticles';
+export { ParentsTrustBar } from '@/modules/parents-landing/components/ParentsTrustBar';
 export { ParentsFaq } from '@/modules/parents-landing/components/ParentsFaq';
 export { ParentsFinalCta } from '@/modules/parents-landing/components/ParentsFinalCta';

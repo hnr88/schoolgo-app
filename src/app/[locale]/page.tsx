@@ -9,6 +9,7 @@ import {
   ParentsFourSteps,
   ParentsHero,
   ParentsStatsBar,
+  ParentsTrustBar,
   ParentsPickATest,
   ParentsSevenLanguages,
   ParentsVerified,
@@ -54,6 +55,7 @@ export default async function ParentsLandingPage({
         <ParentsPickATest />
         <ParentsSevenLanguages />
         <ParentsArticles />
+        <ParentsTrustBar />
         <ParentsFaq />
         <ParentsFinalCta />
       </main>
