@@ -1,7 +1,7 @@
 import type { ComponentType, SVGProps } from 'react';
 import { CheckCircle2, Inbox, ListChecks, School } from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
-import { Eyebrow, SectionContainer } from '@/modules/design-system';
+import { SectionContainer, SectionHeader, StatusBadge } from '@/modules/design-system';
 
 type IconComponent = ComponentType<SVGProps<SVGSVGElement>>;
 
@@ -18,13 +18,11 @@ export async function SchoolsTimeline() {
   return (
     <section className='bg-muted py-20 md:py-28'>
       <SectionContainer className='flex flex-col gap-10'>
-        <div className='flex max-w-3xl flex-col gap-3'>
-          <Eyebrow tone='brand'>{t('eyebrow')}</Eyebrow>
-          <h2 className='font-display text-4xl font-bold leading-[1.1] tracking-[-0.02em] text-ink-900 md:text-5xl'>
-            {t('heading')}
-          </h2>
-          <p className='text-body text-foggy md:text-lg'>{t('subheading')}</p>
-        </div>
+        <SectionHeader
+          eyebrow={t('eyebrow')}
+          heading={t('heading')}
+          subheading={t('subheading')}
+        />
 
         <ol className='relative grid grid-cols-1 gap-6 md:grid-cols-4'>
           <div
@@ -49,9 +47,7 @@ export async function SchoolsTimeline() {
                   {tc('step', { number: index + 1 })}
                 </span>
                 {step.comingSoon && (
-                  <span className='rounded-pill bg-arches-50 px-2.5 py-0.5 text-caption font-semibold text-arches-700'>
-                    {t(`steps.${step.key}.comingSoon`)}
-                  </span>
+                  <StatusBadge>{t(`steps.${step.key}.comingSoon`)}</StatusBadge>
                 )}
               </div>
               <h3 className='text-h4 font-semibold text-ink-900'>{t(`steps.${step.key}.title`)}</h3>

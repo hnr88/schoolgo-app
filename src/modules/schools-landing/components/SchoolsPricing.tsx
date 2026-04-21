@@ -1,7 +1,6 @@
-import { ArrowRight, Check } from 'lucide-react';
+import { Check } from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
-import { Link } from '@/i18n/navigation';
-import { Eyebrow, SectionContainer } from '@/modules/design-system';
+import { CtaLink, SectionContainer, SectionHeader, StatusBadge } from '@/modules/design-system';
 
 const PLANS: Array<{
   key: 'listing' | 'admissions' | 'network';
@@ -19,13 +18,11 @@ export async function SchoolsPricing() {
   return (
     <section className='py-20 md:py-28'>
       <SectionContainer className='flex flex-col gap-10'>
-        <div className='flex max-w-3xl flex-col gap-3'>
-          <Eyebrow tone='brand'>{t('eyebrow')}</Eyebrow>
-          <h2 className='font-display text-4xl font-bold leading-[1.1] tracking-[-0.02em] text-ink-900 md:text-5xl'>
-            {t('heading')}
-          </h2>
-          <p className='text-body text-foggy md:text-lg'>{t('subheading')}</p>
-        </div>
+        <SectionHeader
+          eyebrow={t('eyebrow')}
+          heading={t('heading')}
+          subheading={t('subheading')}
+        />
 
         <div className='grid grid-cols-1 gap-5 md:grid-cols-3'>
           {PLANS.map((plan) => {
@@ -40,9 +37,9 @@ export async function SchoolsPricing() {
                 }
               >
                 {featured && t.has('plans.admissions.badge') && (
-                  <span className='absolute -top-3 left-6 rounded-pill bg-primary px-3 py-1 text-caption font-semibold text-on-primary shadow-brand'>
+                  <StatusBadge tone='brand' size='md' className='absolute -top-3 left-6 bg-primary text-on-primary shadow-brand px-3'>
                     {t('plans.admissions.badge')}
-                  </span>
+                  </StatusBadge>
                 )}
                 <div className='flex flex-col gap-1'>
                   <span
@@ -72,17 +69,14 @@ export async function SchoolsPricing() {
                     </li>
                   ))}
                 </ul>
-                <Link
+                <CtaLink
                   href={plan.ctaHref}
-                  className={
-                    featured
-                      ? 'inline-flex items-center justify-center gap-2 rounded-pill bg-primary px-6 py-3 text-sm font-semibold text-on-primary shadow-brand no-underline transition-colors hover:bg-rausch-600'
-                      : 'inline-flex items-center justify-center gap-2 rounded-pill border border-border bg-card px-6 py-3 text-sm font-semibold text-foreground no-underline transition-colors hover:bg-muted'
-                  }
+                  variant={featured ? 'primary' : 'secondary'}
+                  arrow
+                  justify
                 >
                   {t(`plans.${plan.key}.cta`)}
-                  <ArrowRight className='h-4 w-4' strokeWidth={2} aria-hidden='true' />
-                </Link>
+                </CtaLink>
               </article>
             );
           })}

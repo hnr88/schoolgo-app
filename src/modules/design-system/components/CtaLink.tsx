@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react';
 import { ArrowRight } from 'lucide-react';
-import { Link } from '@/i18n/navigation';
 import { cva, type VariantProps } from 'class-variance-authority';
+import { Link } from '@/i18n/navigation';
 import { cn } from '@/lib/utils';
 
 const ctaLinkStyles = cva(

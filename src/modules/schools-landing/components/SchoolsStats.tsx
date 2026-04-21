@@ -1,5 +1,5 @@
 import { getTranslations } from 'next-intl/server';
-import { Eyebrow, SectionContainer } from '@/modules/design-system';
+import { SectionContainer, SectionHeader } from '@/modules/design-system';
 
 const ITEMS = ['schools', 'states', 'sectors', 'feeRange'] as const;
 
@@ -8,13 +8,12 @@ export async function SchoolsStats() {
   return (
     <section className='bg-ink-900 py-20 text-background md:py-28'>
       <SectionContainer className='flex flex-col gap-10'>
-        <div className='flex max-w-3xl flex-col gap-3'>
-          <Eyebrow className='text-background/70'>{t('eyebrow')}</Eyebrow>
-          <h2 className='font-display text-4xl font-bold leading-[1.1] tracking-[-0.02em] text-background md:text-5xl'>
-            {t('heading')}
-          </h2>
-          <p className='text-body text-background/75 md:text-lg'>{t('subheading')}</p>
-        </div>
+        <SectionHeader
+          theme='dark'
+          eyebrow={t('eyebrow')}
+          heading={t('heading')}
+          subheading={t('subheading')}
+        />
 
         <dl className='grid grid-cols-2 gap-x-8 gap-y-10 border-t border-background/15 pt-10 md:grid-cols-4'>
           {ITEMS.map((key) => (
