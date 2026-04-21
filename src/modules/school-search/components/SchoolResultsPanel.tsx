@@ -1,5 +1,5 @@
 import { getTranslations } from 'next-intl/server';
-import { SchoolCard } from '@/modules/school-search/components/SchoolCard';
+import { SearchSchoolCard } from '@/modules/school-search/components/SchoolCard';
 import { MOCK_SCHOOLS } from '@/modules/school-search/constants/school.constants';
 
 export async function SchoolResultsPanel() {
@@ -21,7 +21,7 @@ export async function SchoolResultsPanel() {
 
       <div className='custom-scrollbar flex flex-1 flex-col gap-4 overflow-y-auto bg-muted p-4'>
         {MOCK_SCHOOLS.map((school) => (
-          <SchoolCard key={school.id} school={school} />
+          <SearchSchoolCard key={school.id} school={school} />
         ))}
       </div>
 

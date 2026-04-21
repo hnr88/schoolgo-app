@@ -73,7 +73,7 @@
       }
     },
     "language": "Bahasa",
-    "copyright": "© {year, number} SchoolGo Australia. Hak cipta terpelihara.",
+    "copyright": "© {year} SchoolGo Australia. Hak cipta terpelihara.",
     "attribution": "Bersumber dari data.gov.au · CC BY 2.5 AU · Patuh Akta ESOS"
   },
   "ParentsHero": {
@@ -112,21 +112,24 @@
           "location": "Hawthorn, VIC",
           "curriculum": "VCE",
           "fee": "$38.5k AUD",
-          "boarding": "Asrama"
+          "boarding": "Asrama",
+          "rating": "4.9"
         },
         "b": {
           "name": "Sydney Grammar School",
           "location": "Darlinghurst, NSW",
           "curriculum": "HSC",
           "fee": "$41.2k AUD",
-          "boarding": "Harian sahaja"
+          "boarding": "Harian sahaja",
+          "rating": "4.8"
         },
         "c": {
           "name": "Brisbane Grammar School",
           "location": "Spring Hill, QLD",
           "curriculum": "QCE/IB",
           "fee": "$35.8k AUD",
-          "boarding": "Asrama"
+          "boarding": "Asrama",
+          "rating": "4.7"
         }
       }
     }
@@ -283,6 +286,9 @@
     "readMore": "Baca artikel"
   },
   "ParentsStatsBar": {
+    "eyebrow": "Angka utama",
+    "heading": "Direktori sekolah CRICOS terbesar di Australia.",
+    "subheading": "Setiap sekolah berdaftar, disahkan dan boleh dicari — dari kerajaan hingga swasta, merentasi lapan negeri dan wilayah.",
     "items": {
       "schools": {
         "value": "{count, number}+",
@@ -299,10 +305,6 @@
       "fees": {
         "value": "$3.5k – $78k",
         "label": "Annual Fee Range"
-      },
-      "verified": {
-        "value": "100%",
-        "label": "CRICOS Verified"
       }
     }
   },
@@ -316,25 +318,28 @@
     "ctaSecondary": "Bercakap dengan ejen yang disahkan"
   },
   "ParentsTrustBar": {
+    "eyebrow": "Kepercayaan & pematuhan",
+    "heading": "Data yang boleh anda percayai.",
+    "subheading": "Setiap penyenaraian di SchoolGo disokong oleh sumber data kerajaan rasmi — disahkan, berlesen, dan dikemas kini setiap bulan.",
     "items": {
       "cricos": {
         "label": "CRICOS Verified",
-        "sublabel": "Data"
+        "description": "Setiap penyenaraian sekolah disemak silang dengan Daftar Komanwel rasmi."
       },
       "datagov": {
         "label": "data.gov.au",
-        "sublabel": "CC BY 2.5 AU Licensed"
+        "description": "Data terbuka berlesen di bawah CC BY 2.5 AU — telus dan boleh diaudit secara umum."
       },
       "acara": {
-        "label": "ACARA",
-        "sublabel": "School Profiles"
+        "label": "ACARA School Profiles",
+        "description": "Kurikulum, skor ICSEA, dan data enrolmen bersumber daripada pihak berkuasa kebangsaan."
       },
       "esos": {
-        "label": "ESOS Act",
-        "sublabel": "Compliant"
+        "label": "ESOS Act Compliant",
+        "description": "SchoolGo beroperasi dalam rangka kerja Akta Perkhidmatan Pendidikan untuk Pelajar Luar Negeri Australia."
       }
     },
-    "attribution": "School data sourced from the Commonwealth Register of Institutions and Courses for Overseas Students (CRICOS) and the Australian Curriculum, Assessment and Reporting Authority (ACARA). Updated April 2026."
+    "attribution": "Data sekolah bersumber daripada Daftar Komanwel Institusi dan Kursus untuk Pelajar Luar Negeri (CRICOS) dan Pihak Berkuasa Kurikulum, Penilaian dan Pelaporan Australia (ACARA). Dikemas kini April 2026."
   },
   "ParentsFaq": {
     "heading": "Frequently Asked Questions",
@@ -782,6 +787,35 @@
       "viewDetails": "Lihat {name}",
       "topRated": "Top rated"
     }
+  },
+  "Auth": {
+    "signInTitle": "Log masuk ke SchoolGo",
+    "signInSubtitle": "Akses akaun anda untuk mengurus sekolah, permohonan dan banyak lagi.",
+    "iAmA": "Saya seorang…",
+    "userTypes": {
+      "parent": "Ibu Bapa",
+      "agent": "Ejen",
+      "school": "Sekolah"
+    },
+    "emailLabel": "E-mel",
+    "emailPlaceholder": "you@example.com",
+    "passwordLabel": "Kata Laluan",
+    "passwordPlaceholder": "Masukkan kata laluan anda",
+    "signInButton": "Log Masuk",
+    "loginSuccess": "Selamat kembali!",
+    "loginError": "E-mel atau kata laluan tidak sah. Sila cuba lagi.",
+    "noAccount": "Tiada akaun?",
+    "signUp": "Daftar",
+    "signUpTitle": "Buat akaun anda",
+    "signUpSubtitle": "Sertai SchoolGo untuk mencari, membandingkan dan memohon ke sekolah Australia.",
+    "nameLabel": "Nama penuh",
+    "namePlaceholder": "Nama penuh anda",
+    "createPasswordPlaceholder": "Buat kata laluan (min. 6 aksara)",
+    "signUpButton": "Buat akaun",
+    "registerSuccess": "Akaun dicipta! Selamat datang ke SchoolGo.",
+    "registerError": "Tidak dapat mencipta akaun. Sila cuba lagi.",
+    "hasAccount": "Sudah ada akaun?",
+    "signInLink": "Log masuk"
   },
   "Errors": {
     "generic": "Sesuatu telah berlaku",

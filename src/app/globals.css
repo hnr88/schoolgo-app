@@ -87,6 +87,14 @@
   --color-chart-4: var(--chart-4);
   --color-chart-5: var(--chart-5);
 
+  /* Shadows (Airbnb 5-stop) */
+  --shadow-1: 0 1px 2px rgba(0, 0, 0, 0.04), 0 1px 1px rgba(0, 0, 0, 0.03);
+  --shadow-2: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --shadow-3: 0 6px 16px rgba(0, 0, 0, 0.12);
+  --shadow-4: 0 16px 32px rgba(0, 0, 0, 0.15), 0 3px 8px rgba(0, 0, 0, 0.06);
+  --shadow-5: 0 28px 56px rgba(0, 0, 0, 0.22), 0 8px 16px rgba(0, 0, 0, 0.08);
+  --shadow-brand: 0 6px 16px oklch(0.685 0.188 18 / 0.32);
+
   /* Radii (Airbnb) */
   --radius-xs: 0.25rem;      /*  4px */
   --radius-sm: 0.5rem;       /*  8px */

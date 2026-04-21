@@ -108,7 +108,7 @@ export function MarketingHeaderClient({ labels }: MarketingHeaderClientProps) {
           <div className='hidden shrink-0 items-center gap-2 md:flex'>
             <LanguageSelector placement='down' />
             <Link
-              href='/search'
+              href='/sign-in'
               className='rounded-pill px-4 py-2 text-sm font-medium text-foreground no-underline transition-colors hover:bg-muted'
             >
               {labels.signIn}
@@ -164,7 +164,7 @@ export function MarketingHeaderClient({ labels }: MarketingHeaderClientProps) {
               {labels.findSchools}
             </Link>
             <Link
-              href='/search'
+              href='/sign-in'
               onClick={() => setMobileOpen(false)}
               className='rounded-lg px-3 py-3 text-base font-semibold text-foreground no-underline hover:bg-muted'
             >

@@ -73,7 +73,7 @@
       }
     },
     "language": "Ngôn ngữ",
-    "copyright": "© {year, number} SchoolGo Australia. Bảo lưu mọi quyền.",
+    "copyright": "© {year} SchoolGo Australia. Bảo lưu mọi quyền.",
     "attribution": "Nguồn từ data.gov.au · CC BY 2.5 AU · Tuân thủ đạo luật ESOS"
   },
   "ParentsHero": {
@@ -112,21 +112,24 @@
           "location": "Hawthorn, VIC",
           "curriculum": "VCE",
           "fee": "$38.5k AUD",
-          "boarding": "Nội trú"
+          "boarding": "Nội trú",
+          "rating": "4.9"
         },
         "b": {
           "name": "Sydney Grammar School",
           "location": "Darlinghurst, NSW",
           "curriculum": "HSC",
           "fee": "$41.2k AUD",
-          "boarding": "Chỉ ngoại trú"
+          "boarding": "Chỉ ngoại trú",
+          "rating": "4.8"
         },
         "c": {
           "name": "Brisbane Grammar School",
           "location": "Spring Hill, QLD",
           "curriculum": "QCE/IB",
           "fee": "$35.8k AUD",
-          "boarding": "Nội trú"
+          "boarding": "Nội trú",
+          "rating": "4.7"
         }
       }
     }
@@ -283,6 +286,9 @@
     "readMore": "Đọc bài viết"
   },
   "ParentsStatsBar": {
+    "eyebrow": "Con số nổi bật",
+    "heading": "Danh bạ trường CRICOS lớn nhất Úc.",
+    "subheading": "Mọi trường đã đăng ký, được xác minh và có thể tìm kiếm — từ công lập đến tư thục, trên toàn bộ tám bang và vùng lãnh thổ.",
     "items": {
       "schools": {
         "value": "{count, number}+",
@@ -299,10 +305,6 @@
       "fees": {
         "value": "$3.5k – $78k",
         "label": "Annual Fee Range"
-      },
-      "verified": {
-        "value": "100%",
-        "label": "CRICOS Verified"
       }
     }
   },
@@ -316,25 +318,28 @@
     "ctaSecondary": "Liên hệ tư vấn đã xác minh"
   },
   "ParentsTrustBar": {
+    "eyebrow": "Tin cậy & tuân thủ",
+    "heading": "Dữ liệu bạn có thể tin tưởng.",
+    "subheading": "Mọi thông tin trường trên SchoolGo đều được hỗ trợ bởi các nguồn dữ liệu chính phủ chính thức — đã xác minh, được cấp phép và cập nhật hàng tháng.",
     "items": {
       "cricos": {
         "label": "CRICOS Verified",
-        "sublabel": "Data"
+        "description": "Mọi thông tin trường đều được đối chiếu với Sổ đăng ký Liên bang chính thức."
       },
       "datagov": {
         "label": "data.gov.au",
-        "sublabel": "CC BY 2.5 AU Licensed"
+        "description": "Dữ liệu mở được cấp phép theo CC BY 2.5 AU — minh bạch và có thể kiểm tra công khai."
       },
       "acara": {
-        "label": "ACARA",
-        "sublabel": "School Profiles"
+        "label": "ACARA School Profiles",
+        "description": "Chương trình học, điểm ICSEA và dữ liệu tuyển sinh lấy từ cơ quan quốc gia."
       },
       "esos": {
-        "label": "ESOS Act",
-        "sublabel": "Compliant"
+        "label": "ESOS Act Compliant",
+        "description": "SchoolGo hoạt động trong khuôn khổ Đạo luật Dịch vụ Giáo dục cho Học sinh Nước ngoài của Úc."
       }
     },
-    "attribution": "School data sourced from the Commonwealth Register of Institutions and Courses for Overseas Students (CRICOS) and the Australian Curriculum, Assessment and Reporting Authority (ACARA). Updated April 2026."
+    "attribution": "Dữ liệu trường lấy từ Sổ đăng ký Liên bang về Cơ sở và Khóa học cho Học sinh Nước ngoài (CRICOS) và Cơ quan Chương trình, Đánh giá và Báo cáo Úc (ACARA). Cập nhật tháng 4 năm 2026."
   },
   "ParentsFaq": {
     "heading": "Frequently Asked Questions",
@@ -782,6 +787,35 @@
       "viewDetails": "Xem {name}",
       "topRated": "Top rated"
     }
+  },
+  "Auth": {
+    "signInTitle": "Đăng nhập vào SchoolGo",
+    "signInSubtitle": "Truy cập tài khoản để quản lý trường học, hồ sơ và nhiều hơn nữa.",
+    "iAmA": "Tôi là…",
+    "userTypes": {
+      "parent": "Phụ huynh",
+      "agent": "Tư vấn",
+      "school": "Trường học"
+    },
+    "emailLabel": "Email",
+    "emailPlaceholder": "you@example.com",
+    "passwordLabel": "Mật khẩu",
+    "passwordPlaceholder": "Nhập mật khẩu của bạn",
+    "signInButton": "Đăng nhập",
+    "loginSuccess": "Chào mừng trở lại!",
+    "loginError": "Email hoặc mật khẩu không hợp lệ. Vui lòng thử lại.",
+    "noAccount": "Chưa có tài khoản?",
+    "signUp": "Đăng ký",
+    "signUpTitle": "Tạo tài khoản của bạn",
+    "signUpSubtitle": "Tham gia SchoolGo để tìm kiếm, so sánh và nộp đơn vào các trường Úc.",
+    "nameLabel": "Họ và tên",
+    "namePlaceholder": "Họ và tên của bạn",
+    "createPasswordPlaceholder": "Tạo mật khẩu (tối thiểu 6 ký tự)",
+    "signUpButton": "Tạo tài khoản",
+    "registerSuccess": "Tài khoản đã được tạo! Chào mừng bạn đến với SchoolGo.",
+    "registerError": "Không thể tạo tài khoản. Vui lòng thử lại.",
+    "hasAccount": "Đã có tài khoản?",
+    "signInLink": "Đăng nhập"
   },
   "Errors": {
     "generic": "Đã xảy ra lỗi",

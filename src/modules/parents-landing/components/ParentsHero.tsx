@@ -1,7 +1,6 @@
 import { MapPin } from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
-import { SectionContainer } from '@/modules/design-system';
-import { ParentsFeaturedCard } from '@/modules/parents-landing/components/ParentsFeaturedCard';
+import { SectionContainer, SchoolCard } from '@/modules/design-system';
 import { ParentsHeroSearch } from '@/modules/parents-landing/components/ParentsHeroSearch';
 
 const FEATURED_KEYS: Array<{ key: 'a' | 'b' | 'c'; seed: string }> = [
@@ -14,10 +13,22 @@ export async function ParentsHero() {
   const t = await getTranslations('ParentsHero');
 
   return (
-    <section className='pb-16 pt-28 md:pb-24 md:pt-36'>
-      <SectionContainer className='flex flex-col gap-12'>
+    <section className='relative overflow-hidden pb-16 pt-28 md:pb-24 md:pt-36'>
+      <div className='pointer-events-none absolute inset-0' aria-hidden='true'>
+        <div className='absolute -right-24 -top-24 h-[800px] w-[800px] rounded-full bg-rausch-100 opacity-30 blur-[140px]' />
+        <div className='absolute -left-32 top-[60%] h-[600px] w-[600px] rounded-full bg-rausch-200 opacity-20 blur-[120px]' />
+        <svg className='absolute inset-0 h-full w-full opacity-[0.07]'>
+          <defs>
+            <pattern id='parents-waves' width='120' height='20' patternUnits='userSpaceOnUse' patternTransform='rotate(-5)'>
+              <path d='M0 10 Q30 0 60 10 Q90 20 120 10' fill='none' stroke='currentColor' strokeWidth='0.75' />
+            </pattern>
+          </defs>
+          <rect width='100%' height='100%' fill='url(#parents-waves)' />
+        </svg>
+      </div>
+      <SectionContainer className='relative flex flex-col gap-12'>
         <div className='flex flex-col gap-6'>
-          <span className='inline-flex w-fit items-center gap-2 rounded-pill border border-babu-100 bg-babu-50 px-3 py-1 text-body-sm text-babu-700'>
+          <span className='inline-flex w-fit items-center gap-2 rounded-pill border border-border px-3 py-1 text-sm text-babu-700'>
             <MapPin className='h-3.5 w-3.5 text-babu-500' strokeWidth={2} aria-hidden='true' />
             <span className='font-semibold text-babu-700'>{t('trustPill.brand')}</span>{' '}
             <span className='italic text-babu-700'>{t('trustPill.brandAccent')}</span>{' '}
@@ -56,15 +67,17 @@ export async function ParentsHero() {
 
         <div className='grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3'>
           {FEATURED_KEYS.map(({ key, seed }) => (
-            <ParentsFeaturedCard
+            <SchoolCard
               key={key}
               href='/search'
-              photoSeed={seed}
+              photoUrl={`https://picsum.photos/seed/${seed}/720/540`}
               name={t(`featured.cards.${key}.name`)}
               location={t(`featured.cards.${key}.location`)}
               curriculum={t(`featured.cards.${key}.curriculum`)}
               fee={t(`featured.cards.${key}.fee`)}
+              feeSuffix='/ year'
               boarding={t(`featured.cards.${key}.boarding`)}
+              rating={t(`featured.cards.${key}.rating`)}
               shortlistAddLabel={t('featured.shortlistAdd', {
                 name: t(`featured.cards.${key}.name`),
               })}

@@ -7,7 +7,6 @@ import {
   AgentsHero,
   AgentsMatching,
   AgentsPainPoints,
-  AgentsStatsBar,
   AgentsQeacTrust,
   AgentsScale,
   AgentsTestimonial,
@@ -46,7 +45,6 @@ export default async function AgentsLandingPage({
       <MarketingHeader />
       <main>
         <AgentsHero />
-        <AgentsStatsBar />
         <AgentsPainPoints />
         <AgentsMatching />
         <AgentsCommission />

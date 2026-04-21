@@ -10,14 +10,14 @@ export async function AgentsStatsBar() {
   const stats = computeSchoolStats(schools);
 
   return (
-    <section className='border-y border-border bg-card py-6'>
+    <section className='bg-ink-900 py-10 md:py-12'>
       <SectionContainer>
-        <ul className='flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-body-sm font-medium text-foggy'>
-          {ITEMS.map((key, i) => (
-            <li key={key} className='flex items-center gap-2'>
-              {i > 0 && (
-                <span className='h-1 w-1 rounded-full bg-foggy/40' aria-hidden='true' />
-              )}
+        <ul className='grid grid-cols-2 gap-6 md:grid-cols-4'>
+          {ITEMS.map((key) => (
+            <li
+              key={key}
+              className='text-center text-body-sm font-medium text-background/70'
+            >
               {key === 'schools'
                 ? t('items.schools', { count: stats.totalSchools })
                 : t(`items.${key}`)}

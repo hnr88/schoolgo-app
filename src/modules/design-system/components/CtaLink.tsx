@@ -12,12 +12,14 @@ const ctaLinkStyles = cva(
         primary:
           'bg-primary text-on-primary shadow-brand hover:bg-rausch-600 active:bg-rausch-700',
         secondary:
-          'border border-border bg-card text-foreground hover:bg-muted',
+          'border border-border bg-white text-hof hover:bg-muted',
+        dark:
+          'bg-ink-900 text-white hover:bg-ink-900/90 active:bg-ink-900/80',
       },
       size: {
-        sm: 'px-4 py-2 text-sm',
-        md: 'px-6 py-3 text-sm',
-        lg: 'px-7 py-3.5 text-base',
+        sm: 'px-3.5 py-1.5 text-[13px]',
+        md: 'px-4.5 py-2.5 text-sm',
+        lg: 'px-6 py-3.5 text-base',
       },
     },
     defaultVariants: {

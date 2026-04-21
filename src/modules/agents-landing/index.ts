@@ -1,5 +1,4 @@
 export { AgentsHero } from '@/modules/agents-landing/components/AgentsHero';
-export { AgentsStatsBar } from '@/modules/agents-landing/components/AgentsStatsBar';
 export { AgentsPainPoints } from '@/modules/agents-landing/components/AgentsPainPoints';
 export { AgentsMatching } from '@/modules/agents-landing/components/AgentsMatching';
 export { AgentsCommission } from '@/modules/agents-landing/components/AgentsCommission';

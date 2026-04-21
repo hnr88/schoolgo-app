@@ -73,7 +73,7 @@
       }
     },
     "language": "언어",
-    "copyright": "© {year, number} SchoolGo Australia. 모든 권리 보유.",
+    "copyright": "© {year} SchoolGo Australia. 모든 권리 보유.",
     "attribution": "출처: data.gov.au · CC BY 2.5 AU · ESOS 법 준수"
   },
   "ParentsHero": {
@@ -112,21 +112,24 @@
           "location": "Hawthorn, VIC",
           "curriculum": "VCE",
           "fee": "$38.5k AUD",
-          "boarding": "기숙"
+          "boarding": "기숙",
+          "rating": "4.9"
         },
         "b": {
           "name": "Sydney Grammar School",
           "location": "Darlinghurst, NSW",
           "curriculum": "HSC",
           "fee": "$41.2k AUD",
-          "boarding": "통학 전용"
+          "boarding": "통학 전용",
+          "rating": "4.8"
         },
         "c": {
           "name": "Brisbane Grammar School",
           "location": "Spring Hill, QLD",
           "curriculum": "QCE/IB",
           "fee": "$35.8k AUD",
-          "boarding": "기숙"
+          "boarding": "기숙",
+          "rating": "4.7"
         }
       }
     }
@@ -283,6 +286,9 @@
     "readMore": "기사 읽기"
   },
   "ParentsStatsBar": {
+    "eyebrow": "주요 수치",
+    "heading": "호주 최대 CRICOS 학교 디렉토리.",
+    "subheading": "모든 등록 학교를 검증하고 검색할 수 있습니다 — 공립부터 사립까지, 8개 주와 준주 전체를 포함합니다.",
     "items": {
       "schools": {
         "value": "{count, number}+",
@@ -299,10 +305,6 @@
       "fees": {
         "value": "$3.5k – $78k",
         "label": "Annual Fee Range"
-      },
-      "verified": {
-        "value": "100%",
-        "label": "CRICOS Verified"
       }
     }
   },
@@ -316,25 +318,28 @@
     "ctaSecondary": "인증 에이전트와 상담하기"
   },
   "ParentsTrustBar": {
+    "eyebrow": "신뢰와 규정 준수",
+    "heading": "믿을 수 있는 데이터.",
+    "subheading": "SchoolGo의 모든 학교 정보는 공식 정부 데이터 출처를 기반으로 — 검증되고, 라이선스가 부여되며, 매월 갱신됩니다.",
     "items": {
       "cricos": {
         "label": "CRICOS Verified",
-        "sublabel": "Data"
+        "description": "모든 학교 정보는 공식 연방 등록부와 교차 검증됩니다."
       },
       "datagov": {
         "label": "data.gov.au",
-        "sublabel": "CC BY 2.5 AU Licensed"
+        "description": "CC BY 2.5 AU 라이선스로 제공되는 공개 데이터 — 투명하고 누구나 감사 가능합니다."
       },
       "acara": {
-        "label": "ACARA",
-        "sublabel": "School Profiles"
+        "label": "ACARA School Profiles",
+        "description": "커리큘럼, ICSEA 점수, 입학 데이터는 국가 권위 기관에서 제공합니다."
       },
       "esos": {
-        "label": "ESOS Act",
-        "sublabel": "Compliant"
+        "label": "ESOS Act Compliant",
+        "description": "SchoolGo는 호주 해외 학생 교육 서비스(ESOS) 법률 체계 내에서 운영됩니다."
       }
     },
-    "attribution": "School data sourced from the Commonwealth Register of Institutions and Courses for Overseas Students (CRICOS) and the Australian Curriculum, Assessment and Reporting Authority (ACARA). Updated April 2026."
+    "attribution": "학교 데이터는 호주 해외 학생 기관 및 과정 연방 등록부(CRICOS)와 호주 교육과정·평가·보고 기관(ACARA) 공개 데이터셋을 출처로 합니다. 2026년 4월 업데이트."
   },
   "ParentsFaq": {
     "heading": "Frequently Asked Questions",
@@ -782,6 +787,35 @@
       "viewDetails": "{name} 보기",
       "topRated": "Top rated"
     }
+  },
+  "Auth": {
+    "signInTitle": "SchoolGo에 로그인",
+    "signInSubtitle": "계정에 로그인하여 학교, 지원서 등을 관리하세요.",
+    "iAmA": "저는…",
+    "userTypes": {
+      "parent": "학부모",
+      "agent": "유학원",
+      "school": "학교"
+    },
+    "emailLabel": "이메일",
+    "emailPlaceholder": "you@example.com",
+    "passwordLabel": "비밀번호",
+    "passwordPlaceholder": "비밀번호를 입력하세요",
+    "signInButton": "로그인",
+    "loginSuccess": "다시 오셨군요!",
+    "loginError": "이메일 또는 비밀번호가 올바르지 않습니다. 다시 시도해주세요.",
+    "noAccount": "계정이 없으신가요?",
+    "signUp": "회원가입",
+    "signUpTitle": "계정 만들기",
+    "signUpSubtitle": "SchoolGo에 가입하여 호주 학교를 찾고, 비교하고, 지원하세요.",
+    "nameLabel": "이름",
+    "namePlaceholder": "성명을 입력하세요",
+    "createPasswordPlaceholder": "비밀번호를 만드세요 (최소 6자)",
+    "signUpButton": "계정 만들기",
+    "registerSuccess": "계정이 생성되었습니다! SchoolGo에 오신 것을 환영합니다.",
+    "registerError": "계정을 만들 수 없습니다. 다시 시도해주세요.",
+    "hasAccount": "이미 계정이 있으신가요?",
+    "signInLink": "로그인"
   },
   "Errors": {
     "generic": "문제가 발생했습니다",

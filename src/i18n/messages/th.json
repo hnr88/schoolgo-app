@@ -73,7 +73,7 @@
       }
     },
     "language": "ภาษา",
-    "copyright": "© {year, number} SchoolGo Australia. สงวนลิขสิทธิ์",
+    "copyright": "© {year} SchoolGo Australia. สงวนลิขสิทธิ์",
     "attribution": "ข้อมูลจาก data.gov.au · CC BY 2.5 AU · สอดคล้องกับ ESOS Act"
   },
   "ParentsHero": {
@@ -112,21 +112,24 @@
           "location": "Hawthorn, VIC",
           "curriculum": "VCE",
           "fee": "$38.5k AUD",
-          "boarding": "หอพัก"
+          "boarding": "หอพัก",
+          "rating": "4.9"
         },
         "b": {
           "name": "Sydney Grammar School",
           "location": "Darlinghurst, NSW",
           "curriculum": "HSC",
           "fee": "$41.2k AUD",
-          "boarding": "ไป-กลับเท่านั้น"
+          "boarding": "ไป-กลับเท่านั้น",
+          "rating": "4.8"
         },
         "c": {
           "name": "Brisbane Grammar School",
           "location": "Spring Hill, QLD",
           "curriculum": "QCE/IB",
           "fee": "$35.8k AUD",
-          "boarding": "หอพัก"
+          "boarding": "หอพัก",
+          "rating": "4.7"
         }
       }
     }
@@ -283,6 +286,9 @@
     "readMore": "อ่านบทความ"
   },
   "ParentsStatsBar": {
+    "eyebrow": "ตัวเลขสำคัญ",
+    "heading": "ไดเรกทอรีโรงเรียน CRICOS ที่ใหญ่ที่สุดในออสเตรเลีย",
+    "subheading": "โรงเรียนที่ลงทะเบียนทุกแห่ง ผ่านการตรวจสอบและค้นหาได้ — ตั้งแต่โรงเรียนรัฐบาลถึงเอกชน ครอบคลุมทั้ง 8 รัฐและเขตปกครอง",
     "items": {
       "schools": {
         "value": "{count, number}+",
@@ -299,10 +305,6 @@
       "fees": {
         "value": "$3.5k – $78k",
         "label": "Annual Fee Range"
-      },
-      "verified": {
-        "value": "100%",
-        "label": "CRICOS Verified"
       }
     }
   },
@@ -316,25 +318,28 @@
     "ctaSecondary": "พูดคุยกับตัวแทนที่ผ่านการรับรอง"
   },
   "ParentsTrustBar": {
+    "eyebrow": "ความน่าเชื่อถือและการปฏิบัติตามกฎหมาย",
+    "heading": "ข้อมูลที่คุณไว้วางใจได้",
+    "subheading": "ทุกรายชื่อโรงเรียนบน SchoolGo มาจากแหล่งข้อมูลรัฐบาลอย่างเป็นทางการ — ผ่านการตรวจสอบ ได้รับอนุญาต และอัปเดตทุกเดือน",
     "items": {
       "cricos": {
         "label": "CRICOS Verified",
-        "sublabel": "Data"
+        "description": "ข้อมูลโรงเรียนทุกแห่งถูกตรวจสอบกับทะเบียนเครือจักรภพอย่างเป็นทางการ"
       },
       "datagov": {
         "label": "data.gov.au",
-        "sublabel": "CC BY 2.5 AU Licensed"
+        "description": "ข้อมูลเปิดที่ได้รับอนุญาตภายใต้ CC BY 2.5 AU — โปร่งใสและตรวจสอบได้สาธารณะ"
       },
       "acara": {
-        "label": "ACARA",
-        "sublabel": "School Profiles"
+        "label": "ACARA School Profiles",
+        "description": "หลักสูตร คะแนน ICSEA และข้อมูลนักเรียนมาจากหน่วยงานระดับชาติ"
       },
       "esos": {
-        "label": "ESOS Act",
-        "sublabel": "Compliant"
+        "label": "ESOS Act Compliant",
+        "description": "SchoolGo ดำเนินงานภายในกรอบกฎหมาย ESOS ว่าด้วยบริการการศึกษาสำหรับนักเรียนต่างชาติของออสเตรเลีย"
       }
     },
-    "attribution": "School data sourced from the Commonwealth Register of Institutions and Courses for Overseas Students (CRICOS) and the Australian Curriculum, Assessment and Reporting Authority (ACARA). Updated April 2026."
+    "attribution": "ข้อมูลโรงเรียนมาจากทะเบียนสถาบันและหลักสูตรเครือจักรภพสำหรับนักเรียนต่างชาติ (CRICOS) และสำนักงานหลักสูตร การประเมิน และการรายงานของออสเตรเลีย (ACARA) อัปเดตเมษายน 2026"
   },
   "ParentsFaq": {
     "heading": "Frequently Asked Questions",
@@ -782,6 +787,35 @@
       "viewDetails": "ดู {name}",
       "topRated": "Top rated"
     }
+  },
+  "Auth": {
+    "signInTitle": "เข้าสู่ระบบ SchoolGo",
+    "signInSubtitle": "เข้าสู่บัญชีของคุณเพื่อจัดการโรงเรียน ใบสมัคร และอื่น ๆ",
+    "iAmA": "ฉันคือ…",
+    "userTypes": {
+      "parent": "ผู้ปกครอง",
+      "agent": "ตัวแทน",
+      "school": "โรงเรียน"
+    },
+    "emailLabel": "อีเมล",
+    "emailPlaceholder": "you@example.com",
+    "passwordLabel": "รหัสผ่าน",
+    "passwordPlaceholder": "กรอกรหัสผ่านของคุณ",
+    "signInButton": "เข้าสู่ระบบ",
+    "loginSuccess": "ยินดีต้อนรับกลับ!",
+    "loginError": "อีเมลหรือรหัสผ่านไม่ถูกต้อง กรุณาลองอีกครั้ง",
+    "noAccount": "ยังไม่มีบัญชี?",
+    "signUp": "สมัครสมาชิก",
+    "signUpTitle": "สร้างบัญชีของคุณ",
+    "signUpSubtitle": "เข้าร่วม SchoolGo เพื่อค้นหา เปรียบเทียบ และสมัครเข้าโรงเรียนในออสเตรเลีย",
+    "nameLabel": "ชื่อเต็ม",
+    "namePlaceholder": "ชื่อเต็มของคุณ",
+    "createPasswordPlaceholder": "สร้างรหัสผ่าน (อย่างน้อย 6 ตัวอักษร)",
+    "signUpButton": "สร้างบัญชี",
+    "registerSuccess": "สร้างบัญชีสำเร็จ! ยินดีต้อนรับสู่ SchoolGo",
+    "registerError": "ไม่สามารถสร้างบัญชีได้ กรุณาลองอีกครั้ง",
+    "hasAccount": "มีบัญชีอยู่แล้ว?",
+    "signInLink": "เข้าสู่ระบบ"
   },
   "Errors": {
     "generic": "เกิดข้อผิดพลาด",
