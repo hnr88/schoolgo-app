@@ -17,11 +17,10 @@ export function Eyebrow({ tone = 'default', className, children, ...props }: Eye
   return (
     <span
       className={cn(
-        'text-label font-semibold uppercase',
+        'text-label font-semibold uppercase tracking-[0.08em]',
         TONE_CLASSES[tone],
         className,
       )}
-      style={{ letterSpacing: '0.08em' }}
       {...props}
     >
       {children}

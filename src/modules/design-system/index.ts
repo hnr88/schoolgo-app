@@ -8,3 +8,7 @@ export { SectionHeader } from '@/modules/design-system/components/SectionHeader'
 export { CtaLink } from '@/modules/design-system/components/CtaLink';
 export { StatusBadge } from '@/modules/design-system/components/StatusBadge';
 export { FeatureCard } from '@/modules/design-system/components/FeatureCard';
+export { DsInput } from '@/modules/design-system/components/DsInput';
+export { DsSelect } from '@/modules/design-system/components/DsSelect';
+export { DsField } from '@/modules/design-system/components/DsField';
+export { SearchInput } from '@/modules/design-system/components/SearchInput';

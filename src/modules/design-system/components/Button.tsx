@@ -10,9 +10,11 @@ const buttonStyles = cva(
         primary:
           'bg-primary text-on-primary shadow-brand hover:bg-rausch-600 active:bg-rausch-700 active:translate-y-px active:shadow-none',
         secondary:
-          'border border-border bg-card text-foreground hover:bg-muted active:border-quill',
+          'border border-border bg-white text-hof hover:bg-muted active:border-quill',
         tertiary:
-          'bg-transparent text-foreground hover:bg-muted',
+          'bg-transparent text-hof underline underline-offset-4 decoration-border hover:decoration-hof',
+        dark:
+          'bg-ink-900 text-white hover:bg-ink-900/90 active:bg-ink-900/80',
         trust:
           'bg-babu-500 text-on-primary hover:bg-babu-600 active:bg-babu-700',
         featured:
@@ -20,10 +22,10 @@ const buttonStyles = cva(
         link: 'px-0 bg-transparent text-primary underline-offset-4 hover:underline',
       },
       size: {
-        sm: 'h-9 px-4 text-sm',
-        md: 'h-11 px-6 text-sm',
-        lg: 'h-12 px-7 text-base',
-        icon: 'h-10 w-10 p-0',
+        sm: 'px-3.5 py-1.5 text-[13px]',
+        md: 'px-4.5 py-2.5 text-sm',
+        lg: 'px-6 py-3.5 text-base',
+        icon: 'h-9 w-9 p-0',
       },
     },
     defaultVariants: {

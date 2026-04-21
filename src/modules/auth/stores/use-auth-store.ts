@@ -1,7 +1,7 @@
 import { create } from 'zustand';
 import { persist, createJSONStorage } from 'zustand/middleware';
 
-export type UserType = 'admin' | 'student' | 'parent' | 'school';
+export type UserType = 'parent' | 'agent' | 'school';
 
 interface AuthUser {
   id: string;

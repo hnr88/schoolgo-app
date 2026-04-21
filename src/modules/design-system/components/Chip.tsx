@@ -1,7 +1,31 @@
 import { forwardRef, type ButtonHTMLAttributes, type ReactNode } from 'react';
+import { cva, type VariantProps } from 'class-variance-authority';
 import { cn } from '@/lib/utils';
 
-interface ChipProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+const chipStyles = cva(
+  'inline-flex items-center gap-1.5 rounded-pill text-[13px] font-semibold transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary',
+  {
+    variants: {
+      variant: {
+        default: 'border border-border bg-white text-hof hover:bg-muted',
+        selected: 'border border-primary bg-primary text-on-primary shadow-brand',
+        soft: 'border border-transparent bg-muted text-hof',
+      },
+      size: {
+        sm: 'px-2.5 py-1',
+        md: 'px-3.5 py-2',
+      },
+    },
+    defaultVariants: {
+      variant: 'default',
+      size: 'md',
+    },
+  },
+);
+
+interface ChipProps
+  extends ButtonHTMLAttributes<HTMLButtonElement>,
+    VariantProps<typeof chipStyles> {
   selected?: boolean;
   leading?: ReactNode;
   trailing?: ReactNode;
@@ -9,21 +33,17 @@ interface ChipProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 export const Chip = forwardRef<HTMLButtonElement, ChipProps>(function Chip(
-  { selected = false, leading, trailing, className, children, ...props },
+  { selected = false, variant, size, leading, trailing, className, children, ...props },
   ref,
 ) {
+  const resolvedVariant = selected ? 'selected' : (variant ?? 'default');
+
   return (
     <button
       ref={ref}
       type='button'
       aria-pressed={selected}
-      className={cn(
-        'inline-flex items-center gap-1.5 rounded-pill border px-3 h-9 text-sm font-medium transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary',
-        selected
-          ? 'border-primary bg-primary text-on-primary shadow-brand'
-          : 'border-border bg-card text-foreground hover:bg-muted',
-        className,
-      )}
+      className={cn(chipStyles({ variant: resolvedVariant, size }), className)}
       {...props}
     >
       {leading}

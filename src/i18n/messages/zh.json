@@ -73,7 +73,7 @@
       }
     },
     "language": "语言",
-    "copyright": "© {year, number} SchoolGo Australia。保留所有权利。",
+    "copyright": "© {year} SchoolGo Australia。保留所有权利。",
     "attribution": "数据来源：data.gov.au · CC BY 2.5 AU · 符合 ESOS 法案"
   },
   "ParentsHero": {
@@ -112,21 +112,24 @@
           "location": "Hawthorn, VIC",
           "curriculum": "VCE",
           "fee": "$38.5k AUD",
-          "boarding": "寄宿"
+          "boarding": "寄宿",
+          "rating": "4.9"
         },
         "b": {
           "name": "Sydney Grammar School",
           "location": "Darlinghurst, NSW",
           "curriculum": "HSC",
           "fee": "$41.2k AUD",
-          "boarding": "仅走读"
+          "boarding": "仅走读",
+          "rating": "4.8"
         },
         "c": {
           "name": "Brisbane Grammar School",
           "location": "Spring Hill, QLD",
           "curriculum": "QCE/IB",
           "fee": "$35.8k AUD",
-          "boarding": "寄宿"
+          "boarding": "寄宿",
+          "rating": "4.7"
         }
       }
     }
@@ -283,6 +286,9 @@
     "readMore": "阅读文章"
   },
   "ParentsStatsBar": {
+    "eyebrow": "数据一览",
+    "heading": "澳大利亚最大的CRICOS学校目录。",
+    "subheading": "每一所注册学校，经过验证且可搜索——从公立到私立，覆盖全部八个州和领地。",
     "items": {
       "schools": {
         "value": "{count, number}+",
@@ -299,10 +305,6 @@
       "fees": {
         "value": "$3.5k – $78k",
         "label": "Annual Fee Range"
-      },
-      "verified": {
-        "value": "100%",
-        "label": "CRICOS Verified"
       }
     }
   },
@@ -316,25 +318,28 @@
     "ctaSecondary": "联系认证中介"
   },
   "ParentsTrustBar": {
+    "eyebrow": "信任与合规",
+    "heading": "您可信赖的数据。",
+    "subheading": "SchoolGo 上的每一条学校信息均来自官方政府数据来源——经过验证、持有授权，并每月更新。",
     "items": {
       "cricos": {
         "label": "CRICOS Verified",
-        "sublabel": "Data"
+        "description": "每所学校均与官方联邦注册信息进行交叉核验。"
       },
       "datagov": {
         "label": "data.gov.au",
-        "sublabel": "CC BY 2.5 AU Licensed"
+        "description": "依据 CC BY 2.5 AU 授权的开放数据——透明且可公开审查。"
       },
       "acara": {
-        "label": "ACARA",
-        "sublabel": "School Profiles"
+        "label": "ACARA School Profiles",
+        "description": "课程体系、ICSEA 分数及招生数据均来源于澳大利亚国家权威机构。"
       },
       "esos": {
-        "label": "ESOS Act",
-        "sublabel": "Compliant"
+        "label": "ESOS Act Compliant",
+        "description": "SchoolGo 在澳大利亚《海外学生教育服务法》框架内运营。"
       }
     },
-    "attribution": "School data sourced from the Commonwealth Register of Institutions and Courses for Overseas Students (CRICOS) and the Australian Curriculum, Assessment and Reporting Authority (ACARA). Updated April 2026."
+    "attribution": "学校数据来源于澳大利亚海外学生机构及课程联邦注册处（CRICOS）和澳大利亚课程、评估与报告局（ACARA）。更新至 2026 年 4 月。"
   },
   "ParentsFaq": {
     "heading": "Frequently Asked Questions",
@@ -782,6 +787,35 @@
       "viewDetails": "查看 {name}",
       "topRated": "Top rated"
     }
+  },
+  "Auth": {
+    "signInTitle": "登录 SchoolGo",
+    "signInSubtitle": "登录您的账户，管理学校、申请及更多内容。",
+    "iAmA": "我是…",
+    "userTypes": {
+      "parent": "家长",
+      "agent": "中介",
+      "school": "学校"
+    },
+    "emailLabel": "电子邮件",
+    "emailPlaceholder": "you@example.com",
+    "passwordLabel": "密码",
+    "passwordPlaceholder": "请输入密码",
+    "signInButton": "登录",
+    "loginSuccess": "欢迎回来！",
+    "loginError": "邮箱或密码错误，请重试。",
+    "noAccount": "还没有账户？",
+    "signUp": "立即注册",
+    "signUpTitle": "创建您的账户",
+    "signUpSubtitle": "加入 SchoolGo，查找、比较并申请澳大利亚学校。",
+    "nameLabel": "全名",
+    "namePlaceholder": "您的全名",
+    "createPasswordPlaceholder": "创建密码（至少6个字符）",
+    "signUpButton": "创建账户",
+    "registerSuccess": "账户已创建！欢迎来到 SchoolGo。",
+    "registerError": "无法创建账户，请重试。",
+    "hasAccount": "已有账户？",
+    "signInLink": "登录"
   },
   "Errors": {
     "generic": "出了点问题",
