@@ -263,11 +263,11 @@
     "stats": {
       "schools": {
         "value": "{count, number}",
-        "label": "Verified CRICOS schools"
+        "label": "CRICOS-registered schools"
       },
-      "agents": {
-        "value": "2,400+",
-        "label": "Verified agents across APAC"
+      "sectors": {
+        "value": "3",
+        "label": "Sectors — Gov, Independent, Catholic"
       },
       "commission": {
         "value": "100%",
@@ -335,8 +335,8 @@
     "eyebrow": "Pricing",
     "heading": "You keep 100% of your school commission.",
     "subheading": "We charge the schools, not you. Your commercial relationship with schools stays direct.",
-    "statValue": "$36,480",
-    "statLabel": "Average 2026 commission retained per agent, Q1 cohort",
+    "statValue": "$0",
+    "statLabel": "Platform cost per agent. Zero fees, zero commission splits — ever.",
     "bullets": {
       "zero": {
         "title": "Zero per-student fees",
@@ -356,6 +356,7 @@
     "eyebrow": "Verified",
     "heading": "A profile parents — and schools — actually trust.",
     "subheading": "Your QEAC credential is verified once. Your badge and track record appear on every application you submit.",
+    "sampleLabel": "Sample profile",
     "profile": {
       "name": "Agent profile",
       "qeac": "QEAC Verified",
@@ -367,35 +368,35 @@
   },
   "AgentsScale": {
     "eyebrow": "Network",
-    "heading": "2,400 verified agents across APAC. Growing every week.",
+    "heading": "Agents across APAC are joining. Be one of the first.",
     "subheading": "From Shanghai to Jakarta, Ho Chi Minh to Seoul — agents placing families into Australian K–12.",
     "agents": {
       "a": {
         "name": "Li Wei",
         "region": "Shanghai · 中国",
-        "meta": "QEAC 12 years · 148 placements"
+        "meta": "QEAC verified · Independent schools"
       },
       "b": {
         "name": "Nguyễn Minh",
         "region": "Ho Chi Minh · Việt Nam",
-        "meta": "QEAC 8 years · 96 placements"
+        "meta": "QEAC verified · All sectors"
       },
       "c": {
         "name": "Siti Rahman",
         "region": "Kuala Lumpur · Malaysia",
-        "meta": "QEAC 6 years · 64 placements"
+        "meta": "QEAC verified · Boarding specialist"
       },
       "d": {
         "name": "Ji-eun Park",
         "region": "Seoul · 대한민국",
-        "meta": "QEAC 9 years · 112 placements"
+        "meta": "QEAC verified · VIC & NSW"
       }
     },
     "cta": "Apply for verification"
   },
   "AgentsTestimonial": {
-    "quote": "I used to forward 40 PDFs a week between parents and six admissions offices. Now I do it once, and the families see one status update in Mandarin. My placement volume tripled.",
-    "attribution": "Mei, Shanghai · QEAC-verified since 2018"
+    "quote": "I used to forward 40 PDFs a week between parents and six admissions offices. With a platform like this, I could do it once — and families see one status update in Mandarin.",
+    "attribution": "Composite quote based on agent interviews"
   },
   "AgentsFinalCta": {
     "eyebrow": "Get verified",
@@ -420,7 +421,7 @@
     "ctaPrimary": "Claim your school profile",
     "ctaSecondary": "Book a walkthrough",
     "inbox": {
-      "eyebrow": "Applications inbox",
+      "eyebrow": "Applications inbox — preview",
       "countLabel": "This month",
       "rows": {
         "a": {
@@ -442,25 +443,25 @@
     }
   },
   "SchoolsStats": {
-    "eyebrow": "The network effect",
+    "eyebrow": "The network",
     "heading": "One profile. Seen by families in seven countries.",
     "subheading": "Your listing shows up in every search, every comparison, every matched shortlist — in the family's language.",
     "items": {
-      "views": {
-        "value": "42,000+",
-        "label": "Monthly profile views"
+      "schools": {
+        "value": "695+",
+        "label": "CRICOS-registered schools"
       },
-      "countries": {
-        "value": "7",
-        "label": "Source countries"
+      "states": {
+        "value": "8",
+        "label": "States & territories"
       },
-      "enquiries": {
-        "value": "168",
-        "label": "Avg monthly enquiries per profile"
+      "sectors": {
+        "value": "3",
+        "label": "Sectors — Government, Independent, Catholic"
       },
-      "applications": {
-        "value": "4,200+",
-        "label": "Applications processed in 2026"
+      "feeRange": {
+        "value": "$3.5k – $78k",
+        "label": "Annual fee range (AUD)"
       }
     }
   },
@@ -549,8 +550,8 @@
     }
   },
   "SchoolsTestimonial": {
-    "quote": "We filled our 2026 boarding intake by July. SchoolGo didn't just bring us more applications — it brought us applicants we could actually say yes to.",
-    "attribution": "Director of Admissions · Independent day & boarding school, VIC"
+    "quote": "The hardest part of international admissions isn't finding students — it's processing incomplete applications from 15 different email threads.",
+    "attribution": "Composite quote based on admissions officer interviews"
   },
   "SchoolsFinalCta": {
     "eyebrow": "Start here",

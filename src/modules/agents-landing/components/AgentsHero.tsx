@@ -43,7 +43,7 @@ export async function AgentsHero() {
           </div>
 
           <dl className='mt-6 grid grid-cols-1 gap-5 border-t border-divider pt-6 sm:grid-cols-3'>
-            {(['schools', 'agents', 'commission'] as const).map((k) => (
+            {(['schools', 'sectors', 'commission'] as const).map((k) => (
               <div key={k} className='flex flex-col gap-1'>
                 <dt
                   className='text-caption font-semibold uppercase text-foggy'

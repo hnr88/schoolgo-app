@@ -16,7 +16,10 @@ export async function AgentsQeacTrust() {
         </div>
 
         <div className='md:col-span-6'>
-          <article className='rounded-2xl border border-border bg-card p-6 shadow-3 md:p-8'>
+          <article className='relative rounded-2xl border border-border bg-card p-6 shadow-3 md:p-8'>
+            <span className='absolute top-4 right-4 rounded-pill bg-muted px-3 py-1 text-caption font-medium text-foggy'>
+              {t('sampleLabel')}
+            </span>
             <header className='flex items-center gap-4 border-b border-divider pb-5'>
               <div className='relative h-14 w-14 shrink-0 overflow-hidden rounded-pill border border-border bg-muted'>
                 <Image

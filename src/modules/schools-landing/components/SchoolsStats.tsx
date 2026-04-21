@@ -1,7 +1,7 @@
 import { getTranslations } from 'next-intl/server';
 import { Eyebrow, SectionContainer } from '@/modules/design-system';
 
-const ITEMS = ['views', 'countries', 'enquiries', 'applications'] as const;
+const ITEMS = ['schools', 'states', 'sectors', 'feeRange'] as const;
 
 export async function SchoolsStats() {
   const t = await getTranslations('SchoolsStats');
