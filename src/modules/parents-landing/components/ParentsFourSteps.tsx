@@ -1,10 +1,9 @@
 import type { ComponentType, SVGProps } from 'react';
 import Image from 'next/image';
-import { ArrowRight, BadgeCheck, LayoutGrid, ListChecks, Search } from 'lucide-react';
+import { BadgeCheck, LayoutGrid, ListChecks, Search } from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
-import { Link } from '@/i18n/navigation';
 import { loadSchools, computeSchoolStats } from '@/lib/schools';
-import { Eyebrow, SectionContainer } from '@/modules/design-system';
+import { CtaLink, SectionContainer, SectionHeader, StatusBadge } from '@/modules/design-system';
 
 type IconComponent = ComponentType<SVGProps<SVGSVGElement>>;
 
@@ -25,11 +24,11 @@ export async function ParentsFourSteps() {
     <section className='py-20 md:py-28'>
       <SectionContainer className='grid grid-cols-1 gap-12 md:grid-cols-12 md:gap-16'>
         <div className='flex flex-col gap-6 md:col-span-6'>
-          <Eyebrow tone='brand'>{t('eyebrow')}</Eyebrow>
-          <h2 className='font-display text-4xl font-bold leading-[1.1] tracking-[-0.02em] text-ink-900 md:text-5xl'>
-            {t('heading')}
-          </h2>
-          <p className='max-w-lg text-body text-foggy md:text-lg'>{t('subheading')}</p>
+          <SectionHeader
+            eyebrow={t('eyebrow')}
+            heading={t('heading')}
+            subheading={t('subheading')}
+          />
 
           <ol className='mt-4 flex flex-col gap-6'>
             {STEPS.map((step, index) => {
@@ -54,9 +53,7 @@ export async function ParentsFourSteps() {
                     <h3 className='flex items-center gap-2 text-h4 font-semibold text-ink-900'>
                       {t(`steps.${step.key}.title`)}
                       {step.comingSoon && (
-                        <span className='rounded-pill bg-arches-50 px-2.5 py-0.5 text-caption font-semibold text-arches-700'>
-                          {t(`steps.${step.key}.comingSoon`)}
-                        </span>
+                        <StatusBadge>{t(`steps.${step.key}.comingSoon`)}</StatusBadge>
                       )}
                     </h3>
                     <p className='text-body-sm text-foggy'>
@@ -72,19 +69,12 @@ export async function ParentsFourSteps() {
           </ol>
 
           <div className='mt-2 flex flex-wrap gap-3'>
-            <Link
-              href='/search'
-              className='inline-flex items-center gap-2 rounded-pill bg-primary px-6 py-3 text-sm font-semibold text-on-primary shadow-brand no-underline transition-colors hover:bg-rausch-600'
-            >
+            <CtaLink href='/search' arrow>
               {t('ctaBrowse')}
-              <ArrowRight className='h-4 w-4' strokeWidth={2} aria-hidden='true' />
-            </Link>
-            <Link
-              href='#how-it-works'
-              className='inline-flex items-center gap-2 rounded-pill border border-border bg-card px-6 py-3 text-sm font-semibold text-foreground no-underline transition-colors hover:bg-muted'
-            >
+            </CtaLink>
+            <CtaLink href='#how-it-works' variant='secondary'>
               {t('ctaLearn')}
-            </Link>
+            </CtaLink>
           </div>
         </div>
 

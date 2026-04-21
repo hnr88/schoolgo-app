@@ -2,7 +2,7 @@ import Image from 'next/image';
 import type { ComponentType, SVGProps } from 'react';
 import { Filter, Headphones, Send } from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
-import { Eyebrow, SectionContainer, TrustBadge } from '@/modules/design-system';
+import { SectionContainer, SectionHeader, StatusBadge, TrustBadge } from '@/modules/design-system';
 
 type IconComponent = ComponentType<SVGProps<SVGSVGElement>>;
 
@@ -25,11 +25,11 @@ export async function AgentsMatching() {
     <section id='how-it-works' className='py-20 md:py-28'>
       <SectionContainer className='grid grid-cols-1 items-center gap-12 md:grid-cols-12 md:gap-16'>
         <div className='flex flex-col gap-6 md:col-span-6'>
-          <Eyebrow tone='brand'>{t('eyebrow')}</Eyebrow>
-          <h2 className='font-display text-4xl font-bold leading-[1.1] tracking-[-0.02em] text-ink-900 md:text-5xl'>
-            {t('heading')}
-          </h2>
-          <p className='max-w-lg text-body text-foggy md:text-lg'>{t('subheading')}</p>
+          <SectionHeader
+            eyebrow={t('eyebrow')}
+            heading={t('heading')}
+            subheading={t('subheading')}
+          />
 
           <ol className='mt-4 flex flex-col gap-6'>
             {STEPS.map((step) => {
@@ -43,9 +43,7 @@ export async function AgentsMatching() {
                   <h3 className='flex items-center gap-2 text-h4 font-semibold text-ink-900'>
                     {t(`steps.${step.key}.title`)}
                     {step.comingSoon && (
-                      <span className='rounded-pill bg-arches-50 px-2.5 py-0.5 text-caption font-semibold text-arches-700'>
-                        {t(`steps.${step.key}.comingSoon`)}
-                      </span>
+                      <StatusBadge>{t(`steps.${step.key}.comingSoon`)}</StatusBadge>
                     )}
                   </h3>
                   <p className='text-body-sm text-foggy'>{t(`steps.${step.key}.description`)}</p>
@@ -88,9 +86,9 @@ export async function AgentsMatching() {
                       {t(`inboxRows.${row.key}.location`)}
                     </span>
                   </div>
-                  <span className='rounded-pill bg-babu-50 px-2.5 py-1 text-caption font-semibold text-babu-700'>
+                  <StatusBadge tone='trust' size='md'>
                     {t(`inboxRows.${row.key}.status`)}
-                  </span>
+                  </StatusBadge>
                 </li>
               ))}
             </ul>

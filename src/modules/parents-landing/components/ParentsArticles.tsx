@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { ArrowRight } from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
-import { Eyebrow, SectionContainer } from '@/modules/design-system';
+import { SectionContainer, SectionHeader } from '@/modules/design-system';
 
 const ITEMS: Array<{ key: 'intakes' | 'englishTests' | 'boarding'; seed: string }> = [
   { key: 'intakes', seed: 'admissions-intakes' },
@@ -15,13 +15,11 @@ export async function ParentsArticles() {
   return (
     <section className='py-20 md:py-28'>
       <SectionContainer className='flex flex-col gap-10'>
-        <div className='flex max-w-3xl flex-col gap-3'>
-          <Eyebrow tone='brand'>{t('eyebrow')}</Eyebrow>
-          <h2 className='font-display text-4xl font-bold leading-[1.1] tracking-[-0.02em] text-ink-900 md:text-5xl'>
-            {t('heading')}
-          </h2>
-          <p className='text-body text-foggy md:text-lg'>{t('subheading')}</p>
-        </div>
+        <SectionHeader
+          eyebrow={t('eyebrow')}
+          heading={t('heading')}
+          subheading={t('subheading')}
+        />
 
         <div className='grid grid-cols-1 gap-5 md:grid-cols-3'>
           {ITEMS.map((item) => (

@@ -1,7 +1,7 @@
 import type { ComponentType, SVGProps } from 'react';
 import { FileSearch, Handshake, PiggyBank } from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
-import { Eyebrow, SectionContainer } from '@/modules/design-system';
+import { SectionContainer, SectionHeader } from '@/modules/design-system';
 
 type IconComponent = ComponentType<SVGProps<SVGSVGElement>>;
 
@@ -17,11 +17,12 @@ export async function AgentsCommission() {
     <section className='bg-ink-900 py-20 text-background md:py-28'>
       <SectionContainer className='grid grid-cols-1 items-center gap-12 md:grid-cols-12 md:gap-16'>
         <div className='flex flex-col gap-6 md:col-span-6'>
-          <Eyebrow className='text-background/70'>{t('eyebrow')}</Eyebrow>
-          <h2 className='font-display text-4xl font-bold leading-[1.1] tracking-[-0.02em] text-background md:text-5xl'>
-            {t('heading')}
-          </h2>
-          <p className='max-w-xl text-body text-background/75 md:text-lg'>{t('subheading')}</p>
+          <SectionHeader
+            theme='dark'
+            eyebrow={t('eyebrow')}
+            heading={t('heading')}
+            subheading={t('subheading')}
+          />
           <ul className='mt-4 flex flex-col gap-4'>
             {BULLETS.map(({ key, icon: Icon }) => (
               <li key={key} className='flex gap-4'>

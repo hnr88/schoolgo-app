@@ -1,7 +1,5 @@
-import { ArrowRight } from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
-import { Link } from '@/i18n/navigation';
-import { Eyebrow, SectionContainer } from '@/modules/design-system';
+import { CtaLink, SectionContainer, SectionHeader } from '@/modules/design-system';
 
 const TESTS: Array<'aeas' | 'idat' | 'duolingo' | 'ielts' | 'pte' | 'cambridge' | 'toefl'> = [
   'aeas',
@@ -18,14 +16,16 @@ export async function ParentsPickATest() {
   return (
     <section className='bg-muted py-20 md:py-28'>
       <SectionContainer className='flex flex-col gap-10'>
-        <div className='flex max-w-3xl flex-col gap-3'>
-          <Eyebrow tone='brand'>{t('eyebrow')}</Eyebrow>
-          <h2 className='font-display text-4xl font-bold leading-[1.1] tracking-[-0.02em] text-ink-900 md:text-5xl'>
-            {t('heading')}{' '}
-            <em className='italic font-medium text-primary'>{t('headingAccent')}</em>
-          </h2>
-          <p className='text-body text-foggy md:text-lg'>{t('subheading')}</p>
-        </div>
+        <SectionHeader
+          eyebrow={t('eyebrow')}
+          heading={
+            <>
+              {t('heading')}{' '}
+              <em className='italic font-medium text-primary'>{t('headingAccent')}</em>
+            </>
+          }
+          subheading={t('subheading')}
+        />
 
         <div className='grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7'>
           {TESTS.map((key) => (
@@ -43,13 +43,9 @@ export async function ParentsPickATest() {
         </div>
 
         <div>
-          <Link
-            href='/search'
-            className='inline-flex items-center gap-2 rounded-pill bg-primary px-6 py-3 text-sm font-semibold text-on-primary shadow-brand no-underline transition-colors hover:bg-rausch-600'
-          >
+          <CtaLink href='/search' arrow>
             {t('cta')}
-            <ArrowRight className='h-4 w-4' strokeWidth={2} aria-hidden='true' />
-          </Link>
+          </CtaLink>
         </div>
       </SectionContainer>
     </section>

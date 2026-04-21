@@ -2,12 +2,11 @@ import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
 import { loadSchools } from '@/lib/schools';
 import { formatFeeAud, parseFeeAud } from '@/lib/schools/format-fee';
-import { Eyebrow, SectionContainer } from '@/modules/design-system';
+import { SectionContainer, SectionHeader } from '@/modules/design-system';
 
 function pickComparisonSet(
   schools: Awaited<ReturnType<typeof loadSchools>>,
 ) {
-  // Top ICSEA Independent schools with non-null fee, one per unique state.
   const candidates = schools
     .filter((s) => s.sector === 'Independent' && s.icseaScore !== null && parseFeeAud(s.annualFeeAud))
     .sort((a, b) => (b.icseaScore as number) - (a.icseaScore as number));
@@ -32,14 +31,16 @@ export async function ParentsComparison() {
   return (
     <section className='py-20 md:py-28'>
       <SectionContainer className='flex flex-col gap-10'>
-        <div className='flex max-w-3xl flex-col gap-3'>
-          <Eyebrow tone='brand'>{t('eyebrow')}</Eyebrow>
-          <h2 className='font-display text-4xl font-bold leading-[1.1] tracking-[-0.02em] text-ink-900 md:text-5xl'>
-            {t('heading')}{' '}
-            <em className='italic font-medium text-primary'>{t('headingAccent')}</em>
-          </h2>
-          <p className='text-body text-foggy md:text-lg'>{t('subheading')}</p>
-        </div>
+        <SectionHeader
+          eyebrow={t('eyebrow')}
+          heading={
+            <>
+              {t('heading')}{' '}
+              <em className='italic font-medium text-primary'>{t('headingAccent')}</em>
+            </>
+          }
+          subheading={t('subheading')}
+        />
 
         <div className='-mx-4 overflow-x-auto px-4 md:mx-0 md:px-0'>
           <table className='w-full min-w-[720px] overflow-hidden rounded-lg border border-border bg-card shadow-2'>
