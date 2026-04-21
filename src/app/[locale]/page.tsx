@@ -8,6 +8,7 @@ import {
   ParentsFinalCta,
   ParentsFourSteps,
   ParentsHero,
+  ParentsStatsBar,
   ParentsPickATest,
   ParentsSevenLanguages,
   ParentsVerified,
@@ -46,6 +47,7 @@ export default async function ParentsLandingPage({
       <MarketingHeader />
       <main>
         <ParentsHero />
+        <ParentsStatsBar />
         <ParentsFourSteps />
         <ParentsVerified />
         <ParentsComparison />

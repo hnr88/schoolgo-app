@@ -121,6 +121,30 @@
       }
     }
   },
+  "ParentsStatsBar": {
+    "items": {
+      "schools": {
+        "value": "{count, number}+",
+        "label": "CRICOS Schools"
+      },
+      "states": {
+        "value": "8",
+        "label": "States & Territories"
+      },
+      "sectors": {
+        "value": "All 3 Sectors",
+        "label": "Government · Independent · Catholic"
+      },
+      "fees": {
+        "value": "$3.5k – $78k",
+        "label": "Annual Fee Range"
+      },
+      "verified": {
+        "value": "100%",
+        "label": "CRICOS Verified"
+      }
+    }
+  },
   "ParentsFourSteps": {
     "eyebrow": "How it works",
     "heading": "From first browse to offer letter — four simple steps.",

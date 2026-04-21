@@ -1,4 +1,5 @@
 export { ParentsHero } from '@/modules/parents-landing/components/ParentsHero';
+export { ParentsStatsBar } from '@/modules/parents-landing/components/ParentsStatsBar';
 export { ParentsFourSteps } from '@/modules/parents-landing/components/ParentsFourSteps';
 export { ParentsVerified } from '@/modules/parents-landing/components/ParentsVerified';
 export { ParentsComparison } from '@/modules/parents-landing/components/ParentsComparison';
