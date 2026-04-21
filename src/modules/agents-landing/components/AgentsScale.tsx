@@ -1,8 +1,6 @@
 import Image from 'next/image';
-import { ArrowRight } from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
-import { Link } from '@/i18n/navigation';
-import { Eyebrow, SectionContainer, TrustBadge } from '@/modules/design-system';
+import { CtaLink, SectionContainer, SectionHeader, TrustBadge } from '@/modules/design-system';
 
 const AGENTS: Array<{ key: 'a' | 'b' | 'c' | 'd'; seed: string }> = [
   { key: 'a', seed: 'schoolgo-agent-shanghai' },
@@ -13,16 +11,15 @@ const AGENTS: Array<{ key: 'a' | 'b' | 'c' | 'd'; seed: string }> = [
 
 export async function AgentsScale() {
   const t = await getTranslations('AgentsScale');
+  const tc = await getTranslations('Common');
   return (
     <section className='bg-muted py-20 md:py-28'>
       <SectionContainer className='flex flex-col gap-10'>
-        <div className='flex max-w-3xl flex-col gap-3'>
-          <Eyebrow tone='brand'>{t('eyebrow')}</Eyebrow>
-          <h2 className='font-display text-4xl font-bold leading-[1.1] tracking-[-0.02em] text-ink-900 md:text-5xl'>
-            {t('heading')}
-          </h2>
-          <p className='text-body text-foggy md:text-lg'>{t('subheading')}</p>
-        </div>
+        <SectionHeader
+          eyebrow={t('eyebrow')}
+          heading={t('heading')}
+          subheading={t('subheading')}
+        />
 
         <div className='grid grid-cols-2 gap-4 md:grid-cols-4'>
           {AGENTS.map((agent) => (
@@ -41,7 +38,7 @@ export async function AgentsScale() {
                     aria-hidden='true'
                   />
                 </div>
-                <TrustBadge variant='qeac' />
+                <TrustBadge variant='qeac' label={tc('qeacVerified')} />
               </div>
               <div className='flex flex-col'>
                 <span className='text-body-sm font-semibold text-ink-900'>
@@ -55,13 +52,9 @@ export async function AgentsScale() {
         </div>
 
         <div>
-          <Link
-            href='/agents'
-            className='inline-flex items-center gap-2 rounded-pill bg-primary px-6 py-3 text-sm font-semibold text-on-primary shadow-brand no-underline transition-colors hover:bg-rausch-600'
-          >
+          <CtaLink href='/agents' arrow>
             {t('cta')}
-            <ArrowRight className='h-4 w-4' strokeWidth={2} aria-hidden='true' />
-          </Link>
+          </CtaLink>
         </div>
       </SectionContainer>
     </section>

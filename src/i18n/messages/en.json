@@ -4,6 +4,15 @@
     "description": "Search and compare the best schools across Australia. Filter by curriculum, price, location and more.",
     "ogDescription": "Search and compare the best schools across Australia."
   },
+  "Common": {
+    "step": "Step {number, number}",
+    "cricosVerified": "CRICOS Verified",
+    "qeacVerified": "QEAC Verified",
+    "claimedBySchool": "Claimed by school",
+    "addToShortlist": "Add to shortlist",
+    "removeFromShortlist": "Remove from shortlist",
+    "comingSoon": "Coming soon"
+  },
   "ParentsMetadata": {
     "title": "SchoolGo — Find your child's Australian school",
     "description": "Search every CRICOS-registered Australian school. Compare fees, English test requirements, and intakes — in seven languages, for free.",
@@ -20,7 +29,8 @@
     "signIn": "Sign in",
     "getStarted": "Get started",
     "openMenu": "Open menu",
-    "closeMenu": "Close menu"
+    "closeMenu": "Close menu",
+    "menu": "Menu"
   },
   "MarketingFooter": {
     "tagline": "Connecting future leaders with Australia's best schools — across the continent, in seven languages.",
@@ -39,8 +49,8 @@
         "links": {
           "overview": "Agents overview",
           "qeac": "QEAC verification",
-          "pipeline": "Pipeline tools",
-          "login": "Agent login"
+          "pipeline": "Pipeline tools [Soon]",
+          "login": "Agent login [Soon]"
         }
       },
       "schools": {
@@ -48,7 +58,7 @@
         "links": {
           "overview": "Schools overview",
           "claim": "Claim profile",
-          "login": "School login",
+          "login": "School login [Soon]",
           "pricing": "Pricing"
         }
       },
@@ -121,6 +131,30 @@
       }
     }
   },
+  "ParentsStatsBar": {
+    "items": {
+      "schools": {
+        "value": "{count, number}+",
+        "label": "CRICOS Schools"
+      },
+      "states": {
+        "value": "8",
+        "label": "States & Territories"
+      },
+      "sectors": {
+        "value": "All 3 Sectors",
+        "label": "Government · Independent · Catholic"
+      },
+      "fees": {
+        "value": "$3.5k – $78k",
+        "label": "Annual Fee Range"
+      },
+      "verified": {
+        "value": "100%",
+        "label": "CRICOS Verified"
+      }
+    }
+  },
   "ParentsFourSteps": {
     "eyebrow": "How it works",
     "heading": "From first browse to offer letter — four simple steps.",
@@ -140,11 +174,16 @@
       },
       "apply": {
         "title": "Apply through a verified agent",
-        "description": "Your agent carries a QEAC badge. Applications are tracked end-to-end in one dashboard."
+        "description": "Your agent carries a QEAC badge. Applications are tracked end-to-end in one dashboard.",
+        "comingSoon": "Coming soon"
       }
     },
     "ctaBrowse": "Start browsing",
-    "ctaLearn": "See how it works"
+    "ctaLearn": "See how it works",
+    "badge": {
+      "cricosVerified": "CRICOS Verified · Claimed by school",
+      "updated": "Updated April 2026"
+    }
   },
   "ParentsVerified": {
     "eyebrow": "Every CRICOS school",
@@ -195,13 +234,41 @@
     "headingAccent": "and the minimum scores.",
     "subheading": "We map accepted English tests across every profile. No more digging through 50 school websites.",
     "tests": {
-      "aeas": "AEAS",
-      "idat": "iDAT",
-      "duolingo": "Duolingo",
-      "ielts": "IELTS",
-      "pte": "PTE Academic",
-      "cambridge": "Cambridge",
-      "toefl": "TOEFL"
+      "aeas": {
+        "name": "AEAS",
+        "fullName": "Australian Education Assessment Services",
+        "description": "Most commonly accepted by Australian independent schools"
+      },
+      "idat": {
+        "name": "iDAT",
+        "fullName": "International Digital Admissions Test",
+        "description": "Growing in popularity for K–12 admissions"
+      },
+      "duolingo": {
+        "name": "Duolingo",
+        "fullName": "Duolingo English Test",
+        "description": "Accepted by an increasing number of schools"
+      },
+      "ielts": {
+        "name": "IELTS",
+        "fullName": "International English Language Testing System",
+        "description": "Standard for senior secondary entry (Year 11+)"
+      },
+      "pte": {
+        "name": "PTE Academic",
+        "fullName": "Pearson Test of English Academic",
+        "description": "Accepted by some schools for Year 11–12 entry"
+      },
+      "cambridge": {
+        "name": "Cambridge",
+        "fullName": "Cambridge English Qualifications",
+        "description": "Accepted by select schools"
+      },
+      "toefl": {
+        "name": "TOEFL",
+        "fullName": "Test of English as a Foreign Language",
+        "description": "Accepted by select schools for senior entry"
+      }
     },
     "cta": "See schools accepting this test"
   },
@@ -239,6 +306,56 @@
     },
     "readMore": "Read article"
   },
+  "ParentsTrustBar": {
+    "items": {
+      "cricos": {
+        "label": "CRICOS Verified",
+        "sublabel": "Data"
+      },
+      "datagov": {
+        "label": "data.gov.au",
+        "sublabel": "CC BY 2.5 AU Licensed"
+      },
+      "acara": {
+        "label": "ACARA",
+        "sublabel": "School Profiles"
+      },
+      "esos": {
+        "label": "ESOS Act",
+        "sublabel": "Compliant"
+      }
+    },
+    "attribution": "School data sourced from the Commonwealth Register of Institutions and Courses for Overseas Students (CRICOS) and the Australian Curriculum, Assessment and Reporting Authority (ACARA). Updated April 2026."
+  },
+  "ParentsFaq": {
+    "heading": "Frequently Asked Questions",
+    "items": {
+      "free": {
+        "question": "Is SchoolGo free?",
+        "answer": "Yes. SchoolGo is completely free for parents, education agents, and schools. There are no listing fees, application fees, or subscription costs."
+      },
+      "dataSource": {
+        "question": "Where does the school data come from?",
+        "answer": "All school listings are sourced from CRICOS (the Commonwealth Register of Institutions and Courses for Overseas Students), which is the Australian Government's official register of schools authorised to enrol international students. We cross-reference this with ACARA school profile data for enrolment figures, ICSEA scores, and GPS coordinates."
+      },
+      "englishTests": {
+        "question": "What English proficiency tests do Australian schools accept?",
+        "answer": "Different schools accept different tests. The most common are AEAS (Australian Education Assessment Services), iDAT (International Digital Admissions Test), Duolingo English Test, IELTS, and PTE Academic. SchoolGo shows which specific tests each school accepts on their profile page."
+      },
+      "agentCommission": {
+        "question": "I'm an education agent. How does SchoolGo protect my commissions?",
+        "answer": "SchoolGo never intermediates or processes commission payments. Your commission relationship with schools remains direct. SchoolGo makes your role more transparent by displaying your verified agent attribution on every application, which actually protects you from commission disputes."
+      },
+      "claimProfile": {
+        "question": "I'm a school. How do I claim my profile?",
+        "answer": "Search for your school on SchoolGo and click \"Claim This School.\" You'll be asked to verify your identity as a school staff member. Once verified, you can update your profile with fees, entry requirements, and contact details."
+      },
+      "updateFrequency": {
+        "question": "How often is the data updated?",
+        "answer": "CRICOS data is refreshed monthly from data.gov.au. School-specific details (fees, requirements, intake dates) are updated by schools who have claimed their profiles. If a school hasn't claimed their profile, the data shown is from CRICOS and ACARA public datasets."
+      }
+    }
+  },
   "ParentsFinalCta": {
     "eyebrow": "Start here",
     "headingPrefix": "Your search",
@@ -260,14 +377,15 @@
     "lede": "One verified profile. {count, number} CRICOS schools. A pipeline your families can see. SchoolGo charges the schools, not you.",
     "ctaPrimary": "Apply for verification",
     "ctaSecondary": "See how it works",
+    "badgeMeta": "Sample agent profile",
     "stats": {
       "schools": {
         "value": "{count, number}",
-        "label": "Verified CRICOS schools"
+        "label": "CRICOS-registered schools"
       },
-      "agents": {
-        "value": "2,400+",
-        "label": "Verified agents across APAC"
+      "sectors": {
+        "value": "3",
+        "label": "Sectors — Gov, Independent, Catholic"
       },
       "commission": {
         "value": "100%",
@@ -276,22 +394,34 @@
     }
   },
   "AgentsPainPoints": {
-    "eyebrow": "The old way",
-    "heading": "Stop juggling spreadsheets, WeChat threads, and school admission inboxes.",
-    "subheading": "Every student, every application, every school requirement — in one workspace.",
+    "eyebrow": "Why agents switch",
+    "heading": "Built for Education Agents Who Manage Real Pipelines",
+    "subheading": "76% of international school enrolments come through education agents. SchoolGo is built to make you more effective, not to replace you.",
     "items": {
-      "spreadsheets": {
-        "title": "One list, not fifteen tabs",
-        "description": "Track every student's stage, deadlines, and documents — without maintaining a parallel spreadsheet."
+      "email": {
+        "question": "Tired of emailing 15 admissions offices?",
+        "answer": "One platform, one application workflow. Submit to multiple schools and track responses in real time. Every application carries your verified agent attribution."
       },
-      "wechat": {
-        "title": "Families see the same screen you do",
-        "description": "Status updates flow to parents automatically, in their language. You spend less time answering 'any news yet?'"
+      "status": {
+        "question": "Students keep asking 'did you hear back?'",
+        "answer": "Live application tracker your students can see. Status updates flow automatically — you spend less time chasing and more time advising."
       },
-      "admissions": {
-        "title": "Standardised submissions",
-        "description": "One application format. One place to upload documents. One inbox for replies — instead of fifteen."
+      "trust": {
+        "question": "Schools don't know if you're legitimate?",
+        "answer": "SchoolGo agent verification with your QEAC credentials. Your verified badge and track record appear on every application you submit."
+      },
+      "requirements": {
+        "question": "Different requirements for every school?",
+        "answer": "SchoolGo maps each school's specific entry requirements: accepted English tests, minimum scores, required documents, intake dates, and application fees. No more digging through 50 school websites."
       }
+    }
+  },
+  "AgentsStatsBar": {
+    "items": {
+      "schools": "{count, number}+ School Profiles",
+      "requirements": "Entry Requirements Mapped",
+      "tests": "English Test Requirements Listed",
+      "free": "Free for Agents"
     }
   },
   "AgentsMatching": {
@@ -305,11 +435,13 @@
       },
       "match": {
         "title": "See best-fit schools",
-        "description": "Filtered by your student's profile. See accepted tests and minimum scores per school."
+        "description": "Filtered by your student's profile. See accepted tests and minimum scores per school.",
+        "comingSoon": "Coming soon"
       },
       "deliver": {
         "title": "Deliver a shortlist, not a mess",
-        "description": "A branded PDF the family can screenshot and send to Dad. No PDFs from fifteen different schools."
+        "description": "A branded PDF the family can screenshot and send to Dad. No PDFs from fifteen different schools.",
+        "comingSoon": "Coming soon"
       }
     },
     "inboxLabel": "Admissions inbox",
@@ -335,8 +467,8 @@
     "eyebrow": "Pricing",
     "heading": "You keep 100% of your school commission.",
     "subheading": "We charge the schools, not you. Your commercial relationship with schools stays direct.",
-    "statValue": "$36,480",
-    "statLabel": "Average 2026 commission retained per agent, Q1 cohort",
+    "statValue": "$0",
+    "statLabel": "Platform cost per agent. Zero fees, zero commission splits — ever.",
     "bullets": {
       "zero": {
         "title": "Zero per-student fees",
@@ -356,46 +488,49 @@
     "eyebrow": "Verified",
     "heading": "A profile parents — and schools — actually trust.",
     "subheading": "Your QEAC credential is verified once. Your badge and track record appear on every application you submit.",
+    "sampleLabel": "Sample profile",
     "profile": {
       "name": "Agent profile",
+      "agentName": "Mei Lin",
       "qeac": "QEAC Verified",
       "yearsActive": "Years active",
       "students": "Students placed",
       "placements": "Schools placed into",
-      "languages": "Spoken languages"
+      "languages": "Spoken languages",
+      "languagesValue": "中 · EN"
     }
   },
   "AgentsScale": {
     "eyebrow": "Network",
-    "heading": "2,400 verified agents across APAC. Growing every week.",
+    "heading": "Agents across APAC are joining. Be one of the first.",
     "subheading": "From Shanghai to Jakarta, Ho Chi Minh to Seoul — agents placing families into Australian K–12.",
     "agents": {
       "a": {
         "name": "Li Wei",
         "region": "Shanghai · 中国",
-        "meta": "QEAC 12 years · 148 placements"
+        "meta": "QEAC verified · Independent schools"
       },
       "b": {
         "name": "Nguyễn Minh",
         "region": "Ho Chi Minh · Việt Nam",
-        "meta": "QEAC 8 years · 96 placements"
+        "meta": "QEAC verified · All sectors"
       },
       "c": {
         "name": "Siti Rahman",
         "region": "Kuala Lumpur · Malaysia",
-        "meta": "QEAC 6 years · 64 placements"
+        "meta": "QEAC verified · Boarding specialist"
       },
       "d": {
         "name": "Ji-eun Park",
         "region": "Seoul · 대한민국",
-        "meta": "QEAC 9 years · 112 placements"
+        "meta": "QEAC verified · VIC & NSW"
       }
     },
     "cta": "Apply for verification"
   },
   "AgentsTestimonial": {
-    "quote": "I used to forward 40 PDFs a week between parents and six admissions offices. Now I do it once, and the families see one status update in Mandarin. My placement volume tripled.",
-    "attribution": "Mei, Shanghai · QEAC-verified since 2018"
+    "quote": "I used to forward 40 PDFs a week between parents and six admissions offices. With a platform like this, I could do it once — and families see one status update in Mandarin.",
+    "attribution": "Composite quote based on agent interviews"
   },
   "AgentsFinalCta": {
     "eyebrow": "Get verified",
@@ -420,7 +555,7 @@
     "ctaPrimary": "Claim your school profile",
     "ctaSecondary": "Book a walkthrough",
     "inbox": {
-      "eyebrow": "Applications inbox",
+      "eyebrow": "Applications inbox — preview",
       "countLabel": "This month",
       "rows": {
         "a": {
@@ -442,25 +577,25 @@
     }
   },
   "SchoolsStats": {
-    "eyebrow": "The network effect",
+    "eyebrow": "The network",
     "heading": "One profile. Seen by families in seven countries.",
     "subheading": "Your listing shows up in every search, every comparison, every matched shortlist — in the family's language.",
     "items": {
-      "views": {
-        "value": "42,000+",
-        "label": "Monthly profile views"
+      "schools": {
+        "value": "695+",
+        "label": "CRICOS-registered schools"
       },
-      "countries": {
-        "value": "7",
-        "label": "Source countries"
+      "states": {
+        "value": "8",
+        "label": "States & territories"
       },
-      "enquiries": {
-        "value": "168",
-        "label": "Avg monthly enquiries per profile"
+      "sectors": {
+        "value": "3",
+        "label": "Sectors — Government, Independent, Catholic"
       },
-      "applications": {
-        "value": "4,200+",
-        "label": "Applications processed in 2026"
+      "feeRange": {
+        "value": "$3.5k – $78k",
+        "label": "Annual fee range (AUD)"
       }
     }
   },
@@ -490,19 +625,23 @@
     "steps": {
       "receive": {
         "title": "Receive",
-        "description": "Application lands in your inbox with English scores, documents, and verified agent."
+        "description": "Application lands in your inbox with English scores, documents, and verified agent.",
+        "comingSoon": "Coming soon"
       },
       "review": {
         "title": "Review",
-        "description": "Your team assesses against your own rubric. Notes stay internal."
+        "description": "Your team assesses against your own rubric. Notes stay internal.",
+        "comingSoon": "Coming soon"
       },
       "decide": {
         "title": "Decide",
-        "description": "Offer, waitlist, or decline in one click. Status flows to family and agent instantly."
+        "description": "Offer, waitlist, or decline in one click. Status flows to family and agent instantly.",
+        "comingSoon": "Coming soon"
       },
       "onboard": {
         "title": "Onboard",
-        "description": "Share intake-day paperwork, accommodation info, and orientation links — all in one thread."
+        "description": "Share intake-day paperwork, accommodation info, and orientation links — all in one thread.",
+        "comingSoon": "Coming soon"
       }
     }
   },
@@ -549,8 +688,8 @@
     }
   },
   "SchoolsTestimonial": {
-    "quote": "We filled our 2026 boarding intake by July. SchoolGo didn't just bring us more applications — it brought us applicants we could actually say yes to.",
-    "attribution": "Director of Admissions · Independent day & boarding school, VIC"
+    "quote": "The hardest part of international admissions isn't finding students — it's processing incomplete applications from 15 different email threads.",
+    "attribution": "Composite quote based on admissions officer interviews"
   },
   "SchoolsFinalCta": {
     "eyebrow": "Start here",
@@ -604,9 +743,9 @@
       "priceRangeValue": "${min}k – ${max}k",
       "priceMin": "$5,000",
       "priceMax": "$60,000+",
-      "diagnosticTests": "Diagnostic Tests",
-      "diagnosticTestsHint": "Accepts external testing",
-      "diagnosticTestsToggle": "Toggle diagnostic tests",
+      "englishTests": "English Proficiency Tests",
+      "englishTestsHint": "School accepts recognised English tests",
+      "englishTestsToggle": "Toggle English proficiency tests filter",
       "curriculum": "Curriculum",
       "location": "Location",
       "apply": "Apply Filters"
@@ -640,7 +779,8 @@
     },
     "card": {
       "currency": "AUD",
-      "viewDetails": "View {name}"
+      "viewDetails": "View {name}",
+      "topRated": "Top rated"
     }
   },
   "Errors": {

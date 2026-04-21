@@ -4,6 +4,15 @@
     "description": "Tìm kiếm và so sánh các trường tốt nhất trên toàn nước Úc. Lọc theo chương trình, giá cả, vị trí và nhiều hơn nữa.",
     "ogDescription": "Tìm kiếm và so sánh các trường tốt nhất trên toàn nước Úc."
   },
+  "Common": {
+    "step": "Step {number, number}",
+    "cricosVerified": "CRICOS Verified",
+    "qeacVerified": "QEAC Verified",
+    "claimedBySchool": "Claimed by school",
+    "addToShortlist": "Add to shortlist",
+    "removeFromShortlist": "Remove from shortlist",
+    "comingSoon": "Coming soon"
+  },
   "ParentsMetadata": {
     "title": "SchoolGo — Tìm trường Úc cho con bạn",
     "description": "Tìm kiếm mọi trường học Úc đăng ký CRICOS. So sánh học phí, yêu cầu thi tiếng Anh và kỳ tuyển sinh — bằng bảy ngôn ngữ, miễn phí.",
@@ -20,7 +29,8 @@
     "signIn": "Đăng nhập",
     "getStarted": "Bắt đầu",
     "openMenu": "Mở menu",
-    "closeMenu": "Đóng menu"
+    "closeMenu": "Đóng menu",
+    "menu": "Menu"
   },
   "MarketingFooter": {
     "tagline": "Kết nối các nhà lãnh đạo tương lai với những trường học tốt nhất của Úc — khắp đất nước, bằng bảy ngôn ngữ.",
@@ -39,8 +49,8 @@
         "links": {
           "overview": "Tổng quan tư vấn",
           "qeac": "Xác minh QEAC",
-          "pipeline": "Công cụ quản lý",
-          "login": "Đăng nhập tư vấn"
+          "pipeline": "Pipeline tools [Soon]",
+          "login": "Agent login [Soon]"
         }
       },
       "schools": {
@@ -48,7 +58,7 @@
         "links": {
           "overview": "Tổng quan trường",
           "claim": "Xác nhận hồ sơ",
-          "login": "Đăng nhập trường",
+          "login": "School login [Soon]",
           "pricing": "Bảng giá"
         }
       },
@@ -140,11 +150,16 @@
       },
       "apply": {
         "title": "Nộp đơn qua tư vấn đã xác minh",
-        "description": "Tư vấn của bạn có huy hiệu QEAC. Hồ sơ được theo dõi từ đầu đến cuối trên một bảng điều khiển."
+        "description": "Tư vấn của bạn có huy hiệu QEAC. Hồ sơ được theo dõi từ đầu đến cuối trên một bảng điều khiển.",
+        "comingSoon": "Coming soon"
       }
     },
     "ctaBrowse": "Bắt đầu duyệt",
-    "ctaLearn": "Xem cách hoạt động"
+    "ctaLearn": "Xem cách hoạt động",
+    "badge": {
+      "cricosVerified": "CRICOS Verified · Claimed by school",
+      "updated": "Updated April 2026"
+    }
   },
   "ParentsVerified": {
     "eyebrow": "Mọi trường CRICOS",
@@ -195,13 +210,41 @@
     "headingAccent": "và điểm tối thiểu.",
     "subheading": "Chúng tôi tổng hợp bài thi tiếng Anh được chấp nhận trên mọi hồ sơ trường. Không còn phải lướt qua 50 website trường.",
     "tests": {
-      "aeas": "AEAS",
-      "idat": "iDAT",
-      "duolingo": "Duolingo",
-      "ielts": "IELTS",
-      "pte": "PTE Academic",
-      "cambridge": "Cambridge",
-      "toefl": "TOEFL"
+      "aeas": {
+        "name": "AEAS",
+        "fullName": "Australian Education Assessment Services",
+        "description": "Most commonly accepted by Australian independent schools"
+      },
+      "idat": {
+        "name": "iDAT",
+        "fullName": "International Digital Admissions Test",
+        "description": "Growing in popularity for K–12 admissions"
+      },
+      "duolingo": {
+        "name": "Duolingo",
+        "fullName": "Duolingo English Test",
+        "description": "Accepted by an increasing number of schools"
+      },
+      "ielts": {
+        "name": "IELTS",
+        "fullName": "International English Language Testing System",
+        "description": "Standard for senior secondary entry (Year 11+)"
+      },
+      "pte": {
+        "name": "PTE Academic",
+        "fullName": "Pearson Test of English Academic",
+        "description": "Accepted by some schools for Year 11–12 entry"
+      },
+      "cambridge": {
+        "name": "Cambridge",
+        "fullName": "Cambridge English Qualifications",
+        "description": "Accepted by select schools"
+      },
+      "toefl": {
+        "name": "TOEFL",
+        "fullName": "Test of English as a Foreign Language",
+        "description": "Accepted by select schools for senior entry"
+      }
     },
     "cta": "Xem các trường chấp nhận bài thi này"
   },
@@ -239,6 +282,30 @@
     },
     "readMore": "Đọc bài viết"
   },
+  "ParentsStatsBar": {
+    "items": {
+      "schools": {
+        "value": "{count, number}+",
+        "label": "CRICOS Schools"
+      },
+      "states": {
+        "value": "8",
+        "label": "States & Territories"
+      },
+      "sectors": {
+        "value": "All 3 Sectors",
+        "label": "Government · Independent · Catholic"
+      },
+      "fees": {
+        "value": "$3.5k – $78k",
+        "label": "Annual Fee Range"
+      },
+      "verified": {
+        "value": "100%",
+        "label": "CRICOS Verified"
+      }
+    }
+  },
   "ParentsFinalCta": {
     "eyebrow": "Bắt đầu tại đây",
     "headingPrefix": "Hành trình tìm kiếm của bạn",
@@ -247,6 +314,56 @@
     "subheading": "Miễn phí. Không cần đăng nhập. Cập nhật {month} {year, number}.",
     "ctaPrimary": "Tìm trường của bạn",
     "ctaSecondary": "Liên hệ tư vấn đã xác minh"
+  },
+  "ParentsTrustBar": {
+    "items": {
+      "cricos": {
+        "label": "CRICOS Verified",
+        "sublabel": "Data"
+      },
+      "datagov": {
+        "label": "data.gov.au",
+        "sublabel": "CC BY 2.5 AU Licensed"
+      },
+      "acara": {
+        "label": "ACARA",
+        "sublabel": "School Profiles"
+      },
+      "esos": {
+        "label": "ESOS Act",
+        "sublabel": "Compliant"
+      }
+    },
+    "attribution": "School data sourced from the Commonwealth Register of Institutions and Courses for Overseas Students (CRICOS) and the Australian Curriculum, Assessment and Reporting Authority (ACARA). Updated April 2026."
+  },
+  "ParentsFaq": {
+    "heading": "Frequently Asked Questions",
+    "items": {
+      "free": {
+        "question": "Is SchoolGo free?",
+        "answer": "Yes. SchoolGo is completely free for parents, education agents, and schools. There are no listing fees, application fees, or subscription costs."
+      },
+      "dataSource": {
+        "question": "Where does the school data come from?",
+        "answer": "All school listings are sourced from CRICOS (the Commonwealth Register of Institutions and Courses for Overseas Students), which is the Australian Government's official register of schools authorised to enrol international students. We cross-reference this with ACARA school profile data for enrolment figures, ICSEA scores, and GPS coordinates."
+      },
+      "englishTests": {
+        "question": "What English proficiency tests do Australian schools accept?",
+        "answer": "Different schools accept different tests. The most common are AEAS (Australian Education Assessment Services), iDAT (International Digital Admissions Test), Duolingo English Test, IELTS, and PTE Academic. SchoolGo shows which specific tests each school accepts on their profile page."
+      },
+      "agentCommission": {
+        "question": "I'm an education agent. How does SchoolGo protect my commissions?",
+        "answer": "SchoolGo never intermediates or processes commission payments. Your commission relationship with schools remains direct. SchoolGo makes your role more transparent by displaying your verified agent attribution on every application, which actually protects you from commission disputes."
+      },
+      "claimProfile": {
+        "question": "I'm a school. How do I claim my profile?",
+        "answer": "Search for your school on SchoolGo and click \"Claim This School.\" You'll be asked to verify your identity as a school staff member. Once verified, you can update your profile with fees, entry requirements, and contact details."
+      },
+      "updateFrequency": {
+        "question": "How often is the data updated?",
+        "answer": "CRICOS data is refreshed monthly from data.gov.au. School-specific details (fees, requirements, intake dates) are updated by schools who have claimed their profiles. If a school hasn't claimed their profile, the data shown is from CRICOS and ACARA public datasets."
+      }
+    }
   },
   "AgentsMetadata": {
     "title": "SchoolGo — Vận hành công ty tư vấn như một danh mục đầu tư",
@@ -260,14 +377,15 @@
     "lede": "Một hồ sơ được xác minh. {count, number} trường CRICOS. Một bảng theo dõi mà gia đình có thể xem. SchoolGo thu phí từ các trường, không thu từ bạn.",
     "ctaPrimary": "Đăng ký xác minh",
     "ctaSecondary": "Xem cách hoạt động",
+    "badgeMeta": "Sample agent profile",
     "stats": {
       "schools": {
         "value": "{count, number}",
         "label": "Trường CRICOS đã xác minh"
       },
-      "agents": {
-        "value": "2,400+",
-        "label": "Tư vấn được xác minh trên toàn APAC"
+      "sectors": {
+        "value": "3",
+        "label": "Sectors — Gov, Independent, Catholic"
       },
       "commission": {
         "value": "100%",
@@ -276,22 +394,34 @@
     }
   },
   "AgentsPainPoints": {
-    "eyebrow": "Cách cũ",
-    "heading": "Không còn loay hoay với bảng tính, chuỗi WeChat và hộp thư tuyển sinh của trường.",
-    "subheading": "Mọi học sinh, mọi hồ sơ, mọi yêu cầu của trường — trong một không gian làm việc duy nhất.",
+    "eyebrow": "Why agents switch",
+    "heading": "Built for Education Agents Who Manage Real Pipelines",
+    "subheading": "76% of international school enrolments come through education agents. SchoolGo is built to make you more effective, not to replace you.",
     "items": {
-      "spreadsheets": {
-        "title": "Một danh sách, không phải mười lăm tab",
-        "description": "Theo dõi giai đoạn, hạn chót và hồ sơ của từng học sinh — không cần duy trì bảng tính riêng."
+      "email": {
+        "question": "Tired of emailing 15 admissions offices?",
+        "answer": "One platform, one application workflow. Submit to multiple schools and track responses in real time. Every application carries your verified agent attribution."
       },
-      "wechat": {
-        "title": "Gia đình nhìn thấy cùng màn hình với bạn",
-        "description": "Cập nhật trạng thái tự động gửi đến phụ huynh bằng ngôn ngữ của họ. Bạn không còn mất nhiều thời gian trả lời 'có tin tức chưa?'"
+      "status": {
+        "question": "Students keep asking 'did you hear back?'",
+        "answer": "Live application tracker your students can see. Status updates flow automatically — you spend less time chasing and more time advising."
       },
-      "admissions": {
-        "title": "Hồ sơ được chuẩn hóa",
-        "description": "Một định dạng hồ sơ. Một nơi tải lên tài liệu. Một hộp thư nhận phản hồi — thay vì mười lăm."
+      "trust": {
+        "question": "Schools don't know if you're legitimate?",
+        "answer": "SchoolGo agent verification with your QEAC credentials. Your verified badge and track record appear on every application you submit."
+      },
+      "requirements": {
+        "question": "Different requirements for every school?",
+        "answer": "SchoolGo maps each school's specific entry requirements: accepted English tests, minimum scores, required documents, intake dates, and application fees. No more digging through 50 school websites."
       }
+    }
+  },
+  "AgentsStatsBar": {
+    "items": {
+      "schools": "{count, number}+ School Profiles",
+      "requirements": "Entry Requirements Mapped",
+      "tests": "English Test Requirements Listed",
+      "free": "Free for Agents"
     }
   },
   "AgentsMatching": {
@@ -305,11 +435,13 @@
       },
       "match": {
         "title": "Xem các trường phù hợp nhất",
-        "description": "Lọc theo hồ sơ của học sinh. Xem bài thi được chấp nhận và điểm tối thiểu của từng trường."
+        "description": "Lọc theo hồ sơ của học sinh. Xem bài thi được chấp nhận và điểm tối thiểu của từng trường.",
+        "comingSoon": "Coming soon"
       },
       "deliver": {
         "title": "Giao danh sách gọn gàng, không lộn xộn",
-        "description": "Một file PDF có thương hiệu mà gia đình có thể chụp màn hình và gửi cho bố. Không cần PDF từ mười lăm trường khác nhau."
+        "description": "Một file PDF có thương hiệu mà gia đình có thể chụp màn hình và gửi cho bố. Không cần PDF từ mười lăm trường khác nhau.",
+        "comingSoon": "Coming soon"
       }
     },
     "inboxLabel": "Hộp thư tuyển sinh",
@@ -335,8 +467,8 @@
     "eyebrow": "Phí dịch vụ",
     "heading": "Bạn giữ lại 100% hoa hồng từ trường.",
     "subheading": "Chúng tôi thu phí từ trường, không từ bạn. Mối quan hệ thương mại của bạn với các trường vẫn trực tiếp.",
-    "statValue": "$36,480",
-    "statLabel": "Hoa hồng trung bình 2026 được giữ lại mỗi tư vấn, nhóm Q1",
+    "statValue": "$0",
+    "statLabel": "Platform cost per agent. Zero fees, zero commission splits — ever.",
     "bullets": {
       "zero": {
         "title": "Không phí theo từng học sinh",
@@ -356,46 +488,49 @@
     "eyebrow": "Đã xác minh",
     "heading": "Một hồ sơ mà phụ huynh — và nhà trường — thực sự tin tưởng.",
     "subheading": "Chứng chỉ QEAC của bạn được xác minh một lần. Huy hiệu và thành tích của bạn sẽ xuất hiện trên mọi hồ sơ bạn nộp.",
+    "sampleLabel": "Sample profile",
     "profile": {
       "name": "Hồ sơ tư vấn",
+      "agentName": "Mei Lin",
       "qeac": "QEAC đã xác minh",
       "yearsActive": "Năm hoạt động",
       "students": "Học sinh đã xếp chỗ",
       "placements": "Trường đã xếp chỗ",
-      "languages": "Ngôn ngữ sử dụng"
+      "languages": "Ngôn ngữ sử dụng",
+      "languagesValue": "中 · EN"
     }
   },
   "AgentsScale": {
     "eyebrow": "Mạng lưới",
-    "heading": "2.400 tư vấn được xác minh trên toàn APAC. Tăng trưởng mỗi tuần.",
-    "subheading": "Từ Shanghai đến Jakarta, Ho Chi Minh đến Seoul — các tư vấn đang kết nối gia đình với K–12 Australia.",
+    "heading": "Agents across APAC are joining. Be one of the first.",
+    "subheading": "From Shanghai to Jakarta, Ho Chi Minh to Seoul — agents placing families into Australian K–12.",
     "agents": {
       "a": {
         "name": "Li Wei",
         "region": "Shanghai · 中国",
-        "meta": "QEAC 12 năm · 148 lần xếp chỗ"
+        "meta": "QEAC verified · Independent schools"
       },
       "b": {
         "name": "Nguyễn Minh",
         "region": "Ho Chi Minh · Việt Nam",
-        "meta": "QEAC 8 năm · 96 lần xếp chỗ"
+        "meta": "QEAC verified · All sectors"
       },
       "c": {
         "name": "Siti Rahman",
         "region": "Kuala Lumpur · Malaysia",
-        "meta": "QEAC 6 năm · 64 lần xếp chỗ"
+        "meta": "QEAC verified · Boarding specialist"
       },
       "d": {
         "name": "Ji-eun Park",
         "region": "Seoul · 대한민국",
-        "meta": "QEAC 9 năm · 112 lần xếp chỗ"
+        "meta": "QEAC verified · VIC & NSW"
       }
     },
     "cta": "Đăng ký xác minh"
   },
   "AgentsTestimonial": {
-    "quote": "Trước đây tôi chuyển tiếp 40 file PDF mỗi tuần giữa phụ huynh và sáu phòng tuyển sinh. Bây giờ tôi chỉ làm một lần, và gia đình nhận được một thông báo trạng thái bằng tiếng Mandarin. Số lượng xếp chỗ của tôi tăng gấp ba.",
-    "attribution": "Mei, Shanghai · QEAC được xác minh từ 2018"
+    "quote": "I used to forward 40 PDFs a week between parents and six admissions offices. With a platform like this, I could do it once — and families see one status update in Mandarin.",
+    "attribution": "Composite quote based on agent interviews"
   },
   "AgentsFinalCta": {
     "eyebrow": "Được xác minh",
@@ -420,7 +555,7 @@
     "ctaPrimary": "Xác nhận hồ sơ trường",
     "ctaSecondary": "Đặt lịch giới thiệu",
     "inbox": {
-      "eyebrow": "Hộp thư hồ sơ",
+      "eyebrow": "Applications inbox — preview",
       "countLabel": "Tháng này",
       "rows": {
         "a": {
@@ -446,21 +581,21 @@
     "heading": "Một hồ sơ. Được các gia đình ở bảy quốc gia nhìn thấy.",
     "subheading": "Thông tin trường của bạn xuất hiện trong mọi tìm kiếm, mọi so sánh, mọi danh sách gợi ý — bằng ngôn ngữ của gia đình.",
     "items": {
-      "views": {
-        "value": "42,000+",
-        "label": "Lượt xem hồ sơ hàng tháng"
+      "schools": {
+        "value": "695+",
+        "label": "CRICOS-registered schools"
       },
-      "countries": {
-        "value": "7",
-        "label": "Quốc gia nguồn"
+      "states": {
+        "value": "8",
+        "label": "States & territories"
       },
-      "enquiries": {
-        "value": "168",
-        "label": "Trung bình hỏi thăm hàng tháng mỗi hồ sơ"
+      "sectors": {
+        "value": "3",
+        "label": "Sectors — Government, Independent, Catholic"
       },
-      "applications": {
-        "value": "4,200+",
-        "label": "Hồ sơ được xử lý năm 2026"
+      "feeRange": {
+        "value": "$3.5k – $78k",
+        "label": "Annual fee range (AUD)"
       }
     }
   },
@@ -490,19 +625,23 @@
     "steps": {
       "receive": {
         "title": "Nhận hồ sơ",
-        "description": "Hồ sơ đến hộp thư kèm điểm tiếng Anh, tài liệu và tư vấn đã xác minh."
+        "description": "Hồ sơ đến hộp thư kèm điểm tiếng Anh, tài liệu và tư vấn đã xác minh.",
+        "comingSoon": "Coming soon"
       },
       "review": {
         "title": "Xét duyệt",
-        "description": "Đội của bạn đánh giá theo tiêu chí riêng. Ghi chú chỉ hiển thị nội bộ."
+        "description": "Đội của bạn đánh giá theo tiêu chí riêng. Ghi chú chỉ hiển thị nội bộ.",
+        "comingSoon": "Coming soon"
       },
       "decide": {
         "title": "Quyết định",
-        "description": "Mời nhập học, xếp danh sách chờ hoặc từ chối chỉ bằng một cú nhấp. Trạng thái gửi ngay đến gia đình và tư vấn."
+        "description": "Mời nhập học, xếp danh sách chờ hoặc từ chối chỉ bằng một cú nhấp. Trạng thái gửi ngay đến gia đình và tư vấn.",
+        "comingSoon": "Coming soon"
       },
       "onboard": {
         "title": "Nhập học",
-        "description": "Chia sẻ giấy tờ ngày nhập học, thông tin chỗ ở và đường dẫn định hướng — tất cả trong một luồng hội thoại."
+        "description": "Chia sẻ giấy tờ ngày nhập học, thông tin chỗ ở và đường dẫn định hướng — tất cả trong một luồng hội thoại.",
+        "comingSoon": "Coming soon"
       }
     }
   },
@@ -549,8 +688,8 @@
     }
   },
   "SchoolsTestimonial": {
-    "quote": "Chúng tôi lấp đầy chỉ tiêu nội trú 2026 vào tháng Bảy. SchoolGo không chỉ mang đến nhiều hồ sơ hơn — mà mang đến những ứng viên chúng tôi thực sự có thể nhận.",
-    "attribution": "Giám đốc Tuyển sinh · Trường ngày và nội trú tư thục, VIC"
+    "quote": "The hardest part of international admissions isn't finding students — it's processing incomplete applications from 15 different email threads.",
+    "attribution": "Composite quote based on admissions officer interviews"
   },
   "SchoolsFinalCta": {
     "eyebrow": "Bắt đầu tại đây",
@@ -604,9 +743,9 @@
       "priceRangeValue": "${min}k – ${max}k",
       "priceMin": "$5.000",
       "priceMax": "$60.000+",
-      "diagnosticTests": "Bài Kiểm Tra Chẩn Đoán",
-      "diagnosticTestsHint": "Chấp nhận kiểm tra bên ngoài",
-      "diagnosticTestsToggle": "Bật/tắt bài kiểm tra chẩn đoán",
+      "englishTests": "Bài Thi Trình Độ Tiếng Anh",
+      "englishTestsHint": "Trường chấp nhận các bài thi tiếng Anh được công nhận",
+      "englishTestsToggle": "Bật/tắt bộ lọc bài thi trình độ tiếng Anh",
       "curriculum": "Chương Trình Học",
       "location": "Vị Trí",
       "apply": "Áp Dụng Bộ Lọc"
@@ -640,7 +779,8 @@
     },
     "card": {
       "currency": "AUD",
-      "viewDetails": "Xem {name}"
+      "viewDetails": "Xem {name}",
+      "topRated": "Top rated"
     }
   },
   "Errors": {

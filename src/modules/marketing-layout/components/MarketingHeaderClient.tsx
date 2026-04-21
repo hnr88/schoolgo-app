@@ -16,6 +16,7 @@ interface MarketingHeaderClientProps {
     getStarted: string;
     openMenu: string;
     closeMenu: string;
+    menu: string;
     audiences: Record<AudienceKey, string>;
   };
 }
@@ -71,12 +72,12 @@ export function MarketingHeaderClient({ labels }: MarketingHeaderClientProps) {
             aria-label='SchoolGo home'
           >
             <Image
-              src='/ds/logos/logo-red.png'
+              src='/logos/logo-red.png'
               alt='SchoolGo'
-              width={140}
-              height={32}
+              width={220}
+              height={48}
               priority
-              className='h-7 w-auto md:h-8'
+              className='h-11 w-auto md:h-12'
             />
           </Link>
 
@@ -144,7 +145,7 @@ export function MarketingHeaderClient({ labels }: MarketingHeaderClientProps) {
                 className='text-label font-semibold uppercase text-foggy'
                 style={{ letterSpacing: '0.08em' }}
               >
-                Menu
+                {labels.menu}
               </span>
               <button
                 type='button'

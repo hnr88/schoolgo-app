@@ -14,13 +14,13 @@ interface SchoolSearchState {
   priceMax: number;
   curricula: Curriculum[];
   states: AustralianState[];
-  diagnosticTests: boolean;
+  englishTests: boolean;
   activeChips: string[];
   setQuery: (q: string) => void;
   setPriceRange: (min: number, max: number) => void;
   toggleCurriculum: (c: Curriculum) => void;
   toggleState: (s: AustralianState) => void;
-  setDiagnosticTests: (value: boolean) => void;
+  setEnglishTests: (value: boolean) => void;
   toggleChip: (id: string) => void;
   reset: () => void;
 }
@@ -31,7 +31,7 @@ const initialState = {
   priceMax: 45000,
   curricula: ['VCE'] as Curriculum[],
   states: ['VIC', 'NSW'] as AustralianState[],
-  diagnosticTests: true,
+  englishTests: true,
   activeChips: ['top-rated'],
 };
 
@@ -55,7 +55,7 @@ export const useSchoolSearchStore = create<SchoolSearchState>((set) => ({
         ? s.states.filter((x) => x !== st)
         : [...s.states, st],
     })),
-  setDiagnosticTests: (value) => set({ diagnosticTests: value }),
+  setEnglishTests: (value) => set({ englishTests: value }),
   toggleChip: (id) =>
     set((s) => ({
       activeChips: s.activeChips.includes(id)

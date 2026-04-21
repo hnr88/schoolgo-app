@@ -11,6 +11,7 @@ interface SchoolCardProps {
 
 export async function SchoolCard({ school }: SchoolCardProps) {
   const t = await getTranslations('SchoolSearch.card');
+  const tc = await getTranslations('Common');
   const currencyFormatter = new Intl.NumberFormat('en-AU', {
     style: 'currency',
     currency: 'AUD',
@@ -37,7 +38,7 @@ export async function SchoolCard({ school }: SchoolCardProps) {
           {school.isTopRated && (
             <span className='absolute left-3 top-3 inline-flex items-center gap-1 rounded-pill bg-arches-500 px-2.5 py-1 text-caption font-semibold text-on-primary shadow-brand'>
               <Star className='h-3 w-3 fill-current' strokeWidth={0} aria-hidden='true' />
-              Top rated
+              {t('topRated')}
             </span>
           )}
         </div>
@@ -51,7 +52,7 @@ export async function SchoolCard({ school }: SchoolCardProps) {
             {school.suburb}, {school.state}
           </p>
           <div className='mt-2 flex items-center justify-between border-t border-divider pt-3'>
-            <TrustBadge variant='cricos' />
+            <TrustBadge variant='cricos' label={tc('cricosVerified')} />
             <span className='text-body-sm font-semibold text-ink-900'>
               {currencyFormatter.format(school.tuitionAud)}
               <span className='ml-1 text-caption font-normal text-foggy'>{t('currency')}</span>

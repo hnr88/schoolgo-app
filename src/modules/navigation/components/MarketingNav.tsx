@@ -68,12 +68,12 @@ export function MarketingNav({ labels }: MarketingNavProps) {
           <div className='flex items-center gap-8 h-full'>
             <Link href='/landing' className='flex items-center'>
               <Image
-                src='/images/logo-horizontal.png'
+                src='/logos/logo-red.png'
                 alt='SchoolGo'
-                width={160}
-                height={40}
+                width={220}
+                height={48}
                 priority
-                className='h-8 w-auto'
+                className='h-11 w-auto md:h-12'
               />
             </Link>
 

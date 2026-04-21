@@ -25,8 +25,8 @@ export function FilterSidebar() {
   const toggleCurriculum = useSchoolSearchStore((s) => s.toggleCurriculum);
   const selectedStates = useSchoolSearchStore((s) => s.states);
   const toggleState = useSchoolSearchStore((s) => s.toggleState);
-  const diagnosticTests = useSchoolSearchStore((s) => s.diagnosticTests);
-  const setDiagnosticTests = useSchoolSearchStore((s) => s.setDiagnosticTests);
+  const englishTests = useSchoolSearchStore((s) => s.englishTests);
+  const setEnglishTests = useSchoolSearchStore((s) => s.setEnglishTests);
 
   return (
     <aside className='hidden shrink-0 lg:sticky lg:top-20 lg:block lg:h-[calc(100vh-5rem)] lg:w-sidebar lg:p-4'>
@@ -73,16 +73,16 @@ export function FilterSidebar() {
 
         <div className='flex items-center justify-between rounded-md border border-border bg-muted px-4 py-3'>
           <div className='flex flex-col'>
-            <Label htmlFor='diagnostic-tests-switch' className='text-body-sm font-semibold text-ink-900'>
-              {t('diagnosticTests')}
+            <Label htmlFor='english-tests-switch' className='text-body-sm font-semibold text-ink-900'>
+              {t('englishTests')}
             </Label>
-            <span className='text-caption text-foggy'>{t('diagnosticTestsHint')}</span>
+            <span className='text-caption text-foggy'>{t('englishTestsHint')}</span>
           </div>
           <Switch
-            id='diagnostic-tests-switch'
-            checked={diagnosticTests}
-            onCheckedChange={setDiagnosticTests}
-            aria-label={t('diagnosticTestsToggle')}
+            id='english-tests-switch'
+            checked={englishTests}
+            onCheckedChange={setEnglishTests}
+            aria-label={t('englishTestsToggle')}
           />
         </div>
 

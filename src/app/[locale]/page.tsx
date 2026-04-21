@@ -4,9 +4,12 @@ import { MarketingFooter, MarketingHeader } from '@/modules/marketing-layout';
 import {
   ParentsArticles,
   ParentsComparison,
+  ParentsFaq,
   ParentsFinalCta,
   ParentsFourSteps,
   ParentsHero,
+  ParentsStatsBar,
+  ParentsTrustBar,
   ParentsPickATest,
   ParentsSevenLanguages,
   ParentsVerified,
@@ -45,12 +48,15 @@ export default async function ParentsLandingPage({
       <MarketingHeader />
       <main>
         <ParentsHero />
+        <ParentsStatsBar />
         <ParentsFourSteps />
         <ParentsVerified />
         <ParentsComparison />
         <ParentsPickATest />
         <ParentsSevenLanguages />
         <ParentsArticles />
+        <ParentsTrustBar />
+        <ParentsFaq />
         <ParentsFinalCta />
       </main>
       <MarketingFooter />

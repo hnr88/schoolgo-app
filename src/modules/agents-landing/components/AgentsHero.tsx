@@ -1,12 +1,12 @@
 import Image from 'next/image';
-import { ArrowRight, BadgeCheck } from 'lucide-react';
+import { BadgeCheck } from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
-import { Link } from '@/i18n/navigation';
 import { loadSchools, computeSchoolStats } from '@/lib/schools';
-import { Eyebrow, SectionContainer } from '@/modules/design-system';
+import { CtaLink, Eyebrow, SectionContainer } from '@/modules/design-system';
 
 export async function AgentsHero() {
   const t = await getTranslations('AgentsHero');
+  const tc = await getTranslations('Common');
   const schools = await loadSchools();
   const stats = computeSchoolStats(schools);
 
@@ -27,23 +27,16 @@ export async function AgentsHero() {
             {t('lede', { count: stats.totalSchools })}
           </p>
           <div className='flex flex-wrap gap-3 pt-2'>
-            <Link
-              href='/agents'
-              className='inline-flex items-center gap-2 rounded-pill bg-primary px-7 py-3.5 text-base font-semibold text-on-primary shadow-brand no-underline transition-colors hover:bg-rausch-600'
-            >
+            <CtaLink href='/agents' size='lg' arrow>
               {t('ctaPrimary')}
-              <ArrowRight className='h-4 w-4' strokeWidth={2} aria-hidden='true' />
-            </Link>
-            <Link
-              href='#how-it-works'
-              className='inline-flex items-center gap-2 rounded-pill border border-border bg-card px-7 py-3.5 text-base font-semibold text-foreground no-underline transition-colors hover:bg-muted'
-            >
+            </CtaLink>
+            <CtaLink href='#how-it-works' variant='secondary' size='lg'>
               {t('ctaSecondary')}
-            </Link>
+            </CtaLink>
           </div>
 
           <dl className='mt-6 grid grid-cols-1 gap-5 border-t border-divider pt-6 sm:grid-cols-3'>
-            {(['schools', 'agents', 'commission'] as const).map((k) => (
+            {(['schools', 'sectors', 'commission'] as const).map((k) => (
               <div key={k} className='flex flex-col gap-1'>
                 <dt
                   className='text-caption font-semibold uppercase text-foggy'
@@ -77,8 +70,8 @@ export async function AgentsHero() {
               <BadgeCheck className='h-5 w-5' strokeWidth={2} aria-hidden='true' />
             </div>
             <div className='flex flex-col'>
-              <span className='text-body-sm font-semibold text-ink-900'>QEAC Verified</span>
-              <span className='text-caption text-foggy'>Since 2018 · Shanghai</span>
+              <span className='text-body-sm font-semibold text-ink-900'>{tc('qeacVerified')}</span>
+              <span className='text-caption text-foggy'>{t('badgeMeta')}</span>
             </div>
           </div>
         </div>

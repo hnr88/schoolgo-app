@@ -6,18 +6,18 @@ type TrustVariant = 'cricos' | 'qeac' | 'claimed';
 
 interface TrustBadgeProps {
   variant: TrustVariant;
-  label?: ReactNode;
+  label: ReactNode;
   className?: string;
 }
 
-const DEFAULTS: Record<TrustVariant, { label: string; Icon: typeof ShieldCheck }> = {
-  cricos: { label: 'CRICOS Verified', Icon: ShieldCheck },
-  qeac: { label: 'QEAC Verified', Icon: BadgeCheck },
-  claimed: { label: 'Claimed by school', Icon: BadgeCheck },
+const ICONS: Record<TrustVariant, typeof ShieldCheck> = {
+  cricos: ShieldCheck,
+  qeac: BadgeCheck,
+  claimed: BadgeCheck,
 };
 
 export function TrustBadge({ variant, label, className }: TrustBadgeProps) {
-  const { label: defaultLabel, Icon } = DEFAULTS[variant];
+  const Icon = ICONS[variant];
   return (
     <span
       className={cn(
@@ -26,7 +26,7 @@ export function TrustBadge({ variant, label, className }: TrustBadgeProps) {
       )}
     >
       <Icon className='h-3.5 w-3.5' aria-hidden='true' strokeWidth={2} />
-      {label ?? defaultLabel}
+      {label}
     </span>
   );
 }

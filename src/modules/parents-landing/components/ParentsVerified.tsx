@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
-import { Eyebrow, SectionContainer, TrustBadge } from '@/modules/design-system';
+import { SectionContainer, SectionHeader, TrustBadge } from '@/modules/design-system';
 
 const CARDS: Array<{ key: 'a' | 'b' | 'c' | 'd'; seed: string }> = [
   { key: 'a', seed: 'scotch-college-hawthorn' },
@@ -11,16 +11,16 @@ const CARDS: Array<{ key: 'a' | 'b' | 'c' | 'd'; seed: string }> = [
 
 export async function ParentsVerified() {
   const t = await getTranslations('ParentsVerified');
+  const tc = await getTranslations('Common');
   return (
     <section className='bg-muted py-20 md:py-28'>
       <SectionContainer className='flex flex-col gap-10'>
-        <div className='flex max-w-2xl flex-col gap-3'>
-          <Eyebrow tone='brand'>{t('eyebrow')}</Eyebrow>
-          <h2 className='font-display text-4xl font-bold leading-[1.1] tracking-[-0.02em] text-ink-900 md:text-5xl'>
-            {t('heading')}
-          </h2>
-          <p className='text-body text-foggy md:text-lg'>{t('subheading')}</p>
-        </div>
+        <SectionHeader
+          className='max-w-2xl'
+          eyebrow={t('eyebrow')}
+          heading={t('heading')}
+          subheading={t('subheading')}
+        />
 
         <div className='grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4'>
           {CARDS.map((card) => (
@@ -46,7 +46,7 @@ export async function ParentsVerified() {
                   {t(`cards.${card.key}.location`)} · {t(`cards.${card.key}.sector`)}
                 </p>
                 <div className='mt-auto pt-3'>
-                  <TrustBadge variant='cricos' />
+                  <TrustBadge variant='cricos' label={tc('cricosVerified')} />
                 </div>
               </div>
             </article>
