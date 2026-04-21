@@ -4,6 +4,15 @@
     "description": "Cari dan bandingkan sekolah terbaik di seluruh Australia. Tapis mengikut kurikulum, harga, lokasi dan lain-lain.",
     "ogDescription": "Cari dan bandingkan sekolah terbaik di seluruh Australia."
   },
+  "Common": {
+    "step": "Step {number, number}",
+    "cricosVerified": "CRICOS Verified",
+    "qeacVerified": "QEAC Verified",
+    "claimedBySchool": "Claimed by school",
+    "addToShortlist": "Add to shortlist",
+    "removeFromShortlist": "Remove from shortlist",
+    "comingSoon": "Coming soon"
+  },
   "ParentsMetadata": {
     "title": "SchoolGo — Cari sekolah Australia untuk anak anda",
     "description": "Cari setiap sekolah Australia berdaftar CRICOS. Bandingkan yuran, keperluan ujian Bahasa Inggeris, dan sesi pengambilan — dalam tujuh bahasa, percuma.",
@@ -20,7 +29,8 @@
     "signIn": "Log Masuk",
     "getStarted": "Mulakan",
     "openMenu": "Buka menu",
-    "closeMenu": "Tutup menu"
+    "closeMenu": "Tutup menu",
+    "menu": "Menu"
   },
   "MarketingFooter": {
     "tagline": "Menghubungkan pemimpin masa depan dengan sekolah terbaik Australia — merentas negara, dalam tujuh bahasa.",
@@ -145,7 +155,11 @@
       }
     },
     "ctaBrowse": "Mula semak imbas",
-    "ctaLearn": "Lihat cara penggunaan"
+    "ctaLearn": "Lihat cara penggunaan",
+    "badge": {
+      "cricosVerified": "CRICOS Verified · Claimed by school",
+      "updated": "Updated April 2026"
+    }
   },
   "ParentsVerified": {
     "eyebrow": "Setiap sekolah CRICOS",
@@ -363,6 +377,7 @@
     "lede": "Satu profil yang disahkan. {count, number} sekolah CRICOS. Saluran yang boleh dilihat keluarga anda. SchoolGo mengenakan bayaran kepada sekolah, bukan anda.",
     "ctaPrimary": "Mohon pengesahan",
     "ctaSecondary": "Lihat cara ia berfungsi",
+    "badgeMeta": "Sample agent profile",
     "stats": {
       "schools": {
         "value": "{count, number}",
@@ -476,11 +491,13 @@
     "sampleLabel": "Sample profile",
     "profile": {
       "name": "Profil ejen",
+      "agentName": "Mei Lin",
       "qeac": "QEAC Disahkan",
       "yearsActive": "Tahun aktif",
       "students": "Pelajar ditempatkan",
       "placements": "Sekolah ditempatkan",
-      "languages": "Bahasa yang dituturkan"
+      "languages": "Bahasa yang dituturkan",
+      "languagesValue": "中 · EN"
     }
   },
   "AgentsScale": {
@@ -726,9 +743,9 @@
       "priceRangeValue": "${min}k – ${max}k",
       "priceMin": "$5,000",
       "priceMax": "$60,000+",
-      "diagnosticTests": "Ujian Diagnostik",
-      "diagnosticTestsHint": "Menerima ujian luar",
-      "diagnosticTestsToggle": "Togol ujian diagnostik",
+      "englishTests": "Ujian Kecekapan Bahasa Inggeris",
+      "englishTestsHint": "Sekolah menerima ujian Bahasa Inggeris yang diiktiraf",
+      "englishTestsToggle": "Togol penapis ujian kecekapan Bahasa Inggeris",
       "curriculum": "Kurikulum",
       "location": "Lokasi",
       "apply": "Gunakan Penapis"
@@ -762,7 +779,8 @@
     },
     "card": {
       "currency": "AUD",
-      "viewDetails": "Lihat {name}"
+      "viewDetails": "Lihat {name}",
+      "topRated": "Top rated"
     }
   },
   "Errors": {

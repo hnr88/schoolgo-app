@@ -4,6 +4,15 @@
     "description": "搜索和比较澳大利亚最好的学校。按课程、价格、地点等进行筛选。",
     "ogDescription": "搜索和比较澳大利亚最好的学校。"
   },
+  "Common": {
+    "step": "Step {number, number}",
+    "cricosVerified": "CRICOS Verified",
+    "qeacVerified": "QEAC Verified",
+    "claimedBySchool": "Claimed by school",
+    "addToShortlist": "Add to shortlist",
+    "removeFromShortlist": "Remove from shortlist",
+    "comingSoon": "Coming soon"
+  },
   "ParentsMetadata": {
     "title": "SchoolGo — 为孩子寻找澳大利亚学校",
     "description": "搜索每一所CRICOS注册的澳大利亚学校。免费比较学费、英语考试要求及入学时间——支持七种语言。",
@@ -20,7 +29,8 @@
     "signIn": "登录",
     "getStarted": "立即开始",
     "openMenu": "打开菜单",
-    "closeMenu": "关闭菜单"
+    "closeMenu": "关闭菜单",
+    "menu": "Menu"
   },
   "MarketingFooter": {
     "tagline": "连接未来领袖与澳大利亚最优秀的学校——横跨全境，支持七种语言。",
@@ -145,7 +155,11 @@
       }
     },
     "ctaBrowse": "开始浏览",
-    "ctaLearn": "查看使用方法"
+    "ctaLearn": "查看使用方法",
+    "badge": {
+      "cricosVerified": "CRICOS Verified · Claimed by school",
+      "updated": "Updated April 2026"
+    }
   },
   "ParentsVerified": {
     "eyebrow": "每一所 CRICOS 学校",
@@ -363,6 +377,7 @@
     "lede": "一个认证主页。{count, number} 所 CRICOS 学校。一个家庭可查看的进度看板。SchoolGo 向学校收费，不向您收费。",
     "ctaPrimary": "申请认证",
     "ctaSecondary": "查看运作方式",
+    "badgeMeta": "Sample agent profile",
     "stats": {
       "schools": {
         "value": "{count, number}",
@@ -476,11 +491,13 @@
     "sampleLabel": "Sample profile",
     "profile": {
       "name": "中介主页",
+      "agentName": "Mei Lin",
       "qeac": "QEAC 已认证",
       "yearsActive": "从业年限",
       "students": "已安置学生",
       "placements": "已安置学校",
-      "languages": "所用语言"
+      "languages": "所用语言",
+      "languagesValue": "中 · EN"
     }
   },
   "AgentsScale": {
@@ -726,9 +743,9 @@
       "priceRangeValue": "${min}k – ${max}k",
       "priceMin": "$5,000",
       "priceMax": "$60,000+",
-      "diagnosticTests": "诊断测试",
-      "diagnosticTestsHint": "接受外部测试",
-      "diagnosticTestsToggle": "切换诊断测试",
+      "englishTests": "英语水平考试",
+      "englishTestsHint": "学校接受认可的英语考试",
+      "englishTestsToggle": "切换英语水平考试筛选",
       "curriculum": "课程",
       "location": "位置",
       "apply": "应用筛选"
@@ -762,7 +779,8 @@
     },
     "card": {
       "currency": "AUD",
-      "viewDetails": "查看 {name}"
+      "viewDetails": "查看 {name}",
+      "topRated": "Top rated"
     }
   },
   "Errors": {

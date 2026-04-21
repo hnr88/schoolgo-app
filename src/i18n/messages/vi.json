@@ -4,6 +4,15 @@
     "description": "Tìm kiếm và so sánh các trường tốt nhất trên toàn nước Úc. Lọc theo chương trình, giá cả, vị trí và nhiều hơn nữa.",
     "ogDescription": "Tìm kiếm và so sánh các trường tốt nhất trên toàn nước Úc."
   },
+  "Common": {
+    "step": "Step {number, number}",
+    "cricosVerified": "CRICOS Verified",
+    "qeacVerified": "QEAC Verified",
+    "claimedBySchool": "Claimed by school",
+    "addToShortlist": "Add to shortlist",
+    "removeFromShortlist": "Remove from shortlist",
+    "comingSoon": "Coming soon"
+  },
   "ParentsMetadata": {
     "title": "SchoolGo — Tìm trường Úc cho con bạn",
     "description": "Tìm kiếm mọi trường học Úc đăng ký CRICOS. So sánh học phí, yêu cầu thi tiếng Anh và kỳ tuyển sinh — bằng bảy ngôn ngữ, miễn phí.",
@@ -20,7 +29,8 @@
     "signIn": "Đăng nhập",
     "getStarted": "Bắt đầu",
     "openMenu": "Mở menu",
-    "closeMenu": "Đóng menu"
+    "closeMenu": "Đóng menu",
+    "menu": "Menu"
   },
   "MarketingFooter": {
     "tagline": "Kết nối các nhà lãnh đạo tương lai với những trường học tốt nhất của Úc — khắp đất nước, bằng bảy ngôn ngữ.",
@@ -145,7 +155,11 @@
       }
     },
     "ctaBrowse": "Bắt đầu duyệt",
-    "ctaLearn": "Xem cách hoạt động"
+    "ctaLearn": "Xem cách hoạt động",
+    "badge": {
+      "cricosVerified": "CRICOS Verified · Claimed by school",
+      "updated": "Updated April 2026"
+    }
   },
   "ParentsVerified": {
     "eyebrow": "Mọi trường CRICOS",
@@ -363,6 +377,7 @@
     "lede": "Một hồ sơ được xác minh. {count, number} trường CRICOS. Một bảng theo dõi mà gia đình có thể xem. SchoolGo thu phí từ các trường, không thu từ bạn.",
     "ctaPrimary": "Đăng ký xác minh",
     "ctaSecondary": "Xem cách hoạt động",
+    "badgeMeta": "Sample agent profile",
     "stats": {
       "schools": {
         "value": "{count, number}",
@@ -476,11 +491,13 @@
     "sampleLabel": "Sample profile",
     "profile": {
       "name": "Hồ sơ tư vấn",
+      "agentName": "Mei Lin",
       "qeac": "QEAC đã xác minh",
       "yearsActive": "Năm hoạt động",
       "students": "Học sinh đã xếp chỗ",
       "placements": "Trường đã xếp chỗ",
-      "languages": "Ngôn ngữ sử dụng"
+      "languages": "Ngôn ngữ sử dụng",
+      "languagesValue": "中 · EN"
     }
   },
   "AgentsScale": {
@@ -726,9 +743,9 @@
       "priceRangeValue": "${min}k – ${max}k",
       "priceMin": "$5.000",
       "priceMax": "$60.000+",
-      "diagnosticTests": "Bài Kiểm Tra Chẩn Đoán",
-      "diagnosticTestsHint": "Chấp nhận kiểm tra bên ngoài",
-      "diagnosticTestsToggle": "Bật/tắt bài kiểm tra chẩn đoán",
+      "englishTests": "Bài Thi Trình Độ Tiếng Anh",
+      "englishTestsHint": "Trường chấp nhận các bài thi tiếng Anh được công nhận",
+      "englishTestsToggle": "Bật/tắt bộ lọc bài thi trình độ tiếng Anh",
       "curriculum": "Chương Trình Học",
       "location": "Vị Trí",
       "apply": "Áp Dụng Bộ Lọc"
@@ -762,7 +779,8 @@
     },
     "card": {
       "currency": "AUD",
-      "viewDetails": "Xem {name}"
+      "viewDetails": "Xem {name}",
+      "topRated": "Top rated"
     }
   },
   "Errors": {

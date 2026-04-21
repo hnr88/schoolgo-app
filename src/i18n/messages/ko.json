@@ -4,6 +4,15 @@
     "description": "호주 전역의 최고의 학교를 검색하고 비교하세요. 커리큘럼, 가격, 위치 등으로 필터링하세요.",
     "ogDescription": "호주 전역의 최고의 학교를 검색하고 비교하세요."
   },
+  "Common": {
+    "step": "Step {number, number}",
+    "cricosVerified": "CRICOS Verified",
+    "qeacVerified": "QEAC Verified",
+    "claimedBySchool": "Claimed by school",
+    "addToShortlist": "Add to shortlist",
+    "removeFromShortlist": "Remove from shortlist",
+    "comingSoon": "Coming soon"
+  },
   "ParentsMetadata": {
     "title": "SchoolGo — 자녀를 위한 호주 학교 찾기",
     "description": "모든 CRICOS 등록 호주 학교를 검색하세요. 학비, 영어 시험 요건, 입학 일정을 7개 언어로 무료 비교하세요.",
@@ -20,7 +29,8 @@
     "signIn": "로그인",
     "getStarted": "시작하기",
     "openMenu": "메뉴 열기",
-    "closeMenu": "메뉴 닫기"
+    "closeMenu": "메뉴 닫기",
+    "menu": "Menu"
   },
   "MarketingFooter": {
     "tagline": "미래의 리더들을 호주 최고의 학교와 연결합니다 — 전국, 7개 언어로.",
@@ -145,7 +155,11 @@
       }
     },
     "ctaBrowse": "학교 둘러보기",
-    "ctaLearn": "이용 방법 보기"
+    "ctaLearn": "이용 방법 보기",
+    "badge": {
+      "cricosVerified": "CRICOS Verified · Claimed by school",
+      "updated": "Updated April 2026"
+    }
   },
   "ParentsVerified": {
     "eyebrow": "모든 CRICOS 학교",
@@ -363,6 +377,7 @@
     "lede": "인증된 프로필 하나. CRICOS 학교 {count, number}개. 가족이 직접 확인하는 파이프라인. SchoolGo는 학교에 청구합니다. 에이전트에게는 청구하지 않습니다.",
     "ctaPrimary": "인증 신청",
     "ctaSecondary": "운영 방식 보기",
+    "badgeMeta": "Sample agent profile",
     "stats": {
       "schools": {
         "value": "{count, number}",
@@ -476,11 +491,13 @@
     "sampleLabel": "Sample profile",
     "profile": {
       "name": "에이전트 프로필",
+      "agentName": "Mei Lin",
       "qeac": "QEAC 인증",
       "yearsActive": "활동 연수",
       "students": "배치 학생 수",
       "placements": "배치 학교 수",
-      "languages": "사용 언어"
+      "languages": "사용 언어",
+      "languagesValue": "中 · EN"
     }
   },
   "AgentsScale": {
@@ -726,9 +743,9 @@
       "priceRangeValue": "${min}k – ${max}k",
       "priceMin": "$5,000",
       "priceMax": "$60,000+",
-      "diagnosticTests": "진단 테스트",
-      "diagnosticTestsHint": "외부 테스트 수용",
-      "diagnosticTestsToggle": "진단 테스트 전환",
+      "englishTests": "영어 능력 시험",
+      "englishTestsHint": "인정된 영어 시험 수용",
+      "englishTestsToggle": "영어 능력 시험 필터 전환",
       "curriculum": "커리큘럼",
       "location": "위치",
       "apply": "필터 적용"
@@ -762,7 +779,8 @@
     },
     "card": {
       "currency": "AUD",
-      "viewDetails": "{name} 보기"
+      "viewDetails": "{name} 보기",
+      "topRated": "Top rated"
     }
   },
   "Errors": {

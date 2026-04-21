@@ -4,6 +4,15 @@
     "description": "ค้นหาและเปรียบเทียบโรงเรียนที่ดีที่สุดทั่วออสเตรเลีย กรองตามหลักสูตร ราคา สถานที่ และอื่น ๆ",
     "ogDescription": "ค้นหาและเปรียบเทียบโรงเรียนที่ดีที่สุดทั่วออสเตรเลีย"
   },
+  "Common": {
+    "step": "Step {number, number}",
+    "cricosVerified": "CRICOS Verified",
+    "qeacVerified": "QEAC Verified",
+    "claimedBySchool": "Claimed by school",
+    "addToShortlist": "Add to shortlist",
+    "removeFromShortlist": "Remove from shortlist",
+    "comingSoon": "Coming soon"
+  },
   "ParentsMetadata": {
     "title": "SchoolGo — ค้นหาโรงเรียนออสเตรเลียสำหรับบุตรหลานของคุณ",
     "description": "ค้นหาทุกโรงเรียนออสเตรเลียที่จดทะเบียน CRICOS เปรียบเทียบค่าเล่าเรียน ข้อกำหนดการทดสอบภาษาอังกฤษ และรอบรับสมัคร — ในเจ็ดภาษา ฟรี",
@@ -20,7 +29,8 @@
     "signIn": "เข้าสู่ระบบ",
     "getStarted": "เริ่มต้นใช้งาน",
     "openMenu": "เปิดเมนู",
-    "closeMenu": "ปิดเมนู"
+    "closeMenu": "ปิดเมนู",
+    "menu": "Menu"
   },
   "MarketingFooter": {
     "tagline": "เชื่อมต่อผู้นำในอนาคตกับโรงเรียนที่ดีที่สุดของออสเตรเลีย — ทั่วประเทศ ในเจ็ดภาษา",
@@ -145,7 +155,11 @@
       }
     },
     "ctaBrowse": "เริ่มเรียกดู",
-    "ctaLearn": "ดูวิธีการใช้งาน"
+    "ctaLearn": "ดูวิธีการใช้งาน",
+    "badge": {
+      "cricosVerified": "CRICOS Verified · Claimed by school",
+      "updated": "Updated April 2026"
+    }
   },
   "ParentsVerified": {
     "eyebrow": "ทุกโรงเรียน CRICOS",
@@ -363,6 +377,7 @@
     "lede": "โปรไฟล์ที่ผ่านการรับรองหนึ่งโปรไฟล์ โรงเรียน CRICOS จำนวน {count, number} แห่ง ไปป์ไลน์ที่ครอบครัวของคุณมองเห็นได้ SchoolGo เรียกเก็บจากโรงเรียน ไม่ใช่จากคุณ",
     "ctaPrimary": "สมัครขอการรับรอง",
     "ctaSecondary": "ดูวิธีการทำงาน",
+    "badgeMeta": "Sample agent profile",
     "stats": {
       "schools": {
         "value": "{count, number}",
@@ -476,11 +491,13 @@
     "sampleLabel": "Sample profile",
     "profile": {
       "name": "โปรไฟล์ตัวแทน",
+      "agentName": "Mei Lin",
       "qeac": "รับรองโดย QEAC",
       "yearsActive": "ปีที่ทำงาน",
       "students": "นักเรียนที่จัดวางแล้ว",
       "placements": "โรงเรียนที่จัดวางแล้ว",
-      "languages": "ภาษาที่พูด"
+      "languages": "ภาษาที่พูด",
+      "languagesValue": "中 · EN"
     }
   },
   "AgentsScale": {
@@ -726,9 +743,9 @@
       "priceRangeValue": "${min}k – ${max}k",
       "priceMin": "$5,000",
       "priceMax": "$60,000+",
-      "diagnosticTests": "การทดสอบวินิจฉัย",
-      "diagnosticTestsHint": "รับการทดสอบจากภายนอก",
-      "diagnosticTestsToggle": "สลับการทดสอบวินิจฉัย",
+      "englishTests": "การทดสอบความสามารถภาษาอังกฤษ",
+      "englishTestsHint": "โรงเรียนยอมรับการทดสอบภาษาอังกฤษที่ได้รับการรับรอง",
+      "englishTestsToggle": "สลับตัวกรองการทดสอบความสามารถภาษาอังกฤษ",
       "curriculum": "หลักสูตร",
       "location": "สถานที่",
       "apply": "ใช้ตัวกรอง"
@@ -762,7 +779,8 @@
     },
     "card": {
       "currency": "AUD",
-      "viewDetails": "ดู {name}"
+      "viewDetails": "ดู {name}",
+      "topRated": "Top rated"
     }
   },
   "Errors": {
