@@ -39,8 +39,8 @@
         "links": {
           "overview": "Gambaran ejen",
           "qeac": "Pengesahan QEAC",
-          "pipeline": "Alat saluran",
-          "login": "Log masuk ejen"
+          "pipeline": "Pipeline tools [Soon]",
+          "login": "Agent login [Soon]"
         }
       },
       "schools": {
@@ -48,7 +48,7 @@
         "links": {
           "overview": "Gambaran sekolah",
           "claim": "Tuntut profil",
-          "login": "Log masuk sekolah",
+          "login": "School login [Soon]",
           "pricing": "Harga"
         }
       },
@@ -140,7 +140,8 @@
       },
       "apply": {
         "title": "Mohon melalui ejen yang disahkan",
-        "description": "Ejen anda membawa lencana QEAC. Permohonan dipantau dari awal hingga akhir dalam satu papan pemuka."
+        "description": "Ejen anda membawa lencana QEAC. Permohonan dipantau dari awal hingga akhir dalam satu papan pemuka.",
+        "comingSoon": "Coming soon"
       }
     },
     "ctaBrowse": "Mula semak imbas",
@@ -195,13 +196,41 @@
     "headingAccent": "dan markah minimum.",
     "subheading": "Kami memetakan ujian Bahasa Inggeris yang diterima merentas setiap profil. Tidak perlu lagi menggali 50 laman web sekolah.",
     "tests": {
-      "aeas": "AEAS",
-      "idat": "iDAT",
-      "duolingo": "Duolingo",
-      "ielts": "IELTS",
-      "pte": "PTE Academic",
-      "cambridge": "Cambridge",
-      "toefl": "TOEFL"
+      "aeas": {
+        "name": "AEAS",
+        "fullName": "Australian Education Assessment Services",
+        "description": "Most commonly accepted by Australian independent schools"
+      },
+      "idat": {
+        "name": "iDAT",
+        "fullName": "International Digital Admissions Test",
+        "description": "Growing in popularity for K–12 admissions"
+      },
+      "duolingo": {
+        "name": "Duolingo",
+        "fullName": "Duolingo English Test",
+        "description": "Accepted by an increasing number of schools"
+      },
+      "ielts": {
+        "name": "IELTS",
+        "fullName": "International English Language Testing System",
+        "description": "Standard for senior secondary entry (Year 11+)"
+      },
+      "pte": {
+        "name": "PTE Academic",
+        "fullName": "Pearson Test of English Academic",
+        "description": "Accepted by some schools for Year 11–12 entry"
+      },
+      "cambridge": {
+        "name": "Cambridge",
+        "fullName": "Cambridge English Qualifications",
+        "description": "Accepted by select schools"
+      },
+      "toefl": {
+        "name": "TOEFL",
+        "fullName": "Test of English as a Foreign Language",
+        "description": "Accepted by select schools for senior entry"
+      }
     },
     "cta": "Lihat sekolah yang menerima ujian ini"
   },
@@ -239,6 +268,30 @@
     },
     "readMore": "Baca artikel"
   },
+  "ParentsStatsBar": {
+    "items": {
+      "schools": {
+        "value": "{count, number}+",
+        "label": "CRICOS Schools"
+      },
+      "states": {
+        "value": "8",
+        "label": "States & Territories"
+      },
+      "sectors": {
+        "value": "All 3 Sectors",
+        "label": "Government · Independent · Catholic"
+      },
+      "fees": {
+        "value": "$3.5k – $78k",
+        "label": "Annual Fee Range"
+      },
+      "verified": {
+        "value": "100%",
+        "label": "CRICOS Verified"
+      }
+    }
+  },
   "ParentsFinalCta": {
     "eyebrow": "Mulakan di sini",
     "headingPrefix": "Carian anda",
@@ -247,6 +300,56 @@
     "subheading": "Percuma. Tiada log masuk diperlukan. Dikemas kini {month} {year, number}.",
     "ctaPrimary": "Cari sekolah anda",
     "ctaSecondary": "Bercakap dengan ejen yang disahkan"
+  },
+  "ParentsTrustBar": {
+    "items": {
+      "cricos": {
+        "label": "CRICOS Verified",
+        "sublabel": "Data"
+      },
+      "datagov": {
+        "label": "data.gov.au",
+        "sublabel": "CC BY 2.5 AU Licensed"
+      },
+      "acara": {
+        "label": "ACARA",
+        "sublabel": "School Profiles"
+      },
+      "esos": {
+        "label": "ESOS Act",
+        "sublabel": "Compliant"
+      }
+    },
+    "attribution": "School data sourced from the Commonwealth Register of Institutions and Courses for Overseas Students (CRICOS) and the Australian Curriculum, Assessment and Reporting Authority (ACARA). Updated April 2026."
+  },
+  "ParentsFaq": {
+    "heading": "Frequently Asked Questions",
+    "items": {
+      "free": {
+        "question": "Is SchoolGo free?",
+        "answer": "Yes. SchoolGo is completely free for parents, education agents, and schools. There are no listing fees, application fees, or subscription costs."
+      },
+      "dataSource": {
+        "question": "Where does the school data come from?",
+        "answer": "All school listings are sourced from CRICOS (the Commonwealth Register of Institutions and Courses for Overseas Students), which is the Australian Government's official register of schools authorised to enrol international students. We cross-reference this with ACARA school profile data for enrolment figures, ICSEA scores, and GPS coordinates."
+      },
+      "englishTests": {
+        "question": "What English proficiency tests do Australian schools accept?",
+        "answer": "Different schools accept different tests. The most common are AEAS (Australian Education Assessment Services), iDAT (International Digital Admissions Test), Duolingo English Test, IELTS, and PTE Academic. SchoolGo shows which specific tests each school accepts on their profile page."
+      },
+      "agentCommission": {
+        "question": "I'm an education agent. How does SchoolGo protect my commissions?",
+        "answer": "SchoolGo never intermediates or processes commission payments. Your commission relationship with schools remains direct. SchoolGo makes your role more transparent by displaying your verified agent attribution on every application, which actually protects you from commission disputes."
+      },
+      "claimProfile": {
+        "question": "I'm a school. How do I claim my profile?",
+        "answer": "Search for your school on SchoolGo and click \"Claim This School.\" You'll be asked to verify your identity as a school staff member. Once verified, you can update your profile with fees, entry requirements, and contact details."
+      },
+      "updateFrequency": {
+        "question": "How often is the data updated?",
+        "answer": "CRICOS data is refreshed monthly from data.gov.au. School-specific details (fees, requirements, intake dates) are updated by schools who have claimed their profiles. If a school hasn't claimed their profile, the data shown is from CRICOS and ACARA public datasets."
+      }
+    }
   },
   "AgentsMetadata": {
     "title": "SchoolGo — Uruskan amalan ejen anda seperti portfolio",
@@ -265,9 +368,9 @@
         "value": "{count, number}",
         "label": "Sekolah CRICOS yang disahkan"
       },
-      "agents": {
-        "value": "2,400+",
-        "label": "Ejen disahkan seluruh APAC"
+      "sectors": {
+        "value": "3",
+        "label": "Sectors — Gov, Independent, Catholic"
       },
       "commission": {
         "value": "100%",
@@ -276,22 +379,34 @@
     }
   },
   "AgentsPainPoints": {
-    "eyebrow": "Cara lama",
-    "heading": "Berhenti bergelut dengan hamparan, utas WeChat, dan peti masuk kemasukan sekolah.",
-    "subheading": "Setiap pelajar, setiap permohonan, setiap syarat sekolah — dalam satu ruang kerja.",
+    "eyebrow": "Why agents switch",
+    "heading": "Built for Education Agents Who Manage Real Pipelines",
+    "subheading": "76% of international school enrolments come through education agents. SchoolGo is built to make you more effective, not to replace you.",
     "items": {
-      "spreadsheets": {
-        "title": "Satu senarai, bukan lima belas tab",
-        "description": "Jejaki peringkat, tarikh akhir, dan dokumen setiap pelajar — tanpa perlu menyelenggara hamparan berasingan."
+      "email": {
+        "question": "Tired of emailing 15 admissions offices?",
+        "answer": "One platform, one application workflow. Submit to multiple schools and track responses in real time. Every application carries your verified agent attribution."
       },
-      "wechat": {
-        "title": "Keluarga melihat skrin yang sama seperti anda",
-        "description": "Kemas kini status dihantar kepada ibu bapa secara automatik, dalam bahasa mereka. Anda kurang masa menjawab 'ada berita?'"
+      "status": {
+        "question": "Students keep asking 'did you hear back?'",
+        "answer": "Live application tracker your students can see. Status updates flow automatically — you spend less time chasing and more time advising."
       },
-      "admissions": {
-        "title": "Penyerahan yang diseragamkan",
-        "description": "Satu format permohonan. Satu tempat untuk memuat naik dokumen. Satu peti masuk untuk balasan — bukan lima belas."
+      "trust": {
+        "question": "Schools don't know if you're legitimate?",
+        "answer": "SchoolGo agent verification with your QEAC credentials. Your verified badge and track record appear on every application you submit."
+      },
+      "requirements": {
+        "question": "Different requirements for every school?",
+        "answer": "SchoolGo maps each school's specific entry requirements: accepted English tests, minimum scores, required documents, intake dates, and application fees. No more digging through 50 school websites."
       }
+    }
+  },
+  "AgentsStatsBar": {
+    "items": {
+      "schools": "{count, number}+ School Profiles",
+      "requirements": "Entry Requirements Mapped",
+      "tests": "English Test Requirements Listed",
+      "free": "Free for Agents"
     }
   },
   "AgentsMatching": {
@@ -305,11 +420,13 @@
       },
       "match": {
         "title": "Lihat sekolah yang paling sesuai",
-        "description": "Ditapis mengikut profil pelajar anda. Lihat ujian yang diterima dan markah minimum bagi setiap sekolah."
+        "description": "Ditapis mengikut profil pelajar anda. Lihat ujian yang diterima dan markah minimum bagi setiap sekolah.",
+        "comingSoon": "Coming soon"
       },
       "deliver": {
         "title": "Hantar senarai pendek, bukan kekacauan",
-        "description": "Satu PDF berjenama yang boleh diambil skrin oleh keluarga dan dihantar kepada ayah. Tiada PDF daripada lima belas sekolah yang berbeza."
+        "description": "Satu PDF berjenama yang boleh diambil skrin oleh keluarga dan dihantar kepada ayah. Tiada PDF daripada lima belas sekolah yang berbeza.",
+        "comingSoon": "Coming soon"
       }
     },
     "inboxLabel": "Peti masuk kemasukan",
@@ -335,8 +452,8 @@
     "eyebrow": "Harga",
     "heading": "Anda menyimpan 100% komisen sekolah anda.",
     "subheading": "Kami mengenakan bayaran kepada sekolah, bukan anda. Hubungan komersial anda dengan sekolah kekal terus.",
-    "statValue": "$36,480",
-    "statLabel": "Purata komisen 2026 yang disimpan setiap ejen, kohort Q1",
+    "statValue": "$0",
+    "statLabel": "Platform cost per agent. Zero fees, zero commission splits — ever.",
     "bullets": {
       "zero": {
         "title": "Sifar yuran per pelajar",
@@ -356,6 +473,7 @@
     "eyebrow": "Disahkan",
     "heading": "Profil yang ibu bapa — dan sekolah — benar-benar percayai.",
     "subheading": "Kelayakan QEAC anda disahkan sekali sahaja. Lencana dan rekod prestasi anda akan terpapar pada setiap permohonan yang anda serahkan.",
+    "sampleLabel": "Sample profile",
     "profile": {
       "name": "Profil ejen",
       "qeac": "QEAC Disahkan",
@@ -367,35 +485,35 @@
   },
   "AgentsScale": {
     "eyebrow": "Rangkaian",
-    "heading": "2,400 ejen disahkan di seluruh APAC. Berkembang setiap minggu.",
-    "subheading": "Dari Shanghai ke Jakarta, Ho Chi Minh ke Seoul — ejen menempatkan keluarga ke dalam K–12 Australia.",
+    "heading": "Agents across APAC are joining. Be one of the first.",
+    "subheading": "From Shanghai to Jakarta, Ho Chi Minh to Seoul — agents placing families into Australian K–12.",
     "agents": {
       "a": {
         "name": "Li Wei",
         "region": "Shanghai · 中国",
-        "meta": "QEAC 12 tahun · 148 penempatan"
+        "meta": "QEAC verified · Independent schools"
       },
       "b": {
         "name": "Nguyễn Minh",
         "region": "Ho Chi Minh · Việt Nam",
-        "meta": "QEAC 8 tahun · 96 penempatan"
+        "meta": "QEAC verified · All sectors"
       },
       "c": {
         "name": "Siti Rahman",
         "region": "Kuala Lumpur · Malaysia",
-        "meta": "QEAC 6 tahun · 64 penempatan"
+        "meta": "QEAC verified · Boarding specialist"
       },
       "d": {
         "name": "Ji-eun Park",
         "region": "Seoul · 대한민국",
-        "meta": "QEAC 9 tahun · 112 penempatan"
+        "meta": "QEAC verified · VIC & NSW"
       }
     },
     "cta": "Mohon pengesahan"
   },
   "AgentsTestimonial": {
-    "quote": "Dulu saya menghantar 40 PDF seminggu antara ibu bapa dan enam pejabat kemasukan. Sekarang saya lakukan sekali sahaja, dan keluarga melihat satu kemas kini status dalam Bahasa Mandarin. Jumlah penempatan saya tiga kali ganda.",
-    "attribution": "Mei, Shanghai · QEAC-disahkan sejak 2018"
+    "quote": "I used to forward 40 PDFs a week between parents and six admissions offices. With a platform like this, I could do it once — and families see one status update in Mandarin.",
+    "attribution": "Composite quote based on agent interviews"
   },
   "AgentsFinalCta": {
     "eyebrow": "Dapatkan pengesahan",
@@ -420,7 +538,7 @@
     "ctaPrimary": "Tuntut profil sekolah anda",
     "ctaSecondary": "Tempah walkthrough",
     "inbox": {
-      "eyebrow": "Peti masuk permohonan",
+      "eyebrow": "Applications inbox — preview",
       "countLabel": "Bulan ini",
       "rows": {
         "a": {
@@ -446,21 +564,21 @@
     "heading": "Satu profil. Dilihat oleh keluarga di tujuh negara.",
     "subheading": "Penyenaraian anda muncul dalam setiap carian, setiap perbandingan, setiap senarai pendek yang dipadankan — dalam bahasa keluarga.",
     "items": {
-      "views": {
-        "value": "42,000+",
-        "label": "Paparan profil bulanan"
+      "schools": {
+        "value": "695+",
+        "label": "CRICOS-registered schools"
       },
-      "countries": {
-        "value": "7",
-        "label": "Negara sumber"
+      "states": {
+        "value": "8",
+        "label": "States & territories"
       },
-      "enquiries": {
-        "value": "168",
-        "label": "Purata pertanyaan bulanan setiap profil"
+      "sectors": {
+        "value": "3",
+        "label": "Sectors — Government, Independent, Catholic"
       },
-      "applications": {
-        "value": "4,200+",
-        "label": "Permohonan diproses pada 2026"
+      "feeRange": {
+        "value": "$3.5k – $78k",
+        "label": "Annual fee range (AUD)"
       }
     }
   },
@@ -490,19 +608,23 @@
     "steps": {
       "receive": {
         "title": "Terima",
-        "description": "Permohonan tiba dalam peti masuk anda bersama markah Bahasa Inggeris, dokumen, dan ejen yang disahkan."
+        "description": "Permohonan tiba dalam peti masuk anda bersama markah Bahasa Inggeris, dokumen, dan ejen yang disahkan.",
+        "comingSoon": "Coming soon"
       },
       "review": {
         "title": "Semak",
-        "description": "Pasukan anda menilai mengikut rubrik sendiri. Nota kekal dalaman."
+        "description": "Pasukan anda menilai mengikut rubrik sendiri. Nota kekal dalaman.",
+        "comingSoon": "Coming soon"
       },
       "decide": {
         "title": "Putuskan",
-        "description": "Tawarkan, senarai tunggu, atau tolak dalam satu klik. Status dihantar kepada keluarga dan ejen serta-merta."
+        "description": "Tawarkan, senarai tunggu, atau tolak dalam satu klik. Status dihantar kepada keluarga dan ejen serta-merta.",
+        "comingSoon": "Coming soon"
       },
       "onboard": {
         "title": "Daftarkan",
-        "description": "Kongsi kertas kerja hari pengambilan, maklumat penginapan, dan pautan orientasi — semuanya dalam satu utas."
+        "description": "Kongsi kertas kerja hari pengambilan, maklumat penginapan, dan pautan orientasi — semuanya dalam satu utas.",
+        "comingSoon": "Coming soon"
       }
     }
   },
@@ -549,8 +671,8 @@
     }
   },
   "SchoolsTestimonial": {
-    "quote": "Kami mengisi pengambilan asrama 2026 menjelang Julai. SchoolGo bukan sahaja membawa lebih banyak permohonan — ia membawa pemohon yang benar-benar boleh kami terima.",
-    "attribution": "Pengarah Kemasukan · Sekolah harian & asrama swasta, VIC"
+    "quote": "The hardest part of international admissions isn't finding students — it's processing incomplete applications from 15 different email threads.",
+    "attribution": "Composite quote based on admissions officer interviews"
   },
   "SchoolsFinalCta": {
     "eyebrow": "Mulakan di sini",

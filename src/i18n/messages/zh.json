@@ -39,8 +39,8 @@
         "links": {
           "overview": "中介概览",
           "qeac": "QEAC 认证",
-          "pipeline": "申请管理",
-          "login": "中介登录"
+          "pipeline": "Pipeline tools [Soon]",
+          "login": "Agent login [Soon]"
         }
       },
       "schools": {
@@ -48,7 +48,7 @@
         "links": {
           "overview": "学校概览",
           "claim": "认领主页",
-          "login": "学校登录",
+          "login": "School login [Soon]",
           "pricing": "定价"
         }
       },
@@ -140,7 +140,8 @@
       },
       "apply": {
         "title": "通过认证中介申请",
-        "description": "您的中介持有 QEAC 认证徽章。申请全程在一个控制台跟踪。"
+        "description": "您的中介持有 QEAC 认证徽章。申请全程在一个控制台跟踪。",
+        "comingSoon": "即将推出"
       }
     },
     "ctaBrowse": "开始浏览",
@@ -195,13 +196,41 @@
     "headingAccent": "及最低分数要求。",
     "subheading": "我们在每所学校的主页上列明认可的英语考试。无需再逐一浏览50个学校网站。",
     "tests": {
-      "aeas": "AEAS",
-      "idat": "iDAT",
-      "duolingo": "Duolingo",
-      "ielts": "IELTS",
-      "pte": "PTE Academic",
-      "cambridge": "Cambridge",
-      "toefl": "TOEFL"
+      "aeas": {
+        "name": "AEAS",
+        "fullName": "Australian Education Assessment Services",
+        "description": "Most commonly accepted by Australian independent schools"
+      },
+      "idat": {
+        "name": "iDAT",
+        "fullName": "International Digital Admissions Test",
+        "description": "Growing in popularity for K–12 admissions"
+      },
+      "duolingo": {
+        "name": "Duolingo",
+        "fullName": "Duolingo English Test",
+        "description": "Accepted by an increasing number of schools"
+      },
+      "ielts": {
+        "name": "IELTS",
+        "fullName": "International English Language Testing System",
+        "description": "Standard for senior secondary entry (Year 11+)"
+      },
+      "pte": {
+        "name": "PTE Academic",
+        "fullName": "Pearson Test of English Academic",
+        "description": "Accepted by some schools for Year 11–12 entry"
+      },
+      "cambridge": {
+        "name": "Cambridge",
+        "fullName": "Cambridge English Qualifications",
+        "description": "Accepted by select schools"
+      },
+      "toefl": {
+        "name": "TOEFL",
+        "fullName": "Test of English as a Foreign Language",
+        "description": "Accepted by select schools for senior entry"
+      }
     },
     "cta": "查看认可该考试的学校"
   },
@@ -239,6 +268,30 @@
     },
     "readMore": "阅读文章"
   },
+  "ParentsStatsBar": {
+    "items": {
+      "schools": {
+        "value": "{count, number}+",
+        "label": "CRICOS Schools"
+      },
+      "states": {
+        "value": "8",
+        "label": "States & Territories"
+      },
+      "sectors": {
+        "value": "All 3 Sectors",
+        "label": "Government · Independent · Catholic"
+      },
+      "fees": {
+        "value": "$3.5k – $78k",
+        "label": "Annual Fee Range"
+      },
+      "verified": {
+        "value": "100%",
+        "label": "CRICOS Verified"
+      }
+    }
+  },
   "ParentsFinalCta": {
     "eyebrow": "从这里开始",
     "headingPrefix": "您的搜索，",
@@ -247,6 +300,56 @@
     "subheading": "免费。无需登录。更新至 {month} {year, number}。",
     "ctaPrimary": "找到您的学校",
     "ctaSecondary": "联系认证中介"
+  },
+  "ParentsTrustBar": {
+    "items": {
+      "cricos": {
+        "label": "CRICOS Verified",
+        "sublabel": "Data"
+      },
+      "datagov": {
+        "label": "data.gov.au",
+        "sublabel": "CC BY 2.5 AU Licensed"
+      },
+      "acara": {
+        "label": "ACARA",
+        "sublabel": "School Profiles"
+      },
+      "esos": {
+        "label": "ESOS Act",
+        "sublabel": "Compliant"
+      }
+    },
+    "attribution": "School data sourced from the Commonwealth Register of Institutions and Courses for Overseas Students (CRICOS) and the Australian Curriculum, Assessment and Reporting Authority (ACARA). Updated April 2026."
+  },
+  "ParentsFaq": {
+    "heading": "Frequently Asked Questions",
+    "items": {
+      "free": {
+        "question": "Is SchoolGo free?",
+        "answer": "Yes. SchoolGo is completely free for parents, education agents, and schools. There are no listing fees, application fees, or subscription costs."
+      },
+      "dataSource": {
+        "question": "Where does the school data come from?",
+        "answer": "All school listings are sourced from CRICOS (the Commonwealth Register of Institutions and Courses for Overseas Students), which is the Australian Government's official register of schools authorised to enrol international students. We cross-reference this with ACARA school profile data for enrolment figures, ICSEA scores, and GPS coordinates."
+      },
+      "englishTests": {
+        "question": "What English proficiency tests do Australian schools accept?",
+        "answer": "Different schools accept different tests. The most common are AEAS (Australian Education Assessment Services), iDAT (International Digital Admissions Test), Duolingo English Test, IELTS, and PTE Academic. SchoolGo shows which specific tests each school accepts on their profile page."
+      },
+      "agentCommission": {
+        "question": "I'm an education agent. How does SchoolGo protect my commissions?",
+        "answer": "SchoolGo never intermediates or processes commission payments. Your commission relationship with schools remains direct. SchoolGo makes your role more transparent by displaying your verified agent attribution on every application, which actually protects you from commission disputes."
+      },
+      "claimProfile": {
+        "question": "I'm a school. How do I claim my profile?",
+        "answer": "Search for your school on SchoolGo and click \"Claim This School.\" You'll be asked to verify your identity as a school staff member. Once verified, you can update your profile with fees, entry requirements, and contact details."
+      },
+      "updateFrequency": {
+        "question": "How often is the data updated?",
+        "answer": "CRICOS data is refreshed monthly from data.gov.au. School-specific details (fees, requirements, intake dates) are updated by schools who have claimed their profiles. If a school hasn't claimed their profile, the data shown is from CRICOS and ACARA public datasets."
+      }
+    }
   },
   "AgentsMetadata": {
     "title": "SchoolGo — 像管理投资组合一样经营您的中介业务",
@@ -265,9 +368,9 @@
         "value": "{count, number}",
         "label": "已认证 CRICOS 学校"
       },
-      "agents": {
-        "value": "2,400+",
-        "label": "APAC 认证中介"
+      "sectors": {
+        "value": "3",
+        "label": "Sectors — Gov, Independent, Catholic"
       },
       "commission": {
         "value": "100%",
@@ -276,22 +379,34 @@
     }
   },
   "AgentsPainPoints": {
-    "eyebrow": "旧有方式",
-    "heading": "不再在电子表格、微信群和招生邮箱之间疲于奔命。",
-    "subheading": "每位学生、每份申请、每项学校要求——全部在一个工作台中处理。",
+    "eyebrow": "Why agents switch",
+    "heading": "Built for Education Agents Who Manage Real Pipelines",
+    "subheading": "76% of international school enrolments come through education agents. SchoolGo is built to make you more effective, not to replace you.",
     "items": {
-      "spreadsheets": {
-        "title": "一个列表，而非十五个标签页",
-        "description": "追踪每位学生的进度、截止日期和文件——无需维护额外的电子表格。"
+      "email": {
+        "question": "Tired of emailing 15 admissions offices?",
+        "answer": "One platform, one application workflow. Submit to multiple schools and track responses in real time. Every application carries your verified agent attribution."
       },
-      "wechat": {
-        "title": "家长看到的与您看到的一致",
-        "description": "状态更新自动以家长的语言推送。您无需再频繁回复「有消息了吗？」"
+      "status": {
+        "question": "Students keep asking 'did you hear back?'",
+        "answer": "Live application tracker your students can see. Status updates flow automatically — you spend less time chasing and more time advising."
       },
-      "admissions": {
-        "title": "标准化提交",
-        "description": "统一的申请格式。统一的文件上传入口。统一的回复收件箱——而非十五个。"
+      "trust": {
+        "question": "Schools don't know if you're legitimate?",
+        "answer": "SchoolGo agent verification with your QEAC credentials. Your verified badge and track record appear on every application you submit."
+      },
+      "requirements": {
+        "question": "Different requirements for every school?",
+        "answer": "SchoolGo maps each school's specific entry requirements: accepted English tests, minimum scores, required documents, intake dates, and application fees. No more digging through 50 school websites."
       }
+    }
+  },
+  "AgentsStatsBar": {
+    "items": {
+      "schools": "{count, number}+ School Profiles",
+      "requirements": "Entry Requirements Mapped",
+      "tests": "English Test Requirements Listed",
+      "free": "Free for Agents"
     }
   },
   "AgentsMatching": {
@@ -305,11 +420,13 @@
       },
       "match": {
         "title": "查看最匹配的学校",
-        "description": "按学生档案筛选。查看每所学校认可的考试及最低分数要求。"
+        "description": "按学生档案筛选。查看每所学校认可的考试及最低分数要求。",
+        "comingSoon": "即将推出"
       },
       "deliver": {
         "title": "交付精准候选名单，而非杂乱材料",
-        "description": "一份家庭可截图发给父亲的品牌 PDF。无需来自十五所学校的各自 PDF。"
+        "description": "一份家庭可截图发给父亲的品牌 PDF。无需来自十五所学校的各自 PDF。",
+        "comingSoon": "即将推出"
       }
     },
     "inboxLabel": "招生收件箱",
@@ -335,8 +452,8 @@
     "eyebrow": "定价",
     "heading": "您保留 100% 的学校佣金。",
     "subheading": "我们向学校收费，不向您收费。您与学校的商业关系保持直接。",
-    "statValue": "$36,480",
-    "statLabel": "2026年第一季度中介平均留存佣金",
+    "statValue": "$0",
+    "statLabel": "Platform cost per agent. Zero fees, zero commission splits — ever.",
     "bullets": {
       "zero": {
         "title": "零每生收费",
@@ -356,6 +473,7 @@
     "eyebrow": "已认证",
     "heading": "一个家长——和学校——真正信任的主页。",
     "subheading": "您的 QEAC 资质一次性核实完成。您的徽章和业绩记录将出现在每一份申请中。",
+    "sampleLabel": "Sample profile",
     "profile": {
       "name": "中介主页",
       "qeac": "QEAC 已认证",
@@ -367,35 +485,35 @@
   },
   "AgentsScale": {
     "eyebrow": "网络",
-    "heading": "APAC 地区 2,400 名认证中介，每周持续增长。",
-    "subheading": "从 Shanghai 到 Jakarta，Ho Chi Minh 到 Seoul——中介正为家庭开启澳大利亚 K–12 的求学之路。",
+    "heading": "Agents across APAC are joining. Be one of the first.",
+    "subheading": "From Shanghai to Jakarta, Ho Chi Minh to Seoul — agents placing families into Australian K–12.",
     "agents": {
       "a": {
         "name": "Li Wei",
         "region": "Shanghai · 中国",
-        "meta": "QEAC 12年 · 148次安置"
+        "meta": "QEAC verified · Independent schools"
       },
       "b": {
         "name": "Nguyễn Minh",
         "region": "Ho Chi Minh · Việt Nam",
-        "meta": "QEAC 8年 · 96次安置"
+        "meta": "QEAC verified · All sectors"
       },
       "c": {
         "name": "Siti Rahman",
         "region": "Kuala Lumpur · Malaysia",
-        "meta": "QEAC 6年 · 64次安置"
+        "meta": "QEAC verified · Boarding specialist"
       },
       "d": {
         "name": "Ji-eun Park",
         "region": "Seoul · 대한민국",
-        "meta": "QEAC 9年 · 112次安置"
+        "meta": "QEAC verified · VIC & NSW"
       }
     },
     "cta": "申请认证"
   },
   "AgentsTestimonial": {
-    "quote": "以前我每周要在家长和六个招生办公室之间来回转发40份 PDF。现在我只需操作一次，家庭就能收到一条中文状态更新。我的安置量翻了三倍。",
-    "attribution": "Mei，Shanghai · QEAC 认证自2018年"
+    "quote": "I used to forward 40 PDFs a week between parents and six admissions offices. With a platform like this, I could do it once — and families see one status update in Mandarin.",
+    "attribution": "Composite quote based on agent interviews"
   },
   "AgentsFinalCta": {
     "eyebrow": "获得认证",
@@ -420,7 +538,7 @@
     "ctaPrimary": "认领您的学校主页",
     "ctaSecondary": "预约演示",
     "inbox": {
-      "eyebrow": "申请收件箱",
+      "eyebrow": "Applications inbox — preview",
       "countLabel": "本月",
       "rows": {
         "a": {
@@ -446,21 +564,21 @@
     "heading": "一个主页。被七个国家的家庭看到。",
     "subheading": "您的学校信息出现在每一次搜索、每一次比较、每一份匹配候选名单中——以家庭的语言呈现。",
     "items": {
-      "views": {
-        "value": "42,000+",
-        "label": "每月主页浏览量"
+      "schools": {
+        "value": "695+",
+        "label": "CRICOS-registered schools"
       },
-      "countries": {
-        "value": "7",
-        "label": "来源国家"
+      "states": {
+        "value": "8",
+        "label": "States & territories"
       },
-      "enquiries": {
-        "value": "168",
-        "label": "每个主页平均月询盘数"
+      "sectors": {
+        "value": "3",
+        "label": "Sectors — Government, Independent, Catholic"
       },
-      "applications": {
-        "value": "4,200+",
-        "label": "2026年已处理申请数"
+      "feeRange": {
+        "value": "$3.5k – $78k",
+        "label": "Annual fee range (AUD)"
       }
     }
   },
@@ -490,19 +608,23 @@
     "steps": {
       "receive": {
         "title": "收取",
-        "description": "申请附带英语成绩、相关材料及认证中介信息，直接进入您的收件箱。"
+        "description": "申请附带英语成绩、相关材料及认证中介信息，直接进入您的收件箱。",
+        "comingSoon": "即将推出"
       },
       "review": {
         "title": "审核",
-        "description": "您的团队按照自有标准进行评估。备注仅对内部可见。"
+        "description": "您的团队按照自有标准进行评估。备注仅对内部可见。",
+        "comingSoon": "即将推出"
       },
       "decide": {
         "title": "决定",
-        "description": "一键发放录取、候补或拒绝通知。状态即时同步至家庭和中介。"
+        "description": "一键发放录取、候补或拒绝通知。状态即时同步至家庭和中介。",
+        "comingSoon": "即将推出"
       },
       "onboard": {
         "title": "入学",
-        "description": "在同一线程中分享入学手续材料、住宿信息及迎新链接。"
+        "description": "在同一线程中分享入学手续材料、住宿信息及迎新链接。",
+        "comingSoon": "即将推出"
       }
     }
   },
@@ -549,8 +671,8 @@
     }
   },
   "SchoolsTestimonial": {
-    "quote": "我们在七月前就完成了2026年寄宿入学名额的招募。SchoolGo 不仅带来更多申请——更带来了我们真正可以录取的学生。",
-    "attribution": "招生主任 · 独立走读及寄宿学校，VIC"
+    "quote": "The hardest part of international admissions isn't finding students — it's processing incomplete applications from 15 different email threads.",
+    "attribution": "Composite quote based on admissions officer interviews"
   },
   "SchoolsFinalCta": {
     "eyebrow": "从这里开始",
