@@ -15,7 +15,13 @@ export function proxy(request: NextRequest) {
     '';
   const hostname = rawHost.split(':')[0];
 
-  if (hostname.endsWith(PROD_DOMAIN)) {
+  const isProduction =
+    hostname === PROD_DOMAIN ||
+    hostname === `www.${PROD_DOMAIN}` ||
+    hostname === `agent.${PROD_DOMAIN}` ||
+    hostname === `school.${PROD_DOMAIN}`;
+
+  if (isProduction) {
     const url = request.nextUrl.clone();
     const pathname = url.pathname;
     const segments = pathname.split('/').filter(Boolean);
