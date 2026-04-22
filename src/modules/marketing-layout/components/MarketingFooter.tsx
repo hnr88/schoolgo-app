@@ -1,35 +1,39 @@
 import Image from 'next/image';
-import { getTranslations } from 'next-intl/server';
+import { getLocale, getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import { routing } from '@/i18n/routing';
+import { portalUrl, type Portal } from '@/lib/portal-url';
 import { SectionContainer } from '@/modules/design-system';
 
 const COLUMNS = [
   {
     key: 'parents' as const,
+    portal: 'parent' as Portal,
     links: [
-      { key: 'findSchools', href: '/search' },
-      { key: 'compare', href: '/search' },
-      { key: 'scholarships', href: '/search' },
-      { key: 'english', href: '/search' },
+      { key: 'findSchools', path: '/search' },
+      { key: 'compare', path: '/search' },
+      { key: 'scholarships', path: '/search' },
+      { key: 'english', path: '/search' },
     ],
   },
   {
     key: 'agents' as const,
+    portal: 'agent' as Portal,
     links: [
-      { key: 'overview', href: '/agents' },
-      { key: 'qeac', href: '/agents' },
-      { key: 'pipeline', href: '/agents' },
-      { key: 'login', href: '/agents' },
+      { key: 'overview', path: '/' },
+      { key: 'qeac', path: '/' },
+      { key: 'pipeline', path: '/' },
+      { key: 'login', path: '/sign-in' },
     ],
   },
   {
     key: 'schools' as const,
+    portal: 'school' as Portal,
     links: [
-      { key: 'overview', href: '/schools' },
-      { key: 'claim', href: '/schools' },
-      { key: 'login', href: '/schools' },
-      { key: 'pricing', href: '/schools' },
+      { key: 'overview', path: '/' },
+      { key: 'claim', path: '/' },
+      { key: 'login', path: '/sign-in' },
+      { key: 'pricing', path: '/' },
     ],
   },
 ];
@@ -39,12 +43,19 @@ const LANGUAGES: Array<{ code: string; label: string }> = [
   { code: 'zh', label: '简体中文' },
   { code: 'ko', label: '한국어' },
   { code: 'vi', label: 'Tiếng Việt' },
-  { code: 'th', label: 'ภาษาไทย' },
+  { code: 'th', label: 'ภา��าไทย' },
   { code: 'ms', label: 'Bahasa Melayu' },
 ];
 
-export async function MarketingFooter() {
-  const t = await getTranslations('MarketingFooter');
+interface MarketingFooterProps {
+  activePortal: Portal;
+}
+
+export async function MarketingFooter({ activePortal }: MarketingFooterProps) {
+  const [t, locale] = await Promise.all([
+    getTranslations('MarketingFooter'),
+    getLocale(),
+  ]);
   const year = new Date().getFullYear();
 
   return (
@@ -52,8 +63,8 @@ export async function MarketingFooter() {
       <SectionContainer size='wide' className='py-16 md:py-20'>
         <div className='flex flex-col justify-between gap-12 md:flex-row'>
           <div className='flex max-w-xs shrink-0 flex-col gap-5'>
-            <Link
-              href='/'
+            <a
+              href={portalUrl(activePortal, locale)}
               className='inline-flex items-center gap-2.5'
               aria-label='SchoolGo home'
             >
@@ -64,7 +75,7 @@ export async function MarketingFooter() {
                 height={40}
                 className='h-10 w-auto'
               />
-            </Link>
+            </a>
             <p className='text-sm leading-relaxed text-white/60'>{t('tagline')}</p>
             <p className='text-xs text-white/40'>{t('attribution')}</p>
           </div>
@@ -77,12 +88,12 @@ export async function MarketingFooter() {
               <ul className='flex flex-col gap-2.5'>
                 {col.links.map((l) => (
                   <li key={l.key}>
-                    <Link
-                      href={l.href}
+                    <a
+                      href={`${portalUrl(col.portal, locale)}${l.path === '/' ? '' : l.path}`}
                       className='text-sm text-white/70 no-underline transition-colors hover:text-white'
                     >
                       {t(`columns.${col.key}.links.${l.key}`)}
-                    </Link>
+                    </a>
                   </li>
                 ))}
               </ul>

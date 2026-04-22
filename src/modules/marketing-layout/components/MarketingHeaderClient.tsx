@@ -3,13 +3,16 @@
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { Menu, X } from 'lucide-react';
-import { Link, usePathname } from '@/i18n/navigation';
+import { Link } from '@/i18n/navigation';
 import { LanguageSelector } from '@/modules/layout/components/LanguageSelector';
 import { cn } from '@/lib/utils';
+import type { Portal } from '@/lib/portal-url';
 
 type AudienceKey = 'parents' | 'agents' | 'schools';
 
 interface MarketingHeaderClientProps {
+  activePortal: Portal;
+  portalUrls: Record<Portal, string>;
   labels: {
     findSchools: string;
     signIn: string;
@@ -21,21 +24,17 @@ interface MarketingHeaderClientProps {
   };
 }
 
-const AUDIENCES: Array<{ key: AudienceKey; href: string }> = [
-  { key: 'parents', href: '/' },
-  { key: 'agents', href: '/agents' },
-  { key: 'schools', href: '/schools' },
+const AUDIENCES: Array<{ key: AudienceKey; portal: Portal }> = [
+  { key: 'parents', portal: 'parent' },
+  { key: 'agents', portal: 'agent' },
+  { key: 'schools', portal: 'school' },
 ];
 
-function matchAudience(pathname: string): AudienceKey {
-  if (pathname === '/agents' || pathname.startsWith('/agents/')) return 'agents';
-  if (pathname === '/schools' || pathname.startsWith('/schools/')) return 'schools';
-  return 'parents';
-}
-
-export function MarketingHeaderClient({ labels }: MarketingHeaderClientProps) {
-  const pathname = usePathname();
-  const active = matchAudience(pathname);
+export function MarketingHeaderClient({
+  activePortal,
+  portalUrls,
+  labels,
+}: MarketingHeaderClientProps) {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -66,8 +65,8 @@ export function MarketingHeaderClient({ labels }: MarketingHeaderClientProps) {
         )}
       >
         <div className='mx-auto flex h-16 max-w-content items-center gap-4 px-5 md:h-20 md:px-8'>
-          <Link
-            href='/'
+          <a
+            href={portalUrls[activePortal]}
             className='flex shrink-0 items-center'
             aria-label='SchoolGo home'
           >
@@ -79,18 +78,18 @@ export function MarketingHeaderClient({ labels }: MarketingHeaderClientProps) {
               priority
               className='h-11 w-auto md:h-12'
             />
-          </Link>
+          </a>
 
           <nav
             aria-label='Audience'
             className='mx-auto flex items-center gap-1 rounded-pill bg-muted p-1 shadow-1'
           >
             {AUDIENCES.map((a) => {
-              const isActive = a.key === active;
+              const isActive = a.portal === activePortal;
               return (
-                <Link
+                <a
                   key={a.key}
-                  href={a.href}
+                  href={portalUrls[a.portal]}
                   aria-current={isActive ? 'page' : undefined}
                   className={cn(
                     'rounded-pill px-4 py-1.5 text-body-sm font-semibold no-underline transition-colors md:px-5 md:py-2',
@@ -100,7 +99,7 @@ export function MarketingHeaderClient({ labels }: MarketingHeaderClientProps) {
                   )}
                 >
                   {labels.audiences[a.key]}
-                </Link>
+                </a>
               );
             })}
           </nav>

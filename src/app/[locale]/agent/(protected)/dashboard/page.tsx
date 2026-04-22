@@ -1,7 +1,7 @@
 import { setRequestLocale } from 'next-intl/server';
 import { redirect } from '@/i18n/navigation';
 
-export default async function DashboardPage({
+export default async function AgentDashboardPage({
   params,
 }: {
   params: Promise<{ locale: string }>;
