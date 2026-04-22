@@ -9,7 +9,11 @@ const SUBDOMAIN_PREFIX: Record<string, string> = {
 };
 
 export function proxy(request: NextRequest) {
-  const hostname = request.headers.get('host') ?? '';
+  const rawHost =
+    request.headers.get('x-forwarded-host') ??
+    request.headers.get('host') ??
+    '';
+  const hostname = rawHost.split(':')[0];
 
   if (hostname.endsWith(PROD_DOMAIN)) {
     const url = request.nextUrl.clone();
