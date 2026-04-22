@@ -1,0 +1,16 @@
+node_modules
+.next
+.git
+.gitignore
+.idea
+.vscode
+.env.local
+.env*.local
+*.md
+!README.md
+tests
+playwright-report
+test-results
+coverage
+.playwright
+.turbo
