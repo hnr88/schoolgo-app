@@ -841,13 +841,35 @@
     "registerSuccess": "账户已创建！欢迎来到 SchoolGo。",
     "registerError": "无法创建账户，请重试。",
     "hasAccount": "已有账户？",
-    "signInLink": "登录"
+    "signInLink": "登录",
+    "parent": {
+      "signInTitle": "[TODO: zh] Welcome back, Parent",
+      "signInSubtitle": "[TODO: zh] Sign in to find and compare the best schools for your child.",
+      "signUpTitle": "[TODO: zh] Start your school search",
+      "signUpSubtitle": "[TODO: zh] Create an account to shortlist, compare and apply to Australian schools."
+    },
+    "agent": {
+      "signInTitle": "[TODO: zh] Agent Portal",
+      "signInSubtitle": "[TODO: zh] Sign in to manage your pipeline and student placements.",
+      "signUpTitle": "[TODO: zh] Grow your agency",
+      "signUpSubtitle": "[TODO: zh] Join SchoolGo to access verified schools and streamline placements."
+    },
+    "school": {
+      "signInTitle": "[TODO: zh] School Portal",
+      "signInSubtitle": "[TODO: zh] Sign in to manage enrolments and connect with agents.",
+      "signUpTitle": "[TODO: zh] List your school",
+      "signUpSubtitle": "[TODO: zh] Create an account to reach international students and education agents."
+    }
   },
   "Errors": {
     "generic": "出了点问题",
+    "genericSubtitle": "[TODO: zh] We hit an unexpected bump. Don't worry — your data is safe.",
     "tryAgain": "再试一次",
     "notFound": "页面未找到",
-    "goHome": "回到首页"
+    "notFoundCode": "[TODO: zh] 404",
+    "notFoundSubtitle": "[TODO: zh] The page you're looking for doesn't exist or has been moved.",
+    "goHome": "回到首页",
+    "searchInstead": "[TODO: zh] Search schools"
   },
   "Dashboard": {
     "nav": {

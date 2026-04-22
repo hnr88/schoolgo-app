@@ -836,13 +836,35 @@
     "registerSuccess": "Account created! Welcome to SchoolGo.",
     "registerError": "Could not create account. Please try again.",
     "hasAccount": "Already have an account?",
-    "signInLink": "Sign in"
+    "signInLink": "Sign in",
+    "parent": {
+      "signInTitle": "Welcome back, Parent",
+      "signInSubtitle": "Sign in to find and compare the best schools for your child.",
+      "signUpTitle": "Start your school search",
+      "signUpSubtitle": "Create an account to shortlist, compare and apply to Australian schools."
+    },
+    "agent": {
+      "signInTitle": "Agent Portal",
+      "signInSubtitle": "Sign in to manage your pipeline and student placements.",
+      "signUpTitle": "Grow your agency",
+      "signUpSubtitle": "Join SchoolGo to access verified schools and streamline placements."
+    },
+    "school": {
+      "signInTitle": "School Portal",
+      "signInSubtitle": "Sign in to manage enrolments and connect with agents.",
+      "signUpTitle": "List your school",
+      "signUpSubtitle": "Create an account to reach international students and education agents."
+    }
   },
   "Errors": {
     "generic": "Something went wrong",
+    "genericSubtitle": "We hit an unexpected bump. Don't worry — your data is safe.",
     "tryAgain": "Try again",
     "notFound": "Page not found",
-    "goHome": "Go home"
+    "notFoundCode": "404",
+    "notFoundSubtitle": "The page you're looking for doesn't exist or has been moved.",
+    "goHome": "Back to home",
+    "searchInstead": "Search schools"
   },
   "Dashboard": {
     "nav": {

@@ -1,51 +1,69 @@
 'use client';
 
-import { useState } from 'react';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
-import type { UserType } from '@/modules/auth/stores/use-auth-store';
-import { UserTypeSelector } from '@/modules/auth/components/UserTypeSelector';
+import type { Portal } from '@/lib/portal-url';
 import { RegisterForm } from '@/modules/auth/components/RegisterForm';
 
-export function SignUpCard() {
+interface SignUpCardProps {
+  portal: Portal;
+}
+
+const PORTAL_ACCENT_BAR: Record<Portal, string> = {
+  parent: 'bg-rausch-400',
+  agent: 'bg-babu-500',
+  school: 'bg-arches-400',
+};
+
+const PORTAL_LOGO_BG: Record<Portal, string> = {
+  parent: 'bg-rausch-50',
+  agent: 'bg-babu-50',
+  school: 'bg-arches-50',
+};
+
+const PORTAL_LINK_COLOR: Record<Portal, string> = {
+  parent: 'text-rausch-500 hover:text-rausch-600',
+  agent: 'text-babu-600 hover:text-babu-700',
+  school: 'text-arches-500 hover:text-arches-600',
+};
+
+export function SignUpCard({ portal }: SignUpCardProps) {
   const t = useTranslations('Auth');
-  const [userType, setUserType] = useState<UserType>('parent');
 
   return (
     <div className='mx-auto w-full max-w-md'>
-      <div className='flex flex-col items-center gap-6'>
+      <div className='flex flex-col items-center gap-8'>
         <Link href='/' aria-label='SchoolGo home'>
           <Image
-            src='/logos/logo-black.png'
+            src='/logos/logo-red.png'
             alt='SchoolGo'
-            width={160}
-            height={36}
-            className='h-9 w-auto'
+            width={280}
+            height={60}
+            className='h-20 w-auto'
           />
         </Link>
-        <div className='flex flex-col items-center gap-1 text-center'>
-          <h1 className='font-display text-2xl font-bold text-ink-900'>{t('signUpTitle')}</h1>
-          <p className='text-sm text-foggy'>{t('signUpSubtitle')}</p>
+        <div className='flex flex-col items-center gap-2 text-center'>
+          <h1 className='font-display text-3xl font-bold tracking-tight text-ink-900'>
+            {t(`${portal}.signUpTitle`)}
+          </h1>
+          <div className={`h-0.5 w-12 rounded-full ${PORTAL_ACCENT_BAR[portal]}`} />
+          <p className='mt-1 max-w-xs text-sm leading-relaxed text-foggy'>
+            {t(`${portal}.signUpSubtitle`)}
+          </p>
         </div>
       </div>
 
-      <div className='mt-8 rounded-2xl border border-border bg-card p-6 shadow-3 sm:p-8'>
-        <div className='flex flex-col gap-6'>
-          <div className='flex flex-col gap-2'>
-            <p className='text-sm font-medium text-ink-900'>{t('iAmA')}</p>
-            <UserTypeSelector value={userType} onChange={setUserType} />
-          </div>
-
-          <div className='h-px bg-divider' />
-
-          <RegisterForm userType={userType} />
-        </div>
+      <div className='mt-8 rounded-2xl border border-border/60 bg-white/80 p-6 shadow-lg backdrop-blur-sm sm:p-8'>
+        <RegisterForm userType={portal} />
       </div>
 
-      <p className='mt-6 text-center text-sm text-foggy'>
+      <p className='mt-8 text-center text-sm text-foggy'>
         {t('hasAccount')}{' '}
-        <Link href='/sign-in' className='font-medium text-primary hover:underline'>
+        <Link
+          href='/sign-in'
+          className={`font-semibold underline-offset-4 hover:underline ${PORTAL_LINK_COLOR[portal]}`}
+        >
           {t('signInLink')}
         </Link>
       </p>
