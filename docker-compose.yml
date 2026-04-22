@@ -1,0 +1,17 @@
+services:
+  schoolgo-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: schoolgo-app:latest
+    container_name: schoolgo-app
+    restart: unless-stopped
+    ports:
+      - "${PORT}:${PORT}"
+    networks:
+      coolify:
+
+networks:
+  coolify:
+    external: true
+    name: coolify
