@@ -85,3 +85,56 @@ Set these as **Docker Build Args** in each Coolify resource:
 | `NEXT_PUBLIC_API_URL` | Backend API base URL |
 | `NEXT_PUBLIC_SITE_URL` | Frontend public URL |
 | `NEXT_PUBLIC_BASE_DOMAIN` | Base domain for subdomain routing |
+
+## DNS Records
+
+### schoolgo.com.au
+
+#### Production (46.225.221.109)
+
+| Subdomain | Full URL | IP | Proxied |
+|---|---|---|---|
+| *(root)* | schoolgo.com.au | 46.225.221.109 | Yes |
+| agent | agent.schoolgo.com.au | 46.225.221.109 | Yes |
+| api | api.schoolgo.com.au | 46.225.221.109 | Yes |
+| parent | parent.schoolgo.com.au | 46.225.221.109 | Yes |
+| school | school.schoolgo.com.au | 46.225.221.109 | Yes |
+
+#### Staging (5.13.233.49)
+
+| Subdomain | Full URL | IP | Proxied |
+|---|---|---|---|
+| staging | staging.schoolgo.com.au | 5.13.233.49 | Yes |
+| staging-agent | staging-agent.schoolgo.com.au | 5.13.233.49 | Yes |
+| staging-api | staging-api.schoolgo.com.au | 5.13.233.49 | Yes |
+| staging-parent | staging-parent.schoolgo.com.au | 5.13.233.49 | Yes |
+| staging-school | staging-school.schoolgo.com.au | 5.13.233.49 | Yes |
+
+---
+
+### diagnostiq.com.au
+
+#### Production (46.225.221.109)
+
+| Subdomain | Full URL | IP | Proxied |
+|---|---|---|---|
+| *(root)* | diagnostiq.com.au | 46.225.221.109 | Yes |
+| agent | agent.diagnostiq.com.au | 46.225.221.109 | Yes |
+| api | api.diagnostiq.com.au | 46.225.221.109 | Yes |
+| panel | panel.diagnostiq.com.au | 46.225.221.109 | Yes |
+| parent | parent.diagnostiq.com.au | 46.225.221.109 | Yes |
+| pipelines | pipelines.diagnostiq.com.au | 46.225.221.109 | Yes |
+| school | school.diagnostiq.com.au | 46.225.221.109 | Yes |
+| test | test.diagnostiq.com.au | 46.225.221.109 | Yes |
+| tracker | tracker.diagnostiq.com.au | 46.225.221.109 | Yes |
+
+#### Staging (5.13.233.49)
+
+| Subdomain | Full URL | IP | Proxied |
+|---|---|---|---|
+| staging | staging.diagnostiq.com.au | 5.13.233.49 | Yes |
+| staging-agent | staging-agent.diagnostiq.com.au | 5.13.233.49 | Yes |
+| staging-api | staging-api.diagnostiq.com.au | 5.13.233.49 | Yes |
+| staging-parent | staging-parent.diagnostiq.com.au | 5.13.233.49 | Yes |
+| staging-school | staging-school.diagnostiq.com.au | 5.13.233.49 | Yes |
+| staging-test | staging-test.diagnostiq.com.au | 5.13.233.49 | Yes |

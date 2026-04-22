@@ -1,874 +1,361 @@
-# CLAUDE.md — Next.js 16 Frontend Developer Rules
+# CLAUDE.md — Next.js 16 Strict Ruleset
 
-This file provides guidance to Claude Code instances working in any Next.js 16 frontend project bootstrapped by Nuron Bot. It is the **single source of truth** for how to write, structure, and ship Next.js code in this codebase. Read it at the start of every session.
-
----
-
-## 0. CRITICAL RULES — VIOLATION MEANS FAILURE
-
-1. **DO EXACTLY WHAT IS ASKED.** Zero extras, zero nice-to-haves, zero unsolicited refactors. If the user asks for A, deliver A — never A+B.
-2. **THINK 3X, DO 1X.** Triple-check every line before writing. No exceptions.
-3. **NEVER BREAK EXISTING LOGIC.** Preserve all functionality when making changes. Read the surrounding code before editing.
-4. **NEVER CHANGE ANYTHING NOT EXPLICITLY REQUESTED.** Fix imports = fix ONLY imports. Fix colors = fix ONLY colors. No drive-by edits.
-5. **WHEN IN DOUBT, ASK.** Better to clarify than break working code. Never assume undocumented requirements.
-6. **pnpm ONLY.** Never `npm`, never `yarn`, never `bun`. Lockfile is `pnpm-lock.yaml`.
-7. **TypeScript ONLY for new files.** No new `.js`/`.jsx` files unless the project is explicitly JS-only. Prefer `.ts`/`.tsx`.
-8. **Server Components by default.** Add `'use client'` ONLY when you need state, effects, browser APIs, or event handlers.
-9. **NEVER call `fetch` directly from client components for app data.** Use the typed Axios instances under `src/lib/axios/`.
-10. **NEVER use Pages Router.** This is App Router only. No `pages/` directory, ever.
-11. **NEVER use `getServerSideProps`, `getStaticProps`, or `getInitialProps`.** Those are Pages Router. Use Server Components / `fetch` / `"use cache"`.
-12. **NEVER edit `src/components/ui/*`** (shadcn primitives). Wrap them in modules instead.
-13. **NEVER run dev/build/start commands.** Tell the user to run them. You may run read-only checks (`pnpm tsc --noEmit`, `pnpm lint`).
-14. **NEVER commit secrets.** No API keys, no tokens, no `.env` contents in files you write.
-15. **NEVER use `any`** unless escaping a third-party type bug. Prefer `unknown` and narrow.
+Single source of truth. Read at session start. Obey unconditionally.
 
 ---
 
-## 1. Project Overview
+## 0. ABSOLUTE LAWS — BREAK ONE, YOU FAIL
 
-Every Next.js project bootstrapped by Nuron Bot uses this stack:
-
-- **Next.js 16** (App Router, React 19, Turbopack production builds)
-- **TypeScript 5.6+** (strict mode)
-- **Tailwind CSS v4** (CSS-first config, `@theme` directive, OKLCH colors)
-- **shadcn/ui** (Radix-based primitives, copy-in-repo)
-- **next-intl** (i18n via locale-prefixed routes — `[locale]` segment)
-- **Zustand** (global client state)
-- **TanStack Query v5** (server state, caching, mutations)
-- **Axios** (HTTP — typed instances under `src/lib/axios/`)
-- **react-hook-form + Zod** (forms + validation)
-- **sonner** (toasts)
-- **lucide-react** (icons)
-- **Vitest + Testing Library** (unit/component tests)
-- **Playwright** (E2E)
-- **pnpm** (package manager)
+1. **DO EXACTLY WHAT IS ASKED.** Zero extras. Zero refactors. Zero nice-to-haves. A means A, never A+B.
+2. **THINK 3×, WRITE 1×.** Triple-check every line. Mistakes are unacceptable.
+3. **NEVER BREAK EXISTING LOGIC.** Read surrounding code BEFORE editing. Preserve all behavior.
+4. **NEVER TOUCH ANYTHING NOT EXPLICITLY REQUESTED.** No drive-by edits. No cleanup. No "while I'm here" changes.
+5. **WHEN IN DOUBT, ASK.** Never guess. Never assume. Clarify or stop.
+6. **pnpm ONLY.** npm/yarn/bun = instant failure. Lockfile: `pnpm-lock.yaml`.
+7. **TypeScript ONLY** for new files. No `.js`/`.jsx`. Ever.
+8. **Server Components by default.** `'use client'` ONLY for state, effects, browser APIs, event handlers.
+9. **NEVER `fetch` from client components.** Use typed Axios instances from `src/lib/axios/`.
+10. **App Router ONLY.** No `pages/` directory. No `getServerSideProps`/`getStaticProps`/`getInitialProps`. Forbidden.
+11. **NEVER edit `src/components/ui/*`.** Wrap shadcn primitives in modules. Never modify originals.
+12. **NEVER run dev/build/start.** Tell the user. You may run: `pnpm tsc --noEmit`, `pnpm lint`.
+13. **NEVER commit secrets.** No keys, no tokens, no `.env` contents in code.
+14. **NEVER use `any`.** Use `unknown` and narrow. Only exception: escaping third-party type bugs with explicit justification.
+15. **NEVER add unsolicited comments, docs, or explanations in code.** Code speaks for itself.
 
 ---
 
-## 2. Required Third-Party Stack — MANDATORY, NEVER SUBSTITUTE
+## 1. Stack — MANDATORY, NON-NEGOTIABLE
 
-This is the **only** approved stack. Do NOT introduce alternatives. If a need arises that isn't covered below, search for the **most popular, actively maintained** package and confirm with the user before adding.
-
-### State Management
-- **Zustand** — the ONLY global state library. No Redux, MobX, Jotai, Recoil, Valtio, Context-as-store.
-
-### Server State / Data Fetching
-- **TanStack Query** (`@tanstack/react-query`) — the ONLY server-state library. No SWR, no apollo-client for REST.
-- Other TanStack packages are allowed when needed (`@tanstack/react-table`, `@tanstack/react-virtual`).
-
-### HTTP Client
-- **Axios** — wrap in **typed instances** under `src/lib/axios/`. Never call `fetch` for app data from client code, never call `axios` directly in components.
-- Required instances:
-  - `publicApi` — unauthenticated requests
-  - `privateApi` — authenticated requests, attaches token via interceptor, handles 401 refresh/logout
-- For Server Components/Server Actions you may use the native `fetch` (with `"use cache"`) OR a server-only Axios instance — pick one per project and stay consistent.
-
-### Forms & Validation
-- **react-hook-form** + **zod** + `@hookform/resolvers/zod` — the ONLY form stack. No Formik, Final Form, Yup, Joi, valibot.
-- Always pair with shadcn `Form` components.
-
-### Toasts / Notifications
-- **sonner** — the ONLY toast library. No react-toastify, no react-hot-toast, no notistack.
-
-### Sliders / Carousels
-- **Splide.js** (`@splidejs/react-splide`) for content carousels. No Swiper, Embla, Keen Slider.
-- For form range sliders, use the shadcn `Slider` component.
-
-### UI / Styling
-- **Tailwind CSS v4** with `@theme` directive — the only styling system. No CSS Modules, styled-components, Emotion, vanilla-extract.
-- **shadcn/ui** — wrap, never replace.
-
-### Icons
-- **lucide-react** or **@heroicons/react** — the approved icon libraries. No react-icons, Font Awesome, Material Icons.
-
-### Internationalization
-- **next-intl** — the only i18n library. No react-i18next, no LinguiJS, no Format.JS standalone.
+| Layer | REQUIRED | BANNED |
+|---|---|---|
+| Framework | **Next.js 16** (App Router, React 19, Turbopack) | Pages Router, any pre-16 patterns |
+| Language | **TypeScript 5.6+** strict mode | JavaScript, loose mode |
+| Styling | **Tailwind CSS v4** (CSS-first, `@theme`, OKLCH) | CSS Modules, styled-components, Emotion, vanilla-extract |
+| UI primitives | **shadcn/ui** (Radix-based, copy-in-repo) | Custom primitives that duplicate shadcn |
+| i18n | **next-intl** (locale-prefixed `[locale]` routes) | react-i18next, LinguiJS, Format.JS |
+| Client state | **Zustand** | Redux, MobX, Jotai, Recoil, Valtio, Context-as-store |
+| Server state | **TanStack Query v5** | SWR, apollo-client for REST |
+| HTTP | **Axios** (typed instances in `src/lib/axios/`) | Raw `fetch` from client, raw `axios` in components |
+| Forms | **react-hook-form + Zod + `@hookform/resolvers/zod`** | Formik, Final Form, Yup, Joi, valibot |
+| Toasts | **sonner** | react-toastify, react-hot-toast, notistack |
+| Icons | **lucide-react** or **@heroicons/react** | react-icons, Font Awesome, Material Icons |
+| Carousels | **Splide.js** (`@splidejs/react-splide`) | Swiper, Embla, Keen Slider |
+| Testing | **Vitest + Testing Library** (unit), **Playwright** (E2E) | Jest, Enzyme, Cypress, Selenium |
+| Package mgr | **pnpm** | npm, yarn, bun |
 
 ### Extended Approved Stack
 
-| Need | USE | NEVER use |
+| Need | USE | BANNED |
 |---|---|---|
-| Date / time | **date-fns** or **Day.js** | Moment.js, Luxon |
+| Date/time | **date-fns** or **Day.js** | Moment.js, Luxon |
 | Tables | **@tanstack/react-table** + shadcn `Table` | MUI DataGrid, AG Grid |
-| Charts | **Recharts** or **Tremor** (dashboards) | Chart.js, Victory, Nivo, ApexCharts |
+| Charts | **Recharts** or **Tremor** | Chart.js, Victory, Nivo, ApexCharts |
 | Animation | **Framer Motion** (`motion/react`) | react-spring, GSAP, anime.js |
 | Drag & drop | **dnd-kit** | react-dnd, react-beautiful-dnd |
 | Virtualization | **@tanstack/react-virtual** | react-window, react-virtualized |
 | Rich text | **Tiptap** | Draft.js, Quill, Slate, CKEditor, TinyMCE |
-| Markdown render | **react-markdown** + `remark-gfm` | marked + dangerouslySetInnerHTML |
+| Markdown | **react-markdown** + `remark-gfm` | marked + dangerouslySetInnerHTML |
 | Code highlight | **Shiki** | Prism, highlight.js |
-| File upload UI | **react-dropzone** | filepond, uppy |
+| File upload | **react-dropzone** | filepond, uppy |
 | Image crop | **react-image-crop** | cropperjs wrappers |
-| PDF view | **react-pdf** | pdf.js raw, iframe hacks |
+| PDF | **react-pdf** | pdf.js raw, iframe hacks |
 | Maps | **react-leaflet** or **@vis.gl/react-google-maps** | react-google-maps/api |
-| Class merging | **clsx + tailwind-merge** via `cn()` | classnames, custom concat |
-| IDs | **nanoid** | uuid (unless RFC 4122 needed) |
-| Env validation | **@t3-oss/env-nextjs** + zod | raw `process.env` scattered |
+| Class merge | **clsx + tailwind-merge** via `cn()` | classnames, custom concat |
+| IDs | **nanoid** | uuid (unless RFC 4122 required) |
+| Env validation | **@t3-oss/env-nextjs** + Zod | raw `process.env` scattered |
 | Email | **Resend** + **react-email** | Nodemailer raw templates |
-| Auth | **Auth.js v5 / NextAuth** OR custom Axios | Clerk SDK out-of-place |
+| Auth | **Auth.js v5 / NextAuth** OR custom Axios | Clerk SDK |
 | Payments | **Stripe** + `@stripe/react-stripe-js` | wrappers/forks |
 | Analytics | **PostHog** or **Vercel Analytics** | GA raw `<script>` |
 | WebSockets | native `WebSocket` or `socket.io-client` | sockjs, pusher-js |
-| Search (client) | **Fuse.js** or **Algolia** | Lunr.js, custom regex |
+| Search | **Fuse.js** or **Algolia** | Lunr.js, custom regex |
 | Phone input | **react-phone-number-input** + libphonenumber-js | regex masks |
 | Color picker | **react-colorful** | react-color |
 | QR codes | **qrcode.react** | qr.js |
-| Copy to clipboard | native `navigator.clipboard` | react-copy-to-clipboard |
-| Number / currency | native `Intl.NumberFormat` | numeral.js, accounting.js |
-| Component variants | **class-variance-authority (cva)** | prop-to-class switch statements |
-| OTP input | shadcn `InputOTP` | react-otp-input |
-| Testing (unit) | **Vitest** + **@testing-library/react** | Jest, Enzyme |
-| Testing (E2E) | **Playwright** | Cypress, Selenium |
+| Clipboard | native `navigator.clipboard` | react-copy-to-clipboard |
+| Number/currency | native `Intl.NumberFormat` | numeral.js, accounting.js |
+| Variants | **cva** (class-variance-authority) | prop-to-class switch statements |
+| OTP | shadcn `InputOTP` | react-otp-input |
 
-### Adding a new library
-1. Search for the **most popular, actively maintained** option (weekly downloads, last publish, GitHub stars).
-2. Reject anything unmaintained (>1 year no release) or with <50k weekly downloads unless niche.
-3. Confirm with the user before adding.
+### Adding a New Library
+
+1. Must be the most popular, actively maintained option (downloads, stars, recency).
+2. Reject anything unmaintained (>1 year no release) or <50k weekly downloads unless niche.
+3. **CONFIRM WITH USER** before adding. No exceptions.
 4. Install with `pnpm add` (or `pnpm add -D`).
-5. NEVER pick obscure or "cool new thing nobody uses" packages.
+5. NEVER introduce obscure or trendy-but-unproven packages.
 
 ---
 
-## 3. Folder Layout (CANONICAL — DO NOT DEVIATE)
+## 2. Folder Layout — CANONICAL, DO NOT DEVIATE
 
-```
-.
-├── public/                          # Static assets served from /
-│   ├── favicon.ico
-│   └── images/
-├── src/
-│   ├── app/                         # Next.js App Router
-│   │   ├── [locale]/                # Locale-prefixed routes
-│   │   │   ├── layout.tsx           # Locale layout (providers, fonts, intl)
-│   │   │   ├── page.tsx             # Home page
-│   │   │   ├── error.tsx            # Locale-level error boundary
-│   │   │   ├── loading.tsx          # Locale-level loading UI
-│   │   │   ├── not-found.tsx        # Locale 404
-│   │   │   └── (group)/             # Route groups (no URL impact)
-│   │   ├── api/                     # Route handlers (only if needed)
-│   │   │   └── [name]/route.ts
-│   │   ├── globals.css              # Tailwind v4 entry, @theme, design tokens
-│   │   ├── layout.tsx               # Root layout (html, body, no providers here)
-│   │   ├── opengraph-image.tsx      # OG image generation
-│   │   ├── icon.tsx                 # Favicon generation
-│   │   ├── manifest.ts              # Web app manifest
-│   │   ├── robots.ts                # robots.txt
-│   │   └── sitemap.ts               # sitemap.xml
-│   ├── modules/                     # Feature modules (ALL custom code lives here)
-│   │   └── [module-name]/
-│   │       ├── components/          # PascalCase.tsx
-│   │       ├── hooks/               # use-*.ts (kebab) or useX.ts
-│   │       ├── stores/              # Zustand stores
-│   │       ├── queries/             # TanStack Query hooks
-│   │       ├── actions/             # Server Actions
-│   │       ├── schemas/             # Zod schemas
-│   │       ├── lib/                 # Pure utilities
-│   │       ├── types/               # TS types/interfaces
-│   │       ├── constants/           # Module constants
-│   │       └── index.ts             # Public exports
-│   ├── components/
-│   │   └── ui/                      # shadcn/ui primitives — DO NOT EDIT
-│   ├── lib/
-│   │   ├── axios/                   # Typed Axios instances
-│   │   │   ├── public.ts
-│   │   │   ├── private.ts
-│   │   │   └── index.ts
-│   │   ├── utils.ts                 # cn() and shared helpers
-│   │   └── env.ts                   # @t3-oss/env-nextjs schema
-│   ├── i18n/
-│   │   ├── messages/                # Translation files
-│   │   │   ├── en.json
-│   │   │   └── [locale].json
-│   │   ├── request.ts               # next-intl request config
-│   │   └── routing.ts               # Locale routing config
-│   └── proxy.ts                     # Next 16 middleware (renamed from middleware.ts)
-├── tests/
-│   ├── unit/
-│   └── e2e/
-├── .env.local                       # Local secrets (gitignored)
-├── .env.example                     # Public template
-├── next.config.ts
-├── tailwind.config.ts               # Optional in v4 (CSS-first preferred)
-├── tsconfig.json
-├── vitest.config.ts
-├── playwright.config.ts
-├── pnpm-lock.yaml
-└── package.json
-```
+- `public/` — static assets (`favicon.ico`, `images/`)
+- `src/app/` — App Router ONLY
+  - `[locale]/` — locale-prefixed routes: `layout.tsx`, `page.tsx`, `error.tsx`, `loading.tsx`, `not-found.tsx`, `(group)/`
+  - `api/` — route handlers (`[name]/route.ts`), only when needed
+  - `globals.css` — Tailwind v4 entry, `@theme`, design tokens
+  - `layout.tsx` — root layout (html, body, NO providers)
+  - `opengraph-image.tsx`, `icon.tsx`, `manifest.ts`, `robots.ts`, `sitemap.ts`
+- `src/modules/` — **ALL custom code lives here.** Zero exceptions.
+  - `[module-name]/` — `components/`, `hooks/`, `stores/`, `queries/`, `actions/`, `schemas/`, `lib/`, `types/`, `constants/`, `index.ts`
+- `src/components/ui/` — shadcn primitives. **READ ONLY. DO NOT EDIT.**
+- `src/lib/` — `axios/` (public.ts, private.ts, index.ts), `utils.ts` (cn()), `env.ts` (@t3-oss)
+- `src/i18n/` — `messages/` (en.json, [locale].json), `request.ts`, `routing.ts`
+- `src/proxy.ts` — Next 16 middleware (renamed from middleware.ts)
+- `tests/` — `unit/`, `e2e/`
+- Root: `.env.local` (gitignored), `.env.example`, `next.config.ts`, `tsconfig.json`, `vitest.config.ts`, `playwright.config.ts`, `pnpm-lock.yaml`, `package.json`
 
 ---
 
-## 4. Module Pattern (MANDATORY)
+## 3. Module Pattern — MANDATORY, ZERO TOLERANCE
 
-**ALL custom code lives in modules.** Zero components, hooks, stores, or business logic outside `src/modules/`.
+ALL custom components, hooks, stores, queries, actions, schemas, types, and utilities MUST live inside `src/modules/[module-name]/`. Code outside modules is a structural violation.
 
-```
-src/modules/[module-name]/
-├── components/         # PascalCase.tsx
-├── hooks/              # useX.ts
-├── stores/             # use-x-store.ts (Zustand)
-├── queries/            # use-x.query.ts / use-x.mutation.ts
-├── actions/            # x.action.ts (Server Actions, 'use server')
-├── schemas/            # x.schema.ts (Zod)
-├── lib/                # pure utils
-├── types/              # x.types.ts
-├── constants/          # x.constants.ts
-└── index.ts            # public barrel exports
-```
+### Module Structure Enforcement
+1. Modules are **self-contained** — they own their own everything.
+2. Cross-module imports MUST go through the barrel `index.ts`. NEVER reach into another module's internals.
+3. `index.ts` exports ONLY the public surface. Internal helpers stay private.
+4. NEVER import from a module and skip the barrel.
+5. Shared code goes in `src/lib/` or a dedicated shared module.
 
-Rules:
-1. A module is **self-contained** — it owns its own components, state, queries, types.
-2. Cross-module imports MUST go through the module's `index.ts` barrel — never reach into another module's internals.
-3. The `index.ts` barrel exports ONLY the public surface. Internal helpers stay private.
-4. Never import a module from `src/app/` and skip the barrel.
-5. If two modules need to share something, lift it into `src/lib/` or a new shared module.
+### File Placement — ABSOLUTE RULES
+6. **Types and interfaces → `types/` folder ONLY.** NEVER define a `type` or `interface` in a component file, hook file, or anywhere else. ALL types live in `src/modules/[name]/types/x.types.ts`. The ONLY exception: inline props type for a component that is used nowhere else (e.g. `function Card({ title }: { title: string })`). If any type is used in more than one file, it MUST be in `types/`.
+7. **Zod schemas → `schemas/` folder ONLY.** NEVER define a Zod schema inside a component, hook, or action file. Extract to `src/modules/[name]/schemas/x.schema.ts`. Inferred types from schemas (`z.infer<>`) MUST be re-exported from `types/`.
+8. **Constants → `constants/` folder ONLY.** NEVER scatter `const` config objects, magic strings, or enum-like values across component or hook files. Centralize in `src/modules/[name]/constants/x.constants.ts`.
+9. **Hooks → `hooks/` folder ONLY.** NEVER define a custom hook inside a component file. Even if the hook is small, extract it to `src/modules/[name]/hooks/useX.ts`.
+10. **Server Actions → `actions/` folder ONLY.** NEVER put `'use server'` functions inside component files or page files. Extract to `src/modules/[name]/actions/x.action.ts`.
+11. **Queries/Mutations → `queries/` folder ONLY.** NEVER define `useQuery`/`useMutation` calls inline in components. Extract to `src/modules/[name]/queries/`.
+12. **Stores → `stores/` folder ONLY.** NEVER define a Zustand store outside its designated file in `src/modules/[name]/stores/`.
+
+### What Goes Where — NO EXCEPTIONS
+
+| Code type | MUST live in | NEVER in |
+|---|---|---|
+| `type`, `interface` | `types/x.types.ts` | components, hooks, lib, actions, queries |
+| Zod `z.object(...)` | `schemas/x.schema.ts` | components, hooks, actions |
+| `useQuery`/`useMutation` | `queries/use-x.query.ts` | components |
+| `useX` custom hooks | `hooks/useX.ts` | components |
+| `'use server'` functions | `actions/x.action.ts` | components, pages |
+| `create<Store>()` | `stores/use-x-store.ts` | components, hooks |
+| Constants, config objects | `constants/x.constants.ts` | components, hooks |
+| Pure utility functions | `lib/x.ts` | components, hooks |
 
 ---
 
-## 5. App Router Rules
+## 3.1. Code Quality — COMPONENTS ARE DUMB, LOGIC LIVES ELSEWHERE
 
-### 5.1 Server Components (default)
+Components render UI. That is their ONLY job. All logic, data transformation, business rules, and side effects MUST be extracted.
 
-Every file in `src/app/` is a **Server Component** by default. They:
-- Run only on the server, never ship JS to the client
-- Can be `async` and `await` data directly
-- Cannot use `useState`, `useEffect`, `useRef`, browser APIs, or event handlers
-- Cannot import client-only modules (e.g., Zustand stores) at the top level
+### Components — WHAT THEY CAN DO
+1. Return JSX.
+2. Call hooks (custom hooks, not raw logic).
+3. Handle simple UI state (`isOpen`, `activeTab`) — but even these should be in a hook if reused.
+4. Destructure props and pass them down.
+5. Map over data to render lists.
 
-```tsx
-// src/app/[locale]/products/page.tsx
-import { getTranslations } from 'next-intl/server';
-import { ProductList } from '@/modules/products';
-import { fetchProducts } from '@/modules/products/lib/server';
+### Components — WHAT THEY CANNOT DO
+1. **NEVER contain business logic.** No calculations, no data transformations, no conditional logic beyond simple ternaries for rendering. Extract to `hooks/` or `lib/`.
+2. **NEVER contain API calls.** No `useQuery`, `useMutation`, `fetch`, or `axios` directly in a component. Wrap in a custom hook in `queries/` or `hooks/`.
+3. **NEVER contain form validation logic.** Zod schemas live in `schemas/`. `useForm` setup goes in a custom hook if the form is complex.
+4. **NEVER contain data formatting/transformation.** Formatting dates, currencies, filtering arrays, sorting — ALL goes in `lib/` utility functions.
+5. **NEVER contain more than 3 `useState` calls.** If you need more, extract into a custom hook.
+6. **NEVER contain `useEffect` with complex logic.** Extract the effect logic into a custom hook.
+7. **NEVER define helper functions inside components** that could live in `lib/`. If a function doesn't use hooks or component state, it belongs in `lib/`.
 
-export default async function ProductsPage() {
-  const t = await getTranslations('Products');
-  const products = await fetchProducts();
-  return (
-    <main>
-      <h1>{t('title')}</h1>
-      <ProductList products={products} />
-    </main>
-  );
-}
-```
+### Where Logic MUST Live
 
-### 5.2 Client Components
+| Logic type | MUST go in | NEVER in components |
+|---|---|---|
+| API calls, data fetching | `queries/` hooks | Direct `useQuery`/`useMutation` in JSX files |
+| Data transformation, formatting | `lib/` pure functions | Inline in render or event handlers |
+| Business rules, calculations | `lib/` pure functions or `hooks/` | Inline in components |
+| Complex state management | `hooks/useX.ts` custom hooks | Multiple `useState` + `useEffect` in component |
+| Form setup with validation | `hooks/useXForm.ts` or keep simple | Massive `useForm` config blocks in component |
+| Side effects | `hooks/` custom hooks | Raw `useEffect` with 10+ lines |
+| Event handler logic (>3 lines) | `hooks/` or `lib/` | Inline in component |
 
-Add `'use client'` ONLY when you need:
-- `useState` / `useReducer` / `useRef`
-- `useEffect` / `useLayoutEffect`
-- Event handlers (`onClick`, `onChange`, etc.)
-- Browser APIs (`window`, `document`, `localStorage`)
-- React Context, Zustand stores, TanStack Query hooks
-- Third-party libs that depend on the above
+### The Rule of Thumb
+If you remove the JSX `return` statement and there's more than 15 lines of logic left, the component has TOO MUCH logic. Extract it.
 
-```tsx
-'use client';
-import { useState } from 'react';
-import { useTranslations } from 'next-intl';
+---
 
-export function Counter() {
-  const t = useTranslations('Counter');
-  const [count, setCount] = useState(0);
-  return <button onClick={() => setCount(c => c + 1)}>{t('count', { count })}</button>;
-}
-```
+## 4. Server Components
 
-Rules:
-1. Push `'use client'` **as far down the tree as possible**. Wrap leaves, not pages.
-2. A Server Component CAN render a Client Component, and pass serializable props to it.
-3. A Client Component CANNOT directly import a Server Component, but it CAN receive one as `children`.
-4. If a file needs `'use client'`, the directive MUST be the very first line.
-5. Never add `'use client'` "just in case" — every directive must be justified.
+Default for every file in `src/app/`. They run on the server only, ship zero JS to the client.
 
-### 5.3 Server Actions
+1. CAN be `async` and `await` data directly.
+2. CANNOT use `useState`, `useEffect`, `useRef`, browser APIs, event handlers.
+3. CANNOT import Zustand stores or client-only modules at the top level.
+4. Use `getTranslations` from `next-intl/server` for i18n.
 
-Server Actions are async functions marked with `'use server'`. They run on the server and can be called from Client Components or `<form action={...}>`.
+---
 
-```ts
-// src/modules/products/actions/create-product.action.ts
-'use server';
-import { z } from 'zod';
-import { revalidateTag } from 'next/cache';
-import { productSchema } from '@/modules/products/schemas/product.schema';
+## 5. Client Components
 
-export async function createProduct(_prev: unknown, formData: FormData) {
-  const parsed = productSchema.safeParse(Object.fromEntries(formData));
-  if (!parsed.success) {
-    return { ok: false as const, errors: parsed.error.flatten().fieldErrors };
-  }
-  await db.products.create({ data: parsed.data });
-  revalidateTag('products');
-  return { ok: true as const };
-}
-```
+Add `'use client'` ONLY when you absolutely need: state hooks, effects, event handlers, browser APIs, Zustand stores, TanStack Query hooks, or third-party libs that require them.
 
-Rules:
-1. Server Actions MUST validate input with Zod on the server. Never trust the client.
-2. Server Actions MUST return serializable values (no functions, no class instances).
-3. Use `revalidateTag` / `revalidatePath` after mutations.
+1. `'use client'` MUST be the very first line of the file. No exceptions.
+2. Push it **as far down the tree as possible**. Wrap leaves, not pages.
+3. A Server Component CAN render a Client Component with serializable props.
+4. A Client Component CANNOT import a Server Component — receive it as `children`.
+5. NEVER add `'use client'` "just in case". Every directive must be justified.
+6. Use `useTranslations` from `next-intl` for i18n in client components.
+
+---
+
+## 6. Server Actions
+
+Async functions marked `'use server'`, placed in `src/modules/[name]/actions/x.action.ts`.
+
+1. MUST validate ALL input with Zod on the server. NEVER trust the client.
+2. MUST return serializable values only (no functions, no class instances).
+3. MUST call `revalidateTag`/`revalidatePath` after mutations.
 4. Pair with `useActionState` (React 19) on the client for pending/error UI.
-5. Server Actions are NOT a security boundary — re-check auth/ownership inside every action.
-
-### 5.4 Route Handlers (`route.ts`)
-
-Use `route.ts` only when you need a public HTTP endpoint (webhooks, OAuth callbacks, file uploads). Prefer Server Actions for app data mutations from your own UI.
-
-```ts
-// src/app/api/webhooks/stripe/route.ts
-import { NextResponse } from 'next/server';
-
-export async function POST(req: Request) {
-  const body = await req.json();
-  return NextResponse.json({ ok: true });
-}
-```
-
-### 5.5 Streaming, Suspense, PPR
-
-- **Streaming**: Wrap slow data fetches in `<Suspense fallback={<Skeleton />}>`. The shell streams immediately, the slow part fills in later.
-- **Parallel data fetching**: Use `Promise.all([a(), b()])` inside Server Components, or use multiple `<Suspense>` boundaries side by side.
-- **Partial Prerendering (PPR)**: Enable in `next.config.ts` with `experimental.ppr = 'incremental'` and add `export const experimental_ppr = true` to a route. Static shell prerenders, dynamic holes stream.
-
-```tsx
-import { Suspense } from 'react';
-
-export const experimental_ppr = true;
-
-export default function Page() {
-  return (
-    <>
-      <StaticHero />
-      <Suspense fallback={<DashboardSkeleton />}>
-        <DynamicDashboard />
-      </Suspense>
-    </>
-  );
-}
-```
-
-### 5.6 `loading.tsx`, `error.tsx`, `not-found.tsx`
-
-Every route segment SHOULD have these files where appropriate:
-
-- `loading.tsx` — Suspense fallback for the segment. Keep it lightweight (skeletons, not spinners).
-- `error.tsx` — Client component with `'use client'` and `reset()` button. Receives `error` and `reset` props.
-- `not-found.tsx` — Triggered by `notFound()` from `next/navigation`.
-- `global-error.tsx` — Root-level error boundary (only at `app/global-error.tsx`).
-
-```tsx
-// src/app/[locale]/products/error.tsx
-'use client';
-export default function Error({ error, reset }: { error: Error; reset: () => void }) {
-  return (
-    <div>
-      <h2>Something went wrong</h2>
-      <button onClick={reset}>Try again</button>
-    </div>
-  );
-}
-```
-
-### 5.7 Parallel & Intercepting Routes
-
-- **Parallel routes**: `@slot` folders render multiple pages in one layout simultaneously. Useful for dashboards with independent panels.
-- **Intercepting routes**: `(.)folder`, `(..)folder`, `(...)folder` capture navigation from elsewhere — e.g., open a photo as a modal when navigated to from a feed but as a full page on direct visit.
-
-Use these only when they genuinely simplify UX. Do not add them speculatively.
-
-### 5.8 Metadata API
-
-Every page MUST export `metadata` (static) or `generateMetadata` (dynamic).
-
-```tsx
-import type { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: 'Products',
-  description: 'Browse our catalog',
-  openGraph: {
-    title: 'Products',
-    description: 'Browse our catalog',
-    images: ['/og/products.png'],
-    type: 'website',
-  },
-  twitter: { card: 'summary_large_image' },
-  alternates: { canonical: '/products' },
-};
-
-export async function generateMetadata({ params }): Promise<Metadata> {
-  const { id } = await params;
-  const product = await getProduct(id);
-  return { title: product.name };
-}
-```
-
-Rules:
-1. Every page sets `title` and `description`.
-2. Public pages set `openGraph` and `twitter`.
-3. Detail pages set `alternates.canonical`.
-4. Use `app/opengraph-image.tsx` to generate dynamic OG images via `ImageResponse`.
-5. Use `app/icon.tsx`, `app/apple-icon.tsx` for favicons.
-6. Define `app/robots.ts` and `app/sitemap.ts` at the root of `app/`.
-
-### 5.9 `proxy.ts` (formerly `middleware.ts`)
-
-Next.js 16 renamed `middleware.ts` → `proxy.ts`. The function signature and matcher config are unchanged.
-
-```ts
-// src/proxy.ts
-import { NextResponse, type NextRequest } from 'next/server';
-import createIntlMiddleware from 'next-intl/middleware';
-import { routing } from '@/i18n/routing';
-
-const intlMiddleware = createIntlMiddleware(routing);
-
-export function proxy(req: NextRequest) {
-  // Auth check
-  const token = req.cookies.get('session')?.value;
-  if (req.nextUrl.pathname.startsWith('/admin') && !token) {
-    return NextResponse.redirect(new URL('/login', req.url));
-  }
-  return intlMiddleware(req);
-}
-
-export const config = {
-  matcher: ['/((?!api|_next|_vercel|.*\\..*).*)'],
-};
-```
-
-Rules:
-1. The file MUST be named `proxy.ts` (Next 16). Old `middleware.ts` still works but is deprecated.
-2. The exported function MUST be named `proxy` (or `middleware` for back-compat).
-3. NEVER use `proxy.ts` as your sole auth boundary. Re-check inside Server Actions and Route Handlers.
-4. Keep proxy logic minimal — it runs on every matched request.
+5. NOT a security boundary — re-check auth/ownership inside EVERY action.
 
 ---
 
-## 6. Caching (Next.js 16)
+## 7. Route Handlers
 
-Next 16 caching is **explicit and opt-in**. Nothing is cached unless you say so.
-
-### `"use cache"` directive
-
-```ts
-'use cache';
-import { cacheLife, cacheTag } from 'next/cache';
-
-export async function getProducts() {
-  cacheLife('hours');
-  cacheTag('products');
-  return await db.products.findMany();
-}
-```
-
-- `'use cache'` at top of file/function/component opts into the data cache.
-- `cacheLife('seconds' | 'minutes' | 'hours' | 'days' | 'weeks' | 'max')` — TTL profile.
-- `cacheTag('products')` — enables on-demand invalidation.
-- Replaces the v14 `unstable_cache`.
-
-### Invalidation
-
-```ts
-'use server';
-import { revalidateTag, revalidatePath } from 'next/cache';
-
-export async function updateProduct(id: string, data: FormData) {
-  await db.products.update(id, data);
-  revalidateTag('products');     // purge all caches tagged 'products'
-  revalidatePath('/products');   // purge specific route
-}
-```
-
-### `cache()` from React
-
-```ts
-import { cache } from 'react';
-export const getUser = cache(async (id: string) => db.users.findOne(id));
-```
-- Request-level memoization. Deduplicates identical calls within a single request.
-- Use for repeated data access in the same render pass.
-
-### Rules
-1. Never cache user-specific data with `cacheTag` unless you tag it per-user.
-2. Always tag cached data so you can invalidate it later.
-3. Default to **no cache** unless you have a clear reason.
-4. Use `cacheLife('max')` only for truly immutable data.
+Use `route.ts` ONLY for public HTTP endpoints (webhooks, OAuth callbacks, file uploads). Prefer Server Actions for mutations from your own UI.
 
 ---
 
-## 7. next-intl (Internationalization)
+## 8. Streaming & PPR
 
-### Routing
-
-```ts
-// src/i18n/routing.ts
-import { defineRouting } from 'next-intl/routing';
-export const routing = defineRouting({
-  locales: ['en', 'hu'],
-  defaultLocale: 'en',
-  localePrefix: 'as-needed',
-});
-```
-
-### Request config
-
-```ts
-// src/i18n/request.ts
-import { getRequestConfig } from 'next-intl/server';
-import { routing } from './routing';
-
-export default getRequestConfig(async ({ requestLocale }) => {
-  const requested = await requestLocale;
-  const locale = routing.locales.includes(requested as never) ? requested : routing.defaultLocale;
-  return {
-    locale: locale!,
-    messages: (await import(`./messages/${locale}.json`)).default,
-  };
-});
-```
-
-### Translation files
-
-```
-src/i18n/messages/
-├── en.json
-└── hu.json
-```
-
-```json
-{
-  "Home": { "title": "Welcome", "description": "..." },
-  "Common": { "submit": "Submit", "cancel": "Cancel" }
-}
-```
-
-### Usage
-
-```tsx
-// Server Component
-import { getTranslations } from 'next-intl/server';
-export default async function Page() {
-  const t = await getTranslations('Home');
-  return <h1>{t('title')}</h1>;
-}
-
-// Client Component
-'use client';
-import { useTranslations } from 'next-intl';
-export function Btn() {
-  const t = useTranslations('Common');
-  return <button>{t('submit')}</button>;
-}
-```
-
-### Rules
-1. NEVER hardcode user-facing strings. Every string goes in a message file.
-2. Translation keys: PascalCase namespaces, camelCase keys (`Home.welcomeMessage`).
-3. Keep translation files in sync — every locale file must have the same key shape.
-4. Use ICU plurals/selects for plurals: `{count, plural, one {# item} other {# items}}`.
-5. Use `next-intl/link` and `next-intl/navigation` for locale-aware routing.
+1. Wrap slow data fetches in `<Suspense fallback={<Skeleton />}>`.
+2. Parallelize with `Promise.all` or multiple `<Suspense>` boundaries side by side.
+3. Partial Prerendering: enable `experimental.ppr = 'incremental'` in `next.config.ts`, add `export const experimental_ppr = true` to the route.
 
 ---
 
-## 8. Tailwind CSS v4
+## 8.1. Parallel & Intercepting Routes
 
-Tailwind v4 is **CSS-first**. Define your theme inside `globals.css` using `@theme`.
-
-```css
-/* src/app/globals.css */
-@import "tailwindcss";
-
-@theme {
-  --font-sans: "Plus Jakarta Sans", system-ui, sans-serif;
-  --font-display: "Instrument Sans", system-ui, sans-serif;
-
-  --color-brand-50:  oklch(0.97 0.02 280);
-  --color-brand-500: oklch(0.62 0.18 280);
-  --color-brand-900: oklch(0.28 0.10 280);
-
-  --radius-sm: 0.375rem;
-  --radius-md: 0.5rem;
-  --radius-lg: 0.75rem;
-}
-
-@layer base {
-  :root {
-    --background: oklch(0.99 0.005 280);
-    --foreground: oklch(0.18 0.02 280);
-  }
-  .dark {
-    --background: oklch(0.14 0.015 280);
-    --foreground: oklch(0.96 0.01 280);
-  }
-}
-```
-
-### Rules
-1. Use **OKLCH** colors. Never raw hex, never HSL, never `#000` or `#fff` (always tint).
-2. Use the **4pt spacing scale**: `p-1, p-2, p-3, p-4, p-6, p-8, p-12, p-16, p-24`.
-3. NEVER use arbitrary values (`p-[23px]`) unless absolutely necessary.
-4. Use `gap-*` for sibling spacing, not `margin`.
-5. Use `clamp()` for fluid typography in CSS, expose via `--font-size-*` tokens.
-6. NEVER use the banned fonts (Inter, Roboto, Arial, Open Sans, Lato, Montserrat). Use Instrument Sans, Plus Jakarta Sans, Outfit, Onest, Figtree, Urbanist, DM Sans.
-7. Animations: animate `transform` and `opacity` only. Never `width/height/padding/margin`.
-8. Use exponential easings: `ease-out-quart`, `ease-out-quint`, `ease-out-expo`. No `bounce`/`elastic`.
-9. NO glassmorphism, NO gradient text on headings, NO neon-on-dark.
+1. **Parallel routes:** `@slot` folders render multiple pages in one layout simultaneously (dashboards, independent panels).
+2. **Intercepting routes:** `(.)folder`, `(..)folder`, `(...)folder` capture navigation from elsewhere (e.g. modal on feed click, full page on direct visit).
+3. Use ONLY when they genuinely simplify UX. NEVER add speculatively.
 
 ---
 
-## 9. shadcn/ui
+## 9. Error/Loading Boundaries
 
-**NEVER reinvent UI primitives.** ALWAYS use shadcn first.
-
-### Rules
-1. **USE shadcn components** — Button, Dialog, Form, Input, Select, etc. live in `@/components/ui/`.
-2. **WRAP, never replace** — Create wrappers in your module that extend shadcn.
-3. **NEVER edit `src/components/ui/*` directly** unless updating from upstream.
-4. **CHECK FIRST** — Before creating any UI component, check if shadcn already has it.
-5. Install new ones with `pnpm dlx shadcn@latest add <component>`.
-
-### Wrapping
-
-```tsx
-// src/modules/forms/components/SubmitButton.tsx
-import { Button, type ButtonProps } from '@/components/ui/button';
-import { Loader2 } from 'lucide-react';
-
-export function SubmitButton({ loading, children, ...props }: ButtonProps & { loading?: boolean }) {
-  return (
-    <Button type="submit" disabled={loading || props.disabled} {...props}>
-      {loading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-      {children}
-    </Button>
-  );
-}
-```
-
-### Available primitives
-accordion, alert, alert-dialog, aspect-ratio, avatar, badge, breadcrumb, button, calendar, card, carousel, chart, checkbox, collapsible, command, context-menu, dialog, drawer, dropdown-menu, form, hover-card, input, input-otp, label, menubar, navigation-menu, pagination, popover, progress, radio-group, resizable, scroll-area, select, separator, sheet, sidebar, skeleton, slider, sonner, switch, table, tabs, textarea, toggle, toggle-group, tooltip.
+1. `loading.tsx` — lightweight skeletons, NOT spinners.
+2. `error.tsx` — MUST be `'use client'`, MUST include a `reset()` button.
+3. `not-found.tsx` — triggered by `notFound()` from `next/navigation`.
+4. `global-error.tsx` — root-level only at `app/global-error.tsx`.
 
 ---
 
-## 10. Zustand (Client State)
+## 10. Caching (Next.js 16) — Explicit, Opt-In
 
-```ts
-// src/modules/cart/stores/use-cart-store.ts
-import { create } from 'zustand';
-import { persist } from 'zustand/middleware';
+NOTHING is cached unless you explicitly opt in. Default is no-cache.
 
-interface CartState {
-  items: CartItem[];
-  add: (item: CartItem) => void;
-  remove: (id: string) => void;
-  clear: () => void;
-}
-
-export const useCartStore = create<CartState>()(
-  persist(
-    (set) => ({
-      items: [],
-      add: (item) => set((s) => ({ items: [...s.items, item] })),
-      remove: (id) => set((s) => ({ items: s.items.filter((i) => i.id !== id) })),
-      clear: () => set({ items: [] }),
-    }),
-    { name: 'cart' }
-  )
-);
-```
-
-### Rules
-1. ONE store per concern (auth, cart, ui), NOT one mega-store.
-2. Stores live in `src/modules/[name]/stores/use-[name]-store.ts`.
-3. Always type the state interface explicitly.
-4. Use selectors when reading: `const items = useCartStore((s) => s.items);` to avoid unnecessary re-renders.
-5. Persist only what must survive reload — use `persist` middleware with `partialize`.
-6. NEVER import a store at the top of a Server Component file. Stores are client-only.
+1. Use `'use cache'` directive at top of file/function to opt into the data cache.
+2. Use `cacheLife('seconds' | 'minutes' | 'hours' | 'days' | 'weeks' | 'max')` for TTL.
+3. Use `cacheTag('name')` to enable on-demand invalidation via `revalidateTag`.
+4. Use React `cache()` for request-level memoization (deduplication within a single render).
+5. NEVER cache user-specific data unless tagged per-user.
+6. ALWAYS tag cached data so you can invalidate it.
+7. Use `cacheLife('max')` ONLY for truly immutable data.
 
 ---
 
-## 11. TanStack Query (Server State)
+## 11. next-intl
 
-### Setup
-
-```tsx
-// src/modules/core/components/QueryProvider.tsx
-'use client';
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { useState } from 'react';
-
-export function QueryProvider({ children }: { children: React.ReactNode }) {
-  const [client] = useState(
-    () => new QueryClient({
-      defaultOptions: { queries: { staleTime: 60_000, refetchOnWindowFocus: false } },
-    })
-  );
-  return <QueryClientProvider client={client}>{children}</QueryClientProvider>;
-}
-```
-
-### Query hook
-
-```ts
-// src/modules/products/queries/use-products.query.ts
-import { useQuery } from '@tanstack/react-query';
-import { privateApi } from '@/lib/axios';
-import type { Product } from '@/modules/products/types';
-
-export function useProducts() {
-  return useQuery({
-    queryKey: ['products'],
-    queryFn: async () => {
-      const { data } = await privateApi.get<Product[]>('/products');
-      return data;
-    },
-  });
-}
-```
-
-### Mutation hook
-
-```ts
-import { useMutation, useQueryClient } from '@tanstack/react-query';
-import { privateApi } from '@/lib/axios';
-
-export function useCreateProduct() {
-  const qc = useQueryClient();
-  return useMutation({
-    mutationFn: async (input: CreateProductInput) => {
-      const { data } = await privateApi.post('/products', input);
-      return data;
-    },
-    onSuccess: () => qc.invalidateQueries({ queryKey: ['products'] }),
-  });
-}
-```
-
-### Rules
-1. Query keys are arrays starting with the resource name: `['products']`, `['products', id]`.
-2. ONE hook per query, in `src/modules/[name]/queries/use-[name].query.ts`.
-3. Mutations live alongside queries with `.mutation.ts` suffix.
-4. Always invalidate or `setQueryData` after a successful mutation.
-5. Never call `fetch` or `axios` directly in components — go through a query hook.
+1. Routing config in `src/i18n/routing.ts` using `defineRouting`.
+2. Request config in `src/i18n/request.ts` using `getRequestConfig`.
+3. Translation files in `src/i18n/messages/` — one JSON per locale.
+4. Server Components: use `getTranslations` from `next-intl/server`.
+5. Client Components: use `useTranslations` from `next-intl`.
+6. **NEVER hardcode user-facing strings.** Every string goes through `t()`.
+7. Keys: PascalCase namespaces, camelCase keys (e.g. `Home.welcomeMessage`).
+8. ALL locale files MUST have the same key shape. No missing keys.
+9. Use ICU plurals: `{count, plural, one {# item} other {# items}}`.
+10. Use `next-intl/navigation` for locale-aware `<Link>` and routing.
 
 ---
 
-## 12. Axios Pattern
+## 12. Tailwind CSS v4
 
-```ts
-// src/lib/axios/public.ts
-import axios from 'axios';
-import { env } from '@/lib/env';
-export const publicApi = axios.create({ baseURL: env.NEXT_PUBLIC_API_URL });
-```
+CSS-first config. Theme defined in `globals.css` via `@theme`.
 
-```ts
-// src/lib/axios/private.ts
-import axios from 'axios';
-import { useAuthStore } from '@/modules/auth';
-import { env } from '@/lib/env';
+1. **OKLCH colors ONLY.** NEVER raw hex, HSL, `#000`, or `#fff`. Always tint.
+2. **4pt spacing scale:** `p-1, p-2, p-3, p-4, p-6, p-8, p-12, p-16, p-24`.
+3. **NEVER use arbitrary values.** No `p-[23px]`, no `w-[347px]`, no `text-[17px]`. Use ONLY built-in Tailwind utilities. If a built-in value doesn't exist, define a token in `@theme` — NEVER inline arbitrary values.
+4. **NEVER use absurdly large spacing/padding.** No `px-80`, `py-96`, `mt-72`, or anything that screams hardcoded layout. Keep spacing proportional and reasonable. Max padding: `p-24` for page-level containers. Anything beyond that is a layout smell — use `max-w-*` and `mx-auto` instead.
+5. **NEVER hardcode text sizes with arbitrary values.** Use built-in `text-xs` through `text-9xl` or define `--font-size-*` tokens in `@theme`. No `text-[15px]`, no `text-[1.125rem]`.
+6. Use `gap-*` for sibling spacing. NEVER margin for gaps between siblings.
+7. Use `clamp()` for fluid typography via `--font-size-*` tokens.
+8. **BANNED fonts:** Inter, Roboto, Arial, Open Sans, Lato, Montserrat. Use: Instrument Sans, Plus Jakarta Sans, Outfit, Onest, Figtree, Urbanist, DM Sans.
+9. Animate `transform` and `opacity` ONLY. NEVER animate width/height/padding/margin.
+10. Exponential easings only: `ease-out-quart`, `ease-out-quint`, `ease-out-expo`. NO bounce/elastic.
+11. **BANNED patterns:** glassmorphism, gradient text on headings, neon-on-dark.
+12. **Use ONLY built-in Tailwind classes.** Every value must come from the default scale or your `@theme` tokens. If you're typing square brackets `[]`, you're doing it wrong.
 
-export const privateApi = axios.create({ baseURL: env.NEXT_PUBLIC_API_URL });
+---
 
-privateApi.interceptors.request.use((config) => {
-  const { token, userType } = useAuthStore.getState();
-  if (token) config.headers.Authorization = `Bearer ${token}`;
-  if (userType) config.headers['X-User-Type'] = userType;
-  return config;
-});
+## 13. shadcn/ui
 
-privateApi.interceptors.response.use(
-  (res) => res,
-  async (err) => {
-    if (err.response?.status === 401) {
-      useAuthStore.getState().logout();
-    }
-    return Promise.reject(err);
-  }
-);
-```
+1. ALWAYS check if shadcn has the component BEFORE creating anything custom.
+2. WRAP shadcn components in module components. NEVER replace or duplicate them.
+3. **NEVER edit files in `src/components/ui/`.**
+4. Install new primitives: `pnpm dlx shadcn@latest add <component>`.
+5. Available: accordion, alert, alert-dialog, aspect-ratio, avatar, badge, breadcrumb, button, calendar, card, carousel, chart, checkbox, collapsible, command, context-menu, dialog, drawer, dropdown-menu, form, hover-card, input, input-otp, label, menubar, navigation-menu, pagination, popover, progress, radio-group, resizable, scroll-area, select, separator, sheet, sidebar, skeleton, slider, sonner, switch, table, tabs, textarea, toggle, toggle-group, tooltip.
 
-### Rules
-1. NEVER call `axios.create()` outside `src/lib/axios/`.
+---
+
+## 14. Zustand
+
+1. ONE store per concern (auth, cart, ui). NEVER a mega-store.
+2. Stores in `src/modules/[name]/stores/use-[name]-store.ts`.
+3. ALWAYS type the state interface explicitly.
+4. ALWAYS use selectors: `useCartStore((s) => s.items)`. No full-store subscriptions.
+5. Use `persist` middleware with `partialize` — persist ONLY what must survive reload.
+6. NEVER import a store in a Server Component. Stores are client-only.
+
+---
+
+## 15. TanStack Query
+
+1. Query keys: arrays starting with resource name — `['products']`, `['products', id]`.
+2. ONE hook per query in `src/modules/[name]/queries/use-[name].query.ts`.
+3. Mutations in `use-[name].mutation.ts` alongside queries.
+4. ALWAYS invalidate or `setQueryData` after successful mutation.
+5. NEVER call `fetch`/`axios` directly in components. Go through a query/mutation hook.
+6. `QueryProvider` is a `'use client'` component wrapping `QueryClientProvider` with `useState` for the client instance.
+
+---
+
+## 16. Axios
+
+1. ALL Axios instances live in `src/lib/axios/`. NEVER create instances elsewhere.
 2. NEVER `import axios from 'axios'` in a component.
-3. Multi user-type support: the auth store holds `userType` (e.g. `admin`, `customer`, `vendor`) and the interceptor injects the right token/header.
-4. Use `publicApi` for unauthenticated calls (login, register, public endpoints).
-5. Use `privateApi` for authenticated calls.
+3. `publicApi` — unauthenticated requests.
+4. `privateApi` — authenticated requests, auto-attaches token via interceptor, handles 401 logout.
+5. The auth store holds `userType` (admin, customer, vendor) — interceptor injects the right token/header.
 
 ---
 
-## 13. react-hook-form + Zod
+## 17. Forms
 
-```tsx
-'use client';
-import { useForm } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { z } from 'zod';
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
-import { Input } from '@/components/ui/input';
-import { Button } from '@/components/ui/button';
-
-const schema = z.object({
-  email: z.string().email(),
-  password: z.string().min(8),
-});
-type Values = z.infer<typeof schema>;
-
-export function LoginForm() {
-  const form = useForm<Values>({
-    resolver: zodResolver(schema),
-    defaultValues: { email: '', password: '' },
-  });
-
-  async function onSubmit(values: Values) {
-    // call mutation
-  }
-
-  return (
-    <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
-        <FormField
-          control={form.control}
-          name="email"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Email</FormLabel>
-              <FormControl><Input type="email" {...field} /></FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <Button type="submit">Sign in</Button>
-      </form>
-    </Form>
-  );
-}
-```
-
-### Rules
-1. EVERY form uses `useForm` + `zodResolver`. No manual `useState` for form values.
-2. EVERY form has a Zod schema. Schemas live in `src/modules/[name]/schemas/`.
-3. ALWAYS pair with shadcn `Form` components.
-4. Always provide `defaultValues` (avoid uncontrolled-to-controlled warnings).
-5. The same Zod schema MUST be used in the corresponding Server Action for server-side validation.
+1. EVERY form: `useForm` + `zodResolver`. NEVER manual `useState` for form values.
+2. EVERY form has a Zod schema in `src/modules/[name]/schemas/`.
+3. ALWAYS use shadcn `Form`, `FormField`, `FormItem`, `FormLabel`, `FormControl`, `FormMessage`.
+4. ALWAYS provide `defaultValues`.
+5. The SAME Zod schema MUST validate in both the client form AND the Server Action.
 
 ---
 
-## 14. Imports & Naming
+## 18. Imports & Naming
 
 ### Imports
-- ALWAYS use `@/` aliased imports (`@/` = `src/`). NEVER `../../`.
-- Within the same module, relative imports are allowed.
-- Cross-module imports MUST go through the module's barrel `index.ts`.
-- Import order:
-  1. React / Next / external libs
-  2. next-intl
-  3. Internal modules (`@/modules/*`)
-  4. Internal libs (`@/lib/*`, `@/components/*`)
-  5. Relative imports
+- **ALWAYS** `@/` aliased imports. NEVER `../../`.
+- Relative imports allowed ONLY within the same module.
+- Cross-module: barrel `index.ts` ONLY.
+- Order: (1) React/Next/external → (2) next-intl → (3) `@/modules/*` → (4) `@/lib/*`, `@/components/*` → (5) relative.
 
-### Naming
+### Naming — MANDATORY CONVENTIONS
+
 | Kind | Convention | Example |
 |---|---|---|
 | Components | PascalCase | `UserProfile.tsx` |
@@ -876,240 +363,168 @@ export function LoginForm() {
 | Stores | `use-x-store` kebab | `use-cart-store.ts` |
 | Queries | `use-x.query` | `use-products.query.ts` |
 | Mutations | `use-x.mutation` | `use-create-product.mutation.ts` |
-| Server Actions | `x.action` | `create-product.action.ts` |
-| Schemas | `x.schema` | `product.schema.ts` |
-| Types | `x.types` | `product.types.ts` |
+| Server Actions | `x.action` kebab | `create-product.action.ts` |
+| Schemas | `x.schema` kebab | `product.schema.ts` |
+| Types | `x.types` kebab | `product.types.ts` |
 | Constants | UPPER_SNAKE_CASE | `MAX_RETRIES` |
-| Utility files | kebab-case | `format-date.ts` |
+| Utilities | kebab-case | `format-date.ts` |
 | Booleans | `is/has/should` prefix | `isLoading`, `hasError` |
-| Event handlers | `handle*` | `handleSubmit` |
-| Translation namespaces | PascalCase | `Home.welcomeMessage` |
+| Event handlers | `handle*` prefix | `handleSubmit` |
+| i18n namespaces | PascalCase keys, camelCase values | `Home.welcomeMessage` |
 
-### File size
-- Keep files under **200 lines**. Split when larger.
-- Components: max **120 lines**. Extract subcomponents otherwise.
-
----
-
-## 15. Performance Rules
-
-1. **Server Components by default** — minimize client JS.
-2. **`next/image`** for ALL images. Provide `width`/`height` or `fill`. `priority` for LCP.
-3. **`next/font`** (`google` or `local`) for fonts. Self-hosts, eliminates CLS, removes external requests.
-4. **Stream slow data** with `<Suspense>`. Parallelize with `Promise.all`.
-5. **Use `"use cache"`** for expensive pure computations and DB reads. Tag everything.
-6. **Code-split** Client Components with `next/dynamic` when they're heavy and below the fold.
-7. **Avoid client-side waterfalls** — fetch on the server when possible.
-8. **Bundle analysis** — `pnpm add -D @next/bundle-analyzer`. Keep client bundles lean.
-9. **Core Web Vitals targets**: LCP < 2.5s, INP < 200ms, CLS < 0.1.
-10. **Memoize expensively** — use `useMemo`/`useCallback` only when profiling proves a need. Don't cargo-cult.
+### File Size LIMITS
+- Files: **200 lines max.** Split if larger.
+- Components: **120 lines max.** Extract subcomponents.
 
 ---
 
-## 16. SEO Rules
+## 19. Performance — NON-NEGOTIABLE
+
+1. Server Components by default — minimize client JS bundle.
+2. `next/image` for ALL images. ALWAYS provide `width`/`height` or `fill`. Use `priority` for LCP images.
+3. `next/font` for ALL fonts. Self-hosted, eliminates CLS.
+4. Stream slow data with `<Suspense>`. Parallelize with `Promise.all`.
+5. `"use cache"` for expensive pure computations and DB reads. Tag everything.
+6. Code-split heavy below-fold Client Components with `next/dynamic`.
+7. Fetch on the server. NEVER create client-side waterfalls.
+8. Bundle analysis: use `@next/bundle-analyzer`. Keep client bundles lean.
+9. Core Web Vitals targets: LCP < 2.5s, INP < 200ms, CLS < 0.1.
+10. `useMemo`/`useCallback` ONLY when profiling proves a need. No cargo-culting.
+
+---
+
+## 20. SEO — EVERY PAGE
 
 1. EVERY page exports `metadata` or `generateMetadata`.
-2. EVERY page has `title` (≤ 60 chars) and `description` (≤ 160 chars).
-3. Public pages set `openGraph.images` (1200×630).
-4. Detail pages set `alternates.canonical`.
-5. Use `app/sitemap.ts` to generate `/sitemap.xml`.
-6. Use `app/robots.ts` to generate `/robots.txt`.
-7. Use `app/opengraph-image.tsx` (`ImageResponse`) for dynamic OG images.
-8. Use semantic HTML — `<main>`, `<header>`, `<nav>`, `<article>`, `<section>`. Single `<h1>` per page.
-9. Add JSON-LD structured data via a `<script type="application/ld+json">` in the page when relevant.
-10. Locale alternates: `alternates.languages` for hreflang.
+2. `title` (max 60 chars) and `description` (max 160 chars) REQUIRED.
+3. Public pages: `openGraph.images` (1200x630) and `twitter.card`.
+4. Detail pages: `alternates.canonical`.
+5. `app/sitemap.ts` and `app/robots.ts` at root.
+6. `app/opengraph-image.tsx` for dynamic OG images via `ImageResponse`.
+7. `app/icon.tsx` and `app/apple-icon.tsx` for favicons.
+8. Semantic HTML: `<main>`, `<header>`, `<nav>`, `<article>`, `<section>`. ONE `<h1>` per page.
+9. JSON-LD structured data via `<script type="application/ld+json">` when relevant.
+10. Locale alternates via `alternates.languages` for hreflang.
 
 ---
 
-## 17. Accessibility Rules
+## 21. Accessibility — MANDATORY
 
-1. EVERY interactive element MUST be reachable by keyboard.
-2. EVERY image has `alt`. Decorative images use `alt=""`.
-3. EVERY form input has an associated `<Label>` (use shadcn `FormLabel`).
-4. Color contrast ≥ WCAG AA (4.5:1 body, 3:1 large text).
-5. Use semantic elements (`<button>` for actions, `<a>` for navigation). NEVER `<div onClick>`.
-6. Focus rings MUST be visible. Don't `outline: none` without a replacement ring.
-7. Use `aria-*` only when semantic HTML can't express the meaning.
-8. Test with keyboard only: Tab, Shift+Tab, Enter, Escape, arrow keys.
-9. Modals: trap focus, restore focus on close, ESC closes (shadcn `Dialog` does this).
+1. EVERY interactive element: keyboard reachable.
+2. EVERY image: `alt` text (decorative = `alt=""`).
+3. EVERY form input: associated `<Label>` via shadcn `FormLabel`.
+4. Color contrast: WCAG AA minimum (4.5:1 body, 3:1 large text).
+5. Semantic elements: `<button>` for actions, `<a>` for navigation. **NEVER `<div onClick>`.**
+6. Focus rings: ALWAYS visible. NEVER `outline: none` without replacement.
+7. `aria-*` ONLY when semantic HTML cannot express the meaning.
+8. Test with keyboard: Tab, Shift+Tab, Enter, Escape, arrow keys.
+9. Modals: trap focus, restore on close, ESC closes. Use modals ONLY when absolutely necessary — prefer inline disclosure.
 10. Live regions for async updates: `role="status"` / `aria-live="polite"`.
 
 ---
 
-## 18. Testing
+## 22. Testing
 
-### Vitest setup
-
-```bash
-pnpm add -D vitest @testing-library/react @testing-library/jest-dom @testing-library/user-event jsdom @vitejs/plugin-react
-```
-
-```ts
-// vitest.config.ts
-import { defineConfig } from 'vitest/config';
-import react from '@vitejs/plugin-react';
-import path from 'path';
-
-export default defineConfig({
-  plugins: [react()],
-  test: { environment: 'jsdom', setupFiles: ['./tests/setup.ts'], globals: true },
-  resolve: { alias: { '@': path.resolve(__dirname, './src') } },
-});
-```
-
-### Unit / component test
-
-```tsx
-import { render, screen } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
-import { SearchInput } from './SearchInput';
-
-test('emits query on type', async () => {
-  const onSearch = vi.fn();
-  render(<SearchInput onSearch={onSearch} />);
-  await userEvent.type(screen.getByRole('textbox'), 'hello');
-  expect(onSearch).toHaveBeenLastCalledWith('hello');
-});
-```
-
-### Playwright E2E
-
-```bash
-pnpm add -D @playwright/test
-pnpm exec playwright install
-```
-
-```ts
-import { test, expect } from '@playwright/test';
-
-test('login flow', async ({ page }) => {
-  await page.goto('/login');
-  await page.getByLabel('Email').fill('user@example.com');
-  await page.getByLabel('Password').fill('password123');
-  await page.getByRole('button', { name: /sign in/i }).click();
-  await expect(page).toHaveURL(/\/dashboard/);
-});
-```
-
-### Rules
-1. Server Components: cannot render in JSDOM. Test by extracting logic into pure functions, or test via Playwright.
-2. Client Components: render with RTL, simulate events with `userEvent`, assert DOM.
-3. Server Actions: import and call directly — they're just async functions.
-4. Co-locate tests: `Component.test.tsx` next to `Component.tsx` OR in `__tests__/`.
-5. Every new feature ships with at least ONE test.
+1. Server Components: CANNOT render in JSDOM. Extract logic into pure functions or test via Playwright.
+2. Client Components: render with RTL, simulate with `userEvent`, assert DOM.
+3. Server Actions: import and call directly as async functions.
+4. Co-locate: `Component.test.tsx` next to `Component.tsx` or in `__tests__/`.
+5. EVERY new feature ships with at least ONE test.
 
 ---
 
-## 19. Environment Variables
+## 23. Environment Variables
 
-Use `@t3-oss/env-nextjs` for type-safe env access.
-
-```ts
-// src/lib/env.ts
-import { createEnv } from '@t3-oss/env-nextjs';
-import { z } from 'zod';
-
-export const env = createEnv({
-  server: {
-    DATABASE_URL: z.string().url(),
-    JWT_SECRET: z.string().min(32),
-  },
-  client: {
-    NEXT_PUBLIC_API_URL: z.string().url(),
-  },
-  runtimeEnv: {
-    DATABASE_URL: process.env.DATABASE_URL,
-    JWT_SECRET: process.env.JWT_SECRET,
-    NEXT_PUBLIC_API_URL: process.env.NEXT_PUBLIC_API_URL,
-  },
-});
-```
-
-### Rules
-1. NEVER access `process.env.*` outside `src/lib/env.ts`.
-2. Client-exposed vars MUST be prefixed `NEXT_PUBLIC_`.
-3. Commit `.env.example` with placeholder values; gitignore `.env.local`.
+1. ALL env access goes through `@t3-oss/env-nextjs` in `src/lib/env.ts`. NEVER access `process.env` elsewhere.
+2. Client vars MUST be prefixed `NEXT_PUBLIC_`.
+3. `.env.example` committed with placeholders. `.env.local` gitignored.
 4. NEVER commit real secrets.
 
 ---
 
-## 20. Turbopack
+## 24. proxy.ts (Middleware)
 
-Next.js 16 ships **Turbopack as the default** for both `next dev` and `next build`. No special flags required.
-
-### Rules
-1. Don't add Webpack-specific config to `next.config.ts` — prefer the Turbopack-supported options.
-2. If a loader you need isn't supported, file it as a project task; don't silently fall back to Webpack.
-3. Production builds: `next build` uses Turbopack by default.
+1. File MUST be named `proxy.ts` (Next 16). `middleware.ts` is deprecated.
+2. Exported function: `proxy` (or `middleware` for back-compat).
+3. NEVER use proxy as sole auth boundary. Re-check auth in Server Actions and Route Handlers.
+4. Keep logic minimal — runs on EVERY matched request.
 
 ---
 
-## 21. Common Pitfalls (READ BEFORE CODING)
+## 25. Turbopack
 
-1. **Importing a Server Component into a Client Component.** Pass it as `children` instead.
-2. **`'use client'` not on the first line.** It MUST be the very first non-comment line of the file.
-3. **Calling `cookies()`/`headers()`/`searchParams` synchronously.** In Next 16 these are async — `await cookies()`, `const sp = await searchParams`.
-4. **Using `useRouter` from `next/router`.** That's Pages Router. Use `next/navigation` (or `next-intl/navigation`).
-5. **Using `next/head`.** Pages Router only. Use the `metadata` export.
-6. **Using `getServerSideProps` / `getStaticProps`.** Pages Router. Forbidden.
-7. **Mutating without revalidation.** After a Server Action that changes data, ALWAYS `revalidateTag` or `revalidatePath`.
-8. **Treating `proxy.ts` as a security boundary.** It's not. Re-check auth in actions and route handlers.
-9. **Passing functions as props from Server to Client Components.** Server props must be serializable. Use Server Actions for callbacks.
-10. **Reading client state in a Server Component.** Server Components can't see Zustand stores or React Context.
-11. **`fetch` without a cache strategy in Server Components.** Default is no-cache in Next 16. If you want caching, wrap in a `'use cache'` function.
-12. **Using `useEffect` to fetch.** Use TanStack Query or fetch in a Server Component.
-13. **Hardcoded strings instead of `t()`.** Every user-facing string goes through next-intl.
-14. **Forgetting `key` props in lists.** React 19 still requires unique stable keys.
-15. **Pure black/white colors.** Always tint via OKLCH.
-16. **Animating layout properties.** Animate `transform`/`opacity` only.
-17. **Modal-everything.** Use modals only when absolutely necessary; prefer inline disclosure.
-18. **Cards inside cards.** Flatten the hierarchy.
-19. **Using `<a>` for internal navigation.** Use `<Link>` from `next-intl/navigation` (or `next/link`).
-20. **`window` access at module top level.** Wrap in `useEffect` or `if (typeof window !== 'undefined')`.
-21. **Importing server-only code into client bundles.** Use `import 'server-only'` at the top of server modules to fail loud.
-22. **Importing client-only code into server bundles.** Use `import 'client-only'`.
-23. **Overusing `useMemo`/`useCallback`.** Only when profiling shows a real perf problem.
-24. **Storing tokens in `localStorage`.** Use httpOnly cookies via the API.
-25. **Skipping form server-side validation.** ALWAYS revalidate with the same Zod schema in the Server Action.
+1. Turbopack is the default for both `next dev` and `next build`. No flags needed.
+2. NEVER add Webpack-specific config to `next.config.ts`.
+3. If a loader isn't supported, file a task. NEVER silently fall back to Webpack.
 
 ---
 
-## 22. Command Restrictions
+## 26. FATAL PITFALLS — MEMORIZE THESE
 
-### NEVER Run These (tell the user to run them)
-- `pnpm dev`, `pnpm build`, `pnpm start`
-- Any command that starts a long-running server
-- Any destructive git command
+1. Importing Server Component into Client Component → pass as `children` instead.
+2. `'use client'` not on first line → file breaks silently.
+3. `cookies()`/`headers()`/`searchParams` called synchronously → they are `async` in Next 16. `await` them.
+4. `useRouter` from `next/router` → WRONG. Use `next/navigation` or `next-intl/navigation`.
+5. `next/head` → Pages Router. Use `metadata` export.
+6. `getServerSideProps`/`getStaticProps` → Pages Router. FORBIDDEN.
+7. Mutation without revalidation → stale UI. ALWAYS `revalidateTag`/`revalidatePath`.
+8. `proxy.ts` as security boundary → it's NOT. Re-check auth in actions/handlers.
+9. Functions as props from Server → Client → NOT serializable. Use Server Actions.
+10. Reading Zustand/Context in Server Component → impossible. Don't try.
+11. `fetch` without cache strategy in Server Components → no-cache by default in Next 16. Wrap in `'use cache'` if needed.
+12. `useEffect` to fetch data → use TanStack Query or Server Component fetch.
+13. Hardcoded strings → use `t()` from next-intl. ALWAYS.
+14. Missing `key` props in lists → React 19 still requires them.
+15. Pure `#000`/`#fff` → BANNED. Tint via OKLCH.
+16. Animating layout properties → `transform`/`opacity` ONLY.
+17. `<a>` for internal navigation → use `<Link>` from `next-intl/navigation`.
+18. `window` at module top level → wrap in `useEffect` or `typeof window !== 'undefined'`.
+19. Server code in client bundle → add `import 'server-only'` to server modules.
+20. Client code in server bundle → add `import 'client-only'` to client modules.
+21. Tokens in `localStorage` → use httpOnly cookies via the API.
+22. Skipping server-side form validation → ALWAYS re-validate with the same Zod schema in the Server Action.
+23. Cards inside cards → flatten the hierarchy. No nested cards.
+24. Overusing `useMemo`/`useCallback` → ONLY when profiling proves a real problem.
+25. Defining types/interfaces in component files → MOVE to `types/x.types.ts`. Components don't own types.
+26. Defining Zod schemas in component files → MOVE to `schemas/x.schema.ts`. Components don't own validation.
+27. Business logic in components → EXTRACT to `hooks/` or `lib/`. Components render UI, nothing more.
+28. Raw `useQuery`/`useMutation` in components → EXTRACT to `queries/` hooks. Components don't fetch.
+29. Helper functions in components → if it doesn't use hooks, it belongs in `lib/`. Move it.
+30. 4+ `useState` calls in one component → EXTRACT to a custom hook. The component is doing too much.
+31. Constants/config objects scattered in components → MOVE to `constants/`. Centralize them.
 
-### MAY Run
-- `pnpm tsc --noEmit` (typecheck)
-- `pnpm lint`
-- `pnpm test --run` (Vitest non-watch)
-- `pnpm exec playwright test` (with `--reporter=line`)
+---
+
+## 27. Command Restrictions
+
+### NEVER RUN (tell user to run these)
+- `pnpm dev`, `pnpm build`, `pnpm start`, any long-running server, any destructive git command
+
+### ALLOWED TO RUN
+- `pnpm tsc --noEmit`, `pnpm lint`, `pnpm test --run`, `pnpm exec playwright test --reporter=line`
 - `git status`, `git log`, `git diff`
 - File reads, greps, listings
 
 ---
 
-## 23. Git Rules
+## 28. Git
 
 - NEVER revert commits.
 - NEVER run destructive commands (`reset --hard`, `push --force`, `rebase`, `clean -fd`).
-- NEVER amend commits not authored by you in this session.
+- NEVER amend commits you didn't author in this session.
 - NEVER commit unless explicitly asked.
-- When asked to commit, write a clear, scoped message.
+- Commit messages: clear, scoped, concise.
 
 ---
 
-## 24. Execution Standards
+## 29. Execution Standard
 
 - Execute ONLY what is requested.
-- NO hallucinated APIs.
-- NO unsolicited improvements.
+- NO hallucinated APIs. NO invented patterns. NO unsolicited improvements.
 - NO assumptions beyond explicit requirements.
-- ASK if a requirement is ambiguous.
-- When done, run `pnpm tsc --noEmit && pnpm lint` (if available) before reporting completion.
+- ASK if ambiguous.
+- Run `pnpm tsc --noEmit && pnpm lint` before reporting completion.
 
 ---
 
-*Last Updated: 2026-04-07 — targets Next.js 16.x, React 19, Tailwind v4, next-intl, Turbopack.*
+*Last Updated: 2026-04-22 — Next.js 16.x, React 19, Tailwind v4, next-intl, Turbopack.*
