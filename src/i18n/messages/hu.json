@@ -866,6 +866,11 @@
     "goHome": "[TODO: hu] Back to home",
     "searchInstead": "[TODO: hu] Search schools"
   },
+  "LaunchingSoon": {
+    "title": "[TODO: hu] We're launching soon",
+    "subtitle": "[TODO: hu] SchoolGo is getting ready to help you find the best schools across Australia. We're putting the finishing touches on something great.",
+    "stayTuned": "[TODO: hu] Stay tuned — we'll be live before you know it."
+  },
   "Dashboard": {
     "nav": {
       "dashboard": "[TODO: hu] Dashboard",

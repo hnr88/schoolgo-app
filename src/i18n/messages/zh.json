@@ -871,6 +871,11 @@
     "goHome": "回到首页",
     "searchInstead": "[TODO: zh] Search schools"
   },
+  "LaunchingSoon": {
+    "title": "我们即将上线",
+    "subtitle": "SchoolGo 正在为您准备澳大利亚最好的学校资源。我们正在为您打造一个出色的平台，即将完成。",
+    "stayTuned": "敬请期待——我们很快就会正式上线。"
+  },
   "Dashboard": {
     "nav": {
       "dashboard": "[TODO: zh] Dashboard",

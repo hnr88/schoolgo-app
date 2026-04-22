@@ -863,9 +863,18 @@
   },
   "Errors": {
     "generic": "Sesuatu telah berlaku",
+    "genericSubtitle": "[TODO: ms] We hit an unexpected bump. Don't worry — your data is safe.",
     "tryAgain": "Cuba lagi",
     "notFound": "Halaman tidak ditemui",
-    "goHome": "Ke laman utama"
+    "notFoundCode": "[TODO: ms] 404",
+    "notFoundSubtitle": "[TODO: ms] The page you're looking for doesn't exist or has been moved.",
+    "goHome": "Ke laman utama",
+    "searchInstead": "[TODO: ms] Search schools"
+  },
+  "LaunchingSoon": {
+    "title": "Kami akan melancarkan tidak lama lagi",
+    "subtitle": "SchoolGo sedang bersedia untuk membantu anda mencari sekolah terbaik di seluruh Australia. Kami sedang menyempurnakan sesuatu yang hebat.",
+    "stayTuned": "Nantikan — kami akan berada dalam talian tidak lama lagi."
   },
   "Dashboard": {
     "nav": {

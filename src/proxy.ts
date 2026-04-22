@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { routing } from '@/i18n/routing';
 
+const PROD_DOMAIN = 'schoolgo.com.au';
+
 const SUBDOMAIN_PREFIX: Record<string, string> = {
   agent: 'agent',
   school: 'school',
@@ -8,6 +10,25 @@ const SUBDOMAIN_PREFIX: Record<string, string> = {
 
 export function proxy(request: NextRequest) {
   const hostname = request.headers.get('host') ?? '';
+
+  if (hostname.endsWith(PROD_DOMAIN)) {
+    const url = request.nextUrl.clone();
+    const pathname = url.pathname;
+    const segments = pathname.split('/').filter(Boolean);
+    const maybeLocale = segments[0];
+    const hasLocale =
+      maybeLocale !== undefined &&
+      routing.locales.includes(maybeLocale as (typeof routing.locales)[number]);
+
+    if (segments.includes('launching-soon')) {
+      return NextResponse.next();
+    }
+
+    const locale = hasLocale ? maybeLocale : routing.defaultLocale;
+    url.pathname = `/${locale}/launching-soon`;
+    return NextResponse.redirect(url);
+  }
+
   const subdomain = hostname.split('.')[0];
   const prefix = SUBDOMAIN_PREFIX[subdomain];
 

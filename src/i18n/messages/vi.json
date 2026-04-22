@@ -871,6 +871,11 @@
     "goHome": "Về trang chủ",
     "searchInstead": "[TODO: vi] Search schools"
   },
+  "LaunchingSoon": {
+    "title": "Chúng tôi sắp ra mắt",
+    "subtitle": "SchoolGo đang chuẩn bị giúp bạn tìm kiếm những trường học tốt nhất trên khắp nước Úc. Chúng tôi đang hoàn thiện những điều tuyệt vời.",
+    "stayTuned": "Hãy chú ý theo dõi — chúng tôi sẽ ra mắt chính thức trong thời gian tới."
+  },
   "Dashboard": {
     "nav": {
       "dashboard": "[TODO: vi] Dashboard",
