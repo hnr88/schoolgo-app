@@ -9,11 +9,11 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'Auth' });
-  return { title: t('signInTitle'), description: t('signInSubtitle') };
+  return { title: t('parent.signInTitle'), description: t('parent.signInSubtitle') };
 }
 
 export default async function SignInPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   setRequestLocale(locale);
-  return <SignInPageContent />;
+  return <SignInPageContent portal="parent" />;
 }

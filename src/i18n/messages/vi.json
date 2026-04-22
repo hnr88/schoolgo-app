@@ -841,13 +841,35 @@
     "registerSuccess": "Tài khoản đã được tạo! Chào mừng bạn đến với SchoolGo.",
     "registerError": "Không thể tạo tài khoản. Vui lòng thử lại.",
     "hasAccount": "Đã có tài khoản?",
-    "signInLink": "Đăng nhập"
+    "signInLink": "Đăng nhập",
+    "parent": {
+      "signInTitle": "[TODO: vi] Welcome back, Parent",
+      "signInSubtitle": "[TODO: vi] Sign in to find and compare the best schools for your child.",
+      "signUpTitle": "[TODO: vi] Start your school search",
+      "signUpSubtitle": "[TODO: vi] Create an account to shortlist, compare and apply to Australian schools."
+    },
+    "agent": {
+      "signInTitle": "[TODO: vi] Agent Portal",
+      "signInSubtitle": "[TODO: vi] Sign in to manage your pipeline and student placements.",
+      "signUpTitle": "[TODO: vi] Grow your agency",
+      "signUpSubtitle": "[TODO: vi] Join SchoolGo to access verified schools and streamline placements."
+    },
+    "school": {
+      "signInTitle": "[TODO: vi] School Portal",
+      "signInSubtitle": "[TODO: vi] Sign in to manage enrolments and connect with agents.",
+      "signUpTitle": "[TODO: vi] List your school",
+      "signUpSubtitle": "[TODO: vi] Create an account to reach international students and education agents."
+    }
   },
   "Errors": {
     "generic": "Đã xảy ra lỗi",
+    "genericSubtitle": "[TODO: vi] We hit an unexpected bump. Don't worry — your data is safe.",
     "tryAgain": "Thử lại",
     "notFound": "Không tìm thấy trang",
-    "goHome": "Về trang chủ"
+    "notFoundCode": "[TODO: vi] 404",
+    "notFoundSubtitle": "[TODO: vi] The page you're looking for doesn't exist or has been moved.",
+    "goHome": "Về trang chủ",
+    "searchInstead": "[TODO: vi] Search schools"
   },
   "Dashboard": {
     "nav": {
