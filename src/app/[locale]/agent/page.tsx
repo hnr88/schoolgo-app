@@ -2,14 +2,15 @@ import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { MarketingFooter, MarketingHeader } from '@/modules/marketing-layout';
 import {
-  SchoolsFinalCta,
-  SchoolsHero,
-  SchoolsPricing,
-  SchoolsStats,
-  SchoolsTestimonial,
-  SchoolsThreeTools,
-  SchoolsTimeline,
-} from '@/modules/schools-landing';
+  AgentsCommission,
+  AgentsFinalCta,
+  AgentsHero,
+  AgentsMatching,
+  AgentsPainPoints,
+  AgentsQeacTrust,
+  AgentsScale,
+  AgentsTestimonial,
+} from '@/modules/agents-landing';
 
 export async function generateMetadata({
   params,
@@ -17,11 +18,11 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'SchoolsMetadata' });
+  const t = await getTranslations({ locale, namespace: 'AgentsMetadata' });
   return {
     title: t('title'),
     description: t('description'),
-    alternates: { canonical: '/schools' },
+    alternates: { canonical: '/' },
     openGraph: {
       title: t('title'),
       description: t('ogDescription'),
@@ -31,7 +32,7 @@ export async function generateMetadata({
   };
 }
 
-export default async function SchoolsLandingPage({
+export default async function AgentsLandingPage({
   params,
 }: {
   params: Promise<{ locale: string }>;
@@ -41,17 +42,18 @@ export default async function SchoolsLandingPage({
 
   return (
     <>
-      <MarketingHeader />
+      <MarketingHeader activePortal="agent" />
       <main>
-        <SchoolsHero />
-        <SchoolsStats />
-        <SchoolsThreeTools />
-        <SchoolsTimeline />
-        <SchoolsPricing />
-        <SchoolsTestimonial />
-        <SchoolsFinalCta />
+        <AgentsHero />
+        <AgentsPainPoints />
+        <AgentsMatching />
+        <AgentsCommission />
+        <AgentsQeacTrust />
+        <AgentsScale />
+        <AgentsTestimonial />
+        <AgentsFinalCta />
       </main>
-      <MarketingFooter />
+      <MarketingFooter activePortal="agent" />
     </>
   );
 }

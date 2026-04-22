@@ -1,28 +1,6 @@
-import type { Metadata } from 'next';
-import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { SignUpCard } from '@/modules/auth/components/SignUpCard';
 
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<{ locale: string }>;
-}): Promise<Metadata> {
-  const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'Auth' });
-  return {
-    title: t('signUpTitle'),
-    description: t('signUpSubtitle'),
-  };
-}
-
-export default async function SignUpPage({
-  params,
-}: {
-  params: Promise<{ locale: string }>;
-}) {
-  const { locale } = await params;
-  setRequestLocale(locale);
-
+export function SignUpPageContent() {
   return (
     <main className='relative flex min-h-screen items-center justify-center overflow-hidden px-4 py-16'>
       <div className='pointer-events-none absolute inset-0' aria-hidden='true'>
