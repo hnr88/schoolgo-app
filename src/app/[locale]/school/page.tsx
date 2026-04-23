@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { MarketingFooter, MarketingHeader } from '@/modules/marketing-layout';
 import {
+  SchoolsFaq,
   SchoolsFinalCta,
   SchoolsHero,
   SchoolsPricing,
@@ -49,6 +50,7 @@ export default async function SchoolsLandingPage({
         <SchoolsTimeline />
         <SchoolsPricing />
         <SchoolsTestimonial />
+        <SchoolsFaq />
         <SchoolsFinalCta />
       </main>
       <MarketingFooter activePortal="school" />
