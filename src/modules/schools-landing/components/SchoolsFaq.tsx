@@ -1,18 +1,11 @@
 import { getTranslations } from 'next-intl/server';
 import { SectionContainer } from '@/modules/design-system';
-import { FaqAccordion } from '@/modules/parents-landing/components/FaqAccordion';
+import { FaqAccordion } from '@/modules/parents-landing';
 
-const FAQ_KEYS = [
-  'free',
-  'dataSource',
-  'englishTests',
-  'doINeedAgent',
-  'claimProfile',
-  'updateFrequency',
-] as const;
+const FAQ_KEYS = ['claim', 'agents', 'commission', 'data'] as const;
 
-export async function ParentsFaq() {
-  const t = await getTranslations('ParentsFaq');
+export async function SchoolsFaq() {
+  const t = await getTranslations('SchoolsFaq');
 
   const items = FAQ_KEYS.map((key) => ({
     question: t(`items.${key}.question`),

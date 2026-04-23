@@ -8,4 +8,5 @@ export { ParentsSevenLanguages } from '@/modules/parents-landing/components/Pare
 export { ParentsArticles } from '@/modules/parents-landing/components/ParentsArticles';
 export { ParentsTrustBar } from '@/modules/parents-landing/components/ParentsTrustBar';
 export { ParentsFaq } from '@/modules/parents-landing/components/ParentsFaq';
+export { FaqAccordion } from '@/modules/parents-landing/components/FaqAccordion';
 export { ParentsFinalCta } from '@/modules/parents-landing/components/ParentsFinalCta';
