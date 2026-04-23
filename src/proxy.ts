@@ -21,6 +21,43 @@ function resolvePortal(hostname: string): 'agent' | 'school' | 'parent' {
   return 'parent';
 }
 
+const COUNTRY_TO_LOCALE: Record<string, string> = {
+  CN: 'zh',
+  TW: 'zh',
+  HK: 'zh',
+  KR: 'ko',
+  MY: 'ms',
+  SG: 'ms',
+  VN: 'vi',
+  TH: 'th',
+};
+
+function detectLocale(request: NextRequest): string {
+  const country =
+    request.headers.get('x-vercel-ip-country') ??
+    request.headers.get('cf-ipcountry');
+
+  if (country) {
+    const geoLocale = COUNTRY_TO_LOCALE[country];
+    if (geoLocale && routing.locales.includes(geoLocale as (typeof routing.locales)[number])) {
+      return geoLocale;
+    }
+  }
+
+  const acceptLang = request.headers.get('accept-language');
+  if (acceptLang) {
+    const preferred = acceptLang
+      .split(',')
+      .map((s) => s.trim().split(';')[0].split('-')[0])
+      .find((code) =>
+        routing.locales.includes(code as (typeof routing.locales)[number]),
+      );
+    if (preferred) return preferred;
+  }
+
+  return routing.defaultLocale;
+}
+
 export function proxy(request: NextRequest) {
   const rawHost =
     request.headers.get('x-forwarded-host') ??
@@ -54,6 +91,17 @@ export function proxy(request: NextRequest) {
   const hasLocale =
     maybeLocale !== undefined &&
     routing.locales.includes(maybeLocale as (typeof routing.locales)[number]);
+
+  if (!hasLocale) {
+    const localeCookie = request.cookies.get('NEXT_LOCALE')?.value;
+    const preferredLocale = localeCookie ?? detectLocale(request);
+
+    if (preferredLocale !== routing.defaultLocale) {
+      url.pathname = `/${preferredLocale}${pathname === '/' ? '' : pathname}`;
+      return NextResponse.redirect(url);
+    }
+  }
+
   const locale = hasLocale ? maybeLocale : routing.defaultLocale;
 
   if (hasLocale) {
