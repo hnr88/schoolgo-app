@@ -4,4 +4,5 @@ export { SchoolsThreeTools } from '@/modules/schools-landing/components/SchoolsT
 export { SchoolsTimeline } from '@/modules/schools-landing/components/SchoolsTimeline';
 export { SchoolsPricing } from '@/modules/schools-landing/components/SchoolsPricing';
 export { SchoolsTestimonial } from '@/modules/schools-landing/components/SchoolsTestimonial';
+export { SchoolsFaq } from '@/modules/schools-landing/components/SchoolsFaq';
 export { SchoolsFinalCta } from '@/modules/schools-landing/components/SchoolsFinalCta';

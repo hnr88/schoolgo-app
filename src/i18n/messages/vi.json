@@ -213,13 +213,8 @@
     "eyebrow": "So sánh",
     "heading": "Đặt các trường cạnh nhau.",
     "headingAccent": "Quyết định trong vài phút, không phải vài tháng.",
-    "subheading": "So sánh song song tối đa bốn trường. Học phí, ICSEA, bài thi tiếng Anh được chấp nhận, kỳ tuyển sinh, nội trú.",
     "columns": {
-      "school": "Trường",
-      "location": "Vị trí",
-      "sector": "Loại hình",
       "fee": "Học phí hàng năm",
-      "icsea": "ICSEA",
       "tests": "Bài thi được chấp nhận",
       "intakes": "Kỳ tuyển sinh",
       "stateSector": "[TODO: vi] State & sector",
@@ -382,9 +377,9 @@
         "question": "What English proficiency tests do Australian schools accept?",
         "answer": "Different schools accept different tests. The most common are AEAS (Australian Education Assessment Services), iDAT (International Digital Admissions Test), Duolingo English Test, IELTS, and PTE Academic. SchoolGo shows which specific tests each school accepts on their profile page."
       },
-      "agentCommission": {
-        "question": "I'm an education agent. How does SchoolGo protect my commissions?",
-        "answer": "SchoolGo never intermediates or processes commission payments. Your commission relationship with schools remains direct. SchoolGo makes your role more transparent by displaying your verified agent attribution on every application, which actually protects you from commission disputes."
+      "doINeedAgent": {
+        "question": "[TODO: vi] Do I need an education agent?",
+        "answer": "[TODO: vi] You don't have to use one, but most families do — and it's free. Education agents help you choose the right school, prepare documents, and manage the application. SchoolGo shows which agents work with each school, so you can find someone who already knows the admissions process."
       },
       "claimProfile": {
         "question": "I'm a school. How do I claim my profile?",
@@ -560,8 +555,26 @@
     "cta": "Đăng ký xác minh"
   },
   "AgentsTestimonial": {
-    "quote": "I used to forward 40 PDFs a week between parents and six admissions offices. With a platform like this, I could do it once — and families see one status update in Mandarin.",
-    "attribution": "Composite quote based on agent interviews"
+    "eyebrow": "[TODO: vi] From the field",
+    "heading": "[TODO: vi] What agents are saying",
+    "items": {
+      "a": {
+        "quote": "[TODO: vi] I used to forward 40 PDFs a week between parents on WeChat and six admissions offices over email. One platform would cut my admin in half.",
+        "attribution": "[TODO: vi] Agency director, Shanghai",
+        "meta": "[TODO: vi] 60+ students · 3 counsellors"
+      },
+      "b": {
+        "quote": "[TODO: vi] My families want updates at 11pm their time. A live tracker they can check themselves would save me two hours a day on WhatsApp.",
+        "attribution": "[TODO: vi] Independent agent, Ho Chi Minh City",
+        "meta": "[TODO: vi] 25+ students · Solo practice"
+      },
+      "c": {
+        "quote": "[TODO: vi] I re-type the same passport number into five different school forms every week. Enter-once, apply-many would change everything.",
+        "attribution": "[TODO: vi] Senior counsellor, Kuala Lumpur",
+        "meta": "[TODO: vi] 40+ students · 2 branches"
+      }
+    },
+    "disclaimer": "[TODO: vi] Composite quotes based on agent interviews"
   },
   "AgentsFinalCta": {
     "eyebrow": "Được xác minh",
@@ -704,17 +717,6 @@
           "d": "Dịch sang bảy ngôn ngữ trên mọi trang hồ sơ"
         },
         "cta": "Bắt đầu tuyển sinh"
-      },
-      "network": {
-        "name": "Mạng lưới",
-        "price": "Custom",
-        "priceMeta": "Dành cho tập đoàn nhiều cơ sở",
-        "features": {
-          "a": "Tất cả trong Tuyển sinh",
-          "b": "Hộp thư tập trung giữa các cơ sở",
-          "c": "Hỗ trợ ưu tiên + báo cáo tùy chỉnh"
-        },
-        "cta": "Liên hệ với chúng tôi"
       }
     }
   },
@@ -730,6 +732,27 @@
     "subheading": "Đăng ký miễn phí. Không cần thẻ tín dụng. Xác nhận trong 10 phút.",
     "ctaPrimary": "Xác nhận hồ sơ trường",
     "ctaSecondary": "Đặt lịch giới thiệu"
+  },
+  "SchoolsFaq": {
+    "heading": "[TODO: vi] Frequently Asked Questions",
+    "items": {
+      "claim": {
+        "question": "[TODO: vi] How do I claim my school's profile?",
+        "answer": "[TODO: vi] Search for your school on SchoolGo and click \"Claim This School.\" You'll verify your identity as a staff member, and once approved you can edit your profile, update fees, and manage applications."
+      },
+      "agents": {
+        "question": "[TODO: vi] How does SchoolGo work with education agents?",
+        "answer": "[TODO: vi] By default, your profile works with your school's existing agents. You can see which agents have placed students with you, invite new agents, or manage agent relationships from your dashboard."
+      },
+      "commission": {
+        "question": "[TODO: vi] Does SchoolGo charge schools or agents?",
+        "answer": "[TODO: vi] No. SchoolGo is free for everyone — schools, agents, and parents. There are no listing fees, per-student fees, or commission splits."
+      },
+      "data": {
+        "question": "[TODO: vi] Where does the school data come from?",
+        "answer": "[TODO: vi] All school profiles are auto-published from CRICOS (the Australian Government's official register) and cross-referenced with ACARA school profile data. Schools that claim their profile can update their own details at any time."
+      }
+    }
   },
   "Navbar": {
     "brand": "School",

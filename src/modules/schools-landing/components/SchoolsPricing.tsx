@@ -3,14 +3,13 @@ import { getTranslations } from 'next-intl/server';
 import { CtaLink, SectionContainer, SectionHeader, StatusBadge } from '@/modules/design-system';
 
 const PLANS: Array<{
-  key: 'listing' | 'admissions' | 'network';
+  key: 'listing' | 'admissions';
   featured?: boolean;
   featureKeys: string[];
   ctaHref: string;
 }> = [
   { key: 'listing', featureKeys: ['a', 'b', 'c'], ctaHref: '/schools' },
   { key: 'admissions', featured: true, featureKeys: ['a', 'b', 'c', 'd'], ctaHref: '/schools' },
-  { key: 'network', featureKeys: ['a', 'b', 'c'], ctaHref: '/schools' },
 ];
 
 export async function SchoolsPricing() {
@@ -24,7 +23,7 @@ export async function SchoolsPricing() {
           subheading={t('subheading')}
         />
 
-        <div className='grid grid-cols-1 gap-5 md:grid-cols-3'>
+        <div className='mx-auto grid w-full max-w-3xl grid-cols-1 gap-5 md:grid-cols-2'>
           {PLANS.map((plan) => {
             const featured = plan.featured;
             return (
