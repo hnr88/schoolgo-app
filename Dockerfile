@@ -1,48 +1,53 @@
-# syntax=docker/dockerfile:1
+ARG NODE_VERSION=22-alpine
 
-# --- Base ---
-FROM node:22-alpine AS base
-RUN corepack enable && corepack prepare pnpm@latest --activate
+# =============================================================================
+# Stage 1: Install dependencies (cached unless lockfile changes)
+# =============================================================================
+FROM node:${NODE_VERSION} AS deps
+
 WORKDIR /app
 
-# --- Dependencies ---
-FROM base AS deps
-COPY package.json pnpm-lock.yaml ./
-RUN pnpm install --frozen-lockfile --prod=false
+RUN corepack enable pnpm
 
-# --- Build ---
-FROM base AS build
+COPY package.json pnpm-lock.yaml .npmrc* ./
+
+RUN --mount=type=cache,target=/root/.local/share/pnpm/store \
+    pnpm install --frozen-lockfile
+
+# =============================================================================
+# Stage 2: Build the Next.js application
+# =============================================================================
+FROM node:${NODE_VERSION} AS builder
+
+WORKDIR /app
+
+RUN corepack enable pnpm
+
 COPY --from=deps /app/node_modules ./node_modules
+COPY --from=deps /app/package.json ./package.json
+
 COPY . .
 
-ARG NEXT_PUBLIC_API_URL
-ARG NEXT_PUBLIC_SITE_URL
-ARG NEXT_PUBLIC_BASE_DOMAIN
+ENV NODE_ENV=production
 
-ENV NEXT_PUBLIC_API_URL=$NEXT_PUBLIC_API_URL
-ENV NEXT_PUBLIC_SITE_URL=$NEXT_PUBLIC_SITE_URL
-ENV NEXT_PUBLIC_BASE_DOMAIN=$NEXT_PUBLIC_BASE_DOMAIN
+RUN pnpm run build
 
-RUN pnpm build
+# =============================================================================
+# Stage 3: Production image (minimal, standalone)
+# =============================================================================
+FROM node:${NODE_VERSION} AS runner
 
-# --- Production ---
-FROM node:22-alpine AS runner
 WORKDIR /app
 
-ENV NODE_ENV=production
-ENV NEXT_TELEMETRY_DISABLED=1
-
-RUN addgroup --system --gid 1001 nodejs && \
-    adduser --system --uid 1001 nextjs
-
-COPY --from=build /app/public ./public
-COPY --from=build --chown=nextjs:nodejs /app/.next/standalone ./
-COPY --from=build --chown=nextjs:nodejs /app/.next/static ./.next/static
-
-USER nextjs
-
-EXPOSE 3000
-ENV PORT=3000
 ENV HOSTNAME="0.0.0.0"
+
+COPY --from=builder --chown=node:node /app/public ./public
+
+RUN mkdir .next && chown node:node .next
+
+COPY --from=builder --chown=node:node /app/.next/standalone ./
+COPY --from=builder --chown=node:node /app/.next/static ./.next/static
+
+USER node
 
 CMD ["node", "server.js"]

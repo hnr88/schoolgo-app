@@ -213,13 +213,8 @@
     "eyebrow": "Bandingkan",
     "heading": "Susun sekolah bersebelahan.",
     "headingAccent": "Buat keputusan dalam minit, bukan bulan.",
-    "subheading": "Perbandingan serentak sehingga empat sekolah. Yuran, ICSEA, ujian Bahasa Inggeris yang diterima, sesi pengambilan, asrama.",
     "columns": {
-      "school": "Sekolah",
-      "location": "Lokasi",
-      "sector": "Sektor",
       "fee": "Yuran tahunan",
-      "icsea": "ICSEA",
       "tests": "Ujian diterima",
       "intakes": "Sesi pengambilan",
       "stateSector": "[TODO: ms] State & sector",
@@ -382,9 +377,9 @@
         "question": "What English proficiency tests do Australian schools accept?",
         "answer": "Different schools accept different tests. The most common are AEAS (Australian Education Assessment Services), iDAT (International Digital Admissions Test), Duolingo English Test, IELTS, and PTE Academic. SchoolGo shows which specific tests each school accepts on their profile page."
       },
-      "agentCommission": {
-        "question": "I'm an education agent. How does SchoolGo protect my commissions?",
-        "answer": "SchoolGo never intermediates or processes commission payments. Your commission relationship with schools remains direct. SchoolGo makes your role more transparent by displaying your verified agent attribution on every application, which actually protects you from commission disputes."
+      "doINeedAgent": {
+        "question": "[TODO: ms] Do I need an education agent?",
+        "answer": "[TODO: ms] You don't have to use one, but most families do — and it's free. Education agents help you choose the right school, prepare documents, and manage the application. SchoolGo shows which agents work with each school, so you can find someone who already knows the admissions process."
       },
       "claimProfile": {
         "question": "I'm a school. How do I claim my profile?",
@@ -560,8 +555,26 @@
     "cta": "Mohon pengesahan"
   },
   "AgentsTestimonial": {
-    "quote": "I used to forward 40 PDFs a week between parents and six admissions offices. With a platform like this, I could do it once — and families see one status update in Mandarin.",
-    "attribution": "Composite quote based on agent interviews"
+    "eyebrow": "[TODO: ms] From the field",
+    "heading": "[TODO: ms] What agents are saying",
+    "items": {
+      "a": {
+        "quote": "[TODO: ms] I used to forward 40 PDFs a week between parents on WeChat and six admissions offices over email. One platform would cut my admin in half.",
+        "attribution": "[TODO: ms] Agency director, Shanghai",
+        "meta": "[TODO: ms] 60+ students · 3 counsellors"
+      },
+      "b": {
+        "quote": "[TODO: ms] My families want updates at 11pm their time. A live tracker they can check themselves would save me two hours a day on WhatsApp.",
+        "attribution": "[TODO: ms] Independent agent, Ho Chi Minh City",
+        "meta": "[TODO: ms] 25+ students · Solo practice"
+      },
+      "c": {
+        "quote": "[TODO: ms] I re-type the same passport number into five different school forms every week. Enter-once, apply-many would change everything.",
+        "attribution": "[TODO: ms] Senior counsellor, Kuala Lumpur",
+        "meta": "[TODO: ms] 40+ students · 2 branches"
+      }
+    },
+    "disclaimer": "[TODO: ms] Composite quotes based on agent interviews"
   },
   "AgentsFinalCta": {
     "eyebrow": "Dapatkan pengesahan",
@@ -704,17 +717,6 @@
           "d": "Terjemahan tujuh bahasa pada setiap halaman profil"
         },
         "cta": "Mulakan kemasukan"
-      },
-      "network": {
-        "name": "Rangkaian",
-        "price": "Custom",
-        "priceMeta": "Untuk kumpulan berbilang kampus",
-        "features": {
-          "a": "Semua dalam Kemasukan",
-          "b": "Peti masuk berpusat merentas kampus",
-          "c": "Sokongan keutamaan + laporan tersuai"
-        },
-        "cta": "Hubungi kami"
       }
     }
   },
@@ -730,6 +732,27 @@
     "subheading": "Penyenaraian percuma. Tiada kad kredit. Tuntutan mengambil masa 10 minit.",
     "ctaPrimary": "Tuntut profil sekolah anda",
     "ctaSecondary": "Tempah walkthrough"
+  },
+  "SchoolsFaq": {
+    "heading": "[TODO: ms] Frequently Asked Questions",
+    "items": {
+      "claim": {
+        "question": "[TODO: ms] How do I claim my school's profile?",
+        "answer": "[TODO: ms] Search for your school on SchoolGo and click \"Claim This School.\" You'll verify your identity as a staff member, and once approved you can edit your profile, update fees, and manage applications."
+      },
+      "agents": {
+        "question": "[TODO: ms] How does SchoolGo work with education agents?",
+        "answer": "[TODO: ms] By default, your profile works with your school's existing agents. You can see which agents have placed students with you, invite new agents, or manage agent relationships from your dashboard."
+      },
+      "commission": {
+        "question": "[TODO: ms] Does SchoolGo charge schools or agents?",
+        "answer": "[TODO: ms] No. SchoolGo is free for everyone — schools, agents, and parents. There are no listing fees, per-student fees, or commission splits."
+      },
+      "data": {
+        "question": "[TODO: ms] Where does the school data come from?",
+        "answer": "[TODO: ms] All school profiles are auto-published from CRICOS (the Australian Government's official register) and cross-referenced with ACARA school profile data. Schools that claim their profile can update their own details at any time."
+      }
+    }
   },
   "Navbar": {
     "brand": "School",
@@ -863,9 +886,24 @@
   },
   "Errors": {
     "generic": "Sesuatu telah berlaku",
+    "genericSubtitle": "[TODO: ms] We hit an unexpected bump. Don't worry — your data is safe.",
     "tryAgain": "Cuba lagi",
     "notFound": "Halaman tidak ditemui",
-    "goHome": "Ke laman utama"
+    "notFoundCode": "[TODO: ms] 404",
+    "notFoundSubtitle": "[TODO: ms] The page you're looking for doesn't exist or has been moved.",
+    "goHome": "Ke laman utama",
+    "searchInstead": "[TODO: ms] Search schools"
+  },
+  "LaunchingSoon": {
+    "title": "Kami akan melancarkan tidak lama lagi",
+    "subtitle": "SchoolGo sedang bersedia untuk membantu anda mencari sekolah terbaik di seluruh Australia. Kami sedang menyempurnakan sesuatu yang hebat.",
+    "stayTuned": "Nantikan — kami akan berada dalam talian tidak lama lagi.",
+    "portals": {
+      "heading": "Platform kami",
+      "parents": "Untuk Ibu Bapa",
+      "schools": "Untuk Sekolah",
+      "agents": "Untuk Ejen"
+    }
   },
   "Dashboard": {
     "nav": {

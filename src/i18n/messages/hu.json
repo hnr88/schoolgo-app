@@ -368,9 +368,9 @@
         "question": "[TODO: hu] What English proficiency tests do Australian schools accept?",
         "answer": "[TODO: hu] Different schools accept different tests. The most common are AEAS (Australian Education Assessment Services), iDAT (International Digital Admissions Test), Duolingo English Test, IELTS, and PTE Academic. SchoolGo shows which specific tests each school accepts on their profile page."
       },
-      "agentCommission": {
-        "question": "[TODO: hu] I'm an education agent. How does SchoolGo protect my commissions?",
-        "answer": "[TODO: hu] SchoolGo never intermediates or processes commission payments. Your commission relationship with schools remains direct. SchoolGo makes your role more transparent by displaying your verified agent attribution on every application, which actually protects you from commission disputes."
+      "doINeedAgent": {
+        "question": "[TODO: hu] Do I need an education agent?",
+        "answer": "[TODO: hu] You don't have to use one, but most families do — and it's free. Education agents help you choose the right school, prepare documents, and manage the application. SchoolGo shows which agents work with each school, so you can find someone who already knows the admissions process."
       },
       "claimProfile": {
         "question": "[TODO: hu] I'm a school. How do I claim my profile?",
@@ -555,8 +555,26 @@
     "cta": "[TODO: hu] Apply for verification"
   },
   "AgentsTestimonial": {
-    "quote": "[TODO: hu] I used to forward 40 PDFs a week between parents and six admissions offices. With a platform like this, I could do it once — and families see one status update in Mandarin.",
-    "attribution": "[TODO: hu] Composite quote based on agent interviews"
+    "eyebrow": "[TODO: hu] From the field",
+    "heading": "[TODO: hu] What agents are saying",
+    "items": {
+      "a": {
+        "quote": "[TODO: hu] I used to forward 40 PDFs a week between parents on WeChat and six admissions offices over email. One platform would cut my admin in half.",
+        "attribution": "[TODO: hu] Agency director, Shanghai",
+        "meta": "[TODO: hu] 60+ students · 3 counsellors"
+      },
+      "b": {
+        "quote": "[TODO: hu] My families want updates at 11pm their time. A live tracker they can check themselves would save me two hours a day on WhatsApp.",
+        "attribution": "[TODO: hu] Independent agent, Ho Chi Minh City",
+        "meta": "[TODO: hu] 25+ students · Solo practice"
+      },
+      "c": {
+        "quote": "[TODO: hu] I re-type the same passport number into five different school forms every week. Enter-once, apply-many would change everything.",
+        "attribution": "[TODO: hu] Senior counsellor, Kuala Lumpur",
+        "meta": "[TODO: hu] 40+ students · 2 branches"
+      }
+    },
+    "disclaimer": "[TODO: hu] Composite quotes based on agent interviews"
   },
   "AgentsFinalCta": {
     "eyebrow": "[TODO: hu] Get verified",
@@ -699,17 +717,6 @@
           "d": "[TODO: hu] Seven-language translation on every profile page"
         },
         "cta": "[TODO: hu] Start admissions"
-      },
-      "network": {
-        "name": "[TODO: hu] Network",
-        "price": "Custom",
-        "priceMeta": "[TODO: hu] For multi-campus groups",
-        "features": {
-          "a": "[TODO: hu] Everything in Admissions",
-          "b": "[TODO: hu] Centralised inbox across campuses",
-          "c": "[TODO: hu] Priority support + custom reports"
-        },
-        "cta": "[TODO: hu] Talk to us"
       }
     }
   },
@@ -865,6 +872,38 @@
     "notFoundSubtitle": "[TODO: hu] The page you're looking for doesn't exist or has been moved.",
     "goHome": "[TODO: hu] Back to home",
     "searchInstead": "[TODO: hu] Search schools"
+  },
+  "SchoolsFaq": {
+    "heading": "[TODO: hu] Frequently Asked Questions",
+    "items": {
+      "claim": {
+        "question": "[TODO: hu] How do I claim my school's profile?",
+        "answer": "[TODO: hu] Search for your school on SchoolGo and click \"Claim This School.\" You'll verify your identity as a staff member, and once approved you can edit your profile, update fees, and manage applications."
+      },
+      "agents": {
+        "question": "[TODO: hu] How does SchoolGo work with education agents?",
+        "answer": "[TODO: hu] By default, your profile works with your school's existing agents. You can see which agents have placed students with you, invite new agents, or manage agent relationships from your dashboard."
+      },
+      "commission": {
+        "question": "[TODO: hu] Does SchoolGo charge schools or agents?",
+        "answer": "[TODO: hu] No. SchoolGo is free for everyone — schools, agents, and parents. There are no listing fees, per-student fees, or commission splits."
+      },
+      "data": {
+        "question": "[TODO: hu] Where does the school data come from?",
+        "answer": "[TODO: hu] All school profiles are auto-published from CRICOS (the Australian Government's official register) and cross-referenced with ACARA school profile data. Schools that claim their profile can update their own details at any time."
+      }
+    }
+  },
+  "LaunchingSoon": {
+    "title": "[TODO: hu] We're launching soon",
+    "subtitle": "[TODO: hu] SchoolGo is getting ready to help you find the best schools across Australia. We're putting the finishing touches on something great.",
+    "stayTuned": "[TODO: hu] Stay tuned — we'll be live before you know it.",
+    "portals": {
+      "heading": "[TODO: hu] Our platforms",
+      "parents": "[TODO: hu] For Parents",
+      "schools": "[TODO: hu] For Schools",
+      "agents": "[TODO: hu] For Agents"
+    }
   },
   "Dashboard": {
     "nav": {
