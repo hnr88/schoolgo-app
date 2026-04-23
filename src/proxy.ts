@@ -1,20 +1,25 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { routing } from '@/i18n/routing';
 
-const BASE_DOMAIN = process.env.NEXT_PUBLIC_BASE_DOMAIN ?? 'localhost';
+const LAUNCHING_SOON = process.env.NEXT_PUBLIC_LAUNCHING_SOON === 'true';
 
-const PROD_HOSTS = new Set([
-  BASE_DOMAIN,
-  `www.${BASE_DOMAIN}`,
-  `agent.${BASE_DOMAIN}`,
-  `school.${BASE_DOMAIN}`,
-  `parent.${BASE_DOMAIN}`,
-]);
+function extractHost(url: string | undefined): string | null {
+  if (!url) return null;
+  try {
+    return new URL(url).hostname;
+  } catch {
+    return null;
+  }
+}
 
-const SUBDOMAIN_PREFIX: Record<string, string> = {
-  agent: 'agent',
-  school: 'school',
-};
+const agentHost = extractHost(process.env.NEXT_PUBLIC_AGENT_URL);
+const schoolHost = extractHost(process.env.NEXT_PUBLIC_SCHOOL_URL);
+
+function resolvePortal(hostname: string): 'agent' | 'school' | 'parent' {
+  if (agentHost && hostname === agentHost) return 'agent';
+  if (schoolHost && hostname === schoolHost) return 'school';
+  return 'parent';
+}
 
 export function proxy(request: NextRequest) {
   const rawHost =
@@ -22,51 +27,24 @@ export function proxy(request: NextRequest) {
     request.headers.get('host') ??
     '';
   const hostname = rawHost.split(':')[0];
+  const portal = resolvePortal(hostname);
 
-  if (PROD_HOSTS.has(hostname)) {
+  if (LAUNCHING_SOON) {
     const url = request.nextUrl.clone();
     const pathname = url.pathname;
     const segments = pathname.split('/').filter(Boolean);
-    const maybeLocale = segments[0];
-    const hasLocale =
-      maybeLocale !== undefined &&
-      routing.locales.includes(maybeLocale as (typeof routing.locales)[number]);
 
     if (segments.includes('launching-soon')) {
       return NextResponse.next();
     }
 
-    const locale = hasLocale ? maybeLocale : routing.defaultLocale;
-    url.pathname = `/${locale}/launching-soon`;
-    return NextResponse.redirect(url);
-  }
-
-  const subdomain = hostname.split('.')[0];
-  const prefix = SUBDOMAIN_PREFIX[subdomain];
-
-  if (prefix) {
-    const url = request.nextUrl.clone();
-    const pathname = url.pathname;
-    const segments = pathname.split('/').filter(Boolean);
     const maybeLocale = segments[0];
     const hasLocale =
       maybeLocale !== undefined &&
       routing.locales.includes(maybeLocale as (typeof routing.locales)[number]);
-
     const locale = hasLocale ? maybeLocale : routing.defaultLocale;
-
-    if (hasLocale) {
-      const [, second, ...rest] = segments;
-      if (second !== prefix) {
-        const restPath = rest.length > 0 ? `/${rest.join('/')}` : '';
-        url.pathname = `/${locale}/${prefix}${second ? `/${second}` : ''}${restPath}`;
-      }
-    } else {
-      const cleanPath = pathname === '/' ? '' : pathname;
-      url.pathname = `/${locale}/${prefix}${cleanPath}`;
-    }
-
-    return NextResponse.rewrite(url);
+    url.pathname = `/${locale}/launching-soon`;
+    return NextResponse.redirect(url);
   }
 
   const url = request.nextUrl.clone();
@@ -76,18 +54,17 @@ export function proxy(request: NextRequest) {
   const hasLocale =
     maybeLocale !== undefined &&
     routing.locales.includes(maybeLocale as (typeof routing.locales)[number]);
-
   const locale = hasLocale ? maybeLocale : routing.defaultLocale;
 
   if (hasLocale) {
     const [, second, ...rest] = segments;
-    if (second !== 'parent') {
+    if (second !== portal) {
       const restPath = rest.length > 0 ? `/${rest.join('/')}` : '';
-      url.pathname = `/${locale}/parent${second ? `/${second}` : ''}${restPath}`;
+      url.pathname = `/${locale}/${portal}${second ? `/${second}` : ''}${restPath}`;
     }
   } else {
     const cleanPath = pathname === '/' ? '' : pathname;
-    url.pathname = `/${locale}/parent${cleanPath}`;
+    url.pathname = `/${locale}/${portal}${cleanPath}`;
   }
 
   return NextResponse.rewrite(url);
