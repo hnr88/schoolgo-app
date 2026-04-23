@@ -874,7 +874,13 @@
   "LaunchingSoon": {
     "title": "곧 출시됩니다",
     "subtitle": "SchoolGo가 호주 전역의 최고의 학교를 찾을 수 있도록 준비하고 있습니다. 멋진 서비스의 마무리 작업이 한창입니다.",
-    "stayTuned": "기대해 주세요 — 곧 정식 출시됩니다."
+    "stayTuned": "기대해 주세요 — 곧 정식 출시됩니다.",
+    "portals": {
+      "heading": "우리 플랫폼",
+      "parents": "학부모 포털",
+      "schools": "학교 포털",
+      "agents": "에이전트 포털"
+    }
   },
   "Dashboard": {
     "nav": {

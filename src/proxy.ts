@@ -1,7 +1,15 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { routing } from '@/i18n/routing';
 
-const PROD_DOMAIN = 'schoolgo.com.au';
+const BASE_DOMAIN = process.env.NEXT_PUBLIC_BASE_DOMAIN ?? 'localhost';
+
+const PROD_HOSTS = new Set([
+  BASE_DOMAIN,
+  `www.${BASE_DOMAIN}`,
+  `agent.${BASE_DOMAIN}`,
+  `school.${BASE_DOMAIN}`,
+  `parent.${BASE_DOMAIN}`,
+]);
 
 const SUBDOMAIN_PREFIX: Record<string, string> = {
   agent: 'agent',
@@ -15,13 +23,7 @@ export function proxy(request: NextRequest) {
     '';
   const hostname = rawHost.split(':')[0];
 
-  const isProduction =
-    hostname === PROD_DOMAIN ||
-    hostname === `www.${PROD_DOMAIN}` ||
-    hostname === `agent.${PROD_DOMAIN}` ||
-    hostname === `school.${PROD_DOMAIN}`;
-
-  if (isProduction) {
+  if (PROD_HOSTS.has(hostname)) {
     const url = request.nextUrl.clone();
     const pathname = url.pathname;
     const segments = pathname.split('/').filter(Boolean);

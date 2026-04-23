@@ -874,7 +874,13 @@
   "LaunchingSoon": {
     "title": "Chúng tôi sắp ra mắt",
     "subtitle": "SchoolGo đang chuẩn bị giúp bạn tìm kiếm những trường học tốt nhất trên khắp nước Úc. Chúng tôi đang hoàn thiện những điều tuyệt vời.",
-    "stayTuned": "Hãy chú ý theo dõi — chúng tôi sẽ ra mắt chính thức trong thời gian tới."
+    "stayTuned": "Hãy chú ý theo dõi — chúng tôi sẽ ra mắt chính thức trong thời gian tới.",
+    "portals": {
+      "heading": "Các nền tảng của chúng tôi",
+      "parents": "Dành cho Phụ huynh",
+      "schools": "Dành cho Trường học",
+      "agents": "Dành cho Tư vấn"
+    }
   },
   "Dashboard": {
     "nav": {

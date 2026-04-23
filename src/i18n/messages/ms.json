@@ -874,7 +874,13 @@
   "LaunchingSoon": {
     "title": "Kami akan melancarkan tidak lama lagi",
     "subtitle": "SchoolGo sedang bersedia untuk membantu anda mencari sekolah terbaik di seluruh Australia. Kami sedang menyempurnakan sesuatu yang hebat.",
-    "stayTuned": "Nantikan — kami akan berada dalam talian tidak lama lagi."
+    "stayTuned": "Nantikan — kami akan berada dalam talian tidak lama lagi.",
+    "portals": {
+      "heading": "Platform kami",
+      "parents": "Untuk Ibu Bapa",
+      "schools": "Untuk Sekolah",
+      "agents": "Untuk Ejen"
+    }
   },
   "Dashboard": {
     "nav": {

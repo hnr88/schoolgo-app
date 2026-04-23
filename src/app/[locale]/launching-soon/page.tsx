@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
-import { Rocket } from 'lucide-react';
+import { Rocket, GraduationCap, School, Briefcase } from 'lucide-react';
+import { portalUrl, siteUrl } from '@/lib/portal-url';
 
 export default async function LaunchingSoonPage() {
   const t = await getTranslations('LaunchingSoon');
@@ -22,14 +23,16 @@ export default async function LaunchingSoonPage() {
       </div>
 
       <div className='relative flex max-w-lg flex-col items-center text-center'>
-        <Image
-          src='/logos/logo-red.png'
-          alt='SchoolGo'
-          width={160}
-          height={36}
-          className='mb-10 h-9 w-auto'
-          priority
-        />
+        <a href={siteUrl} aria-label='SchoolGo home'>
+          <Image
+            src='/logos/logo-red.png'
+            alt='SchoolGo'
+            width={160}
+            height={36}
+            className='mb-10 h-9 w-auto'
+            priority
+          />
+        </a>
 
         <div className='mb-6 flex h-20 w-20 items-center justify-center rounded-3xl bg-rausch-50'>
           <Rocket className='h-10 w-10 text-rausch-500' />
@@ -41,6 +44,35 @@ export default async function LaunchingSoonPage() {
         <p className='mt-3 text-base leading-relaxed text-foggy'>
           {t('subtitle')}
         </p>
+
+        <div className='mt-10 w-full'>
+          <p className='mb-4 text-sm font-semibold text-ink-900'>
+            {t('portals.heading')}
+          </p>
+          <div className='flex flex-col gap-3 sm:flex-row'>
+            <a
+              href={portalUrl('parent')}
+              className='flex flex-1 items-center justify-center gap-2 rounded-xl border border-divider bg-white px-4 py-3 text-sm font-medium text-hof transition-colors hover:border-rausch-300 hover:text-rausch-600'
+            >
+              <GraduationCap className='h-4 w-4' />
+              {t('portals.parents')}
+            </a>
+            <a
+              href={portalUrl('school')}
+              className='flex flex-1 items-center justify-center gap-2 rounded-xl border border-divider bg-white px-4 py-3 text-sm font-medium text-hof transition-colors hover:border-babu-500 hover:text-babu-600'
+            >
+              <School className='h-4 w-4' />
+              {t('portals.schools')}
+            </a>
+            <a
+              href={portalUrl('agent')}
+              className='flex flex-1 items-center justify-center gap-2 rounded-xl border border-divider bg-white px-4 py-3 text-sm font-medium text-hof transition-colors hover:border-arches-500 hover:text-arches-600'
+            >
+              <Briefcase className='h-4 w-4' />
+              {t('portals.agents')}
+            </a>
+          </div>
+        </div>
 
         <p className='mt-8 text-sm text-quill'>
           {t('stayTuned')}

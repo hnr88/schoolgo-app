@@ -869,7 +869,13 @@
   "LaunchingSoon": {
     "title": "We're launching soon",
     "subtitle": "SchoolGo is getting ready to help you find the best schools across Australia. We're putting the finishing touches on something great.",
-    "stayTuned": "Stay tuned — we'll be live before you know it."
+    "stayTuned": "Stay tuned — we'll be live before you know it.",
+    "portals": {
+      "heading": "Our platforms",
+      "parents": "For Parents",
+      "schools": "For Schools",
+      "agents": "For Agents"
+    }
   },
   "Dashboard": {
     "nav": {

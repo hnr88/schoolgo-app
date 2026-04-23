@@ -874,7 +874,13 @@
   "LaunchingSoon": {
     "title": "我们即将上线",
     "subtitle": "SchoolGo 正在为您准备澳大利亚最好的学校资源。我们正在为您打造一个出色的平台，即将完成。",
-    "stayTuned": "敬请期待——我们很快就会正式上线。"
+    "stayTuned": "敬请期待——我们很快就会正式上线。",
+    "portals": {
+      "heading": "我们的平台",
+      "parents": "家长端",
+      "schools": "学校端",
+      "agents": "中介端"
+    }
   },
   "Dashboard": {
     "nav": {
