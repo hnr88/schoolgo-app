@@ -1,10 +1,9 @@
 import axios from 'axios';
 import { toast } from 'sonner';
-import { env } from '@/lib/env';
 import { useAuthStore } from '@/modules/auth/stores/use-auth-store';
 
 export const privateApi = axios.create({
-  baseURL: env.NEXT_PUBLIC_API_URL,
+  baseURL: '',
   headers: { 'Content-Type': 'application/json' },
   timeout: 30000,
 });
