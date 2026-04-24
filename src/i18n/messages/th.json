@@ -917,7 +917,8 @@
       "messages": "[TODO: th] Messages",
       "settings": "[TODO: th] Settings",
       "profile": "[TODO: th] My Profile",
-      "logout": "[TODO: th] Log out"
+      "logout": "[TODO: th] Log out",
+      "portalLabel": "ตัวแทน"
     }
   },
   "Students": {

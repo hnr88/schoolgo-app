@@ -1,6 +1,11 @@
 import type { Portal } from '@/lib/portal-url';
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-export function getPortalDashboardPath(_portal: Portal): string {
-  return '/dashboard';
+const PORTAL_DASHBOARD_PATHS: Record<Portal, string> = {
+  parent: '/dashboard',
+  agent: '/dashboard',
+  school: '/dashboard',
+};
+
+export function getPortalDashboardPath(portal: Portal): string {
+  return PORTAL_DASHBOARD_PATHS[portal];
 }

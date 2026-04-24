@@ -917,7 +917,8 @@
       "messages": "[TODO: zh] Messages",
       "settings": "[TODO: zh] Settings",
       "profile": "[TODO: zh] My Profile",
-      "logout": "[TODO: zh] Log out"
+      "logout": "[TODO: zh] Log out",
+      "portalLabel": "代理"
     }
   },
   "Students": {

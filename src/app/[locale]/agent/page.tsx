@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { MarketingFooter, MarketingHeader } from '@/modules/marketing-layout';
+import { AuthRedirectCheck } from '@/modules/auth/components/AuthRedirectCheck';
 import {
   AgentsCommission,
   AgentsFinalCta,
@@ -42,6 +43,7 @@ export default async function AgentsLandingPage({
 
   return (
     <>
+      <AuthRedirectCheck />
       <MarketingHeader activePortal="agent" />
       <main>
         <AgentsHero />

@@ -917,7 +917,8 @@
       "messages": "[TODO: vi] Messages",
       "settings": "[TODO: vi] Settings",
       "profile": "[TODO: vi] My Profile",
-      "logout": "[TODO: vi] Log out"
+      "logout": "[TODO: vi] Log out",
+      "portalLabel": "Đại lý"
     }
   },
   "Students": {

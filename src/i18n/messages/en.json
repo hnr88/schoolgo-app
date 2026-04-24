@@ -885,7 +885,8 @@
       "messages": "Messages",
       "settings": "Settings",
       "profile": "My Profile",
-      "logout": "Log out"
+      "logout": "Log out",
+      "portalLabel": "Agent"
     }
   },
   "Students": {

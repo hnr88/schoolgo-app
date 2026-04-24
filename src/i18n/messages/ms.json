@@ -917,7 +917,8 @@
       "messages": "[TODO: ms] Messages",
       "settings": "[TODO: ms] Settings",
       "profile": "[TODO: ms] My Profile",
-      "logout": "[TODO: ms] Log out"
+      "logout": "[TODO: ms] Log out",
+      "portalLabel": "Ejen"
     }
   },
   "Students": {

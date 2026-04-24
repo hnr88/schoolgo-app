@@ -917,7 +917,8 @@
       "messages": "[TODO: ko] Messages",
       "settings": "[TODO: ko] Settings",
       "profile": "[TODO: ko] My Profile",
-      "logout": "[TODO: ko] Log out"
+      "logout": "[TODO: ko] Log out",
+      "portalLabel": "에이전트"
     }
   },
   "Students": {

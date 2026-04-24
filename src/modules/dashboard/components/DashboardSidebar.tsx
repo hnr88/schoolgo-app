@@ -1,9 +1,7 @@
 'use client';
 
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
-import { Link, useRouter } from '@/i18n/navigation';
-import { useTranslations } from 'next-intl';
-import { cn } from '@/lib/utils';
 import {
   LayoutDashboard,
   Users,
@@ -15,7 +13,10 @@ import {
   User,
   LogOut,
 } from 'lucide-react';
+import { useTranslations } from 'next-intl';
+import { Link, useRouter } from '@/i18n/navigation';
 import { useAuthStore } from '@/modules/auth/stores/use-auth-store';
+import { cn } from '@/lib/utils';
 
 const NAV_ITEMS = [
   { href: '/dashboard', icon: LayoutDashboard, labelKey: 'dashboard' },
@@ -44,12 +45,18 @@ export function DashboardSidebar() {
 
   return (
     <aside className='flex h-full w-64 flex-col border-r border-border bg-card'>
-      <div className='flex h-16 items-center gap-2 border-b border-border px-6'>
-        <Link href='/dashboard' className='font-display text-lg font-bold text-ink-900'>
-          SchoolGo
+      <div className='flex h-16 items-center gap-3 border-b border-border px-6'>
+        <Link href='/dashboard' className='flex items-center gap-2'>
+          <Image
+            src='/logos/logo-red.png'
+            alt='SchoolGo'
+            width={140}
+            height={30}
+            className='h-8 w-auto'
+          />
         </Link>
         <span className='rounded-md bg-primary/10 px-2 py-0.5 text-xs font-medium text-primary'>
-          Agent
+          {t('nav.portalLabel')}
         </span>
       </div>
 

@@ -6,6 +6,7 @@ import { Loader2 } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { loginSchema, type LoginValues } from '@/modules/auth/schemas/login.schema';
 import { useLogin } from '@/modules/auth/hooks/use-login';
+import type { Portal } from '@/lib/portal-url';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import {
@@ -16,7 +17,6 @@ import {
   FormLabel,
   FormMessage,
 } from '@/components/ui/form';
-import type { Portal } from '@/lib/portal-url';
 
 interface LoginFormProps {
   userType: Portal;

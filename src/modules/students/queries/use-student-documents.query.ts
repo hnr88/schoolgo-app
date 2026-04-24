@@ -1,5 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 import { privateApi } from '@/lib/axios';
+import { useAuthStore } from '@/modules/auth/stores/use-auth-store';
 import type { StudentDocument } from '@/modules/students/types/document.types';
 import type { StrapiListResponse } from '@/modules/students/types/student.types';
 
@@ -14,8 +15,11 @@ export function useStudentDocuments({
   documentType,
   status,
 }: UseStudentDocumentsParams) {
+  const isAuthenticated = useAuthStore((s) => s.isAuthenticated);
+
   return useQuery({
     queryKey: ['student-documents', studentDocumentId, { documentType, status }],
+    enabled: !!studentDocumentId && isAuthenticated,
     queryFn: async () => {
       const params: Record<string, unknown> = {
         'filters[student][documentId][$eq]': studentDocumentId,
@@ -38,6 +42,5 @@ export function useStudentDocuments({
       );
       return data;
     },
-    enabled: !!studentDocumentId,
   });
 }

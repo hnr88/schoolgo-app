@@ -1,5 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 import { privateApi } from '@/lib/axios';
+import { useAuthStore } from '@/modules/auth/stores/use-auth-store';
 import type { Student, StrapiListResponse } from '@/modules/students/types/student.types';
 
 interface UseStudentsParams {
@@ -10,8 +11,11 @@ interface UseStudentsParams {
 }
 
 export function useStudents({ page = 1, pageSize = 25, status, search }: UseStudentsParams = {}) {
+  const isAuthenticated = useAuthStore((s) => s.isAuthenticated);
+
   return useQuery({
     queryKey: ['students', { page, pageSize, status, search }],
+    enabled: isAuthenticated,
     queryFn: async () => {
       const params: Record<string, unknown> = {
         'pagination[page]': page,
