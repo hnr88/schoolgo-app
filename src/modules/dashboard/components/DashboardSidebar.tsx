@@ -95,7 +95,7 @@ export function DashboardSidebar() {
 
         {user && (
           <div className='mt-4 rounded-lg bg-muted px-3 py-3'>
-            <p className='text-sm font-medium text-ink-900'>{user.name}</p>
+            <p className='text-sm font-medium text-ink-900'>{user.displayName}</p>
             <p className='text-xs text-foggy'>{user.email}</p>
           </div>
         )}

@@ -3,14 +3,14 @@
 import { GraduationCap, Briefcase, School } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { cn } from '@/lib/utils';
-import type { UserType } from '@/modules/auth/stores/use-auth-store';
+import type { Portal } from '@/lib/portal-url';
 
 interface UserTypeSelectorProps {
-  value: UserType;
-  onChange: (type: UserType) => void;
+  value: Portal;
+  onChange: (type: Portal) => void;
 }
 
-const USER_TYPES: Array<{ type: UserType; icon: typeof GraduationCap }> = [
+const USER_TYPES: Array<{ type: Portal; icon: typeof GraduationCap }> = [
   { type: 'parent', icon: GraduationCap },
   { type: 'agent', icon: Briefcase },
   { type: 'school', icon: School },

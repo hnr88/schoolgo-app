@@ -853,6 +853,8 @@
     "signInButton": "Đăng nhập",
     "loginSuccess": "Chào mừng trở lại!",
     "loginError": "Email hoặc mật khẩu không hợp lệ. Vui lòng thử lại.",
+    "portalUnauthorized": "Tài khoản này không được phép truy cập cổng này.",
+    "sessionExpired": "Phiên đăng nhập của bạn đã hết hạn. Vui lòng đăng nhập lại.",
     "noAccount": "Chưa có tài khoản?",
     "signUp": "Đăng ký",
     "signUpTitle": "Tạo tài khoản của bạn",

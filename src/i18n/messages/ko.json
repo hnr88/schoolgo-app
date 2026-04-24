@@ -853,6 +853,8 @@
     "signInButton": "로그인",
     "loginSuccess": "다시 오셨군요!",
     "loginError": "이메일 또는 비밀번호가 올바르지 않습니다. 다시 시도해주세요.",
+    "portalUnauthorized": "이 계정은 해당 포털에 대한 접근 권한이 없습니다.",
+    "sessionExpired": "세션이 만료되었습니다. 다시 로그인해 주세요.",
     "noAccount": "계정이 없으신가요?",
     "signUp": "회원가입",
     "signUpTitle": "계정 만들기",

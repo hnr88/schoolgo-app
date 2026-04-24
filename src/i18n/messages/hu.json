@@ -832,6 +832,8 @@
     "signInButton": "[TODO: hu] Sign in",
     "loginSuccess": "[TODO: hu] Welcome back!",
     "loginError": "[TODO: hu] Invalid email or password. Please try again.",
+    "portalUnauthorized": "Ez a fiók nem jogosult a megnyitni kívánt portálhoz.",
+    "sessionExpired": "A munkamenet lejárt. Kérjük, jelentkezzen be újra.",
     "noAccount": "[TODO: hu] Don't have an account?",
     "signUp": "[TODO: hu] Sign up",
     "signUpTitle": "[TODO: hu] Create your account",
