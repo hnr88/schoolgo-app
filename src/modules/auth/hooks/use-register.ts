@@ -28,7 +28,8 @@ export function useRegister({ portal }: UseRegisterOptions) {
       await login({ identifier: data.email, password: data.password });
       setUserType(portal);
       toast.success(t('registerSuccess'));
-      router.push(getPortalDashboardPath(portal));
+      const dashboardPath = getPortalDashboardPath(portal);
+      if (dashboardPath) router.push(dashboardPath);
     } catch {
       toast.error(t('registerError'));
     } finally {

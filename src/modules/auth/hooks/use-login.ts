@@ -2,12 +2,11 @@
 
 import { useState } from 'react';
 import { toast } from 'sonner';
-import { useTranslations } from 'next-intl';
-import { useRouter } from '@/i18n/navigation';
+import { useTranslations, useLocale } from 'next-intl';
 import { useAuthStore } from '@/modules/auth/stores/use-auth-store';
+import { portalUrl, type Portal } from '@/lib/portal-url';
 import { getPortalDashboardPath } from '@/modules/auth/lib/get-portal-dashboard-path';
 import type { LoginValues } from '@/modules/auth/schemas/login.schema';
-import type { Portal } from '@/lib/portal-url';
 
 interface UseLoginOptions {
   portal: Portal;
@@ -15,7 +14,7 @@ interface UseLoginOptions {
 
 export function useLogin({ portal }: UseLoginOptions) {
   const t = useTranslations('Auth');
-  const router = useRouter();
+  const locale = useLocale();
   const login = useAuthStore((s) => s.login);
   const setUserType = useAuthStore((s) => s.setUserType);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -27,7 +26,10 @@ export function useLogin({ portal }: UseLoginOptions) {
 
       setUserType(portal);
       toast.success(t('loginSuccess'));
-      router.push(getPortalDashboardPath(portal));
+      const dashboardPath = getPortalDashboardPath(portal);
+      if (dashboardPath) {
+        window.location.href = `${portalUrl(portal, locale)}${dashboardPath}`;
+      }
     } catch {
       toast.error(t('loginError'));
     } finally {
