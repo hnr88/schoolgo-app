@@ -1,7 +1,17 @@
 export { useAuthStore } from '@/modules/auth/stores/use-auth-store';
-export type { UserType } from '@/modules/auth/stores/use-auth-store';
+export { useAuth } from '@/modules/auth/hooks/use-auth';
+export { useLogin } from '@/modules/auth/hooks/use-login';
+export { useRegister } from '@/modules/auth/hooks/use-register';
+export { useRequireAuth } from '@/modules/auth/hooks/use-require-auth';
+export { useRedirectIfAuthenticated } from '@/modules/auth/hooks/use-redirect-if-authenticated';
+export { AuthInitProvider } from '@/modules/auth/components/AuthInitProvider';
+export { ProtectedLayout } from '@/modules/auth/components/ProtectedLayout';
+export { AuthRedirectCheck } from '@/modules/auth/components/AuthRedirectCheck';
 export { SignInCard } from '@/modules/auth/components/SignInCard';
 export { SignUpCard } from '@/modules/auth/components/SignUpCard';
 export { LoginForm } from '@/modules/auth/components/LoginForm';
 export { RegisterForm } from '@/modules/auth/components/RegisterForm';
 export { UserTypeSelector } from '@/modules/auth/components/UserTypeSelector';
+export { UserRole } from '@/modules/auth/types/auth.types';
+export type { User, AuthState, LoginCredentials } from '@/modules/auth/types/auth.types';
+export type { Portal } from '@/lib/portal-url';

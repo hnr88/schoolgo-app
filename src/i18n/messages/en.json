@@ -832,6 +832,8 @@
     "signInButton": "Sign in",
     "loginSuccess": "Welcome back!",
     "loginError": "Invalid email or password. Please try again.",
+    "portalUnauthorized": "This account is not authorised for this portal.",
+    "sessionExpired": "Your session has expired. Please sign in again.",
     "noAccount": "Don't have an account?",
     "signUp": "Sign up",
     "signUpTitle": "Create your account",
@@ -883,7 +885,8 @@
       "messages": "Messages",
       "settings": "Settings",
       "profile": "My Profile",
-      "logout": "Log out"
+      "logout": "Log out",
+      "portalLabel": "Agent"
     }
   },
   "Students": {

@@ -853,6 +853,8 @@
     "signInButton": "Log Masuk",
     "loginSuccess": "Selamat kembali!",
     "loginError": "E-mel atau kata laluan tidak sah. Sila cuba lagi.",
+    "portalUnauthorized": "Akaun ini tidak dibenarkan untuk portal ini.",
+    "sessionExpired": "Sesi anda telah tamat. Sila log masuk semula.",
     "noAccount": "Tiada akaun?",
     "signUp": "Daftar",
     "signUpTitle": "Buat akaun anda",
@@ -915,7 +917,8 @@
       "messages": "[TODO: ms] Messages",
       "settings": "[TODO: ms] Settings",
       "profile": "[TODO: ms] My Profile",
-      "logout": "[TODO: ms] Log out"
+      "logout": "[TODO: ms] Log out",
+      "portalLabel": "Ejen"
     }
   },
   "Students": {

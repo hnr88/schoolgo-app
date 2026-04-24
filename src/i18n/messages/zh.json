@@ -853,6 +853,8 @@
     "signInButton": "登录",
     "loginSuccess": "欢迎回来！",
     "loginError": "邮箱或密码错误，请重试。",
+    "portalUnauthorized": "此账户无权访问该门户。",
+    "sessionExpired": "您的登录已过期，请重新登录。",
     "noAccount": "还没有账户？",
     "signUp": "立即注册",
     "signUpTitle": "创建您的账户",
@@ -915,7 +917,8 @@
       "messages": "[TODO: zh] Messages",
       "settings": "[TODO: zh] Settings",
       "profile": "[TODO: zh] My Profile",
-      "logout": "[TODO: zh] Log out"
+      "logout": "[TODO: zh] Log out",
+      "portalLabel": "代理"
     }
   },
   "Students": {

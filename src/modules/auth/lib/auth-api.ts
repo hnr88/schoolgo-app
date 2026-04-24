@@ -14,8 +14,3 @@ export async function registerRequest(
   const { data } = await publicApi.post<StrapiAuthResponse>('/api/auth/local/register', values);
   return data;
 }
-
-export async function fetchMe(): Promise<StrapiAuthResponse['user']> {
-  const { data } = await publicApi.get<StrapiAuthResponse['user']>('/api/users/me');
-  return data;
-}

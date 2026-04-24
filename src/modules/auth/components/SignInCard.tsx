@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import type { Portal } from '@/lib/portal-url';
+import { useRedirectIfAuthenticated } from '@/modules/auth/hooks/use-redirect-if-authenticated';
 import { LoginForm } from '@/modules/auth/components/LoginForm';
 
 interface SignInCardProps {
@@ -16,12 +17,6 @@ const PORTAL_ACCENT_BAR: Record<Portal, string> = {
   school: 'bg-arches-400',
 };
 
-const PORTAL_LOGO_BG: Record<Portal, string> = {
-  parent: 'bg-rausch-50',
-  agent: 'bg-babu-50',
-  school: 'bg-arches-50',
-};
-
 const PORTAL_LINK_COLOR: Record<Portal, string> = {
   parent: 'text-rausch-500 hover:text-rausch-600',
   agent: 'text-babu-600 hover:text-babu-700',
@@ -30,6 +25,9 @@ const PORTAL_LINK_COLOR: Record<Portal, string> = {
 
 export function SignInCard({ portal }: SignInCardProps) {
   const t = useTranslations('Auth');
+  const { isRedirecting } = useRedirectIfAuthenticated();
+
+  if (isRedirecting) return null;
 
   return (
     <div className='mx-auto w-full max-w-md'>
