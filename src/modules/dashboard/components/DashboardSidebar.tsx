@@ -16,6 +16,7 @@ import {
 import { useTranslations } from 'next-intl';
 import { Link, useRouter } from '@/i18n/navigation';
 import { useAuthStore } from '@/modules/auth/stores/use-auth-store';
+import { PortalSwitcher } from '@/modules/dashboard/components/PortalSwitcher';
 import { cn } from '@/lib/utils';
 
 const NAV_ITEMS = [
@@ -55,9 +56,7 @@ export function DashboardSidebar() {
             className='h-8 w-auto'
           />
         </Link>
-        <span className='rounded-md bg-primary/10 px-2 py-0.5 text-xs font-medium text-primary'>
-          {t('nav.portalLabel')}
-        </span>
+        <PortalSwitcher activePortal='agent' />
       </div>
 
       <nav className='flex flex-1 flex-col gap-1 px-3 py-4'>
