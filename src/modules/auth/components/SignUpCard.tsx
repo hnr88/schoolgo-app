@@ -6,6 +6,7 @@ import { Link } from '@/i18n/navigation';
 import type { Portal } from '@/lib/portal-url';
 import { useRedirectIfAuthenticated } from '@/modules/auth/hooks/use-redirect-if-authenticated';
 import { RegisterForm } from '@/modules/auth/components/RegisterForm';
+import { AuthPortalHint } from '@/modules/auth/components/AuthPortalHint';
 
 interface SignUpCardProps {
   portal: Portal;
@@ -52,8 +53,13 @@ export function SignUpCard({ portal }: SignUpCardProps) {
         </div>
       </div>
 
-      <div className='mt-8 rounded-2xl border border-border/60 bg-white/80 p-6 shadow-lg backdrop-blur-sm sm:p-8'>
-        <RegisterForm userType={portal} />
+      <div className='mt-8 overflow-hidden rounded-2xl border border-border/60 bg-white/80 shadow-lg'>
+        <div className='border-b border-border/60 px-6 py-2 sm:px-8'>
+          <AuthPortalHint activePortal={portal} />
+        </div>
+        <div className='p-6 sm:p-8'>
+          <RegisterForm userType={portal} />
+        </div>
       </div>
 
       <p className='mt-8 text-center text-sm text-foggy'>

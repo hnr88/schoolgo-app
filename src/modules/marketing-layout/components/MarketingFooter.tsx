@@ -42,9 +42,9 @@ const LANGUAGES: Array<{ code: string; label: string }> = [
   { code: 'en', label: 'English' },
   { code: 'zh', label: '简体中文' },
   { code: 'ko', label: '한국어' },
-  { code: 'vi', label: 'Tiếng Việt' },
-  { code: 'th', label: 'ภา��าไทย' },
   { code: 'ms', label: 'Bahasa Melayu' },
+  { code: 'vi', label: 'Tiếng Việt' },
+  { code: 'th', label: 'ภาษาไทย' },
 ];
 
 interface MarketingFooterProps {

@@ -867,23 +867,45 @@
     "registerError": "Tidak dapat mencipta akaun. Sila cuba lagi.",
     "hasAccount": "Sudah ada akaun?",
     "signInLink": "Log masuk",
+    "close": "Tutup",
+    "portalSwitch": {
+      "backTo": "[TODO: ms] Back to"
+    },
     "parent": {
       "signInTitle": "[TODO: ms] Welcome back, Parent",
       "signInSubtitle": "[TODO: ms] Sign in to find and compare the best schools for your child.",
       "signUpTitle": "[TODO: ms] Start your school search",
-      "signUpSubtitle": "[TODO: ms] Create an account to shortlist, compare and apply to Australian schools."
+      "signUpSubtitle": "[TODO: ms] Create an account to shortlist, compare and apply to Australian schools.",
+      "stat1Value": "2,400+",
+      "stat1Label": "Sekolah",
+      "stat2Value": "7",
+      "stat2Label": "Bahasa",
+      "stat3Value": "98%",
+      "stat3Label": "Kepuasan"
     },
     "agent": {
       "signInTitle": "[TODO: ms] Agent Portal",
       "signInSubtitle": "[TODO: ms] Sign in to manage your pipeline and student placements.",
       "signUpTitle": "[TODO: ms] Grow your agency",
-      "signUpSubtitle": "[TODO: ms] Join SchoolGo to access verified schools and streamline placements."
+      "signUpSubtitle": "[TODO: ms] Join SchoolGo to access verified schools and streamline placements.",
+      "stat1Value": "850+",
+      "stat1Label": "Ejen",
+      "stat2Value": "15%",
+      "stat2Label": "Komisen",
+      "stat3Value": "24h",
+      "stat3Label": "Respons"
     },
     "school": {
       "signInTitle": "[TODO: ms] School Portal",
       "signInSubtitle": "[TODO: ms] Sign in to manage enrolments and connect with agents.",
       "signUpTitle": "[TODO: ms] List your school",
-      "signUpSubtitle": "[TODO: ms] Create an account to reach international students and education agents."
+      "signUpSubtitle": "[TODO: ms] Create an account to reach international students and education agents.",
+      "stat1Value": "500+",
+      "stat1Label": "Ejen",
+      "stat2Value": "12k",
+      "stat2Label": "Pelajar",
+      "stat3Value": "Free",
+      "stat3Label": "Penyenaraian"
     }
   },
   "Errors": {

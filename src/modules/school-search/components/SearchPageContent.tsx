@@ -19,7 +19,7 @@ export async function SearchPageContent({ activePortal }: SearchPageContentProps
       <h1 className='sr-only'>{t('title')}</h1>
       <MarketingHeader activePortal={activePortal} />
 
-      <main className='pt-16 md:pt-20 flex max-w-wide mx-auto w-full'>
+      <main className='flex w-full pt-16 md:pt-20'>
         <FilterSidebar />
 
         <section className='flex-1 p-6 flex flex-col gap-4 overflow-hidden h-[calc(100vh-4rem)] md:h-[calc(100vh-5rem)]'>

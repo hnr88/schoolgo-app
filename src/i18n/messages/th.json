@@ -867,23 +867,45 @@
     "registerError": "ไม่สามารถสร้างบัญชีได้ กรุณาลองอีกครั้ง",
     "hasAccount": "มีบัญชีอยู่แล้ว?",
     "signInLink": "เข้าสู่ระบบ",
+    "close": "ปิด",
+    "portalSwitch": {
+      "backTo": "[TODO: th] Back to"
+    },
     "parent": {
       "signInTitle": "[TODO: th] Welcome back, Parent",
       "signInSubtitle": "[TODO: th] Sign in to find and compare the best schools for your child.",
       "signUpTitle": "[TODO: th] Start your school search",
-      "signUpSubtitle": "[TODO: th] Create an account to shortlist, compare and apply to Australian schools."
+      "signUpSubtitle": "[TODO: th] Create an account to shortlist, compare and apply to Australian schools.",
+      "stat1Value": "2,400+",
+      "stat1Label": "โรงเรียน",
+      "stat2Value": "7",
+      "stat2Label": "ภาษา",
+      "stat3Value": "98%",
+      "stat3Label": "ความพึงพอใจ"
     },
     "agent": {
       "signInTitle": "[TODO: th] Agent Portal",
       "signInSubtitle": "[TODO: th] Sign in to manage your pipeline and student placements.",
       "signUpTitle": "[TODO: th] Grow your agency",
-      "signUpSubtitle": "[TODO: th] Join SchoolGo to access verified schools and streamline placements."
+      "signUpSubtitle": "[TODO: th] Join SchoolGo to access verified schools and streamline placements.",
+      "stat1Value": "850+",
+      "stat1Label": "ตัวแทน",
+      "stat2Value": "15%",
+      "stat2Label": "ค่าคอมมิชชัน",
+      "stat3Value": "24h",
+      "stat3Label": "การตอบสนอง"
     },
     "school": {
       "signInTitle": "[TODO: th] School Portal",
       "signInSubtitle": "[TODO: th] Sign in to manage enrolments and connect with agents.",
       "signUpTitle": "[TODO: th] List your school",
-      "signUpSubtitle": "[TODO: th] Create an account to reach international students and education agents."
+      "signUpSubtitle": "[TODO: th] Create an account to reach international students and education agents.",
+      "stat1Value": "500+",
+      "stat1Label": "ตัวแทน",
+      "stat2Value": "12k",
+      "stat2Label": "นักเรียน",
+      "stat3Value": "Free",
+      "stat3Label": "การลงรายการ"
     }
   },
   "Errors": {

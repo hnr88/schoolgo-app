@@ -867,23 +867,45 @@
     "registerError": "계정을 만들 수 없습니다. 다시 시도해주세요.",
     "hasAccount": "이미 계정이 있으신가요?",
     "signInLink": "로그인",
+    "close": "닫기",
+    "portalSwitch": {
+      "backTo": "[TODO: ko] Back to"
+    },
     "parent": {
       "signInTitle": "[TODO: ko] Welcome back, Parent",
       "signInSubtitle": "[TODO: ko] Sign in to find and compare the best schools for your child.",
       "signUpTitle": "[TODO: ko] Start your school search",
-      "signUpSubtitle": "[TODO: ko] Create an account to shortlist, compare and apply to Australian schools."
+      "signUpSubtitle": "[TODO: ko] Create an account to shortlist, compare and apply to Australian schools.",
+      "stat1Value": "2,400+",
+      "stat1Label": "학교",
+      "stat2Value": "7",
+      "stat2Label": "언어",
+      "stat3Value": "98%",
+      "stat3Label": "만족도"
     },
     "agent": {
       "signInTitle": "[TODO: ko] Agent Portal",
       "signInSubtitle": "[TODO: ko] Sign in to manage your pipeline and student placements.",
       "signUpTitle": "[TODO: ko] Grow your agency",
-      "signUpSubtitle": "[TODO: ko] Join SchoolGo to access verified schools and streamline placements."
+      "signUpSubtitle": "[TODO: ko] Join SchoolGo to access verified schools and streamline placements.",
+      "stat1Value": "850+",
+      "stat1Label": "유학원",
+      "stat2Value": "15%",
+      "stat2Label": "수수료",
+      "stat3Value": "24h",
+      "stat3Label": "응답"
     },
     "school": {
       "signInTitle": "[TODO: ko] School Portal",
       "signInSubtitle": "[TODO: ko] Sign in to manage enrolments and connect with agents.",
       "signUpTitle": "[TODO: ko] List your school",
-      "signUpSubtitle": "[TODO: ko] Create an account to reach international students and education agents."
+      "signUpSubtitle": "[TODO: ko] Create an account to reach international students and education agents.",
+      "stat1Value": "500+",
+      "stat1Label": "유학원",
+      "stat2Value": "12k",
+      "stat2Label": "학생",
+      "stat3Value": "Free",
+      "stat3Label": "등록"
     }
   },
   "Errors": {
