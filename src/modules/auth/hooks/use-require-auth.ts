@@ -29,7 +29,8 @@ export function useRequireAuth(options: UseRequireAuthOptions = {}) {
 
     if (allowedRoles && user?.role && !allowedRoles.includes(user.role)) {
       const portal = userType ?? 'parent';
-      router.push(getPortalDashboardPath(portal));
+      const path = getPortalDashboardPath(portal);
+      if (path) router.push(path);
     }
   }, [isAuthenticated, isInitialized, user?.role, allowedRoles, loginPath, router, userType]);
 

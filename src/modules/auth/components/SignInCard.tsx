@@ -26,7 +26,7 @@ const PORTAL_LINK_COLOR: Record<Portal, string> = {
 
 export function SignInCard({ portal }: SignInCardProps) {
   const t = useTranslations('Auth');
-  const { isRedirecting } = useRedirectIfAuthenticated();
+  const { isRedirecting } = useRedirectIfAuthenticated(portal);
 
   if (isRedirecting) return null;
 
