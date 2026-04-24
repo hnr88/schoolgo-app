@@ -7,7 +7,6 @@ const FAQ_KEYS = [
   'dataSource',
   'englishTests',
   'doINeedAgent',
-  'claimProfile',
   'updateFrequency',
 ] as const;
 

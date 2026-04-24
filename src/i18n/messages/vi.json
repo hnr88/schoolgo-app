@@ -867,23 +867,45 @@
     "registerError": "Không thể tạo tài khoản. Vui lòng thử lại.",
     "hasAccount": "Đã có tài khoản?",
     "signInLink": "Đăng nhập",
+    "close": "Đóng",
+    "portalSwitch": {
+      "backTo": "[TODO: vi] Back to"
+    },
     "parent": {
       "signInTitle": "[TODO: vi] Welcome back, Parent",
       "signInSubtitle": "[TODO: vi] Sign in to find and compare the best schools for your child.",
       "signUpTitle": "[TODO: vi] Start your school search",
-      "signUpSubtitle": "[TODO: vi] Create an account to shortlist, compare and apply to Australian schools."
+      "signUpSubtitle": "[TODO: vi] Create an account to shortlist, compare and apply to Australian schools.",
+      "stat1Value": "2,400+",
+      "stat1Label": "Trường học",
+      "stat2Value": "7",
+      "stat2Label": "Ngôn ngữ",
+      "stat3Value": "98%",
+      "stat3Label": "Hài lòng"
     },
     "agent": {
       "signInTitle": "[TODO: vi] Agent Portal",
       "signInSubtitle": "[TODO: vi] Sign in to manage your pipeline and student placements.",
       "signUpTitle": "[TODO: vi] Grow your agency",
-      "signUpSubtitle": "[TODO: vi] Join SchoolGo to access verified schools and streamline placements."
+      "signUpSubtitle": "[TODO: vi] Join SchoolGo to access verified schools and streamline placements.",
+      "stat1Value": "850+",
+      "stat1Label": "Tư vấn",
+      "stat2Value": "15%",
+      "stat2Label": "Hoa hồng",
+      "stat3Value": "24h",
+      "stat3Label": "Phản hồi"
     },
     "school": {
       "signInTitle": "[TODO: vi] School Portal",
       "signInSubtitle": "[TODO: vi] Sign in to manage enrolments and connect with agents.",
       "signUpTitle": "[TODO: vi] List your school",
-      "signUpSubtitle": "[TODO: vi] Create an account to reach international students and education agents."
+      "signUpSubtitle": "[TODO: vi] Create an account to reach international students and education agents.",
+      "stat1Value": "500+",
+      "stat1Label": "Tư vấn",
+      "stat2Value": "12k",
+      "stat2Label": "Học sinh",
+      "stat3Value": "Free",
+      "stat3Label": "Đăng ký"
     }
   },
   "Errors": {

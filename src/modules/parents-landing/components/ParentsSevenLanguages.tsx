@@ -5,9 +5,9 @@ import { SectionContainer, SectionHeader } from '@/modules/design-system';
 const LANGS: Array<{ code: string; key: string }> = [
   { code: 'en', key: 'en' },
   { code: 'zh', key: 'zh' },
-  { code: 'vi', key: 'vi' },
   { code: 'ko', key: 'ko' },
   { code: 'ms', key: 'ms' },
+  { code: 'vi', key: 'vi' },
   { code: 'th', key: 'th' },
   { code: 'id', key: 'id' },
 ];

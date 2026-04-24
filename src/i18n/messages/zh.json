@@ -867,23 +867,45 @@
     "registerError": "无法创建账户，请重试。",
     "hasAccount": "已有账户？",
     "signInLink": "登录",
+    "close": "关闭",
+    "portalSwitch": {
+      "backTo": "[TODO: zh] Back to"
+    },
     "parent": {
       "signInTitle": "[TODO: zh] Welcome back, Parent",
       "signInSubtitle": "[TODO: zh] Sign in to find and compare the best schools for your child.",
       "signUpTitle": "[TODO: zh] Start your school search",
-      "signUpSubtitle": "[TODO: zh] Create an account to shortlist, compare and apply to Australian schools."
+      "signUpSubtitle": "[TODO: zh] Create an account to shortlist, compare and apply to Australian schools.",
+      "stat1Value": "2,400+",
+      "stat1Label": "学校",
+      "stat2Value": "7",
+      "stat2Label": "语言",
+      "stat3Value": "98%",
+      "stat3Label": "满意度"
     },
     "agent": {
       "signInTitle": "[TODO: zh] Agent Portal",
       "signInSubtitle": "[TODO: zh] Sign in to manage your pipeline and student placements.",
       "signUpTitle": "[TODO: zh] Grow your agency",
-      "signUpSubtitle": "[TODO: zh] Join SchoolGo to access verified schools and streamline placements."
+      "signUpSubtitle": "[TODO: zh] Join SchoolGo to access verified schools and streamline placements.",
+      "stat1Value": "850+",
+      "stat1Label": "中介",
+      "stat2Value": "15%",
+      "stat2Label": "佣金",
+      "stat3Value": "24h",
+      "stat3Label": "响应"
     },
     "school": {
       "signInTitle": "[TODO: zh] School Portal",
       "signInSubtitle": "[TODO: zh] Sign in to manage enrolments and connect with agents.",
       "signUpTitle": "[TODO: zh] List your school",
-      "signUpSubtitle": "[TODO: zh] Create an account to reach international students and education agents."
+      "signUpSubtitle": "[TODO: zh] Create an account to reach international students and education agents.",
+      "stat1Value": "500+",
+      "stat1Label": "中介",
+      "stat2Value": "12k",
+      "stat2Label": "学生",
+      "stat3Value": "Free",
+      "stat3Label": "免费列表"
     }
   },
   "Errors": {

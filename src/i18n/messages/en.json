@@ -1,7 +1,7 @@
 {
   "Metadata": {
     "title": "SchoolGo Australia | Find the Best Schools",
-    "description": "Search and compare CRICOS-registered schools across Australia. Filter by curriculum, fees, location, and more — in seven languages.",
+    "description": "Find the right Australian school — the first step to a great university and career. Compare fees, English tests, and entry requirements in seven languages.",
     "ogDescription": "Search and compare the best schools across Australia."
   },
   "Common": {
@@ -15,8 +15,8 @@
   },
   "ParentsMetadata": {
     "title": "SchoolGo — Give your child the best Australian education",
-    "description": "Search every CRICOS-registered Australian school. Compare fees, English test requirements, and intakes — in seven languages, from across Asia-Pacific, for free.",
-    "ogDescription": "Every CRICOS school. Verified. In your language."
+    "description": "Find the right Australian school for your child — the first step to a great university and career. Compare fees, English tests, and entry requirements across every registered school, in seven languages.",
+    "ogDescription": "Every registered school. Verified. In your language."
   },
   "MarketingHeader": {
     "findSchools": "Find schools",
@@ -33,7 +33,7 @@
     "menu": "Menu"
   },
   "MarketingFooter": {
-    "tagline": "Connecting families across Asia-Pacific with Australia's best schools — in seven languages.",
+    "tagline": "The right school. The right university. The right career. Connecting families across Asia-Pacific with Australia's best schools.",
     "columns": {
       "parents": {
         "title": "For parents",
@@ -78,14 +78,14 @@
   },
   "ParentsHero": {
     "trustPill": {
-      "brand": "CRICOS",
-      "brandAccent": "Verified",
+      "brand": "Government",
+      "brandAccent": "Registered",
       "source": "data from data.gov.au"
     },
     "headlinePrefix": "Give your child the best",
     "headlineEmphasis": "Australian",
     "headlineSuffix": "education.",
-    "lede": "Every CRICOS-registered K–12 school in one place. Compare fees, boarding, English tests — search in Mandarin, Korean, Thai, Vietnamese, Malay, Bahasa, or English.",
+    "lede": "The right Australian school sets up the right university — and the right career. Search every registered K–12 school, compare fees, English tests, and boarding — in your language.",
     "searchAriaLabel": "Search schools",
     "searchFields": {
       "where": {
@@ -136,12 +136,12 @@
   },
   "ParentsStatsBar": {
     "eyebrow": "The numbers",
-    "heading": "Australia's most complete school directory for international families.",
-    "subheading": "Every CRICOS-registered school, verified and searchable — from government to independent, across all eight states and territories.",
+    "heading": "Every registered school for international students. In one place.",
+    "subheading": "No more searching across dozens of school websites, government registers, and agent brochures. Filter, compare, and shortlist — in your language.",
     "items": {
       "schools": {
         "value": "{count, number}+",
-        "label": "CRICOS Schools"
+        "label": "Registered Schools"
       },
       "states": {
         "value": "8",
@@ -160,30 +160,30 @@
   "ParentsFourSteps": {
     "eyebrow": "How it works",
     "heading": "From first search to offer letter — four simple steps.",
-    "subheading": "No hidden fees. No login required until you apply.",
+    "subheading": "Transparent at every stage. No hidden fees. No login required until you apply.",
     "steps": {
       "browse": {
-        "title": "Browse every CRICOS school",
-        "description": "Filter {count, number} schools by state, fees, sector, curriculum, boarding, and scholarships — in your language."
+        "title": "Browse every registered school",
+        "description": "Filter {count, number} schools by state, fees, curriculum, boarding, English tests, and scholarships — in Mandarin, Korean, Thai, Vietnamese, Malay, Bahasa, or English."
       },
       "shortlist": {
-        "title": "Shortlist and compare side by side",
-        "description": "Line up fees, intakes, ICSEA, and accepted English tests. Decide in minutes, not months."
+        "title": "Compare schools side by side",
+        "description": "Line up fees, intakes, accepted English tests, and entry requirements for up to five schools. Decide in minutes, not months."
       },
       "prepare": {
-        "title": "See exact entry requirements",
-        "description": "Every listing shows accepted tests, minimum scores, documents needed, and intake windows — no more digging through school websites."
+        "title": "See exactly what your child needs",
+        "description": "Every school profile shows accepted English tests, minimum scores, required documents, and intake windows — so you know if your child qualifies before you apply."
       },
       "apply": {
-        "title": "Apply through a trusted agent",
-        "description": "SchoolGo shows which agents work with each school. Applications are tracked end-to-end in one dashboard.",
+        "title": "Connect with a trusted agent",
+        "description": "SchoolGo shows which education agents each school works with. Choose an agent who already knows the school, the admissions process, and what it takes to get in.",
         "comingSoon": "Coming soon"
       }
     },
     "ctaBrowse": "Start browsing",
     "ctaLearn": "See how it works",
     "badge": {
-      "cricosVerified": "CRICOS Verified · Claimed by school",
+      "cricosVerified": "Government Registered · Claimed by school",
       "updated": "Updated April 2026"
     },
     "visuals": {
@@ -208,7 +208,7 @@
   "ParentsVerified": {
     "eyebrow": "Trusted agents",
     "heading": "Every school has agents who know it best.",
-    "subheading": "SchoolGo shows you which education agents each school works with — so you're connected with someone who already knows the admissions process, the staff, and what it takes to get in.",
+    "subheading": "Don't rely on a single agent you haven't vetted. SchoolGo shows you which education agents each school actually works with — so you can choose someone with a track record at the schools you're considering.",
     "cards": {
       "a": {
         "name": "Scotch College",
@@ -255,7 +255,7 @@
     "eyebrow": "English proficiency",
     "heading": "Pick a test. See which schools accept it —",
     "headingAccent": "and the minimum scores.",
-    "subheading": "We map accepted English tests across every school profile. No more digging through 50 school websites.",
+    "subheading": "Every school accepts different English tests at different levels. We map them all — so you can see at a glance which schools match your child's score.",
     "tests": {
       "aeas": {
         "name": "AEAS",
@@ -297,8 +297,8 @@
   },
   "ParentsSevenLanguages": {
     "eyebrow": "Seven languages",
-    "heading": "Families shouldn't need to translate a fee schedule at midnight.",
-    "subheading": "SchoolGo is translated end-to-end into seven of the most common languages spoken by families across Asia-Pacific.",
+    "heading": "The Australian school system shouldn't feel like a mystery.",
+    "subheading": "Fees, entry requirements, VCE, ATAR, boarding, welfare — everything explained in your language. SchoolGo is translated end-to-end into seven languages spoken by families across Asia-Pacific.",
     "languages": {
       "en": "English",
       "zh": "简体中文",
@@ -311,8 +311,8 @@
   },
   "ParentsArticles": {
     "eyebrow": "Admissions library",
-    "heading": "Guides that actually help — written by admissions officers.",
-    "subheading": "Plain-language guides to visas, intakes, English tests, and fee schedules. Free, no login.",
+    "heading": "Guides that answer the questions every family asks.",
+    "subheading": "Visas, intakes, English tests, fee schedules, homestay, welfare — plain-language guides written by admissions officers. Free, no login.",
     "items": {
       "intakes": {
         "title": "Understanding Australian school intakes",
@@ -332,7 +332,7 @@
   "ParentsTrustBar": {
     "eyebrow": "Trust & compliance",
     "heading": "Data you can trust.",
-    "subheading": "Every listing is backed by official Australian government data — verified, licensed, and kept up to date.",
+    "subheading": "Every school listed is verified against official Australian government registers — so you know you're looking at legitimate institutions.",
     "items": {
       "cricos": {
         "label": "Government-registered schools",
@@ -351,7 +351,7 @@
         "description": "All schools listed operate under Australia's legal framework for protecting international students."
       }
     },
-    "attribution": "School data sourced from the Commonwealth Register of Institutions and Courses for Overseas Students (CRICOS) and the Australian Curriculum, Assessment and Reporting Authority (ACARA). Updated April 2026."
+    "attribution": "School data sourced from official Australian Government registers and the national curriculum authority (ACARA). Updated April 2026."
   },
   "ParentsFaq": {
     "heading": "Frequently Asked Questions",
@@ -362,7 +362,7 @@
       },
       "dataSource": {
         "question": "Where does the school data come from?",
-        "answer": "All school listings are sourced from CRICOS (the Commonwealth Register of Institutions and Courses for Overseas Students), which is the Australian Government's official register of schools authorised to enrol international students. We cross-reference this with ACARA school profile data for enrolment figures, ICSEA scores, and GPS coordinates."
+        "answer": "All school listings come from the Australian Government's official register of schools approved to enrol international students. We cross-reference this with national school profile data for enrolment figures, performance scores, and locations."
       },
       "englishTests": {
         "question": "What English proficiency tests do Australian schools accept?",
@@ -370,11 +370,7 @@
       },
       "doINeedAgent": {
         "question": "Do I need an education agent?",
-        "answer": "You don't have to use one, but most families do — and it's free. Education agents help you choose the right school, prepare documents, and manage the application. SchoolGo shows which agents work with each school, so you can find someone who already knows the admissions process."
-      },
-      "claimProfile": {
-        "question": "I'm a school. How do I claim my profile?",
-        "answer": "Search for your school on SchoolGo and click \"Claim This School.\" You'll be asked to verify your identity as a school staff member. Once verified, you can update your profile with fees, entry requirements, and contact details."
+        "answer": "You don't have to use one, but most families do — and it's free. Education agents help you choose the right school, prepare documents, and manage the application process. SchoolGo shows which agents each school works with, so you can pick someone with a proven track record — not just whoever found you first."
       },
       "updateFrequency": {
         "question": "How often is the data updated?",
@@ -387,7 +383,7 @@
     "headingPrefix": "Their future",
     "headingEmphasis": "starts",
     "headingSuffix": "with the right school.",
-    "subheading": "Free. No login required. Updated {month} {year, number}.",
+    "subheading": "The right school. The right university. The right career. Start searching — free, no login required.",
     "ctaPrimary": "Find your school",
     "ctaSecondary": "Talk to a verified agent"
   },
@@ -400,7 +396,7 @@
     "eyebrow": "For education agents",
     "headlinePrefix": "Your entire pipeline.",
     "headlineEmphasis": "One platform.",
-    "lede": "Stop juggling WeChat threads, WhatsApp groups, and spreadsheets. One profile, {count, number} CRICOS schools, and a pipeline your families can actually see. Free for every agent.",
+    "lede": "Stop juggling WeChat threads, WhatsApp groups, and spreadsheets. Every student, every document, every application — one system, from first enquiry to offer letter. Free for every agent.",
     "ctaPrimary": "Create your agent profile",
     "ctaSecondary": "See how it works",
     "badgeMeta": "Sample agent profile",
@@ -421,24 +417,24 @@
   },
   "AgentsPainPoints": {
     "eyebrow": "Why agents switch",
-    "heading": "Built for agents who manage real pipelines",
+    "heading": "You're the backbone of international admissions. Your tools should act like it.",
     "subheading": "76% of international school enrolments come through education agents. SchoolGo is built to make you more effective, not to replace you.",
     "items": {
       "email": {
         "question": "Scattered across WeChat, WhatsApp, and email?",
-        "answer": "One platform for every conversation and application. Stop copying details between WeChat threads, WhatsApp groups, and email chains. Every application carries your verified agent attribution."
+        "answer": "One platform replaces the chaos. Stop copying student details between WeChat threads, WhatsApp groups, and email chains. Every application carries your verified agent attribution — automatically."
       },
       "status": {
-        "question": "No visibility into your pipeline?",
-        "answer": "See every student, every application, every status — in one dashboard. Families can check progress themselves instead of messaging you at midnight."
+        "question": "Can't see what needs attention today?",
+        "answer": "A daily action queue shows which applications need a follow-up, which documents are expiring, and which families are waiting for an update. No more scrolling through threads to figure out where you left off."
       },
       "trust": {
-        "question": "Drowning in documents from families?",
-        "answer": "Structured document collection means families upload once. Passports, test scores, school reports — organised automatically and attached to the right application."
+        "question": "Drowning in documents — or worse, fraudulent ones?",
+        "answer": "Families upload passports, test scores, and school reports once. Everything is organised, version-controlled, and tracked for expiry. English scores are verified against official records — so you never unknowingly submit a forged report."
       },
       "requirements": {
-        "question": "Typing the same student details into every school form?",
-        "answer": "Enter a student's profile once. SchoolGo maps it to each school's requirements and generates applications — no more re-keying names, dates, and passport numbers."
+        "question": "Re-entering the same student data for every school?",
+        "answer": "Enter a student's profile once. SchoolGo maps it to each school's requirements and generates applications — no more re-keying names, dates, and passport numbers across different forms."
       }
     }
   },
@@ -453,7 +449,7 @@
   "AgentsMatching": {
     "eyebrow": "Match · Apply · Track",
     "heading": "Family calls at 10am. Three matched schools by 10:30.",
-    "subheading": "SchoolGo surfaces the right schools by state, fees, English level, and intake — then lets you send a structured application in minutes.",
+    "subheading": "A school search tool built for professional use — filter by intake, year level, English threshold, fees, and boarding. Compare schools side by side, then submit one application that works for any school.",
     "steps": {
       "listen": {
         "title": "Capture what the family wants",
@@ -498,7 +494,7 @@
     "bullets": {
       "zero": {
         "title": "Zero per-student fees",
-        "description": "No commission split. No placement fee. No subscription."
+        "description": "No commission split. No placement fee. No subscription. Bulk-import your existing student list and start immediately."
       },
       "direct": {
         "title": "Direct relationship with schools",
@@ -506,14 +502,14 @@
       },
       "audit": {
         "title": "Full audit trail",
-        "description": "Every status change timestamped. Disputes end at the paper trail."
+        "description": "Every status change timestamped. Multiple counsellors work in their own queue; admin sees everything across branches."
       }
     }
   },
   "AgentsQeacTrust": {
     "eyebrow": "Verified",
     "heading": "Build your reputation with every placement.",
-    "subheading": "Every agent builds a verified track record on SchoolGo. QEAC-certified agents get an additional credential badge — but every agent's placement history speaks for itself.",
+    "subheading": "Every agent on SchoolGo builds a public track record — placement history, school relationships, and verified English score submissions. QEAC-certified agents get an additional credential badge, but every agent's results speak for themselves.",
     "sampleLabel": "Sample profile",
     "profile": {
       "name": "Agent profile",
@@ -529,7 +525,7 @@
   "AgentsScale": {
     "eyebrow": "Network",
     "heading": "Agents across APAC are joining. Be one of the first.",
-    "subheading": "From Shanghai to Jakarta, Ho Chi Minh to Seoul — agents placing families into Australian K–12.",
+    "subheading": "From Shanghai to Jakarta, Ho Chi Minh to Seoul — solo agents and multi-branch agencies placing families into Australian K–12.",
     "agents": {
       "a": {
         "name": "Li Wei",
@@ -578,16 +574,16 @@
   },
   "AgentsFinalCta": {
     "eyebrow": "Get started",
-    "headingPrefix": "Your portfolio",
-    "headingEmphasis": "deserves",
-    "headingSuffix": "better.",
-    "subheading": "Free. Instant onboarding. Start managing your pipeline today.",
+    "headingPrefix": "Your students",
+    "headingEmphasis": "deserve",
+    "headingSuffix": "better tools.",
+    "subheading": "Free. Instant onboarding. One system for every student, every school, every document.",
     "ctaPrimary": "Create your agent profile",
     "ctaSecondary": "Book a walkthrough"
   },
   "SchoolsMetadata": {
     "title": "SchoolGo — Grow your international cohort. Simplify admissions.",
-    "description": "Reach qualified international families. Receive complete, verified applications. Free for all schools.",
+    "description": "Reach qualified international families. Receive complete, verified applications with checked English scores. Approve the agents you trust. Free for all schools.",
     "ogDescription": "Grow your international cohort. Simplify admissions."
   },
   "SchoolsHero": {
@@ -595,7 +591,7 @@
     "headlinePrefix": "Grow your",
     "headlineEmphasis": "international",
     "headlineSuffix": "cohort. Simplify admissions.",
-    "lede": "Reach qualified families across Asia-Pacific. Receive complete applications with verified English scores — in the formats your admissions team already uses. Free for every school.",
+    "lede": "Reach qualified international families. Receive complete applications with verified English scores and documents — in one inbox, in a standard format. Free for every school.",
     "ctaPrimary": "Claim your school profile",
     "ctaSecondary": "Book a walkthrough",
     "inbox": {
@@ -622,8 +618,8 @@
   },
   "SchoolsStats": {
     "eyebrow": "The network",
-    "heading": "One profile. Seen by families across Asia-Pacific.",
-    "subheading": "Your listing shows up in every search, every comparison, every matched shortlist — in the family's language.",
+    "heading": "One profile. Seen by families around the world.",
+    "subheading": "Your listing appears in every search, every comparison, every matched shortlist — translated into seven languages. Reach new markets and diversify your international cohort.",
     "items": {
       "schools": {
         "value": "695+",
@@ -650,15 +646,15 @@
     "tools": {
       "profile": {
         "title": "A living school profile",
-        "description": "Fees, intakes, accepted tests and minimum scores, scholarship offers, and documents — updated by you, displayed in the family's language."
+        "description": "Fees, intakes, accepted English tests and minimum scores, scholarships, and documents — all updated by you, displayed in the family's language. You control how your school appears."
       },
       "applications": {
         "title": "Complete, verified applications",
-        "description": "Every application arrives in the same format, with verified agent attribution and complete documentation. Test scores are checked against official records — so you never process a fraudulent report."
+        "description": "Every application arrives complete: verified agent attribution, required documents, and English scores checked against official records. No more chasing missing paperwork or processing fraudulent reports."
       },
       "inbox": {
         "title": "A single admissions inbox",
-        "description": "Status-track every application. Offer, waitlist, or decline in one click. Families and agents see the status update instantly."
+        "description": "Offer, waitlist, or decline in one click. Approve agents you trust, block ones you don't. Track profile views, enquiry sources, and agent performance from one dashboard."
       }
     }
   },
@@ -669,7 +665,7 @@
     "steps": {
       "receive": {
         "title": "Receive",
-        "description": "Application lands in your inbox with verified English scores, complete documents, and agent attribution.",
+        "description": "Application lands in your inbox — complete with verified English scores, required documents, and agent attribution. No more chasing missing paperwork across email threads.",
         "comingSoon": "Coming soon"
       },
       "review": {
@@ -699,7 +695,7 @@
         "price": "Free",
         "priceMeta": "Forever",
         "features": {
-          "a": "Your CRICOS profile, auto-published from government data",
+          "a": "Your school profile, auto-published from government data",
           "b": "Visible to families and agents across Asia-Pacific",
           "c": "Accepted English tests and minimum scores displayed"
         },
@@ -711,10 +707,10 @@
         "priceMeta": "Claim your profile",
         "badge": "Recommended",
         "features": {
-          "a": "Edit your profile, photos, and fee details",
-          "b": "Receive structured applications from verified agents",
+          "a": "Full control over your school profile and photos",
+          "b": "Receive complete, verified applications",
           "c": "Offer / waitlist / decline workflow",
-          "d": "Manage which agents your school works with"
+          "d": "Approve or block agents · View analytics"
         },
         "cta": "Claim your profile"
       }
@@ -832,8 +828,6 @@
     "signInButton": "Sign in",
     "loginSuccess": "Welcome back!",
     "loginError": "Invalid email or password. Please try again.",
-    "portalUnauthorized": "This account is not authorised for this portal.",
-    "sessionExpired": "Your session has expired. Please sign in again.",
     "noAccount": "Don't have an account?",
     "signUp": "Sign up",
     "signUpTitle": "Create your account",
@@ -846,23 +840,47 @@
     "registerError": "Could not create account. Please try again.",
     "hasAccount": "Already have an account?",
     "signInLink": "Sign in",
+    "close": "Close",
+    "portalUnauthorized": "This account is not authorised for this portal.",
+    "sessionExpired": "Your session has expired. Please sign in again.",
+    "portalSwitch": {
+      "backTo": "Back to"
+    },
     "parent": {
       "signInTitle": "Welcome back, Parent",
       "signInSubtitle": "Sign in to find and compare the best schools for your child.",
       "signUpTitle": "Start your school search",
-      "signUpSubtitle": "Create an account to shortlist, compare and apply to Australian schools."
+      "signUpSubtitle": "Create an account to shortlist, compare and apply to Australian schools.",
+      "stat1Value": "2,400+",
+      "stat1Label": "Schools",
+      "stat2Value": "7",
+      "stat2Label": "Languages",
+      "stat3Value": "98%",
+      "stat3Label": "Satisfaction"
     },
     "agent": {
       "signInTitle": "Agent Portal",
       "signInSubtitle": "Sign in to manage your pipeline and student placements.",
       "signUpTitle": "Grow your agency",
-      "signUpSubtitle": "Join SchoolGo to access verified schools and streamline placements."
+      "signUpSubtitle": "Join SchoolGo to access verified schools and streamline placements.",
+      "stat1Value": "850+",
+      "stat1Label": "Agents",
+      "stat2Value": "15%",
+      "stat2Label": "Commission",
+      "stat3Value": "24h",
+      "stat3Label": "Response"
     },
     "school": {
       "signInTitle": "School Portal",
       "signInSubtitle": "Sign in to manage enrolments and connect with agents.",
       "signUpTitle": "List your school",
-      "signUpSubtitle": "Create an account to reach international students and education agents."
+      "signUpSubtitle": "Create an account to reach international students and education agents.",
+      "stat1Value": "500+",
+      "stat1Label": "Agents",
+      "stat2Value": "12k",
+      "stat2Label": "Students",
+      "stat3Value": "Free",
+      "stat3Label": "Listing"
     }
   },
   "Errors": {

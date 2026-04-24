@@ -9,7 +9,7 @@ import { cn } from '@/lib/utils';
 
 const LOCALE_LABELS: Record<string, string> = {
   en: 'English',
-  zh: '中文',
+  zh: '简体中文',
   ko: '한국어',
   ms: 'Bahasa Melayu',
   vi: 'Tiếng Việt',
