@@ -25,6 +25,23 @@
       "agents": "ตัวแทน",
       "schools": "โรงเรียน"
     },
+    "nav": {
+      "parent": {
+        "howItWorks": "วิธีการใช้งาน",
+        "compare": "เปรียบเทียบ",
+        "faq": "คำถามที่พบบ่อย"
+      },
+      "agent": {
+        "howItWorks": "วิธีการใช้งาน",
+        "commission": "ค่าคอมมิชชัน",
+        "trust": "ความน่าเชื่อถือ"
+      },
+      "school": {
+        "howItWorks": "วิธีการใช้งาน",
+        "pricing": "การกำหนดราคา",
+        "faq": "คำถามที่พบบ่อย"
+      }
+    },
     "language": "ภาษา",
     "signIn": "เข้าสู่ระบบ",
     "getStarted": "เริ่มต้นใช้งาน",
@@ -835,6 +852,11 @@
       "currency": "AUD",
       "viewDetails": "ดู {name}",
       "topRated": "Top rated"
+    },
+    "loginPrompt": {
+      "title": "ปลดล็อกการค้นหาเต็มรูปแบบ",
+      "subtitle": "เข้าสู่ระบบเพื่อใช้ตัวกรองโดยละเอียด บันทึกโรงเรียน และเปรียบเทียบโปรแกรม",
+      "signIn": "เข้าสู่ระบบเพื่อดำเนินการต่อ"
     }
   },
   "Auth": {
@@ -906,6 +928,23 @@
       "stat2Label": "นักเรียน",
       "stat3Value": "Free",
       "stat3Label": "การลงรายการ"
+    },
+    "nav": {
+      "parent": {
+        "howItWorks": "วิธีการใช้งาน",
+        "compare": "เปรียบเทียบ",
+        "faq": "คำถามที่พบบ่อย"
+      },
+      "agent": {
+        "howItWorks": "วิธีการใช้งาน",
+        "commission": "ค่าคอมมิชชัน",
+        "trust": "ความน่าเชื่อถือ"
+      },
+      "school": {
+        "howItWorks": "วิธีการใช้งาน",
+        "pricing": "การกำหนดราคา",
+        "faq": "คำถามที่พบบ่อย"
+      }
     }
   },
   "Errors": {
@@ -940,7 +979,12 @@
       "settings": "[TODO: th] Settings",
       "profile": "[TODO: th] My Profile",
       "logout": "[TODO: th] Log out",
-      "portalLabel": "ตัวแทน"
+      "portalLabel": "ตัวแทน",
+      "portalBadge": {
+        "agent": "ตัวแทน",
+        "parent": "ผู้ปกครอง",
+        "school": "โรงเรียน"
+      }
     }
   },
   "Students": {

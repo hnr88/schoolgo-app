@@ -104,6 +104,21 @@ export function proxy(request: NextRequest) {
 
   const locale = hasLocale ? maybeLocale : routing.defaultLocale;
 
+  const isRootPath = hasLocale ? segments.length === 1 : pathname === '/';
+  const loggedInPortal = request.cookies.get('schoolgo-logged-in')?.value;
+
+  if (loggedInPortal && isRootPath && loggedInPortal === portal) {
+    url.pathname = `/${locale}/dashboard`;
+    return NextResponse.redirect(url);
+  }
+
+  const pathAfterLocale = hasLocale ? segments.slice(1).join('/') : pathname.replace(/^\//, '');
+  const isSearchPath = pathAfterLocale === 'search' || pathAfterLocale === `${portal}/search`;
+  if (loggedInPortal && loggedInPortal === portal && isSearchPath) {
+    url.pathname = `/${locale}/dashboard/search`;
+    return NextResponse.redirect(url);
+  }
+
   if (hasLocale) {
     const [, second, ...rest] = segments;
     if (second !== portal) {

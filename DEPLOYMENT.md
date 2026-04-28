@@ -1,26 +1,13 @@
-# Deployment — Coolify Tag-Based Deploys
+# Deployment — Coolify Branch-Based Deploys
 
 ## How it works
 
 | Trigger | Environment |
 |---|---|
-| `git push origin main` | Nothing deployed |
-| `git tag v*.*.*-staging.* && git push origin <tag>` | Staging |
-| `git tag v*.*.* && git push origin <tag>` | Production |
+| `git push origin staging` | Staging |
+| `git push origin main` | Production |
 
-Pushes to `main` do nothing. Only explicit tags trigger deploys.
-
-## Deploy commands
-
-```bash
-# Deploy to staging
-git tag v1.0.0-staging.1
-git push origin v1.0.0-staging.1
-
-# Deploy to production
-git tag v1.0.0
-git push origin v1.0.0
-```
+Pushes to the respective branch trigger automatic deploys via Coolify webhooks.
 
 ## Coolify setup
 
@@ -37,36 +24,29 @@ git push origin v1.0.0
 3. Build Pack: **Dockerfile** (auto-detected at repo root)
 4. **Settings → Build → Docker Build Args**:
    ```
-   NEXT_PUBLIC_API_URL=https://api.schoolgo.au
-   NEXT_PUBLIC_SITE_URL=https://schoolgo.au
-   NEXT_PUBLIC_BASE_DOMAIN=schoolgo.au
+   NEXT_PUBLIC_API_URL=https://api.schoolgo.com.au
+   NEXT_PUBLIC_SITE_URL=https://schoolgo.com.au
+   NEXT_PUBLIC_BASE_DOMAIN=schoolgo.com.au
    ```
 5. **Settings → General → Domains**: set production domain
 6. **Settings → Webhooks**:
-   - **Auto Deploy on Push**: OFF
-   - **Deploy Tag**: ON
-   - Tag pattern: `v*.*.*`
+   - **Auto Deploy on Push**: ON
+   - Branch: `main`
 
 ### 3. Create Staging resource
 
-1. Same project → **+ New Resource** → same repo, branch `main`
+1. Same project → **+ New Resource** → same repo, branch `staging`
 2. Build Pack: **Dockerfile**
 3. **Build Args**:
    ```
-   NEXT_PUBLIC_API_URL=https://api.staging.schoolgo.au
-   NEXT_PUBLIC_SITE_URL=https://staging.schoolgo.au
-   NEXT_PUBLIC_BASE_DOMAIN=staging.schoolgo.au
+   NEXT_PUBLIC_API_URL=https://staging-api.schoolgo.com.au
+   NEXT_PUBLIC_SITE_URL=https://staging.schoolgo.com.au
+   NEXT_PUBLIC_BASE_DOMAIN=staging.schoolgo.com.au
    ```
 4. **Domains**: set staging domain
 5. **Webhooks**:
-   - **Auto Deploy on Push**: OFF
-   - **Deploy Tag**: ON
-   - Tag pattern: `v*.*.*-staging.*`
-
-## Tag convention
-
-- **Production**: `v<major>.<minor>.<patch>` — e.g. `v1.0.0`, `v1.2.3`
-- **Staging**: `v<major>.<minor>.<patch>-staging.<n>` — e.g. `v1.0.0-staging.1`, `v1.0.0-staging.2`
+   - **Auto Deploy on Push**: ON
+   - Branch: `staging`
 
 ## Docker
 

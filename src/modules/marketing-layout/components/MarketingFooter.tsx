@@ -60,7 +60,7 @@ export async function MarketingFooter({ activePortal }: MarketingFooterProps) {
 
   return (
     <footer className='bg-ink-900 text-white/80'>
-      <SectionContainer size='wide' className='py-16 md:py-20'>
+      <SectionContainer size='wide' className='pt-16 pb-8 md:pt-20 md:pb-8'>
         <div className='flex flex-col justify-between gap-12 md:flex-row'>
           <div className='flex max-w-xs shrink-0 flex-col gap-5'>
             <a

@@ -60,7 +60,7 @@ export async function AgentsHero() {
         <div className='relative md:col-span-5'>
           <div className='relative aspect-[4/5] overflow-hidden rounded-2xl border border-border bg-muted shadow-3'>
             <Image
-              src='https://picsum.photos/seed/schoolgo-agent-hero/720/900'
+              src='https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=720&h=900&q=80'
               alt=''
               fill
               sizes='(max-width: 768px) 100vw, 420px'

@@ -5,7 +5,7 @@ import { SectionContainer, SectionHeader, StatusBadge, TrustBadge } from '@/modu
 export async function AgentsQeacTrust() {
   const t = await getTranslations('AgentsQeacTrust');
   return (
-    <section className='py-20 md:py-28'>
+    <section id='trust' className='py-20 md:py-28'>
       <SectionContainer className='grid grid-cols-1 items-center gap-12 md:grid-cols-12 md:gap-16'>
         <div className='flex flex-col gap-6 md:col-span-6'>
           <SectionHeader
@@ -23,7 +23,7 @@ export async function AgentsQeacTrust() {
             <header className='flex items-center gap-4 border-b border-divider pb-5'>
               <div className='relative h-14 w-14 shrink-0 overflow-hidden rounded-pill border border-border bg-muted'>
                 <Image
-                  src='https://picsum.photos/seed/schoolgo-qeac-agent/160/160'
+                  src='https://images.unsplash.com/photo-1758518729459-235dcaadc611?auto=format&fit=crop&w=160&h=160&q=80'
                   alt=''
                   fill
                   sizes='56px'

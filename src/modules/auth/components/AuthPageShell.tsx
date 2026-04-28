@@ -1,8 +1,26 @@
 import type { ReactNode } from 'react';
 import Image from 'next/image';
-import { getTranslations } from 'next-intl/server';
+import { getLocale, getTranslations } from 'next-intl/server';
 import type { Portal } from '@/lib/portal-url';
 import { AuthCloseButton } from '@/modules/auth/components/AuthCloseButton';
+
+const PORTAL_NAV: Record<Portal, Array<{ labelKey: string; hash: string }>> = {
+  parent: [
+    { labelKey: 'howItWorks', hash: '#how-it-works' },
+    { labelKey: 'compare', hash: '#compare' },
+    { labelKey: 'faq', hash: '#faq' },
+  ],
+  agent: [
+    { labelKey: 'howItWorks', hash: '#how-it-works' },
+    { labelKey: 'commission', hash: '#commission' },
+    { labelKey: 'trust', hash: '#trust' },
+  ],
+  school: [
+    { labelKey: 'howItWorks', hash: '#how-it-works' },
+    { labelKey: 'pricing', hash: '#pricing' },
+    { labelKey: 'faq', hash: '#faq' },
+  ],
+};
 
 interface AuthPageShellProps {
   portal: Portal;
@@ -63,8 +81,13 @@ const PORTAL_THEME: Record<
 };
 
 export async function AuthPageShell({ portal, children }: AuthPageShellProps) {
-  const t = await getTranslations('Auth');
+  const [t, locale] = await Promise.all([
+    getTranslations('Auth'),
+    getLocale(),
+  ]);
   const theme = PORTAL_THEME[portal];
+  const landingPath = `/${locale}/${portal}`;
+  const navItems = PORTAL_NAV[portal];
 
   return (
     <main className='flex min-h-screen bg-muted/50 lg:p-8'>
@@ -91,8 +114,19 @@ export async function AuthPageShell({ portal, children }: AuthPageShellProps) {
             </svg>
           </div>
 
-          <div className='relative flex items-center justify-end px-6 pt-8 lg:hidden'>
-            <AuthCloseButton />
+          <div className='relative flex items-center justify-between px-6 pt-8 lg:px-16 xl:px-24'>
+            <nav className='flex items-center gap-6'>
+              {navItems.map((item) => (
+                <a
+                  key={item.hash}
+                  href={`${landingPath}${item.hash}`}
+                  className='text-sm font-medium text-foggy transition-colors hover:text-ink-900'
+                >
+                  {t(`nav.${portal}.${item.labelKey}`)}
+                </a>
+              ))}
+            </nav>
+            <AuthCloseButton className='lg:hidden' />
           </div>
 
           <div className='relative flex flex-1 flex-col justify-center px-6 py-8 lg:px-16 xl:px-24'>

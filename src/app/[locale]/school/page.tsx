@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { MarketingFooter, MarketingHeader } from '@/modules/marketing-layout';
+import { AuthRedirectCheck } from '@/modules/auth/components/AuthRedirectCheck';
 import {
   SchoolsFaq,
   SchoolsFinalCta,
@@ -41,7 +42,7 @@ export default async function SchoolsLandingPage({
   setRequestLocale(locale);
 
   return (
-    <>
+    <AuthRedirectCheck portal="school">
       <MarketingHeader activePortal="school" />
       <main>
         <SchoolsHero />
@@ -54,6 +55,6 @@ export default async function SchoolsLandingPage({
         <SchoolsFinalCta />
       </main>
       <MarketingFooter activePortal="school" />
-    </>
+    </AuthRedirectCheck>
   );
 }

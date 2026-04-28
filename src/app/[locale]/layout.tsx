@@ -3,7 +3,7 @@ import { NextIntlClientProvider, hasLocale } from 'next-intl';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { Toaster } from '@/components/ui/sonner';
-import { QueryProvider } from '@/modules/core';
+import { HashScrollHandler, QueryProvider } from '@/modules/core';
 import { routing } from '@/i18n/routing';
 import { env } from '@/lib/env';
 import '../globals.css';
@@ -50,6 +50,7 @@ export default async function LocaleLayout({
       <body className='min-h-full flex flex-col'>
         <NextIntlClientProvider>
           <QueryProvider>{children}</QueryProvider>
+          <HashScrollHandler />
           <Toaster richColors closeButton position='top-right' />
         </NextIntlClientProvider>
       </body>

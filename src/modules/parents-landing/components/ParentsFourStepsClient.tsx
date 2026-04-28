@@ -25,11 +25,11 @@ interface ParentsFourStepsClientProps {
 }
 
 const ICONS = [Search, LayoutGrid, ListChecks, BadgeCheck];
-const SEEDS = [
-  'schoolgo-browse-filter',
-  'schoolgo-shortlist-compare',
-  'schoolgo-requirements-docs',
-  'schoolgo-apply-dashboard',
+const STEP_IMAGES = [
+  'https://images.unsplash.com/photo-1616499452581-cc7f8e3dd3c9?auto=format&fit=crop&w=960&h=1280&q=80',
+  'https://images.unsplash.com/photo-1758873271321-4d6b3526ef42?auto=format&fit=crop&w=960&h=1280&q=80',
+  'https://images.unsplash.com/photo-1603796846097-bee99e4a601f?auto=format&fit=crop&w=960&h=1280&q=80',
+  'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=960&h=1280&q=80',
 ];
 
 export function ParentsFourStepsClient({
@@ -119,8 +119,8 @@ export function ParentsFourStepsClient({
       <div className='relative mx-auto w-full max-w-lg lg:sticky lg:top-24'>
         <div className='relative aspect-[3/4] overflow-hidden rounded-2xl border border-border bg-muted shadow-3'>
           <Image
-            key={SEEDS[active]}
-            src={`https://picsum.photos/seed/${SEEDS[active]}/960/1280`}
+            key={active}
+            src={STEP_IMAGES[active]}
             alt=''
             fill
             sizes='(max-width: 1024px) 100vw, 480px'

@@ -1,11 +1,11 @@
 import type { Portal } from '@/lib/portal-url';
 
-const PORTAL_DASHBOARD_PATHS: Record<Portal, string | null> = {
-  parent: null,
+const PORTAL_DASHBOARD_PATHS: Record<Portal, string> = {
+  parent: '/dashboard',
   agent: '/dashboard',
-  school: null,
+  school: '/dashboard',
 };
 
-export function getPortalDashboardPath(portal: Portal): string | null {
+export function getPortalDashboardPath(portal: Portal): string {
   return PORTAL_DASHBOARD_PATHS[portal];
 }

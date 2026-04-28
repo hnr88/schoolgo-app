@@ -3,14 +3,19 @@ import { useTranslations } from 'next-intl';
 import { Chip } from '@/modules/design-system';
 import { FILTER_CHIP_IDS } from '@/modules/school-search/constants/school.constants';
 import { useSchoolSearchStore } from '@/modules/school-search/stores/use-school-search-store';
+import { cn } from '@/lib/utils';
 
-export function FilterChips() {
+interface FilterChipsProps {
+  className?: string;
+}
+
+export function FilterChips({ className }: FilterChipsProps) {
   const t = useTranslations('SchoolSearch.chips');
   const activeChips = useSchoolSearchStore((s) => s.activeChips);
   const toggleChip = useSchoolSearchStore((s) => s.toggleChip);
 
   return (
-    <div className='no-scrollbar flex items-center gap-2 overflow-x-auto pb-2'>
+    <div className={cn('no-scrollbar flex items-center gap-2 overflow-x-auto pb-2', className)}>
       {FILTER_CHIP_IDS.map((id) => {
         const isActive = activeChips.includes(id);
         return (

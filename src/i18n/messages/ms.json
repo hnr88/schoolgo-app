@@ -25,6 +25,23 @@
       "agents": "Ejen",
       "schools": "Sekolah"
     },
+    "nav": {
+      "parent": {
+        "howItWorks": "Cara penggunaan",
+        "compare": "Bandingkan",
+        "faq": "Soalan Lazim"
+      },
+      "agent": {
+        "howItWorks": "Cara penggunaan",
+        "commission": "Komisen",
+        "trust": "Kepercayaan"
+      },
+      "school": {
+        "howItWorks": "Cara penggunaan",
+        "pricing": "Harga",
+        "faq": "Soalan Lazim"
+      }
+    },
     "language": "Bahasa",
     "signIn": "Log Masuk",
     "getStarted": "Mulakan",
@@ -835,6 +852,11 @@
       "currency": "AUD",
       "viewDetails": "Lihat {name}",
       "topRated": "Top rated"
+    },
+    "loginPrompt": {
+      "title": "Buka carian penuh",
+      "subtitle": "Log masuk untuk mengakses penapis terperinci, simpan sekolah dan bandingkan program.",
+      "signIn": "Log masuk untuk teruskan"
     }
   },
   "Auth": {
@@ -906,6 +928,23 @@
       "stat2Label": "Pelajar",
       "stat3Value": "Free",
       "stat3Label": "Penyenaraian"
+    },
+    "nav": {
+      "parent": {
+        "howItWorks": "Cara penggunaan",
+        "compare": "Bandingkan",
+        "faq": "Soalan Lazim"
+      },
+      "agent": {
+        "howItWorks": "Cara penggunaan",
+        "commission": "Komisen",
+        "trust": "Kepercayaan"
+      },
+      "school": {
+        "howItWorks": "Cara penggunaan",
+        "pricing": "Harga",
+        "faq": "Soalan Lazim"
+      }
     }
   },
   "Errors": {
@@ -940,7 +979,12 @@
       "settings": "[TODO: ms] Settings",
       "profile": "[TODO: ms] My Profile",
       "logout": "[TODO: ms] Log out",
-      "portalLabel": "Ejen"
+      "portalLabel": "Ejen",
+      "portalBadge": {
+        "agent": "Ejen",
+        "parent": "Ibu Bapa",
+        "school": "Sekolah"
+      }
     }
   },
   "Students": {

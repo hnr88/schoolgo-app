@@ -4,10 +4,10 @@ import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import { SectionContainer, SectionHeader } from '@/modules/design-system';
 
-const ITEMS: Array<{ key: 'intakes' | 'englishTests' | 'boarding'; seed: string }> = [
-  { key: 'intakes', seed: 'admissions-intakes' },
-  { key: 'englishTests', seed: 'english-tests' },
-  { key: 'boarding', seed: 'boarding-day-school' },
+const ITEMS: Array<{ key: 'intakes' | 'englishTests' | 'boarding'; image: string }> = [
+  { key: 'intakes', image: 'https://images.unsplash.com/photo-1635821620693-b6863c79db72?auto=format&fit=crop&w=720&h=540&q=80' },
+  { key: 'englishTests', image: 'https://images.unsplash.com/photo-1742549586702-c23994895082?auto=format&fit=crop&w=720&h=540&q=80' },
+  { key: 'boarding', image: 'https://images.unsplash.com/photo-1576495199011-eb94736d05d6?auto=format&fit=crop&w=720&h=540&q=80' },
 ];
 
 export async function ParentsArticles() {
@@ -29,7 +29,7 @@ export async function ParentsArticles() {
             >
               <div className='relative aspect-[4/3] w-full bg-muted'>
                 <Image
-                  src={`https://picsum.photos/seed/${item.seed}/720/540`}
+                  src={item.image}
                   alt=''
                   fill
                   sizes='(max-width: 768px) 100vw, 400px'

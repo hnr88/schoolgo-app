@@ -25,6 +25,23 @@
       "agents": "Agents",
       "schools": "Schools"
     },
+    "nav": {
+      "parent": {
+        "howItWorks": "How it works",
+        "compare": "Compare",
+        "faq": "FAQ"
+      },
+      "agent": {
+        "howItWorks": "How it works",
+        "commission": "Commission",
+        "trust": "Trust"
+      },
+      "school": {
+        "howItWorks": "How it works",
+        "pricing": "Pricing",
+        "faq": "FAQ"
+      }
+    },
     "language": "Language",
     "signIn": "Sign in",
     "getStarted": "Get started",
@@ -810,6 +827,11 @@
       "currency": "AUD",
       "viewDetails": "View {name}",
       "topRated": "Top rated"
+    },
+    "loginPrompt": {
+      "title": "Unlock full search",
+      "subtitle": "Sign in to access detailed filters, save schools, and compare programs.",
+      "signIn": "Sign in to continue"
     }
   },
   "Auth": {
@@ -881,6 +903,23 @@
       "stat2Label": "Students",
       "stat3Value": "Free",
       "stat3Label": "Listing"
+    },
+    "nav": {
+      "parent": {
+        "howItWorks": "How it works",
+        "compare": "Compare",
+        "faq": "FAQ"
+      },
+      "agent": {
+        "howItWorks": "How it works",
+        "commission": "Commission",
+        "trust": "Trust"
+      },
+      "school": {
+        "howItWorks": "How it works",
+        "pricing": "Pricing",
+        "faq": "FAQ"
+      }
     }
   },
   "Errors": {
@@ -904,7 +943,12 @@
       "settings": "Settings",
       "profile": "My Profile",
       "logout": "Log out",
-      "portalLabel": "Agent"
+      "portalLabel": "Agent",
+      "portalBadge": {
+        "agent": "Agent",
+        "parent": "Parent",
+        "school": "School"
+      }
     }
   },
   "Students": {

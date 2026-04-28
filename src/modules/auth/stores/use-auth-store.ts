@@ -7,6 +7,14 @@ import { mapStrapiUser } from '@/modules/auth/lib/map-strapi-user';
 import type { AuthState, LoginCredentials, User } from '@/modules/auth/types/auth.types';
 import type { Portal } from '@/lib/portal-url';
 
+function setAuthCookie(portal: Portal) {
+  document.cookie = `schoolgo-logged-in=${portal}; path=/; max-age=31536000; SameSite=Lax`;
+}
+
+function clearAuthCookie() {
+  document.cookie = 'schoolgo-logged-in=; path=/; max-age=0';
+}
+
 export const useAuthStore = create<AuthState>()(
   persist(
     (set, get) => ({
@@ -32,6 +40,8 @@ export const useAuthStore = create<AuthState>()(
             isLoading: false,
             isInitialized: true,
           });
+          const { userType: currentType } = get();
+          if (currentType) setAuthCookie(currentType);
         } catch (error) {
           set({ isLoading: false });
           throw error;
@@ -39,6 +49,7 @@ export const useAuthStore = create<AuthState>()(
       },
 
       logout: () => {
+        clearAuthCookie();
         set({
           user: null,
           jwt: null,
@@ -55,6 +66,7 @@ export const useAuthStore = create<AuthState>()(
 
       setUserType: (userType: Portal) => {
         set({ userType });
+        if (get().isAuthenticated) setAuthCookie(userType);
       },
 
       initialize: async () => {
@@ -75,6 +87,7 @@ export const useAuthStore = create<AuthState>()(
             isInitialized: true,
           });
         } catch {
+          clearAuthCookie();
           set({
             jwt: null,
             user: null,
@@ -99,8 +112,10 @@ export const useAuthStore = create<AuthState>()(
           state.isHydrated = true;
           if (state.jwt) {
             state.isAuthenticated = true;
+            if (state.userType) setAuthCookie(state.userType);
             state.initialize();
           } else {
+            clearAuthCookie();
             state.isLoading = false;
             state.isInitialized = true;
           }
