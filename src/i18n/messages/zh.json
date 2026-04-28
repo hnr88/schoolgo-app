@@ -25,6 +25,23 @@
       "agents": "中介",
       "schools": "学校"
     },
+    "nav": {
+      "parent": {
+        "howItWorks": "使用方法",
+        "compare": "比较",
+        "faq": "常见问题"
+      },
+      "agent": {
+        "howItWorks": "使用方法",
+        "commission": "佣金",
+        "trust": "信任"
+      },
+      "school": {
+        "howItWorks": "使用方法",
+        "pricing": "定价",
+        "faq": "常见问题"
+      }
+    },
     "language": "语言",
     "signIn": "登录",
     "getStarted": "立即开始",
@@ -835,6 +852,11 @@
       "currency": "AUD",
       "viewDetails": "查看 {name}",
       "topRated": "Top rated"
+    },
+    "loginPrompt": {
+      "title": "解锁完整搜索",
+      "subtitle": "登录以使用详细筛选器、保存学校和比较课程。",
+      "signIn": "登录以继续"
     }
   },
   "Auth": {
@@ -906,6 +928,23 @@
       "stat2Label": "学生",
       "stat3Value": "Free",
       "stat3Label": "免费列表"
+    },
+    "nav": {
+      "parent": {
+        "howItWorks": "使用方法",
+        "compare": "比较",
+        "faq": "常见问题"
+      },
+      "agent": {
+        "howItWorks": "使用方法",
+        "commission": "佣金",
+        "trust": "信任"
+      },
+      "school": {
+        "howItWorks": "使用方法",
+        "pricing": "定价",
+        "faq": "常见问题"
+      }
     }
   },
   "Errors": {
@@ -940,7 +979,12 @@
       "settings": "[TODO: zh] Settings",
       "profile": "[TODO: zh] My Profile",
       "logout": "[TODO: zh] Log out",
-      "portalLabel": "代理"
+      "portalLabel": "代理",
+      "portalBadge": {
+        "agent": "代理",
+        "parent": "家长",
+        "school": "学校"
+      }
     }
   },
   "Students": {

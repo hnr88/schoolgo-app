@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 import { Menu, X } from 'lucide-react';
 import { Link } from '@/i18n/navigation';
 import { LanguageSelector } from '@/modules/layout/components/LanguageSelector';
@@ -10,9 +11,15 @@ import type { Portal } from '@/lib/portal-url';
 
 type AudienceKey = 'parents' | 'agents' | 'schools';
 
+interface NavLink {
+  label: string;
+  href: string;
+}
+
 interface MarketingHeaderClientProps {
   activePortal: Portal;
   portalUrls: Record<Portal, string>;
+  navLinks: NavLink[];
   labels: {
     findSchools: string;
     signIn: string;
@@ -33,10 +40,14 @@ const AUDIENCES: Array<{ key: AudienceKey; portal: Portal }> = [
 export function MarketingHeaderClient({
   activePortal,
   portalUrls,
+  navLinks,
   labels,
 }: MarketingHeaderClientProps) {
+  const pathname = usePathname();
+  const isSearchPage = pathname.endsWith('/search');
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [activeHash, setActiveHash] = useState('');
 
   useEffect(() => {
     function onScroll() {
@@ -46,6 +57,26 @@ export function MarketingHeaderClient({
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
+
+  useEffect(() => {
+    const ids = navLinks.map((l) => l.href.replace('#', ''));
+    const els = ids.map((id) => document.getElementById(id)).filter(Boolean) as HTMLElement[];
+    if (els.length === 0) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) {
+            setActiveHash(`#${entry.target.id}`);
+          }
+        }
+      },
+      { rootMargin: '-20% 0px -60% 0px' },
+    );
+
+    els.forEach((el) => observer.observe(el));
+    return () => observer.disconnect();
+  }, [navLinks]);
 
   useEffect(() => {
     document.body.style.overflow = mobileOpen ? 'hidden' : '';
@@ -80,9 +111,29 @@ export function MarketingHeaderClient({
             />
           </a>
 
+          <nav className='hidden items-center gap-1 md:flex'>
+            {navLinks.map((link) => {
+              const isActive = activeHash === link.href;
+              return (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  className={cn(
+                    'rounded-pill px-3 py-1.5 text-body-sm font-medium no-underline transition-colors',
+                    isActive
+                      ? 'text-ink-900'
+                      : 'text-foggy hover:bg-muted hover:text-ink-900',
+                  )}
+                >
+                  {link.label}
+                </a>
+              );
+            })}
+          </nav>
+
           <nav
             aria-label='Audience'
-            className='mx-auto flex items-center gap-1 rounded-pill bg-muted p-1 shadow-1'
+            className='mx-auto flex items-center rounded-lg border border-border/60 p-0.5'
           >
             {AUDIENCES.map((a) => {
               const isActive = a.portal === activePortal;
@@ -92,9 +143,9 @@ export function MarketingHeaderClient({
                   href={portalUrls[a.portal]}
                   aria-current={isActive ? 'page' : undefined}
                   className={cn(
-                    'rounded-pill px-4 py-1.5 text-body-sm font-semibold no-underline transition-colors md:px-5 md:py-2',
+                    'rounded-md px-3 py-1 text-sm font-medium no-underline transition-all duration-150',
                     isActive
-                      ? 'bg-card text-ink-900 shadow-2'
+                      ? 'bg-primary text-on-primary shadow-brand'
                       : 'text-foggy hover:text-ink-900',
                   )}
                 >
@@ -105,19 +156,23 @@ export function MarketingHeaderClient({
           </nav>
 
           <div className='hidden shrink-0 items-center gap-2 md:flex'>
-            <LanguageSelector placement='down' />
             <Link
               href='/sign-in'
+              data-slot='button'
               className='rounded-pill px-4 py-2 text-sm font-medium text-foreground no-underline transition-colors hover:bg-muted'
             >
               {labels.signIn}
             </Link>
-            <Link
-              href='/search'
-              className='inline-flex items-center justify-center rounded-pill bg-primary px-5 py-2 text-sm font-semibold text-on-primary shadow-brand no-underline transition-colors hover:bg-rausch-600 active:bg-rausch-700'
-            >
-              {labels.findSchools}
-            </Link>
+            {!isSearchPage && (
+              <Link
+                href='/search'
+                data-slot='button'
+                className='inline-flex items-center justify-center rounded-pill bg-primary px-5 py-2 text-sm font-semibold text-on-primary shadow-brand no-underline transition-colors hover:bg-rausch-600 active:bg-rausch-700'
+              >
+                {labels.findSchools}
+              </Link>
+            )}
+            <LanguageSelector placement='down' compact />
           </div>
 
           <button
@@ -155,13 +210,25 @@ export function MarketingHeaderClient({
                 <X className='h-5 w-5' strokeWidth={1.75} aria-hidden='true' />
               </button>
             </div>
-            <Link
-              href='/search'
-              onClick={() => setMobileOpen(false)}
-              className='rounded-lg px-3 py-3 text-base font-semibold text-foreground no-underline hover:bg-muted'
-            >
-              {labels.findSchools}
-            </Link>
+            {navLinks.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                onClick={() => setMobileOpen(false)}
+                className='rounded-lg px-3 py-3 text-base font-semibold text-foreground no-underline hover:bg-muted'
+              >
+                {link.label}
+              </a>
+            ))}
+            {!isSearchPage && (
+              <Link
+                href='/search'
+                onClick={() => setMobileOpen(false)}
+                className='rounded-lg px-3 py-3 text-base font-semibold text-foreground no-underline hover:bg-muted'
+              >
+                {labels.findSchools}
+              </Link>
+            )}
             <Link
               href='/sign-in'
               onClick={() => setMobileOpen(false)}
@@ -171,13 +238,16 @@ export function MarketingHeaderClient({
             </Link>
             <div className='mt-2 flex flex-col gap-3 border-t border-divider pt-4'>
               <LanguageSelector placement='down' />
-              <Link
-                href='/search'
-                onClick={() => setMobileOpen(false)}
-                className='w-full rounded-pill bg-primary px-6 py-3 text-center text-sm font-semibold text-on-primary shadow-brand no-underline'
-              >
-                {labels.findSchools}
-              </Link>
+              {!isSearchPage && (
+                <Link
+                  href='/search'
+                  onClick={() => setMobileOpen(false)}
+                  data-slot='button'
+                  className='w-full rounded-pill bg-primary px-6 py-3 text-center text-sm font-semibold text-on-primary shadow-brand no-underline'
+                >
+                  {labels.findSchools}
+                </Link>
+              )}
             </div>
           </div>
         </div>

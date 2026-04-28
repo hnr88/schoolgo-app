@@ -27,7 +27,7 @@ export async function ParentsFourSteps() {
   }));
 
   return (
-    <section className='py-20 md:py-28'>
+    <section id='how-it-works' className='py-20 md:py-28'>
       <SectionContainer>
         <div className='mb-10 flex flex-col gap-3'>
           <span className='text-xs font-semibold uppercase tracking-widest text-primary'>

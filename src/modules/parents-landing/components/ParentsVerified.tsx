@@ -1,11 +1,11 @@
 import { getTranslations } from 'next-intl/server';
 import { SectionContainer, SectionHeader, SchoolCard } from '@/modules/design-system';
 
-const CARDS: Array<{ key: 'a' | 'b' | 'c' | 'd'; seed: string }> = [
-  { key: 'a', seed: 'scotch-college-hawthorn' },
-  { key: 'b', seed: 'sydney-grammar-darlinghurst' },
-  { key: 'c', seed: 'brisbane-grammar-spring-hill' },
-  { key: 'd', seed: 'christ-church-grammar-claremont' },
+const CARDS: Array<{ key: 'a' | 'b' | 'c' | 'd'; image: string }> = [
+  { key: 'a', image: 'https://images.unsplash.com/photo-1603437119287-4a3732b685f9?auto=format&fit=crop&w=640&h=480&q=80' },
+  { key: 'b', image: 'https://images.unsplash.com/photo-1607237138185-eedd9c632b0b?auto=format&fit=crop&w=640&h=480&q=80' },
+  { key: 'c', image: 'https://images.unsplash.com/photo-1651313976327-f10851420a08?auto=format&fit=crop&w=640&h=480&q=80' },
+  { key: 'd', image: 'https://images.unsplash.com/photo-1751510397614-e289eb4ce57a?auto=format&fit=crop&w=640&h=480&q=80' },
 ];
 
 export async function ParentsVerified() {
@@ -25,7 +25,7 @@ export async function ParentsVerified() {
           {CARDS.map((card) => (
             <SchoolCard
               key={card.key}
-              photoUrl={`https://picsum.photos/seed/${card.seed}/640/480`}
+              photoUrl={card.image}
               name={t(`cards.${card.key}.name`)}
               location={`${t(`cards.${card.key}.location`)} · ${t(`cards.${card.key}.sector`)}`}
               cricosLabel={tc('cricosVerified')}

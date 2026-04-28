@@ -15,7 +15,12 @@ import {
 import { useSchoolSearchStore } from '@/modules/school-search/stores/use-school-search-store';
 import type { AustralianState } from '@/modules/school-search/types/school.types';
 
-export function FilterSidebar() {
+interface FilterSidebarProps {
+  className?: string;
+  cardClassName?: string;
+}
+
+export function FilterSidebar({ className, cardClassName }: FilterSidebarProps) {
   const t = useTranslations('SchoolSearch.filters');
   const tStates = useTranslations('SchoolSearch.states');
 
@@ -30,8 +35,8 @@ export function FilterSidebar() {
   const setEnglishTests = useSchoolSearchStore((s) => s.setEnglishTests);
 
   return (
-    <aside className='hidden shrink-0 lg:sticky lg:top-20 lg:block lg:h-[calc(100vh-5rem)] lg:w-[20rem] lg:p-4'>
-      <div className='flex h-full min-h-0 flex-col overflow-hidden rounded-xl border border-border bg-card shadow-2'>
+    <aside className={cn('hidden shrink-0 lg:sticky lg:top-20 lg:block lg:h-[calc(100vh-5rem)] lg:w-[20rem] lg:p-4', className)}>
+      <div className={cn('flex h-full min-h-0 flex-col overflow-hidden rounded-xl border border-border bg-card shadow-2', cardClassName)}>
         <div className='shrink-0 border-b border-divider px-4 py-3.5'>
           <div className='flex items-center gap-3'>
             <span className='flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-rausch-50 text-primary'>

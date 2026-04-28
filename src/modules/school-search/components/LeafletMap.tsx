@@ -69,13 +69,13 @@ export function LeafletMap({ schools }: LeafletMapProps) {
   });
 
   return (
-    <div className='relative w-full h-full rounded-lg overflow-hidden'>
+    <div className='relative isolate w-full h-full rounded-lg overflow-hidden'>
       <style>{`
         .leaflet-tile-pane {
           filter: grayscale(0.9) contrast(0.85) brightness(1.05);
         }
       `}</style>
-      <div className='absolute inset-0 bg-primary/5 z-[400] pointer-events-none rounded-lg' />
+      <div className='absolute inset-0 bg-primary/5 z-10 pointer-events-none rounded-lg' />
       <MapContainer
         center={[-30, 148]}
         zoom={4}

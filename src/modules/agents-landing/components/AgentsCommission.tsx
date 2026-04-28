@@ -14,7 +14,7 @@ const BULLETS: Array<{ key: 'zero' | 'direct' | 'audit'; icon: IconComponent }> 
 export async function AgentsCommission() {
   const t = await getTranslations('AgentsCommission');
   return (
-    <section className='bg-ink-900 py-20 text-background md:py-28'>
+    <section id='commission' className='bg-ink-900 py-20 text-background md:py-28'>
       <SectionContainer className='grid grid-cols-1 items-center gap-12 md:grid-cols-12 md:gap-16'>
         <div className='flex flex-col gap-6 md:col-span-6'>
           <SectionHeader

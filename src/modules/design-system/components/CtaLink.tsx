@@ -5,7 +5,7 @@ import { Link } from '@/i18n/navigation';
 import { cn } from '@/lib/utils';
 
 const ctaLinkStyles = cva(
-  'inline-flex items-center gap-2 rounded-pill font-semibold no-underline transition-colors',
+  'inline-flex items-center gap-2 rounded-pill font-semibold no-underline',
   {
     variants: {
       variant: {
@@ -49,6 +49,7 @@ export function CtaLink({
   return (
     <Link
       href={href}
+      data-slot='button'
       className={cn(
         ctaLinkStyles({ variant, size }),
         justify && 'justify-center',

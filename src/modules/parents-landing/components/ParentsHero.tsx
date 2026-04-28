@@ -3,10 +3,10 @@ import { getTranslations } from 'next-intl/server';
 import { SectionContainer, SchoolCard } from '@/modules/design-system';
 import { ParentsHeroSearch } from '@/modules/parents-landing/components/ParentsHeroSearch';
 
-const FEATURED_KEYS: Array<{ key: 'a' | 'b' | 'c'; seed: string }> = [
-  { key: 'a', seed: 'scotch-college-melbourne' },
-  { key: 'b', seed: 'sydney-grammar-darlinghurst' },
-  { key: 'c', seed: 'brisbane-grammar-spring-hill' },
+const FEATURED_KEYS: Array<{ key: 'a' | 'b' | 'c'; image: string }> = [
+  { key: 'a', image: 'https://images.unsplash.com/photo-1603437119287-4a3732b685f9?auto=format&fit=crop&w=720&h=540&q=80' },
+  { key: 'b', image: 'https://images.unsplash.com/photo-1621241484978-6f60fdb68f1c?auto=format&fit=crop&w=720&h=540&q=80' },
+  { key: 'c', image: 'https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=720&h=540&q=80' },
 ];
 
 export async function ParentsHero() {
@@ -66,11 +66,11 @@ export async function ParentsHero() {
         </div>
 
         <div className='grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3'>
-          {FEATURED_KEYS.map(({ key, seed }) => (
+          {FEATURED_KEYS.map(({ key, image }) => (
             <SchoolCard
               key={key}
               href='/search'
-              photoUrl={`https://picsum.photos/seed/${seed}/720/540`}
+              photoUrl={image}
               name={t(`featured.cards.${key}.name`)}
               location={t(`featured.cards.${key}.location`)}
               curriculum={t(`featured.cards.${key}.curriculum`)}

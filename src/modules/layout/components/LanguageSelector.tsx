@@ -16,11 +16,21 @@ const LOCALE_LABELS: Record<string, string> = {
   th: 'ภาษาไทย',
 };
 
+const LOCALE_CODES: Record<string, string> = {
+  en: 'EN',
+  zh: 'ZH',
+  ko: 'KO',
+  ms: 'MS',
+  vi: 'VI',
+  th: 'TH',
+};
+
 interface LanguageSelectorProps {
   placement?: 'up' | 'down';
+  compact?: boolean;
 }
 
-export function LanguageSelector({ placement = 'up' }: LanguageSelectorProps = {}) {
+export function LanguageSelector({ placement = 'up', compact = false }: LanguageSelectorProps = {}) {
   const locale = useLocale();
   const router = useRouter();
   const pathname = usePathname();
@@ -57,14 +67,21 @@ export function LanguageSelector({ placement = 'up' }: LanguageSelectorProps = {
         onClick={() => setOpen(!open)}
         aria-expanded={open}
         aria-haspopup='listbox'
-        className='flex items-center gap-2 text-on-surface-variant text-xs font-bold uppercase tracking-widest cursor-pointer border border-outline-variant/30 rounded-lg px-3 py-2 hover:border-primary/50 transition-colors'
+        className={cn(
+          'flex items-center cursor-pointer transition-colors',
+          compact
+            ? 'gap-1.5 rounded-pill px-2.5 py-1.5 text-sm font-medium text-foggy hover:text-ink-900 hover:bg-muted'
+            : 'gap-2 rounded-lg border border-outline-variant/30 px-3 py-2 text-xs font-bold uppercase tracking-widest text-on-surface-variant hover:border-primary/50',
+        )}
       >
         <LanguageIcon className='w-4 h-4' aria-hidden='true' />
-        {LOCALE_LABELS[locale] ?? locale}
-        <ChevronDownIcon
-          className={cn('w-3 h-3 transition-transform', open && 'rotate-180')}
-          aria-hidden='true'
-        />
+        {compact ? (LOCALE_CODES[locale] ?? locale.toUpperCase()) : (LOCALE_LABELS[locale] ?? locale)}
+        {!compact && (
+          <ChevronDownIcon
+            className={cn('w-3 h-3 transition-transform', open && 'rotate-180')}
+            aria-hidden='true'
+          />
+        )}
       </button>
 
       {open && (

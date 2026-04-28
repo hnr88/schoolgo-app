@@ -19,7 +19,7 @@ export async function ParentsFaq() {
   }));
 
   return (
-    <section className='bg-muted py-20 md:py-28'>
+    <section id='faq' className='bg-muted py-20 md:py-28'>
       <SectionContainer className='flex flex-col gap-10'>
         <h2 className='font-display text-4xl font-bold leading-[1.1] tracking-[-0.02em] text-ink-900 md:text-5xl'>
           {t('heading')}

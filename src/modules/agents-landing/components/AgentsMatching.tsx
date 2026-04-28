@@ -12,10 +12,10 @@ const STEPS: Array<{ key: 'listen' | 'match' | 'deliver'; icon: IconComponent; c
   { key: 'deliver', icon: Send, comingSoon: true },
 ];
 
-const INBOX_ROWS: Array<{ key: 'scotch' | 'brisbane' | 'sydney'; seed: string }> = [
-  { key: 'scotch', seed: 'scotch-college-hawthorn' },
-  { key: 'brisbane', seed: 'brisbane-grammar-spring-hill' },
-  { key: 'sydney', seed: 'sydney-grammar-darlinghurst' },
+const INBOX_ROWS: Array<{ key: 'scotch' | 'brisbane' | 'sydney'; image: string }> = [
+  { key: 'scotch', image: 'https://images.unsplash.com/photo-1603437119287-4a3732b685f9?auto=format&fit=crop&w=160&h=160&q=80' },
+  { key: 'brisbane', image: 'https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=160&h=160&q=80' },
+  { key: 'sydney', image: 'https://images.unsplash.com/photo-1621241484978-6f60fdb68f1c?auto=format&fit=crop&w=160&h=160&q=80' },
 ];
 
 export async function AgentsMatching() {
@@ -70,7 +70,7 @@ export async function AgentsMatching() {
                 <li key={row.key} className='flex items-center gap-4 px-5 py-4'>
                   <div className='relative h-12 w-12 shrink-0 overflow-hidden rounded-md border border-border bg-muted'>
                     <Image
-                      src={`https://picsum.photos/seed/${row.seed}/160/160`}
+                      src={row.image}
                       alt=''
                       fill
                       sizes='48px'

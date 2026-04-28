@@ -11,16 +11,18 @@
 
 @font-face {
   font-family: 'Google Sans';
-  src: url('/fonts/GoogleSans-Variable.ttf') format('truetype-variations'),
-       url('/fonts/GoogleSans-Variable.ttf') format('truetype');
+  src:
+    url('/fonts/GoogleSans-Variable.ttf') format('truetype-variations'),
+    url('/fonts/GoogleSans-Variable.ttf') format('truetype');
   font-weight: 400 800;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Google Sans';
-  src: url('/fonts/GoogleSans-Italic-Variable.ttf') format('truetype-variations'),
-       url('/fonts/GoogleSans-Italic-Variable.ttf') format('truetype');
+  src:
+    url('/fonts/GoogleSans-Italic-Variable.ttf') format('truetype-variations'),
+    url('/fonts/GoogleSans-Italic-Variable.ttf') format('truetype');
   font-weight: 400 800;
   font-style: italic;
   font-display: swap;
@@ -30,24 +32,25 @@
 
 @theme inline {
   /* Fonts */
-  --font-sans: 'Google Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+  --font-sans:
+    'Google Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
     'Helvetica Neue', sans-serif;
   --font-display: 'Google Sans', sans-serif;
   --font-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
   --font-heading: var(--font-display);
 
   /* Layout tokens */
-  --container-content: 75rem;             /* 1200px — Airbnb marketing max */
-  --container-wide: 85rem;                /* 1360px — dashboards */
+  --container-content: 75rem; /* 1200px — Airbnb marketing max */
+  --container-wide: 85rem; /* 1360px — dashboards */
   --max-width-content: 75rem;
   --max-width-wide: 85rem;
   --spacing-sidebar: 18rem;
   --spacing-results-panel: 18.75rem;
 
   /* Type scale micros (Airbnb eyebrow) */
-  --text-caption: 0.6875rem;              /* 11px */
+  --text-caption: 0.6875rem; /* 11px */
   --text-caption-line-height: 0.875rem;
-  --text-label: 0.75rem;                  /* 12px */
+  --text-label: 0.75rem; /* 12px */
   --text-label-line-height: 1rem;
 
   /* Shadcn semantic mapping */
@@ -96,13 +99,13 @@
   --shadow-brand: 0 6px 16px oklch(0.685 0.188 18 / 0.32);
 
   /* Radii (Airbnb) */
-  --radius-xs: 0.25rem;      /*  4px */
-  --radius-sm: 0.5rem;       /*  8px */
-  --radius-md: 0.75rem;      /* 12px — inputs */
-  --radius-lg: 1rem;         /* 16px — cards */
-  --radius-xl: 1.25rem;      /* 20px */
-  --radius-2xl: 1.75rem;     /* 28px — modal */
-  --radius-pill: 999px;      /* pill buttons / chips */
+  --radius-xs: 0.25rem; /*  4px */
+  --radius-sm: 0.5rem; /*  8px */
+  --radius-md: 0.75rem; /* 12px — inputs */
+  --radius-lg: 1rem; /* 16px — cards */
+  --radius-xl: 1.25rem; /* 20px */
+  --radius-2xl: 1.75rem; /* 28px — modal */
+  --radius-pill: 999px; /* pill buttons / chips */
   /* Legacy aliases (keep existing components compiling) */
   --radius-3xl: 1.75rem;
   --radius-4xl: 2.25rem;
@@ -177,54 +180,54 @@
   --radius: 1rem;
 
   /* ========== Rausch scale (coral red, hue ≈ 18) ========== */
-  --rausch-50:  oklch(0.956 0.014 18);   /* #FFF1F2 */
-  --rausch-100: oklch(0.916 0.033 18);   /* #FFE0E2 */
-  --rausch-200: oklch(0.852 0.066 18);   /* #FFC2C5 */
-  --rausch-300: oklch(0.770 0.114 18);   /* #FF9498 */
-  --rausch-400: oklch(0.725 0.156 18);   /* #FF7478 */
-  --rausch-500: oklch(0.685 0.188 18);   /* #FF5A5F — Rausch */
-  --rausch-600: oklch(0.610 0.195 22);   /* #E84349 — hover */
-  --rausch-700: oklch(0.497 0.195 26);   /* #C02B30 — pressed */
-  --rausch-800: oklch(0.382 0.156 27);   /* #8F1F22 */
+  --rausch-50: oklch(0.956 0.014 18); /* #FFF1F2 */
+  --rausch-100: oklch(0.916 0.033 18); /* #FFE0E2 */
+  --rausch-200: oklch(0.852 0.066 18); /* #FFC2C5 */
+  --rausch-300: oklch(0.77 0.114 18); /* #FF9498 */
+  --rausch-400: oklch(0.725 0.156 18); /* #FF7478 */
+  --rausch-500: oklch(0.685 0.188 18); /* #FF5A5F — Rausch */
+  --rausch-600: oklch(0.61 0.195 22); /* #E84349 — hover */
+  --rausch-700: oklch(0.497 0.195 26); /* #C02B30 — pressed */
+  --rausch-800: oklch(0.382 0.156 27); /* #8F1F22 */
 
   /* ========== Babu teal (hue ≈ 176) ========== */
-  --babu-50:  oklch(0.951 0.015 174);    /* #E7F4F1 */
-  --babu-100: oklch(0.901 0.032 174);    /* #CBE8E1 */
-  --babu-500: oklch(0.556 0.086 176);    /* #1F8E7D — Babu */
-  --babu-600: oklch(0.456 0.072 176);    /* #167264 */
-  --babu-700: oklch(0.358 0.054 177);    /* #0F574C */
+  --babu-50: oklch(0.951 0.015 174); /* #E7F4F1 */
+  --babu-100: oklch(0.901 0.032 174); /* #CBE8E1 */
+  --babu-500: oklch(0.556 0.086 176); /* #1F8E7D — Babu */
+  --babu-600: oklch(0.456 0.072 176); /* #167264 */
+  --babu-700: oklch(0.358 0.054 177); /* #0F574C */
 
   /* ========== Arches orange (hue ≈ 38) ========== */
-  --arches-50:  oklch(0.960 0.013 48);   /* #FFF2EC */
-  --arches-100: oklch(0.908 0.041 47);   /* #FFDDCC */
-  --arches-500: oklch(0.672 0.186 38);   /* #FC642D — Arches */
-  --arches-600: oklch(0.593 0.190 35);   /* #E34E17 */
-  --arches-700: oklch(0.479 0.160 34);   /* #B13A0E */
+  --arches-50: oklch(0.96 0.013 48); /* #FFF2EC */
+  --arches-100: oklch(0.908 0.041 47); /* #FFDDCC */
+  --arches-500: oklch(0.672 0.186 38); /* #FC642D — Arches */
+  --arches-600: oklch(0.593 0.19 35); /* #E34E17 */
+  --arches-700: oklch(0.479 0.16 34); /* #B13A0E */
 
   /* ========== Neutrals (Airbnb) ========== */
-  --ink-900: oklch(0.236 0 0);           /* #222222 — headings deeper than Hof */
-  --hof:     oklch(0.357 0 0);           /* #484848 — body text */
-  --foggy:   oklch(0.546 0 0);           /* #767676 — secondary */
-  --quill:   oklch(0.737 0 0);           /* #B0B0B0 — disabled / placeholder */
-  --divider: oklch(0.931 0 0);           /* #EBEBEB — hairline */
+  --ink-900: oklch(0.236 0 0); /* #222222 — headings deeper than Hof */
+  --hof: oklch(0.357 0 0); /* #484848 — body text */
+  --foggy: oklch(0.546 0 0); /* #767676 — secondary */
+  --quill: oklch(0.737 0 0); /* #B0B0B0 — disabled / placeholder */
+  --divider: oklch(0.931 0 0); /* #EBEBEB — hairline */
 
   /* ========== Shadcn semantic tokens ========== */
-  --background: oklch(1 0 0);                      /* #FFFFFF */
-  --foreground: var(--hof);                        /* Hof */
-  --card: oklch(1 0 0);                            /* #FFFFFF */
+  --background: oklch(1 0 0); /* #FFFFFF */
+  --foreground: var(--hof); /* Hof */
+  --card: oklch(1 0 0); /* #FFFFFF */
   --card-foreground: var(--hof);
   --popover: oklch(1 0 0);
   --popover-foreground: var(--hof);
   --primary: var(--rausch-500);
-  --primary-foreground: oklch(1 0 0);              /* white on Rausch */
-  --secondary: oklch(0.972 0 0);                   /* #F7F7F7 surface */
+  --primary-foreground: oklch(1 0 0); /* white on Rausch */
+  --secondary: oklch(0.972 0 0); /* #F7F7F7 surface */
   --secondary-foreground: var(--hof);
-  --muted: oklch(0.972 0 0);                       /* #F7F7F7 */
+  --muted: oklch(0.972 0 0); /* #F7F7F7 */
   --muted-foreground: var(--foggy);
-  --accent: oklch(0.972 0 0);                      /* #F7F7F7 */
+  --accent: oklch(0.972 0 0); /* #F7F7F7 */
   --accent-foreground: var(--hof);
   --destructive: var(--rausch-700);
-  --border: oklch(0.878 0 0);                      /* #DDDDDD */
+  --border: oklch(0.878 0 0); /* #DDDDDD */
   --input: oklch(0.878 0 0);
   --ring: var(--rausch-500);
 
@@ -236,7 +239,7 @@
   --chart-5: var(--babu-700);
 
   /* Sidebar */
-  --sidebar: oklch(0.972 0 0);                     /* #F7F7F7 */
+  --sidebar: oklch(0.972 0 0); /* #F7F7F7 */
   --sidebar-foreground: var(--hof);
   --sidebar-primary: var(--rausch-500);
   --sidebar-primary-foreground: oklch(1 0 0);
@@ -247,23 +250,23 @@
 
   /* ========== Extended surface scale — remapped to Airbnb values
      (preserves existing `bg-surface-container-*` class names across the app) ========== */
-  --surface: oklch(1 0 0);                         /* #FFFFFF */
+  --surface: oklch(1 0 0); /* #FFFFFF */
   --surface-bright: oklch(1 0 0);
-  --surface-dim: oklch(0.931 0 0);                 /* #EBEBEB */
-  --surface-container-lowest: oklch(1 0 0);        /* #FFFFFF — card surface */
-  --surface-container-low: oklch(0.972 0 0);       /* #F7F7F7 — section tone */
-  --surface-container: oklch(0.972 0 0);           /* #F7F7F7 */
-  --surface-container-high: oklch(0.931 0 0);      /* #EBEBEB */
-  --surface-container-highest: oklch(0.878 0 0);   /* #DDDDDD */
-  --surface-variant: oklch(0.931 0 0);             /* #EBEBEB */
+  --surface-dim: oklch(0.931 0 0); /* #EBEBEB */
+  --surface-container-lowest: oklch(1 0 0); /* #FFFFFF — card surface */
+  --surface-container-low: oklch(0.972 0 0); /* #F7F7F7 — section tone */
+  --surface-container: oklch(0.972 0 0); /* #F7F7F7 */
+  --surface-container-high: oklch(0.931 0 0); /* #EBEBEB */
+  --surface-container-highest: oklch(0.878 0 0); /* #DDDDDD */
+  --surface-variant: oklch(0.931 0 0); /* #EBEBEB */
 
   /* On-surface ink */
-  --on-surface: var(--hof);                        /* #484848 */
-  --on-surface-variant: var(--foggy);              /* #767676 */
+  --on-surface: var(--hof); /* #484848 */
+  --on-surface-variant: var(--foggy); /* #767676 */
   --on-background: var(--hof);
 
   /* Primary extended */
-  --on-primary: oklch(1 0 0);                      /* white on Rausch */
+  --on-primary: oklch(1 0 0); /* white on Rausch */
   --primary-container: var(--rausch-100);
   --on-primary-container: var(--rausch-800);
 
@@ -272,21 +275,21 @@
   --on-secondary-container: var(--hof);
 
   /* Outline */
-  --outline: var(--quill);                         /* #B0B0B0 */
-  --outline-variant: var(--divider);               /* #EBEBEB */
+  --outline: var(--quill); /* #B0B0B0 */
+  --outline-variant: var(--divider); /* #EBEBEB */
 
   /* ========== Airbnb shadows (5 stops) ========== */
   --shadow-1: 0 1px 2px rgba(0, 0, 0, 0.04), 0 1px 1px rgba(0, 0, 0, 0.03);
-  --shadow-2: 0 2px 8px rgba(0, 0, 0, 0.08);                                    /* card rest */
-  --shadow-3: 0 6px 16px rgba(0, 0, 0, 0.12);                                   /* card hover */
-  --shadow-4: 0 16px 32px rgba(0, 0, 0, 0.15), 0 3px 8px rgba(0, 0, 0, 0.06);   /* modal */
-  --shadow-5: 0 28px 56px rgba(0, 0, 0, 0.22), 0 8px 16px rgba(0, 0, 0, 0.08);  /* sheet */
+  --shadow-2: 0 2px 8px rgba(0, 0, 0, 0.08); /* card rest */
+  --shadow-3: 0 6px 16px rgba(0, 0, 0, 0.12); /* card hover */
+  --shadow-4: 0 16px 32px rgba(0, 0, 0, 0.15), 0 3px 8px rgba(0, 0, 0, 0.06); /* modal */
+  --shadow-5: 0 28px 56px rgba(0, 0, 0, 0.22), 0 8px 16px rgba(0, 0, 0, 0.08); /* sheet */
   --shadow-brand: 0 6px 16px oklch(0.685 0.188 18 / 0.32);
 
   /* ========== Motion ========== */
-  --ease-standard:   cubic-bezier(0.2, 0, 0, 1);
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1);
   --ease-emphasized: cubic-bezier(0.3, 0, 0, 1);
-  --ease-out:        cubic-bezier(0, 0, 0, 1);
+  --ease-out: cubic-bezier(0, 0, 0, 1);
   --dur-1: 120ms;
   --dur-2: 200ms;
   --dur-3: 320ms;
@@ -298,34 +301,34 @@
 .dark {
   --background: oklch(0.164 0 0);
   --foreground: oklch(0.931 0 0);
-  --card: oklch(0.200 0 0);
+  --card: oklch(0.2 0 0);
   --card-foreground: oklch(0.931 0 0);
-  --popover: oklch(0.200 0 0);
+  --popover: oklch(0.2 0 0);
   --popover-foreground: oklch(0.931 0 0);
   --primary: var(--rausch-500);
   --primary-foreground: oklch(1 0 0);
-  --secondary: oklch(0.260 0 0);
+  --secondary: oklch(0.26 0 0);
   --secondary-foreground: oklch(0.931 0 0);
-  --muted: oklch(0.260 0 0);
-  --muted-foreground: oklch(0.700 0 0);
-  --accent: oklch(0.260 0 0);
+  --muted: oklch(0.26 0 0);
+  --muted-foreground: oklch(0.7 0 0);
+  --accent: oklch(0.26 0 0);
   --accent-foreground: oklch(0.931 0 0);
   --destructive: var(--rausch-700);
-  --border: oklch(0.280 0 0);
-  --input: oklch(0.280 0 0);
+  --border: oklch(0.28 0 0);
+  --input: oklch(0.28 0 0);
   --ring: var(--rausch-500);
 
   --surface: oklch(0.164 0 0);
-  --surface-container-lowest: oklch(0.200 0 0);
-  --surface-container-low: oklch(0.220 0 0);
-  --surface-container: oklch(0.240 0 0);
-  --surface-container-high: oklch(0.260 0 0);
-  --surface-container-highest: oklch(0.300 0 0);
+  --surface-container-lowest: oklch(0.2 0 0);
+  --surface-container-low: oklch(0.22 0 0);
+  --surface-container: oklch(0.24 0 0);
+  --surface-container-high: oklch(0.26 0 0);
+  --surface-container-highest: oklch(0.3 0 0);
   --on-surface: oklch(0.931 0 0);
-  --on-surface-variant: oklch(0.700 0 0);
+  --on-surface-variant: oklch(0.7 0 0);
   --on-background: oklch(0.931 0 0);
-  --outline: oklch(0.520 0 0);
-  --outline-variant: oklch(0.350 0 0);
+  --outline: oklch(0.52 0 0);
+  --outline-variant: oklch(0.35 0 0);
 }
 
 @layer base {
@@ -339,9 +342,13 @@
   textarea,
   [role='button'],
   [tabindex] {
-    transition: color 200ms var(--ease-standard), background-color 200ms var(--ease-standard),
-      border-color 200ms var(--ease-standard), opacity 200ms var(--ease-standard),
-      box-shadow 200ms var(--ease-standard), transform 120ms var(--ease-standard);
+    transition:
+      color 200ms var(--ease-standard),
+      background-color 200ms var(--ease-standard),
+      border-color 200ms var(--ease-standard),
+      opacity 200ms var(--ease-standard),
+      box-shadow 200ms var(--ease-standard),
+      transform 120ms var(--ease-standard);
   }
   body {
     @apply bg-background text-foreground font-sans antialiased;
@@ -350,6 +357,10 @@
   }
   html {
     @apply font-sans;
+    scroll-behavior: smooth;
+  }
+  section[id] {
+    scroll-margin-top: 6rem;
   }
   ::selection {
     background-color: var(--rausch-100);
@@ -383,4 +394,24 @@
     background-color: var(--surface-container-highest);
     border-radius: 10px;
   }
+}
+
+button:not(:disabled),
+[role='button']:not(:disabled),
+[data-slot='button'] {
+  cursor: pointer;
+  transition:
+    color 200ms var(--ease-standard),
+    background-color 200ms var(--ease-standard),
+    border-color 200ms var(--ease-standard),
+    opacity 200ms var(--ease-standard),
+    box-shadow 200ms var(--ease-standard),
+    scale 200ms cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+button:not(:disabled):not([aria-haspopup]):active,
+[role='button']:not(:disabled):not([aria-haspopup]):active,
+[data-slot='button']:not(:disabled):not([aria-haspopup]):active {
+  scale: 0.97;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 0 1px rgba(0, 0, 0, 0.08);
 }

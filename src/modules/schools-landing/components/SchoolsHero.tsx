@@ -2,10 +2,10 @@ import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
 import { CtaLink, Eyebrow, SectionContainer, StatusBadge, TrustBadge } from '@/modules/design-system';
 
-const ROWS: Array<{ key: 'a' | 'b' | 'c'; tone: 'brand' | 'featured' | 'trust' }> = [
-  { key: 'a', tone: 'brand' },
-  { key: 'b', tone: 'featured' },
-  { key: 'c', tone: 'trust' },
+const ROWS: Array<{ key: 'a' | 'b' | 'c'; tone: 'brand' | 'featured' | 'trust'; image: string }> = [
+  { key: 'a', tone: 'brand', image: 'https://images.unsplash.com/photo-1758518729459-235dcaadc611?auto=format&fit=crop&w=160&h=160&q=80' },
+  { key: 'b', tone: 'featured', image: 'https://images.unsplash.com/photo-1698047681452-08eba22d0c64?auto=format&fit=crop&w=160&h=160&q=80' },
+  { key: 'c', tone: 'trust', image: 'https://images.unsplash.com/photo-1651684215020-f7a5b6610f23?auto=format&fit=crop&w=160&h=160&q=80' },
 ];
 
 export async function SchoolsHero() {
@@ -68,7 +68,7 @@ export async function SchoolsHero() {
                 <li key={row.key} className='flex items-center gap-4 px-5 py-4'>
                   <div className='relative h-11 w-11 shrink-0 overflow-hidden rounded-pill border border-border bg-muted'>
                     <Image
-                      src={`https://picsum.photos/seed/schoolgo-inbox-${row.key}/160/160`}
+                      src={row.image}
                       alt=''
                       fill
                       sizes='44px'

@@ -48,12 +48,14 @@ export default async function NotFound() {
         <div className='mt-10 flex flex-col gap-3 sm:flex-row'>
           <Link
             href='/'
+            data-slot='button'
             className={buttonVariants({ className: 'h-auto rounded-xl px-8 py-3 text-sm font-semibold shadow-brand' })}
           >
             {t('goHome')}
           </Link>
           <Link
             href='/search'
+            data-slot='button'
             className={buttonVariants({ variant: 'outline', className: 'h-auto rounded-xl px-8 py-3 text-sm font-semibold' })}
           >
             <Search className='mr-2 h-4 w-4' />

@@ -42,8 +42,7 @@ export default async function AgentsLandingPage({
   setRequestLocale(locale);
 
   return (
-    <>
-      <AuthRedirectCheck />
+    <AuthRedirectCheck portal="agent">
       <MarketingHeader activePortal="agent" />
       <main>
         <AgentsHero />
@@ -56,6 +55,6 @@ export default async function AgentsLandingPage({
         <AgentsFinalCta />
       </main>
       <MarketingFooter activePortal="agent" />
-    </>
+    </AuthRedirectCheck>
   );
 }

@@ -15,7 +15,7 @@ const PLANS: Array<{
 export async function SchoolsPricing() {
   const t = await getTranslations('SchoolsPricing');
   return (
-    <section className='py-20 md:py-28'>
+    <section id='pricing' className='py-20 md:py-28'>
       <SectionContainer className='flex flex-col gap-10'>
         <SectionHeader
           eyebrow={t('eyebrow')}

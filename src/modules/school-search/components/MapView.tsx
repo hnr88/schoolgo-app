@@ -2,6 +2,7 @@
 
 import dynamic from 'next/dynamic';
 import { MOCK_SCHOOLS } from '@/modules/school-search/constants/school.constants';
+import { cn } from '@/lib/utils';
 
 const LeafletMap = dynamic(
   () =>
@@ -23,9 +24,13 @@ const LeafletMap = dynamic(
   },
 );
 
-export function MapView() {
+interface MapViewProps {
+  className?: string;
+}
+
+export function MapView({ className }: MapViewProps) {
   return (
-    <div className='h-full w-full overflow-hidden rounded-lg border border-border shadow-2'>
+    <div className={cn('h-full w-full overflow-hidden rounded-lg border border-border shadow-2', className)}>
       <LeafletMap schools={MOCK_SCHOOLS} />
     </div>
   );
