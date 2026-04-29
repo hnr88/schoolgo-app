@@ -3,10 +3,7 @@ import { Search } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { cn } from '@/lib/utils';
 import { useSchoolSearchStore } from '@/modules/school-search/stores/use-school-search-store';
-
-interface SearchBarProps {
-  className?: string;
-}
+import type { SearchBarProps } from '@/modules/school-search/types/component.types';
 
 export function SearchBar({ className }: SearchBarProps) {
   const t = useTranslations('SchoolSearch');

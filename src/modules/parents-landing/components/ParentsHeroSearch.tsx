@@ -2,16 +2,7 @@
 
 import { Search } from 'lucide-react';
 import { useRouter } from '@/i18n/navigation';
-
-interface ParentsHeroSearchProps {
-  ariaLabel: string;
-  buttonLabel: string;
-  fields: {
-    where: { label: string; value: string };
-    yearLevel: { label: string; value: string };
-    fees: { label: string; value: string };
-  };
-}
+import type { ParentsHeroSearchProps } from '@/modules/parents-landing/types/parents-landing.types';
 
 export function ParentsHeroSearch({
   ariaLabel,

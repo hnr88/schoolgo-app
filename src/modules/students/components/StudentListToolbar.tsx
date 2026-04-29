@@ -13,13 +13,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
-
-interface StudentListToolbarProps {
-  search: string;
-  onSearchChange: (value: string) => void;
-  status: string;
-  onStatusChange: (value: string) => void;
-}
+import type { StudentListToolbarProps } from '@/modules/students/types/component.types';
 
 export function StudentListToolbar({
   search,

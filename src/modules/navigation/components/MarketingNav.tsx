@@ -7,21 +7,7 @@ import { Link } from '@/i18n/navigation';
 import { Button } from '@/components/ui/button';
 import { LanguageSelector } from '@/modules/layout/components/LanguageSelector';
 import { cn } from '@/lib/utils';
-
-interface MarketingNavLabels {
-  findSchools: string;
-  howItWorks: string;
-  forAgents: string;
-  forSchools: string;
-  logIn: string;
-  getStarted: string;
-  openMenu: string;
-  closeMenu: string;
-}
-
-interface MarketingNavProps {
-  labels: MarketingNavLabels;
-}
+import type { MarketingNavProps } from '@/modules/navigation/types/navigation.types';
 
 export function MarketingNav({ labels }: MarketingNavProps) {
   const [scrolled, setScrolled] = useState(false);

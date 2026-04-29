@@ -1,13 +1,10 @@
 'use client';
 
 import { useLocale, useTranslations } from 'next-intl';
-import { portalUrl, type Portal } from '@/lib/portal-url';
+import { portalUrl } from '@/lib/portal-url';
 import { cn } from '@/lib/utils';
 import { PORTAL_TABS } from '@/modules/auth/constants/portal.constants';
-
-interface AuthPortalTabsProps {
-  activePortal: Portal;
-}
+import type { AuthPortalTabsProps } from '@/modules/auth/types/component.types';
 
 export function AuthPortalTabs({ activePortal }: AuthPortalTabsProps) {
   const t = useTranslations('MarketingHeader');

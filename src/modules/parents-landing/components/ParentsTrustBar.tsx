@@ -1,9 +1,7 @@
-import type { ComponentType, SVGProps } from 'react';
 import { Database, Lock, School, ShieldCheck } from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
 import { SectionContainer, SectionHeader } from '@/modules/design-system';
-
-type IconComponent = ComponentType<SVGProps<SVGSVGElement>>;
+import type { IconComponent } from '@/modules/design-system';
 
 const ITEMS: Array<{ key: 'cricos' | 'datagov' | 'acara' | 'esos'; icon: IconComponent }> = [
   { key: 'cricos', icon: ShieldCheck },

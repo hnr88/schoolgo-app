@@ -12,10 +12,7 @@ import { portalUrl, type Portal } from '@/lib/portal-url';
 import { getPortalDashboardPath } from '@/modules/auth/lib/get-portal-dashboard-path';
 import { PORTAL_DOT, PORTAL_TABS } from '@/modules/auth/constants/portal.constants';
 import { cn } from '@/lib/utils';
-
-interface PortalSwitcherProps {
-  activePortal: Portal;
-}
+import type { PortalSwitcherProps } from '@/modules/dashboard/types/dashboard.types';
 
 export function PortalSwitcher({ activePortal }: PortalSwitcherProps) {
   const t = useTranslations('MarketingHeader');

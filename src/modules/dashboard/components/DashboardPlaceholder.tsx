@@ -1,8 +1,5 @@
 import { getTranslations } from 'next-intl/server';
-
-interface DashboardPlaceholderProps {
-  titleKey: string;
-}
+import type { DashboardPlaceholderProps } from '@/modules/dashboard/types/dashboard.types';
 
 export async function DashboardPlaceholder({ titleKey }: DashboardPlaceholderProps) {
   const t = await getTranslations('Dashboard');

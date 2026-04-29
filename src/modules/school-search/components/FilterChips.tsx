@@ -4,10 +4,7 @@ import { Chip } from '@/modules/design-system';
 import { FILTER_CHIP_IDS } from '@/modules/school-search/constants/school.constants';
 import { useSchoolSearchStore } from '@/modules/school-search/stores/use-school-search-store';
 import { cn } from '@/lib/utils';
-
-interface FilterChipsProps {
-  className?: string;
-}
+import type { FilterChipsProps } from '@/modules/school-search/types/component.types';
 
 export function FilterChips({ className }: FilterChipsProps) {
   const t = useTranslations('SchoolSearch.chips');

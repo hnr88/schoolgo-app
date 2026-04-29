@@ -1,10 +1,5 @@
-import type { HTMLAttributes, ReactNode } from 'react';
 import { cn } from '@/lib/utils';
-
-interface SectionContainerProps extends HTMLAttributes<HTMLDivElement> {
-  size?: 'marketing' | 'wide';
-  children: ReactNode;
-}
+import type { SectionContainerProps } from '@/modules/design-system/types/design-system.types';
 
 export function SectionContainer({
   size = 'marketing',

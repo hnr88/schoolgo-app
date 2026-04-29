@@ -4,6 +4,7 @@ import { Link } from '@/i18n/navigation';
 import { routing } from '@/i18n/routing';
 import { portalUrl, type Portal } from '@/lib/portal-url';
 import { SectionContainer } from '@/modules/design-system';
+import type { MarketingFooterProps } from '@/modules/marketing-layout/types/footer.types';
 
 const COLUMNS = [
   {
@@ -46,10 +47,6 @@ const LANGUAGES: Array<{ code: string; label: string }> = [
   { code: 'vi', label: 'Tiếng Việt' },
   { code: 'th', label: 'ภาษาไทย' },
 ];
-
-interface MarketingFooterProps {
-  activePortal: Portal;
-}
 
 export async function MarketingFooter({ activePortal }: MarketingFooterProps) {
   const [t, locale] = await Promise.all([

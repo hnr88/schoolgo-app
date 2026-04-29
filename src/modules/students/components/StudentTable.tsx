@@ -12,12 +12,7 @@ import {
   TableRow,
 } from '@/components/ui/table';
 import { Skeleton } from '@/components/ui/skeleton';
-import type { Student } from '@/modules/students/types/student.types';
-
-interface StudentTableProps {
-  students: Student[];
-  isLoading: boolean;
-}
+import type { StudentTableProps } from '@/modules/students/types/component.types';
 
 const STATUS_VARIANT: Record<string, 'default' | 'secondary' | 'outline'> = {
   active: 'default',

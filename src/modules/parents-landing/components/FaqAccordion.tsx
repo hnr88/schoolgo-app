@@ -6,15 +6,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion';
-
-interface FaqItem {
-  question: string;
-  answer: string;
-}
-
-interface FaqAccordionProps {
-  items: FaqItem[];
-}
+import type { FaqAccordionProps } from '@/modules/parents-landing/types/parents-landing.types';
 
 export function FaqAccordion({ items }: FaqAccordionProps) {
   return (

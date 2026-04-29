@@ -6,11 +6,7 @@ import { Link } from '@/i18n/navigation';
 import type { Portal } from '@/lib/portal-url';
 import { useRedirectIfAuthenticated } from '@/modules/auth/hooks/use-redirect-if-authenticated';
 import { RegisterForm } from '@/modules/auth/components/RegisterForm';
-
-
-interface SignUpCardProps {
-  portal: Portal;
-}
+import type { SignUpCardProps } from '@/modules/auth/types/component.types';
 
 const PORTAL_ACCENT_BAR: Record<Portal, string> = {
   parent: 'bg-rausch-400',

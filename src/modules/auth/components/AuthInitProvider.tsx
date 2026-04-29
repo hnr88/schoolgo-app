@@ -1,12 +1,8 @@
 'use client';
 
-import type { ReactNode } from 'react';
 import { useAuthStore } from '@/modules/auth/stores/use-auth-store';
 import { Skeleton } from '@/components/ui/skeleton';
-
-interface AuthInitProviderProps {
-  children: ReactNode;
-}
+import type { AuthInitProviderProps } from '@/modules/auth/types/component.types';
 
 export function AuthInitProvider({ children }: AuthInitProviderProps) {
   const isHydrated = useAuthStore((s) => s.isHydrated);

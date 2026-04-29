@@ -1,10 +1,5 @@
-import type { HTMLAttributes, ReactNode } from 'react';
 import { cn } from '@/lib/utils';
-
-interface EyebrowProps extends HTMLAttributes<HTMLSpanElement> {
-  tone?: 'default' | 'brand' | 'trust' | 'featured';
-  children: ReactNode;
-}
+import type { EyebrowProps } from '@/modules/design-system/types/design-system.types';
 
 const TONE_CLASSES: Record<NonNullable<EyebrowProps['tone']>, string> = {
   default: 'text-foggy',

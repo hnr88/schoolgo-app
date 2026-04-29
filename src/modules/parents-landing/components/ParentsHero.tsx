@@ -13,7 +13,7 @@ export async function ParentsHero() {
   const t = await getTranslations('ParentsHero');
 
   return (
-    <section className='relative overflow-hidden pb-16 pt-28 md:pb-24 md:pt-36'>
+    <section className='relative overflow-hidden pb-16 pt-28 md:pb-24 md:pt-40'>
       <div className='pointer-events-none absolute inset-0' aria-hidden='true'>
         <div className='absolute -right-24 -top-24 h-[800px] w-[800px] rounded-full bg-rausch-100 opacity-30 blur-[140px]' />
         <div className='absolute -left-32 top-[60%] h-[600px] w-[600px] rounded-full bg-rausch-200 opacity-20 blur-[120px]' />

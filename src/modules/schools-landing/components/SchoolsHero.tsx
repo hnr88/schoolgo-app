@@ -12,7 +12,7 @@ export async function SchoolsHero() {
   const t = await getTranslations('SchoolsHero');
   const tc = await getTranslations('Common');
   return (
-    <section className='relative overflow-hidden bg-gradient-to-br from-arches-50/40 via-arches-50/10 to-transparent pt-28 pb-16 md:pt-36 md:pb-24'>
+    <section className='relative overflow-hidden bg-gradient-to-br from-arches-50/40 via-arches-50/10 to-transparent pt-28 pb-16 md:pt-40 md:pb-24'>
       <div className='pointer-events-none absolute inset-0' aria-hidden='true'>
         <div className='absolute -right-20 -top-20 h-[700px] w-[700px] rounded-full bg-arches-200 opacity-25 blur-[140px]' />
         <div className='absolute -left-32 bottom-[-10%] h-[500px] w-[500px] rounded-full bg-arches-100 opacity-30 blur-[120px]' />

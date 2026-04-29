@@ -1,9 +1,8 @@
-import { forwardRef, type InputHTMLAttributes } from 'react';
+import { forwardRef } from 'react';
 import { cn } from '@/lib/utils';
+import type { DsInputProps } from '@/modules/design-system/types/design-system.types';
 
-export interface DsInputProps extends InputHTMLAttributes<HTMLInputElement> {
-  error?: boolean;
-}
+export type { DsInputProps };
 
 export const DsInput = forwardRef<HTMLInputElement, DsInputProps>(
   function DsInput({ error, className, ...props }, ref) {

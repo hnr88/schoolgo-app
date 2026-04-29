@@ -7,6 +7,7 @@ import { useRouter, usePathname } from '@/i18n/navigation';
 import { routing } from '@/i18n/routing';
 import { env } from '@/lib/env';
 import { cn } from '@/lib/utils';
+import type { LanguageSelectorProps } from '@/modules/layout/types/layout.types';
 
 const LOCALE_LABELS: Record<string, string> = {
   en: 'English',
@@ -25,11 +26,6 @@ const LOCALE_CODES: Record<string, string> = {
   vi: 'VI',
   th: 'TH',
 };
-
-interface LanguageSelectorProps {
-  placement?: 'up' | 'down';
-  compact?: boolean;
-}
 
 export function LanguageSelector({ placement = 'up', compact = false }: LanguageSelectorProps = {}) {
   const locale = useLocale();

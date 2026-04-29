@@ -6,23 +6,7 @@ import { GraduationCap, Heart, Star } from 'lucide-react';
 import { Link } from '@/i18n/navigation';
 import { cn } from '@/lib/utils';
 import { TrustBadge } from '@/modules/design-system/components/TrustBadge';
-
-interface SchoolCardProps {
-  name: string;
-  location: string;
-  photoUrl?: string;
-  href?: string;
-  fee?: string;
-  feeSuffix?: string;
-  curriculum?: string;
-  boarding?: string;
-  rating?: string;
-  cricosLabel?: string;
-  topRatedLabel?: string;
-  shortlistAddLabel?: string;
-  shortlistRemoveLabel?: string;
-  className?: string;
-}
+import type { SchoolCardProps } from '@/modules/design-system/types/design-system.types';
 
 export function SchoolCard({
   name,

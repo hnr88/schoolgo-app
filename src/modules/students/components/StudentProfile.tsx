@@ -10,10 +10,7 @@ import { Skeleton } from '@/components/ui/skeleton';
 import { Separator } from '@/components/ui/separator';
 import { useStudent } from '@/modules/students/queries/use-student.query';
 import { StudentDocumentsTab } from '@/modules/students/components/StudentDocumentsTab';
-
-interface StudentProfileProps {
-  documentId: string;
-}
+import type { StudentProfileProps } from '@/modules/students/types/component.types';
 
 function InfoRow({ label, value }: { label: string; value: string | null | undefined }) {
   return (

@@ -5,10 +5,7 @@ import { useTranslations } from 'next-intl';
 import { Button } from '@/components/ui/button';
 import { Link } from '@/i18n/navigation';
 import { cn } from '@/lib/utils';
-
-interface AuthCloseButtonProps {
-  className?: string;
-}
+import type { AuthCloseButtonProps } from '@/modules/auth/types/component.types';
 
 export function AuthCloseButton({ className }: AuthCloseButtonProps) {
   const t = useTranslations('Auth');

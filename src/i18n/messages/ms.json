@@ -47,7 +47,46 @@
     "getStarted": "Mulakan",
     "openMenu": "Buka menu",
     "closeMenu": "Tutup menu",
-    "menu": "Menu"
+    "menu": "Menu",
+    "subNav": {
+      "explore": {
+        "label": "Terokai",
+        "items": {
+          "browseSchools": "Semak imbas sekolah",
+          "browseSchoolsDesc": "Cari semua sekolah Australia berdaftar",
+          "compareSchools": "Bandingkan sekolah",
+          "compareSchoolsDesc": "Perbandingan yuran, ujian & pengambilan serentak",
+          "scholarships": "Biasiswa",
+          "scholarshipsDesc": "Senarai biasiswa pelajar antarabangsa",
+          "englishTests": "Ujian Bahasa Inggeris",
+          "englishTestsDesc": "Panduan ujian AEAS, IELTS & ujian yang diterima"
+        }
+      },
+      "resources": {
+        "label": "Sumber",
+        "items": {
+          "admissionsGuide": "Panduan kemasukan",
+          "admissionsGuideDesc": "Proses enrolmen langkah demi langkah",
+          "boardingSchools": "Sekolah berasrama",
+          "boardingSchoolsDesc": "Perbandingan sekolah berasrama vs harian",
+          "visaRequirements": "Keperluan visa",
+          "visaRequirementsDesc": "Perkara penting visa pelajar 500"
+        }
+      },
+      "about": {
+        "label": "Tentang",
+        "items": {
+          "aboutSchoolGo": "Tentang SchoolGo",
+          "aboutSchoolGoDesc": "Misi dan cerita kami",
+          "contactUs": "Hubungi kami",
+          "contactUsDesc": "Berhubung dengan pasukan kami",
+          "forAgents": "Untuk ejen",
+          "forAgentsDesc": "Alat untuk ejen pendidikan",
+          "forSchools": "Untuk sekolah",
+          "forSchoolsDesc": "Kembangkan kohort antarabangsa anda"
+        }
+      }
+    }
   },
   "MarketingFooter": {
     "tagline": "Menghubungkan pemimpin masa depan dengan sekolah terbaik Australia — merentas negara, dalam tujuh bahasa.",

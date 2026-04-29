@@ -47,7 +47,46 @@
     "getStarted": "Get started",
     "openMenu": "Open menu",
     "closeMenu": "Close menu",
-    "menu": "Menu"
+    "menu": "Menu",
+    "subNav": {
+      "explore": {
+        "label": "Explore",
+        "items": {
+          "browseSchools": "Browse schools",
+          "browseSchoolsDesc": "Search all registered Australian schools",
+          "compareSchools": "Compare schools",
+          "compareSchoolsDesc": "Side-by-side fees, tests & intakes",
+          "scholarships": "Scholarships",
+          "scholarshipsDesc": "International student scholarship listings",
+          "englishTests": "English tests",
+          "englishTestsDesc": "AEAS, IELTS & accepted test guide"
+        }
+      },
+      "resources": {
+        "label": "Resources",
+        "items": {
+          "admissionsGuide": "Admissions guide",
+          "admissionsGuideDesc": "Step-by-step enrolment process",
+          "boardingSchools": "Boarding schools",
+          "boardingSchoolsDesc": "Boarding vs day school comparison",
+          "visaRequirements": "Visa requirements",
+          "visaRequirementsDesc": "Student visa 500 essentials"
+        }
+      },
+      "about": {
+        "label": "About",
+        "items": {
+          "aboutSchoolGo": "About SchoolGo",
+          "aboutSchoolGoDesc": "Our mission and story",
+          "contactUs": "Contact us",
+          "contactUsDesc": "Get in touch with our team",
+          "forAgents": "For agents",
+          "forAgentsDesc": "Tools for education agents",
+          "forSchools": "For schools",
+          "forSchoolsDesc": "Grow your international cohort"
+        }
+      }
+    }
   },
   "MarketingFooter": {
     "tagline": "The right school. The right university. The right career. Connecting families across Asia-Pacific with Australia's best schools.",

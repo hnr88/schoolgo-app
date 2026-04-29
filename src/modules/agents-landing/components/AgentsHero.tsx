@@ -11,7 +11,7 @@ export async function AgentsHero() {
   const stats = computeSchoolStats(schools);
 
   return (
-    <section className='relative overflow-hidden pt-28 pb-20 md:pt-36 md:pb-28'>
+    <section className='relative overflow-hidden pt-28 pb-20 md:pt-40 md:pb-28'>
       <div className='pointer-events-none absolute inset-0' aria-hidden='true'>
         <div className='absolute -right-40 -top-20 h-[600px] w-[600px] rounded-full bg-rausch-100 opacity-40 blur-[120px]' />
         <div className='absolute -left-20 bottom-0 h-[400px] w-[400px] rounded-full bg-babu-50 opacity-50 blur-[100px]' />

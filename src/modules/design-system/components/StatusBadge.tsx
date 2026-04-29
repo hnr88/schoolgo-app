@@ -1,6 +1,6 @@
-import type { ReactNode } from 'react';
-import { cva, type VariantProps } from 'class-variance-authority';
+import { cva } from 'class-variance-authority';
 import { cn } from '@/lib/utils';
+import type { StatusBadgeProps } from '@/modules/design-system/types/design-system.types';
 
 const statusBadgeStyles = cva(
   'inline-flex items-center gap-1 rounded-pill text-[11px] font-semibold tracking-wide',
@@ -24,11 +24,6 @@ const statusBadgeStyles = cva(
     },
   },
 );
-
-interface StatusBadgeProps extends VariantProps<typeof statusBadgeStyles> {
-  children: ReactNode;
-  className?: string;
-}
 
 export function StatusBadge({
   tone,

@@ -47,7 +47,46 @@
     "getStarted": "เริ่มต้นใช้งาน",
     "openMenu": "เปิดเมนู",
     "closeMenu": "ปิดเมนู",
-    "menu": "Menu"
+    "menu": "Menu",
+    "subNav": {
+      "explore": {
+        "label": "สำรวจ",
+        "items": {
+          "browseSchools": "ดูโรงเรียนทั้งหมด",
+          "browseSchoolsDesc": "ค้นหาโรงเรียนออสเตรเลียที่จดทะเบียนทุกแห่ง",
+          "compareSchools": "เปรียบเทียบโรงเรียน",
+          "compareSchoolsDesc": "เปรียบเทียบค่าเล่าเรียน การสอบ และรอบรับสมัครแบบเคียงกัน",
+          "scholarships": "ทุนการศึกษา",
+          "scholarshipsDesc": "รายชื่อทุนการศึกษาสำหรับนักเรียนต่างชาติ",
+          "englishTests": "การสอบภาษาอังกฤษ",
+          "englishTestsDesc": "คู่มือ AEAS IELTS และการสอบที่ได้รับการรับรอง"
+        }
+      },
+      "resources": {
+        "label": "แหล่งข้อมูล",
+        "items": {
+          "admissionsGuide": "คู่มือการรับสมัคร",
+          "admissionsGuideDesc": "ขั้นตอนการลงทะเบียนทีละขั้นตอน",
+          "boardingSchools": "โรงเรียนประจำ",
+          "boardingSchoolsDesc": "เปรียบเทียบโรงเรียนประจำกับโรงเรียนไป-กลับ",
+          "visaRequirements": "ข้อกำหนดวีซ่า",
+          "visaRequirementsDesc": "สาระสำคัญของวีซ่านักเรียน 500"
+        }
+      },
+      "about": {
+        "label": "เกี่ยวกับ",
+        "items": {
+          "aboutSchoolGo": "เกี่ยวกับ SchoolGo",
+          "aboutSchoolGoDesc": "พันธกิจและเรื่องราวของเรา",
+          "contactUs": "ติดต่อเรา",
+          "contactUsDesc": "ติดต่อทีมงานของเรา",
+          "forAgents": "สำหรับตัวแทน",
+          "forAgentsDesc": "เครื่องมือสำหรับตัวแทนการศึกษา",
+          "forSchools": "สำหรับโรงเรียน",
+          "forSchoolsDesc": "ขยายกลุ่มนักเรียนต่างชาติของคุณ"
+        }
+      }
+    }
   },
   "MarketingFooter": {
     "tagline": "เชื่อมต่อผู้นำในอนาคตกับโรงเรียนที่ดีที่สุดของออสเตรเลีย — ทั่วประเทศ ในเจ็ดภาษา",

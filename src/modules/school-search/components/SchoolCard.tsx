@@ -1,6 +1,6 @@
 import { getTranslations } from 'next-intl/server';
 import { SchoolCard as DsSchoolCard } from '@/modules/design-system';
-import type { School } from '@/modules/school-search/types/school.types';
+import type { SearchSchoolCardProps } from '@/modules/school-search/types/component.types';
 
 const SCHOOL_IMAGES = [
   'https://images.unsplash.com/photo-1603437119287-4a3732b685f9?auto=format&fit=crop&w=480&h=360&q=80',
@@ -10,10 +10,6 @@ const SCHOOL_IMAGES = [
   'https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=480&h=360&q=80',
   'https://images.unsplash.com/photo-1751510397614-e289eb4ce57a?auto=format&fit=crop&w=480&h=360&q=80',
 ];
-
-interface SearchSchoolCardProps {
-  school: School;
-}
 
 export async function SearchSchoolCard({ school }: SearchSchoolCardProps) {
   const t = await getTranslations('SchoolSearch.card');

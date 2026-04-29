@@ -1,16 +1,5 @@
-import type { ComponentType, SVGProps, ReactNode } from 'react';
 import { cn } from '@/lib/utils';
-
-type IconComponent = ComponentType<SVGProps<SVGSVGElement>>;
-
-interface FeatureCardProps {
-  icon: IconComponent;
-  title: ReactNode;
-  description: ReactNode;
-  iconTone?: 'brand' | 'trust';
-  size?: 'sm' | 'md';
-  className?: string;
-}
+import type { FeatureCardProps } from '@/modules/design-system/types/design-system.types';
 
 export function FeatureCard({
   icon: Icon,

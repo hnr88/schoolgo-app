@@ -1,8 +1,8 @@
-import type { ReactNode } from 'react';
 import { ArrowRight } from 'lucide-react';
-import { cva, type VariantProps } from 'class-variance-authority';
+import { cva } from 'class-variance-authority';
 import { Link } from '@/i18n/navigation';
 import { cn } from '@/lib/utils';
+import type { CtaLinkProps } from '@/modules/design-system/types/design-system.types';
 
 const ctaLinkStyles = cva(
   'inline-flex items-center gap-2 rounded-pill font-semibold no-underline',
@@ -28,14 +28,6 @@ const ctaLinkStyles = cva(
     },
   },
 );
-
-interface CtaLinkProps extends VariantProps<typeof ctaLinkStyles> {
-  href: string;
-  arrow?: boolean;
-  justify?: boolean;
-  children: ReactNode;
-  className?: string;
-}
 
 export function CtaLink({
   href,
