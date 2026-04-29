@@ -1,4 +1,3 @@
-import { getTranslations } from 'next-intl/server';
 import { MarketingFooter, MarketingHeader } from '@/modules/marketing-layout';
 import type { Portal } from '@/lib/portal-url';
 import { FilterSidebar } from '@/modules/school-search/components/FilterSidebar';
@@ -12,14 +11,16 @@ import { SearchLoginPrompt } from '@/modules/school-search/components/SearchLogi
 
 interface SearchPageContentProps {
   activePortal: Portal;
+  title: string;
 }
 
-export async function SearchPageContent({ activePortal }: SearchPageContentProps) {
-  const t = await getTranslations('Metadata');
-
+export async function SearchPageContent({
+  activePortal,
+  title,
+}: SearchPageContentProps) {
   return (
     <>
-      <h1 className='sr-only'>{t('title')}</h1>
+      <h1 className='sr-only'>{title}</h1>
       <MarketingHeader activePortal={activePortal} />
 
       <SearchLayout>

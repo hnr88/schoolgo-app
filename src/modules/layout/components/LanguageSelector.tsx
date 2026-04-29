@@ -5,6 +5,7 @@ import { LanguageIcon, CheckIcon, ChevronDownIcon } from '@heroicons/react/24/ou
 import { useLocale } from 'next-intl';
 import { useRouter, usePathname } from '@/i18n/navigation';
 import { routing } from '@/i18n/routing';
+import { env } from '@/lib/env';
 import { cn } from '@/lib/utils';
 
 const LOCALE_LABELS: Record<string, string> = {
@@ -50,12 +51,16 @@ export function LanguageSelector({ placement = 'up', compact = false }: Language
   function handleSelect(loc: string) {
     setOpen(false);
     if (loc !== locale) {
-      const baseDomain = process.env.NEXT_PUBLIC_BASE_DOMAIN ?? '';
+      const baseDomain = env.NEXT_PUBLIC_BASE_DOMAIN ?? '';
       const cookieDomain = baseDomain.split(':')[0];
       const domainAttr = cookieDomain && cookieDomain !== 'localhost'
         ? `; domain=.${cookieDomain}`
         : '';
-      document.cookie = `NEXT_LOCALE=${loc}; path=/; max-age=${365 * 24 * 60 * 60}; samesite=lax${domainAttr}`;
+      Reflect.set(
+        document,
+        'cookie',
+        `NEXT_LOCALE=${loc}; path=/; max-age=${365 * 24 * 60 * 60}; samesite=lax${domainAttr}`,
+      );
       router.replace(pathname, { locale: loc });
     }
   }

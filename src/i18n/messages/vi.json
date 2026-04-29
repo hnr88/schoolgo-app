@@ -1091,5 +1091,19 @@
     "docStatus_active": "[TODO: vi] Active",
     "docStatus_replaced": "[TODO: vi] Replaced",
     "docStatus_archived": "[TODO: vi] Archived"
+  },
+  "SearchMetadata": {
+    "title": "Tìm kiếm trường — SchoolGo",
+    "description": "Tìm kiếm và so sánh các trường học Úc. Lọc theo vị trí, học phí, chương trình giảng dạy, nội trú và nhiều hơn nữa.",
+    "ogDescription": "Tìm kiếm và so sánh các trường học Úc trên SchoolGo.",
+    "parentTitle": "Tìm Trường Úc cho Con Bạn — SchoolGo",
+    "parentDescription": "Tìm kiếm và so sánh các trường Úc theo vị trí, học phí, chương trình, nội trú và hỗ trợ học sinh.",
+    "parentOgDescription": "So sánh các trường Úc và tìm lựa chọn phù hợp cho con bạn trên SchoolGo.",
+    "schoolTitle": "Khám phá Danh sách Trường Úc — SchoolGo",
+    "schoolDescription": "Xem danh sách trường Úc, vị trí, chương trình, học phí và thông tin hỗ trợ học sinh trên SchoolGo.",
+    "schoolOgDescription": "Khám phá danh sách trường Úc và so sánh chương trình trên SchoolGo.",
+    "agentTitle": "Tìm Trường Úc cho Học sinh — SchoolGo",
+    "agentDescription": "Tìm trường Úc cho học sinh quốc tế và so sánh vị trí, học phí, chương trình, nội trú và hỗ trợ.",
+    "agentOgDescription": "Tìm kiếm và so sánh các trường Úc cho học sinh của bạn trên SchoolGo."
   }
 }

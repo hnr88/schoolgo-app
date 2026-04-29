@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { getAlternateLanguages, getCanonicalPath } from '@/lib/seo';
 import { MarketingFooter, MarketingHeader } from '@/modules/marketing-layout';
 import { AuthRedirectCheck } from '@/modules/auth/components/AuthRedirectCheck';
 import {
@@ -26,7 +27,10 @@ export async function generateMetadata({
   return {
     title: t('title'),
     description: t('description'),
-    alternates: { canonical: '/' },
+    alternates: {
+      canonical: getCanonicalPath('/parent', locale),
+      languages: getAlternateLanguages('/parent'),
+    },
     openGraph: {
       title: t('title'),
       description: t('ogDescription'),

@@ -1,7 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { routing } from '@/i18n/routing';
+import { env } from '@/lib/env';
+import { isNonIndexableHost } from '@/lib/seo';
 
-const LAUNCHING_SOON = process.env.NEXT_PUBLIC_LAUNCHING_SOON === 'true';
+const LAUNCHING_SOON = env.NEXT_PUBLIC_LAUNCHING_SOON === 'true';
 
 function extractHost(url: string | undefined): string | null {
   if (!url) return null;
@@ -12,13 +14,20 @@ function extractHost(url: string | undefined): string | null {
   }
 }
 
-const agentHost = extractHost(process.env.NEXT_PUBLIC_AGENT_URL);
-const schoolHost = extractHost(process.env.NEXT_PUBLIC_SCHOOL_URL);
+const agentHost = extractHost(env.NEXT_PUBLIC_AGENT_URL);
+const schoolHost = extractHost(env.NEXT_PUBLIC_SCHOOL_URL);
 
 function resolvePortal(hostname: string): 'agent' | 'school' | 'parent' {
   if (agentHost && hostname === agentHost) return 'agent';
   if (schoolHost && hostname === schoolHost) return 'school';
   return 'parent';
+}
+
+function withRobotsHeader(response: NextResponse, hostname: string): NextResponse {
+  if (isNonIndexableHost(hostname)) {
+    response.headers.set('X-Robots-Tag', 'noindex, nofollow, noarchive');
+  }
+  return response;
 }
 
 const COUNTRY_TO_LOCALE: Record<string, string> = {
@@ -72,7 +81,7 @@ export function proxy(request: NextRequest) {
     const segments = pathname.split('/').filter(Boolean);
 
     if (segments.includes('launching-soon')) {
-      return NextResponse.next();
+      return withRobotsHeader(NextResponse.next(), hostname);
     }
 
     const maybeLocale = segments[0];
@@ -81,7 +90,7 @@ export function proxy(request: NextRequest) {
       routing.locales.includes(maybeLocale as (typeof routing.locales)[number]);
     const locale = hasLocale ? maybeLocale : routing.defaultLocale;
     url.pathname = `/${locale}/launching-soon`;
-    return NextResponse.redirect(url);
+    return withRobotsHeader(NextResponse.redirect(url), hostname);
   }
 
   const url = request.nextUrl.clone();
@@ -98,7 +107,7 @@ export function proxy(request: NextRequest) {
 
     if (preferredLocale !== routing.defaultLocale) {
       url.pathname = `/${preferredLocale}${pathname === '/' ? '' : pathname}`;
-      return NextResponse.redirect(url);
+      return withRobotsHeader(NextResponse.redirect(url), hostname);
     }
   }
 
@@ -109,14 +118,14 @@ export function proxy(request: NextRequest) {
 
   if (loggedInPortal && isRootPath && loggedInPortal === portal) {
     url.pathname = `/${locale}/dashboard`;
-    return NextResponse.redirect(url);
+    return withRobotsHeader(NextResponse.redirect(url), hostname);
   }
 
   const pathAfterLocale = hasLocale ? segments.slice(1).join('/') : pathname.replace(/^\//, '');
   const isSearchPath = pathAfterLocale === 'search' || pathAfterLocale === `${portal}/search`;
   if (loggedInPortal && loggedInPortal === portal && isSearchPath) {
     url.pathname = `/${locale}/dashboard/search`;
-    return NextResponse.redirect(url);
+    return withRobotsHeader(NextResponse.redirect(url), hostname);
   }
 
   if (hasLocale) {
@@ -130,7 +139,7 @@ export function proxy(request: NextRequest) {
     url.pathname = `/${locale}/${portal}${cleanPath}`;
   }
 
-  return NextResponse.rewrite(url);
+  return withRobotsHeader(NextResponse.rewrite(url), hostname);
 }
 
 export const config = {
