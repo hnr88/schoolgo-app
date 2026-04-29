@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import {
@@ -33,12 +33,13 @@ export function DashboardSidebar() {
   const userType = useAuthStore((s) => s.userType);
 
   const isSearchRoute = pathname.includes('/dashboard/search');
-  const [manualCollapse, setManualCollapse] = useState<boolean | null>(null);
-  const isCollapsed = manualCollapse ?? isSearchRoute;
-
-  useEffect(() => {
-    setManualCollapse(null);
-  }, [pathname]);
+  const [manualCollapse, setManualCollapse] = useState<{
+    pathname: string;
+    value: boolean;
+  } | null>(null);
+  const manualCollapseValue =
+    manualCollapse?.pathname === pathname ? manualCollapse.value : null;
+  const isCollapsed = manualCollapseValue ?? isSearchRoute;
 
   return (
     <aside
@@ -85,7 +86,12 @@ export function DashboardSidebar() {
       <div className={cn('py-3', isCollapsed ? 'px-2' : 'px-3')}>
         <button
           type='button'
-          onClick={() => setManualCollapse((prev) => !(prev ?? isSearchRoute))}
+          onClick={() =>
+            setManualCollapse({
+              pathname,
+              value: !(manualCollapseValue ?? isSearchRoute),
+            })
+          }
           className={cn(
             'flex w-full items-center gap-3 rounded-xl text-sm font-medium text-foggy transition-colors hover:bg-muted hover:text-ink-900',
             isCollapsed ? 'justify-center p-3' : 'px-4 py-3',

@@ -67,6 +67,14 @@ const SCHOLARSHIPS_MAP: Record<string, string | null> = {
   NT: null,
 };
 
+function boardingBedsForSchool(school: SchoolRecord): number {
+  const seed = Array.from(school.slug).reduce(
+    (total, char) => total + char.charCodeAt(0),
+    0,
+  );
+  return 280 + (seed % 60);
+}
+
 export async function ParentsComparison() {
   const t = await getTranslations('ParentsComparison');
   const schools = await loadSchools();
@@ -105,7 +113,7 @@ export async function ParentsComparison() {
         const val = s.boardingAvailable?.toLowerCase();
         if (val === 'yes' || val?.includes('yes')) {
           return {
-            text: `Yes · ${280 + Math.floor(Math.random() * 60)} beds`,
+            text: `Yes · ${boardingBedsForSchool(s)} beds`,
             highlight: true,
           };
         }

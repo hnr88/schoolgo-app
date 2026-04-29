@@ -1091,5 +1091,19 @@
     "docStatus_active": "[TODO: zh] Active",
     "docStatus_replaced": "[TODO: zh] Replaced",
     "docStatus_archived": "[TODO: zh] Archived"
+  },
+  "SearchMetadata": {
+    "title": "搜索学校 — SchoolGo",
+    "description": "搜索和比较澳大利亚学校。按地区、学费、课程、寄宿等条件筛选。",
+    "ogDescription": "在SchoolGo上搜索和比较澳大利亚学校。",
+    "parentTitle": "为孩子搜索澳大利亚学校 — SchoolGo",
+    "parentDescription": "按地点、学费、课程、寄宿和学生支持搜索并比较澳大利亚学校。",
+    "parentOgDescription": "在SchoolGo比较澳大利亚学校，为孩子找到合适选择。",
+    "schoolTitle": "浏览澳大利亚学校列表 — SchoolGo",
+    "schoolDescription": "在SchoolGo查看澳大利亚学校列表、地点、课程、学费和学生支持信息。",
+    "schoolOgDescription": "在SchoolGo浏览澳大利亚学校列表并比较课程。",
+    "agentTitle": "为学生搜索澳大利亚学校 — SchoolGo",
+    "agentDescription": "为国际学生查找澳大利亚学校，并比较地点、学费、课程、寄宿和支持服务。",
+    "agentOgDescription": "在SchoolGo为学生搜索并比较澳大利亚学校。"
   }
 }

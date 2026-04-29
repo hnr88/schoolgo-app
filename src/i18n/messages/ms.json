@@ -1091,5 +1091,19 @@
     "docStatus_active": "[TODO: ms] Active",
     "docStatus_replaced": "[TODO: ms] Replaced",
     "docStatus_archived": "[TODO: ms] Archived"
+  },
+  "SearchMetadata": {
+    "title": "Cari Sekolah — SchoolGo",
+    "description": "Cari dan bandingkan sekolah Australia. Tapis mengikut lokasi, yuran, kurikulum, asrama dan lain-lain.",
+    "ogDescription": "Cari dan bandingkan sekolah Australia di SchoolGo.",
+    "parentTitle": "Cari Sekolah Australia untuk Anak Anda — SchoolGo",
+    "parentDescription": "Cari dan bandingkan sekolah Australia mengikut lokasi, yuran, kurikulum, asrama dan sokongan pelajar.",
+    "parentOgDescription": "Bandingkan sekolah Australia dan cari pilihan yang sesuai untuk anak anda di SchoolGo.",
+    "schoolTitle": "Teroka Senarai Sekolah Australia — SchoolGo",
+    "schoolDescription": "Semak senarai sekolah Australia, lokasi, program, yuran dan maklumat sokongan pelajar di SchoolGo.",
+    "schoolOgDescription": "Teroka senarai sekolah Australia dan bandingkan program di SchoolGo.",
+    "agentTitle": "Cari Sekolah Australia untuk Pelajar — SchoolGo",
+    "agentDescription": "Cari sekolah Australia untuk pelajar antarabangsa dan bandingkan lokasi, yuran, program, asrama dan sokongan.",
+    "agentOgDescription": "Cari dan bandingkan sekolah Australia untuk pelajar anda di SchoolGo."
   }
 }

@@ -1091,5 +1091,19 @@
     "docStatus_active": "[TODO: ko] Active",
     "docStatus_replaced": "[TODO: ko] Replaced",
     "docStatus_archived": "[TODO: ko] Archived"
+  },
+  "SearchMetadata": {
+    "title": "학교 검색 — SchoolGo",
+    "description": "호주 학교를 검색하고 비교하세요. 위치, 학비, 커리큘럼, 기숙사 등으로 필터링하세요.",
+    "ogDescription": "SchoolGo에서 호주 학교를 검색하고 비교하세요.",
+    "parentTitle": "자녀를 위한 호주 학교 검색 — SchoolGo",
+    "parentDescription": "위치, 학비, 커리큘럼, 기숙사, 학생 지원 기준으로 호주 학교를 찾고 비교하세요.",
+    "parentOgDescription": "SchoolGo에서 자녀에게 맞는 호주 학교를 비교하고 찾아보세요.",
+    "schoolTitle": "호주 학교 목록 살펴보기 — SchoolGo",
+    "schoolDescription": "SchoolGo에서 호주 학교 목록, 위치, 프로그램, 학비, 학생 지원 정보를 확인하세요.",
+    "schoolOgDescription": "SchoolGo에서 호주 학교 목록과 프로그램을 비교하세요.",
+    "agentTitle": "학생을 위한 호주 학교 검색 — SchoolGo",
+    "agentDescription": "유학생에게 맞는 호주 학교를 찾고 위치, 학비, 프로그램, 기숙사, 지원을 비교하세요.",
+    "agentOgDescription": "SchoolGo에서 학생을 위한 호주 학교를 검색하고 비교하세요."
   }
 }

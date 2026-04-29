@@ -1087,5 +1087,19 @@
       "schools": "For Schools",
       "agents": "For Agents"
     }
+  },
+  "SearchMetadata": {
+    "title": "Search Schools — SchoolGo",
+    "description": "Search and compare Australian schools. Filter by location, fees, curriculum, boarding, and more.",
+    "ogDescription": "Search and compare Australian schools on SchoolGo.",
+    "parentTitle": "Search Australian Schools for Your Child — SchoolGo",
+    "parentDescription": "Find and compare Australian schools by location, fees, curriculum, boarding, and student support.",
+    "parentOgDescription": "Compare Australian schools and find the right fit for your child on SchoolGo.",
+    "schoolTitle": "Explore Australian School Listings — SchoolGo",
+    "schoolDescription": "Review Australian school listings, locations, programs, fees, and student support details on SchoolGo.",
+    "schoolOgDescription": "Explore Australian school listings and compare programs on SchoolGo.",
+    "agentTitle": "Search Australian Schools for Students — SchoolGo",
+    "agentDescription": "Find Australian schools for international students and compare location, fees, programs, boarding, and support.",
+    "agentOgDescription": "Search and compare Australian schools for your students on SchoolGo."
   }
 }
