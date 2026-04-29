@@ -47,7 +47,46 @@
     "getStarted": "시작하기",
     "openMenu": "메뉴 열기",
     "closeMenu": "메뉴 닫기",
-    "menu": "Menu"
+    "menu": "Menu",
+    "subNav": {
+      "explore": {
+        "label": "탐색",
+        "items": {
+          "browseSchools": "학교 둘러보기",
+          "browseSchoolsDesc": "모든 등록 호주 학교 검색",
+          "compareSchools": "학교 비교",
+          "compareSchoolsDesc": "학비·시험·입학 일정 나란히 비교",
+          "scholarships": "장학금",
+          "scholarshipsDesc": "유학생 장학금 목록",
+          "englishTests": "영어 시험",
+          "englishTestsDesc": "AEAS, IELTS 및 인정 시험 안내"
+        }
+      },
+      "resources": {
+        "label": "자료",
+        "items": {
+          "admissionsGuide": "입학 가이드",
+          "admissionsGuideDesc": "단계별 입학 과정 안내",
+          "boardingSchools": "기숙학교",
+          "boardingSchoolsDesc": "기숙 vs 통학 비교",
+          "visaRequirements": "비자 요건",
+          "visaRequirementsDesc": "학생 비자 500 필수 사항"
+        }
+      },
+      "about": {
+        "label": "소개",
+        "items": {
+          "aboutSchoolGo": "SchoolGo 소개",
+          "aboutSchoolGoDesc": "우리의 사명과 이야기",
+          "contactUs": "문의하기",
+          "contactUsDesc": "우리 팀에게 연락하기",
+          "forAgents": "유학원 안내",
+          "forAgentsDesc": "교육 에이전트 전용 도구",
+          "forSchools": "학교 안내",
+          "forSchoolsDesc": "국제 학생 모집 확대"
+        }
+      }
+    }
   },
   "MarketingFooter": {
     "tagline": "미래의 리더들을 호주 최고의 학교와 연결합니다 — 전국, 7개 언어로.",

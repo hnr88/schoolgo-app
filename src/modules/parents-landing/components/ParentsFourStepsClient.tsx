@@ -4,25 +4,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 import { BadgeCheck, LayoutGrid, ListChecks, Search } from 'lucide-react';
 import { cn } from '@/lib/utils';
-
-interface StepData {
-  key: string;
-  stepLabel: string;
-  title: string;
-  description: string;
-  comingSoon?: string;
-  visual: { title: string; subtitle: string };
-}
-
-interface ParentsFourStepsClientProps {
-  steps: StepData[];
-  ctaBrowseLabel: string;
-  ctaLearnLabel: string;
-  ctaBrowseHref: string;
-  ctaLearnHref: string;
-  badgeTitle: string;
-  badgeSubtitle: string;
-}
+import type { ParentsFourStepsClientProps } from '@/modules/parents-landing/types/parents-landing.types';
 
 const ICONS = [Search, LayoutGrid, ListChecks, BadgeCheck];
 const STEP_IMAGES = [

@@ -47,7 +47,46 @@
     "getStarted": "立即开始",
     "openMenu": "打开菜单",
     "closeMenu": "关闭菜单",
-    "menu": "Menu"
+    "menu": "Menu",
+    "subNav": {
+      "explore": {
+        "label": "探索",
+        "items": {
+          "browseSchools": "浏览学校",
+          "browseSchoolsDesc": "搜索所有注册的澳大利亚学校",
+          "compareSchools": "比较学校",
+          "compareSchoolsDesc": "并排对比学费、考试及入学时间",
+          "scholarships": "奖学金",
+          "scholarshipsDesc": "国际学生奖学金列表",
+          "englishTests": "英语考试",
+          "englishTestsDesc": "AEAS、IELTS 及认可考试指南"
+        }
+      },
+      "resources": {
+        "label": "资源",
+        "items": {
+          "admissionsGuide": "招生指南",
+          "admissionsGuideDesc": "逐步入学流程说明",
+          "boardingSchools": "寄宿学校",
+          "boardingSchoolsDesc": "寄宿与走读学校比较",
+          "visaRequirements": "签证要求",
+          "visaRequirementsDesc": "学生签证 500 核心要点"
+        }
+      },
+      "about": {
+        "label": "关于",
+        "items": {
+          "aboutSchoolGo": "关于 SchoolGo",
+          "aboutSchoolGoDesc": "我们的使命与故事",
+          "contactUs": "联系我们",
+          "contactUsDesc": "与我们的团队取得联系",
+          "forAgents": "面向中介",
+          "forAgentsDesc": "教育中介专属工具",
+          "forSchools": "面向学校",
+          "forSchoolsDesc": "扩大您的国际生群体"
+        }
+      }
+    }
   },
   "MarketingFooter": {
     "tagline": "连接未来领袖与澳大利亚最优秀的学校——横跨全境，支持七种语言。",

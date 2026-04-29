@@ -1,12 +1,9 @@
 'use client';
 
-import { forwardRef, type InputHTMLAttributes } from 'react';
+import { forwardRef } from 'react';
 import { Search } from 'lucide-react';
 import { cn } from '@/lib/utils';
-
-interface SearchInputProps extends InputHTMLAttributes<HTMLInputElement> {
-  onSearch?: (value: string) => void;
-}
+import type { SearchInputProps } from '@/modules/design-system/types/design-system.types';
 
 export const SearchInput = forwardRef<HTMLInputElement, SearchInputProps>(
   function SearchInput({ className, onSearch, ...props }, ref) {

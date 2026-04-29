@@ -4,11 +4,7 @@ import { GraduationCap, Briefcase, School } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { cn } from '@/lib/utils';
 import type { Portal } from '@/lib/portal-url';
-
-interface UserTypeSelectorProps {
-  value: Portal;
-  onChange: (type: Portal) => void;
-}
+import type { UserTypeSelectorProps } from '@/modules/auth/types/component.types';
 
 const USER_TYPES: Array<{ type: Portal; icon: typeof GraduationCap }> = [
   { type: 'parent', icon: GraduationCap },

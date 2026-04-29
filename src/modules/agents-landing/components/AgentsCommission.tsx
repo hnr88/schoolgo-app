@@ -1,9 +1,7 @@
-import type { ComponentType, SVGProps } from 'react';
 import { FileSearch, Handshake, PiggyBank } from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
 import { SectionContainer, SectionHeader } from '@/modules/design-system';
-
-type IconComponent = ComponentType<SVGProps<SVGSVGElement>>;
+import type { IconComponent } from '@/modules/design-system';
 
 const BULLETS: Array<{ key: 'zero' | 'direct' | 'audit'; icon: IconComponent }> = [
   { key: 'zero', icon: PiggyBank },

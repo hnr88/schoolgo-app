@@ -1,9 +1,7 @@
-import type { ComponentType, SVGProps } from 'react';
 import { CheckCircle2, Inbox, ListChecks, School } from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
 import { SectionContainer, SectionHeader, StatusBadge } from '@/modules/design-system';
-
-type IconComponent = ComponentType<SVGProps<SVGSVGElement>>;
+import type { IconComponent } from '@/modules/design-system';
 
 const STEPS: Array<{ key: 'receive' | 'review' | 'decide' | 'onboard'; icon: IconComponent; comingSoon?: true }> = [
   { key: 'receive', icon: Inbox, comingSoon: true },

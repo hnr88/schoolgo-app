@@ -1,14 +1,8 @@
 'use client';
 
-import type { ReactNode } from 'react';
-import type { Portal } from '@/lib/portal-url';
 import { useRedirectIfAuthenticated } from '@/modules/auth/hooks/use-redirect-if-authenticated';
 import { useAuthStore } from '@/modules/auth/stores/use-auth-store';
-
-interface AuthRedirectCheckProps {
-  portal?: Portal;
-  children?: ReactNode;
-}
+import type { AuthRedirectCheckProps } from '@/modules/auth/types/component.types';
 
 export function AuthRedirectCheck({ portal, children }: AuthRedirectCheckProps) {
   useRedirectIfAuthenticated(portal);

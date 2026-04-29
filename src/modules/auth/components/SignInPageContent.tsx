@@ -1,10 +1,6 @@
-import type { Portal } from '@/lib/portal-url';
 import { AuthPageShell } from '@/modules/auth/components/AuthPageShell';
 import { SignInCard } from '@/modules/auth/components/SignInCard';
-
-interface SignInPageContentProps {
-  portal: Portal;
-}
+import type { SignInPageContentProps } from '@/modules/auth/types/component.types';
 
 export function SignInPageContent({ portal }: SignInPageContentProps) {
   return (

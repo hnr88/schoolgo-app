@@ -2,12 +2,9 @@
 
 import { Compass } from 'lucide-react';
 import { useLocale, useTranslations } from 'next-intl';
-import { portalUrl, type Portal } from '@/lib/portal-url';
+import { portalUrl } from '@/lib/portal-url';
 import { PORTAL_DOT, PORTAL_TABS } from '@/modules/auth/constants/portal.constants';
-
-interface AuthPortalHintProps {
-  activePortal: Portal;
-}
+import type { AuthPortalHintProps } from '@/modules/auth/types/component.types';
 
 export function AuthPortalHint({ activePortal }: AuthPortalHintProps) {
   const t = useTranslations('MarketingHeader');

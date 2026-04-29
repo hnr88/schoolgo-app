@@ -3,6 +3,7 @@
 import dynamic from 'next/dynamic';
 import { MOCK_SCHOOLS } from '@/modules/school-search/constants/school.constants';
 import { cn } from '@/lib/utils';
+import type { MapViewProps } from '@/modules/school-search/types/component.types';
 
 const LeafletMap = dynamic(
   () =>
@@ -23,10 +24,6 @@ const LeafletMap = dynamic(
     ),
   },
 );
-
-interface MapViewProps {
-  className?: string;
-}
 
 export function MapView({ className }: MapViewProps) {
   return (

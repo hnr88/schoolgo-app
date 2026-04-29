@@ -1,8 +1,8 @@
-import type { ReactNode } from 'react';
 import Image from 'next/image';
 import { getLocale, getTranslations } from 'next-intl/server';
 import type { Portal } from '@/lib/portal-url';
 import { AuthCloseButton } from '@/modules/auth/components/AuthCloseButton';
+import type { AuthPageShellProps } from '@/modules/auth/types/component.types';
 
 const PORTAL_NAV: Record<Portal, Array<{ labelKey: string; hash: string }>> = {
   parent: [
@@ -21,11 +21,6 @@ const PORTAL_NAV: Record<Portal, Array<{ labelKey: string; hash: string }>> = {
     { labelKey: 'faq', hash: '#faq' },
   ],
 };
-
-interface AuthPageShellProps {
-  portal: Portal;
-  children: ReactNode;
-}
 
 const PORTAL_THEME: Record<
   Portal,

@@ -3,10 +3,7 @@ import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import { Button } from '@/components/ui/button';
 import { MarketingNav } from '@/modules/navigation/components/MarketingNav';
-
-interface NavbarProps {
-  variant?: 'dashboard' | 'marketing';
-}
+import type { NavbarProps } from '@/modules/navigation/types/navigation.types';
 
 export async function Navbar({ variant = 'dashboard' }: NavbarProps = {}) {
   if (variant === 'marketing') {

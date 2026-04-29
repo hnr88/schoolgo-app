@@ -1,10 +1,9 @@
-import { forwardRef, type SelectHTMLAttributes } from 'react';
+import { forwardRef } from 'react';
 import { ChevronDown } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import type { DsSelectProps } from '@/modules/design-system/types/design-system.types';
 
-export interface DsSelectProps extends SelectHTMLAttributes<HTMLSelectElement> {
-  error?: boolean;
-}
+export type { DsSelectProps };
 
 export const DsSelect = forwardRef<HTMLSelectElement, DsSelectProps>(
   function DsSelect({ error, className, children, ...props }, ref) {

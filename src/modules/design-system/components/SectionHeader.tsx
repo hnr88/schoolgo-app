@@ -1,18 +1,6 @@
-import type { ReactNode } from 'react';
 import { Eyebrow } from '@/modules/design-system/components/Eyebrow';
 import { cn } from '@/lib/utils';
-
-interface SectionHeaderProps {
-  eyebrow?: ReactNode;
-  eyebrowTone?: 'default' | 'brand' | 'trust' | 'featured';
-  heading: ReactNode;
-  subheading?: ReactNode;
-  as?: 'h1' | 'h2' | 'h3';
-  size?: 'md' | 'lg';
-  align?: 'left' | 'center';
-  theme?: 'light' | 'dark';
-  className?: string;
-}
+import type { SectionHeaderProps } from '@/modules/design-system/types/design-system.types';
 
 export function SectionHeader({
   eyebrow,

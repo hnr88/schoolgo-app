@@ -1,12 +1,8 @@
 'use client';
 
-import type { ReactNode } from 'react';
 import { useAuthStore } from '@/modules/auth/stores/use-auth-store';
 import { cn } from '@/lib/utils';
-
-interface SearchLayoutProps {
-  children: ReactNode;
-}
+import type { SearchLayoutProps } from '@/modules/school-search/types/component.types';
 
 export function SearchLayout({ children }: SearchLayoutProps) {
   const isAuthenticated = useAuthStore((s) => s.isAuthenticated);
@@ -17,7 +13,7 @@ export function SearchLayout({ children }: SearchLayoutProps) {
   return (
     <main
       className={cn(
-        'flex pt-16 md:pt-20',
+        'flex pt-16 md:pt-30',
         isGuest ? 'mx-auto w-full max-w-content px-6' : 'w-full',
       )}
     >

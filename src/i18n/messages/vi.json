@@ -47,7 +47,46 @@
     "getStarted": "Bắt đầu",
     "openMenu": "Mở menu",
     "closeMenu": "Đóng menu",
-    "menu": "Menu"
+    "menu": "Menu",
+    "subNav": {
+      "explore": {
+        "label": "Khám phá",
+        "items": {
+          "browseSchools": "Duyệt trường học",
+          "browseSchoolsDesc": "Tìm kiếm tất cả trường Úc đã đăng ký",
+          "compareSchools": "So sánh trường",
+          "compareSchoolsDesc": "So sánh học phí, bài thi & kỳ tuyển sinh song song",
+          "scholarships": "Học bổng",
+          "scholarshipsDesc": "Danh sách học bổng dành cho học sinh quốc tế",
+          "englishTests": "Thi tiếng Anh",
+          "englishTestsDesc": "Hướng dẫn AEAS, IELTS & các bài thi được chấp nhận"
+        }
+      },
+      "resources": {
+        "label": "Tài nguyên",
+        "items": {
+          "admissionsGuide": "Hướng dẫn tuyển sinh",
+          "admissionsGuideDesc": "Quy trình nhập học từng bước",
+          "boardingSchools": "Trường nội trú",
+          "boardingSchoolsDesc": "So sánh trường nội trú và ngoại trú",
+          "visaRequirements": "Yêu cầu visa",
+          "visaRequirementsDesc": "Những điều cần biết về visa học sinh 500"
+        }
+      },
+      "about": {
+        "label": "Giới thiệu",
+        "items": {
+          "aboutSchoolGo": "Về SchoolGo",
+          "aboutSchoolGoDesc": "Sứ mệnh và câu chuyện của chúng tôi",
+          "contactUs": "Liên hệ chúng tôi",
+          "contactUsDesc": "Kết nối với đội ngũ của chúng tôi",
+          "forAgents": "Dành cho tư vấn",
+          "forAgentsDesc": "Công cụ dành cho tư vấn giáo dục",
+          "forSchools": "Dành cho trường",
+          "forSchoolsDesc": "Phát triển nhóm học sinh quốc tế của bạn"
+        }
+      }
+    }
   },
   "MarketingFooter": {
     "tagline": "Kết nối các nhà lãnh đạo tương lai với những trường học tốt nhất của Úc — khắp đất nước, bằng bảy ngôn ngữ.",

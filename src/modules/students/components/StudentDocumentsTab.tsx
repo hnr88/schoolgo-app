@@ -39,10 +39,7 @@ import { DocumentUploadDialog } from '@/modules/students/components/DocumentUplo
 import { DOCUMENT_STATUS_VARIANT } from '@/modules/students/constants/document.constants';
 import { DOCUMENT_TYPES } from '@/modules/students/types/document.types';
 import type { StudentDocument } from '@/modules/students/types/document.types';
-
-interface StudentDocumentsTabProps {
-  studentDocumentId: string;
-}
+import type { StudentDocumentsTabProps } from '@/modules/students/types/component.types';
 
 export function StudentDocumentsTab({ studentDocumentId }: StudentDocumentsTabProps) {
   const t = useTranslations('Students');

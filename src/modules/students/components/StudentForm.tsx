@@ -25,13 +25,7 @@ import {
 import { Separator } from '@/components/ui/separator';
 import { studentSchema, type StudentFormValues } from '@/modules/students/schemas/student.schema';
 import { GENDER_OPTIONS, YEAR_LEVEL_OPTIONS } from '@/modules/students/constants/student.constants';
-
-interface StudentFormProps {
-  defaultValues?: Partial<StudentFormValues>;
-  onSubmit: (values: StudentFormValues) => Promise<void>;
-  isLoading: boolean;
-  submitLabel: string;
-}
+import type { StudentFormProps } from '@/modules/students/types/component.types';
 
 export function StudentForm({ defaultValues, onSubmit, isLoading, submitLabel }: StudentFormProps) {
   const t = useTranslations('Students');

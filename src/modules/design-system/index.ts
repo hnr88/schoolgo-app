@@ -12,3 +12,4 @@ export { DsInput } from '@/modules/design-system/components/DsInput';
 export { DsSelect } from '@/modules/design-system/components/DsSelect';
 export { DsField } from '@/modules/design-system/components/DsField';
 export { SearchInput } from '@/modules/design-system/components/SearchInput';
+export type { IconComponent, TrustVariant, DsInputProps, DsSelectProps } from '@/modules/design-system/types/design-system.types';

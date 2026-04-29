@@ -1,14 +1,6 @@
-import type { ReactNode } from 'react';
 import { BadgeCheck, ShieldCheck } from 'lucide-react';
 import { cn } from '@/lib/utils';
-
-type TrustVariant = 'cricos' | 'qeac' | 'claimed';
-
-interface TrustBadgeProps {
-  variant: TrustVariant;
-  label: ReactNode;
-  className?: string;
-}
+import type { TrustBadgeProps, TrustVariant } from '@/modules/design-system/types/design-system.types';
 
 const ICONS: Record<TrustVariant, typeof ShieldCheck> = {
   cricos: ShieldCheck,

@@ -6,30 +6,13 @@ import { usePathname } from 'next/navigation';
 import { Menu, X } from 'lucide-react';
 import { Link } from '@/i18n/navigation';
 import { LanguageSelector } from '@/modules/layout/components/LanguageSelector';
+import { MarketingSubHeader } from '@/modules/marketing-layout/components/MarketingSubHeader';
 import { cn } from '@/lib/utils';
 import type { Portal } from '@/lib/portal-url';
-
-type AudienceKey = 'parents' | 'agents' | 'schools';
-
-interface NavLink {
-  label: string;
-  href: string;
-}
-
-interface MarketingHeaderClientProps {
-  activePortal: Portal;
-  portalUrls: Record<Portal, string>;
-  navLinks: NavLink[];
-  labels: {
-    findSchools: string;
-    signIn: string;
-    getStarted: string;
-    openMenu: string;
-    closeMenu: string;
-    menu: string;
-    audiences: Record<AudienceKey, string>;
-  };
-}
+import type {
+  AudienceKey,
+  MarketingHeaderClientProps,
+} from '@/modules/marketing-layout/types/header.types';
 
 const AUDIENCES: Array<{ key: AudienceKey; portal: Portal }> = [
   { key: 'parents', portal: 'parent' },
@@ -38,6 +21,7 @@ const AUDIENCES: Array<{ key: AudienceKey; portal: Portal }> = [
 ];
 
 export function MarketingHeaderClient({
+  subMenus,
   activePortal,
   portalUrls,
   navLinks,
@@ -95,6 +79,7 @@ export function MarketingHeaderClient({
             : 'border-b border-transparent bg-background/0',
         )}
       >
+        <MarketingSubHeader menus={subMenus} />
         <div className='mx-auto flex h-16 max-w-content items-center gap-4 px-5 md:h-20 md:px-8'>
           <a
             href={portalUrls[activePortal]}

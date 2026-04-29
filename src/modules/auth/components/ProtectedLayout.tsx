@@ -1,12 +1,8 @@
 'use client';
 
-import type { ReactNode } from 'react';
 import { useRequireAuth } from '@/modules/auth/hooks/use-require-auth';
 import { Skeleton } from '@/components/ui/skeleton';
-
-interface ProtectedLayoutProps {
-  children: ReactNode;
-}
+import type { ProtectedLayoutProps } from '@/modules/auth/types/component.types';
 
 export function ProtectedLayout({ children }: ProtectedLayoutProps) {
   const { isAuthenticated, isInitialized } = useRequireAuth();

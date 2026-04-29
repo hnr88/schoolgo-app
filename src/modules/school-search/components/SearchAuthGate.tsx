@@ -1,11 +1,7 @@
 'use client';
 
-import type { ReactNode } from 'react';
 import { useAuthStore } from '@/modules/auth/stores/use-auth-store';
-
-interface SearchAuthGateProps {
-  children: ReactNode;
-}
+import type { SearchAuthGateProps } from '@/modules/school-search/types/component.types';
 
 export function SearchAuthGate({ children }: SearchAuthGateProps) {
   const isAuthenticated = useAuthStore((s) => s.isAuthenticated);

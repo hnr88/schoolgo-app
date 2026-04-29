@@ -1,5 +1,4 @@
 import { MarketingFooter, MarketingHeader } from '@/modules/marketing-layout';
-import type { Portal } from '@/lib/portal-url';
 import { FilterSidebar } from '@/modules/school-search/components/FilterSidebar';
 import { SearchBar } from '@/modules/school-search/components/SearchBar';
 import { FilterChips } from '@/modules/school-search/components/FilterChips';
@@ -8,11 +7,7 @@ import { SchoolResultsPanel } from '@/modules/school-search/components/SchoolRes
 import { SearchAuthGate } from '@/modules/school-search/components/SearchAuthGate';
 import { SearchLayout } from '@/modules/school-search/components/SearchLayout';
 import { SearchLoginPrompt } from '@/modules/school-search/components/SearchLoginPrompt';
-
-interface SearchPageContentProps {
-  activePortal: Portal;
-  title: string;
-}
+import type { SearchPageContentProps } from '@/modules/school-search/types/component.types';
 
 export async function SearchPageContent({
   activePortal,
@@ -28,7 +23,7 @@ export async function SearchPageContent({
           <FilterSidebar />
         </SearchAuthGate>
 
-        <section className='flex-1 p-6 flex flex-col gap-4 overflow-hidden h-[calc(100vh-4rem)] md:h-[calc(100vh-5rem)]'>
+        <section className='flex-1 p-6 flex flex-col gap-4 overflow-hidden h-[calc(100vh-4rem)] md:h-[calc(100vh-7.5rem)]'>
           <div className='flex flex-col gap-4 shrink-0'>
             <SearchBar />
             <SearchAuthGate>

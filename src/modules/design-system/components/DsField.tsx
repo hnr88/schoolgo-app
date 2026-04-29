@@ -1,15 +1,5 @@
-import type { ReactNode } from 'react';
 import { cn } from '@/lib/utils';
-
-interface DsFieldProps {
-  label: string;
-  htmlFor?: string;
-  hint?: string;
-  error?: string;
-  required?: boolean;
-  children: ReactNode;
-  className?: string;
-}
+import type { DsFieldProps } from '@/modules/design-system/types/design-system.types';
 
 export function DsField({
   label,

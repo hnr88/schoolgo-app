@@ -6,6 +6,7 @@ import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import type { School } from '@/modules/school-search/types/school.types';
+import type { LeafletMapProps } from '@/modules/school-search/types/component.types';
 
 const schoolIcon = new L.DivIcon({
   className: '',
@@ -54,10 +55,6 @@ function CustomZoom() {
       </button>
     </div>
   );
-}
-
-interface LeafletMapProps {
-  schools: School[];
 }
 
 export function LeafletMap({ schools }: LeafletMapProps) {

@@ -1,10 +1,8 @@
 import Image from 'next/image';
-import type { ComponentType, SVGProps } from 'react';
 import { Filter, Headphones, Send } from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
 import { SectionContainer, SectionHeader, StatusBadge, TrustBadge } from '@/modules/design-system';
-
-type IconComponent = ComponentType<SVGProps<SVGSVGElement>>;
+import type { IconComponent } from '@/modules/design-system';
 
 const STEPS: Array<{ key: 'listen' | 'match' | 'deliver'; icon: IconComponent; comingSoon?: true }> = [
   { key: 'listen', icon: Headphones },

@@ -1,6 +1,7 @@
-import { forwardRef, type ButtonHTMLAttributes, type ReactNode } from 'react';
-import { cva, type VariantProps } from 'class-variance-authority';
+import { forwardRef } from 'react';
+import { cva } from 'class-variance-authority';
 import { cn } from '@/lib/utils';
+import type { ChipProps } from '@/modules/design-system/types/design-system.types';
 
 const chipStyles = cva(
   'inline-flex items-center gap-1.5 rounded-pill text-[13px] font-semibold transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary',
@@ -22,15 +23,6 @@ const chipStyles = cva(
     },
   },
 );
-
-interface ChipProps
-  extends ButtonHTMLAttributes<HTMLButtonElement>,
-    VariantProps<typeof chipStyles> {
-  selected?: boolean;
-  leading?: ReactNode;
-  trailing?: ReactNode;
-  children: ReactNode;
-}
 
 export const Chip = forwardRef<HTMLButtonElement, ChipProps>(function Chip(
   { selected = false, variant, size, leading, trailing, className, children, ...props },

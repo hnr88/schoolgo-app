@@ -37,12 +37,7 @@ import {
 } from '@/modules/students/schemas/document.schema';
 import { useUploadDocument } from '@/modules/students/queries/use-upload-document.mutation';
 import { ACCEPTED_FILE_TYPES, MAX_FILE_SIZE } from '@/modules/students/constants/document.constants';
-
-interface DocumentUploadDialogProps {
-  open: boolean;
-  onOpenChange: (open: boolean) => void;
-  studentDocumentId: string;
-}
+import type { DocumentUploadDialogProps } from '@/modules/students/types/component.types';
 
 export function DocumentUploadDialog({
   open,
