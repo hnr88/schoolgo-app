@@ -65,7 +65,7 @@ export function DashboardHeader() {
 
   return (
     <header className='shrink-0 bg-card'>
-      <div className={`mx-auto flex h-14 max-w-7xl items-center gap-4 ${isSearchPage ? 'px-4' : 'px-6'}`}>
+      <div className={`flex h-14 items-center gap-4 ${isSearchPage ? 'px-4' : 'px-6'}`}>
         <h1 className={`shrink-0 text-lg font-bold text-ink-900 ${isSearchPage ? 'w-80' : ''}`}>
           {t(`nav.${titleKey}`)}
         </h1>

@@ -12,7 +12,8 @@
     "test:watch": "vitest",
     "test:e2e": "playwright test",
     "seed:schools": "node --experimental-strip-types scripts/seed-schools-from-csv.ts",
-    "seed:students": "node --experimental-strip-types scripts/seed-students.ts"
+    "seed:students": "node --experimental-strip-types scripts/seed-students.ts",
+    "seed:applications": "node --experimental-strip-types scripts/seed-applications.ts"
   },
   "dependencies": {
     "@base-ui/react": "^1.4.0",

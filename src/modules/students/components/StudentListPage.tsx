@@ -9,10 +9,11 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
+import { getPageNumbers } from '@/modules/core';
 import { StudentListToolbar } from '@/modules/students/components/StudentListToolbar';
 import { StudentTable } from '@/modules/students/components/StudentTable';
 import { useStudentList } from '@/modules/students/hooks/useStudentList';
-import { PAGE_SIZE_OPTIONS, getPageNumbers } from '@/modules/students/lib/pagination';
+import { PAGE_SIZE_OPTIONS } from '@/modules/students/lib/pagination';
 
 export function StudentListPage() {
   const t = useTranslations('Students');

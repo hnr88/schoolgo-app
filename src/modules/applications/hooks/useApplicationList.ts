@@ -1,17 +1,17 @@
 import { useState } from 'react';
 import { useDebouncedValue } from '@/modules/core/client';
-import { useStudents } from '@/modules/students/queries/use-students.query';
-import { SORT_FIELD_TO_API } from '@/modules/students/constants/sort.constants';
-import { SEARCH_DEBOUNCE_MS, SEARCH_MIN_LENGTH } from '@/modules/students/constants/search.constants';
-import type { SortField, SortDirection } from '@/modules/students/types/component.types';
+import { useApplications } from '@/modules/applications/queries/use-applications.query';
+import { SORT_FIELD_TO_API } from '@/modules/applications/constants/application.constants';
+import { SEARCH_DEBOUNCE_MS, SEARCH_MIN_LENGTH } from '@/modules/applications/constants/search.constants';
+import type { ApplicationSortField, SortDirection } from '@/modules/applications/types/component.types';
 
-export function useStudentList() {
+export function useApplicationList() {
   const [search, setSearch] = useState('');
   const [status, setStatus] = useState('all');
   const [page, setPage] = useState(1);
   const [pageSize, setPageSize] = useState<number>(10);
   const [showAll, setShowAll] = useState(false);
-  const [sortField, setSortField] = useState<SortField | null>(null);
+  const [sortField, setSortField] = useState<ApplicationSortField | null>(null);
   const [sortDirection, setSortDirection] = useState<SortDirection>('asc');
 
   const debouncedSearch = useDebouncedValue(search, SEARCH_DEBOUNCE_MS);
@@ -23,7 +23,7 @@ export function useStudentList() {
 
   const effectivePageSize = showAll ? 1000 : pageSize;
 
-  const { data, isLoading } = useStudents({
+  const { data, isLoading } = useApplications({
     page: showAll ? 1 : page,
     pageSize: effectivePageSize,
     status,
@@ -31,11 +31,11 @@ export function useStudentList() {
     sort: sortParam,
   });
 
-  const students = data?.data ?? [];
+  const applications = data?.data ?? [];
   const pagination = data?.meta?.pagination;
   const showPagination = !showAll && pagination && pagination.pageCount > 1;
 
-  function handleSort(field: SortField) {
+  function handleSort(field: ApplicationSortField) {
     if (sortField !== field) {
       setSortField(field);
       setSortDirection('asc');
@@ -75,7 +75,7 @@ export function useStudentList() {
     showAll,
     sortField,
     sortDirection,
-    students,
+    applications,
     pagination,
     showPagination,
     isLoading,
