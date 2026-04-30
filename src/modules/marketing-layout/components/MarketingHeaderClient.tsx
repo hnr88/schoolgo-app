@@ -8,17 +8,7 @@ import { Link } from '@/i18n/navigation';
 import { LanguageSelector } from '@/modules/layout/components/LanguageSelector';
 import { MarketingSubHeader } from '@/modules/marketing-layout/components/MarketingSubHeader';
 import { cn } from '@/lib/utils';
-import type { Portal } from '@/lib/portal-url';
-import type {
-  AudienceKey,
-  MarketingHeaderClientProps,
-} from '@/modules/marketing-layout/types/header.types';
-
-const AUDIENCES: Array<{ key: AudienceKey; portal: Portal }> = [
-  { key: 'parents', portal: 'parent' },
-  { key: 'agents', portal: 'agent' },
-  { key: 'schools', portal: 'school' },
-];
+import type { MarketingHeaderClientProps } from '@/modules/marketing-layout/types/header.types';
 
 export function MarketingHeaderClient({
   subMenus,
@@ -79,7 +69,12 @@ export function MarketingHeaderClient({
             : 'border-b border-transparent bg-background/0',
         )}
       >
-        <MarketingSubHeader menus={subMenus} />
+        <MarketingSubHeader
+          menus={subMenus}
+          activePortal={activePortal}
+          portalUrls={portalUrls}
+          audienceLabels={labels.audiences}
+        />
         <div className='mx-auto flex h-16 max-w-content items-center gap-4 px-5 md:h-20 md:px-8'>
           <a
             href={portalUrls[activePortal]}
@@ -116,31 +111,7 @@ export function MarketingHeaderClient({
             })}
           </nav>
 
-          <nav
-            aria-label='Audience'
-            className='mx-auto flex items-center rounded-lg border border-border/60 p-0.5'
-          >
-            {AUDIENCES.map((a) => {
-              const isActive = a.portal === activePortal;
-              return (
-                <a
-                  key={a.key}
-                  href={portalUrls[a.portal]}
-                  aria-current={isActive ? 'page' : undefined}
-                  className={cn(
-                    'rounded-md px-3 py-1 text-sm font-medium no-underline transition-all duration-150',
-                    isActive
-                      ? 'bg-primary text-on-primary shadow-brand'
-                      : 'text-foggy hover:text-ink-900',
-                  )}
-                >
-                  {labels.audiences[a.key]}
-                </a>
-              );
-            })}
-          </nav>
-
-          <div className='hidden shrink-0 items-center gap-2 md:flex'>
+          <div className='ml-auto hidden shrink-0 items-center gap-2 md:flex'>
             <Link
               href='/sign-in'
               data-slot='button'
