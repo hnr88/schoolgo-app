@@ -1024,6 +1024,35 @@
         "parent": "학부모",
         "school": "학교"
       }
+    },
+    "greeting": {
+      "morning": "좋은 아침입니다,",
+      "afternoon": "좋은 오후입니다,",
+      "evening": "좋은 저녁입니다,",
+      "fallbackName": "안녕하세요"
+    },
+    "actionBanner": {
+      "title": "처리 필요"
+    },
+    "cards": {
+      "activeStudents": "활성 학생",
+      "appsInProgress": "진행 중인 지원",
+      "offersReceived": "받은 오퍼",
+      "enrolledThisTerm": "이번 학기 등록"
+    },
+    "activity": {
+      "title": "최근 활동",
+      "empty": "최근 활동이 없습니다. 학생을 추가하거나 학교를 검색해 보세요."
+    },
+    "deadlines": {
+      "title": "다가오는 마감일",
+      "empty": "다가오는 마감일이 없습니다."
+    },
+    "quickActions": {
+      "addStudent": "새 학생 추가",
+      "newApplication": "새 지원서",
+      "reviewApplications": "지원서 확인",
+      "searchSchools": "학교 검색"
     }
   },
   "Students": {

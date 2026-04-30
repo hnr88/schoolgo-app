@@ -1024,6 +1024,35 @@
         "parent": "Phụ huynh",
         "school": "Trường học"
       }
+    },
+    "greeting": {
+      "morning": "Chào buổi sáng,",
+      "afternoon": "Chào buổi chiều,",
+      "evening": "Chào buổi tối,",
+      "fallbackName": "bạn"
+    },
+    "actionBanner": {
+      "title": "Cần xử lý"
+    },
+    "cards": {
+      "activeStudents": "Học sinh đang hoạt động",
+      "appsInProgress": "Hồ sơ đang xử lý",
+      "offersReceived": "Thư mời đã nhận",
+      "enrolledThisTerm": "Đã nhập học kỳ này"
+    },
+    "activity": {
+      "title": "Hoạt động gần đây",
+      "empty": "Chưa có hoạt động gần đây. Hãy thêm học sinh hoặc tìm trường."
+    },
+    "deadlines": {
+      "title": "Hạn sắp tới",
+      "empty": "Không có hạn sắp tới."
+    },
+    "quickActions": {
+      "addStudent": "Thêm học sinh mới",
+      "newApplication": "Hồ sơ mới",
+      "reviewApplications": "Xem hồ sơ",
+      "searchSchools": "Tìm trường"
     }
   },
   "Students": {

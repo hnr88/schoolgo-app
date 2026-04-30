@@ -988,6 +988,35 @@
         "parent": "Parent",
         "school": "School"
       }
+    },
+    "greeting": {
+      "morning": "Good morning,",
+      "afternoon": "Good afternoon,",
+      "evening": "Good evening,",
+      "fallbackName": "there"
+    },
+    "actionBanner": {
+      "title": "Action required"
+    },
+    "cards": {
+      "activeStudents": "Active students",
+      "appsInProgress": "Apps in progress",
+      "offersReceived": "Offers received",
+      "enrolledThisTerm": "Enrolled this term"
+    },
+    "activity": {
+      "title": "Recent activity",
+      "empty": "No recent activity. Start by adding a student or browsing schools."
+    },
+    "deadlines": {
+      "title": "Upcoming deadlines",
+      "empty": "No upcoming deadlines. You're all caught up."
+    },
+    "quickActions": {
+      "addStudent": "Add new student",
+      "newApplication": "New application",
+      "reviewApplications": "Review applications",
+      "searchSchools": "Search schools"
     }
   },
   "Students": {

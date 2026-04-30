@@ -1024,6 +1024,35 @@
         "parent": "Ibu Bapa",
         "school": "Sekolah"
       }
+    },
+    "greeting": {
+      "morning": "Selamat pagi,",
+      "afternoon": "Selamat petang,",
+      "evening": "Selamat malam,",
+      "fallbackName": "anda"
+    },
+    "actionBanner": {
+      "title": "Perlu tindakan"
+    },
+    "cards": {
+      "activeStudents": "Pelajar aktif",
+      "appsInProgress": "Permohonan sedang diproses",
+      "offersReceived": "Tawaran diterima",
+      "enrolledThisTerm": "Mendaftar penggal ini"
+    },
+    "activity": {
+      "title": "Aktiviti terkini",
+      "empty": "Tiada aktiviti terkini. Mulakan dengan menambah pelajar atau mencari sekolah."
+    },
+    "deadlines": {
+      "title": "Tarikh akhir akan datang",
+      "empty": "Tiada tarikh akhir akan datang."
+    },
+    "quickActions": {
+      "addStudent": "Tambah pelajar baharu",
+      "newApplication": "Permohonan baharu",
+      "reviewApplications": "Semak permohonan",
+      "searchSchools": "Cari sekolah"
     }
   },
   "Students": {

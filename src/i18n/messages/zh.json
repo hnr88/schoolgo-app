@@ -1024,6 +1024,35 @@
         "parent": "家长",
         "school": "学校"
       }
+    },
+    "greeting": {
+      "morning": "早上好，",
+      "afternoon": "下午好，",
+      "evening": "晚上好，",
+      "fallbackName": "您好"
+    },
+    "actionBanner": {
+      "title": "需要处理"
+    },
+    "cards": {
+      "activeStudents": "活跃学生",
+      "appsInProgress": "进行中的申请",
+      "offersReceived": "收到的录取",
+      "enrolledThisTerm": "本学期已入学"
+    },
+    "activity": {
+      "title": "最近动态",
+      "empty": "暂无最近动态。可以先添加学生或浏览学校。"
+    },
+    "deadlines": {
+      "title": "即将到期",
+      "empty": "暂无即将到期事项。"
+    },
+    "quickActions": {
+      "addStudent": "添加新学生",
+      "newApplication": "新建申请",
+      "reviewApplications": "查看申请",
+      "searchSchools": "搜索学校"
     }
   },
   "Students": {

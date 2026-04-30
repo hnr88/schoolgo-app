@@ -1024,6 +1024,35 @@
         "parent": "ผู้ปกครอง",
         "school": "โรงเรียน"
       }
+    },
+    "greeting": {
+      "morning": "สวัสดีตอนเช้า",
+      "afternoon": "สวัสดีตอนบ่าย",
+      "evening": "สวัสดีตอนเย็น",
+      "fallbackName": "คุณ"
+    },
+    "actionBanner": {
+      "title": "ต้องดำเนินการ"
+    },
+    "cards": {
+      "activeStudents": "นักเรียนที่ใช้งานอยู่",
+      "appsInProgress": "ใบสมัครที่กำลังดำเนินการ",
+      "offersReceived": "ข้อเสนอที่ได้รับ",
+      "enrolledThisTerm": "ลงทะเบียนภาคเรียนนี้"
+    },
+    "activity": {
+      "title": "กิจกรรมล่าสุด",
+      "empty": "ยังไม่มีกิจกรรมล่าสุด เริ่มจากเพิ่มนักเรียนหรือค้นหาโรงเรียน"
+    },
+    "deadlines": {
+      "title": "กำหนดการใกล้ถึง",
+      "empty": "ไม่มีกำหนดการใกล้ถึง"
+    },
+    "quickActions": {
+      "addStudent": "เพิ่มนักเรียนใหม่",
+      "newApplication": "ใบสมัครใหม่",
+      "reviewApplications": "ตรวจสอบใบสมัคร",
+      "searchSchools": "ค้นหาโรงเรียน"
     }
   },
   "Students": {
