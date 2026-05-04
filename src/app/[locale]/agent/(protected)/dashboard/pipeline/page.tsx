@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
-import { DashboardPlaceholder } from '@/modules/dashboard/components/DashboardPlaceholder';
+import { PipelineKanbanPage } from '@/modules/pipeline/components/PipelineKanbanPage';
 
 export async function generateMetadata({
   params,
@@ -8,8 +8,8 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'Dashboard' });
-  return { title: t('nav.pipeline') };
+  const t = await getTranslations({ locale, namespace: 'Pipeline' });
+  return { title: t('title') };
 }
 
 export default async function PipelinePage({
@@ -19,5 +19,5 @@ export default async function PipelinePage({
 }) {
   const { locale } = await params;
   setRequestLocale(locale);
-  return <DashboardPlaceholder titleKey='pipeline' />;
+  return <PipelineKanbanPage />;
 }

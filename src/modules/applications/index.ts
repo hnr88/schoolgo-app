@@ -1,4 +1,5 @@
 export { ApplicationListPage } from '@/modules/applications/components/ApplicationListPage';
+export { ApplicationDetailPage } from '@/modules/applications/components/ApplicationDetailPage';
 
 export {
   APPLICATION_STATUS_STYLES,
