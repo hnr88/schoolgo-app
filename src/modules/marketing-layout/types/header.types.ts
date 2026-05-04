@@ -38,6 +38,9 @@ export interface MarketingHeaderClientProps {
 
 export interface MarketingSubHeaderProps {
   menus: SubMenu[];
+  activePortal: Portal;
+  portalUrls: Record<Portal, string>;
+  audienceLabels: Record<AudienceKey, string>;
 }
 
 export interface MarketingHeaderProps {

@@ -159,6 +159,16 @@
   --color-arches-600: var(--arches-600);
   --color-arches-700: var(--arches-700);
 
+  /* Vivid accents */
+  --color-vivid-coral: var(--vivid-coral);
+  --color-vivid-coral-soft: var(--vivid-coral-soft);
+  --color-vivid-mint: var(--vivid-mint);
+  --color-vivid-mint-soft: var(--vivid-mint-soft);
+  --color-vivid-amber: var(--vivid-amber);
+  --color-vivid-amber-soft: var(--vivid-amber-soft);
+  --color-vivid-iris: var(--vivid-iris);
+  --color-vivid-iris-soft: var(--vivid-iris-soft);
+
   /* Trust + featured semantic aliases */
   --color-trust: var(--babu-500);
   --color-trust-soft: var(--babu-50);
@@ -185,9 +195,9 @@
   --rausch-200: oklch(0.852 0.066 18); /* #FFC2C5 */
   --rausch-300: oklch(0.77 0.114 18); /* #FF9498 */
   --rausch-400: oklch(0.725 0.156 18); /* #FF7478 */
-  --rausch-500: oklch(0.685 0.188 18); /* #FF5A5F — Rausch */
-  --rausch-600: oklch(0.61 0.195 22); /* #E84349 — hover */
-  --rausch-700: oklch(0.497 0.195 26); /* #C02B30 — pressed */
+  --rausch-500: oklch(0.58 0.26 25); /* #FE131E — Logo red */
+  --rausch-600: oklch(0.52 0.235 25); /* hover */
+  --rausch-700: oklch(0.44 0.2 25); /* pressed */
   --rausch-800: oklch(0.382 0.156 27); /* #8F1F22 */
 
   /* ========== Babu teal (hue ≈ 176) ========== */
@@ -203,6 +213,16 @@
   --arches-500: oklch(0.672 0.186 38); /* #FC642D — Arches */
   --arches-600: oklch(0.593 0.19 35); /* #E34E17 */
   --arches-700: oklch(0.479 0.16 34); /* #B13A0E */
+
+  /* ========== Vivid accents (dashboard icons, badges) ========== */
+  --vivid-coral: oklch(0.68 0.19 18);
+  --vivid-coral-soft: oklch(0.95 0.025 18);
+  --vivid-mint: oklch(0.72 0.14 162);
+  --vivid-mint-soft: oklch(0.95 0.025 162);
+  --vivid-amber: oklch(0.8 0.15 75);
+  --vivid-amber-soft: oklch(0.96 0.03 75);
+  --vivid-iris: oklch(0.6 0.2 280);
+  --vivid-iris-soft: oklch(0.94 0.03 280);
 
   /* ========== Neutrals (Airbnb) ========== */
   --ink-900: oklch(0.236 0 0); /* #222222 — headings deeper than Hof */

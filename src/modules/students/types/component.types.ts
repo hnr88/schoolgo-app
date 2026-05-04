@@ -29,7 +29,20 @@ export interface StudentProfileProps {
   documentId: string;
 }
 
+export type SortField = 'name' | 'nationality' | 'currentYearLevel' | 'targetEntryYear' | 'status';
+export type SortDirection = 'asc' | 'desc';
+
+export interface SortIconProps {
+  field: SortField;
+  activeField: SortField | null;
+  direction: SortDirection;
+}
+
 export interface StudentTableProps {
   students: Student[];
   isLoading: boolean;
+  sortField: SortField | null;
+  sortDirection: SortDirection;
+  onSort: (field: SortField) => void;
+  pageSize: number;
 }

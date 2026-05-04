@@ -2,26 +2,20 @@ import { useQuery } from '@tanstack/react-query';
 import { privateApi } from '@/lib/axios';
 import { useAuthStore } from '@/modules/auth/stores/use-auth-store';
 import type { Student, StrapiListResponse } from '@/modules/students/types/student.types';
+import type { UseStudentsParams } from '@/modules/students/types/query.types';
 
-interface UseStudentsParams {
-  page?: number;
-  pageSize?: number;
-  status?: string;
-  search?: string;
-}
-
-export function useStudents({ page = 1, pageSize = 25, status, search }: UseStudentsParams = {}) {
+export function useStudents({ page = 1, pageSize = 12, status, search, sort }: UseStudentsParams = {}) {
   const isAuthenticated = useAuthStore((s) => s.isAuthenticated);
 
   return useQuery({
-    queryKey: ['students', { page, pageSize, status, search }],
+    queryKey: ['students', { page, pageSize, status, search, sort }],
     enabled: isAuthenticated,
     queryFn: async () => {
       const params: Record<string, unknown> = {
         'pagination[page]': page,
         'pagination[pageSize]': pageSize,
         'pagination[withCount]': true,
-        'sort[0]': 'createdAt:desc',
+        'sort[0]': sort || 'createdAt:desc',
       };
 
       if (status && status !== 'all') {

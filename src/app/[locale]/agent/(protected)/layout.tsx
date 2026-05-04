@@ -10,7 +10,7 @@ export default function AgentProtectedLayout({ children }: { children: React.Rea
         <div className='flex flex-1 flex-col overflow-hidden'>
           <DashboardHeader />
           <main className='relative flex-1 overflow-y-auto bg-muted'>
-            <div className='mx-auto max-w-7xl px-6 py-8'>{children}</div>
+            <div className='px-6 py-8'>{children}</div>
           </main>
         </div>
       </div>
