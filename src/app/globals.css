@@ -169,6 +169,9 @@
   --color-vivid-iris: var(--vivid-iris);
   --color-vivid-iris-soft: var(--vivid-iris-soft);
 
+  /* Z-index scale */
+  --z-map-controls: 1000;
+
   /* Trust + featured semantic aliases */
   --color-trust: var(--babu-500);
   --color-trust-soft: var(--babu-50);
@@ -392,6 +395,12 @@
   h4 {
     color: var(--ink-900);
     letter-spacing: -0.015em;
+  }
+}
+
+@layer components {
+  .leaflet-tile-pane {
+    filter: grayscale(0.9) contrast(0.85) brightness(1.05);
   }
 }
 

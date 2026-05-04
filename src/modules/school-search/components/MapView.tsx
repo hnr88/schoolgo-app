@@ -1,3 +1,5 @@
+'use client';
+
 import dynamic from 'next/dynamic';
 import { MOCK_SCHOOLS } from '@/modules/school-search/constants/school.constants';
 import { cn } from '@/lib/utils';
