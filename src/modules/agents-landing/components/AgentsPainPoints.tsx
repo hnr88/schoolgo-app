@@ -1,13 +1,6 @@
-import { FileSearch, Inbox, MessagesSquare, ShieldCheck } from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
 import { FeatureCard, SectionContainer, SectionHeader } from '@/modules/design-system';
-
-const ITEMS = [
-  { key: 'email', icon: Inbox },
-  { key: 'status', icon: MessagesSquare },
-  { key: 'trust', icon: ShieldCheck },
-  { key: 'requirements', icon: FileSearch },
-] as const;
+import { PAIN_POINT_ITEMS } from '../constants/agents-landing.constants';
 
 export async function AgentsPainPoints() {
   const t = await getTranslations('AgentsPainPoints');
@@ -21,7 +14,7 @@ export async function AgentsPainPoints() {
         />
 
         <div className='grid grid-cols-1 gap-5 md:grid-cols-2'>
-          {ITEMS.map(({ key, icon }) => (
+          {PAIN_POINT_ITEMS.map(({ key, icon }) => (
             <FeatureCard
               key={key}
               icon={icon}

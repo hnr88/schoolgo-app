@@ -1,13 +1,6 @@
-import { FileSearch, Handshake, PiggyBank } from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
 import { SectionContainer, SectionHeader } from '@/modules/design-system';
-import type { IconComponent } from '@/modules/design-system';
-
-const BULLETS: Array<{ key: 'zero' | 'direct' | 'audit'; icon: IconComponent }> = [
-  { key: 'zero', icon: PiggyBank },
-  { key: 'direct', icon: Handshake },
-  { key: 'audit', icon: FileSearch },
-];
+import { COMMISSION_BULLETS } from '../constants/agents-landing.constants';
 
 export async function AgentsCommission() {
   const t = await getTranslations('AgentsCommission');
@@ -22,7 +15,7 @@ export async function AgentsCommission() {
             subheading={t('subheading')}
           />
           <ul className='mt-4 flex flex-col gap-4'>
-            {BULLETS.map(({ key, icon: Icon }) => (
+            {COMMISSION_BULLETS.map(({ key, icon: Icon }) => (
               <li key={key} className='flex gap-4'>
                 <span className='flex h-11 w-11 shrink-0 items-center justify-center rounded-pill bg-background/10 text-background'>
                   <Icon className='h-5 w-5' strokeWidth={1.75} aria-hidden='true' />

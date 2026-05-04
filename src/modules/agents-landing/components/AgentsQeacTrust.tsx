@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
 import { SectionContainer, SectionHeader, StatusBadge, TrustBadge } from '@/modules/design-system';
+import { QEAC_PROFILE_STAT_KEYS, QEAC_PROFILE_STAT_VALUES } from '../constants/agents-landing.constants';
 
 export async function AgentsQeacTrust() {
   const t = await getTranslations('AgentsQeacTrust');
@@ -44,7 +45,7 @@ export async function AgentsQeacTrust() {
             </header>
 
             <dl className='grid grid-cols-2 gap-5 pt-5 sm:grid-cols-4'>
-              {(['yearsActive', 'students', 'placements', 'languages'] as const).map((key) => (
+              {QEAC_PROFILE_STAT_KEYS.map((key) => (
                 <div key={key} className='flex flex-col gap-1'>
                   <dt
                     className='text-caption font-semibold uppercase text-foggy'
@@ -53,10 +54,7 @@ export async function AgentsQeacTrust() {
                     {t(`profile.${key}`)}
                   </dt>
                   <dd className='text-h3 font-bold text-ink-900'>
-                    {key === 'yearsActive' && '8'}
-                    {key === 'students' && '143'}
-                    {key === 'placements' && '37'}
-                    {key === 'languages' && t('profile.languagesValue')}
+                    {QEAC_PROFILE_STAT_VALUES[key] ?? t('profile.languagesValue')}
                   </dd>
                 </div>
               ))}

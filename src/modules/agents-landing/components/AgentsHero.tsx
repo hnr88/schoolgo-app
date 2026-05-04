@@ -3,6 +3,7 @@ import { BadgeCheck } from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
 import { loadSchools, computeSchoolStats } from '@/lib/schools';
 import { CtaLink, Eyebrow, SectionContainer } from '@/modules/design-system';
+import { HERO_STAT_KEYS } from '../constants/agents-landing.constants';
 
 export async function AgentsHero() {
   const t = await getTranslations('AgentsHero');
@@ -39,7 +40,7 @@ export async function AgentsHero() {
           </div>
 
           <dl className='mt-6 grid grid-cols-1 gap-5 border-t border-divider pt-6 sm:grid-cols-3'>
-            {(['schools', 'sectors', 'commission'] as const).map((k) => (
+            {HERO_STAT_KEYS.map((k) => (
               <div key={k} className='flex flex-col gap-1'>
                 <dt
                   className='text-caption font-semibold uppercase text-foggy'

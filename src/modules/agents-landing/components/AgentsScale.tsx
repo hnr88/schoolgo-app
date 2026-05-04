@@ -1,13 +1,7 @@
 import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
 import { CtaLink, SectionContainer, SectionHeader, TrustBadge } from '@/modules/design-system';
-
-const AGENTS: Array<{ key: 'a' | 'b' | 'c' | 'd'; image: string }> = [
-  { key: 'a', image: 'https://images.unsplash.com/photo-1698047681452-08eba22d0c64?auto=format&fit=crop&w=160&h=160&q=80' },
-  { key: 'b', image: 'https://images.unsplash.com/photo-1651684215020-f7a5b6610f23?auto=format&fit=crop&w=160&h=160&q=80' },
-  { key: 'c', image: 'https://images.unsplash.com/photo-1696603865152-74514c198a07?auto=format&fit=crop&w=160&h=160&q=80' },
-  { key: 'd', image: 'https://images.unsplash.com/photo-1573496527892-904f897eb744?auto=format&fit=crop&w=160&h=160&q=80' },
-];
+import { SCALE_AGENTS } from '../constants/agents-landing.constants';
 
 export async function AgentsScale() {
   const t = await getTranslations('AgentsScale');
@@ -22,7 +16,7 @@ export async function AgentsScale() {
         />
 
         <div className='grid grid-cols-2 gap-4 md:grid-cols-4'>
-          {AGENTS.map((agent) => (
+          {SCALE_AGENTS.map((agent) => (
             <article
               key={agent.key}
               className='flex flex-col gap-3 rounded-lg border border-border bg-card p-5 shadow-2 transition-shadow hover:shadow-3'

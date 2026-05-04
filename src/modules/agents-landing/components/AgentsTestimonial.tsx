@@ -1,8 +1,7 @@
 import { Quote } from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
 import { SectionContainer } from '@/modules/design-system';
-
-const ITEM_KEYS = ['a', 'b', 'c'] as const;
+import { TESTIMONIAL_KEYS } from '../constants/agents-landing.constants';
 
 export async function AgentsTestimonial() {
   const t = await getTranslations('AgentsTestimonial');
@@ -19,7 +18,7 @@ export async function AgentsTestimonial() {
         </div>
 
         <div className='grid grid-cols-1 gap-5 md:grid-cols-3'>
-          {ITEM_KEYS.map((key) => (
+          {TESTIMONIAL_KEYS.map((key) => (
             <article
               key={key}
               className='flex flex-col gap-4 rounded-2xl border border-border bg-card p-8 shadow-2'

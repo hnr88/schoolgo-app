@@ -1,20 +1,7 @@
 import Image from 'next/image';
-import { Filter, Headphones, Send } from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
 import { SectionContainer, SectionHeader, StatusBadge, TrustBadge } from '@/modules/design-system';
-import type { IconComponent } from '@/modules/design-system';
-
-const STEPS: Array<{ key: 'listen' | 'match' | 'deliver'; icon: IconComponent; comingSoon?: true }> = [
-  { key: 'listen', icon: Headphones },
-  { key: 'match', icon: Filter, comingSoon: true },
-  { key: 'deliver', icon: Send, comingSoon: true },
-];
-
-const INBOX_ROWS: Array<{ key: 'scotch' | 'brisbane' | 'sydney'; image: string }> = [
-  { key: 'scotch', image: 'https://images.unsplash.com/photo-1603437119287-4a3732b685f9?auto=format&fit=crop&w=160&h=160&q=80' },
-  { key: 'brisbane', image: 'https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=160&h=160&q=80' },
-  { key: 'sydney', image: 'https://images.unsplash.com/photo-1621241484978-6f60fdb68f1c?auto=format&fit=crop&w=160&h=160&q=80' },
-];
+import { INBOX_ROWS, MATCHING_STEPS } from '../constants/agents-landing.constants';
 
 export async function AgentsMatching() {
   const t = await getTranslations('AgentsMatching');
@@ -30,7 +17,7 @@ export async function AgentsMatching() {
           />
 
           <ol className='mt-4 flex flex-col gap-6'>
-            {STEPS.map((step) => {
+            {MATCHING_STEPS.map((step) => {
               const Icon = step.icon;
               return (
               <li key={step.key} className='flex gap-4'>

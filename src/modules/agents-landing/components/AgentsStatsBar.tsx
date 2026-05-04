@@ -1,8 +1,7 @@
 import { getTranslations } from 'next-intl/server';
 import { loadSchools, computeSchoolStats } from '@/lib/schools';
 import { SectionContainer } from '@/modules/design-system';
-
-const ITEMS = ['schools', 'requirements', 'tests', 'free'] as const;
+import { STATS_BAR_ITEMS } from '../constants/agents-landing.constants';
 
 export async function AgentsStatsBar() {
   const t = await getTranslations('AgentsStatsBar');
@@ -13,7 +12,7 @@ export async function AgentsStatsBar() {
     <section className='bg-ink-900 py-10 md:py-12'>
       <SectionContainer>
         <ul className='grid grid-cols-2 gap-6 md:grid-cols-4'>
-          {ITEMS.map((key) => (
+          {STATS_BAR_ITEMS.map((key) => (
             <li
               key={key}
               className='text-center text-body-sm font-medium text-background/70'
