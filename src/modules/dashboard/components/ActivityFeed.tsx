@@ -1,39 +1,8 @@
-import {
-  ArrowRight,
-  Award,
-  CheckCircle,
-  ClipboardCheck,
-  FileQuestion,
-  Gift,
-  MessageSquare,
-  Send,
-} from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import { cn } from '@/lib/utils';
-import type { ActivityEvent, ActivityEventType } from '@/modules/dashboard/types/dashboard.types';
-
-const EVENT_ICON: Record<ActivityEventType, typeof ArrowRight> = {
-  status_change: ArrowRight,
-  document_requested: FileQuestion,
-  offer_made: Gift,
-  message: MessageSquare,
-  test_results: ClipboardCheck,
-  application_submitted: Send,
-  offer_accepted: CheckCircle,
-  coe_issued: Award,
-};
-
-const EVENT_COLOR: Record<ActivityEventType, string> = {
-  status_change: 'bg-vivid-amber-soft text-vivid-amber',
-  document_requested: 'bg-vivid-coral-soft text-vivid-coral',
-  offer_made: 'bg-vivid-mint-soft text-vivid-mint',
-  message: 'bg-vivid-iris-soft text-vivid-iris',
-  test_results: 'bg-vivid-mint-soft text-vivid-mint',
-  application_submitted: 'bg-vivid-coral-soft text-vivid-coral',
-  offer_accepted: 'bg-vivid-mint-soft text-vivid-mint',
-  coe_issued: 'bg-vivid-iris-soft text-vivid-iris',
-};
+import type { ActivityEvent } from '@/modules/dashboard/types/dashboard.types';
+import { EVENT_COLOR, EVENT_ICON } from '../constants/ui.constants';
 
 export async function ActivityFeed({ events }: { events: ActivityEvent[] }) {
   const t = await getTranslations('Dashboard.activity');

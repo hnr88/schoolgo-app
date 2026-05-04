@@ -1,6 +1,11 @@
 import { DAYS_THRESHOLDS } from '@/modules/applications/constants/application.constants';
 import type { Application } from '@/modules/applications/types/application.types';
 
+export function formatFileSize(bytes: number): string {
+  if (bytes >= 1048576) return `${(bytes / 1048576).toFixed(1)} MB`;
+  return `${(bytes / 1024).toFixed(1)} KB`;
+}
+
 const MS_PER_DAY = 86400000;
 
 function calculateDaysSince(dateStr: string | undefined): number {

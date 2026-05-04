@@ -1,12 +1,7 @@
-import { FileText, Inbox, IdCard } from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
 import { FeatureCard, SectionContainer, SectionHeader } from '@/modules/design-system';
 
-const TOOLS = [
-  { key: 'profile', icon: IdCard },
-  { key: 'applications', icon: FileText },
-  { key: 'inbox', icon: Inbox },
-] as const;
+import { TOOLS } from '../constants/schools-landing.constants';
 
 export async function SchoolsThreeTools() {
   const t = await getTranslations('SchoolsThreeTools');

@@ -3,7 +3,7 @@ import { faqPageJsonLd } from '@/lib/seo';
 import { SectionContainer } from '@/modules/design-system';
 import { FaqAccordion } from '@/modules/parents-landing';
 
-const FAQ_KEYS = ['claim', 'agents', 'commission', 'data'] as const;
+import { FAQ_KEYS } from '../constants/schools-landing.constants';
 
 export async function SchoolsFaq() {
   const t = await getTranslations('SchoolsFaq');

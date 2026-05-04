@@ -2,51 +2,10 @@ import Image from 'next/image';
 import { getLocale, getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import { routing } from '@/i18n/routing';
-import { portalUrl, type Portal } from '@/lib/portal-url';
+import { portalUrl } from '@/lib/portal-url';
 import { SectionContainer } from '@/modules/design-system';
 import type { MarketingFooterProps } from '@/modules/marketing-layout/types/footer.types';
-
-const COLUMNS = [
-  {
-    key: 'parents' as const,
-    portal: 'parent' as Portal,
-    links: [
-      { key: 'findSchools', path: '/search' },
-      { key: 'compare', path: '/search' },
-      { key: 'scholarships', path: '/search' },
-      { key: 'english', path: '/search' },
-    ],
-  },
-  {
-    key: 'agents' as const,
-    portal: 'agent' as Portal,
-    links: [
-      { key: 'overview', path: '/' },
-      { key: 'qeac', path: '/' },
-      { key: 'pipeline', path: '/' },
-      { key: 'login', path: '/sign-in' },
-    ],
-  },
-  {
-    key: 'schools' as const,
-    portal: 'school' as Portal,
-    links: [
-      { key: 'overview', path: '/' },
-      { key: 'claim', path: '/' },
-      { key: 'login', path: '/sign-in' },
-      { key: 'pricing', path: '/' },
-    ],
-  },
-];
-
-const LANGUAGES: Array<{ code: string; label: string }> = [
-  { code: 'en', label: 'English' },
-  { code: 'zh', label: '简体中文' },
-  { code: 'ko', label: '한국어' },
-  { code: 'ms', label: 'Bahasa Melayu' },
-  { code: 'vi', label: 'Tiếng Việt' },
-  { code: 'th', label: 'ภาษาไทย' },
-];
+import { COLUMNS, LANGUAGES } from '../constants/footer.constants';
 
 export async function MarketingFooter({ activePortal }: MarketingFooterProps) {
   const [t, locale] = await Promise.all([

@@ -2,8 +2,7 @@ import { getTranslations } from 'next-intl/server';
 import { loadSchools, computeSchoolStats } from '@/lib/schools';
 import { SectionContainer } from '@/modules/design-system';
 import { ParentsFourStepsClient } from '@/modules/parents-landing/components/ParentsFourStepsClient';
-
-const STEP_KEYS = ['browse', 'shortlist', 'prepare', 'apply'] as const;
+import { STEP_KEYS } from '../constants/four-steps.constants';
 
 export async function ParentsFourSteps() {
   const t = await getTranslations('ParentsFourSteps');

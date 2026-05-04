@@ -8,24 +8,7 @@ import { routing } from '@/i18n/routing';
 import { env } from '@/lib/env';
 import { cn } from '@/lib/utils';
 import type { LanguageSelectorProps } from '@/modules/layout/types/layout.types';
-
-const LOCALE_LABELS: Record<string, string> = {
-  en: 'English',
-  zh: '简体中文',
-  ko: '한국어',
-  ms: 'Bahasa Melayu',
-  vi: 'Tiếng Việt',
-  th: 'ภาษาไทย',
-};
-
-const LOCALE_CODES: Record<string, string> = {
-  en: 'EN',
-  zh: 'ZH',
-  ko: 'KO',
-  ms: 'MS',
-  vi: 'VI',
-  th: 'TH',
-};
+import { LOCALE_LABELS, LOCALE_CODES } from '../constants/locale.constants';
 
 export function LanguageSelector({ placement = 'up', compact = false }: LanguageSelectorProps = {}) {
   const locale = useLocale();

@@ -1,37 +1,4 @@
 {
-  "workspace": "klarizo-app",
-  "type": "frontend",
-  "framework": "Next.js 16",
-  "language": "TypeScript",
-  "styling": "Tailwind CSS",
-  "stateManagement": ["Zustand", "TanStack Query"],
-  "testing": "Vitest + Testing Library",
-  "mobile": "Ionic Capacitor",
-  "rules": {
-    "components": "Functional with TypeScript props",
-    "styling": "Tailwind only, no inline styles",
-    "forms": "React Hook Form + Zod",
-    "authentication": "JWT tokens in localStorage",
-    "realtime": "Socket.IO for updates",
-    "i18n": "next-intl"
-  },
-  "paths": {
-    "components": "src/components",
-    "hooks": "src/hooks",
-    "stores": "src/stores",
-    "types": "src/types",
-    "utils": "src/lib",
-    "styles": "src/styles",
-    "tests": "src/__tests__"
-  },
-  "forbiddenPatterns": [
-    "inline styles",
-    "class components",
-    "any types",
-    "console.log in production",
-    "hardcoded strings"
-  ],
-  "lastUpdated": "2026-02-15",
   "hooks": {
     "PostToolUse": [
       {

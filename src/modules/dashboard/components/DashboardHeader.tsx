@@ -13,32 +13,8 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
-
-const ROUTE_TITLE_MAP: Record<string, string> = {
-  '/dashboard': 'dashboard',
-  '/dashboard/students': 'students',
-  '/dashboard/applications': 'applications',
-  '/dashboard/pipeline': 'pipeline',
-  '/dashboard/search': 'searchSchools',
-  '/dashboard/messages': 'messages',
-  '/dashboard/settings': 'settings',
-  '/dashboard/profile': 'profile',
-};
-
-function resolvePageTitle(pathname: string): string {
-  for (const [route, key] of Object.entries(ROUTE_TITLE_MAP)) {
-    if (pathname.includes(route) && route !== '/dashboard') return key;
-  }
-  if (pathname.endsWith('/dashboard')) return 'dashboard';
-  return 'dashboard';
-}
-
-function getTimeOfDay(): 'morning' | 'afternoon' | 'evening' {
-  const hour = new Date().getHours();
-  if (hour >= 5 && hour < 12) return 'morning';
-  if (hour >= 12 && hour < 18) return 'afternoon';
-  return 'evening';
-}
+import { resolvePageTitle } from '../lib/resolve-page-title';
+import { getTimeOfDay } from '../lib/get-time-of-day';
 
 export function DashboardHeader() {
   const t = useTranslations('Dashboard');

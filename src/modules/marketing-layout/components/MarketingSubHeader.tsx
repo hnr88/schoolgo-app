@@ -1,46 +1,10 @@
 'use client';
 
 import { useState, useRef, useEffect } from 'react';
-import {
-  Award,
-  BadgeCheck,
-  BookOpen,
-  Building2,
-  ChevronDown,
-  GitCompare,
-  Languages,
-  MessageCircle,
-  School,
-  Search,
-  Sparkles,
-  Users,
-} from 'lucide-react';
+import { ChevronDown, Sparkles } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import type { Portal } from '@/lib/portal-url';
-import type {
-  AudienceKey,
-  MarketingSubHeaderProps,
-} from '@/modules/marketing-layout/types/header.types';
-
-const ICONS = {
-  award: Award,
-  badge: BadgeCheck,
-  book: BookOpen,
-  building: Building2,
-  compare: GitCompare,
-  languages: Languages,
-  message: MessageCircle,
-  school: School,
-  search: Search,
-  sparkles: Sparkles,
-  users: Users,
-} as const;
-
-const AUDIENCES: Array<{ key: AudienceKey; portal: Portal }> = [
-  { key: 'parents', portal: 'parent' },
-  { key: 'agents', portal: 'agent' },
-  { key: 'schools', portal: 'school' },
-];
+import type { MarketingSubHeaderProps } from '@/modules/marketing-layout/types/header.types';
+import { ICONS, AUDIENCES } from '../constants/sub-header.constants';
 
 export function MarketingSubHeader({
   menus,

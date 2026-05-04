@@ -2,15 +2,7 @@ import { Check } from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
 import { CtaLink, SectionContainer, SectionHeader, StatusBadge } from '@/modules/design-system';
 
-const PLANS: Array<{
-  key: 'listing' | 'admissions';
-  featured?: boolean;
-  featureKeys: string[];
-  ctaHref: string;
-}> = [
-  { key: 'listing', featureKeys: ['a', 'b', 'c'], ctaHref: '/schools' },
-  { key: 'admissions', featured: true, featureKeys: ['a', 'b', 'c', 'd'], ctaHref: '/schools' },
-];
+import { PLANS } from '../constants/schools-landing.constants';
 
 export async function SchoolsPricing() {
   const t = await getTranslations('SchoolsPricing');

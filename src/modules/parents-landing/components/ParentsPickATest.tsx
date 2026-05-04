@@ -1,14 +1,6 @@
 import { getTranslations } from 'next-intl/server';
 import { CtaLink, SectionContainer, SectionHeader } from '@/modules/design-system';
-
-const FEATURED: Array<'aeas' | 'idat' | 'duolingo' | 'ielts'> = [
-  'aeas',
-  'idat',
-  'duolingo',
-  'ielts',
-];
-
-const SECONDARY: Array<'pte' | 'cambridge' | 'toefl'> = ['pte', 'cambridge', 'toefl'];
+import { PICK_A_TEST_FEATURED, PICK_A_TEST_SECONDARY } from '../constants/parents-landing.constants';
 
 export async function ParentsPickATest() {
   const t = await getTranslations('ParentsPickATest');
@@ -38,7 +30,7 @@ export async function ParentsPickATest() {
 
           <div className='flex flex-col gap-4'>
             <div className='grid grid-cols-2 gap-4'>
-              {FEATURED.map((key) => (
+              {PICK_A_TEST_FEATURED.map((key) => (
                 <article
                   key={key}
                   className='flex flex-col gap-2 rounded-lg border border-border bg-card p-5 shadow-2 transition-shadow hover:shadow-3'
@@ -57,7 +49,7 @@ export async function ParentsPickATest() {
             </div>
 
             <div className='grid grid-cols-3 gap-4'>
-              {SECONDARY.map((key) => (
+              {PICK_A_TEST_SECONDARY.map((key) => (
                 <article
                   key={key}
                   className='flex flex-col gap-1 rounded-lg border border-border bg-card px-4 py-3 shadow-1'

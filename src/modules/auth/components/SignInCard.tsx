@@ -3,22 +3,10 @@
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
-import type { Portal } from '@/lib/portal-url';
 import { useRedirectIfAuthenticated } from '@/modules/auth/hooks/use-redirect-if-authenticated';
 import { LoginForm } from '@/modules/auth/components/LoginForm';
 import type { SignInCardProps } from '@/modules/auth/types/component.types';
-
-const PORTAL_ACCENT_BAR: Record<Portal, string> = {
-  parent: 'bg-rausch-400',
-  agent: 'bg-babu-500',
-  school: 'bg-arches-400',
-};
-
-const PORTAL_LINK_COLOR: Record<Portal, string> = {
-  parent: 'text-rausch-500 hover:text-rausch-600',
-  agent: 'text-babu-600 hover:text-babu-700',
-  school: 'text-arches-500 hover:text-arches-600',
-};
+import { PORTAL_ACCENT_BAR, PORTAL_LINK_COLOR } from '../constants/portal.constants';
 
 export function SignInCard({ portal }: SignInCardProps) {
   const t = useTranslations('Auth');

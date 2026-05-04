@@ -1,16 +1,9 @@
 'use client';
 
-import { GraduationCap, Briefcase, School } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { cn } from '@/lib/utils';
-import type { Portal } from '@/lib/portal-url';
 import type { UserTypeSelectorProps } from '@/modules/auth/types/component.types';
-
-const USER_TYPES: Array<{ type: Portal; icon: typeof GraduationCap }> = [
-  { type: 'parent', icon: GraduationCap },
-  { type: 'agent', icon: Briefcase },
-  { type: 'school', icon: School },
-];
+import { USER_TYPES } from '../constants/portal.constants';
 
 export function UserTypeSelector({ value, onChange }: UserTypeSelectorProps) {
   const t = useTranslations('Auth');

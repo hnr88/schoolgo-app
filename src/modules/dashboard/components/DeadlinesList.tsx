@@ -2,13 +2,8 @@ import { getTranslations } from 'next-intl/server';
 import { CheckCircle } from 'lucide-react';
 import { Link } from '@/i18n/navigation';
 import { cn } from '@/lib/utils';
-import type { Deadline, DeadlineUrgency } from '@/modules/dashboard/types/dashboard.types';
-
-const DATE_STYLE: Record<DeadlineUrgency, string> = {
-  urgent: 'bg-rausch-100 text-rausch-700',
-  high: 'bg-arches-100 text-arches-700',
-  normal: 'bg-muted text-foggy',
-};
+import type { Deadline } from '@/modules/dashboard/types/dashboard.types';
+import { DATE_STYLE } from '../constants/ui.constants';
 
 export async function DeadlinesList({ deadlines }: { deadlines: Deadline[] }) {
   const t = await getTranslations('Dashboard.deadlines');

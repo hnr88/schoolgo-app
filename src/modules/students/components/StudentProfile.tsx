@@ -7,6 +7,8 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Skeleton } from '@/components/ui/skeleton';
 import { useStudent } from '@/modules/students/queries/use-student.query';
 import { StudentDocumentsTab } from '@/modules/students/components/StudentDocumentsTab';
+import { STATUS_DOT } from '@/modules/students/constants/profile.constants';
+import { getInitials } from '@/modules/students/lib/get-initials';
 import type { StudentProfileProps } from '@/modules/students/types/component.types';
 
 function InfoItem({ label, value }: { label: string; value: string | null | undefined }) {
@@ -17,16 +19,6 @@ function InfoItem({ label, value }: { label: string; value: string | null | unde
     </div>
   );
 }
-
-function getInitials(first: string, last: string): string {
-  return `${first.charAt(0)}${last.charAt(0)}`.toUpperCase();
-}
-
-const STATUS_DOT: Record<string, string> = {
-  active: 'bg-babu-500',
-  archived: 'bg-foggy/50',
-  enrolled: 'bg-vivid-iris',
-};
 
 export function StudentProfile({ documentId }: StudentProfileProps) {
   const t = useTranslations('Students');

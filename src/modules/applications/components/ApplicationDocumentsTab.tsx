@@ -5,12 +5,8 @@ import { FileText, Download } from 'lucide-react';
 import { Skeleton } from '@/components/ui/skeleton';
 import { EmptyState } from '@/modules/core/components/EmptyState';
 import { useApplicationDocuments } from '@/modules/applications/queries/use-application-documents.query';
+import { formatFileSize } from '@/modules/applications/lib/format';
 import type { Application } from '@/modules/applications/types/application.types';
-
-function formatFileSize(bytes: number): string {
-  if (bytes >= 1048576) return `${(bytes / 1048576).toFixed(1)} MB`;
-  return `${(bytes / 1024).toFixed(1)} KB`;
-}
 
 function DocumentsSkeleton() {
   return (

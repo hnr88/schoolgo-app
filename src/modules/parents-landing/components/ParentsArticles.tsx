@@ -3,12 +3,7 @@ import { ArrowRight } from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import { SectionContainer, SectionHeader } from '@/modules/design-system';
-
-const ITEMS: Array<{ key: 'intakes' | 'englishTests' | 'boarding'; image: string }> = [
-  { key: 'intakes', image: 'https://images.unsplash.com/photo-1635821620693-b6863c79db72?auto=format&fit=crop&w=720&h=540&q=80' },
-  { key: 'englishTests', image: 'https://images.unsplash.com/photo-1742549586702-c23994895082?auto=format&fit=crop&w=720&h=540&q=80' },
-  { key: 'boarding', image: 'https://images.unsplash.com/photo-1576495199011-eb94736d05d6?auto=format&fit=crop&w=720&h=540&q=80' },
-];
+import { ARTICLES_ITEMS } from '../constants/parents-landing.constants';
 
 export async function ParentsArticles() {
   const t = await getTranslations('ParentsArticles');
@@ -22,7 +17,7 @@ export async function ParentsArticles() {
         />
 
         <div className='grid grid-cols-1 gap-5 md:grid-cols-3'>
-          {ITEMS.map((item) => (
+          {ARTICLES_ITEMS.map((item) => (
             <article
               key={item.key}
               className='group flex flex-col overflow-hidden rounded-lg border border-border bg-card shadow-2 transition-shadow hover:shadow-3'

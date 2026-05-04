@@ -1,15 +1,9 @@
-import { FileText, Gift, GraduationCap, TrendingDown, TrendingUp, Users } from 'lucide-react';
+import { TrendingDown, TrendingUp, Users } from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import { cn } from '@/lib/utils';
 import type { PipelineCard } from '@/modules/dashboard/types/dashboard.types';
-
-const CARD_STYLE: Record<string, { icon: typeof Users; bg: string; iconColor: string }> = {
-  activeStudents: { icon: Users, bg: 'bg-vivid-coral-soft', iconColor: 'text-vivid-coral' },
-  appsInProgress: { icon: FileText, bg: 'bg-vivid-amber-soft', iconColor: 'text-vivid-amber' },
-  offersReceived: { icon: Gift, bg: 'bg-vivid-mint-soft', iconColor: 'text-vivid-mint' },
-  enrolledThisTerm: { icon: GraduationCap, bg: 'bg-vivid-iris-soft', iconColor: 'text-vivid-iris' },
-};
+import { CARD_STYLE } from '../constants/ui.constants';
 
 export async function PipelineCards({ cards }: { cards: PipelineCard[] }) {
   const t = await getTranslations('Dashboard.cards');

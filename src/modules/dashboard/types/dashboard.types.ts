@@ -1,4 +1,5 @@
 import type { Portal } from '@/lib/portal-url';
+import type { IconComponent } from '@/modules/design-system';
 
 export interface DashboardPlaceholderProps {
   titleKey: string;
@@ -52,3 +53,26 @@ export interface Deadline {
   urgency: DeadlineUrgency;
   href: string;
 }
+
+export type NavItem = {
+  href: string;
+  icon: IconComponent;
+  labelKey: string;
+  agentOnly: boolean;
+};
+
+export type PipelineCardStyle = {
+  icon: IconComponent;
+  bg: string;
+  iconColor: string;
+};
+
+export type QuickAction = {
+  href: string;
+  icon: IconComponent;
+  labelKey: string;
+  bg: string;
+  color: string;
+};
+
+export type TimeOfDay = 'morning' | 'afternoon' | 'evening';

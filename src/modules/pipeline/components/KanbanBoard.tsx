@@ -1,5 +1,3 @@
-'use client';
-
 import { Skeleton } from '@/components/ui/skeleton';
 import { KanbanColumn } from '@/modules/pipeline/components/KanbanColumn';
 import type { KanbanBoardProps } from '@/modules/pipeline/types/component.types';

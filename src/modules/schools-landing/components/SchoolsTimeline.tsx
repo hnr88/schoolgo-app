@@ -1,14 +1,7 @@
-import { CheckCircle2, Inbox, ListChecks, School } from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
 import { SectionContainer, SectionHeader, StatusBadge } from '@/modules/design-system';
-import type { IconComponent } from '@/modules/design-system';
 
-const STEPS: Array<{ key: 'receive' | 'review' | 'decide' | 'onboard'; icon: IconComponent; comingSoon?: true }> = [
-  { key: 'receive', icon: Inbox, comingSoon: true },
-  { key: 'review', icon: ListChecks, comingSoon: true },
-  { key: 'decide', icon: CheckCircle2, comingSoon: true },
-  { key: 'onboard', icon: School, comingSoon: true },
-];
+import { TIMELINE_STEPS } from '../constants/schools-landing.constants';
 
 export async function SchoolsTimeline() {
   const t = await getTranslations('SchoolsTimeline');
@@ -27,7 +20,7 @@ export async function SchoolsTimeline() {
             className='pointer-events-none absolute left-6 top-6 hidden h-px w-[calc(100%-3rem)] bg-border md:block'
             aria-hidden='true'
           />
-          {STEPS.map((step, index) => {
+          {TIMELINE_STEPS.map((step, index) => {
             const Icon = step.icon;
             return (
             <li

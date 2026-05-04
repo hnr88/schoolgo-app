@@ -1,3 +1,11 @@
+import type { ApplicationStatus } from '@/modules/applications/types/application.types';
+
+export interface ProgressStep {
+  key: string;
+  label: string;
+  statuses: ApplicationStatus[];
+}
+
 export interface ApplicationDocument {
   id: number;
   documentId: string;

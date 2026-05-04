@@ -1,13 +1,7 @@
 'use client';
 
 import { useEffect } from 'react';
-
-function scrollToHash() {
-  const { hash } = window.location;
-  if (!hash) return;
-  const el = document.querySelector(hash);
-  if (el) el.scrollIntoView({ behavior: 'smooth' });
-}
+import { scrollToHash } from '../lib/scroll-to-hash';
 
 export function HashScrollHandler() {
   useEffect(() => {

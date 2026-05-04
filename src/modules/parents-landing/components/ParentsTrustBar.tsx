@@ -1,14 +1,6 @@
-import { Database, Lock, School, ShieldCheck } from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
 import { SectionContainer, SectionHeader } from '@/modules/design-system';
-import type { IconComponent } from '@/modules/design-system';
-
-const ITEMS: Array<{ key: 'cricos' | 'datagov' | 'acara' | 'esos'; icon: IconComponent }> = [
-  { key: 'cricos', icon: ShieldCheck },
-  { key: 'datagov', icon: Database },
-  { key: 'acara', icon: School },
-  { key: 'esos', icon: Lock },
-];
+import { TRUST_BAR_ITEMS } from '../constants/parents-landing.constants';
 
 export async function ParentsTrustBar() {
   const t = await getTranslations('ParentsTrustBar');
@@ -25,7 +17,7 @@ export async function ParentsTrustBar() {
           />
 
           <div className='grid grid-cols-1 gap-4 sm:grid-cols-2'>
-            {ITEMS.map(({ key, icon: Icon }) => (
+            {TRUST_BAR_ITEMS.map(({ key, icon: Icon }) => (
               <div
                 key={key}
                 className='flex gap-4 rounded-lg border border-background/10 bg-background/5 p-5'

@@ -2,12 +2,7 @@ import { MapPin } from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
 import { SectionContainer, SchoolCard } from '@/modules/design-system';
 import { ParentsHeroSearch } from '@/modules/parents-landing/components/ParentsHeroSearch';
-
-const FEATURED_KEYS: Array<{ key: 'a' | 'b' | 'c'; image: string }> = [
-  { key: 'a', image: 'https://images.unsplash.com/photo-1603437119287-4a3732b685f9?auto=format&fit=crop&w=720&h=540&q=80' },
-  { key: 'b', image: 'https://images.unsplash.com/photo-1621241484978-6f60fdb68f1c?auto=format&fit=crop&w=720&h=540&q=80' },
-  { key: 'c', image: 'https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=720&h=540&q=80' },
-];
+import { FEATURED_KEYS } from '../constants/parents-landing.constants';
 
 export async function ParentsHero() {
   const t = await getTranslations('ParentsHero');

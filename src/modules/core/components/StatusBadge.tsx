@@ -1,11 +1,6 @@
 import { cn } from '@/lib/utils';
 import type { StatusBadgeProps } from '@/modules/core/types/component.types';
-
-const FALLBACK_STYLES = {
-  dot: 'bg-foggy/50',
-  bg: 'bg-muted',
-  text: 'text-foggy',
-};
+import { FALLBACK_STYLES } from '../constants/status.constants';
 
 export function StatusBadge({ status, label, styles }: StatusBadgeProps) {
   const resolved = styles[status] ?? FALLBACK_STYLES;

@@ -1,16 +1,7 @@
 import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
 import { SectionContainer, SectionHeader } from '@/modules/design-system';
-
-const LANGS: Array<{ code: string; key: string }> = [
-  { code: 'en', key: 'en' },
-  { code: 'zh', key: 'zh' },
-  { code: 'ko', key: 'ko' },
-  { code: 'ms', key: 'ms' },
-  { code: 'vi', key: 'vi' },
-  { code: 'th', key: 'th' },
-  { code: 'id', key: 'id' },
-];
+import { LANGS } from '../constants/parents-landing.constants';
 
 export async function ParentsSevenLanguages() {
   const t = await getTranslations('ParentsSevenLanguages');

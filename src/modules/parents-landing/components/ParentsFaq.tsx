@@ -2,14 +2,7 @@ import { getTranslations } from 'next-intl/server';
 import { faqPageJsonLd } from '@/lib/seo';
 import { SectionContainer } from '@/modules/design-system';
 import { FaqAccordion } from '@/modules/parents-landing/components/FaqAccordion';
-
-const FAQ_KEYS = [
-  'free',
-  'dataSource',
-  'englishTests',
-  'doINeedAgent',
-  'updateFrequency',
-] as const;
+import { FAQ_KEYS } from '../constants/parents-landing.constants';
 
 export async function ParentsFaq() {
   const t = await getTranslations('ParentsFaq');

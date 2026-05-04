@@ -1,15 +1,9 @@
-import { BadgeCheck, ShieldCheck } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import type { TrustBadgeProps, TrustVariant } from '@/modules/design-system/types/design-system.types';
-
-const ICONS: Record<TrustVariant, typeof ShieldCheck> = {
-  cricos: ShieldCheck,
-  qeac: BadgeCheck,
-  claimed: BadgeCheck,
-};
+import type { TrustBadgeProps } from '@/modules/design-system/types/design-system.types';
+import { TRUST_BADGE_ICONS } from '../constants/design-system.constants';
 
 export function TrustBadge({ variant, label, className }: TrustBadgeProps) {
-  const Icon = ICONS[variant];
+  const Icon = TRUST_BADGE_ICONS[variant];
   return (
     <span
       className={cn(

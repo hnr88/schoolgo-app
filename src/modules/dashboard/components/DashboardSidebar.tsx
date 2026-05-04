@@ -3,29 +3,12 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
-import {
-  LayoutDashboard,
-  Users,
-  FileText,
-  BarChart3,
-  Search,
-  MessageSquare,
-  PanelLeftClose,
-  PanelLeftOpen,
-} from 'lucide-react';
+import { PanelLeftClose, PanelLeftOpen } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import { useAuthStore } from '@/modules/auth/stores/use-auth-store';
 import { cn } from '@/lib/utils';
-
-const NAV_ITEMS = [
-  { href: '/dashboard', icon: LayoutDashboard, labelKey: 'dashboard', agentOnly: false },
-  { href: '/dashboard/students', icon: Users, labelKey: 'students', agentOnly: true },
-  { href: '/dashboard/applications', icon: FileText, labelKey: 'applications', agentOnly: true },
-  { href: '/dashboard/pipeline', icon: BarChart3, labelKey: 'pipeline', agentOnly: true },
-  { href: '/dashboard/search', icon: Search, labelKey: 'searchSchools', agentOnly: true },
-  { href: '/dashboard/messages', icon: MessageSquare, labelKey: 'messages', agentOnly: true },
-] as const;
+import { NAV_ITEMS } from '../constants/ui.constants';
 
 export function DashboardSidebar() {
   const t = useTranslations('Dashboard');

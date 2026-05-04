@@ -1,20 +1,12 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { Clock, ArrowRight, FileUp, MessageSquare, StickyNote, Plus } from 'lucide-react';
+import { Clock, Plus } from 'lucide-react';
 import { Skeleton } from '@/components/ui/skeleton';
 import { EmptyState } from '@/modules/core/components/EmptyState';
 import { useApplicationTimeline } from '@/modules/applications/queries/use-application-timeline.query';
+import { EVENT_ICONS } from '@/modules/applications/constants/timeline.constants';
 import type { Application } from '@/modules/applications/types/application.types';
-import type { ApplicationTimelineEvent } from '@/modules/applications/types/detail.types';
-
-const EVENT_ICONS: Record<ApplicationTimelineEvent['type'], React.ComponentType<{ className?: string }>> = {
-  status_change: ArrowRight,
-  document_uploaded: FileUp,
-  message_sent: MessageSquare,
-  note_added: StickyNote,
-  application_created: Plus,
-};
 
 function TimelineSkeleton() {
   return (

@@ -13,9 +13,8 @@ import {
 } from '@/components/ui/table';
 import { Skeleton } from '@/components/ui/skeleton';
 import { STATUS_STYLES } from '@/modules/students/constants/status.constants';
+import { HEADER_CLASS } from '../constants/profile.constants';
 import type { StudentTableProps, SortField, SortIconProps } from '@/modules/students/types/component.types';
-
-const HEADER_CLASS = 'text-xs font-semibold uppercase tracking-wider text-foggy select-none';
 
 function SortIcon({ field, activeField, direction }: SortIconProps) {
   if (activeField !== field) return <ArrowUpDown className='ml-1 h-3 w-3 text-quill' />;

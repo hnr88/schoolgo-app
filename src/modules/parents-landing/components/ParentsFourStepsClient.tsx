@@ -2,17 +2,10 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
-import { BadgeCheck, LayoutGrid, ListChecks, Search } from 'lucide-react';
+import { BadgeCheck } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import type { ParentsFourStepsClientProps } from '@/modules/parents-landing/types/parents-landing.types';
-
-const ICONS = [Search, LayoutGrid, ListChecks, BadgeCheck];
-const STEP_IMAGES = [
-  'https://images.unsplash.com/photo-1616499452581-cc7f8e3dd3c9?auto=format&fit=crop&w=960&h=1280&q=80',
-  'https://images.unsplash.com/photo-1758873271321-4d6b3526ef42?auto=format&fit=crop&w=960&h=1280&q=80',
-  'https://images.unsplash.com/photo-1603796846097-bee99e4a601f?auto=format&fit=crop&w=960&h=1280&q=80',
-  'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=960&h=1280&q=80',
-];
+import { ICONS, STEP_IMAGES } from '../constants/four-steps.constants';
 
 export function ParentsFourStepsClient({
   steps,

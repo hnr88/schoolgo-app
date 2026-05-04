@@ -5,9 +5,8 @@ import { CheckIcon } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { ApplicationStatusBadge } from '@/modules/applications/components/ApplicationStatusBadge';
 import { PROGRESS_STEPS, TERMINAL_STATUSES } from '@/modules/applications/constants/detail.constants';
-import type { Application, ApplicationStatus } from '@/modules/applications/types/application.types';
-
-type ProgressStep = { key: string; label: string; statuses: ApplicationStatus[] };
+import type { Application } from '@/modules/applications/types/application.types';
+import type { ProgressStep } from '@/modules/applications/types/detail.types';
 
 function ProgressBar({ application }: { application: Application }) {
   const t = useTranslations('Applications');

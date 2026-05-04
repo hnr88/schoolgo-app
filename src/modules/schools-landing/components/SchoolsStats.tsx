@@ -1,7 +1,7 @@
 import { getTranslations } from 'next-intl/server';
 import { SectionContainer, SectionHeader } from '@/modules/design-system';
 
-const ITEMS = ['schools', 'states', 'sectors', 'feeRange'] as const;
+import { STATS_ITEMS } from '../constants/schools-landing.constants';
 
 export async function SchoolsStats() {
   const t = await getTranslations('SchoolsStats');
@@ -16,7 +16,7 @@ export async function SchoolsStats() {
         />
 
         <dl className='grid grid-cols-2 gap-x-8 gap-y-10 border-t border-background/15 pt-10 md:grid-cols-4'>
-          {ITEMS.map((key) => (
+          {STATS_ITEMS.map((key) => (
             <div key={key} className='flex flex-col gap-2'>
               <dd className='font-display text-4xl font-extrabold tracking-[-0.025em] text-background md:text-6xl'>
                 {t(`items.${key}.value`)}

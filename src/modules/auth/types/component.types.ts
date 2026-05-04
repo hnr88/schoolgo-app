@@ -1,5 +1,6 @@
 import type { ReactNode } from 'react';
 import type { Portal } from '@/lib/portal-url';
+import type { IconComponent } from '@/modules/design-system';
 
 export interface AuthCloseButtonProps {
   className?: string;
@@ -59,3 +60,28 @@ export interface UserTypeSelectorProps {
   value: Portal;
   onChange: (type: Portal) => void;
 }
+
+export type PortalNavItem = {
+  labelKey: string;
+  hash: string;
+};
+
+export type PortalThemeStat = {
+  valueKey: string;
+  labelKey: string;
+};
+
+export type PortalTheme = {
+  gradient: string;
+  blob1: string;
+  blob2: string;
+  image: string;
+  overlayGradient: string;
+  panelBg: string;
+  stats: PortalThemeStat[];
+};
+
+export type UserTypeOption = {
+  type: Portal;
+  icon: IconComponent;
+};
