@@ -4,6 +4,8 @@ paths:
   - "src/**/*.css"
 ---
 
+Docs: `.claude/docs/getting-started/css.md`
+
 CSS-first config. Theme defined in `globals.css` via `@theme`.
 
 1. **OKLCH colors ONLY.** Never raw hex, HSL, `#000`, `#fff`. Always tint.

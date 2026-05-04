@@ -3,6 +3,8 @@ paths:
   - "src/modules/**"
 ---
 
+Docs: `.claude/docs/getting-started/project-structure.md`
+
 ALL custom code lives in `src/modules/[name]/`. Code outside modules is a structural violation.
 
 ## Module Structure

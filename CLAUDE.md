@@ -115,20 +115,25 @@ tests/                           unit/, e2e/
 
 1. Importing Server Component into Client → pass as `children`.
 2. `'use client'` not on first line → silent breakage.
-3. `cookies()`/`headers()`/`searchParams` are `async` in Next 16 → `await` them.
+3. `cookies()`/`headers()`/`searchParams`/`params` are `async` in Next 16 → `await` them. Sync access is fully removed.
 4. `useRouter` from `next/router` → use `next/navigation` or `next-intl/navigation`.
 5. `getServerSideProps`/`getStaticProps` → FORBIDDEN (Pages Router).
-6. Mutation without `revalidateTag`/`revalidatePath` → stale UI.
-7. Functions as props Server → Client → NOT serializable.
-8. Zustand/Context in Server Component → impossible.
-9. `useEffect` to fetch → use TanStack Query or Server Component.
-10. Hardcoded user-facing strings → use `t()` from next-intl.
-11. Pure `#000`/`#fff` → use OKLCH tints.
-12. `<a>` for internal nav → use `<Link>` from `next-intl/navigation`.
-13. `window` at module top level → wrap in `typeof window !== 'undefined'`.
-14. Types in component files → move to `types/`.
-15. Business logic in components → extract to `hooks/` or `lib/`.
-16. Raw `useQuery`/`useMutation` in components → extract to `queries/`.
+6. Mutation without revalidation → stale UI. Use `updateTag` (Server Actions, immediate) or `revalidateTag('tag', 'max')` (stale-while-revalidate).
+7. `revalidateTag` without 2nd argument → deprecated. Always pass a cacheLife profile: `revalidateTag('tag', 'max')`.
+8. Functions as props Server → Client → NOT serializable.
+9. Zustand/Context in Server Component → impossible.
+10. `useEffect` to fetch → use TanStack Query or Server Component.
+11. Hardcoded user-facing strings → use `t()` from next-intl.
+12. Pure `#000`/`#fff` → use OKLCH tints.
+13. `<a>` for internal nav → use `<Link>` from `next-intl/navigation`.
+14. `window` at module top level → wrap in `typeof window !== 'undefined'`.
+15. Types in component files → move to `types/`.
+16. Business logic in components → extract to `hooks/` or `lib/`.
+17. Raw `useQuery`/`useMutation` in components → extract to `queries/`.
+18. Parallel route slots without `default.tsx` → build fails. Always create one.
+19. `experimental.ppr` / `experimental_ppr` → removed. Use `cacheComponents: true` instead.
+20. `error.tsx` using `reset()` → use `unstable_retry()` instead (re-fetches Server Components).
+21. Non-deterministic ops (`Math.random()`, `Date.now()`) in cached components → call `connection()` from `next/server` first.
 
 ---
 
@@ -151,4 +156,30 @@ Execute ONLY what is requested. No hallucinated APIs. No invented patterns. No u
 
 ---
 
-*Last updated: 2026-05-04 — Next.js 16.x, React 19, Tailwind v4, next-intl, Turbopack.*
+## 9. DOCUMENTATION REFERENCE
+
+Full Next.js 16.2.4 docs are in `.claude/docs/`. Consult before implementing unfamiliar patterns.
+
+| Topic | Path |
+|---|---|
+| Getting Started (18 pages) | `.claude/docs/getting-started/` |
+| Guides (60 pages) | `.claude/docs/guides/` |
+| API: Directives | `.claude/docs/api-reference/directives/` |
+| API: Components | `.claude/docs/api-reference/components/` |
+| API: File Conventions | `.claude/docs/api-reference/file-conventions/` |
+| API: Functions | `.claude/docs/api-reference/functions/` |
+| API: Config | `.claude/docs/api-reference/config/` |
+| API: CLI | `.claude/docs/api-reference/cli/` |
+| API: Adapters | `.claude/docs/api-reference/adapters/` |
+| Architecture | `.claude/docs/architecture/` |
+
+Key files to check first:
+- Caching: `getting-started/caching.md`, `getting-started/revalidating.md`
+- Components: `getting-started/server-and-client-components.md`
+- Errors: `getting-started/error-handling.md`
+- Proxy: `getting-started/proxy.md`, `api-reference/file-conventions/proxy.md`
+- Upgrade notes: `guides/upgrading/version-16.md`
+
+---
+
+*Last updated: 2026-05-04 — Next.js 16.2.4, React 19.2, Tailwind v4, next-intl, Turbopack.*

@@ -41,8 +41,11 @@ paths:
 
 ## Forms
 
+Docs: `.claude/docs/guides/forms.md`, `.claude/docs/api-reference/components/form.md`
+
 1. Every form: `useForm` + `zodResolver`. Never manual `useState` for form values.
 2. Every form has a Zod schema in `src/modules/[name]/schemas/`.
 3. Always use shadcn Form, FormField, FormItem, FormLabel, FormControl, FormMessage.
 4. Always provide `defaultValues`.
 5. Same Zod schema validates on both client form AND Server Action.
+6. For pending/error state, use `useActionState` from React 19. See `.claude/docs/getting-started/error-handling.md`.

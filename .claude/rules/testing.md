@@ -14,6 +14,8 @@ Never write tests after implementation — they'll "cheat" by matching broken lo
 
 ## Testing Rules
 
+Docs: `.claude/docs/guides/testing/vitest.md`, `.claude/docs/guides/testing/playwright.md`
+
 1. Server Components: CANNOT render in JSDOM. Extract logic into pure functions or test via Playwright.
 2. Client Components: render with RTL, simulate with `userEvent`, assert DOM.
 3. Server Actions: import and call directly as async functions.
