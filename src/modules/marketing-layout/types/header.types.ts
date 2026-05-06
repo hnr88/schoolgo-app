@@ -32,15 +32,11 @@ export interface MarketingHeaderClientProps {
     openMenu: string;
     closeMenu: string;
     menu: string;
-    audiences: Record<AudienceKey, string>;
   };
 }
 
 export interface MarketingSubHeaderProps {
   menus: SubMenu[];
-  activePortal: Portal;
-  portalUrls: Record<Portal, string>;
-  audienceLabels: Record<AudienceKey, string>;
 }
 
 export interface MarketingHeaderProps {

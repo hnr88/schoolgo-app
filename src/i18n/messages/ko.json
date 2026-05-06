@@ -130,12 +130,18 @@
     },
     "language": "언어",
     "copyright": "© {year} SchoolGo Australia. 모든 권리 보유.",
-    "attribution": "출처: data.gov.au · CC BY 2.5 AU · ESOS 법 준수"
+    "attribution": "출처: data.gov.au · CC BY 2.5 AU · ESOS 법 준수",
+    "portals": "저는...",
+    "portalLabels": {
+      "parents": "학부모",
+      "agents": "유학원",
+      "schools": "학교"
+    }
   },
   "ParentsHero": {
     "trustPill": {
-      "brand": "CRICOS",
-      "brandAccent": "인증 완료",
+      "brand": "정부",
+      "brandAccent": "등록 인증",
       "source": "data.gov.au 데이터"
     },
     "headlinePrefix": "자녀를 위한",
@@ -400,19 +406,19 @@
     "subheading": "SchoolGo의 모든 학교 정보는 공식 정부 데이터 출처를 기반으로 — 검증되고, 라이선스가 부여되며, 매월 갱신됩니다.",
     "items": {
       "cricos": {
-        "label": "CRICOS Verified",
+        "label": "정부 등록 학교",
         "description": "모든 학교 정보는 공식 연방 등록부와 교차 검증됩니다."
       },
       "datagov": {
-        "label": "data.gov.au",
+        "label": "최신 상태 유지",
         "description": "CC BY 2.5 AU 라이선스로 제공되는 공개 데이터 — 투명하고 누구나 감사 가능합니다."
       },
       "acara": {
-        "label": "ACARA School Profiles",
+        "label": "국가 교육과정 데이터",
         "description": "커리큘럼, ICSEA 점수, 입학 데이터는 국가 권위 기관에서 제공합니다."
       },
       "esos": {
-        "label": "ESOS Act Compliant",
+        "label": "학생 보호",
         "description": "SchoolGo는 호주 해외 학생 교육 서비스(ESOS) 법률 체계 내에서 운영됩니다."
       }
     },
@@ -880,7 +886,9 @@
     "results": {
       "title": "이용 가능한 학교",
       "count": "{count, plural, one {# 결과} other {# 결과}}",
-      "viewAll": "모든 학교 보기"
+      "viewAll": "모든 학교 보기",
+      "error": "[TODO: ko] Something went wrong. Please try again.",
+      "empty": "[TODO: ko] No schools found. Try adjusting your filters."
     },
     "map": {
       "title": "호주 — 학교 지도",

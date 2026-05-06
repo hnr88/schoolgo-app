@@ -130,12 +130,18 @@
     },
     "language": "ภาษา",
     "copyright": "© {year} SchoolGo Australia. สงวนลิขสิทธิ์",
-    "attribution": "ข้อมูลจาก data.gov.au · CC BY 2.5 AU · สอดคล้องกับ ESOS Act"
+    "attribution": "ข้อมูลจาก data.gov.au · CC BY 2.5 AU · สอดคล้องกับ ESOS Act",
+    "portals": "ฉันเป็น...",
+    "portalLabels": {
+      "parents": "ผู้ปกครอง",
+      "agents": "ตัวแทน",
+      "schools": "โรงเรียน"
+    }
   },
   "ParentsHero": {
     "trustPill": {
-      "brand": "CRICOS",
-      "brandAccent": "ผ่านการรับรอง",
+      "brand": "รัฐบาล",
+      "brandAccent": "จดทะเบียน",
       "source": "ข้อมูลจาก data.gov.au"
     },
     "headlinePrefix": "ค้นหาโรงเรียน",
@@ -400,19 +406,19 @@
     "subheading": "ทุกรายชื่อโรงเรียนบน SchoolGo มาจากแหล่งข้อมูลรัฐบาลอย่างเป็นทางการ — ผ่านการตรวจสอบ ได้รับอนุญาต และอัปเดตทุกเดือน",
     "items": {
       "cricos": {
-        "label": "CRICOS Verified",
+        "label": "โรงเรียนจดทะเบียนกับรัฐบาล",
         "description": "ข้อมูลโรงเรียนทุกแห่งถูกตรวจสอบกับทะเบียนเครือจักรภพอย่างเป็นทางการ"
       },
       "datagov": {
-        "label": "data.gov.au",
+        "label": "ข้อมูลอัปเดตล่าสุด",
         "description": "ข้อมูลเปิดที่ได้รับอนุญาตภายใต้ CC BY 2.5 AU — โปร่งใสและตรวจสอบได้สาธารณะ"
       },
       "acara": {
-        "label": "ACARA School Profiles",
+        "label": "ข้อมูลหลักสูตรแห่งชาติ",
         "description": "หลักสูตร คะแนน ICSEA และข้อมูลนักเรียนมาจากหน่วยงานระดับชาติ"
       },
       "esos": {
-        "label": "ESOS Act Compliant",
+        "label": "การคุ้มครองนักเรียน",
         "description": "SchoolGo ดำเนินงานภายในกรอบกฎหมาย ESOS ว่าด้วยบริการการศึกษาสำหรับนักเรียนต่างชาติของออสเตรเลีย"
       }
     },
@@ -880,7 +886,9 @@
     "results": {
       "title": "โรงเรียนที่มีอยู่",
       "count": "{count, plural, one {# ผลลัพธ์} other {# ผลลัพธ์}}",
-      "viewAll": "ดูโรงเรียนทั้งหมด"
+      "viewAll": "ดูโรงเรียนทั้งหมด",
+      "error": "[TODO: th] Something went wrong. Please try again.",
+      "empty": "[TODO: th] No schools found. Try adjusting your filters."
     },
     "map": {
       "title": "ออสเตรเลีย — แผนที่โรงเรียน",

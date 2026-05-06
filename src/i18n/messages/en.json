@@ -130,7 +130,13 @@
     },
     "language": "Language",
     "copyright": "© {year} SchoolGo Australia. All rights reserved.",
-    "attribution": "Sourced from data.gov.au · CC BY 2.5 AU · ESOS Act compliant"
+    "attribution": "Sourced from data.gov.au · CC BY 2.5 AU · ESOS Act compliant",
+    "portals": "I am a...",
+    "portalLabels": {
+      "parents": "Parent",
+      "agents": "Agent",
+      "schools": "School"
+    }
   },
   "ParentsHero": {
     "trustPill": {
@@ -855,7 +861,9 @@
     "results": {
       "title": "Available Schools",
       "count": "{count, plural, one {# Result} other {# Results}}",
-      "viewAll": "View All Schools"
+      "viewAll": "View All Schools",
+      "error": "Something went wrong. Please try again.",
+      "empty": "No schools found. Try adjusting your filters."
     },
     "map": {
       "title": "Australia — School Map",

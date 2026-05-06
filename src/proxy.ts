@@ -122,8 +122,21 @@ export function proxy(request: NextRequest) {
   }
 
   const pathAfterLocale = hasLocale ? segments.slice(1).join('/') : pathname.replace(/^\//, '');
-  const isSearchPath = pathAfterLocale === 'search' || pathAfterLocale === `${portal}/search`;
-  if (loggedInPortal && loggedInPortal === portal && isSearchPath) {
+  if (pathAfterLocale === 'launching-soon') {
+    url.pathname = `/${locale}/launching-soon`;
+    return withRobotsHeader(NextResponse.rewrite(url), hostname);
+  }
+
+  if (pathAfterLocale === 'search') {
+    if (!hasLocale) {
+      url.pathname = `/${locale}/search`;
+      return withRobotsHeader(NextResponse.rewrite(url), hostname);
+    }
+    return withRobotsHeader(NextResponse.next(), hostname);
+  }
+
+  const isPortalSearchPath = pathAfterLocale === `${portal}/search`;
+  if (loggedInPortal && loggedInPortal === portal && isPortalSearchPath) {
     url.pathname = `/${locale}/dashboard/search`;
     return withRobotsHeader(NextResponse.redirect(url), hostname);
   }

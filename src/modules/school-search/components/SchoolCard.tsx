@@ -1,28 +1,39 @@
-import { getTranslations } from 'next-intl/server';
+'use client';
+
+import { useTranslations } from 'next-intl';
 import { SchoolCard as DsSchoolCard } from '@/modules/design-system';
-import type { SearchSchoolCardProps } from '@/modules/school-search/types/component.types';
+import type { SchoolHit } from '@/modules/school-search/types/search-api.types';
 import { SCHOOL_IMAGES } from '@/modules/school-search/constants/school-card.constants';
 
-export async function SearchSchoolCard({ school }: SearchSchoolCardProps) {
-  const t = await getTranslations('SchoolSearch.card');
-  const tc = await getTranslations('Common');
-  const fee = new Intl.NumberFormat('en-AU', {
+const formatFee = (amount: number | null) => {
+  if (amount == null) return null;
+  return new Intl.NumberFormat('en-AU', {
     style: 'currency',
     currency: 'AUD',
     maximumFractionDigits: 0,
     notation: 'compact',
-  }).format(school.tuitionAud);
+  }).format(amount);
+};
+
+function pickImage(id: string): string {
+  const hash = Math.abs([...id].reduce((h, c) => h * 31 + c.charCodeAt(0), 0));
+  return SCHOOL_IMAGES[hash % SCHOOL_IMAGES.length];
+}
+
+export function SearchSchoolCard({ school }: { school: SchoolHit }) {
+  const t = useTranslations('SchoolSearch.card');
+  const tc = useTranslations('Common');
 
   return (
     <DsSchoolCard
-      href={`/schools/${school.id}`}
-      photoUrl={SCHOOL_IMAGES[Math.abs([...school.id].reduce((h, c) => h * 31 + c.charCodeAt(0), 0)) % SCHOOL_IMAGES.length]}
+      href={`/schools/${school.slug}`}
+      photoUrl={pickImage(school.documentId)}
       name={school.name}
       location={`${school.suburb}, ${school.state}`}
-      curriculum={school.curriculum}
-      fee={fee}
+      curriculum={school.curriculumOffered ?? undefined}
+      fee={formatFee(school.lowestAnnualTuition) ?? undefined}
       feeSuffix={t('currency')}
-      topRatedLabel={school.isTopRated ? t('topRated') : undefined}
+      topRatedLabel={undefined}
       cricosLabel={tc('cricosVerified')}
       shortlistAddLabel={tc('addToShortlist')}
       shortlistRemoveLabel={tc('removeFromShortlist')}

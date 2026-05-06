@@ -43,11 +43,6 @@ export async function MarketingHeader({ activePortal }: MarketingHeaderProps) {
         openMenu: t('openMenu'),
         closeMenu: t('closeMenu'),
         menu: t('menu'),
-        audiences: {
-          parents: t('audiences.parents'),
-          agents: t('audiences.agents'),
-          schools: t('audiences.schools'),
-        },
       }}
     />
   );

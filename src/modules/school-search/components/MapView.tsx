@@ -1,8 +1,8 @@
 'use client';
 
 import dynamic from 'next/dynamic';
-import { MOCK_SCHOOLS } from '@/modules/school-search/constants/school.constants';
 import { cn } from '@/lib/utils';
+import { useSearchWithFilters } from '@/modules/school-search/hooks/useSearchWithFilters';
 import type { MapViewProps } from '@/modules/school-search/types/component.types';
 
 const LeafletMap = dynamic(
@@ -26,9 +26,12 @@ const LeafletMap = dynamic(
 );
 
 export function MapView({ className }: MapViewProps) {
+  const { data } = useSearchWithFilters();
+  const schools = data?.data?.hits ?? [];
+
   return (
     <div className={cn('h-full w-full overflow-hidden rounded-lg border border-border shadow-2', className)}>
-      <LeafletMap schools={MOCK_SCHOOLS} />
+      <LeafletMap schools={schools} />
     </div>
   );
 }

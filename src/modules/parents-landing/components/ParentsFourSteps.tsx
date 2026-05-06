@@ -26,13 +26,13 @@ export async function ParentsFourSteps() {
   }));
 
   return (
-    <section id='how-it-works' className='py-20 md:py-28'>
+    <section id='how-it-works' className='py-12 md:py-28'>
       <SectionContainer>
-        <div className='mb-10 flex flex-col gap-3'>
+        <div className='mb-6 flex flex-col gap-2 md:mb-10 md:gap-3'>
           <span className='text-xs font-semibold uppercase tracking-widest text-primary'>
             {t('eyebrow')}
           </span>
-          <h2 className='max-w-lg font-display text-4xl font-bold leading-[1.1] tracking-tight text-ink-900 md:text-5xl'>
+          <h2 className='max-w-lg font-display text-2xl font-bold leading-tight tracking-tight text-ink-900 md:text-5xl'>
             {t('heading')}
           </h2>
           <p className='max-w-md text-base text-foggy'>

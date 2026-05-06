@@ -130,12 +130,18 @@
     },
     "language": "Bahasa",
     "copyright": "© {year} SchoolGo Australia. Hak cipta terpelihara.",
-    "attribution": "Bersumber dari data.gov.au · CC BY 2.5 AU · Patuh Akta ESOS"
+    "attribution": "Bersumber dari data.gov.au · CC BY 2.5 AU · Patuh Akta ESOS",
+    "portals": "Saya adalah...",
+    "portalLabels": {
+      "parents": "Ibu Bapa",
+      "agents": "Ejen",
+      "schools": "Sekolah"
+    }
   },
   "ParentsHero": {
     "trustPill": {
-      "brand": "CRICOS",
-      "brandAccent": "Disahkan",
+      "brand": "Kerajaan",
+      "brandAccent": "Berdaftar",
       "source": "data dari data.gov.au"
     },
     "headlinePrefix": "Cari sekolah",
@@ -400,19 +406,19 @@
     "subheading": "Setiap penyenaraian di SchoolGo disokong oleh sumber data kerajaan rasmi — disahkan, berlesen, dan dikemas kini setiap bulan.",
     "items": {
       "cricos": {
-        "label": "CRICOS Verified",
+        "label": "Sekolah berdaftar kerajaan",
         "description": "Setiap penyenaraian sekolah disemak silang dengan Daftar Komanwel rasmi."
       },
       "datagov": {
-        "label": "data.gov.au",
+        "label": "Sentiasa dikemas kini",
         "description": "Data terbuka berlesen di bawah CC BY 2.5 AU — telus dan boleh diaudit secara umum."
       },
       "acara": {
-        "label": "ACARA School Profiles",
+        "label": "Data kurikulum kebangsaan",
         "description": "Kurikulum, skor ICSEA, dan data enrolmen bersumber daripada pihak berkuasa kebangsaan."
       },
       "esos": {
-        "label": "ESOS Act Compliant",
+        "label": "Perlindungan pelajar",
         "description": "SchoolGo beroperasi dalam rangka kerja Akta Perkhidmatan Pendidikan untuk Pelajar Luar Negeri Australia."
       }
     },
@@ -880,7 +886,9 @@
     "results": {
       "title": "Sekolah Tersedia",
       "count": "{count, plural, one {# Keputusan} other {# Keputusan}}",
-      "viewAll": "Lihat Semua Sekolah"
+      "viewAll": "Lihat Semua Sekolah",
+      "error": "[TODO: ms] Something went wrong. Please try again.",
+      "empty": "[TODO: ms] No schools found. Try adjusting your filters."
     },
     "map": {
       "title": "Australia — Peta Sekolah",

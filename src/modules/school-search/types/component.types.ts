@@ -1,5 +1,4 @@
 import type { ReactNode } from 'react';
-import type { School } from '@/modules/school-search/types/school.types';
 import type { Portal } from '@/lib/portal-url';
 
 export interface FilterChipsProps {
@@ -11,16 +10,8 @@ export interface FilterSidebarProps {
   cardClassName?: string;
 }
 
-export interface LeafletMapProps {
-  schools: School[];
-}
-
 export interface MapViewProps {
   className?: string;
-}
-
-export interface SearchSchoolCardProps {
-  school: School;
 }
 
 export interface SearchAuthGateProps {
@@ -33,9 +24,11 @@ export interface SearchBarProps {
 
 export interface SearchLayoutProps {
   children: ReactNode;
+  guestAccess?: boolean;
 }
 
 export interface SearchPageContentProps {
   activePortal: Portal;
   title: string;
+  guestAccess?: boolean;
 }
