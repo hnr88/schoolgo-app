@@ -12,31 +12,46 @@ import type { SearchPageContentProps } from '@/modules/school-search/types/compo
 export async function SearchPageContent({
   activePortal,
   title,
+  guestAccess = false,
 }: SearchPageContentProps) {
   return (
     <>
       <h1 className='sr-only'>{title}</h1>
       <MarketingHeader activePortal={activePortal} />
 
-      <SearchLayout>
-        <SearchAuthGate>
+      <SearchLayout guestAccess={guestAccess}>
+        {guestAccess ? (
           <FilterSidebar />
-        </SearchAuthGate>
+        ) : (
+          <SearchAuthGate>
+            <FilterSidebar />
+          </SearchAuthGate>
+        )}
 
         <section className='flex-1 p-6 flex flex-col gap-4 overflow-hidden h-[calc(100vh-4rem)] md:h-[calc(100vh-7.5rem)]'>
           <div className='flex flex-col gap-4 shrink-0'>
             <SearchBar />
-            <SearchAuthGate>
+            {guestAccess ? (
               <FilterChips />
-            </SearchAuthGate>
+            ) : (
+              <SearchAuthGate>
+                <FilterChips />
+              </SearchAuthGate>
+            )}
           </div>
 
           <div className='relative flex-1 min-h-0'>
             <MapView />
-            <SearchAuthGate>
+            {guestAccess ? (
               <SchoolResultsPanel />
-            </SearchAuthGate>
-            <SearchLoginPrompt />
+            ) : (
+              <>
+                <SearchAuthGate>
+                  <SchoolResultsPanel />
+                </SearchAuthGate>
+                <SearchLoginPrompt />
+              </>
+            )}
           </div>
         </section>
       </SearchLayout>

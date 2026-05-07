@@ -1,3 +1,4 @@
+import { Fragment } from 'react';
 import Image from 'next/image';
 import { Star } from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
@@ -90,80 +91,138 @@ export async function ParentsComparison() {
           </h2>
         </div>
 
-        <div className='rounded-2xl shadow-4'>
+        {/* Desktop: classic column layout */}
+        <div className='hidden rounded-2xl shadow-4 lg:block'>
           <div className='overflow-hidden rounded-2xl border border-border bg-card'>
-            <div className='overflow-x-auto'>
-              <table className='w-full min-w-[800px]'>
-                <thead>
-                  <tr>
+            <table className='w-full'>
+              <thead>
+                <tr>
+                  <th
+                    scope='col'
+                    className='w-48 border-b border-divider bg-card px-8 pb-6 pt-8 text-left align-bottom'
+                  >
+                    <span className='text-xs font-semibold uppercase tracking-widest text-foggy'>
+                      {t('shortlistLabel', { count: set.length })}
+                    </span>
+                  </th>
+                  {set.map((s, i) => (
                     <th
+                      key={s.slug}
                       scope='col'
-                      className='w-48 border-b border-divider bg-card px-8 pb-6 pt-8 text-left align-bottom'
+                      className='min-w-52 border-b border-divider px-6 pb-6 pt-8 text-left align-top'
                     >
-                      <span className='text-xs font-semibold uppercase tracking-widest text-foggy'>
-                        {t('shortlistLabel', { count: set.length })}
-                      </span>
-                    </th>
-                    {set.map((s, i) => (
-                      <th
-                        key={s.slug}
-                        scope='col'
-                        className='min-w-[13rem] border-b border-divider px-6 pb-6 pt-8 text-left align-top'
-                      >
-                        <div className='flex flex-col gap-3'>
-                          <div className='relative h-40 w-full overflow-hidden rounded-xl border border-border bg-muted'>
-                            <Image
-                              src={COMPARISON_IMAGES[i] ?? COMPARISON_IMAGES[0]}
-                              alt=''
-                              fill
-                              sizes='200px'
-                              className='object-cover'
-                              aria-hidden='true'
-                            />
-                          </div>
-                          <div className='flex flex-col gap-0.5'>
-                            <span className='text-sm font-semibold text-ink-900'>
-                              {s.name}
-                            </span>
-                            <span className='flex items-center gap-1 text-xs text-foggy'>
-                              {s.suburb}, {s.state} ·{' '}
-                              <Star
-                                className='inline h-3 w-3 fill-ink-900 text-ink-900'
-                                aria-hidden='true'
-                              />
-                              {RATINGS[i]}
-                            </span>
-                          </div>
+                      <div className='flex flex-col gap-3'>
+                        <div className='relative h-40 w-full overflow-hidden rounded-xl border border-border bg-muted'>
+                          <Image
+                            src={COMPARISON_IMAGES[i] ?? COMPARISON_IMAGES[0]}
+                            alt=''
+                            fill
+                            sizes='200px'
+                            className='object-cover'
+                            aria-hidden='true'
+                          />
                         </div>
-                      </th>
-                    ))}
+                        <div className='flex flex-col gap-0.5'>
+                          <span className='text-sm font-semibold text-ink-900'>{s.name}</span>
+                          <span className='flex items-center gap-1 text-xs text-foggy'>
+                            {s.suburb}, {s.state} ·{' '}
+                            <Star className='inline h-3 w-3 fill-ink-900 text-ink-900' aria-hidden='true' />
+                            {RATINGS[i]}
+                          </span>
+                        </div>
+                      </div>
+                    </th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {rows.map((row) => (
+                  <tr key={row.key} className='border-t border-divider transition-colors hover:bg-muted/50'>
+                    <th scope='row' className='bg-muted/40 px-8 py-5 text-left text-xs font-medium text-foggy'>
+                      {t(`columns.${row.key}`)}
+                    </th>
+                    {set.map((s, i) => {
+                      const cell = row.value(s, i);
+                      return (
+                        <td
+                          key={s.slug}
+                          className={`px-6 py-5 text-sm ${cell.highlight ? 'font-medium text-primary' : cell.muted ? 'text-foggy' : 'font-medium text-ink-900'}`}
+                        >
+                          {cell.text}
+                        </td>
+                      );
+                    })}
                   </tr>
-                </thead>
-                <tbody>
-                  {rows.map((row) => (
-                    <tr key={row.key} className='border-t border-divider transition-colors hover:bg-muted/50'>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        {/* Mobile: row-label layout */}
+        <div className='rounded-2xl shadow-4 lg:hidden'>
+          <div className='overflow-hidden rounded-2xl border border-border bg-card'>
+            <table className='w-full'>
+              <caption className='px-4 pb-4 pt-6 text-left text-xs font-semibold uppercase tracking-widest text-foggy'>
+                {t('shortlistLabel', { count: set.length })}
+              </caption>
+              <thead>
+                <tr>
+                  {set.map((s, i) => (
+                    <th key={s.slug} scope='col' className='border-b border-divider px-3 pb-4 text-left align-top'>
+                      <div className='flex flex-col gap-2'>
+                        <div className='relative h-20 w-full overflow-hidden rounded-xl border border-border bg-muted'>
+                          <Image
+                            src={COMPARISON_IMAGES[i] ?? COMPARISON_IMAGES[0]}
+                            alt=''
+                            fill
+                            sizes='33vw'
+                            className='object-cover'
+                            aria-hidden='true'
+                          />
+                        </div>
+                        <div className='flex flex-col gap-0.5'>
+                          <span className='text-xs font-semibold text-ink-900'>{s.name}</span>
+                          <span className='flex items-center gap-1 text-xs text-foggy'>
+                            {s.suburb}, {s.state} ·{' '}
+                            <Star className='inline h-3 w-3 fill-ink-900 text-ink-900' aria-hidden='true' />
+                            {RATINGS[i]}
+                          </span>
+                        </div>
+                      </div>
+                    </th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {rows.map((row) => (
+                  <Fragment key={row.key}>
+                    <tr>
                       <th
-                        scope='row'
-                        className='bg-muted/40 px-8 py-5 text-left text-xs font-medium text-foggy'
+                        colSpan={set.length}
+                        scope='colgroup'
+                        className='border-t-2 border-divider px-4 pb-1 pt-4 text-center text-xs font-semibold uppercase tracking-wider text-foggy'
                       >
                         {t(`columns.${row.key}`)}
                       </th>
+                    </tr>
+                    <tr>
                       {set.map((s, i) => {
                         const cell = row.value(s, i);
                         return (
                           <td
                             key={s.slug}
-                            className={`px-6 py-5 text-sm ${cell.highlight ? 'font-medium text-primary' : cell.muted ? 'text-foggy' : 'font-medium text-ink-900'}`}
+                            className={`relative px-3 pb-3 pt-1 text-xs after:absolute after:bottom-1 after:right-0 after:top-1 after:w-px after:bg-divider last:after:hidden ${cell.highlight ? 'font-medium text-primary' : cell.muted ? 'text-foggy' : 'font-medium text-ink-900'}`}
                           >
                             {cell.text}
                           </td>
                         );
                       })}
                     </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
+                  </Fragment>
+                ))}
+              </tbody>
+            </table>
           </div>
         </div>
       </SectionContainer>

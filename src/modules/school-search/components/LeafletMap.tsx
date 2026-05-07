@@ -6,8 +6,7 @@ import 'leaflet/dist/leaflet.css';
 import { MapZoomControls } from '@/modules/school-search/components/MapZoomControls';
 import { useMapFitBounds } from '@/modules/school-search/hooks/useMapFitBounds';
 import { formatAudCompact } from '@/modules/school-search/lib/format-currency';
-import type { LeafletMapProps } from '@/modules/school-search/types/component.types';
-import type { School } from '@/modules/school-search/types/school.types';
+import type { SchoolHit } from '@/modules/school-search/types/search-api.types';
 
 const SCHOOL_MAP_ICON = new L.DivIcon({
   className: '',
@@ -19,12 +18,14 @@ const SCHOOL_MAP_ICON = new L.DivIcon({
   popupAnchor: [0, -20],
 });
 
-function FitBoundsController({ schools }: { schools: School[] }) {
+function FitBoundsController({ schools }: { schools: SchoolHit[] }) {
   useMapFitBounds(schools);
   return null;
 }
 
-export function LeafletMap({ schools }: LeafletMapProps) {
+export function LeafletMap({ schools }: { schools: SchoolHit[] }) {
+  const geoSchools = schools.filter((s) => s._geo != null);
+
   return (
     <div className="relative isolate h-full w-full overflow-hidden rounded-lg">
       <div className="pointer-events-none absolute inset-0 z-10 rounded-lg bg-primary/5" />
@@ -40,11 +41,11 @@ export function LeafletMap({ schools }: LeafletMapProps) {
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
         />
-        <FitBoundsController schools={schools} />
-        {schools.map((school) => (
+        <FitBoundsController schools={geoSchools} />
+        {geoSchools.map((school) => (
           <Marker
-            key={school.id}
-            position={[school.lat, school.lng]}
+            key={school.documentId}
+            position={[school._geo!.lat, school._geo!.lng]}
             icon={SCHOOL_MAP_ICON}
           >
             <Popup>
@@ -53,9 +54,11 @@ export function LeafletMap({ schools }: LeafletMapProps) {
                 <p className="text-xs text-on-surface-variant">
                   {school.suburb}, {school.state}
                 </p>
-                <p className="mt-1 text-sm font-black text-primary">
-                  {formatAudCompact(school.tuitionAud)}
-                </p>
+                {school.lowestAnnualTuition != null && (
+                  <p className="mt-1 text-sm font-black text-primary">
+                    {formatAudCompact(school.lowestAnnualTuition)}
+                  </p>
+                )}
               </div>
             </Popup>
           </Marker>

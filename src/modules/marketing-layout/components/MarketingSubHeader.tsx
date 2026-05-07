@@ -4,13 +4,10 @@ import { useState, useRef, useEffect } from 'react';
 import { ChevronDown, Sparkles } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import type { MarketingSubHeaderProps } from '@/modules/marketing-layout/types/header.types';
-import { ICONS, AUDIENCES } from '../constants/sub-header.constants';
+import { ICONS } from '../constants/sub-header.constants';
 
 export function MarketingSubHeader({
   menus,
-  activePortal,
-  portalUrls,
-  audienceLabels,
 }: MarketingSubHeaderProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   const timeoutRef = useRef<ReturnType<typeof setTimeout>>(null);
@@ -32,36 +29,12 @@ export function MarketingSubHeader({
   }
 
   return (
-    <div className='hidden border-b border-divider/70 bg-background/85 backdrop-blur-xl md:block'>
+    <div className='hidden border-b border-divider/70 bg-background/85 md:block'>
       <div
         ref={navRef}
-        className='mx-auto flex h-8 max-w-content items-center px-5 md:px-8'
+        className='mx-auto flex h-8 max-w-content items-center justify-end px-5 md:px-8'
       >
-        <nav
-          aria-label='Audience'
-          className='flex items-center rounded-lg border border-border/60 p-0.5'
-        >
-          {AUDIENCES.map((a) => {
-            const isActive = a.portal === activePortal;
-            return (
-              <a
-                key={a.key}
-                href={portalUrls[a.portal]}
-                aria-current={isActive ? 'page' : undefined}
-                className={cn(
-                  'rounded-md px-2.5 py-0.5 text-xs font-medium no-underline transition-all duration-150',
-                  isActive
-                    ? 'bg-primary text-on-primary shadow-brand'
-                    : 'text-foggy hover:text-ink-900',
-                )}
-              >
-                {audienceLabels[a.key]}
-              </a>
-            );
-          })}
-        </nav>
-
-        <div className='ml-auto flex items-center gap-6'>
+        <div className='flex items-center gap-6'>
           {menus.map((menu, i) => (
             <div
               key={menu.label}
@@ -91,9 +64,8 @@ export function MarketingSubHeader({
               </button>
 
               {openIndex === i && (
-                <div className='absolute right-0 top-full z-50 pt-2'>
+                <div className='absolute right-0 top-full z-[60] pt-2'>
                   <div className='w-[22rem] rounded-xl border border-border bg-background p-2 shadow-4 ring-1 ring-ink-900/[0.03]'>
-                    <div className='absolute -top-1 right-6 h-2 w-2 rotate-45 border-l border-t border-border bg-background' />
                     <div className='grid gap-1'>
                       {menu.items.map((item) => {
                         const Icon =

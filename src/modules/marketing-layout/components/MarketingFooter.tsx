@@ -5,7 +5,8 @@ import { routing } from '@/i18n/routing';
 import { portalUrl } from '@/lib/portal-url';
 import { SectionContainer } from '@/modules/design-system';
 import type { MarketingFooterProps } from '@/modules/marketing-layout/types/footer.types';
-import { COLUMNS, LANGUAGES } from '../constants/footer.constants';
+import { FOOTER_COLUMNS_BY_PORTAL, LANGUAGES } from '../constants/footer.constants';
+import { AUDIENCES } from '../constants/sub-header.constants';
 
 export async function MarketingFooter({ activePortal }: MarketingFooterProps) {
   const [t, locale] = await Promise.all([
@@ -13,12 +14,13 @@ export async function MarketingFooter({ activePortal }: MarketingFooterProps) {
     getLocale(),
   ]);
   const year = new Date().getFullYear();
+  const footerColumns = FOOTER_COLUMNS_BY_PORTAL[activePortal];
 
   return (
     <footer className='bg-ink-900 text-white/80'>
-      <SectionContainer size='wide' className='pt-16 pb-8 md:pt-20 md:pb-8'>
-        <div className='flex flex-col justify-between gap-12 md:flex-row'>
-          <div className='flex max-w-xs shrink-0 flex-col gap-5'>
+      <SectionContainer size='wide' className='pb-8 pt-14 md:pb-8 md:pt-20'>
+        <div className='grid grid-cols-1 gap-10 md:grid-cols-[minmax(240px,1.1fr)_minmax(0,2fr)] lg:grid-cols-[minmax(260px,1.15fr)_repeat(3,minmax(180px,1fr))] lg:gap-16'>
+          <div className='flex max-w-sm flex-col items-center gap-5 text-center sm:items-start sm:text-left'>
             <a
               href={portalUrl(activePortal, locale)}
               className='inline-flex items-center gap-2.5'
@@ -36,19 +38,16 @@ export async function MarketingFooter({ activePortal }: MarketingFooterProps) {
             <p className='text-xs text-white/40'>{t('attribution')}</p>
           </div>
 
-          {COLUMNS.map((col) => (
-            <div key={col.key} className='flex flex-col gap-4'>
-              <p className='text-xs font-semibold uppercase tracking-widest text-white/50'>
-                {t(`columns.${col.key}.title`)}
-              </p>
-              <ul className='flex flex-col gap-2.5'>
+          {footerColumns.map((col, index) => (
+            <div key={index} className='flex min-w-0 flex-col items-center gap-3 text-center sm:items-start sm:text-left'>
+              <ul className='flex flex-col items-center gap-2.5 sm:items-start'>
                 {col.links.map((l) => (
-                  <li key={l.key}>
+                  <li key={`${l.path}-${'label' in l ? l.label : l.linkKey}`}>
                     <a
-                      href={`${portalUrl(col.portal, locale)}${l.path === '/' ? '' : l.path}`}
-                      className='text-sm text-white/70 no-underline transition-colors hover:text-white'
+                      href={`${portalUrl(col.portal ?? activePortal, locale)}${l.path === '/' ? '' : l.path}`}
+                      className='text-sm leading-snug text-white/70 no-underline transition-colors hover:text-white'
                     >
-                      {t(`columns.${col.key}.links.${l.key}`)}
+                      {'label' in l ? l.label : t(`columns.${l.columnKey}.links.${l.linkKey}`)}
                     </a>
                   </li>
                 ))}
@@ -56,11 +55,11 @@ export async function MarketingFooter({ activePortal }: MarketingFooterProps) {
             </div>
           ))}
 
-          <div className='flex flex-col gap-4'>
+          <div className='flex min-w-0 flex-col items-center gap-4 text-center sm:items-start sm:text-left'>
             <p className='text-xs font-semibold uppercase tracking-widest text-white/50'>
               {t('language')}
             </p>
-            <ul className='flex flex-col gap-2.5'>
+            <ul className='grid grid-cols-1 justify-items-center gap-2.5 sm:justify-items-start'>
               {LANGUAGES.filter((l) =>
                 routing.locales.includes(l.code as (typeof routing.locales)[number]),
               ).map((lang) => (
@@ -68,17 +67,17 @@ export async function MarketingFooter({ activePortal }: MarketingFooterProps) {
                   <Link
                     href='/'
                     locale={lang.code as (typeof routing.locales)[number]}
-                    className='inline-flex items-center gap-2 text-sm text-white/70 no-underline transition-colors hover:text-white'
+                    className='inline-flex max-w-full items-center gap-2 text-sm leading-snug text-white/70 no-underline transition-colors hover:text-white'
                   >
                     <Image
                       src={`/flags/${lang.code}.svg`}
                       alt=''
                       width={20}
                       height={14}
-                      className='h-3.5 w-5 rounded-sm'
+                      className='h-3.5 w-5 shrink-0 rounded-sm'
                       aria-hidden='true'
                     />
-                    {lang.label}
+                    <span className='min-w-0'>{lang.label}</span>
                   </Link>
                 </li>
               ))}
@@ -86,7 +85,35 @@ export async function MarketingFooter({ activePortal }: MarketingFooterProps) {
           </div>
         </div>
 
-        <div className='mt-14 flex justify-center border-t border-white/10 pt-8'>
+        <div className='mx-auto mt-12 flex max-w-xl flex-col items-center gap-3 border-t border-white/10 pt-7 text-center'>
+          <p className='text-xs font-semibold uppercase tracking-widest text-white/50'>
+            {t('portals')}
+          </p>
+          <nav
+            aria-label='Portals'
+            className='flex flex-wrap items-center justify-center gap-2'
+          >
+            {AUDIENCES.map((a) => {
+              const isActive = a.portal === activePortal;
+              return (
+                <a
+                  key={a.key}
+                  href={portalUrl(a.portal, locale)}
+                  aria-current={isActive ? 'page' : undefined}
+                  className={`rounded-pill border px-3 py-1 text-sm leading-none no-underline transition-colors ${
+                    isActive
+                      ? 'border-white/25 bg-white/10 font-semibold text-white'
+                      : 'border-white/10 text-white/60 hover:border-white/25 hover:text-white/85'
+                  }`}
+                >
+                  {t(`portalLabels.${a.key}`)}
+                </a>
+              );
+            })}
+          </nav>
+        </div>
+
+        <div className='mt-8 flex justify-center'>
           <p className='text-sm text-white/60' style={{ fontFamily: 'system-ui, sans-serif' }}>
             {t('copyright', { year })}
           </p>

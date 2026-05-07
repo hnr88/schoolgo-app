@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
-import { SignInPageContent } from '@/modules/auth/components/SignInPageContent';
+import { redirect } from '@/i18n/navigation';
 
 export async function generateMetadata({
   params,
@@ -15,5 +15,5 @@ export async function generateMetadata({
 export default async function SignInPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   setRequestLocale(locale);
-  return <SignInPageContent portal="agent" />;
+  redirect({ href: '/launching-soon', locale });
 }

@@ -130,12 +130,18 @@
     },
     "language": "Ngôn ngữ",
     "copyright": "© {year} SchoolGo Australia. Bảo lưu mọi quyền.",
-    "attribution": "Nguồn từ data.gov.au · CC BY 2.5 AU · Tuân thủ đạo luật ESOS"
+    "attribution": "Nguồn từ data.gov.au · CC BY 2.5 AU · Tuân thủ đạo luật ESOS",
+    "portals": "Tôi là...",
+    "portalLabels": {
+      "parents": "Phụ huynh",
+      "agents": "Tư vấn",
+      "schools": "Trường học"
+    }
   },
   "ParentsHero": {
     "trustPill": {
-      "brand": "CRICOS",
-      "brandAccent": "Đã xác minh",
+      "brand": "Chính phủ",
+      "brandAccent": "Đã đăng ký",
       "source": "dữ liệu từ data.gov.au"
     },
     "headlinePrefix": "Tìm trường",
@@ -400,19 +406,19 @@
     "subheading": "Mọi thông tin trường trên SchoolGo đều được hỗ trợ bởi các nguồn dữ liệu chính phủ chính thức — đã xác minh, được cấp phép và cập nhật hàng tháng.",
     "items": {
       "cricos": {
-        "label": "CRICOS Verified",
+        "label": "Trường đăng ký với chính phủ",
         "description": "Mọi thông tin trường đều được đối chiếu với Sổ đăng ký Liên bang chính thức."
       },
       "datagov": {
-        "label": "data.gov.au",
+        "label": "Luôn cập nhật",
         "description": "Dữ liệu mở được cấp phép theo CC BY 2.5 AU — minh bạch và có thể kiểm tra công khai."
       },
       "acara": {
-        "label": "ACARA School Profiles",
+        "label": "Dữ liệu chương trình quốc gia",
         "description": "Chương trình học, điểm ICSEA và dữ liệu tuyển sinh lấy từ cơ quan quốc gia."
       },
       "esos": {
-        "label": "ESOS Act Compliant",
+        "label": "Bảo vệ học sinh",
         "description": "SchoolGo hoạt động trong khuôn khổ Đạo luật Dịch vụ Giáo dục cho Học sinh Nước ngoài của Úc."
       }
     },
@@ -880,7 +886,9 @@
     "results": {
       "title": "Trường Có Sẵn",
       "count": "{count, plural, one {# Kết Quả} other {# Kết Quả}}",
-      "viewAll": "Xem Tất Cả Trường"
+      "viewAll": "Xem Tất Cả Trường",
+      "error": "[TODO: vi] Something went wrong. Please try again.",
+      "empty": "[TODO: vi] No schools found. Try adjusting your filters."
     },
     "map": {
       "title": "Úc — Bản Đồ Trường Học",

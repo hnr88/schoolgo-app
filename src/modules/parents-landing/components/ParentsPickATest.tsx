@@ -4,6 +4,8 @@ import { PICK_A_TEST_FEATURED, PICK_A_TEST_SECONDARY } from '../constants/parent
 
 export async function ParentsPickATest() {
   const t = await getTranslations('ParentsPickATest');
+  const testCards = [...PICK_A_TEST_FEATURED, ...PICK_A_TEST_SECONDARY];
+
   return (
     <section className='bg-muted py-20 md:py-28'>
       <SectionContainer className='flex flex-col gap-10'>
@@ -28,7 +30,28 @@ export async function ParentsPickATest() {
             </div>
           </div>
 
-          <div className='flex flex-col gap-4'>
+          <div className='grid grid-cols-2 gap-3 sm:hidden'>
+            {testCards.map((key, index) => (
+              <article
+                key={key}
+                className={`flex min-h-32 flex-col gap-1.5 rounded-xl border border-border bg-card p-4 shadow-2 ${
+                  index === testCards.length - 1 ? 'col-span-2' : ''
+                }`}
+              >
+                <h3 className='text-base font-semibold leading-tight text-ink-900'>
+                  {t(`tests.${key}.name`)}
+                </h3>
+                <p className='line-clamp-2 text-xs leading-snug text-foggy'>
+                  {t(`tests.${key}.fullName`)}
+                </p>
+                <p className='mt-auto line-clamp-2 pt-2 text-xs font-medium leading-snug text-primary'>
+                  {t(`tests.${key}.description`)}
+                </p>
+              </article>
+            ))}
+          </div>
+
+          <div className='hidden flex-col gap-4 sm:flex'>
             <div className='grid grid-cols-2 gap-4'>
               {PICK_A_TEST_FEATURED.map((key) => (
                 <article

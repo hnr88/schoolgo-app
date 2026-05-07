@@ -3,15 +3,16 @@
 import { useEffect } from 'react';
 import { useMap } from 'react-leaflet';
 import L from 'leaflet';
-import type { School } from '@/modules/school-search/types/school.types';
+import type { SchoolHit } from '@/modules/school-search/types/search-api.types';
 
-export function useMapFitBounds(schools: School[]) {
+export function useMapFitBounds(schools: SchoolHit[]) {
   const map = useMap();
 
   useEffect(() => {
-    if (schools.length === 0) return;
+    const withGeo = schools.filter((s) => s._geo != null);
+    if (withGeo.length === 0) return;
     const bounds = L.latLngBounds(
-      schools.map((s) => [s.lat, s.lng] as [number, number]),
+      withGeo.map((s) => [s._geo!.lat, s._geo!.lng] as [number, number]),
     );
     map.fitBounds(bounds, { padding: [50, 50] });
   }, [map, schools]);
