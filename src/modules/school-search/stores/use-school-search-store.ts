@@ -27,12 +27,12 @@ interface SchoolSearchState {
 
 const initialState = {
   query: '',
-  priceMin: 15000,
-  priceMax: 45000,
-  curricula: ['VCE'] as Curriculum[],
-  states: ['VIC', 'NSW'] as AustralianState[],
-  englishTests: true,
-  activeChips: ['top-rated'],
+  priceMin: PRICE_MIN,
+  priceMax: PRICE_MAX,
+  curricula: [] as Curriculum[],
+  states: [] as AustralianState[],
+  englishTests: false,
+  activeChips: [] as string[],
 };
 
 export const useSchoolSearchStore = create<SchoolSearchState>((set) => ({
