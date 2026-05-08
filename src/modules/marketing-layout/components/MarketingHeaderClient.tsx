@@ -15,10 +15,12 @@ export function MarketingHeaderClient({
   activePortal,
   portalUrls,
   navLinks,
+  variant,
   labels,
 }: MarketingHeaderClientProps) {
   const pathname = usePathname();
   const isSearchPage = pathname.endsWith('/search');
+  const isDark = variant === 'dark';
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeHash, setActiveHash] = useState('');
@@ -116,7 +118,7 @@ export function MarketingHeaderClient({
             : 'border-b border-transparent bg-background md:bg-background/0',
         )}
       >
-        <MarketingSubHeader menus={subMenus} />
+        <MarketingSubHeader menus={subMenus} inverted={isDark && !scrolled} />
         <div className='mx-auto flex h-16 max-w-content items-center gap-4 px-5 md:h-20 md:px-8'>
           <a
             href={portalUrls[activePortal]}
@@ -124,7 +126,7 @@ export function MarketingHeaderClient({
             aria-label='SchoolGo home'
           >
             <Image
-              src='/logos/logo-red.png'
+              src={isDark && !scrolled ? '/logos/logo-white.png' : '/logos/logo-red.png'}
               alt='SchoolGo'
               width={220}
               height={48}
@@ -142,9 +144,13 @@ export function MarketingHeaderClient({
                   href={link.href}
                   className={cn(
                     'rounded-pill px-3 py-1.5 text-body-sm font-medium no-underline transition-colors',
-                    isActive
-                      ? 'text-ink-900'
-                      : 'text-foggy hover:bg-muted hover:text-ink-900',
+                    isDark && !scrolled
+                      ? isActive
+                        ? 'text-white'
+                        : 'text-white/70 hover:bg-white/10 hover:text-white'
+                      : isActive
+                        ? 'text-ink-900'
+                        : 'text-foggy hover:bg-muted hover:text-ink-900',
                   )}
                 >
                   {link.label}
@@ -157,7 +163,12 @@ export function MarketingHeaderClient({
             <Link
               href='/sign-in'
               data-slot='button'
-              className='rounded-pill px-4 py-2 text-sm font-medium text-foreground no-underline transition-colors hover:bg-muted'
+              className={cn(
+                'rounded-pill px-4 py-2 text-sm font-medium no-underline transition-colors',
+                isDark && !scrolled
+                  ? 'text-white/88 hover:bg-white/10 hover:text-white'
+                  : 'text-foreground hover:bg-muted',
+              )}
             >
               {labels.signIn}
             </Link>
@@ -177,7 +188,12 @@ export function MarketingHeaderClient({
             type='button'
             onClick={() => setMobileOpen(true)}
             aria-label={labels.openMenu}
-            className='ml-auto flex h-10 w-10 shrink-0 items-center justify-center rounded-pill text-foreground hover:bg-muted md:hidden'
+            className={cn(
+              'ml-auto flex h-10 w-10 shrink-0 items-center justify-center rounded-pill md:hidden',
+              isDark && !scrolled
+                ? 'text-white hover:bg-white/10'
+                : 'text-foreground hover:bg-muted',
+            )}
           >
             <Menu className='h-5 w-5' strokeWidth={1.75} aria-hidden='true' />
           </button>

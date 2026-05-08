@@ -15,5 +15,5 @@ export async function generateMetadata({
 export default async function SignInPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   setRequestLocale(locale);
-  redirect({ href: '/launching-soon', locale });
+  redirect({ href: '/launching-soon?variant=dashboard', locale });
 }

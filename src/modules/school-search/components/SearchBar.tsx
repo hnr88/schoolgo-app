@@ -1,5 +1,5 @@
 'use client';
-import { Search } from 'lucide-react';
+import { Search, X } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { cn } from '@/lib/utils';
 import { useSchoolSearchStore } from '@/modules/school-search/stores/use-school-search-store';
@@ -23,13 +23,23 @@ export function SearchBar({ className }: SearchBarProps) {
         aria-hidden='true'
       />
       <input
-        type='search'
+        type='text'
         value={query}
         onChange={(e) => setQuery(e.target.value)}
         placeholder={t('searchPlaceholder')}
         aria-label={t('searchPlaceholder')}
         className='w-full border-0 bg-transparent text-body text-foreground placeholder:text-quill outline-none'
       />
+      {query && (
+        <button
+          type='button'
+          onClick={() => setQuery('')}
+          aria-label={t('clearSearch')}
+          className='flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-muted text-foggy transition-colors hover:bg-ink-200 hover:text-foreground'
+        >
+          <X className='h-3 w-3' strokeWidth={2.5} aria-hidden='true' />
+        </button>
+      )}
     </div>
   );
 }

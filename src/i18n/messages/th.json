@@ -56,8 +56,8 @@
           "browseSchoolsDesc": "ค้นหาโรงเรียนออสเตรเลียที่จดทะเบียนทุกแห่ง",
           "compareSchools": "เปรียบเทียบโรงเรียน",
           "compareSchoolsDesc": "เปรียบเทียบค่าเล่าเรียน การสอบ และรอบรับสมัครแบบเคียงกัน",
-          "scholarships": "ทุนการศึกษา",
-          "scholarshipsDesc": "รายชื่อทุนการศึกษาสำหรับนักเรียนต่างชาติ",
+          "schoolTypes": "ประเภทโรงเรียน",
+          "schoolTypesDesc": "เปรียบเทียบโรงเรียนรัฐบาล คาทอลิก และเอกชน",
           "englishTests": "การสอบภาษาอังกฤษ",
           "englishTestsDesc": "คู่มือ AEAS IELTS และการสอบที่ได้รับการรับรอง"
         }
@@ -67,10 +67,12 @@
         "items": {
           "admissionsGuide": "คู่มือการรับสมัคร",
           "admissionsGuideDesc": "ขั้นตอนการลงทะเบียนทีละขั้นตอน",
-          "boardingSchools": "โรงเรียนประจำ",
-          "boardingSchoolsDesc": "เปรียบเทียบโรงเรียนประจำกับโรงเรียนไป-กลับ",
+          "schoolFees": "ค่าเล่าเรียน",
+          "schoolFeesDesc": "ค่าเล่าเรียน ค่าใช้จ่ายเพิ่มเติม และค่าใช้จ่ายปีแรก",
           "visaRequirements": "ข้อกำหนดวีซ่า",
-          "visaRequirementsDesc": "สาระสำคัญของวีซ่านักเรียน 500"
+          "visaRequirementsDesc": "สาระสำคัญของวีซ่านักเรียน 500",
+          "allGuides": "คู่มือทั้งหมด",
+          "allGuidesDesc": "เรียกดูคู่มือทุกฉบับสำหรับครอบครัวต่างชาติ"
         }
       },
       "about": {
@@ -852,6 +854,7 @@
   },
   "SchoolSearch": {
     "searchPlaceholder": "ค้นหาตามชื่อโรงเรียน เมือง หรือชานเมือง...",
+    "clearSearch": "ล้างการค้นหา",
     "filters": {
       "title": "ตัวกรองการค้นหา",
       "subtitle": "กรองโรงเรียนในออสเตรเลีย",
@@ -864,7 +867,7 @@
       "englishTestsToggle": "สลับตัวกรองการทดสอบความสามารถภาษาอังกฤษ",
       "curriculum": "หลักสูตร",
       "location": "สถานที่",
-      "apply": "ใช้ตัวกรอง"
+      "resetFilters": "รีเซ็ตตัวกรอง"
     },
     "chips": {
       "topRated": "คะแนนสูงสุด",
@@ -892,8 +895,10 @@
     },
     "map": {
       "title": "ออสเตรเลีย — แผนที่โรงเรียน",
+      "reset": "[TODO: th] Reset filters and map",
       "zoomIn": "ซูมเข้า",
-      "zoomOut": "ซูมออก"
+      "zoomOut": "ซูมออก",
+      "ctrlScrollHint": "[TODO: th] Use Ctrl + scroll to zoom the map"
     },
     "card": {
       "currency": "AUD",

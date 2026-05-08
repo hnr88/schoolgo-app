@@ -12,4 +12,5 @@ export { DsInput } from '@/modules/design-system/components/DsInput';
 export { DsSelect } from '@/modules/design-system/components/DsSelect';
 export { DsField } from '@/modules/design-system/components/DsField';
 export { SearchInput } from '@/modules/design-system/components/SearchInput';
-export type { IconComponent, TrustVariant, DsInputProps, DsSelectProps } from '@/modules/design-system/types/design-system.types';
+export { FaqSection } from '@/modules/design-system/components/FaqSection';
+export type { IconComponent, TrustVariant, DsInputProps, DsSelectProps, FaqItem, FaqSectionProps } from '@/modules/design-system/types/design-system.types';

@@ -56,8 +56,8 @@
           "browseSchoolsDesc": "Cari semua sekolah Australia berdaftar",
           "compareSchools": "Bandingkan sekolah",
           "compareSchoolsDesc": "Perbandingan yuran, ujian & pengambilan serentak",
-          "scholarships": "Biasiswa",
-          "scholarshipsDesc": "Senarai biasiswa pelajar antarabangsa",
+          "schoolTypes": "Jenis sekolah",
+          "schoolTypesDesc": "Perbandingan sekolah kerajaan, Katolik & swasta",
           "englishTests": "Ujian Bahasa Inggeris",
           "englishTestsDesc": "Panduan ujian AEAS, IELTS & ujian yang diterima"
         }
@@ -67,10 +67,12 @@
         "items": {
           "admissionsGuide": "Panduan kemasukan",
           "admissionsGuideDesc": "Proses enrolmen langkah demi langkah",
-          "boardingSchools": "Sekolah berasrama",
-          "boardingSchoolsDesc": "Perbandingan sekolah berasrama vs harian",
+          "schoolFees": "Yuran sekolah",
+          "schoolFeesDesc": "Yuran pengajian, tambahan & kos tahun pertama",
           "visaRequirements": "Keperluan visa",
-          "visaRequirementsDesc": "Perkara penting visa pelajar 500"
+          "visaRequirementsDesc": "Perkara penting visa pelajar 500",
+          "allGuides": "Semua panduan",
+          "allGuidesDesc": "Semak imbas setiap panduan untuk keluarga antarabangsa"
         }
       },
       "about": {
@@ -852,6 +854,7 @@
   },
   "SchoolSearch": {
     "searchPlaceholder": "Cari mengikut nama sekolah, bandar, atau pinggir bandar...",
+    "clearSearch": "Kosongkan carian",
     "filters": {
       "title": "Penapis Carian",
       "subtitle": "Tapis Sekolah Australia",
@@ -864,7 +867,7 @@
       "englishTestsToggle": "Togol penapis ujian kecekapan Bahasa Inggeris",
       "curriculum": "Kurikulum",
       "location": "Lokasi",
-      "apply": "Gunakan Penapis"
+      "resetFilters": "Set Semula Penapis"
     },
     "chips": {
       "topRated": "Penilaian Tertinggi",
@@ -892,8 +895,10 @@
     },
     "map": {
       "title": "Australia — Peta Sekolah",
+      "reset": "[TODO: ms] Reset filters and map",
       "zoomIn": "Zum masuk",
-      "zoomOut": "Zum keluar"
+      "zoomOut": "Zum keluar",
+      "ctrlScrollHint": "[TODO: ms] Use Ctrl + scroll to zoom the map"
     },
     "card": {
       "currency": "AUD",

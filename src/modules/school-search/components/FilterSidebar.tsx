@@ -1,7 +1,6 @@
 'use client';
-import { Check, MapPin, SlidersHorizontal } from 'lucide-react';
+import { Check, MapPin, RotateCcw, SlidersHorizontal } from 'lucide-react';
 import { useTranslations } from 'next-intl';
-import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { Label } from '@/components/ui/label';
 import { Slider } from '@/components/ui/slider';
@@ -29,6 +28,18 @@ export function FilterSidebar({ className, cardClassName }: FilterSidebarProps) 
   const toggleState = useSchoolSearchStore((s) => s.toggleState);
   const englishTests = useSchoolSearchStore((s) => s.englishTests);
   const setEnglishTests = useSchoolSearchStore((s) => s.setEnglishTests);
+  const query = useSchoolSearchStore((s) => s.query);
+  const activeChips = useSchoolSearchStore((s) => s.activeChips);
+  const reset = useSchoolSearchStore((s) => s.reset);
+
+  const hasActiveFilters =
+    query !== '' ||
+    priceMin > PRICE_MIN ||
+    priceMax < PRICE_MAX ||
+    curricula.length > 0 ||
+    selectedStates.length > 0 ||
+    englishTests ||
+    activeChips.length > 0;
 
   return (
     <aside className={cn('hidden shrink-0 lg:sticky lg:top-30 lg:block lg:h-[calc(100vh-7.5rem)] lg:w-[20rem] lg:p-4', className)}>
@@ -124,7 +135,7 @@ export function FilterSidebar({ className, cardClassName }: FilterSidebarProps) 
           <div className='space-y-2.5 border-t border-divider px-4 py-3.5'>
             <Label className='text-body-sm font-semibold text-ink-900'>{t('location')}</Label>
             <div className='flex flex-col gap-1.5'>
-              {STATE_OPTIONS.slice(0, 4).map((value) => {
+              {STATE_OPTIONS.map((value) => {
                 const isSelected = selectedStates.includes(value as AustralianState);
                 return (
                   <button
@@ -152,14 +163,18 @@ export function FilterSidebar({ className, cardClassName }: FilterSidebarProps) 
           </div>
         </div>
 
-        <div className='shrink-0 border-t border-divider bg-card px-4 py-3.5'>
-          <Button
-            type='button'
-            className='h-auto w-full rounded-lg py-2.5 text-sm font-semibold shadow-brand'
-          >
-            {t('apply')}
-          </Button>
-        </div>
+        {hasActiveFilters && (
+          <div className='shrink-0 border-t border-divider bg-card px-4 py-3.5'>
+            <button
+              type='button'
+              onClick={reset}
+              className='flex h-auto w-full items-center justify-center gap-2 rounded-lg border border-border bg-background py-2.5 text-sm font-semibold text-foreground transition-colors hover:bg-muted'
+            >
+              <RotateCcw className='h-3.5 w-3.5' strokeWidth={2} aria-hidden='true' />
+              {t('resetFilters')}
+            </button>
+          </div>
+        )}
       </div>
     </aside>
   );

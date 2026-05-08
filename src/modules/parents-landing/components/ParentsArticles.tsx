@@ -22,7 +22,7 @@ export async function ParentsArticles() {
               key={item.key}
               className='group flex flex-col overflow-hidden rounded-lg border border-border bg-card shadow-2 transition-shadow hover:shadow-3'
             >
-              <div className='relative aspect-[4/3] w-full bg-muted'>
+              <div className='relative aspect-4-3 w-full bg-muted'>
                 <Image
                   src={item.image}
                   alt=''

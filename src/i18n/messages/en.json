@@ -56,8 +56,8 @@
           "browseSchoolsDesc": "Search all registered Australian schools",
           "compareSchools": "Compare schools",
           "compareSchoolsDesc": "Side-by-side fees, tests & intakes",
-          "scholarships": "Scholarships",
-          "scholarshipsDesc": "International student scholarship listings",
+          "schoolTypes": "School types",
+          "schoolTypesDesc": "Government, Catholic & independent compared",
           "englishTests": "English tests",
           "englishTestsDesc": "AEAS, IELTS & accepted test guide"
         }
@@ -67,10 +67,12 @@
         "items": {
           "admissionsGuide": "Admissions guide",
           "admissionsGuideDesc": "Step-by-step enrolment process",
-          "boardingSchools": "Boarding schools",
-          "boardingSchoolsDesc": "Boarding vs day school comparison",
+          "schoolFees": "School fees",
+          "schoolFeesDesc": "Tuition, extras & first-year costs",
           "visaRequirements": "Visa requirements",
-          "visaRequirementsDesc": "Student visa 500 essentials"
+          "visaRequirementsDesc": "Student visa 500 essentials",
+          "allGuides": "All guides",
+          "allGuidesDesc": "Browse every guide for international families"
         }
       },
       "about": {
@@ -827,6 +829,7 @@
   },
   "SchoolSearch": {
     "searchPlaceholder": "Search by school name, city, or suburb...",
+    "clearSearch": "Clear search",
     "filters": {
       "title": "Search Filters",
       "subtitle": "Refine Australian Schools",
@@ -839,7 +842,7 @@
       "englishTestsToggle": "Toggle English proficiency tests filter",
       "curriculum": "Curriculum",
       "location": "Location",
-      "apply": "Apply Filters"
+      "resetFilters": "Reset Filters"
     },
     "chips": {
       "topRated": "Top Rated",
@@ -867,8 +870,10 @@
     },
     "map": {
       "title": "Australia — School Map",
+      "reset": "Reset filters and map",
       "zoomIn": "Zoom in",
-      "zoomOut": "Zoom out"
+      "zoomOut": "Zoom out",
+      "ctrlScrollHint": "Use Ctrl + scroll to zoom the map"
     },
     "card": {
       "currency": "AUD",

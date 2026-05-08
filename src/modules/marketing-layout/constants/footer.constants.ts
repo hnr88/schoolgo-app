@@ -29,6 +29,17 @@ const PARENT_SECONDARY_COLUMN: FooterColumn = {
   ],
 };
 
+const GUIDES_COLUMN: FooterColumn = {
+  links: [
+    { label: 'Choose a school', path: '/guides/choose-a-school' },
+    { label: 'School fees', path: '/guides/school-fees' },
+    { label: 'Accommodation', path: '/guides/accommodation' },
+    { label: 'Student visa', path: '/guides/student-visa' },
+    { label: 'English requirements', path: '/guides/english-requirements' },
+    { label: 'All guides', path: '/guides' },
+  ],
+};
+
 const AGENT_PRIMARY_COLUMN: FooterColumn = {
   portal: 'agent',
   links: [
@@ -70,7 +81,7 @@ const SCHOOL_SECONDARY_COLUMN: FooterColumn = {
 };
 
 export const FOOTER_COLUMNS_BY_PORTAL = {
-  parent: [PARENT_PRIMARY_COLUMN, PARENT_SECONDARY_COLUMN],
+  parent: [PARENT_PRIMARY_COLUMN, PARENT_SECONDARY_COLUMN, GUIDES_COLUMN],
   agent: [AGENT_PRIMARY_COLUMN, AGENT_SECONDARY_COLUMN],
   school: [SCHOOL_PRIMARY_COLUMN, SCHOOL_SECONDARY_COLUMN],
 } satisfies Record<Portal, FooterColumn[]>;

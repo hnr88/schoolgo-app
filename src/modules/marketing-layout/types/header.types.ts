@@ -20,11 +20,14 @@ export interface SubMenu {
   items: SubMenuItem[];
 }
 
+export type HeaderVariant = 'default' | 'dark';
+
 export interface MarketingHeaderClientProps {
   subMenus: SubMenu[];
   activePortal: Portal;
   portalUrls: Record<Portal, string>;
   navLinks: NavLink[];
+  variant: HeaderVariant;
   labels: {
     findSchools: string;
     signIn: string;
@@ -37,8 +40,10 @@ export interface MarketingHeaderClientProps {
 
 export interface MarketingSubHeaderProps {
   menus: SubMenu[];
+  inverted?: boolean;
 }
 
 export interface MarketingHeaderProps {
   activePortal: Portal;
+  variant?: HeaderVariant;
 }

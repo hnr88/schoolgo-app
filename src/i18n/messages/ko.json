@@ -56,8 +56,8 @@
           "browseSchoolsDesc": "모든 등록 호주 학교 검색",
           "compareSchools": "학교 비교",
           "compareSchoolsDesc": "학비·시험·입학 일정 나란히 비교",
-          "scholarships": "장학금",
-          "scholarshipsDesc": "유학생 장학금 목록",
+          "schoolTypes": "학교 유형",
+          "schoolTypesDesc": "공립·가톨릭·사립 학교 비교",
           "englishTests": "영어 시험",
           "englishTestsDesc": "AEAS, IELTS 및 인정 시험 안내"
         }
@@ -67,10 +67,12 @@
         "items": {
           "admissionsGuide": "입학 가이드",
           "admissionsGuideDesc": "단계별 입학 과정 안내",
-          "boardingSchools": "기숙학교",
-          "boardingSchoolsDesc": "기숙 vs 통학 비교",
+          "schoolFees": "학교 학비",
+          "schoolFeesDesc": "등록금·기타 비용·첫해 총비용",
           "visaRequirements": "비자 요건",
-          "visaRequirementsDesc": "학생 비자 500 필수 사항"
+          "visaRequirementsDesc": "학생 비자 500 필수 사항",
+          "allGuides": "모든 가이드",
+          "allGuidesDesc": "국제 가족을 위한 모든 가이드 보기"
         }
       },
       "about": {
@@ -852,6 +854,7 @@
   },
   "SchoolSearch": {
     "searchPlaceholder": "학교 이름, 도시 또는 교외로 검색...",
+    "clearSearch": "검색 지우기",
     "filters": {
       "title": "검색 필터",
       "subtitle": "호주 학교 필터링",
@@ -864,7 +867,7 @@
       "englishTestsToggle": "영어 능력 시험 필터 전환",
       "curriculum": "커리큘럼",
       "location": "위치",
-      "apply": "필터 적용"
+      "resetFilters": "필터 초기화"
     },
     "chips": {
       "topRated": "최고 평점",
@@ -892,8 +895,10 @@
     },
     "map": {
       "title": "호주 — 학교 지도",
+      "reset": "[TODO: ko] Reset filters and map",
       "zoomIn": "확대",
-      "zoomOut": "축소"
+      "zoomOut": "축소",
+      "ctrlScrollHint": "[TODO: ko] Use Ctrl + scroll to zoom the map"
     },
     "card": {
       "currency": "AUD",

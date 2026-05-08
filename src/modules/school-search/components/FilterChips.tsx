@@ -12,7 +12,7 @@ export function FilterChips({ className }: FilterChipsProps) {
   const toggleChip = useSchoolSearchStore((s) => s.toggleChip);
 
   return (
-    <div className={cn('no-scrollbar flex items-center gap-2 overflow-x-auto pb-2', className)}>
+    <div className={cn('flex flex-wrap items-center gap-2', className)}>
       {FILTER_CHIP_IDS.map((id) => {
         const isActive = activeChips.includes(id);
         return (

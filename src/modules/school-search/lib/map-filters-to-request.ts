@@ -2,6 +2,12 @@ import type { SearchRequest, SearchRequestFilters } from '@/modules/school-searc
 import type { AustralianState, Curriculum } from '@/modules/school-search/types/school.types';
 import { PRICE_MIN, PRICE_MAX } from '@/modules/school-search/constants/school.constants';
 
+interface MapBounds {
+  lat: number;
+  lng: number;
+  radiusKm: number;
+}
+
 interface StoreState {
   query: string;
   priceMin: number;
@@ -10,6 +16,8 @@ interface StoreState {
   states: AustralianState[];
   englishTests: boolean;
   activeChips: string[];
+  mapBounds: MapBounds;
+  geocodedQuery: string;
 }
 
 const CHIP_TO_FILTER: Record<string, Partial<SearchRequestFilters>> = {
@@ -27,10 +35,14 @@ export function mapFiltersToRequest(store: StoreState): SearchRequest {
 
   const isFullRange = store.priceMin <= PRICE_MIN && store.priceMax >= PRICE_MAX;
   if (!isFullRange) {
-    filters.lowestAnnualTuition = {
+    filters.tuitionAnnual = {
       ...(store.priceMin > PRICE_MIN ? { min: store.priceMin } : {}),
       ...(store.priceMax < PRICE_MAX ? { max: store.priceMax } : {}),
     };
+  }
+
+  if (store.curricula.length > 0) {
+    filters.curriculumOffered = store.curricula;
   }
 
   if (store.englishTests) {
@@ -42,10 +54,18 @@ export function mapFiltersToRequest(store: StoreState): SearchRequest {
     if (mapped) Object.assign(filters, mapped);
   }
 
+  const isLocationSearch = store.geocodedQuery !== '' && store.query === store.geocodedQuery;
+
   return {
-    query: store.query,
+    query: isLocationSearch ? '' : store.query,
     filters: Object.keys(filters).length > 0 ? filters : undefined,
+    location: {
+      lat: store.mapBounds.lat,
+      lng: store.mapBounds.lng,
+      radiusKm: store.mapBounds.radiusKm,
+    },
+    matchingStrategy: 'all',
     facets: true,
-    limit: 20,
+    limit: 500,
   };
 }

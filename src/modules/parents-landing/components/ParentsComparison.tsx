@@ -85,7 +85,7 @@ export async function ParentsComparison() {
           <span className='text-xs font-semibold uppercase tracking-widest text-primary'>
             {t('eyebrow')}
           </span>
-          <h2 className='max-w-2xl font-display text-4xl font-bold leading-[1.1] tracking-tight text-ink-900 md:text-5xl'>
+          <h2 className='max-w-2xl font-display text-4xl font-bold leading-display tracking-tight text-ink-900 md:text-5xl'>
             {t('heading')}{' '}
             <em className='not-italic text-ink-900'>{t('headingAccent')}</em>
           </h2>

@@ -47,6 +47,17 @@
   --spacing-sidebar: 18rem;
   --spacing-results-panel: 18.75rem;
 
+  /* Display heading tokens */
+  --leading-display: 1.1;
+  --leading-display-lg: 1.05;
+  --tracking-display: -0.02em;
+  --tracking-display-lg: -0.025em;
+
+  /* Aspect ratio tokens */
+  --aspect-ratio-4-3: 4/3;
+  --aspect-ratio-3-2: 3/2;
+  --aspect-ratio-3-4: 3/4;
+
   /* Type scale micros (Airbnb eyebrow) */
   --text-caption: 0.6875rem; /* 11px */
   --text-caption-line-height: 0.875rem;
@@ -170,7 +181,7 @@
   --color-vivid-iris-soft: var(--vivid-iris-soft);
 
   /* Z-index scale */
-  --z-map-controls: 1000;
+  --z-index-map-controls: 1000;
 
   /* Trust + featured semantic aliases */
   --color-trust: var(--babu-500);
@@ -402,6 +413,82 @@
   .leaflet-tile-pane {
     filter: grayscale(0.9) contrast(0.85) brightness(1.05);
   }
+}
+
+.school-map-marker {
+  background: transparent !important;
+  border: 0 !important;
+}
+
+.school-map-marker__pin {
+  position: relative;
+  display: grid;
+  width: 36px;
+  height: 36px;
+  place-items: center;
+  color: var(--primary-foreground);
+  border-radius: 999px;
+  background: var(--primary);
+  border: 3px solid var(--card);
+  box-shadow:
+    0 10px 22px oklch(0.2 0 0 / 0.18),
+    0 4px 12px oklch(0.58 0.26 25 / 0.24);
+  transition:
+    transform 180ms var(--ease-standard),
+    box-shadow 180ms var(--ease-standard);
+}
+
+.school-map-marker__pin::after {
+  position: absolute;
+  right: 3px;
+  bottom: -4px;
+  left: 3px;
+  height: 5px;
+  content: '';
+  border-radius: 50%;
+  background: oklch(0.2 0 0 / 0.18);
+  filter: blur(4px);
+}
+
+.school-map-marker__inner {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  place-items: center;
+  color: inherit;
+  border-radius: 999px;
+}
+
+.school-map-marker:hover .school-map-marker__pin {
+  box-shadow:
+    0 14px 26px oklch(0.2 0 0 / 0.2),
+    0 6px 16px oklch(0.58 0.26 25 / 0.32);
+}
+
+.schoolgo-map-popup .leaflet-popup-content-wrapper {
+  overflow: hidden;
+  padding: 0;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--card);
+  box-shadow:
+    0 4px 24px -4px oklch(0.2 0 0 / 0.12),
+    0 1px 3px oklch(0.2 0 0 / 0.06);
+}
+
+.schoolgo-map-popup .leaflet-popup-content {
+  width: 16rem !important;
+  margin: 0;
+}
+
+.schoolgo-map-popup--compact .leaflet-popup-content {
+  width: auto !important;
+  margin: 0 !important;
+}
+
+.schoolgo-map-popup .leaflet-popup-tip {
+  background: var(--card);
+  box-shadow: var(--shadow-2);
 }
 
 @layer utilities {

@@ -112,6 +112,18 @@ export interface StatusBadgeProps {
   className?: string;
 }
 
+export interface FaqItem {
+  question: string;
+  answer: string;
+}
+
+export interface FaqSectionProps {
+  heading: string;
+  items: FaqItem[];
+  id?: string;
+  className?: string;
+}
+
 export type TrustVariant = 'cricos' | 'qeac' | 'claimed';
 
 export interface TrustBadgeProps {
