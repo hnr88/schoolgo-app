@@ -1,65 +1,94 @@
 'use client';
 
 import L from 'leaflet';
+import { ArrowRight } from 'lucide-react';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
-import { MapZoomControls } from '@/modules/school-search/components/MapZoomControls';
-import { useMapFitBounds } from '@/modules/school-search/hooks/useMapFitBounds';
 import { formatAudCompact } from '@/modules/school-search/lib/format-currency';
 import type { SchoolHit } from '@/modules/school-search/types/search-api.types';
 
 const SCHOOL_MAP_ICON = new L.DivIcon({
-  className: '',
-  html: `<div style="width:32px;height:32px;background:#FF5A5F;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(0,0,0,0.2);border:3px solid white;">
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="white" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" /></svg>
+  className: 'school-map-marker',
+  html: `<div class="school-map-marker__pin" aria-hidden="true">
+    <div class="school-map-marker__inner">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" width="17" height="17">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" />
+      </svg>
+    </div>
   </div>`,
-  iconSize: [32, 32],
-  iconAnchor: [16, 16],
-  popupAnchor: [0, -20],
+  iconSize: [36, 36],
+  iconAnchor: [18, 18],
+  popupAnchor: [0, -18],
 });
 
-function FitBoundsController({ schools }: { schools: SchoolHit[] }) {
-  useMapFitBounds(schools);
-  return null;
+const AUSTRALIA_BOUNDS = L.latLngBounds([-46, 110], [-8, 160]);
+
+interface LeafletMapProps {
+  schools: SchoolHit[];
+  onMapReady: (map: L.Map) => void;
 }
 
-export function LeafletMap({ schools }: { schools: SchoolHit[] }) {
+export function LeafletMap({ schools, onMapReady }: LeafletMapProps) {
   const geoSchools = schools.filter((s) => s._geo != null);
 
   return (
-    <div className="relative isolate h-full w-full overflow-hidden rounded-lg">
-      <div className="pointer-events-none absolute inset-0 z-10 rounded-lg bg-primary/5" />
+    <div className='relative isolate h-full w-full overflow-hidden rounded-lg'>
       <MapContainer
-        center={[-30, 148]}
-        zoom={4}
-        className="z-0 h-full w-full"
+        ref={(mapInstance) => {
+          if (mapInstance) onMapReady(mapInstance);
+        }}
+        center={[-28, 133]}
+        zoom={5}
+        minZoom={4}
+        maxBounds={AUSTRALIA_BOUNDS}
+        maxBoundsViscosity={0.85}
+        className='h-full w-full'
         zoomControl={false}
+        scrollWheelZoom={false}
         attributionControl={false}
       >
-        <MapZoomControls />
         <TileLayer
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
         />
-        <FitBoundsController schools={geoSchools} />
         {geoSchools.map((school) => (
           <Marker
             key={school.documentId}
             position={[school._geo!.lat, school._geo!.lng]}
             icon={SCHOOL_MAP_ICON}
           >
-            <Popup>
-              <div className="text-on-surface">
-                <p className="text-sm font-bold">{school.name}</p>
-                <p className="text-xs text-on-surface-variant">
-                  {school.suburb}, {school.state}
-                </p>
-                {school.lowestAnnualTuition != null && (
-                  <p className="mt-1 text-sm font-black text-primary">
-                    {formatAudCompact(school.lowestAnnualTuition)}
+            <Popup
+              className='schoolgo-map-popup schoolgo-map-popup--compact'
+              closeButton={false}
+              autoPan={false}
+            >
+              <a
+                href={school.slug ? `/schools/${school.slug}` : undefined}
+                className='group flex min-w-44 max-w-52 flex-col no-underline transition-colors'
+              >
+                <div className='flex flex-col gap-1 p-3 pb-2'>
+                  <h3 className='line-clamp-2 text-body-sm font-semibold leading-snug text-ink-900'>
+                    {school.name}
+                  </h3>
+                  <p className='text-caption leading-none text-foggy'>
+                    {school.suburb}, {school.state}
                   </p>
-                )}
-              </div>
+                  {school.lowestAnnualTuition != null && (
+                    <span className='mt-0.5 inline-flex self-start rounded-pill bg-rausch-50 px-2 py-0.5 text-caption font-semibold leading-normal text-primary'>
+                      {formatAudCompact(school.lowestAnnualTuition)} /yr
+                    </span>
+                  )}
+                </div>
+                <div className='mx-3 border-t border-divider' />
+                <div className='flex items-center justify-between px-3 py-2 transition-colors group-hover:bg-muted/60'>
+                  <span className='text-caption font-semibold text-primary transition-colors group-hover:text-rausch-600'>
+                    View school
+                  </span>
+                  <span className='flex h-5 w-5 items-center justify-center rounded-full bg-rausch-50 text-primary transition-all group-hover:bg-primary group-hover:text-on-primary'>
+                    <ArrowRight className='h-3 w-3' aria-hidden />
+                  </span>
+                </div>
+              </a>
             </Popup>
           </Marker>
         ))}

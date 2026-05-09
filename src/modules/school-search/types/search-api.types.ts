@@ -5,6 +5,7 @@ export interface SearchRequestFilters {
   schoolType?: ('combined' | 'primary' | 'secondary')[];
   sector?: ('gov' | 'non_gov')[];
   gender?: ('co_ed' | 'boys' | 'girls')[];
+  curriculumOffered?: string[];
   yearLevels?: ('primary' | 'junior_secondary' | 'senior_secondary')[];
   yearLevelMatch?: 'any' | 'all';
   lowestAnnualTuition?: { min?: number; max?: number };

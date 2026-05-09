@@ -56,8 +56,8 @@
           "browseSchoolsDesc": "搜索所有注册的澳大利亚学校",
           "compareSchools": "比较学校",
           "compareSchoolsDesc": "并排对比学费、考试及入学时间",
-          "scholarships": "奖学金",
-          "scholarshipsDesc": "国际学生奖学金列表",
+          "schoolTypes": "学校类型",
+          "schoolTypesDesc": "公立、天主教与独立学校对比",
           "englishTests": "英语考试",
           "englishTestsDesc": "AEAS、IELTS 及认可考试指南"
         }
@@ -67,10 +67,12 @@
         "items": {
           "admissionsGuide": "招生指南",
           "admissionsGuideDesc": "逐步入学流程说明",
-          "boardingSchools": "寄宿学校",
-          "boardingSchoolsDesc": "寄宿与走读学校比较",
+          "schoolFees": "学校费用",
+          "schoolFeesDesc": "学费、附加费及第一年总费用",
           "visaRequirements": "签证要求",
-          "visaRequirementsDesc": "学生签证 500 核心要点"
+          "visaRequirementsDesc": "学生签证 500 核心要点",
+          "allGuides": "全部指南",
+          "allGuidesDesc": "浏览所有面向国际家庭的指南"
         }
       },
       "about": {
@@ -852,6 +854,7 @@
   },
   "SchoolSearch": {
     "searchPlaceholder": "按学校名称、城市或郊区搜索...",
+    "clearSearch": "清除搜索",
     "filters": {
       "title": "搜索筛选",
       "subtitle": "筛选澳大利亚学校",
@@ -864,7 +867,7 @@
       "englishTestsToggle": "切换英语水平考试筛选",
       "curriculum": "课程",
       "location": "位置",
-      "apply": "应用筛选"
+      "resetFilters": "重置筛选"
     },
     "chips": {
       "topRated": "最高评分",
@@ -892,8 +895,10 @@
     },
     "map": {
       "title": "澳大利亚 — 学校地图",
+      "reset": "[TODO: zh] Reset filters and map",
       "zoomIn": "放大",
-      "zoomOut": "缩小"
+      "zoomOut": "缩小",
+      "ctrlScrollHint": "[TODO: zh] Use Ctrl + scroll to zoom the map"
     },
     "card": {
       "currency": "AUD",

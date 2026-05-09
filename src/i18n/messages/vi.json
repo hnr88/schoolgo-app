@@ -56,8 +56,8 @@
           "browseSchoolsDesc": "Tìm kiếm tất cả trường Úc đã đăng ký",
           "compareSchools": "So sánh trường",
           "compareSchoolsDesc": "So sánh học phí, bài thi & kỳ tuyển sinh song song",
-          "scholarships": "Học bổng",
-          "scholarshipsDesc": "Danh sách học bổng dành cho học sinh quốc tế",
+          "schoolTypes": "Loại trường",
+          "schoolTypesDesc": "So sánh trường công lập, Công giáo & tư thục",
           "englishTests": "Thi tiếng Anh",
           "englishTestsDesc": "Hướng dẫn AEAS, IELTS & các bài thi được chấp nhận"
         }
@@ -67,10 +67,12 @@
         "items": {
           "admissionsGuide": "Hướng dẫn tuyển sinh",
           "admissionsGuideDesc": "Quy trình nhập học từng bước",
-          "boardingSchools": "Trường nội trú",
-          "boardingSchoolsDesc": "So sánh trường nội trú và ngoại trú",
+          "schoolFees": "Học phí trường",
+          "schoolFeesDesc": "Học phí, phụ phí & chi phí năm đầu tiên",
           "visaRequirements": "Yêu cầu visa",
-          "visaRequirementsDesc": "Những điều cần biết về visa học sinh 500"
+          "visaRequirementsDesc": "Những điều cần biết về visa học sinh 500",
+          "allGuides": "Tất cả hướng dẫn",
+          "allGuidesDesc": "Xem mọi hướng dẫn dành cho gia đình quốc tế"
         }
       },
       "about": {
@@ -852,6 +854,7 @@
   },
   "SchoolSearch": {
     "searchPlaceholder": "Tìm theo tên trường, thành phố hoặc vùng ngoại ô...",
+    "clearSearch": "Xóa tìm kiếm",
     "filters": {
       "title": "Bộ Lọc Tìm Kiếm",
       "subtitle": "Lọc Trường Học Úc",
@@ -864,7 +867,7 @@
       "englishTestsToggle": "Bật/tắt bộ lọc bài thi trình độ tiếng Anh",
       "curriculum": "Chương Trình Học",
       "location": "Vị Trí",
-      "apply": "Áp Dụng Bộ Lọc"
+      "resetFilters": "Đặt Lại Bộ Lọc"
     },
     "chips": {
       "topRated": "Đánh Giá Cao",
@@ -892,8 +895,10 @@
     },
     "map": {
       "title": "Úc — Bản Đồ Trường Học",
+      "reset": "[TODO: vi] Reset filters and map",
       "zoomIn": "Phóng to",
-      "zoomOut": "Thu nhỏ"
+      "zoomOut": "Thu nhỏ",
+      "ctrlScrollHint": "[TODO: vi] Use Ctrl + scroll to zoom the map"
     },
     "card": {
       "currency": "AUD",

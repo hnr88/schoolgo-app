@@ -8,6 +8,7 @@ import { ICONS } from '../constants/sub-header.constants';
 
 export function MarketingSubHeader({
   menus,
+  inverted,
 }: MarketingSubHeaderProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   const timeoutRef = useRef<ReturnType<typeof setTimeout>>(null);
@@ -29,7 +30,12 @@ export function MarketingSubHeader({
   }
 
   return (
-    <div className='hidden border-b border-divider/70 bg-background/85 md:block'>
+    <div className={cn(
+      'hidden md:block',
+      inverted
+        ? 'border-b border-white/10 bg-transparent'
+        : 'border-b border-divider/70 bg-background/85',
+    )}>
       <div
         ref={navRef}
         className='mx-auto flex h-8 max-w-content items-center justify-end px-5 md:px-8'
@@ -48,8 +54,8 @@ export function MarketingSubHeader({
                 className={cn(
                   'flex items-center gap-1 text-xs font-semibold transition-colors',
                   openIndex === i
-                    ? 'text-primary'
-                    : 'text-foggy hover:text-ink-900',
+                    ? inverted ? 'text-white' : 'text-primary'
+                    : inverted ? 'text-white/60 hover:text-white' : 'text-foggy hover:text-ink-900',
                 )}
               >
                 {menu.label}

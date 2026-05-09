@@ -3,10 +3,13 @@ import type {
   AustralianState,
   Curriculum,
 } from '@/modules/school-search/types/school.types';
-import {
-  PRICE_MIN,
-  PRICE_MAX,
-} from '@/modules/school-search/constants/school.constants';
+import { PRICE_MIN, PRICE_MAX } from '@/modules/school-search/constants/school.constants';
+
+interface MapBounds {
+  lat: number;
+  lng: number;
+  radiusKm: number;
+}
 
 interface SchoolSearchState {
   query: string;
@@ -16,14 +19,25 @@ interface SchoolSearchState {
   states: AustralianState[];
   englishTests: boolean;
   activeChips: string[];
+  mapBounds: MapBounds;
+  geocodedQuery: string;
   setQuery: (q: string) => void;
   setPriceRange: (min: number, max: number) => void;
   toggleCurriculum: (c: Curriculum) => void;
   toggleState: (s: AustralianState) => void;
   setEnglishTests: (value: boolean) => void;
   toggleChip: (id: string) => void;
+  setMapBounds: (bounds: MapBounds) => void;
+  setGeocodedQuery: (q: string) => void;
+  resetCount: number;
   reset: () => void;
 }
+
+const DEFAULT_MAP_BOUNDS: MapBounds = {
+  lat: -28,
+  lng: 133,
+  radiusKm: 2000,
+};
 
 const initialState = {
   query: '',
@@ -33,6 +47,9 @@ const initialState = {
   states: [] as AustralianState[],
   englishTests: false,
   activeChips: [] as string[],
+  mapBounds: DEFAULT_MAP_BOUNDS,
+  geocodedQuery: '',
+  resetCount: 0,
 };
 
 export const useSchoolSearchStore = create<SchoolSearchState>((set) => ({
@@ -62,5 +79,7 @@ export const useSchoolSearchStore = create<SchoolSearchState>((set) => ({
         ? s.activeChips.filter((x) => x !== id)
         : [...s.activeChips, id],
     })),
-  reset: () => set(initialState),
+  setMapBounds: (mapBounds) => set({ mapBounds }),
+  setGeocodedQuery: (geocodedQuery) => set({ geocodedQuery }),
+  reset: () => set((s) => ({ ...initialState, resetCount: s.resetCount + 1 })),
 }));

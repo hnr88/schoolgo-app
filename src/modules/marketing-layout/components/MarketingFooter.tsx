@@ -19,8 +19,8 @@ export async function MarketingFooter({ activePortal }: MarketingFooterProps) {
   return (
     <footer className='bg-ink-900 text-white/80'>
       <SectionContainer size='wide' className='pb-8 pt-14 md:pb-8 md:pt-20'>
-        <div className='grid grid-cols-1 gap-10 md:grid-cols-[minmax(240px,1.1fr)_minmax(0,2fr)] lg:grid-cols-[minmax(260px,1.15fr)_repeat(3,minmax(180px,1fr))] lg:gap-16'>
-          <div className='flex max-w-sm flex-col items-center gap-5 text-center sm:items-start sm:text-left'>
+        <div className='grid grid-cols-1 gap-10 sm:grid-cols-2 lg:flex lg:gap-12'>
+          <div className='flex max-w-sm flex-col items-center gap-5 text-center sm:col-span-2 sm:items-start sm:text-left lg:w-60 lg:shrink-0'>
             <a
               href={portalUrl(activePortal, locale)}
               className='inline-flex items-center gap-2.5'
@@ -39,7 +39,7 @@ export async function MarketingFooter({ activePortal }: MarketingFooterProps) {
           </div>
 
           {footerColumns.map((col, index) => (
-            <div key={index} className='flex min-w-0 flex-col items-center gap-3 text-center sm:items-start sm:text-left'>
+            <div key={index} className='flex min-w-0 flex-col items-center gap-3 text-center sm:items-start sm:text-left lg:flex-1'>
               <ul className='flex flex-col items-center gap-2.5 sm:items-start'>
                 {col.links.map((l) => (
                   <li key={`${l.path}-${'label' in l ? l.label : l.linkKey}`}>
@@ -55,7 +55,7 @@ export async function MarketingFooter({ activePortal }: MarketingFooterProps) {
             </div>
           ))}
 
-          <div className='flex min-w-0 flex-col items-center gap-4 text-center sm:items-start sm:text-left'>
+          <div className='flex min-w-0 flex-col items-center gap-4 text-center sm:items-start sm:text-left lg:w-48 lg:shrink-0'>
             <p className='text-xs font-semibold uppercase tracking-widest text-white/50'>
               {t('language')}
             </p>
@@ -114,7 +114,7 @@ export async function MarketingFooter({ activePortal }: MarketingFooterProps) {
         </div>
 
         <div className='mt-8 flex justify-center'>
-          <p className='text-sm text-white/60' style={{ fontFamily: 'system-ui, sans-serif' }}>
+          <p className='font-sans text-sm text-white/60'>
             {t('copyright', { year })}
           </p>
         </div>

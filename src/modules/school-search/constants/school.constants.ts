@@ -27,6 +27,17 @@ export const STATE_OPTIONS: readonly AustralianState[] = [
   'NT',
 ] as const;
 
+export const STATE_BOUNDS: Record<AustralianState, [[number, number], [number, number]]> = {
+  VIC: [[-39.2, 140.9], [-33.9, 150.0]],
+  NSW: [[-37.5, 141.0], [-28.1, 153.6]],
+  QLD: [[-29.2, 138.0], [-10.0, 153.5]],
+  SA:  [[-38.1, 129.0], [-26.0, 141.0]],
+  WA:  [[-35.1, 112.9], [-13.7, 129.0]],
+  TAS: [[-43.6, 144.5], [-39.5, 148.5]],
+  ACT: [[-35.9, 148.7], [-35.1, 149.4]],
+  NT:  [[-26.0, 129.0], [-10.9, 138.0]],
+};
+
 export const FILTER_CHIP_IDS = [
   'topRated',
   'boarding',

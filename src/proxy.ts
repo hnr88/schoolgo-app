@@ -135,6 +135,14 @@ export function proxy(request: NextRequest) {
     return withRobotsHeader(NextResponse.next(), hostname);
   }
 
+  if (pathAfterLocale === 'guides' || pathAfterLocale.startsWith('guides/')) {
+    if (!hasLocale) {
+      url.pathname = `/${locale}/${pathAfterLocale}`;
+      return withRobotsHeader(NextResponse.rewrite(url), hostname);
+    }
+    return withRobotsHeader(NextResponse.next(), hostname);
+  }
+
   const isPortalSearchPath = pathAfterLocale === `${portal}/search`;
   if (loggedInPortal && loggedInPortal === portal && isPortalSearchPath) {
     url.pathname = `/${locale}/dashboard/search`;

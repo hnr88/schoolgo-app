@@ -36,9 +36,9 @@ export function SectionHeader({
         className={cn(
           'font-display',
           size === 'md' &&
-            'text-4xl font-bold leading-[1.1] tracking-[-0.02em] md:text-5xl',
+            'text-4xl font-bold leading-display tracking-display md:text-5xl',
           size === 'lg' &&
-            'max-w-3xl text-5xl font-extrabold leading-[1.05] tracking-[-0.025em] md:text-7xl',
+            'max-w-3xl text-5xl font-extrabold leading-display-lg tracking-display-lg md:text-7xl',
           dark ? 'text-background' : 'text-ink-900',
         )}
       >

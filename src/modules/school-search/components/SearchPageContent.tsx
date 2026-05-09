@@ -28,19 +28,19 @@ export async function SearchPageContent({
           </SearchAuthGate>
         )}
 
-        <section className='flex-1 p-6 flex flex-col gap-4 overflow-hidden h-[calc(100vh-4rem)] md:h-[calc(100vh-7.5rem)]'>
-          <div className='flex flex-col gap-4 shrink-0'>
-            <SearchBar />
+        <section className='flex flex-1 flex-col gap-4 overflow-hidden p-6 h-[calc(100vh-4rem)] md:h-[calc(100vh-7.5rem)]'>
+          <div className='flex shrink-0 items-center gap-4'>
+            <SearchBar className='w-1/2 shrink-0' />
             {guestAccess ? (
-              <FilterChips />
+              <FilterChips className='w-1/2 min-w-0' />
             ) : (
               <SearchAuthGate>
-                <FilterChips />
+                <FilterChips className='w-1/2 min-w-0' />
               </SearchAuthGate>
             )}
           </div>
 
-          <div className='relative flex-1 min-h-0'>
+          <div className='relative min-h-0 flex-1'>
             <MapView />
             {guestAccess ? (
               <SchoolResultsPanel />

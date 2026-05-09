@@ -35,14 +35,14 @@ export function SchoolCard({
         className,
       )}
     >
-      <div className='relative aspect-[4/3] w-full overflow-hidden bg-muted'>
+      <div className='relative aspect-4-3 w-full overflow-hidden bg-muted'>
         {photoUrl ? (
           <Image
             src={photoUrl}
             alt=''
             fill
             sizes='(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px'
-            className='object-cover transition-transform duration-300 group-hover:scale-[1.03]'
+            className='object-cover transition-transform duration-300 group-hover:scale-105'
             aria-hidden='true'
           />
         ) : (
