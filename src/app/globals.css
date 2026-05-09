@@ -53,10 +53,6 @@
   --tracking-display: -0.02em;
   --tracking-display-lg: -0.025em;
 
-  /* Aspect ratio tokens */
-  --aspect-ratio-4-3: 4/3;
-  --aspect-ratio-3-2: 3/2;
-  --aspect-ratio-3-4: 3/4;
 
   /* Type scale micros (Airbnb eyebrow) */
   --text-caption: 0.6875rem; /* 11px */

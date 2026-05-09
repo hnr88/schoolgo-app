@@ -93,7 +93,7 @@ export function ParentsFourStepsClient({
       </div>
 
       <div className='relative order-first mx-auto w-full max-w-sm lg:order-none lg:sticky lg:top-24 lg:max-w-lg'>
-        <div className='relative aspect-4-3 overflow-hidden rounded-xl border border-border bg-muted shadow-3 lg:aspect-3-4 lg:rounded-2xl'>
+        <div className='relative aspect-[4/3] overflow-hidden rounded-xl border border-border bg-muted shadow-3 lg:aspect-[3/4] lg:rounded-2xl'>
           <Image
             key={active}
             src={STEP_IMAGES[active]}

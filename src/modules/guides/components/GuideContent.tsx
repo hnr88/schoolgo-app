@@ -52,7 +52,7 @@ export function GuideContent({
                 </div>
               )}
             </div>
-            <div className="relative aspect-4-3 overflow-hidden rounded-2xl shadow-3">
+            <div className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-3">
               <Image
                 src={image}
                 alt={imageAlt ?? heading}

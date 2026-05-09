@@ -73,7 +73,7 @@ export default async function GuidesIndexPage({
                 href={`/guides/${slug}`}
                 className='group flex flex-col overflow-hidden rounded-xl border border-border bg-card shadow-2 transition-shadow hover:shadow-3'
               >
-                <div className='relative aspect-3-2 w-full overflow-hidden bg-muted'>
+                <div className='relative aspect-[3/2] w-full overflow-hidden bg-muted'>
                   {cardImage && (
                     <Image
                       src={cardImage}
