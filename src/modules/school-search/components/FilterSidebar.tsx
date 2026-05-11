@@ -42,7 +42,7 @@ export function FilterSidebar({ className, cardClassName }: FilterSidebarProps) 
     activeChips.length > 0;
 
   return (
-    <aside className={cn('hidden shrink-0 lg:sticky lg:top-30 lg:block lg:h-[calc(100vh-7.5rem)] lg:w-[20rem] lg:p-4', className)}>
+    <aside className={cn('hidden shrink-0 lg:sticky lg:top-18 lg:block lg:h-[calc(100vh-4.5rem)] lg:w-[20rem] lg:p-6', className)}>
       <div className={cn('flex h-full min-h-0 flex-col overflow-hidden rounded-xl border border-border bg-card shadow-2', cardClassName)}>
         <div className='shrink-0 border-b border-divider px-4 py-3.5'>
           <div className='flex items-center gap-3'>
@@ -116,7 +116,7 @@ export function FilterSidebar({ className, cardClassName }: FilterSidebarProps) 
                     onClick={() => toggleCurriculum(c)}
                     aria-pressed={isSelected}
                     className={cn(
-                      'flex min-h-9 items-center justify-between rounded-lg border px-2.5 py-1.5 text-label font-semibold transition-colors',
+                      'flex min-h-7 items-center justify-between rounded-lg border px-2.5 py-1 text-label font-semibold transition-colors',
                       isSelected
                         ? 'border-primary bg-rausch-50 text-primary shadow-1'
                         : 'border-border bg-background text-foreground hover:border-quill hover:bg-muted',
@@ -124,7 +124,7 @@ export function FilterSidebar({ className, cardClassName }: FilterSidebarProps) 
                   >
                     {c}
                     {isSelected && (
-                      <Check className='h-4 w-4 shrink-0 text-primary' strokeWidth={2.25} aria-hidden='true' />
+                      <Check className='h-3.5 w-3.5 shrink-0 text-primary' strokeWidth={2.25} aria-hidden='true' />
                     )}
                   </button>
                 );
@@ -144,7 +144,7 @@ export function FilterSidebar({ className, cardClassName }: FilterSidebarProps) 
                     onClick={() => toggleState(value as AustralianState)}
                     aria-pressed={isSelected}
                     className={cn(
-                      'flex min-h-9 w-full items-center gap-2 rounded-lg border px-2.5 py-1.5 text-left text-label font-medium transition-colors',
+                      'flex min-h-7 w-full items-center gap-2 rounded-lg border px-2.5 py-1 text-left text-label font-medium transition-colors',
                       isSelected
                         ? 'border-primary bg-rausch-50 text-primary shadow-1'
                         : 'border-border bg-background text-foreground hover:border-quill hover:bg-muted',
@@ -168,9 +168,9 @@ export function FilterSidebar({ className, cardClassName }: FilterSidebarProps) 
             <button
               type='button'
               onClick={reset}
-              className='flex h-auto w-full items-center justify-center gap-2 rounded-lg border border-border bg-background py-2.5 text-sm font-semibold text-foreground transition-colors hover:bg-muted'
+              className='flex h-auto w-full items-center justify-center gap-2 rounded-lg border border-border bg-background py-1.5 text-xs font-semibold text-foreground transition-colors hover:bg-muted'
             >
-              <RotateCcw className='h-3.5 w-3.5' strokeWidth={2} aria-hidden='true' />
+              <RotateCcw className='h-3 w-3' strokeWidth={2} aria-hidden='true' />
               {t('resetFilters')}
             </button>
           </div>

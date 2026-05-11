@@ -28,7 +28,7 @@ export function SearchSchoolCard({
   return (
     <DsSchoolCard
       href={`/${activePortal}/schools/${school.slug}`}
-      photoUrl={school.logoUrl ?? undefined}
+      logoUrl={school.logoUrl ?? undefined}
       name={school.name}
       location={`${school.suburb}, ${school.state}`}
       curriculum={school.curriculumOffered ?? undefined}

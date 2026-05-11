@@ -2,9 +2,10 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
-import { GraduationCap, Heart, Star } from 'lucide-react';
+import { Heart, Star } from 'lucide-react';
 import { Link } from '@/i18n/navigation';
 import { cn } from '@/lib/utils';
+import { DefaultPhoto } from '@/modules/design-system/components/DefaultPhoto';
 import { TrustBadge } from '@/modules/design-system/components/TrustBadge';
 import type { SchoolCardProps } from '@/modules/design-system/types/design-system.types';
 
@@ -12,6 +13,7 @@ export function SchoolCard({
   name,
   location,
   photoUrl,
+  logoUrl,
   href,
   fee,
   feeSuffix,
@@ -25,6 +27,8 @@ export function SchoolCard({
   className,
 }: SchoolCardProps) {
   const [shortlisted, setShortlisted] = useState(false);
+  const [photoFailed, setPhotoFailed] = useState(false);
+  const [logoFailed, setLogoFailed] = useState(false);
 
   const hasShortlist = Boolean(shortlistAddLabel && shortlistRemoveLabel);
 
@@ -36,7 +40,7 @@ export function SchoolCard({
       )}
     >
       <div className='relative aspect-[4/3] w-full overflow-hidden bg-muted'>
-        {photoUrl ? (
+        {photoUrl && !photoFailed ? (
           <Image
             src={photoUrl}
             alt=''
@@ -44,11 +48,20 @@ export function SchoolCard({
             sizes='(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px'
             className='object-cover transition-transform duration-300 group-hover:scale-105'
             aria-hidden='true'
+            onError={() => setPhotoFailed(true)}
+          />
+        ) : logoUrl && !logoFailed ? (
+          <Image
+            src={logoUrl}
+            alt=''
+            fill
+            sizes='(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px'
+            className='object-contain p-8 transition-transform duration-300 group-hover:scale-105'
+            aria-hidden='true'
+            onError={() => setLogoFailed(true)}
           />
         ) : (
-          <div className='flex h-full w-full items-center justify-center text-quill'>
-            <GraduationCap className='h-12 w-12' strokeWidth={1.5} aria-hidden='true' />
-          </div>
+          <DefaultPhoto />
         )}
 
         {topRatedLabel && (

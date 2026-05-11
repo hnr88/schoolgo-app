@@ -14,7 +14,7 @@ export function FilterChips({ className }: FilterChipsProps) {
   return (
     <div
       className={cn(
-        'no-scrollbar flex items-center gap-1.5 overflow-x-auto rounded-pill border border-border bg-card px-4 py-2 shadow-2',
+        'no-scrollbar flex items-center gap-1 overflow-x-auto rounded-pill border border-border bg-card px-3 py-1.5 shadow-2',
         className,
       )}
     >
@@ -23,7 +23,7 @@ export function FilterChips({ className }: FilterChipsProps) {
         return (
           <Chip
             key={id}
-            size='md'
+            size='sm'
             selected={isActive}
             onClick={() => toggleChip(id)}
             className='whitespace-nowrap'

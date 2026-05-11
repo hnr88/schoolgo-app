@@ -1,4 +1,4 @@
-import { MarketingFooter, MarketingHeader } from '@/modules/marketing-layout';
+import { MarketingHeader } from '@/modules/marketing-layout';
 import { FilterSidebar } from '@/modules/school-search/components/FilterSidebar';
 import { SearchBar } from '@/modules/school-search/components/SearchBar';
 import { FilterChips } from '@/modules/school-search/components/FilterChips';
@@ -14,11 +14,10 @@ export async function SearchPageContent({
   title,
   guestAccess = false,
 }: SearchPageContentProps) {
-  const isSchoolPortal = activePortal === 'school';
   return (
     <>
       <h1 className='sr-only'>{title}</h1>
-      <MarketingHeader activePortal={activePortal} fullWidth={isSchoolPortal} />
+      <MarketingHeader activePortal={activePortal} fullWidth />
 
       <SearchLayout guestAccess={guestAccess}>
         {guestAccess ? (
@@ -29,7 +28,7 @@ export async function SearchPageContent({
           </SearchAuthGate>
         )}
 
-        <section className='flex flex-1 flex-col gap-4 overflow-hidden p-6 h-[calc(100vh-4rem)] md:h-[calc(100vh-7.5rem)]'>
+        <section className='flex flex-1 flex-col gap-4 overflow-hidden p-6 h-[calc(100vh-3.5rem)] md:h-[calc(100vh-4.5rem)]'>
           <div className='flex shrink-0 items-center gap-4'>
             <SearchBar className='w-1/2 shrink-0' />
             {guestAccess ? (
@@ -56,8 +55,6 @@ export async function SearchPageContent({
           </div>
         </section>
       </SearchLayout>
-
-      {!isSchoolPortal && <MarketingFooter activePortal={activePortal} />}
     </>
   );
 }

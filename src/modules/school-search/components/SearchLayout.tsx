@@ -13,7 +13,7 @@ export function SearchLayout({ children, guestAccess = false }: SearchLayoutProp
   return (
     <main
       className={cn(
-        'flex pt-16 md:pt-30',
+        'flex pt-14 md:pt-18',
         isGuest ? 'mx-auto w-full max-w-content px-6' : 'w-full',
       )}
     >

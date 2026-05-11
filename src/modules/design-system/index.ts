@@ -3,6 +3,7 @@ export { Eyebrow } from '@/modules/design-system/components/Eyebrow';
 export { TrustBadge } from '@/modules/design-system/components/TrustBadge';
 export { Chip } from '@/modules/design-system/components/Chip';
 export { SchoolCard } from '@/modules/design-system/components/SchoolCard';
+export { DefaultPhoto } from '@/modules/design-system/components/DefaultPhoto';
 export { SectionContainer } from '@/modules/design-system/components/SectionContainer';
 export { SectionHeader } from '@/modules/design-system/components/SectionHeader';
 export { CtaLink } from '@/modules/design-system/components/CtaLink';

@@ -40,7 +40,7 @@ export function MarketingSubHeader({
       <div
         ref={navRef}
         className={cn(
-          'flex h-8 items-center justify-end px-5 md:px-8',
+          'flex h-7 items-center justify-end px-5 md:px-8',
           fullWidth ? 'w-full' : 'mx-auto max-w-content',
         )}
       >

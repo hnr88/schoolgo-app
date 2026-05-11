@@ -157,7 +157,11 @@ export function proxy(request: NextRequest) {
     }
   } else {
     const cleanPath = pathname === '/' ? '' : pathname;
-    url.pathname = `/${locale}/${portal}${cleanPath}`;
+    if (segments[0] === portal) {
+      url.pathname = `/${locale}${cleanPath}`;
+    } else {
+      url.pathname = `/${locale}/${portal}${cleanPath}`;
+    }
   }
 
   return withRobotsHeader(NextResponse.rewrite(url), hostname);

@@ -122,7 +122,7 @@ export function MarketingHeaderClient({
         <MarketingSubHeader menus={subMenus} inverted={isDark && !scrolled} fullWidth={fullWidth} />
         <div
           className={cn(
-            'flex h-12 items-center gap-4 px-5 md:h-14 md:px-8',
+            'flex h-11 items-center gap-4 px-5 md:h-12 md:px-8',
             fullWidth ? 'w-full' : 'mx-auto max-w-content',
           )}
         >
@@ -137,7 +137,7 @@ export function MarketingHeaderClient({
               width={220}
               height={48}
               priority
-              className='h-8 w-auto md:h-9'
+              className='h-7 w-auto md:h-8'
             />
           </a>
 
@@ -149,7 +149,7 @@ export function MarketingHeaderClient({
                   key={link.href}
                   href={link.href}
                   className={cn(
-                    'rounded-pill px-3 py-1.5 text-body-sm font-medium no-underline transition-colors',
+                    'rounded-pill px-3 py-1 text-sm font-medium no-underline transition-colors',
                     isDark && !scrolled
                       ? isActive
                         ? 'text-white'
@@ -170,7 +170,7 @@ export function MarketingHeaderClient({
               href='/sign-in'
               data-slot='button'
               className={cn(
-                'rounded-pill px-4 py-2 text-sm font-medium no-underline transition-colors',
+                'rounded-pill px-3 py-1.5 text-sm font-medium no-underline transition-colors',
                 isDark && !scrolled
                   ? 'text-white/88 hover:bg-white/10 hover:text-white'
                   : 'text-foreground hover:bg-muted',
@@ -182,7 +182,7 @@ export function MarketingHeaderClient({
               <Link
                 href='/search'
                 data-slot='button'
-                className='inline-flex items-center justify-center rounded-pill bg-primary px-5 py-2 text-sm font-semibold text-on-primary shadow-brand no-underline transition-colors hover:bg-rausch-600 active:bg-rausch-700'
+                className='inline-flex items-center justify-center rounded-pill bg-primary px-4 py-1.5 text-sm font-semibold text-on-primary shadow-brand no-underline transition-colors hover:bg-rausch-600 active:bg-rausch-700'
               >
                 {labels.findSchools}
               </Link>
@@ -195,7 +195,7 @@ export function MarketingHeaderClient({
             onClick={() => setMobileOpen(true)}
             aria-label={labels.openMenu}
             className={cn(
-              'ml-auto flex h-10 w-10 shrink-0 items-center justify-center rounded-pill md:hidden',
+              'ml-auto flex h-9 w-9 shrink-0 items-center justify-center rounded-pill md:hidden',
               isDark && !scrolled
                 ? 'text-white hover:bg-white/10'
                 : 'text-foreground hover:bg-muted',
