@@ -119,7 +119,7 @@ export function MarketingHeaderClient({
         )}
       >
         <MarketingSubHeader menus={subMenus} inverted={isDark && !scrolled} />
-        <div className='mx-auto flex h-16 max-w-content items-center gap-4 px-5 md:h-20 md:px-8'>
+        <div className='mx-auto flex h-12 max-w-content items-center gap-4 px-5 md:h-14 md:px-8'>
           <a
             href={portalUrls[activePortal]}
             className='flex shrink-0 items-center'
@@ -131,7 +131,7 @@ export function MarketingHeaderClient({
               width={220}
               height={48}
               priority
-              className='h-11 w-auto md:h-12'
+              className='h-8 w-auto md:h-9'
             />
           </a>
 

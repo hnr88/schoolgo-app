@@ -41,7 +41,7 @@ export const chipStyles = cva(
   {
     variants: {
       variant: {
-        default: 'border border-border bg-card text-hof hover:bg-muted',
+        default: 'border border-transparent bg-muted text-hof hover:bg-ink-200',
         selected: 'border border-primary bg-primary text-on-primary shadow-brand',
         soft: 'border border-transparent bg-muted text-hof',
       },

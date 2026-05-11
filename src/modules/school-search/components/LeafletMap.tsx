@@ -1,8 +1,10 @@
 'use client';
 
+import { memo, useMemo } from 'react';
 import L from 'leaflet';
 import { ArrowRight } from 'lucide-react';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import MarkerClusterGroup from 'react-leaflet-cluster';
 import 'leaflet/dist/leaflet.css';
 import { formatAudCompact } from '@/modules/school-search/lib/format-currency';
 import type { SchoolHit } from '@/modules/school-search/types/search-api.types';
@@ -21,7 +23,64 @@ const SCHOOL_MAP_ICON = new L.DivIcon({
   popupAnchor: [0, -18],
 });
 
+function createClusterIcon(cluster: { getChildCount: () => number }) {
+  const count = cluster.getChildCount();
+  const size = count < 10 ? 36 : count < 50 ? 42 : 48;
+
+  return new L.DivIcon({
+    className: 'school-map-cluster',
+    html: `<div class="school-map-cluster__circle" style="width:${size}px;height:${size}px">${count}</div>`,
+    iconSize: [size, size],
+    iconAnchor: [size / 2, size / 2],
+  });
+}
+
 const AUSTRALIA_BOUNDS = L.latLngBounds([-46, 110], [-8, 160]);
+
+const SchoolMarker = memo(function SchoolMarker({ school }: { school: SchoolHit }) {
+  const position = useMemo<[number, number]>(
+    () => [school._geo!.lat, school._geo!.lng],
+    [school._geo!.lat, school._geo!.lng],
+  );
+
+  return (
+    <Marker position={position} icon={SCHOOL_MAP_ICON}>
+      <Popup
+        className='schoolgo-map-popup schoolgo-map-popup--compact'
+        closeButton={false}
+        autoPan={false}
+      >
+        <a
+          href={school.slug ? `/schools/${school.slug}` : undefined}
+          className='group flex min-w-44 max-w-52 flex-col no-underline transition-colors'
+        >
+          <div className='flex flex-col gap-1 p-3 pb-2'>
+            <h3 className='line-clamp-2 text-body-sm font-semibold leading-snug text-ink-900'>
+              {school.name}
+            </h3>
+            <p className='text-caption leading-none text-foggy'>
+              {school.suburb}, {school.state}
+            </p>
+            {school.lowestAnnualTuition != null && (
+              <span className='mt-0.5 inline-flex self-start rounded-pill bg-rausch-50 px-2 py-0.5 text-caption font-semibold leading-normal text-primary'>
+                {formatAudCompact(school.lowestAnnualTuition)} /yr
+              </span>
+            )}
+          </div>
+          <div className='mx-3 border-t border-divider' />
+          <div className='flex items-center justify-between px-3 py-2 transition-colors group-hover:bg-muted/60'>
+            <span className='text-caption font-semibold text-primary transition-colors group-hover:text-rausch-600'>
+              View school
+            </span>
+            <span className='flex h-5 w-5 items-center justify-center rounded-full bg-rausch-50 text-primary transition-all group-hover:bg-primary group-hover:text-on-primary'>
+              <ArrowRight className='h-3 w-3' aria-hidden />
+            </span>
+          </div>
+        </a>
+      </Popup>
+    </Marker>
+  );
+}, (prev, next) => prev.school.documentId === next.school.documentId);
 
 interface LeafletMapProps {
   schools: SchoolHit[];
@@ -29,7 +88,10 @@ interface LeafletMapProps {
 }
 
 export function LeafletMap({ schools, onMapReady }: LeafletMapProps) {
-  const geoSchools = schools.filter((s) => s._geo != null);
+  const geoSchools = useMemo(
+    () => schools.filter((s) => s._geo != null),
+    [schools],
+  );
 
   return (
     <div className='relative isolate h-full w-full overflow-hidden rounded-lg'>
@@ -39,7 +101,7 @@ export function LeafletMap({ schools, onMapReady }: LeafletMapProps) {
         }}
         center={[-28, 133]}
         zoom={5}
-        minZoom={4}
+        minZoom={5}
         maxBounds={AUSTRALIA_BOUNDS}
         maxBoundsViscosity={0.85}
         className='h-full w-full'
@@ -51,47 +113,21 @@ export function LeafletMap({ schools, onMapReady }: LeafletMapProps) {
           url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
         />
-        {geoSchools.map((school) => (
-          <Marker
-            key={school.documentId}
-            position={[school._geo!.lat, school._geo!.lng]}
-            icon={SCHOOL_MAP_ICON}
-          >
-            <Popup
-              className='schoolgo-map-popup schoolgo-map-popup--compact'
-              closeButton={false}
-              autoPan={false}
-            >
-              <a
-                href={school.slug ? `/schools/${school.slug}` : undefined}
-                className='group flex min-w-44 max-w-52 flex-col no-underline transition-colors'
-              >
-                <div className='flex flex-col gap-1 p-3 pb-2'>
-                  <h3 className='line-clamp-2 text-body-sm font-semibold leading-snug text-ink-900'>
-                    {school.name}
-                  </h3>
-                  <p className='text-caption leading-none text-foggy'>
-                    {school.suburb}, {school.state}
-                  </p>
-                  {school.lowestAnnualTuition != null && (
-                    <span className='mt-0.5 inline-flex self-start rounded-pill bg-rausch-50 px-2 py-0.5 text-caption font-semibold leading-normal text-primary'>
-                      {formatAudCompact(school.lowestAnnualTuition)} /yr
-                    </span>
-                  )}
-                </div>
-                <div className='mx-3 border-t border-divider' />
-                <div className='flex items-center justify-between px-3 py-2 transition-colors group-hover:bg-muted/60'>
-                  <span className='text-caption font-semibold text-primary transition-colors group-hover:text-rausch-600'>
-                    View school
-                  </span>
-                  <span className='flex h-5 w-5 items-center justify-center rounded-full bg-rausch-50 text-primary transition-all group-hover:bg-primary group-hover:text-on-primary'>
-                    <ArrowRight className='h-3 w-3' aria-hidden />
-                  </span>
-                </div>
-              </a>
-            </Popup>
-          </Marker>
-        ))}
+        <MarkerClusterGroup
+          iconCreateFunction={createClusterIcon}
+          maxClusterRadius={60}
+          spiderfyOnMaxZoom
+          showCoverageOnHover={false}
+          zoomToBoundsOnClick
+          animate={false}
+          animateAddingMarkers={false}
+          disableClusteringAtZoom={15}
+          removeOutsideVisibleBounds={false}
+        >
+          {geoSchools.map((school) => (
+            <SchoolMarker key={school.documentId} school={school} />
+          ))}
+        </MarkerClusterGroup>
       </MapContainer>
     </div>
   );
