@@ -1,5 +1,6 @@
 import { Link } from '@/i18n/navigation';
 import { SectionContainer } from '@/modules/design-system';
+import { GuideSectionNav } from '@/modules/guides/components/GuideSectionNav';
 import type { GuideHeroData } from '@/modules/guides/types/guides.types';
 
 export function GuideHero({
@@ -52,19 +53,7 @@ export function GuideHero({
         </SectionContainer>
       </section>
 
-      <nav className='sticky top-20 z-30 border-b border-border bg-background md:top-22'>
-        <SectionContainer className='flex gap-0 overflow-x-auto'>
-          {navItems.map((item) => (
-            <a
-              key={item.id}
-              href={`#${item.id}`}
-              className='whitespace-nowrap border-b-2 border-transparent px-5 py-3.5 text-sm font-medium text-foggy transition hover:border-quill hover:text-hof first:border-ink-900 first:text-ink-900'
-            >
-              {item.label}
-            </a>
-          ))}
-        </SectionContainer>
-      </nav>
+      <GuideSectionNav navItems={navItems} />
     </>
   );
 }
