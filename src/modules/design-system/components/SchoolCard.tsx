@@ -39,7 +39,7 @@ export function SchoolCard({
         className,
       )}
     >
-      <div className='relative aspect-[4/3] w-full overflow-hidden bg-muted'>
+      <div className='relative aspect-[3/2] w-full overflow-hidden bg-muted'>
         {photoUrl && !photoFailed ? (
           <Image
             src={photoUrl}

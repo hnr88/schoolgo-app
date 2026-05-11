@@ -890,6 +890,7 @@
       "title": "이용 가능한 학교",
       "count": "{count, plural, one {# 결과} other {# 결과}}",
       "viewAll": "모든 학교 보기",
+      "searching": "[TODO: ko] Searching…",
       "error": "[TODO: ko] Something went wrong. Please try again.",
       "empty": "[TODO: ko] No schools found. Try adjusting your filters."
     },

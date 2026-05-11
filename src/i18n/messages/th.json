@@ -890,6 +890,7 @@
       "title": "โรงเรียนที่มีอยู่",
       "count": "{count, plural, one {# ผลลัพธ์} other {# ผลลัพธ์}}",
       "viewAll": "ดูโรงเรียนทั้งหมด",
+      "searching": "[TODO: th] Searching…",
       "error": "[TODO: th] Something went wrong. Please try again.",
       "empty": "[TODO: th] No schools found. Try adjusting your filters."
     },

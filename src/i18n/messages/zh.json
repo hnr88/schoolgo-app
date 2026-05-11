@@ -890,6 +890,7 @@
       "title": "可用学校",
       "count": "{count, plural, one {# 个结果} other {# 个结果}}",
       "viewAll": "查看所有学校",
+      "searching": "[TODO: zh] Searching…",
       "error": "[TODO: zh] Something went wrong. Please try again.",
       "empty": "[TODO: zh] No schools found. Try adjusting your filters."
     },

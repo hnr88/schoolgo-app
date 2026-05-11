@@ -1,16 +1,20 @@
 'use client';
 
+import { Loader2 } from 'lucide-react';
 import { useTranslations } from 'next-intl';
+import { Skeleton } from '@/components/ui/skeleton';
+import { cn } from '@/lib/utils';
 import { SearchSchoolCard } from '@/modules/school-search/components/SchoolCard';
 import { useSearchWithFilters } from '@/modules/school-search/hooks/useSearchWithFilters';
 import type { SchoolResultsPanelProps } from '@/modules/school-search/types/component.types';
 
 export function SchoolResultsPanel({ activePortal }: SchoolResultsPanelProps) {
   const t = useTranslations('SchoolSearch.results');
-  const { data, isLoading, isError } = useSearchWithFilters();
+  const { data, isLoading, isFetching, isError } = useSearchWithFilters();
 
   const hits = data?.data?.hits ?? [];
   const totalHits = data?.data?.estimatedTotalHits ?? 0;
+  const isRefetching = isFetching && !isLoading;
 
   return (
     <div className='absolute bottom-4 right-4 top-4 flex w-results-panel flex-col overflow-hidden rounded-lg border border-border bg-card shadow-3'>
@@ -21,9 +25,20 @@ export function SchoolResultsPanel({ activePortal }: SchoolResultsPanelProps) {
         >
           {t('title')}
         </span>
-        <span className='inline-flex items-center rounded-pill bg-rausch-50 px-2.5 py-1 text-caption font-semibold text-primary'>
-          {t('count', { count: totalHits })}
-        </span>
+        {isRefetching ? (
+          <span
+            className='inline-flex items-center gap-1.5 rounded-pill bg-muted px-2.5 py-1 text-caption font-semibold text-foggy'
+            role='status'
+            aria-live='polite'
+          >
+            <Loader2 className='h-3 w-3 animate-spin' aria-hidden='true' />
+            {t('searching')}
+          </span>
+        ) : (
+          <span className='inline-flex items-center rounded-pill bg-rausch-50 px-2.5 py-1 text-caption font-semibold text-primary'>
+            {t('count', { count: totalHits })}
+          </span>
+        )}
       </div>
 
       <div className='custom-scrollbar flex flex-1 flex-col gap-4 overflow-y-auto bg-muted p-4'>
@@ -32,8 +47,15 @@ export function SchoolResultsPanel({ activePortal }: SchoolResultsPanelProps) {
             {Array.from({ length: 3 }).map((_, i) => (
               <div
                 key={i}
-                className='h-48 animate-pulse rounded-lg bg-muted-foreground/10'
-              />
+                className='flex flex-col overflow-hidden rounded-xl border border-border bg-card shadow-2'
+              >
+                <Skeleton className='aspect-[4/3] w-full rounded-none' />
+                <div className='flex flex-col gap-2 p-4'>
+                  <Skeleton className='h-4 w-3/4' />
+                  <Skeleton className='h-3 w-1/2' />
+                  <Skeleton className='h-3 w-1/3' />
+                </div>
+              </div>
             ))}
           </>
         )}
@@ -50,13 +72,23 @@ export function SchoolResultsPanel({ activePortal }: SchoolResultsPanelProps) {
           </p>
         )}
 
-        {hits.map((school) => (
-          <SearchSchoolCard
-            key={school.documentId}
-            school={school}
-            activePortal={activePortal}
-          />
-        ))}
+        {!isLoading && hits.length > 0 && (
+          <div
+            className={cn(
+              'flex flex-col gap-4 transition-opacity duration-200',
+              isRefetching && 'pointer-events-none opacity-60',
+            )}
+            aria-busy={isRefetching}
+          >
+            {hits.map((school) => (
+              <SearchSchoolCard
+                key={school.documentId}
+                school={school}
+                activePortal={activePortal}
+              />
+            ))}
+          </div>
+        )}
       </div>
 
       {totalHits > hits.length && (

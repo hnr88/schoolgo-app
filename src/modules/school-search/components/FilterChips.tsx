@@ -14,7 +14,7 @@ export function FilterChips({ className }: FilterChipsProps) {
   return (
     <div
       className={cn(
-        'no-scrollbar flex items-center gap-1 overflow-x-auto rounded-pill border border-border bg-card px-3 py-1.5 shadow-2',
+        'no-scrollbar flex items-center gap-1 overflow-x-auto rounded-pill border border-border bg-card px-3 py-3 shadow-2',
         className,
       )}
     >

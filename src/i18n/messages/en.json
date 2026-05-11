@@ -865,6 +865,7 @@
       "title": "Available Schools",
       "count": "{count, plural, one {# Result} other {# Results}}",
       "viewAll": "View All Schools",
+      "searching": "Searching…",
       "error": "Something went wrong. Please try again.",
       "empty": "No schools found. Try adjusting your filters."
     },

@@ -890,6 +890,7 @@
       "title": "Sekolah Tersedia",
       "count": "{count, plural, one {# Keputusan} other {# Keputusan}}",
       "viewAll": "Lihat Semua Sekolah",
+      "searching": "[TODO: ms] Searching…",
       "error": "[TODO: ms] Something went wrong. Please try again.",
       "empty": "[TODO: ms] No schools found. Try adjusting your filters."
     },

@@ -3,10 +3,14 @@ import { getTranslations } from 'next-intl/server';
 import { CtaLink, Eyebrow, SectionContainer, StatusBadge, TrustBadge } from '@/modules/design-system';
 
 import { HERO_ROWS } from '../constants/schools-landing.constants';
+import { getFeaturedSchoolLogos } from '../lib/featured-school-logos';
 
 export async function SchoolsHero() {
-  const t = await getTranslations('SchoolsHero');
-  const tc = await getTranslations('Common');
+  const [t, tc, schoolLogos] = await Promise.all([
+    getTranslations('SchoolsHero'),
+    getTranslations('Common'),
+    getFeaturedSchoolLogos(HERO_ROWS.length),
+  ]);
   return (
     <section className='relative overflow-hidden bg-gradient-to-br from-arches-50/40 via-arches-50/10 to-transparent pt-28 pb-16 md:pt-40 md:pb-24'>
       <div className='pointer-events-none absolute inset-0' aria-hidden='true'>
@@ -60,15 +64,17 @@ export async function SchoolsHero() {
               <TrustBadge variant='qeac' label={tc('qeacVerified')} />
             </div>
             <ul className='divide-y divide-divider'>
-              {HERO_ROWS.map((row) => (
+              {HERO_ROWS.map((row, index) => {
+                const logoUrl = schoolLogos[index] ?? null;
+                return (
                 <li key={row.key} className='flex items-center gap-4 px-5 py-4'>
-                  <div className='relative h-11 w-11 shrink-0 overflow-hidden rounded-pill border border-border bg-muted'>
+                  <div className='relative h-11 w-11 shrink-0 overflow-hidden rounded-pill border border-border bg-card'>
                     <Image
-                      src={row.image}
+                      src={logoUrl ?? row.image}
                       alt=''
                       fill
                       sizes='44px'
-                      className='object-cover'
+                      className={logoUrl ? 'object-contain p-2' : 'object-cover'}
                       aria-hidden='true'
                     />
                   </div>
@@ -84,7 +90,8 @@ export async function SchoolsHero() {
                     {t(`inbox.rows.${row.key}.status`)}
                   </StatusBadge>
                 </li>
-              ))}
+                );
+              })}
             </ul>
           </div>
         </div>

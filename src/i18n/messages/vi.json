@@ -890,6 +890,7 @@
       "title": "Trường Có Sẵn",
       "count": "{count, plural, one {# Kết Quả} other {# Kết Quả}}",
       "viewAll": "Xem Tất Cả Trường",
+      "searching": "[TODO: vi] Searching…",
       "error": "[TODO: vi] Something went wrong. Please try again.",
       "empty": "[TODO: vi] No schools found. Try adjusting your filters."
     },
