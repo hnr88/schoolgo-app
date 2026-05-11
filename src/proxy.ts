@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { routing } from '@/i18n/routing';
 import { env } from '@/lib/env';
-import { isNonIndexableHost } from '@/lib/seo';
+import { isNonIndexableHost } from '@/modules/seo';
 
 const LAUNCHING_SOON = env.NEXT_PUBLIC_LAUNCHING_SOON === 'true';
 

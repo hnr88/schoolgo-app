@@ -14,10 +14,11 @@ export async function SearchPageContent({
   title,
   guestAccess = false,
 }: SearchPageContentProps) {
+  const isSchoolPortal = activePortal === 'school';
   return (
     <>
       <h1 className='sr-only'>{title}</h1>
-      <MarketingHeader activePortal={activePortal} />
+      <MarketingHeader activePortal={activePortal} fullWidth={isSchoolPortal} />
 
       <SearchLayout guestAccess={guestAccess}>
         {guestAccess ? (
@@ -41,13 +42,13 @@ export async function SearchPageContent({
           </div>
 
           <div className='relative min-h-0 flex-1'>
-            <MapView />
+            <MapView activePortal={activePortal} />
             {guestAccess ? (
-              <SchoolResultsPanel />
+              <SchoolResultsPanel activePortal={activePortal} />
             ) : (
               <>
                 <SearchAuthGate>
-                  <SchoolResultsPanel />
+                  <SchoolResultsPanel activePortal={activePortal} />
                 </SearchAuthGate>
                 <SearchLoginPrompt />
               </>
@@ -56,7 +57,7 @@ export async function SearchPageContent({
         </section>
       </SearchLayout>
 
-      <MarketingFooter activePortal={activePortal} />
+      {!isSchoolPortal && <MarketingFooter activePortal={activePortal} />}
     </>
   );
 }

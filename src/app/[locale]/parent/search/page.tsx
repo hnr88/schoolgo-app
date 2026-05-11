@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
-import { getAlternateLanguages, getCanonicalPath } from '@/lib/seo';
+import { getAlternateLanguages, getCanonicalPath } from '@/modules/seo';
 import { SearchPageContent } from '@/modules/school-search/components/SearchPageContent';
 
 export async function generateMetadata({

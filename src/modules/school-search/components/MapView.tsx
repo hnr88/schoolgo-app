@@ -36,7 +36,7 @@ const LeafletMap = dynamic(
   },
 );
 
-export function MapView({ className }: MapViewProps) {
+export function MapView({ className, activePortal }: MapViewProps) {
   const [map, setMap] = useState<L.Map | null>(null);
   const resetCount = useSchoolSearchStore((s) => s.resetCount);
   const { data } = useSearchWithFilters();
@@ -112,7 +112,7 @@ export function MapView({ className }: MapViewProps) {
   return (
     <>
       <div className={cn('relative h-full w-full overflow-hidden rounded-lg border border-border shadow-2', className)}>
-        <LeafletMap schools={schools} onMapReady={handleMapReady} />
+        <LeafletMap schools={schools} onMapReady={handleMapReady} activePortal={activePortal} />
         {map && <ScrollWheelZoomHandler map={map} />}
       </div>
       {map && <MapZoomControls map={map} />}

@@ -71,6 +71,7 @@ export interface SchoolCardProps {
   name: string;
   location: string;
   photoUrl?: string;
+  logoUrl?: string;
   href?: string;
   fee?: string;
   feeSuffix?: string;

@@ -3,8 +3,9 @@
 import { useTranslations } from 'next-intl';
 import { SearchSchoolCard } from '@/modules/school-search/components/SchoolCard';
 import { useSearchWithFilters } from '@/modules/school-search/hooks/useSearchWithFilters';
+import type { SchoolResultsPanelProps } from '@/modules/school-search/types/component.types';
 
-export function SchoolResultsPanel() {
+export function SchoolResultsPanel({ activePortal }: SchoolResultsPanelProps) {
   const t = useTranslations('SchoolSearch.results');
   const { data, isLoading, isError } = useSearchWithFilters();
 
@@ -50,7 +51,11 @@ export function SchoolResultsPanel() {
         )}
 
         {hits.map((school) => (
-          <SearchSchoolCard key={school.documentId} school={school} />
+          <SearchSchoolCard
+            key={school.documentId}
+            school={school}
+            activePortal={activePortal}
+          />
         ))}
       </div>
 

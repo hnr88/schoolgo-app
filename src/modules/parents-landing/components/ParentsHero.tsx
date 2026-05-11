@@ -2,10 +2,13 @@ import { MapPin } from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
 import { SectionContainer, SchoolCard } from '@/modules/design-system';
 import { ParentsHeroSearch } from '@/modules/parents-landing/components/ParentsHeroSearch';
-import { FEATURED_KEYS } from '../constants/parents-landing.constants';
+import { getFeaturedSchools } from '@/modules/parents-landing/lib/featured-schools';
+import { formatAudCompact } from '@/modules/school-search/lib/format-currency';
 
 export async function ParentsHero() {
   const t = await getTranslations('ParentsHero');
+  const tCard = await getTranslations('SchoolSearch.card');
+  const featuredSchools = await getFeaturedSchools();
 
   return (
     <section className='relative overflow-hidden pb-16 pt-28 md:pb-24 md:pt-40'>
@@ -61,31 +64,31 @@ export async function ParentsHero() {
           />
         </div>
 
-        <div className='no-scrollbar -mx-5 overflow-x-auto sm:mx-0 sm:overflow-visible'>
-          <div className='flex w-max snap-x snap-mandatory gap-4 px-5 pb-4 sm:grid sm:w-auto sm:grid-cols-2 sm:gap-5 sm:px-0 sm:pb-0 lg:grid-cols-3'>
-            {FEATURED_KEYS.map(({ key, image }) => (
-              <div key={key} className='w-64 snap-start sm:w-auto'>
-                <SchoolCard
-                  href='/search'
-                  photoUrl={image}
-                  name={t(`featured.cards.${key}.name`)}
-                  location={t(`featured.cards.${key}.location`)}
-                  curriculum={t(`featured.cards.${key}.curriculum`)}
-                  fee={t(`featured.cards.${key}.fee`)}
-                  feeSuffix='/ year'
-                  boarding={t(`featured.cards.${key}.boarding`)}
-                  rating={t(`featured.cards.${key}.rating`)}
-                  shortlistAddLabel={t('featured.shortlistAdd', {
-                    name: t(`featured.cards.${key}.name`),
-                  })}
-                  shortlistRemoveLabel={t('featured.shortlistRemove', {
-                    name: t(`featured.cards.${key}.name`),
-                  })}
-                />
-              </div>
-            ))}
+        {featuredSchools.length > 0 && (
+          <div className='no-scrollbar -mx-5 overflow-x-auto sm:mx-0 sm:overflow-visible'>
+            <div className='flex w-max snap-x snap-mandatory gap-4 px-5 pb-4 sm:grid sm:w-auto sm:grid-cols-2 sm:gap-5 sm:px-0 sm:pb-0 lg:grid-cols-3'>
+              {featuredSchools.map((school) => (
+                <div key={school.documentId} className='w-64 snap-start sm:w-auto'>
+                  <SchoolCard
+                    href={`/parent/schools/${school.slug}`}
+                    photoUrl={school.photoUrl}
+                    name={school.name}
+                    location={`${school.suburb}, ${school.state}`}
+                    curriculum={school.curriculumOffered ?? undefined}
+                    fee={
+                      school.lowestAnnualTuition != null
+                        ? formatAudCompact(school.lowestAnnualTuition)
+                        : undefined
+                    }
+                    feeSuffix={tCard('currency')}
+                    shortlistAddLabel={t('featured.shortlistAdd', { name: school.name })}
+                    shortlistRemoveLabel={t('featured.shortlistRemove', { name: school.name })}
+                  />
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
+        )}
       </SectionContainer>
     </section>
   );

@@ -74,9 +74,6 @@ export async function getSchoolBySlug(slug: string): Promise<SchoolDetail | null
   const response = await fetch(
     `${env.STRAPI_API_URL}/api/schools?${buildSchoolQuery(slug)}`,
     {
-      headers: {
-        Authorization: `Bearer ${env.STRAPI_JWT}`,
-      },
       next: { revalidate: 300 },
     },
   );

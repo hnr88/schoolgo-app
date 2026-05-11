@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
-import { getAlternateLanguages, getCanonicalPath } from '@/lib/seo';
+import { getAlternateLanguages, getCanonicalPath } from '@/modules/seo';
 import { MarketingFooter, MarketingHeader } from '@/modules/marketing-layout';
 import { AuthRedirectCheck } from '@/modules/auth/components/AuthRedirectCheck';
 import {

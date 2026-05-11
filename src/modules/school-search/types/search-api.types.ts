@@ -45,6 +45,7 @@ export interface SchoolHit {
   schoolType: string;
   sector: string;
   gender: string;
+  logoUrl: string | null;
   lowestAnnualTuition: number | null;
   highestAnnualTuition: number | null;
   scholarshipAvailable: boolean;

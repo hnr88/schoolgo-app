@@ -28,6 +28,7 @@ export interface MarketingHeaderClientProps {
   portalUrls: Record<Portal, string>;
   navLinks: NavLink[];
   variant: HeaderVariant;
+  fullWidth?: boolean;
   labels: {
     findSchools: string;
     signIn: string;
@@ -41,9 +42,11 @@ export interface MarketingHeaderClientProps {
 export interface MarketingSubHeaderProps {
   menus: SubMenu[];
   inverted?: boolean;
+  fullWidth?: boolean;
 }
 
 export interface MarketingHeaderProps {
   activePortal: Portal;
   variant?: HeaderVariant;
+  fullWidth?: boolean;
 }

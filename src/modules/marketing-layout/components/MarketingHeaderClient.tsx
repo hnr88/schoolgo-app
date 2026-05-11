@@ -16,6 +16,7 @@ export function MarketingHeaderClient({
   portalUrls,
   navLinks,
   variant,
+  fullWidth = false,
   labels,
 }: MarketingHeaderClientProps) {
   const pathname = usePathname();
@@ -118,8 +119,13 @@ export function MarketingHeaderClient({
             : 'border-b border-transparent bg-background md:bg-background/0',
         )}
       >
-        <MarketingSubHeader menus={subMenus} inverted={isDark && !scrolled} />
-        <div className='mx-auto flex h-12 max-w-content items-center gap-4 px-5 md:h-14 md:px-8'>
+        <MarketingSubHeader menus={subMenus} inverted={isDark && !scrolled} fullWidth={fullWidth} />
+        <div
+          className={cn(
+            'flex h-12 items-center gap-4 px-5 md:h-14 md:px-8',
+            fullWidth ? 'w-full' : 'mx-auto max-w-content',
+          )}
+        >
           <a
             href={portalUrls[activePortal]}
             className='flex shrink-0 items-center'

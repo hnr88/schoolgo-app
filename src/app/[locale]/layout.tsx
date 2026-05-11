@@ -9,7 +9,7 @@ import {
   getAlternateLanguages,
   organizationJsonLd,
   robotsPolicy,
-} from '@/lib/seo';
+} from '@/modules/seo';
 import '../globals.css';
 
 export function generateStaticParams() {

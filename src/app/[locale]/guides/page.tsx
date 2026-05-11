@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { ArrowRight, BookOpen } from 'lucide-react';
 import { setRequestLocale } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
-import { getAlternateLanguages, getCanonicalPath } from '@/lib/seo';
+import { getAlternateLanguages, getCanonicalPath } from '@/modules/seo';
 import { SectionContainer } from '@/modules/design-system';
 import { GUIDE_SLUGS } from '@/modules/guides';
 import { guideRegistry } from '@/modules/guides/data';

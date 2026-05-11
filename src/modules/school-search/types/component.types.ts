@@ -12,6 +12,7 @@ export interface FilterSidebarProps {
 
 export interface MapViewProps {
   className?: string;
+  activePortal: Portal;
 }
 
 export interface SearchAuthGateProps {
@@ -31,4 +32,8 @@ export interface SearchPageContentProps {
   activePortal: Portal;
   title: string;
   guestAccess?: boolean;
+}
+
+export interface SchoolResultsPanelProps {
+  activePortal: Portal;
 }

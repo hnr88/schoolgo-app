@@ -4,7 +4,7 @@ import { MarketingHeaderClient } from '@/modules/marketing-layout/components/Mar
 import type { MarketingHeaderProps } from '@/modules/marketing-layout/types/header.types';
 import { SUB_MENUS, SUB_MENU_ITEMS, PORTAL_NAV } from '../constants/header.constants';
 
-export async function MarketingHeader({ activePortal, variant = 'default' }: MarketingHeaderProps) {
+export async function MarketingHeader({ activePortal, variant = 'default', fullWidth = false }: MarketingHeaderProps) {
   const [t, locale] = await Promise.all([
     getTranslations('MarketingHeader'),
     getLocale(),
@@ -31,6 +31,7 @@ export async function MarketingHeader({ activePortal, variant = 'default' }: Mar
       subMenus={subMenus}
       activePortal={activePortal}
       variant={variant}
+      fullWidth={fullWidth}
       portalUrls={{
         parent: portalUrl('parent', locale),
         agent: portalUrl('agent', locale),

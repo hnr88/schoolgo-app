@@ -3,6 +3,19 @@ import { env } from '@/lib/env';
 import { searchRequestSchema } from '@/modules/school-search/schemas/search-request.schema';
 
 const STRAPI_SEARCH_URL = `${env.STRAPI_API_URL}/api/search/schools`;
+const STRAPI_BASE = env.STRAPI_API_URL.replace(/\/+$/, '');
+
+function resolveMediaUrl(url: unknown): string | null {
+  if (typeof url !== 'string' || url.length === 0) return null;
+  if (url.startsWith('http://') || url.startsWith('https://')) return url;
+  return `${STRAPI_BASE}${url.startsWith('/') ? '' : '/'}${url}`;
+}
+
+function resolveHitMedia(hit: unknown): unknown {
+  if (!hit || typeof hit !== 'object') return hit;
+  const h = hit as Record<string, unknown>;
+  return { ...h, logoUrl: resolveMediaUrl(h.logoUrl) };
+}
 
 export async function POST(request: NextRequest) {
   let body: unknown;
@@ -28,7 +41,6 @@ export async function POST(request: NextRequest) {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        Authorization: `Bearer ${env.STRAPI_JWT}`,
       },
       body: JSON.stringify(parsed.data),
     });
@@ -40,6 +52,10 @@ export async function POST(request: NextRequest) {
         { data: null, error: data.error ?? { status: upstream.status, message: 'Upstream error' } },
         { status: upstream.status },
       );
+    }
+
+    if (data?.data?.hits && Array.isArray(data.data.hits)) {
+      data.data.hits = data.data.hits.map(resolveHitMedia);
     }
 
     return NextResponse.json(data);

@@ -7,6 +7,7 @@ import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import MarkerClusterGroup from 'react-leaflet-cluster';
 import 'leaflet/dist/leaflet.css';
 import { formatAudCompact } from '@/modules/school-search/lib/format-currency';
+import type { Portal } from '@/lib/portal-url';
 import type { SchoolHit } from '@/modules/school-search/types/search-api.types';
 
 const SCHOOL_MAP_ICON = new L.DivIcon({
@@ -37,7 +38,13 @@ function createClusterIcon(cluster: { getChildCount: () => number }) {
 
 const AUSTRALIA_BOUNDS = L.latLngBounds([-46, 110], [-8, 160]);
 
-const SchoolMarker = memo(function SchoolMarker({ school }: { school: SchoolHit }) {
+const SchoolMarker = memo(function SchoolMarker({
+  school,
+  activePortal,
+}: {
+  school: SchoolHit;
+  activePortal: Portal;
+}) {
   const position = useMemo<[number, number]>(
     () => [school._geo!.lat, school._geo!.lng],
     [school._geo!.lat, school._geo!.lng],
@@ -51,7 +58,7 @@ const SchoolMarker = memo(function SchoolMarker({ school }: { school: SchoolHit 
         autoPan={false}
       >
         <a
-          href={school.slug ? `/schools/${school.slug}` : undefined}
+          href={school.slug ? `/${activePortal}/schools/${school.slug}` : undefined}
           className='group flex min-w-44 max-w-52 flex-col no-underline transition-colors'
         >
           <div className='flex flex-col gap-1 p-3 pb-2'>
@@ -80,14 +87,15 @@ const SchoolMarker = memo(function SchoolMarker({ school }: { school: SchoolHit 
       </Popup>
     </Marker>
   );
-}, (prev, next) => prev.school.documentId === next.school.documentId);
+}, (prev, next) => prev.school.documentId === next.school.documentId && prev.activePortal === next.activePortal);
 
 interface LeafletMapProps {
   schools: SchoolHit[];
   onMapReady: (map: L.Map) => void;
+  activePortal: Portal;
 }
 
-export function LeafletMap({ schools, onMapReady }: LeafletMapProps) {
+export function LeafletMap({ schools, onMapReady, activePortal }: LeafletMapProps) {
   const geoSchools = useMemo(
     () => schools.filter((s) => s._geo != null),
     [schools],
@@ -125,7 +133,11 @@ export function LeafletMap({ schools, onMapReady }: LeafletMapProps) {
           removeOutsideVisibleBounds={false}
         >
           {geoSchools.map((school) => (
-            <SchoolMarker key={school.documentId} school={school} />
+            <SchoolMarker
+              key={school.documentId}
+              school={school}
+              activePortal={activePortal}
+            />
           ))}
         </MarkerClusterGroup>
       </MapContainer>

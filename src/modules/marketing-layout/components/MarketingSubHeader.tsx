@@ -9,6 +9,7 @@ import { ICONS } from '../constants/sub-header.constants';
 export function MarketingSubHeader({
   menus,
   inverted,
+  fullWidth = false,
 }: MarketingSubHeaderProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   const timeoutRef = useRef<ReturnType<typeof setTimeout>>(null);
@@ -38,7 +39,10 @@ export function MarketingSubHeader({
     )}>
       <div
         ref={navRef}
-        className='mx-auto flex h-8 max-w-content items-center justify-end px-5 md:px-8'
+        className={cn(
+          'flex h-8 items-center justify-end px-5 md:px-8',
+          fullWidth ? 'w-full' : 'mx-auto max-w-content',
+        )}
       >
         <div className='flex items-center gap-6'>
           {menus.map((menu, i) => (

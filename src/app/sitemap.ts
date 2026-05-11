@@ -1,6 +1,6 @@
 import type { MetadataRoute } from 'next';
 import { routing } from '@/i18n/routing';
-import { getAlternateLanguageUrls, getLocalizedPath, siteUrl } from '@/lib/seo';
+import { getAlternateLanguageUrls, getLocalizedPath, siteUrl } from '@/modules/seo';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const routes = [

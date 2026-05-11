@@ -5,7 +5,7 @@ import {
   faqPageJsonLd,
   getAlternateLanguages,
   getCanonicalPath,
-} from '@/lib/seo';
+} from '@/modules/seo';
 import { GuidePageRenderer, GUIDE_SLUGS } from '@/modules/guides';
 import { guideRegistry } from '@/modules/guides/data';
 import type { GuideSlug } from '@/modules/guides/constants/guides.constants';

@@ -1,5 +1,5 @@
 import { getTranslations } from 'next-intl/server';
-import { faqPageJsonLd } from '@/lib/seo';
+import { faqPageJsonLd } from '@/modules/seo';
 import { FaqSection } from '@/modules/design-system';
 import { FAQ_KEYS } from '../constants/parents-landing.constants';
 

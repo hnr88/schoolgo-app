@@ -15,12 +15,6 @@ export const FAQ_KEYS = [
   'updateFrequency',
 ] as const;
 
-export const FEATURED_KEYS: Array<{ key: 'a' | 'b' | 'c'; image: string }> = [
-  { key: 'a', image: 'https://images.unsplash.com/photo-1603437119287-4a3732b685f9?auto=format&fit=crop&w=720&h=540&q=80' },
-  { key: 'b', image: 'https://images.unsplash.com/photo-1621241484978-6f60fdb68f1c?auto=format&fit=crop&w=720&h=540&q=80' },
-  { key: 'c', image: 'https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=720&h=540&q=80' },
-];
-
 export const PICK_A_TEST_FEATURED: Array<'aeas' | 'idat' | 'duolingo' | 'ielts'> = [
   'aeas',
   'idat',
