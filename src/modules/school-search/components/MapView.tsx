@@ -1,6 +1,6 @@
 'use client';
 
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import dynamic from 'next/dynamic';
 import type L from 'leaflet';
 import { cn } from '@/lib/utils';
@@ -11,7 +11,10 @@ import { useStateFilterMapSync } from '@/modules/school-search/hooks/useStateFil
 import { MapZoomControls } from '@/modules/school-search/components/MapZoomControls';
 import { ScrollWheelZoomHandler } from '@/modules/school-search/components/ScrollWheelZoomHandler';
 import { useSchoolSearchStore } from '@/modules/school-search/stores/use-school-search-store';
+import type { SchoolHit } from '@/modules/school-search/types/search-api.types';
 import type { MapViewProps } from '@/modules/school-search/types/component.types';
+
+const EMPTY_SCHOOLS: SchoolHit[] = [];
 
 const LeafletMap = dynamic(
   () =>
@@ -37,7 +40,42 @@ export function MapView({ className }: MapViewProps) {
   const [map, setMap] = useState<L.Map | null>(null);
   const resetCount = useSchoolSearchStore((s) => s.resetCount);
   const { data } = useSearchWithFilters();
-  const schools = data?.data?.hits ?? [];
+  const freshSchools = data?.data?.hits ?? EMPTY_SCHOOLS;
+  const prevSchoolsRef = useRef<SchoolHit[]>(EMPTY_SCHOOLS);
+
+  const schools = useMemo(() => {
+    const prev = prevSchoolsRef.current;
+
+    if (freshSchools.length === 0) {
+      prevSchoolsRef.current = EMPTY_SCHOOLS;
+      return EMPTY_SCHOOLS;
+    }
+
+    if (prev.length === 0) {
+      prevSchoolsRef.current = freshSchools;
+      return freshSchools;
+    }
+
+    const freshIds = new Set(freshSchools.map((s) => s.documentId));
+    const prevIds = new Set(prev.map((s) => s.documentId));
+    const overlapCount = freshSchools.filter((s) => prevIds.has(s.documentId)).length;
+    const overlapRatio = overlapCount / freshSchools.length;
+
+    if (overlapRatio > 0.5 && prev.length < 1500) {
+      const retained = prev.filter((s) => !freshIds.has(s.documentId));
+      if (retained.length === 0) {
+        prevSchoolsRef.current = freshSchools;
+        return freshSchools;
+      }
+      const merged = [...freshSchools, ...retained];
+      prevSchoolsRef.current = merged;
+      return merged;
+    }
+
+    prevSchoolsRef.current = freshSchools;
+    return freshSchools;
+  }, [freshSchools]);
+
   const prevResetRef = useRef(resetCount);
 
   const handleMapReady = useCallback((m: L.Map) => setMap(m), []);
@@ -45,8 +83,27 @@ export function MapView({ className }: MapViewProps) {
   useEffect(() => {
     if (!map || resetCount === prevResetRef.current) return;
     prevResetRef.current = resetCount;
+    prevSchoolsRef.current = EMPTY_SCHOOLS;
     map.setView([-28, 133], 5, { animate: true });
   }, [map, resetCount]);
+
+  useEffect(() => {
+    if (!map) return;
+    const timer = setTimeout(() => {
+      map.eachLayer((layer: unknown) => {
+        const cl = layer as Record<string, unknown>;
+        if (typeof cl._moveChild === 'function' && !cl._moveChildPatched) {
+          const orig = cl._moveChild as (child: unknown, from: L.LatLng, to: L.LatLng) => void;
+          cl._moveChild = function (child: unknown, from: L.LatLng, to: L.LatLng) {
+            if (Math.abs(from.lat - to.lat) < 1e-10 && Math.abs(from.lng - to.lng) < 1e-10) return;
+            orig.call(this, child, from, to);
+          };
+          cl._moveChildPatched = true;
+        }
+      });
+    }, 0);
+    return () => clearTimeout(timer);
+  }, [map]);
 
   useMapViewportReporter(map);
   useGeocodeSearch(map);

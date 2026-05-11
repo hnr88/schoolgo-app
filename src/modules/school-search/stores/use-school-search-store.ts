@@ -36,7 +36,7 @@ interface SchoolSearchState {
 const DEFAULT_MAP_BOUNDS: MapBounds = {
   lat: -28,
   lng: 133,
-  radiusKm: 2000,
+  radiusKm: 5000,
 };
 
 const initialState = {

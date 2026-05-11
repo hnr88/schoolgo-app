@@ -411,9 +411,42 @@
   }
 }
 
+.school-map-cluster {
+  background: transparent !important;
+  border: 0 !important;
+  transition: opacity 200ms var(--ease-standard);
+}
+
+.school-map-cluster__circle {
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  background: var(--primary);
+  color: var(--primary-foreground);
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 0.8125rem;
+  border: 3px solid var(--card);
+  box-shadow:
+    0 6px 16px oklch(0.2 0 0 / 0.16),
+    0 2px 6px oklch(0.58 0.26 25 / 0.2);
+  cursor: pointer;
+  transition:
+    transform 180ms var(--ease-standard),
+    box-shadow 180ms var(--ease-standard);
+}
+
+.school-map-cluster__circle:hover {
+  transform: scale(1.08);
+  box-shadow:
+    0 10px 22px oklch(0.2 0 0 / 0.2),
+    0 4px 10px oklch(0.58 0.26 25 / 0.28);
+}
+
 .school-map-marker {
   background: transparent !important;
   border: 0 !important;
+  scale: 1 !important;
 }
 
 .school-map-marker__pin {
@@ -429,9 +462,7 @@
   box-shadow:
     0 10px 22px oklch(0.2 0 0 / 0.18),
     0 4px 12px oklch(0.58 0.26 25 / 0.24);
-  transition:
-    transform 180ms var(--ease-standard),
-    box-shadow 180ms var(--ease-standard);
+  transition: box-shadow 180ms var(--ease-standard);
 }
 
 .school-map-marker__pin::after {
@@ -526,4 +557,10 @@ button:not(:disabled):not([aria-haspopup]):active,
 [data-slot='button']:not(:disabled):not([aria-haspopup]):active {
   scale: 0.97;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 0 1px rgba(0, 0, 0, 0.08);
+}
+
+.leaflet-container .leaflet-marker-icon:active,
+.leaflet-container .leaflet-marker-icon *:active {
+  scale: 1 !important;
+  box-shadow: unset !important;
 }

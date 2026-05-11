@@ -1,11 +1,22 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import type { Map } from 'leaflet';
 import { useSchoolSearchStore } from '@/modules/school-search/stores/use-school-search-store';
 
+const RADIUS_BUFFER = 3;
+const CENTER_MOVE_RATIO = 0.3;
+
+interface Snapshot {
+  lat: number;
+  lng: number;
+  radiusKm: number;
+  zoom: number;
+}
+
 export function useMapViewportReporter(map: Map | null) {
   const setMapBounds = useSchoolSearchStore((s) => s.setMapBounds);
+  const prevRef = useRef<Snapshot>({ lat: -28, lng: 133, radiusKm: 5000, zoom: 5 });
 
   useEffect(() => {
     if (!map) return;
@@ -13,15 +24,32 @@ export function useMapViewportReporter(map: Map | null) {
 
     function reportBounds() {
       const center = m.getCenter();
-      const bounds = m.getBounds();
-      const radiusM = center.distanceTo(bounds.getNorthEast());
-      const radiusKm = Math.max(1, Math.ceil(radiusM / 1000));
+      const zoom = m.getZoom();
+      const prev = prevRef.current;
 
-      setMapBounds({
-        lat: Number(center.lat.toFixed(4)),
-        lng: Number(center.lng.toFixed(4)),
-        radiusKm: Math.min(radiusKm, 5000),
-      });
+      let radiusKm: number;
+      if (zoom === prev.zoom) {
+        radiusKm = prev.radiusKm;
+      } else {
+        const bounds = m.getBounds();
+        const radiusM = center.distanceTo(bounds.getNorthEast());
+        radiusKm = Math.min(5000, Math.max(1, Math.ceil((radiusM * RADIUS_BUFFER) / 1000)));
+      }
+
+      if (zoom > prev.zoom) {
+        prevRef.current = { lat: center.lat, lng: center.lng, radiusKm: prev.radiusKm, zoom };
+        return;
+      }
+
+      const movedKm = center.distanceTo([prev.lat, prev.lng]) / 1000;
+      if (zoom === prev.zoom && movedKm < radiusKm * CENTER_MOVE_RATIO) {
+        return;
+      }
+
+      const lat = Number(center.lat.toFixed(4));
+      const lng = Number(center.lng.toFixed(4));
+      prevRef.current = { lat: center.lat, lng: center.lng, radiusKm, zoom };
+      setMapBounds({ lat, lng, radiusKm });
     }
 
     reportBounds();

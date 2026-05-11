@@ -12,12 +12,18 @@ export function FilterChips({ className }: FilterChipsProps) {
   const toggleChip = useSchoolSearchStore((s) => s.toggleChip);
 
   return (
-    <div className={cn('flex flex-wrap items-center gap-2', className)}>
+    <div
+      className={cn(
+        'no-scrollbar flex items-center gap-1.5 overflow-x-auto rounded-pill border border-border bg-card px-4 py-2 shadow-2',
+        className,
+      )}
+    >
       {FILTER_CHIP_IDS.map((id) => {
         const isActive = activeChips.includes(id);
         return (
           <Chip
             key={id}
+            size='md'
             selected={isActive}
             onClick={() => toggleChip(id)}
             className='whitespace-nowrap'
