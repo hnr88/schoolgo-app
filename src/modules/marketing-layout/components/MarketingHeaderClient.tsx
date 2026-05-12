@@ -132,10 +132,10 @@ export function MarketingHeaderClient({
             aria-label='SchoolGo home'
           >
             <Image
-              src={isDark && !scrolled ? '/logos/logo-white.png' : '/logos/logo-red.png'}
+              src={isDark && !scrolled ? '/logos/logo-white-text.png' : '/logos/logo-red-text.png'}
               alt='SchoolGo'
-              width={220}
-              height={48}
+              width={559}
+              height={125}
               priority
               className='h-7 w-auto md:h-8'
             />
@@ -245,10 +245,10 @@ export function MarketingHeaderClient({
               onClick={() => setMobileOpen(false)}
             >
               <Image
-                src='/logos/logo-red.png'
+                src='/logos/logo-red-text.png'
                 alt='SchoolGo'
-                width={160}
-                height={36}
+                width={559}
+                height={125}
                 className='h-9 w-auto'
               />
             </a>
