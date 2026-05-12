@@ -34,5 +34,7 @@ export default async function SearchPage({
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: 'SearchMetadata' });
-  return <SearchPageContent activePortal='parent' title={t('parentTitle')} />;
+  return (
+    <SearchPageContent activePortal='parent' title={t('parentTitle')} guestAccess specOnly />
+  );
 }

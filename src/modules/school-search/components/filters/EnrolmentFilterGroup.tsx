@@ -19,10 +19,9 @@ import type {
 
 interface EnrolmentFilterGroupProps {
   isAdvanced: boolean;
-  signUpHref: string;
 }
 
-export function EnrolmentFilterGroup({ isAdvanced, signUpHref }: EnrolmentFilterGroupProps) {
+export function EnrolmentFilterGroup({ isAdvanced }: EnrolmentFilterGroupProps) {
   const t = useTranslations('SchoolSearch.spec');
 
   const yearLevels = useSchoolSearchStore((s) => s.entryYearLevels);
@@ -89,7 +88,6 @@ export function EnrolmentFilterGroup({ isAdvanced, signUpHref }: EnrolmentFilter
           defaultOpen
           locked={!isAdvanced}
           lockedDescription={t('lockedDescription')}
-          signUpHref={signUpHref}
         >
           <FilterChipGroup<EntryTerm>
             options={ENTRY_TERM_OPTIONS}

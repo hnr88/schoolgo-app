@@ -25,7 +25,7 @@ export function SearchTopBar({ className }: SearchTopBarProps) {
       )}
       data-testid="spec-top-bar"
     >
-      <div className="relative min-w-72 flex-1">
+      <div className="relative min-w-[18rem] flex-1">
         <Search
           className="absolute left-3 top-1/2 size-4 -translate-y-1/2 text-muted-foreground"
           aria-hidden

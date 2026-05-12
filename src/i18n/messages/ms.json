@@ -1072,13 +1072,6 @@
           "waitlist": "Waitlist only",
           "closed": "Closed"
         }
-      },
-      "modeAdvanced": "Lanjutan",
-      "modeBasic": "Asas",
-      "topBarQuickFiltersLabel": "Penapis pantas",
-      "stepper": {
-        "decrease": "Kurangkan",
-        "increase": "Tambah"
       }
     }
   },

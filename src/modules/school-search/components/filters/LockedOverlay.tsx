@@ -8,7 +8,6 @@ import { cn } from '@/lib/utils';
 type LockedOverlayProps = {
   locked: boolean;
   description: string;
-  signUpHref: string;
   children: ReactNode;
   className?: string;
 };
@@ -16,7 +15,6 @@ type LockedOverlayProps = {
 export function LockedOverlay({
   locked,
   description,
-  signUpHref,
   children,
   className,
 }: LockedOverlayProps) {
@@ -45,7 +43,7 @@ export function LockedOverlay({
           {description}
         </p>
         <Link
-          href={signUpHref}
+          href="/register"
           className={cn(
             'inline-flex items-center rounded-pill border border-primary px-4 py-1.5',
             'text-sm font-medium text-primary',

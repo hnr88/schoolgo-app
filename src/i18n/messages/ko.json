@@ -1072,13 +1072,6 @@
           "waitlist": "Waitlist only",
           "closed": "Closed"
         }
-      },
-      "modeAdvanced": "고급",
-      "modeBasic": "기본",
-      "topBarQuickFiltersLabel": "빠른 필터",
-      "stepper": {
-        "decrease": "감소",
-        "increase": "증가"
       }
     }
   },

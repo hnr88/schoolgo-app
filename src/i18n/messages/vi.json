@@ -1072,13 +1072,6 @@
           "waitlist": "Waitlist only",
           "closed": "Closed"
         }
-      },
-      "modeAdvanced": "Nâng cao",
-      "modeBasic": "Cơ bản",
-      "topBarQuickFiltersLabel": "Bộ lọc nhanh",
-      "stepper": {
-        "decrease": "Giảm",
-        "increase": "Tăng"
       }
     }
   },

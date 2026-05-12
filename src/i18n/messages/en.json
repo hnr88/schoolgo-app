@@ -895,16 +895,9 @@
     "spec": {
       "previewBadge": "Preview",
       "previewTitle": "Spec filters",
-      "modeAdvanced": "Advanced",
-      "modeBasic": "Basic",
       "lockedDescription": "Sign up to unlock this filter.",
       "showAll": "Show all ({count})",
       "showFewer": "Show fewer",
-      "stepper": {
-        "decrease": "Decrease",
-        "increase": "Increase"
-      },
-      "topBarQuickFiltersLabel": "Quick filters",
       "location": {
         "title": "Location",
         "stateLabel": "State or territory",

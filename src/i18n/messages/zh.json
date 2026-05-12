@@ -1072,13 +1072,6 @@
           "waitlist": "Waitlist only",
           "closed": "Closed"
         }
-      },
-      "modeAdvanced": "高级",
-      "modeBasic": "基础",
-      "topBarQuickFiltersLabel": "快速筛选",
-      "stepper": {
-        "decrease": "减少",
-        "increase": "增加"
       }
     }
   },

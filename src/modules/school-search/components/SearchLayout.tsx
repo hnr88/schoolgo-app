@@ -1,0 +1,23 @@
+'use client';
+
+import { useAuthStore } from '@/modules/auth/stores/use-auth-store';
+import { cn } from '@/lib/utils';
+import type { SearchLayoutProps } from '@/modules/school-search/types/component.types';
+
+export function SearchLayout({ children, guestAccess = false }: SearchLayoutProps) {
+  const isAuthenticated = useAuthStore((s) => s.isAuthenticated);
+  const isHydrated = useAuthStore((s) => s.isHydrated);
+
+  const isGuest = isHydrated && !isAuthenticated && !guestAccess;
+
+  return (
+    <main
+      className={cn(
+        'flex bg-muted pt-14 md:pt-18',
+        isGuest ? 'mx-auto w-full max-w-content px-6' : 'w-full',
+      )}
+    >
+      {children}
+    </main>
+  );
+}

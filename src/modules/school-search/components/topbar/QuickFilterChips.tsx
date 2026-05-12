@@ -95,7 +95,7 @@ export function QuickFilterChips() {
       value={selected}
       onChange={handleChange}
       multi
-      ariaLabel={t('topBarQuickFiltersLabel')}
+      ariaLabel={t('topBar.feeLabel')}
       size="sm"
       getLabel={(option) => t(option.labelKey as never)}
     />
