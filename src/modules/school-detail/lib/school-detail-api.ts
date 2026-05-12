@@ -67,12 +67,12 @@ export function mediaUrl(media?: StrapiMedia | null): string | null {
   const url = media?.url;
   if (!url) return null;
   if (url.startsWith('http')) return url;
-  return `${env.STRAPI_API_URL.replace(/\/+$/, '')}${url}`;
+  return `${env.NEXT_PUBLIC_API_URL.replace(/\/+$/, '')}${url}`;
 }
 
 export async function getSchoolBySlug(slug: string): Promise<SchoolDetail | null> {
   const response = await fetch(
-    `${env.STRAPI_API_URL}/api/schools?${buildSchoolQuery(slug)}`,
+    `${env.NEXT_PUBLIC_API_URL}/api/schools?${buildSchoolQuery(slug)}`,
     {
       next: { revalidate: 300 },
     },

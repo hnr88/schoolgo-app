@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SchoolGo — Basic Search Wireframe (Anonymous / Landing Page)</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:#1a1a1a;background:#f5f5f0;display:flex;justify-content:center;padding:24px}
+.wf{max-width:1200px;width:100%;border:1px solid #e0e0e0;border-radius:12px;overflow:hidden;background:#fff}
+.an{font-size:11px;color:#854F0B;background:#FAEEDA;padding:3px 8px;border-radius:6px;display:inline-block;margin-bottom:6px;font-weight:500}
+.dev-note{font-size:11px;color:#085041;background:#E1F5EE;padding:3px 8px;border-radius:6px;display:inline-block;margin-bottom:6px;font-weight:500}
+.navbar{display:flex;align-items:center;justify-content:space-between;padding:14px 20px;border-bottom:1px solid #e0e0e0}
+.nav-left{display:flex;align-items:center;gap:20px}
+.logo{font-size:18px;font-weight:600;color:#E24B4A;display:flex;align-items:center;gap:6px}
+.logo svg{width:24px;height:24px}
+.nav-links{display:flex;gap:16px;font-size:14px;color:#666}
+.nav-right{display:flex;align-items:center;gap:14px;font-size:14px}
+.nav-right .signin{font-weight:600;color:#1a1a1a;cursor:pointer}
+.top-bar{padding:14px 20px;border-bottom:1px solid #e0e0e0;display:flex;flex-direction:column;gap:10px}
+.top-row1{display:flex;gap:10px;align-items:center}
+.search-input{flex:1;min-width:240px;height:42px;border-radius:10px;border:1px solid #ccc;padding:0 16px;font-size:15px;background:#fff;color:#1a1a1a;outline:none}
+.search-input:focus{border-color:#E24B4A}
+.top-row2{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.fee-slider{display:flex;align-items:center;gap:10px;background:#f5f5f0;padding:8px 16px;border-radius:10px;flex-shrink:0}
+.fee-slider label{font-size:13px;color:#666;font-weight:500;white-space:nowrap}
+.fee-slider input[type=range]{width:140px;accent-color:#E24B4A;cursor:pointer}
+.fee-slider .val{font-size:13px;font-weight:600;color:#E24B4A;white-space:nowrap;min-width:80px}
+.quick-chips{display:flex;gap:8px;flex-wrap:wrap}
+.qchip{font-size:13px;padding:8px 16px;border-radius:20px;border:1px solid #ddd;background:#fff;color:#666;cursor:pointer;white-space:nowrap;font-weight:500;transition:all .15s}
+.qchip:hover{border-color:#999}
+.qchip.on{background:#1a1a1a;color:#fff;border-color:transparent}
+.body-wrap{display:flex;min-height:600px;position:relative}
+.sidebar{width:280px;border-right:1px solid #e0e0e0;overflow-y:auto;flex-shrink:0}
+.fg{border-bottom:1px solid #e0e0e0}
+.fg-h{display:flex;align-items:center;gap:8px;padding:12px 16px;cursor:pointer;font-size:14px;font-weight:500;user-select:none}
+.fg-h:hover{background:#fafaf5}
+.fg-h svg{width:16px;height:16px;color:#999;flex-shrink:0}
+.fg-h .arr{margin-left:auto;font-size:11px;color:#999;transition:transform .2s}
+.fg-b{padding:0 16px 16px;display:block}
+.fg.closed .fg-b{display:none}
+.fg.closed .arr{transform:rotate(-90deg)}
+.fl{margin-bottom:12px}
+.fl:last-child{margin-bottom:0}
+.fl-label{font-size:12px;color:#666;margin-bottom:6px;font-weight:500;display:flex;align-items:center;gap:5px}
+.info-i{width:16px;height:16px;border-radius:50%;border:1px solid #ccc;display:inline-flex;align-items:center;justify-content:center;font-size:10px;color:#999;cursor:help;font-weight:600;font-style:italic;flex-shrink:0;position:relative}
+.info-tip{display:none;position:absolute;left:22px;top:-6px;background:#1a1a1a;color:#fff;font-size:12px;padding:8px 12px;border-radius:8px;width:200px;z-index:10;font-weight:400;font-style:normal;line-height:1.4;box-shadow:0 4px 12px rgba(0,0,0,0.15)}
+.info-tip::before{content:"";position:absolute;left:-6px;top:10px;border:6px solid transparent;border-right-color:#1a1a1a;border-left:none}
+.info-i:hover .info-tip{display:block}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font-size:12px;padding:6px 12px;border-radius:16px;border:1px solid #ddd;background:#fff;color:#666;cursor:pointer;white-space:nowrap;transition:all .15s}
+.chip:hover{border-color:#999}
+.chip.on{background:#FCEBEB;color:#791F1F;border-color:#F09595}
+.show-more{font-size:12px;color:#0C447C;cursor:pointer;border:none;background:none;padding:4px 0;font-weight:500;margin-top:4px}
+.toggle-row{display:flex;align-items:center;justify-content:space-between;font-size:13px;padding:2px 0}
+.toggle-track{width:36px;height:20px;border-radius:10px;background:#ddd;position:relative;cursor:pointer}
+.toggle-dot{width:16px;height:16px;border-radius:50%;background:#fff;position:absolute;top:2px;left:2px;box-shadow:0 1px 3px rgba(0,0,0,0.15)}
+.stepper{display:flex;align-items:center;gap:8px}
+.stepper button{width:28px;height:28px;border-radius:50%;border:1px solid #ccc;background:#fff;font-size:16px;cursor:pointer;color:#1a1a1a;display:flex;align-items:center;justify-content:center}
+.stepper span{font-size:16px;font-weight:600;min-width:28px;text-align:center;color:#999}
+.lock-overlay{position:relative;padding:16px 12px;text-align:center;border-radius:8px;overflow:hidden}
+.lock-bg{position:absolute;inset:0;background:#fff;opacity:0.8}
+.lock-content{position:relative;z-index:1}
+.lock-icon{font-size:20px;color:#ccc;margin-bottom:6px}
+.lock-text{font-size:12px;color:#666;margin-bottom:10px;line-height:1.4}
+.lock-btn{font-size:12px;padding:6px 16px;border-radius:16px;border:none;background:#E24B4A;color:#fff;cursor:pointer;font-weight:600}
+.lock-btn:hover{background:#d03e3e}
+.map-area{flex:1;background:#f0ede6;position:relative;min-width:0;overflow:hidden}
+.map-label{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center}
+.map-label .main{font-size:16px;color:#999;margin-bottom:4px}
+.map-label .sub{font-size:12px;color:#bbb}
+.pin{position:absolute;width:32px;height:32px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);display:flex;align-items:center;justify-content:center;background:#E24B4A;color:#fff}
+.pin-inner{transform:rotate(45deg);font-size:10px}
+.pin-cluster{position:absolute;background:#E24B4A;color:#fff;border-radius:50%;width:36px;height:36px;font-size:13px;font-weight:600;border:2.5px solid #fff;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 6px rgba(0,0,0,0.2)}
+.results-panel{position:absolute;right:12px;top:12px;bottom:12px;width:280px;background:#fff;border-radius:12px;border:1px solid #e0e0e0;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,0.08)}
+.rp-header{padding:12px 14px;border-bottom:1px solid #e0e0e0;display:flex;justify-content:space-between;align-items:center;flex-shrink:0}
+.rp-header .title{font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.5px;color:#999}
+.rp-header .count{font-size:12px;font-weight:600;color:#27500A;background:#EAF3DE;padding:3px 10px;border-radius:12px}
+.rp-cards{flex:1;overflow-y:auto;padding:8px}
+.rp-card{border:1px solid #e0e0e0;border-radius:10px;margin-bottom:8px;overflow:hidden;cursor:pointer;transition:all .15s}
+.rp-card:hover{border-color:#ccc;box-shadow:0 2px 8px rgba(0,0,0,0.06)}
+.rp-img{height:80px;background:#e8e5de;position:relative;display:flex;align-items:center;justify-content:center}
+.rp-img span{font-size:11px;color:#bbb}
+.rp-fav{position:absolute;top:6px;right:6px;width:28px;height:28px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;font-size:14px;cursor:pointer;border:1px solid #e0e0e0}
+.rp-body{padding:10px 12px}
+.rp-name{font-size:14px;font-weight:600;margin-bottom:3px}
+.rp-loc{font-size:12px;color:#666;margin-bottom:8px}
+.rp-badges{display:flex;gap:4px;flex-wrap:wrap;margin-bottom:8px}
+.rp-badge{font-size:10px;padding:3px 8px;border-radius:6px;font-weight:500}
+.rp-badge.v{background:#EAF3DE;color:#27500A}
+.rp-badge.lim{background:#FAEEDA;color:#633806}
+.rp-badge.s{background:#EEEDFE;color:#3C3489}
+.rp-badge.cur{background:#E6F1FB;color:#0C447C}
+.rp-badge.acc{background:#f0ede6;color:#666}
+.rp-fee{font-size:12px;color:#666}
+.rp-fee b{color:#1a1a1a;font-weight:600}
+.rp-arrow{font-size:12px;color:#999;margin-top:6px}
+.compare-strip{border-top:1px solid #e0e0e0;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;background:#f5f5f0}
+.section-label{padding:8px 16px 0}
+</style>
+</head>
+<body>
+<div class="wf">
+
+<div class="section-label"><span class="an">Basic search — anonymous / landing page (no login required)</span></div>
+
+<div class="navbar">
+<div class="nav-left">
+<div class="logo">
+<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+SchoolGo
+</div>
+<div class="nav-links"><span>How it works</span><span>Compare</span><span>FAQ</span></div>
+</div>
+<div class="nav-right">
+<span class="signin">Sign in</span>
+<span style="color:#666">EN</span>
+</div>
+</div>
+
+<div class="top-bar">
+<div class="top-row1">
+<input class="search-input" type="text" placeholder="Search by school name, city, or suburb..." />
+</div>
+<div class="top-row2">
+<div class="fee-slider">
+<label>Annual fees</label>
+<input type="range" min="5000" max="60000" value="60000" />
+<span class="val">$5k – $60k</span>
+</div>
+<div class="quick-chips">
+<span class="qchip">Boys</span>
+<span class="qchip">Girls</span>
+<span class="qchip">Co-ed</span>
+<span class="qchip">Primary</span>
+<span class="qchip">Secondary</span>
+<span class="qchip">Boarding</span>
+</div>
+</div>
+</div>
+
+<div class="body-wrap">
+<div class="sidebar">
+<div class="section-label"><span class="an">Sidebar: 2 open groups, 3 partially/fully locked</span></div>
+
+<!-- LOCATION (OPEN) -->
+<div class="fg">
+<div class="fg-h" onclick="this.parentElement.classList.toggle('closed')">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+Location
+<span class="arr">&#9660;</span>
+</div>
+<div class="fg-b">
+<div class="fl">
+<div class="fl-label">State / territory</div>
+<div class="chips">
+<span class="chip">QLD</span>
+<span class="chip">NSW</span>
+<span class="chip on">VIC</span>
+<span class="chip">SA</span>
+<span class="chip">WA</span>
+<span class="chip">TAS</span>
+<span class="chip">NT</span>
+<span class="chip">ACT</span>
+</div>
+</div>
+<div class="fl">
+<div class="fl-label">Suburb / postcode</div>
+<input type="text" placeholder="e.g. Kew, 3101" style="width:100%;height:32px;border-radius:8px;border:1px solid #ddd;padding:0 10px;font-size:13px;background:#fff;color:#1a1a1a" />
+</div>
+</div>
+</div>
+
+<!-- SCHOOL PROFILE (OPEN) -->
+<div class="fg">
+<div class="fg-h" onclick="this.parentElement.classList.toggle('closed')">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+School profile
+<span class="arr">&#9660;</span>
+</div>
+<div class="fg-b">
+<div class="fl">
+<div class="fl-label">Sector</div>
+<div class="chips">
+<span class="chip">Government</span>
+<span class="chip">Non-government</span>
+<span class="chip">Catholic</span>
+</div>
+</div>
+<div class="fl">
+<div class="fl-label">Accommodation</div>
+<div class="chips">
+<span class="chip">Boarding</span>
+<span class="chip">Homestay</span>
+<span class="chip">Both</span>
+<span class="chip">None</span>
+</div>
+</div>
+<div class="fl">
+<div class="fl-label">Religious affiliation</div>
+<div class="chips">
+<span class="chip">Non-denom.</span>
+<span class="chip">Anglican</span>
+<span class="chip">Baptist</span>
+<span class="chip">Lutheran</span>
+<span class="chip">Uniting Church</span>
+<span class="chip">Presbyterian</span>
+<span class="chip">Islamic</span>
+</div>
+<button class="show-more">Show all (14) &#9660;</button>
+</div>
+</div>
+</div>
+
+<!-- ENROLMENT & ENTRY (PARTIALLY OPEN) -->
+<div class="fg">
+<div class="fg-h" onclick="this.parentElement.classList.toggle('closed')">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/></svg>
+Enrolment and entry
+<span class="arr">&#9660;</span>
+</div>
+<div class="fg-b">
+<div class="fl">
+<div class="fl-label">Entry year level <span class="dev-note">Open for anonymous</span></div>
+<div class="chips">
+<span class="chip">Gr 4</span>
+<span class="chip">Gr 5</span>
+<span class="chip">Gr 6</span>
+<span class="chip">Yr 7</span>
+<span class="chip">Yr 8</span>
+<span class="chip">Yr 9</span>
+<span class="chip">Yr 10</span>
+<span class="chip">Yr 11</span>
+<span class="chip">Yr 12</span>
+</div>
+</div>
+<div class="fl">
+<div class="fl-label">Student age <span class="dev-note">Open for anonymous</span></div>
+<div class="stepper"><button>−</button><span>—</span><button>+</button></div>
+</div>
+<div class="fl">
+<div class="fl-label">Entry term <span class="an">Locked</span></div>
+<div class="lock-overlay">
+<div class="lock-bg"></div>
+<div class="lock-content">
+<div class="lock-text">Filter by entry term (Term 1–4)</div>
+<button class="lock-btn">Create free account</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- ACADEMIC (PARTIALLY OPEN) -->
+<div class="fg">
+<div class="fg-h" onclick="this.parentElement.classList.toggle('closed')">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1.1 2.7 3 6 3s6-1.9 6-3v-5"/></svg>
+Academic
+<span class="arr">&#9660;</span>
+</div>
+<div class="fg-b">
+<div class="fl">
+<div class="fl-label">Program type <span class="an">Locked</span></div>
+<div class="lock-overlay">
+<div class="lock-bg"></div>
+<div class="lock-content">
+<div class="lock-text">Filter by Australian Cert. / IB / ELICOS</div>
+<button class="lock-btn">Create free account</button>
+</div>
+</div>
+</div>
+<div class="fl">
+<div class="fl-label">
+ATAR available
+<span class="info-i">i<span class="info-tip">Australian Tertiary Admission Rank — the score used for university entry in Australia.</span></span>
+</div>
+<div class="toggle-row"><span>ATAR schools only</span><div class="toggle-track"><div class="toggle-dot"></div></div></div>
+</div>
+<div class="fl">
+<div class="fl-label">English language support</div>
+<div class="toggle-row"><span>Support available</span><div class="toggle-track"><div class="toggle-dot"></div></div></div>
+</div>
+</div>
+</div>
+
+<!-- ENGLISH TEST SCORES (LOCKED) -->
+<div class="fg">
+<div class="fg-h">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+English test scores
+<span class="arr">&#9654;</span>
+</div>
+<div class="fg-b">
+<div class="lock-overlay">
+<div class="lock-bg"></div>
+<div class="lock-content">
+<div class="lock-icon">&#128274;</div>
+<div class="lock-text">Filter by AEAS, IELTS, PTE, Duolingo, and more</div>
+<button class="lock-btn">Create free account</button>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+
+<!-- MAP -->
+<div class="map-area">
+<div class="map-label">
+<div class="main">Map with clustered school pins</div>
+<div class="sub">Pins cluster at low zoom, expand on zoom in</div>
+</div>
+<div class="pin" style="position:absolute;top:32%;left:24%"><div class="pin-inner">&#9679;</div></div>
+<div class="pin-cluster" style="top:52%;left:42%">7</div>
+<div class="pin-cluster" style="top:62%;left:58%">15</div>
+<div class="pin-cluster" style="top:70%;left:73%">21</div>
+
+<div class="results-panel">
+<div class="rp-header">
+<span class="title">Available schools</span>
+<span class="count">312 results</span>
+</div>
+<div class="rp-cards">
+
+<div class="rp-card">
+<div class="rp-img"><span>School photo</span><div class="rp-fav">&#9825;</div></div>
+<div class="rp-body">
+<div class="rp-name">Melbourne Grammar School</div>
+<div class="rp-loc">South Yarra, VIC</div>
+<div class="rp-badges">
+<span class="rp-badge v">Open</span>
+<span class="rp-badge s">Non-gov</span>
+<span class="rp-badge cur">VCE</span>
+<span class="rp-badge acc">Boarding</span>
+</div>
+<div class="rp-fee">From <b>$42,100</b> / year</div>
+<div class="rp-arrow">View school &#8594;</div>
+</div>
+</div>
+
+<div class="rp-card">
+<div class="rp-img"><span>School photo</span><div class="rp-fav">&#9825;</div></div>
+<div class="rp-body">
+<div class="rp-name">Scotch College Melbourne</div>
+<div class="rp-loc">Hawthorn, VIC</div>
+<div class="rp-badges">
+<span class="rp-badge lim">Limited places</span>
+<span class="rp-badge s">Non-gov</span>
+<span class="rp-badge cur">VCE / IB</span>
+<span class="rp-badge acc">Boarding</span>
+</div>
+<div class="rp-fee">From <b>$38,900</b> / year</div>
+<div class="rp-arrow">View school &#8594;</div>
+</div>
+</div>
+
+<div class="rp-card">
+<div class="rp-img"><span>School photo</span><div class="rp-fav">&#9825;</div></div>
+<div class="rp-body">
+<div class="rp-name">Xavier College</div>
+<div class="rp-loc">Kew, VIC</div>
+<div class="rp-badges">
+<span class="rp-badge v">Open</span>
+<span class="rp-badge" style="background:#EEEDFE;color:#3C3489">Catholic</span>
+<span class="rp-badge cur">VCE</span>
+<span class="rp-badge acc">Boarding</span>
+</div>
+<div class="rp-fee">From <b>$29,600</b> / year</div>
+<div class="rp-arrow">View school &#8594;</div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+
+</div>
+
+<div class="section-label"><span class="an">Compare bar — up to 3 schools (anonymous)</span></div>
+<div class="compare-strip">
+<div style="font-size:13px;color:#666">Select schools to compare (up to 3)</div>
+<button style="font-size:13px;padding:8px 20px;border-radius:16px;border:none;background:#E24B4A;color:#fff;font-weight:600;opacity:0.4;cursor:default">Compare</button>
+</div>
+
+</div>
+</body>
+</html>

@@ -867,7 +867,13 @@
       "englishTestsToggle": "切换英语水平考试筛选",
       "curriculum": "课程",
       "location": "位置",
-      "resetFilters": "重置筛选"
+      "resetFilters": "重置筛选",
+      "locked": {
+        "title": "Unlock this filter",
+        "cta": "Create free account"
+      },
+      "collapse": "Collapse",
+      "expand": "Expand"
     },
     "chips": {
       "topRated": "最高评分",
@@ -910,6 +916,163 @@
       "title": "解锁完整搜索",
       "subtitle": "登录以使用详细筛选器、保存学校和比较课程。",
       "signIn": "登录以继续"
+    },
+    "spec": {
+      "previewBadge": "Preview",
+      "previewTitle": "Spec filters",
+      "lockedDescription": "Sign up to unlock this filter.",
+      "showAll": "Show all ({count})",
+      "showFewer": "Show fewer",
+      "location": {
+        "title": "位置",
+        "stateLabel": "州或领地",
+        "suburbLabel": "郊区或邮编",
+        "suburbPlaceholder": "例如 Hawthorn 或 3122"
+      },
+      "schoolProfile": {
+        "title": "School profile",
+        "sectorLabel": "Sector",
+        "accommodationLabel": "Accommodation",
+        "religionLabel": "Religious affiliation"
+      },
+      "enrolment": {
+        "title": "Enrolment & entry",
+        "yearLevelLabel": "Entry year level",
+        "ageLabel": "Student age",
+        "agePlaceholder": "—",
+        "ageHint": "Most {age}-year-olds enter {expected} — showing all results for your selection.",
+        "termLabel": "Entry term"
+      },
+      "academic": {
+        "title": "Academic",
+        "programLabel": "Program type",
+        "atarLabel": "ATAR available",
+        "atarTooltip": "Australian Tertiary Admission Rank — the score used for university entry in Australia",
+        "englishSupportLabel": "English language support",
+        "programTooltips": {
+          "australianCert": "The standard Australian senior secondary certificate — VCE (VIC), HSC (NSW), QCE (QLD), etc.",
+          "ib": "International Baccalaureate — a globally recognised program accepted by universities worldwide",
+          "elicos": "English Language Intensive Courses for Overseas Students — intensive English preparation before starting mainstream school"
+        }
+      },
+      "englishTest": {
+        "title": "English test scores",
+        "selectorLabel": "Test",
+        "scoreLabel": "Your score",
+        "scorePlaceholder": "Enter score"
+      },
+      "sector": {
+        "government": "Government",
+        "nonGovernment": "Non-government",
+        "catholic": "Catholic"
+      },
+      "accommodation": {
+        "boarding": "Boarding",
+        "homestay": "Homestay",
+        "both": "Both",
+        "none": "None"
+      },
+      "religion": {
+        "nonDenominational": "Non-denominational",
+        "anglican": "Anglican",
+        "baptist": "Baptist",
+        "lutheran": "Lutheran",
+        "unitingChurch": "Uniting Church",
+        "presbyterian": "Presbyterian",
+        "islamic": "Islamic",
+        "jewish": "Jewish",
+        "buddhist": "Buddhist",
+        "copticOrthodox": "Coptic Orthodox",
+        "greekOrthodox": "Greek Orthodox",
+        "seventhDayAdventist": "Seventh-day Adventist",
+        "quaker": "Quaker",
+        "interdenominationalChristian": "Interdenominational Christian"
+      },
+      "yearLevel": {
+        "gr4": "Gr 4",
+        "gr5": "Gr 5",
+        "gr6": "Gr 6",
+        "yr7": "Yr 7",
+        "yr8": "Yr 8",
+        "yr9": "Yr 9",
+        "yr10": "Yr 10",
+        "yr11": "Yr 11",
+        "yr12": "Yr 12"
+      },
+      "entryTerm": {
+        "term1": "Term 1",
+        "term2": "Term 2",
+        "term3": "Term 3",
+        "term4": "Term 4"
+      },
+      "programType": {
+        "australianCert": "Australian Cert.",
+        "ib": "IB",
+        "elicos": "ELICOS"
+      },
+      "englishTestOption": {
+        "aeas": "AEAS",
+        "idat": "iDAT",
+        "duolingo": "Duolingo",
+        "ielts": "IELTS",
+        "pte": "PTE",
+        "cambridge": "Cambridge"
+      },
+      "gender": {
+        "boys": "Boys",
+        "girls": "Girls",
+        "coEd": "Co-ed"
+      },
+      "schoolLevel": {
+        "primary": "Primary",
+        "secondary": "Secondary"
+      },
+      "quickChip": {
+        "boys": "Boys",
+        "girls": "Girls",
+        "coEd": "Co-ed",
+        "primary": "Primary",
+        "secondary": "Secondary",
+        "boarding": "Boarding"
+      },
+      "sort": {
+        "label": "Sort by",
+        "nameAsc": "School name (A–Z)",
+        "nameDesc": "School name (Z–A)",
+        "tuitionLowHigh": "Tuition low–high",
+        "tuitionHighLow": "Tuition high–low",
+        "stateAsc": "State",
+        "enrolmentOpenFirst": "Enrolment status (open first)",
+        "applicationDeadlineAsc": "Application deadline (soonest)",
+        "schoolSizeAsc": "School size (small–large)",
+        "schoolSizeDesc": "School size (large–small)",
+        "internationalPctAsc": "International % (low–high)",
+        "internationalPctDesc": "International % (high–low)"
+      },
+      "topBar": {
+        "searchPlaceholder": "Search by school name, city, or suburb",
+        "feeLabel": "Annual fee",
+        "feeReadout": "${min}k – ${max}k"
+      },
+      "compareBar": {
+        "label": "Compare ({count}/{max})",
+        "remove": "Remove {name}",
+        "cta": "Compare",
+        "capReached": "Compare cap reached"
+      },
+      "tileCard": {
+        "tuitionFrom": "From ${amount} / year",
+        "viewSchool": "View school",
+        "bookmark": "Bookmark",
+        "bookmarkRemove": "Remove bookmark",
+        "compareCheckbox": "Add {name} to compare",
+        "status": {
+          "open": "Open",
+          "limited": "Limited places",
+          "waitlist": "Waitlist only",
+          "closed": "Closed"
+        }
+      }
     }
   },
   "Applications": {

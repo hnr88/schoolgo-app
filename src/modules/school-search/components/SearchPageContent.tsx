@@ -7,6 +7,8 @@ import { SchoolResultsPanel } from '@/modules/school-search/components/SchoolRes
 import { SearchAuthGate } from '@/modules/school-search/components/SearchAuthGate';
 import { SearchLayout } from '@/modules/school-search/components/SearchLayout';
 import { SearchLoginPrompt } from '@/modules/school-search/components/SearchLoginPrompt';
+import { SpecFilterSidebar } from '@/modules/school-search/components/SpecFilterSidebar';
+import { SpecPreviewGate } from '@/modules/school-search/components/SpecPreviewGate';
 import type { SearchPageContentProps } from '@/modules/school-search/types/component.types';
 
 export async function SearchPageContent({
@@ -27,32 +29,39 @@ export async function SearchPageContent({
             <FilterSidebar />
           </SearchAuthGate>
         )}
+        <SpecFilterSidebar />
 
         <section className='flex flex-1 flex-col gap-4 overflow-hidden p-6 h-[calc(100vh-3.5rem)] md:h-[calc(100vh-4.5rem)]'>
-          <div className='flex shrink-0 items-center gap-4'>
-            <SearchBar className='w-1/2 shrink-0' />
-            {guestAccess ? (
-              <FilterChips className='w-1/2 min-w-0' />
-            ) : (
-              <SearchAuthGate>
-                <FilterChips className='w-1/2 min-w-0' />
-              </SearchAuthGate>
-            )}
-          </div>
-
-          <div className='relative min-h-0 flex-1'>
-            <MapView activePortal={activePortal} />
-            {guestAccess ? (
-              <SchoolResultsPanel activePortal={activePortal} />
-            ) : (
+          <SpecPreviewGate
+            fallback={
               <>
-                <SearchAuthGate>
-                  <SchoolResultsPanel activePortal={activePortal} />
-                </SearchAuthGate>
-                <SearchLoginPrompt />
+                <div className='flex shrink-0 items-center gap-4'>
+                  <SearchBar className='w-1/2 shrink-0' />
+                  {guestAccess ? (
+                    <FilterChips className='w-1/2 min-w-0' />
+                  ) : (
+                    <SearchAuthGate>
+                      <FilterChips className='w-1/2 min-w-0' />
+                    </SearchAuthGate>
+                  )}
+                </div>
+
+                <div className='relative min-h-0 flex-1'>
+                  <MapView activePortal={activePortal} />
+                  {guestAccess ? (
+                    <SchoolResultsPanel activePortal={activePortal} />
+                  ) : (
+                    <>
+                      <SearchAuthGate>
+                        <SchoolResultsPanel activePortal={activePortal} />
+                      </SearchAuthGate>
+                      <SearchLoginPrompt />
+                    </>
+                  )}
+                </div>
               </>
-            )}
-          </div>
+            }
+          />
         </section>
       </SearchLayout>
     </>

@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SchoolGo — Advanced Search Wireframe (Logged In)</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:#1a1a1a;background:#f5f5f0;display:flex;justify-content:center;padding:24px}
+.wf{max-width:1200px;width:100%;border:1px solid #e0e0e0;border-radius:12px;overflow:hidden;background:#fff}
+.an{font-size:11px;color:#854F0B;background:#FAEEDA;padding:3px 8px;border-radius:6px;display:inline-block;margin-bottom:6px;font-weight:500}
+.dev-note{font-size:11px;color:#085041;background:#E1F5EE;padding:3px 8px;border-radius:6px;display:inline-block;margin-bottom:6px;font-weight:500}
+
+/* NAV */
+.navbar{display:flex;align-items:center;justify-content:space-between;padding:14px 20px;border-bottom:1px solid #e0e0e0}
+.nav-left{display:flex;align-items:center;gap:20px}
+.logo{font-size:18px;font-weight:600;color:#E24B4A;display:flex;align-items:center;gap:6px}
+.logo svg{width:24px;height:24px}
+.nav-links{display:flex;gap:16px;font-size:14px;color:#666}
+.nav-links span{cursor:pointer}
+.nav-links span:hover{color:#1a1a1a}
+.nav-right{display:flex;align-items:center;gap:14px;font-size:14px}
+.avatar{width:32px;height:32px;border-radius:50%;background:#EEEDFE;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:600;color:#3C3489}
+
+/* TOP BAR */
+.top-bar{padding:14px 20px;border-bottom:1px solid #e0e0e0;display:flex;flex-direction:column;gap:10px}
+.top-row1{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.search-input{flex:1;min-width:240px;height:42px;border-radius:10px;border:1px solid #ccc;padding:0 16px;font-size:15px;background:#fff;color:#1a1a1a;outline:none}
+.search-input:focus{border-color:#E24B4A}
+.tool-bar{display:flex;gap:8px;flex-shrink:0}
+.btn-sm{height:42px;padding:0 16px;border-radius:8px;border:1px solid #ccc;background:#fff;font-size:13px;color:#666;cursor:pointer;display:flex;align-items:center;gap:6px;font-weight:500;white-space:nowrap}
+.btn-sm:hover{background:#f9f9f9;border-color:#999}
+.btn-sm.primary{background:#E24B4A;color:#fff;border-color:transparent}
+.btn-sm.primary:hover{background:#d03e3e}
+.btn-sm svg{width:14px;height:14px}
+.top-row2{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.fee-slider{display:flex;align-items:center;gap:10px;background:#f5f5f0;padding:8px 16px;border-radius:10px;flex-shrink:0}
+.fee-slider label{font-size:13px;color:#666;font-weight:500;white-space:nowrap}
+.fee-slider input[type=range]{width:140px;accent-color:#E24B4A;cursor:pointer}
+.fee-slider .val{font-size:13px;font-weight:600;color:#E24B4A;white-space:nowrap;min-width:80px}
+.quick-chips{display:flex;gap:8px;flex-wrap:wrap}
+.qchip{font-size:13px;padding:8px 16px;border-radius:20px;border:1px solid #ddd;background:#fff;color:#666;cursor:pointer;white-space:nowrap;font-weight:500;transition:all .15s}
+.qchip:hover{border-color:#999}
+.qchip.on{background:#1a1a1a;color:#fff;border-color:transparent}
+
+/* LAYOUT */
+.body-wrap{display:flex;min-height:640px;position:relative}
+.sidebar{width:280px;border-right:1px solid #e0e0e0;overflow-y:auto;flex-shrink:0}
+
+/* FILTER GROUPS */
+.fg{border-bottom:1px solid #e0e0e0}
+.fg-h{display:flex;align-items:center;gap:8px;padding:12px 16px;cursor:pointer;font-size:14px;font-weight:500;user-select:none}
+.fg-h:hover{background:#fafaf5}
+.fg-h svg{width:16px;height:16px;color:#999;flex-shrink:0}
+.fg-h .arr{margin-left:auto;font-size:11px;color:#999;transition:transform .2s}
+.fg-b{padding:0 16px 16px;display:block}
+.fg.closed .fg-b{display:none}
+.fg.closed .arr{transform:rotate(-90deg)}
+.fl{margin-bottom:12px}
+.fl:last-child{margin-bottom:0}
+.fl-label{font-size:12px;color:#666;margin-bottom:6px;font-weight:500;display:flex;align-items:center;gap:5px}
+
+/* INFO TOOLTIPS */
+.info-i{width:16px;height:16px;border-radius:50%;border:1px solid #ccc;display:inline-flex;align-items:center;justify-content:center;font-size:10px;color:#999;cursor:help;font-weight:600;font-style:italic;flex-shrink:0;position:relative}
+.info-tip{display:none;position:absolute;left:22px;top:-6px;background:#1a1a1a;color:#fff;font-size:12px;padding:8px 12px;border-radius:8px;width:200px;z-index:10;font-weight:400;font-style:normal;line-height:1.4;box-shadow:0 4px 12px rgba(0,0,0,0.15)}
+.info-tip::before{content:"";position:absolute;left:-6px;top:10px;border:6px solid transparent;border-right-color:#1a1a1a;border-left:none}
+.info-i:hover .info-tip{display:block}
+
+/* CHIPS */
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font-size:12px;padding:6px 12px;border-radius:16px;border:1px solid #ddd;background:#fff;color:#666;cursor:pointer;white-space:nowrap;transition:all .15s;display:inline-flex;align-items:center;gap:4px}
+.chip:hover{border-color:#999}
+.chip.on{background:#FCEBEB;color:#791F1F;border-color:#F09595}
+.chip.on-b{background:#E6F1FB;color:#0C447C;border-color:#85B7EB}
+.chip.on-p{background:#EEEDFE;color:#3C3489;border-color:#AFA9EC}
+.chip.on-g{background:#EAF3DE;color:#27500A;border-color:#97C459}
+
+/* TOGGLES */
+.toggle-row{display:flex;align-items:center;justify-content:space-between;font-size:13px;padding:2px 0}
+.toggle-track{width:36px;height:20px;border-radius:10px;background:#ddd;position:relative;cursor:pointer;transition:background .2s;flex-shrink:0}
+.toggle-track.on{background:#22C55E}
+.toggle-dot{width:16px;height:16px;border-radius:50%;background:#fff;position:absolute;top:2px;left:2px;transition:left .2s;box-shadow:0 1px 3px rgba(0,0,0,0.15)}
+.toggle-track.on .toggle-dot{left:18px}
+
+/* STEPPER */
+.stepper{display:flex;align-items:center;gap:8px}
+.stepper button{width:28px;height:28px;border-radius:50%;border:1px solid #ccc;background:#fff;font-size:16px;cursor:pointer;color:#1a1a1a;display:flex;align-items:center;justify-content:center}
+.stepper button:hover{background:#f5f5f0}
+.stepper span{font-size:16px;font-weight:600;min-width:28px;text-align:center}
+.hint-msg{font-size:11px;color:#854F0B;background:#FAEEDA;padding:4px 8px;border-radius:6px;margin-top:6px;line-height:1.4}
+
+/* SCORE INPUT */
+.score-input{display:flex;align-items:center;gap:8px;margin-top:8px;padding:8px 12px;background:#f5f5f0;border-radius:8px}
+.score-input label{font-size:12px;color:#666;white-space:nowrap;font-weight:500}
+.score-input input{width:60px;height:28px;border-radius:6px;border:1px solid #ccc;padding:0 8px;font-size:14px;font-weight:600;text-align:center;background:#fff;color:#1a1a1a}
+.score-input .hint{font-size:11px;color:#999}
+
+.show-more{font-size:12px;color:#0C447C;cursor:pointer;border:none;background:none;padding:4px 0;font-weight:500;margin-top:4px}
+.show-more:hover{text-decoration:underline}
+
+/* MAP */
+.map-area{flex:1;background:#f0ede6;position:relative;min-width:0;overflow:hidden}
+.map-label{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center}
+.map-label .main{font-size:16px;color:#999;margin-bottom:4px}
+.map-label .sub{font-size:12px;color:#bbb}
+.pin{position:absolute;width:32px;height:32px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);display:flex;align-items:center;justify-content:center;background:#E24B4A;color:#fff}
+.pin-inner{transform:rotate(45deg);font-size:10px}
+.pin-cluster{position:absolute;background:#E24B4A;color:#fff;border-radius:50%;width:36px;height:36px;font-size:13px;font-weight:600;border:2.5px solid #fff;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 6px rgba(0,0,0,0.2)}
+
+/* RESULTS PANEL */
+.results-panel{position:absolute;right:12px;top:12px;bottom:12px;width:300px;background:#fff;border-radius:12px;border:1px solid #e0e0e0;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,0.08)}
+.rp-header{padding:12px 14px;border-bottom:1px solid #e0e0e0;display:flex;justify-content:space-between;align-items:center;flex-shrink:0}
+.rp-header .title{font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.5px;color:#999}
+.rp-header .count{font-size:12px;font-weight:600;color:#27500A;background:#EAF3DE;padding:3px 10px;border-radius:12px}
+.rp-cards{flex:1;overflow-y:auto;padding:8px}
+.rp-card{border:1px solid #e0e0e0;border-radius:10px;margin-bottom:8px;overflow:hidden;cursor:pointer;transition:all .15s}
+.rp-card:hover{border-color:#ccc;box-shadow:0 2px 8px rgba(0,0,0,0.06)}
+.rp-img{height:80px;background:#e8e5de;position:relative;display:flex;align-items:center;justify-content:center}
+.rp-img span{font-size:11px;color:#bbb}
+.rp-actions{position:absolute;top:6px;right:6px;display:flex;gap:4px}
+.rp-act{width:28px;height:28px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;font-size:14px;cursor:pointer;border:1px solid #e0e0e0;transition:all .15s}
+.rp-act:hover{border-color:#999}
+.rp-act.fav-on{color:#E24B4A;border-color:#E24B4A}
+.rp-act.cmp-on{color:#0C447C;background:#E6F1FB;border-color:#85B7EB}
+.rp-body{padding:10px 12px}
+.rp-name{font-size:14px;font-weight:600;margin-bottom:3px}
+.rp-loc{font-size:12px;color:#666;margin-bottom:8px}
+.rp-badges{display:flex;gap:4px;flex-wrap:wrap;margin-bottom:8px}
+.rp-badge{font-size:10px;padding:3px 8px;border-radius:6px;font-weight:500}
+.rp-badge.v{background:#EAF3DE;color:#27500A}
+.rp-badge.lim{background:#FAEEDA;color:#633806}
+.rp-badge.wait{background:#FCEBEB;color:#791F1F}
+.rp-badge.s{background:#EEEDFE;color:#3C3489}
+.rp-badge.cur{background:#E6F1FB;color:#0C447C}
+.rp-badge.acc{background:#f0ede6;color:#666}
+.rp-fee{font-size:12px;color:#666}
+.rp-fee b{color:#1a1a1a;font-weight:600}
+.rp-arrow{font-size:12px;color:#999;margin-top:6px;display:flex;align-items:center;gap:4px}
+.rp-arrow:hover{color:#E24B4A}
+
+/* COMPARE */
+.compare-strip{border-top:1px solid #e0e0e0;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;background:#f5f5f0;flex-wrap:wrap;gap:8px}
+.compare-strip .left{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.cp-pill{font-size:12px;padding:4px 12px;border-radius:12px;background:#E6F1FB;color:#0C447C;display:flex;align-items:center;gap:5px;font-weight:500}
+.cp-pill .x{font-size:10px;cursor:pointer;opacity:0.5}
+.cp-pill .x:hover{opacity:1}
+.compare-btn{font-size:13px;padding:8px 20px;border-radius:16px;border:none;background:#E24B4A;color:#fff;font-weight:600;cursor:pointer}
+.compare-btn:hover{background:#d03e3e}
+
+/* SECTION LABELS */
+.section-label{padding:8px 16px 0}
+</style>
+</head>
+<body>
+<div class="wf">
+
+<div class="section-label"><span class="an">Advanced search — logged-in view (agents + registered parents)</span></div>
+
+<div class="navbar">
+<div class="nav-left">
+<div class="logo">
+<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+SchoolGo
+</div>
+<div class="nav-links"><span>How it works</span><span>Compare</span><span>FAQ</span></div>
+</div>
+<div class="nav-right">
+<span style="color:#666">EN</span>
+<div class="avatar">JM</div>
+</div>
+</div>
+
+<div class="section-label"><span class="an">Top bar: search + fee slider + quick-filter chips + save/load</span></div>
+<div class="top-bar">
+<div class="top-row1">
+<input class="search-input" type="text" placeholder="Search by school name, city, or suburb..." />
+<div class="tool-bar">
+<button class="btn-sm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>Saved searches</button>
+<button class="btn-sm primary"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/></svg>Save search</button>
+</div>
+</div>
+<div class="top-row2">
+<div class="fee-slider">
+<label>Annual fees</label>
+<input type="range" min="5000" max="60000" value="40000" />
+<span class="val">$5k – $40k</span>
+</div>
+<div class="quick-chips">
+<span class="qchip">Boys</span>
+<span class="qchip">Girls</span>
+<span class="qchip on">Co-ed</span>
+<span class="qchip">Primary</span>
+<span class="qchip on">Secondary</span>
+<span class="qchip on">Boarding</span>
+</div>
+</div>
+</div>
+
+<div class="body-wrap">
+
+<div class="sidebar">
+<div class="section-label"><span class="an">Sidebar: all 5 filter groups open (no school size)</span></div>
+
+<!-- LOCATION -->
+<div class="fg">
+<div class="fg-h" onclick="this.parentElement.classList.toggle('closed')">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+Location
+<span class="arr">&#9660;</span>
+</div>
+<div class="fg-b">
+<div class="fl">
+<div class="fl-label">State / territory</div>
+<div class="chips">
+<span class="chip on">QLD</span>
+<span class="chip on">NSW</span>
+<span class="chip">VIC</span>
+<span class="chip">SA</span>
+<span class="chip">WA</span>
+<span class="chip">TAS</span>
+<span class="chip">NT</span>
+<span class="chip">ACT</span>
+</div>
+</div>
+<div class="fl">
+<div class="fl-label">Suburb / postcode</div>
+<input type="text" placeholder="e.g. Manly West, 4179" style="width:100%;height:32px;border-radius:8px;border:1px solid #ddd;padding:0 10px;font-size:13px;background:#fff;color:#1a1a1a" />
+</div>
+</div>
+</div>
+
+<!-- SCHOOL PROFILE -->
+<div class="fg">
+<div class="fg-h" onclick="this.parentElement.classList.toggle('closed')">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+School profile
+<span class="arr">&#9660;</span>
+</div>
+<div class="fg-b">
+<div class="fl">
+<div class="fl-label">Sector <span class="dev-note">Catholic is its own sector pill</span></div>
+<div class="chips">
+<span class="chip">Government</span>
+<span class="chip on-b">Non-government</span>
+<span class="chip on-p">Catholic</span>
+</div>
+</div>
+<div class="fl">
+<div class="fl-label">Accommodation</div>
+<div class="chips">
+<span class="chip on">Boarding</span>
+<span class="chip">Homestay</span>
+<span class="chip">Both</span>
+<span class="chip">None</span>
+</div>
+</div>
+<div class="fl">
+<div class="fl-label">Religious affiliation <span class="dev-note">"Show all" expands full list</span></div>
+<div class="chips">
+<span class="chip">Non-denom.</span>
+<span class="chip">Anglican</span>
+<span class="chip">Baptist</span>
+<span class="chip">Lutheran</span>
+<span class="chip">Uniting Church</span>
+<span class="chip">Presbyterian</span>
+<span class="chip">Islamic</span>
+</div>
+<button class="show-more">Show all (14) &#9660;</button>
+</div>
+</div>
+</div>
+
+<!-- ENROLMENT & ENTRY -->
+<div class="fg">
+<div class="fg-h" onclick="this.parentElement.classList.toggle('closed')">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/></svg>
+Enrolment and entry
+<span class="arr">&#9660;</span>
+</div>
+<div class="fg-b">
+<div class="fl">
+<div class="fl-label">Entry year level</div>
+<div class="chips">
+<span class="chip">Gr 4</span>
+<span class="chip">Gr 5</span>
+<span class="chip">Gr 6</span>
+<span class="chip on-b">Yr 7</span>
+<span class="chip on-b">Yr 8</span>
+<span class="chip">Yr 9</span>
+<span class="chip">Yr 10</span>
+<span class="chip">Yr 11</span>
+<span class="chip">Yr 12</span>
+</div>
+</div>
+<div class="fl">
+<div class="fl-label">Student age <span class="dev-note">Soft mismatch hint — see below</span></div>
+<div class="stepper"><button>−</button><span>14</span><button>+</button></div>
+<div class="hint-msg">Most 14-year-olds enter Year 8 or 9 — showing all results for your selection</div>
+</div>
+<div class="fl">
+<div class="fl-label">Entry term</div>
+<div class="chips">
+<span class="chip on-p">Term 1</span>
+<span class="chip">Term 2</span>
+<span class="chip on-p">Term 3</span>
+<span class="chip">Term 4</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- ACADEMIC -->
+<div class="fg">
+<div class="fg-h" onclick="this.parentElement.classList.toggle('closed')">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1.1 2.7 3 6 3s6-1.9 6-3v-5"/></svg>
+Academic
+<span class="arr">&#9660;</span>
+</div>
+<div class="fg-b">
+<div class="fl">
+<div class="fl-label">
+Program type
+<span class="info-i">i<span class="info-tip">The type of qualification your child will study toward at this school.</span></span>
+</div>
+<div class="chips">
+<span class="chip on-b">Australian Cert.
+<span class="info-i" style="width:14px;height:14px;font-size:9px;border-color:#85B7EB">i<span class="info-tip">The standard Australian senior secondary certificate — VCE (VIC), HSC (NSW), QCE (QLD), etc.</span></span>
+</span>
+<span class="chip">IB
+<span class="info-i" style="width:14px;height:14px;font-size:9px">i<span class="info-tip">International Baccalaureate — a globally recognised program accepted by universities worldwide.</span></span>
+</span>
+<span class="chip">ELICOS
+<span class="info-i" style="width:14px;height:14px;font-size:9px">i<span class="info-tip">English Language Intensive Courses for Overseas Students — intensive English preparation before starting mainstream school.</span></span>
+</span>
+</div>
+</div>
+<div class="fl">
+<div class="fl-label">
+ATAR available
+<span class="info-i">i<span class="info-tip">Australian Tertiary Admission Rank — the score used for university entry in Australia. Not all schools offer ATAR pathways.</span></span>
+</div>
+<div class="toggle-row"><span>ATAR schools only</span><div class="toggle-track on"><div class="toggle-dot"></div></div></div>
+</div>
+<div class="fl">
+<div class="fl-label">English language support</div>
+<div class="toggle-row"><span>Support available</span><div class="toggle-track"><div class="toggle-dot"></div></div></div>
+</div>
+</div>
+</div>
+
+<!-- ENGLISH TEST SCORES -->
+<div class="fg">
+<div class="fg-h" onclick="this.parentElement.classList.toggle('closed')">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+English test scores
+<span class="arr">&#9660;</span>
+</div>
+<div class="fg-b">
+<div class="fl">
+<div class="fl-label">I have a score for <span class="dev-note">Tap test → score input appears</span></div>
+<div class="chips">
+<span class="chip on">AEAS</span>
+<span class="chip">iDAT</span>
+<span class="chip">Duolingo</span>
+<span class="chip">IELTS</span>
+<span class="chip">PTE</span>
+<span class="chip">Cambridge</span>
+</div>
+<div class="score-input">
+<label>AEAS score</label>
+<input type="number" value="45" />
+<span class="hint">Range: 1–80</span>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+
+<!-- MAP AREA -->
+<div class="map-area">
+<div class="map-label">
+<div class="main">Map with clustered school pins</div>
+<div class="sub">Pins cluster at low zoom, expand on zoom in</div>
+</div>
+<div class="pin" style="position:absolute;top:28%;left:20%"><div class="pin-inner">&#9679;</div></div>
+<div class="pin" style="position:absolute;top:48%;left:16%"><div class="pin-inner">&#9679;</div></div>
+<div class="pin-cluster" style="top:58%;left:42%">9</div>
+<div class="pin-cluster" style="top:36%;left:55%">6</div>
+<div class="pin" style="position:absolute;top:24%;left:50%"><div class="pin-inner">&#9679;</div></div>
+<div class="pin-cluster" style="top:68%;left:70%">18</div>
+
+<!-- RESULTS PANEL -->
+<div class="results-panel">
+<div class="rp-header">
+<span class="title">Schools</span>
+<span class="count">89 results</span>
+</div>
+<div class="rp-cards">
+
+<div class="rp-card">
+<div class="rp-img"><span>School photo</span>
+<div class="rp-actions"><div class="rp-act fav-on">&#9829;</div><div class="rp-act cmp-on">&#10003;</div></div>
+</div>
+<div class="rp-body">
+<div class="rp-name">Moreton Bay Colleges</div>
+<div class="rp-loc">Manly West, QLD</div>
+<div class="rp-badges">
+<span class="rp-badge v">Open</span>
+<span class="rp-badge s">Non-gov</span>
+<span class="rp-badge cur">QCE</span>
+<span class="rp-badge acc">Boarding</span>
+</div>
+<div class="rp-fee">From <b>$18,500</b> / year</div>
+<div class="rp-arrow">View school &#8594;</div>
+</div>
+</div>
+
+<div class="rp-card">
+<div class="rp-img"><span>School photo</span>
+<div class="rp-actions"><div class="rp-act">&#9825;</div><div class="rp-act">&#9744;</div></div>
+</div>
+<div class="rp-body">
+<div class="rp-name">Brisbane Grammar School</div>
+<div class="rp-loc">Spring Hill, QLD</div>
+<div class="rp-badges">
+<span class="rp-badge lim">Limited places</span>
+<span class="rp-badge s">Non-gov</span>
+<span class="rp-badge cur">QCE / IB</span>
+<span class="rp-badge acc">Boarding</span>
+</div>
+<div class="rp-fee">From <b>$32,400</b> / year</div>
+<div class="rp-arrow">View school &#8594;</div>
+</div>
+</div>
+
+<div class="rp-card">
+<div class="rp-img"><span>School photo</span>
+<div class="rp-actions"><div class="rp-act">&#9825;</div><div class="rp-act">&#9744;</div></div>
+</div>
+<div class="rp-body">
+<div class="rp-name">St Joseph's College</div>
+<div class="rp-loc">Gregory Terrace, QLD</div>
+<div class="rp-badges">
+<span class="rp-badge v">Open</span>
+<span class="rp-badge" style="background:#EEEDFE;color:#3C3489">Catholic</span>
+<span class="rp-badge cur">QCE</span>
+<span class="rp-badge acc">Boarding</span>
+</div>
+<div class="rp-fee">From <b>$22,800</b> / year</div>
+<div class="rp-arrow">View school &#8594;</div>
+</div>
+</div>
+
+<div class="rp-card">
+<div class="rp-img"><span>School photo</span>
+<div class="rp-actions"><div class="rp-act">&#9825;</div><div class="rp-act">&#9744;</div></div>
+</div>
+<div class="rp-body">
+<div class="rp-name">All Hallows' School</div>
+<div class="rp-loc">Brisbane City, QLD</div>
+<div class="rp-badges">
+<span class="rp-badge v">Open</span>
+<span class="rp-badge" style="background:#EEEDFE;color:#3C3489">Catholic</span>
+<span class="rp-badge cur">QCE</span>
+<span class="rp-badge acc">Homestay</span>
+</div>
+<div class="rp-fee">From <b>$26,100</b> / year</div>
+<div class="rp-arrow">View school &#8594;</div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+
+</div>
+
+<div class="section-label"><span class="an">Compare bar — sticky bottom, up to 4 schools (logged in)</span></div>
+<div class="compare-strip">
+<div class="left">
+<span class="cp-pill">Moreton Bay <span class="x">&times;</span></span>
+<span style="font-size:12px;color:#999">1 of 4 selected</span>
+</div>
+<button class="compare-btn">Compare schools</button>
+</div>
+
+</div>
+</body>
+</html>

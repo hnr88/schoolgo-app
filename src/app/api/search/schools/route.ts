@@ -1,9 +1,15 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { env } from '@/lib/env';
-import { searchRequestSchema } from '@/modules/school-search/schemas/search-request.schema';
+import {
+  searchRequestSchema,
+  typedSearchRequestSchema,
+} from '@/modules/school-search/schemas/search-request.schema';
+import { filterDefaultMockHits } from '@/modules/school-search/lib/filter-mock-hits';
 
-const STRAPI_SEARCH_URL = `${env.STRAPI_API_URL}/api/search/schools`;
-const STRAPI_BASE = env.STRAPI_API_URL.replace(/\/+$/, '');
+export const dynamic = 'force-dynamic';
+
+const STRAPI_SEARCH_URL = `${env.NEXT_PUBLIC_API_URL}/api/search/schools`;
+const STRAPI_BASE = env.NEXT_PUBLIC_API_URL.replace(/\/+$/, '');
 
 function resolveMediaUrl(url: unknown): string | null {
   if (typeof url !== 'string' || url.length === 0) return null;
@@ -28,38 +34,107 @@ export async function POST(request: NextRequest) {
     );
   }
 
-  const parsed = searchRequestSchema.safeParse(body);
-  if (!parsed.success) {
+  const isLegacyShape =
+    body !== null &&
+    typeof body === 'object' &&
+    ('filters' in body ||
+      'location' in body ||
+      'matchingStrategy' in body ||
+      'facets' in body ||
+      'allOf' in body ||
+      'anyOf' in body ||
+      'noneOf' in body ||
+      'query' in body);
+
+  if (isLegacyShape) {
+    const legacyParsed = searchRequestSchema.safeParse(body);
+    if (!legacyParsed.success) {
+      return NextResponse.json(
+        {
+          data: null,
+          error: {
+            status: 400,
+            message: legacyParsed.error.flatten().formErrors[0] ?? 'Invalid request body',
+          },
+        },
+        { status: 400 },
+      );
+    }
+    return proxyToStrapi(legacyParsed.data);
+  }
+
+  const typedParsed = typedSearchRequestSchema.safeParse(body);
+  if (!typedParsed.success) {
     return NextResponse.json(
-      { data: null, error: { status: 400, message: parsed.error.issues[0].message } },
+      {
+        data: null,
+        error: {
+          status: 400,
+          message: typedParsed.error.flatten().formErrors[0] ?? 'Invalid request body',
+        },
+      },
       { status: 400 },
     );
   }
 
+  if (env.SEARCH_BACKEND_MODE === 'proxy') {
+    return proxyToStrapi(typedParsed.data);
+  }
+
+  const envelope = filterDefaultMockHits(typedParsed.data);
+  return NextResponse.json({
+    data: {
+      hits: envelope.hits,
+      query: typedParsed.data.q ?? '',
+      processingTimeMs: 0,
+      limit: envelope.pageSize,
+      offset: (envelope.page - 1) * envelope.pageSize,
+      estimatedTotalHits: envelope.total,
+      totalHits: envelope.total,
+    },
+    error: null,
+  });
+}
+
+async function proxyToStrapi(parsedData: unknown): Promise<NextResponse> {
   try {
     const upstream = await fetch(STRAPI_SEARCH_URL, {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(parsed.data),
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(parsedData),
     });
 
-    const data = await upstream.json();
+    const data: unknown = await upstream.json();
 
     if (!upstream.ok) {
+      const errData = data as Record<string, unknown> | null;
       return NextResponse.json(
-        { data: null, error: data.error ?? { status: upstream.status, message: 'Upstream error' } },
+        {
+          data: null,
+          error: (errData?.error as Record<string, unknown>) ?? {
+            status: upstream.status,
+            message: 'Upstream error',
+          },
+        },
         { status: upstream.status },
       );
     }
 
-    if (data?.data?.hits && Array.isArray(data.data.hits)) {
-      data.data.hits = data.data.hits.map(resolveHitMedia);
+    const responseData = data as Record<string, unknown> | null;
+    if (
+      responseData?.data &&
+      typeof responseData.data === 'object' &&
+      responseData.data !== null
+    ) {
+      const inner = responseData.data as Record<string, unknown>;
+      if (Array.isArray(inner.hits)) {
+        inner.hits = inner.hits.map(resolveHitMedia);
+      }
     }
 
     return NextResponse.json(data);
   } catch {
+    console.error('[POST /api/search/schools] Proxy to Strapi failed');
     return NextResponse.json(
       { data: null, error: { status: 502, message: 'Search service unavailable' } },
       { status: 502 },

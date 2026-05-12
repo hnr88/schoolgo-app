@@ -39,7 +39,7 @@ function toFeatured(hit: SchoolHit): FeaturedSchool {
 
 export async function getFeaturedSchools(): Promise<FeaturedSchool[]> {
   try {
-    const response = await fetch(`${env.STRAPI_API_URL}/api/search/schools`, {
+    const response = await fetch(`${env.NEXT_PUBLIC_API_URL}/api/search/schools`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ limit: FEATURED_LIMIT }),

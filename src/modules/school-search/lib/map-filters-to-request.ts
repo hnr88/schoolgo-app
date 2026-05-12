@@ -1,6 +1,16 @@
 import type { SearchRequest, SearchRequestFilters } from '@/modules/school-search/types/search-api.types';
 import type { AustralianState, Curriculum } from '@/modules/school-search/types/school.types';
-import { PRICE_MIN, PRICE_MAX } from '@/modules/school-search/constants/school.constants';
+import type {
+  Accommodation,
+  EnglishTestScore,
+  EntryTerm,
+  EntryYearLevel,
+  Gender,
+  ProgramType,
+  ReligiousAffiliation,
+  Sector,
+} from '@/modules/school-search/types/filter.types';
+import { FEE_MIN, FEE_MAX } from '@/modules/school-search/constants/filter-options.constants';
 
 interface MapBounds {
   lat: number;
@@ -10,10 +20,27 @@ interface MapBounds {
 
 interface StoreState {
   query: string;
+  suburb?: string;
+  postcode?: string;
+  feeMin?: number;
+  feeMax?: number;
+  states: AustralianState[];
+  sectors?: Sector[];
+  accommodation?: Accommodation[];
+  religiousAffiliations?: ReligiousAffiliation[];
+  entryYearLevels?: EntryYearLevel[];
+  studentAge?: number | null;
+  entryTerms?: EntryTerm[];
+  programTypes?: ProgramType[];
+  atarAvailable?: boolean;
+  englishLanguageSupport?: boolean;
+  englishTest?: EnglishTestScore | null;
+  gender?: Gender[];
+
+  // Legacy mirrors
   priceMin: number;
   priceMax: number;
   curricula: Curriculum[];
-  states: AustralianState[];
   englishTests: boolean;
   activeChips: string[];
   mapBounds: MapBounds;
@@ -23,7 +50,6 @@ interface StoreState {
 const CHIP_TO_FILTER: Record<string, Partial<SearchRequestFilters>> = {
   boarding: { boardingAvailable: true },
   coed: { gender: ['co_ed'] },
-  scholarships: { scholarshipAvailable: true },
 };
 
 export function mapFiltersToRequest(store: StoreState): SearchRequest {
@@ -33,19 +59,34 @@ export function mapFiltersToRequest(store: StoreState): SearchRequest {
     filters.state = store.states;
   }
 
-  const isFullRange = store.priceMin <= PRICE_MIN && store.priceMax >= PRICE_MAX;
+  const feeMin = store.feeMin ?? store.priceMin;
+  const feeMax = store.feeMax ?? store.priceMax;
+  const isFullRange = feeMin <= FEE_MIN && feeMax >= FEE_MAX;
   if (!isFullRange) {
     filters.tuitionAnnual = {
-      ...(store.priceMin > PRICE_MIN ? { min: store.priceMin } : {}),
-      ...(store.priceMax < PRICE_MAX ? { max: store.priceMax } : {}),
+      ...(feeMin > FEE_MIN ? { min: feeMin } : {}),
+      ...(feeMax < FEE_MAX ? { max: feeMax } : {}),
     };
   }
 
-  if (store.curricula.length > 0) {
-    filters.curriculumOffered = store.curricula;
+  if (store.sectors && store.sectors.length > 0) {
+    const backendSectors = store.sectors.filter((s): s is 'gov' | 'non_gov' =>
+      s === 'gov' || s === 'non_gov',
+    );
+    if (backendSectors.length > 0) filters.sector = backendSectors;
   }
 
-  if (store.englishTests) {
+  if (store.accommodation && store.accommodation.length > 0) {
+    if (store.accommodation.includes('boarding') || store.accommodation.includes('both')) {
+      filters.boardingAvailable = true;
+    }
+  }
+
+  if (store.gender && store.gender.length > 0) {
+    filters.gender = store.gender;
+  }
+
+  if (store.englishLanguageSupport ?? store.englishTests) {
     filters.templateRequiresEnglishTest = true;
   }
 

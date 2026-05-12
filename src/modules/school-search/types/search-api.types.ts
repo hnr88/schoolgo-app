@@ -1,4 +1,16 @@
 import type { AustralianState } from '@/modules/school-search/types/school.types';
+import type {
+  Accommodation,
+  CurriculumCode,
+  EnglishTestType,
+  EnrolmentStatus,
+  EntryTerm,
+  EntryYearLevel,
+  ProgramType,
+  ReligiousAffiliation,
+  Sector,
+  SortOption,
+} from '@/modules/school-search/types/filter.types';
 
 export interface SearchRequestFilters {
   state?: AustralianState[];
@@ -35,6 +47,29 @@ export interface SearchRequest {
   matchingStrategy?: 'last' | 'all' | 'frequency';
 }
 
+export interface TypedSearchRequest {
+  q?: string;
+  states?: AustralianState[];
+  suburb?: string;
+  postcode?: string;
+  sectors?: Sector[];
+  accommodation?: Accommodation[];
+  religiousAffiliations?: ReligiousAffiliation[];
+  entryYearLevels?: EntryYearLevel[];
+  studentAge?: number;
+  entryTerms?: EntryTerm[];
+  programTypes?: ProgramType[];
+  atarAvailable?: boolean;
+  englishLanguageSupport?: boolean;
+  englishTest?: { type: EnglishTestType; score: number };
+  feeMin?: number;
+  feeMax?: number;
+  sortBy?: SortOption;
+  bbox?: { north: number; south: number; east: number; west: number };
+  page?: number;
+  pageSize?: number;
+}
+
 export interface SchoolHit {
   documentId: string;
   name: string;
@@ -61,6 +96,18 @@ export interface SchoolHit {
   capacityBands: string[];
   _geo: { lat: number; lng: number } | null;
   _formatted?: Record<string, string>;
+
+  // Spec-aligned tile-card fields (mock/proxy may not populate every one yet).
+  photoUrl?: string | null;
+  enrolmentStatus?: EnrolmentStatus;
+  curriculumCodes?: CurriculumCode[];
+  accommodation?: Accommodation;
+  annualTuitionFrom?: number | null;
+  programTypes?: ProgramType[];
+  entryTerms?: EntryTerm[];
+  atarAvailable?: boolean;
+  englishLanguageSupport?: boolean;
+  englishTestMinScores?: Partial<Record<EnglishTestType, number>>;
 }
 
 export interface FacetDistribution {

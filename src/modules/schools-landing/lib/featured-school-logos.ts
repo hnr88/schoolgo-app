@@ -6,7 +6,7 @@ export async function getFeaturedSchoolLogos(
   limit: number,
 ): Promise<(string | null)[]> {
   try {
-    const response = await fetch(`${env.STRAPI_API_URL}/api/search/schools`, {
+    const response = await fetch(`${env.NEXT_PUBLIC_API_URL}/api/search/schools`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ limit }),
