@@ -139,7 +139,7 @@ export function MarketingHeaderClient({
               width={559}
               height={125}
               priority
-              className='h-5 w-auto md:h-6'
+              className='h-3 w-auto md:h-4'
             />
           </a>
 
@@ -251,7 +251,7 @@ export function MarketingHeaderClient({
                 alt='SchoolGo'
                 width={559}
                 height={125}
-                className='h-6 w-auto'
+                className='h-4 w-auto'
               />
             </a>
             <button
