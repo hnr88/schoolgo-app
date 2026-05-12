@@ -65,7 +65,7 @@ export interface TypedSearchRequest {
   feeMin?: number;
   feeMax?: number;
   sortBy?: SortOption;
-  bbox?: { north: number; south: number; east: number; west: number };
+  bbox?: { swLat: number; swLng: number; neLat: number; neLng: number };
   page?: number;
   pageSize?: number;
 }

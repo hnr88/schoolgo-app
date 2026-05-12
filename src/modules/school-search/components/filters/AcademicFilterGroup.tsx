@@ -15,7 +15,7 @@ interface AcademicFilterGroupProps {
 }
 
 const TOOLTIP_KEY_BY_PROGRAM: Record<ProgramType, string> = {
-  australian_cert: 'academic.programTooltips.australianCert',
+  'australian-cert': 'academic.programTooltips.australianCert',
   ib: 'academic.programTooltips.ib',
   elicos: 'academic.programTooltips.elicos',
 };

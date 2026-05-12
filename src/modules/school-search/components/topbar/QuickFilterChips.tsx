@@ -22,7 +22,7 @@ function deriveSelectedChips(
   const selected: QuickChipId[] = [];
   if (gender.includes('boys')) selected.push('boys');
   if (gender.includes('girls')) selected.push('girls');
-  if (gender.includes('co_ed')) selected.push('co_ed');
+  if (gender.includes('co-ed')) selected.push('co-ed');
   if (accommodation.includes('boarding') || accommodation.includes('both')) {
     selected.push('boarding');
   }
@@ -48,7 +48,7 @@ export function QuickFilterChips() {
   const selected = deriveSelectedChips(gender, accommodation, entryYearLevels);
 
   const applyChip = (id: QuickChipId, willSelect: boolean) => {
-    if (id === 'boys' || id === 'girls' || id === 'co_ed') {
+    if (id === 'boys' || id === 'girls' || id === 'co-ed') {
       const isInGender = gender.includes(id);
       if (willSelect !== isInGender) toggleGender(id);
       return;

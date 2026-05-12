@@ -1,7 +1,7 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { Check, Heart } from 'lucide-react';
+import { Check, Heart, Square } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import {
   COMPARE_MAX_ADVANCED,
@@ -24,7 +24,7 @@ export function CardActions({
   onUnauthenticatedBookmark,
   className,
 }: CardActionsProps) {
-  const t = useTranslations('SchoolSearch.spec.tileCard');
+  const tActions = useTranslations('SchoolSearch.spec.tile.actions');
   const bookmarks = useSchoolSearchStore((s) => s.bookmarks);
   const toggleBookmark = useSchoolSearchStore((s) => s.toggleBookmark);
   const compareList = useSchoolSearchStore((s) => s.compareList);
@@ -50,21 +50,25 @@ export function CardActions({
     toggleCompare(schoolId, max);
   };
 
+  const bookmarkLabel = isBookmarked
+    ? tActions('bookmarkRemove', { name: schoolName })
+    : tActions('bookmarkAdd', { name: schoolName });
+
   return (
-    <div className={cn('flex items-center gap-2', className)}>
+    <div className={cn('flex items-center gap-1.5', className)}>
       <button
         type="button"
         onClick={handleBookmark}
-        aria-label={isBookmarked ? t('bookmarkRemove') : t('bookmark')}
+        aria-label={bookmarkLabel}
         aria-pressed={isBookmarked}
         className={cn(
-          'flex size-8 items-center justify-center rounded-full border transition-colors',
+          'flex size-8 items-center justify-center rounded-full border bg-background/90 backdrop-blur transition-colors',
           isBookmarked
-            ? 'border-red-300 bg-red-50 text-red-500'
-            : 'border-border bg-background text-muted-foreground hover:bg-muted',
+            ? 'border-rose-300 bg-rose-50 text-rose-500'
+            : 'border-border text-muted-foreground hover:bg-muted',
         )}
       >
-        <Heart size={16} fill={isBookmarked ? 'currentColor' : 'none'} />
+        <Heart size={16} fill={isBookmarked ? 'currentColor' : 'none'} aria-hidden />
       </button>
       {isAdvanced && (
         <button
@@ -72,15 +76,19 @@ export function CardActions({
           onClick={handleCompare}
           role="checkbox"
           aria-checked={isInCompare}
-          aria-label={t('compareCheckbox', { name: schoolName })}
+          aria-label={tActions('compare', { name: schoolName })}
           className={cn(
-            'flex size-8 items-center justify-center rounded border transition-colors',
+            'flex size-8 items-center justify-center rounded-md border bg-background/90 backdrop-blur transition-colors',
             isInCompare
               ? 'border-primary bg-primary text-primary-foreground'
-              : 'border-border bg-background text-muted-foreground hover:bg-muted',
+              : 'border-border text-muted-foreground hover:bg-muted',
           )}
         >
-          {isInCompare && <Check size={16} />}
+          {isInCompare ? (
+            <Check size={16} aria-hidden />
+          ) : (
+            <Square size={16} aria-hidden />
+          )}
         </button>
       )}
     </div>

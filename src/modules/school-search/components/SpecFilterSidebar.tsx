@@ -18,12 +18,11 @@ interface SpecFilterSidebarProps {
 export function SpecFilterSidebar({ className, alwaysOn = false }: SpecFilterSidebarProps) {
   const t = useTranslations('SchoolSearch.spec');
   const searchParams = useSearchParams();
-  const isPreview = alwaysOn || searchParams.get('preview') === 'spec';
   const isAuthenticated = useAuthStore((s) => s.isAuthenticated);
   const isHydrated = useAuthStore((s) => s.isHydrated);
   const isAdvanced = isHydrated && isAuthenticated;
 
-  if (!isPreview) return null;
+  if (!alwaysOn && searchParams.get('preview') !== 'spec') return null;
 
   return (
     <aside
@@ -36,9 +35,8 @@ export function SpecFilterSidebar({ className, alwaysOn = false }: SpecFilterSid
       <div className="flex h-full min-h-0 flex-col overflow-hidden rounded-xl border border-primary/40 bg-card shadow-2">
         <div className="shrink-0 border-b border-divider bg-primary/5 px-4 py-2.5">
           <span className="text-caption font-semibold uppercase text-primary">
-            {t('previewBadge')} · {isAdvanced ? 'Advanced' : 'Basic'}
+            {t(isAdvanced ? 'modeBadge.advanced' : 'modeBadge.basic')}
           </span>
-          <h2 className="text-sm font-semibold text-ink-900">{t('previewTitle')}</h2>
         </div>
 
         <div className="no-scrollbar min-h-0 flex-1 divide-y divide-divider overflow-y-auto px-4">

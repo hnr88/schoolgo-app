@@ -917,9 +917,14 @@
       "subtitle": "เข้าสู่ระบบเพื่อใช้ตัวกรองโดยละเอียด บันทึกโรงเรียน และเปรียบเทียบโปรแกรม",
       "signIn": "เข้าสู่ระบบเพื่อดำเนินการต่อ"
     },
+    "lockedDescription": "เข้าสู่ระบบเพื่อปลดล็อก — สร้างบัญชีฟรีเพื่อใช้ตัวกรองนี้",
     "spec": {
       "previewBadge": "Preview",
       "previewTitle": "Spec filters",
+      "modeBadge": {
+        "basic": "พื้นฐาน",
+        "advanced": "ขั้นสูง"
+      },
       "lockedDescription": "Sign up to unlock this filter.",
       "showAll": "Show all ({count})",
       "showFewer": "Show fewer",
@@ -956,10 +961,42 @@
         }
       },
       "englishTest": {
-        "title": "English test scores",
-        "selectorLabel": "Test",
-        "scoreLabel": "Your score",
-        "scorePlaceholder": "Enter score"
+        "title": "คะแนนสอบภาษาอังกฤษ",
+        "selectorLabel": "ฉันมีคะแนนสำหรับ",
+        "scoreLabel": "คะแนน {label}",
+        "scorePlaceholder": "ใส่คะแนน",
+        "scoreHint": "ช่วง: {min}–{max}",
+        "aeas": "AEAS",
+        "idat": "iDAT",
+        "duolingo": "Duolingo",
+        "ielts": "IELTS",
+        "pte": "PTE",
+        "cambridge": "Cambridge"
+      },
+      "tile": {
+        "status": {
+          "open": "เปิดรับสมัคร",
+          "limited": "ที่นั่งจำกัด",
+          "waitlist": "รายชื่อสำรองเท่านั้น",
+          "closed": "ปิดรับสมัคร"
+        },
+        "sector": {
+          "government": "รัฐบาล",
+          "nonGovernment": "เอกชน",
+          "catholic": "คาทอลิก"
+        },
+        "accommodation": {
+          "boarding": "หอพัก",
+          "homestay": "โฮมสเตย์",
+          "both": "ทั้งสองแบบ",
+          "none": "ไม่มี"
+        },
+        "actions": {
+          "bookmark": "บุ๊กมาร์ก {name}",
+          "bookmarkAdd": "เพิ่ม {name} ในบุ๊กมาร์ก",
+          "bookmarkRemove": "ลบ {name} ออกจากบุ๊กมาร์ก",
+          "compare": "เพิ่ม {name} ในการเปรียบเทียบ"
+        }
       },
       "sector": {
         "government": "Government",
@@ -1036,18 +1073,22 @@
         "boarding": "Boarding"
       },
       "sort": {
-        "label": "Sort by",
-        "nameAsc": "School name (A–Z)",
-        "nameDesc": "School name (Z–A)",
-        "tuitionLowHigh": "Tuition low–high",
-        "tuitionHighLow": "Tuition high–low",
-        "stateAsc": "State",
-        "enrolmentOpenFirst": "Enrolment status (open first)",
-        "applicationDeadlineAsc": "Application deadline (soonest)",
-        "schoolSizeAsc": "School size (small–large)",
-        "schoolSizeDesc": "School size (large–small)",
-        "internationalPctAsc": "International % (low–high)",
-        "internationalPctDesc": "International % (high–low)"
+        "label": "เรียงตาม",
+        "nameAsc": "ชื่อโรงเรียน (A–Z)",
+        "nameDesc": "ชื่อโรงเรียน (Z–A)",
+        "tuitionAsc": "ค่าเล่าเรียนต่ำ–สูง",
+        "tuitionDesc": "ค่าเล่าเรียนสูง–ต่ำ",
+        "state": "รัฐ",
+        "enrolmentStatus": "สถานะรับสมัคร (เปิดก่อน)",
+        "applicationDeadlineAsc": "วันหมดเขตรับสมัคร (ใกล้ที่สุด)",
+        "schoolSizeAsc": "ขนาดโรงเรียน (เล็ก–ใหญ่)",
+        "schoolSizeDesc": "ขนาดโรงเรียน (ใหญ่–เล็ก)",
+        "internationalPctAsc": "% นักศึกษาต่างชาติ (ต่ำ–สูง)",
+        "internationalPctDesc": "% นักศึกษาต่างชาติ (สูง–ต่ำ)",
+        "tuitionLowHigh": "ค่าเล่าเรียนต่ำ–สูง",
+        "tuitionHighLow": "ค่าเล่าเรียนสูง–ต่ำ",
+        "stateAsc": "รัฐ",
+        "enrolmentOpenFirst": "สถานะรับสมัคร (เปิดก่อน)"
       },
       "topBar": {
         "searchPlaceholder": "Search by school name, city, or suburb",
@@ -1055,10 +1096,10 @@
         "feeReadout": "${min}k – ${max}k"
       },
       "compareBar": {
-        "label": "Compare ({count}/{max})",
-        "remove": "Remove {name}",
-        "cta": "Compare",
-        "capReached": "Compare cap reached"
+        "label": "เปรียบเทียบ ({count}/{max})",
+        "remove": "ลบ {name}",
+        "cta": "เปรียบเทียบโรงเรียน",
+        "capReached": "ถึงขีดจำกัดการเปรียบเทียบแล้ว"
       },
       "tileCard": {
         "tuitionFrom": "From ${amount} / year",

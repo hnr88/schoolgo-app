@@ -148,7 +148,7 @@ const initialState = {
   englishTest: null as EnglishTestScore | null,
   quickChips: [] as QuickChipId[],
   gender: [] as Gender[],
-  sortBy: 'name_asc' as SortOption,
+  sortBy: 'name-asc' as SortOption,
   compareList: [] as string[],
   bookmarks: [] as string[],
 

@@ -917,9 +917,14 @@
       "subtitle": "登录以使用详细筛选器、保存学校和比较课程。",
       "signIn": "登录以继续"
     },
+    "lockedDescription": "登录以解锁 — 创建免费账户以使用此筛选器",
     "spec": {
       "previewBadge": "Preview",
       "previewTitle": "Spec filters",
+      "modeBadge": {
+        "basic": "基础",
+        "advanced": "高级"
+      },
       "lockedDescription": "Sign up to unlock this filter.",
       "showAll": "Show all ({count})",
       "showFewer": "Show fewer",
@@ -956,10 +961,42 @@
         }
       },
       "englishTest": {
-        "title": "English test scores",
-        "selectorLabel": "Test",
-        "scoreLabel": "Your score",
-        "scorePlaceholder": "Enter score"
+        "title": "英语考试成绩",
+        "selectorLabel": "我有一个成绩，考试为",
+        "scoreLabel": "{label} 成绩",
+        "scorePlaceholder": "输入成绩",
+        "scoreHint": "范围：{min}–{max}",
+        "aeas": "AEAS",
+        "idat": "iDAT",
+        "duolingo": "Duolingo",
+        "ielts": "IELTS",
+        "pte": "PTE",
+        "cambridge": "Cambridge"
+      },
+      "tile": {
+        "status": {
+          "open": "开放",
+          "limited": "名额有限",
+          "waitlist": "仅候补",
+          "closed": "已关闭"
+        },
+        "sector": {
+          "government": "公立",
+          "nonGovernment": "非政府",
+          "catholic": "天主教"
+        },
+        "accommodation": {
+          "boarding": "寄宿",
+          "homestay": "寄宿家庭",
+          "both": "两者皆有",
+          "none": "无"
+        },
+        "actions": {
+          "bookmark": "收藏 {name}",
+          "bookmarkAdd": "将 {name} 加入收藏",
+          "bookmarkRemove": "从收藏中移除 {name}",
+          "compare": "将 {name} 加入比较"
+        }
       },
       "sector": {
         "government": "Government",
@@ -1036,18 +1073,22 @@
         "boarding": "Boarding"
       },
       "sort": {
-        "label": "Sort by",
-        "nameAsc": "School name (A–Z)",
-        "nameDesc": "School name (Z–A)",
-        "tuitionLowHigh": "Tuition low–high",
-        "tuitionHighLow": "Tuition high–low",
-        "stateAsc": "State",
-        "enrolmentOpenFirst": "Enrolment status (open first)",
-        "applicationDeadlineAsc": "Application deadline (soonest)",
-        "schoolSizeAsc": "School size (small–large)",
-        "schoolSizeDesc": "School size (large–small)",
-        "internationalPctAsc": "International % (low–high)",
-        "internationalPctDesc": "International % (high–low)"
+        "label": "排序方式",
+        "nameAsc": "学校名称 (A–Z)",
+        "nameDesc": "学校名称 (Z–A)",
+        "tuitionAsc": "学费由低到高",
+        "tuitionDesc": "学费由高到低",
+        "state": "州份",
+        "enrolmentStatus": "招生状态（开放优先）",
+        "applicationDeadlineAsc": "申请截止日期（最近）",
+        "schoolSizeAsc": "学校规模（小到大）",
+        "schoolSizeDesc": "学校规模（大到小）",
+        "internationalPctAsc": "国际生比例（低到高）",
+        "internationalPctDesc": "国际生比例（高到低）",
+        "tuitionLowHigh": "学费由低到高",
+        "tuitionHighLow": "学费由高到低",
+        "stateAsc": "州份",
+        "enrolmentOpenFirst": "招生状态（开放优先）"
       },
       "topBar": {
         "searchPlaceholder": "Search by school name, city, or suburb",
@@ -1055,10 +1096,10 @@
         "feeReadout": "${min}k – ${max}k"
       },
       "compareBar": {
-        "label": "Compare ({count}/{max})",
-        "remove": "Remove {name}",
-        "cta": "Compare",
-        "capReached": "Compare cap reached"
+        "label": "比较（{count}/{max}）",
+        "remove": "移除 {name}",
+        "cta": "比较学校",
+        "capReached": "已达比较上限"
       },
       "tileCard": {
         "tuitionFrom": "From ${amount} / year",

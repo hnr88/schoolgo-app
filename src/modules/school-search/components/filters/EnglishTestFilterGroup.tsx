@@ -20,8 +20,9 @@ export function EnglishTestFilterGroup({ isAdvanced }: EnglishTestFilterGroupPro
   const englishTest = useSchoolSearchStore((s) => s.englishTest);
   const setEnglishTest = useSchoolSearchStore((s) => s.setEnglishTest);
 
-  const selected = englishTest?.testType ?? null;
+  const selected = englishTest?.type ?? null;
   const config = selected ? ENGLISH_TEST_CONFIG[selected] : null;
+  const selectedLabel = selected ? t(`englishTest.${selected}` as never) : '';
 
   const handleTestChange = (next: EnglishTestType[] | EnglishTestType | null) => {
     if (Array.isArray(next)) return;
@@ -30,19 +31,19 @@ export function EnglishTestFilterGroup({ isAdvanced }: EnglishTestFilterGroupPro
       return;
     }
     const cfg = ENGLISH_TEST_CONFIG[next];
-    setEnglishTest({ testType: next, score: cfg.min });
+    setEnglishTest({ type: next, score: cfg.min });
   };
 
   const handleScoreChange = (raw: string) => {
     if (!selected || !config) return;
     if (raw === '') {
-      setEnglishTest({ testType: selected, score: config.min });
+      setEnglishTest({ type: selected, score: config.min });
       return;
     }
     const parsed = Number(raw);
     if (Number.isNaN(parsed)) return;
     const clamped = Math.min(config.max, Math.max(config.min, parsed));
-    setEnglishTest({ testType: selected, score: clamped });
+    setEnglishTest({ type: selected, score: clamped });
   };
 
   return (
@@ -74,7 +75,7 @@ export function EnglishTestFilterGroup({ isAdvanced }: EnglishTestFilterGroupPro
               htmlFor="spec-english-score"
               className="text-xs font-medium text-muted-foreground"
             >
-              {t('englishTest.scoreLabel')} ({config.min}–{config.max})
+              {t('englishTest.scoreLabel', { label: selectedLabel })}
             </label>
             <Input
               id="spec-english-score"
@@ -87,6 +88,9 @@ export function EnglishTestFilterGroup({ isAdvanced }: EnglishTestFilterGroupPro
               placeholder={t('englishTest.scorePlaceholder')}
               onChange={(e) => handleScoreChange(e.target.value)}
             />
+            <span className="text-xs text-muted-foreground">
+              {t('englishTest.scoreHint', { min: config.min, max: config.max })}
+            </span>
           </div>
         )}
       </div>

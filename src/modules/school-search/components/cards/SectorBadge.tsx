@@ -5,15 +5,15 @@ import { cn } from '@/lib/utils';
 import type { Sector } from '@/modules/school-search/types/filter.types';
 
 const STYLE_BY_SECTOR: Record<Sector, string> = {
-  gov: 'bg-blue-100 text-blue-800 ring-blue-200',
-  non_gov: 'bg-purple-100 text-purple-800 ring-purple-200',
+  government: 'bg-sky-100 text-sky-800 ring-sky-200',
+  'non-government': 'bg-violet-100 text-violet-800 ring-violet-200',
   catholic: 'bg-purple-100 text-purple-800 ring-purple-200',
 };
 
 const LABEL_KEY_BY_SECTOR: Record<Sector, string> = {
-  gov: 'sector.government',
-  non_gov: 'sector.nonGovernment',
-  catholic: 'sector.catholic',
+  government: 'government',
+  'non-government': 'nonGovernment',
+  catholic: 'catholic',
 };
 
 interface SectorBadgeProps {
@@ -22,7 +22,7 @@ interface SectorBadgeProps {
 }
 
 export function SectorBadge({ sector, className }: SectorBadgeProps) {
-  const t = useTranslations('SchoolSearch.spec');
+  const t = useTranslations('SchoolSearch.spec.tile.sector');
   return (
     <span
       className={cn(

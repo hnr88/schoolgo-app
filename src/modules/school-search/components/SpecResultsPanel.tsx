@@ -5,10 +5,8 @@ import { useSearchParams } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 import { useAuthStore } from '@/modules/auth/stores/use-auth-store';
 import { cn } from '@/lib/utils';
-import { CompareBar } from '@/modules/school-search/components/CompareBar';
 import { SpecSchoolCard } from '@/modules/school-search/components/cards/SpecSchoolCard';
 import { SortControl } from '@/modules/school-search/components/results/SortControl';
-import { SearchTopBar } from '@/modules/school-search/components/topbar/SearchTopBar';
 import { filterMockHits } from '@/modules/school-search/lib/filter-mock-hits';
 import { MOCK_SCHOOL_HITS } from '@/modules/school-search/lib/mock-search-response';
 import { useSchoolSearchStore } from '@/modules/school-search/stores/use-school-search-store';
@@ -18,21 +16,21 @@ import type { SchoolHit } from '@/modules/school-search/types/search-api.types';
 function sortHits(hits: readonly SchoolHit[], sortBy: SortOption): SchoolHit[] {
   const arr = [...hits];
   switch (sortBy) {
-    case 'name_asc':
+    case 'name-asc':
       return arr.sort((a, b) => a.name.localeCompare(b.name));
-    case 'name_desc':
+    case 'name-desc':
       return arr.sort((a, b) => b.name.localeCompare(a.name));
-    case 'tuition_low_high':
+    case 'tuition-asc':
       return arr.sort(
         (a, b) => (a.annualTuitionFrom ?? Infinity) - (b.annualTuitionFrom ?? Infinity),
       );
-    case 'tuition_high_low':
+    case 'tuition-desc':
       return arr.sort(
         (a, b) => (b.annualTuitionFrom ?? -Infinity) - (a.annualTuitionFrom ?? -Infinity),
       );
-    case 'state_asc':
+    case 'state':
       return arr.sort((a, b) => a.state.localeCompare(b.state));
-    case 'enrolment_open_first': {
+    case 'enrolment-status': {
       const rank: Record<string, number> = { open: 0, limited: 1, waitlist: 2, closed: 3 };
       return arr.sort((a, b) => (rank[a.enrolmentStatus ?? ''] ?? 9) - (rank[b.enrolmentStatus ?? ''] ?? 9));
     }
@@ -44,20 +42,26 @@ function sortHits(hits: readonly SchoolHit[], sortBy: SortOption): SchoolHit[] {
 interface SpecResultsPanelProps {
   className?: string;
   alwaysOn?: boolean;
+  floating?: boolean;
 }
 
-export function SpecResultsPanel({ className, alwaysOn = false }: SpecResultsPanelProps) {
+export function SpecResultsPanel({
+  className,
+  alwaysOn = false,
+  floating = false,
+}: SpecResultsPanelProps) {
   const t = useTranslations('SchoolSearch');
   const searchParams = useSearchParams();
-  const isPreview = alwaysOn || searchParams.get('preview') === 'spec';
   const isAuthenticated = useAuthStore((s) => s.isAuthenticated);
   const isHydrated = useAuthStore((s) => s.isHydrated);
   const isAdvanced = isHydrated && isAuthenticated;
 
   const store = useSchoolSearchStore();
 
+  const isActive = alwaysOn || searchParams.get('preview') === 'spec';
+
   const hits = useMemo(() => {
-    if (!isPreview) return [];
+    if (!isActive) return [];
     const filtered = filterMockHits(MOCK_SCHOOL_HITS, {
       q: store.query || undefined,
       states: store.states.length ? store.states : undefined,
@@ -75,7 +79,7 @@ export function SpecResultsPanel({ className, alwaysOn = false }: SpecResultsPan
     });
     return sortHits(filtered.hits, store.sortBy);
   }, [
-    isPreview,
+    isActive,
     store.query,
     store.states,
     store.sectors,
@@ -89,19 +93,46 @@ export function SpecResultsPanel({ className, alwaysOn = false }: SpecResultsPan
     store.sortBy,
   ]);
 
-  const schoolNamesById = useMemo(
-    () => Object.fromEntries(hits.map((h) => [h.documentId, h.name])),
-    [hits],
-  );
+  if (!isActive) return null;
 
-  if (!isPreview) return null;
+  if (floating) {
+    return (
+      <aside
+        className={cn(
+          'absolute right-3 top-3 bottom-3 z-10 flex w-80 flex-col gap-2 overflow-hidden rounded-xl border border-border bg-card/95 shadow-2 backdrop-blur',
+          className,
+        )}
+        data-testid="spec-results-panel"
+      >
+        <div className="flex shrink-0 items-center justify-between gap-2 border-b border-divider px-3 py-2">
+          <h2 className="text-sm font-semibold text-ink-900">{t('results.title')}</h2>
+          <span className="rounded-pill bg-primary/10 px-2 py-0.5 text-caption font-semibold text-primary">
+            {t('results.count', { count: hits.length })}
+          </span>
+        </div>
+        <div className="flex shrink-0 items-center justify-end gap-2 px-3">
+          <SortControl isAdvanced={isAdvanced} />
+        </div>
+        <div className="flex min-h-0 flex-1 flex-col gap-2 overflow-y-auto px-3 pb-3">
+          {hits.length === 0 ? (
+            <p className="py-12 text-center text-sm text-muted-foreground">
+              {t('results.empty')}
+            </p>
+          ) : (
+            hits.map((hit) => (
+              <SpecSchoolCard key={hit.documentId} hit={hit} isAdvanced={isAdvanced} />
+            ))
+          )}
+        </div>
+      </aside>
+    );
+  }
 
   return (
     <div
       className={cn('flex flex-1 flex-col gap-3 overflow-hidden', className)}
       data-testid="spec-results-panel"
     >
-      <SearchTopBar />
       <div className="flex items-center justify-between gap-3 px-1">
         <span className="text-xs font-semibold text-muted-foreground">
           {t('results.count', { count: hits.length })}
@@ -119,7 +150,6 @@ export function SpecResultsPanel({ className, alwaysOn = false }: SpecResultsPan
           ))
         )}
       </div>
-      <CompareBar isAdvanced={isAdvanced} schoolNamesById={schoolNamesById} />
     </div>
   );
 }

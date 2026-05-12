@@ -46,7 +46,7 @@ export function ReligiousAffiliationChips() {
         onClick={() => setShowAll((v) => !v)}
         className="self-start text-xs font-medium text-primary underline-offset-2 hover:underline"
       >
-        {showAll ? t('showFewer') : t('showAll', { count: TOTAL_COUNT })}
+        {showAll ? t('religion.showLess') : t('religion.showAll', { count: TOTAL_COUNT })}
       </button>
     </div>
   );

@@ -892,9 +892,14 @@
       "subtitle": "Sign in to access detailed filters, save schools, and compare programs.",
       "signIn": "Sign in to continue"
     },
+    "lockedDescription": "Sign in to unlock — Create a free account to use this filter",
     "spec": {
       "previewBadge": "Preview",
       "previewTitle": "Spec filters",
+      "modeBadge": {
+        "basic": "Basic",
+        "advanced": "Advanced"
+      },
       "lockedDescription": "Sign up to unlock this filter.",
       "showAll": "Show all ({count})",
       "showFewer": "Show fewer",
@@ -932,9 +937,41 @@
       },
       "englishTest": {
         "title": "English test scores",
-        "selectorLabel": "Test",
-        "scoreLabel": "Your score",
-        "scorePlaceholder": "Enter score"
+        "selectorLabel": "I have a score for",
+        "scoreLabel": "{label} score",
+        "scorePlaceholder": "Enter score",
+        "scoreHint": "Range: {min}–{max}",
+        "aeas": "AEAS",
+        "idat": "iDAT",
+        "duolingo": "Duolingo",
+        "ielts": "IELTS",
+        "pte": "PTE",
+        "cambridge": "Cambridge"
+      },
+      "tile": {
+        "status": {
+          "open": "Open",
+          "limited": "Limited places",
+          "waitlist": "Waitlist only",
+          "closed": "Closed"
+        },
+        "sector": {
+          "government": "Government",
+          "nonGovernment": "Non-government",
+          "catholic": "Catholic"
+        },
+        "accommodation": {
+          "boarding": "Boarding",
+          "homestay": "Homestay",
+          "both": "Both",
+          "none": "None"
+        },
+        "actions": {
+          "bookmark": "Bookmark {name}",
+          "bookmarkAdd": "Add {name} to bookmarks",
+          "bookmarkRemove": "Remove {name} from bookmarks",
+          "compare": "Add {name} to compare"
+        }
       },
       "sector": {
         "government": "Government",
@@ -1014,10 +1051,10 @@
         "label": "Sort by",
         "nameAsc": "School name (A–Z)",
         "nameDesc": "School name (Z–A)",
-        "tuitionLowHigh": "Tuition low–high",
-        "tuitionHighLow": "Tuition high–low",
-        "stateAsc": "State",
-        "enrolmentOpenFirst": "Enrolment status (open first)",
+        "tuitionAsc": "Tuition low–high",
+        "tuitionDesc": "Tuition high–low",
+        "state": "State",
+        "enrolmentStatus": "Enrolment status (open first)",
         "applicationDeadlineAsc": "Application deadline (soonest)",
         "schoolSizeAsc": "School size (small–large)",
         "schoolSizeDesc": "School size (large–small)",
@@ -1032,7 +1069,7 @@
       "compareBar": {
         "label": "Compare ({count}/{max})",
         "remove": "Remove {name}",
-        "cta": "Compare",
+        "cta": "Compare schools",
         "capReached": "Compare cap reached"
       },
       "tileCard": {

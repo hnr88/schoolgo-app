@@ -917,9 +917,14 @@
       "subtitle": "Log masuk untuk mengakses penapis terperinci, simpan sekolah dan bandingkan program.",
       "signIn": "Log masuk untuk teruskan"
     },
+    "lockedDescription": "Log masuk untuk membuka kunci — Cipta akaun percuma untuk menggunakan penapis ini",
     "spec": {
       "previewBadge": "Preview",
       "previewTitle": "Spec filters",
+      "modeBadge": {
+        "basic": "Asas",
+        "advanced": "Lanjutan"
+      },
       "lockedDescription": "Sign up to unlock this filter.",
       "showAll": "Show all ({count})",
       "showFewer": "Show fewer",
@@ -956,10 +961,42 @@
         }
       },
       "englishTest": {
-        "title": "English test scores",
-        "selectorLabel": "Test",
-        "scoreLabel": "Your score",
-        "scorePlaceholder": "Enter score"
+        "title": "Skor ujian Bahasa Inggeris",
+        "selectorLabel": "Saya ada skor untuk",
+        "scoreLabel": "Skor {label}",
+        "scorePlaceholder": "Masukkan skor",
+        "scoreHint": "Julat: {min}–{max}",
+        "aeas": "AEAS",
+        "idat": "iDAT",
+        "duolingo": "Duolingo",
+        "ielts": "IELTS",
+        "pte": "PTE",
+        "cambridge": "Cambridge"
+      },
+      "tile": {
+        "status": {
+          "open": "Terbuka",
+          "limited": "Tempat terhad",
+          "waitlist": "Senarai tunggu sahaja",
+          "closed": "Ditutup"
+        },
+        "sector": {
+          "government": "Kerajaan",
+          "nonGovernment": "Bukan kerajaan",
+          "catholic": "Katolik"
+        },
+        "accommodation": {
+          "boarding": "Asrama",
+          "homestay": "Homestay",
+          "both": "Kedua-dua",
+          "none": "Tiada"
+        },
+        "actions": {
+          "bookmark": "Tandabuku {name}",
+          "bookmarkAdd": "Tambah {name} ke tandabuku",
+          "bookmarkRemove": "Buang {name} daripada tandabuku",
+          "compare": "Tambah {name} ke perbandingan"
+        }
       },
       "sector": {
         "government": "Government",
@@ -1036,18 +1073,22 @@
         "boarding": "Boarding"
       },
       "sort": {
-        "label": "Sort by",
-        "nameAsc": "School name (A–Z)",
-        "nameDesc": "School name (Z–A)",
-        "tuitionLowHigh": "Tuition low–high",
-        "tuitionHighLow": "Tuition high–low",
-        "stateAsc": "State",
-        "enrolmentOpenFirst": "Enrolment status (open first)",
-        "applicationDeadlineAsc": "Application deadline (soonest)",
-        "schoolSizeAsc": "School size (small–large)",
-        "schoolSizeDesc": "School size (large–small)",
-        "internationalPctAsc": "International % (low–high)",
-        "internationalPctDesc": "International % (high–low)"
+        "label": "Isih mengikut",
+        "nameAsc": "Nama sekolah (A–Z)",
+        "nameDesc": "Nama sekolah (Z–A)",
+        "tuitionAsc": "Yuran rendah–tinggi",
+        "tuitionDesc": "Yuran tinggi–rendah",
+        "state": "Negeri",
+        "enrolmentStatus": "Status enrolmen (terbuka dahulu)",
+        "applicationDeadlineAsc": "Tarikh tutup permohonan (terdekat)",
+        "schoolSizeAsc": "Saiz sekolah (kecil–besar)",
+        "schoolSizeDesc": "Saiz sekolah (besar–kecil)",
+        "internationalPctAsc": "% antarabangsa (rendah–tinggi)",
+        "internationalPctDesc": "% antarabangsa (tinggi–rendah)",
+        "tuitionLowHigh": "Yuran rendah–tinggi",
+        "tuitionHighLow": "Yuran tinggi–rendah",
+        "stateAsc": "Negeri",
+        "enrolmentOpenFirst": "Status enrolmen (terbuka dahulu)"
       },
       "topBar": {
         "searchPlaceholder": "Search by school name, city, or suburb",
@@ -1055,10 +1096,10 @@
         "feeReadout": "${min}k – ${max}k"
       },
       "compareBar": {
-        "label": "Compare ({count}/{max})",
-        "remove": "Remove {name}",
-        "cta": "Compare",
-        "capReached": "Compare cap reached"
+        "label": "Bandingkan ({count}/{max})",
+        "remove": "Buang {name}",
+        "cta": "Bandingkan sekolah",
+        "capReached": "Had perbandingan dicapai"
       },
       "tileCard": {
         "tuitionFrom": "From ${amount} / year",

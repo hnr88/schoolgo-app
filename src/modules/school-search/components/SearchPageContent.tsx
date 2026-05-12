@@ -1,15 +1,17 @@
 import { MarketingHeader } from '@/modules/marketing-layout';
-import { FilterSidebar } from '@/modules/school-search/components/FilterSidebar';
-import { SearchBar } from '@/modules/school-search/components/SearchBar';
+import { CompareBar } from '@/modules/school-search/components/CompareBar';
 import { FilterChips } from '@/modules/school-search/components/FilterChips';
+import { FilterSidebar } from '@/modules/school-search/components/FilterSidebar';
 import { MapView } from '@/modules/school-search/components/MapView';
 import { SchoolResultsPanel } from '@/modules/school-search/components/SchoolResultsPanel';
 import { SearchAuthGate } from '@/modules/school-search/components/SearchAuthGate';
+import { SearchBar } from '@/modules/school-search/components/SearchBar';
 import { SearchLayout } from '@/modules/school-search/components/SearchLayout';
 import { SearchLoginPrompt } from '@/modules/school-search/components/SearchLoginPrompt';
 import { SpecFilterSidebar } from '@/modules/school-search/components/SpecFilterSidebar';
 import { SpecPreviewGate } from '@/modules/school-search/components/SpecPreviewGate';
 import { SpecResultsPanel } from '@/modules/school-search/components/SpecResultsPanel';
+import { SearchTopBar } from '@/modules/school-search/components/topbar/SearchTopBar';
 import type { SearchPageContentProps } from '@/modules/school-search/types/component.types';
 
 export async function SearchPageContent({
@@ -25,10 +27,15 @@ export async function SearchPageContent({
         <MarketingHeader activePortal={activePortal} fullWidth />
         <main className='flex w-full bg-muted pt-14 md:pt-18'>
           <SpecFilterSidebar alwaysOn />
-          <section className='flex flex-1 flex-col gap-4 overflow-hidden p-6 h-[calc(100vh-3.5rem)] md:h-[calc(100vh-4.5rem)]'>
-            <SpecResultsPanel alwaysOn />
+          <section className='flex h-[calc(100vh-3.5rem)] flex-1 flex-col gap-3 overflow-hidden p-3 md:h-[calc(100vh-4.5rem)] md:p-4'>
+            <SearchTopBar />
+            <div className='relative min-h-0 flex-1'>
+              <MapView activePortal={activePortal} />
+              <SpecResultsPanel alwaysOn floating />
+            </div>
           </section>
         </main>
+        <CompareBar />
       </>
     );
   }

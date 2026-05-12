@@ -25,7 +25,7 @@ export function SortControl({ isAdvanced, className }: SortControlProps) {
 
   const options = isAdvanced ? ADVANCED_SORT_OPTIONS : BASIC_SORT_OPTIONS;
   const currentLabelKey =
-    options.find((o) => o.value === sortBy)?.labelKey ?? options[0]?.labelKey ?? 'nameAsc';
+    options.find((o) => o.value === sortBy)?.labelKey ?? options[0]?.labelKey ?? 'sort.nameAsc';
 
   useEffect(() => {
     if (!open) return;

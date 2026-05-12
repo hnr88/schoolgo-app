@@ -917,9 +917,14 @@
       "subtitle": "로그인하여 상세 필터, 학교 저장, 프로그램 비교 기능을 이용하세요.",
       "signIn": "로그인하여 계속"
     },
+    "lockedDescription": "로그인하여 잠금 해제 — 이 필터를 사용하려면 무료 계정을 만드세요",
     "spec": {
       "previewBadge": "Preview",
       "previewTitle": "Spec filters",
+      "modeBadge": {
+        "basic": "기본",
+        "advanced": "고급"
+      },
       "lockedDescription": "Sign up to unlock this filter.",
       "showAll": "Show all ({count})",
       "showFewer": "Show fewer",
@@ -956,10 +961,42 @@
         }
       },
       "englishTest": {
-        "title": "English test scores",
-        "selectorLabel": "Test",
-        "scoreLabel": "Your score",
-        "scorePlaceholder": "Enter score"
+        "title": "영어 시험 점수",
+        "selectorLabel": "점수가 있는 시험",
+        "scoreLabel": "{label} 점수",
+        "scorePlaceholder": "점수 입력",
+        "scoreHint": "범위: {min}–{max}",
+        "aeas": "AEAS",
+        "idat": "iDAT",
+        "duolingo": "Duolingo",
+        "ielts": "IELTS",
+        "pte": "PTE",
+        "cambridge": "Cambridge"
+      },
+      "tile": {
+        "status": {
+          "open": "모집 중",
+          "limited": "자리 제한",
+          "waitlist": "대기자 명단만",
+          "closed": "마감"
+        },
+        "sector": {
+          "government": "공립",
+          "nonGovernment": "비공립",
+          "catholic": "가톨릭"
+        },
+        "accommodation": {
+          "boarding": "기숙사",
+          "homestay": "홈스테이",
+          "both": "둘 다",
+          "none": "없음"
+        },
+        "actions": {
+          "bookmark": "{name} 북마크",
+          "bookmarkAdd": "{name} 북마크에 추가",
+          "bookmarkRemove": "{name} 북마크에서 제거",
+          "compare": "{name} 비교에 추가"
+        }
       },
       "sector": {
         "government": "Government",
@@ -1036,18 +1073,22 @@
         "boarding": "Boarding"
       },
       "sort": {
-        "label": "Sort by",
-        "nameAsc": "School name (A–Z)",
-        "nameDesc": "School name (Z–A)",
-        "tuitionLowHigh": "Tuition low–high",
-        "tuitionHighLow": "Tuition high–low",
-        "stateAsc": "State",
-        "enrolmentOpenFirst": "Enrolment status (open first)",
-        "applicationDeadlineAsc": "Application deadline (soonest)",
-        "schoolSizeAsc": "School size (small–large)",
-        "schoolSizeDesc": "School size (large–small)",
-        "internationalPctAsc": "International % (low–high)",
-        "internationalPctDesc": "International % (high–low)"
+        "label": "정렬 기준",
+        "nameAsc": "학교 이름 (A–Z)",
+        "nameDesc": "학교 이름 (Z–A)",
+        "tuitionAsc": "학비 낮은 순",
+        "tuitionDesc": "학비 높은 순",
+        "state": "주",
+        "enrolmentStatus": "입학 상태 (모집 중 우선)",
+        "applicationDeadlineAsc": "지원 마감일 (임박 순)",
+        "schoolSizeAsc": "학교 규모 (소~대)",
+        "schoolSizeDesc": "학교 규모 (대~소)",
+        "internationalPctAsc": "유학생 비율 (낮은 순)",
+        "internationalPctDesc": "유학생 비율 (높은 순)",
+        "tuitionLowHigh": "학비 낮은 순",
+        "tuitionHighLow": "학비 높은 순",
+        "stateAsc": "주",
+        "enrolmentOpenFirst": "입학 상태 (모집 중 우선)"
       },
       "topBar": {
         "searchPlaceholder": "Search by school name, city, or suburb",
@@ -1055,10 +1096,10 @@
         "feeReadout": "${min}k – ${max}k"
       },
       "compareBar": {
-        "label": "Compare ({count}/{max})",
-        "remove": "Remove {name}",
-        "cta": "Compare",
-        "capReached": "Compare cap reached"
+        "label": "{count}/{max} 선택됨",
+        "remove": "{name} 제거",
+        "cta": "학교 비교",
+        "capReached": "비교 한도 도달"
       },
       "tileCard": {
         "tuitionFrom": "From ${amount} / year",

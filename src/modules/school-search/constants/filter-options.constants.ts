@@ -18,8 +18,8 @@ export interface FilterOption<T extends string> {
 }
 
 export const SECTOR_OPTIONS: readonly FilterOption<Sector>[] = [
-  { value: 'gov', labelKey: 'sector.government' },
-  { value: 'non_gov', labelKey: 'sector.nonGovernment' },
+  { value: 'government', labelKey: 'sector.government' },
+  { value: 'non-government', labelKey: 'sector.nonGovernment' },
   { value: 'catholic', labelKey: 'sector.catholic' },
 ] as const;
 
@@ -31,11 +31,11 @@ export const ACCOMMODATION_OPTIONS: readonly FilterOption<Accommodation>[] = [
 ] as const;
 
 export const RELIGIOUS_AFFILIATION_DEFAULT: readonly FilterOption<ReligiousAffiliation>[] = [
-  { value: 'non_denominational', labelKey: 'religion.nonDenominational' },
+  { value: 'non-denominational', labelKey: 'religion.nonDenominational' },
   { value: 'anglican', labelKey: 'religion.anglican' },
   { value: 'baptist', labelKey: 'religion.baptist' },
   { value: 'lutheran', labelKey: 'religion.lutheran' },
-  { value: 'uniting_church', labelKey: 'religion.unitingChurch' },
+  { value: 'uniting-church', labelKey: 'religion.unitingChurch' },
   { value: 'presbyterian', labelKey: 'religion.presbyterian' },
   { value: 'islamic', labelKey: 'religion.islamic' },
 ] as const;
@@ -43,11 +43,11 @@ export const RELIGIOUS_AFFILIATION_DEFAULT: readonly FilterOption<ReligiousAffil
 export const RELIGIOUS_AFFILIATION_EXTRA: readonly FilterOption<ReligiousAffiliation>[] = [
   { value: 'jewish', labelKey: 'religion.jewish' },
   { value: 'buddhist', labelKey: 'religion.buddhist' },
-  { value: 'coptic_orthodox', labelKey: 'religion.copticOrthodox' },
-  { value: 'greek_orthodox', labelKey: 'religion.greekOrthodox' },
-  { value: 'seventh_day_adventist', labelKey: 'religion.seventhDayAdventist' },
+  { value: 'coptic-orthodox', labelKey: 'religion.copticOrthodox' },
+  { value: 'greek-orthodox', labelKey: 'religion.greekOrthodox' },
+  { value: 'seventh-day-adventist', labelKey: 'religion.seventhDayAdventist' },
   { value: 'quaker', labelKey: 'religion.quaker' },
-  { value: 'interdenominational_christian', labelKey: 'religion.interdenominationalChristian' },
+  { value: 'interdenominational-christian', labelKey: 'religion.interdenominationalChristian' },
 ] as const;
 
 export const ENTRY_YEAR_LEVEL_OPTIONS: readonly FilterOption<EntryYearLevel>[] = [
@@ -80,7 +80,7 @@ export const ENTRY_TERM_OPTIONS: readonly FilterOption<EntryTerm>[] = [
 ] as const;
 
 export const PROGRAM_TYPE_OPTIONS: readonly FilterOption<ProgramType>[] = [
-  { value: 'australian_cert', labelKey: 'programType.australianCert' },
+  { value: 'australian-cert', labelKey: 'programType.australianCert' },
   { value: 'ib', labelKey: 'programType.ib' },
   { value: 'elicos', labelKey: 'programType.elicos' },
 ] as const;
@@ -109,7 +109,7 @@ export const ENGLISH_TEST_CONFIG: Record<
 export const GENDER_OPTIONS: readonly FilterOption<Gender>[] = [
   { value: 'boys', labelKey: 'gender.boys' },
   { value: 'girls', labelKey: 'gender.girls' },
-  { value: 'co_ed', labelKey: 'gender.coEd' },
+  { value: 'co-ed', labelKey: 'gender.coEd' },
 ] as const;
 
 export const SCHOOL_LEVEL_OPTIONS: readonly FilterOption<SchoolLevel>[] = [
@@ -120,7 +120,7 @@ export const SCHOOL_LEVEL_OPTIONS: readonly FilterOption<SchoolLevel>[] = [
 export const QUICK_CHIP_OPTIONS: readonly FilterOption<QuickChipId>[] = [
   { value: 'boys', labelKey: 'quickChip.boys' },
   { value: 'girls', labelKey: 'quickChip.girls' },
-  { value: 'co_ed', labelKey: 'quickChip.coEd' },
+  { value: 'co-ed', labelKey: 'quickChip.coEd' },
   { value: 'primary', labelKey: 'quickChip.primary' },
   { value: 'secondary', labelKey: 'quickChip.secondary' },
   { value: 'boarding', labelKey: 'quickChip.boarding' },
@@ -136,19 +136,19 @@ export const COMPARE_MAX_BASIC = 3;
 export const COMPARE_MAX_ADVANCED = 4;
 
 export const BASIC_SORT_OPTIONS: readonly FilterOption<SortOption>[] = [
-  { value: 'name_asc', labelKey: 'sort.nameAsc' },
-  { value: 'tuition_low_high', labelKey: 'sort.tuitionLowHigh' },
-  { value: 'tuition_high_low', labelKey: 'sort.tuitionHighLow' },
-  { value: 'state_asc', labelKey: 'sort.stateAsc' },
+  { value: 'name-asc', labelKey: 'sort.nameAsc' },
+  { value: 'tuition-asc', labelKey: 'sort.tuitionAsc' },
+  { value: 'tuition-desc', labelKey: 'sort.tuitionDesc' },
+  { value: 'state', labelKey: 'sort.state' },
 ] as const;
 
 export const ADVANCED_SORT_OPTIONS: readonly FilterOption<SortOption>[] = [
   ...BASIC_SORT_OPTIONS,
-  { value: 'name_desc', labelKey: 'sort.nameDesc' },
-  { value: 'enrolment_open_first', labelKey: 'sort.enrolmentOpenFirst' },
-  { value: 'application_deadline_asc', labelKey: 'sort.applicationDeadlineAsc' },
-  { value: 'school_size_asc', labelKey: 'sort.schoolSizeAsc' },
-  { value: 'school_size_desc', labelKey: 'sort.schoolSizeDesc' },
-  { value: 'international_pct_asc', labelKey: 'sort.internationalPctAsc' },
-  { value: 'international_pct_desc', labelKey: 'sort.internationalPctDesc' },
+  { value: 'name-desc', labelKey: 'sort.nameDesc' },
+  { value: 'enrolment-status', labelKey: 'sort.enrolmentStatus' },
+  { value: 'application-deadline-asc', labelKey: 'sort.applicationDeadlineAsc' },
+  { value: 'school-size-asc', labelKey: 'sort.schoolSizeAsc' },
+  { value: 'school-size-desc', labelKey: 'sort.schoolSizeDesc' },
+  { value: 'international-pct-asc', labelKey: 'sort.internationalPctAsc' },
+  { value: 'international-pct-desc', labelKey: 'sort.internationalPctDesc' },
 ] as const;

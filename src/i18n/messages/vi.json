@@ -917,9 +917,14 @@
       "subtitle": "Đăng nhập để sử dụng bộ lọc chi tiết, lưu trường học và so sánh chương trình.",
       "signIn": "Đăng nhập để tiếp tục"
     },
+    "lockedDescription": "Đăng nhập để mở khóa — Tạo tài khoản miễn phí để sử dụng bộ lọc này",
     "spec": {
       "previewBadge": "Preview",
       "previewTitle": "Spec filters",
+      "modeBadge": {
+        "basic": "Cơ bản",
+        "advanced": "Nâng cao"
+      },
       "lockedDescription": "Sign up to unlock this filter.",
       "showAll": "Show all ({count})",
       "showFewer": "Show fewer",
@@ -956,10 +961,42 @@
         }
       },
       "englishTest": {
-        "title": "English test scores",
-        "selectorLabel": "Test",
-        "scoreLabel": "Your score",
-        "scorePlaceholder": "Enter score"
+        "title": "Điểm bài thi tiếng Anh",
+        "selectorLabel": "Tôi có điểm cho",
+        "scoreLabel": "Điểm {label}",
+        "scorePlaceholder": "Nhập điểm",
+        "scoreHint": "Phạm vi: {min}–{max}",
+        "aeas": "AEAS",
+        "idat": "iDAT",
+        "duolingo": "Duolingo",
+        "ielts": "IELTS",
+        "pte": "PTE",
+        "cambridge": "Cambridge"
+      },
+      "tile": {
+        "status": {
+          "open": "Đang tuyển",
+          "limited": "Chỗ có hạn",
+          "waitlist": "Chỉ danh sách chờ",
+          "closed": "Đã đóng"
+        },
+        "sector": {
+          "government": "Công lập",
+          "nonGovernment": "Ngoài công lập",
+          "catholic": "Công giáo"
+        },
+        "accommodation": {
+          "boarding": "Nội trú",
+          "homestay": "Homestay",
+          "both": "Cả hai",
+          "none": "Không có"
+        },
+        "actions": {
+          "bookmark": "Đánh dấu {name}",
+          "bookmarkAdd": "Thêm {name} vào danh sách yêu thích",
+          "bookmarkRemove": "Xóa {name} khỏi danh sách yêu thích",
+          "compare": "Thêm {name} vào so sánh"
+        }
       },
       "sector": {
         "government": "Government",
@@ -1036,18 +1073,22 @@
         "boarding": "Boarding"
       },
       "sort": {
-        "label": "Sort by",
-        "nameAsc": "School name (A–Z)",
-        "nameDesc": "School name (Z–A)",
-        "tuitionLowHigh": "Tuition low–high",
-        "tuitionHighLow": "Tuition high–low",
-        "stateAsc": "State",
-        "enrolmentOpenFirst": "Enrolment status (open first)",
-        "applicationDeadlineAsc": "Application deadline (soonest)",
-        "schoolSizeAsc": "School size (small–large)",
-        "schoolSizeDesc": "School size (large–small)",
-        "internationalPctAsc": "International % (low–high)",
-        "internationalPctDesc": "International % (high–low)"
+        "label": "Sắp xếp theo",
+        "nameAsc": "Tên trường (A–Z)",
+        "nameDesc": "Tên trường (Z–A)",
+        "tuitionAsc": "Học phí thấp–cao",
+        "tuitionDesc": "Học phí cao–thấp",
+        "state": "Bang",
+        "enrolmentStatus": "Trạng thái tuyển sinh (đang mở trước)",
+        "applicationDeadlineAsc": "Hạn nộp hồ sơ (sớm nhất)",
+        "schoolSizeAsc": "Quy mô trường (nhỏ–lớn)",
+        "schoolSizeDesc": "Quy mô trường (lớn–nhỏ)",
+        "internationalPctAsc": "% học sinh quốc tế (thấp–cao)",
+        "internationalPctDesc": "% học sinh quốc tế (cao–thấp)",
+        "tuitionLowHigh": "Học phí thấp–cao",
+        "tuitionHighLow": "Học phí cao–thấp",
+        "stateAsc": "Bang",
+        "enrolmentOpenFirst": "Trạng thái tuyển sinh (đang mở trước)"
       },
       "topBar": {
         "searchPlaceholder": "Search by school name, city, or suburb",
@@ -1055,10 +1096,10 @@
         "feeReadout": "${min}k – ${max}k"
       },
       "compareBar": {
-        "label": "Compare ({count}/{max})",
-        "remove": "Remove {name}",
-        "cta": "Compare",
-        "capReached": "Compare cap reached"
+        "label": "So sánh ({count}/{max})",
+        "remove": "Xóa {name}",
+        "cta": "So sánh trường",
+        "capReached": "Đã đạt giới hạn so sánh"
       },
       "tileCard": {
         "tuitionFrom": "From ${amount} / year",

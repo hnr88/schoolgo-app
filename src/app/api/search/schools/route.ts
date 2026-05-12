@@ -85,12 +85,9 @@ export async function POST(request: NextRequest) {
   return NextResponse.json({
     data: {
       hits: envelope.hits,
-      query: typedParsed.data.q ?? '',
-      processingTimeMs: 0,
-      limit: envelope.pageSize,
-      offset: (envelope.page - 1) * envelope.pageSize,
-      estimatedTotalHits: envelope.total,
-      totalHits: envelope.total,
+      total: envelope.total,
+      page: envelope.page,
+      pageSize: envelope.pageSize,
     },
     error: null,
   });

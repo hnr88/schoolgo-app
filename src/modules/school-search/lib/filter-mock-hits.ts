@@ -20,7 +20,7 @@ function isAustralianState(value: string): value is AustralianState {
 }
 
 function isSector(value: string): value is Sector {
-  return ['gov', 'non_gov', 'catholic'].includes(value);
+  return ['government', 'non-government', 'catholic'].includes(value);
 }
 
 function isAccommodation(value: string): value is Accommodation {
@@ -29,9 +29,9 @@ function isAccommodation(value: string): value is Accommodation {
 
 function isReligiousAffiliation(value: string): value is ReligiousAffiliation {
   return [
-    'non_denominational', 'anglican', 'baptist', 'lutheran', 'uniting_church',
-    'presbyterian', 'islamic', 'jewish', 'buddhist', 'coptic_orthodox',
-    'greek_orthodox', 'seventh_day_adventist', 'quaker', 'interdenominational_christian',
+    'non-denominational', 'anglican', 'baptist', 'lutheran', 'uniting-church',
+    'presbyterian', 'islamic', 'jewish', 'buddhist', 'coptic-orthodox',
+    'greek-orthodox', 'seventh-day-adventist', 'quaker', 'interdenominational-christian',
   ].includes(value);
 }
 

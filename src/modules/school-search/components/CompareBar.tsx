@@ -1,29 +1,40 @@
 'use client';
 
+import { useMemo } from 'react';
 import { useTranslations } from 'next-intl';
 import { X } from 'lucide-react';
 import { Link } from '@/i18n/navigation';
 import { cn } from '@/lib/utils';
+import { useAuthStore } from '@/modules/auth/stores/use-auth-store';
 import {
   COMPARE_MAX_ADVANCED,
   COMPARE_MAX_BASIC,
 } from '@/modules/school-search/constants/filter-options.constants';
+import { MOCK_SCHOOL_HITS } from '@/modules/school-search/lib/mock-search-response';
 import { useSchoolSearchStore } from '@/modules/school-search/stores/use-school-search-store';
 
 interface CompareBarProps {
-  isAdvanced: boolean;
+  isAdvanced?: boolean;
   schoolNamesById?: Record<string, string>;
   className?: string;
 }
 
 export function CompareBar({
-  isAdvanced,
-  schoolNamesById = {},
+  isAdvanced: isAdvancedProp,
+  schoolNamesById: schoolNamesByIdProp,
   className,
 }: CompareBarProps) {
   const t = useTranslations('SchoolSearch.spec.compareBar');
+  const isAuthenticated = useAuthStore((s) => s.isAuthenticated);
+  const isHydrated = useAuthStore((s) => s.isHydrated);
+  const isAdvanced = isAdvancedProp ?? (isHydrated && isAuthenticated);
   const compareList = useSchoolSearchStore((s) => s.compareList);
   const toggleCompare = useSchoolSearchStore((s) => s.toggleCompare);
+
+  const schoolNamesById = useMemo(() => {
+    if (schoolNamesByIdProp) return schoolNamesByIdProp;
+    return Object.fromEntries(MOCK_SCHOOL_HITS.map((h) => [h.documentId, h.name]));
+  }, [schoolNamesByIdProp]);
 
   if (compareList.length === 0) return null;
 
@@ -65,7 +76,11 @@ export function CompareBar({
         </div>
         <Link
           href={compareHref}
-          className="shrink-0 rounded-pill bg-primary px-4 py-2 text-xs font-semibold text-primary-foreground shadow-1 hover:bg-primary/90"
+          aria-disabled={compareList.length === 0}
+          className={cn(
+            'shrink-0 rounded-pill bg-primary px-4 py-2 text-xs font-semibold text-primary-foreground shadow-1 hover:bg-primary/90',
+            compareList.length === 0 && 'pointer-events-none opacity-50',
+          )}
         >
           {t('cta')}
         </Link>

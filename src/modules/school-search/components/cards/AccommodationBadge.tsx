@@ -5,10 +5,10 @@ import { cn } from '@/lib/utils';
 import type { Accommodation } from '@/modules/school-search/types/filter.types';
 
 const LABEL_KEY_BY_ACCOMMODATION: Record<Accommodation, string> = {
-  boarding: 'accommodation.boarding',
-  homestay: 'accommodation.homestay',
-  both: 'accommodation.both',
-  none: 'accommodation.none',
+  boarding: 'boarding',
+  homestay: 'homestay',
+  both: 'both',
+  none: 'none',
 };
 
 interface AccommodationBadgeProps {
@@ -17,12 +17,12 @@ interface AccommodationBadgeProps {
 }
 
 export function AccommodationBadge({ value, className }: AccommodationBadgeProps) {
-  const t = useTranslations('SchoolSearch.spec');
+  const t = useTranslations('SchoolSearch.spec.tile.accommodation');
   if (value === 'none') return null;
   return (
     <span
       className={cn(
-        'inline-flex items-center rounded-pill bg-emerald-100 px-2 py-0.5 text-caption font-semibold text-emerald-800 ring-1 ring-inset ring-emerald-200',
+        'inline-flex items-center rounded-pill bg-stone-100 px-2 py-0.5 text-caption font-semibold text-stone-700 ring-1 ring-inset ring-stone-200',
         className,
       )}
     >

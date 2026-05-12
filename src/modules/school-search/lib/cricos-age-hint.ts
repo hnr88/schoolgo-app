@@ -22,7 +22,6 @@ const YEAR_LEVEL_BY_AGE: Record<number, EntryYearLevel[]> = {
   15: ['yr9', 'yr10'],
   16: ['yr10', 'yr11'],
   17: ['yr11', 'yr12'],
-  18: ['yr12'],
 };
 
 export interface CricosHint {

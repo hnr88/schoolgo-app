@@ -27,7 +27,9 @@ interface SpecSchoolCardProps {
 }
 
 function asSector(value: string | null | undefined): Sector | null {
-  if (value === 'gov' || value === 'non_gov' || value === 'catholic') return value;
+  if (value === 'government' || value === 'non-government' || value === 'catholic') {
+    return value;
+  }
   return null;
 }
 
