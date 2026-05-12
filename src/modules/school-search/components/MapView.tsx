@@ -6,7 +6,8 @@ import type L from 'leaflet';
 import { useTranslations } from 'next-intl';
 import { Skeleton } from '@/components/ui/skeleton';
 import { cn } from '@/lib/utils';
-import { useSearchWithFilters } from '@/modules/school-search/hooks/useSearchWithFilters';
+import { useTypedSchoolSearch } from '@/modules/school-search/queries/use-school-search.query';
+import { mapStoreToTypedRequest } from '@/modules/school-search/lib/store-to-typed-request';
 import { useMapViewportReporter } from '@/modules/school-search/hooks/useMapViewportReporter';
 import { useGeocodeSearch } from '@/modules/school-search/hooks/useGeocodeSearch';
 import { useStateFilterMapSync } from '@/modules/school-search/hooks/useStateFilterMapSync';
@@ -15,6 +16,10 @@ import { ScrollWheelZoomHandler } from '@/modules/school-search/components/Scrol
 import { useSchoolSearchStore } from '@/modules/school-search/stores/use-school-search-store';
 import type { SchoolHit } from '@/modules/school-search/types/search-api.types';
 import type { MapViewProps } from '@/modules/school-search/types/component.types';
+
+function schoolKey(s: SchoolHit): string {
+  return s.id ?? s.documentId ?? `${s.slug ?? ''}-${s.name}`;
+}
 
 const EMPTY_SCHOOLS: SchoolHit[] = [];
 
@@ -46,7 +51,73 @@ const LeafletMap = dynamic(
 export function MapView({ className, activePortal }: MapViewProps) {
   const [map, setMap] = useState<L.Map | null>(null);
   const resetCount = useSchoolSearchStore((s) => s.resetCount);
-  const { data } = useSearchWithFilters();
+
+  const query = useSchoolSearchStore((s) => s.query);
+  const suburb = useSchoolSearchStore((s) => s.suburb);
+  const postcode = useSchoolSearchStore((s) => s.postcode);
+  const states = useSchoolSearchStore((s) => s.states);
+  const sectors = useSchoolSearchStore((s) => s.sectors);
+  const accommodation = useSchoolSearchStore((s) => s.accommodation);
+  const religiousAffiliations = useSchoolSearchStore((s) => s.religiousAffiliations);
+  const entryYearLevels = useSchoolSearchStore((s) => s.entryYearLevels);
+  const studentAge = useSchoolSearchStore((s) => s.studentAge);
+  const entryTerms = useSchoolSearchStore((s) => s.entryTerms);
+  const programTypes = useSchoolSearchStore((s) => s.programTypes);
+  const atarAvailable = useSchoolSearchStore((s) => s.atarAvailable);
+  const englishLanguageSupport = useSchoolSearchStore((s) => s.englishLanguageSupport);
+  const englishTest = useSchoolSearchStore((s) => s.englishTest);
+  const feeMin = useSchoolSearchStore((s) => s.feeMin);
+  const feeMax = useSchoolSearchStore((s) => s.feeMax);
+  const sortBy = useSchoolSearchStore((s) => s.sortBy);
+
+  const typedRequest = useMemo(
+    () =>
+      mapStoreToTypedRequest({
+        query,
+        suburb,
+        postcode,
+        states,
+        sectors,
+        accommodation,
+        religiousAffiliations,
+        entryYearLevels,
+        studentAge,
+        entryTerms,
+        programTypes,
+        atarAvailable,
+        englishLanguageSupport,
+        englishTest,
+        feeMin,
+        feeMax,
+        sortBy,
+      }),
+    [
+      query,
+      suburb,
+      postcode,
+      states,
+      sectors,
+      accommodation,
+      religiousAffiliations,
+      entryYearLevels,
+      studentAge,
+      entryTerms,
+      programTypes,
+      atarAvailable,
+      englishLanguageSupport,
+      englishTest,
+      feeMin,
+      feeMax,
+      sortBy,
+    ],
+  );
+
+  const mapTypedRequest = useMemo(
+    () => ({ ...typedRequest, pageSize: 100 }),
+    [typedRequest],
+  );
+
+  const { data } = useTypedSchoolSearch(mapTypedRequest);
   const freshSchools = data?.data?.hits ?? EMPTY_SCHOOLS;
   const prevSchoolsRef = useRef<SchoolHit[]>(EMPTY_SCHOOLS);
 
@@ -63,13 +134,13 @@ export function MapView({ className, activePortal }: MapViewProps) {
       return freshSchools;
     }
 
-    const freshIds = new Set(freshSchools.map((s) => s.documentId));
-    const prevIds = new Set(prev.map((s) => s.documentId));
-    const overlapCount = freshSchools.filter((s) => prevIds.has(s.documentId)).length;
+    const freshIds = new Set(freshSchools.map(schoolKey));
+    const prevIds = new Set(prev.map(schoolKey));
+    const overlapCount = freshSchools.filter((s) => prevIds.has(schoolKey(s))).length;
     const overlapRatio = overlapCount / freshSchools.length;
 
     if (overlapRatio > 0.5 && prev.length < 1500) {
-      const retained = prev.filter((s) => !freshIds.has(s.documentId));
+      const retained = prev.filter((s) => !freshIds.has(schoolKey(s)));
       if (retained.length === 0) {
         prevSchoolsRef.current = freshSchools;
         return freshSchools;

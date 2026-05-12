@@ -38,6 +38,20 @@ function createClusterIcon(cluster: { getChildCount: () => number }) {
 
 const AUSTRALIA_BOUNDS = L.latLngBounds([-46, 110], [-8, 160]);
 
+function getSchoolCoords(school: SchoolHit): { lat: number; lng: number } | null {
+  if (school._geo && typeof school._geo.lat === 'number' && typeof school._geo.lng === 'number') {
+    return { lat: school._geo.lat, lng: school._geo.lng };
+  }
+  if (typeof school.lat === 'number' && typeof school.lng === 'number') {
+    return { lat: school.lat, lng: school.lng };
+  }
+  return null;
+}
+
+function getSchoolKey(school: SchoolHit): string {
+  return school.id ?? school.documentId ?? `${school.slug ?? ''}-${school.name}`;
+}
+
 const SchoolMarker = memo(function SchoolMarker({
   school,
   activePortal,
@@ -45,9 +59,9 @@ const SchoolMarker = memo(function SchoolMarker({
   school: SchoolHit;
   activePortal: Portal;
 }) {
-  const geo = school._geo;
-  const lat = geo?.lat ?? 0;
-  const lng = geo?.lng ?? 0;
+  const coords = getSchoolCoords(school);
+  const lat = coords?.lat ?? 0;
+  const lng = coords?.lng ?? 0;
   const position = useMemo<[number, number]>(
     () => [lat, lng],
     [lat, lng],
@@ -90,7 +104,7 @@ const SchoolMarker = memo(function SchoolMarker({
       </Popup>
     </Marker>
   );
-}, (prev, next) => prev.school.documentId === next.school.documentId && prev.activePortal === next.activePortal);
+}, (prev, next) => getSchoolKey(prev.school) === getSchoolKey(next.school) && prev.activePortal === next.activePortal);
 
 interface LeafletMapProps {
   schools: SchoolHit[];
@@ -100,7 +114,7 @@ interface LeafletMapProps {
 
 export function LeafletMap({ schools, onMapReady, activePortal }: LeafletMapProps) {
   const geoSchools = useMemo(
-    () => schools.filter((s) => s._geo != null),
+    () => schools.filter((s) => getSchoolCoords(s) != null),
     [schools],
   );
 
@@ -136,7 +150,7 @@ export function LeafletMap({ schools, onMapReady, activePortal }: LeafletMapProp
         >
           {geoSchools.map((school) => (
             <SchoolMarker
-              key={school.documentId}
+              key={getSchoolKey(school)}
               school={school}
               activePortal={activePortal}
             />
