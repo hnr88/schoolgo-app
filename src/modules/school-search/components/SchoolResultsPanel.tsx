@@ -13,7 +13,7 @@ export function SchoolResultsPanel({ activePortal }: SchoolResultsPanelProps) {
   const { data, isLoading, isFetching, isError } = useSearchWithFilters();
 
   const hits = data?.data?.hits ?? [];
-  const totalHits = data?.data?.estimatedTotalHits ?? 0;
+  const totalHits = data?.data?.total ?? 0;
   const isRefetching = isFetching && !isLoading;
 
   return (

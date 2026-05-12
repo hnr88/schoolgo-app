@@ -10,7 +10,7 @@ import {
   COMPARE_MAX_ADVANCED,
   COMPARE_MAX_BASIC,
 } from '@/modules/school-search/constants/filter-options.constants';
-import { MOCK_SCHOOL_HITS } from '@/modules/school-search/lib/mock-search-response';
+import { useCompareSchools } from '@/modules/school-search/queries/use-compare-schools.query';
 import { useSchoolSearchStore } from '@/modules/school-search/stores/use-school-search-store';
 
 interface CompareBarProps {
@@ -31,11 +31,12 @@ export function CompareBar({
   const isAdvanced = isAdvancedProp ?? (isHydrated && isAuthenticated);
   const compareList = useSchoolSearchStore((s) => s.compareList);
   const toggleCompare = useSchoolSearchStore((s) => s.toggleCompare);
+  const { data: compareData } = useCompareSchools(compareList);
 
   const schoolNamesById = useMemo(() => {
     if (schoolNamesByIdProp) return schoolNamesByIdProp;
-    return Object.fromEntries(MOCK_SCHOOL_HITS.map((h) => [h.documentId, h.name]));
-  }, [schoolNamesByIdProp]);
+    return Object.fromEntries(compareData?.data.map((h) => [h.id, h.name]) ?? []);
+  }, [schoolNamesByIdProp, compareData]);
 
   if (compareList.length === 0) return null;
 

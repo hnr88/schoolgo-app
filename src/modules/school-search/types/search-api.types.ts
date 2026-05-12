@@ -71,12 +71,16 @@ export interface TypedSearchRequest {
 }
 
 export interface SchoolHit {
+  id?: string;
   documentId: string;
   name: string;
   slug: string;
   state: string;
   suburb: string;
   postcode: string;
+  lat?: number;
+  lng?: number;
+  coverImageUrl?: string | null;
   schoolType: string;
   sector: string;
   gender: string;
@@ -121,15 +125,9 @@ export interface FacetStats {
 export interface SearchResponse {
   data: {
     hits: SchoolHit[];
-    query: string;
-    processingTimeMs: number;
-    limit: number;
-    offset: number;
-    estimatedTotalHits: number;
-    totalHits?: number;
-    facetDistribution?: FacetDistribution;
-    facetStats?: FacetStats;
-    filters?: string[];
-    sort?: string[];
+    total: number;
+    page: number;
+    pageSize: number;
   };
+  error: null | { status: number; name?: string; message: string; details?: Record<string, unknown> };
 }

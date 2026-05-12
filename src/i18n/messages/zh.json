@@ -892,13 +892,44 @@
 			"ACT": "澳大利亚首都领地 (ACT)",
 			"NT": "北领地 (NT)"
 		},
+		"autocomplete": {
+			"schoolsHeading": "学校",
+			"suburbsHeading": "郊区和邮编",
+			"loading": "搜索中…",
+			"empty": "无匹配结果"
+		},
+		"saveSearch": {
+			"cta": "保存搜索",
+			"promptTitle": "保存此搜索",
+			"nameLabel": "名称",
+			"namePlaceholder": "例如：布里斯班候选名单",
+			"confirm": "保存",
+			"cancel": "取消",
+			"successToast": "搜索已保存",
+			"errorToast": "无法保存搜索",
+			"signInRequired": "登录以保存搜索"
+		},
+		"savedSearches": {
+			"heading": "已保存的搜索",
+			"empty": "暂无保存的搜索",
+			"applyCta": "应用",
+			"deleteCta": "删除",
+			"signInRequired": "登录以查看已保存的搜索",
+			"lastResultCount": "{count, plural, =0 {无结果} other {# 个结果}}"
+		},
+		"bookmark": {
+			"add": "保存学校",
+			"remove": "从已保存中移除",
+			"signInRequired": "登录以保存学校"
+		},
 		"results": {
 			"title": "可用学校",
 			"count": "{count, plural, one {# 个结果} other {# 个结果}}",
 			"viewAll": "查看所有学校",
 			"searching": "[TODO: zh] Searching…",
 			"error": "[TODO: zh] Something went wrong. Please try again.",
-			"empty": "[TODO: zh] No schools found. Try adjusting your filters."
+			"empty": "[TODO: zh] No schools found. Try adjusting your filters.",
+			"loading": "正在加载学校…"
 		},
 		"map": {
 			"title": "澳大利亚 — 学校地图",
@@ -922,7 +953,8 @@
 		"lockedDescription": "登录以解锁 — 创建免费账户以使用此筛选器",
 		"compare": {
 			"regionLabel": "比较学校",
-			"clearAll": "清除所有比较选择"
+			"clearAll": "清除所有比较选择",
+			"loading": "正在加载比较数据…"
 		},
 		"spec": {
 			"previewBadge": "Preview",

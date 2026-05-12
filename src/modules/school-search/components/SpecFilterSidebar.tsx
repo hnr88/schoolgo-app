@@ -11,6 +11,7 @@ import { EnglishTestFilterGroup } from '@/modules/school-search/components/filte
 import { EnrolmentFilterGroup } from '@/modules/school-search/components/filters/EnrolmentFilterGroup';
 import { LocationFilterGroup } from '@/modules/school-search/components/filters/LocationFilterGroup';
 import { SchoolProfileFilterGroup } from '@/modules/school-search/components/filters/SchoolProfileFilterGroup';
+import { SaveSearchButton } from '@/modules/school-search/components/SaveSearchButton';
 import {
   FEE_MAX,
   FEE_MIN,
@@ -96,6 +97,9 @@ export function SpecFilterSidebar({ className, alwaysOn = false }: SpecFilterSid
           <EnrolmentFilterGroup isAdvanced={isAdvanced} />
           <AcademicFilterGroup isAdvanced={isAdvanced} />
           <EnglishTestFilterGroup isAdvanced={isAdvanced} />
+          <div className="py-4">
+            <SaveSearchButton />
+          </div>
         </div>
       </div>
     </aside>

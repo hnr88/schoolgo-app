@@ -871,13 +871,44 @@
       "ACT": "Australian Capital Territory (ACT)",
       "NT": "Northern Territory (NT)"
     },
+    "autocomplete": {
+      "schoolsHeading": "Schools",
+      "suburbsHeading": "Suburbs & postcodes",
+      "loading": "Searching…",
+      "empty": "No matches"
+    },
+    "saveSearch": {
+      "cta": "Save search",
+      "promptTitle": "Save this search",
+      "nameLabel": "Name",
+      "namePlaceholder": "e.g. Brisbane shortlist",
+      "confirm": "Save",
+      "cancel": "Cancel",
+      "successToast": "Search saved",
+      "errorToast": "Couldn't save search",
+      "signInRequired": "Sign in to save searches"
+    },
+    "savedSearches": {
+      "heading": "Saved searches",
+      "empty": "No saved searches yet",
+      "applyCta": "Apply",
+      "deleteCta": "Delete",
+      "signInRequired": "Sign in to view your saved searches",
+      "lastResultCount": "{count, plural, =0 {No results} one {# result} other {# results}}"
+    },
+    "bookmark": {
+      "add": "Save school",
+      "remove": "Remove from saved",
+      "signInRequired": "Sign in to save schools"
+    },
     "results": {
       "title": "Available Schools",
       "count": "{count, plural, one {# Result} other {# Results}}",
       "viewAll": "View All Schools",
       "searching": "Searching…",
       "error": "Something went wrong. Please try again.",
-      "empty": "No schools found. Try adjusting your filters."
+      "empty": "No schools found. Try adjusting your filters.",
+      "loading": "Loading schools…"
     },
     "map": {
       "title": "Australia — School Map",
@@ -901,7 +932,8 @@
     "lockedDescription": "Sign in to unlock — Create a free account to use this filter",
     "compare": {
       "regionLabel": "Compare schools",
-      "clearAll": "Clear all compare selections"
+      "clearAll": "Clear all compare selections",
+      "loading": "Loading compare data…"
     },
     "spec": {
       "previewBadge": "Preview",

@@ -1,0 +1,143 @@
+'use client';
+
+import { useEffect, useRef } from 'react';
+import Image from 'next/image';
+import { useTranslations } from 'next-intl';
+import { useAutocompleteSchools } from '@/modules/school-search/queries/use-autocomplete-schools.query';
+import { useAutocompleteSuburbs } from '@/modules/school-search/queries/use-autocomplete-suburbs.query';
+import type { AutocompleteSchoolHit } from '@/modules/school-search/types/autocomplete-schools.types';
+import type { AutocompleteSuburbHit } from '@/modules/school-search/types/autocomplete-suburbs.types';
+
+interface SearchAutocompleteDropdownProps {
+  query: string;
+  isOpen: boolean;
+  onSelectSchool: (hit: AutocompleteSchoolHit) => void;
+  onSelectSuburb: (hit: AutocompleteSuburbHit) => void;
+  onClose: () => void;
+}
+
+function getInitials(name: string): string {
+  return name
+    .split(/\s+/)
+    .filter(Boolean)
+    .slice(0, 2)
+    .map((part) => part[0]?.toUpperCase() ?? '')
+    .join('');
+}
+
+export function SearchAutocompleteDropdown({
+  query,
+  isOpen,
+  onSelectSchool,
+  onSelectSuburb,
+  onClose,
+}: SearchAutocompleteDropdownProps) {
+  const t = useTranslations('SchoolSearch');
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  const schoolsQuery = useAutocompleteSchools(query, 6);
+  const suburbsQuery = useAutocompleteSuburbs(query, 5);
+
+  const schools = schoolsQuery.data?.data ?? [];
+  const suburbs = suburbsQuery.data?.data ?? [];
+  const isLoading = schoolsQuery.isPending && suburbsQuery.isPending;
+  const isEmpty = !isLoading && schools.length === 0 && suburbs.length === 0;
+
+  useEffect(() => {
+    if (!isOpen) return;
+    const handler = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') onClose();
+    };
+    document.addEventListener('keydown', handler);
+    return () => document.removeEventListener('keydown', handler);
+  }, [isOpen, onClose]);
+
+  if (!isOpen || query.trim().length === 0) return null;
+
+  return (
+    <div
+      ref={containerRef}
+      role='listbox'
+      aria-label={t('searchPlaceholder')}
+      className='absolute left-0 right-0 top-full z-20 mt-2 max-h-80 overflow-y-auto rounded-xl border border-border bg-card p-2 shadow-3'
+    >
+      {isLoading && (
+        <div role='status' className='px-3 py-2 text-sm text-muted-foreground'>
+          {t('autocomplete.loading')}
+        </div>
+      )}
+
+      {isEmpty && (
+        <div role='status' className='px-3 py-2 text-sm text-muted-foreground'>
+          {t('autocomplete.empty')}
+        </div>
+      )}
+
+      {schools.length > 0 && (
+        <div className='flex flex-col gap-1'>
+          <div className='px-3 pt-2 pb-1 text-xs font-medium uppercase tracking-wide text-muted-foreground'>
+            {t('autocomplete.schoolsHeading')}
+          </div>
+          {schools.map((hit) => (
+            <button
+              key={hit.id}
+              type='button'
+              onClick={() => {
+                onSelectSchool(hit);
+                onClose();
+              }}
+              className='flex items-center gap-3 rounded-lg px-3 py-2 text-left text-sm text-foreground transition-colors hover:bg-muted focus:bg-muted focus:outline-none'
+            >
+              {hit.logoUrl ? (
+                <Image
+                  src={hit.logoUrl}
+                  alt=''
+                  width={24}
+                  height={24}
+                  className='h-6 w-6 shrink-0 rounded-sm object-cover'
+                />
+              ) : (
+                <div
+                  aria-hidden='true'
+                  className='flex h-6 w-6 shrink-0 items-center justify-center rounded-sm bg-muted text-xs font-medium text-muted-foreground'
+                >
+                  {getInitials(hit.name)}
+                </div>
+              )}
+              <span className='flex flex-col'>
+                <span className='font-medium text-foreground'>{hit.name}</span>
+                <span className='text-xs text-muted-foreground'>
+                  {hit.suburb}, {hit.state}
+                </span>
+              </span>
+            </button>
+          ))}
+        </div>
+      )}
+
+      {suburbs.length > 0 && (
+        <div className='mt-2 flex flex-col gap-1'>
+          <div className='px-3 pt-2 pb-1 text-xs font-medium uppercase tracking-wide text-muted-foreground'>
+            {t('autocomplete.suburbsHeading')}
+          </div>
+          {suburbs.map((hit) => (
+            <button
+              key={`${hit.suburb}-${hit.postcode}-${hit.state}`}
+              type='button'
+              onClick={() => {
+                onSelectSuburb(hit);
+                onClose();
+              }}
+              className='flex items-center justify-between gap-3 rounded-lg px-3 py-2 text-left text-sm text-foreground transition-colors hover:bg-muted focus:bg-muted focus:outline-none'
+            >
+              <span className='font-medium text-foreground'>{hit.suburb}</span>
+              <span className='text-xs text-muted-foreground'>
+                {hit.postcode} {hit.state}
+              </span>
+            </button>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}

@@ -5,8 +5,6 @@ import {
   searchRequestSchema,
   typedSearchRequestSchema,
 } from '@/modules/school-search/schemas/search-request.schema';
-import { filterDefaultMockHits } from '@/modules/school-search/lib/filter-mock-hits';
-
 export const dynamic = 'force-dynamic';
 
 const STRAPI_SEARCH_URL = `${env.NEXT_PUBLIC_API_URL}/api/search/schools`;
@@ -86,20 +84,7 @@ export async function POST(request: NextRequest) {
     );
   }
 
-  if (env.SEARCH_BACKEND_MODE === 'proxy') {
-    return proxyToStrapi(typedParsed.data);
-  }
-
-  const envelope = filterDefaultMockHits(typedParsed.data);
-  return NextResponse.json({
-    data: {
-      hits: envelope.hits,
-      total: envelope.total,
-      page: envelope.page,
-      pageSize: envelope.pageSize,
-    },
-    error: null,
-  });
+  return proxyToStrapi(typedParsed.data);
 }
 
 async function proxyToStrapi(parsedData: unknown): Promise<NextResponse> {

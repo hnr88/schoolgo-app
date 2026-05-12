@@ -892,13 +892,44 @@
 			"ACT": "호주 수도 특별구 (ACT)",
 			"NT": "노던 테리토리 (NT)"
 		},
+		"autocomplete": {
+			"schoolsHeading": "학교",
+			"suburbsHeading": "교외 및 우편번호",
+			"loading": "검색 중…",
+			"empty": "결과 없음"
+		},
+		"saveSearch": {
+			"cta": "검색 저장",
+			"promptTitle": "이 검색 저장",
+			"nameLabel": "이름",
+			"namePlaceholder": "예: 브리즈번 후보 목록",
+			"confirm": "저장",
+			"cancel": "취소",
+			"successToast": "검색이 저장되었습니다",
+			"errorToast": "검색을 저장할 수 없습니다",
+			"signInRequired": "검색을 저장하려면 로그인하세요"
+		},
+		"savedSearches": {
+			"heading": "저장된 검색",
+			"empty": "저장된 검색이 없습니다",
+			"applyCta": "적용",
+			"deleteCta": "삭제",
+			"signInRequired": "저장된 검색을 보려면 로그인하세요",
+			"lastResultCount": "{count, plural, =0 {결과 없음} other {# 개 결과}}"
+		},
+		"bookmark": {
+			"add": "학교 저장",
+			"remove": "저장 목록에서 제거",
+			"signInRequired": "학교를 저장하려면 로그인하세요"
+		},
 		"results": {
 			"title": "이용 가능한 학교",
 			"count": "{count, plural, one {# 결과} other {# 결과}}",
 			"viewAll": "모든 학교 보기",
 			"searching": "[TODO: ko] Searching…",
 			"error": "[TODO: ko] Something went wrong. Please try again.",
-			"empty": "[TODO: ko] No schools found. Try adjusting your filters."
+			"empty": "[TODO: ko] No schools found. Try adjusting your filters.",
+			"loading": "학교를 불러오는 중…"
 		},
 		"map": {
 			"title": "호주 — 학교 지도",
@@ -922,7 +953,8 @@
 		"lockedDescription": "로그인하여 잠금 해제 — 이 필터를 사용하려면 무료 계정을 만드세요",
 		"compare": {
 			"regionLabel": "학교 비교",
-			"clearAll": "비교 선택 모두 지우기"
+			"clearAll": "비교 선택 모두 지우기",
+			"loading": "비교 데이터를 불러오는 중…"
 		},
 		"spec": {
 			"previewBadge": "Preview",

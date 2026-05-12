@@ -2,12 +2,17 @@
 
 import { useTranslations } from 'next-intl';
 import { Check, GitCompare, Heart } from 'lucide-react';
+import { useAuthStore } from '@/modules/auth/stores/use-auth-store';
 import { cn } from '@/lib/utils';
 import {
   COMPARE_MAX_ADVANCED,
   COMPARE_MAX_BASIC,
 } from '@/modules/school-search/constants/filter-options.constants';
+import { useBookmarks } from '@/modules/school-search/queries/use-bookmarks.query';
+import { useCreateBookmark } from '@/modules/school-search/queries/use-create-bookmark.mutation';
+import { useDeleteBookmark } from '@/modules/school-search/queries/use-delete-bookmark.mutation';
 import { useSchoolSearchStore } from '@/modules/school-search/stores/use-school-search-store';
+import type { SchoolHit } from '@/modules/school-search/types/search-api.types';
 
 interface CardActionsProps {
   schoolId: string;
@@ -25,23 +30,41 @@ export function CardActions({
   className,
 }: CardActionsProps) {
   const tActions = useTranslations('SchoolSearch.spec.tile.actions');
-  const bookmarks = useSchoolSearchStore((s) => s.bookmarks);
-  const toggleBookmark = useSchoolSearchStore((s) => s.toggleBookmark);
+  const isAuthenticated = useAuthStore((s) => s.isAuthenticated);
+  const localBookmarks = useSchoolSearchStore((s) => s.bookmarks);
+  const toggleLocalBookmark = useSchoolSearchStore((s) => s.toggleBookmark);
   const compareList = useSchoolSearchStore((s) => s.compareList);
   const toggleCompare = useSchoolSearchStore((s) => s.toggleCompare);
 
-  const isBookmarked = bookmarks.includes(schoolId);
+  const { data: bookmarksData } = useBookmarks();
+  const createBookmark = useCreateBookmark();
+  const deleteBookmark = useDeleteBookmark();
+
+  const bookmarkedIds = new Set(
+    (bookmarksData?.data ?? [])
+      .map((h: SchoolHit) => h.id ?? h.documentId)
+      .filter((value): value is string => Boolean(value)),
+  );
+  const isBookmarked = isAuthenticated
+    ? bookmarkedIds.has(schoolId)
+    : localBookmarks.includes(schoolId);
   const isInCompare = compareList.includes(schoolId);
   const max = isAdvanced ? COMPARE_MAX_ADVANCED : COMPARE_MAX_BASIC;
+  const isBookmarkPending = createBookmark.isPending || deleteBookmark.isPending;
 
   const handleBookmark = (e: React.MouseEvent) => {
     e.stopPropagation();
     e.preventDefault();
-    if (!isAdvanced) {
+    if (!isAuthenticated) {
       onUnauthenticatedBookmark?.();
+      toggleLocalBookmark(schoolId);
       return;
     }
-    toggleBookmark(schoolId);
+    if (isBookmarked) {
+      deleteBookmark.mutate(schoolId);
+    } else {
+      createBookmark.mutate({ schoolId });
+    }
   };
 
   const handleCompare = (e: React.MouseEvent) => {
@@ -59,10 +82,11 @@ export function CardActions({
       <button
         type="button"
         onClick={handleBookmark}
+        disabled={isBookmarkPending}
         aria-label={bookmarkLabel}
         aria-pressed={isBookmarked}
         className={cn(
-          'flex size-9 items-center justify-center rounded-full border bg-background/90 backdrop-blur transition-colors',
+          'flex size-9 items-center justify-center rounded-full border bg-background/90 backdrop-blur transition-colors disabled:cursor-not-allowed disabled:opacity-60',
           isBookmarked
             ? 'border-rose-300 bg-rose-50 text-rose-500'
             : 'border-border text-muted-foreground hover:bg-muted',

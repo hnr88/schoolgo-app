@@ -2,12 +2,19 @@
 
 import { useSearchParams } from 'next/navigation';
 import { useTranslations } from 'next-intl';
+import { useEffect } from 'react';
 import type { Portal } from '@/lib/portal-url';
 import { cn } from '@/lib/utils';
+import { useAuthStore } from '@/modules/auth';
 import { SortControl } from '@/modules/school-search/components/results/SortControl';
 import { SpecResultsList } from '@/modules/school-search/components/SpecResultsList';
 import { SpecResultsPanelHeader } from '@/modules/school-search/components/SpecResultsPanelHeader';
-import { useFilteredSpecHits } from '@/modules/school-search/hooks/useFilteredSpecHits';
+import {
+  mapStoreToTypedRequest,
+  type SchoolSearchStoreSnapshot,
+} from '@/modules/school-search/lib/store-to-typed-request';
+import { useTypedSchoolSearch } from '@/modules/school-search/queries/use-school-search.query';
+import { useSchoolSearchStore } from '@/modules/school-search/stores/use-school-search-store';
 
 interface SpecResultsPanelProps {
   activePortal: Portal;
@@ -25,7 +32,60 @@ export function SpecResultsPanel({
   const t = useTranslations('SchoolSearch');
   const searchParams = useSearchParams();
   const isActive = alwaysOn || searchParams.get('preview') === 'spec';
-  const { hits, isAdvanced } = useFilteredSpecHits(isActive);
+
+  const isAuthenticated = useAuthStore((s) => s.isAuthenticated);
+  const isHydrated = useAuthStore((s) => s.isHydrated);
+  const isAdvanced = isHydrated && isAuthenticated;
+
+  const query = useSchoolSearchStore((s) => s.query);
+  const suburb = useSchoolSearchStore((s) => s.suburb);
+  const postcode = useSchoolSearchStore((s) => s.postcode);
+  const states = useSchoolSearchStore((s) => s.states);
+  const sectors = useSchoolSearchStore((s) => s.sectors);
+  const accommodation = useSchoolSearchStore((s) => s.accommodation);
+  const religiousAffiliations = useSchoolSearchStore((s) => s.religiousAffiliations);
+  const entryYearLevels = useSchoolSearchStore((s) => s.entryYearLevels);
+  const studentAge = useSchoolSearchStore((s) => s.studentAge);
+  const entryTerms = useSchoolSearchStore((s) => s.entryTerms);
+  const programTypes = useSchoolSearchStore((s) => s.programTypes);
+  const atarAvailable = useSchoolSearchStore((s) => s.atarAvailable);
+  const englishLanguageSupport = useSchoolSearchStore((s) => s.englishLanguageSupport);
+  const englishTest = useSchoolSearchStore((s) => s.englishTest);
+  const feeMin = useSchoolSearchStore((s) => s.feeMin);
+  const feeMax = useSchoolSearchStore((s) => s.feeMax);
+  const sortBy = useSchoolSearchStore((s) => s.sortBy);
+
+  const snapshot: SchoolSearchStoreSnapshot = {
+    query,
+    suburb,
+    postcode,
+    states,
+    sectors,
+    accommodation,
+    religiousAffiliations,
+    entryYearLevels,
+    studentAge,
+    entryTerms,
+    programTypes,
+    atarAvailable,
+    englishLanguageSupport,
+    englishTest,
+    feeMin,
+    feeMax,
+    sortBy,
+  };
+
+  const typedRequest = mapStoreToTypedRequest(snapshot);
+  const { data, error } = useTypedSchoolSearch(typedRequest);
+
+  useEffect(() => {
+    if (error) {
+      console.error('[SpecResultsPanel] search failed', error);
+    }
+  }, [error]);
+
+  const hits = data?.data.hits ?? [];
+  const count = data?.data.total ?? 0;
 
   if (!isActive) return null;
 
@@ -38,7 +98,7 @@ export function SpecResultsPanel({
         )}
         data-testid="spec-results-panel"
       >
-        <SpecResultsPanelHeader count={hits.length} />
+        <SpecResultsPanelHeader count={count} />
         <div className="flex shrink-0 items-center justify-end gap-2 px-3">
           <SortControl isAdvanced={isAdvanced} />
         </div>
@@ -59,7 +119,7 @@ export function SpecResultsPanel({
     >
       <div className="flex items-center justify-between gap-3 px-1">
         <span className="text-xs font-semibold text-muted-foreground">
-          {t('results.count', { count: hits.length })}
+          {t('results.count', { count })}
         </span>
         <SortControl isAdvanced={isAdvanced} />
       </div>

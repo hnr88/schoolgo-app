@@ -45,9 +45,12 @@ const SchoolMarker = memo(function SchoolMarker({
   school: SchoolHit;
   activePortal: Portal;
 }) {
+  const geo = school._geo;
+  const lat = geo?.lat ?? 0;
+  const lng = geo?.lng ?? 0;
   const position = useMemo<[number, number]>(
-    () => [school._geo!.lat, school._geo!.lng],
-    [school._geo!.lat, school._geo!.lng],
+    () => [lat, lng],
+    [lat, lng],
   );
 
   return (

@@ -892,13 +892,44 @@
 			"ACT": "Lãnh Thổ Thủ Đô Úc (ACT)",
 			"NT": "Lãnh Thổ Bắc Úc (NT)"
 		},
+		"autocomplete": {
+			"schoolsHeading": "Trường học",
+			"suburbsHeading": "Vùng ngoại ô & mã bưu chính",
+			"loading": "Đang tìm kiếm…",
+			"empty": "Không có kết quả"
+		},
+		"saveSearch": {
+			"cta": "Lưu tìm kiếm",
+			"promptTitle": "Lưu tìm kiếm này",
+			"nameLabel": "Tên",
+			"namePlaceholder": "vd. Danh sách ngắn Brisbane",
+			"confirm": "Lưu",
+			"cancel": "Hủy",
+			"successToast": "Đã lưu tìm kiếm",
+			"errorToast": "Không thể lưu tìm kiếm",
+			"signInRequired": "Đăng nhập để lưu tìm kiếm"
+		},
+		"savedSearches": {
+			"heading": "Tìm kiếm đã lưu",
+			"empty": "Chưa có tìm kiếm nào được lưu",
+			"applyCta": "Áp dụng",
+			"deleteCta": "Xóa",
+			"signInRequired": "Đăng nhập để xem tìm kiếm đã lưu",
+			"lastResultCount": "{count, plural, =0 {Không có kết quả} other {# kết quả}}"
+		},
+		"bookmark": {
+			"add": "Lưu trường học",
+			"remove": "Xóa khỏi danh sách đã lưu",
+			"signInRequired": "Đăng nhập để lưu trường học"
+		},
 		"results": {
 			"title": "Trường Có Sẵn",
 			"count": "{count, plural, one {# Kết Quả} other {# Kết Quả}}",
 			"viewAll": "Xem Tất Cả Trường",
 			"searching": "[TODO: vi] Searching…",
 			"error": "[TODO: vi] Something went wrong. Please try again.",
-			"empty": "[TODO: vi] No schools found. Try adjusting your filters."
+			"empty": "[TODO: vi] No schools found. Try adjusting your filters.",
+			"loading": "Đang tải trường học…"
 		},
 		"map": {
 			"title": "Úc — Bản Đồ Trường Học",
@@ -922,7 +953,8 @@
 		"lockedDescription": "Đăng nhập để mở khóa — Tạo tài khoản miễn phí để sử dụng bộ lọc này",
 		"compare": {
 			"regionLabel": "So sánh trường học",
-			"clearAll": "Xóa tất cả lựa chọn so sánh"
+			"clearAll": "Xóa tất cả lựa chọn so sánh",
+			"loading": "Đang tải dữ liệu so sánh…"
 		},
 		"spec": {
 			"previewBadge": "Preview",

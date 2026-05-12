@@ -892,13 +892,44 @@
 			"ACT": "เขตเมืองหลวงออสเตรเลีย (ACT)",
 			"NT": "นอร์เทิร์นเทร์ริทอรี (NT)"
 		},
+		"autocomplete": {
+			"schoolsHeading": "โรงเรียน",
+			"suburbsHeading": "ย่านและรหัสไปรษณีย์",
+			"loading": "กำลังค้นหา…",
+			"empty": "ไม่พบผลลัพธ์"
+		},
+		"saveSearch": {
+			"cta": "บันทึกการค้นหา",
+			"promptTitle": "บันทึกการค้นหานี้",
+			"nameLabel": "ชื่อ",
+			"namePlaceholder": "เช่น รายชื่อโรงเรียนที่ Brisbane",
+			"confirm": "บันทึก",
+			"cancel": "ยกเลิก",
+			"successToast": "บันทึกการค้นหาแล้ว",
+			"errorToast": "ไม่สามารถบันทึกการค้นหาได้",
+			"signInRequired": "เข้าสู่ระบบเพื่อบันทึกการค้นหา"
+		},
+		"savedSearches": {
+			"heading": "การค้นหาที่บันทึกไว้",
+			"empty": "ยังไม่มีการค้นหาที่บันทึกไว้",
+			"applyCta": "ใช้งาน",
+			"deleteCta": "ลบ",
+			"signInRequired": "เข้าสู่ระบบเพื่อดูการค้นหาที่บันทึกไว้",
+			"lastResultCount": "{count, plural, =0 {ไม่พบผลลัพธ์} other {# ผลลัพธ์}}"
+		},
+		"bookmark": {
+			"add": "บันทึกโรงเรียน",
+			"remove": "นำออกจากที่บันทึกไว้",
+			"signInRequired": "เข้าสู่ระบบเพื่อบันทึกโรงเรียน"
+		},
 		"results": {
 			"title": "โรงเรียนที่มีอยู่",
 			"count": "{count, plural, one {# ผลลัพธ์} other {# ผลลัพธ์}}",
 			"viewAll": "ดูโรงเรียนทั้งหมด",
 			"searching": "[TODO: th] Searching…",
 			"error": "[TODO: th] Something went wrong. Please try again.",
-			"empty": "[TODO: th] No schools found. Try adjusting your filters."
+			"empty": "[TODO: th] No schools found. Try adjusting your filters.",
+			"loading": "กำลังโหลดโรงเรียน…"
 		},
 		"map": {
 			"title": "ออสเตรเลีย — แผนที่โรงเรียน",
@@ -922,7 +953,8 @@
 		"lockedDescription": "เข้าสู่ระบบเพื่อปลดล็อก — สร้างบัญชีฟรีเพื่อใช้ตัวกรองนี้",
 		"compare": {
 			"regionLabel": "เปรียบเทียบโรงเรียน",
-			"clearAll": "ล้างการเลือกเปรียบเทียบทั้งหมด"
+			"clearAll": "ล้างการเลือกเปรียบเทียบทั้งหมด",
+			"loading": "กำลังโหลดข้อมูลเปรียบเทียบ…"
 		},
 		"spec": {
 			"previewBadge": "Preview",

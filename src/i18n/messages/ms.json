@@ -892,13 +892,44 @@
 			"ACT": "Australian Capital Territory (ACT)",
 			"NT": "Northern Territory (NT)"
 		},
+		"autocomplete": {
+			"schoolsHeading": "Sekolah",
+			"suburbsHeading": "Kawasan & poskod",
+			"loading": "Mencari…",
+			"empty": "Tiada padanan"
+		},
+		"saveSearch": {
+			"cta": "Simpan carian",
+			"promptTitle": "Simpan carian ini",
+			"nameLabel": "Nama",
+			"namePlaceholder": "cth. Senarai pendek Brisbane",
+			"confirm": "Simpan",
+			"cancel": "Batal",
+			"successToast": "Carian disimpan",
+			"errorToast": "Tidak dapat menyimpan carian",
+			"signInRequired": "Log masuk untuk menyimpan carian"
+		},
+		"savedSearches": {
+			"heading": "Carian tersimpan",
+			"empty": "Tiada carian tersimpan lagi",
+			"applyCta": "Guna",
+			"deleteCta": "Padam",
+			"signInRequired": "Log masuk untuk melihat carian tersimpan anda",
+			"lastResultCount": "{count, plural, =0 {Tiada keputusan} other {# keputusan}}"
+		},
+		"bookmark": {
+			"add": "Simpan sekolah",
+			"remove": "Buang daripada tersimpan",
+			"signInRequired": "Log masuk untuk menyimpan sekolah"
+		},
 		"results": {
 			"title": "Sekolah Tersedia",
 			"count": "{count, plural, one {# Keputusan} other {# Keputusan}}",
 			"viewAll": "Lihat Semua Sekolah",
 			"searching": "[TODO: ms] Searching…",
 			"error": "[TODO: ms] Something went wrong. Please try again.",
-			"empty": "[TODO: ms] No schools found. Try adjusting your filters."
+			"empty": "[TODO: ms] No schools found. Try adjusting your filters.",
+			"loading": "Memuatkan sekolah…"
 		},
 		"map": {
 			"title": "Australia — Peta Sekolah",
@@ -922,7 +953,8 @@
 		"lockedDescription": "Log masuk untuk membuka kunci — Cipta akaun percuma untuk menggunakan penapis ini",
 		"compare": {
 			"regionLabel": "Bandingkan sekolah",
-			"clearAll": "Kosongkan semua pilihan perbandingan"
+			"clearAll": "Kosongkan semua pilihan perbandingan",
+			"loading": "Memuatkan data perbandingan…"
 		},
 		"spec": {
 			"previewBadge": "Preview",
