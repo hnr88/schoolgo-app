@@ -3,6 +3,8 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import dynamic from 'next/dynamic';
 import type L from 'leaflet';
+import { useTranslations } from 'next-intl';
+import { Skeleton } from '@/components/ui/skeleton';
 import { cn } from '@/lib/utils';
 import { useSearchWithFilters } from '@/modules/school-search/hooks/useSearchWithFilters';
 import { useMapViewportReporter } from '@/modules/school-search/hooks/useMapViewportReporter';
@@ -16,6 +18,20 @@ import type { MapViewProps } from '@/modules/school-search/types/component.types
 
 const EMPTY_SCHOOLS: SchoolHit[] = [];
 
+function MapLoadingFallback() {
+  const t = useTranslations('SchoolSearch.map');
+  return (
+    <Skeleton className='flex h-full w-full items-center justify-center rounded-lg'>
+      <span
+        className='text-caption font-semibold uppercase text-foggy'
+        style={{ letterSpacing: '0.08em' }}
+      >
+        {t('loading')}
+      </span>
+    </Skeleton>
+  );
+}
+
 const LeafletMap = dynamic(
   () =>
     import('@/modules/school-search/components/LeafletMap').then(
@@ -23,16 +39,7 @@ const LeafletMap = dynamic(
     ),
   {
     ssr: false,
-    loading: () => (
-      <div className='flex h-full w-full items-center justify-center rounded-lg bg-muted'>
-        <span
-          className='animate-pulse text-caption font-semibold uppercase text-foggy'
-          style={{ letterSpacing: '0.08em' }}
-        >
-          Loading map…
-        </span>
-      </div>
-    ),
+    loading: () => <MapLoadingFallback />,
   },
 );
 

@@ -11,11 +11,13 @@ export async function ParentsHero() {
   const featuredSchools = await getFeaturedSchools();
 
   return (
-    <section className='relative overflow-hidden pb-16 pt-28 md:pb-24 md:pt-40'>
+    <section id='main-content' className='relative overflow-hidden pb-16 pt-28 md:pb-24 md:pt-40'>
       <div className='pointer-events-none absolute inset-0' aria-hidden='true'>
+        {/* arbitrary value: hero ambient blob, no token */}
         <div className='absolute -right-24 -top-24 h-[800px] w-[800px] rounded-full bg-rausch-100 opacity-30 blur-[140px]' />
+        {/* arbitrary value: hero ambient blob, no token */}
         <div className='absolute -left-32 top-[60%] h-[600px] w-[600px] rounded-full bg-rausch-200 opacity-20 blur-[120px]' />
-        <svg className='absolute inset-0 h-full w-full opacity-[0.07]'>
+        <svg className='absolute inset-0 h-full w-full opacity-5'>
           <defs>
             <pattern id='parents-waves' width='120' height='20' patternUnits='userSpaceOnUse' patternTransform='rotate(-5)'>
               <path d='M0 10 Q30 0 60 10 Q90 20 120 10' fill='none' stroke='currentColor' strokeWidth='0.75' />
@@ -34,9 +36,9 @@ export async function ParentsHero() {
             <span className='hidden text-babu-700/70 sm:inline'>{t('trustPill.source')}</span>
           </span>
 
-          <h1 className='font-display text-5xl font-extrabold leading-[1.02] tracking-[-0.03em] text-ink-900 md:text-7xl lg:text-[5.5rem]'>
+          <h1 className='font-display text-5xl font-extrabold leading-display-xl tracking-display-lg text-ink-900 md:text-7xl lg:text-8xl'>
             {t('headlinePrefix')}{' '}
-            <em className='italic font-medium text-foggy'>{t('headlineEmphasis')}</em>{' '}
+            <em className='italic font-medium text-ink-900'>{t('headlineEmphasis')}</em>{' '}
             {t('headlineSuffix')}
           </h1>
 

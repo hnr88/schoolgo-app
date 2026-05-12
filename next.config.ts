@@ -1,5 +1,6 @@
 import type { NextConfig } from 'next';
 import createNextIntlPlugin from 'next-intl/plugin';
+import { env } from './src/lib/env';
 
 const withNextIntl = createNextIntlPlugin('./src/i18n/request.ts');
 
@@ -20,11 +21,10 @@ const nextConfig: NextConfig = {
     ],
   },
   async rewrites() {
-    const apiUrl = process.env.NEXT_PUBLIC_API_URL ?? 'http://localhost:5110';
     return [
       {
         source: '/api/:path*',
-        destination: `${apiUrl}/api/:path*`,
+        destination: `${env.NEXT_PUBLIC_API_URL}/api/:path*`,
       },
     ];
   },

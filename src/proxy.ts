@@ -23,11 +23,38 @@ function resolvePortal(hostname: string): 'agent' | 'school' | 'parent' {
   return 'parent';
 }
 
+const SECURITY_HEADERS: Readonly<Record<string, string>> = {
+  'X-Content-Type-Options': 'nosniff',
+  'X-Frame-Options': 'SAMEORIGIN',
+  'Referrer-Policy': 'strict-origin-when-cross-origin',
+  'Strict-Transport-Security': 'max-age=63072000; includeSubDomains; preload',
+};
+
+function withSecurityHeaders(response: NextResponse): NextResponse {
+  for (const [key, value] of Object.entries(SECURITY_HEADERS)) {
+    response.headers.set(key, value);
+  }
+  return response;
+}
+
 function withRobotsHeader(response: NextResponse, hostname: string): NextResponse {
   if (isNonIndexableHost(hostname)) {
     response.headers.set('X-Robots-Tag', 'noindex, nofollow, noarchive');
   }
-  return response;
+  return withSecurityHeaders(response);
+}
+
+const KNOWN_HOSTS = new Set<string>(
+  [agentHost, schoolHost, extractHost(env.NEXT_PUBLIC_PARENT_URL)].filter(
+    (h): h is string => h !== null,
+  ),
+);
+
+function isTrustedHost(hostname: string): boolean {
+  if (KNOWN_HOSTS.size === 0) return true;
+  if (KNOWN_HOSTS.has(hostname)) return true;
+  if (hostname.endsWith('.localhost') || hostname === 'localhost') return true;
+  return false;
 }
 
 const COUNTRY_TO_LOCALE: Record<string, string> = {
@@ -68,10 +95,10 @@ function detectLocale(request: NextRequest): string {
 }
 
 export function proxy(request: NextRequest) {
-  const rawHost =
-    request.headers.get('x-forwarded-host') ??
-    request.headers.get('host') ??
-    '';
+  const forwardedHost = request.headers.get('x-forwarded-host');
+  const rawHost = (forwardedHost && isTrustedHost(forwardedHost.split(':')[0]))
+    ? forwardedHost
+    : request.headers.get('host') ?? '';
   const hostname = rawHost.split(':')[0];
   const portal = resolvePortal(hostname);
 

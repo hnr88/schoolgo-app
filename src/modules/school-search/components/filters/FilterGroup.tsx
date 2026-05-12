@@ -43,7 +43,7 @@ export function FilterGroup({
             'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring',
           )}
         >
-          {open ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
+          {open ? <ChevronUp size={14} aria-hidden /> : <ChevronDown size={14} aria-hidden />}
         </CollapsibleTrigger>
       </div>
       <CollapsibleContent className="pb-3">

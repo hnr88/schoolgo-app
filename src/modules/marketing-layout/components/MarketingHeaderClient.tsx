@@ -2,7 +2,8 @@
 
 import { useCallback, useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
-import { usePathname } from 'next/navigation';
+import { useTranslations } from 'next-intl';
+import { usePathname } from '@/i18n/navigation';
 import { Menu, X } from 'lucide-react';
 import { Link } from '@/i18n/navigation';
 import { LanguageSelector } from '@/modules/layout/components/LanguageSelector';
@@ -19,6 +20,7 @@ export function MarketingHeaderClient({
   fullWidth = false,
   labels,
 }: MarketingHeaderClientProps) {
+  const t = useTranslations('Common');
   const pathname = usePathname();
   const isSearchPage = pathname.endsWith('/search');
   const isDark = variant === 'dark';
@@ -141,7 +143,7 @@ export function MarketingHeaderClient({
             />
           </a>
 
-          <nav className='hidden items-center gap-1 md:flex'>
+          <nav aria-label={t('primaryNavigation')} className='hidden items-center gap-1 md:flex'>
             {navLinks.map((link) => {
               const isActive = activeHash === link.href;
               return (
@@ -195,7 +197,7 @@ export function MarketingHeaderClient({
             onClick={() => setMobileOpen(true)}
             aria-label={labels.openMenu}
             className={cn(
-              'ml-auto flex h-9 w-9 shrink-0 items-center justify-center rounded-pill md:hidden',
+              'ml-auto flex h-10 w-10 shrink-0 items-center justify-center rounded-pill md:hidden',
               isDark && !scrolled
                 ? 'text-white hover:bg-white/10'
                 : 'text-foreground hover:bg-muted',

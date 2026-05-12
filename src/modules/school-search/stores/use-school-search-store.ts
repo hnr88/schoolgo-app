@@ -28,46 +28,36 @@ interface MapBounds {
 }
 
 interface SchoolSearchState {
-  // free-text + location
   query: string;
   suburb: string;
   postcode: string;
 
-  // fee range (canonical, top-bar slider writes here)
   feeMin: number;
   feeMax: number;
 
-  // Group 1 — Location
   states: AustralianState[];
 
-  // Group 2 — School profile
   sectors: Sector[];
   accommodation: Accommodation[];
   religiousAffiliations: ReligiousAffiliation[];
 
-  // Group 3 — Enrolment & entry
   entryYearLevels: EntryYearLevel[];
   studentAge: number | null;
   entryTerms: EntryTerm[];
 
-  // Group 4 — Academic
   programTypes: ProgramType[];
   atarAvailable: boolean;
   englishLanguageSupport: boolean;
 
-  // Group 5 — English test scores
   englishTest: EnglishTestScore | null;
 
-  // Top-bar quick chips (mirror multiple groups)
   quickChips: QuickChipId[];
   gender: Gender[];
 
-  // Sort + selection
   sortBy: SortOption;
   compareList: string[];
   bookmarks: string[];
 
-  // Legacy / map runtime state (used by existing map code; slated for cleanup)
   /** @deprecated alias for feeMin — remove in cleanup slice */
   priceMin: number;
   /** @deprecated alias for feeMax — remove in cleanup slice */
@@ -82,7 +72,6 @@ interface SchoolSearchState {
   geocodedQuery: string;
   resetCount: number;
 
-  // Setters — canonical
   setQuery: (q: string) => void;
   setSuburb: (suburb: string) => void;
   setPostcode: (postcode: string) => void;
@@ -108,7 +97,6 @@ interface SchoolSearchState {
   toggleQuickChip: (id: QuickChipId) => void;
   toggleGender: (g: Gender) => void;
 
-  // Legacy setters
   /** @deprecated use setFeeRange */
   setPriceRange: (min: number, max: number) => void;
   /** @deprecated curriculum no longer a filter */
@@ -152,7 +140,6 @@ const initialState = {
   compareList: [] as string[],
   bookmarks: [] as string[],
 
-  // Legacy mirrors
   priceMin: FEE_MIN,
   priceMax: FEE_MAX,
   curricula: [] as Curriculum[],

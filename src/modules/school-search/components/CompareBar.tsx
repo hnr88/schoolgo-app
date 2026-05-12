@@ -5,7 +5,7 @@ import { useTranslations } from 'next-intl';
 import { X } from 'lucide-react';
 import { Link } from '@/i18n/navigation';
 import { cn } from '@/lib/utils';
-import { useAuthStore } from '@/modules/auth/stores/use-auth-store';
+import { useAuthStore } from '@/modules/auth';
 import {
   COMPARE_MAX_ADVANCED,
   COMPARE_MAX_BASIC,
@@ -25,6 +25,7 @@ export function CompareBar({
   className,
 }: CompareBarProps) {
   const t = useTranslations('SchoolSearch.spec.compareBar');
+  const tCompare = useTranslations('SchoolSearch.compare');
   const isAuthenticated = useAuthStore((s) => s.isAuthenticated);
   const isHydrated = useAuthStore((s) => s.isHydrated);
   const isAdvanced = isAdvancedProp ?? (isHydrated && isAuthenticated);
@@ -41,10 +42,16 @@ export function CompareBar({
   const max = isAdvanced ? COMPARE_MAX_ADVANCED : COMPARE_MAX_BASIC;
   const compareHref = `/compare?ids=${compareList.join(',')}`;
 
+  const handleClearAll = () => {
+    useSchoolSearchStore.setState({ compareList: [] });
+  };
+
   return (
     <div
+      role="region"
+      aria-label={tCompare('regionLabel')}
       className={cn(
-        'fixed inset-x-0 bottom-0 z-30 border-t border-border bg-card/95 backdrop-blur',
+        'fixed inset-x-0 bottom-0 z-30 border-t border-border bg-card shadow-3 animate-in slide-in-from-bottom duration-300',
         className,
       )}
       data-testid="spec-compare-bar"
@@ -68,22 +75,32 @@ export function CompareBar({
                   aria-label={t('remove', { name })}
                   className="text-muted-foreground hover:text-foreground"
                 >
-                  <X size={12} />
+                  <X size={12} aria-hidden />
                 </button>
               </span>
             );
           })}
         </div>
-        <Link
-          href={compareHref}
-          aria-disabled={compareList.length === 0}
-          className={cn(
-            'shrink-0 rounded-pill bg-primary px-4 py-2 text-xs font-semibold text-primary-foreground shadow-1 hover:bg-primary/90',
-            compareList.length === 0 && 'pointer-events-none opacity-50',
-          )}
-        >
-          {t('cta')}
-        </Link>
+        <div className="flex shrink-0 items-center gap-2">
+          <Link
+            href={compareHref}
+            aria-disabled={compareList.length === 0}
+            className={cn(
+              'shrink-0 rounded-pill bg-primary px-4 py-2 text-xs font-semibold text-primary-foreground shadow-1 hover:bg-primary/90',
+              compareList.length === 0 && 'pointer-events-none opacity-50',
+            )}
+          >
+            {t('cta')}
+          </Link>
+          <button
+            type="button"
+            onClick={handleClearAll}
+            aria-label={tCompare('clearAll')}
+            className="inline-flex h-8 w-8 items-center justify-center rounded-full text-muted-foreground hover:bg-muted hover:text-foreground"
+          >
+            <X size={16} aria-hidden />
+          </button>
+        </div>
       </div>
     </div>
   );

@@ -11,7 +11,9 @@
     "claimedBySchool": "Claimed by school",
     "addToShortlist": "Add to shortlist",
     "removeFromShortlist": "Remove from shortlist",
-    "comingSoon": "Coming soon"
+    "comingSoon": "Coming soon",
+    "skipToContent": "Skip to content",
+    "primaryNavigation": "Primary navigation"
   },
   "ParentsMetadata": {
     "title": "SchoolGo — Give your child the best Australian education",
@@ -166,6 +168,7 @@
       }
     },
     "searchButtonLabel": "Search",
+    "searchClearLabel": "Clear search",
     "featured": {
       "eyebrow": "Featured",
       "shortlistAdd": "Add {name} to shortlist",
@@ -843,6 +846,7 @@
       "curriculum": "Curriculum",
       "location": "Location",
       "resetFilters": "Reset Filters",
+      "resetAll": "Reset all",
       "locked": {
         "title": "Unlock this filter",
         "cta": "Create free account"
@@ -880,7 +884,8 @@
       "reset": "Reset filters and map",
       "zoomIn": "Zoom in",
       "zoomOut": "Zoom out",
-      "ctrlScrollHint": "Use Ctrl + scroll to zoom the map"
+      "ctrlScrollHint": "Use Ctrl + scroll to zoom the map",
+      "loading": "Loading map…"
     },
     "card": {
       "currency": "AUD",
@@ -890,9 +895,14 @@
     "loginPrompt": {
       "title": "Unlock full search",
       "subtitle": "Sign in to access detailed filters, save schools, and compare programs.",
-      "signIn": "Sign in to continue"
+      "signIn": "Sign in to continue",
+      "signUp": "Sign up"
     },
     "lockedDescription": "Sign in to unlock — Create a free account to use this filter",
+    "compare": {
+      "regionLabel": "Compare schools",
+      "clearAll": "Clear all compare selections"
+    },
     "spec": {
       "previewBadge": "Preview",
       "previewTitle": "Spec filters",
@@ -901,8 +911,11 @@
         "advanced": "Advanced"
       },
       "lockedDescription": "Sign up to unlock this filter.",
-      "showAll": "Show all ({count})",
       "showFewer": "Show fewer",
+      "stepper": {
+        "decrease": "{label} decrease",
+        "increase": "{label} increase"
+      },
       "location": {
         "title": "Location",
         "stateLabel": "State or territory",
@@ -998,7 +1011,9 @@
         "greekOrthodox": "Greek Orthodox",
         "seventhDayAdventist": "Seventh-day Adventist",
         "quaker": "Quaker",
-        "interdenominationalChristian": "Interdenominational Christian"
+        "interdenominationalChristian": "Interdenominational Christian",
+        "showMore": "Show all ({count})",
+        "showLess": "Show less"
       },
       "yearLevel": {
         "gr4": "Gr 4",
@@ -1045,7 +1060,8 @@
         "coEd": "Co-ed",
         "primary": "Primary",
         "secondary": "Secondary",
-        "boarding": "Boarding"
+        "boarding": "Boarding",
+        "groupAriaLabel": "Quick filters"
       },
       "sort": {
         "label": "Sort by",

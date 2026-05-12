@@ -49,11 +49,19 @@ export function SchoolResultsPanel({ activePortal }: SchoolResultsPanelProps) {
                 key={i}
                 className='flex flex-col overflow-hidden rounded-xl border border-border bg-card shadow-2'
               >
-                <Skeleton className='aspect-[4/3] w-full rounded-none' />
+                <Skeleton className='aspect-[16/10] w-full rounded-none' />
                 <div className='flex flex-col gap-2 p-4'>
                   <Skeleton className='h-4 w-3/4' />
                   <Skeleton className='h-3 w-1/2' />
-                  <Skeleton className='h-3 w-1/3' />
+                  <div className='flex flex-wrap gap-1.5'>
+                    <Skeleton className='h-4 w-12 rounded-pill' />
+                    <Skeleton className='h-4 w-14 rounded-pill' />
+                    <Skeleton className='h-4 w-10 rounded-pill' />
+                  </div>
+                  <div className='flex items-center justify-between'>
+                    <Skeleton className='h-3 w-16' />
+                    <Skeleton className='h-3 w-20' />
+                  </div>
                 </div>
               </div>
             ))}

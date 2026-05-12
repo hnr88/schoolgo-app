@@ -1,1508 +1,1524 @@
 {
-  "Metadata": {
-    "title": "SchoolGo Australia | Cari Sekolah Terbaik",
-    "description": "Cari dan bandingkan sekolah terbaik di seluruh Australia. Tapis mengikut kurikulum, harga, lokasi dan lain-lain.",
-    "ogDescription": "Cari dan bandingkan sekolah terbaik di seluruh Australia."
-  },
-  "Common": {
-    "step": "Step {number, number}",
-    "cricosVerified": "CRICOS Verified",
-    "qeacVerified": "QEAC Verified",
-    "claimedBySchool": "Claimed by school",
-    "addToShortlist": "Add to shortlist",
-    "removeFromShortlist": "Remove from shortlist",
-    "comingSoon": "Coming soon"
-  },
-  "ParentsMetadata": {
-    "title": "SchoolGo — Cari sekolah Australia untuk anak anda",
-    "description": "Cari setiap sekolah Australia berdaftar CRICOS. Bandingkan yuran, keperluan ujian Bahasa Inggeris, dan sesi pengambilan — dalam tujuh bahasa, percuma.",
-    "ogDescription": "Setiap sekolah CRICOS. Disahkan. Dalam bahasa anda."
-  },
-  "MarketingHeader": {
-    "findSchools": "Cari Sekolah",
-    "audiences": {
-      "parents": "Ibu Bapa",
-      "agents": "Ejen",
-      "schools": "Sekolah"
-    },
-    "nav": {
-      "parent": {
-        "howItWorks": "Cara penggunaan",
-        "compare": "Bandingkan",
-        "faq": "Soalan Lazim"
-      },
-      "agent": {
-        "howItWorks": "Cara penggunaan",
-        "commission": "Komisen",
-        "trust": "Kepercayaan"
-      },
-      "school": {
-        "howItWorks": "Cara penggunaan",
-        "pricing": "Harga",
-        "faq": "Soalan Lazim"
-      }
-    },
-    "language": "Bahasa",
-    "signIn": "Log Masuk",
-    "getStarted": "Mulakan",
-    "openMenu": "Buka menu",
-    "closeMenu": "Tutup menu",
-    "menu": "Menu",
-    "subNav": {
-      "explore": {
-        "label": "Terokai",
-        "items": {
-          "browseSchools": "Semak imbas sekolah",
-          "browseSchoolsDesc": "Cari semua sekolah Australia berdaftar",
-          "compareSchools": "Bandingkan sekolah",
-          "compareSchoolsDesc": "Perbandingan yuran, ujian & pengambilan serentak",
-          "schoolTypes": "Jenis sekolah",
-          "schoolTypesDesc": "Perbandingan sekolah kerajaan, Katolik & swasta",
-          "englishTests": "Ujian Bahasa Inggeris",
-          "englishTestsDesc": "Panduan ujian AEAS, IELTS & ujian yang diterima"
-        }
-      },
-      "resources": {
-        "label": "Sumber",
-        "items": {
-          "admissionsGuide": "Panduan kemasukan",
-          "admissionsGuideDesc": "Proses enrolmen langkah demi langkah",
-          "schoolFees": "Yuran sekolah",
-          "schoolFeesDesc": "Yuran pengajian, tambahan & kos tahun pertama",
-          "visaRequirements": "Keperluan visa",
-          "visaRequirementsDesc": "Perkara penting visa pelajar 500",
-          "allGuides": "Semua panduan",
-          "allGuidesDesc": "Semak imbas setiap panduan untuk keluarga antarabangsa"
-        }
-      },
-      "about": {
-        "label": "Tentang",
-        "items": {
-          "aboutSchoolGo": "Tentang SchoolGo",
-          "aboutSchoolGoDesc": "Misi dan cerita kami",
-          "contactUs": "Hubungi kami",
-          "contactUsDesc": "Berhubung dengan pasukan kami",
-          "forAgents": "Untuk ejen",
-          "forAgentsDesc": "Alat untuk ejen pendidikan",
-          "forSchools": "Untuk sekolah",
-          "forSchoolsDesc": "Kembangkan kohort antarabangsa anda"
-        }
-      }
-    }
-  },
-  "MarketingFooter": {
-    "tagline": "Menghubungkan pemimpin masa depan dengan sekolah terbaik Australia — merentas negara, dalam tujuh bahasa.",
-    "columns": {
-      "parents": {
-        "title": "Untuk ibu bapa",
-        "links": {
-          "findSchools": "Cari sekolah",
-          "compare": "Bandingkan",
-          "scholarships": "Biasiswa",
-          "english": "Ujian Bahasa Inggeris"
-        }
-      },
-      "agents": {
-        "title": "Untuk ejen",
-        "links": {
-          "overview": "Gambaran ejen",
-          "qeac": "Pengesahan QEAC",
-          "pipeline": "Pipeline tools [Soon]",
-          "login": "Agent login [Soon]"
-        }
-      },
-      "schools": {
-        "title": "Untuk sekolah",
-        "links": {
-          "overview": "Gambaran sekolah",
-          "claim": "Tuntut profil",
-          "login": "School login [Soon]",
-          "pricing": "Harga"
-        }
-      },
-      "resources": {
-        "title": "Sumber",
-        "links": {
-          "help": "Pusat bantuan",
-          "contact": "Hubungi",
-          "privacy": "Dasar privasi",
-          "terms": "Terma"
-        }
-      }
-    },
-    "language": "Bahasa",
-    "copyright": "© {year} SchoolGo Australia. Hak cipta terpelihara.",
-    "attribution": "Bersumber dari data.gov.au · CC BY 2.5 AU · Patuh Akta ESOS",
-    "portals": "Saya adalah...",
-    "portalLabels": {
-      "parents": "Ibu Bapa",
-      "agents": "Ejen",
-      "schools": "Sekolah"
-    }
-  },
-  "ParentsHero": {
-    "trustPill": {
-      "brand": "Kerajaan",
-      "brandAccent": "Berdaftar",
-      "source": "data dari data.gov.au"
-    },
-    "headlinePrefix": "Cari sekolah",
-    "headlineEmphasis": "Australia",
-    "headlineSuffix": "untuk anak anda.",
-    "lede": "Setiap sekolah K–12 berdaftar CRICOS dalam satu tempat. Bandingkan yuran, asrama, ujian Bahasa Inggeris — cari dalam Mandarin, Korea, Thai, Vietnam, Melayu, Bahasa, atau Inggeris.",
-    "searchAriaLabel": "Cari sekolah",
-    "searchFields": {
-      "where": {
-        "label": "Di mana",
-        "value": "Di mana sahaja di Australia"
-      },
-      "yearLevel": {
-        "label": "Tahap tahun",
-        "value": "Year 7 – Year 12"
-      },
-      "fees": {
-        "label": "Yuran",
-        "value": "$15k – $45k AUD"
-      }
-    },
-    "searchButtonLabel": "Cari",
-    "featured": {
-      "eyebrow": "Pilihan utama",
-      "shortlistAdd": "Tambah {name} ke senarai pendek",
-      "shortlistRemove": "Buang {name} dari senarai pendek",
-      "cards": {
-        "a": {
-          "name": "Scotch College Melbourne",
-          "location": "Hawthorn, VIC",
-          "curriculum": "VCE",
-          "fee": "$38.5k AUD",
-          "boarding": "Asrama",
-          "rating": "4.9"
-        },
-        "b": {
-          "name": "Sydney Grammar School",
-          "location": "Darlinghurst, NSW",
-          "curriculum": "HSC",
-          "fee": "$41.2k AUD",
-          "boarding": "Harian sahaja",
-          "rating": "4.8"
-        },
-        "c": {
-          "name": "Brisbane Grammar School",
-          "location": "Spring Hill, QLD",
-          "curriculum": "QCE/IB",
-          "fee": "$35.8k AUD",
-          "boarding": "Asrama",
-          "rating": "4.7"
-        }
-      }
-    }
-  },
-  "ParentsFourSteps": {
-    "eyebrow": "Cara penggunaan",
-    "heading": "Dari pelayaran pertama hingga surat tawaran — empat langkah mudah.",
-    "subheading": "Tiada yuran tersembunyi. Log masuk tidak diperlukan sehingga anda memohon.",
-    "steps": {
-      "browse": {
-        "title": "Semak imbas setiap sekolah CRICOS",
-        "description": "Tapis {count, number} sekolah mengikut negeri, yuran, sektor, kurikulum, asrama, dan biasiswa — dalam bahasa anda."
-      },
-      "shortlist": {
-        "title": "Senarai pendek empat. Bandingkan serentak",
-        "description": "Susun yuran, sesi pengambilan, ICSEA, dan ujian Bahasa Inggeris yang diterima. Buat keputusan dalam minit, bukan bulan."
-      },
-      "prepare": {
-        "title": "Semak syarat tepat",
-        "description": "Setiap penyenaraian menunjukkan ujian yang diterima, markah minimum, dokumen, dan tempoh pengambilan."
-      },
-      "apply": {
-        "title": "Mohon melalui ejen yang disahkan",
-        "description": "Ejen anda membawa lencana QEAC. Permohonan dipantau dari awal hingga akhir dalam satu papan pemuka.",
-        "comingSoon": "Coming soon"
-      }
-    },
-    "ctaBrowse": "Mula semak imbas",
-    "ctaLearn": "Lihat cara penggunaan",
-    "badge": {
-      "cricosVerified": "CRICOS Verified · Claimed by school",
-      "updated": "Updated April 2026"
-    },
-    "visuals": {
-      "browse": {
-        "title": "[TODO: ms] 695 schools loaded",
-        "subtitle": "[TODO: ms] Filtered by state, fees & curriculum"
-      },
-      "shortlist": {
-        "title": "[TODO: ms] Wei's shortlist",
-        "subtitle": "[TODO: ms] 3 schools in Victoria · All accept AEAS"
-      },
-      "prepare": {
-        "title": "[TODO: ms] Requirements matched",
-        "subtitle": "[TODO: ms] AEAS 70+ · IELTS 5.5+ · Documents ready"
-      },
-      "apply": {
-        "title": "[TODO: ms] Application submitted",
-        "subtitle": "[TODO: ms] Tracked end-to-end · Status: Under review"
-      }
-    }
-  },
-  "ParentsVerified": {
-    "eyebrow": "Setiap sekolah CRICOS",
-    "heading": "Disahkan. Dalam bahasa anda.",
-    "subheading": "Foto bangunan sebenar. Yuran sebenar. Kalendar pengambilan sebenar. Data sekolah bersumber dari CRICOS dan ACARA, dikemas kini setiap bulan.",
-    "cards": {
-      "a": {
-        "name": "Scotch College",
-        "location": "Hawthorn, VIC",
-        "sector": "Swasta"
-      },
-      "b": {
-        "name": "Sydney Grammar",
-        "location": "Darlinghurst, NSW",
-        "sector": "Swasta"
-      },
-      "c": {
-        "name": "Brisbane Grammar",
-        "location": "Spring Hill, QLD",
-        "sector": "Swasta"
-      },
-      "d": {
-        "name": "Christ Church Grammar",
-        "location": "Claremont, WA",
-        "sector": "Swasta"
-      }
-    }
-  },
-  "ParentsComparison": {
-    "eyebrow": "Bandingkan",
-    "heading": "Susun sekolah bersebelahan.",
-    "headingAccent": "Buat keputusan dalam minit, bukan bulan.",
-    "columns": {
-      "fee": "Yuran tahunan",
-      "tests": "Ujian diterima",
-      "intakes": "Sesi pengambilan",
-      "stateSector": "[TODO: ms] State & sector",
-      "curriculum": "[TODO: ms] Curriculum",
-      "boarding": "[TODO: ms] Boarding",
-      "minScore": "[TODO: ms] Min. AEAS score",
-      "scholarships": "[TODO: ms] Scholarships"
-    },
-    "notPublished": "Tidak diterbitkan",
-    "shortlistLabel": "[TODO: ms] Shortlist · {count} schools",
-    "dayOnly": "[TODO: ms] — Day only",
-    "noneIntl": "[TODO: ms] — None intl."
-  },
-  "ParentsPickATest": {
-    "eyebrow": "Kemahiran Bahasa Inggeris",
-    "heading": "Pilih ujian. Lihat sekolah mana yang menerimanya —",
-    "headingAccent": "dan markah minimum.",
-    "subheading": "Kami memetakan ujian Bahasa Inggeris yang diterima merentas setiap profil. Tidak perlu lagi menggali 50 laman web sekolah.",
-    "tests": {
-      "aeas": {
-        "name": "AEAS",
-        "fullName": "Australian Education Assessment Services",
-        "description": "Most commonly accepted by Australian independent schools"
-      },
-      "idat": {
-        "name": "iDAT",
-        "fullName": "International Digital Admissions Test",
-        "description": "Growing in popularity for K–12 admissions"
-      },
-      "duolingo": {
-        "name": "Duolingo",
-        "fullName": "Duolingo English Test",
-        "description": "Accepted by an increasing number of schools"
-      },
-      "ielts": {
-        "name": "IELTS",
-        "fullName": "International English Language Testing System",
-        "description": "Standard for senior secondary entry (Year 11+)"
-      },
-      "pte": {
-        "name": "PTE Academic",
-        "fullName": "Pearson Test of English Academic",
-        "description": "Accepted by some schools for Year 11–12 entry"
-      },
-      "cambridge": {
-        "name": "Cambridge",
-        "fullName": "Cambridge English Qualifications",
-        "description": "Accepted by select schools"
-      },
-      "toefl": {
-        "name": "TOEFL",
-        "fullName": "Test of English as a Foreign Language",
-        "description": "Accepted by select schools for senior entry"
-      }
-    },
-    "cta": "Lihat sekolah yang menerima ujian ini"
-  },
-  "ParentsSevenLanguages": {
-    "eyebrow": "Tujuh bahasa",
-    "heading": "Keluarga tidak sepatutnya perlu menterjemah jadual yuran tengah malam.",
-    "subheading": "SchoolGo diterjemah sepenuhnya ke dalam tujuh bahasa yang paling lazim digunakan di koridor Asia-Pasifik.",
-    "languages": {
-      "en": "English",
-      "zh": "简体中文",
-      "vi": "Tiếng Việt",
-      "ko": "한국어",
-      "ms": "Bahasa Melayu",
-      "th": "ภาษาไทย",
-      "id": "Bahasa Indonesia"
-    }
-  },
-  "ParentsArticles": {
-    "eyebrow": "Perpustakaan kemasukan",
-    "heading": "Ditulis oleh pegawai kemasukan. Diterjemah ke dalam tujuh bahasa.",
-    "subheading": "Panduan mudah tentang visa, sesi pengambilan, ujian Bahasa Inggeris, dan jadual yuran. Percuma, tanpa log masuk.",
-    "items": {
-      "intakes": {
-        "title": "Memahami sesi pengambilan sekolah Australia",
-        "meta": "6 min baca · Dikemas kini setiap bulan"
-      },
-      "englishTests": {
-        "title": "Ujian Bahasa Inggeris mana yang diterima sekolah anda?",
-        "meta": "8 min baca · Pecahan mengikut ujian"
-      },
-      "boarding": {
-        "title": "Asrama vs harian: pilihan keluarga dan sebabnya",
-        "meta": "5 min baca · Kajian kes"
-      }
-    },
-    "readMore": "Baca artikel"
-  },
-  "ParentsStatsBar": {
-    "eyebrow": "Angka utama",
-    "heading": "Direktori sekolah CRICOS terbesar di Australia.",
-    "subheading": "Setiap sekolah berdaftar, disahkan dan boleh dicari — dari kerajaan hingga swasta, merentasi lapan negeri dan wilayah.",
-    "items": {
-      "schools": {
-        "value": "{count, number}+",
-        "label": "CRICOS Schools"
-      },
-      "states": {
-        "value": "8",
-        "label": "States & Territories"
-      },
-      "sectors": {
-        "value": "All 3 Sectors",
-        "label": "Government · Independent · Catholic"
-      },
-      "fees": {
-        "value": "$3.5k – $78k",
-        "label": "Annual Fee Range"
-      }
-    }
-  },
-  "ParentsFinalCta": {
-    "eyebrow": "Mulakan di sini",
-    "headingPrefix": "Carian anda",
-    "headingEmphasis": "bermula",
-    "headingSuffix": "dalam tujuh bahasa.",
-    "subheading": "Percuma. Tiada log masuk diperlukan. Dikemas kini {month} {year, number}.",
-    "ctaPrimary": "Cari sekolah anda",
-    "ctaSecondary": "Bercakap dengan ejen yang disahkan"
-  },
-  "ParentsTrustBar": {
-    "eyebrow": "Kepercayaan & pematuhan",
-    "heading": "Data yang boleh anda percayai.",
-    "subheading": "Setiap penyenaraian di SchoolGo disokong oleh sumber data kerajaan rasmi — disahkan, berlesen, dan dikemas kini setiap bulan.",
-    "items": {
-      "cricos": {
-        "label": "Sekolah berdaftar kerajaan",
-        "description": "Setiap penyenaraian sekolah disemak silang dengan Daftar Komanwel rasmi."
-      },
-      "datagov": {
-        "label": "Sentiasa dikemas kini",
-        "description": "Data terbuka berlesen di bawah CC BY 2.5 AU — telus dan boleh diaudit secara umum."
-      },
-      "acara": {
-        "label": "Data kurikulum kebangsaan",
-        "description": "Kurikulum, skor ICSEA, dan data enrolmen bersumber daripada pihak berkuasa kebangsaan."
-      },
-      "esos": {
-        "label": "Perlindungan pelajar",
-        "description": "SchoolGo beroperasi dalam rangka kerja Akta Perkhidmatan Pendidikan untuk Pelajar Luar Negeri Australia."
-      }
-    },
-    "attribution": "Data sekolah bersumber daripada Daftar Komanwel Institusi dan Kursus untuk Pelajar Luar Negeri (CRICOS) dan Pihak Berkuasa Kurikulum, Penilaian dan Pelaporan Australia (ACARA). Dikemas kini April 2026."
-  },
-  "ParentsFaq": {
-    "heading": "Frequently Asked Questions",
-    "items": {
-      "free": {
-        "question": "Is SchoolGo free?",
-        "answer": "Yes. SchoolGo is completely free for parents, education agents, and schools. There are no listing fees, application fees, or subscription costs."
-      },
-      "dataSource": {
-        "question": "Where does the school data come from?",
-        "answer": "All school listings are sourced from CRICOS (the Commonwealth Register of Institutions and Courses for Overseas Students), which is the Australian Government's official register of schools authorised to enrol international students. We cross-reference this with ACARA school profile data for enrolment figures, ICSEA scores, and GPS coordinates."
-      },
-      "englishTests": {
-        "question": "What English proficiency tests do Australian schools accept?",
-        "answer": "Different schools accept different tests. The most common are AEAS (Australian Education Assessment Services), iDAT (International Digital Admissions Test), Duolingo English Test, IELTS, and PTE Academic. SchoolGo shows which specific tests each school accepts on their profile page."
-      },
-      "doINeedAgent": {
-        "question": "[TODO: ms] Do I need an education agent?",
-        "answer": "[TODO: ms] You don't have to use one, but most families do — and it's free. Education agents help you choose the right school, prepare documents, and manage the application. SchoolGo shows which agents work with each school, so you can find someone who already knows the admissions process."
-      },
-      "claimProfile": {
-        "question": "I'm a school. How do I claim my profile?",
-        "answer": "Search for your school on SchoolGo and click \"Claim This School.\" You'll be asked to verify your identity as a school staff member. Once verified, you can update your profile with fees, entry requirements, and contact details."
-      },
-      "updateFrequency": {
-        "question": "How often is the data updated?",
-        "answer": "CRICOS data is refreshed monthly from data.gov.au. School-specific details (fees, requirements, intake dates) are updated by schools who have claimed their profiles. If a school hasn't claimed their profile, the data shown is from CRICOS and ACARA public datasets."
-      }
-    }
-  },
-  "AgentsMetadata": {
-    "title": "SchoolGo — Uruskan amalan ejen anda seperti portfolio",
-    "description": "Alat disahkan QEAC untuk ejen pendidikan yang menempatkan pelajar ke sekolah Australia. Permohonan piawai, saluran langsung, komisen penuh.",
-    "ogDescription": "Uruskan amalan anda seperti portfolio. Simpan 100% komisen anda."
-  },
-  "AgentsHero": {
-    "eyebrow": "Untuk ejen pendidikan · Disokong QEAC",
-    "headlinePrefix": "Uruskan amalan anda",
-    "headlineEmphasis": "seperti portfolio.",
-    "lede": "Satu profil yang disahkan. {count, number} sekolah CRICOS. Saluran yang boleh dilihat keluarga anda. SchoolGo mengenakan bayaran kepada sekolah, bukan anda.",
-    "ctaPrimary": "Mohon pengesahan",
-    "ctaSecondary": "Lihat cara ia berfungsi",
-    "badgeMeta": "Sample agent profile",
-    "stats": {
-      "schools": {
-        "value": "{count, number}",
-        "label": "Sekolah CRICOS yang disahkan"
-      },
-      "sectors": {
-        "value": "3",
-        "label": "Sectors — Gov, Independent, Catholic"
-      },
-      "commission": {
-        "value": "100%",
-        "label": "Komisen anda disimpan sepenuhnya"
-      }
-    }
-  },
-  "AgentsPainPoints": {
-    "eyebrow": "Why agents switch",
-    "heading": "Built for Education Agents Who Manage Real Pipelines",
-    "subheading": "76% of international school enrolments come through education agents. SchoolGo is built to make you more effective, not to replace you.",
-    "items": {
-      "email": {
-        "question": "Tired of emailing 15 admissions offices?",
-        "answer": "One platform, one application workflow. Submit to multiple schools and track responses in real time. Every application carries your verified agent attribution."
-      },
-      "status": {
-        "question": "Students keep asking 'did you hear back?'",
-        "answer": "Live application tracker your students can see. Status updates flow automatically — you spend less time chasing and more time advising."
-      },
-      "trust": {
-        "question": "Schools don't know if you're legitimate?",
-        "answer": "SchoolGo agent verification with your QEAC credentials. Your verified badge and track record appear on every application you submit."
-      },
-      "requirements": {
-        "question": "Different requirements for every school?",
-        "answer": "SchoolGo maps each school's specific entry requirements: accepted English tests, minimum scores, required documents, intake dates, and application fees. No more digging through 50 school websites."
-      }
-    }
-  },
-  "AgentsStatsBar": {
-    "items": {
-      "schools": "{count, number}+ School Profiles",
-      "requirements": "Entry Requirements Mapped",
-      "tests": "English Test Requirements Listed",
-      "free": "Free for Agents"
-    }
-  },
-  "AgentsMatching": {
-    "eyebrow": "Padanan · Mohon · Jejak",
-    "heading": "Panggilan ibu bapa pukul 10 pagi. Tiga sekolah sepadan menjelang 10:30.",
-    "subheading": "SchoolGo mengemukakan sekolah yang sesuai mengikut negeri, yuran, tahap Bahasa Inggeris, dan pengambilan — kemudian membolehkan anda menyerahkan permohonan piawai dalam beberapa minit.",
-    "steps": {
-      "listen": {
-        "title": "Tangkap keperluan keluarga",
-        "description": "Bajet, lokasi, tahap Bahasa Inggeris, pengambilan yang dikehendaki — dalam satu borang, dalam bahasa mereka."
-      },
-      "match": {
-        "title": "Lihat sekolah yang paling sesuai",
-        "description": "Ditapis mengikut profil pelajar anda. Lihat ujian yang diterima dan markah minimum bagi setiap sekolah.",
-        "comingSoon": "Coming soon"
-      },
-      "deliver": {
-        "title": "Hantar senarai pendek, bukan kekacauan",
-        "description": "Satu PDF berjenama yang boleh diambil skrin oleh keluarga dan dihantar kepada ayah. Tiada PDF daripada lima belas sekolah yang berbeza.",
-        "comingSoon": "Coming soon"
-      }
-    },
-    "inboxLabel": "Peti masuk kemasukan",
-    "inboxRows": {
-      "scotch": {
-        "school": "Scotch College",
-        "location": "Hawthorn, VIC",
-        "status": "Sepadan · AEAS 70+"
-      },
-      "brisbane": {
-        "school": "Brisbane Grammar",
-        "location": "Spring Hill, QLD",
-        "status": "Sepadan · AEAS 68+"
-      },
-      "sydney": {
-        "school": "Sydney Grammar",
-        "location": "Darlinghurst, NSW",
-        "status": "Sepadan · AEAS 65+"
-      }
-    }
-  },
-  "AgentsCommission": {
-    "eyebrow": "Harga",
-    "heading": "Anda menyimpan 100% komisen sekolah anda.",
-    "subheading": "Kami mengenakan bayaran kepada sekolah, bukan anda. Hubungan komersial anda dengan sekolah kekal terus.",
-    "statValue": "$0",
-    "statLabel": "Platform cost per agent. Zero fees, zero commission splits — ever.",
-    "bullets": {
-      "zero": {
-        "title": "Sifar yuran per pelajar",
-        "description": "Tiada pembahagian komisen. Tiada yuran penempatan. Tiada langganan."
-      },
-      "direct": {
-        "title": "Hubungan terus dengan sekolah",
-        "description": "Atribusi anda dikunci pada permohonan pada saat anda menyerahkannya."
-      },
-      "audit": {
-        "title": "Jejak audit penuh",
-        "description": "Setiap perubahan status dicap masa. Pertikaian tamat pada rekod bertulis."
-      }
-    }
-  },
-  "AgentsQeacTrust": {
-    "eyebrow": "Disahkan",
-    "heading": "Profil yang ibu bapa — dan sekolah — benar-benar percayai.",
-    "subheading": "Kelayakan QEAC anda disahkan sekali sahaja. Lencana dan rekod prestasi anda akan terpapar pada setiap permohonan yang anda serahkan.",
-    "sampleLabel": "Sample profile",
-    "profile": {
-      "name": "Profil ejen",
-      "agentName": "Mei Lin",
-      "qeac": "QEAC Disahkan",
-      "yearsActive": "Tahun aktif",
-      "students": "Pelajar ditempatkan",
-      "placements": "Sekolah ditempatkan",
-      "languages": "Bahasa yang dituturkan",
-      "languagesValue": "中 · EN"
-    }
-  },
-  "AgentsScale": {
-    "eyebrow": "Rangkaian",
-    "heading": "Agents across APAC are joining. Be one of the first.",
-    "subheading": "From Shanghai to Jakarta, Ho Chi Minh to Seoul — agents placing families into Australian K–12.",
-    "agents": {
-      "a": {
-        "name": "Li Wei",
-        "region": "Shanghai · 中国",
-        "meta": "QEAC verified · Independent schools"
-      },
-      "b": {
-        "name": "Nguyễn Minh",
-        "region": "Ho Chi Minh · Việt Nam",
-        "meta": "QEAC verified · All sectors"
-      },
-      "c": {
-        "name": "Siti Rahman",
-        "region": "Kuala Lumpur · Malaysia",
-        "meta": "QEAC verified · Boarding specialist"
-      },
-      "d": {
-        "name": "Ji-eun Park",
-        "region": "Seoul · 대한민국",
-        "meta": "QEAC verified · VIC & NSW"
-      }
-    },
-    "cta": "Mohon pengesahan"
-  },
-  "AgentsTestimonial": {
-    "eyebrow": "[TODO: ms] From the field",
-    "heading": "[TODO: ms] What agents are saying",
-    "items": {
-      "a": {
-        "quote": "[TODO: ms] I used to forward 40 PDFs a week between parents on WeChat and six admissions offices over email. One platform would cut my admin in half.",
-        "attribution": "[TODO: ms] Agency director, Shanghai",
-        "meta": "[TODO: ms] 60+ students · 3 counsellors"
-      },
-      "b": {
-        "quote": "[TODO: ms] My families want updates at 11pm their time. A live tracker they can check themselves would save me two hours a day on WhatsApp.",
-        "attribution": "[TODO: ms] Independent agent, Ho Chi Minh City",
-        "meta": "[TODO: ms] 25+ students · Solo practice"
-      },
-      "c": {
-        "quote": "[TODO: ms] I re-type the same passport number into five different school forms every week. Enter-once, apply-many would change everything.",
-        "attribution": "[TODO: ms] Senior counsellor, Kuala Lumpur",
-        "meta": "[TODO: ms] 40+ students · 2 branches"
-      }
-    },
-    "disclaimer": "[TODO: ms] Composite quotes based on agent interviews"
-  },
-  "AgentsFinalCta": {
-    "eyebrow": "Dapatkan pengesahan",
-    "headingPrefix": "Portfolio anda",
-    "headingEmphasis": "layak mendapat",
-    "headingSuffix": "yang lebih baik.",
-    "subheading": "Percuma. Pengesahan QEAC diperlukan. Onboarding mengambil masa 48 jam.",
-    "ctaPrimary": "Mohon pengesahan",
-    "ctaSecondary": "Tempah walkthrough"
-  },
-  "SchoolsMetadata": {
-    "title": "SchoolGo — Penuhkan tempat antarabangsa anda dengan lebih sedikit e-mel",
-    "description": "Satu peti masuk kemasukan yang diseragamkan untuk sekolah Australia. Ejen disahkan QEAC, permohonan sebenar, tiada yuran per pelajar.",
-    "ogDescription": "Penuhkan tempat antarabangsa anda. Dengan lebih sedikit e-mel."
-  },
-  "SchoolsHero": {
-    "eyebrow": "Untuk sekolah Australia",
-    "headlinePrefix": "Penuhkan",
-    "headlineEmphasis": "tempat antarabangsa",
-    "headlineSuffix": "anda. Dengan lebih sedikit e-mel.",
-    "lede": "Satu profil yang disahkan, dilihat oleh keluarga di tujuh negara. Terima permohonan yang diseragamkan daripada ejen disahkan QEAC — dalam format yang sudah digunakan oleh pasukan kemasukan anda.",
-    "ctaPrimary": "Tuntut profil sekolah anda",
-    "ctaSecondary": "Tempah walkthrough",
-    "inbox": {
-      "eyebrow": "Applications inbox — preview",
-      "countLabel": "Bulan ini",
-      "rows": {
-        "a": {
-          "name": "Sophie Chen",
-          "status": "Baharu",
-          "meta": "VIC · Year 9 · AEAS 78"
-        },
-        "b": {
-          "name": "Minh Tran",
-          "status": "Sedang disemak",
-          "meta": "VIC · Year 11 · IELTS 6.5"
-        },
-        "c": {
-          "name": "Ji-woo Park",
-          "status": "Tawaran dihantar",
-          "meta": "NSW · Year 10 · AEAS 74"
-        }
-      }
-    }
-  },
-  "SchoolsStats": {
-    "eyebrow": "Kesan rangkaian",
-    "heading": "Satu profil. Dilihat oleh keluarga di tujuh negara.",
-    "subheading": "Penyenaraian anda muncul dalam setiap carian, setiap perbandingan, setiap senarai pendek yang dipadankan — dalam bahasa keluarga.",
-    "items": {
-      "schools": {
-        "value": "695+",
-        "label": "CRICOS-registered schools"
-      },
-      "states": {
-        "value": "8",
-        "label": "States & territories"
-      },
-      "sectors": {
-        "value": "3",
-        "label": "Sectors — Government, Independent, Catholic"
-      },
-      "feeRange": {
-        "value": "$3.5k – $78k",
-        "label": "Annual fee range (AUD)"
-      }
-    }
-  },
-  "SchoolsThreeTools": {
-    "eyebrow": "Peralatan",
-    "heading": "Tiga alat. Satu matlamat: pelajar yang tepat, dengan lebih sedikit kerja.",
-    "subheading": "SchoolGo memberi pasukan kemasukan anda tiga perkara yang benar-benar diperlukan.",
-    "tools": {
-      "profile": {
-        "title": "Profil sekolah yang sentiasa dikemas kini",
-        "description": "Yuran, sesi pengambilan, ujian yang diterima, tawaran biasiswa, dan dokumen — dikemas kini oleh anda, dipaparkan dalam bahasa keluarga."
-      },
-      "applications": {
-        "title": "Permohonan yang diseragamkan",
-        "description": "Setiap permohonan tiba dalam format yang sama, dengan atribusi ejen disahkan QEAC dan dokumentasi lengkap."
-      },
-      "inbox": {
-        "title": "Satu peti masuk kemasukan",
-        "description": "Jejak status setiap permohonan. Tawarkan, senarai tunggu, atau tolak dalam satu klik. Keluarga dan ejen melihat kemas kini status serta-merta."
-      }
-    }
-  },
-  "SchoolsTimeline": {
-    "eyebrow": "Perjalanan kemasukan",
-    "heading": "Dari permohonan pertama hingga hari pertama penggal — tanpa kekacauan peti masuk.",
-    "subheading": "Setiap langkah kitaran kemasukan antarabangsa, di satu tempat.",
-    "steps": {
-      "receive": {
-        "title": "Terima",
-        "description": "Permohonan tiba dalam peti masuk anda bersama markah Bahasa Inggeris, dokumen, dan ejen yang disahkan.",
-        "comingSoon": "Coming soon"
-      },
-      "review": {
-        "title": "Semak",
-        "description": "Pasukan anda menilai mengikut rubrik sendiri. Nota kekal dalaman.",
-        "comingSoon": "Coming soon"
-      },
-      "decide": {
-        "title": "Putuskan",
-        "description": "Tawarkan, senarai tunggu, atau tolak dalam satu klik. Status dihantar kepada keluarga dan ejen serta-merta.",
-        "comingSoon": "Coming soon"
-      },
-      "onboard": {
-        "title": "Daftarkan",
-        "description": "Kongsi kertas kerja hari pengambilan, maklumat penginapan, dan pautan orientasi — semuanya dalam satu utas.",
-        "comingSoon": "Coming soon"
-      }
-    }
-  },
-  "SchoolsPricing": {
-    "eyebrow": "Harga",
-    "heading": "Tiada yuran per ejen. Tiada komisen. Satu pelan tahunan.",
-    "subheading": "Sekolah yang menyokong SchoolGo membayar satu yuran tahunan yang telus. Keluarga dan ejen tidak perlu membayar.",
-    "plans": {
-      "listing": {
-        "name": "Penyenaraian",
-        "price": "Free",
-        "priceMeta": "Selamanya",
-        "features": {
-          "a": "Profil CRICOS anda, diterbitkan secara automatik",
-          "b": "Ujian Bahasa Inggeris yang diterima + markah minimum",
-          "c": "Peti masuk permohonan yang diseragamkan"
-        },
-        "cta": "Tuntut profil anda"
-      },
-      "admissions": {
-        "name": "Kemasukan",
-        "price": "$12,800",
-        "priceMeta": "AUD / tahun",
-        "badge": "Paling popular",
-        "features": {
-          "a": "Semua dalam Penyenaraian",
-          "b": "Aliran kerja tawaran / senarai tunggu / tolak",
-          "c": "Direktori ejen disahkan QEAC",
-          "d": "Terjemahan tujuh bahasa pada setiap halaman profil"
-        },
-        "cta": "Mulakan kemasukan"
-      }
-    }
-  },
-  "SchoolsTestimonial": {
-    "quote": "The hardest part of international admissions isn't finding students — it's processing incomplete applications from 15 different email threads.",
-    "attribution": "Composite quote based on admissions officer interviews"
-  },
-  "SchoolsFinalCta": {
-    "eyebrow": "Mulakan di sini",
-    "headingPrefix": "Pengambilan seterusnya anda",
-    "headingEmphasis": "bermula",
-    "headingSuffix": "di sini.",
-    "subheading": "Penyenaraian percuma. Tiada kad kredit. Tuntutan mengambil masa 10 minit.",
-    "ctaPrimary": "Tuntut profil sekolah anda",
-    "ctaSecondary": "Tempah walkthrough"
-  },
-  "SchoolsFaq": {
-    "heading": "[TODO: ms] Frequently Asked Questions",
-    "items": {
-      "claim": {
-        "question": "[TODO: ms] How do I claim my school's profile?",
-        "answer": "[TODO: ms] Search for your school on SchoolGo and click \"Claim This School.\" You'll verify your identity as a staff member, and once approved you can edit your profile, update fees, and manage applications."
-      },
-      "agents": {
-        "question": "[TODO: ms] How does SchoolGo work with education agents?",
-        "answer": "[TODO: ms] By default, your profile works with your school's existing agents. You can see which agents have placed students with you, invite new agents, or manage agent relationships from your dashboard."
-      },
-      "commission": {
-        "question": "[TODO: ms] Does SchoolGo charge schools or agents?",
-        "answer": "[TODO: ms] No. SchoolGo is free for everyone — schools, agents, and parents. There are no listing fees, per-student fees, or commission splits."
-      },
-      "data": {
-        "question": "[TODO: ms] Where does the school data come from?",
-        "answer": "[TODO: ms] All school profiles are auto-published from CRICOS (the Australian Government's official register) and cross-referenced with ACARA school profile data. Schools that claim their profile can update their own details at any time."
-      }
-    }
-  },
-  "Navbar": {
-    "brand": "School",
-    "brandAccent": "Go",
-    "region": "Australia",
-    "findSchools": "Cari Sekolah",
-    "compare": "Bandingkan",
-    "scholarships": "Biasiswa",
-    "admissions": "Kemasukan",
-    "contactUs": "Hubungi Kami",
-    "signIn": "Log Masuk"
-  },
-  "Footer": {
-    "brand": "School",
-    "brandAccent": "Go",
-    "region": "Australia",
-    "tagline": "Menghubungkan pemimpin masa depan dengan asas akademik terbaik di seluruh benua.",
-    "resources": "Sumber",
-    "directory": "Direktori",
-    "copyright": "© {year} SchoolGo Australia. Hak cipta terpelihara.",
-    "resourceLinks": {
-      "vceResources": "Sumber VCE",
-      "hscGuides": "Panduan HSC",
-      "ibRequirements": "Keperluan IB"
-    },
-    "directoryLinks": {
-      "scholarshipTips": "Tips Biasiswa",
-      "contactSupport": "Hubungi Sokongan"
-    },
-    "social": {
-      "website": "Lawati laman web",
-      "share": "Kongsi",
-      "email": "E-mel kami"
-    }
-  },
-  "SchoolSearch": {
-    "searchPlaceholder": "Cari mengikut nama sekolah, bandar, atau pinggir bandar...",
-    "clearSearch": "Kosongkan carian",
-    "filters": {
-      "title": "Penapis Carian",
-      "subtitle": "Tapis Sekolah Australia",
-      "priceRangeLabel": "Julat Harga (AUD)",
-      "priceRangeValue": "${min}k – ${max}k",
-      "priceMin": "$5,000",
-      "priceMax": "$60,000+",
-      "englishTests": "Ujian Kecekapan Bahasa Inggeris",
-      "englishTestsHint": "Sekolah menerima ujian Bahasa Inggeris yang diiktiraf",
-      "englishTestsToggle": "Togol penapis ujian kecekapan Bahasa Inggeris",
-      "curriculum": "Kurikulum",
-      "location": "Lokasi",
-      "resetFilters": "Set Semula Penapis",
-      "locked": {
-        "title": "Unlock this filter",
-        "cta": "Create free account"
-      },
-      "collapse": "Collapse",
-      "expand": "Expand"
-    },
-    "chips": {
-      "topRated": "Penilaian Tertinggi",
-      "boarding": "Asrama Tersedia",
-      "coed": "Ko-edukasi",
-      "scholarships": "Biasiswa Dibuka",
-      "openDays": "Hari Terbuka"
-    },
-    "states": {
-      "VIC": "Victoria (VIC)",
-      "NSW": "New South Wales (NSW)",
-      "QLD": "Queensland (QLD)",
-      "SA": "South Australia (SA)",
-      "WA": "Western Australia (WA)",
-      "TAS": "Tasmania (TAS)",
-      "ACT": "Australian Capital Territory (ACT)",
-      "NT": "Northern Territory (NT)"
-    },
-    "results": {
-      "title": "Sekolah Tersedia",
-      "count": "{count, plural, one {# Keputusan} other {# Keputusan}}",
-      "viewAll": "Lihat Semua Sekolah",
-      "searching": "[TODO: ms] Searching…",
-      "error": "[TODO: ms] Something went wrong. Please try again.",
-      "empty": "[TODO: ms] No schools found. Try adjusting your filters."
-    },
-    "map": {
-      "title": "Australia — Peta Sekolah",
-      "reset": "[TODO: ms] Reset filters and map",
-      "zoomIn": "Zum masuk",
-      "zoomOut": "Zum keluar",
-      "ctrlScrollHint": "[TODO: ms] Use Ctrl + scroll to zoom the map"
-    },
-    "card": {
-      "currency": "AUD",
-      "viewDetails": "Lihat {name}",
-      "topRated": "Top rated"
-    },
-    "loginPrompt": {
-      "title": "Buka carian penuh",
-      "subtitle": "Log masuk untuk mengakses penapis terperinci, simpan sekolah dan bandingkan program.",
-      "signIn": "Log masuk untuk teruskan"
-    },
-    "lockedDescription": "Log masuk untuk membuka kunci — Cipta akaun percuma untuk menggunakan penapis ini",
-    "spec": {
-      "previewBadge": "Preview",
-      "previewTitle": "Spec filters",
-      "modeBadge": {
-        "basic": "Asas",
-        "advanced": "Lanjutan"
-      },
-      "lockedDescription": "Sign up to unlock this filter.",
-      "showAll": "Show all ({count})",
-      "showFewer": "Show fewer",
-      "location": {
-        "title": "Lokasi",
-        "stateLabel": "Negeri atau wilayah",
-        "suburbLabel": "Pinggir bandar atau poskod",
-        "suburbPlaceholder": "cth. Hawthorn atau 3122"
-      },
-      "schoolProfile": {
-        "title": "School profile",
-        "sectorLabel": "Sector",
-        "accommodationLabel": "Accommodation",
-        "religionLabel": "Religious affiliation"
-      },
-      "enrolment": {
-        "title": "Enrolment & entry",
-        "yearLevelLabel": "Entry year level",
-        "ageLabel": "Student age",
-        "agePlaceholder": "—",
-        "ageHint": "Most {age}-year-olds enter {expected} — showing all results for your selection.",
-        "termLabel": "Entry term"
-      },
-      "academic": {
-        "title": "Academic",
-        "programLabel": "Program type",
-        "atarLabel": "ATAR available",
-        "atarTooltip": "Australian Tertiary Admission Rank — the score used for university entry in Australia",
-        "englishSupportLabel": "English language support",
-        "programTooltips": {
-          "australianCert": "The standard Australian senior secondary certificate — VCE (VIC), HSC (NSW), QCE (QLD), etc.",
-          "ib": "International Baccalaureate — a globally recognised program accepted by universities worldwide",
-          "elicos": "English Language Intensive Courses for Overseas Students — intensive English preparation before starting mainstream school"
-        }
-      },
-      "englishTest": {
-        "title": "Skor ujian Bahasa Inggeris",
-        "selectorLabel": "Saya ada skor untuk",
-        "scoreLabel": "Skor {label}",
-        "scorePlaceholder": "Masukkan skor",
-        "scoreHint": "Julat: {min}–{max}",
-        "aeas": "AEAS",
-        "idat": "iDAT",
-        "duolingo": "Duolingo",
-        "ielts": "IELTS",
-        "pte": "PTE",
-        "cambridge": "Cambridge"
-      },
-      "tile": {
-        "status": {
-          "open": "Terbuka",
-          "limited": "Tempat terhad",
-          "waitlist": "Senarai tunggu sahaja",
-          "closed": "Ditutup"
-        },
-        "sector": {
-          "government": "Kerajaan",
-          "nonGovernment": "Bukan kerajaan",
-          "catholic": "Katolik"
-        },
-        "accommodation": {
-          "boarding": "Asrama",
-          "homestay": "Homestay",
-          "both": "Kedua-dua",
-          "none": "Tiada"
-        },
-        "actions": {
-          "bookmark": "Tandabuku {name}",
-          "bookmarkAdd": "Tambah {name} ke tandabuku",
-          "bookmarkRemove": "Buang {name} daripada tandabuku",
-          "compare": "Tambah {name} ke perbandingan"
-        }
-      },
-      "sector": {
-        "government": "Government",
-        "nonGovernment": "Non-government",
-        "catholic": "Catholic"
-      },
-      "accommodation": {
-        "boarding": "Boarding",
-        "homestay": "Homestay",
-        "both": "Both",
-        "none": "None"
-      },
-      "religion": {
-        "nonDenominational": "Non-denominational",
-        "anglican": "Anglican",
-        "baptist": "Baptist",
-        "lutheran": "Lutheran",
-        "unitingChurch": "Uniting Church",
-        "presbyterian": "Presbyterian",
-        "islamic": "Islamic",
-        "jewish": "Jewish",
-        "buddhist": "Buddhist",
-        "copticOrthodox": "Coptic Orthodox",
-        "greekOrthodox": "Greek Orthodox",
-        "seventhDayAdventist": "Seventh-day Adventist",
-        "quaker": "Quaker",
-        "interdenominationalChristian": "Interdenominational Christian"
-      },
-      "yearLevel": {
-        "gr4": "Gr 4",
-        "gr5": "Gr 5",
-        "gr6": "Gr 6",
-        "yr7": "Yr 7",
-        "yr8": "Yr 8",
-        "yr9": "Yr 9",
-        "yr10": "Yr 10",
-        "yr11": "Yr 11",
-        "yr12": "Yr 12"
-      },
-      "entryTerm": {
-        "term1": "Term 1",
-        "term2": "Term 2",
-        "term3": "Term 3",
-        "term4": "Term 4"
-      },
-      "programType": {
-        "australianCert": "Australian Cert.",
-        "ib": "IB",
-        "elicos": "ELICOS"
-      },
-      "englishTestOption": {
-        "aeas": "AEAS",
-        "idat": "iDAT",
-        "duolingo": "Duolingo",
-        "ielts": "IELTS",
-        "pte": "PTE",
-        "cambridge": "Cambridge"
-      },
-      "gender": {
-        "boys": "Boys",
-        "girls": "Girls",
-        "coEd": "Co-ed"
-      },
-      "schoolLevel": {
-        "primary": "Primary",
-        "secondary": "Secondary"
-      },
-      "quickChip": {
-        "boys": "Boys",
-        "girls": "Girls",
-        "coEd": "Co-ed",
-        "primary": "Primary",
-        "secondary": "Secondary",
-        "boarding": "Boarding"
-      },
-      "sort": {
-        "label": "Isih mengikut",
-        "nameAsc": "Nama sekolah (A–Z)",
-        "nameDesc": "Nama sekolah (Z–A)",
-        "tuitionAsc": "Yuran rendah–tinggi",
-        "tuitionDesc": "Yuran tinggi–rendah",
-        "state": "Negeri",
-        "enrolmentStatus": "Status enrolmen (terbuka dahulu)",
-        "applicationDeadlineAsc": "Tarikh tutup permohonan (terdekat)",
-        "schoolSizeAsc": "Saiz sekolah (kecil–besar)",
-        "schoolSizeDesc": "Saiz sekolah (besar–kecil)",
-        "internationalPctAsc": "% antarabangsa (rendah–tinggi)",
-        "internationalPctDesc": "% antarabangsa (tinggi–rendah)",
-        "tuitionLowHigh": "Yuran rendah–tinggi",
-        "tuitionHighLow": "Yuran tinggi–rendah",
-        "stateAsc": "Negeri",
-        "enrolmentOpenFirst": "Status enrolmen (terbuka dahulu)"
-      },
-      "topBar": {
-        "searchPlaceholder": "Search by school name, city, or suburb",
-        "feeLabel": "Annual fee",
-        "feeReadout": "${min}k – ${max}k"
-      },
-      "compareBar": {
-        "label": "Bandingkan ({count}/{max})",
-        "remove": "Buang {name}",
-        "cta": "Bandingkan sekolah",
-        "capReached": "Had perbandingan dicapai"
-      },
-      "tileCard": {
-        "tuitionFrom": "From ${amount} / year",
-        "viewSchool": "View school",
-        "bookmark": "Bookmark",
-        "bookmarkRemove": "Remove bookmark",
-        "compareCheckbox": "Add {name} to compare",
-        "status": {
-          "open": "Open",
-          "limited": "Limited places",
-          "waitlist": "Waitlist only",
-          "closed": "Closed"
-        }
-      }
-    }
-  },
-  "Applications": {
-    "title": "Permohonan",
-    "subtitle": "Urus dan jejak semua permohonan pelajar merentasi sekolah.",
-    "searchPlaceholder": "Cari mengikut pelajar atau sekolah...",
-    "clearSearch": "Kosongkan carian",
-    "allStatuses": "Semua status",
-    "filterActive": "Aktif",
-    "filterNeedsAction": "Perlu Tindakan",
-    "statusDraft": "Draf",
-    "statusSubmitted": "Diserahkan",
-    "statusReceived": "Diterima",
-    "statusUnderReview": "Sedang Disemak",
-    "statusDocumentsRequested": "Dokumen Diperlukan",
-    "statusAssessmentRequired": "Penilaian Diperlukan",
-    "statusInterviewScheduled": "Temuduga Dijadualkan",
-    "statusOfferMade": "Tawaran Dibuat",
-    "statusOfferAccepted": "Tawaran Diterima",
-    "statusPreEnrolment": "Pra-Enrolmen",
-    "statusCoeIssued": "CoE Dikeluarkan",
-    "statusEnrolled": "Didaftarkan",
-    "statusWithdrawn": "Ditarik Balik",
-    "statusDeclined": "Ditolak",
-    "statusWaitlisted": "Senarai Tunggu",
-    "columnStudent": "Pelajar",
-    "columnSchool": "Sekolah",
-    "columnState": "Negeri",
-    "columnYearLevel": "Tahap Tahun",
-    "columnStatus": "Status",
-    "columnSubmitted": "Diserahkan",
-    "columnDays": "Hari",
-    "emptyTitle": "Tiada permohonan lagi",
-    "emptySubtitle": "Mulakan dengan mencipta permohonan untuk salah seorang pelajar anda.",
-    "emptyFilteredTitle": "Tiada permohonan yang sepadan dengan penapis anda",
-    "emptyFilteredSubtitle": "Cuba laraskan penapis atau terma carian anda.",
-    "addApplication": "Permohonan Baharu",
-    "paginationShowing": "Menunjukkan",
-    "paginationOf": "daripada {total}",
-    "allRows": "Semua",
-    "today": "Hari ini",
-    "daysAgo": "{count}h lepas",
-    "exportCsv": "Eksport CSV",
-    "detailTitle": "Butiran Permohonan",
-    "backToApplications": "Kembali ke Permohonan",
-    "tabDetails": "Butiran",
-    "tabDocuments": "Dokumen",
-    "tabTimeline": "Garis Masa",
-    "tabMessages": "Mesej",
-    "studentToSchool": "{student} → {school}",
-    "submittedOn": "Diserahkan",
-    "lastUpdated": "Dikemas Kini",
-    "daysInCurrentStatus": "Hari dalam Status",
-    "applicationId": "ID Permohonan",
-    "progressSubmitted": "Diserahkan",
-    "progressReview": "Semakan",
-    "progressDocuments": "Dokumen",
-    "progressOffer": "Tawaran",
-    "progressEnrolment": "Enrolmen",
-    "progressEnrolled": "Berdaftar",
-    "notFound": "Permohonan tidak dijumpai.",
-    "loadError": "Gagal memuatkan permohonan.",
-    "sectionStudent": "Maklumat Pelajar",
-    "sectionSchool": "Maklumat Sekolah",
-    "sectionApplication": "Maklumat Permohonan",
-    "labelName": "Nama",
-    "labelNationality": "Kewarganegaraan",
-    "labelSchoolName": "Nama Sekolah",
-    "labelState": "Negeri",
-    "labelCricosCode": "Kod CRICOS",
-    "labelYearLevel": "Tahap Tahun",
-    "labelIntake": "Sesi Pengambilan",
-    "labelStatus": "Status",
-    "labelSubmitted": "Diserahkan",
-    "labelCreated": "Dicipta",
-    "labelUpdated": "Dikemas Kini",
-    "notProvided": "Tidak disediakan",
-    "documentsEmpty": "Tiada dokumen dilampirkan",
-    "documentName": "Nama",
-    "documentType": "Jenis",
-    "documentSize": "Saiz",
-    "documentUploadedAt": "Dimuat naik",
-    "downloadDocument": "Muat turun",
-    "timelineEmpty": "Tiada peristiwa garis masa lagi",
-    "timelineBy": "oleh {actor}",
-    "messagesComingSoon": "Mesej akan datang tidak lama lagi",
-    "actionWithdraw": "Tarik Balik Permohonan",
-    "actionAcceptOffer": "Terima Tawaran",
-    "actionContactSchool": "Hubungi Sekolah",
-    "actionComingSoon": "Akan datang"
-  },
-  "Auth": {
-    "signInTitle": "Log masuk ke SchoolGo",
-    "signInSubtitle": "Akses akaun anda untuk mengurus sekolah, permohonan dan banyak lagi.",
-    "iAmA": "Saya seorang…",
-    "userTypes": {
-      "parent": "Ibu Bapa",
-      "agent": "Ejen",
-      "school": "Sekolah"
-    },
-    "emailLabel": "E-mel",
-    "emailPlaceholder": "you@example.com",
-    "passwordLabel": "Kata Laluan",
-    "passwordPlaceholder": "Masukkan kata laluan anda",
-    "signInButton": "Log Masuk",
-    "loginSuccess": "Selamat kembali!",
-    "loginError": "E-mel atau kata laluan tidak sah. Sila cuba lagi.",
-    "portalUnauthorized": "Akaun ini tidak dibenarkan untuk portal ini.",
-    "sessionExpired": "Sesi anda telah tamat. Sila log masuk semula.",
-    "noAccount": "Tiada akaun?",
-    "signUp": "Daftar",
-    "signUpTitle": "Buat akaun anda",
-    "signUpSubtitle": "Sertai SchoolGo untuk mencari, membandingkan dan memohon ke sekolah Australia.",
-    "nameLabel": "Nama penuh",
-    "namePlaceholder": "Nama penuh anda",
-    "createPasswordPlaceholder": "Buat kata laluan (min. 6 aksara)",
-    "signUpButton": "Buat akaun",
-    "registerSuccess": "Akaun dicipta! Selamat datang ke SchoolGo.",
-    "registerError": "Tidak dapat mencipta akaun. Sila cuba lagi.",
-    "hasAccount": "Sudah ada akaun?",
-    "signInLink": "Log masuk",
-    "close": "Tutup",
-    "portalSwitch": {
-      "backTo": "[TODO: ms] Back to"
-    },
-    "parent": {
-      "signInTitle": "[TODO: ms] Welcome back, Parent",
-      "signInSubtitle": "[TODO: ms] Sign in to find and compare the best schools for your child.",
-      "signUpTitle": "[TODO: ms] Start your school search",
-      "signUpSubtitle": "[TODO: ms] Create an account to shortlist, compare and apply to Australian schools.",
-      "stat1Value": "2,400+",
-      "stat1Label": "Sekolah",
-      "stat2Value": "7",
-      "stat2Label": "Bahasa",
-      "stat3Value": "98%",
-      "stat3Label": "Kepuasan"
-    },
-    "agent": {
-      "signInTitle": "[TODO: ms] Agent Portal",
-      "signInSubtitle": "[TODO: ms] Sign in to manage your pipeline and student placements.",
-      "signUpTitle": "[TODO: ms] Grow your agency",
-      "signUpSubtitle": "[TODO: ms] Join SchoolGo to access verified schools and streamline placements.",
-      "stat1Value": "850+",
-      "stat1Label": "Ejen",
-      "stat2Value": "15%",
-      "stat2Label": "Komisen",
-      "stat3Value": "24h",
-      "stat3Label": "Respons"
-    },
-    "school": {
-      "signInTitle": "[TODO: ms] School Portal",
-      "signInSubtitle": "[TODO: ms] Sign in to manage enrolments and connect with agents.",
-      "signUpTitle": "[TODO: ms] List your school",
-      "signUpSubtitle": "[TODO: ms] Create an account to reach international students and education agents.",
-      "stat1Value": "500+",
-      "stat1Label": "Ejen",
-      "stat2Value": "12k",
-      "stat2Label": "Pelajar",
-      "stat3Value": "Free",
-      "stat3Label": "Penyenaraian"
-    },
-    "nav": {
-      "parent": {
-        "howItWorks": "Cara penggunaan",
-        "compare": "Bandingkan",
-        "faq": "Soalan Lazim"
-      },
-      "agent": {
-        "howItWorks": "Cara penggunaan",
-        "commission": "Komisen",
-        "trust": "Kepercayaan"
-      },
-      "school": {
-        "howItWorks": "Cara penggunaan",
-        "pricing": "Harga",
-        "faq": "Soalan Lazim"
-      }
-    }
-  },
-  "Errors": {
-    "generic": "Sesuatu telah berlaku",
-    "genericSubtitle": "[TODO: ms] We hit an unexpected bump. Don't worry — your data is safe.",
-    "tryAgain": "Cuba lagi",
-    "notFound": "Halaman tidak ditemui",
-    "notFoundCode": "[TODO: ms] 404",
-    "notFoundSubtitle": "[TODO: ms] The page you're looking for doesn't exist or has been moved.",
-    "goHome": "Ke laman utama",
-    "searchInstead": "[TODO: ms] Search schools"
-  },
-  "LaunchingSoon": {
-    "title": "Kami akan melancarkan tidak lama lagi",
-    "subtitle": "SchoolGo sedang bersedia untuk membantu anda mencari sekolah terbaik di seluruh Australia. Kami sedang menyempurnakan sesuatu yang hebat.",
-    "stayTuned": "Nantikan — kami akan berada dalam talian tidak lama lagi.",
-    "portals": {
-      "heading": "Platform kami",
-      "parents": "Untuk Ibu Bapa",
-      "schools": "Untuk Sekolah",
-      "agents": "Untuk Ejen"
-    }
-  },
-  "Dashboard": {
-    "nav": {
-      "dashboard": "[TODO: ms] Dashboard",
-      "students": "[TODO: ms] Students",
-      "applications": "[TODO: ms] Applications",
-      "pipeline": "[TODO: ms] Pipeline",
-      "searchSchools": "[TODO: ms] Search Schools",
-      "messages": "[TODO: ms] Messages",
-      "settings": "[TODO: ms] Settings",
-      "profile": "[TODO: ms] My Profile",
-      "logout": "[TODO: ms] Log out",
-      "portalLabel": "Ejen",
-      "portalBadge": {
-        "agent": "Ejen",
-        "parent": "Ibu Bapa",
-        "school": "Sekolah"
-      }
-    },
-    "greeting": {
-      "morning": "Selamat pagi,",
-      "afternoon": "Selamat petang,",
-      "evening": "Selamat malam,",
-      "fallbackName": "anda"
-    },
-    "actionBanner": {
-      "title": "Perlu tindakan"
-    },
-    "cards": {
-      "activeStudents": "Pelajar aktif",
-      "appsInProgress": "Permohonan sedang diproses",
-      "offersReceived": "Tawaran diterima",
-      "enrolledThisTerm": "Mendaftar penggal ini"
-    },
-    "activity": {
-      "title": "Aktiviti terkini",
-      "empty": "Tiada aktiviti terkini. Mulakan dengan menambah pelajar atau mencari sekolah."
-    },
-    "deadlines": {
-      "title": "Tarikh akhir akan datang",
-      "empty": "Tiada tarikh akhir akan datang."
-    },
-    "quickActions": {
-      "addStudent": "Tambah pelajar baharu",
-      "newApplication": "Permohonan baharu",
-      "reviewApplications": "Semak permohonan",
-      "searchSchools": "Cari sekolah"
-    }
-  },
-  "Students": {
-    "title": "[TODO: ms] Students",
-    "subtitle": "[TODO: ms] Manage your student profiles, documents, and test results.",
-    "searchPlaceholder": "[TODO: ms] Search by name...",
-    "clearSearch": "[TODO: ms] Clear search",
-    "allStatuses": "[TODO: ms] All statuses",
-    "statusActive": "[TODO: ms] Active",
-    "statusArchived": "[TODO: ms] Archived",
-    "statusEnrolled": "[TODO: ms] Enrolled",
-    "addStudent": "[TODO: ms] Add Student",
-    "columnName": "[TODO: ms] Name",
-    "columnNationality": "[TODO: ms] Nationality",
-    "columnYearLevel": "[TODO: ms] Year Level",
-    "columnTargetEntry": "[TODO: ms] Target Entry",
-    "columnEnglishTest": "Ujian Bahasa Inggeris",
-    "columnApps": "Permohonan",
-    "columnStatus": "[TODO: ms] Status",
-    "filters": "Penapis",
-    "sort": "Isih",
-    "emptyTitle": "Belum ada pelajar",
-    "emptySubtitle": "Tambah pelajar pertama anda untuk mula membina profil mereka dan memohon ke sekolah.",
-    "archive": "Arkib",
-    "paginationShowing": "Menunjukkan",
-    "paginationOf": "daripada {total}",
-    "allRows": "Semua",
-    "createTitle": "[TODO: ms] Add New Student",
-    "createButton": "[TODO: ms] Create Student",
-    "createSuccess": "[TODO: ms] Student created successfully.",
-    "createError": "[TODO: ms] Could not create student. Please try again.",
-    "profileTitle": "[TODO: ms] Student Profile",
-    "notFound": "[TODO: ms] Student not found.",
-    "backToList": "[TODO: ms] Back",
-    "edit": "[TODO: ms] Edit",
-    "sectionPersonal": "[TODO: ms] Personal Information",
-    "sectionEducation": "[TODO: ms] Education",
-    "sectionParent": "[TODO: ms] Parent / Guardian",
-    "fieldFirstName": "[TODO: ms] First name",
-    "fieldLastName": "[TODO: ms] Last name",
-    "fieldDob": "[TODO: ms] Date of birth",
-    "fieldGender": "[TODO: ms] Gender",
-    "fieldNationality": "[TODO: ms] Nationality",
-    "fieldCurrentSchool": "[TODO: ms] Current school",
-    "fieldCurrentYear": "[TODO: ms] Current year level",
-    "fieldTargetYear": "[TODO: ms] Target entry year",
-    "fieldTargetTerm": "[TODO: ms] Target intake",
-    "fieldParentName": "[TODO: ms] Name",
-    "fieldParentEmail": "[TODO: ms] Email",
-    "fieldParentPhone": "[TODO: ms] Phone",
-    "fieldParentWechat": "[TODO: ms] WeChat ID",
-    "fieldNotes": "[TODO: ms] Agent Notes",
-    "notesPlaceholder": "[TODO: ms] Private notes about this student (only visible to you)...",
-    "selectGender": "[TODO: ms] Select gender",
-    "selectYear": "[TODO: ms] Select year level",
-    "genderMale": "[TODO: ms] Male",
-    "genderFemale": "[TODO: ms] Female",
-    "genderOther": "[TODO: ms] Other",
-    "tabOverview": "[TODO: ms] Overview",
-    "tabDocuments": "[TODO: ms] Documents",
-    "tabTests": "[TODO: ms] Tests",
-    "tabApplications": "[TODO: ms] Applications",
-    "documentsComingSoon": "[TODO: ms] Document management coming soon.",
-    "testsComingSoon": "[TODO: ms] Test results coming soon.",
-    "applicationsComingSoon": "[TODO: ms] Applications coming soon.",
-    "docUpload": "[TODO: ms] Upload Document",
-    "docUploadTitle": "[TODO: ms] Upload Document",
-    "docUploadButton": "[TODO: ms] Upload",
-    "docCancel": "[TODO: ms] Cancel",
-    "docDropzone": "[TODO: ms] Drag & drop a file here, or click to browse",
-    "docDropzoneHint": "[TODO: ms] PDF, JPG, PNG, DOCX up to 10 MB",
-    "docTypeLabel": "[TODO: ms] Document Type",
-    "docTypeSelect": "[TODO: ms] Select document type",
-    "docFileNameLabel": "[TODO: ms] Display Name (optional)",
-    "docFileNamePlaceholder": "[TODO: ms] e.g. John Passport 2026",
-    "docExpiresLabel": "[TODO: ms] Expiry Date (optional)",
-    "docNotesLabel": "[TODO: ms] Notes (optional)",
-    "docNotesPlaceholder": "[TODO: ms] Any notes about this document...",
-    "docAllTypes": "[TODO: ms] All types",
-    "docEmptyTitle": "[TODO: ms] No documents yet",
-    "docEmptySubtitle": "[TODO: ms] Upload your first document to get started.",
-    "docColName": "[TODO: ms] File",
-    "docColType": "[TODO: ms] Type",
-    "docColStatus": "[TODO: ms] Status",
-    "docColExpiry": "[TODO: ms] Expiry",
-    "docColUploaded": "[TODO: ms] Uploaded",
-    "docDeleteTitle": "[TODO: ms] Delete Document",
-    "docDeleteConfirm": "[TODO: ms] Are you sure you want to delete this document? This action cannot be undone.",
-    "docDeleteButton": "[TODO: ms] Delete",
-    "docUploadSuccess": "[TODO: ms] Document uploaded successfully.",
-    "docUploadError": "[TODO: ms] Could not upload document. Please try again.",
-    "docDeleteSuccess": "[TODO: ms] Document deleted.",
-    "docDeleteError": "[TODO: ms] Could not delete document.",
-    "docType_passport": "[TODO: ms] Passport",
-    "docType_school_reports": "[TODO: ms] School Reports",
-    "docType_english_test": "[TODO: ms] English Test Report",
-    "docType_birth_certificate": "[TODO: ms] Birth Certificate",
-    "docType_parent_passport": "[TODO: ms] Parent Passport",
-    "docType_immunisation": "[TODO: ms] Immunisation Records",
-    "docType_personal_statement": "[TODO: ms] Personal Statement",
-    "docType_guardian_nomination": "[TODO: ms] Guardian Nomination",
-    "docType_current_visa": "[TODO: ms] Current Visa",
-    "docType_welfare_docs": "[TODO: ms] Welfare Documents",
-    "docType_financial_evidence": "[TODO: ms] Financial Evidence",
-    "docType_oshc": "[TODO: ms] OSHC",
-    "docType_written_agreement": "[TODO: ms] Written Agreement",
-    "docType_conditions_of_entry": "[TODO: ms] Conditions of Entry",
-    "docType_offer_acceptance": "[TODO: ms] Offer Acceptance",
-    "docType_coe": "[TODO: ms] CoE (Confirmation of Enrolment)",
-    "docType_caaw_letter": "[TODO: ms] CAAW Letter",
-    "docType_photo": "[TODO: ms] Photo",
-    "docType_other": "[TODO: ms] Other",
-    "docStatus_active": "[TODO: ms] Active",
-    "docStatus_replaced": "[TODO: ms] Replaced",
-    "docStatus_archived": "[TODO: ms] Archived"
-  },
-  "Pipeline": {
-    "title": "Saluran Permohonan",
-    "totalApplications": "{count, plural, one {# permohonan} other {# permohonan}}",
-    "emptyTitle": "Tiada permohonan dalam saluran",
-    "emptySubtitle": "Mulakan dengan mencipta permohonan untuk salah seorang pelajar anda.",
-    "columnNew": "Baharu",
-    "columnInReview": "Sedang Disemak",
-    "columnActionRequired": "Perlu Tindakan",
-    "columnOffers": "Tawaran",
-    "columnPreEnrolment": "Pra-Enrolmen",
-    "columnEnrolled": "Didaftarkan",
-    "columnClosed": "Ditutup",
-    "daysLabel": "{count}h",
-    "moreApplications": "+{count} lagi"
-  },
-  "SearchMetadata": {
-    "title": "Cari Sekolah — SchoolGo",
-    "description": "Cari dan bandingkan sekolah Australia. Tapis mengikut lokasi, yuran, kurikulum, asrama dan lain-lain.",
-    "ogDescription": "Cari dan bandingkan sekolah Australia di SchoolGo.",
-    "parentTitle": "Cari Sekolah Australia untuk Anak Anda — SchoolGo",
-    "parentDescription": "Cari dan bandingkan sekolah Australia mengikut lokasi, yuran, kurikulum, asrama dan sokongan pelajar.",
-    "parentOgDescription": "Bandingkan sekolah Australia dan cari pilihan yang sesuai untuk anak anda di SchoolGo.",
-    "schoolTitle": "Teroka Senarai Sekolah Australia — SchoolGo",
-    "schoolDescription": "Semak senarai sekolah Australia, lokasi, program, yuran dan maklumat sokongan pelajar di SchoolGo.",
-    "schoolOgDescription": "Teroka senarai sekolah Australia dan bandingkan program di SchoolGo.",
-    "agentTitle": "Cari Sekolah Australia untuk Pelajar — SchoolGo",
-    "agentDescription": "Cari sekolah Australia untuk pelajar antarabangsa dan bandingkan lokasi, yuran, program, asrama dan sokongan.",
-    "agentOgDescription": "Cari dan bandingkan sekolah Australia untuk pelajar anda di SchoolGo."
-  }
+	"Metadata": {
+		"title": "SchoolGo Australia | Cari Sekolah Terbaik",
+		"description": "Cari dan bandingkan sekolah terbaik di seluruh Australia. Tapis mengikut kurikulum, harga, lokasi dan lain-lain.",
+		"ogDescription": "Cari dan bandingkan sekolah terbaik di seluruh Australia."
+	},
+	"Common": {
+		"step": "Step {number, number}",
+		"cricosVerified": "CRICOS Verified",
+		"qeacVerified": "QEAC Verified",
+		"claimedBySchool": "Claimed by school",
+		"addToShortlist": "Add to shortlist",
+		"removeFromShortlist": "Remove from shortlist",
+		"comingSoon": "Coming soon",
+		"skipToContent": "Langkau ke kandungan",
+		"primaryNavigation": "Navigasi utama"
+	},
+	"ParentsMetadata": {
+		"title": "SchoolGo — Cari sekolah Australia untuk anak anda",
+		"description": "Cari setiap sekolah Australia berdaftar CRICOS. Bandingkan yuran, keperluan ujian Bahasa Inggeris, dan sesi pengambilan — dalam tujuh bahasa, percuma.",
+		"ogDescription": "Setiap sekolah CRICOS. Disahkan. Dalam bahasa anda."
+	},
+	"MarketingHeader": {
+		"findSchools": "Cari Sekolah",
+		"audiences": {
+			"parents": "Ibu Bapa",
+			"agents": "Ejen",
+			"schools": "Sekolah"
+		},
+		"nav": {
+			"parent": {
+				"howItWorks": "Cara penggunaan",
+				"compare": "Bandingkan",
+				"faq": "Soalan Lazim"
+			},
+			"agent": {
+				"howItWorks": "Cara penggunaan",
+				"commission": "Komisen",
+				"trust": "Kepercayaan"
+			},
+			"school": {
+				"howItWorks": "Cara penggunaan",
+				"pricing": "Harga",
+				"faq": "Soalan Lazim"
+			}
+		},
+		"language": "Bahasa",
+		"signIn": "Log Masuk",
+		"getStarted": "Mulakan",
+		"openMenu": "Buka menu",
+		"closeMenu": "Tutup menu",
+		"menu": "Menu",
+		"subNav": {
+			"explore": {
+				"label": "Terokai",
+				"items": {
+					"browseSchools": "Semak imbas sekolah",
+					"browseSchoolsDesc": "Cari semua sekolah Australia berdaftar",
+					"compareSchools": "Bandingkan sekolah",
+					"compareSchoolsDesc": "Perbandingan yuran, ujian & pengambilan serentak",
+					"schoolTypes": "Jenis sekolah",
+					"schoolTypesDesc": "Perbandingan sekolah kerajaan, Katolik & swasta",
+					"englishTests": "Ujian Bahasa Inggeris",
+					"englishTestsDesc": "Panduan ujian AEAS, IELTS & ujian yang diterima"
+				}
+			},
+			"resources": {
+				"label": "Sumber",
+				"items": {
+					"admissionsGuide": "Panduan kemasukan",
+					"admissionsGuideDesc": "Proses enrolmen langkah demi langkah",
+					"schoolFees": "Yuran sekolah",
+					"schoolFeesDesc": "Yuran pengajian, tambahan & kos tahun pertama",
+					"visaRequirements": "Keperluan visa",
+					"visaRequirementsDesc": "Perkara penting visa pelajar 500",
+					"allGuides": "Semua panduan",
+					"allGuidesDesc": "Semak imbas setiap panduan untuk keluarga antarabangsa"
+				}
+			},
+			"about": {
+				"label": "Tentang",
+				"items": {
+					"aboutSchoolGo": "Tentang SchoolGo",
+					"aboutSchoolGoDesc": "Misi dan cerita kami",
+					"contactUs": "Hubungi kami",
+					"contactUsDesc": "Berhubung dengan pasukan kami",
+					"forAgents": "Untuk ejen",
+					"forAgentsDesc": "Alat untuk ejen pendidikan",
+					"forSchools": "Untuk sekolah",
+					"forSchoolsDesc": "Kembangkan kohort antarabangsa anda"
+				}
+			}
+		}
+	},
+	"MarketingFooter": {
+		"tagline": "Menghubungkan pemimpin masa depan dengan sekolah terbaik Australia — merentas negara, dalam tujuh bahasa.",
+		"columns": {
+			"parents": {
+				"title": "Untuk ibu bapa",
+				"links": {
+					"findSchools": "Cari sekolah",
+					"compare": "Bandingkan",
+					"scholarships": "Biasiswa",
+					"english": "Ujian Bahasa Inggeris"
+				}
+			},
+			"agents": {
+				"title": "Untuk ejen",
+				"links": {
+					"overview": "Gambaran ejen",
+					"qeac": "Pengesahan QEAC",
+					"pipeline": "Pipeline tools [Soon]",
+					"login": "Agent login [Soon]"
+				}
+			},
+			"schools": {
+				"title": "Untuk sekolah",
+				"links": {
+					"overview": "Gambaran sekolah",
+					"claim": "Tuntut profil",
+					"login": "School login [Soon]",
+					"pricing": "Harga"
+				}
+			},
+			"resources": {
+				"title": "Sumber",
+				"links": {
+					"help": "Pusat bantuan",
+					"contact": "Hubungi",
+					"privacy": "Dasar privasi",
+					"terms": "Terma"
+				}
+			}
+		},
+		"language": "Bahasa",
+		"copyright": "© {year} SchoolGo Australia. Hak cipta terpelihara.",
+		"attribution": "Bersumber dari data.gov.au · CC BY 2.5 AU · Patuh Akta ESOS",
+		"portals": "Saya adalah...",
+		"portalLabels": {
+			"parents": "Ibu Bapa",
+			"agents": "Ejen",
+			"schools": "Sekolah"
+		}
+	},
+	"ParentsHero": {
+		"trustPill": {
+			"brand": "Kerajaan",
+			"brandAccent": "Berdaftar",
+			"source": "data dari data.gov.au"
+		},
+		"headlinePrefix": "Cari sekolah",
+		"headlineEmphasis": "Australia",
+		"headlineSuffix": "untuk anak anda.",
+		"lede": "Setiap sekolah K–12 berdaftar CRICOS dalam satu tempat. Bandingkan yuran, asrama, ujian Bahasa Inggeris — cari dalam Mandarin, Korea, Thai, Vietnam, Melayu, Bahasa, atau Inggeris.",
+		"searchAriaLabel": "Cari sekolah",
+		"searchFields": {
+			"where": {
+				"label": "Di mana",
+				"value": "Di mana sahaja di Australia"
+			},
+			"yearLevel": {
+				"label": "Tahap tahun",
+				"value": "Year 7 – Year 12"
+			},
+			"fees": {
+				"label": "Yuran",
+				"value": "$15k – $45k AUD"
+			}
+		},
+		"searchButtonLabel": "Cari",
+		"searchClearLabel": "Kosongkan carian",
+		"featured": {
+			"eyebrow": "Pilihan utama",
+			"shortlistAdd": "Tambah {name} ke senarai pendek",
+			"shortlistRemove": "Buang {name} dari senarai pendek",
+			"cards": {
+				"a": {
+					"name": "Scotch College Melbourne",
+					"location": "Hawthorn, VIC",
+					"curriculum": "VCE",
+					"fee": "$38.5k AUD",
+					"boarding": "Asrama",
+					"rating": "4.9"
+				},
+				"b": {
+					"name": "Sydney Grammar School",
+					"location": "Darlinghurst, NSW",
+					"curriculum": "HSC",
+					"fee": "$41.2k AUD",
+					"boarding": "Harian sahaja",
+					"rating": "4.8"
+				},
+				"c": {
+					"name": "Brisbane Grammar School",
+					"location": "Spring Hill, QLD",
+					"curriculum": "QCE/IB",
+					"fee": "$35.8k AUD",
+					"boarding": "Asrama",
+					"rating": "4.7"
+				}
+			}
+		}
+	},
+	"ParentsFourSteps": {
+		"eyebrow": "Cara penggunaan",
+		"heading": "Dari pelayaran pertama hingga surat tawaran — empat langkah mudah.",
+		"subheading": "Tiada yuran tersembunyi. Log masuk tidak diperlukan sehingga anda memohon.",
+		"steps": {
+			"browse": {
+				"title": "Semak imbas setiap sekolah CRICOS",
+				"description": "Tapis {count, number} sekolah mengikut negeri, yuran, sektor, kurikulum, asrama, dan biasiswa — dalam bahasa anda."
+			},
+			"shortlist": {
+				"title": "Senarai pendek empat. Bandingkan serentak",
+				"description": "Susun yuran, sesi pengambilan, ICSEA, dan ujian Bahasa Inggeris yang diterima. Buat keputusan dalam minit, bukan bulan."
+			},
+			"prepare": {
+				"title": "Semak syarat tepat",
+				"description": "Setiap penyenaraian menunjukkan ujian yang diterima, markah minimum, dokumen, dan tempoh pengambilan."
+			},
+			"apply": {
+				"title": "Mohon melalui ejen yang disahkan",
+				"description": "Ejen anda membawa lencana QEAC. Permohonan dipantau dari awal hingga akhir dalam satu papan pemuka.",
+				"comingSoon": "Coming soon"
+			}
+		},
+		"ctaBrowse": "Mula semak imbas",
+		"ctaLearn": "Lihat cara penggunaan",
+		"badge": {
+			"cricosVerified": "CRICOS Verified · Claimed by school",
+			"updated": "Updated April 2026"
+		},
+		"visuals": {
+			"browse": {
+				"title": "[TODO: ms] 695 schools loaded",
+				"subtitle": "[TODO: ms] Filtered by state, fees & curriculum"
+			},
+			"shortlist": {
+				"title": "[TODO: ms] Wei's shortlist",
+				"subtitle": "[TODO: ms] 3 schools in Victoria · All accept AEAS"
+			},
+			"prepare": {
+				"title": "[TODO: ms] Requirements matched",
+				"subtitle": "[TODO: ms] AEAS 70+ · IELTS 5.5+ · Documents ready"
+			},
+			"apply": {
+				"title": "[TODO: ms] Application submitted",
+				"subtitle": "[TODO: ms] Tracked end-to-end · Status: Under review"
+			}
+		}
+	},
+	"ParentsVerified": {
+		"eyebrow": "Setiap sekolah CRICOS",
+		"heading": "Disahkan. Dalam bahasa anda.",
+		"subheading": "Foto bangunan sebenar. Yuran sebenar. Kalendar pengambilan sebenar. Data sekolah bersumber dari CRICOS dan ACARA, dikemas kini setiap bulan.",
+		"cards": {
+			"a": {
+				"name": "Scotch College",
+				"location": "Hawthorn, VIC",
+				"sector": "Swasta"
+			},
+			"b": {
+				"name": "Sydney Grammar",
+				"location": "Darlinghurst, NSW",
+				"sector": "Swasta"
+			},
+			"c": {
+				"name": "Brisbane Grammar",
+				"location": "Spring Hill, QLD",
+				"sector": "Swasta"
+			},
+			"d": {
+				"name": "Christ Church Grammar",
+				"location": "Claremont, WA",
+				"sector": "Swasta"
+			}
+		}
+	},
+	"ParentsComparison": {
+		"eyebrow": "Bandingkan",
+		"heading": "Susun sekolah bersebelahan.",
+		"headingAccent": "Buat keputusan dalam minit, bukan bulan.",
+		"columns": {
+			"fee": "Yuran tahunan",
+			"tests": "Ujian diterima",
+			"intakes": "Sesi pengambilan",
+			"stateSector": "[TODO: ms] State & sector",
+			"curriculum": "[TODO: ms] Curriculum",
+			"boarding": "[TODO: ms] Boarding",
+			"minScore": "[TODO: ms] Min. AEAS score",
+			"scholarships": "[TODO: ms] Scholarships"
+		},
+		"notPublished": "Tidak diterbitkan",
+		"shortlistLabel": "[TODO: ms] Shortlist · {count} schools",
+		"dayOnly": "[TODO: ms] — Day only",
+		"noneIntl": "[TODO: ms] — None intl."
+	},
+	"ParentsPickATest": {
+		"eyebrow": "Kemahiran Bahasa Inggeris",
+		"heading": "Pilih ujian. Lihat sekolah mana yang menerimanya —",
+		"headingAccent": "dan markah minimum.",
+		"subheading": "Kami memetakan ujian Bahasa Inggeris yang diterima merentas setiap profil. Tidak perlu lagi menggali 50 laman web sekolah.",
+		"tests": {
+			"aeas": {
+				"name": "AEAS",
+				"fullName": "Australian Education Assessment Services",
+				"description": "Most commonly accepted by Australian independent schools"
+			},
+			"idat": {
+				"name": "iDAT",
+				"fullName": "International Digital Admissions Test",
+				"description": "Growing in popularity for K–12 admissions"
+			},
+			"duolingo": {
+				"name": "Duolingo",
+				"fullName": "Duolingo English Test",
+				"description": "Accepted by an increasing number of schools"
+			},
+			"ielts": {
+				"name": "IELTS",
+				"fullName": "International English Language Testing System",
+				"description": "Standard for senior secondary entry (Year 11+)"
+			},
+			"pte": {
+				"name": "PTE Academic",
+				"fullName": "Pearson Test of English Academic",
+				"description": "Accepted by some schools for Year 11–12 entry"
+			},
+			"cambridge": {
+				"name": "Cambridge",
+				"fullName": "Cambridge English Qualifications",
+				"description": "Accepted by select schools"
+			},
+			"toefl": {
+				"name": "TOEFL",
+				"fullName": "Test of English as a Foreign Language",
+				"description": "Accepted by select schools for senior entry"
+			}
+		},
+		"cta": "Lihat sekolah yang menerima ujian ini"
+	},
+	"ParentsSevenLanguages": {
+		"eyebrow": "Tujuh bahasa",
+		"heading": "Keluarga tidak sepatutnya perlu menterjemah jadual yuran tengah malam.",
+		"subheading": "SchoolGo diterjemah sepenuhnya ke dalam tujuh bahasa yang paling lazim digunakan di koridor Asia-Pasifik.",
+		"languages": {
+			"en": "English",
+			"zh": "简体中文",
+			"vi": "Tiếng Việt",
+			"ko": "한국어",
+			"ms": "Bahasa Melayu",
+			"th": "ภาษาไทย",
+			"id": "Bahasa Indonesia"
+		}
+	},
+	"ParentsArticles": {
+		"eyebrow": "Perpustakaan kemasukan",
+		"heading": "Ditulis oleh pegawai kemasukan. Diterjemah ke dalam tujuh bahasa.",
+		"subheading": "Panduan mudah tentang visa, sesi pengambilan, ujian Bahasa Inggeris, dan jadual yuran. Percuma, tanpa log masuk.",
+		"items": {
+			"intakes": {
+				"title": "Memahami sesi pengambilan sekolah Australia",
+				"meta": "6 min baca · Dikemas kini setiap bulan"
+			},
+			"englishTests": {
+				"title": "Ujian Bahasa Inggeris mana yang diterima sekolah anda?",
+				"meta": "8 min baca · Pecahan mengikut ujian"
+			},
+			"boarding": {
+				"title": "Asrama vs harian: pilihan keluarga dan sebabnya",
+				"meta": "5 min baca · Kajian kes"
+			}
+		},
+		"readMore": "Baca artikel"
+	},
+	"ParentsStatsBar": {
+		"eyebrow": "Angka utama",
+		"heading": "Direktori sekolah CRICOS terbesar di Australia.",
+		"subheading": "Setiap sekolah berdaftar, disahkan dan boleh dicari — dari kerajaan hingga swasta, merentasi lapan negeri dan wilayah.",
+		"items": {
+			"schools": {
+				"value": "{count, number}+",
+				"label": "CRICOS Schools"
+			},
+			"states": {
+				"value": "8",
+				"label": "States & Territories"
+			},
+			"sectors": {
+				"value": "All 3 Sectors",
+				"label": "Government · Independent · Catholic"
+			},
+			"fees": {
+				"value": "$3.5k – $78k",
+				"label": "Annual Fee Range"
+			}
+		}
+	},
+	"ParentsFinalCta": {
+		"eyebrow": "Mulakan di sini",
+		"headingPrefix": "Carian anda",
+		"headingEmphasis": "bermula",
+		"headingSuffix": "dalam tujuh bahasa.",
+		"subheading": "Percuma. Tiada log masuk diperlukan. Dikemas kini {month} {year, number}.",
+		"ctaPrimary": "Cari sekolah anda",
+		"ctaSecondary": "Bercakap dengan ejen yang disahkan"
+	},
+	"ParentsTrustBar": {
+		"eyebrow": "Kepercayaan & pematuhan",
+		"heading": "Data yang boleh anda percayai.",
+		"subheading": "Setiap penyenaraian di SchoolGo disokong oleh sumber data kerajaan rasmi — disahkan, berlesen, dan dikemas kini setiap bulan.",
+		"items": {
+			"cricos": {
+				"label": "Sekolah berdaftar kerajaan",
+				"description": "Setiap penyenaraian sekolah disemak silang dengan Daftar Komanwel rasmi."
+			},
+			"datagov": {
+				"label": "Sentiasa dikemas kini",
+				"description": "Data terbuka berlesen di bawah CC BY 2.5 AU — telus dan boleh diaudit secara umum."
+			},
+			"acara": {
+				"label": "Data kurikulum kebangsaan",
+				"description": "Kurikulum, skor ICSEA, dan data enrolmen bersumber daripada pihak berkuasa kebangsaan."
+			},
+			"esos": {
+				"label": "Perlindungan pelajar",
+				"description": "SchoolGo beroperasi dalam rangka kerja Akta Perkhidmatan Pendidikan untuk Pelajar Luar Negeri Australia."
+			}
+		},
+		"attribution": "Data sekolah bersumber daripada Daftar Komanwel Institusi dan Kursus untuk Pelajar Luar Negeri (CRICOS) dan Pihak Berkuasa Kurikulum, Penilaian dan Pelaporan Australia (ACARA). Dikemas kini April 2026."
+	},
+	"ParentsFaq": {
+		"heading": "Frequently Asked Questions",
+		"items": {
+			"free": {
+				"question": "Is SchoolGo free?",
+				"answer": "Yes. SchoolGo is completely free for parents, education agents, and schools. There are no listing fees, application fees, or subscription costs."
+			},
+			"dataSource": {
+				"question": "Where does the school data come from?",
+				"answer": "All school listings are sourced from CRICOS (the Commonwealth Register of Institutions and Courses for Overseas Students), which is the Australian Government's official register of schools authorised to enrol international students. We cross-reference this with ACARA school profile data for enrolment figures, ICSEA scores, and GPS coordinates."
+			},
+			"englishTests": {
+				"question": "What English proficiency tests do Australian schools accept?",
+				"answer": "Different schools accept different tests. The most common are AEAS (Australian Education Assessment Services), iDAT (International Digital Admissions Test), Duolingo English Test, IELTS, and PTE Academic. SchoolGo shows which specific tests each school accepts on their profile page."
+			},
+			"doINeedAgent": {
+				"question": "[TODO: ms] Do I need an education agent?",
+				"answer": "[TODO: ms] You don't have to use one, but most families do — and it's free. Education agents help you choose the right school, prepare documents, and manage the application. SchoolGo shows which agents work with each school, so you can find someone who already knows the admissions process."
+			},
+			"claimProfile": {
+				"question": "I'm a school. How do I claim my profile?",
+				"answer": "Search for your school on SchoolGo and click \"Claim This School.\" You'll be asked to verify your identity as a school staff member. Once verified, you can update your profile with fees, entry requirements, and contact details."
+			},
+			"updateFrequency": {
+				"question": "How often is the data updated?",
+				"answer": "CRICOS data is refreshed monthly from data.gov.au. School-specific details (fees, requirements, intake dates) are updated by schools who have claimed their profiles. If a school hasn't claimed their profile, the data shown is from CRICOS and ACARA public datasets."
+			}
+		}
+	},
+	"AgentsMetadata": {
+		"title": "SchoolGo — Uruskan amalan ejen anda seperti portfolio",
+		"description": "Alat disahkan QEAC untuk ejen pendidikan yang menempatkan pelajar ke sekolah Australia. Permohonan piawai, saluran langsung, komisen penuh.",
+		"ogDescription": "Uruskan amalan anda seperti portfolio. Simpan 100% komisen anda."
+	},
+	"AgentsHero": {
+		"eyebrow": "Untuk ejen pendidikan · Disokong QEAC",
+		"headlinePrefix": "Uruskan amalan anda",
+		"headlineEmphasis": "seperti portfolio.",
+		"lede": "Satu profil yang disahkan. {count, number} sekolah CRICOS. Saluran yang boleh dilihat keluarga anda. SchoolGo mengenakan bayaran kepada sekolah, bukan anda.",
+		"ctaPrimary": "Mohon pengesahan",
+		"ctaSecondary": "Lihat cara ia berfungsi",
+		"badgeMeta": "Sample agent profile",
+		"stats": {
+			"schools": {
+				"value": "{count, number}",
+				"label": "Sekolah CRICOS yang disahkan"
+			},
+			"sectors": {
+				"value": "3",
+				"label": "Sectors — Gov, Independent, Catholic"
+			},
+			"commission": {
+				"value": "100%",
+				"label": "Komisen anda disimpan sepenuhnya"
+			}
+		}
+	},
+	"AgentsPainPoints": {
+		"eyebrow": "Why agents switch",
+		"heading": "Built for Education Agents Who Manage Real Pipelines",
+		"subheading": "76% of international school enrolments come through education agents. SchoolGo is built to make you more effective, not to replace you.",
+		"items": {
+			"email": {
+				"question": "Tired of emailing 15 admissions offices?",
+				"answer": "One platform, one application workflow. Submit to multiple schools and track responses in real time. Every application carries your verified agent attribution."
+			},
+			"status": {
+				"question": "Students keep asking 'did you hear back?'",
+				"answer": "Live application tracker your students can see. Status updates flow automatically — you spend less time chasing and more time advising."
+			},
+			"trust": {
+				"question": "Schools don't know if you're legitimate?",
+				"answer": "SchoolGo agent verification with your QEAC credentials. Your verified badge and track record appear on every application you submit."
+			},
+			"requirements": {
+				"question": "Different requirements for every school?",
+				"answer": "SchoolGo maps each school's specific entry requirements: accepted English tests, minimum scores, required documents, intake dates, and application fees. No more digging through 50 school websites."
+			}
+		}
+	},
+	"AgentsStatsBar": {
+		"items": {
+			"schools": "{count, number}+ School Profiles",
+			"requirements": "Entry Requirements Mapped",
+			"tests": "English Test Requirements Listed",
+			"free": "Free for Agents"
+		}
+	},
+	"AgentsMatching": {
+		"eyebrow": "Padanan · Mohon · Jejak",
+		"heading": "Panggilan ibu bapa pukul 10 pagi. Tiga sekolah sepadan menjelang 10:30.",
+		"subheading": "SchoolGo mengemukakan sekolah yang sesuai mengikut negeri, yuran, tahap Bahasa Inggeris, dan pengambilan — kemudian membolehkan anda menyerahkan permohonan piawai dalam beberapa minit.",
+		"steps": {
+			"listen": {
+				"title": "Tangkap keperluan keluarga",
+				"description": "Bajet, lokasi, tahap Bahasa Inggeris, pengambilan yang dikehendaki — dalam satu borang, dalam bahasa mereka."
+			},
+			"match": {
+				"title": "Lihat sekolah yang paling sesuai",
+				"description": "Ditapis mengikut profil pelajar anda. Lihat ujian yang diterima dan markah minimum bagi setiap sekolah.",
+				"comingSoon": "Coming soon"
+			},
+			"deliver": {
+				"title": "Hantar senarai pendek, bukan kekacauan",
+				"description": "Satu PDF berjenama yang boleh diambil skrin oleh keluarga dan dihantar kepada ayah. Tiada PDF daripada lima belas sekolah yang berbeza.",
+				"comingSoon": "Coming soon"
+			}
+		},
+		"inboxLabel": "Peti masuk kemasukan",
+		"inboxRows": {
+			"scotch": {
+				"school": "Scotch College",
+				"location": "Hawthorn, VIC",
+				"status": "Sepadan · AEAS 70+"
+			},
+			"brisbane": {
+				"school": "Brisbane Grammar",
+				"location": "Spring Hill, QLD",
+				"status": "Sepadan · AEAS 68+"
+			},
+			"sydney": {
+				"school": "Sydney Grammar",
+				"location": "Darlinghurst, NSW",
+				"status": "Sepadan · AEAS 65+"
+			}
+		}
+	},
+	"AgentsCommission": {
+		"eyebrow": "Harga",
+		"heading": "Anda menyimpan 100% komisen sekolah anda.",
+		"subheading": "Kami mengenakan bayaran kepada sekolah, bukan anda. Hubungan komersial anda dengan sekolah kekal terus.",
+		"statValue": "$0",
+		"statLabel": "Platform cost per agent. Zero fees, zero commission splits — ever.",
+		"bullets": {
+			"zero": {
+				"title": "Sifar yuran per pelajar",
+				"description": "Tiada pembahagian komisen. Tiada yuran penempatan. Tiada langganan."
+			},
+			"direct": {
+				"title": "Hubungan terus dengan sekolah",
+				"description": "Atribusi anda dikunci pada permohonan pada saat anda menyerahkannya."
+			},
+			"audit": {
+				"title": "Jejak audit penuh",
+				"description": "Setiap perubahan status dicap masa. Pertikaian tamat pada rekod bertulis."
+			}
+		}
+	},
+	"AgentsQeacTrust": {
+		"eyebrow": "Disahkan",
+		"heading": "Profil yang ibu bapa — dan sekolah — benar-benar percayai.",
+		"subheading": "Kelayakan QEAC anda disahkan sekali sahaja. Lencana dan rekod prestasi anda akan terpapar pada setiap permohonan yang anda serahkan.",
+		"sampleLabel": "Sample profile",
+		"profile": {
+			"name": "Profil ejen",
+			"agentName": "Mei Lin",
+			"qeac": "QEAC Disahkan",
+			"yearsActive": "Tahun aktif",
+			"students": "Pelajar ditempatkan",
+			"placements": "Sekolah ditempatkan",
+			"languages": "Bahasa yang dituturkan",
+			"languagesValue": "中 · EN"
+		}
+	},
+	"AgentsScale": {
+		"eyebrow": "Rangkaian",
+		"heading": "Agents across APAC are joining. Be one of the first.",
+		"subheading": "From Shanghai to Jakarta, Ho Chi Minh to Seoul — agents placing families into Australian K–12.",
+		"agents": {
+			"a": {
+				"name": "Li Wei",
+				"region": "Shanghai · 中国",
+				"meta": "QEAC verified · Independent schools"
+			},
+			"b": {
+				"name": "Nguyễn Minh",
+				"region": "Ho Chi Minh · Việt Nam",
+				"meta": "QEAC verified · All sectors"
+			},
+			"c": {
+				"name": "Siti Rahman",
+				"region": "Kuala Lumpur · Malaysia",
+				"meta": "QEAC verified · Boarding specialist"
+			},
+			"d": {
+				"name": "Ji-eun Park",
+				"region": "Seoul · 대한민국",
+				"meta": "QEAC verified · VIC & NSW"
+			}
+		},
+		"cta": "Mohon pengesahan"
+	},
+	"AgentsTestimonial": {
+		"eyebrow": "[TODO: ms] From the field",
+		"heading": "[TODO: ms] What agents are saying",
+		"items": {
+			"a": {
+				"quote": "[TODO: ms] I used to forward 40 PDFs a week between parents on WeChat and six admissions offices over email. One platform would cut my admin in half.",
+				"attribution": "[TODO: ms] Agency director, Shanghai",
+				"meta": "[TODO: ms] 60+ students · 3 counsellors"
+			},
+			"b": {
+				"quote": "[TODO: ms] My families want updates at 11pm their time. A live tracker they can check themselves would save me two hours a day on WhatsApp.",
+				"attribution": "[TODO: ms] Independent agent, Ho Chi Minh City",
+				"meta": "[TODO: ms] 25+ students · Solo practice"
+			},
+			"c": {
+				"quote": "[TODO: ms] I re-type the same passport number into five different school forms every week. Enter-once, apply-many would change everything.",
+				"attribution": "[TODO: ms] Senior counsellor, Kuala Lumpur",
+				"meta": "[TODO: ms] 40+ students · 2 branches"
+			}
+		},
+		"disclaimer": "[TODO: ms] Composite quotes based on agent interviews"
+	},
+	"AgentsFinalCta": {
+		"eyebrow": "Dapatkan pengesahan",
+		"headingPrefix": "Portfolio anda",
+		"headingEmphasis": "layak mendapat",
+		"headingSuffix": "yang lebih baik.",
+		"subheading": "Percuma. Pengesahan QEAC diperlukan. Onboarding mengambil masa 48 jam.",
+		"ctaPrimary": "Mohon pengesahan",
+		"ctaSecondary": "Tempah walkthrough"
+	},
+	"SchoolsMetadata": {
+		"title": "SchoolGo — Penuhkan tempat antarabangsa anda dengan lebih sedikit e-mel",
+		"description": "Satu peti masuk kemasukan yang diseragamkan untuk sekolah Australia. Ejen disahkan QEAC, permohonan sebenar, tiada yuran per pelajar.",
+		"ogDescription": "Penuhkan tempat antarabangsa anda. Dengan lebih sedikit e-mel."
+	},
+	"SchoolsHero": {
+		"eyebrow": "Untuk sekolah Australia",
+		"headlinePrefix": "Penuhkan",
+		"headlineEmphasis": "tempat antarabangsa",
+		"headlineSuffix": "anda. Dengan lebih sedikit e-mel.",
+		"lede": "Satu profil yang disahkan, dilihat oleh keluarga di tujuh negara. Terima permohonan yang diseragamkan daripada ejen disahkan QEAC — dalam format yang sudah digunakan oleh pasukan kemasukan anda.",
+		"ctaPrimary": "Tuntut profil sekolah anda",
+		"ctaSecondary": "Tempah walkthrough",
+		"inbox": {
+			"eyebrow": "Applications inbox — preview",
+			"countLabel": "Bulan ini",
+			"rows": {
+				"a": {
+					"name": "Sophie Chen",
+					"status": "Baharu",
+					"meta": "VIC · Year 9 · AEAS 78"
+				},
+				"b": {
+					"name": "Minh Tran",
+					"status": "Sedang disemak",
+					"meta": "VIC · Year 11 · IELTS 6.5"
+				},
+				"c": {
+					"name": "Ji-woo Park",
+					"status": "Tawaran dihantar",
+					"meta": "NSW · Year 10 · AEAS 74"
+				}
+			}
+		}
+	},
+	"SchoolsStats": {
+		"eyebrow": "Kesan rangkaian",
+		"heading": "Satu profil. Dilihat oleh keluarga di tujuh negara.",
+		"subheading": "Penyenaraian anda muncul dalam setiap carian, setiap perbandingan, setiap senarai pendek yang dipadankan — dalam bahasa keluarga.",
+		"items": {
+			"schools": {
+				"value": "695+",
+				"label": "CRICOS-registered schools"
+			},
+			"states": {
+				"value": "8",
+				"label": "States & territories"
+			},
+			"sectors": {
+				"value": "3",
+				"label": "Sectors — Government, Independent, Catholic"
+			},
+			"feeRange": {
+				"value": "$3.5k – $78k",
+				"label": "Annual fee range (AUD)"
+			}
+		}
+	},
+	"SchoolsThreeTools": {
+		"eyebrow": "Peralatan",
+		"heading": "Tiga alat. Satu matlamat: pelajar yang tepat, dengan lebih sedikit kerja.",
+		"subheading": "SchoolGo memberi pasukan kemasukan anda tiga perkara yang benar-benar diperlukan.",
+		"tools": {
+			"profile": {
+				"title": "Profil sekolah yang sentiasa dikemas kini",
+				"description": "Yuran, sesi pengambilan, ujian yang diterima, tawaran biasiswa, dan dokumen — dikemas kini oleh anda, dipaparkan dalam bahasa keluarga."
+			},
+			"applications": {
+				"title": "Permohonan yang diseragamkan",
+				"description": "Setiap permohonan tiba dalam format yang sama, dengan atribusi ejen disahkan QEAC dan dokumentasi lengkap."
+			},
+			"inbox": {
+				"title": "Satu peti masuk kemasukan",
+				"description": "Jejak status setiap permohonan. Tawarkan, senarai tunggu, atau tolak dalam satu klik. Keluarga dan ejen melihat kemas kini status serta-merta."
+			}
+		}
+	},
+	"SchoolsTimeline": {
+		"eyebrow": "Perjalanan kemasukan",
+		"heading": "Dari permohonan pertama hingga hari pertama penggal — tanpa kekacauan peti masuk.",
+		"subheading": "Setiap langkah kitaran kemasukan antarabangsa, di satu tempat.",
+		"steps": {
+			"receive": {
+				"title": "Terima",
+				"description": "Permohonan tiba dalam peti masuk anda bersama markah Bahasa Inggeris, dokumen, dan ejen yang disahkan.",
+				"comingSoon": "Coming soon"
+			},
+			"review": {
+				"title": "Semak",
+				"description": "Pasukan anda menilai mengikut rubrik sendiri. Nota kekal dalaman.",
+				"comingSoon": "Coming soon"
+			},
+			"decide": {
+				"title": "Putuskan",
+				"description": "Tawarkan, senarai tunggu, atau tolak dalam satu klik. Status dihantar kepada keluarga dan ejen serta-merta.",
+				"comingSoon": "Coming soon"
+			},
+			"onboard": {
+				"title": "Daftarkan",
+				"description": "Kongsi kertas kerja hari pengambilan, maklumat penginapan, dan pautan orientasi — semuanya dalam satu utas.",
+				"comingSoon": "Coming soon"
+			}
+		}
+	},
+	"SchoolsPricing": {
+		"eyebrow": "Harga",
+		"heading": "Tiada yuran per ejen. Tiada komisen. Satu pelan tahunan.",
+		"subheading": "Sekolah yang menyokong SchoolGo membayar satu yuran tahunan yang telus. Keluarga dan ejen tidak perlu membayar.",
+		"plans": {
+			"listing": {
+				"name": "Penyenaraian",
+				"price": "Free",
+				"priceMeta": "Selamanya",
+				"features": {
+					"a": "Profil CRICOS anda, diterbitkan secara automatik",
+					"b": "Ujian Bahasa Inggeris yang diterima + markah minimum",
+					"c": "Peti masuk permohonan yang diseragamkan"
+				},
+				"cta": "Tuntut profil anda"
+			},
+			"admissions": {
+				"name": "Kemasukan",
+				"price": "$12,800",
+				"priceMeta": "AUD / tahun",
+				"badge": "Paling popular",
+				"features": {
+					"a": "Semua dalam Penyenaraian",
+					"b": "Aliran kerja tawaran / senarai tunggu / tolak",
+					"c": "Direktori ejen disahkan QEAC",
+					"d": "Terjemahan tujuh bahasa pada setiap halaman profil"
+				},
+				"cta": "Mulakan kemasukan"
+			}
+		}
+	},
+	"SchoolsTestimonial": {
+		"quote": "The hardest part of international admissions isn't finding students — it's processing incomplete applications from 15 different email threads.",
+		"attribution": "Composite quote based on admissions officer interviews"
+	},
+	"SchoolsFinalCta": {
+		"eyebrow": "Mulakan di sini",
+		"headingPrefix": "Pengambilan seterusnya anda",
+		"headingEmphasis": "bermula",
+		"headingSuffix": "di sini.",
+		"subheading": "Penyenaraian percuma. Tiada kad kredit. Tuntutan mengambil masa 10 minit.",
+		"ctaPrimary": "Tuntut profil sekolah anda",
+		"ctaSecondary": "Tempah walkthrough"
+	},
+	"SchoolsFaq": {
+		"heading": "[TODO: ms] Frequently Asked Questions",
+		"items": {
+			"claim": {
+				"question": "[TODO: ms] How do I claim my school's profile?",
+				"answer": "[TODO: ms] Search for your school on SchoolGo and click \"Claim This School.\" You'll verify your identity as a staff member, and once approved you can edit your profile, update fees, and manage applications."
+			},
+			"agents": {
+				"question": "[TODO: ms] How does SchoolGo work with education agents?",
+				"answer": "[TODO: ms] By default, your profile works with your school's existing agents. You can see which agents have placed students with you, invite new agents, or manage agent relationships from your dashboard."
+			},
+			"commission": {
+				"question": "[TODO: ms] Does SchoolGo charge schools or agents?",
+				"answer": "[TODO: ms] No. SchoolGo is free for everyone — schools, agents, and parents. There are no listing fees, per-student fees, or commission splits."
+			},
+			"data": {
+				"question": "[TODO: ms] Where does the school data come from?",
+				"answer": "[TODO: ms] All school profiles are auto-published from CRICOS (the Australian Government's official register) and cross-referenced with ACARA school profile data. Schools that claim their profile can update their own details at any time."
+			}
+		}
+	},
+	"Navbar": {
+		"brand": "School",
+		"brandAccent": "Go",
+		"region": "Australia",
+		"findSchools": "Cari Sekolah",
+		"compare": "Bandingkan",
+		"scholarships": "Biasiswa",
+		"admissions": "Kemasukan",
+		"contactUs": "Hubungi Kami",
+		"signIn": "Log Masuk"
+	},
+	"Footer": {
+		"brand": "School",
+		"brandAccent": "Go",
+		"region": "Australia",
+		"tagline": "Menghubungkan pemimpin masa depan dengan asas akademik terbaik di seluruh benua.",
+		"resources": "Sumber",
+		"directory": "Direktori",
+		"copyright": "© {year} SchoolGo Australia. Hak cipta terpelihara.",
+		"resourceLinks": {
+			"vceResources": "Sumber VCE",
+			"hscGuides": "Panduan HSC",
+			"ibRequirements": "Keperluan IB"
+		},
+		"directoryLinks": {
+			"scholarshipTips": "Tips Biasiswa",
+			"contactSupport": "Hubungi Sokongan"
+		},
+		"social": {
+			"website": "Lawati laman web",
+			"share": "Kongsi",
+			"email": "E-mel kami"
+		}
+	},
+	"SchoolSearch": {
+		"searchPlaceholder": "Cari mengikut nama sekolah, bandar, atau pinggir bandar...",
+		"clearSearch": "Kosongkan carian",
+		"filters": {
+			"title": "Penapis Carian",
+			"subtitle": "Tapis Sekolah Australia",
+			"priceRangeLabel": "Julat Harga (AUD)",
+			"priceRangeValue": "${min}k – ${max}k",
+			"priceMin": "$5,000",
+			"priceMax": "$60,000+",
+			"englishTests": "Ujian Kecekapan Bahasa Inggeris",
+			"englishTestsHint": "Sekolah menerima ujian Bahasa Inggeris yang diiktiraf",
+			"englishTestsToggle": "Togol penapis ujian kecekapan Bahasa Inggeris",
+			"curriculum": "Kurikulum",
+			"location": "Lokasi",
+			"resetFilters": "Set Semula Penapis",
+			"resetAll": "Set semula semua",
+			"locked": {
+				"title": "Unlock this filter",
+				"cta": "Create free account"
+			},
+			"collapse": "Collapse",
+			"expand": "Expand"
+		},
+		"chips": {
+			"topRated": "Penilaian Tertinggi",
+			"boarding": "Asrama Tersedia",
+			"coed": "Ko-edukasi",
+			"scholarships": "Biasiswa Dibuka",
+			"openDays": "Hari Terbuka"
+		},
+		"states": {
+			"VIC": "Victoria (VIC)",
+			"NSW": "New South Wales (NSW)",
+			"QLD": "Queensland (QLD)",
+			"SA": "South Australia (SA)",
+			"WA": "Western Australia (WA)",
+			"TAS": "Tasmania (TAS)",
+			"ACT": "Australian Capital Territory (ACT)",
+			"NT": "Northern Territory (NT)"
+		},
+		"results": {
+			"title": "Sekolah Tersedia",
+			"count": "{count, plural, one {# Keputusan} other {# Keputusan}}",
+			"viewAll": "Lihat Semua Sekolah",
+			"searching": "[TODO: ms] Searching…",
+			"error": "[TODO: ms] Something went wrong. Please try again.",
+			"empty": "[TODO: ms] No schools found. Try adjusting your filters."
+		},
+		"map": {
+			"title": "Australia — Peta Sekolah",
+			"reset": "[TODO: ms] Reset filters and map",
+			"zoomIn": "Zum masuk",
+			"zoomOut": "Zum keluar",
+			"ctrlScrollHint": "[TODO: ms] Use Ctrl + scroll to zoom the map",
+			"loading": "Memuat peta…"
+		},
+		"card": {
+			"currency": "AUD",
+			"viewDetails": "Lihat {name}",
+			"topRated": "Top rated"
+		},
+		"loginPrompt": {
+			"title": "Buka carian penuh",
+			"subtitle": "Log masuk untuk mengakses penapis terperinci, simpan sekolah dan bandingkan program.",
+			"signIn": "Log masuk untuk teruskan",
+			"signUp": "Daftar"
+		},
+		"lockedDescription": "Log masuk untuk membuka kunci — Cipta akaun percuma untuk menggunakan penapis ini",
+		"compare": {
+			"regionLabel": "Bandingkan sekolah",
+			"clearAll": "Kosongkan semua pilihan perbandingan"
+		},
+		"spec": {
+			"previewBadge": "Preview",
+			"previewTitle": "Spec filters",
+			"modeBadge": {
+				"basic": "Asas",
+				"advanced": "Lanjutan"
+			},
+			"lockedDescription": "Sign up to unlock this filter.",
+			"showFewer": "Show fewer",
+			"location": {
+				"title": "Lokasi",
+				"stateLabel": "Negeri atau wilayah",
+				"suburbLabel": "Pinggir bandar atau poskod",
+				"suburbPlaceholder": "cth. Hawthorn atau 3122"
+			},
+			"schoolProfile": {
+				"title": "School profile",
+				"sectorLabel": "Sector",
+				"accommodationLabel": "Accommodation",
+				"religionLabel": "Religious affiliation"
+			},
+			"enrolment": {
+				"title": "Enrolment & entry",
+				"yearLevelLabel": "Entry year level",
+				"ageLabel": "Student age",
+				"agePlaceholder": "—",
+				"ageHint": "Most {age}-year-olds enter {expected} — showing all results for your selection.",
+				"termLabel": "Entry term"
+			},
+			"academic": {
+				"title": "Academic",
+				"programLabel": "Program type",
+				"atarLabel": "ATAR available",
+				"atarTooltip": "Australian Tertiary Admission Rank — the score used for university entry in Australia",
+				"englishSupportLabel": "English language support",
+				"programTooltips": {
+					"australianCert": "The standard Australian senior secondary certificate — VCE (VIC), HSC (NSW), QCE (QLD), etc.",
+					"ib": "International Baccalaureate — a globally recognised program accepted by universities worldwide",
+					"elicos": "English Language Intensive Courses for Overseas Students — intensive English preparation before starting mainstream school"
+				}
+			},
+			"englishTest": {
+				"title": "Skor ujian Bahasa Inggeris",
+				"selectorLabel": "Saya ada skor untuk",
+				"scoreLabel": "Skor {label}",
+				"scorePlaceholder": "Masukkan skor",
+				"scoreHint": "Julat: {min}–{max}",
+				"aeas": "AEAS",
+				"idat": "iDAT",
+				"duolingo": "Duolingo",
+				"ielts": "IELTS",
+				"pte": "PTE",
+				"cambridge": "Cambridge"
+			},
+			"tile": {
+				"status": {
+					"open": "Terbuka",
+					"limited": "Tempat terhad",
+					"waitlist": "Senarai tunggu sahaja",
+					"closed": "Ditutup"
+				},
+				"sector": {
+					"government": "Kerajaan",
+					"nonGovernment": "Bukan kerajaan",
+					"catholic": "Katolik"
+				},
+				"accommodation": {
+					"boarding": "Asrama",
+					"homestay": "Homestay",
+					"both": "Kedua-dua",
+					"none": "Tiada"
+				},
+				"actions": {
+					"bookmark": "Tandabuku {name}",
+					"bookmarkAdd": "Tambah {name} ke tandabuku",
+					"bookmarkRemove": "Buang {name} daripada tandabuku",
+					"compare": "Tambah {name} ke perbandingan"
+				}
+			},
+			"sector": {
+				"government": "Government",
+				"nonGovernment": "Non-government",
+				"catholic": "Catholic"
+			},
+			"accommodation": {
+				"boarding": "Boarding",
+				"homestay": "Homestay",
+				"both": "Both",
+				"none": "None"
+			},
+			"religion": {
+				"nonDenominational": "Non-denominational",
+				"anglican": "Anglican",
+				"baptist": "Baptist",
+				"lutheran": "Lutheran",
+				"unitingChurch": "Uniting Church",
+				"presbyterian": "Presbyterian",
+				"islamic": "Islamic",
+				"jewish": "Jewish",
+				"buddhist": "Buddhist",
+				"copticOrthodox": "Coptic Orthodox",
+				"greekOrthodox": "Greek Orthodox",
+				"seventhDayAdventist": "Seventh-day Adventist",
+				"quaker": "Quaker",
+				"interdenominationalChristian": "Interdenominational Christian",
+				"showMore": "Show all ({count})",
+				"showLess": "Show less"
+			},
+			"yearLevel": {
+				"gr4": "Gr 4",
+				"gr5": "Gr 5",
+				"gr6": "Gr 6",
+				"yr7": "Yr 7",
+				"yr8": "Yr 8",
+				"yr9": "Yr 9",
+				"yr10": "Yr 10",
+				"yr11": "Yr 11",
+				"yr12": "Yr 12"
+			},
+			"entryTerm": {
+				"term1": "Term 1",
+				"term2": "Term 2",
+				"term3": "Term 3",
+				"term4": "Term 4"
+			},
+			"programType": {
+				"australianCert": "Australian Cert.",
+				"ib": "IB",
+				"elicos": "ELICOS"
+			},
+			"englishTestOption": {
+				"aeas": "AEAS",
+				"idat": "iDAT",
+				"duolingo": "Duolingo",
+				"ielts": "IELTS",
+				"pte": "PTE",
+				"cambridge": "Cambridge"
+			},
+			"gender": {
+				"boys": "Boys",
+				"girls": "Girls",
+				"coEd": "Co-ed"
+			},
+			"schoolLevel": {
+				"primary": "Primary",
+				"secondary": "Secondary"
+			},
+			"quickChip": {
+				"boys": "Boys",
+				"girls": "Girls",
+				"coEd": "Co-ed",
+				"primary": "Primary",
+				"secondary": "Secondary",
+				"boarding": "Boarding",
+				"groupAriaLabel": "Quick filters"
+			},
+			"sort": {
+				"label": "Isih mengikut",
+				"nameAsc": "Nama sekolah (A–Z)",
+				"nameDesc": "Nama sekolah (Z–A)",
+				"tuitionAsc": "Yuran rendah–tinggi",
+				"tuitionDesc": "Yuran tinggi–rendah",
+				"state": "Negeri",
+				"enrolmentStatus": "Status enrolmen (terbuka dahulu)",
+				"applicationDeadlineAsc": "Tarikh tutup permohonan (terdekat)",
+				"schoolSizeAsc": "Saiz sekolah (kecil–besar)",
+				"schoolSizeDesc": "Saiz sekolah (besar–kecil)",
+				"internationalPctAsc": "% antarabangsa (rendah–tinggi)",
+				"internationalPctDesc": "% antarabangsa (tinggi–rendah)",
+				"tuitionLowHigh": "Yuran rendah–tinggi",
+				"tuitionHighLow": "Yuran tinggi–rendah",
+				"stateAsc": "Negeri",
+				"enrolmentOpenFirst": "Status enrolmen (terbuka dahulu)"
+			},
+			"topBar": {
+				"searchPlaceholder": "Search by school name, city, or suburb",
+				"feeLabel": "Annual fee",
+				"feeReadout": "${min}k – ${max}k"
+			},
+			"compareBar": {
+				"label": "Bandingkan ({count}/{max})",
+				"remove": "Buang {name}",
+				"cta": "Bandingkan sekolah",
+				"capReached": "Had perbandingan dicapai"
+			},
+			"tileCard": {
+				"tuitionFrom": "From ${amount} / year",
+				"viewSchool": "View school",
+				"bookmark": "Bookmark",
+				"bookmarkRemove": "Remove bookmark",
+				"compareCheckbox": "Add {name} to compare",
+				"status": {
+					"open": "Open",
+					"limited": "Limited places",
+					"waitlist": "Waitlist only",
+					"closed": "Closed"
+				}
+			},
+			"stepper": {
+				"decrease": "{label} decrease",
+				"increase": "{label} increase"
+			}
+		}
+	},
+	"Applications": {
+		"title": "Permohonan",
+		"subtitle": "Urus dan jejak semua permohonan pelajar merentasi sekolah.",
+		"searchPlaceholder": "Cari mengikut pelajar atau sekolah...",
+		"clearSearch": "Kosongkan carian",
+		"allStatuses": "Semua status",
+		"filterActive": "Aktif",
+		"filterNeedsAction": "Perlu Tindakan",
+		"statusDraft": "Draf",
+		"statusSubmitted": "Diserahkan",
+		"statusReceived": "Diterima",
+		"statusUnderReview": "Sedang Disemak",
+		"statusDocumentsRequested": "Dokumen Diperlukan",
+		"statusAssessmentRequired": "Penilaian Diperlukan",
+		"statusInterviewScheduled": "Temuduga Dijadualkan",
+		"statusOfferMade": "Tawaran Dibuat",
+		"statusOfferAccepted": "Tawaran Diterima",
+		"statusPreEnrolment": "Pra-Enrolmen",
+		"statusCoeIssued": "CoE Dikeluarkan",
+		"statusEnrolled": "Didaftarkan",
+		"statusWithdrawn": "Ditarik Balik",
+		"statusDeclined": "Ditolak",
+		"statusWaitlisted": "Senarai Tunggu",
+		"columnStudent": "Pelajar",
+		"columnSchool": "Sekolah",
+		"columnState": "Negeri",
+		"columnYearLevel": "Tahap Tahun",
+		"columnStatus": "Status",
+		"columnSubmitted": "Diserahkan",
+		"columnDays": "Hari",
+		"emptyTitle": "Tiada permohonan lagi",
+		"emptySubtitle": "Mulakan dengan mencipta permohonan untuk salah seorang pelajar anda.",
+		"emptyFilteredTitle": "Tiada permohonan yang sepadan dengan penapis anda",
+		"emptyFilteredSubtitle": "Cuba laraskan penapis atau terma carian anda.",
+		"addApplication": "Permohonan Baharu",
+		"paginationShowing": "Menunjukkan",
+		"paginationOf": "daripada {total}",
+		"allRows": "Semua",
+		"today": "Hari ini",
+		"daysAgo": "{count}h lepas",
+		"exportCsv": "Eksport CSV",
+		"detailTitle": "Butiran Permohonan",
+		"backToApplications": "Kembali ke Permohonan",
+		"tabDetails": "Butiran",
+		"tabDocuments": "Dokumen",
+		"tabTimeline": "Garis Masa",
+		"tabMessages": "Mesej",
+		"studentToSchool": "{student} → {school}",
+		"submittedOn": "Diserahkan",
+		"lastUpdated": "Dikemas Kini",
+		"daysInCurrentStatus": "Hari dalam Status",
+		"applicationId": "ID Permohonan",
+		"progressSubmitted": "Diserahkan",
+		"progressReview": "Semakan",
+		"progressDocuments": "Dokumen",
+		"progressOffer": "Tawaran",
+		"progressEnrolment": "Enrolmen",
+		"progressEnrolled": "Berdaftar",
+		"notFound": "Permohonan tidak dijumpai.",
+		"loadError": "Gagal memuatkan permohonan.",
+		"sectionStudent": "Maklumat Pelajar",
+		"sectionSchool": "Maklumat Sekolah",
+		"sectionApplication": "Maklumat Permohonan",
+		"labelName": "Nama",
+		"labelNationality": "Kewarganegaraan",
+		"labelSchoolName": "Nama Sekolah",
+		"labelState": "Negeri",
+		"labelCricosCode": "Kod CRICOS",
+		"labelYearLevel": "Tahap Tahun",
+		"labelIntake": "Sesi Pengambilan",
+		"labelStatus": "Status",
+		"labelSubmitted": "Diserahkan",
+		"labelCreated": "Dicipta",
+		"labelUpdated": "Dikemas Kini",
+		"notProvided": "Tidak disediakan",
+		"documentsEmpty": "Tiada dokumen dilampirkan",
+		"documentName": "Nama",
+		"documentType": "Jenis",
+		"documentSize": "Saiz",
+		"documentUploadedAt": "Dimuat naik",
+		"downloadDocument": "Muat turun",
+		"timelineEmpty": "Tiada peristiwa garis masa lagi",
+		"timelineBy": "oleh {actor}",
+		"messagesComingSoon": "Mesej akan datang tidak lama lagi",
+		"actionWithdraw": "Tarik Balik Permohonan",
+		"actionAcceptOffer": "Terima Tawaran",
+		"actionContactSchool": "Hubungi Sekolah",
+		"actionComingSoon": "Akan datang"
+	},
+	"Auth": {
+		"signInTitle": "Log masuk ke SchoolGo",
+		"signInSubtitle": "Akses akaun anda untuk mengurus sekolah, permohonan dan banyak lagi.",
+		"iAmA": "Saya seorang…",
+		"userTypes": {
+			"parent": "Ibu Bapa",
+			"agent": "Ejen",
+			"school": "Sekolah"
+		},
+		"emailLabel": "E-mel",
+		"emailPlaceholder": "you@example.com",
+		"passwordLabel": "Kata Laluan",
+		"passwordPlaceholder": "Masukkan kata laluan anda",
+		"signInButton": "Log Masuk",
+		"loginSuccess": "Selamat kembali!",
+		"loginError": "E-mel atau kata laluan tidak sah. Sila cuba lagi.",
+		"portalUnauthorized": "Akaun ini tidak dibenarkan untuk portal ini.",
+		"sessionExpired": "Sesi anda telah tamat. Sila log masuk semula.",
+		"noAccount": "Tiada akaun?",
+		"signUp": "Daftar",
+		"signUpTitle": "Buat akaun anda",
+		"signUpSubtitle": "Sertai SchoolGo untuk mencari, membandingkan dan memohon ke sekolah Australia.",
+		"nameLabel": "Nama penuh",
+		"namePlaceholder": "Nama penuh anda",
+		"createPasswordPlaceholder": "Buat kata laluan (min. 6 aksara)",
+		"signUpButton": "Buat akaun",
+		"registerSuccess": "Akaun dicipta! Selamat datang ke SchoolGo.",
+		"registerError": "Tidak dapat mencipta akaun. Sila cuba lagi.",
+		"hasAccount": "Sudah ada akaun?",
+		"signInLink": "Log masuk",
+		"close": "Tutup",
+		"portalSwitch": {
+			"backTo": "[TODO: ms] Back to"
+		},
+		"parent": {
+			"signInTitle": "[TODO: ms] Welcome back, Parent",
+			"signInSubtitle": "[TODO: ms] Sign in to find and compare the best schools for your child.",
+			"signUpTitle": "[TODO: ms] Start your school search",
+			"signUpSubtitle": "[TODO: ms] Create an account to shortlist, compare and apply to Australian schools.",
+			"stat1Value": "2,400+",
+			"stat1Label": "Sekolah",
+			"stat2Value": "7",
+			"stat2Label": "Bahasa",
+			"stat3Value": "98%",
+			"stat3Label": "Kepuasan"
+		},
+		"agent": {
+			"signInTitle": "[TODO: ms] Agent Portal",
+			"signInSubtitle": "[TODO: ms] Sign in to manage your pipeline and student placements.",
+			"signUpTitle": "[TODO: ms] Grow your agency",
+			"signUpSubtitle": "[TODO: ms] Join SchoolGo to access verified schools and streamline placements.",
+			"stat1Value": "850+",
+			"stat1Label": "Ejen",
+			"stat2Value": "15%",
+			"stat2Label": "Komisen",
+			"stat3Value": "24h",
+			"stat3Label": "Respons"
+		},
+		"school": {
+			"signInTitle": "[TODO: ms] School Portal",
+			"signInSubtitle": "[TODO: ms] Sign in to manage enrolments and connect with agents.",
+			"signUpTitle": "[TODO: ms] List your school",
+			"signUpSubtitle": "[TODO: ms] Create an account to reach international students and education agents.",
+			"stat1Value": "500+",
+			"stat1Label": "Ejen",
+			"stat2Value": "12k",
+			"stat2Label": "Pelajar",
+			"stat3Value": "Free",
+			"stat3Label": "Penyenaraian"
+		},
+		"nav": {
+			"parent": {
+				"howItWorks": "Cara penggunaan",
+				"compare": "Bandingkan",
+				"faq": "Soalan Lazim"
+			},
+			"agent": {
+				"howItWorks": "Cara penggunaan",
+				"commission": "Komisen",
+				"trust": "Kepercayaan"
+			},
+			"school": {
+				"howItWorks": "Cara penggunaan",
+				"pricing": "Harga",
+				"faq": "Soalan Lazim"
+			}
+		}
+	},
+	"Errors": {
+		"generic": "Sesuatu telah berlaku",
+		"genericSubtitle": "[TODO: ms] We hit an unexpected bump. Don't worry — your data is safe.",
+		"tryAgain": "Cuba lagi",
+		"notFound": "Halaman tidak ditemui",
+		"notFoundCode": "[TODO: ms] 404",
+		"notFoundSubtitle": "[TODO: ms] The page you're looking for doesn't exist or has been moved.",
+		"goHome": "Ke laman utama",
+		"searchInstead": "[TODO: ms] Search schools"
+	},
+	"LaunchingSoon": {
+		"title": "Kami akan melancarkan tidak lama lagi",
+		"subtitle": "SchoolGo sedang bersedia untuk membantu anda mencari sekolah terbaik di seluruh Australia. Kami sedang menyempurnakan sesuatu yang hebat.",
+		"stayTuned": "Nantikan — kami akan berada dalam talian tidak lama lagi.",
+		"portals": {
+			"heading": "Platform kami",
+			"parents": "Untuk Ibu Bapa",
+			"schools": "Untuk Sekolah",
+			"agents": "Untuk Ejen"
+		}
+	},
+	"Dashboard": {
+		"nav": {
+			"dashboard": "[TODO: ms] Dashboard",
+			"students": "[TODO: ms] Students",
+			"applications": "[TODO: ms] Applications",
+			"pipeline": "[TODO: ms] Pipeline",
+			"searchSchools": "[TODO: ms] Search Schools",
+			"messages": "[TODO: ms] Messages",
+			"settings": "[TODO: ms] Settings",
+			"profile": "[TODO: ms] My Profile",
+			"logout": "[TODO: ms] Log out",
+			"portalLabel": "Ejen",
+			"portalBadge": {
+				"agent": "Ejen",
+				"parent": "Ibu Bapa",
+				"school": "Sekolah"
+			}
+		},
+		"greeting": {
+			"morning": "Selamat pagi,",
+			"afternoon": "Selamat petang,",
+			"evening": "Selamat malam,",
+			"fallbackName": "anda"
+		},
+		"actionBanner": {
+			"title": "Perlu tindakan"
+		},
+		"cards": {
+			"activeStudents": "Pelajar aktif",
+			"appsInProgress": "Permohonan sedang diproses",
+			"offersReceived": "Tawaran diterima",
+			"enrolledThisTerm": "Mendaftar penggal ini"
+		},
+		"activity": {
+			"title": "Aktiviti terkini",
+			"empty": "Tiada aktiviti terkini. Mulakan dengan menambah pelajar atau mencari sekolah."
+		},
+		"deadlines": {
+			"title": "Tarikh akhir akan datang",
+			"empty": "Tiada tarikh akhir akan datang."
+		},
+		"quickActions": {
+			"addStudent": "Tambah pelajar baharu",
+			"newApplication": "Permohonan baharu",
+			"reviewApplications": "Semak permohonan",
+			"searchSchools": "Cari sekolah"
+		}
+	},
+	"Students": {
+		"title": "[TODO: ms] Students",
+		"subtitle": "[TODO: ms] Manage your student profiles, documents, and test results.",
+		"searchPlaceholder": "[TODO: ms] Search by name...",
+		"clearSearch": "[TODO: ms] Clear search",
+		"allStatuses": "[TODO: ms] All statuses",
+		"statusActive": "[TODO: ms] Active",
+		"statusArchived": "[TODO: ms] Archived",
+		"statusEnrolled": "[TODO: ms] Enrolled",
+		"addStudent": "[TODO: ms] Add Student",
+		"columnName": "[TODO: ms] Name",
+		"columnNationality": "[TODO: ms] Nationality",
+		"columnYearLevel": "[TODO: ms] Year Level",
+		"columnTargetEntry": "[TODO: ms] Target Entry",
+		"columnEnglishTest": "Ujian Bahasa Inggeris",
+		"columnApps": "Permohonan",
+		"columnStatus": "[TODO: ms] Status",
+		"filters": "Penapis",
+		"sort": "Isih",
+		"emptyTitle": "Belum ada pelajar",
+		"emptySubtitle": "Tambah pelajar pertama anda untuk mula membina profil mereka dan memohon ke sekolah.",
+		"archive": "Arkib",
+		"paginationShowing": "Menunjukkan",
+		"paginationOf": "daripada {total}",
+		"allRows": "Semua",
+		"createTitle": "[TODO: ms] Add New Student",
+		"createButton": "[TODO: ms] Create Student",
+		"createSuccess": "[TODO: ms] Student created successfully.",
+		"createError": "[TODO: ms] Could not create student. Please try again.",
+		"profileTitle": "[TODO: ms] Student Profile",
+		"notFound": "[TODO: ms] Student not found.",
+		"backToList": "[TODO: ms] Back",
+		"edit": "[TODO: ms] Edit",
+		"sectionPersonal": "[TODO: ms] Personal Information",
+		"sectionEducation": "[TODO: ms] Education",
+		"sectionParent": "[TODO: ms] Parent / Guardian",
+		"fieldFirstName": "[TODO: ms] First name",
+		"fieldLastName": "[TODO: ms] Last name",
+		"fieldDob": "[TODO: ms] Date of birth",
+		"fieldGender": "[TODO: ms] Gender",
+		"fieldNationality": "[TODO: ms] Nationality",
+		"fieldCurrentSchool": "[TODO: ms] Current school",
+		"fieldCurrentYear": "[TODO: ms] Current year level",
+		"fieldTargetYear": "[TODO: ms] Target entry year",
+		"fieldTargetTerm": "[TODO: ms] Target intake",
+		"fieldParentName": "[TODO: ms] Name",
+		"fieldParentEmail": "[TODO: ms] Email",
+		"fieldParentPhone": "[TODO: ms] Phone",
+		"fieldParentWechat": "[TODO: ms] WeChat ID",
+		"fieldNotes": "[TODO: ms] Agent Notes",
+		"notesPlaceholder": "[TODO: ms] Private notes about this student (only visible to you)...",
+		"selectGender": "[TODO: ms] Select gender",
+		"selectYear": "[TODO: ms] Select year level",
+		"genderMale": "[TODO: ms] Male",
+		"genderFemale": "[TODO: ms] Female",
+		"genderOther": "[TODO: ms] Other",
+		"tabOverview": "[TODO: ms] Overview",
+		"tabDocuments": "[TODO: ms] Documents",
+		"tabTests": "[TODO: ms] Tests",
+		"tabApplications": "[TODO: ms] Applications",
+		"documentsComingSoon": "[TODO: ms] Document management coming soon.",
+		"testsComingSoon": "[TODO: ms] Test results coming soon.",
+		"applicationsComingSoon": "[TODO: ms] Applications coming soon.",
+		"docUpload": "[TODO: ms] Upload Document",
+		"docUploadTitle": "[TODO: ms] Upload Document",
+		"docUploadButton": "[TODO: ms] Upload",
+		"docCancel": "[TODO: ms] Cancel",
+		"docDropzone": "[TODO: ms] Drag & drop a file here, or click to browse",
+		"docDropzoneHint": "[TODO: ms] PDF, JPG, PNG, DOCX up to 10 MB",
+		"docTypeLabel": "[TODO: ms] Document Type",
+		"docTypeSelect": "[TODO: ms] Select document type",
+		"docFileNameLabel": "[TODO: ms] Display Name (optional)",
+		"docFileNamePlaceholder": "[TODO: ms] e.g. John Passport 2026",
+		"docExpiresLabel": "[TODO: ms] Expiry Date (optional)",
+		"docNotesLabel": "[TODO: ms] Notes (optional)",
+		"docNotesPlaceholder": "[TODO: ms] Any notes about this document...",
+		"docAllTypes": "[TODO: ms] All types",
+		"docEmptyTitle": "[TODO: ms] No documents yet",
+		"docEmptySubtitle": "[TODO: ms] Upload your first document to get started.",
+		"docColName": "[TODO: ms] File",
+		"docColType": "[TODO: ms] Type",
+		"docColStatus": "[TODO: ms] Status",
+		"docColExpiry": "[TODO: ms] Expiry",
+		"docColUploaded": "[TODO: ms] Uploaded",
+		"docDeleteTitle": "[TODO: ms] Delete Document",
+		"docDeleteConfirm": "[TODO: ms] Are you sure you want to delete this document? This action cannot be undone.",
+		"docDeleteButton": "[TODO: ms] Delete",
+		"docUploadSuccess": "[TODO: ms] Document uploaded successfully.",
+		"docUploadError": "[TODO: ms] Could not upload document. Please try again.",
+		"docDeleteSuccess": "[TODO: ms] Document deleted.",
+		"docDeleteError": "[TODO: ms] Could not delete document.",
+		"docType_passport": "[TODO: ms] Passport",
+		"docType_school_reports": "[TODO: ms] School Reports",
+		"docType_english_test": "[TODO: ms] English Test Report",
+		"docType_birth_certificate": "[TODO: ms] Birth Certificate",
+		"docType_parent_passport": "[TODO: ms] Parent Passport",
+		"docType_immunisation": "[TODO: ms] Immunisation Records",
+		"docType_personal_statement": "[TODO: ms] Personal Statement",
+		"docType_guardian_nomination": "[TODO: ms] Guardian Nomination",
+		"docType_current_visa": "[TODO: ms] Current Visa",
+		"docType_welfare_docs": "[TODO: ms] Welfare Documents",
+		"docType_financial_evidence": "[TODO: ms] Financial Evidence",
+		"docType_oshc": "[TODO: ms] OSHC",
+		"docType_written_agreement": "[TODO: ms] Written Agreement",
+		"docType_conditions_of_entry": "[TODO: ms] Conditions of Entry",
+		"docType_offer_acceptance": "[TODO: ms] Offer Acceptance",
+		"docType_coe": "[TODO: ms] CoE (Confirmation of Enrolment)",
+		"docType_caaw_letter": "[TODO: ms] CAAW Letter",
+		"docType_photo": "[TODO: ms] Photo",
+		"docType_other": "[TODO: ms] Other",
+		"docStatus_active": "[TODO: ms] Active",
+		"docStatus_replaced": "[TODO: ms] Replaced",
+		"docStatus_archived": "[TODO: ms] Archived"
+	},
+	"Pipeline": {
+		"title": "Saluran Permohonan",
+		"totalApplications": "{count, plural, one {# permohonan} other {# permohonan}}",
+		"emptyTitle": "Tiada permohonan dalam saluran",
+		"emptySubtitle": "Mulakan dengan mencipta permohonan untuk salah seorang pelajar anda.",
+		"columnNew": "Baharu",
+		"columnInReview": "Sedang Disemak",
+		"columnActionRequired": "Perlu Tindakan",
+		"columnOffers": "Tawaran",
+		"columnPreEnrolment": "Pra-Enrolmen",
+		"columnEnrolled": "Didaftarkan",
+		"columnClosed": "Ditutup",
+		"daysLabel": "{count}h",
+		"moreApplications": "+{count} lagi"
+	},
+	"SearchMetadata": {
+		"title": "Cari Sekolah — SchoolGo",
+		"description": "Cari dan bandingkan sekolah Australia. Tapis mengikut lokasi, yuran, kurikulum, asrama dan lain-lain.",
+		"ogDescription": "Cari dan bandingkan sekolah Australia di SchoolGo.",
+		"parentTitle": "Cari Sekolah Australia untuk Anak Anda — SchoolGo",
+		"parentDescription": "Cari dan bandingkan sekolah Australia mengikut lokasi, yuran, kurikulum, asrama dan sokongan pelajar.",
+		"parentOgDescription": "Bandingkan sekolah Australia dan cari pilihan yang sesuai untuk anak anda di SchoolGo.",
+		"schoolTitle": "Teroka Senarai Sekolah Australia — SchoolGo",
+		"schoolDescription": "Semak senarai sekolah Australia, lokasi, program, yuran dan maklumat sokongan pelajar di SchoolGo.",
+		"schoolOgDescription": "Teroka senarai sekolah Australia dan bandingkan program di SchoolGo.",
+		"agentTitle": "Cari Sekolah Australia untuk Pelajar — SchoolGo",
+		"agentDescription": "Cari sekolah Australia untuk pelajar antarabangsa dan bandingkan lokasi, yuran, program, asrama dan sokongan.",
+		"agentOgDescription": "Cari dan bandingkan sekolah Australia untuk pelajar anda di SchoolGo."
+	}
 }

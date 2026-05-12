@@ -1,1508 +1,1524 @@
 {
-  "Metadata": {
-    "title": "SchoolGo 호주 | 최고의 학교를 찾아보세요",
-    "description": "호주 전역의 최고의 학교를 검색하고 비교하세요. 커리큘럼, 가격, 위치 등으로 필터링하세요.",
-    "ogDescription": "호주 전역의 최고의 학교를 검색하고 비교하세요."
-  },
-  "Common": {
-    "step": "Step {number, number}",
-    "cricosVerified": "CRICOS Verified",
-    "qeacVerified": "QEAC Verified",
-    "claimedBySchool": "Claimed by school",
-    "addToShortlist": "Add to shortlist",
-    "removeFromShortlist": "Remove from shortlist",
-    "comingSoon": "Coming soon"
-  },
-  "ParentsMetadata": {
-    "title": "SchoolGo — 자녀를 위한 호주 학교 찾기",
-    "description": "모든 CRICOS 등록 호주 학교를 검색하세요. 학비, 영어 시험 요건, 입학 일정을 7개 언어로 무료 비교하세요.",
-    "ogDescription": "모든 CRICOS 학교. 검증 완료. 내 언어로."
-  },
-  "MarketingHeader": {
-    "findSchools": "학교 찾기",
-    "audiences": {
-      "parents": "학부모",
-      "agents": "유학원",
-      "schools": "학교"
-    },
-    "nav": {
-      "parent": {
-        "howItWorks": "이용 방법",
-        "compare": "비교",
-        "faq": "자주 묻는 질문"
-      },
-      "agent": {
-        "howItWorks": "이용 방법",
-        "commission": "수수료",
-        "trust": "신뢰"
-      },
-      "school": {
-        "howItWorks": "이용 방법",
-        "pricing": "요금제",
-        "faq": "자주 묻는 질문"
-      }
-    },
-    "language": "언어",
-    "signIn": "로그인",
-    "getStarted": "시작하기",
-    "openMenu": "메뉴 열기",
-    "closeMenu": "메뉴 닫기",
-    "menu": "Menu",
-    "subNav": {
-      "explore": {
-        "label": "탐색",
-        "items": {
-          "browseSchools": "학교 둘러보기",
-          "browseSchoolsDesc": "모든 등록 호주 학교 검색",
-          "compareSchools": "학교 비교",
-          "compareSchoolsDesc": "학비·시험·입학 일정 나란히 비교",
-          "schoolTypes": "학교 유형",
-          "schoolTypesDesc": "공립·가톨릭·사립 학교 비교",
-          "englishTests": "영어 시험",
-          "englishTestsDesc": "AEAS, IELTS 및 인정 시험 안내"
-        }
-      },
-      "resources": {
-        "label": "자료",
-        "items": {
-          "admissionsGuide": "입학 가이드",
-          "admissionsGuideDesc": "단계별 입학 과정 안내",
-          "schoolFees": "학교 학비",
-          "schoolFeesDesc": "등록금·기타 비용·첫해 총비용",
-          "visaRequirements": "비자 요건",
-          "visaRequirementsDesc": "학생 비자 500 필수 사항",
-          "allGuides": "모든 가이드",
-          "allGuidesDesc": "국제 가족을 위한 모든 가이드 보기"
-        }
-      },
-      "about": {
-        "label": "소개",
-        "items": {
-          "aboutSchoolGo": "SchoolGo 소개",
-          "aboutSchoolGoDesc": "우리의 사명과 이야기",
-          "contactUs": "문의하기",
-          "contactUsDesc": "우리 팀에게 연락하기",
-          "forAgents": "유학원 안내",
-          "forAgentsDesc": "교육 에이전트 전용 도구",
-          "forSchools": "학교 안내",
-          "forSchoolsDesc": "국제 학생 모집 확대"
-        }
-      }
-    }
-  },
-  "MarketingFooter": {
-    "tagline": "미래의 리더들을 호주 최고의 학교와 연결합니다 — 전국, 7개 언어로.",
-    "columns": {
-      "parents": {
-        "title": "학부모 안내",
-        "links": {
-          "findSchools": "학교 찾기",
-          "compare": "비교",
-          "scholarships": "장학금",
-          "english": "영어 시험"
-        }
-      },
-      "agents": {
-        "title": "유학원 안내",
-        "links": {
-          "overview": "에이전트 개요",
-          "qeac": "QEAC 인증",
-          "pipeline": "Pipeline tools [Soon]",
-          "login": "Agent login [Soon]"
-        }
-      },
-      "schools": {
-        "title": "학교 안내",
-        "links": {
-          "overview": "학교 개요",
-          "claim": "프로필 등록",
-          "login": "School login [Soon]",
-          "pricing": "요금제"
-        }
-      },
-      "resources": {
-        "title": "자료",
-        "links": {
-          "help": "도움말 센터",
-          "contact": "문의하기",
-          "privacy": "개인정보 처리방침",
-          "terms": "이용약관"
-        }
-      }
-    },
-    "language": "언어",
-    "copyright": "© {year} SchoolGo Australia. 모든 권리 보유.",
-    "attribution": "출처: data.gov.au · CC BY 2.5 AU · ESOS 법 준수",
-    "portals": "저는...",
-    "portalLabels": {
-      "parents": "학부모",
-      "agents": "유학원",
-      "schools": "학교"
-    }
-  },
-  "ParentsHero": {
-    "trustPill": {
-      "brand": "정부",
-      "brandAccent": "등록 인증",
-      "source": "data.gov.au 데이터"
-    },
-    "headlinePrefix": "자녀를 위한",
-    "headlineEmphasis": "호주",
-    "headlineSuffix": "학교를 찾아보세요.",
-    "lede": "모든 CRICOS 등록 K–12 학교를 한곳에서 검색하세요. 학비, 기숙사, 영어 시험을 비교하세요 — 중국어, 한국어, 태국어, 베트남어, 말레이어 또는 영어로 검색하세요.",
-    "searchAriaLabel": "학교 검색",
-    "searchFields": {
-      "where": {
-        "label": "지역",
-        "value": "호주 어디서나"
-      },
-      "yearLevel": {
-        "label": "학년",
-        "value": "Year 7 – Year 12"
-      },
-      "fees": {
-        "label": "학비",
-        "value": "$15k – $45k AUD"
-      }
-    },
-    "searchButtonLabel": "검색",
-    "featured": {
-      "eyebrow": "추천",
-      "shortlistAdd": "{name}을(를) 후보 목록에 추가",
-      "shortlistRemove": "후보 목록에서 {name} 제거",
-      "cards": {
-        "a": {
-          "name": "Scotch College Melbourne",
-          "location": "Hawthorn, VIC",
-          "curriculum": "VCE",
-          "fee": "$38.5k AUD",
-          "boarding": "기숙",
-          "rating": "4.9"
-        },
-        "b": {
-          "name": "Sydney Grammar School",
-          "location": "Darlinghurst, NSW",
-          "curriculum": "HSC",
-          "fee": "$41.2k AUD",
-          "boarding": "통학 전용",
-          "rating": "4.8"
-        },
-        "c": {
-          "name": "Brisbane Grammar School",
-          "location": "Spring Hill, QLD",
-          "curriculum": "QCE/IB",
-          "fee": "$35.8k AUD",
-          "boarding": "기숙",
-          "rating": "4.7"
-        }
-      }
-    }
-  },
-  "ParentsFourSteps": {
-    "eyebrow": "이용 방법",
-    "heading": "첫 탐색부터 합격 통보까지 — 네 가지 간단한 단계.",
-    "subheading": "숨겨진 비용 없음. 지원 전까지 로그인 불필요.",
-    "steps": {
-      "browse": {
-        "title": "모든 CRICOS 학교 둘러보기",
-        "description": "주, 학비, 교육 부문, 커리큘럼, 기숙사, 장학금으로 {count, number}개 학교를 필터링하세요 — 내 언어로."
-      },
-      "shortlist": {
-        "title": "4개 후보 선정, 나란히 비교",
-        "description": "학비, 입학 일정, ICSEA, 인정 영어 시험을 한눈에 비교하세요. 몇 달이 아닌 몇 분 안에 결정하세요."
-      },
-      "prepare": {
-        "title": "정확한 요건 확인",
-        "description": "모든 프로필에 인정 시험, 최저 점수, 필요 서류, 입학 기간이 명시되어 있습니다."
-      },
-      "apply": {
-        "title": "인증된 에이전트를 통해 지원",
-        "description": "에이전트는 QEAC 인증 배지를 보유합니다. 지원서는 하나의 대시보드에서 처음부터 끝까지 추적됩니다.",
-        "comingSoon": "Coming soon"
-      }
-    },
-    "ctaBrowse": "학교 둘러보기",
-    "ctaLearn": "이용 방법 보기",
-    "badge": {
-      "cricosVerified": "CRICOS Verified · Claimed by school",
-      "updated": "Updated April 2026"
-    },
-    "visuals": {
-      "browse": {
-        "title": "[TODO: ko] 695 schools loaded",
-        "subtitle": "[TODO: ko] Filtered by state, fees & curriculum"
-      },
-      "shortlist": {
-        "title": "[TODO: ko] Wei's shortlist",
-        "subtitle": "[TODO: ko] 3 schools in Victoria · All accept AEAS"
-      },
-      "prepare": {
-        "title": "[TODO: ko] Requirements matched",
-        "subtitle": "[TODO: ko] AEAS 70+ · IELTS 5.5+ · Documents ready"
-      },
-      "apply": {
-        "title": "[TODO: ko] Application submitted",
-        "subtitle": "[TODO: ko] Tracked end-to-end · Status: Under review"
-      }
-    }
-  },
-  "ParentsVerified": {
-    "eyebrow": "모든 CRICOS 학교",
-    "heading": "검증 완료. 내 언어로.",
-    "subheading": "실제 건물 사진. 실제 학비. 실제 입학 일정. 학교 데이터는 CRICOS와 ACARA에서 가져오며 매월 갱신됩니다.",
-    "cards": {
-      "a": {
-        "name": "Scotch College",
-        "location": "Hawthorn, VIC",
-        "sector": "사립"
-      },
-      "b": {
-        "name": "Sydney Grammar",
-        "location": "Darlinghurst, NSW",
-        "sector": "사립"
-      },
-      "c": {
-        "name": "Brisbane Grammar",
-        "location": "Spring Hill, QLD",
-        "sector": "사립"
-      },
-      "d": {
-        "name": "Christ Church Grammar",
-        "location": "Claremont, WA",
-        "sector": "사립"
-      }
-    }
-  },
-  "ParentsComparison": {
-    "eyebrow": "비교",
-    "heading": "학교를 나란히 놓고 비교하세요.",
-    "headingAccent": "몇 달이 아닌 몇 분 안에 결정하세요.",
-    "columns": {
-      "fee": "연간 학비",
-      "tests": "인정 시험",
-      "intakes": "입학 일정",
-      "stateSector": "[TODO: ko] State & sector",
-      "curriculum": "[TODO: ko] Curriculum",
-      "boarding": "[TODO: ko] Boarding",
-      "minScore": "[TODO: ko] Min. AEAS score",
-      "scholarships": "[TODO: ko] Scholarships"
-    },
-    "notPublished": "미공개",
-    "shortlistLabel": "[TODO: ko] Shortlist · {count} schools",
-    "dayOnly": "[TODO: ko] — Day only",
-    "noneIntl": "[TODO: ko] — None intl."
-  },
-  "ParentsPickATest": {
-    "eyebrow": "영어 능력",
-    "heading": "시험을 선택하세요. 어떤 학교가 인정하는지 확인하세요 —",
-    "headingAccent": "그리고 최저 점수까지.",
-    "subheading": "모든 프로필에서 인정 영어 시험을 확인할 수 있습니다. 50개 학교 웹사이트를 일일이 뒤질 필요가 없습니다.",
-    "tests": {
-      "aeas": {
-        "name": "AEAS",
-        "fullName": "Australian Education Assessment Services",
-        "description": "Most commonly accepted by Australian independent schools"
-      },
-      "idat": {
-        "name": "iDAT",
-        "fullName": "International Digital Admissions Test",
-        "description": "Growing in popularity for K–12 admissions"
-      },
-      "duolingo": {
-        "name": "Duolingo",
-        "fullName": "Duolingo English Test",
-        "description": "Accepted by an increasing number of schools"
-      },
-      "ielts": {
-        "name": "IELTS",
-        "fullName": "International English Language Testing System",
-        "description": "Standard for senior secondary entry (Year 11+)"
-      },
-      "pte": {
-        "name": "PTE Academic",
-        "fullName": "Pearson Test of English Academic",
-        "description": "Accepted by some schools for Year 11–12 entry"
-      },
-      "cambridge": {
-        "name": "Cambridge",
-        "fullName": "Cambridge English Qualifications",
-        "description": "Accepted by select schools"
-      },
-      "toefl": {
-        "name": "TOEFL",
-        "fullName": "Test of English as a Foreign Language",
-        "description": "Accepted by select schools for senior entry"
-      }
-    },
-    "cta": "이 시험을 인정하는 학교 보기"
-  },
-  "ParentsSevenLanguages": {
-    "eyebrow": "7개 언어",
-    "heading": "가족이 자정에 학비 안내서를 번역할 필요는 없습니다.",
-    "subheading": "SchoolGo는 아시아태평양 지역에서 가장 많이 쓰이는 7개 언어로 완전히 번역되어 있습니다.",
-    "languages": {
-      "en": "English",
-      "zh": "简体中文",
-      "vi": "Tiếng Việt",
-      "ko": "한국어",
-      "ms": "Bahasa Melayu",
-      "th": "ภาษาไทย",
-      "id": "Bahasa Indonesia"
-    }
-  },
-  "ParentsArticles": {
-    "eyebrow": "입학 자료실",
-    "heading": "입학 담당자가 작성하고 7개 언어로 번역했습니다.",
-    "subheading": "비자, 입학 일정, 영어 시험, 학비 안내에 대한 쉬운 가이드. 무료, 로그인 불필요.",
-    "items": {
-      "intakes": {
-        "title": "호주 학교 입학 일정 이해하기",
-        "meta": "6분 읽기 · 매월 업데이트"
-      },
-      "englishTests": {
-        "title": "내 학교가 인정하는 영어 시험은?",
-        "meta": "8분 읽기 · 시험별 상세 비교"
-      },
-      "boarding": {
-        "title": "기숙 vs 통학: 가족들의 선택과 이유",
-        "meta": "5분 읽기 · 사례 연구"
-      }
-    },
-    "readMore": "기사 읽기"
-  },
-  "ParentsStatsBar": {
-    "eyebrow": "주요 수치",
-    "heading": "호주 최대 CRICOS 학교 디렉토리.",
-    "subheading": "모든 등록 학교를 검증하고 검색할 수 있습니다 — 공립부터 사립까지, 8개 주와 준주 전체를 포함합니다.",
-    "items": {
-      "schools": {
-        "value": "{count, number}+",
-        "label": "CRICOS Schools"
-      },
-      "states": {
-        "value": "8",
-        "label": "States & Territories"
-      },
-      "sectors": {
-        "value": "All 3 Sectors",
-        "label": "Government · Independent · Catholic"
-      },
-      "fees": {
-        "value": "$3.5k – $78k",
-        "label": "Annual Fee Range"
-      }
-    }
-  },
-  "ParentsFinalCta": {
-    "eyebrow": "여기서 시작하세요",
-    "headingPrefix": "검색이",
-    "headingEmphasis": "시작됩니다",
-    "headingSuffix": "7개 언어로.",
-    "subheading": "무료. 로그인 불필요. {month} {year, number} 업데이트.",
-    "ctaPrimary": "학교 찾기",
-    "ctaSecondary": "인증 에이전트와 상담하기"
-  },
-  "ParentsTrustBar": {
-    "eyebrow": "신뢰와 규정 준수",
-    "heading": "믿을 수 있는 데이터.",
-    "subheading": "SchoolGo의 모든 학교 정보는 공식 정부 데이터 출처를 기반으로 — 검증되고, 라이선스가 부여되며, 매월 갱신됩니다.",
-    "items": {
-      "cricos": {
-        "label": "정부 등록 학교",
-        "description": "모든 학교 정보는 공식 연방 등록부와 교차 검증됩니다."
-      },
-      "datagov": {
-        "label": "최신 상태 유지",
-        "description": "CC BY 2.5 AU 라이선스로 제공되는 공개 데이터 — 투명하고 누구나 감사 가능합니다."
-      },
-      "acara": {
-        "label": "국가 교육과정 데이터",
-        "description": "커리큘럼, ICSEA 점수, 입학 데이터는 국가 권위 기관에서 제공합니다."
-      },
-      "esos": {
-        "label": "학생 보호",
-        "description": "SchoolGo는 호주 해외 학생 교육 서비스(ESOS) 법률 체계 내에서 운영됩니다."
-      }
-    },
-    "attribution": "학교 데이터는 호주 해외 학생 기관 및 과정 연방 등록부(CRICOS)와 호주 교육과정·평가·보고 기관(ACARA) 공개 데이터셋을 출처로 합니다. 2026년 4월 업데이트."
-  },
-  "ParentsFaq": {
-    "heading": "Frequently Asked Questions",
-    "items": {
-      "free": {
-        "question": "Is SchoolGo free?",
-        "answer": "Yes. SchoolGo is completely free for parents, education agents, and schools. There are no listing fees, application fees, or subscription costs."
-      },
-      "dataSource": {
-        "question": "Where does the school data come from?",
-        "answer": "All school listings are sourced from CRICOS (the Commonwealth Register of Institutions and Courses for Overseas Students), which is the Australian Government's official register of schools authorised to enrol international students. We cross-reference this with ACARA school profile data for enrolment figures, ICSEA scores, and GPS coordinates."
-      },
-      "englishTests": {
-        "question": "What English proficiency tests do Australian schools accept?",
-        "answer": "Different schools accept different tests. The most common are AEAS (Australian Education Assessment Services), iDAT (International Digital Admissions Test), Duolingo English Test, IELTS, and PTE Academic. SchoolGo shows which specific tests each school accepts on their profile page."
-      },
-      "doINeedAgent": {
-        "question": "[TODO: ko] Do I need an education agent?",
-        "answer": "[TODO: ko] You don't have to use one, but most families do — and it's free. Education agents help you choose the right school, prepare documents, and manage the application. SchoolGo shows which agents work with each school, so you can find someone who already knows the admissions process."
-      },
-      "claimProfile": {
-        "question": "I'm a school. How do I claim my profile?",
-        "answer": "Search for your school on SchoolGo and click \"Claim This School.\" You'll be asked to verify your identity as a school staff member. Once verified, you can update your profile with fees, entry requirements, and contact details."
-      },
-      "updateFrequency": {
-        "question": "How often is the data updated?",
-        "answer": "CRICOS data is refreshed monthly from data.gov.au. School-specific details (fees, requirements, intake dates) are updated by schools who have claimed their profiles. If a school hasn't claimed their profile, the data shown is from CRICOS and ACARA public datasets."
-      }
-    }
-  },
-  "AgentsMetadata": {
-    "title": "SchoolGo — 포트폴리오처럼 운영하는 유학원 비즈니스",
-    "description": "호주 학교로 학생을 보내는 교육 에이전트를 위한 QEAC 인증 도구. 표준화된 지원서, 실시간 파이프라인, 전액 수수료.",
-    "ogDescription": "포트폴리오처럼 비즈니스를 운영하세요. 수수료 100% 보전."
-  },
-  "AgentsHero": {
-    "eyebrow": "교육 에이전트 전용 · QEAC 인증",
-    "headlinePrefix": "포트폴리오처럼",
-    "headlineEmphasis": "비즈니스를 운영하세요.",
-    "lede": "인증된 프로필 하나. CRICOS 학교 {count, number}개. 가족이 직접 확인하는 파이프라인. SchoolGo는 학교에 청구합니다. 에이전트에게는 청구하지 않습니다.",
-    "ctaPrimary": "인증 신청",
-    "ctaSecondary": "운영 방식 보기",
-    "badgeMeta": "Sample agent profile",
-    "stats": {
-      "schools": {
-        "value": "{count, number}",
-        "label": "인증된 CRICOS 학교"
-      },
-      "sectors": {
-        "value": "3",
-        "label": "Sectors — Gov, Independent, Catholic"
-      },
-      "commission": {
-        "value": "100%",
-        "label": "수수료 전액 보전"
-      }
-    }
-  },
-  "AgentsPainPoints": {
-    "eyebrow": "Why agents switch",
-    "heading": "Built for Education Agents Who Manage Real Pipelines",
-    "subheading": "76% of international school enrolments come through education agents. SchoolGo is built to make you more effective, not to replace you.",
-    "items": {
-      "email": {
-        "question": "Tired of emailing 15 admissions offices?",
-        "answer": "One platform, one application workflow. Submit to multiple schools and track responses in real time. Every application carries your verified agent attribution."
-      },
-      "status": {
-        "question": "Students keep asking 'did you hear back?'",
-        "answer": "Live application tracker your students can see. Status updates flow automatically — you spend less time chasing and more time advising."
-      },
-      "trust": {
-        "question": "Schools don't know if you're legitimate?",
-        "answer": "SchoolGo agent verification with your QEAC credentials. Your verified badge and track record appear on every application you submit."
-      },
-      "requirements": {
-        "question": "Different requirements for every school?",
-        "answer": "SchoolGo maps each school's specific entry requirements: accepted English tests, minimum scores, required documents, intake dates, and application fees. No more digging through 50 school websites."
-      }
-    }
-  },
-  "AgentsStatsBar": {
-    "items": {
-      "schools": "{count, number}+ School Profiles",
-      "requirements": "Entry Requirements Mapped",
-      "tests": "English Test Requirements Listed",
-      "free": "Free for Agents"
-    }
-  },
-  "AgentsMatching": {
-    "eyebrow": "매칭 · 지원 · 추적",
-    "heading": "오전 10시 부모 통화. 10시 30분까지 매칭된 학교 3곳.",
-    "subheading": "SchoolGo가 주, 학비, 영어 수준, 입학 시기에 맞는 학교를 추려낸 뒤, 몇 분 안에 표준화된 지원서를 제출할 수 있도록 합니다.",
-    "steps": {
-      "listen": {
-        "title": "가족의 요구 사항 파악",
-        "description": "예산, 지역, 영어 수준, 희망 입학 시기 — 부모 언어로 한 장의 양식에 입력."
-      },
-      "match": {
-        "title": "최적 학교 확인",
-        "description": "학생 프로필에 맞게 필터링. 학교별 인정 시험과 최저 점수를 바로 확인.",
-        "comingSoon": "Coming soon"
-      },
-      "deliver": {
-        "title": "정리된 후보 목록 제공",
-        "description": "가족이 캡처해서 아버지에게 보낼 수 있는 브랜드 PDF. 15개 학교에서 각각 보내온 PDF는 이제 필요 없습니다.",
-        "comingSoon": "Coming soon"
-      }
-    },
-    "inboxLabel": "입학 수신함",
-    "inboxRows": {
-      "scotch": {
-        "school": "Scotch College",
-        "location": "Hawthorn, VIC",
-        "status": "매칭 · AEAS 70+"
-      },
-      "brisbane": {
-        "school": "Brisbane Grammar",
-        "location": "Spring Hill, QLD",
-        "status": "매칭 · AEAS 68+"
-      },
-      "sydney": {
-        "school": "Sydney Grammar",
-        "location": "Darlinghurst, NSW",
-        "status": "매칭 · AEAS 65+"
-      }
-    }
-  },
-  "AgentsCommission": {
-    "eyebrow": "요금제",
-    "heading": "학교 수수료의 100%를 에이전트가 받습니다.",
-    "subheading": "SchoolGo는 학교에 청구합니다. 에이전트에게는 청구하지 않습니다. 학교와의 상업적 관계는 그대로 유지됩니다.",
-    "statValue": "$0",
-    "statLabel": "Platform cost per agent. Zero fees, zero commission splits — ever.",
-    "bullets": {
-      "zero": {
-        "title": "학생 1인당 수수료 없음",
-        "description": "수수료 분할 없음. 배치 수수료 없음. 구독료 없음."
-      },
-      "direct": {
-        "title": "학교와의 직접적 관계 유지",
-        "description": "지원서를 제출하는 순간 에이전트 귀속이 확정됩니다."
-      },
-      "audit": {
-        "title": "완전한 감사 기록",
-        "description": "모든 상태 변경에 타임스탬프가 찍힙니다. 분쟁은 기록으로 해결됩니다."
-      }
-    }
-  },
-  "AgentsQeacTrust": {
-    "eyebrow": "인증 완료",
-    "heading": "부모와 학교가 실제로 신뢰하는 프로필.",
-    "subheading": "QEAC 자격은 한 번만 검증합니다. 제출하는 모든 지원서에 배지와 실적이 표시됩니다.",
-    "sampleLabel": "Sample profile",
-    "profile": {
-      "name": "에이전트 프로필",
-      "agentName": "Mei Lin",
-      "qeac": "QEAC 인증",
-      "yearsActive": "활동 연수",
-      "students": "배치 학생 수",
-      "placements": "배치 학교 수",
-      "languages": "사용 언어",
-      "languagesValue": "中 · EN"
-    }
-  },
-  "AgentsScale": {
-    "eyebrow": "네트워크",
-    "heading": "Agents across APAC are joining. Be one of the first.",
-    "subheading": "From Shanghai to Jakarta, Ho Chi Minh to Seoul — agents placing families into Australian K–12.",
-    "agents": {
-      "a": {
-        "name": "Li Wei",
-        "region": "Shanghai · 中国",
-        "meta": "QEAC verified · Independent schools"
-      },
-      "b": {
-        "name": "Nguyễn Minh",
-        "region": "Ho Chi Minh · Việt Nam",
-        "meta": "QEAC verified · All sectors"
-      },
-      "c": {
-        "name": "Siti Rahman",
-        "region": "Kuala Lumpur · Malaysia",
-        "meta": "QEAC verified · Boarding specialist"
-      },
-      "d": {
-        "name": "Ji-eun Park",
-        "region": "Seoul · 대한민국",
-        "meta": "QEAC verified · VIC & NSW"
-      }
-    },
-    "cta": "인증 신청"
-  },
-  "AgentsTestimonial": {
-    "eyebrow": "[TODO: ko] From the field",
-    "heading": "[TODO: ko] What agents are saying",
-    "items": {
-      "a": {
-        "quote": "[TODO: ko] I used to forward 40 PDFs a week between parents on WeChat and six admissions offices over email. One platform would cut my admin in half.",
-        "attribution": "[TODO: ko] Agency director, Shanghai",
-        "meta": "[TODO: ko] 60+ students · 3 counsellors"
-      },
-      "b": {
-        "quote": "[TODO: ko] My families want updates at 11pm their time. A live tracker they can check themselves would save me two hours a day on WhatsApp.",
-        "attribution": "[TODO: ko] Independent agent, Ho Chi Minh City",
-        "meta": "[TODO: ko] 25+ students · Solo practice"
-      },
-      "c": {
-        "quote": "[TODO: ko] I re-type the same passport number into five different school forms every week. Enter-once, apply-many would change everything.",
-        "attribution": "[TODO: ko] Senior counsellor, Kuala Lumpur",
-        "meta": "[TODO: ko] 40+ students · 2 branches"
-      }
-    },
-    "disclaimer": "[TODO: ko] Composite quotes based on agent interviews"
-  },
-  "AgentsFinalCta": {
-    "eyebrow": "인증 받기",
-    "headingPrefix": "내 포트폴리오는",
-    "headingEmphasis": "더 나은 것을",
-    "headingSuffix": "받을 자격이 있습니다.",
-    "subheading": "무료. QEAC 인증 필요. 온보딩은 48시간 이내.",
-    "ctaPrimary": "인증 신청",
-    "ctaSecondary": "데모 예약"
-  },
-  "SchoolsMetadata": {
-    "title": "SchoolGo — 더 적은 이메일로 국제 학생 정원을 채우세요",
-    "description": "호주 학교를 위한 하나의 표준화된 입학 수신함. QEAC 인증 에이전트, 실제 지원서, 학생 1인당 수수료 없음.",
-    "ogDescription": "국제 학생 정원을 채우세요. 이메일은 줄이고."
-  },
-  "SchoolsHero": {
-    "eyebrow": "호주 학교 전용",
-    "headlinePrefix": "채우세요",
-    "headlineEmphasis": "국제 학생",
-    "headlineSuffix": "정원을. 이메일은 줄이고.",
-    "lede": "7개국 가족들이 보는 하나의 인증된 프로필. QEAC 인증 에이전트로부터 표준화된 지원서를 받으세요 — 입학팀이 이미 사용하는 형식으로.",
-    "ctaPrimary": "학교 프로필 등록",
-    "ctaSecondary": "데모 예약",
-    "inbox": {
-      "eyebrow": "Applications inbox — preview",
-      "countLabel": "이번 달",
-      "rows": {
-        "a": {
-          "name": "Sophie Chen",
-          "status": "신규",
-          "meta": "VIC · Year 9 · AEAS 78"
-        },
-        "b": {
-          "name": "Minh Tran",
-          "status": "검토 중",
-          "meta": "VIC · Year 11 · IELTS 6.5"
-        },
-        "c": {
-          "name": "Ji-woo Park",
-          "status": "합격 통보 완료",
-          "meta": "NSW · Year 10 · AEAS 74"
-        }
-      }
-    }
-  },
-  "SchoolsStats": {
-    "eyebrow": "네트워크 효과",
-    "heading": "프로필 하나. 7개국 가족들이 봅니다.",
-    "subheading": "학교 정보가 모든 검색, 모든 비교, 모든 매칭 후보 목록에 — 가족의 언어로 노출됩니다.",
-    "items": {
-      "schools": {
-        "value": "695+",
-        "label": "CRICOS-registered schools"
-      },
-      "states": {
-        "value": "8",
-        "label": "States & territories"
-      },
-      "sectors": {
-        "value": "3",
-        "label": "Sectors — Government, Independent, Catholic"
-      },
-      "feeRange": {
-        "value": "$3.5k – $78k",
-        "label": "Annual fee range (AUD)"
-      }
-    }
-  },
-  "SchoolsThreeTools": {
-    "eyebrow": "도구 모음",
-    "heading": "세 가지 도구. 하나의 목표: 더 적은 수고로 적합한 학생을.",
-    "subheading": "SchoolGo는 입학팀이 실제로 필요한 세 가지를 제공합니다.",
-    "tools": {
-      "profile": {
-        "title": "살아있는 학교 프로필",
-        "description": "학비, 입학 일정, 인정 시험, 장학금, 서류 — 직접 업데이트하면 가족의 언어로 표시됩니다."
-      },
-      "applications": {
-        "title": "표준화된 지원서",
-        "description": "모든 지원서가 동일한 형식으로 도착하며, QEAC 인증 에이전트 귀속 및 완전한 서류가 포함됩니다."
-      },
-      "inbox": {
-        "title": "단일 입학 수신함",
-        "description": "모든 지원서의 상태를 추적하세요. 한 번의 클릭으로 합격, 대기, 불합격 처리. 가족과 에이전트가 상태를 즉시 확인합니다."
-      }
-    }
-  },
-  "SchoolsTimeline": {
-    "eyebrow": "입학 여정",
-    "heading": "첫 지원서부터 개학 첫날까지 — 이메일 홍수 없이.",
-    "subheading": "국제 입학 전 과정을 한 곳에서.",
-    "steps": {
-      "receive": {
-        "title": "접수",
-        "description": "영어 점수, 서류, 인증 에이전트 정보와 함께 지원서가 수신함에 도착합니다.",
-        "comingSoon": "Coming soon"
-      },
-      "review": {
-        "title": "검토",
-        "description": "팀이 자체 기준에 따라 평가합니다. 메모는 내부 전용으로 유지됩니다.",
-        "comingSoon": "Coming soon"
-      },
-      "decide": {
-        "title": "결정",
-        "description": "한 번의 클릭으로 합격, 대기, 불합격 처리. 상태가 가족과 에이전트에게 즉시 전달됩니다.",
-        "comingSoon": "Coming soon"
-      },
-      "onboard": {
-        "title": "온보딩",
-        "description": "입학 서류, 숙소 정보, 오리엔테이션 링크를 하나의 스레드에서 공유하세요.",
-        "comingSoon": "Coming soon"
-      }
-    }
-  },
-  "SchoolsPricing": {
-    "eyebrow": "요금제",
-    "heading": "에이전트 수수료 없음. 커미션 없음. 연간 요금제 하나.",
-    "subheading": "SchoolGo를 지원하는 학교는 하나의 투명한 연간 비용을 납부합니다. 가족과 에이전트는 비용을 내지 않습니다.",
-    "plans": {
-      "listing": {
-        "name": "기본 등록",
-        "price": "Free",
-        "priceMeta": "영구 무료",
-        "features": {
-          "a": "CRICOS 프로필 자동 게시",
-          "b": "인정 영어 시험 + 최저 점수",
-          "c": "표준화된 지원 수신함"
-        },
-        "cta": "프로필 등록"
-      },
-      "admissions": {
-        "name": "입학 관리",
-        "price": "$12,800",
-        "priceMeta": "AUD / 년",
-        "badge": "가장 인기",
-        "features": {
-          "a": "기본 등록의 모든 기능",
-          "b": "합격 / 대기 / 불합격 워크플로",
-          "c": "QEAC 인증 에이전트 디렉토리",
-          "d": "모든 프로필 페이지 7개 언어 번역"
-        },
-        "cta": "입학 관리 시작"
-      }
-    }
-  },
-  "SchoolsTestimonial": {
-    "quote": "The hardest part of international admissions isn't finding students — it's processing incomplete applications from 15 different email threads.",
-    "attribution": "Composite quote based on admissions officer interviews"
-  },
-  "SchoolsFinalCta": {
-    "eyebrow": "여기서 시작하세요",
-    "headingPrefix": "다음 학기 입학이",
-    "headingEmphasis": "시작됩니다",
-    "headingSuffix": "여기서.",
-    "subheading": "무료 등록. 신용카드 불필요. 등록 10분이면 완료.",
-    "ctaPrimary": "학교 프로필 등록",
-    "ctaSecondary": "데모 예약"
-  },
-  "SchoolsFaq": {
-    "heading": "[TODO: ko] Frequently Asked Questions",
-    "items": {
-      "claim": {
-        "question": "[TODO: ko] How do I claim my school's profile?",
-        "answer": "[TODO: ko] Search for your school on SchoolGo and click \"Claim This School.\" You'll verify your identity as a staff member, and once approved you can edit your profile, update fees, and manage applications."
-      },
-      "agents": {
-        "question": "[TODO: ko] How does SchoolGo work with education agents?",
-        "answer": "[TODO: ko] By default, your profile works with your school's existing agents. You can see which agents have placed students with you, invite new agents, or manage agent relationships from your dashboard."
-      },
-      "commission": {
-        "question": "[TODO: ko] Does SchoolGo charge schools or agents?",
-        "answer": "[TODO: ko] No. SchoolGo is free for everyone — schools, agents, and parents. There are no listing fees, per-student fees, or commission splits."
-      },
-      "data": {
-        "question": "[TODO: ko] Where does the school data come from?",
-        "answer": "[TODO: ko] All school profiles are auto-published from CRICOS (the Australian Government's official register) and cross-referenced with ACARA school profile data. Schools that claim their profile can update their own details at any time."
-      }
-    }
-  },
-  "Navbar": {
-    "brand": "School",
-    "brandAccent": "Go",
-    "region": "호주",
-    "findSchools": "학교 찾기",
-    "compare": "비교",
-    "scholarships": "장학금",
-    "admissions": "입학",
-    "contactUs": "문의하기",
-    "signIn": "로그인"
-  },
-  "Footer": {
-    "brand": "School",
-    "brandAccent": "Go",
-    "region": "호주",
-    "tagline": "미래의 리더들을 대륙 최고의 학술 기반과 연결합니다.",
-    "resources": "자료",
-    "directory": "디렉토리",
-    "copyright": "© {year} SchoolGo 호주. 모든 권리 보유.",
-    "resourceLinks": {
-      "vceResources": "VCE 자료",
-      "hscGuides": "HSC 가이드",
-      "ibRequirements": "IB 요건"
-    },
-    "directoryLinks": {
-      "scholarshipTips": "장학금 팁",
-      "contactSupport": "지원 문의"
-    },
-    "social": {
-      "website": "웹사이트 방문",
-      "share": "공유",
-      "email": "이메일 보내기"
-    }
-  },
-  "SchoolSearch": {
-    "searchPlaceholder": "학교 이름, 도시 또는 교외로 검색...",
-    "clearSearch": "검색 지우기",
-    "filters": {
-      "title": "검색 필터",
-      "subtitle": "호주 학교 필터링",
-      "priceRangeLabel": "가격 범위 (AUD)",
-      "priceRangeValue": "${min}k – ${max}k",
-      "priceMin": "$5,000",
-      "priceMax": "$60,000+",
-      "englishTests": "영어 능력 시험",
-      "englishTestsHint": "인정된 영어 시험 수용",
-      "englishTestsToggle": "영어 능력 시험 필터 전환",
-      "curriculum": "커리큘럼",
-      "location": "위치",
-      "resetFilters": "필터 초기화",
-      "locked": {
-        "title": "Unlock this filter",
-        "cta": "Create free account"
-      },
-      "collapse": "Collapse",
-      "expand": "Expand"
-    },
-    "chips": {
-      "topRated": "최고 평점",
-      "boarding": "기숙 가능",
-      "coed": "남녀공학",
-      "scholarships": "장학금 모집 중",
-      "openDays": "오픈 데이"
-    },
-    "states": {
-      "VIC": "빅토리아 (VIC)",
-      "NSW": "뉴사우스웨일스 (NSW)",
-      "QLD": "퀸즐랜드 (QLD)",
-      "SA": "남호주 (SA)",
-      "WA": "서호주 (WA)",
-      "TAS": "태즈메이니아 (TAS)",
-      "ACT": "호주 수도 특별구 (ACT)",
-      "NT": "노던 테리토리 (NT)"
-    },
-    "results": {
-      "title": "이용 가능한 학교",
-      "count": "{count, plural, one {# 결과} other {# 결과}}",
-      "viewAll": "모든 학교 보기",
-      "searching": "[TODO: ko] Searching…",
-      "error": "[TODO: ko] Something went wrong. Please try again.",
-      "empty": "[TODO: ko] No schools found. Try adjusting your filters."
-    },
-    "map": {
-      "title": "호주 — 학교 지도",
-      "reset": "[TODO: ko] Reset filters and map",
-      "zoomIn": "확대",
-      "zoomOut": "축소",
-      "ctrlScrollHint": "[TODO: ko] Use Ctrl + scroll to zoom the map"
-    },
-    "card": {
-      "currency": "AUD",
-      "viewDetails": "{name} 보기",
-      "topRated": "Top rated"
-    },
-    "loginPrompt": {
-      "title": "전체 검색 잠금 해제",
-      "subtitle": "로그인하여 상세 필터, 학교 저장, 프로그램 비교 기능을 이용하세요.",
-      "signIn": "로그인하여 계속"
-    },
-    "lockedDescription": "로그인하여 잠금 해제 — 이 필터를 사용하려면 무료 계정을 만드세요",
-    "spec": {
-      "previewBadge": "Preview",
-      "previewTitle": "Spec filters",
-      "modeBadge": {
-        "basic": "기본",
-        "advanced": "고급"
-      },
-      "lockedDescription": "Sign up to unlock this filter.",
-      "showAll": "Show all ({count})",
-      "showFewer": "Show fewer",
-      "location": {
-        "title": "위치",
-        "stateLabel": "주 또는 준주",
-        "suburbLabel": "교외 또는 우편번호",
-        "suburbPlaceholder": "예: Hawthorn 또는 3122"
-      },
-      "schoolProfile": {
-        "title": "School profile",
-        "sectorLabel": "Sector",
-        "accommodationLabel": "Accommodation",
-        "religionLabel": "Religious affiliation"
-      },
-      "enrolment": {
-        "title": "Enrolment & entry",
-        "yearLevelLabel": "Entry year level",
-        "ageLabel": "Student age",
-        "agePlaceholder": "—",
-        "ageHint": "Most {age}-year-olds enter {expected} — showing all results for your selection.",
-        "termLabel": "Entry term"
-      },
-      "academic": {
-        "title": "Academic",
-        "programLabel": "Program type",
-        "atarLabel": "ATAR available",
-        "atarTooltip": "Australian Tertiary Admission Rank — the score used for university entry in Australia",
-        "englishSupportLabel": "English language support",
-        "programTooltips": {
-          "australianCert": "The standard Australian senior secondary certificate — VCE (VIC), HSC (NSW), QCE (QLD), etc.",
-          "ib": "International Baccalaureate — a globally recognised program accepted by universities worldwide",
-          "elicos": "English Language Intensive Courses for Overseas Students — intensive English preparation before starting mainstream school"
-        }
-      },
-      "englishTest": {
-        "title": "영어 시험 점수",
-        "selectorLabel": "점수가 있는 시험",
-        "scoreLabel": "{label} 점수",
-        "scorePlaceholder": "점수 입력",
-        "scoreHint": "범위: {min}–{max}",
-        "aeas": "AEAS",
-        "idat": "iDAT",
-        "duolingo": "Duolingo",
-        "ielts": "IELTS",
-        "pte": "PTE",
-        "cambridge": "Cambridge"
-      },
-      "tile": {
-        "status": {
-          "open": "모집 중",
-          "limited": "자리 제한",
-          "waitlist": "대기자 명단만",
-          "closed": "마감"
-        },
-        "sector": {
-          "government": "공립",
-          "nonGovernment": "비공립",
-          "catholic": "가톨릭"
-        },
-        "accommodation": {
-          "boarding": "기숙사",
-          "homestay": "홈스테이",
-          "both": "둘 다",
-          "none": "없음"
-        },
-        "actions": {
-          "bookmark": "{name} 북마크",
-          "bookmarkAdd": "{name} 북마크에 추가",
-          "bookmarkRemove": "{name} 북마크에서 제거",
-          "compare": "{name} 비교에 추가"
-        }
-      },
-      "sector": {
-        "government": "Government",
-        "nonGovernment": "Non-government",
-        "catholic": "Catholic"
-      },
-      "accommodation": {
-        "boarding": "Boarding",
-        "homestay": "Homestay",
-        "both": "Both",
-        "none": "None"
-      },
-      "religion": {
-        "nonDenominational": "Non-denominational",
-        "anglican": "Anglican",
-        "baptist": "Baptist",
-        "lutheran": "Lutheran",
-        "unitingChurch": "Uniting Church",
-        "presbyterian": "Presbyterian",
-        "islamic": "Islamic",
-        "jewish": "Jewish",
-        "buddhist": "Buddhist",
-        "copticOrthodox": "Coptic Orthodox",
-        "greekOrthodox": "Greek Orthodox",
-        "seventhDayAdventist": "Seventh-day Adventist",
-        "quaker": "Quaker",
-        "interdenominationalChristian": "Interdenominational Christian"
-      },
-      "yearLevel": {
-        "gr4": "Gr 4",
-        "gr5": "Gr 5",
-        "gr6": "Gr 6",
-        "yr7": "Yr 7",
-        "yr8": "Yr 8",
-        "yr9": "Yr 9",
-        "yr10": "Yr 10",
-        "yr11": "Yr 11",
-        "yr12": "Yr 12"
-      },
-      "entryTerm": {
-        "term1": "Term 1",
-        "term2": "Term 2",
-        "term3": "Term 3",
-        "term4": "Term 4"
-      },
-      "programType": {
-        "australianCert": "Australian Cert.",
-        "ib": "IB",
-        "elicos": "ELICOS"
-      },
-      "englishTestOption": {
-        "aeas": "AEAS",
-        "idat": "iDAT",
-        "duolingo": "Duolingo",
-        "ielts": "IELTS",
-        "pte": "PTE",
-        "cambridge": "Cambridge"
-      },
-      "gender": {
-        "boys": "Boys",
-        "girls": "Girls",
-        "coEd": "Co-ed"
-      },
-      "schoolLevel": {
-        "primary": "Primary",
-        "secondary": "Secondary"
-      },
-      "quickChip": {
-        "boys": "Boys",
-        "girls": "Girls",
-        "coEd": "Co-ed",
-        "primary": "Primary",
-        "secondary": "Secondary",
-        "boarding": "Boarding"
-      },
-      "sort": {
-        "label": "정렬 기준",
-        "nameAsc": "학교 이름 (A–Z)",
-        "nameDesc": "학교 이름 (Z–A)",
-        "tuitionAsc": "학비 낮은 순",
-        "tuitionDesc": "학비 높은 순",
-        "state": "주",
-        "enrolmentStatus": "입학 상태 (모집 중 우선)",
-        "applicationDeadlineAsc": "지원 마감일 (임박 순)",
-        "schoolSizeAsc": "학교 규모 (소~대)",
-        "schoolSizeDesc": "학교 규모 (대~소)",
-        "internationalPctAsc": "유학생 비율 (낮은 순)",
-        "internationalPctDesc": "유학생 비율 (높은 순)",
-        "tuitionLowHigh": "학비 낮은 순",
-        "tuitionHighLow": "학비 높은 순",
-        "stateAsc": "주",
-        "enrolmentOpenFirst": "입학 상태 (모집 중 우선)"
-      },
-      "topBar": {
-        "searchPlaceholder": "Search by school name, city, or suburb",
-        "feeLabel": "Annual fee",
-        "feeReadout": "${min}k – ${max}k"
-      },
-      "compareBar": {
-        "label": "{count}/{max} 선택됨",
-        "remove": "{name} 제거",
-        "cta": "학교 비교",
-        "capReached": "비교 한도 도달"
-      },
-      "tileCard": {
-        "tuitionFrom": "From ${amount} / year",
-        "viewSchool": "View school",
-        "bookmark": "Bookmark",
-        "bookmarkRemove": "Remove bookmark",
-        "compareCheckbox": "Add {name} to compare",
-        "status": {
-          "open": "Open",
-          "limited": "Limited places",
-          "waitlist": "Waitlist only",
-          "closed": "Closed"
-        }
-      }
-    }
-  },
-  "Applications": {
-    "title": "지원서",
-    "subtitle": "모든 학교의 학생 지원서를 관리하고 추적하세요.",
-    "searchPlaceholder": "학생 또는 학교로 검색...",
-    "clearSearch": "검색 초기화",
-    "allStatuses": "모든 상태",
-    "filterActive": "활성",
-    "filterNeedsAction": "처리 필요",
-    "statusDraft": "초안",
-    "statusSubmitted": "제출됨",
-    "statusReceived": "접수됨",
-    "statusUnderReview": "검토 중",
-    "statusDocumentsRequested": "서류 요청",
-    "statusAssessmentRequired": "평가 필요",
-    "statusInterviewScheduled": "면접 예약됨",
-    "statusOfferMade": "합격 통보",
-    "statusOfferAccepted": "합격 수락",
-    "statusPreEnrolment": "사전 등록",
-    "statusCoeIssued": "CoE 발급",
-    "statusEnrolled": "등록 완료",
-    "statusWithdrawn": "철회",
-    "statusDeclined": "거절",
-    "statusWaitlisted": "대기 중",
-    "columnStudent": "학생",
-    "columnSchool": "학교",
-    "columnState": "주",
-    "columnYearLevel": "학년",
-    "columnStatus": "상태",
-    "columnSubmitted": "제출일",
-    "columnDays": "일수",
-    "emptyTitle": "아직 지원서가 없습니다",
-    "emptySubtitle": "학생을 위한 지원서를 먼저 만들어 보세요.",
-    "emptyFilteredTitle": "필터에 맞는 지원서가 없습니다",
-    "emptyFilteredSubtitle": "필터 또는 검색어를 조정해 보세요.",
-    "addApplication": "새 지원서",
-    "paginationShowing": "표시",
-    "paginationOf": "전체 {total}개",
-    "allRows": "전체",
-    "today": "오늘",
-    "daysAgo": "{count}일 전",
-    "exportCsv": "CSV 내보내기",
-    "detailTitle": "지원서 상세",
-    "backToApplications": "지원서 목록으로",
-    "tabDetails": "상세 정보",
-    "tabDocuments": "서류",
-    "tabTimeline": "타임라인",
-    "tabMessages": "메시지",
-    "studentToSchool": "{student} → {school}",
-    "submittedOn": "제출일",
-    "lastUpdated": "최근 수정",
-    "daysInCurrentStatus": "현재 상태 일수",
-    "applicationId": "지원서 ID",
-    "progressSubmitted": "제출",
-    "progressReview": "검토",
-    "progressDocuments": "서류",
-    "progressOffer": "합격",
-    "progressEnrolment": "등록",
-    "progressEnrolled": "등록 완료",
-    "notFound": "지원서를 찾을 수 없습니다.",
-    "loadError": "지원서를 불러오지 못했습니다.",
-    "sectionStudent": "학생 정보",
-    "sectionSchool": "학교 정보",
-    "sectionApplication": "지원서 정보",
-    "labelName": "이름",
-    "labelNationality": "국적",
-    "labelSchoolName": "학교 이름",
-    "labelState": "주",
-    "labelCricosCode": "CRICOS 코드",
-    "labelYearLevel": "학년",
-    "labelIntake": "입학 시기",
-    "labelStatus": "상태",
-    "labelSubmitted": "제출일",
-    "labelCreated": "생성일",
-    "labelUpdated": "수정일",
-    "notProvided": "정보 없음",
-    "documentsEmpty": "첨부된 서류가 없습니다",
-    "documentName": "이름",
-    "documentType": "유형",
-    "documentSize": "크기",
-    "documentUploadedAt": "업로드",
-    "downloadDocument": "다운로드",
-    "timelineEmpty": "타임라인 이벤트가 없습니다",
-    "timelineBy": "{actor} 처리",
-    "messagesComingSoon": "메시지 기능 준비 중",
-    "actionWithdraw": "지원서 철회",
-    "actionAcceptOffer": "합격 수락",
-    "actionContactSchool": "학교 문의",
-    "actionComingSoon": "준비 중"
-  },
-  "Auth": {
-    "signInTitle": "SchoolGo에 로그인",
-    "signInSubtitle": "계정에 로그인하여 학교, 지원서 등을 관리하세요.",
-    "iAmA": "저는…",
-    "userTypes": {
-      "parent": "학부모",
-      "agent": "유학원",
-      "school": "학교"
-    },
-    "emailLabel": "이메일",
-    "emailPlaceholder": "you@example.com",
-    "passwordLabel": "비밀번호",
-    "passwordPlaceholder": "비밀번호를 입력하세요",
-    "signInButton": "로그인",
-    "loginSuccess": "다시 오셨군요!",
-    "loginError": "이메일 또는 비밀번호가 올바르지 않습니다. 다시 시도해주세요.",
-    "portalUnauthorized": "이 계정은 해당 포털에 대한 접근 권한이 없습니다.",
-    "sessionExpired": "세션이 만료되었습니다. 다시 로그인해 주세요.",
-    "noAccount": "계정이 없으신가요?",
-    "signUp": "회원가입",
-    "signUpTitle": "계정 만들기",
-    "signUpSubtitle": "SchoolGo에 가입하여 호주 학교를 찾고, 비교하고, 지원하세요.",
-    "nameLabel": "이름",
-    "namePlaceholder": "성명을 입력하세요",
-    "createPasswordPlaceholder": "비밀번호를 만드세요 (최소 6자)",
-    "signUpButton": "계정 만들기",
-    "registerSuccess": "계정이 생성되었습니다! SchoolGo에 오신 것을 환영합니다.",
-    "registerError": "계정을 만들 수 없습니다. 다시 시도해주세요.",
-    "hasAccount": "이미 계정이 있으신가요?",
-    "signInLink": "로그인",
-    "close": "닫기",
-    "portalSwitch": {
-      "backTo": "[TODO: ko] Back to"
-    },
-    "parent": {
-      "signInTitle": "[TODO: ko] Welcome back, Parent",
-      "signInSubtitle": "[TODO: ko] Sign in to find and compare the best schools for your child.",
-      "signUpTitle": "[TODO: ko] Start your school search",
-      "signUpSubtitle": "[TODO: ko] Create an account to shortlist, compare and apply to Australian schools.",
-      "stat1Value": "2,400+",
-      "stat1Label": "학교",
-      "stat2Value": "7",
-      "stat2Label": "언어",
-      "stat3Value": "98%",
-      "stat3Label": "만족도"
-    },
-    "agent": {
-      "signInTitle": "[TODO: ko] Agent Portal",
-      "signInSubtitle": "[TODO: ko] Sign in to manage your pipeline and student placements.",
-      "signUpTitle": "[TODO: ko] Grow your agency",
-      "signUpSubtitle": "[TODO: ko] Join SchoolGo to access verified schools and streamline placements.",
-      "stat1Value": "850+",
-      "stat1Label": "유학원",
-      "stat2Value": "15%",
-      "stat2Label": "수수료",
-      "stat3Value": "24h",
-      "stat3Label": "응답"
-    },
-    "school": {
-      "signInTitle": "[TODO: ko] School Portal",
-      "signInSubtitle": "[TODO: ko] Sign in to manage enrolments and connect with agents.",
-      "signUpTitle": "[TODO: ko] List your school",
-      "signUpSubtitle": "[TODO: ko] Create an account to reach international students and education agents.",
-      "stat1Value": "500+",
-      "stat1Label": "유학원",
-      "stat2Value": "12k",
-      "stat2Label": "학생",
-      "stat3Value": "Free",
-      "stat3Label": "등록"
-    },
-    "nav": {
-      "parent": {
-        "howItWorks": "이용 방법",
-        "compare": "비교",
-        "faq": "자주 묻는 질문"
-      },
-      "agent": {
-        "howItWorks": "이용 방법",
-        "commission": "수수료",
-        "trust": "신뢰"
-      },
-      "school": {
-        "howItWorks": "이용 방법",
-        "pricing": "요금제",
-        "faq": "자주 묻는 질문"
-      }
-    }
-  },
-  "Errors": {
-    "generic": "문제가 발생했습니다",
-    "genericSubtitle": "[TODO: ko] We hit an unexpected bump. Don't worry — your data is safe.",
-    "tryAgain": "다시 시도",
-    "notFound": "페이지를 찾을 수 없습니다",
-    "notFoundCode": "[TODO: ko] 404",
-    "notFoundSubtitle": "[TODO: ko] The page you're looking for doesn't exist or has been moved.",
-    "goHome": "홈으로 이동",
-    "searchInstead": "[TODO: ko] Search schools"
-  },
-  "LaunchingSoon": {
-    "title": "곧 출시됩니다",
-    "subtitle": "SchoolGo가 호주 전역의 최고의 학교를 찾을 수 있도록 준비하고 있습니다. 멋진 서비스의 마무리 작업이 한창입니다.",
-    "stayTuned": "기대해 주세요 — 곧 정식 출시됩니다.",
-    "portals": {
-      "heading": "우리 플랫폼",
-      "parents": "학부모 포털",
-      "schools": "학교 포털",
-      "agents": "에이전트 포털"
-    }
-  },
-  "Dashboard": {
-    "nav": {
-      "dashboard": "[TODO: ko] Dashboard",
-      "students": "[TODO: ko] Students",
-      "applications": "[TODO: ko] Applications",
-      "pipeline": "[TODO: ko] Pipeline",
-      "searchSchools": "[TODO: ko] Search Schools",
-      "messages": "[TODO: ko] Messages",
-      "settings": "[TODO: ko] Settings",
-      "profile": "[TODO: ko] My Profile",
-      "logout": "[TODO: ko] Log out",
-      "portalLabel": "에이전트",
-      "portalBadge": {
-        "agent": "에이전트",
-        "parent": "학부모",
-        "school": "학교"
-      }
-    },
-    "greeting": {
-      "morning": "좋은 아침입니다,",
-      "afternoon": "좋은 오후입니다,",
-      "evening": "좋은 저녁입니다,",
-      "fallbackName": "안녕하세요"
-    },
-    "actionBanner": {
-      "title": "처리 필요"
-    },
-    "cards": {
-      "activeStudents": "활성 학생",
-      "appsInProgress": "진행 중인 지원",
-      "offersReceived": "받은 오퍼",
-      "enrolledThisTerm": "이번 학기 등록"
-    },
-    "activity": {
-      "title": "최근 활동",
-      "empty": "최근 활동이 없습니다. 학생을 추가하거나 학교를 검색해 보세요."
-    },
-    "deadlines": {
-      "title": "다가오는 마감일",
-      "empty": "다가오는 마감일이 없습니다."
-    },
-    "quickActions": {
-      "addStudent": "새 학생 추가",
-      "newApplication": "새 지원서",
-      "reviewApplications": "지원서 확인",
-      "searchSchools": "학교 검색"
-    }
-  },
-  "Students": {
-    "title": "[TODO: ko] Students",
-    "subtitle": "[TODO: ko] Manage your student profiles, documents, and test results.",
-    "searchPlaceholder": "[TODO: ko] Search by name...",
-    "clearSearch": "[TODO: ko] Clear search",
-    "allStatuses": "[TODO: ko] All statuses",
-    "statusActive": "[TODO: ko] Active",
-    "statusArchived": "[TODO: ko] Archived",
-    "statusEnrolled": "[TODO: ko] Enrolled",
-    "addStudent": "[TODO: ko] Add Student",
-    "columnName": "[TODO: ko] Name",
-    "columnNationality": "[TODO: ko] Nationality",
-    "columnYearLevel": "[TODO: ko] Year Level",
-    "columnTargetEntry": "[TODO: ko] Target Entry",
-    "columnEnglishTest": "영어 시험",
-    "columnApps": "지원",
-    "columnStatus": "[TODO: ko] Status",
-    "filters": "필터",
-    "sort": "정렬",
-    "emptyTitle": "아직 학생이 없습니다",
-    "emptySubtitle": "첫 번째 학생을 추가하여 프로필을 구성하고 학교에 지원을 시작하세요.",
-    "archive": "보관",
-    "paginationShowing": "표시",
-    "paginationOf": "전체 {total}개",
-    "allRows": "전체",
-    "createTitle": "[TODO: ko] Add New Student",
-    "createButton": "[TODO: ko] Create Student",
-    "createSuccess": "[TODO: ko] Student created successfully.",
-    "createError": "[TODO: ko] Could not create student. Please try again.",
-    "profileTitle": "[TODO: ko] Student Profile",
-    "notFound": "[TODO: ko] Student not found.",
-    "backToList": "[TODO: ko] Back",
-    "edit": "[TODO: ko] Edit",
-    "sectionPersonal": "[TODO: ko] Personal Information",
-    "sectionEducation": "[TODO: ko] Education",
-    "sectionParent": "[TODO: ko] Parent / Guardian",
-    "fieldFirstName": "[TODO: ko] First name",
-    "fieldLastName": "[TODO: ko] Last name",
-    "fieldDob": "[TODO: ko] Date of birth",
-    "fieldGender": "[TODO: ko] Gender",
-    "fieldNationality": "[TODO: ko] Nationality",
-    "fieldCurrentSchool": "[TODO: ko] Current school",
-    "fieldCurrentYear": "[TODO: ko] Current year level",
-    "fieldTargetYear": "[TODO: ko] Target entry year",
-    "fieldTargetTerm": "[TODO: ko] Target intake",
-    "fieldParentName": "[TODO: ko] Name",
-    "fieldParentEmail": "[TODO: ko] Email",
-    "fieldParentPhone": "[TODO: ko] Phone",
-    "fieldParentWechat": "[TODO: ko] WeChat ID",
-    "fieldNotes": "[TODO: ko] Agent Notes",
-    "notesPlaceholder": "[TODO: ko] Private notes about this student (only visible to you)...",
-    "selectGender": "[TODO: ko] Select gender",
-    "selectYear": "[TODO: ko] Select year level",
-    "genderMale": "[TODO: ko] Male",
-    "genderFemale": "[TODO: ko] Female",
-    "genderOther": "[TODO: ko] Other",
-    "tabOverview": "[TODO: ko] Overview",
-    "tabDocuments": "[TODO: ko] Documents",
-    "tabTests": "[TODO: ko] Tests",
-    "tabApplications": "[TODO: ko] Applications",
-    "documentsComingSoon": "[TODO: ko] Document management coming soon.",
-    "testsComingSoon": "[TODO: ko] Test results coming soon.",
-    "applicationsComingSoon": "[TODO: ko] Applications coming soon.",
-    "docUpload": "[TODO: ko] Upload Document",
-    "docUploadTitle": "[TODO: ko] Upload Document",
-    "docUploadButton": "[TODO: ko] Upload",
-    "docCancel": "[TODO: ko] Cancel",
-    "docDropzone": "[TODO: ko] Drag & drop a file here, or click to browse",
-    "docDropzoneHint": "[TODO: ko] PDF, JPG, PNG, DOCX up to 10 MB",
-    "docTypeLabel": "[TODO: ko] Document Type",
-    "docTypeSelect": "[TODO: ko] Select document type",
-    "docFileNameLabel": "[TODO: ko] Display Name (optional)",
-    "docFileNamePlaceholder": "[TODO: ko] e.g. John Passport 2026",
-    "docExpiresLabel": "[TODO: ko] Expiry Date (optional)",
-    "docNotesLabel": "[TODO: ko] Notes (optional)",
-    "docNotesPlaceholder": "[TODO: ko] Any notes about this document...",
-    "docAllTypes": "[TODO: ko] All types",
-    "docEmptyTitle": "[TODO: ko] No documents yet",
-    "docEmptySubtitle": "[TODO: ko] Upload your first document to get started.",
-    "docColName": "[TODO: ko] File",
-    "docColType": "[TODO: ko] Type",
-    "docColStatus": "[TODO: ko] Status",
-    "docColExpiry": "[TODO: ko] Expiry",
-    "docColUploaded": "[TODO: ko] Uploaded",
-    "docDeleteTitle": "[TODO: ko] Delete Document",
-    "docDeleteConfirm": "[TODO: ko] Are you sure you want to delete this document? This action cannot be undone.",
-    "docDeleteButton": "[TODO: ko] Delete",
-    "docUploadSuccess": "[TODO: ko] Document uploaded successfully.",
-    "docUploadError": "[TODO: ko] Could not upload document. Please try again.",
-    "docDeleteSuccess": "[TODO: ko] Document deleted.",
-    "docDeleteError": "[TODO: ko] Could not delete document.",
-    "docType_passport": "[TODO: ko] Passport",
-    "docType_school_reports": "[TODO: ko] School Reports",
-    "docType_english_test": "[TODO: ko] English Test Report",
-    "docType_birth_certificate": "[TODO: ko] Birth Certificate",
-    "docType_parent_passport": "[TODO: ko] Parent Passport",
-    "docType_immunisation": "[TODO: ko] Immunisation Records",
-    "docType_personal_statement": "[TODO: ko] Personal Statement",
-    "docType_guardian_nomination": "[TODO: ko] Guardian Nomination",
-    "docType_current_visa": "[TODO: ko] Current Visa",
-    "docType_welfare_docs": "[TODO: ko] Welfare Documents",
-    "docType_financial_evidence": "[TODO: ko] Financial Evidence",
-    "docType_oshc": "[TODO: ko] OSHC",
-    "docType_written_agreement": "[TODO: ko] Written Agreement",
-    "docType_conditions_of_entry": "[TODO: ko] Conditions of Entry",
-    "docType_offer_acceptance": "[TODO: ko] Offer Acceptance",
-    "docType_coe": "[TODO: ko] CoE (Confirmation of Enrolment)",
-    "docType_caaw_letter": "[TODO: ko] CAAW Letter",
-    "docType_photo": "[TODO: ko] Photo",
-    "docType_other": "[TODO: ko] Other",
-    "docStatus_active": "[TODO: ko] Active",
-    "docStatus_replaced": "[TODO: ko] Replaced",
-    "docStatus_archived": "[TODO: ko] Archived"
-  },
-  "Pipeline": {
-    "title": "파이프라인",
-    "totalApplications": "{count, plural, one {지원서 # 건} other {지원서 # 건}}",
-    "emptyTitle": "파이프라인에 지원서가 없습니다",
-    "emptySubtitle": "학생을 위한 지원서를 먼저 만들어 보세요.",
-    "columnNew": "신규",
-    "columnInReview": "검토 중",
-    "columnActionRequired": "처리 필요",
-    "columnOffers": "합격 통보",
-    "columnPreEnrolment": "사전 등록",
-    "columnEnrolled": "등록 완료",
-    "columnClosed": "종료",
-    "daysLabel": "{count}일",
-    "moreApplications": "+{count}건 더"
-  },
-  "SearchMetadata": {
-    "title": "학교 검색 — SchoolGo",
-    "description": "호주 학교를 검색하고 비교하세요. 위치, 학비, 커리큘럼, 기숙사 등으로 필터링하세요.",
-    "ogDescription": "SchoolGo에서 호주 학교를 검색하고 비교하세요.",
-    "parentTitle": "자녀를 위한 호주 학교 검색 — SchoolGo",
-    "parentDescription": "위치, 학비, 커리큘럼, 기숙사, 학생 지원 기준으로 호주 학교를 찾고 비교하세요.",
-    "parentOgDescription": "SchoolGo에서 자녀에게 맞는 호주 학교를 비교하고 찾아보세요.",
-    "schoolTitle": "호주 학교 목록 살펴보기 — SchoolGo",
-    "schoolDescription": "SchoolGo에서 호주 학교 목록, 위치, 프로그램, 학비, 학생 지원 정보를 확인하세요.",
-    "schoolOgDescription": "SchoolGo에서 호주 학교 목록과 프로그램을 비교하세요.",
-    "agentTitle": "학생을 위한 호주 학교 검색 — SchoolGo",
-    "agentDescription": "유학생에게 맞는 호주 학교를 찾고 위치, 학비, 프로그램, 기숙사, 지원을 비교하세요.",
-    "agentOgDescription": "SchoolGo에서 학생을 위한 호주 학교를 검색하고 비교하세요."
-  }
+	"Metadata": {
+		"title": "SchoolGo 호주 | 최고의 학교를 찾아보세요",
+		"description": "호주 전역의 최고의 학교를 검색하고 비교하세요. 커리큘럼, 가격, 위치 등으로 필터링하세요.",
+		"ogDescription": "호주 전역의 최고의 학교를 검색하고 비교하세요."
+	},
+	"Common": {
+		"step": "Step {number, number}",
+		"cricosVerified": "CRICOS Verified",
+		"qeacVerified": "QEAC Verified",
+		"claimedBySchool": "Claimed by school",
+		"addToShortlist": "Add to shortlist",
+		"removeFromShortlist": "Remove from shortlist",
+		"comingSoon": "Coming soon",
+		"skipToContent": "콘텐츠로 건너뛰기",
+		"primaryNavigation": "기본 탐색"
+	},
+	"ParentsMetadata": {
+		"title": "SchoolGo — 자녀를 위한 호주 학교 찾기",
+		"description": "모든 CRICOS 등록 호주 학교를 검색하세요. 학비, 영어 시험 요건, 입학 일정을 7개 언어로 무료 비교하세요.",
+		"ogDescription": "모든 CRICOS 학교. 검증 완료. 내 언어로."
+	},
+	"MarketingHeader": {
+		"findSchools": "학교 찾기",
+		"audiences": {
+			"parents": "학부모",
+			"agents": "유학원",
+			"schools": "학교"
+		},
+		"nav": {
+			"parent": {
+				"howItWorks": "이용 방법",
+				"compare": "비교",
+				"faq": "자주 묻는 질문"
+			},
+			"agent": {
+				"howItWorks": "이용 방법",
+				"commission": "수수료",
+				"trust": "신뢰"
+			},
+			"school": {
+				"howItWorks": "이용 방법",
+				"pricing": "요금제",
+				"faq": "자주 묻는 질문"
+			}
+		},
+		"language": "언어",
+		"signIn": "로그인",
+		"getStarted": "시작하기",
+		"openMenu": "메뉴 열기",
+		"closeMenu": "메뉴 닫기",
+		"menu": "Menu",
+		"subNav": {
+			"explore": {
+				"label": "탐색",
+				"items": {
+					"browseSchools": "학교 둘러보기",
+					"browseSchoolsDesc": "모든 등록 호주 학교 검색",
+					"compareSchools": "학교 비교",
+					"compareSchoolsDesc": "학비·시험·입학 일정 나란히 비교",
+					"schoolTypes": "학교 유형",
+					"schoolTypesDesc": "공립·가톨릭·사립 학교 비교",
+					"englishTests": "영어 시험",
+					"englishTestsDesc": "AEAS, IELTS 및 인정 시험 안내"
+				}
+			},
+			"resources": {
+				"label": "자료",
+				"items": {
+					"admissionsGuide": "입학 가이드",
+					"admissionsGuideDesc": "단계별 입학 과정 안내",
+					"schoolFees": "학교 학비",
+					"schoolFeesDesc": "등록금·기타 비용·첫해 총비용",
+					"visaRequirements": "비자 요건",
+					"visaRequirementsDesc": "학생 비자 500 필수 사항",
+					"allGuides": "모든 가이드",
+					"allGuidesDesc": "국제 가족을 위한 모든 가이드 보기"
+				}
+			},
+			"about": {
+				"label": "소개",
+				"items": {
+					"aboutSchoolGo": "SchoolGo 소개",
+					"aboutSchoolGoDesc": "우리의 사명과 이야기",
+					"contactUs": "문의하기",
+					"contactUsDesc": "우리 팀에게 연락하기",
+					"forAgents": "유학원 안내",
+					"forAgentsDesc": "교육 에이전트 전용 도구",
+					"forSchools": "학교 안내",
+					"forSchoolsDesc": "국제 학생 모집 확대"
+				}
+			}
+		}
+	},
+	"MarketingFooter": {
+		"tagline": "미래의 리더들을 호주 최고의 학교와 연결합니다 — 전국, 7개 언어로.",
+		"columns": {
+			"parents": {
+				"title": "학부모 안내",
+				"links": {
+					"findSchools": "학교 찾기",
+					"compare": "비교",
+					"scholarships": "장학금",
+					"english": "영어 시험"
+				}
+			},
+			"agents": {
+				"title": "유학원 안내",
+				"links": {
+					"overview": "에이전트 개요",
+					"qeac": "QEAC 인증",
+					"pipeline": "Pipeline tools [Soon]",
+					"login": "Agent login [Soon]"
+				}
+			},
+			"schools": {
+				"title": "학교 안내",
+				"links": {
+					"overview": "학교 개요",
+					"claim": "프로필 등록",
+					"login": "School login [Soon]",
+					"pricing": "요금제"
+				}
+			},
+			"resources": {
+				"title": "자료",
+				"links": {
+					"help": "도움말 센터",
+					"contact": "문의하기",
+					"privacy": "개인정보 처리방침",
+					"terms": "이용약관"
+				}
+			}
+		},
+		"language": "언어",
+		"copyright": "© {year} SchoolGo Australia. 모든 권리 보유.",
+		"attribution": "출처: data.gov.au · CC BY 2.5 AU · ESOS 법 준수",
+		"portals": "저는...",
+		"portalLabels": {
+			"parents": "학부모",
+			"agents": "유학원",
+			"schools": "학교"
+		}
+	},
+	"ParentsHero": {
+		"trustPill": {
+			"brand": "정부",
+			"brandAccent": "등록 인증",
+			"source": "data.gov.au 데이터"
+		},
+		"headlinePrefix": "자녀를 위한",
+		"headlineEmphasis": "호주",
+		"headlineSuffix": "학교를 찾아보세요.",
+		"lede": "모든 CRICOS 등록 K–12 학교를 한곳에서 검색하세요. 학비, 기숙사, 영어 시험을 비교하세요 — 중국어, 한국어, 태국어, 베트남어, 말레이어 또는 영어로 검색하세요.",
+		"searchAriaLabel": "학교 검색",
+		"searchFields": {
+			"where": {
+				"label": "지역",
+				"value": "호주 어디서나"
+			},
+			"yearLevel": {
+				"label": "학년",
+				"value": "Year 7 – Year 12"
+			},
+			"fees": {
+				"label": "학비",
+				"value": "$15k – $45k AUD"
+			}
+		},
+		"searchButtonLabel": "검색",
+		"searchClearLabel": "검색 지우기",
+		"featured": {
+			"eyebrow": "추천",
+			"shortlistAdd": "{name}을(를) 후보 목록에 추가",
+			"shortlistRemove": "후보 목록에서 {name} 제거",
+			"cards": {
+				"a": {
+					"name": "Scotch College Melbourne",
+					"location": "Hawthorn, VIC",
+					"curriculum": "VCE",
+					"fee": "$38.5k AUD",
+					"boarding": "기숙",
+					"rating": "4.9"
+				},
+				"b": {
+					"name": "Sydney Grammar School",
+					"location": "Darlinghurst, NSW",
+					"curriculum": "HSC",
+					"fee": "$41.2k AUD",
+					"boarding": "통학 전용",
+					"rating": "4.8"
+				},
+				"c": {
+					"name": "Brisbane Grammar School",
+					"location": "Spring Hill, QLD",
+					"curriculum": "QCE/IB",
+					"fee": "$35.8k AUD",
+					"boarding": "기숙",
+					"rating": "4.7"
+				}
+			}
+		}
+	},
+	"ParentsFourSteps": {
+		"eyebrow": "이용 방법",
+		"heading": "첫 탐색부터 합격 통보까지 — 네 가지 간단한 단계.",
+		"subheading": "숨겨진 비용 없음. 지원 전까지 로그인 불필요.",
+		"steps": {
+			"browse": {
+				"title": "모든 CRICOS 학교 둘러보기",
+				"description": "주, 학비, 교육 부문, 커리큘럼, 기숙사, 장학금으로 {count, number}개 학교를 필터링하세요 — 내 언어로."
+			},
+			"shortlist": {
+				"title": "4개 후보 선정, 나란히 비교",
+				"description": "학비, 입학 일정, ICSEA, 인정 영어 시험을 한눈에 비교하세요. 몇 달이 아닌 몇 분 안에 결정하세요."
+			},
+			"prepare": {
+				"title": "정확한 요건 확인",
+				"description": "모든 프로필에 인정 시험, 최저 점수, 필요 서류, 입학 기간이 명시되어 있습니다."
+			},
+			"apply": {
+				"title": "인증된 에이전트를 통해 지원",
+				"description": "에이전트는 QEAC 인증 배지를 보유합니다. 지원서는 하나의 대시보드에서 처음부터 끝까지 추적됩니다.",
+				"comingSoon": "Coming soon"
+			}
+		},
+		"ctaBrowse": "학교 둘러보기",
+		"ctaLearn": "이용 방법 보기",
+		"badge": {
+			"cricosVerified": "CRICOS Verified · Claimed by school",
+			"updated": "Updated April 2026"
+		},
+		"visuals": {
+			"browse": {
+				"title": "[TODO: ko] 695 schools loaded",
+				"subtitle": "[TODO: ko] Filtered by state, fees & curriculum"
+			},
+			"shortlist": {
+				"title": "[TODO: ko] Wei's shortlist",
+				"subtitle": "[TODO: ko] 3 schools in Victoria · All accept AEAS"
+			},
+			"prepare": {
+				"title": "[TODO: ko] Requirements matched",
+				"subtitle": "[TODO: ko] AEAS 70+ · IELTS 5.5+ · Documents ready"
+			},
+			"apply": {
+				"title": "[TODO: ko] Application submitted",
+				"subtitle": "[TODO: ko] Tracked end-to-end · Status: Under review"
+			}
+		}
+	},
+	"ParentsVerified": {
+		"eyebrow": "모든 CRICOS 학교",
+		"heading": "검증 완료. 내 언어로.",
+		"subheading": "실제 건물 사진. 실제 학비. 실제 입학 일정. 학교 데이터는 CRICOS와 ACARA에서 가져오며 매월 갱신됩니다.",
+		"cards": {
+			"a": {
+				"name": "Scotch College",
+				"location": "Hawthorn, VIC",
+				"sector": "사립"
+			},
+			"b": {
+				"name": "Sydney Grammar",
+				"location": "Darlinghurst, NSW",
+				"sector": "사립"
+			},
+			"c": {
+				"name": "Brisbane Grammar",
+				"location": "Spring Hill, QLD",
+				"sector": "사립"
+			},
+			"d": {
+				"name": "Christ Church Grammar",
+				"location": "Claremont, WA",
+				"sector": "사립"
+			}
+		}
+	},
+	"ParentsComparison": {
+		"eyebrow": "비교",
+		"heading": "학교를 나란히 놓고 비교하세요.",
+		"headingAccent": "몇 달이 아닌 몇 분 안에 결정하세요.",
+		"columns": {
+			"fee": "연간 학비",
+			"tests": "인정 시험",
+			"intakes": "입학 일정",
+			"stateSector": "[TODO: ko] State & sector",
+			"curriculum": "[TODO: ko] Curriculum",
+			"boarding": "[TODO: ko] Boarding",
+			"minScore": "[TODO: ko] Min. AEAS score",
+			"scholarships": "[TODO: ko] Scholarships"
+		},
+		"notPublished": "미공개",
+		"shortlistLabel": "[TODO: ko] Shortlist · {count} schools",
+		"dayOnly": "[TODO: ko] — Day only",
+		"noneIntl": "[TODO: ko] — None intl."
+	},
+	"ParentsPickATest": {
+		"eyebrow": "영어 능력",
+		"heading": "시험을 선택하세요. 어떤 학교가 인정하는지 확인하세요 —",
+		"headingAccent": "그리고 최저 점수까지.",
+		"subheading": "모든 프로필에서 인정 영어 시험을 확인할 수 있습니다. 50개 학교 웹사이트를 일일이 뒤질 필요가 없습니다.",
+		"tests": {
+			"aeas": {
+				"name": "AEAS",
+				"fullName": "Australian Education Assessment Services",
+				"description": "Most commonly accepted by Australian independent schools"
+			},
+			"idat": {
+				"name": "iDAT",
+				"fullName": "International Digital Admissions Test",
+				"description": "Growing in popularity for K–12 admissions"
+			},
+			"duolingo": {
+				"name": "Duolingo",
+				"fullName": "Duolingo English Test",
+				"description": "Accepted by an increasing number of schools"
+			},
+			"ielts": {
+				"name": "IELTS",
+				"fullName": "International English Language Testing System",
+				"description": "Standard for senior secondary entry (Year 11+)"
+			},
+			"pte": {
+				"name": "PTE Academic",
+				"fullName": "Pearson Test of English Academic",
+				"description": "Accepted by some schools for Year 11–12 entry"
+			},
+			"cambridge": {
+				"name": "Cambridge",
+				"fullName": "Cambridge English Qualifications",
+				"description": "Accepted by select schools"
+			},
+			"toefl": {
+				"name": "TOEFL",
+				"fullName": "Test of English as a Foreign Language",
+				"description": "Accepted by select schools for senior entry"
+			}
+		},
+		"cta": "이 시험을 인정하는 학교 보기"
+	},
+	"ParentsSevenLanguages": {
+		"eyebrow": "7개 언어",
+		"heading": "가족이 자정에 학비 안내서를 번역할 필요는 없습니다.",
+		"subheading": "SchoolGo는 아시아태평양 지역에서 가장 많이 쓰이는 7개 언어로 완전히 번역되어 있습니다.",
+		"languages": {
+			"en": "English",
+			"zh": "简体中文",
+			"vi": "Tiếng Việt",
+			"ko": "한국어",
+			"ms": "Bahasa Melayu",
+			"th": "ภาษาไทย",
+			"id": "Bahasa Indonesia"
+		}
+	},
+	"ParentsArticles": {
+		"eyebrow": "입학 자료실",
+		"heading": "입학 담당자가 작성하고 7개 언어로 번역했습니다.",
+		"subheading": "비자, 입학 일정, 영어 시험, 학비 안내에 대한 쉬운 가이드. 무료, 로그인 불필요.",
+		"items": {
+			"intakes": {
+				"title": "호주 학교 입학 일정 이해하기",
+				"meta": "6분 읽기 · 매월 업데이트"
+			},
+			"englishTests": {
+				"title": "내 학교가 인정하는 영어 시험은?",
+				"meta": "8분 읽기 · 시험별 상세 비교"
+			},
+			"boarding": {
+				"title": "기숙 vs 통학: 가족들의 선택과 이유",
+				"meta": "5분 읽기 · 사례 연구"
+			}
+		},
+		"readMore": "기사 읽기"
+	},
+	"ParentsStatsBar": {
+		"eyebrow": "주요 수치",
+		"heading": "호주 최대 CRICOS 학교 디렉토리.",
+		"subheading": "모든 등록 학교를 검증하고 검색할 수 있습니다 — 공립부터 사립까지, 8개 주와 준주 전체를 포함합니다.",
+		"items": {
+			"schools": {
+				"value": "{count, number}+",
+				"label": "CRICOS Schools"
+			},
+			"states": {
+				"value": "8",
+				"label": "States & Territories"
+			},
+			"sectors": {
+				"value": "All 3 Sectors",
+				"label": "Government · Independent · Catholic"
+			},
+			"fees": {
+				"value": "$3.5k – $78k",
+				"label": "Annual Fee Range"
+			}
+		}
+	},
+	"ParentsFinalCta": {
+		"eyebrow": "여기서 시작하세요",
+		"headingPrefix": "검색이",
+		"headingEmphasis": "시작됩니다",
+		"headingSuffix": "7개 언어로.",
+		"subheading": "무료. 로그인 불필요. {month} {year, number} 업데이트.",
+		"ctaPrimary": "학교 찾기",
+		"ctaSecondary": "인증 에이전트와 상담하기"
+	},
+	"ParentsTrustBar": {
+		"eyebrow": "신뢰와 규정 준수",
+		"heading": "믿을 수 있는 데이터.",
+		"subheading": "SchoolGo의 모든 학교 정보는 공식 정부 데이터 출처를 기반으로 — 검증되고, 라이선스가 부여되며, 매월 갱신됩니다.",
+		"items": {
+			"cricos": {
+				"label": "정부 등록 학교",
+				"description": "모든 학교 정보는 공식 연방 등록부와 교차 검증됩니다."
+			},
+			"datagov": {
+				"label": "최신 상태 유지",
+				"description": "CC BY 2.5 AU 라이선스로 제공되는 공개 데이터 — 투명하고 누구나 감사 가능합니다."
+			},
+			"acara": {
+				"label": "국가 교육과정 데이터",
+				"description": "커리큘럼, ICSEA 점수, 입학 데이터는 국가 권위 기관에서 제공합니다."
+			},
+			"esos": {
+				"label": "학생 보호",
+				"description": "SchoolGo는 호주 해외 학생 교육 서비스(ESOS) 법률 체계 내에서 운영됩니다."
+			}
+		},
+		"attribution": "학교 데이터는 호주 해외 학생 기관 및 과정 연방 등록부(CRICOS)와 호주 교육과정·평가·보고 기관(ACARA) 공개 데이터셋을 출처로 합니다. 2026년 4월 업데이트."
+	},
+	"ParentsFaq": {
+		"heading": "Frequently Asked Questions",
+		"items": {
+			"free": {
+				"question": "Is SchoolGo free?",
+				"answer": "Yes. SchoolGo is completely free for parents, education agents, and schools. There are no listing fees, application fees, or subscription costs."
+			},
+			"dataSource": {
+				"question": "Where does the school data come from?",
+				"answer": "All school listings are sourced from CRICOS (the Commonwealth Register of Institutions and Courses for Overseas Students), which is the Australian Government's official register of schools authorised to enrol international students. We cross-reference this with ACARA school profile data for enrolment figures, ICSEA scores, and GPS coordinates."
+			},
+			"englishTests": {
+				"question": "What English proficiency tests do Australian schools accept?",
+				"answer": "Different schools accept different tests. The most common are AEAS (Australian Education Assessment Services), iDAT (International Digital Admissions Test), Duolingo English Test, IELTS, and PTE Academic. SchoolGo shows which specific tests each school accepts on their profile page."
+			},
+			"doINeedAgent": {
+				"question": "[TODO: ko] Do I need an education agent?",
+				"answer": "[TODO: ko] You don't have to use one, but most families do — and it's free. Education agents help you choose the right school, prepare documents, and manage the application. SchoolGo shows which agents work with each school, so you can find someone who already knows the admissions process."
+			},
+			"claimProfile": {
+				"question": "I'm a school. How do I claim my profile?",
+				"answer": "Search for your school on SchoolGo and click \"Claim This School.\" You'll be asked to verify your identity as a school staff member. Once verified, you can update your profile with fees, entry requirements, and contact details."
+			},
+			"updateFrequency": {
+				"question": "How often is the data updated?",
+				"answer": "CRICOS data is refreshed monthly from data.gov.au. School-specific details (fees, requirements, intake dates) are updated by schools who have claimed their profiles. If a school hasn't claimed their profile, the data shown is from CRICOS and ACARA public datasets."
+			}
+		}
+	},
+	"AgentsMetadata": {
+		"title": "SchoolGo — 포트폴리오처럼 운영하는 유학원 비즈니스",
+		"description": "호주 학교로 학생을 보내는 교육 에이전트를 위한 QEAC 인증 도구. 표준화된 지원서, 실시간 파이프라인, 전액 수수료.",
+		"ogDescription": "포트폴리오처럼 비즈니스를 운영하세요. 수수료 100% 보전."
+	},
+	"AgentsHero": {
+		"eyebrow": "교육 에이전트 전용 · QEAC 인증",
+		"headlinePrefix": "포트폴리오처럼",
+		"headlineEmphasis": "비즈니스를 운영하세요.",
+		"lede": "인증된 프로필 하나. CRICOS 학교 {count, number}개. 가족이 직접 확인하는 파이프라인. SchoolGo는 학교에 청구합니다. 에이전트에게는 청구하지 않습니다.",
+		"ctaPrimary": "인증 신청",
+		"ctaSecondary": "운영 방식 보기",
+		"badgeMeta": "Sample agent profile",
+		"stats": {
+			"schools": {
+				"value": "{count, number}",
+				"label": "인증된 CRICOS 학교"
+			},
+			"sectors": {
+				"value": "3",
+				"label": "Sectors — Gov, Independent, Catholic"
+			},
+			"commission": {
+				"value": "100%",
+				"label": "수수료 전액 보전"
+			}
+		}
+	},
+	"AgentsPainPoints": {
+		"eyebrow": "Why agents switch",
+		"heading": "Built for Education Agents Who Manage Real Pipelines",
+		"subheading": "76% of international school enrolments come through education agents. SchoolGo is built to make you more effective, not to replace you.",
+		"items": {
+			"email": {
+				"question": "Tired of emailing 15 admissions offices?",
+				"answer": "One platform, one application workflow. Submit to multiple schools and track responses in real time. Every application carries your verified agent attribution."
+			},
+			"status": {
+				"question": "Students keep asking 'did you hear back?'",
+				"answer": "Live application tracker your students can see. Status updates flow automatically — you spend less time chasing and more time advising."
+			},
+			"trust": {
+				"question": "Schools don't know if you're legitimate?",
+				"answer": "SchoolGo agent verification with your QEAC credentials. Your verified badge and track record appear on every application you submit."
+			},
+			"requirements": {
+				"question": "Different requirements for every school?",
+				"answer": "SchoolGo maps each school's specific entry requirements: accepted English tests, minimum scores, required documents, intake dates, and application fees. No more digging through 50 school websites."
+			}
+		}
+	},
+	"AgentsStatsBar": {
+		"items": {
+			"schools": "{count, number}+ School Profiles",
+			"requirements": "Entry Requirements Mapped",
+			"tests": "English Test Requirements Listed",
+			"free": "Free for Agents"
+		}
+	},
+	"AgentsMatching": {
+		"eyebrow": "매칭 · 지원 · 추적",
+		"heading": "오전 10시 부모 통화. 10시 30분까지 매칭된 학교 3곳.",
+		"subheading": "SchoolGo가 주, 학비, 영어 수준, 입학 시기에 맞는 학교를 추려낸 뒤, 몇 분 안에 표준화된 지원서를 제출할 수 있도록 합니다.",
+		"steps": {
+			"listen": {
+				"title": "가족의 요구 사항 파악",
+				"description": "예산, 지역, 영어 수준, 희망 입학 시기 — 부모 언어로 한 장의 양식에 입력."
+			},
+			"match": {
+				"title": "최적 학교 확인",
+				"description": "학생 프로필에 맞게 필터링. 학교별 인정 시험과 최저 점수를 바로 확인.",
+				"comingSoon": "Coming soon"
+			},
+			"deliver": {
+				"title": "정리된 후보 목록 제공",
+				"description": "가족이 캡처해서 아버지에게 보낼 수 있는 브랜드 PDF. 15개 학교에서 각각 보내온 PDF는 이제 필요 없습니다.",
+				"comingSoon": "Coming soon"
+			}
+		},
+		"inboxLabel": "입학 수신함",
+		"inboxRows": {
+			"scotch": {
+				"school": "Scotch College",
+				"location": "Hawthorn, VIC",
+				"status": "매칭 · AEAS 70+"
+			},
+			"brisbane": {
+				"school": "Brisbane Grammar",
+				"location": "Spring Hill, QLD",
+				"status": "매칭 · AEAS 68+"
+			},
+			"sydney": {
+				"school": "Sydney Grammar",
+				"location": "Darlinghurst, NSW",
+				"status": "매칭 · AEAS 65+"
+			}
+		}
+	},
+	"AgentsCommission": {
+		"eyebrow": "요금제",
+		"heading": "학교 수수료의 100%를 에이전트가 받습니다.",
+		"subheading": "SchoolGo는 학교에 청구합니다. 에이전트에게는 청구하지 않습니다. 학교와의 상업적 관계는 그대로 유지됩니다.",
+		"statValue": "$0",
+		"statLabel": "Platform cost per agent. Zero fees, zero commission splits — ever.",
+		"bullets": {
+			"zero": {
+				"title": "학생 1인당 수수료 없음",
+				"description": "수수료 분할 없음. 배치 수수료 없음. 구독료 없음."
+			},
+			"direct": {
+				"title": "학교와의 직접적 관계 유지",
+				"description": "지원서를 제출하는 순간 에이전트 귀속이 확정됩니다."
+			},
+			"audit": {
+				"title": "완전한 감사 기록",
+				"description": "모든 상태 변경에 타임스탬프가 찍힙니다. 분쟁은 기록으로 해결됩니다."
+			}
+		}
+	},
+	"AgentsQeacTrust": {
+		"eyebrow": "인증 완료",
+		"heading": "부모와 학교가 실제로 신뢰하는 프로필.",
+		"subheading": "QEAC 자격은 한 번만 검증합니다. 제출하는 모든 지원서에 배지와 실적이 표시됩니다.",
+		"sampleLabel": "Sample profile",
+		"profile": {
+			"name": "에이전트 프로필",
+			"agentName": "Mei Lin",
+			"qeac": "QEAC 인증",
+			"yearsActive": "활동 연수",
+			"students": "배치 학생 수",
+			"placements": "배치 학교 수",
+			"languages": "사용 언어",
+			"languagesValue": "中 · EN"
+		}
+	},
+	"AgentsScale": {
+		"eyebrow": "네트워크",
+		"heading": "Agents across APAC are joining. Be one of the first.",
+		"subheading": "From Shanghai to Jakarta, Ho Chi Minh to Seoul — agents placing families into Australian K–12.",
+		"agents": {
+			"a": {
+				"name": "Li Wei",
+				"region": "Shanghai · 中国",
+				"meta": "QEAC verified · Independent schools"
+			},
+			"b": {
+				"name": "Nguyễn Minh",
+				"region": "Ho Chi Minh · Việt Nam",
+				"meta": "QEAC verified · All sectors"
+			},
+			"c": {
+				"name": "Siti Rahman",
+				"region": "Kuala Lumpur · Malaysia",
+				"meta": "QEAC verified · Boarding specialist"
+			},
+			"d": {
+				"name": "Ji-eun Park",
+				"region": "Seoul · 대한민국",
+				"meta": "QEAC verified · VIC & NSW"
+			}
+		},
+		"cta": "인증 신청"
+	},
+	"AgentsTestimonial": {
+		"eyebrow": "[TODO: ko] From the field",
+		"heading": "[TODO: ko] What agents are saying",
+		"items": {
+			"a": {
+				"quote": "[TODO: ko] I used to forward 40 PDFs a week between parents on WeChat and six admissions offices over email. One platform would cut my admin in half.",
+				"attribution": "[TODO: ko] Agency director, Shanghai",
+				"meta": "[TODO: ko] 60+ students · 3 counsellors"
+			},
+			"b": {
+				"quote": "[TODO: ko] My families want updates at 11pm their time. A live tracker they can check themselves would save me two hours a day on WhatsApp.",
+				"attribution": "[TODO: ko] Independent agent, Ho Chi Minh City",
+				"meta": "[TODO: ko] 25+ students · Solo practice"
+			},
+			"c": {
+				"quote": "[TODO: ko] I re-type the same passport number into five different school forms every week. Enter-once, apply-many would change everything.",
+				"attribution": "[TODO: ko] Senior counsellor, Kuala Lumpur",
+				"meta": "[TODO: ko] 40+ students · 2 branches"
+			}
+		},
+		"disclaimer": "[TODO: ko] Composite quotes based on agent interviews"
+	},
+	"AgentsFinalCta": {
+		"eyebrow": "인증 받기",
+		"headingPrefix": "내 포트폴리오는",
+		"headingEmphasis": "더 나은 것을",
+		"headingSuffix": "받을 자격이 있습니다.",
+		"subheading": "무료. QEAC 인증 필요. 온보딩은 48시간 이내.",
+		"ctaPrimary": "인증 신청",
+		"ctaSecondary": "데모 예약"
+	},
+	"SchoolsMetadata": {
+		"title": "SchoolGo — 더 적은 이메일로 국제 학생 정원을 채우세요",
+		"description": "호주 학교를 위한 하나의 표준화된 입학 수신함. QEAC 인증 에이전트, 실제 지원서, 학생 1인당 수수료 없음.",
+		"ogDescription": "국제 학생 정원을 채우세요. 이메일은 줄이고."
+	},
+	"SchoolsHero": {
+		"eyebrow": "호주 학교 전용",
+		"headlinePrefix": "채우세요",
+		"headlineEmphasis": "국제 학생",
+		"headlineSuffix": "정원을. 이메일은 줄이고.",
+		"lede": "7개국 가족들이 보는 하나의 인증된 프로필. QEAC 인증 에이전트로부터 표준화된 지원서를 받으세요 — 입학팀이 이미 사용하는 형식으로.",
+		"ctaPrimary": "학교 프로필 등록",
+		"ctaSecondary": "데모 예약",
+		"inbox": {
+			"eyebrow": "Applications inbox — preview",
+			"countLabel": "이번 달",
+			"rows": {
+				"a": {
+					"name": "Sophie Chen",
+					"status": "신규",
+					"meta": "VIC · Year 9 · AEAS 78"
+				},
+				"b": {
+					"name": "Minh Tran",
+					"status": "검토 중",
+					"meta": "VIC · Year 11 · IELTS 6.5"
+				},
+				"c": {
+					"name": "Ji-woo Park",
+					"status": "합격 통보 완료",
+					"meta": "NSW · Year 10 · AEAS 74"
+				}
+			}
+		}
+	},
+	"SchoolsStats": {
+		"eyebrow": "네트워크 효과",
+		"heading": "프로필 하나. 7개국 가족들이 봅니다.",
+		"subheading": "학교 정보가 모든 검색, 모든 비교, 모든 매칭 후보 목록에 — 가족의 언어로 노출됩니다.",
+		"items": {
+			"schools": {
+				"value": "695+",
+				"label": "CRICOS-registered schools"
+			},
+			"states": {
+				"value": "8",
+				"label": "States & territories"
+			},
+			"sectors": {
+				"value": "3",
+				"label": "Sectors — Government, Independent, Catholic"
+			},
+			"feeRange": {
+				"value": "$3.5k – $78k",
+				"label": "Annual fee range (AUD)"
+			}
+		}
+	},
+	"SchoolsThreeTools": {
+		"eyebrow": "도구 모음",
+		"heading": "세 가지 도구. 하나의 목표: 더 적은 수고로 적합한 학생을.",
+		"subheading": "SchoolGo는 입학팀이 실제로 필요한 세 가지를 제공합니다.",
+		"tools": {
+			"profile": {
+				"title": "살아있는 학교 프로필",
+				"description": "학비, 입학 일정, 인정 시험, 장학금, 서류 — 직접 업데이트하면 가족의 언어로 표시됩니다."
+			},
+			"applications": {
+				"title": "표준화된 지원서",
+				"description": "모든 지원서가 동일한 형식으로 도착하며, QEAC 인증 에이전트 귀속 및 완전한 서류가 포함됩니다."
+			},
+			"inbox": {
+				"title": "단일 입학 수신함",
+				"description": "모든 지원서의 상태를 추적하세요. 한 번의 클릭으로 합격, 대기, 불합격 처리. 가족과 에이전트가 상태를 즉시 확인합니다."
+			}
+		}
+	},
+	"SchoolsTimeline": {
+		"eyebrow": "입학 여정",
+		"heading": "첫 지원서부터 개학 첫날까지 — 이메일 홍수 없이.",
+		"subheading": "국제 입학 전 과정을 한 곳에서.",
+		"steps": {
+			"receive": {
+				"title": "접수",
+				"description": "영어 점수, 서류, 인증 에이전트 정보와 함께 지원서가 수신함에 도착합니다.",
+				"comingSoon": "Coming soon"
+			},
+			"review": {
+				"title": "검토",
+				"description": "팀이 자체 기준에 따라 평가합니다. 메모는 내부 전용으로 유지됩니다.",
+				"comingSoon": "Coming soon"
+			},
+			"decide": {
+				"title": "결정",
+				"description": "한 번의 클릭으로 합격, 대기, 불합격 처리. 상태가 가족과 에이전트에게 즉시 전달됩니다.",
+				"comingSoon": "Coming soon"
+			},
+			"onboard": {
+				"title": "온보딩",
+				"description": "입학 서류, 숙소 정보, 오리엔테이션 링크를 하나의 스레드에서 공유하세요.",
+				"comingSoon": "Coming soon"
+			}
+		}
+	},
+	"SchoolsPricing": {
+		"eyebrow": "요금제",
+		"heading": "에이전트 수수료 없음. 커미션 없음. 연간 요금제 하나.",
+		"subheading": "SchoolGo를 지원하는 학교는 하나의 투명한 연간 비용을 납부합니다. 가족과 에이전트는 비용을 내지 않습니다.",
+		"plans": {
+			"listing": {
+				"name": "기본 등록",
+				"price": "Free",
+				"priceMeta": "영구 무료",
+				"features": {
+					"a": "CRICOS 프로필 자동 게시",
+					"b": "인정 영어 시험 + 최저 점수",
+					"c": "표준화된 지원 수신함"
+				},
+				"cta": "프로필 등록"
+			},
+			"admissions": {
+				"name": "입학 관리",
+				"price": "$12,800",
+				"priceMeta": "AUD / 년",
+				"badge": "가장 인기",
+				"features": {
+					"a": "기본 등록의 모든 기능",
+					"b": "합격 / 대기 / 불합격 워크플로",
+					"c": "QEAC 인증 에이전트 디렉토리",
+					"d": "모든 프로필 페이지 7개 언어 번역"
+				},
+				"cta": "입학 관리 시작"
+			}
+		}
+	},
+	"SchoolsTestimonial": {
+		"quote": "The hardest part of international admissions isn't finding students — it's processing incomplete applications from 15 different email threads.",
+		"attribution": "Composite quote based on admissions officer interviews"
+	},
+	"SchoolsFinalCta": {
+		"eyebrow": "여기서 시작하세요",
+		"headingPrefix": "다음 학기 입학이",
+		"headingEmphasis": "시작됩니다",
+		"headingSuffix": "여기서.",
+		"subheading": "무료 등록. 신용카드 불필요. 등록 10분이면 완료.",
+		"ctaPrimary": "학교 프로필 등록",
+		"ctaSecondary": "데모 예약"
+	},
+	"SchoolsFaq": {
+		"heading": "[TODO: ko] Frequently Asked Questions",
+		"items": {
+			"claim": {
+				"question": "[TODO: ko] How do I claim my school's profile?",
+				"answer": "[TODO: ko] Search for your school on SchoolGo and click \"Claim This School.\" You'll verify your identity as a staff member, and once approved you can edit your profile, update fees, and manage applications."
+			},
+			"agents": {
+				"question": "[TODO: ko] How does SchoolGo work with education agents?",
+				"answer": "[TODO: ko] By default, your profile works with your school's existing agents. You can see which agents have placed students with you, invite new agents, or manage agent relationships from your dashboard."
+			},
+			"commission": {
+				"question": "[TODO: ko] Does SchoolGo charge schools or agents?",
+				"answer": "[TODO: ko] No. SchoolGo is free for everyone — schools, agents, and parents. There are no listing fees, per-student fees, or commission splits."
+			},
+			"data": {
+				"question": "[TODO: ko] Where does the school data come from?",
+				"answer": "[TODO: ko] All school profiles are auto-published from CRICOS (the Australian Government's official register) and cross-referenced with ACARA school profile data. Schools that claim their profile can update their own details at any time."
+			}
+		}
+	},
+	"Navbar": {
+		"brand": "School",
+		"brandAccent": "Go",
+		"region": "호주",
+		"findSchools": "학교 찾기",
+		"compare": "비교",
+		"scholarships": "장학금",
+		"admissions": "입학",
+		"contactUs": "문의하기",
+		"signIn": "로그인"
+	},
+	"Footer": {
+		"brand": "School",
+		"brandAccent": "Go",
+		"region": "호주",
+		"tagline": "미래의 리더들을 대륙 최고의 학술 기반과 연결합니다.",
+		"resources": "자료",
+		"directory": "디렉토리",
+		"copyright": "© {year} SchoolGo 호주. 모든 권리 보유.",
+		"resourceLinks": {
+			"vceResources": "VCE 자료",
+			"hscGuides": "HSC 가이드",
+			"ibRequirements": "IB 요건"
+		},
+		"directoryLinks": {
+			"scholarshipTips": "장학금 팁",
+			"contactSupport": "지원 문의"
+		},
+		"social": {
+			"website": "웹사이트 방문",
+			"share": "공유",
+			"email": "이메일 보내기"
+		}
+	},
+	"SchoolSearch": {
+		"searchPlaceholder": "학교 이름, 도시 또는 교외로 검색...",
+		"clearSearch": "검색 지우기",
+		"filters": {
+			"title": "검색 필터",
+			"subtitle": "호주 학교 필터링",
+			"priceRangeLabel": "가격 범위 (AUD)",
+			"priceRangeValue": "${min}k – ${max}k",
+			"priceMin": "$5,000",
+			"priceMax": "$60,000+",
+			"englishTests": "영어 능력 시험",
+			"englishTestsHint": "인정된 영어 시험 수용",
+			"englishTestsToggle": "영어 능력 시험 필터 전환",
+			"curriculum": "커리큘럼",
+			"location": "위치",
+			"resetFilters": "필터 초기화",
+			"resetAll": "모두 초기화",
+			"locked": {
+				"title": "Unlock this filter",
+				"cta": "Create free account"
+			},
+			"collapse": "Collapse",
+			"expand": "Expand"
+		},
+		"chips": {
+			"topRated": "최고 평점",
+			"boarding": "기숙 가능",
+			"coed": "남녀공학",
+			"scholarships": "장학금 모집 중",
+			"openDays": "오픈 데이"
+		},
+		"states": {
+			"VIC": "빅토리아 (VIC)",
+			"NSW": "뉴사우스웨일스 (NSW)",
+			"QLD": "퀸즐랜드 (QLD)",
+			"SA": "남호주 (SA)",
+			"WA": "서호주 (WA)",
+			"TAS": "태즈메이니아 (TAS)",
+			"ACT": "호주 수도 특별구 (ACT)",
+			"NT": "노던 테리토리 (NT)"
+		},
+		"results": {
+			"title": "이용 가능한 학교",
+			"count": "{count, plural, one {# 결과} other {# 결과}}",
+			"viewAll": "모든 학교 보기",
+			"searching": "[TODO: ko] Searching…",
+			"error": "[TODO: ko] Something went wrong. Please try again.",
+			"empty": "[TODO: ko] No schools found. Try adjusting your filters."
+		},
+		"map": {
+			"title": "호주 — 학교 지도",
+			"reset": "[TODO: ko] Reset filters and map",
+			"zoomIn": "확대",
+			"zoomOut": "축소",
+			"ctrlScrollHint": "[TODO: ko] Use Ctrl + scroll to zoom the map",
+			"loading": "지도를 불러오는 중…"
+		},
+		"card": {
+			"currency": "AUD",
+			"viewDetails": "{name} 보기",
+			"topRated": "Top rated"
+		},
+		"loginPrompt": {
+			"title": "전체 검색 잠금 해제",
+			"subtitle": "로그인하여 상세 필터, 학교 저장, 프로그램 비교 기능을 이용하세요.",
+			"signIn": "로그인하여 계속",
+			"signUp": "회원가입"
+		},
+		"lockedDescription": "로그인하여 잠금 해제 — 이 필터를 사용하려면 무료 계정을 만드세요",
+		"compare": {
+			"regionLabel": "학교 비교",
+			"clearAll": "비교 선택 모두 지우기"
+		},
+		"spec": {
+			"previewBadge": "Preview",
+			"previewTitle": "Spec filters",
+			"modeBadge": {
+				"basic": "기본",
+				"advanced": "고급"
+			},
+			"lockedDescription": "Sign up to unlock this filter.",
+			"showFewer": "Show fewer",
+			"location": {
+				"title": "위치",
+				"stateLabel": "주 또는 준주",
+				"suburbLabel": "교외 또는 우편번호",
+				"suburbPlaceholder": "예: Hawthorn 또는 3122"
+			},
+			"schoolProfile": {
+				"title": "School profile",
+				"sectorLabel": "Sector",
+				"accommodationLabel": "Accommodation",
+				"religionLabel": "Religious affiliation"
+			},
+			"enrolment": {
+				"title": "Enrolment & entry",
+				"yearLevelLabel": "Entry year level",
+				"ageLabel": "Student age",
+				"agePlaceholder": "—",
+				"ageHint": "Most {age}-year-olds enter {expected} — showing all results for your selection.",
+				"termLabel": "Entry term"
+			},
+			"academic": {
+				"title": "Academic",
+				"programLabel": "Program type",
+				"atarLabel": "ATAR available",
+				"atarTooltip": "Australian Tertiary Admission Rank — the score used for university entry in Australia",
+				"englishSupportLabel": "English language support",
+				"programTooltips": {
+					"australianCert": "The standard Australian senior secondary certificate — VCE (VIC), HSC (NSW), QCE (QLD), etc.",
+					"ib": "International Baccalaureate — a globally recognised program accepted by universities worldwide",
+					"elicos": "English Language Intensive Courses for Overseas Students — intensive English preparation before starting mainstream school"
+				}
+			},
+			"englishTest": {
+				"title": "영어 시험 점수",
+				"selectorLabel": "점수가 있는 시험",
+				"scoreLabel": "{label} 점수",
+				"scorePlaceholder": "점수 입력",
+				"scoreHint": "범위: {min}–{max}",
+				"aeas": "AEAS",
+				"idat": "iDAT",
+				"duolingo": "Duolingo",
+				"ielts": "IELTS",
+				"pte": "PTE",
+				"cambridge": "Cambridge"
+			},
+			"tile": {
+				"status": {
+					"open": "모집 중",
+					"limited": "자리 제한",
+					"waitlist": "대기자 명단만",
+					"closed": "마감"
+				},
+				"sector": {
+					"government": "공립",
+					"nonGovernment": "비공립",
+					"catholic": "가톨릭"
+				},
+				"accommodation": {
+					"boarding": "기숙사",
+					"homestay": "홈스테이",
+					"both": "둘 다",
+					"none": "없음"
+				},
+				"actions": {
+					"bookmark": "{name} 북마크",
+					"bookmarkAdd": "{name} 북마크에 추가",
+					"bookmarkRemove": "{name} 북마크에서 제거",
+					"compare": "{name} 비교에 추가"
+				}
+			},
+			"sector": {
+				"government": "Government",
+				"nonGovernment": "Non-government",
+				"catholic": "Catholic"
+			},
+			"accommodation": {
+				"boarding": "Boarding",
+				"homestay": "Homestay",
+				"both": "Both",
+				"none": "None"
+			},
+			"religion": {
+				"nonDenominational": "Non-denominational",
+				"anglican": "Anglican",
+				"baptist": "Baptist",
+				"lutheran": "Lutheran",
+				"unitingChurch": "Uniting Church",
+				"presbyterian": "Presbyterian",
+				"islamic": "Islamic",
+				"jewish": "Jewish",
+				"buddhist": "Buddhist",
+				"copticOrthodox": "Coptic Orthodox",
+				"greekOrthodox": "Greek Orthodox",
+				"seventhDayAdventist": "Seventh-day Adventist",
+				"quaker": "Quaker",
+				"interdenominationalChristian": "Interdenominational Christian",
+				"showMore": "Show all ({count})",
+				"showLess": "Show less"
+			},
+			"yearLevel": {
+				"gr4": "Gr 4",
+				"gr5": "Gr 5",
+				"gr6": "Gr 6",
+				"yr7": "Yr 7",
+				"yr8": "Yr 8",
+				"yr9": "Yr 9",
+				"yr10": "Yr 10",
+				"yr11": "Yr 11",
+				"yr12": "Yr 12"
+			},
+			"entryTerm": {
+				"term1": "Term 1",
+				"term2": "Term 2",
+				"term3": "Term 3",
+				"term4": "Term 4"
+			},
+			"programType": {
+				"australianCert": "Australian Cert.",
+				"ib": "IB",
+				"elicos": "ELICOS"
+			},
+			"englishTestOption": {
+				"aeas": "AEAS",
+				"idat": "iDAT",
+				"duolingo": "Duolingo",
+				"ielts": "IELTS",
+				"pte": "PTE",
+				"cambridge": "Cambridge"
+			},
+			"gender": {
+				"boys": "Boys",
+				"girls": "Girls",
+				"coEd": "Co-ed"
+			},
+			"schoolLevel": {
+				"primary": "Primary",
+				"secondary": "Secondary"
+			},
+			"quickChip": {
+				"boys": "Boys",
+				"girls": "Girls",
+				"coEd": "Co-ed",
+				"primary": "Primary",
+				"secondary": "Secondary",
+				"boarding": "Boarding",
+				"groupAriaLabel": "Quick filters"
+			},
+			"sort": {
+				"label": "정렬 기준",
+				"nameAsc": "학교 이름 (A–Z)",
+				"nameDesc": "학교 이름 (Z–A)",
+				"tuitionAsc": "학비 낮은 순",
+				"tuitionDesc": "학비 높은 순",
+				"state": "주",
+				"enrolmentStatus": "입학 상태 (모집 중 우선)",
+				"applicationDeadlineAsc": "지원 마감일 (임박 순)",
+				"schoolSizeAsc": "학교 규모 (소~대)",
+				"schoolSizeDesc": "학교 규모 (대~소)",
+				"internationalPctAsc": "유학생 비율 (낮은 순)",
+				"internationalPctDesc": "유학생 비율 (높은 순)",
+				"tuitionLowHigh": "학비 낮은 순",
+				"tuitionHighLow": "학비 높은 순",
+				"stateAsc": "주",
+				"enrolmentOpenFirst": "입학 상태 (모집 중 우선)"
+			},
+			"topBar": {
+				"searchPlaceholder": "Search by school name, city, or suburb",
+				"feeLabel": "Annual fee",
+				"feeReadout": "${min}k – ${max}k"
+			},
+			"compareBar": {
+				"label": "{count}/{max} 선택됨",
+				"remove": "{name} 제거",
+				"cta": "학교 비교",
+				"capReached": "비교 한도 도달"
+			},
+			"tileCard": {
+				"tuitionFrom": "From ${amount} / year",
+				"viewSchool": "View school",
+				"bookmark": "Bookmark",
+				"bookmarkRemove": "Remove bookmark",
+				"compareCheckbox": "Add {name} to compare",
+				"status": {
+					"open": "Open",
+					"limited": "Limited places",
+					"waitlist": "Waitlist only",
+					"closed": "Closed"
+				}
+			},
+			"stepper": {
+				"decrease": "{label} decrease",
+				"increase": "{label} increase"
+			}
+		}
+	},
+	"Applications": {
+		"title": "지원서",
+		"subtitle": "모든 학교의 학생 지원서를 관리하고 추적하세요.",
+		"searchPlaceholder": "학생 또는 학교로 검색...",
+		"clearSearch": "검색 초기화",
+		"allStatuses": "모든 상태",
+		"filterActive": "활성",
+		"filterNeedsAction": "처리 필요",
+		"statusDraft": "초안",
+		"statusSubmitted": "제출됨",
+		"statusReceived": "접수됨",
+		"statusUnderReview": "검토 중",
+		"statusDocumentsRequested": "서류 요청",
+		"statusAssessmentRequired": "평가 필요",
+		"statusInterviewScheduled": "면접 예약됨",
+		"statusOfferMade": "합격 통보",
+		"statusOfferAccepted": "합격 수락",
+		"statusPreEnrolment": "사전 등록",
+		"statusCoeIssued": "CoE 발급",
+		"statusEnrolled": "등록 완료",
+		"statusWithdrawn": "철회",
+		"statusDeclined": "거절",
+		"statusWaitlisted": "대기 중",
+		"columnStudent": "학생",
+		"columnSchool": "학교",
+		"columnState": "주",
+		"columnYearLevel": "학년",
+		"columnStatus": "상태",
+		"columnSubmitted": "제출일",
+		"columnDays": "일수",
+		"emptyTitle": "아직 지원서가 없습니다",
+		"emptySubtitle": "학생을 위한 지원서를 먼저 만들어 보세요.",
+		"emptyFilteredTitle": "필터에 맞는 지원서가 없습니다",
+		"emptyFilteredSubtitle": "필터 또는 검색어를 조정해 보세요.",
+		"addApplication": "새 지원서",
+		"paginationShowing": "표시",
+		"paginationOf": "전체 {total}개",
+		"allRows": "전체",
+		"today": "오늘",
+		"daysAgo": "{count}일 전",
+		"exportCsv": "CSV 내보내기",
+		"detailTitle": "지원서 상세",
+		"backToApplications": "지원서 목록으로",
+		"tabDetails": "상세 정보",
+		"tabDocuments": "서류",
+		"tabTimeline": "타임라인",
+		"tabMessages": "메시지",
+		"studentToSchool": "{student} → {school}",
+		"submittedOn": "제출일",
+		"lastUpdated": "최근 수정",
+		"daysInCurrentStatus": "현재 상태 일수",
+		"applicationId": "지원서 ID",
+		"progressSubmitted": "제출",
+		"progressReview": "검토",
+		"progressDocuments": "서류",
+		"progressOffer": "합격",
+		"progressEnrolment": "등록",
+		"progressEnrolled": "등록 완료",
+		"notFound": "지원서를 찾을 수 없습니다.",
+		"loadError": "지원서를 불러오지 못했습니다.",
+		"sectionStudent": "학생 정보",
+		"sectionSchool": "학교 정보",
+		"sectionApplication": "지원서 정보",
+		"labelName": "이름",
+		"labelNationality": "국적",
+		"labelSchoolName": "학교 이름",
+		"labelState": "주",
+		"labelCricosCode": "CRICOS 코드",
+		"labelYearLevel": "학년",
+		"labelIntake": "입학 시기",
+		"labelStatus": "상태",
+		"labelSubmitted": "제출일",
+		"labelCreated": "생성일",
+		"labelUpdated": "수정일",
+		"notProvided": "정보 없음",
+		"documentsEmpty": "첨부된 서류가 없습니다",
+		"documentName": "이름",
+		"documentType": "유형",
+		"documentSize": "크기",
+		"documentUploadedAt": "업로드",
+		"downloadDocument": "다운로드",
+		"timelineEmpty": "타임라인 이벤트가 없습니다",
+		"timelineBy": "{actor} 처리",
+		"messagesComingSoon": "메시지 기능 준비 중",
+		"actionWithdraw": "지원서 철회",
+		"actionAcceptOffer": "합격 수락",
+		"actionContactSchool": "학교 문의",
+		"actionComingSoon": "준비 중"
+	},
+	"Auth": {
+		"signInTitle": "SchoolGo에 로그인",
+		"signInSubtitle": "계정에 로그인하여 학교, 지원서 등을 관리하세요.",
+		"iAmA": "저는…",
+		"userTypes": {
+			"parent": "학부모",
+			"agent": "유학원",
+			"school": "학교"
+		},
+		"emailLabel": "이메일",
+		"emailPlaceholder": "you@example.com",
+		"passwordLabel": "비밀번호",
+		"passwordPlaceholder": "비밀번호를 입력하세요",
+		"signInButton": "로그인",
+		"loginSuccess": "다시 오셨군요!",
+		"loginError": "이메일 또는 비밀번호가 올바르지 않습니다. 다시 시도해주세요.",
+		"portalUnauthorized": "이 계정은 해당 포털에 대한 접근 권한이 없습니다.",
+		"sessionExpired": "세션이 만료되었습니다. 다시 로그인해 주세요.",
+		"noAccount": "계정이 없으신가요?",
+		"signUp": "회원가입",
+		"signUpTitle": "계정 만들기",
+		"signUpSubtitle": "SchoolGo에 가입하여 호주 학교를 찾고, 비교하고, 지원하세요.",
+		"nameLabel": "이름",
+		"namePlaceholder": "성명을 입력하세요",
+		"createPasswordPlaceholder": "비밀번호를 만드세요 (최소 6자)",
+		"signUpButton": "계정 만들기",
+		"registerSuccess": "계정이 생성되었습니다! SchoolGo에 오신 것을 환영합니다.",
+		"registerError": "계정을 만들 수 없습니다. 다시 시도해주세요.",
+		"hasAccount": "이미 계정이 있으신가요?",
+		"signInLink": "로그인",
+		"close": "닫기",
+		"portalSwitch": {
+			"backTo": "[TODO: ko] Back to"
+		},
+		"parent": {
+			"signInTitle": "[TODO: ko] Welcome back, Parent",
+			"signInSubtitle": "[TODO: ko] Sign in to find and compare the best schools for your child.",
+			"signUpTitle": "[TODO: ko] Start your school search",
+			"signUpSubtitle": "[TODO: ko] Create an account to shortlist, compare and apply to Australian schools.",
+			"stat1Value": "2,400+",
+			"stat1Label": "학교",
+			"stat2Value": "7",
+			"stat2Label": "언어",
+			"stat3Value": "98%",
+			"stat3Label": "만족도"
+		},
+		"agent": {
+			"signInTitle": "[TODO: ko] Agent Portal",
+			"signInSubtitle": "[TODO: ko] Sign in to manage your pipeline and student placements.",
+			"signUpTitle": "[TODO: ko] Grow your agency",
+			"signUpSubtitle": "[TODO: ko] Join SchoolGo to access verified schools and streamline placements.",
+			"stat1Value": "850+",
+			"stat1Label": "유학원",
+			"stat2Value": "15%",
+			"stat2Label": "수수료",
+			"stat3Value": "24h",
+			"stat3Label": "응답"
+		},
+		"school": {
+			"signInTitle": "[TODO: ko] School Portal",
+			"signInSubtitle": "[TODO: ko] Sign in to manage enrolments and connect with agents.",
+			"signUpTitle": "[TODO: ko] List your school",
+			"signUpSubtitle": "[TODO: ko] Create an account to reach international students and education agents.",
+			"stat1Value": "500+",
+			"stat1Label": "유학원",
+			"stat2Value": "12k",
+			"stat2Label": "학생",
+			"stat3Value": "Free",
+			"stat3Label": "등록"
+		},
+		"nav": {
+			"parent": {
+				"howItWorks": "이용 방법",
+				"compare": "비교",
+				"faq": "자주 묻는 질문"
+			},
+			"agent": {
+				"howItWorks": "이용 방법",
+				"commission": "수수료",
+				"trust": "신뢰"
+			},
+			"school": {
+				"howItWorks": "이용 방법",
+				"pricing": "요금제",
+				"faq": "자주 묻는 질문"
+			}
+		}
+	},
+	"Errors": {
+		"generic": "문제가 발생했습니다",
+		"genericSubtitle": "[TODO: ko] We hit an unexpected bump. Don't worry — your data is safe.",
+		"tryAgain": "다시 시도",
+		"notFound": "페이지를 찾을 수 없습니다",
+		"notFoundCode": "[TODO: ko] 404",
+		"notFoundSubtitle": "[TODO: ko] The page you're looking for doesn't exist or has been moved.",
+		"goHome": "홈으로 이동",
+		"searchInstead": "[TODO: ko] Search schools"
+	},
+	"LaunchingSoon": {
+		"title": "곧 출시됩니다",
+		"subtitle": "SchoolGo가 호주 전역의 최고의 학교를 찾을 수 있도록 준비하고 있습니다. 멋진 서비스의 마무리 작업이 한창입니다.",
+		"stayTuned": "기대해 주세요 — 곧 정식 출시됩니다.",
+		"portals": {
+			"heading": "우리 플랫폼",
+			"parents": "학부모 포털",
+			"schools": "학교 포털",
+			"agents": "에이전트 포털"
+		}
+	},
+	"Dashboard": {
+		"nav": {
+			"dashboard": "[TODO: ko] Dashboard",
+			"students": "[TODO: ko] Students",
+			"applications": "[TODO: ko] Applications",
+			"pipeline": "[TODO: ko] Pipeline",
+			"searchSchools": "[TODO: ko] Search Schools",
+			"messages": "[TODO: ko] Messages",
+			"settings": "[TODO: ko] Settings",
+			"profile": "[TODO: ko] My Profile",
+			"logout": "[TODO: ko] Log out",
+			"portalLabel": "에이전트",
+			"portalBadge": {
+				"agent": "에이전트",
+				"parent": "학부모",
+				"school": "학교"
+			}
+		},
+		"greeting": {
+			"morning": "좋은 아침입니다,",
+			"afternoon": "좋은 오후입니다,",
+			"evening": "좋은 저녁입니다,",
+			"fallbackName": "안녕하세요"
+		},
+		"actionBanner": {
+			"title": "처리 필요"
+		},
+		"cards": {
+			"activeStudents": "활성 학생",
+			"appsInProgress": "진행 중인 지원",
+			"offersReceived": "받은 오퍼",
+			"enrolledThisTerm": "이번 학기 등록"
+		},
+		"activity": {
+			"title": "최근 활동",
+			"empty": "최근 활동이 없습니다. 학생을 추가하거나 학교를 검색해 보세요."
+		},
+		"deadlines": {
+			"title": "다가오는 마감일",
+			"empty": "다가오는 마감일이 없습니다."
+		},
+		"quickActions": {
+			"addStudent": "새 학생 추가",
+			"newApplication": "새 지원서",
+			"reviewApplications": "지원서 확인",
+			"searchSchools": "학교 검색"
+		}
+	},
+	"Students": {
+		"title": "[TODO: ko] Students",
+		"subtitle": "[TODO: ko] Manage your student profiles, documents, and test results.",
+		"searchPlaceholder": "[TODO: ko] Search by name...",
+		"clearSearch": "[TODO: ko] Clear search",
+		"allStatuses": "[TODO: ko] All statuses",
+		"statusActive": "[TODO: ko] Active",
+		"statusArchived": "[TODO: ko] Archived",
+		"statusEnrolled": "[TODO: ko] Enrolled",
+		"addStudent": "[TODO: ko] Add Student",
+		"columnName": "[TODO: ko] Name",
+		"columnNationality": "[TODO: ko] Nationality",
+		"columnYearLevel": "[TODO: ko] Year Level",
+		"columnTargetEntry": "[TODO: ko] Target Entry",
+		"columnEnglishTest": "영어 시험",
+		"columnApps": "지원",
+		"columnStatus": "[TODO: ko] Status",
+		"filters": "필터",
+		"sort": "정렬",
+		"emptyTitle": "아직 학생이 없습니다",
+		"emptySubtitle": "첫 번째 학생을 추가하여 프로필을 구성하고 학교에 지원을 시작하세요.",
+		"archive": "보관",
+		"paginationShowing": "표시",
+		"paginationOf": "전체 {total}개",
+		"allRows": "전체",
+		"createTitle": "[TODO: ko] Add New Student",
+		"createButton": "[TODO: ko] Create Student",
+		"createSuccess": "[TODO: ko] Student created successfully.",
+		"createError": "[TODO: ko] Could not create student. Please try again.",
+		"profileTitle": "[TODO: ko] Student Profile",
+		"notFound": "[TODO: ko] Student not found.",
+		"backToList": "[TODO: ko] Back",
+		"edit": "[TODO: ko] Edit",
+		"sectionPersonal": "[TODO: ko] Personal Information",
+		"sectionEducation": "[TODO: ko] Education",
+		"sectionParent": "[TODO: ko] Parent / Guardian",
+		"fieldFirstName": "[TODO: ko] First name",
+		"fieldLastName": "[TODO: ko] Last name",
+		"fieldDob": "[TODO: ko] Date of birth",
+		"fieldGender": "[TODO: ko] Gender",
+		"fieldNationality": "[TODO: ko] Nationality",
+		"fieldCurrentSchool": "[TODO: ko] Current school",
+		"fieldCurrentYear": "[TODO: ko] Current year level",
+		"fieldTargetYear": "[TODO: ko] Target entry year",
+		"fieldTargetTerm": "[TODO: ko] Target intake",
+		"fieldParentName": "[TODO: ko] Name",
+		"fieldParentEmail": "[TODO: ko] Email",
+		"fieldParentPhone": "[TODO: ko] Phone",
+		"fieldParentWechat": "[TODO: ko] WeChat ID",
+		"fieldNotes": "[TODO: ko] Agent Notes",
+		"notesPlaceholder": "[TODO: ko] Private notes about this student (only visible to you)...",
+		"selectGender": "[TODO: ko] Select gender",
+		"selectYear": "[TODO: ko] Select year level",
+		"genderMale": "[TODO: ko] Male",
+		"genderFemale": "[TODO: ko] Female",
+		"genderOther": "[TODO: ko] Other",
+		"tabOverview": "[TODO: ko] Overview",
+		"tabDocuments": "[TODO: ko] Documents",
+		"tabTests": "[TODO: ko] Tests",
+		"tabApplications": "[TODO: ko] Applications",
+		"documentsComingSoon": "[TODO: ko] Document management coming soon.",
+		"testsComingSoon": "[TODO: ko] Test results coming soon.",
+		"applicationsComingSoon": "[TODO: ko] Applications coming soon.",
+		"docUpload": "[TODO: ko] Upload Document",
+		"docUploadTitle": "[TODO: ko] Upload Document",
+		"docUploadButton": "[TODO: ko] Upload",
+		"docCancel": "[TODO: ko] Cancel",
+		"docDropzone": "[TODO: ko] Drag & drop a file here, or click to browse",
+		"docDropzoneHint": "[TODO: ko] PDF, JPG, PNG, DOCX up to 10 MB",
+		"docTypeLabel": "[TODO: ko] Document Type",
+		"docTypeSelect": "[TODO: ko] Select document type",
+		"docFileNameLabel": "[TODO: ko] Display Name (optional)",
+		"docFileNamePlaceholder": "[TODO: ko] e.g. John Passport 2026",
+		"docExpiresLabel": "[TODO: ko] Expiry Date (optional)",
+		"docNotesLabel": "[TODO: ko] Notes (optional)",
+		"docNotesPlaceholder": "[TODO: ko] Any notes about this document...",
+		"docAllTypes": "[TODO: ko] All types",
+		"docEmptyTitle": "[TODO: ko] No documents yet",
+		"docEmptySubtitle": "[TODO: ko] Upload your first document to get started.",
+		"docColName": "[TODO: ko] File",
+		"docColType": "[TODO: ko] Type",
+		"docColStatus": "[TODO: ko] Status",
+		"docColExpiry": "[TODO: ko] Expiry",
+		"docColUploaded": "[TODO: ko] Uploaded",
+		"docDeleteTitle": "[TODO: ko] Delete Document",
+		"docDeleteConfirm": "[TODO: ko] Are you sure you want to delete this document? This action cannot be undone.",
+		"docDeleteButton": "[TODO: ko] Delete",
+		"docUploadSuccess": "[TODO: ko] Document uploaded successfully.",
+		"docUploadError": "[TODO: ko] Could not upload document. Please try again.",
+		"docDeleteSuccess": "[TODO: ko] Document deleted.",
+		"docDeleteError": "[TODO: ko] Could not delete document.",
+		"docType_passport": "[TODO: ko] Passport",
+		"docType_school_reports": "[TODO: ko] School Reports",
+		"docType_english_test": "[TODO: ko] English Test Report",
+		"docType_birth_certificate": "[TODO: ko] Birth Certificate",
+		"docType_parent_passport": "[TODO: ko] Parent Passport",
+		"docType_immunisation": "[TODO: ko] Immunisation Records",
+		"docType_personal_statement": "[TODO: ko] Personal Statement",
+		"docType_guardian_nomination": "[TODO: ko] Guardian Nomination",
+		"docType_current_visa": "[TODO: ko] Current Visa",
+		"docType_welfare_docs": "[TODO: ko] Welfare Documents",
+		"docType_financial_evidence": "[TODO: ko] Financial Evidence",
+		"docType_oshc": "[TODO: ko] OSHC",
+		"docType_written_agreement": "[TODO: ko] Written Agreement",
+		"docType_conditions_of_entry": "[TODO: ko] Conditions of Entry",
+		"docType_offer_acceptance": "[TODO: ko] Offer Acceptance",
+		"docType_coe": "[TODO: ko] CoE (Confirmation of Enrolment)",
+		"docType_caaw_letter": "[TODO: ko] CAAW Letter",
+		"docType_photo": "[TODO: ko] Photo",
+		"docType_other": "[TODO: ko] Other",
+		"docStatus_active": "[TODO: ko] Active",
+		"docStatus_replaced": "[TODO: ko] Replaced",
+		"docStatus_archived": "[TODO: ko] Archived"
+	},
+	"Pipeline": {
+		"title": "파이프라인",
+		"totalApplications": "{count, plural, one {지원서 # 건} other {지원서 # 건}}",
+		"emptyTitle": "파이프라인에 지원서가 없습니다",
+		"emptySubtitle": "학생을 위한 지원서를 먼저 만들어 보세요.",
+		"columnNew": "신규",
+		"columnInReview": "검토 중",
+		"columnActionRequired": "처리 필요",
+		"columnOffers": "합격 통보",
+		"columnPreEnrolment": "사전 등록",
+		"columnEnrolled": "등록 완료",
+		"columnClosed": "종료",
+		"daysLabel": "{count}일",
+		"moreApplications": "+{count}건 더"
+	},
+	"SearchMetadata": {
+		"title": "학교 검색 — SchoolGo",
+		"description": "호주 학교를 검색하고 비교하세요. 위치, 학비, 커리큘럼, 기숙사 등으로 필터링하세요.",
+		"ogDescription": "SchoolGo에서 호주 학교를 검색하고 비교하세요.",
+		"parentTitle": "자녀를 위한 호주 학교 검색 — SchoolGo",
+		"parentDescription": "위치, 학비, 커리큘럼, 기숙사, 학생 지원 기준으로 호주 학교를 찾고 비교하세요.",
+		"parentOgDescription": "SchoolGo에서 자녀에게 맞는 호주 학교를 비교하고 찾아보세요.",
+		"schoolTitle": "호주 학교 목록 살펴보기 — SchoolGo",
+		"schoolDescription": "SchoolGo에서 호주 학교 목록, 위치, 프로그램, 학비, 학생 지원 정보를 확인하세요.",
+		"schoolOgDescription": "SchoolGo에서 호주 학교 목록과 프로그램을 비교하세요.",
+		"agentTitle": "학생을 위한 호주 학교 검색 — SchoolGo",
+		"agentDescription": "유학생에게 맞는 호주 학교를 찾고 위치, 학비, 프로그램, 기숙사, 지원을 비교하세요.",
+		"agentOgDescription": "SchoolGo에서 학생을 위한 호주 학교를 검색하고 비교하세요."
+	}
 }

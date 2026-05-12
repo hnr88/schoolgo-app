@@ -52,7 +52,7 @@ export function SortControl({ isAdvanced, className }: SortControlProps) {
           'inline-flex items-center gap-1.5 rounded-pill border border-border bg-background px-3 py-1.5 text-xs font-medium text-foreground hover:bg-muted',
         )}
       >
-        <span className="text-muted-foreground">{t('label')}:</span>
+        <span className="text-muted-foreground">{t('label')}</span>
         <span>{t(currentLabelKey.split('.').pop() as never)}</span>
         <ChevronDown size={12} aria-hidden />
       </button>

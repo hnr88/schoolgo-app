@@ -10,10 +10,10 @@ import { Link } from '@/i18n/navigation';
 
 export default function ErrorBoundary({
   error,
-  reset,
+  unstable_retry,
 }: {
   error: Error & { digest?: string };
-  reset: () => void;
+  unstable_retry: () => void;
 }) {
   const t = useTranslations('Errors');
 
@@ -66,7 +66,7 @@ export default function ErrorBoundary({
         <div className='mt-10 flex flex-col gap-3 sm:flex-row'>
           <Button
             type='button'
-            onClick={reset}
+            onClick={() => unstable_retry()}
             className='h-auto rounded-xl px-8 py-3 text-sm font-semibold shadow-brand'
           >
             <RefreshCw className='mr-2 h-4 w-4' />

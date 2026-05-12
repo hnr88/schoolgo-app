@@ -1,3 +1,5 @@
+'use client';
+
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { privateApi } from '@/lib/axios';
 import type { StudentDocument } from '@/modules/students/types/document.types';

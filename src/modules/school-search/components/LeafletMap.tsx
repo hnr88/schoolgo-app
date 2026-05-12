@@ -115,7 +115,6 @@ export function LeafletMap({ schools, onMapReady, activePortal }: LeafletMapProp
         className='h-full w-full'
         zoomControl={false}
         scrollWheelZoom={false}
-        attributionControl={false}
       >
         <TileLayer
           url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'

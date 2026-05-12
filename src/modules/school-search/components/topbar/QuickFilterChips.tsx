@@ -7,33 +7,9 @@ import {
   QUICK_CHIP_OPTIONS,
   SECONDARY_YEAR_LEVELS,
 } from '@/modules/school-search/constants/filter-options.constants';
+import { deriveSelectedChips } from '@/modules/school-search/lib/derive-selected-chips';
 import { useSchoolSearchStore } from '@/modules/school-search/stores/use-school-search-store';
-import type {
-  EntryYearLevel,
-  Gender,
-  QuickChipId,
-} from '@/modules/school-search/types/filter.types';
-
-function deriveSelectedChips(
-  gender: readonly Gender[],
-  accommodation: readonly string[],
-  entryYearLevels: readonly EntryYearLevel[],
-): QuickChipId[] {
-  const selected: QuickChipId[] = [];
-  if (gender.includes('boys')) selected.push('boys');
-  if (gender.includes('girls')) selected.push('girls');
-  if (gender.includes('co-ed')) selected.push('co-ed');
-  if (accommodation.includes('boarding') || accommodation.includes('both')) {
-    selected.push('boarding');
-  }
-  if (PRIMARY_YEAR_LEVELS.every((y) => entryYearLevels.includes(y))) {
-    selected.push('primary');
-  }
-  if (SECONDARY_YEAR_LEVELS.every((y) => entryYearLevels.includes(y))) {
-    selected.push('secondary');
-  }
-  return selected;
-}
+import type { QuickChipId } from '@/modules/school-search/types/filter.types';
 
 export function QuickFilterChips() {
   const t = useTranslations('SchoolSearch.spec');
@@ -95,7 +71,7 @@ export function QuickFilterChips() {
       value={selected}
       onChange={handleChange}
       multi
-      ariaLabel={t('topBar.feeLabel')}
+      ariaLabel={t('quickChip.groupAriaLabel')}
       size="sm"
       getLabel={(option) => t(option.labelKey as never)}
     />

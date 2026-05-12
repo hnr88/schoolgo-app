@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
-import { usePathname } from 'next/navigation';
+import { usePathname } from '@/i18n/navigation';
 import { PanelLeftClose, PanelLeftOpen } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
@@ -27,7 +27,7 @@ export function DashboardSidebar() {
   return (
     <aside
       className={cn(
-        'flex h-full flex-col bg-card transition-[width] duration-200',
+        'flex h-full flex-col bg-card transition-colors duration-200',
         isCollapsed ? 'w-16' : 'w-64',
       )}
     >

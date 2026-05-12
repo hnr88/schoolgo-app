@@ -1,3 +1,5 @@
+'use client';
+
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { privateApi } from '@/lib/axios';
 import type { StudentFormValues } from '@/modules/students/schemas/student.schema';

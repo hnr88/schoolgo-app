@@ -2,11 +2,12 @@
 
 export default function GlobalError({
   error,
-  reset,
+  unstable_retry,
 }: {
   error: Error & { digest?: string };
-  reset: () => void;
+  unstable_retry: () => void;
 }) {
+  void error;
   return (
     <html lang='en'>
       <body>
@@ -25,10 +26,10 @@ export default function GlobalError({
           <h1 style={{ fontSize: '1.5rem', fontWeight: 700 }}>
             Something went wrong
           </h1>
-          <p style={{ opacity: 0.7 }}>{error.message}</p>
+          <p style={{ opacity: 0.7 }}>An unexpected error occurred. Please try again.</p>
           <button
             type='button'
-            onClick={reset}
+            onClick={() => unstable_retry()}
             style={{
               padding: '0.5rem 1rem',
               borderRadius: '0.5rem',

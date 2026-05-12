@@ -123,7 +123,7 @@ export async function ParentsComparison() {
                           />
                         </div>
                         <div className='flex flex-col gap-0.5'>
-                          <span className='text-sm font-semibold text-ink-900'>{s.name}</span>
+                          <span className='line-clamp-1 text-sm font-semibold text-ink-900'>{s.name}</span>
                           <span className='flex items-center gap-1 text-xs text-foggy'>
                             {s.suburb}, {s.state} ·{' '}
                             <Star className='inline h-3 w-3 fill-ink-900 text-ink-900' aria-hidden='true' />
@@ -146,7 +146,7 @@ export async function ParentsComparison() {
                       return (
                         <td
                           key={s.slug}
-                          className={`px-6 py-5 text-sm ${cell.highlight ? 'font-medium text-primary' : cell.muted ? 'text-foggy' : 'font-medium text-ink-900'}`}
+                          className={`px-6 py-5 text-sm tabular-nums ${cell.highlight ? 'font-medium text-primary' : cell.muted ? 'text-foggy' : 'font-medium text-ink-900'}`}
                         >
                           {cell.text}
                         </td>
@@ -182,7 +182,7 @@ export async function ParentsComparison() {
                           />
                         </div>
                         <div className='flex flex-col gap-0.5'>
-                          <span className='text-xs font-semibold text-ink-900'>{s.name}</span>
+                          <span className='line-clamp-1 text-xs font-semibold text-ink-900'>{s.name}</span>
                           <span className='flex items-center gap-1 text-xs text-foggy'>
                             {s.suburb}, {s.state} ·{' '}
                             <Star className='inline h-3 w-3 fill-ink-900 text-ink-900' aria-hidden='true' />
@@ -212,7 +212,7 @@ export async function ParentsComparison() {
                         return (
                           <td
                             key={s.slug}
-                            className={`relative px-3 pb-3 pt-1 text-xs after:absolute after:bottom-1 after:right-0 after:top-1 after:w-px after:bg-divider last:after:hidden ${cell.highlight ? 'font-medium text-primary' : cell.muted ? 'text-foggy' : 'font-medium text-ink-900'}`}
+                            className={`relative px-3 pb-3 pt-1 text-xs tabular-nums after:absolute after:bottom-1 after:right-0 after:top-1 after:w-px after:bg-divider last:after:hidden ${cell.highlight ? 'font-medium text-primary' : cell.muted ? 'text-foggy' : 'font-medium text-ink-900'}`}
                           >
                             {cell.text}
                           </td>

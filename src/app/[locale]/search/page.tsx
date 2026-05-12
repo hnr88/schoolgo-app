@@ -21,8 +21,19 @@ export async function generateMetadata({
       title: t('parentTitle'),
       description: t('parentOgDescription'),
       type: 'website',
+      images: [
+        {
+          url: '/logos/logo-red.png',
+          width: 1200,
+          height: 630,
+          alt: t('parentTitle'),
+        },
+      ],
     },
-    twitter: { card: 'summary_large_image' },
+    twitter: {
+      card: 'summary_large_image',
+      images: ['/logos/logo-red.png'],
+    },
   };
 }
 

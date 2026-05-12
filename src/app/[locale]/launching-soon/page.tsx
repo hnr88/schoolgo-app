@@ -27,8 +27,8 @@ export default async function LaunchingSoonPage({
   const isDashboard = variant === 'dashboard';
 
   return (
-    <main className="min-h-screen bg-[#f1f2f7] p-3 text-ink-900 sm:p-5">
-      <div className="relative min-h-[calc(100vh-1.5rem)] w-full overflow-hidden rounded-2xl bg-[#f7f7fb] shadow-3 sm:min-h-[calc(100vh-2.5rem)]">
+    <main className="min-h-screen bg-muted p-3 text-ink-900 sm:p-5">
+      <div className="relative min-h-[calc(100vh-1.5rem)] w-full overflow-hidden rounded-2xl bg-background shadow-3 sm:min-h-[calc(100vh-2.5rem)]">
         <div className="pointer-events-none absolute inset-0" aria-hidden="true">
           <div className="absolute -left-28 -top-32 h-[34rem] w-[28rem] rounded-[42%] bg-primary" />
           <div className="absolute -right-20 top-0 h-full w-[28%] min-w-72 skew-x-[-7deg] bg-babu-500" />
@@ -111,7 +111,7 @@ function GenericContent({ locale }: { locale: string }) {
 
 function DashboardContent({ locale }: { locale: string }) {
   return (
-    <div className="mx-auto grid w-full max-w-[92rem] grid-cols-1 items-center gap-10 lg:grid-cols-[minmax(0,0.98fr)_minmax(420px,0.95fr)]">
+    <div className="mx-auto grid w-full max-w-screen-2xl grid-cols-1 items-center gap-10 lg:grid-cols-[minmax(0,0.98fr)_minmax(420px,0.95fr)]">
       <div className="rounded-xl border border-black/10 bg-white/95 p-6 shadow-4 backdrop-blur-xl sm:p-10 lg:p-12">
         <div className="flex max-w-2xl flex-col">
           <p className="mb-5 inline-flex w-fit items-center gap-2 rounded-pill bg-rausch-50 px-3 py-1.5 text-xs font-semibold uppercase tracking-widest text-primary">
@@ -190,15 +190,15 @@ function DashboardContent({ locale }: { locale: string }) {
             <div className="grid grid-cols-3 gap-2">
               <div className="rounded-md bg-rausch-50 p-3">
                 <p className="text-lg font-bold text-primary">12</p>
-                <p className="text-[0.7rem] text-foggy">Schools</p>
+                <p className="text-xs text-foggy">Schools</p>
               </div>
               <div className="rounded-md bg-babu-50 p-3">
                 <p className="text-lg font-bold text-babu-700">4</p>
-                <p className="text-[0.7rem] text-foggy">Shortlist</p>
+                <p className="text-xs text-foggy">Shortlist</p>
               </div>
               <div className="rounded-md bg-arches-50 p-3">
                 <p className="text-lg font-bold text-arches-700">2</p>
-                <p className="text-[0.7rem] text-foggy">Ready</p>
+                <p className="text-xs text-foggy">Ready</p>
               </div>
             </div>
 

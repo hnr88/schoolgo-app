@@ -43,7 +43,6 @@ interface StoreState {
   gender?: Gender[];
   sortBy?: SortOption;
 
-  // Legacy mirrors
   priceMin: number;
   priceMax: number;
   curricula: Curriculum[];

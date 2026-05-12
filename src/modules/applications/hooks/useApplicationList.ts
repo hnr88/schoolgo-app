@@ -1,3 +1,5 @@
+'use client';
+
 import { useState } from 'react';
 import { useDebouncedValue } from '@/modules/core/client';
 import { useApplications } from '@/modules/applications/queries/use-applications.query';

@@ -8,7 +8,7 @@ export async function ParentsStatsBar() {
   const stats = computeSchoolStats(schools);
 
   return (
-    <section className='bg-ink-900 py-8 md:py-28'>
+    <section className='bg-ink-900 py-20 md:py-28'>
       <SectionContainer>
         <div className='grid grid-cols-1 items-start gap-6 md:grid-cols-2 md:gap-12'>
           <SectionHeader
@@ -20,7 +20,7 @@ export async function ParentsStatsBar() {
 
           <dl className='grid grid-cols-2 gap-3 md:gap-5'>
             <div className='flex flex-col gap-1 border-b-2 border-rausch-500 pb-3 md:pb-4'>
-              <dd className='font-display text-3xl font-extrabold tracking-tight text-background md:text-6xl'>
+              <dd className='font-display text-3xl font-extrabold tracking-tight tabular-nums text-background md:text-6xl'>
                 {t('items.schools.value', { count: stats.totalSchools })}
               </dd>
               <dt className='text-caption text-background/60 md:text-body-sm'>
@@ -29,7 +29,7 @@ export async function ParentsStatsBar() {
             </div>
 
             <div className='flex flex-col gap-1 border-b-2 border-background/30 pb-3 md:pb-4'>
-              <dd className='font-display text-3xl font-extrabold tracking-tight text-background md:text-6xl'>
+              <dd className='font-display text-3xl font-extrabold tracking-tight tabular-nums text-background md:text-6xl'>
                 {t('items.states.value')}
               </dd>
               <dt className='text-caption text-background/60 md:text-body-sm'>
@@ -38,7 +38,7 @@ export async function ParentsStatsBar() {
             </div>
 
             <div className='flex flex-col gap-1 rounded-md border border-background/10 bg-background/5 px-3 py-2 md:px-4 md:py-3'>
-              <dd className='font-display text-xl font-bold tracking-tight text-babu-100 md:text-3xl'>
+              <dd className='font-display text-xl font-bold tracking-tight tabular-nums text-babu-100 md:text-3xl'>
                 {t('items.sectors.value')}
               </dd>
               <dt className='text-caption text-background/50'>
@@ -47,7 +47,7 @@ export async function ParentsStatsBar() {
             </div>
 
             <div className='flex flex-col gap-1 rounded-md border border-background/10 bg-background/5 px-3 py-2 md:px-4 md:py-3'>
-              <dd className='font-display text-xl font-bold tracking-tight text-background md:text-3xl'>
+              <dd className='font-display text-xl font-bold tracking-tight tabular-nums text-background md:text-3xl'>
                 {t('items.fees.value')}
               </dd>
               <dt className='text-caption text-background/50'>{t('items.fees.label')}</dt>

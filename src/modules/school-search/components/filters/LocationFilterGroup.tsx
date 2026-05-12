@@ -5,24 +5,9 @@ import { useTranslations } from 'next-intl';
 import { Input } from '@/components/ui/input';
 import { FilterChipGroup } from '@/modules/school-search/components/filters/FilterChipGroup';
 import { FilterGroup } from '@/modules/school-search/components/filters/FilterGroup';
+import { STATE_FILTER_OPTIONS } from '@/modules/school-search/constants/filter-options.constants';
 import { useSchoolSearchStore } from '@/modules/school-search/stores/use-school-search-store';
 import type { AustralianState } from '@/modules/school-search/types/school.types';
-import type { FilterOption } from '@/modules/school-search/constants/filter-options.constants';
-
-const STATE_FILTER_ORDER: readonly AustralianState[] = [
-  'QLD',
-  'NSW',
-  'VIC',
-  'SA',
-  'WA',
-  'TAS',
-  'NT',
-  'ACT',
-] as const;
-
-const STATE_FILTER_OPTIONS: readonly FilterOption<AustralianState>[] = STATE_FILTER_ORDER.map(
-  (value) => ({ value, labelKey: value }),
-);
 
 export function LocationFilterGroup() {
   const t = useTranslations('SchoolSearch.spec.location');

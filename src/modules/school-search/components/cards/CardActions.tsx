@@ -1,7 +1,7 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { Check, Heart, Square } from 'lucide-react';
+import { Check, GitCompare, Heart } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import {
   COMPARE_MAX_ADVANCED,
@@ -62,7 +62,7 @@ export function CardActions({
         aria-label={bookmarkLabel}
         aria-pressed={isBookmarked}
         className={cn(
-          'flex size-8 items-center justify-center rounded-full border bg-background/90 backdrop-blur transition-colors',
+          'flex size-9 items-center justify-center rounded-full border bg-background/90 backdrop-blur transition-colors',
           isBookmarked
             ? 'border-rose-300 bg-rose-50 text-rose-500'
             : 'border-border text-muted-foreground hover:bg-muted',
@@ -78,7 +78,7 @@ export function CardActions({
           aria-checked={isInCompare}
           aria-label={tActions('compare', { name: schoolName })}
           className={cn(
-            'flex size-8 items-center justify-center rounded-md border bg-background/90 backdrop-blur transition-colors',
+            'flex size-9 items-center justify-center rounded-md border bg-background/90 backdrop-blur transition-colors',
             isInCompare
               ? 'border-primary bg-primary text-primary-foreground'
               : 'border-border text-muted-foreground hover:bg-muted',
@@ -87,7 +87,7 @@ export function CardActions({
           {isInCompare ? (
             <Check size={16} aria-hidden />
           ) : (
-            <Square size={16} aria-hidden />
+            <GitCompare size={16} aria-hidden />
           )}
         </button>
       )}

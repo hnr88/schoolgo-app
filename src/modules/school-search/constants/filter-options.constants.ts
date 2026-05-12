@@ -11,6 +11,7 @@ import type {
   Sector,
   SortOption,
 } from '@/modules/school-search/types/filter.types';
+import type { AustralianState } from '@/modules/school-search/types/school.types';
 
 export interface FilterOption<T extends string> {
   value: T;
@@ -152,3 +153,17 @@ export const ADVANCED_SORT_OPTIONS: readonly FilterOption<SortOption>[] = [
   { value: 'international-pct-asc', labelKey: 'sort.internationalPctAsc' },
   { value: 'international-pct-desc', labelKey: 'sort.internationalPctDesc' },
 ] as const;
+
+export const STATE_FILTER_ORDER: readonly AustralianState[] = [
+  'QLD',
+  'NSW',
+  'VIC',
+  'SA',
+  'WA',
+  'TAS',
+  'NT',
+  'ACT',
+] as const;
+
+export const STATE_FILTER_OPTIONS: readonly FilterOption<AustralianState>[] =
+  STATE_FILTER_ORDER.map((value) => ({ value, labelKey: value }));

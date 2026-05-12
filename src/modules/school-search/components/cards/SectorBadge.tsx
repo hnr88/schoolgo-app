@@ -26,7 +26,7 @@ export function SectorBadge({ sector, className }: SectorBadgeProps) {
   return (
     <span
       className={cn(
-        'inline-flex items-center rounded-pill px-2 py-0.5 text-caption font-semibold ring-1 ring-inset',
+        'inline-flex items-center rounded-pill px-1.5 py-0 text-caption font-medium ring-1 ring-inset',
         STYLE_BY_SECTOR[sector],
         className,
       )}

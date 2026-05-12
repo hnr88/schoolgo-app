@@ -67,6 +67,7 @@ export async function AgentsHero() {
               sizes='(max-width: 768px) 100vw, 420px'
               className='object-cover'
               aria-hidden='true'
+              priority
             />
           </div>
           <div className='absolute -left-4 top-6 flex max-w-[16rem] items-center gap-3 rounded-lg border border-border bg-card p-3 shadow-3'>

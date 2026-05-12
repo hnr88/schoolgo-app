@@ -1,5 +1,6 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
 import { Minus, Plus } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
@@ -24,6 +25,7 @@ export function Stepper({
   placeholder = '—',
   className,
 }: StepperProps) {
+  const t = useTranslations('SchoolSearch.spec.stepper');
   const current = value ?? min;
   const canDecrement = value != null && current > min;
   const canIncrement = value == null || current < max;
@@ -41,10 +43,10 @@ export function Stepper({
         type="button"
         onClick={() => canDecrement && onChange(Math.max(min, current - step))}
         disabled={!canDecrement}
-        aria-label={`${ariaLabel} decrease`}
-        className="flex size-6 items-center justify-center rounded text-foreground hover:bg-muted disabled:opacity-30"
+        aria-label={t('decrease', { label: ariaLabel })}
+        className="flex size-9 items-center justify-center rounded text-foreground hover:bg-muted focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-30"
       >
-        <Minus size={14} />
+        <Minus size={14} aria-hidden />
       </button>
       <span className="min-w-8 text-center text-sm font-semibold tabular-nums">
         {value == null ? placeholder : value}
@@ -59,10 +61,10 @@ export function Stepper({
           if (canIncrement) onChange(Math.min(max, current + step));
         }}
         disabled={!canIncrement}
-        aria-label={`${ariaLabel} increase`}
-        className="flex size-6 items-center justify-center rounded text-foreground hover:bg-muted disabled:opacity-30"
+        aria-label={t('increase', { label: ariaLabel })}
+        className="flex size-9 items-center justify-center rounded text-foreground hover:bg-muted focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-30"
       >
-        <Plus size={14} />
+        <Plus size={14} aria-hidden />
       </button>
     </div>
   );
