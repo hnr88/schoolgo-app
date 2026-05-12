@@ -1072,6 +1072,13 @@
           "waitlist": "Waitlist only",
           "closed": "Closed"
         }
+      },
+      "modeAdvanced": "ขั้นสูง",
+      "modeBasic": "พื้นฐาน",
+      "topBarQuickFiltersLabel": "ตัวกรองด่วน",
+      "stepper": {
+        "decrease": "ลด",
+        "increase": "เพิ่ม"
       }
     }
   },

@@ -1,6 +1,7 @@
 'use client';
 
 import { Minus, Plus } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 import { cn } from '@/lib/utils';
 
 interface StepperProps {
@@ -24,6 +25,7 @@ export function Stepper({
   placeholder = '—',
   className,
 }: StepperProps) {
+  const t = useTranslations('SchoolSearch.spec.stepper');
   const current = value ?? min;
   const canDecrement = value != null && current > min;
   const canIncrement = value == null || current < max;
@@ -41,7 +43,7 @@ export function Stepper({
         type="button"
         onClick={() => canDecrement && onChange(Math.max(min, current - step))}
         disabled={!canDecrement}
-        aria-label={`${ariaLabel} decrease`}
+        aria-label={`${ariaLabel}: ${t('decrease')}`}
         className="flex size-6 items-center justify-center rounded text-foreground hover:bg-muted disabled:opacity-30"
       >
         <Minus size={14} />
@@ -59,7 +61,7 @@ export function Stepper({
           if (canIncrement) onChange(Math.min(max, current + step));
         }}
         disabled={!canIncrement}
-        aria-label={`${ariaLabel} increase`}
+        aria-label={`${ariaLabel}: ${t('increase')}`}
         className="flex size-6 items-center justify-center rounded text-foreground hover:bg-muted disabled:opacity-30"
       >
         <Plus size={14} />

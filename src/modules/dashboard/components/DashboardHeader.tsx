@@ -5,7 +5,6 @@ import { Settings, User, LogOut, ChevronDown } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { useRouter } from '@/i18n/navigation';
 import { useAuthStore } from '@/modules/auth/stores/use-auth-store';
-import { SearchBar } from '@/modules/school-search/components/SearchBar';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -23,7 +22,6 @@ export function DashboardHeader() {
   const { user, logout } = useAuthStore();
 
   const titleKey = resolvePageTitle(pathname);
-  const isSearchPage = pathname.includes('/dashboard/search');
   const firstName = user?.displayName?.split(' ')[0] || t('greeting.fallbackName');
   const greeting = t(`greeting.${getTimeOfDay()}`);
 
@@ -41,18 +39,12 @@ export function DashboardHeader() {
 
   return (
     <header className='shrink-0 bg-card'>
-      <div className={`flex h-14 items-center gap-4 ${isSearchPage ? 'px-4' : 'px-6'}`}>
-        <h1 className={`shrink-0 text-lg font-bold text-ink-900 ${isSearchPage ? 'w-80' : ''}`}>
+      <div className='flex h-14 items-center gap-4 px-6'>
+        <h1 className='shrink-0 text-lg font-bold text-ink-900'>
           {t(`nav.${titleKey}`)}
         </h1>
 
-        {isSearchPage && (
-          <div className='flex-1'>
-            <SearchBar className='border-border px-4 py-1.5 shadow-none' />
-          </div>
-        )}
-
-        <div className={isSearchPage ? 'shrink-0' : 'ml-auto'}>
+        <div className='ml-auto'>
           <DropdownMenu>
             <DropdownMenuTrigger className='flex items-center gap-2.5 rounded-xl px-2 py-1.5 text-sm font-medium text-ink-900 outline-none transition-colors hover:bg-muted'>
               <span className='flex h-8 w-8 items-center justify-center rounded-full bg-primary/10 text-xs font-bold text-primary'>

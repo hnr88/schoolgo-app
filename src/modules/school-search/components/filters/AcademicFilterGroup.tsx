@@ -12,6 +12,7 @@ import type { ProgramType } from '@/modules/school-search/types/filter.types';
 
 interface AcademicFilterGroupProps {
   isAdvanced: boolean;
+  signUpHref: string;
 }
 
 const TOOLTIP_KEY_BY_PROGRAM: Record<ProgramType, string> = {
@@ -20,7 +21,7 @@ const TOOLTIP_KEY_BY_PROGRAM: Record<ProgramType, string> = {
   elicos: 'academic.programTooltips.elicos',
 };
 
-export function AcademicFilterGroup({ isAdvanced }: AcademicFilterGroupProps) {
+export function AcademicFilterGroup({ isAdvanced, signUpHref }: AcademicFilterGroupProps) {
   const t = useTranslations('SchoolSearch.spec');
 
   const programTypes = useSchoolSearchStore((s) => s.programTypes);
@@ -48,6 +49,7 @@ export function AcademicFilterGroup({ isAdvanced }: AcademicFilterGroupProps) {
           defaultOpen
           locked={!isAdvanced}
           lockedDescription={t('lockedDescription')}
+          signUpHref={signUpHref}
         >
           <div className="flex flex-col gap-2">
             <FilterChipGroup<ProgramType>

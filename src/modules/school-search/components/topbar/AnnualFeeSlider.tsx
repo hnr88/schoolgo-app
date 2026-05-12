@@ -12,7 +12,7 @@ export function AnnualFeeSlider() {
   const setFeeRange = useSchoolSearchStore((s) => s.setFeeRange);
 
   return (
-    <div className="flex min-w-[14rem] flex-col gap-1">
+    <div className="flex min-w-56 flex-col gap-1">
       <div className="flex items-center justify-between">
         <span className="text-xs font-medium text-muted-foreground">{t('feeLabel')}</span>
         <span className="rounded-pill bg-primary/10 px-2 py-0.5 text-caption font-semibold text-primary">

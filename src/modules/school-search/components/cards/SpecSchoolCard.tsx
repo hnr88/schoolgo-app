@@ -78,10 +78,9 @@ export function SpecSchoolCard({
     rawPhoto && !rawPhoto.startsWith('/images/placeholders/') ? rawPhoto : null;
 
   return (
-    <Link
-      href={`/school/${hit.slug}`}
+    <article
       className={cn(
-        'group flex flex-col gap-3 rounded-xl border border-border bg-card p-3 shadow-1 transition-shadow hover:shadow-2',
+        'relative flex flex-col gap-3 rounded-xl border border-border bg-card p-3 shadow-1 transition-shadow hover:shadow-2',
         className,
       )}
       data-testid={`spec-school-card-${hit.documentId}`}
@@ -90,13 +89,13 @@ export function SpecSchoolCard({
         {photo && (
           <Image
             src={photo}
-            alt={hit.name}
+            alt=""
             fill
             sizes="(min-width: 1024px) 320px, 100vw"
             className="object-cover"
           />
         )}
-        <div className="absolute right-2 top-2 z-10">
+        <div className="absolute right-2 top-2 z-20">
           <CardActions
             schoolId={hit.documentId}
             schoolName={hit.name}
@@ -107,7 +106,15 @@ export function SpecSchoolCard({
       </div>
 
       <div className="flex flex-col gap-1">
-        <h3 className="line-clamp-1 text-sm font-semibold text-foreground">{hit.name}</h3>
+        <h3 className="line-clamp-1 text-sm font-semibold text-foreground">
+          <Link
+            href={`/school/${hit.slug}`}
+            className="rounded-sm outline-none after:absolute after:inset-0 after:z-10 focus-visible:ring-2 focus-visible:ring-ring"
+          >
+            <span className="relative z-30">{hit.name}</span>
+            <span className="sr-only">{t('viewSchool')}</span>
+          </Link>
+        </h3>
         <p className="text-caption text-muted-foreground">
           {hit.suburb}
           {hit.state ? `, ${hit.state}` : ''}
@@ -127,11 +134,11 @@ export function SpecSchoolCard({
             ? t('tuitionFrom', { amount: formatAud(tuition).replace('A$', '$') })
             : ''}
         </span>
-        <span className="inline-flex items-center gap-1 text-caption font-medium text-primary group-hover:underline">
+        <span className="relative z-30 inline-flex items-center gap-1 text-caption font-medium text-primary">
           {t('viewSchool')}
           <ArrowRight size={12} aria-hidden />
         </span>
       </div>
-    </Link>
+    </article>
   );
 }

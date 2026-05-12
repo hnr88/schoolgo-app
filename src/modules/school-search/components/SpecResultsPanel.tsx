@@ -1,7 +1,6 @@
 'use client';
 
 import { useMemo } from 'react';
-import { useSearchParams } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 import { useAuthStore } from '@/modules/auth/stores/use-auth-store';
 import { cn } from '@/lib/utils';
@@ -34,7 +33,9 @@ function sortHits(hits: readonly SchoolHit[], sortBy: SortOption): SchoolHit[] {
       return arr.sort((a, b) => a.state.localeCompare(b.state));
     case 'enrolment_open_first': {
       const rank: Record<string, number> = { open: 0, limited: 1, waitlist: 2, closed: 3 };
-      return arr.sort((a, b) => (rank[a.enrolmentStatus ?? ''] ?? 9) - (rank[b.enrolmentStatus ?? ''] ?? 9));
+      return arr.sort(
+        (a, b) => (rank[a.enrolmentStatus ?? ''] ?? 9) - (rank[b.enrolmentStatus ?? ''] ?? 9),
+      );
     }
     default:
       return arr;
@@ -47,53 +48,57 @@ interface SpecResultsPanelProps {
 
 export function SpecResultsPanel({ className }: SpecResultsPanelProps) {
   const t = useTranslations('SchoolSearch');
-  const searchParams = useSearchParams();
-  const isPreview = searchParams.get('preview') === 'spec';
   const isAuthenticated = useAuthStore((s) => s.isAuthenticated);
   const isHydrated = useAuthStore((s) => s.isHydrated);
   const isAdvanced = isHydrated && isAuthenticated;
 
-  const store = useSchoolSearchStore();
+  const query = useSchoolSearchStore((s) => s.query);
+  const states = useSchoolSearchStore((s) => s.states);
+  const sectors = useSchoolSearchStore((s) => s.sectors);
+  const accommodation = useSchoolSearchStore((s) => s.accommodation);
+  const religiousAffiliations = useSchoolSearchStore((s) => s.religiousAffiliations);
+  const entryYearLevels = useSchoolSearchStore((s) => s.entryYearLevels);
+  const feeMin = useSchoolSearchStore((s) => s.feeMin);
+  const feeMax = useSchoolSearchStore((s) => s.feeMax);
+  const atarAvailable = useSchoolSearchStore((s) => s.atarAvailable);
+  const englishLanguageSupport = useSchoolSearchStore((s) => s.englishLanguageSupport);
+  const sortBy = useSchoolSearchStore((s) => s.sortBy);
 
   const hits = useMemo(() => {
-    if (!isPreview) return [];
     const filtered = filterMockHits(MOCK_SCHOOL_HITS, {
-      q: store.query || undefined,
-      states: store.states.length ? store.states : undefined,
-      sectors: store.sectors.length ? store.sectors : undefined,
-      accommodation: store.accommodation.length ? store.accommodation : undefined,
-      religiousAffiliations: store.religiousAffiliations.length
-        ? store.religiousAffiliations
+      q: query || undefined,
+      states: states.length ? states : undefined,
+      sectors: sectors.length ? sectors : undefined,
+      accommodation: accommodation.length ? accommodation : undefined,
+      religiousAffiliations: religiousAffiliations.length
+        ? religiousAffiliations
         : undefined,
-      entryYearLevels: store.entryYearLevels.length ? store.entryYearLevels : undefined,
-      feeMin: store.feeMin,
-      feeMax: store.feeMax,
-      atarAvailable: store.atarAvailable || undefined,
-      englishLanguageSupport: store.englishLanguageSupport || undefined,
-      sortBy: store.sortBy,
+      entryYearLevels: entryYearLevels.length ? entryYearLevels : undefined,
+      feeMin,
+      feeMax,
+      atarAvailable: atarAvailable || undefined,
+      englishLanguageSupport: englishLanguageSupport || undefined,
+      sortBy,
     });
-    return sortHits(filtered.hits, store.sortBy);
+    return sortHits(filtered.hits, sortBy);
   }, [
-    isPreview,
-    store.query,
-    store.states,
-    store.sectors,
-    store.accommodation,
-    store.religiousAffiliations,
-    store.entryYearLevels,
-    store.feeMin,
-    store.feeMax,
-    store.atarAvailable,
-    store.englishLanguageSupport,
-    store.sortBy,
+    query,
+    states,
+    sectors,
+    accommodation,
+    religiousAffiliations,
+    entryYearLevels,
+    feeMin,
+    feeMax,
+    atarAvailable,
+    englishLanguageSupport,
+    sortBy,
   ]);
 
   const schoolNamesById = useMemo(
     () => Object.fromEntries(hits.map((h) => [h.documentId, h.name])),
     [hits],
   );
-
-  if (!isPreview) return null;
 
   return (
     <div

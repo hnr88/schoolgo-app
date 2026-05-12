@@ -95,7 +95,7 @@ export const typedSearchRequestSchema = z.object({
   englishLanguageSupport: z.boolean().optional(),
   englishTest: z
     .object({
-      type: englishTestTypeSchema,
+      testType: englishTestTypeSchema,
       score: z.number().min(0).max(300),
     })
     .optional(),

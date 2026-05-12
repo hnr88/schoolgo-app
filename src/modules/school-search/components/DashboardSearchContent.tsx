@@ -1,25 +1,14 @@
-import { FilterSidebar } from '@/modules/school-search/components/FilterSidebar';
-import { FilterChips } from '@/modules/school-search/components/FilterChips';
-import { MapView } from '@/modules/school-search/components/MapView';
-import { SchoolResultsPanel } from '@/modules/school-search/components/SchoolResultsPanel';
+import { SpecFilterSidebar } from '@/modules/school-search/components/SpecFilterSidebar';
+import { SpecResultsPanel } from '@/modules/school-search/components/SpecResultsPanel';
 
 export async function DashboardSearchContent() {
   return (
     <div className='absolute inset-0 flex gap-4 overflow-hidden p-4'>
-      <FilterSidebar
-        className='static block h-full w-[20rem] p-0 lg:sticky lg:top-0 lg:h-full lg:p-0'
-        cardClassName='shadow-1'
-      />
+      <SpecFilterSidebar activePortal='agent' />
 
-      <div className='relative min-w-0 flex-1 overflow-hidden rounded-xl'>
-        <MapView className='rounded-none border-0 shadow-none' activePortal='agent' />
-
-        <div className='absolute left-2 right-80 top-1 z-10 p-2'>
-          <FilterChips className='overflow-visible pb-0' />
-        </div>
-
-        <SchoolResultsPanel activePortal='agent' />
-      </div>
+      <section className='flex min-w-0 flex-1 flex-col gap-4 overflow-hidden'>
+        <SpecResultsPanel />
+      </section>
     </div>
   );
 }

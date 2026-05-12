@@ -13,9 +13,10 @@ import type { EnglishTestType } from '@/modules/school-search/types/filter.types
 
 interface EnglishTestFilterGroupProps {
   isAdvanced: boolean;
+  signUpHref: string;
 }
 
-export function EnglishTestFilterGroup({ isAdvanced }: EnglishTestFilterGroupProps) {
+export function EnglishTestFilterGroup({ isAdvanced, signUpHref }: EnglishTestFilterGroupProps) {
   const t = useTranslations('SchoolSearch.spec');
   const englishTest = useSchoolSearchStore((s) => s.englishTest);
   const setEnglishTest = useSchoolSearchStore((s) => s.setEnglishTest);
@@ -51,6 +52,7 @@ export function EnglishTestFilterGroup({ isAdvanced }: EnglishTestFilterGroupPro
       defaultOpen
       locked={!isAdvanced}
       lockedDescription={t('lockedDescription')}
+      signUpHref={signUpHref}
     >
       <div className="flex flex-col gap-3">
         <div className="flex flex-col gap-2">

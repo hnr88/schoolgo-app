@@ -16,6 +16,7 @@ type FilterGroupProps = {
   defaultOpen?: boolean;
   locked?: boolean;
   lockedDescription?: string;
+  signUpHref?: string;
   children: ReactNode;
   className?: string;
 };
@@ -25,6 +26,7 @@ export function FilterGroup({
   defaultOpen = true,
   locked = false,
   lockedDescription = '',
+  signUpHref = '/parent/sign-up',
   children,
   className,
 }: FilterGroupProps) {
@@ -48,7 +50,11 @@ export function FilterGroup({
       </div>
       <CollapsibleContent className="pb-3">
         {locked ? (
-          <LockedOverlay locked={locked} description={lockedDescription}>
+          <LockedOverlay
+            locked={locked}
+            description={lockedDescription}
+            signUpHref={signUpHref}
+          >
             {children}
           </LockedOverlay>
         ) : (
