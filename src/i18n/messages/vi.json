@@ -448,10 +448,6 @@
 				"question": "[TODO: vi] Do I need an education agent?",
 				"answer": "[TODO: vi] You don't have to use one, but most families do — and it's free. Education agents help you choose the right school, prepare documents, and manage the application. SchoolGo shows which agents work with each school, so you can find someone who already knows the admissions process."
 			},
-			"claimProfile": {
-				"question": "I'm a school. How do I claim my profile?",
-				"answer": "Search for your school on SchoolGo and click \"Claim This School.\" You'll be asked to verify your identity as a school staff member. Once verified, you can update your profile with fees, entry requirements, and contact details."
-			},
 			"updateFrequency": {
 				"question": "How often is the data updated?",
 				"answer": "CRICOS data is refreshed monthly from data.gov.au. School-specific details (fees, requirements, intake dates) are updated by schools who have claimed their profiles. If a school hasn't claimed their profile, the data shown is from CRICOS and ACARA public datasets."
@@ -1096,11 +1092,7 @@
 				"schoolSizeAsc": "Quy mô trường (nhỏ–lớn)",
 				"schoolSizeDesc": "Quy mô trường (lớn–nhỏ)",
 				"internationalPctAsc": "% học sinh quốc tế (thấp–cao)",
-				"internationalPctDesc": "% học sinh quốc tế (cao–thấp)",
-				"tuitionLowHigh": "Học phí thấp–cao",
-				"tuitionHighLow": "Học phí cao–thấp",
-				"stateAsc": "Bang",
-				"enrolmentOpenFirst": "Trạng thái tuyển sinh (đang mở trước)"
+				"internationalPctDesc": "% học sinh quốc tế (cao–thấp)"
 			},
 			"topBar": {
 				"searchPlaceholder": "Search by school name, city, or suburb",
@@ -1506,6 +1498,49 @@
 		"columnClosed": "Đã đóng",
 		"daysLabel": "{count}n",
 		"moreApplications": "+{count} hồ sơ"
+	},
+	"SchoolDetail": {
+		"backToSearch": "[TODO: vi] Back to search",
+		"cricosVerified": "[TODO: vi] CRICOS verified",
+		"claimedProfile": "[TODO: vi] Claimed profile",
+		"admissionsProfileLabel": "[TODO: vi] Admissions profile",
+		"admissionsProfileDescription": "[TODO: vi] Compare fees, entry requirements, intakes, and contact details.",
+		"infoCards": {
+			"annualTuition": "[TODO: vi] Annual tuition",
+			"contactSchool": "[TODO: vi] Contact school",
+			"lowestListedTuition": "[TODO: vi] Lowest listed tuition",
+			"feesNotListedYet": "[TODO: vi] Fees not listed yet",
+			"curriculum": "[TODO: vi] Curriculum",
+			"notListed": "[TODO: vi] Not listed",
+			"enrolment": "[TODO: vi] Enrolment",
+			"internationalPercent": "[TODO: vi] {pct}% international",
+			"boarding": "[TODO: vi] Boarding",
+			"boardingAvailable": "[TODO: vi] Available",
+			"scholarshipsListed": "[TODO: vi] Scholarships listed"
+		},
+		"aboutSection": {
+			"heading": "[TODO: vi] About the school",
+			"defaultDescription": "[TODO: vi] {name} is listed in SchoolGo's Australian school directory. Use this profile to review key admissions facts before shortlisting or contacting the school."
+		},
+		"admissionsSection": {
+			"heading": "[TODO: vi] Admissions",
+			"nextIntake": "[TODO: vi] Next intake",
+			"applicationDeadline": "[TODO: vi] Application deadline",
+			"intakePeriods": "[TODO: vi] Intake periods",
+			"applicationFee": "[TODO: vi] Application fee",
+			"cricosCode": "[TODO: vi] CRICOS code"
+		},
+		"englishSection": {
+			"heading": "[TODO: vi] English requirements",
+			"noScoresListed": "[TODO: vi] No minimum test scores are listed yet."
+		},
+		"contactSection": {
+			"heading": "[TODO: vi] Contact and apply",
+			"startApplication": "[TODO: vi] Start application",
+			"visitWebsite": "[TODO: vi] Visit website",
+			"nextIntakeDate": "[TODO: vi] Next intake: {date}"
+		},
+		"trustNotice": "[TODO: vi] SchoolGo profiles combine public provider data with admissions information so families can compare schools before contacting an agent or school."
 	},
 	"SearchMetadata": {
 		"title": "Tìm kiếm trường — SchoolGo",

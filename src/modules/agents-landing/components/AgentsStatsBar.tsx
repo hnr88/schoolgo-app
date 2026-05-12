@@ -4,8 +4,10 @@ import { SectionContainer } from '@/modules/design-system';
 import { STATS_BAR_ITEMS } from '../constants/agents-landing.constants';
 
 export async function AgentsStatsBar() {
-  const t = await getTranslations('AgentsStatsBar');
-  const schools = await loadSchools();
+  const [t, schools] = await Promise.all([
+    getTranslations('AgentsStatsBar'),
+    loadSchools(),
+  ]);
   const stats = computeSchoolStats(schools);
 
   return (

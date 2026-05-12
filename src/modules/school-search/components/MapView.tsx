@@ -23,8 +23,8 @@ function MapLoadingFallback() {
   return (
     <Skeleton className='flex h-full w-full items-center justify-center rounded-lg'>
       <span
-        className='text-caption font-semibold uppercase text-foggy'
-        style={{ letterSpacing: '0.08em' }}
+        className='text-caption font-semibold uppercase tracking-eyebrow text-foggy'
+
       >
         {t('loading')}
       </span>

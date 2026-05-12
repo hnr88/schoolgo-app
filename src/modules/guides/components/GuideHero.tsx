@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { Link } from '@/i18n/navigation';
 import { SectionContainer } from '@/modules/design-system';
 import { GuideSectionNav } from '@/modules/guides/components/GuideSectionNav';
@@ -32,11 +33,16 @@ export function GuideHero({
       <section className='relative overflow-hidden border-b border-border bg-ink-900 py-16 md:py-24'>
         {image && (
           <>
-            <div
-              className='absolute inset-0 bg-cover bg-center opacity-25'
-              style={{ backgroundImage: `url(${image})` }}
-              aria-hidden='true'
-            />
+            <div className='absolute inset-0' aria-hidden='true'>
+              <Image
+                src={image}
+                alt=''
+                fill
+                priority
+                sizes='100vw'
+                className='object-cover object-center opacity-25'
+              />
+            </div>
             <div
               className='absolute inset-0 bg-gradient-to-r from-ink-900 via-ink-900/90 to-ink-900/60'
               aria-hidden='true'

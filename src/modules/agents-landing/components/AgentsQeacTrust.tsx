@@ -34,8 +34,8 @@ export async function AgentsQeacTrust() {
               </div>
               <div className='flex min-w-0 flex-1 flex-col'>
                 <span
-                  className='text-caption font-semibold uppercase text-foggy'
-                  style={{ letterSpacing: '0.08em' }}
+                  className='text-caption font-semibold uppercase tracking-eyebrow text-foggy'
+
                 >
                   {t('profile.name')}
                 </span>
@@ -48,8 +48,8 @@ export async function AgentsQeacTrust() {
               {QEAC_PROFILE_STAT_KEYS.map((key) => (
                 <div key={key} className='flex flex-col gap-1'>
                   <dt
-                    className='text-caption font-semibold uppercase text-foggy'
-                    style={{ letterSpacing: '0.08em' }}
+                    className='text-caption font-semibold uppercase tracking-eyebrow text-foggy'
+
                   >
                     {t(`profile.${key}`)}
                   </dt>

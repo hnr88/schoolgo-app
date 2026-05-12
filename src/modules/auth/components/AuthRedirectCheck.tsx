@@ -1,6 +1,6 @@
 'use client';
 
-import { useRedirectIfAuthenticated } from '@/modules/auth/hooks/use-redirect-if-authenticated';
+import { useRedirectIfAuthenticated } from '@/modules/auth/hooks/useRedirectIfAuthenticated';
 import { useAuthStore } from '@/modules/auth/stores/use-auth-store';
 import type { AuthRedirectCheckProps } from '@/modules/auth/types/component.types';
 

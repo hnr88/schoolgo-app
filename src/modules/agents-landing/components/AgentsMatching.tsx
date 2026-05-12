@@ -4,8 +4,10 @@ import { SectionContainer, SectionHeader, StatusBadge, TrustBadge } from '@/modu
 import { INBOX_ROWS, MATCHING_STEPS } from '../constants/agents-landing.constants';
 
 export async function AgentsMatching() {
-  const t = await getTranslations('AgentsMatching');
-  const tc = await getTranslations('Common');
+  const [t, tc] = await Promise.all([
+    getTranslations('AgentsMatching'),
+    getTranslations('Common'),
+  ]);
   return (
     <section id='how-it-works' className='py-20 md:py-28'>
       <SectionContainer className='grid grid-cols-1 items-center gap-12 md:grid-cols-12 md:gap-16'>
@@ -43,8 +45,8 @@ export async function AgentsMatching() {
           <div className='overflow-hidden rounded-2xl border border-border bg-card shadow-3'>
             <div className='flex items-center justify-between border-b border-divider bg-muted px-5 py-3'>
               <span
-                className='text-label font-semibold uppercase text-foggy'
-                style={{ letterSpacing: '0.08em' }}
+                className='text-label font-semibold uppercase tracking-eyebrow text-foggy'
+
               >
                 {t('inboxLabel')}
               </span>

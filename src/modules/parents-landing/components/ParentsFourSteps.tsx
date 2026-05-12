@@ -5,9 +5,11 @@ import { ParentsFourStepsClient } from '@/modules/parents-landing/components/Par
 import { STEP_KEYS } from '../constants/four-steps.constants';
 
 export async function ParentsFourSteps() {
-  const t = await getTranslations('ParentsFourSteps');
-  const tc = await getTranslations('Common');
-  const schools = await loadSchools();
+  const [t, tc, schools] = await Promise.all([
+    getTranslations('ParentsFourSteps'),
+    getTranslations('Common'),
+    loadSchools(),
+  ]);
   const stats = computeSchoolStats(schools);
 
   const steps = STEP_KEYS.map((key, index) => ({

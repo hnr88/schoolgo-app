@@ -448,10 +448,6 @@
 				"question": "[TODO: zh] Do I need an education agent?",
 				"answer": "[TODO: zh] You don't have to use one, but most families do — and it's free. Education agents help you choose the right school, prepare documents, and manage the application. SchoolGo shows which agents work with each school, so you can find someone who already knows the admissions process."
 			},
-			"claimProfile": {
-				"question": "I'm a school. How do I claim my profile?",
-				"answer": "Search for your school on SchoolGo and click \"Claim This School.\" You'll be asked to verify your identity as a school staff member. Once verified, you can update your profile with fees, entry requirements, and contact details."
-			},
 			"updateFrequency": {
 				"question": "How often is the data updated?",
 				"answer": "CRICOS data is refreshed monthly from data.gov.au. School-specific details (fees, requirements, intake dates) are updated by schools who have claimed their profiles. If a school hasn't claimed their profile, the data shown is from CRICOS and ACARA public datasets."
@@ -1096,11 +1092,7 @@
 				"schoolSizeAsc": "学校规模（小到大）",
 				"schoolSizeDesc": "学校规模（大到小）",
 				"internationalPctAsc": "国际生比例（低到高）",
-				"internationalPctDesc": "国际生比例（高到低）",
-				"tuitionLowHigh": "学费由低到高",
-				"tuitionHighLow": "学费由高到低",
-				"stateAsc": "州份",
-				"enrolmentOpenFirst": "招生状态（开放优先）"
+				"internationalPctDesc": "国际生比例（高到低）"
 			},
 			"topBar": {
 				"searchPlaceholder": "Search by school name, city, or suburb",
@@ -1506,6 +1498,49 @@
 		"columnClosed": "已关闭",
 		"daysLabel": "{count}天",
 		"moreApplications": "+{count} 更多"
+	},
+	"SchoolDetail": {
+		"backToSearch": "[TODO: zh] Back to search",
+		"cricosVerified": "[TODO: zh] CRICOS verified",
+		"claimedProfile": "[TODO: zh] Claimed profile",
+		"admissionsProfileLabel": "[TODO: zh] Admissions profile",
+		"admissionsProfileDescription": "[TODO: zh] Compare fees, entry requirements, intakes, and contact details.",
+		"infoCards": {
+			"annualTuition": "[TODO: zh] Annual tuition",
+			"contactSchool": "[TODO: zh] Contact school",
+			"lowestListedTuition": "[TODO: zh] Lowest listed tuition",
+			"feesNotListedYet": "[TODO: zh] Fees not listed yet",
+			"curriculum": "[TODO: zh] Curriculum",
+			"notListed": "[TODO: zh] Not listed",
+			"enrolment": "[TODO: zh] Enrolment",
+			"internationalPercent": "[TODO: zh] {pct}% international",
+			"boarding": "[TODO: zh] Boarding",
+			"boardingAvailable": "[TODO: zh] Available",
+			"scholarshipsListed": "[TODO: zh] Scholarships listed"
+		},
+		"aboutSection": {
+			"heading": "[TODO: zh] About the school",
+			"defaultDescription": "[TODO: zh] {name} is listed in SchoolGo's Australian school directory. Use this profile to review key admissions facts before shortlisting or contacting the school."
+		},
+		"admissionsSection": {
+			"heading": "[TODO: zh] Admissions",
+			"nextIntake": "[TODO: zh] Next intake",
+			"applicationDeadline": "[TODO: zh] Application deadline",
+			"intakePeriods": "[TODO: zh] Intake periods",
+			"applicationFee": "[TODO: zh] Application fee",
+			"cricosCode": "[TODO: zh] CRICOS code"
+		},
+		"englishSection": {
+			"heading": "[TODO: zh] English requirements",
+			"noScoresListed": "[TODO: zh] No minimum test scores are listed yet."
+		},
+		"contactSection": {
+			"heading": "[TODO: zh] Contact and apply",
+			"startApplication": "[TODO: zh] Start application",
+			"visitWebsite": "[TODO: zh] Visit website",
+			"nextIntakeDate": "[TODO: zh] Next intake: {date}"
+		},
+		"trustNotice": "[TODO: zh] SchoolGo profiles combine public provider data with admissions information so families can compare schools before contacting an agent or school."
 	},
 	"SearchMetadata": {
 		"title": "搜索学校 — SchoolGo",

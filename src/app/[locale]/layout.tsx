@@ -3,6 +3,7 @@ import { NextIntlClientProvider, hasLocale } from 'next-intl';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { Toaster } from '@/components/ui/sonner';
+import { googleSans } from '@/app/layout';
 import { HashScrollHandler, QueryProvider } from '@/modules/core';
 import { routing } from '@/i18n/routing';
 import {
@@ -52,7 +53,7 @@ export default async function LocaleLayout({
   const t = await getTranslations({ locale, namespace: 'Common' });
 
   return (
-    <html lang={locale} className='h-full antialiased'>
+    <html lang={locale} className={`h-full antialiased ${googleSans.variable}`}>
       <body className='min-h-full flex flex-col overflow-x-hidden'>
         <a
           href='#main-content'

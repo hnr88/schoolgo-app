@@ -6,9 +6,11 @@ import { getFeaturedSchools } from '@/modules/parents-landing/lib/featured-schoo
 import { formatAudCompact } from '@/modules/school-search/lib/format-currency';
 
 export async function ParentsHero() {
-  const t = await getTranslations('ParentsHero');
-  const tCard = await getTranslations('SchoolSearch.card');
-  const featuredSchools = await getFeaturedSchools();
+  const [t, tCard, featuredSchools] = await Promise.all([
+    getTranslations('ParentsHero'),
+    getTranslations('SchoolSearch.card'),
+    getFeaturedSchools(),
+  ]);
 
   return (
     <section id='main-content' className='relative overflow-hidden pb-16 pt-28 md:pb-24 md:pt-40'>

@@ -1,4 +1,5 @@
 import 'server-only';
+import { cache } from 'react';
 import { env } from '@/lib/env';
 
 interface StrapiMedia {
@@ -70,7 +71,9 @@ export function mediaUrl(media?: StrapiMedia | null): string | null {
   return `${env.NEXT_PUBLIC_API_URL.replace(/\/+$/, '')}${url}`;
 }
 
-export async function getSchoolBySlug(slug: string): Promise<SchoolDetail | null> {
+export const getSchoolBySlug = cache(async function getSchoolBySlug(
+  slug: string,
+): Promise<SchoolDetail | null> {
   const response = await fetch(
     `${env.NEXT_PUBLIC_API_URL}/api/schools?${buildSchoolQuery(slug)}`,
     {
@@ -84,4 +87,4 @@ export async function getSchoolBySlug(slug: string): Promise<SchoolDetail | null
 
   const payload = (await response.json()) as SchoolsResponse;
   return payload.data?.[0] ?? null;
-}
+});

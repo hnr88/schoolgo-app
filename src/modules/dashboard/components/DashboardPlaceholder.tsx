@@ -2,8 +2,10 @@ import { getTranslations } from 'next-intl/server';
 import type { DashboardPlaceholderProps } from '@/modules/dashboard/types/dashboard.types';
 
 export async function DashboardPlaceholder({ titleKey }: DashboardPlaceholderProps) {
-  const t = await getTranslations('Dashboard');
-  const tCommon = await getTranslations('Common');
+  const [t, tCommon] = await Promise.all([
+    getTranslations('Dashboard'),
+    getTranslations('Common'),
+  ]);
 
   return (
     <div>

@@ -1,9 +1,9 @@
 export { useAuthStore } from '@/modules/auth/stores/use-auth-store';
-export { useAuth } from '@/modules/auth/hooks/use-auth';
-export { useLogin } from '@/modules/auth/hooks/use-login';
-export { useRegister } from '@/modules/auth/hooks/use-register';
-export { useRequireAuth } from '@/modules/auth/hooks/use-require-auth';
-export { useRedirectIfAuthenticated } from '@/modules/auth/hooks/use-redirect-if-authenticated';
+export { useAuth } from '@/modules/auth/hooks/useAuth';
+export { useLogin } from '@/modules/auth/hooks/useLogin';
+export { useRegister } from '@/modules/auth/hooks/useRegister';
+export { useRequireAuth } from '@/modules/auth/hooks/useRequireAuth';
+export { useRedirectIfAuthenticated } from '@/modules/auth/hooks/useRedirectIfAuthenticated';
 export { AuthInitProvider } from '@/modules/auth/components/AuthInitProvider';
 export { ProtectedLayout } from '@/modules/auth/components/ProtectedLayout';
 export { AuthRedirectCheck } from '@/modules/auth/components/AuthRedirectCheck';

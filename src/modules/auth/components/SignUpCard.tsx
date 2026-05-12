@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
-import { useRedirectIfAuthenticated } from '@/modules/auth/hooks/use-redirect-if-authenticated';
+import { useRedirectIfAuthenticated } from '@/modules/auth/hooks/useRedirectIfAuthenticated';
 import { RegisterForm } from '@/modules/auth/components/RegisterForm';
 import type { SignUpCardProps } from '@/modules/auth/types/component.types';
 import { PORTAL_ACCENT_BAR, PORTAL_LINK_COLOR } from '../constants/portal.constants';

@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { env } from '@/lib/env';
+import { rateLimit } from '@/lib/rate-limit';
 import {
   searchRequestSchema,
   typedSearchRequestSchema,
@@ -24,6 +25,14 @@ function resolveHitMedia(hit: unknown): unknown {
 }
 
 export async function POST(request: NextRequest) {
+  const limit = rateLimit(request, 'search-schools', { capacity: 60, refillPerSecond: 2 });
+  if (!limit.ok) {
+    return NextResponse.json(
+      { data: null, error: { status: 429, message: 'Too many requests' } },
+      { status: 429, headers: { 'Retry-After': String(limit.retryAfterSeconds) } },
+    );
+  }
+
   let body: unknown;
   try {
     body = await request.json();

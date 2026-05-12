@@ -3,8 +3,10 @@ import { SectionContainer, SectionHeader, SchoolCard } from '@/modules/design-sy
 import { VERIFIED_CARDS } from '../constants/parents-landing.constants';
 
 export async function ParentsVerified() {
-  const t = await getTranslations('ParentsVerified');
-  const tc = await getTranslations('Common');
+  const [t, tc] = await Promise.all([
+    getTranslations('ParentsVerified'),
+    getTranslations('Common'),
+  ]);
   return (
     <section id='trusted-agents' className='bg-muted py-20 md:py-28'>
       <SectionContainer className='flex flex-col gap-10'>

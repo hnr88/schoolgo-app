@@ -185,6 +185,7 @@ export function StudentForm({ defaultValues, onSubmit, isLoading, submitLabel }:
               render={({ field }) => (
                 <FormItem>
                   <FormLabel>{t('fieldTargetTerm')}</FormLabel>
+                  {/* TODO i18n: Students.fieldTargetTermPlaceholder — e.g. "e.g. Term 1, 2027" */}
                   <FormControl><Input placeholder='e.g. Term 1, 2027' {...field} /></FormControl>
                   <FormMessage />
                 </FormItem>

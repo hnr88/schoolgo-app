@@ -210,7 +210,7 @@ export function MarketingHeaderClient({
 
       <div
         className={cn(
-          'fixed inset-0 z-[60] md:hidden',
+          'fixed inset-0 z-50 md:hidden',
           mobileOpen ? 'pointer-events-auto' : 'pointer-events-none',
         )}
         role='dialog'

@@ -1,6 +1,6 @@
 'use client';
 
-import { useRequireAuth } from '@/modules/auth/hooks/use-require-auth';
+import { useRequireAuth } from '@/modules/auth/hooks/useRequireAuth';
 import { Skeleton } from '@/components/ui/skeleton';
 import type { ProtectedLayoutProps } from '@/modules/auth/types/component.types';
 

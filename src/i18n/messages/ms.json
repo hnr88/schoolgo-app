@@ -448,10 +448,6 @@
 				"question": "[TODO: ms] Do I need an education agent?",
 				"answer": "[TODO: ms] You don't have to use one, but most families do — and it's free. Education agents help you choose the right school, prepare documents, and manage the application. SchoolGo shows which agents work with each school, so you can find someone who already knows the admissions process."
 			},
-			"claimProfile": {
-				"question": "I'm a school. How do I claim my profile?",
-				"answer": "Search for your school on SchoolGo and click \"Claim This School.\" You'll be asked to verify your identity as a school staff member. Once verified, you can update your profile with fees, entry requirements, and contact details."
-			},
 			"updateFrequency": {
 				"question": "How often is the data updated?",
 				"answer": "CRICOS data is refreshed monthly from data.gov.au. School-specific details (fees, requirements, intake dates) are updated by schools who have claimed their profiles. If a school hasn't claimed their profile, the data shown is from CRICOS and ACARA public datasets."
@@ -1096,11 +1092,7 @@
 				"schoolSizeAsc": "Saiz sekolah (kecil–besar)",
 				"schoolSizeDesc": "Saiz sekolah (besar–kecil)",
 				"internationalPctAsc": "% antarabangsa (rendah–tinggi)",
-				"internationalPctDesc": "% antarabangsa (tinggi–rendah)",
-				"tuitionLowHigh": "Yuran rendah–tinggi",
-				"tuitionHighLow": "Yuran tinggi–rendah",
-				"stateAsc": "Negeri",
-				"enrolmentOpenFirst": "Status enrolmen (terbuka dahulu)"
+				"internationalPctDesc": "% antarabangsa (tinggi–rendah)"
 			},
 			"topBar": {
 				"searchPlaceholder": "Search by school name, city, or suburb",
@@ -1506,6 +1498,49 @@
 		"columnClosed": "Ditutup",
 		"daysLabel": "{count}h",
 		"moreApplications": "+{count} lagi"
+	},
+	"SchoolDetail": {
+		"backToSearch": "[TODO: ms] Back to search",
+		"cricosVerified": "[TODO: ms] CRICOS verified",
+		"claimedProfile": "[TODO: ms] Claimed profile",
+		"admissionsProfileLabel": "[TODO: ms] Admissions profile",
+		"admissionsProfileDescription": "[TODO: ms] Compare fees, entry requirements, intakes, and contact details.",
+		"infoCards": {
+			"annualTuition": "[TODO: ms] Annual tuition",
+			"contactSchool": "[TODO: ms] Contact school",
+			"lowestListedTuition": "[TODO: ms] Lowest listed tuition",
+			"feesNotListedYet": "[TODO: ms] Fees not listed yet",
+			"curriculum": "[TODO: ms] Curriculum",
+			"notListed": "[TODO: ms] Not listed",
+			"enrolment": "[TODO: ms] Enrolment",
+			"internationalPercent": "[TODO: ms] {pct}% international",
+			"boarding": "[TODO: ms] Boarding",
+			"boardingAvailable": "[TODO: ms] Available",
+			"scholarshipsListed": "[TODO: ms] Scholarships listed"
+		},
+		"aboutSection": {
+			"heading": "[TODO: ms] About the school",
+			"defaultDescription": "[TODO: ms] {name} is listed in SchoolGo's Australian school directory. Use this profile to review key admissions facts before shortlisting or contacting the school."
+		},
+		"admissionsSection": {
+			"heading": "[TODO: ms] Admissions",
+			"nextIntake": "[TODO: ms] Next intake",
+			"applicationDeadline": "[TODO: ms] Application deadline",
+			"intakePeriods": "[TODO: ms] Intake periods",
+			"applicationFee": "[TODO: ms] Application fee",
+			"cricosCode": "[TODO: ms] CRICOS code"
+		},
+		"englishSection": {
+			"heading": "[TODO: ms] English requirements",
+			"noScoresListed": "[TODO: ms] No minimum test scores are listed yet."
+		},
+		"contactSection": {
+			"heading": "[TODO: ms] Contact and apply",
+			"startApplication": "[TODO: ms] Start application",
+			"visitWebsite": "[TODO: ms] Visit website",
+			"nextIntakeDate": "[TODO: ms] Next intake: {date}"
+		},
+		"trustNotice": "[TODO: ms] SchoolGo profiles combine public provider data with admissions information so families can compare schools before contacting an agent or school."
 	},
 	"SearchMetadata": {
 		"title": "Cari Sekolah — SchoolGo",

@@ -1,6 +1,24 @@
 import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
+import localFont from 'next/font/local';
 import { robotsPolicy, siteUrl } from '@/modules/seo';
+
+const googleSans = localFont({
+  src: [
+    {
+      path: '../../public/fonts/GoogleSans-Variable.ttf',
+      style: 'normal',
+      weight: '400 800',
+    },
+    {
+      path: '../../public/fonts/GoogleSans-Italic-Variable.ttf',
+      style: 'italic',
+      weight: '400 800',
+    },
+  ],
+  variable: '--font-google-sans',
+  display: 'swap',
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -17,5 +35,7 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
-  return children;
+  return <>{children}</>;
 }
+
+export { googleSans };

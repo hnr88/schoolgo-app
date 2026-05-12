@@ -12,7 +12,7 @@ export function AuthPortalTabs({ activePortal }: AuthPortalTabsProps) {
 
   return (
     <nav
-      aria-label="Portal"
+      aria-label="Portal" // TODO i18n: Auth.ariaPortal
       className="flex items-center gap-1 rounded-pill bg-muted p-1 shadow-1"
     >
       {PORTAL_TABS.map(({ key, portal }) => {

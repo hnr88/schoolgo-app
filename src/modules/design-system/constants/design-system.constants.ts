@@ -23,7 +23,7 @@ export const buttonStyles = cva(
         link: 'px-0 bg-transparent text-primary underline-offset-4 hover:underline',
       },
       size: {
-        sm: 'px-3.5 py-1.5 text-[13px]',
+        sm: 'px-3.5 py-1.5 text-sm',
         md: 'px-4.5 py-2.5 text-sm',
         lg: 'px-6 py-3.5 text-base',
         icon: 'h-9 w-9 p-0',
@@ -37,7 +37,7 @@ export const buttonStyles = cva(
 );
 
 export const chipStyles = cva(
-  'inline-flex items-center gap-1.5 rounded-pill text-[13px] font-semibold transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary',
+  'inline-flex items-center gap-1.5 rounded-pill text-sm font-semibold transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary',
   {
     variants: {
       variant: {
@@ -70,7 +70,7 @@ export const ctaLinkStyles = cva(
           'bg-ink-900 text-white hover:bg-ink-900/90 active:bg-ink-900/80',
       },
       size: {
-        sm: 'px-3.5 py-1.5 text-[13px]',
+        sm: 'px-3.5 py-1.5 text-sm',
         md: 'px-4.5 py-2.5 text-sm',
         lg: 'px-6 py-3.5 text-base',
       },
@@ -83,7 +83,7 @@ export const ctaLinkStyles = cva(
 );
 
 export const statusBadgeStyles = cva(
-  'inline-flex items-center gap-1 rounded-pill text-[11px] font-semibold tracking-wide',
+  'inline-flex items-center gap-1 rounded-pill text-xs font-semibold tracking-wide',
   {
     variants: {
       tone: {

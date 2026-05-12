@@ -20,8 +20,8 @@ export function SchoolResultsPanel({ activePortal }: SchoolResultsPanelProps) {
     <div className='absolute bottom-4 right-4 top-4 flex w-results-panel flex-col overflow-hidden rounded-lg border border-border bg-card shadow-3'>
       <div className='flex items-center justify-between border-b border-divider bg-card px-4 py-3'>
         <span
-          className='text-caption font-semibold uppercase text-foggy'
-          style={{ letterSpacing: '0.08em' }}
+          className='text-caption font-semibold uppercase tracking-eyebrow text-foggy'
+
         >
           {t('title')}
         </span>

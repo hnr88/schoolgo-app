@@ -34,8 +34,8 @@ export async function SchoolsPricing() {
                 )}
                 <div className='flex flex-col gap-1'>
                   <span
-                    className='text-label font-semibold uppercase text-foggy'
-                    style={{ letterSpacing: '0.08em' }}
+                    className='text-label font-semibold uppercase tracking-eyebrow text-foggy'
+
                   >
                     {t(`plans.${plan.key}.name`)}
                   </span>

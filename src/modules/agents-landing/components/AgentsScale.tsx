@@ -4,8 +4,10 @@ import { CtaLink, SectionContainer, SectionHeader, TrustBadge } from '@/modules/
 import { SCALE_AGENTS } from '../constants/agents-landing.constants';
 
 export async function AgentsScale() {
-  const t = await getTranslations('AgentsScale');
-  const tc = await getTranslations('Common');
+  const [t, tc] = await Promise.all([
+    getTranslations('AgentsScale'),
+    getTranslations('Common'),
+  ]);
   return (
     <section className='bg-muted py-20 md:py-28'>
       <SectionContainer className='flex flex-col gap-10'>

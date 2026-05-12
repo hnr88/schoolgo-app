@@ -15,7 +15,7 @@ export function DsField({
       <label
         htmlFor={htmlFor}
         className={cn(
-          'text-[13px] font-semibold',
+          'text-sm font-semibold',
           error ? 'text-primary' : 'text-hof',
         )}
       >

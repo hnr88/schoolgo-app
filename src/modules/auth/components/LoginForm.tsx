@@ -5,7 +5,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { Loader2 } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { loginSchema, type LoginValues } from '@/modules/auth/schemas/login.schema';
-import { useLogin } from '@/modules/auth/hooks/use-login';
+import { useLogin } from '@/modules/auth/hooks/useLogin';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import {
@@ -20,7 +20,6 @@ import type { LoginFormProps } from '@/modules/auth/types/component.types';
 
 export function LoginForm({ userType }: LoginFormProps) {
   const t = useTranslations('Auth');
-  const { handleLogin, isSubmitting } = useLogin({ portal: userType });
 
   const form = useForm<LoginValues>({
     resolver: zodResolver(loginSchema),
@@ -29,6 +28,9 @@ export function LoginForm({ userType }: LoginFormProps) {
       password: '',
     },
   });
+
+  const { handleLogin } = useLogin({ portal: userType, setError: form.setError });
+  const { isSubmitting } = form.formState;
 
   return (
     <Form {...form}>
@@ -73,6 +75,9 @@ export function LoginForm({ userType }: LoginFormProps) {
             </FormItem>
           )}
         />
+        {form.formState.errors.root && (
+          <FormMessage>{form.formState.errors.root.message}</FormMessage>
+        )}
         <Button
           type="submit"
           disabled={isSubmitting}

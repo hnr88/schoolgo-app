@@ -1,5 +1,6 @@
+import type { Metadata } from 'next';
 import Image from 'next/image';
-import { setRequestLocale } from 'next-intl/server';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 import {
   ArrowRight,
   CheckCircle2,
@@ -11,6 +12,19 @@ import {
   Sparkles,
 } from 'lucide-react';
 import { portalUrl, siteUrl } from '@/lib/portal-url';
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'LaunchingSoon' });
+  return {
+    title: 'Coming soon | SchoolGo',
+    description: t('subtitle'),
+  };
+}
 
 interface PageProps {
   params: Promise<{ locale: string }>;
@@ -190,14 +204,17 @@ function DashboardContent({ locale }: { locale: string }) {
             <div className="grid grid-cols-3 gap-2">
               <div className="rounded-md bg-rausch-50 p-3">
                 <p className="text-lg font-bold text-primary">12</p>
+                {/* TODO i18n: LaunchingSoon.stats.schools */}
                 <p className="text-xs text-foggy">Schools</p>
               </div>
               <div className="rounded-md bg-babu-50 p-3">
                 <p className="text-lg font-bold text-babu-700">4</p>
+                {/* TODO i18n: LaunchingSoon.stats.shortlist */}
                 <p className="text-xs text-foggy">Shortlist</p>
               </div>
               <div className="rounded-md bg-arches-50 p-3">
                 <p className="text-lg font-bold text-arches-700">2</p>
+                {/* TODO i18n: LaunchingSoon.stats.ready */}
                 <p className="text-xs text-foggy">Ready</p>
               </div>
             </div>

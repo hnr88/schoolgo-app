@@ -4,8 +4,10 @@ import { SectionContainer, SectionHeader, StatusBadge } from '@/modules/design-s
 import { TIMELINE_STEPS } from '../constants/schools-landing.constants';
 
 export async function SchoolsTimeline() {
-  const t = await getTranslations('SchoolsTimeline');
-  const tc = await getTranslations('Common');
+  const [t, tc] = await Promise.all([
+    getTranslations('SchoolsTimeline'),
+    getTranslations('Common'),
+  ]);
   return (
     <section className='bg-muted py-20 md:py-28'>
       <SectionContainer className='flex flex-col gap-10'>
@@ -32,8 +34,8 @@ export async function SchoolsTimeline() {
                   <Icon className='h-5 w-5' strokeWidth={1.75} aria-hidden='true' />
                 </span>
                 <span
-                  className='text-caption font-semibold uppercase text-foggy'
-                  style={{ letterSpacing: '0.08em' }}
+                  className='text-caption font-semibold uppercase tracking-eyebrow text-foggy'
+
                 >
                   {tc('step', { number: index + 1 })}
                 </span>

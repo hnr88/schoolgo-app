@@ -58,15 +58,10 @@ interface SchoolSearchState {
   compareList: string[];
   bookmarks: string[];
 
-  /** @deprecated alias for feeMin — remove in cleanup slice */
   priceMin: number;
-  /** @deprecated alias for feeMax — remove in cleanup slice */
   priceMax: number;
-  /** @deprecated curriculum is no longer a sidebar filter — kept until cleanup slice */
   curricula: Curriculum[];
-  /** @deprecated renamed to englishLanguageSupport */
   englishTests: boolean;
-  /** @deprecated replaced by quickChips */
   activeChips: string[];
   mapBounds: MapBounds;
   geocodedQuery: string;
@@ -97,13 +92,9 @@ interface SchoolSearchState {
   toggleQuickChip: (id: QuickChipId) => void;
   toggleGender: (g: Gender) => void;
 
-  /** @deprecated use setFeeRange */
   setPriceRange: (min: number, max: number) => void;
-  /** @deprecated curriculum no longer a filter */
   toggleCurriculum: (c: Curriculum) => void;
-  /** @deprecated renamed to setEnglishLanguageSupport */
   setEnglishTests: (value: boolean) => void;
-  /** @deprecated use toggleQuickChip */
   toggleChip: (id: string) => void;
 
   setMapBounds: (bounds: MapBounds) => void;

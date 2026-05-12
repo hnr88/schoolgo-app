@@ -52,8 +52,8 @@ export async function SchoolsHero() {
             <div className='flex items-center justify-between border-b border-divider bg-muted px-5 py-3'>
               <div className='flex flex-col'>
                 <span
-                  className='text-caption font-semibold uppercase text-foggy'
-                  style={{ letterSpacing: '0.08em' }}
+                  className='text-caption font-semibold uppercase tracking-eyebrow text-foggy'
+
                 >
                   {t('inbox.eyebrow')}
                 </span>

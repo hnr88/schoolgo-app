@@ -23,7 +23,7 @@ export default async function NewApplicationPage({
   return (
     <div className='flex flex-col items-center justify-center py-24 text-center'>
       <p className='text-lg font-semibold text-ink-900'>{t('addApplication')}</p>
-      <p className='mt-2 text-sm text-foggy'>Coming soon</p>
+      <p className='mt-2 text-sm text-foggy'>{t('actionComingSoon')}</p>
     </div>
   );
 }

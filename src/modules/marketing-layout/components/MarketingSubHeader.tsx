@@ -74,7 +74,7 @@ export function MarketingSubHeader({
               </button>
 
               {openIndex === i && (
-                <div className='absolute right-0 top-full z-[60] pt-2'>
+                <div className='absolute right-0 top-full z-50 pt-2'>
                   <div className='w-[22rem] rounded-xl border border-border bg-background p-2 shadow-4 ring-1 ring-ink-900/[0.03]'>
                     <div className='grid gap-1'>
                       {menu.items.map((item) => {

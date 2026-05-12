@@ -5,7 +5,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { Loader2 } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { registerSchema, type RegisterValues } from '@/modules/auth/schemas/register.schema';
-import { useRegister } from '@/modules/auth/hooks/use-register';
+import { useRegister } from '@/modules/auth/hooks/useRegister';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import {
@@ -20,7 +20,6 @@ import type { RegisterFormProps } from '@/modules/auth/types/component.types';
 
 export function RegisterForm({ userType }: RegisterFormProps) {
   const t = useTranslations('Auth');
-  const { handleRegister, isSubmitting } = useRegister({ portal: userType });
 
   const form = useForm<RegisterValues>({
     resolver: zodResolver(registerSchema),
@@ -30,6 +29,9 @@ export function RegisterForm({ userType }: RegisterFormProps) {
       password: '',
     },
   });
+
+  const { handleRegister } = useRegister({ portal: userType, setError: form.setError });
+  const { isSubmitting } = form.formState;
 
   return (
     <Form {...form}>
@@ -94,6 +96,9 @@ export function RegisterForm({ userType }: RegisterFormProps) {
             </FormItem>
           )}
         />
+        {form.formState.errors.root && (
+          <FormMessage>{form.formState.errors.root.message}</FormMessage>
+        )}
         <Button
           type="submit"
           disabled={isSubmitting}

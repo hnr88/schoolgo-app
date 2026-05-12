@@ -10,8 +10,10 @@ import { COMPARISON_IMAGES, MIN_SCORES, RATINGS, SCHOLARSHIPS_MAP, TESTS_MAP } f
 import { boardingBedsForSchool, pickComparisonSet } from '../lib/comparison';
 
 export async function ParentsComparison() {
-  const t = await getTranslations('ParentsComparison');
-  const schools = await loadSchools();
+  const [t, schools] = await Promise.all([
+    getTranslations('ParentsComparison'),
+    loadSchools(),
+  ]);
   const set = pickComparisonSet(schools);
 
   if (set.length === 0) return null;

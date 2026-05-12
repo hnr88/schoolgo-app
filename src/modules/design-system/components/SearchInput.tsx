@@ -23,7 +23,7 @@ export const SearchInput = forwardRef<HTMLInputElement, SearchInputProps>(
         <input
           ref={ref}
           type='text'
-          className='min-w-0 flex-1 border-none bg-transparent text-[15px] text-hof outline-none placeholder:text-quill'
+          className='min-w-0 flex-1 border-none bg-transparent text-base text-hof outline-none placeholder:text-quill'
           onChange={(e) => onSearch?.(e.target.value)}
           {...props}
         />

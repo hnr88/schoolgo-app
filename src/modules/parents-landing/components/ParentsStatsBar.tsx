@@ -3,8 +3,10 @@ import { loadSchools, computeSchoolStats } from '@/lib/schools';
 import { SectionContainer, SectionHeader } from '@/modules/design-system';
 
 export async function ParentsStatsBar() {
-  const t = await getTranslations('ParentsStatsBar');
-  const schools = await loadSchools();
+  const [t, schools] = await Promise.all([
+    getTranslations('ParentsStatsBar'),
+    loadSchools(),
+  ]);
   const stats = computeSchoolStats(schools);
 
   return (

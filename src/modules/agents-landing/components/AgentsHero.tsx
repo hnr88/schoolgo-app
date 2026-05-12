@@ -6,9 +6,11 @@ import { CtaLink, Eyebrow, SectionContainer } from '@/modules/design-system';
 import { HERO_STAT_KEYS } from '../constants/agents-landing.constants';
 
 export async function AgentsHero() {
-  const t = await getTranslations('AgentsHero');
-  const tc = await getTranslations('Common');
-  const schools = await loadSchools();
+  const [t, tc, schools] = await Promise.all([
+    getTranslations('AgentsHero'),
+    getTranslations('Common'),
+    loadSchools(),
+  ]);
   const stats = computeSchoolStats(schools);
 
   return (
@@ -43,8 +45,8 @@ export async function AgentsHero() {
             {HERO_STAT_KEYS.map((k) => (
               <div key={k} className='flex flex-col gap-1'>
                 <dt
-                  className='text-caption font-semibold uppercase text-foggy'
-                  style={{ letterSpacing: '0.08em' }}
+                  className='text-caption font-semibold uppercase tracking-eyebrow text-foggy'
+
                 >
                   {t(`stats.${k}.label`)}
                 </dt>

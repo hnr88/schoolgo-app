@@ -1499,6 +1499,49 @@
     "daysLabel": "in status",
     "moreApplications": "more"
   },
+  "SchoolDetail": {
+    "backToSearch": "Back to search",
+    "cricosVerified": "CRICOS verified",
+    "claimedProfile": "Claimed profile",
+    "admissionsProfileLabel": "Admissions profile",
+    "admissionsProfileDescription": "Compare fees, entry requirements, intakes, and contact details.",
+    "infoCards": {
+      "annualTuition": "Annual tuition",
+      "contactSchool": "Contact school",
+      "lowestListedTuition": "Lowest listed tuition",
+      "feesNotListedYet": "Fees not listed yet",
+      "curriculum": "Curriculum",
+      "notListed": "Not listed",
+      "enrolment": "Enrolment",
+      "internationalPercent": "{pct}% international",
+      "boarding": "Boarding",
+      "boardingAvailable": "Available",
+      "scholarshipsListed": "Scholarships listed"
+    },
+    "aboutSection": {
+      "heading": "About the school",
+      "defaultDescription": "{name} is listed in SchoolGo's Australian school directory. Use this profile to review key admissions facts before shortlisting or contacting the school."
+    },
+    "admissionsSection": {
+      "heading": "Admissions",
+      "nextIntake": "Next intake",
+      "applicationDeadline": "Application deadline",
+      "intakePeriods": "Intake periods",
+      "applicationFee": "Application fee",
+      "cricosCode": "CRICOS code"
+    },
+    "englishSection": {
+      "heading": "English requirements",
+      "noScoresListed": "No minimum test scores are listed yet."
+    },
+    "contactSection": {
+      "heading": "Contact and apply",
+      "startApplication": "Start application",
+      "visitWebsite": "Visit website",
+      "nextIntakeDate": "Next intake: {date}"
+    },
+    "trustNotice": "SchoolGo profiles combine public provider data with admissions information so families can compare schools before contacting an agent or school."
+  },
   "SearchMetadata": {
     "title": "Search Schools — SchoolGo",
     "description": "Search and compare Australian schools. Filter by location, fees, curriculum, boarding, and more.",
