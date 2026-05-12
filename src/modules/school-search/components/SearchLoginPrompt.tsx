@@ -24,14 +24,14 @@ export function SearchLoginPrompt() {
           <Link
             href='/sign-up'
             data-slot='button'
-            className='inline-flex flex-1 items-center justify-center rounded-xl bg-primary px-6 py-3 text-sm font-semibold text-on-primary shadow-brand'
+            className='inline-flex flex-1 items-center justify-center rounded-xl bg-primary px-8 py-4 text-base font-semibold text-on-primary shadow-brand'
           >
             {t('signUp')}
           </Link>
           <Link
             href='/sign-in'
             data-slot='button'
-            className='inline-flex flex-1 items-center justify-center rounded-xl px-6 py-3 text-sm font-semibold text-foreground hover:bg-muted'
+            className='inline-flex flex-1 items-center justify-center rounded-xl px-8 py-4 text-base font-semibold text-foreground hover:bg-muted'
           >
             {t('signIn')}
           </Link>
