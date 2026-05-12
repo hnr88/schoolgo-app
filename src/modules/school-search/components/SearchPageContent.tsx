@@ -31,7 +31,7 @@ export async function SearchPageContent({
             <SearchTopBar />
             <div className='relative min-h-0 flex-1'>
               <MapView activePortal={activePortal} />
-              <SpecResultsPanel alwaysOn floating />
+              <SpecResultsPanel activePortal={activePortal} alwaysOn floating />
             </div>
           </section>
         </main>
@@ -57,6 +57,7 @@ export async function SearchPageContent({
 
         <section className='flex h-content-viewport flex-1 flex-col gap-4 overflow-hidden p-6'>
           <SpecPreviewGate
+            activePortal={activePortal}
             fallback={
               <>
                 <div className='flex shrink-0 items-center gap-4'>

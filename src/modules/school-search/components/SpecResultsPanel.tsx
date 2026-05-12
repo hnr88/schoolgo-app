@@ -2,6 +2,7 @@
 
 import { useSearchParams } from 'next/navigation';
 import { useTranslations } from 'next-intl';
+import type { Portal } from '@/lib/portal-url';
 import { cn } from '@/lib/utils';
 import { SortControl } from '@/modules/school-search/components/results/SortControl';
 import { SpecResultsList } from '@/modules/school-search/components/SpecResultsList';
@@ -9,12 +10,14 @@ import { SpecResultsPanelHeader } from '@/modules/school-search/components/SpecR
 import { useFilteredSpecHits } from '@/modules/school-search/hooks/useFilteredSpecHits';
 
 interface SpecResultsPanelProps {
+  activePortal: Portal;
   className?: string;
   alwaysOn?: boolean;
   floating?: boolean;
 }
 
 export function SpecResultsPanel({
+  activePortal,
   className,
   alwaysOn = false,
   floating = false,
@@ -42,6 +45,7 @@ export function SpecResultsPanel({
         <SpecResultsList
           hits={hits}
           isAdvanced={isAdvanced}
+          activePortal={activePortal}
           className="flex min-h-0 flex-1 flex-col gap-2 overflow-y-auto px-3 pb-3"
         />
       </aside>
@@ -62,6 +66,7 @@ export function SpecResultsPanel({
       <SpecResultsList
         hits={hits}
         isAdvanced={isAdvanced}
+        activePortal={activePortal}
         className="grid min-h-0 flex-1 grid-cols-1 gap-3 overflow-y-auto pb-24 sm:grid-cols-2 xl:grid-cols-3"
         emptyClassName="col-span-full"
       />

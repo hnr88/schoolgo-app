@@ -18,7 +18,7 @@ export function SchoolCardFooter({ tuition }: SchoolCardFooterProps) {
           ? t('tuitionFrom', { amount: formatAud(tuition).replace('A$', '$') })
           : ''}
       </span>
-      <span className="inline-flex items-center gap-1 text-caption font-medium text-primary group-hover:underline">
+      <span className="inline-flex items-center gap-1 text-xs font-medium text-primary group-hover:underline">
         {t('viewSchool')}
         <ArrowRight size={12} aria-hidden />
       </span>

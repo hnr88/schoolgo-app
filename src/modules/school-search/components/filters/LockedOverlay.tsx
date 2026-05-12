@@ -42,14 +42,14 @@ export function LockedOverlay({
         aria-label={t('title')}
       >
         <Lock className="size-6 text-muted-foreground" aria-hidden="true" />
-        <p className="max-w-xs text-center text-caption text-muted-foreground">
+        <p className="max-w-xs text-center text-xs text-muted-foreground">
           {description}
         </p>
         <Link
           href="/sign-in"
           className={cn(
             'inline-flex items-center rounded-pill border border-primary px-3 py-1',
-            'text-caption font-medium text-primary',
+            'text-xs font-medium text-primary',
             'transition-colors hover:bg-primary hover:text-primary-foreground',
             'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1',
           )}

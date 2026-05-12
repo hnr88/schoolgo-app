@@ -1,6 +1,7 @@
 'use client';
 
 import { Link } from '@/i18n/navigation';
+import type { Portal } from '@/lib/portal-url';
 import { cn } from '@/lib/utils';
 import { AccommodationBadge } from '@/modules/school-search/components/cards/AccommodationBadge';
 import { CurriculumBadge } from '@/modules/school-search/components/cards/CurriculumBadge';
@@ -19,6 +20,7 @@ import type { CurriculumCode } from '@/modules/school-search/types/filter.types'
 interface SpecSchoolCardProps {
   hit: SchoolHit;
   isAdvanced: boolean;
+  activePortal: Portal;
   priority?: boolean;
   onUnauthenticatedBookmark?: () => void;
   className?: string;
@@ -27,6 +29,7 @@ interface SpecSchoolCardProps {
 export function SpecSchoolCard({
   hit,
   isAdvanced,
+  activePortal,
   priority = false,
   onUnauthenticatedBookmark,
   className,
@@ -42,7 +45,7 @@ export function SpecSchoolCard({
 
   return (
     <Link
-      href={`/school/${hit.slug}`}
+      href={`/${activePortal}/schools/${hit.slug}`}
       className={cn(
         'group flex flex-col gap-3 rounded-xl border border-border bg-card p-3 shadow-1 transition-[transform,box-shadow] duration-200 hover:-translate-y-0.5 hover:shadow-3 focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2',
         className,

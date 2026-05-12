@@ -1,6 +1,7 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
+import type { Portal } from '@/lib/portal-url';
 import { cn } from '@/lib/utils';
 import { SpecSchoolCard } from '@/modules/school-search/components/cards/SpecSchoolCard';
 import type { SchoolHit } from '@/modules/school-search/types/search-api.types';
@@ -8,6 +9,7 @@ import type { SchoolHit } from '@/modules/school-search/types/search-api.types';
 interface SpecResultsListProps {
   hits: readonly SchoolHit[];
   isAdvanced: boolean;
+  activePortal: Portal;
   className?: string;
   emptyClassName?: string;
 }
@@ -15,6 +17,7 @@ interface SpecResultsListProps {
 export function SpecResultsList({
   hits,
   isAdvanced,
+  activePortal,
   className,
   emptyClassName,
 }: SpecResultsListProps) {
@@ -35,6 +38,7 @@ export function SpecResultsList({
           key={hit.documentId}
           hit={hit}
           isAdvanced={isAdvanced}
+          activePortal={activePortal}
           priority={index < 3}
         />
       ))}
