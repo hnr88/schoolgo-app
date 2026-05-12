@@ -66,7 +66,7 @@ export function SpecSchoolCard({
         </p>
       </div>
 
-      <div className="flex flex-wrap items-center gap-1.5">
+      <div className="flex flex-wrap items-center gap-1">
         {status && <EnrolmentStatusBadge status={status} />}
         {sector && <SectorBadge sector={sector} />}
         {curriculumCodes.length > 0 && <CurriculumBadge codes={curriculumCodes} />}
