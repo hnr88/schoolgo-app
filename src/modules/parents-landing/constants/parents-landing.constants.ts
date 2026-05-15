@@ -7,13 +7,7 @@ export const ARTICLES_ITEMS: Array<{ key: 'intakes' | 'englishTests' | 'boarding
   { key: 'boarding', image: 'https://images.unsplash.com/photo-1576495199011-eb94736d05d6?auto=format&fit=crop&w=720&h=540&q=80' },
 ];
 
-export const FAQ_KEYS = [
-  'free',
-  'dataSource',
-  'englishTests',
-  'doINeedAgent',
-  'updateFrequency',
-] as const;
+export const FAQ_KEYS = ['enrol', 'cost', 'englishTest', 'visa', 'agent', 'schoolTypes', 'free'] as const;
 
 export const PICK_A_TEST_FEATURED: Array<'aeas' | 'idat' | 'duolingo' | 'ielts'> = [
   'aeas',

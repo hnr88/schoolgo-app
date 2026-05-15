@@ -62,3 +62,12 @@ export const QEAC_PROFILE_STAT_VALUES: Partial<Record<QeacProfileStatKey, string
   students: '143',
   placements: '37',
 };
+
+export const AGENTS_FAQ_KEYS = [
+  'find',
+  'englishTests',
+  'verifyScores',
+  'becomeAgent',
+  'fees',
+  'manage',
+] as const;

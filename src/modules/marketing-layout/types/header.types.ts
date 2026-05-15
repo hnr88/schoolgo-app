@@ -5,6 +5,8 @@ export type AudienceKey = 'parents' | 'agents' | 'schools';
 export interface NavLink {
   label: string;
   href: string;
+  isActive?: boolean;
+  audienceKey?: AudienceKey;
 }
 
 export interface SubMenuItem {

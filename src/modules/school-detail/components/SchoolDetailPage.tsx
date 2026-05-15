@@ -3,7 +3,6 @@ import { SectionContainer } from '@/modules/design-system';
 import { getSimilarSchools } from '@/modules/school-detail/lib/school-detail-api';
 import type { SchoolDetail } from '@/modules/school-detail/lib/school-detail-api';
 import type { Portal } from '@/lib/portal-url';
-import { IntlBanner } from '@/modules/school-detail/components/sections/IntlBanner';
 import { BreadcrumbNav } from '@/modules/school-detail/components/sections/BreadcrumbNav';
 import { Hero } from '@/modules/school-detail/components/sections/Hero';
 import { StatsStrip } from '@/modules/school-detail/components/sections/StatsStrip';
@@ -35,7 +34,6 @@ export async function SchoolDetailPage({ school, activePortal, locale }: SchoolD
   return (
     <>
       <MarketingHeader activePortal={activePortal} variant="dark" />
-      <IntlBanner />
       <main className="bg-background">
         <Hero school={school} activePortal={activePortal} />
         <BreadcrumbNav school={school} activePortal={activePortal} />

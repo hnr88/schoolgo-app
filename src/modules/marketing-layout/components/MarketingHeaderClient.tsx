@@ -26,7 +26,6 @@ export function MarketingHeaderClient({
   const isDark = variant === 'dark';
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [activeHash, setActiveHash] = useState('');
 
   const sheetRef = useRef<HTMLDivElement>(null);
   const dragStartY = useRef(0);
@@ -81,26 +80,6 @@ export function MarketingHeaderClient({
   }, []);
 
   useEffect(() => {
-    const ids = navLinks.map((l) => l.href.replace('#', ''));
-    const els = ids.map((id) => document.getElementById(id)).filter(Boolean) as HTMLElement[];
-    if (els.length === 0) return;
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        for (const entry of entries) {
-          if (entry.isIntersecting) {
-            setActiveHash(`#${entry.target.id}`);
-          }
-        }
-      },
-      { rootMargin: '-20% 0px -60% 0px' },
-    );
-
-    els.forEach((el) => observer.observe(el));
-    return () => observer.disconnect();
-  }, [navLinks]);
-
-  useEffect(() => {
     document.body.style.overflow = mobileOpen ? 'hidden' : '';
     if (sheetRef.current) {
       sheetRef.current.style.transform = '';
@@ -145,7 +124,7 @@ export function MarketingHeaderClient({
 
           <nav aria-label={t('primaryNavigation')} className='hidden items-center gap-1 md:flex'>
             {navLinks.map((link) => {
-              const isActive = activeHash === link.href;
+              const isActive = link.isActive;
               return (
                 <a
                   key={link.href}

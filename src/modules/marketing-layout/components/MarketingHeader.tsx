@@ -2,7 +2,7 @@ import { getLocale, getTranslations } from 'next-intl/server';
 import { portalUrl } from '@/lib/portal-url';
 import { MarketingHeaderClient } from '@/modules/marketing-layout/components/MarketingHeaderClient';
 import type { MarketingHeaderProps } from '@/modules/marketing-layout/types/header.types';
-import { SUB_MENUS, SUB_MENU_ITEMS, PORTAL_NAV } from '../constants/header.constants';
+import { SUB_MENUS, SUB_MENU_ITEMS, AUDIENCE_NAV } from '../constants/header.constants';
 
 export async function MarketingHeader({ activePortal, variant = 'default', fullWidth = false }: MarketingHeaderProps) {
   const [t, locale] = await Promise.all([
@@ -10,9 +10,11 @@ export async function MarketingHeader({ activePortal, variant = 'default', fullW
     getLocale(),
   ]);
 
-  const navLinks = PORTAL_NAV[activePortal].map((item) => ({
-    label: t(`nav.${activePortal}.${item.labelKey}`),
-    href: item.href,
+  const navLinks = AUDIENCE_NAV.map((item) => ({
+    label: t(`audiences.${item.key}`),
+    href: portalUrl(item.portal, locale),
+    isActive: item.portal === activePortal,
+    audienceKey: item.key,
   }));
 
   const subMenus = SUB_MENUS.map((menuKey) => ({

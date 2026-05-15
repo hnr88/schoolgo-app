@@ -28,9 +28,6 @@ export async function ParentsFinalCta() {
           <CtaLink href='/search' size='lg' arrow>
             {t('ctaPrimary')}
           </CtaLink>
-          <CtaLink href='/agents' variant='secondary' size='lg'>
-            {t('ctaSecondary')}
-          </CtaLink>
         </div>
       </SectionContainer>
     </section>

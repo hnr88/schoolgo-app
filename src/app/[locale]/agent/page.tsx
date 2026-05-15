@@ -5,6 +5,7 @@ import { MarketingFooter, MarketingHeader } from '@/modules/marketing-layout';
 import { AuthRedirectCheck } from '@/modules/auth/components/AuthRedirectCheck';
 import {
   AgentsCommission,
+  AgentsFaq,
   AgentsFinalCta,
   AgentsHero,
   AgentsMatching,
@@ -56,6 +57,7 @@ export default async function AgentsLandingPage({
         <AgentsQeacTrust />
         <AgentsScale />
         <AgentsTestimonial />
+        <AgentsFaq />
         <AgentsFinalCta />
       </main>
       <MarketingFooter activePortal="agent" />

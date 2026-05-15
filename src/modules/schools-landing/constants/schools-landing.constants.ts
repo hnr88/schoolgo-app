@@ -2,7 +2,7 @@ import { CheckCircle2, FileText, Inbox, IdCard, ListChecks, School } from 'lucid
 
 import type { HeroRow, Plan, TimelineStep, ToolItem } from '../types/schools-landing.types';
 
-export const FAQ_KEYS = ['claim', 'agents', 'commission', 'data'] as const;
+export const FAQ_KEYS = ['attract', 'verify', 'agents', 'documents', 'cost', 'diversify'] as const;
 
 export const HERO_ROWS: HeroRow[] = [
   { key: 'a', tone: 'brand', image: 'https://images.unsplash.com/photo-1758518729459-235dcaadc611?auto=format&fit=crop&w=160&h=160&q=80' },

@@ -5,4 +5,5 @@ export { AgentsCommission } from '@/modules/agents-landing/components/AgentsComm
 export { AgentsQeacTrust } from '@/modules/agents-landing/components/AgentsQeacTrust';
 export { AgentsScale } from '@/modules/agents-landing/components/AgentsScale';
 export { AgentsTestimonial } from '@/modules/agents-landing/components/AgentsTestimonial';
+export { AgentsFaq } from '@/modules/agents-landing/components/AgentsFaq';
 export { AgentsFinalCta } from '@/modules/agents-landing/components/AgentsFinalCta';

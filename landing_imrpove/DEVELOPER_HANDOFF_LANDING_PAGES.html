@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SchoolGo Landing Pages — Developer Handoff Visual Reference</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Inter', sans-serif; background: #f0f0f0; color: #1a1a1a; }
+
+  /* Page wrapper */
+  .page-break { background: #1a1a1a; padding: 48px 32px; text-align: center; }
+  .page-break h1 { color: #fff; font-size: 28px; font-weight: 800; letter-spacing: -0.5px; }
+  .page-break p { color: #999; font-size: 14px; margin-top: 8px; }
+
+  .page { max-width: 960px; margin: 0 auto; background: #fff; }
+
+  /* Dev notes */
+  .dev-note {
+    background: #fffbe6; border-left: 4px solid #f5a623; padding: 12px 16px;
+    font-size: 12px; color: #6b5900; margin: 0;
+  }
+  .dev-note strong { color: #1a1a1a; }
+  .dev-note code { background: #f0e6c0; padding: 2px 5px; border-radius: 3px; font-size: 11px; }
+
+  .change-note {
+    background: #e8f5e9; border-left: 4px solid #4caf50; padding: 12px 16px;
+    font-size: 12px; color: #1b5e20; margin: 0;
+  }
+  .change-note strong { color: #1a1a1a; }
+
+  .remove-note {
+    background: #fce4ec; border-left: 4px solid #e53935; padding: 12px 16px;
+    font-size: 12px; color: #b71c1c; margin: 0;
+  }
+
+  .new-note {
+    background: #e3f2fd; border-left: 4px solid #1976d2; padding: 12px 16px;
+    font-size: 12px; color: #0d47a1; margin: 0;
+  }
+
+  /* Navbar */
+  .navbar {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 16px 32px; border-bottom: 1px solid #e5e5e5;
+  }
+  .navbar-left { display: flex; align-items: center; gap: 24px; }
+  .logo { font-size: 20px; font-weight: 800; color: #c41e3a; }
+  .audience-switcher { display: flex; gap: 4px; }
+  .audience-switcher a {
+    padding: 6px 14px; border-radius: 20px; font-size: 13px; font-weight: 600;
+    text-decoration: none; color: #666; transition: all 0.2s;
+  }
+  .audience-switcher a.active { background: #c41e3a; color: #fff; }
+  .audience-switcher a:not(.active):hover { background: #f5f5f5; }
+  .navbar-right { display: flex; align-items: center; gap: 16px; }
+  .nav-link { font-size: 13px; font-weight: 500; color: #444; text-decoration: none; cursor: pointer; }
+  .nav-link:hover { color: #1a1a1a; }
+  .btn-signin { font-size: 13px; font-weight: 500; color: #444; text-decoration: none; }
+  .btn-cta-nav {
+    background: #c41e3a; color: #fff; padding: 8px 18px; border-radius: 8px;
+    font-size: 13px; font-weight: 600; text-decoration: none;
+  }
+
+  /* Badge */
+  .top-badge {
+    background: #f8f8f8; text-align: center; padding: 8px;
+    font-size: 11px; color: #666; font-weight: 500; letter-spacing: 0.5px;
+  }
+  .top-badge span { color: #c41e3a; font-weight: 700; }
+
+  /* Hero */
+  .hero { padding: 64px 48px; text-align: center; }
+  .hero-label { font-size: 12px; font-weight: 600; color: #c41e3a; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px; }
+  .hero h1 { font-size: 42px; font-weight: 800; line-height: 1.15; letter-spacing: -1px; max-width: 700px; margin: 0 auto 20px; }
+  .hero h1 em { font-style: italic; color: #c41e3a; }
+  .hero .subhead { font-size: 17px; color: #555; line-height: 1.6; max-width: 600px; margin: 0 auto 32px; }
+
+  /* Search bar mock */
+  .search-bar {
+    display: flex; gap: 12px; max-width: 640px; margin: 0 auto 24px;
+    background: #f8f8f8; border-radius: 12px; padding: 12px 16px; align-items: center;
+  }
+  .search-field { flex: 1; font-size: 13px; color: #999; padding: 8px 12px; background: #fff; border-radius: 8px; border: 1px solid #e5e5e5; }
+
+  /* School tiles */
+  .school-tiles { display: flex; gap: 16px; justify-content: center; max-width: 640px; margin: 0 auto; }
+  .school-tile {
+    flex: 1; background: #f8f8f8; border-radius: 10px; padding: 16px; text-align: left;
+    border: 1px solid #eee;
+  }
+  .school-tile .name { font-size: 13px; font-weight: 700; margin-bottom: 4px; }
+  .school-tile .location { font-size: 11px; color: #888; }
+
+  /* Section */
+  .section { padding: 56px 48px; }
+  .section.alt { background: #fafafa; }
+  .section-label { font-size: 11px; font-weight: 600; color: #c41e3a; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; }
+  .section h2 { font-size: 28px; font-weight: 800; line-height: 1.2; letter-spacing: -0.5px; margin-bottom: 16px; }
+  .section h2 em { font-style: italic; }
+  .section .body { font-size: 15px; color: #555; line-height: 1.7; max-width: 640px; }
+
+  /* Stats strip */
+  .stats { display: flex; gap: 24px; justify-content: center; padding: 32px 48px; background: #1a1a1a; }
+  .stat { text-align: center; flex: 1; }
+  .stat .number { font-size: 28px; font-weight: 800; color: #fff; }
+  .stat .label { font-size: 11px; color: #999; margin-top: 4px; }
+
+  /* Capability blocks */
+  .capabilities { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 24px; }
+  .capability {
+    background: #f8f8f8; border-radius: 12px; padding: 24px;
+  }
+  .capability h3 { font-size: 15px; font-weight: 700; margin-bottom: 8px; }
+  .capability p { font-size: 13px; color: #666; line-height: 1.6; }
+
+  /* Steps */
+  .steps { display: flex; gap: 20px; margin-top: 24px; }
+  .step { flex: 1; background: #f8f8f8; border-radius: 12px; padding: 20px; }
+  .step-num { font-size: 11px; font-weight: 700; color: #c41e3a; margin-bottom: 8px; }
+  .step h3 { font-size: 14px; font-weight: 700; margin-bottom: 6px; }
+  .step p { font-size: 12px; color: #666; line-height: 1.5; }
+
+  /* FAQ */
+  .faq-list { margin-top: 20px; }
+  .faq-item {
+    padding: 16px 0; border-bottom: 1px solid #eee;
+    font-size: 15px; font-weight: 600; color: #1a1a1a;
+  }
+
+  /* CTA block */
+  .cta-block { padding: 64px 48px; text-align: center; background: #1a1a1a; }
+  .cta-block h2 { font-size: 32px; font-weight: 800; color: #fff; margin-bottom: 12px; }
+  .cta-block h2 em { font-style: italic; color: #ff6b7a; }
+  .cta-block .subtext { font-size: 14px; color: #999; margin-bottom: 24px; }
+  .btn-cta {
+    display: inline-block; background: #c41e3a; color: #fff; padding: 14px 32px;
+    border-radius: 10px; font-size: 15px; font-weight: 700; text-decoration: none;
+  }
+
+  /* Quotes */
+  .quotes { display: flex; gap: 20px; margin-top: 24px; }
+  .quote {
+    flex: 1; background: #f8f8f8; border-radius: 12px; padding: 24px;
+    font-size: 13px; color: #444; line-height: 1.6; font-style: italic;
+  }
+  .quote .attr { font-style: normal; font-size: 11px; color: #999; margin-top: 12px; font-weight: 600; }
+
+  /* Pricing */
+  .pricing-cards { display: flex; gap: 20px; margin-top: 24px; }
+  .pricing-card { flex: 1; border: 2px solid #eee; border-radius: 12px; padding: 24px; }
+  .pricing-card.recommended { border-color: #c41e3a; }
+  .pricing-card .tier { font-size: 11px; font-weight: 700; color: #c41e3a; text-transform: uppercase; letter-spacing: 1px; }
+  .pricing-card .price { font-size: 28px; font-weight: 800; margin: 8px 0 4px; }
+  .pricing-card .price-sub { font-size: 12px; color: #999; margin-bottom: 16px; }
+  .pricing-card li { font-size: 13px; color: #555; padding: 4px 0; list-style: none; }
+  .pricing-card li::before { content: "✓ "; color: #4caf50; font-weight: 700; }
+
+  /* Trust */
+  .trust-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 20px; }
+  .trust-card { background: #f8f8f8; border-radius: 10px; padding: 20px; }
+  .trust-card h4 { font-size: 13px; font-weight: 700; margin-bottom: 6px; }
+  .trust-card p { font-size: 12px; color: #666; line-height: 1.5; }
+
+  /* Languages */
+  .lang-flags { display: flex; gap: 16px; margin-top: 16px; flex-wrap: wrap; }
+  .lang-flag { background: #f8f8f8; border-radius: 8px; padding: 10px 16px; font-size: 13px; font-weight: 500; }
+
+  /* Testimonial (single) */
+  .testimonial {
+    background: #f8f8f8; border-radius: 12px; padding: 32px; margin-top: 24px;
+    font-size: 15px; color: #444; line-height: 1.7; font-style: italic; text-align: center;
+    max-width: 640px; margin-left: auto; margin-right: auto;
+  }
+  .testimonial .attr { font-style: normal; font-size: 12px; color: #999; margin-top: 12px; }
+
+  /* Divider */
+  .divider { height: 1px; background: #eee; margin: 0; }
+
+  /* Footer mock */
+  .footer-mock { background: #1a1a1a; padding: 32px 48px; }
+  .footer-mock p { color: #666; font-size: 12px; text-align: center; }
+</style>
+</head>
+<body>
+
+<!-- ============================================================ -->
+<!-- GLOBAL NAV REFERENCE -->
+<!-- ============================================================ -->
+
+<div class="page-break">
+  <h1>Global Navigation — All Pages</h1>
+  <p>Consistent across Parents, Agents, Schools. Only the active audience tab changes.</p>
+</div>
+
+<div class="page">
+  <div class="change-note">
+    <strong>CHANGE:</strong> Replace Explore/Resources/About dropdowns + anchor links with this new layout.
+    "About SchoolGo" and "Contact us" move to the footer.
+  </div>
+  <nav class="navbar">
+    <div class="navbar-left">
+      <div class="logo">SchoolGo</div>
+      <div class="audience-switcher">
+        <a href="/for-parents" class="active">Parents</a>
+        <a href="/for-agents">Agents</a>
+        <a href="/for-schools">Schools</a>
+      </div>
+    </div>
+    <div class="navbar-right">
+      <a class="nav-link">Find Schools ▾</a>
+      <a class="nav-link">Guides ▾</a>
+      <a class="btn-signin">Sign in</a>
+      <a class="btn-cta-nav">Find schools</a>
+    </div>
+  </nav>
+  <div class="dev-note">
+    <strong>Find Schools dropdown:</strong> Search all schools · Compare schools · School types in Australia · English test requirements<br>
+    <strong>Guides dropdown:</strong> How to choose a school · Understanding school fees · Student visa guide · All guides
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- PARENTS PAGE -->
+<!-- ============================================================ -->
+
+<div class="page-break">
+  <h1>1. Parents Landing Page</h1>
+  <p>/for-parents — Primary audience landing page</p>
+</div>
+
+<div class="page">
+
+  <!-- Top badge -->
+  <div class="change-note"><strong>CHANGE:</strong> "Government Registered" → "CRICOS Registered"</div>
+  <div class="top-badge"><span>CRICOS Registered</span> · data from data.gov.au</div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar-left">
+      <div class="logo">SchoolGo</div>
+      <div class="audience-switcher">
+        <a href="/for-parents" class="active">Parents</a>
+        <a href="/for-agents">Agents</a>
+        <a href="/for-schools">Schools</a>
+      </div>
+    </div>
+    <div class="navbar-right">
+      <a class="nav-link">Find Schools ▾</a>
+      <a class="nav-link">Guides ▾</a>
+      <a class="btn-signin">Sign in</a>
+      <a class="btn-cta-nav">Find schools</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <div class="hero">
+    <h1>Give your child the best <em>Australian</em> education.</h1>
+    <p class="subhead">The right Australian school sets up the right university — and the right career. Search every registered K–12 school, compare fees, English tests, and boarding — in your language.</p>
+    <div class="search-bar">
+      <div class="search-field">Where</div>
+      <div class="search-field">Year 7 – Year 12</div>
+      <div class="search-field">$15k – $45k AUD</div>
+    </div>
+    <div class="change-note" style="text-align:left; margin-bottom: 16px;"><strong>CHANGE:</strong> Replace school tiles below with Sydney Grammar, Melbourne Grammar, Brisbane Grammar</div>
+    <div class="school-tiles">
+      <div class="school-tile">
+        <div class="name">Sydney Grammar School</div>
+        <div class="location">Darlinghurst, NSW</div>
+      </div>
+      <div class="school-tile">
+        <div class="name">Melbourne Grammar School</div>
+        <div class="location">Melbourne, VIC</div>
+      </div>
+      <div class="school-tile">
+        <div class="name">Brisbane Grammar School</div>
+        <div class="location">Spring Hill, QLD</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Stats -->
+  <div class="dev-note"><strong>NO CHANGE:</strong> Stats strip — keep as-is</div>
+  <div class="stats">
+    <div class="stat"><div class="number">695+</div><div class="label">Registered Schools</div></div>
+    <div class="stat"><div class="number">8</div><div class="label">States & Territories</div></div>
+    <div class="stat"><div class="number">3</div><div class="label">Sectors</div></div>
+    <div class="stat"><div class="number">$3.5k–$78k</div><div class="label">Annual Fee Range</div></div>
+  </div>
+
+  <!-- How it works -->
+  <div class="dev-note"><strong>NO CHANGE:</strong> How it works — keep as-is</div>
+  <div class="section">
+    <div class="section-label">How it works</div>
+    <h2>From first search to offer letter — four simple steps.</h2>
+    <div class="steps">
+      <div class="step"><div class="step-num">Step 1</div><h3>Browse every registered school</h3></div>
+      <div class="step"><div class="step-num">Step 2</div><h3>Compare schools side by side</h3></div>
+      <div class="step"><div class="step-num">Step 3</div><h3>See exactly what your child needs</h3></div>
+      <div class="step"><div class="step-num">Step 4</div><h3>Connect with a trusted agent</h3></div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- Trusted agents → Get expert help -->
+  <div class="change-note"><strong>CHANGE:</strong> Section completely rewritten — new heading, new body copy</div>
+  <div class="section alt">
+    <div class="section-label">Get expert help</div>
+    <h2>Get expert help — free.</h2>
+    <p class="body">Not sure where to start? Every school works with specialist education consultants who know their admissions process inside out. SchoolGo connects you with the right one — so you get expert guidance from choosing a school to submitting your application, at no cost to you.</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- Comparison -->
+  <div class="change-note"><strong>CHANGE:</strong> "five" → "three" in headline</div>
+  <div class="section">
+    <div class="section-label">Side-by-side comparison</div>
+    <h2>Put <strong>three</strong> schools next to each other. <em>Decide in minutes, not months.</em></h2>
+    <p class="body">[Comparison table mock-up — already shows 3 schools, copy just needs to match]</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- English proficiency -->
+  <div class="change-note"><strong>CHANGE:</strong> Headline and CTA pill rewritten</div>
+  <div class="section alt">
+    <div class="section-label">English proficiency</div>
+    <h2>Find out which English test the school requires — and the score your child needs to get in.</h2>
+    <p class="body" style="margin-top: 16px;">
+      <a href="/search" style="display: inline-block; background: #f0f0f0; padding: 8px 20px; border-radius: 20px; font-size: 13px; font-weight: 600; color: #1a1a1a; text-decoration: none;">Check your school's English requirements</a>
+    </p>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- Seven languages -->
+  <div class="change-note"><strong>CHANGE:</strong> "across Asia-Pacific" → "across the world"</div>
+  <div class="section">
+    <div class="section-label">Seven languages</div>
+    <h2>The Australian school system shouldn't feel like a mystery.</h2>
+    <p class="body">Fees, entry requirements, VCE, ATAR, boarding, welfare — everything explained in your language. SchoolGo is translated end-to-end into seven languages spoken by families across the world.</p>
+    <div class="lang-flags">
+      <div class="lang-flag">English</div>
+      <div class="lang-flag">简体中文</div>
+      <div class="lang-flag">한국어</div>
+      <div class="lang-flag">Bahasa Melayu</div>
+      <div class="lang-flag">Tiếng Việt</div>
+      <div class="lang-flag">ภาษาไทย</div>
+      <div class="lang-flag">Bahasa Indonesia</div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- Admissions library -->
+  <div class="dev-note"><strong>NO CHANGE:</strong> Admissions library — keep as-is</div>
+  <div class="section alt">
+    <div class="section-label">Admissions library</div>
+    <h2>Guides that answer the questions every family asks.</h2>
+    <p class="body">[Three guide cards — keep as-is]</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- Trust & compliance -->
+  <div class="change-note"><strong>CHANGE:</strong> Subhead extended</div>
+  <div class="section">
+    <div class="section-label">Trust & compliance</div>
+    <h2>Data you can trust — so you know you're looking at legitimate institutions and accurate information.</h2>
+    <div class="trust-grid">
+      <div class="trust-card"><h4>Government-registered schools</h4><p>Every school on SchoolGo is registered with the Australian Government to enrol international students.</p></div>
+      <div class="trust-card"><h4>Kept up to date</h4><p>School data is refreshed regularly from official government registers.</p></div>
+      <div class="trust-card"><h4>National curriculum data</h4><p>Curriculum, school performance, and enrolment data sourced from Australia's national education authority.</p></div>
+      <div class="trust-card"><h4>Student protection</h4><p>All schools listed operate under Australia's legal framework for protecting international students.</p></div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- FAQ -->
+  <div class="change-note"><strong>CHANGE:</strong> All questions replaced with SEO-targeted queries. Add FAQ schema (JSON-LD).</div>
+  <div class="section alt">
+    <div class="section-label">FAQ</div>
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-list">
+      <div class="faq-item">How do I enrol my child in an Australian school from overseas?</div>
+      <div class="faq-item">How much does it cost to send my child to school in Australia?</div>
+      <div class="faq-item">What English test does my child need for an Australian school?</div>
+      <div class="faq-item">Do international students need a visa to study at an Australian school?</div>
+      <div class="faq-item">What is an education agent and do I need one?</div>
+      <div class="faq-item">What types of schools are there in Australia?</div>
+      <div class="faq-item">Is SchoolGo free?</div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="change-note"><strong>CHANGE:</strong> CTA button text changed. "Talk to a verified agent" removed.</div>
+  <div class="cta-block">
+    <h2>Their future <em>starts</em> with the right school.</h2>
+    <div class="subtext">The right school. The right university. The right career. Start searching — free, no login required.</div>
+    <a class="btn-cta" href="/search">Find the right school</a>
+  </div>
+
+</div>
+
+<!-- ============================================================ -->
+<!-- AGENTS PAGE -->
+<!-- ============================================================ -->
+
+<div class="page-break">
+  <h1>2. Agents Landing Page</h1>
+  <p>/for-agents — Education agent audience</p>
+</div>
+
+<div class="page">
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar-left">
+      <div class="logo">SchoolGo</div>
+      <div class="audience-switcher">
+        <a href="/for-parents">Parents</a>
+        <a href="/for-agents" class="active">Agents</a>
+        <a href="/for-schools">Schools</a>
+      </div>
+    </div>
+    <div class="navbar-right">
+      <a class="nav-link">Find Schools ▾</a>
+      <a class="nav-link">Guides ▾</a>
+      <a class="btn-signin">Sign in</a>
+      <a class="btn-cta-nav">Find schools</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <div class="change-note"><strong>CHANGE:</strong> H1 and subhead completely rewritten</div>
+  <div class="hero">
+    <div class="hero-label">For education agents</div>
+    <h1>All Australian schools. All your students. <em>One platform.</em></h1>
+    <p class="subhead">Every Australian school has different fees, English tests, entry requirements, and application forms. SchoolGo brings them all into one place — so you can match, compare, and apply without the guesswork.</p>
+    <div style="display: flex; gap: 12px; justify-content: center;">
+      <a class="btn-cta" href="/agents">Create your agent profile</a>
+      <a class="btn-cta" href="#how-it-works" style="background: transparent; border: 2px solid #c41e3a; color: #c41e3a;">See how it works</a>
+    </div>
+  </div>
+
+  <!-- Stats -->
+  <div class="dev-note"><strong>NO CHANGE:</strong> Stats strip — keep as-is</div>
+  <div class="stats">
+    <div class="stat"><div class="number">695</div><div class="label">CRICOS-registered schools</div></div>
+    <div class="stat"><div class="number">3</div><div class="label">Sectors</div></div>
+    <div class="stat"><div class="number">100%</div><div class="label">Free — no commission splits</div></div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- Capabilities (replaces "Why agents switch") -->
+  <div class="change-note"><strong>CHANGE:</strong> Entire "Why agents switch" section removed and replaced with capability blocks</div>
+  <div class="section">
+    <h2>Everything you need to place students into Australian schools</h2>
+    <div class="capabilities">
+      <div class="capability">
+        <h3>Search 695 schools by what matters</h3>
+        <p>Filter by fees, English tests, intakes, boarding, and scholarships. Compare side by side. No more digging through school websites one at a time.</p>
+      </div>
+      <div class="capability">
+        <h3>One student profile, every school</h3>
+        <p>Enter your student's details once. SchoolGo maps them to each school's requirements — so you see which schools fit and apply without re-entering data.</p>
+      </div>
+      <div class="capability">
+        <h3>Documents organised, scores verified</h3>
+        <p>Passports, transcripts, and test scores uploaded once, tracked for expiry. English scores checked against official records automatically.</p>
+      </div>
+      <div class="capability">
+        <h3>Your commission stays yours</h3>
+        <p>SchoolGo is free. No platform fees, no commission splits, no per-student charges. Your relationship with schools stays direct.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- Match Apply Track -->
+  <div class="change-note"><strong>CHANGE:</strong> Step copy updated</div>
+  <div class="section alt">
+    <div class="section-label">Match · Apply · Track</div>
+    <h2>Family calls at 10am. Three matched schools by 10:30.</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">Step 1</div>
+        <h3>Capture what the family wants</h3>
+        <p>Budget, location, intake.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">Step 2</div>
+        <h3>See best-fit schools</h3>
+        <p>Including English test scores.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">Step 3</div>
+        <h3>Deliver a shortlist, not a mess</h3>
+        <p>A branded PDF the family can screenshot and send to Dad.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- Pricing -->
+  <div class="dev-note"><strong>NO CHANGE:</strong> Pricing section — keep as-is</div>
+  <div class="section">
+    <div class="section-label">Pricing</div>
+    <h2>You keep 100% of your school commission.</h2>
+    <p class="body">[Pricing details — keep as-is]</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- Verified -->
+  <div class="dev-note"><strong>NO CHANGE:</strong> Verified / agent reputation — keep as-is</div>
+  <div class="section alt">
+    <div class="section-label">Verified</div>
+    <h2>Build your reputation with every placement.</h2>
+    <p class="body">[Agent profile card and copy — keep as-is]</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- Network -->
+  <div class="change-note"><strong>CHANGE:</strong> Remove "Be one of the first." from headline</div>
+  <div class="section">
+    <div class="section-label">Network</div>
+    <h2>Agents across APAC are joining.</h2>
+    <p class="body">[Agent cards — keep as-is]</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- Testimonials -->
+  <div class="change-note"><strong>CHANGE:</strong> All three quotes replaced</div>
+  <div class="section alt">
+    <div class="section-label">From the field</div>
+    <h2>What agents are saying</h2>
+    <div class="quotes">
+      <div class="quote">
+        "Every school wants a different form, different documents, different English scores. I spend more time on admin than actually helping families."
+        <div class="attr">Agency director, Shanghai · 60+ students</div>
+      </div>
+      <div class="quote">
+        "A parent asks which English test their child needs and I have to check three different school websites to give them an answer. That should take ten seconds."
+        <div class="attr">Independent agent, Ho Chi Minh City · Solo practice</div>
+      </div>
+      <div class="quote">
+        "I've placed into the same twelve schools for years because I know their process. A platform that maps every school's requirements would let me place into hundreds."
+        <div class="attr">Senior counsellor, Kuala Lumpur · 40+ students</div>
+      </div>
+    </div>
+    <p style="font-size: 11px; color: #999; margin-top: 12px;">Composite quotes based on agent interviews</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- FAQ (NEW) -->
+  <div class="new-note"><strong>NEW SECTION:</strong> FAQ added — did not exist on current agents page. Add FAQ schema (JSON-LD).</div>
+  <div class="section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-list">
+      <div class="faq-item">How do education agents find Australian schools for international students?</div>
+      <div class="faq-item">What English tests do Australian schools accept for international admissions?</div>
+      <div class="faq-item">How do education agents verify student English test scores?</div>
+      <div class="faq-item">How do I become an education agent for Australian schools?</div>
+      <div class="faq-item">Do education agents pay fees to use SchoolGo?</div>
+      <div class="faq-item">How do education agents manage multiple student applications at once?</div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="change-note"><strong>CHANGE:</strong> Headline rewritten. "Book a walkthrough" removed.</div>
+  <div class="cta-block">
+    <h2>You deserve better tools to build a better business.</h2>
+    <div class="subtext">Free. Instant onboarding. One system for every student, every school, every document.</div>
+    <a class="btn-cta" href="/agents">Create your agent profile</a>
+  </div>
+
+</div>
+
+<!-- ============================================================ -->
+<!-- SCHOOLS PAGE -->
+<!-- ============================================================ -->
+
+<div class="page-break">
+  <h1>3. Schools Landing Page</h1>
+  <p>/for-schools — Australian school admissions teams</p>
+</div>
+
+<div class="page">
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar-left">
+      <div class="logo">SchoolGo</div>
+      <div class="audience-switcher">
+        <a href="/for-parents">Parents</a>
+        <a href="/for-agents">Agents</a>
+        <a href="/for-schools" class="active">Schools</a>
+      </div>
+    </div>
+    <div class="navbar-right">
+      <a class="nav-link">Find Schools ▾</a>
+      <a class="nav-link">Guides ▾</a>
+      <a class="btn-signin">Sign in</a>
+      <a class="btn-cta-nav">Find schools</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <div class="change-note"><strong>CHANGE:</strong> H1 rewritten. "Book a walkthrough" removed.</div>
+  <div class="hero">
+    <div class="hero-label">For Australian schools</div>
+    <h1>Grow your international cohort with students who belong.</h1>
+    <p class="subhead">Reach qualified international families. Receive complete applications with verified English scores and documents — in one inbox, in a standard format. Free for every school.</p>
+    <a class="btn-cta" href="/schools">Claim your school profile</a>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- The network -->
+  <div class="dev-note"><strong>NO CHANGE:</strong> The network — keep as-is</div>
+  <div class="section">
+    <div class="section-label">The network</div>
+    <h2>One profile. Seen by families around the world.</h2>
+    <p class="body">[Stats strip and copy — keep as-is]</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- The toolkit -->
+  <div class="dev-note"><strong>NO CHANGE:</strong> The toolkit — keep as-is</div>
+  <div class="section alt">
+    <div class="section-label">The toolkit</div>
+    <h2>Three tools. One goal: the right students, with less work.</h2>
+    <p class="body">[Three tool blocks — keep as-is]</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- The journey -->
+  <div class="dev-note"><strong>NO CHANGE:</strong> The journey — keep as-is</div>
+  <div class="section">
+    <div class="section-label">The journey</div>
+    <h2>From first application to first day of term — without the inbox soup.</h2>
+    <p class="body">[Four steps — keep as-is]</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- Pricing -->
+  <div class="dev-note"><strong>NO CHANGE:</strong> Pricing cards — keep as-is</div>
+  <div class="section alt">
+    <div class="section-label">Pricing</div>
+    <h2>Free for every school.</h2>
+    <div class="pricing-cards">
+      <div class="pricing-card">
+        <div class="tier">Auto-published</div>
+        <div class="price">Free</div>
+        <div class="price-sub">Forever</div>
+        <ul>
+          <li>School profile auto-published from government data</li>
+          <li>Visible to families and agents across Asia-Pacific</li>
+          <li>Accepted English tests and minimum scores displayed</li>
+        </ul>
+      </div>
+      <div class="pricing-card recommended">
+        <div class="tier">Claimed — Recommended</div>
+        <div class="price">Free</div>
+        <div class="price-sub">Claim your profile</div>
+        <ul>
+          <li>Full control over your school profile and photos</li>
+          <li>Receive complete, verified applications</li>
+          <li>Offer / waitlist / decline workflow</li>
+          <li>Approve or block agents · View analytics</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Testimonial -->
+  <div class="change-note"><strong>CHANGE:</strong> Testimonial quote replaced</div>
+  <div class="section">
+    <div class="testimonial">
+      "Finding the right students is hard enough. Processing their applications shouldn't be. A single inbox with complete, verified applications changes everything."
+      <div class="attr">Composite quote based on admissions officer interviews</div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- FAQ -->
+  <div class="change-note"><strong>CHANGE:</strong> All questions replaced with SEO-targeted queries. Add FAQ schema (JSON-LD).</div>
+  <div class="section alt">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-list">
+      <div class="faq-item">How do Australian schools attract more international students?</div>
+      <div class="faq-item">How do schools verify international students' English test scores?</div>
+      <div class="faq-item">How do Australian schools work with education agents?</div>
+      <div class="faq-item">What documents do schools need for an international student application?</div>
+      <div class="faq-item">How much does it cost to list on SchoolGo?</div>
+      <div class="faq-item">How do schools diversify their international student intake beyond China?</div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="dev-note"><strong>NO CHANGE:</strong> CTA footer — keep as-is</div>
+  <div class="cta-block">
+    <h2>Your next intake <em>starts</em> with better applications.</h2>
+    <div class="subtext">Free listing. No credit card. Claim takes 10 minutes.</div>
+    <a class="btn-cta" href="/schools">Claim your school profile</a>
+  </div>
+
+</div>
+
+<!-- Legend -->
+<div class="page-break">
+  <h1>Colour Key</h1>
+  <p>Used throughout this document to flag changes</p>
+</div>
+<div class="page" style="padding: 24px;">
+  <div class="change-note" style="margin-bottom: 8px;"><strong>GREEN:</strong> Changed — existing content has been modified</div>
+  <div class="new-note" style="margin-bottom: 8px;"><strong>BLUE:</strong> New — section added that didn't exist before</div>
+  <div class="remove-note" style="margin-bottom: 8px;"><strong>RED:</strong> Removed — content has been deleted</div>
+  <div class="dev-note"><strong>YELLOW:</strong> No change — section kept as-is (noted for completeness)</div>
+</div>
+
+</body>
+</html>

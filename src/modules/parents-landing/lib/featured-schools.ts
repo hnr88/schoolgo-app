@@ -6,7 +6,11 @@ import type {
   SearchResponse,
 } from '@/modules/school-search/types/search-api.types';
 
-const FEATURED_LIMIT = 3;
+const FEATURED_NAMES = [
+  'Sydney Grammar School',
+  'Melbourne Grammar School',
+  'Brisbane Grammar School',
+];
 
 export interface FeaturedSchool {
   documentId: string;
@@ -37,20 +41,28 @@ function toFeatured(hit: SchoolHit): FeaturedSchool {
   };
 }
 
-export async function getFeaturedSchools(): Promise<FeaturedSchool[]> {
+async function fetchByName(name: string): Promise<SchoolHit | null> {
   try {
     const response = await fetch(`${env.NEXT_PUBLIC_API_URL}/api/search/schools`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ limit: FEATURED_LIMIT }),
+      body: JSON.stringify({ query: name, limit: 1 }),
       next: { revalidate: 300 },
     });
 
-    if (!response.ok) return [];
+    if (!response.ok) return null;
 
     const payload = (await response.json()) as SearchResponse;
-    const hits = payload.data?.hits ?? [];
-    return hits.slice(0, FEATURED_LIMIT).map(toFeatured);
+    return payload.data?.hits?.[0] ?? null;
+  } catch {
+    return null;
+  }
+}
+
+export async function getFeaturedSchools(): Promise<FeaturedSchool[]> {
+  try {
+    const hits = await Promise.all(FEATURED_NAMES.map(fetchByName));
+    return hits.filter((h): h is SchoolHit => h !== null).map(toFeatured);
   } catch {
     return [];
   }

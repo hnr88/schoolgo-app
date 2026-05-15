@@ -41,9 +41,6 @@ export async function SchoolsHero() {
             <CtaLink href='/schools' size='lg' arrow>
               {t('ctaPrimary')}
             </CtaLink>
-            <CtaLink href='#how-it-works' variant='secondary' size='lg'>
-              {t('ctaSecondary')}
-            </CtaLink>
           </div>
         </div>
 

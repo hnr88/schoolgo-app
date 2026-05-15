@@ -2,7 +2,7 @@ import type { Portal } from '@/lib/portal-url';
 
 type FooterLink =
   | { label: string; path: string }
-  | { columnKey: 'parents' | 'agents' | 'schools'; linkKey: string; path: string };
+  | { columnKey: 'parents' | 'agents' | 'schools' | 'company' | 'resources'; linkKey: string; path: string };
 
 type FooterColumn = {
   portal?: Portal;
@@ -80,10 +80,17 @@ const SCHOOL_SECONDARY_COLUMN: FooterColumn = {
   ],
 };
 
+const COMPANY_COLUMN: FooterColumn = {
+  links: [
+    { columnKey: 'company', linkKey: 'about', path: '/launching-soon' },
+    { columnKey: 'company', linkKey: 'contact', path: '/launching-soon' },
+  ],
+};
+
 export const FOOTER_COLUMNS_BY_PORTAL = {
-  parent: [PARENT_PRIMARY_COLUMN, PARENT_SECONDARY_COLUMN, GUIDES_COLUMN],
-  agent: [AGENT_PRIMARY_COLUMN, AGENT_SECONDARY_COLUMN],
-  school: [SCHOOL_PRIMARY_COLUMN, SCHOOL_SECONDARY_COLUMN],
+  parent: [PARENT_PRIMARY_COLUMN, PARENT_SECONDARY_COLUMN, GUIDES_COLUMN, COMPANY_COLUMN],
+  agent: [AGENT_PRIMARY_COLUMN, AGENT_SECONDARY_COLUMN, COMPANY_COLUMN],
+  school: [SCHOOL_PRIMARY_COLUMN, SCHOOL_SECONDARY_COLUMN, COMPANY_COLUMN],
 } satisfies Record<Portal, FooterColumn[]>;
 
 export const LANGUAGES: Array<{ code: string; label: string }> = [
