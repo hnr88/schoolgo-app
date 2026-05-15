@@ -66,7 +66,7 @@ export async function StatsStrip({ school }: { school: SchoolDetail }) {
     : t('notOffered');
 
   return (
-    <SectionContainer size="wide" className="-mt-10 md:-mt-12 relative z-10">
+    <SectionContainer size="wide" className="relative z-10 -mt-12 md:-mt-16 lg:-mt-20">
       <div className="grid grid-cols-2 md:grid-cols-5 bg-card border border-divider rounded-lg shadow-2 overflow-hidden divide-x divide-y divide-divider md:divide-y-0">
         <StatCell
           label={t('type')}
