@@ -1,11 +1,20 @@
 import 'server-only';
 import { env } from '@/lib/env';
 import { SCHOOL_IMAGES } from '@/modules/school-search/constants/school-card.constants';
+import type {
+  SchoolHit,
+  SearchResponse,
+} from '@/modules/school-search/types/search-api.types';
 
-const FEATURED_SLUGS = [
-  'sydney-grammar-school',
-  'melbourne-grammar-school',
-  'brisbane-grammar-school',
+interface FeaturedTarget {
+  name: string;
+  slug: string;
+}
+
+const FEATURED: FeaturedTarget[] = [
+  { name: 'Sydney Grammar School', slug: 'sydney-grammar-school' },
+  { name: 'Melbourne Grammar School', slug: 'melbourne-grammar-school' },
+  { name: 'Brisbane Grammar School', slug: 'brisbane-grammar-school' },
 ];
 
 export interface FeaturedSchool {
@@ -40,7 +49,7 @@ function pickImage(id: string): string {
   return SCHOOL_IMAGES[hash % SCHOOL_IMAGES.length];
 }
 
-function lowestTuition(record: SchoolApiRecord): number | null {
+function lowestFromRecord(record: SchoolApiRecord): number | null {
   const values = [
     record.primaryAnnualTuition,
     record.juniorSecAnnualTuition,
@@ -49,7 +58,7 @@ function lowestTuition(record: SchoolApiRecord): number | null {
   return values.length > 0 ? Math.min(...values) : null;
 }
 
-function toFeatured(record: SchoolApiRecord): FeaturedSchool {
+function fromRecord(record: SchoolApiRecord): FeaturedSchool {
   return {
     documentId: record.documentId,
     slug: record.slug,
@@ -57,18 +66,28 @@ function toFeatured(record: SchoolApiRecord): FeaturedSchool {
     suburb: record.suburb ?? '',
     state: record.state ?? '',
     curriculumOffered: record.curriculumOffered,
-    lowestAnnualTuition: lowestTuition(record),
+    lowestAnnualTuition: lowestFromRecord(record),
     photoUrl: pickImage(record.documentId),
   };
 }
 
-async function fetchBySlug(slug: string): Promise<SchoolApiRecord | null> {
+function fromHit(hit: SchoolHit): FeaturedSchool {
+  return {
+    documentId: hit.documentId,
+    slug: hit.slug,
+    name: hit.name,
+    suburb: hit.suburb,
+    state: hit.state,
+    curriculumOffered: hit.curriculumOffered,
+    lowestAnnualTuition: hit.lowestAnnualTuition,
+    photoUrl: pickImage(hit.documentId),
+  };
+}
+
+async function fetchByQuery(query: string): Promise<SchoolApiRecord | null> {
   try {
-    const params = new URLSearchParams();
-    params.set('filters[slug][$eq]', slug);
-    params.set('pagination[pageSize]', '1');
     const response = await fetch(
-      `${env.NEXT_PUBLIC_API_URL}/api/schools?${params.toString()}`,
+      `${env.NEXT_PUBLIC_API_URL}/api/schools?${query}`,
       { next: { revalidate: 300 } },
     );
     if (!response.ok) return null;
@@ -79,10 +98,64 @@ async function fetchBySlug(slug: string): Promise<SchoolApiRecord | null> {
   }
 }
 
+async function fetchBySlug(slug: string): Promise<SchoolApiRecord | null> {
+  const params = new URLSearchParams();
+  params.set('filters[slug][$eq]', slug);
+  params.set('pagination[pageSize]', '1');
+  return fetchByQuery(params.toString());
+}
+
+async function fetchByExactName(name: string): Promise<SchoolApiRecord | null> {
+  const params = new URLSearchParams();
+  params.set('filters[name][$eqi]', name);
+  params.set('pagination[pageSize]', '1');
+  return fetchByQuery(params.toString());
+}
+
+async function fetchByNameContains(name: string): Promise<SchoolApiRecord | null> {
+  const params = new URLSearchParams();
+  params.set('filters[name][$containsi]', name);
+  params.set('pagination[pageSize]', '1');
+  params.set('sort[0]', 'name:asc');
+  return fetchByQuery(params.toString());
+}
+
+async function fetchByName(name: string): Promise<SchoolHit | null> {
+  try {
+    const response = await fetch(`${env.NEXT_PUBLIC_API_URL}/api/search/schools`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ query: name, limit: 1 }),
+      next: { revalidate: 300 },
+    });
+    if (!response.ok) return null;
+    const payload = (await response.json()) as SearchResponse;
+    return payload.data?.hits?.[0] ?? null;
+  } catch {
+    return null;
+  }
+}
+
+async function resolveOne(target: FeaturedTarget): Promise<FeaturedSchool | null> {
+  const bySlug = await fetchBySlug(target.slug);
+  if (bySlug) return fromRecord(bySlug);
+
+  const byExactName = await fetchByExactName(target.name);
+  if (byExactName) return fromRecord(byExactName);
+
+  const byContains = await fetchByNameContains(target.name);
+  if (byContains) return fromRecord(byContains);
+
+  const hit = await fetchByName(target.name);
+  if (hit) return fromHit(hit);
+
+  return null;
+}
+
 export async function getFeaturedSchools(): Promise<FeaturedSchool[]> {
   try {
-    const records = await Promise.all(FEATURED_SLUGS.map(fetchBySlug));
-    return records.filter((r): r is SchoolApiRecord => r !== null).map(toFeatured);
+    const results = await Promise.all(FEATURED.map(resolveOne));
+    return results.filter((r): r is FeaturedSchool => r !== null);
   } catch {
     return [];
   }

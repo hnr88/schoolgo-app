@@ -40,7 +40,7 @@ export async function ParentsHero() {
 
           <h1 className='font-display text-5xl font-extrabold leading-display-xl tracking-display-lg text-ink-900 md:text-7xl lg:text-8xl'>
             {t('headlinePrefix')}{' '}
-            <em className='italic font-medium text-ink-900'>{t('headlineEmphasis')}</em>{' '}
+            <em className='italic font-medium text-primary'>{t('headlineEmphasis')}</em>{' '}
             {t('headlineSuffix')}
           </h1>
 
