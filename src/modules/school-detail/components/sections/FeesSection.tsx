@@ -12,6 +12,21 @@ function formatAud(value: number | null | undefined): string | null {
 }
 
 export async function FeesSection({ school }: { school: SchoolDetail }) {
+  const hasAnyFeeData =
+    school.primaryAnnualTuition != null ||
+    school.juniorSecAnnualTuition != null ||
+    school.seniorSecAnnualTuition != null ||
+    school.feeBoardingAnnual != null ||
+    school.applicationFee != null ||
+    school.enrolmentFee != null ||
+    school.feeApplicationRefundable != null ||
+    school.scholarshipAvailable != null ||
+    school.intakePeriods != null ||
+    school.applicationDeadline != null ||
+    school.nextIntakeDate != null;
+
+  if (!hasAnyFeeData) return null;
+
   const t = await getTranslations('SchoolDetail.fees');
 
   const feeCards: { label: string; value: string | null }[] = [
@@ -63,9 +78,7 @@ export async function FeesSection({ school }: { school: SchoolDetail }) {
       <h2 id="fees-heading" className="text-2xl font-bold text-ink-900 mt-2 md:text-3xl">
         {t('heading')}
       </h2>
-      <p className="mt-4 text-body text-foggy max-w-3xl">{t('intro')}</p>
-
-      {feeCards.length > 0 ? (
+      {feeCards.length > 0 && (
         <div className="mt-6 grid gap-3 sm:grid-cols-3">
           {feeCards.map((card) => (
             <div key={card.label} className="bg-muted rounded-lg p-4 text-center">
@@ -75,8 +88,6 @@ export async function FeesSection({ school }: { school: SchoolDetail }) {
             </div>
           ))}
         </div>
-      ) : (
-        <p className="mt-6 text-body-sm text-foggy">{t('feesNotListed')}</p>
       )}
 
       {highlightCount > 0 && (
@@ -126,7 +137,6 @@ export async function FeesSection({ school }: { school: SchoolDetail }) {
         </dl>
       )}
 
-      <p className="mt-6 rounded-lg bg-muted p-4 text-body-sm text-foggy">{t('sourceNote')}</p>
     </section>
   );
 }

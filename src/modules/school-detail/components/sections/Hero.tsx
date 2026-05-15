@@ -1,4 +1,4 @@
-import { ArrowLeft, GraduationCap, MapPin, School } from 'lucide-react';
+import { ArrowLeft, MapPin, School } from 'lucide-react';
 import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
@@ -34,7 +34,7 @@ export async function Hero({ school, activePortal }: HeroProps) {
   const searchHref = activePortal === 'parent' ? '/search' : `/${activePortal}/search`;
 
   return (
-    <section className="relative overflow-hidden border-b border-divider bg-ink-900 pt-20 text-white md:pt-28">
+    <section className="relative overflow-hidden border-b border-divider bg-ink-900 pt-28 text-white md:pt-40">
       <div className="absolute inset-0 opacity-35" aria-hidden="true">
         <Image src={heroImage} alt="" fill sizes="100vw" className="object-cover" priority />
       </div>
@@ -70,10 +70,6 @@ export async function Hero({ school, activePortal }: HeroProps) {
               </p>
             )}
 
-            <span className="mt-4 inline-flex items-center gap-2 rounded-pill bg-white/8 px-3 py-1 text-body-sm text-white/70">
-              <GraduationCap className="h-4 w-4 shrink-0" aria-hidden="true" />
-              {t('hero.intlGuideLabel')}
-            </span>
           </div>
 
           <div className="rounded-lg border border-white/15 bg-white/10 p-5 backdrop-blur-md">

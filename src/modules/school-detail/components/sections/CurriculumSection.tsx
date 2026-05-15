@@ -39,8 +39,6 @@ function resolveAgeRange(school: SchoolDetail): string | null {
 }
 
 export async function CurriculumSection({ school }: { school: SchoolDetail }) {
-  const t = await getTranslations('SchoolDetail.curriculum');
-
   const pills: string[] = [
     ...(school.programType ? [school.programType] : []),
     ...(school.curriculumOffered ? [school.curriculumOffered] : []),
@@ -49,6 +47,22 @@ export async function CurriculumSection({ school }: { school: SchoolDetail }) {
   ];
 
   const ageRange = resolveAgeRange(school);
+  const courses = school.cricosCoursesCodes ? parseCricosCourses(school.cricosCoursesCodes) : [];
+
+  const hasTable = Boolean(
+    school.levelsOffered ||
+      ageRange ||
+      school.proposedEntryLevel ||
+      school.proposedEntryTerm ||
+      school.languagesOffered ||
+      school.elicosEslSupport ||
+      school.atarAvailable != null ||
+      school.cricosCode,
+  );
+
+  if (pills.length === 0 && !hasTable && courses.length === 0) return null;
+
+  const t = await getTranslations('SchoolDetail.curriculum');
 
   const tableRows: { label: string; value: string | null }[] = [
     { label: t('yearLevels'), value: school.levelsOffered },
@@ -61,8 +75,6 @@ export async function CurriculumSection({ school }: { school: SchoolDetail }) {
     { label: t('cricosCode'), value: school.cricosCode },
   ];
 
-  const courses = school.cricosCoursesCodes ? parseCricosCourses(school.cricosCoursesCodes) : [];
-
   return (
     <section
       id="curriculum"
@@ -73,8 +85,6 @@ export async function CurriculumSection({ school }: { school: SchoolDetail }) {
       <h2 id="curriculum-heading" className="mt-2 text-2xl font-bold text-ink-900 md:text-3xl">
         {t('heading')}
       </h2>
-      <p className="mt-4 max-w-3xl text-body text-foggy">{t('intro', { name: school.name })}</p>
-
       {pills.length > 0 && (
         <div className="mt-6 flex flex-wrap gap-2">
           {pills.map((pill, i) => (
@@ -128,7 +138,6 @@ export async function CurriculumSection({ school }: { school: SchoolDetail }) {
         </>
       )}
 
-      <p className="mt-6 rounded-lg bg-muted p-4 text-body-sm text-foggy">{t('sourceNote')}</p>
     </section>
   );
 }

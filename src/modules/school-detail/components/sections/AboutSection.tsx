@@ -7,28 +7,28 @@ interface AboutSectionProps {
 }
 
 export async function AboutSection({ school }: AboutSectionProps) {
+  const isIntlRelevant = Boolean(
+    school.cricosCode || school.internationalEnrolmentUrl || school.internationalStudentDescription,
+  );
+
+  if (!school.description && !school.welcomeMessage && !isIntlRelevant && !school.claimedAt) {
+    return null;
+  }
+
   const t = await getTranslations('SchoolDetail.about');
-
-  const now = new Date();
-  const lastReviewedIso = school.claimedAt
-    ? school.claimedAt
-    : new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), 1)).toISOString();
-
-  const lastReviewedFormatted = new Intl.DateTimeFormat('en-AU', {
-    month: 'long',
-    year: 'numeric',
-  }).format(new Date(lastReviewedIso));
-
-  const heading = school.description
-    ? t('heading', { name: school.name })
-    : t('defaultHeading', { name: school.name });
 
   const paragraphs: string[] = school.description
     ? school.description
         .split(/\n{2,}/)
         .map((p) => p.trim())
         .filter(Boolean)
-    : [t('defaultDescription', { name: school.name })];
+    : [];
+
+  const lastReviewedFormatted = school.claimedAt
+    ? new Intl.DateTimeFormat('en-AU', { month: 'long', year: 'numeric' }).format(
+        new Date(school.claimedAt),
+      )
+    : null;
 
   return (
     <section
@@ -41,14 +41,8 @@ export async function AboutSection({ school }: AboutSectionProps) {
         id="about-heading"
         className="mt-2 text-2xl font-bold text-ink-900 md:text-3xl"
       >
-        {heading}
+        {t('heading', { name: school.name })}
       </h2>
-      <div className="mt-4 rounded-lg border border-babu-100 bg-babu-50 p-4">
-        <p className="text-body-sm leading-relaxed text-babu-800">
-          <strong>{t('intlNoticeLead')}</strong>{' '}
-          {t('intlNoticeBody', { name: school.name })}
-        </p>
-      </div>
       <div className="mt-6 max-w-3xl space-y-4">
         {paragraphs.map((p, i) => (
           <p key={i} className="text-body leading-relaxed text-foggy">
@@ -61,12 +55,19 @@ export async function AboutSection({ school }: AboutSectionProps) {
           </p>
         )}
       </div>
-      <div className="mt-6 rounded-lg bg-muted p-4 text-body-sm leading-relaxed text-foggy">
-        {t('sourceNote')}{' '}
-        <time dateTime={lastReviewedIso}>
-          {t('lastReviewed', { date: lastReviewedFormatted })}
-        </time>
-      </div>
+      {isIntlRelevant && (
+        <div className="mt-4 rounded-lg border border-babu-100 bg-babu-50 p-4">
+          <p className="text-body-sm leading-relaxed text-babu-800">
+            <strong>{t('intlNoticeLead')}</strong> {t('intlNoticeBody', { name: school.name })}
+          </p>
+        </div>
+      )}
+      {school.claimedAt && lastReviewedFormatted && (
+        <div className="mt-6 rounded-lg bg-muted p-4 text-body-sm leading-relaxed text-foggy">
+          {t('sourceNote')}{' '}
+          <time dateTime={school.claimedAt}>{t('lastReviewed', { date: lastReviewedFormatted })}</time>
+        </div>
+      )}
     </section>
   );
 }

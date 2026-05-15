@@ -1,4 +1,4 @@
-import { Mail, MapPin, Phone, User } from 'lucide-react';
+import { Mail, MapPin, Phone } from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
 import type { SchoolDetail } from '@/modules/school-detail/lib/school-detail-api';
 
@@ -23,10 +23,12 @@ function ContactRow({ icon, label, value }: ContactRowProps) {
 }
 
 export async function ContactCard({ school }: { school: SchoolDetail }) {
-  const t = await getTranslations('SchoolDetail.sidebar.contact');
-
   const addressParts = [school.suburb, school.state, school.postcode].filter(Boolean);
   const address = addressParts.length > 0 ? addressParts.join(', ') : null;
+
+  if (!school.admissionsEmail && !school.admissionsPhone && !address) return null;
+
+  const t = await getTranslations('SchoolDetail.sidebar.contact');
 
   return (
     <section aria-labelledby="contact-heading" className="rounded-lg border border-border bg-card p-6 shadow-1">
@@ -64,12 +66,6 @@ export async function ContactCard({ school }: { school: SchoolDetail }) {
             value={address}
           />
         )}
-
-        <ContactRow
-          icon={<User className="h-4 w-4" aria-hidden="true" />}
-          label={t('principalRole')}
-          value="—"
-        />
       </div>
     </section>
   );

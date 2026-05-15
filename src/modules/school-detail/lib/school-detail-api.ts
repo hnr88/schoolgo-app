@@ -85,6 +85,12 @@ export interface SchoolDetail {
   cambridgeMinScore: number | string | null;
   logo?: StrapiMedia | null;
   coverImage?: StrapiMedia | null;
+  admissionsSteps?: unknown;
+  boardingFeatures?: unknown;
+  locationFeatures?: unknown;
+  faqItems?: unknown;
+  intlNoticeBody?: string | null;
+  sourceNote?: string | null;
 }
 
 interface SchoolsResponse {

@@ -34,11 +34,11 @@ export async function SchoolDetailPage({ school, activePortal, locale }: SchoolD
 
   return (
     <>
-      <MarketingHeader activePortal={activePortal} variant="dark" />
       <IntlBanner />
+      <MarketingHeader activePortal={activePortal} variant="dark" />
       <main className="bg-background">
-        <BreadcrumbNav school={school} activePortal={activePortal} />
         <Hero school={school} activePortal={activePortal} />
+        <BreadcrumbNav school={school} activePortal={activePortal} />
         <StatsStrip school={school} />
 
         <SectionContainer size="wide" className="py-8 md:py-12">

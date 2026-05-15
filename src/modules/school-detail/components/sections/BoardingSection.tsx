@@ -11,26 +11,60 @@ const formatAud = (value: number | null): string | null => {
   }).format(value);
 };
 
+interface BoardingFeature {
+  title: string;
+  desc: string;
+}
+
+function parseFeatures(raw: unknown): BoardingFeature[] {
+  if (!raw) return [];
+  if (Array.isArray(raw)) {
+    return raw
+      .filter((f): f is { title: unknown; desc: unknown } => typeof f === 'object' && f !== null && 'title' in f && 'desc' in f)
+      .map((f) => ({
+        title: typeof f.title === 'string' ? f.title : '',
+        desc: typeof f.desc === 'string' ? f.desc : '',
+      }))
+      .filter((f) => f.title && f.desc);
+  }
+  if (typeof raw === 'object') {
+    return Object.values(raw as Record<string, unknown>)
+      .filter((f): f is { title: unknown; desc: unknown } => typeof f === 'object' && f !== null && 'title' in f && 'desc' in f)
+      .map((f) => ({
+        title: typeof f.title === 'string' ? f.title : '',
+        desc: typeof f.desc === 'string' ? f.desc : '',
+      }))
+      .filter((f) => f.title && f.desc);
+  }
+  return [];
+}
+
 interface BoardingSectionProps {
   school: SchoolDetail;
 }
 
 export async function BoardingSection({ school }: BoardingSectionProps) {
   const acc = school.accommodation ?? '';
-  if (!school.boardingAvailable && !['boarding', 'both'].includes(acc)) {
+  const tableRows: { label: string; value: string | null }[] = [];
+  const features = parseFeatures(school.boardingFeatures);
+  const hasTableData = tableRows.some((r) => r.value != null) || school.internationalStudentDescription;
+
+  if (!school.boardingAvailable && !['boarding', 'both'].includes(acc) && !hasTableData && features.length === 0) {
     return null;
   }
 
   const t = await getTranslations('SchoolDetail.boarding');
 
-  const tableRows: { label: string; value: string | null }[] = [
+  const rows: { label: string; value: string | null }[] = [
     { label: t('accommodation'), value: school.accommodation },
     { label: t('fee'), value: formatAud(school.feeBoardingAnnual) },
     { label: t('years'), value: school.cricosAgeRange },
     { label: t('intake'), value: school.intakePeriods },
   ];
 
-  const featureKeys = ['pastoralCare', 'academicSupport', 'weekendActivities', 'intlSupport'] as const;
+  if (!school.internationalStudentDescription && rows.every((r) => r.value == null) && features.length === 0) {
+    return null;
+  }
 
   return (
     <section
@@ -42,12 +76,14 @@ export async function BoardingSection({ school }: BoardingSectionProps) {
       <h2 id="boarding-heading" className="mt-2 text-2xl font-bold text-ink-900 md:text-3xl">
         {t('heading')}
       </h2>
-      <p className="mt-4 max-w-3xl text-body text-foggy">
-        {school.internationalStudentDescription ?? t('intro')}
-      </p>
+      {school.internationalStudentDescription && (
+        <p className="mt-4 max-w-3xl text-body text-foggy">
+          {school.internationalStudentDescription}
+        </p>
+      )}
 
       <dl className="mt-6">
-        {tableRows.map(
+        {rows.map(
           ({ label, value }) =>
             value != null && (
               <div
@@ -63,18 +99,16 @@ export async function BoardingSection({ school }: BoardingSectionProps) {
         )}
       </dl>
 
-      <div className="mt-6 grid gap-3 sm:grid-cols-2">
-        {featureKeys.map((key) => (
-          <div key={key} className="rounded-lg bg-muted p-4">
-            <p className="text-body-sm font-semibold text-ink-900">
-              {t(`features.${key}.title`)}
-            </p>
-            <p className="mt-1 text-body-sm leading-relaxed text-foggy">
-              {t(`features.${key}.desc`)}
-            </p>
-          </div>
-        ))}
-      </div>
+      {features.length > 0 && (
+        <div className="mt-6 grid gap-3 sm:grid-cols-2">
+          {features.map((f, i) => (
+            <div key={i} className="rounded-lg bg-muted p-4">
+              <p className="text-body-sm font-semibold text-ink-900">{f.title}</p>
+              <p className="mt-1 text-body-sm leading-relaxed text-foggy">{f.desc}</p>
+            </div>
+          ))}
+        </div>
+      )}
     </section>
   );
 }
