@@ -1,1591 +1,1889 @@
 {
-	"Metadata": {
-		"title": "SchoolGo 澳大利亚 | 寻找最好的学校",
-		"description": "搜索和比较澳大利亚最好的学校。按课程、价格、地点等进行筛选。",
-		"ogDescription": "搜索和比较澳大利亚最好的学校。"
-	},
-	"Common": {
-		"step": "Step {number, number}",
-		"cricosVerified": "CRICOS Verified",
-		"qeacVerified": "QEAC Verified",
-		"claimedBySchool": "Claimed by school",
-		"addToShortlist": "Add to shortlist",
-		"removeFromShortlist": "Remove from shortlist",
-		"comingSoon": "Coming soon",
-		"skipToContent": "跳至内容",
-		"primaryNavigation": "主导航"
-	},
-	"ParentsMetadata": {
-		"title": "SchoolGo — 为孩子寻找澳大利亚学校",
-		"description": "搜索每一所CRICOS注册的澳大利亚学校。免费比较学费、英语考试要求及入学时间——支持七种语言。",
-		"ogDescription": "每一所CRICOS学校。已认证。用您的语言。"
-	},
-	"MarketingHeader": {
-		"findSchools": "查找学校",
-		"audiences": {
-			"parents": "家长",
-			"agents": "中介",
-			"schools": "学校"
-		},
-		"nav": {
-			"parent": {
-				"howItWorks": "使用方法",
-				"compare": "比较",
-				"faq": "常见问题"
-			},
-			"agent": {
-				"howItWorks": "使用方法",
-				"commission": "佣金",
-				"trust": "信任"
-			},
-			"school": {
-				"howItWorks": "使用方法",
-				"pricing": "定价",
-				"faq": "常见问题"
-			}
-		},
-		"language": "语言",
-		"signIn": "登录",
-		"getStarted": "立即开始",
-		"openMenu": "打开菜单",
-		"closeMenu": "关闭菜单",
-		"menu": "Menu",
-		"subNav": {
-			"explore": {
-				"label": "探索",
-				"items": {
-					"browseSchools": "浏览学校",
-					"browseSchoolsDesc": "搜索所有注册的澳大利亚学校",
-					"compareSchools": "比较学校",
-					"compareSchoolsDesc": "并排对比学费、考试及入学时间",
-					"schoolTypes": "学校类型",
-					"schoolTypesDesc": "公立、天主教与独立学校对比",
-					"englishTests": "英语考试",
-					"englishTestsDesc": "AEAS、IELTS 及认可考试指南"
-				}
-			},
-			"resources": {
-				"label": "资源",
-				"items": {
-					"admissionsGuide": "招生指南",
-					"admissionsGuideDesc": "逐步入学流程说明",
-					"schoolFees": "学校费用",
-					"schoolFeesDesc": "学费、附加费及第一年总费用",
-					"visaRequirements": "签证要求",
-					"visaRequirementsDesc": "学生签证 500 核心要点",
-					"allGuides": "全部指南",
-					"allGuidesDesc": "浏览所有面向国际家庭的指南"
-				}
-			},
-			"about": {
-				"label": "关于",
-				"items": {
-					"aboutSchoolGo": "关于 SchoolGo",
-					"aboutSchoolGoDesc": "我们的使命与故事",
-					"contactUs": "联系我们",
-					"contactUsDesc": "与我们的团队取得联系",
-					"forAgents": "面向中介",
-					"forAgentsDesc": "教育中介专属工具",
-					"forSchools": "面向学校",
-					"forSchoolsDesc": "扩大您的国际生群体"
-				}
-			}
-		}
-	},
-	"MarketingFooter": {
-		"tagline": "连接未来领袖与澳大利亚最优秀的学校——横跨全境，支持七种语言。",
-		"columns": {
-			"parents": {
-				"title": "面向家长",
-				"links": {
-					"findSchools": "查找学校",
-					"compare": "比较",
-					"scholarships": "奖学金",
-					"english": "英语考试"
-				}
-			},
-			"agents": {
-				"title": "面向中介",
-				"links": {
-					"overview": "中介概览",
-					"qeac": "QEAC 认证",
-					"pipeline": "Pipeline tools [Soon]",
-					"login": "Agent login [Soon]"
-				}
-			},
-			"schools": {
-				"title": "面向学校",
-				"links": {
-					"overview": "学校概览",
-					"claim": "认领主页",
-					"login": "School login [Soon]",
-					"pricing": "定价"
-				}
-			},
-			"resources": {
-				"title": "资源",
-				"links": {
-					"help": "帮助中心",
-					"contact": "联系我们",
-					"privacy": "隐私政策",
-					"terms": "使用条款"
-				}
-			}
-		},
-		"language": "语言",
-		"copyright": "© {year} SchoolGo Australia。保留所有权利。",
-		"attribution": "数据来源：data.gov.au · CC BY 2.5 AU · 符合 ESOS 法案",
-		"portals": "我是...",
-		"portalLabels": {
-			"parents": "家长",
-			"agents": "中介",
-			"schools": "学校"
-		}
-	},
-	"ParentsHero": {
-		"trustPill": {
-			"brand": "政府",
-			"brandAccent": "注册认证",
-			"source": "数据来源 data.gov.au"
-		},
-		"headlinePrefix": "为您的孩子找到",
-		"headlineEmphasis": "澳大利亚",
-		"headlineSuffix": "学校。",
-		"lede": "在一处搜索澳大利亚每一所 CRICOS 注册的 K–12 学校。免费比较学费、寄宿、英语考试要求——支持普通话、韩语、泰语、越南语、马来语或英语搜索。",
-		"searchAriaLabel": "搜索学校",
-		"searchFields": {
-			"where": {
-				"label": "地点",
-				"value": "澳大利亚任意地点"
-			},
-			"yearLevel": {
-				"label": "年级",
-				"value": "Year 7 – Year 12"
-			},
-			"fees": {
-				"label": "学费",
-				"value": "$15k – $45k AUD"
-			}
-		},
-		"searchButtonLabel": "搜索",
-		"searchClearLabel": "清除搜索",
-		"featured": {
-			"eyebrow": "精选",
-			"shortlistAdd": "将 {name} 加入候选名单",
-			"shortlistRemove": "从候选名单中移除 {name}",
-			"cards": {
-				"a": {
-					"name": "Scotch College Melbourne",
-					"location": "Hawthorn, VIC",
-					"curriculum": "VCE",
-					"fee": "$38.5k AUD",
-					"boarding": "寄宿",
-					"rating": "4.9"
-				},
-				"b": {
-					"name": "Sydney Grammar School",
-					"location": "Darlinghurst, NSW",
-					"curriculum": "HSC",
-					"fee": "$41.2k AUD",
-					"boarding": "仅走读",
-					"rating": "4.8"
-				},
-				"c": {
-					"name": "Brisbane Grammar School",
-					"location": "Spring Hill, QLD",
-					"curriculum": "QCE/IB",
-					"fee": "$35.8k AUD",
-					"boarding": "寄宿",
-					"rating": "4.7"
-				}
-			}
-		}
-	},
-	"ParentsFourSteps": {
-		"eyebrow": "使用方法",
-		"heading": "从初次浏览到录取通知——四个简单步骤。",
-		"subheading": "无隐藏费用。申请前无需登录。",
-		"steps": {
-			"browse": {
-				"title": "浏览每一所 CRICOS 学校",
-				"description": "按州份、学费、类别、课程、寄宿和奖学金筛选 {count, number} 所学校——用您的语言。"
-			},
-			"shortlist": {
-				"title": "收藏四所，并排比较",
-				"description": "对比学费、入学时间、ICSEA 及认可英语考试。几分钟内做决定，无需数月等待。"
-			},
-			"prepare": {
-				"title": "查看精确要求",
-				"description": "每条学校信息均列明认可考试、最低分数、所需材料及入学窗口。"
-			},
-			"apply": {
-				"title": "通过认证中介申请",
-				"description": "您的中介持有 QEAC 认证徽章。申请全程在一个控制台跟踪。",
-				"comingSoon": "即将推出"
-			}
-		},
-		"ctaBrowse": "开始浏览",
-		"ctaLearn": "查看使用方法",
-		"badge": {
-			"cricosVerified": "CRICOS Verified · Claimed by school",
-			"updated": "Updated April 2026"
-		},
-		"visuals": {
-			"browse": {
-				"title": "[TODO: zh] 695 schools loaded",
-				"subtitle": "[TODO: zh] Filtered by state, fees & curriculum"
-			},
-			"shortlist": {
-				"title": "[TODO: zh] Wei's shortlist",
-				"subtitle": "[TODO: zh] 3 schools in Victoria · All accept AEAS"
-			},
-			"prepare": {
-				"title": "[TODO: zh] Requirements matched",
-				"subtitle": "[TODO: zh] AEAS 70+ · IELTS 5.5+ · Documents ready"
-			},
-			"apply": {
-				"title": "[TODO: zh] Application submitted",
-				"subtitle": "[TODO: zh] Tracked end-to-end · Status: Under review"
-			}
-		}
-	},
-	"ParentsVerified": {
-		"eyebrow": "每一所 CRICOS 学校",
-		"heading": "已认证。用您的语言。",
-		"subheading": "真实建筑照片。真实学费。真实入学日历。学校数据来源于 CRICOS 和 ACARA，每月更新。",
-		"cards": {
-			"a": {
-				"name": "Scotch College",
-				"location": "Hawthorn, VIC",
-				"sector": "独立学校"
-			},
-			"b": {
-				"name": "Sydney Grammar",
-				"location": "Darlinghurst, NSW",
-				"sector": "独立学校"
-			},
-			"c": {
-				"name": "Brisbane Grammar",
-				"location": "Spring Hill, QLD",
-				"sector": "独立学校"
-			},
-			"d": {
-				"name": "Christ Church Grammar",
-				"location": "Claremont, WA",
-				"sector": "独立学校"
-			}
-		}
-	},
-	"ParentsComparison": {
-		"eyebrow": "比较",
-		"heading": "将学校并排对比。",
-		"headingAccent": "几分钟内做出决定，无需数月等待。",
-		"columns": {
-			"fee": "年费",
-			"tests": "认可考试",
-			"intakes": "入学时间",
-			"stateSector": "[TODO: zh] State & sector",
-			"curriculum": "[TODO: zh] Curriculum",
-			"boarding": "[TODO: zh] Boarding",
-			"minScore": "[TODO: zh] Min. AEAS score",
-			"scholarships": "[TODO: zh] Scholarships"
-		},
-		"notPublished": "未公开",
-		"shortlistLabel": "[TODO: zh] Shortlist · {count} schools",
-		"dayOnly": "[TODO: zh] — Day only",
-		"noneIntl": "[TODO: zh] — None intl."
-	},
-	"ParentsPickATest": {
-		"eyebrow": "英语水平",
-		"heading": "选择考试，查看哪些学校认可——",
-		"headingAccent": "及最低分数要求。",
-		"subheading": "我们在每所学校的主页上列明认可的英语考试。无需再逐一浏览50个学校网站。",
-		"tests": {
-			"aeas": {
-				"name": "AEAS",
-				"fullName": "Australian Education Assessment Services",
-				"description": "Most commonly accepted by Australian independent schools"
-			},
-			"idat": {
-				"name": "iDAT",
-				"fullName": "International Digital Admissions Test",
-				"description": "Growing in popularity for K–12 admissions"
-			},
-			"duolingo": {
-				"name": "Duolingo",
-				"fullName": "Duolingo English Test",
-				"description": "Accepted by an increasing number of schools"
-			},
-			"ielts": {
-				"name": "IELTS",
-				"fullName": "International English Language Testing System",
-				"description": "Standard for senior secondary entry (Year 11+)"
-			},
-			"pte": {
-				"name": "PTE Academic",
-				"fullName": "Pearson Test of English Academic",
-				"description": "Accepted by some schools for Year 11–12 entry"
-			},
-			"cambridge": {
-				"name": "Cambridge",
-				"fullName": "Cambridge English Qualifications",
-				"description": "Accepted by select schools"
-			},
-			"toefl": {
-				"name": "TOEFL",
-				"fullName": "Test of English as a Foreign Language",
-				"description": "Accepted by select schools for senior entry"
-			}
-		},
-		"cta": "查看认可该考试的学校"
-	},
-	"ParentsSevenLanguages": {
-		"eyebrow": "七种语言",
-		"heading": "家庭不应在午夜翻译学费单。",
-		"subheading": "SchoolGo 全程翻译为亚太地区最常用的七种语言。",
-		"languages": {
-			"en": "English",
-			"zh": "简体中文",
-			"vi": "Tiếng Việt",
-			"ko": "한국어",
-			"ms": "Bahasa Melayu",
-			"th": "ภาษาไทย",
-			"id": "Bahasa Indonesia"
-		}
-	},
-	"ParentsArticles": {
-		"eyebrow": "招生资料库",
-		"heading": "由招生官撰写，翻译成七种语言。",
-		"subheading": "关于签证、入学时间、英语考试和学费的简明指南。免费，无需登录。",
-		"items": {
-			"intakes": {
-				"title": "了解澳大利亚学校入学时间",
-				"meta": "阅读约6分钟 · 每月更新"
-			},
-			"englishTests": {
-				"title": "您的学校接受哪种英语考试？",
-				"meta": "阅读约8分钟 · 逐项考试分析"
-			},
-			"boarding": {
-				"title": "寄宿还是走读：家庭的选择与原因",
-				"meta": "阅读约5分钟 · 案例研究"
-			}
-		},
-		"readMore": "阅读文章"
-	},
-	"ParentsStatsBar": {
-		"eyebrow": "数据一览",
-		"heading": "澳大利亚最大的CRICOS学校目录。",
-		"subheading": "每一所注册学校，经过验证且可搜索——从公立到私立，覆盖全部八个州和领地。",
-		"items": {
-			"schools": {
-				"value": "{count, number}+",
-				"label": "CRICOS Schools"
-			},
-			"states": {
-				"value": "8",
-				"label": "States & Territories"
-			},
-			"sectors": {
-				"value": "All 3 Sectors",
-				"label": "Government · Independent · Catholic"
-			},
-			"fees": {
-				"value": "$3.5k – $78k",
-				"label": "Annual Fee Range"
-			}
-		}
-	},
-	"ParentsFinalCta": {
-		"eyebrow": "从这里开始",
-		"headingPrefix": "您的搜索，",
-		"headingEmphasis": "就此",
-		"headingSuffix": "开始，支持七种语言。",
-		"subheading": "免费。无需登录。更新至 {month} {year, number}。",
-		"ctaPrimary": "找到您的学校",
-		"ctaSecondary": "联系认证中介"
-	},
-	"ParentsTrustBar": {
-		"eyebrow": "信任与合规",
-		"heading": "您可信赖的数据。",
-		"subheading": "SchoolGo 上的每一条学校信息均来自官方政府数据来源——经过验证、持有授权，并每月更新。",
-		"items": {
-			"cricos": {
-				"label": "政府注册学校",
-				"description": "每所学校均与官方联邦注册信息进行交叉核验。"
-			},
-			"datagov": {
-				"label": "持续更新",
-				"description": "依据 CC BY 2.5 AU 授权的开放数据——透明且可公开审查。"
-			},
-			"acara": {
-				"label": "国家课程数据",
-				"description": "课程体系、ICSEA 分数及招生数据均来源于澳大利亚国家权威机构。"
-			},
-			"esos": {
-				"label": "学生保护",
-				"description": "SchoolGo 在澳大利亚《海外学生教育服务法》框架内运营。"
-			}
-		},
-		"attribution": "学校数据来源于澳大利亚海外学生机构及课程联邦注册处（CRICOS）和澳大利亚课程、评估与报告局（ACARA）。更新至 2026 年 4 月。"
-	},
-	"ParentsFaq": {
-		"heading": "Frequently Asked Questions",
-		"items": {
-			"free": {
-				"question": "Is SchoolGo free?",
-				"answer": "Yes. SchoolGo is completely free for parents, education agents, and schools. There are no listing fees, application fees, or subscription costs."
-			},
-			"dataSource": {
-				"question": "Where does the school data come from?",
-				"answer": "All school listings are sourced from CRICOS (the Commonwealth Register of Institutions and Courses for Overseas Students), which is the Australian Government's official register of schools authorised to enrol international students. We cross-reference this with ACARA school profile data for enrolment figures, ICSEA scores, and GPS coordinates."
-			},
-			"englishTests": {
-				"question": "What English proficiency tests do Australian schools accept?",
-				"answer": "Different schools accept different tests. The most common are AEAS (Australian Education Assessment Services), iDAT (International Digital Admissions Test), Duolingo English Test, IELTS, and PTE Academic. SchoolGo shows which specific tests each school accepts on their profile page."
-			},
-			"doINeedAgent": {
-				"question": "[TODO: zh] Do I need an education agent?",
-				"answer": "[TODO: zh] You don't have to use one, but most families do — and it's free. Education agents help you choose the right school, prepare documents, and manage the application. SchoolGo shows which agents work with each school, so you can find someone who already knows the admissions process."
-			},
-			"updateFrequency": {
-				"question": "How often is the data updated?",
-				"answer": "CRICOS data is refreshed monthly from data.gov.au. School-specific details (fees, requirements, intake dates) are updated by schools who have claimed their profiles. If a school hasn't claimed their profile, the data shown is from CRICOS and ACARA public datasets."
-			}
-		}
-	},
-	"AgentsMetadata": {
-		"title": "SchoolGo — 像管理投资组合一样经营您的中介业务",
-		"description": "面向将学生送入澳大利亚学校的教育中介的 QEAC 认证工具。标准化申请、实时进度追踪、全额佣金。",
-		"ogDescription": "像管理投资组合一样经营您的业务。保留 100% 的佣金。"
-	},
-	"AgentsHero": {
-		"eyebrow": "面向教育中介 · QEAC 认证",
-		"headlinePrefix": "像管理投资组合一样",
-		"headlineEmphasis": "经营您的业务。",
-		"lede": "一个认证主页。{count, number} 所 CRICOS 学校。一个家庭可查看的进度看板。SchoolGo 向学校收费，不向您收费。",
-		"ctaPrimary": "申请认证",
-		"ctaSecondary": "查看运作方式",
-		"badgeMeta": "Sample agent profile",
-		"stats": {
-			"schools": {
-				"value": "{count, number}",
-				"label": "已认证 CRICOS 学校"
-			},
-			"sectors": {
-				"value": "3",
-				"label": "Sectors — Gov, Independent, Catholic"
-			},
-			"commission": {
-				"value": "100%",
-				"label": "佣金完整保留"
-			}
-		}
-	},
-	"AgentsPainPoints": {
-		"eyebrow": "Why agents switch",
-		"heading": "Built for Education Agents Who Manage Real Pipelines",
-		"subheading": "76% of international school enrolments come through education agents. SchoolGo is built to make you more effective, not to replace you.",
-		"items": {
-			"email": {
-				"question": "Tired of emailing 15 admissions offices?",
-				"answer": "One platform, one application workflow. Submit to multiple schools and track responses in real time. Every application carries your verified agent attribution."
-			},
-			"status": {
-				"question": "Students keep asking 'did you hear back?'",
-				"answer": "Live application tracker your students can see. Status updates flow automatically — you spend less time chasing and more time advising."
-			},
-			"trust": {
-				"question": "Schools don't know if you're legitimate?",
-				"answer": "SchoolGo agent verification with your QEAC credentials. Your verified badge and track record appear on every application you submit."
-			},
-			"requirements": {
-				"question": "Different requirements for every school?",
-				"answer": "SchoolGo maps each school's specific entry requirements: accepted English tests, minimum scores, required documents, intake dates, and application fees. No more digging through 50 school websites."
-			}
-		}
-	},
-	"AgentsStatsBar": {
-		"items": {
-			"schools": "{count, number}+ School Profiles",
-			"requirements": "Entry Requirements Mapped",
-			"tests": "English Test Requirements Listed",
-			"free": "Free for Agents"
-		}
-	},
-	"AgentsMatching": {
-		"eyebrow": "匹配 · 申请 · 追踪",
-		"heading": "上午10点家长来电，10:30前匹配三所学校。",
-		"subheading": "SchoolGo 按州份、学费、英语水平和入学时间筛选出最合适的学校，并在几分钟内完成标准化申请提交。",
-		"steps": {
-			"listen": {
-				"title": "记录家庭需求",
-				"description": "预算、地点、英语水平、期望入学时间——用家长的语言填写一份表格。"
-			},
-			"match": {
-				"title": "查看最匹配的学校",
-				"description": "按学生档案筛选。查看每所学校认可的考试及最低分数要求。",
-				"comingSoon": "即将推出"
-			},
-			"deliver": {
-				"title": "交付精准候选名单，而非杂乱材料",
-				"description": "一份家庭可截图发给父亲的品牌 PDF。无需来自十五所学校的各自 PDF。",
-				"comingSoon": "即将推出"
-			}
-		},
-		"inboxLabel": "招生收件箱",
-		"inboxRows": {
-			"scotch": {
-				"school": "Scotch College",
-				"location": "Hawthorn, VIC",
-				"status": "匹配 · AEAS 70+"
-			},
-			"brisbane": {
-				"school": "Brisbane Grammar",
-				"location": "Spring Hill, QLD",
-				"status": "匹配 · AEAS 68+"
-			},
-			"sydney": {
-				"school": "Sydney Grammar",
-				"location": "Darlinghurst, NSW",
-				"status": "匹配 · AEAS 65+"
-			}
-		}
-	},
-	"AgentsCommission": {
-		"eyebrow": "定价",
-		"heading": "您保留 100% 的学校佣金。",
-		"subheading": "我们向学校收费，不向您收费。您与学校的商业关系保持直接。",
-		"statValue": "$0",
-		"statLabel": "Platform cost per agent. Zero fees, zero commission splits — ever.",
-		"bullets": {
-			"zero": {
-				"title": "零每生收费",
-				"description": "无佣金分成。无安置费。无订阅费。"
-			},
-			"direct": {
-				"title": "与学校直接合作关系",
-				"description": "提交申请的瞬间，您的归属即已锁定。"
-			},
-			"audit": {
-				"title": "完整审计记录",
-				"description": "每次状态变更均带时间戳。争议止于文件记录。"
-			}
-		}
-	},
-	"AgentsQeacTrust": {
-		"eyebrow": "已认证",
-		"heading": "一个家长——和学校——真正信任的主页。",
-		"subheading": "您的 QEAC 资质一次性核实完成。您的徽章和业绩记录将出现在每一份申请中。",
-		"sampleLabel": "Sample profile",
-		"profile": {
-			"name": "中介主页",
-			"agentName": "Mei Lin",
-			"qeac": "QEAC 已认证",
-			"yearsActive": "从业年限",
-			"students": "已安置学生",
-			"placements": "已安置学校",
-			"languages": "所用语言",
-			"languagesValue": "中 · EN"
-		}
-	},
-	"AgentsScale": {
-		"eyebrow": "网络",
-		"heading": "Agents across APAC are joining. Be one of the first.",
-		"subheading": "From Shanghai to Jakarta, Ho Chi Minh to Seoul — agents placing families into Australian K–12.",
-		"agents": {
-			"a": {
-				"name": "Li Wei",
-				"region": "Shanghai · 中国",
-				"meta": "QEAC verified · Independent schools"
-			},
-			"b": {
-				"name": "Nguyễn Minh",
-				"region": "Ho Chi Minh · Việt Nam",
-				"meta": "QEAC verified · All sectors"
-			},
-			"c": {
-				"name": "Siti Rahman",
-				"region": "Kuala Lumpur · Malaysia",
-				"meta": "QEAC verified · Boarding specialist"
-			},
-			"d": {
-				"name": "Ji-eun Park",
-				"region": "Seoul · 대한민국",
-				"meta": "QEAC verified · VIC & NSW"
-			}
-		},
-		"cta": "申请认证"
-	},
-	"AgentsTestimonial": {
-		"eyebrow": "[TODO: zh] From the field",
-		"heading": "[TODO: zh] What agents are saying",
-		"items": {
-			"a": {
-				"quote": "[TODO: zh] I used to forward 40 PDFs a week between parents on WeChat and six admissions offices over email. One platform would cut my admin in half.",
-				"attribution": "[TODO: zh] Agency director, Shanghai",
-				"meta": "[TODO: zh] 60+ students · 3 counsellors"
-			},
-			"b": {
-				"quote": "[TODO: zh] My families want updates at 11pm their time. A live tracker they can check themselves would save me two hours a day on WhatsApp.",
-				"attribution": "[TODO: zh] Independent agent, Ho Chi Minh City",
-				"meta": "[TODO: zh] 25+ students · Solo practice"
-			},
-			"c": {
-				"quote": "[TODO: zh] I re-type the same passport number into five different school forms every week. Enter-once, apply-many would change everything.",
-				"attribution": "[TODO: zh] Senior counsellor, Kuala Lumpur",
-				"meta": "[TODO: zh] 40+ students · 2 branches"
-			}
-		},
-		"disclaimer": "[TODO: zh] Composite quotes based on agent interviews"
-	},
-	"AgentsFinalCta": {
-		"eyebrow": "获得认证",
-		"headingPrefix": "您的投资组合",
-		"headingEmphasis": "值得",
-		"headingSuffix": "更好的。",
-		"subheading": "免费。需要 QEAC 认证。入驻流程 48 小时内完成。",
-		"ctaPrimary": "申请认证",
-		"ctaSecondary": "预约演示"
-	},
-	"SchoolsMetadata": {
-		"title": "SchoolGo — 用更少的邮件填满您的国际生名额",
-		"description": "为澳大利亚学校提供统一的招生收件箱。QEAC 认证中介、真实申请，无需按生收费。",
-		"ogDescription": "填满您的国际生名额。用更少的邮件。"
-	},
-	"SchoolsHero": {
-		"eyebrow": "面向澳大利亚学校",
-		"headlinePrefix": "填满您的",
-		"headlineEmphasis": "国际生",
-		"headlineSuffix": "名额。用更少的邮件。",
-		"lede": "一个认证主页，被七个国家的家庭看到。从 QEAC 认证中介收取标准化申请——格式与您招生团队已在使用的一致。",
-		"ctaPrimary": "认领您的学校主页",
-		"ctaSecondary": "预约演示",
-		"inbox": {
-			"eyebrow": "Applications inbox — preview",
-			"countLabel": "本月",
-			"rows": {
-				"a": {
-					"name": "Sophie Chen",
-					"status": "新申请",
-					"meta": "VIC · Year 9 · AEAS 78"
-				},
-				"b": {
-					"name": "Minh Tran",
-					"status": "审核中",
-					"meta": "VIC · Year 11 · IELTS 6.5"
-				},
-				"c": {
-					"name": "Ji-woo Park",
-					"status": "已发放录取",
-					"meta": "NSW · Year 10 · AEAS 74"
-				}
-			}
-		}
-	},
-	"SchoolsStats": {
-		"eyebrow": "网络效应",
-		"heading": "一个主页。被七个国家的家庭看到。",
-		"subheading": "您的学校信息出现在每一次搜索、每一次比较、每一份匹配候选名单中——以家庭的语言呈现。",
-		"items": {
-			"schools": {
-				"value": "695+",
-				"label": "CRICOS-registered schools"
-			},
-			"states": {
-				"value": "8",
-				"label": "States & territories"
-			},
-			"sectors": {
-				"value": "3",
-				"label": "Sectors — Government, Independent, Catholic"
-			},
-			"feeRange": {
-				"value": "$3.5k – $78k",
-				"label": "Annual fee range (AUD)"
-			}
-		}
-	},
-	"SchoolsThreeTools": {
-		"eyebrow": "工具包",
-		"heading": "三项工具。一个目标：用更少的工作招到合适的学生。",
-		"subheading": "SchoolGo 为您的招生团队提供三项真正需要的功能。",
-		"tools": {
-			"profile": {
-				"title": "持续更新的学校主页",
-				"description": "学费、入学时间、认可考试、奖学金及相关文件——由您更新，以家庭语言展示。"
-			},
-			"applications": {
-				"title": "标准化申请",
-				"description": "每份申请均采用相同格式，附有 QEAC 认证中介归属及完整材料。"
-			},
-			"inbox": {
-				"title": "统一的招生收件箱",
-				"description": "追踪每份申请的状态。一键发放录取、候补或拒绝通知。家庭和中介即时看到状态更新。"
-			}
-		}
-	},
-	"SchoolsTimeline": {
-		"eyebrow": "招生旅程",
-		"heading": "从首份申请到开学第一天——无需陷入邮件乱局。",
-		"subheading": "国际招生全流程，尽在一处。",
-		"steps": {
-			"receive": {
-				"title": "收取",
-				"description": "申请附带英语成绩、相关材料及认证中介信息，直接进入您的收件箱。",
-				"comingSoon": "即将推出"
-			},
-			"review": {
-				"title": "审核",
-				"description": "您的团队按照自有标准进行评估。备注仅对内部可见。",
-				"comingSoon": "即将推出"
-			},
-			"decide": {
-				"title": "决定",
-				"description": "一键发放录取、候补或拒绝通知。状态即时同步至家庭和中介。",
-				"comingSoon": "即将推出"
-			},
-			"onboard": {
-				"title": "入学",
-				"description": "在同一线程中分享入学手续材料、住宿信息及迎新链接。",
-				"comingSoon": "即将推出"
-			}
-		}
-	},
-	"SchoolsPricing": {
-		"eyebrow": "定价",
-		"heading": "无中介费。无佣金。一项年度套餐。",
-		"subheading": "支持 SchoolGo 的学校支付一项透明年费。家庭和中介无需付费。",
-		"plans": {
-			"listing": {
-				"name": "基础列表",
-				"price": "Free",
-				"priceMeta": "永久免费",
-				"features": {
-					"a": "自动发布您的 CRICOS 主页",
-					"b": "认可英语考试及最低分数",
-					"c": "标准化申请收件箱"
-				},
-				"cta": "认领您的主页"
-			},
-			"admissions": {
-				"name": "招生版",
-				"price": "$12,800",
-				"priceMeta": "AUD / 年",
-				"badge": "最受欢迎",
-				"features": {
-					"a": "基础列表的全部功能",
-					"b": "录取 / 候补 / 拒绝工作流",
-					"c": "QEAC 认证中介目录",
-					"d": "每个主页页面的七语言翻译"
-				},
-				"cta": "开启招生版"
-			}
-		}
-	},
-	"SchoolsTestimonial": {
-		"quote": "The hardest part of international admissions isn't finding students — it's processing incomplete applications from 15 different email threads.",
-		"attribution": "Composite quote based on admissions officer interviews"
-	},
-	"SchoolsFinalCta": {
-		"eyebrow": "从这里开始",
-		"headingPrefix": "您的下一届入学",
-		"headingEmphasis": "就此",
-		"headingSuffix": "开始。",
-		"subheading": "免费列表。无需信用卡。认领仅需10分钟。",
-		"ctaPrimary": "认领您的学校主页",
-		"ctaSecondary": "预约演示"
-	},
-	"SchoolsFaq": {
-		"heading": "[TODO: zh] Frequently Asked Questions",
-		"items": {
-			"claim": {
-				"question": "[TODO: zh] How do I claim my school's profile?",
-				"answer": "[TODO: zh] Search for your school on SchoolGo and click \"Claim This School.\" You'll verify your identity as a staff member, and once approved you can edit your profile, update fees, and manage applications."
-			},
-			"agents": {
-				"question": "[TODO: zh] How does SchoolGo work with education agents?",
-				"answer": "[TODO: zh] By default, your profile works with your school's existing agents. You can see which agents have placed students with you, invite new agents, or manage agent relationships from your dashboard."
-			},
-			"commission": {
-				"question": "[TODO: zh] Does SchoolGo charge schools or agents?",
-				"answer": "[TODO: zh] No. SchoolGo is free for everyone — schools, agents, and parents. There are no listing fees, per-student fees, or commission splits."
-			},
-			"data": {
-				"question": "[TODO: zh] Where does the school data come from?",
-				"answer": "[TODO: zh] All school profiles are auto-published from CRICOS (the Australian Government's official register) and cross-referenced with ACARA school profile data. Schools that claim their profile can update their own details at any time."
-			}
-		}
-	},
-	"Navbar": {
-		"brand": "School",
-		"brandAccent": "Go",
-		"region": "澳大利亚",
-		"findSchools": "查找学校",
-		"compare": "比较",
-		"scholarships": "奖学金",
-		"admissions": "招生",
-		"contactUs": "联系我们",
-		"signIn": "登录"
-	},
-	"Footer": {
-		"brand": "School",
-		"brandAccent": "Go",
-		"region": "澳大利亚",
-		"tagline": "连接未来领袖与大陆最好的学术基础。",
-		"resources": "资源",
-		"directory": "目录",
-		"copyright": "© {year} SchoolGo 澳大利亚。保留所有权利。",
-		"resourceLinks": {
-			"vceResources": "VCE 资源",
-			"hscGuides": "HSC 指南",
-			"ibRequirements": "IB 要求"
-		},
-		"directoryLinks": {
-			"scholarshipTips": "奖学金提示",
-			"contactSupport": "联系支持"
-		},
-		"social": {
-			"website": "访问网站",
-			"share": "分享",
-			"email": "给我们发邮件"
-		}
-	},
-	"SchoolSearch": {
-		"searchPlaceholder": "按学校名称、城市或郊区搜索...",
-		"clearSearch": "清除搜索",
-		"filters": {
-			"title": "搜索筛选",
-			"subtitle": "筛选澳大利亚学校",
-			"priceRangeLabel": "价格范围 (AUD)",
-			"priceRangeValue": "${min}k – ${max}k",
-			"priceMin": "$5,000",
-			"priceMax": "$60,000+",
-			"englishTests": "英语水平考试",
-			"englishTestsHint": "学校接受认可的英语考试",
-			"englishTestsToggle": "切换英语水平考试筛选",
-			"curriculum": "课程",
-			"location": "位置",
-			"resetFilters": "重置筛选",
-			"resetAll": "重置全部",
-			"locked": {
-				"title": "Unlock this filter",
-				"cta": "Create free account"
-			},
-			"collapse": "Collapse",
-			"expand": "Expand"
-		},
-		"chips": {
-			"topRated": "最高评分",
-			"boarding": "提供寄宿",
-			"coed": "男女同校",
-			"scholarships": "奖学金开放",
-			"openDays": "开放日"
-		},
-		"states": {
-			"VIC": "维多利亚州 (VIC)",
-			"NSW": "新南威尔士州 (NSW)",
-			"QLD": "昆士兰州 (QLD)",
-			"SA": "南澳大利亚州 (SA)",
-			"WA": "西澳大利亚州 (WA)",
-			"TAS": "塔斯马尼亚州 (TAS)",
-			"ACT": "澳大利亚首都领地 (ACT)",
-			"NT": "北领地 (NT)"
-		},
-		"autocomplete": {
-			"schoolsHeading": "学校",
-			"suburbsHeading": "郊区和邮编",
-			"loading": "搜索中…",
-			"empty": "无匹配结果"
-		},
-		"saveSearch": {
-			"cta": "保存搜索",
-			"promptTitle": "保存此搜索",
-			"nameLabel": "名称",
-			"namePlaceholder": "例如：布里斯班候选名单",
-			"confirm": "保存",
-			"cancel": "取消",
-			"successToast": "搜索已保存",
-			"errorToast": "无法保存搜索",
-			"signInRequired": "登录以保存搜索"
-		},
-		"savedSearches": {
-			"heading": "已保存的搜索",
-			"empty": "暂无保存的搜索",
-			"applyCta": "应用",
-			"deleteCta": "删除",
-			"signInRequired": "登录以查看已保存的搜索",
-			"lastResultCount": "{count, plural, =0 {无结果} other {# 个结果}}"
-		},
-		"bookmark": {
-			"add": "保存学校",
-			"remove": "从已保存中移除",
-			"signInRequired": "登录以保存学校"
-		},
-		"results": {
-			"title": "可用学校",
-			"count": "{count, plural, one {# 个结果} other {# 个结果}}",
-			"viewAll": "查看所有学校",
-			"searching": "[TODO: zh] Searching…",
-			"error": "[TODO: zh] Something went wrong. Please try again.",
-			"empty": "[TODO: zh] No schools found. Try adjusting your filters.",
-			"loading": "正在加载学校…"
-		},
-		"map": {
-			"title": "澳大利亚 — 学校地图",
-			"reset": "[TODO: zh] Reset filters and map",
-			"zoomIn": "放大",
-			"zoomOut": "缩小",
-			"ctrlScrollHint": "[TODO: zh] Use Ctrl + scroll to zoom the map",
-			"loading": "正在加载地图…"
-		},
-		"card": {
-			"currency": "AUD",
-			"viewDetails": "查看 {name}",
-			"topRated": "Top rated"
-		},
-		"loginPrompt": {
-			"title": "解锁完整搜索",
-			"subtitle": "登录以使用详细筛选器、保存学校和比较课程。",
-			"signIn": "登录以继续",
-			"signUp": "立即注册"
-		},
-		"lockedDescription": "登录以解锁 — 创建免费账户以使用此筛选器",
-		"compare": {
-			"regionLabel": "比较学校",
-			"clearAll": "清除所有比较选择",
-			"loading": "正在加载比较数据…"
-		},
-		"spec": {
-			"previewBadge": "Preview",
-			"previewTitle": "Spec filters",
-			"modeBadge": {
-				"basic": "基础",
-				"advanced": "高级"
-			},
-			"lockedDescription": "Sign up to unlock this filter.",
-			"showFewer": "Show fewer",
-			"location": {
-				"title": "位置",
-				"stateLabel": "州或领地",
-				"suburbLabel": "郊区或邮编",
-				"suburbPlaceholder": "例如 Hawthorn 或 3122"
-			},
-			"schoolProfile": {
-				"title": "School profile",
-				"sectorLabel": "Sector",
-				"accommodationLabel": "Accommodation",
-				"religionLabel": "Religious affiliation"
-			},
-			"enrolment": {
-				"title": "Enrolment & entry",
-				"yearLevelLabel": "Entry year level",
-				"ageLabel": "Student age",
-				"agePlaceholder": "—",
-				"ageHint": "Most {age}-year-olds enter {expected} — showing all results for your selection.",
-				"termLabel": "Entry term"
-			},
-			"academic": {
-				"title": "Academic",
-				"programLabel": "Program type",
-				"atarLabel": "ATAR available",
-				"atarTooltip": "Australian Tertiary Admission Rank — the score used for university entry in Australia",
-				"englishSupportLabel": "English language support",
-				"programTooltips": {
-					"australianCert": "The standard Australian senior secondary certificate — VCE (VIC), HSC (NSW), QCE (QLD), etc.",
-					"ib": "International Baccalaureate — a globally recognised program accepted by universities worldwide",
-					"elicos": "English Language Intensive Courses for Overseas Students — intensive English preparation before starting mainstream school"
-				}
-			},
-			"englishTest": {
-				"title": "英语考试成绩",
-				"selectorLabel": "我有一个成绩，考试为",
-				"scoreLabel": "{label} 成绩",
-				"scorePlaceholder": "输入成绩",
-				"scoreHint": "范围：{min}–{max}",
-				"aeas": "AEAS",
-				"idat": "iDAT",
-				"duolingo": "Duolingo",
-				"ielts": "IELTS",
-				"pte": "PTE",
-				"cambridge": "Cambridge"
-			},
-			"tile": {
-				"status": {
-					"open": "开放",
-					"limited": "名额有限",
-					"waitlist": "仅候补",
-					"closed": "已关闭"
-				},
-				"sector": {
-					"government": "公立",
-					"nonGovernment": "非政府",
-					"catholic": "天主教"
-				},
-				"accommodation": {
-					"boarding": "寄宿",
-					"homestay": "寄宿家庭",
-					"both": "两者皆有",
-					"none": "无"
-				},
-				"actions": {
-					"bookmark": "收藏 {name}",
-					"bookmarkAdd": "将 {name} 加入收藏",
-					"bookmarkRemove": "从收藏中移除 {name}",
-					"compare": "将 {name} 加入比较"
-				}
-			},
-			"sector": {
-				"government": "Government",
-				"nonGovernment": "Non-government",
-				"catholic": "Catholic"
-			},
-			"accommodation": {
-				"boarding": "Boarding",
-				"homestay": "Homestay",
-				"both": "Both",
-				"none": "None"
-			},
-			"religion": {
-				"nonDenominational": "Non-denominational",
-				"anglican": "Anglican",
-				"baptist": "Baptist",
-				"lutheran": "Lutheran",
-				"unitingChurch": "Uniting Church",
-				"presbyterian": "Presbyterian",
-				"islamic": "Islamic",
-				"jewish": "Jewish",
-				"buddhist": "Buddhist",
-				"copticOrthodox": "Coptic Orthodox",
-				"greekOrthodox": "Greek Orthodox",
-				"seventhDayAdventist": "Seventh-day Adventist",
-				"quaker": "Quaker",
-				"interdenominationalChristian": "Interdenominational Christian",
-				"showMore": "Show all ({count})",
-				"showLess": "Show less"
-			},
-			"yearLevel": {
-				"gr4": "Gr 4",
-				"gr5": "Gr 5",
-				"gr6": "Gr 6",
-				"yr7": "Yr 7",
-				"yr8": "Yr 8",
-				"yr9": "Yr 9",
-				"yr10": "Yr 10",
-				"yr11": "Yr 11",
-				"yr12": "Yr 12"
-			},
-			"entryTerm": {
-				"term1": "Term 1",
-				"term2": "Term 2",
-				"term3": "Term 3",
-				"term4": "Term 4"
-			},
-			"programType": {
-				"australianCert": "Australian Cert.",
-				"ib": "IB",
-				"elicos": "ELICOS"
-			},
-			"englishTestOption": {
-				"aeas": "AEAS",
-				"idat": "iDAT",
-				"duolingo": "Duolingo",
-				"ielts": "IELTS",
-				"pte": "PTE",
-				"cambridge": "Cambridge"
-			},
-			"gender": {
-				"boys": "Boys",
-				"girls": "Girls",
-				"coEd": "Co-ed"
-			},
-			"schoolLevel": {
-				"primary": "Primary",
-				"secondary": "Secondary"
-			},
-			"quickChip": {
-				"boys": "Boys",
-				"girls": "Girls",
-				"coEd": "Co-ed",
-				"primary": "Primary",
-				"secondary": "Secondary",
-				"boarding": "Boarding",
-				"groupAriaLabel": "Quick filters"
-			},
-			"sort": {
-				"label": "排序方式",
-				"nameAsc": "学校名称 (A–Z)",
-				"nameDesc": "学校名称 (Z–A)",
-				"tuitionAsc": "学费由低到高",
-				"tuitionDesc": "学费由高到低",
-				"state": "州份",
-				"enrolmentStatus": "招生状态（开放优先）",
-				"applicationDeadlineAsc": "申请截止日期（最近）",
-				"schoolSizeAsc": "学校规模（小到大）",
-				"schoolSizeDesc": "学校规模（大到小）",
-				"internationalPctAsc": "国际生比例（低到高）",
-				"internationalPctDesc": "国际生比例（高到低）"
-			},
-			"topBar": {
-				"searchPlaceholder": "Search by school name, city, or suburb",
-				"feeLabel": "Annual fee",
-				"feeReadout": "${min}k – ${max}k"
-			},
-			"compareBar": {
-				"label": "比较（{count}/{max}）",
-				"remove": "移除 {name}",
-				"cta": "比较学校",
-				"capReached": "已达比较上限"
-			},
-			"tileCard": {
-				"tuitionFrom": "From ${amount} / year",
-				"viewSchool": "View school",
-				"bookmark": "Bookmark",
-				"bookmarkRemove": "Remove bookmark",
-				"compareCheckbox": "Add {name} to compare",
-				"status": {
-					"open": "Open",
-					"limited": "Limited places",
-					"waitlist": "Waitlist only",
-					"closed": "Closed"
-				}
-			},
-			"stepper": {
-				"decrease": "{label} decrease",
-				"increase": "{label} increase"
-			}
-		}
-	},
-	"Applications": {
-		"title": "申请",
-		"subtitle": "管理和追踪所有学生在各学校的申请。",
-		"searchPlaceholder": "按学生或学校搜索...",
-		"clearSearch": "清除搜索",
-		"allStatuses": "所有状态",
-		"filterActive": "活跃",
-		"filterNeedsAction": "需要处理",
-		"statusDraft": "草稿",
-		"statusSubmitted": "已提交",
-		"statusReceived": "已收到",
-		"statusUnderReview": "审核中",
-		"statusDocumentsRequested": "需补充文件",
-		"statusAssessmentRequired": "需要测评",
-		"statusInterviewScheduled": "面试已安排",
-		"statusOfferMade": "已发放录取",
-		"statusOfferAccepted": "已接受录取",
-		"statusPreEnrolment": "预入学",
-		"statusCoeIssued": "已签发CoE",
-		"statusEnrolled": "已入学",
-		"statusWithdrawn": "已撤回",
-		"statusDeclined": "已拒绝",
-		"statusWaitlisted": "候补名单",
-		"columnStudent": "学生",
-		"columnSchool": "学校",
-		"columnState": "州份",
-		"columnYearLevel": "年级",
-		"columnStatus": "状态",
-		"columnSubmitted": "提交时间",
-		"columnDays": "天数",
-		"emptyTitle": "暂无申请",
-		"emptySubtitle": "先为您的学生创建一份申请。",
-		"emptyFilteredTitle": "没有符合筛选条件的申请",
-		"emptyFilteredSubtitle": "请尝试调整筛选条件或搜索词。",
-		"addApplication": "新建申请",
-		"paginationShowing": "显示",
-		"paginationOf": "共 {total} 条",
-		"allRows": "全部",
-		"today": "今天",
-		"daysAgo": "{count}天前",
-		"exportCsv": "导出CSV",
-		"detailTitle": "申请详情",
-		"backToApplications": "返回申请列表",
-		"tabDetails": "详情",
-		"tabDocuments": "文件",
-		"tabTimeline": "时间线",
-		"tabMessages": "消息",
-		"studentToSchool": "{student} → {school}",
-		"submittedOn": "提交日期",
-		"lastUpdated": "最近更新",
-		"daysInCurrentStatus": "当前状态天数",
-		"applicationId": "申请 ID",
-		"progressSubmitted": "已提交",
-		"progressReview": "审核",
-		"progressDocuments": "材料",
-		"progressOffer": "录取",
-		"progressEnrolment": "入学",
-		"progressEnrolled": "已入学",
-		"notFound": "未找到该申请。",
-		"loadError": "加载申请失败。",
-		"sectionStudent": "学生信息",
-		"sectionSchool": "学校信息",
-		"sectionApplication": "申请信息",
-		"labelName": "姓名",
-		"labelNationality": "国籍",
-		"labelSchoolName": "学校名称",
-		"labelState": "州份",
-		"labelCricosCode": "CRICOS 编号",
-		"labelYearLevel": "年级",
-		"labelIntake": "入学时间",
-		"labelStatus": "状态",
-		"labelSubmitted": "提交时间",
-		"labelCreated": "创建时间",
-		"labelUpdated": "更新时间",
-		"notProvided": "未提供",
-		"documentsEmpty": "未附加任何文件",
-		"documentName": "名称",
-		"documentType": "类型",
-		"documentSize": "大小",
-		"documentUploadedAt": "上传时间",
-		"downloadDocument": "下载",
-		"timelineEmpty": "暂无时间线事件",
-		"timelineBy": "由 {actor}",
-		"messagesComingSoon": "消息功能即将推出",
-		"actionWithdraw": "撤回申请",
-		"actionAcceptOffer": "接受录取",
-		"actionContactSchool": "联系学校",
-		"actionComingSoon": "即将推出"
-	},
-	"Auth": {
-		"signInTitle": "登录 SchoolGo",
-		"signInSubtitle": "登录您的账户，管理学校、申请及更多内容。",
-		"iAmA": "我是…",
-		"userTypes": {
-			"parent": "家长",
-			"agent": "中介",
-			"school": "学校"
-		},
-		"emailLabel": "电子邮件",
-		"emailPlaceholder": "you@example.com",
-		"passwordLabel": "密码",
-		"passwordPlaceholder": "请输入密码",
-		"signInButton": "登录",
-		"loginSuccess": "欢迎回来！",
-		"loginError": "邮箱或密码错误，请重试。",
-		"portalUnauthorized": "此账户无权访问该门户。",
-		"sessionExpired": "您的登录已过期，请重新登录。",
-		"noAccount": "还没有账户？",
-		"signUp": "立即注册",
-		"signUpTitle": "创建您的账户",
-		"signUpSubtitle": "加入 SchoolGo，查找、比较并申请澳大利亚学校。",
-		"nameLabel": "全名",
-		"namePlaceholder": "您的全名",
-		"createPasswordPlaceholder": "创建密码（至少6个字符）",
-		"signUpButton": "创建账户",
-		"registerSuccess": "账户已创建！欢迎来到 SchoolGo。",
-		"registerError": "无法创建账户，请重试。",
-		"hasAccount": "已有账户？",
-		"signInLink": "登录",
-		"close": "关闭",
-		"portalSwitch": {
-			"backTo": "[TODO: zh] Back to"
-		},
-		"parent": {
-			"signInTitle": "[TODO: zh] Welcome back, Parent",
-			"signInSubtitle": "[TODO: zh] Sign in to find and compare the best schools for your child.",
-			"signUpTitle": "[TODO: zh] Start your school search",
-			"signUpSubtitle": "[TODO: zh] Create an account to shortlist, compare and apply to Australian schools.",
-			"stat1Value": "2,400+",
-			"stat1Label": "学校",
-			"stat2Value": "7",
-			"stat2Label": "语言",
-			"stat3Value": "98%",
-			"stat3Label": "满意度"
-		},
-		"agent": {
-			"signInTitle": "[TODO: zh] Agent Portal",
-			"signInSubtitle": "[TODO: zh] Sign in to manage your pipeline and student placements.",
-			"signUpTitle": "[TODO: zh] Grow your agency",
-			"signUpSubtitle": "[TODO: zh] Join SchoolGo to access verified schools and streamline placements.",
-			"stat1Value": "850+",
-			"stat1Label": "中介",
-			"stat2Value": "15%",
-			"stat2Label": "佣金",
-			"stat3Value": "24h",
-			"stat3Label": "响应"
-		},
-		"school": {
-			"signInTitle": "[TODO: zh] School Portal",
-			"signInSubtitle": "[TODO: zh] Sign in to manage enrolments and connect with agents.",
-			"signUpTitle": "[TODO: zh] List your school",
-			"signUpSubtitle": "[TODO: zh] Create an account to reach international students and education agents.",
-			"stat1Value": "500+",
-			"stat1Label": "中介",
-			"stat2Value": "12k",
-			"stat2Label": "学生",
-			"stat3Value": "Free",
-			"stat3Label": "免费列表"
-		},
-		"nav": {
-			"parent": {
-				"howItWorks": "使用方法",
-				"compare": "比较",
-				"faq": "常见问题"
-			},
-			"agent": {
-				"howItWorks": "使用方法",
-				"commission": "佣金",
-				"trust": "信任"
-			},
-			"school": {
-				"howItWorks": "使用方法",
-				"pricing": "定价",
-				"faq": "常见问题"
-			}
-		}
-	},
-	"Errors": {
-		"generic": "出了点问题",
-		"genericSubtitle": "[TODO: zh] We hit an unexpected bump. Don't worry — your data is safe.",
-		"tryAgain": "再试一次",
-		"notFound": "页面未找到",
-		"notFoundCode": "[TODO: zh] 404",
-		"notFoundSubtitle": "[TODO: zh] The page you're looking for doesn't exist or has been moved.",
-		"goHome": "回到首页",
-		"searchInstead": "[TODO: zh] Search schools"
-	},
-	"LaunchingSoon": {
-		"title": "我们即将上线",
-		"subtitle": "SchoolGo 正在为您准备澳大利亚最好的学校资源。我们正在为您打造一个出色的平台，即将完成。",
-		"stayTuned": "敬请期待——我们很快就会正式上线。",
-		"portals": {
-			"heading": "我们的平台",
-			"parents": "家长端",
-			"schools": "学校端",
-			"agents": "中介端"
-		}
-	},
-	"Dashboard": {
-		"nav": {
-			"dashboard": "[TODO: zh] Dashboard",
-			"students": "[TODO: zh] Students",
-			"applications": "[TODO: zh] Applications",
-			"pipeline": "[TODO: zh] Pipeline",
-			"searchSchools": "[TODO: zh] Search Schools",
-			"messages": "[TODO: zh] Messages",
-			"settings": "[TODO: zh] Settings",
-			"profile": "[TODO: zh] My Profile",
-			"logout": "[TODO: zh] Log out",
-			"portalLabel": "代理",
-			"portalBadge": {
-				"agent": "代理",
-				"parent": "家长",
-				"school": "学校"
-			}
-		},
-		"greeting": {
-			"morning": "早上好，",
-			"afternoon": "下午好，",
-			"evening": "晚上好，",
-			"fallbackName": "您好"
-		},
-		"actionBanner": {
-			"title": "需要处理"
-		},
-		"cards": {
-			"activeStudents": "活跃学生",
-			"appsInProgress": "进行中的申请",
-			"offersReceived": "收到的录取",
-			"enrolledThisTerm": "本学期已入学"
-		},
-		"activity": {
-			"title": "最近动态",
-			"empty": "暂无最近动态。可以先添加学生或浏览学校。"
-		},
-		"deadlines": {
-			"title": "即将到期",
-			"empty": "暂无即将到期事项。"
-		},
-		"quickActions": {
-			"addStudent": "添加新学生",
-			"newApplication": "新建申请",
-			"reviewApplications": "查看申请",
-			"searchSchools": "搜索学校"
-		}
-	},
-	"Students": {
-		"title": "[TODO: zh] Students",
-		"subtitle": "[TODO: zh] Manage your student profiles, documents, and test results.",
-		"searchPlaceholder": "[TODO: zh] Search by name...",
-		"clearSearch": "[TODO: zh] Clear search",
-		"allStatuses": "[TODO: zh] All statuses",
-		"statusActive": "[TODO: zh] Active",
-		"statusArchived": "[TODO: zh] Archived",
-		"statusEnrolled": "[TODO: zh] Enrolled",
-		"addStudent": "[TODO: zh] Add Student",
-		"columnName": "[TODO: zh] Name",
-		"columnNationality": "[TODO: zh] Nationality",
-		"columnYearLevel": "[TODO: zh] Year Level",
-		"columnTargetEntry": "[TODO: zh] Target Entry",
-		"columnEnglishTest": "英语考试",
-		"columnApps": "申请",
-		"columnStatus": "[TODO: zh] Status",
-		"filters": "筛选",
-		"sort": "排序",
-		"emptyTitle": "暂无学生",
-		"emptySubtitle": "添加您的第一位学生，开始建立档案并申请学校。",
-		"archive": "归档",
-		"paginationShowing": "显示",
-		"paginationOf": "共 {total} 条",
-		"allRows": "全部",
-		"createTitle": "[TODO: zh] Add New Student",
-		"createButton": "[TODO: zh] Create Student",
-		"createSuccess": "[TODO: zh] Student created successfully.",
-		"createError": "[TODO: zh] Could not create student. Please try again.",
-		"profileTitle": "[TODO: zh] Student Profile",
-		"notFound": "[TODO: zh] Student not found.",
-		"backToList": "[TODO: zh] Back",
-		"edit": "[TODO: zh] Edit",
-		"sectionPersonal": "[TODO: zh] Personal Information",
-		"sectionEducation": "[TODO: zh] Education",
-		"sectionParent": "[TODO: zh] Parent / Guardian",
-		"fieldFirstName": "[TODO: zh] First name",
-		"fieldLastName": "[TODO: zh] Last name",
-		"fieldDob": "[TODO: zh] Date of birth",
-		"fieldGender": "[TODO: zh] Gender",
-		"fieldNationality": "[TODO: zh] Nationality",
-		"fieldCurrentSchool": "[TODO: zh] Current school",
-		"fieldCurrentYear": "[TODO: zh] Current year level",
-		"fieldTargetYear": "[TODO: zh] Target entry year",
-		"fieldTargetTerm": "[TODO: zh] Target intake",
-		"fieldParentName": "[TODO: zh] Name",
-		"fieldParentEmail": "[TODO: zh] Email",
-		"fieldParentPhone": "[TODO: zh] Phone",
-		"fieldParentWechat": "[TODO: zh] WeChat ID",
-		"fieldNotes": "[TODO: zh] Agent Notes",
-		"notesPlaceholder": "[TODO: zh] Private notes about this student (only visible to you)...",
-		"selectGender": "[TODO: zh] Select gender",
-		"selectYear": "[TODO: zh] Select year level",
-		"genderMale": "[TODO: zh] Male",
-		"genderFemale": "[TODO: zh] Female",
-		"genderOther": "[TODO: zh] Other",
-		"tabOverview": "[TODO: zh] Overview",
-		"tabDocuments": "[TODO: zh] Documents",
-		"tabTests": "[TODO: zh] Tests",
-		"tabApplications": "[TODO: zh] Applications",
-		"documentsComingSoon": "[TODO: zh] Document management coming soon.",
-		"testsComingSoon": "[TODO: zh] Test results coming soon.",
-		"applicationsComingSoon": "[TODO: zh] Applications coming soon.",
-		"docUpload": "[TODO: zh] Upload Document",
-		"docUploadTitle": "[TODO: zh] Upload Document",
-		"docUploadButton": "[TODO: zh] Upload",
-		"docCancel": "[TODO: zh] Cancel",
-		"docDropzone": "[TODO: zh] Drag & drop a file here, or click to browse",
-		"docDropzoneHint": "[TODO: zh] PDF, JPG, PNG, DOCX up to 10 MB",
-		"docTypeLabel": "[TODO: zh] Document Type",
-		"docTypeSelect": "[TODO: zh] Select document type",
-		"docFileNameLabel": "[TODO: zh] Display Name (optional)",
-		"docFileNamePlaceholder": "[TODO: zh] e.g. John Passport 2026",
-		"docExpiresLabel": "[TODO: zh] Expiry Date (optional)",
-		"docNotesLabel": "[TODO: zh] Notes (optional)",
-		"docNotesPlaceholder": "[TODO: zh] Any notes about this document...",
-		"docAllTypes": "[TODO: zh] All types",
-		"docEmptyTitle": "[TODO: zh] No documents yet",
-		"docEmptySubtitle": "[TODO: zh] Upload your first document to get started.",
-		"docColName": "[TODO: zh] File",
-		"docColType": "[TODO: zh] Type",
-		"docColStatus": "[TODO: zh] Status",
-		"docColExpiry": "[TODO: zh] Expiry",
-		"docColUploaded": "[TODO: zh] Uploaded",
-		"docDeleteTitle": "[TODO: zh] Delete Document",
-		"docDeleteConfirm": "[TODO: zh] Are you sure you want to delete this document? This action cannot be undone.",
-		"docDeleteButton": "[TODO: zh] Delete",
-		"docUploadSuccess": "[TODO: zh] Document uploaded successfully.",
-		"docUploadError": "[TODO: zh] Could not upload document. Please try again.",
-		"docDeleteSuccess": "[TODO: zh] Document deleted.",
-		"docDeleteError": "[TODO: zh] Could not delete document.",
-		"docType_passport": "[TODO: zh] Passport",
-		"docType_school_reports": "[TODO: zh] School Reports",
-		"docType_english_test": "[TODO: zh] English Test Report",
-		"docType_birth_certificate": "[TODO: zh] Birth Certificate",
-		"docType_parent_passport": "[TODO: zh] Parent Passport",
-		"docType_immunisation": "[TODO: zh] Immunisation Records",
-		"docType_personal_statement": "[TODO: zh] Personal Statement",
-		"docType_guardian_nomination": "[TODO: zh] Guardian Nomination",
-		"docType_current_visa": "[TODO: zh] Current Visa",
-		"docType_welfare_docs": "[TODO: zh] Welfare Documents",
-		"docType_financial_evidence": "[TODO: zh] Financial Evidence",
-		"docType_oshc": "[TODO: zh] OSHC",
-		"docType_written_agreement": "[TODO: zh] Written Agreement",
-		"docType_conditions_of_entry": "[TODO: zh] Conditions of Entry",
-		"docType_offer_acceptance": "[TODO: zh] Offer Acceptance",
-		"docType_coe": "[TODO: zh] CoE (Confirmation of Enrolment)",
-		"docType_caaw_letter": "[TODO: zh] CAAW Letter",
-		"docType_photo": "[TODO: zh] Photo",
-		"docType_other": "[TODO: zh] Other",
-		"docStatus_active": "[TODO: zh] Active",
-		"docStatus_replaced": "[TODO: zh] Replaced",
-		"docStatus_archived": "[TODO: zh] Archived"
-	},
-	"Pipeline": {
-		"title": "申请管道",
-		"totalApplications": "{count, plural, one {# 份申请} other {# 份申请}}",
-		"emptyTitle": "管道中暂无申请",
-		"emptySubtitle": "先为您的学生创建一份申请。",
-		"columnNew": "新申请",
-		"columnInReview": "审核中",
-		"columnActionRequired": "需要处理",
-		"columnOffers": "录取通知",
-		"columnPreEnrolment": "预入学",
-		"columnEnrolled": "已入学",
-		"columnClosed": "已关闭",
-		"daysLabel": "{count}天",
-		"moreApplications": "+{count} 更多"
-	},
-	"SchoolDetail": {
-		"backToSearch": "[TODO: zh] Back to search",
-		"cricosVerified": "[TODO: zh] CRICOS verified",
-		"claimedProfile": "[TODO: zh] Claimed profile",
-		"admissionsProfileLabel": "[TODO: zh] Admissions profile",
-		"admissionsProfileDescription": "[TODO: zh] Compare fees, entry requirements, intakes, and contact details.",
-		"infoCards": {
-			"annualTuition": "[TODO: zh] Annual tuition",
-			"contactSchool": "[TODO: zh] Contact school",
-			"lowestListedTuition": "[TODO: zh] Lowest listed tuition",
-			"feesNotListedYet": "[TODO: zh] Fees not listed yet",
-			"curriculum": "[TODO: zh] Curriculum",
-			"notListed": "[TODO: zh] Not listed",
-			"enrolment": "[TODO: zh] Enrolment",
-			"internationalPercent": "[TODO: zh] {pct}% international",
-			"boarding": "[TODO: zh] Boarding",
-			"boardingAvailable": "[TODO: zh] Available",
-			"scholarshipsListed": "[TODO: zh] Scholarships listed"
-		},
-		"aboutSection": {
-			"heading": "[TODO: zh] About the school",
-			"defaultDescription": "[TODO: zh] {name} is listed in SchoolGo's Australian school directory. Use this profile to review key admissions facts before shortlisting or contacting the school."
-		},
-		"admissionsSection": {
-			"heading": "[TODO: zh] Admissions",
-			"nextIntake": "[TODO: zh] Next intake",
-			"applicationDeadline": "[TODO: zh] Application deadline",
-			"intakePeriods": "[TODO: zh] Intake periods",
-			"applicationFee": "[TODO: zh] Application fee",
-			"cricosCode": "[TODO: zh] CRICOS code"
-		},
-		"englishSection": {
-			"heading": "[TODO: zh] English requirements",
-			"noScoresListed": "[TODO: zh] No minimum test scores are listed yet."
-		},
-		"contactSection": {
-			"heading": "[TODO: zh] Contact and apply",
-			"startApplication": "[TODO: zh] Start application",
-			"visitWebsite": "[TODO: zh] Visit website",
-			"nextIntakeDate": "[TODO: zh] Next intake: {date}"
-		},
-		"trustNotice": "[TODO: zh] SchoolGo profiles combine public provider data with admissions information so families can compare schools before contacting an agent or school."
-	},
-	"SearchMetadata": {
-		"title": "搜索学校 — SchoolGo",
-		"description": "搜索和比较澳大利亚学校。按地区、学费、课程、寄宿等条件筛选。",
-		"ogDescription": "在SchoolGo上搜索和比较澳大利亚学校。",
-		"parentTitle": "为孩子搜索澳大利亚学校 — SchoolGo",
-		"parentDescription": "按地点、学费、课程、寄宿和学生支持搜索并比较澳大利亚学校。",
-		"parentOgDescription": "在SchoolGo比较澳大利亚学校，为孩子找到合适选择。",
-		"schoolTitle": "浏览澳大利亚学校列表 — SchoolGo",
-		"schoolDescription": "在SchoolGo查看澳大利亚学校列表、地点、课程、学费和学生支持信息。",
-		"schoolOgDescription": "在SchoolGo浏览澳大利亚学校列表并比较课程。",
-		"agentTitle": "为学生搜索澳大利亚学校 — SchoolGo",
-		"agentDescription": "为国际学生查找澳大利亚学校，并比较地点、学费、课程、寄宿和支持服务。",
-		"agentOgDescription": "在SchoolGo为学生搜索并比较澳大利亚学校。"
-	}
+  "Metadata": {
+    "title": "SchoolGo 澳大利亚 | 寻找最好的学校",
+    "description": "搜索和比较澳大利亚最好的学校。按课程、价格、地点等进行筛选。",
+    "ogDescription": "搜索和比较澳大利亚最好的学校。"
+  },
+  "Common": {
+    "step": "Step {number, number}",
+    "cricosVerified": "CRICOS Verified",
+    "qeacVerified": "QEAC Verified",
+    "claimedBySchool": "Claimed by school",
+    "addToShortlist": "Add to shortlist",
+    "removeFromShortlist": "Remove from shortlist",
+    "comingSoon": "Coming soon",
+    "skipToContent": "跳至内容",
+    "primaryNavigation": "主导航"
+  },
+  "ParentsMetadata": {
+    "title": "SchoolGo — 为孩子寻找澳大利亚学校",
+    "description": "搜索每一所CRICOS注册的澳大利亚学校。免费比较学费、英语考试要求及入学时间——支持七种语言。",
+    "ogDescription": "每一所CRICOS学校。已认证。用您的语言。"
+  },
+  "MarketingHeader": {
+    "findSchools": "查找学校",
+    "audiences": {
+      "parents": "家长",
+      "agents": "中介",
+      "schools": "学校"
+    },
+    "nav": {
+      "parent": {
+        "howItWorks": "使用方法",
+        "compare": "比较",
+        "faq": "常见问题"
+      },
+      "agent": {
+        "howItWorks": "使用方法",
+        "commission": "佣金",
+        "trust": "信任"
+      },
+      "school": {
+        "howItWorks": "使用方法",
+        "pricing": "定价",
+        "faq": "常见问题"
+      }
+    },
+    "language": "语言",
+    "signIn": "登录",
+    "getStarted": "立即开始",
+    "openMenu": "打开菜单",
+    "closeMenu": "关闭菜单",
+    "menu": "Menu",
+    "subNav": {
+      "explore": {
+        "label": "探索",
+        "items": {
+          "browseSchools": "浏览学校",
+          "browseSchoolsDesc": "搜索所有注册的澳大利亚学校",
+          "compareSchools": "比较学校",
+          "compareSchoolsDesc": "并排对比学费、考试及入学时间",
+          "schoolTypes": "学校类型",
+          "schoolTypesDesc": "公立、天主教与独立学校对比",
+          "englishTests": "英语考试",
+          "englishTestsDesc": "AEAS、IELTS 及认可考试指南"
+        }
+      },
+      "resources": {
+        "label": "资源",
+        "items": {
+          "admissionsGuide": "招生指南",
+          "admissionsGuideDesc": "逐步入学流程说明",
+          "schoolFees": "学校费用",
+          "schoolFeesDesc": "学费、附加费及第一年总费用",
+          "visaRequirements": "签证要求",
+          "visaRequirementsDesc": "学生签证 500 核心要点",
+          "allGuides": "全部指南",
+          "allGuidesDesc": "浏览所有面向国际家庭的指南"
+        }
+      },
+      "about": {
+        "label": "关于",
+        "items": {
+          "aboutSchoolGo": "关于 SchoolGo",
+          "aboutSchoolGoDesc": "我们的使命与故事",
+          "contactUs": "联系我们",
+          "contactUsDesc": "与我们的团队取得联系",
+          "forAgents": "面向中介",
+          "forAgentsDesc": "教育中介专属工具",
+          "forSchools": "面向学校",
+          "forSchoolsDesc": "扩大您的国际生群体"
+        }
+      }
+    }
+  },
+  "MarketingFooter": {
+    "tagline": "连接未来领袖与澳大利亚最优秀的学校——横跨全境，支持七种语言。",
+    "columns": {
+      "parents": {
+        "title": "面向家长",
+        "links": {
+          "findSchools": "查找学校",
+          "compare": "比较",
+          "scholarships": "奖学金",
+          "english": "英语考试"
+        }
+      },
+      "agents": {
+        "title": "面向中介",
+        "links": {
+          "overview": "中介概览",
+          "qeac": "QEAC 认证",
+          "pipeline": "Pipeline tools [Soon]",
+          "login": "Agent login [Soon]"
+        }
+      },
+      "schools": {
+        "title": "面向学校",
+        "links": {
+          "overview": "学校概览",
+          "claim": "认领主页",
+          "login": "School login [Soon]",
+          "pricing": "定价"
+        }
+      },
+      "resources": {
+        "title": "资源",
+        "links": {
+          "help": "帮助中心",
+          "contact": "联系我们",
+          "privacy": "隐私政策",
+          "terms": "使用条款"
+        }
+      }
+    },
+    "language": "语言",
+    "copyright": "© {year} SchoolGo Australia。保留所有权利。",
+    "attribution": "数据来源：data.gov.au · CC BY 2.5 AU · 符合 ESOS 法案",
+    "portals": "我是...",
+    "portalLabels": {
+      "parents": "家长",
+      "agents": "中介",
+      "schools": "学校"
+    }
+  },
+  "ParentsHero": {
+    "trustPill": {
+      "brand": "政府",
+      "brandAccent": "注册认证",
+      "source": "数据来源 data.gov.au"
+    },
+    "headlinePrefix": "为您的孩子找到",
+    "headlineEmphasis": "澳大利亚",
+    "headlineSuffix": "学校。",
+    "lede": "在一处搜索澳大利亚每一所 CRICOS 注册的 K–12 学校。免费比较学费、寄宿、英语考试要求——支持普通话、韩语、泰语、越南语、马来语或英语搜索。",
+    "searchAriaLabel": "搜索学校",
+    "searchFields": {
+      "where": {
+        "label": "地点",
+        "value": "澳大利亚任意地点"
+      },
+      "yearLevel": {
+        "label": "年级",
+        "value": "Year 7 – Year 12"
+      },
+      "fees": {
+        "label": "学费",
+        "value": "$15k – $45k AUD"
+      }
+    },
+    "searchButtonLabel": "搜索",
+    "searchClearLabel": "清除搜索",
+    "featured": {
+      "eyebrow": "精选",
+      "shortlistAdd": "将 {name} 加入候选名单",
+      "shortlistRemove": "从候选名单中移除 {name}",
+      "cards": {
+        "a": {
+          "name": "Scotch College Melbourne",
+          "location": "Hawthorn, VIC",
+          "curriculum": "VCE",
+          "fee": "$38.5k AUD",
+          "boarding": "寄宿",
+          "rating": "4.9"
+        },
+        "b": {
+          "name": "Sydney Grammar School",
+          "location": "Darlinghurst, NSW",
+          "curriculum": "HSC",
+          "fee": "$41.2k AUD",
+          "boarding": "仅走读",
+          "rating": "4.8"
+        },
+        "c": {
+          "name": "Brisbane Grammar School",
+          "location": "Spring Hill, QLD",
+          "curriculum": "QCE/IB",
+          "fee": "$35.8k AUD",
+          "boarding": "寄宿",
+          "rating": "4.7"
+        }
+      }
+    }
+  },
+  "ParentsFourSteps": {
+    "eyebrow": "使用方法",
+    "heading": "从初次浏览到录取通知——四个简单步骤。",
+    "subheading": "无隐藏费用。申请前无需登录。",
+    "steps": {
+      "browse": {
+        "title": "浏览每一所 CRICOS 学校",
+        "description": "按州份、学费、类别、课程、寄宿和奖学金筛选 {count, number} 所学校——用您的语言。"
+      },
+      "shortlist": {
+        "title": "收藏四所，并排比较",
+        "description": "对比学费、入学时间、ICSEA 及认可英语考试。几分钟内做决定，无需数月等待。"
+      },
+      "prepare": {
+        "title": "查看精确要求",
+        "description": "每条学校信息均列明认可考试、最低分数、所需材料及入学窗口。"
+      },
+      "apply": {
+        "title": "通过认证中介申请",
+        "description": "您的中介持有 QEAC 认证徽章。申请全程在一个控制台跟踪。",
+        "comingSoon": "即将推出"
+      }
+    },
+    "ctaBrowse": "开始浏览",
+    "ctaLearn": "查看使用方法",
+    "badge": {
+      "cricosVerified": "CRICOS Verified · Claimed by school",
+      "updated": "Updated April 2026"
+    },
+    "visuals": {
+      "browse": {
+        "title": "[TODO: zh] 695 schools loaded",
+        "subtitle": "[TODO: zh] Filtered by state, fees & curriculum"
+      },
+      "shortlist": {
+        "title": "[TODO: zh] Wei's shortlist",
+        "subtitle": "[TODO: zh] 3 schools in Victoria · All accept AEAS"
+      },
+      "prepare": {
+        "title": "[TODO: zh] Requirements matched",
+        "subtitle": "[TODO: zh] AEAS 70+ · IELTS 5.5+ · Documents ready"
+      },
+      "apply": {
+        "title": "[TODO: zh] Application submitted",
+        "subtitle": "[TODO: zh] Tracked end-to-end · Status: Under review"
+      }
+    }
+  },
+  "ParentsVerified": {
+    "eyebrow": "每一所 CRICOS 学校",
+    "heading": "已认证。用您的语言。",
+    "subheading": "真实建筑照片。真实学费。真实入学日历。学校数据来源于 CRICOS 和 ACARA，每月更新。",
+    "cards": {
+      "a": {
+        "name": "Scotch College",
+        "location": "Hawthorn, VIC",
+        "sector": "独立学校"
+      },
+      "b": {
+        "name": "Sydney Grammar",
+        "location": "Darlinghurst, NSW",
+        "sector": "独立学校"
+      },
+      "c": {
+        "name": "Brisbane Grammar",
+        "location": "Spring Hill, QLD",
+        "sector": "独立学校"
+      },
+      "d": {
+        "name": "Christ Church Grammar",
+        "location": "Claremont, WA",
+        "sector": "独立学校"
+      }
+    }
+  },
+  "ParentsComparison": {
+    "eyebrow": "比较",
+    "heading": "将学校并排对比。",
+    "headingAccent": "几分钟内做出决定，无需数月等待。",
+    "columns": {
+      "fee": "年费",
+      "tests": "认可考试",
+      "intakes": "入学时间",
+      "stateSector": "[TODO: zh] State & sector",
+      "curriculum": "[TODO: zh] Curriculum",
+      "boarding": "[TODO: zh] Boarding",
+      "minScore": "[TODO: zh] Min. AEAS score",
+      "scholarships": "[TODO: zh] Scholarships"
+    },
+    "notPublished": "未公开",
+    "shortlistLabel": "[TODO: zh] Shortlist · {count} schools",
+    "dayOnly": "[TODO: zh] — Day only",
+    "noneIntl": "[TODO: zh] — None intl."
+  },
+  "ParentsPickATest": {
+    "eyebrow": "英语水平",
+    "heading": "选择考试，查看哪些学校认可——",
+    "headingAccent": "及最低分数要求。",
+    "subheading": "我们在每所学校的主页上列明认可的英语考试。无需再逐一浏览50个学校网站。",
+    "tests": {
+      "aeas": {
+        "name": "AEAS",
+        "fullName": "Australian Education Assessment Services",
+        "description": "Most commonly accepted by Australian independent schools"
+      },
+      "idat": {
+        "name": "iDAT",
+        "fullName": "International Digital Admissions Test",
+        "description": "Growing in popularity for K–12 admissions"
+      },
+      "duolingo": {
+        "name": "Duolingo",
+        "fullName": "Duolingo English Test",
+        "description": "Accepted by an increasing number of schools"
+      },
+      "ielts": {
+        "name": "IELTS",
+        "fullName": "International English Language Testing System",
+        "description": "Standard for senior secondary entry (Year 11+)"
+      },
+      "pte": {
+        "name": "PTE Academic",
+        "fullName": "Pearson Test of English Academic",
+        "description": "Accepted by some schools for Year 11–12 entry"
+      },
+      "cambridge": {
+        "name": "Cambridge",
+        "fullName": "Cambridge English Qualifications",
+        "description": "Accepted by select schools"
+      },
+      "toefl": {
+        "name": "TOEFL",
+        "fullName": "Test of English as a Foreign Language",
+        "description": "Accepted by select schools for senior entry"
+      }
+    },
+    "cta": "查看认可该考试的学校"
+  },
+  "ParentsSevenLanguages": {
+    "eyebrow": "七种语言",
+    "heading": "家庭不应在午夜翻译学费单。",
+    "subheading": "SchoolGo 全程翻译为亚太地区最常用的七种语言。",
+    "languages": {
+      "en": "English",
+      "zh": "简体中文",
+      "vi": "Tiếng Việt",
+      "ko": "한국어",
+      "ms": "Bahasa Melayu",
+      "th": "ภาษาไทย",
+      "id": "Bahasa Indonesia"
+    }
+  },
+  "ParentsArticles": {
+    "eyebrow": "招生资料库",
+    "heading": "由招生官撰写，翻译成七种语言。",
+    "subheading": "关于签证、入学时间、英语考试和学费的简明指南。免费，无需登录。",
+    "items": {
+      "intakes": {
+        "title": "了解澳大利亚学校入学时间",
+        "meta": "阅读约6分钟 · 每月更新"
+      },
+      "englishTests": {
+        "title": "您的学校接受哪种英语考试？",
+        "meta": "阅读约8分钟 · 逐项考试分析"
+      },
+      "boarding": {
+        "title": "寄宿还是走读：家庭的选择与原因",
+        "meta": "阅读约5分钟 · 案例研究"
+      }
+    },
+    "readMore": "阅读文章"
+  },
+  "ParentsStatsBar": {
+    "eyebrow": "数据一览",
+    "heading": "澳大利亚最大的CRICOS学校目录。",
+    "subheading": "每一所注册学校，经过验证且可搜索——从公立到私立，覆盖全部八个州和领地。",
+    "items": {
+      "schools": {
+        "value": "{count, number}+",
+        "label": "CRICOS Schools"
+      },
+      "states": {
+        "value": "8",
+        "label": "States & Territories"
+      },
+      "sectors": {
+        "value": "All 3 Sectors",
+        "label": "Government · Independent · Catholic"
+      },
+      "fees": {
+        "value": "$3.5k – $78k",
+        "label": "Annual Fee Range"
+      }
+    }
+  },
+  "ParentsFinalCta": {
+    "eyebrow": "从这里开始",
+    "headingPrefix": "您的搜索，",
+    "headingEmphasis": "就此",
+    "headingSuffix": "开始，支持七种语言。",
+    "subheading": "免费。无需登录。更新至 {month} {year, number}。",
+    "ctaPrimary": "找到您的学校",
+    "ctaSecondary": "联系认证中介"
+  },
+  "ParentsTrustBar": {
+    "eyebrow": "信任与合规",
+    "heading": "您可信赖的数据。",
+    "subheading": "SchoolGo 上的每一条学校信息均来自官方政府数据来源——经过验证、持有授权，并每月更新。",
+    "items": {
+      "cricos": {
+        "label": "政府注册学校",
+        "description": "每所学校均与官方联邦注册信息进行交叉核验。"
+      },
+      "datagov": {
+        "label": "持续更新",
+        "description": "依据 CC BY 2.5 AU 授权的开放数据——透明且可公开审查。"
+      },
+      "acara": {
+        "label": "国家课程数据",
+        "description": "课程体系、ICSEA 分数及招生数据均来源于澳大利亚国家权威机构。"
+      },
+      "esos": {
+        "label": "学生保护",
+        "description": "SchoolGo 在澳大利亚《海外学生教育服务法》框架内运营。"
+      }
+    },
+    "attribution": "学校数据来源于澳大利亚海外学生机构及课程联邦注册处（CRICOS）和澳大利亚课程、评估与报告局（ACARA）。更新至 2026 年 4 月。"
+  },
+  "ParentsFaq": {
+    "heading": "Frequently Asked Questions",
+    "items": {
+      "free": {
+        "question": "Is SchoolGo free?",
+        "answer": "Yes. SchoolGo is completely free for parents, education agents, and schools. There are no listing fees, application fees, or subscription costs."
+      },
+      "dataSource": {
+        "question": "Where does the school data come from?",
+        "answer": "All school listings are sourced from CRICOS (the Commonwealth Register of Institutions and Courses for Overseas Students), which is the Australian Government's official register of schools authorised to enrol international students. We cross-reference this with ACARA school profile data for enrolment figures, ICSEA scores, and GPS coordinates."
+      },
+      "englishTests": {
+        "question": "What English proficiency tests do Australian schools accept?",
+        "answer": "Different schools accept different tests. The most common are AEAS (Australian Education Assessment Services), iDAT (International Digital Admissions Test), Duolingo English Test, IELTS, and PTE Academic. SchoolGo shows which specific tests each school accepts on their profile page."
+      },
+      "doINeedAgent": {
+        "question": "[TODO: zh] Do I need an education agent?",
+        "answer": "[TODO: zh] You don't have to use one, but most families do — and it's free. Education agents help you choose the right school, prepare documents, and manage the application. SchoolGo shows which agents work with each school, so you can find someone who already knows the admissions process."
+      },
+      "updateFrequency": {
+        "question": "How often is the data updated?",
+        "answer": "CRICOS data is refreshed monthly from data.gov.au. School-specific details (fees, requirements, intake dates) are updated by schools who have claimed their profiles. If a school hasn't claimed their profile, the data shown is from CRICOS and ACARA public datasets."
+      }
+    }
+  },
+  "AgentsMetadata": {
+    "title": "SchoolGo — 像管理投资组合一样经营您的中介业务",
+    "description": "面向将学生送入澳大利亚学校的教育中介的 QEAC 认证工具。标准化申请、实时进度追踪、全额佣金。",
+    "ogDescription": "像管理投资组合一样经营您的业务。保留 100% 的佣金。"
+  },
+  "AgentsHero": {
+    "eyebrow": "面向教育中介 · QEAC 认证",
+    "headlinePrefix": "像管理投资组合一样",
+    "headlineEmphasis": "经营您的业务。",
+    "lede": "一个认证主页。{count, number} 所 CRICOS 学校。一个家庭可查看的进度看板。SchoolGo 向学校收费，不向您收费。",
+    "ctaPrimary": "申请认证",
+    "ctaSecondary": "查看运作方式",
+    "badgeMeta": "Sample agent profile",
+    "stats": {
+      "schools": {
+        "value": "{count, number}",
+        "label": "已认证 CRICOS 学校"
+      },
+      "sectors": {
+        "value": "3",
+        "label": "Sectors — Gov, Independent, Catholic"
+      },
+      "commission": {
+        "value": "100%",
+        "label": "佣金完整保留"
+      }
+    }
+  },
+  "AgentsPainPoints": {
+    "eyebrow": "Why agents switch",
+    "heading": "Built for Education Agents Who Manage Real Pipelines",
+    "subheading": "76% of international school enrolments come through education agents. SchoolGo is built to make you more effective, not to replace you.",
+    "items": {
+      "email": {
+        "question": "Tired of emailing 15 admissions offices?",
+        "answer": "One platform, one application workflow. Submit to multiple schools and track responses in real time. Every application carries your verified agent attribution."
+      },
+      "status": {
+        "question": "Students keep asking 'did you hear back?'",
+        "answer": "Live application tracker your students can see. Status updates flow automatically — you spend less time chasing and more time advising."
+      },
+      "trust": {
+        "question": "Schools don't know if you're legitimate?",
+        "answer": "SchoolGo agent verification with your QEAC credentials. Your verified badge and track record appear on every application you submit."
+      },
+      "requirements": {
+        "question": "Different requirements for every school?",
+        "answer": "SchoolGo maps each school's specific entry requirements: accepted English tests, minimum scores, required documents, intake dates, and application fees. No more digging through 50 school websites."
+      }
+    }
+  },
+  "AgentsStatsBar": {
+    "items": {
+      "schools": "{count, number}+ School Profiles",
+      "requirements": "Entry Requirements Mapped",
+      "tests": "English Test Requirements Listed",
+      "free": "Free for Agents"
+    }
+  },
+  "AgentsMatching": {
+    "eyebrow": "匹配 · 申请 · 追踪",
+    "heading": "上午10点家长来电，10:30前匹配三所学校。",
+    "subheading": "SchoolGo 按州份、学费、英语水平和入学时间筛选出最合适的学校，并在几分钟内完成标准化申请提交。",
+    "steps": {
+      "listen": {
+        "title": "记录家庭需求",
+        "description": "预算、地点、英语水平、期望入学时间——用家长的语言填写一份表格。"
+      },
+      "match": {
+        "title": "查看最匹配的学校",
+        "description": "按学生档案筛选。查看每所学校认可的考试及最低分数要求。",
+        "comingSoon": "即将推出"
+      },
+      "deliver": {
+        "title": "交付精准候选名单，而非杂乱材料",
+        "description": "一份家庭可截图发给父亲的品牌 PDF。无需来自十五所学校的各自 PDF。",
+        "comingSoon": "即将推出"
+      }
+    },
+    "inboxLabel": "招生收件箱",
+    "inboxRows": {
+      "scotch": {
+        "school": "Scotch College",
+        "location": "Hawthorn, VIC",
+        "status": "匹配 · AEAS 70+"
+      },
+      "brisbane": {
+        "school": "Brisbane Grammar",
+        "location": "Spring Hill, QLD",
+        "status": "匹配 · AEAS 68+"
+      },
+      "sydney": {
+        "school": "Sydney Grammar",
+        "location": "Darlinghurst, NSW",
+        "status": "匹配 · AEAS 65+"
+      }
+    }
+  },
+  "AgentsCommission": {
+    "eyebrow": "定价",
+    "heading": "您保留 100% 的学校佣金。",
+    "subheading": "我们向学校收费，不向您收费。您与学校的商业关系保持直接。",
+    "statValue": "$0",
+    "statLabel": "Platform cost per agent. Zero fees, zero commission splits — ever.",
+    "bullets": {
+      "zero": {
+        "title": "零每生收费",
+        "description": "无佣金分成。无安置费。无订阅费。"
+      },
+      "direct": {
+        "title": "与学校直接合作关系",
+        "description": "提交申请的瞬间，您的归属即已锁定。"
+      },
+      "audit": {
+        "title": "完整审计记录",
+        "description": "每次状态变更均带时间戳。争议止于文件记录。"
+      }
+    }
+  },
+  "AgentsQeacTrust": {
+    "eyebrow": "已认证",
+    "heading": "一个家长——和学校——真正信任的主页。",
+    "subheading": "您的 QEAC 资质一次性核实完成。您的徽章和业绩记录将出现在每一份申请中。",
+    "sampleLabel": "Sample profile",
+    "profile": {
+      "name": "中介主页",
+      "agentName": "Mei Lin",
+      "qeac": "QEAC 已认证",
+      "yearsActive": "从业年限",
+      "students": "已安置学生",
+      "placements": "已安置学校",
+      "languages": "所用语言",
+      "languagesValue": "中 · EN"
+    }
+  },
+  "AgentsScale": {
+    "eyebrow": "网络",
+    "heading": "Agents across APAC are joining. Be one of the first.",
+    "subheading": "From Shanghai to Jakarta, Ho Chi Minh to Seoul — agents placing families into Australian K–12.",
+    "agents": {
+      "a": {
+        "name": "Li Wei",
+        "region": "Shanghai · 中国",
+        "meta": "QEAC verified · Independent schools"
+      },
+      "b": {
+        "name": "Nguyễn Minh",
+        "region": "Ho Chi Minh · Việt Nam",
+        "meta": "QEAC verified · All sectors"
+      },
+      "c": {
+        "name": "Siti Rahman",
+        "region": "Kuala Lumpur · Malaysia",
+        "meta": "QEAC verified · Boarding specialist"
+      },
+      "d": {
+        "name": "Ji-eun Park",
+        "region": "Seoul · 대한민국",
+        "meta": "QEAC verified · VIC & NSW"
+      }
+    },
+    "cta": "申请认证"
+  },
+  "AgentsTestimonial": {
+    "eyebrow": "[TODO: zh] From the field",
+    "heading": "[TODO: zh] What agents are saying",
+    "items": {
+      "a": {
+        "quote": "[TODO: zh] I used to forward 40 PDFs a week between parents on WeChat and six admissions offices over email. One platform would cut my admin in half.",
+        "attribution": "[TODO: zh] Agency director, Shanghai",
+        "meta": "[TODO: zh] 60+ students · 3 counsellors"
+      },
+      "b": {
+        "quote": "[TODO: zh] My families want updates at 11pm their time. A live tracker they can check themselves would save me two hours a day on WhatsApp.",
+        "attribution": "[TODO: zh] Independent agent, Ho Chi Minh City",
+        "meta": "[TODO: zh] 25+ students · Solo practice"
+      },
+      "c": {
+        "quote": "[TODO: zh] I re-type the same passport number into five different school forms every week. Enter-once, apply-many would change everything.",
+        "attribution": "[TODO: zh] Senior counsellor, Kuala Lumpur",
+        "meta": "[TODO: zh] 40+ students · 2 branches"
+      }
+    },
+    "disclaimer": "[TODO: zh] Composite quotes based on agent interviews"
+  },
+  "AgentsFinalCta": {
+    "eyebrow": "获得认证",
+    "headingPrefix": "您的投资组合",
+    "headingEmphasis": "值得",
+    "headingSuffix": "更好的。",
+    "subheading": "免费。需要 QEAC 认证。入驻流程 48 小时内完成。",
+    "ctaPrimary": "申请认证",
+    "ctaSecondary": "预约演示"
+  },
+  "SchoolsMetadata": {
+    "title": "SchoolGo — 用更少的邮件填满您的国际生名额",
+    "description": "为澳大利亚学校提供统一的招生收件箱。QEAC 认证中介、真实申请，无需按生收费。",
+    "ogDescription": "填满您的国际生名额。用更少的邮件。"
+  },
+  "SchoolsHero": {
+    "eyebrow": "面向澳大利亚学校",
+    "headlinePrefix": "填满您的",
+    "headlineEmphasis": "国际生",
+    "headlineSuffix": "名额。用更少的邮件。",
+    "lede": "一个认证主页，被七个国家的家庭看到。从 QEAC 认证中介收取标准化申请——格式与您招生团队已在使用的一致。",
+    "ctaPrimary": "认领您的学校主页",
+    "ctaSecondary": "预约演示",
+    "inbox": {
+      "eyebrow": "Applications inbox — preview",
+      "countLabel": "本月",
+      "rows": {
+        "a": {
+          "name": "Sophie Chen",
+          "status": "新申请",
+          "meta": "VIC · Year 9 · AEAS 78"
+        },
+        "b": {
+          "name": "Minh Tran",
+          "status": "审核中",
+          "meta": "VIC · Year 11 · IELTS 6.5"
+        },
+        "c": {
+          "name": "Ji-woo Park",
+          "status": "已发放录取",
+          "meta": "NSW · Year 10 · AEAS 74"
+        }
+      }
+    }
+  },
+  "SchoolsStats": {
+    "eyebrow": "网络效应",
+    "heading": "一个主页。被七个国家的家庭看到。",
+    "subheading": "您的学校信息出现在每一次搜索、每一次比较、每一份匹配候选名单中——以家庭的语言呈现。",
+    "items": {
+      "schools": {
+        "value": "695+",
+        "label": "CRICOS-registered schools"
+      },
+      "states": {
+        "value": "8",
+        "label": "States & territories"
+      },
+      "sectors": {
+        "value": "3",
+        "label": "Sectors — Government, Independent, Catholic"
+      },
+      "feeRange": {
+        "value": "$3.5k – $78k",
+        "label": "Annual fee range (AUD)"
+      }
+    }
+  },
+  "SchoolsThreeTools": {
+    "eyebrow": "工具包",
+    "heading": "三项工具。一个目标：用更少的工作招到合适的学生。",
+    "subheading": "SchoolGo 为您的招生团队提供三项真正需要的功能。",
+    "tools": {
+      "profile": {
+        "title": "持续更新的学校主页",
+        "description": "学费、入学时间、认可考试、奖学金及相关文件——由您更新，以家庭语言展示。"
+      },
+      "applications": {
+        "title": "标准化申请",
+        "description": "每份申请均采用相同格式，附有 QEAC 认证中介归属及完整材料。"
+      },
+      "inbox": {
+        "title": "统一的招生收件箱",
+        "description": "追踪每份申请的状态。一键发放录取、候补或拒绝通知。家庭和中介即时看到状态更新。"
+      }
+    }
+  },
+  "SchoolsTimeline": {
+    "eyebrow": "招生旅程",
+    "heading": "从首份申请到开学第一天——无需陷入邮件乱局。",
+    "subheading": "国际招生全流程，尽在一处。",
+    "steps": {
+      "receive": {
+        "title": "收取",
+        "description": "申请附带英语成绩、相关材料及认证中介信息，直接进入您的收件箱。",
+        "comingSoon": "即将推出"
+      },
+      "review": {
+        "title": "审核",
+        "description": "您的团队按照自有标准进行评估。备注仅对内部可见。",
+        "comingSoon": "即将推出"
+      },
+      "decide": {
+        "title": "决定",
+        "description": "一键发放录取、候补或拒绝通知。状态即时同步至家庭和中介。",
+        "comingSoon": "即将推出"
+      },
+      "onboard": {
+        "title": "入学",
+        "description": "在同一线程中分享入学手续材料、住宿信息及迎新链接。",
+        "comingSoon": "即将推出"
+      }
+    }
+  },
+  "SchoolsPricing": {
+    "eyebrow": "定价",
+    "heading": "无中介费。无佣金。一项年度套餐。",
+    "subheading": "支持 SchoolGo 的学校支付一项透明年费。家庭和中介无需付费。",
+    "plans": {
+      "listing": {
+        "name": "基础列表",
+        "price": "Free",
+        "priceMeta": "永久免费",
+        "features": {
+          "a": "自动发布您的 CRICOS 主页",
+          "b": "认可英语考试及最低分数",
+          "c": "标准化申请收件箱"
+        },
+        "cta": "认领您的主页"
+      },
+      "admissions": {
+        "name": "招生版",
+        "price": "$12,800",
+        "priceMeta": "AUD / 年",
+        "badge": "最受欢迎",
+        "features": {
+          "a": "基础列表的全部功能",
+          "b": "录取 / 候补 / 拒绝工作流",
+          "c": "QEAC 认证中介目录",
+          "d": "每个主页页面的七语言翻译"
+        },
+        "cta": "开启招生版"
+      }
+    }
+  },
+  "SchoolsTestimonial": {
+    "quote": "The hardest part of international admissions isn't finding students — it's processing incomplete applications from 15 different email threads.",
+    "attribution": "Composite quote based on admissions officer interviews"
+  },
+  "SchoolsFinalCta": {
+    "eyebrow": "从这里开始",
+    "headingPrefix": "您的下一届入学",
+    "headingEmphasis": "就此",
+    "headingSuffix": "开始。",
+    "subheading": "免费列表。无需信用卡。认领仅需10分钟。",
+    "ctaPrimary": "认领您的学校主页",
+    "ctaSecondary": "预约演示"
+  },
+  "SchoolsFaq": {
+    "heading": "[TODO: zh] Frequently Asked Questions",
+    "items": {
+      "claim": {
+        "question": "[TODO: zh] How do I claim my school's profile?",
+        "answer": "[TODO: zh] Search for your school on SchoolGo and click \"Claim This School.\" You'll verify your identity as a staff member, and once approved you can edit your profile, update fees, and manage applications."
+      },
+      "agents": {
+        "question": "[TODO: zh] How does SchoolGo work with education agents?",
+        "answer": "[TODO: zh] By default, your profile works with your school's existing agents. You can see which agents have placed students with you, invite new agents, or manage agent relationships from your dashboard."
+      },
+      "commission": {
+        "question": "[TODO: zh] Does SchoolGo charge schools or agents?",
+        "answer": "[TODO: zh] No. SchoolGo is free for everyone — schools, agents, and parents. There are no listing fees, per-student fees, or commission splits."
+      },
+      "data": {
+        "question": "[TODO: zh] Where does the school data come from?",
+        "answer": "[TODO: zh] All school profiles are auto-published from CRICOS (the Australian Government's official register) and cross-referenced with ACARA school profile data. Schools that claim their profile can update their own details at any time."
+      }
+    }
+  },
+  "Navbar": {
+    "brand": "School",
+    "brandAccent": "Go",
+    "region": "澳大利亚",
+    "findSchools": "查找学校",
+    "compare": "比较",
+    "scholarships": "奖学金",
+    "admissions": "招生",
+    "contactUs": "联系我们",
+    "signIn": "登录"
+  },
+  "Footer": {
+    "brand": "School",
+    "brandAccent": "Go",
+    "region": "澳大利亚",
+    "tagline": "连接未来领袖与大陆最好的学术基础。",
+    "resources": "资源",
+    "directory": "目录",
+    "copyright": "© {year} SchoolGo 澳大利亚。保留所有权利。",
+    "resourceLinks": {
+      "vceResources": "VCE 资源",
+      "hscGuides": "HSC 指南",
+      "ibRequirements": "IB 要求"
+    },
+    "directoryLinks": {
+      "scholarshipTips": "奖学金提示",
+      "contactSupport": "联系支持"
+    },
+    "social": {
+      "website": "访问网站",
+      "share": "分享",
+      "email": "给我们发邮件"
+    }
+  },
+  "SchoolSearch": {
+    "searchPlaceholder": "按学校名称、城市或郊区搜索...",
+    "clearSearch": "清除搜索",
+    "filters": {
+      "title": "搜索筛选",
+      "subtitle": "筛选澳大利亚学校",
+      "priceRangeLabel": "价格范围 (AUD)",
+      "priceRangeValue": "${min}k – ${max}k",
+      "priceMin": "$5,000",
+      "priceMax": "$60,000+",
+      "englishTests": "英语水平考试",
+      "englishTestsHint": "学校接受认可的英语考试",
+      "englishTestsToggle": "切换英语水平考试筛选",
+      "curriculum": "课程",
+      "location": "位置",
+      "resetFilters": "重置筛选",
+      "resetAll": "重置全部",
+      "locked": {
+        "title": "Unlock this filter",
+        "cta": "Create free account"
+      },
+      "collapse": "Collapse",
+      "expand": "Expand"
+    },
+    "chips": {
+      "topRated": "最高评分",
+      "boarding": "提供寄宿",
+      "coed": "男女同校",
+      "scholarships": "奖学金开放",
+      "openDays": "开放日"
+    },
+    "states": {
+      "VIC": "维多利亚州 (VIC)",
+      "NSW": "新南威尔士州 (NSW)",
+      "QLD": "昆士兰州 (QLD)",
+      "SA": "南澳大利亚州 (SA)",
+      "WA": "西澳大利亚州 (WA)",
+      "TAS": "塔斯马尼亚州 (TAS)",
+      "ACT": "澳大利亚首都领地 (ACT)",
+      "NT": "北领地 (NT)"
+    },
+    "autocomplete": {
+      "schoolsHeading": "学校",
+      "suburbsHeading": "郊区和邮编",
+      "loading": "搜索中…",
+      "empty": "无匹配结果"
+    },
+    "saveSearch": {
+      "cta": "保存搜索",
+      "promptTitle": "保存此搜索",
+      "nameLabel": "名称",
+      "namePlaceholder": "例如：布里斯班候选名单",
+      "confirm": "保存",
+      "cancel": "取消",
+      "successToast": "搜索已保存",
+      "errorToast": "无法保存搜索",
+      "signInRequired": "登录以保存搜索"
+    },
+    "savedSearches": {
+      "heading": "已保存的搜索",
+      "empty": "暂无保存的搜索",
+      "applyCta": "应用",
+      "deleteCta": "删除",
+      "signInRequired": "登录以查看已保存的搜索",
+      "lastResultCount": "{count, plural, =0 {无结果} other {# 个结果}}"
+    },
+    "bookmark": {
+      "add": "保存学校",
+      "remove": "从已保存中移除",
+      "signInRequired": "登录以保存学校"
+    },
+    "results": {
+      "title": "可用学校",
+      "count": "{count, plural, one {# 个结果} other {# 个结果}}",
+      "viewAll": "查看所有学校",
+      "searching": "[TODO: zh] Searching…",
+      "error": "[TODO: zh] Something went wrong. Please try again.",
+      "empty": "[TODO: zh] No schools found. Try adjusting your filters.",
+      "loading": "正在加载学校…"
+    },
+    "map": {
+      "title": "澳大利亚 — 学校地图",
+      "reset": "[TODO: zh] Reset filters and map",
+      "zoomIn": "放大",
+      "zoomOut": "缩小",
+      "ctrlScrollHint": "[TODO: zh] Use Ctrl + scroll to zoom the map",
+      "loading": "正在加载地图…"
+    },
+    "card": {
+      "currency": "AUD",
+      "viewDetails": "查看 {name}",
+      "topRated": "Top rated"
+    },
+    "loginPrompt": {
+      "title": "解锁完整搜索",
+      "subtitle": "登录以使用详细筛选器、保存学校和比较课程。",
+      "signIn": "登录以继续",
+      "signUp": "立即注册"
+    },
+    "lockedDescription": "登录以解锁 — 创建免费账户以使用此筛选器",
+    "compare": {
+      "regionLabel": "比较学校",
+      "clearAll": "清除所有比较选择",
+      "loading": "正在加载比较数据…"
+    },
+    "spec": {
+      "previewBadge": "Preview",
+      "previewTitle": "Spec filters",
+      "modeBadge": {
+        "basic": "基础",
+        "advanced": "高级"
+      },
+      "lockedDescription": "Sign up to unlock this filter.",
+      "showFewer": "Show fewer",
+      "location": {
+        "title": "位置",
+        "stateLabel": "州或领地",
+        "suburbLabel": "郊区或邮编",
+        "suburbPlaceholder": "例如 Hawthorn 或 3122"
+      },
+      "schoolProfile": {
+        "title": "School profile",
+        "sectorLabel": "Sector",
+        "accommodationLabel": "Accommodation",
+        "religionLabel": "Religious affiliation"
+      },
+      "enrolment": {
+        "title": "Enrolment & entry",
+        "yearLevelLabel": "Entry year level",
+        "ageLabel": "Student age",
+        "agePlaceholder": "—",
+        "ageHint": "Most {age}-year-olds enter {expected} — showing all results for your selection.",
+        "termLabel": "Entry term"
+      },
+      "academic": {
+        "title": "Academic",
+        "programLabel": "Program type",
+        "atarLabel": "ATAR available",
+        "atarTooltip": "Australian Tertiary Admission Rank — the score used for university entry in Australia",
+        "englishSupportLabel": "English language support",
+        "programTooltips": {
+          "australianCert": "The standard Australian senior secondary certificate — VCE (VIC), HSC (NSW), QCE (QLD), etc.",
+          "ib": "International Baccalaureate — a globally recognised program accepted by universities worldwide",
+          "elicos": "English Language Intensive Courses for Overseas Students — intensive English preparation before starting mainstream school"
+        }
+      },
+      "englishTest": {
+        "title": "英语考试成绩",
+        "selectorLabel": "我有一个成绩，考试为",
+        "scoreLabel": "{label} 成绩",
+        "scorePlaceholder": "输入成绩",
+        "scoreHint": "范围：{min}–{max}",
+        "aeas": "AEAS",
+        "idat": "iDAT",
+        "duolingo": "Duolingo",
+        "ielts": "IELTS",
+        "pte": "PTE",
+        "cambridge": "Cambridge"
+      },
+      "tile": {
+        "status": {
+          "open": "开放",
+          "limited": "名额有限",
+          "waitlist": "仅候补",
+          "closed": "已关闭"
+        },
+        "sector": {
+          "government": "公立",
+          "nonGovernment": "非政府",
+          "catholic": "天主教"
+        },
+        "accommodation": {
+          "boarding": "寄宿",
+          "homestay": "寄宿家庭",
+          "both": "两者皆有",
+          "none": "无"
+        },
+        "actions": {
+          "bookmark": "收藏 {name}",
+          "bookmarkAdd": "将 {name} 加入收藏",
+          "bookmarkRemove": "从收藏中移除 {name}",
+          "compare": "将 {name} 加入比较"
+        }
+      },
+      "sector": {
+        "government": "Government",
+        "nonGovernment": "Non-government",
+        "catholic": "Catholic"
+      },
+      "accommodation": {
+        "boarding": "Boarding",
+        "homestay": "Homestay",
+        "both": "Both",
+        "none": "None"
+      },
+      "religion": {
+        "nonDenominational": "Non-denominational",
+        "anglican": "Anglican",
+        "baptist": "Baptist",
+        "lutheran": "Lutheran",
+        "unitingChurch": "Uniting Church",
+        "presbyterian": "Presbyterian",
+        "islamic": "Islamic",
+        "jewish": "Jewish",
+        "buddhist": "Buddhist",
+        "copticOrthodox": "Coptic Orthodox",
+        "greekOrthodox": "Greek Orthodox",
+        "seventhDayAdventist": "Seventh-day Adventist",
+        "quaker": "Quaker",
+        "interdenominationalChristian": "Interdenominational Christian",
+        "showMore": "Show all ({count})",
+        "showLess": "Show less"
+      },
+      "yearLevel": {
+        "gr4": "Gr 4",
+        "gr5": "Gr 5",
+        "gr6": "Gr 6",
+        "yr7": "Yr 7",
+        "yr8": "Yr 8",
+        "yr9": "Yr 9",
+        "yr10": "Yr 10",
+        "yr11": "Yr 11",
+        "yr12": "Yr 12"
+      },
+      "entryTerm": {
+        "term1": "Term 1",
+        "term2": "Term 2",
+        "term3": "Term 3",
+        "term4": "Term 4"
+      },
+      "programType": {
+        "australianCert": "Australian Cert.",
+        "ib": "IB",
+        "elicos": "ELICOS"
+      },
+      "englishTestOption": {
+        "aeas": "AEAS",
+        "idat": "iDAT",
+        "duolingo": "Duolingo",
+        "ielts": "IELTS",
+        "pte": "PTE",
+        "cambridge": "Cambridge"
+      },
+      "gender": {
+        "boys": "Boys",
+        "girls": "Girls",
+        "coEd": "Co-ed"
+      },
+      "schoolLevel": {
+        "primary": "Primary",
+        "secondary": "Secondary"
+      },
+      "quickChip": {
+        "boys": "Boys",
+        "girls": "Girls",
+        "coEd": "Co-ed",
+        "primary": "Primary",
+        "secondary": "Secondary",
+        "boarding": "Boarding",
+        "groupAriaLabel": "Quick filters"
+      },
+      "sort": {
+        "label": "排序方式",
+        "nameAsc": "学校名称 (A–Z)",
+        "nameDesc": "学校名称 (Z–A)",
+        "tuitionAsc": "学费由低到高",
+        "tuitionDesc": "学费由高到低",
+        "state": "州份",
+        "enrolmentStatus": "招生状态（开放优先）",
+        "applicationDeadlineAsc": "申请截止日期（最近）",
+        "schoolSizeAsc": "学校规模（小到大）",
+        "schoolSizeDesc": "学校规模（大到小）",
+        "internationalPctAsc": "国际生比例（低到高）",
+        "internationalPctDesc": "国际生比例（高到低）"
+      },
+      "topBar": {
+        "searchPlaceholder": "Search by school name, city, or suburb",
+        "feeLabel": "Annual fee",
+        "feeReadout": "${min}k – ${max}k"
+      },
+      "compareBar": {
+        "label": "比较（{count}/{max}）",
+        "remove": "移除 {name}",
+        "cta": "比较学校",
+        "capReached": "已达比较上限"
+      },
+      "tileCard": {
+        "tuitionFrom": "From ${amount} / year",
+        "viewSchool": "View school",
+        "bookmark": "Bookmark",
+        "bookmarkRemove": "Remove bookmark",
+        "compareCheckbox": "Add {name} to compare",
+        "status": {
+          "open": "Open",
+          "limited": "Limited places",
+          "waitlist": "Waitlist only",
+          "closed": "Closed"
+        }
+      },
+      "stepper": {
+        "decrease": "{label} decrease",
+        "increase": "{label} increase"
+      }
+    }
+  },
+  "Applications": {
+    "title": "申请",
+    "subtitle": "管理和追踪所有学生在各学校的申请。",
+    "searchPlaceholder": "按学生或学校搜索...",
+    "clearSearch": "清除搜索",
+    "allStatuses": "所有状态",
+    "filterActive": "活跃",
+    "filterNeedsAction": "需要处理",
+    "statusDraft": "草稿",
+    "statusSubmitted": "已提交",
+    "statusReceived": "已收到",
+    "statusUnderReview": "审核中",
+    "statusDocumentsRequested": "需补充文件",
+    "statusAssessmentRequired": "需要测评",
+    "statusInterviewScheduled": "面试已安排",
+    "statusOfferMade": "已发放录取",
+    "statusOfferAccepted": "已接受录取",
+    "statusPreEnrolment": "预入学",
+    "statusCoeIssued": "已签发CoE",
+    "statusEnrolled": "已入学",
+    "statusWithdrawn": "已撤回",
+    "statusDeclined": "已拒绝",
+    "statusWaitlisted": "候补名单",
+    "columnStudent": "学生",
+    "columnSchool": "学校",
+    "columnState": "州份",
+    "columnYearLevel": "年级",
+    "columnStatus": "状态",
+    "columnSubmitted": "提交时间",
+    "columnDays": "天数",
+    "emptyTitle": "暂无申请",
+    "emptySubtitle": "先为您的学生创建一份申请。",
+    "emptyFilteredTitle": "没有符合筛选条件的申请",
+    "emptyFilteredSubtitle": "请尝试调整筛选条件或搜索词。",
+    "addApplication": "新建申请",
+    "paginationShowing": "显示",
+    "paginationOf": "共 {total} 条",
+    "allRows": "全部",
+    "today": "今天",
+    "daysAgo": "{count}天前",
+    "exportCsv": "导出CSV",
+    "detailTitle": "申请详情",
+    "backToApplications": "返回申请列表",
+    "tabDetails": "详情",
+    "tabDocuments": "文件",
+    "tabTimeline": "时间线",
+    "tabMessages": "消息",
+    "studentToSchool": "{student} → {school}",
+    "submittedOn": "提交日期",
+    "lastUpdated": "最近更新",
+    "daysInCurrentStatus": "当前状态天数",
+    "applicationId": "申请 ID",
+    "progressSubmitted": "已提交",
+    "progressReview": "审核",
+    "progressDocuments": "材料",
+    "progressOffer": "录取",
+    "progressEnrolment": "入学",
+    "progressEnrolled": "已入学",
+    "notFound": "未找到该申请。",
+    "loadError": "加载申请失败。",
+    "sectionStudent": "学生信息",
+    "sectionSchool": "学校信息",
+    "sectionApplication": "申请信息",
+    "labelName": "姓名",
+    "labelNationality": "国籍",
+    "labelSchoolName": "学校名称",
+    "labelState": "州份",
+    "labelCricosCode": "CRICOS 编号",
+    "labelYearLevel": "年级",
+    "labelIntake": "入学时间",
+    "labelStatus": "状态",
+    "labelSubmitted": "提交时间",
+    "labelCreated": "创建时间",
+    "labelUpdated": "更新时间",
+    "notProvided": "未提供",
+    "documentsEmpty": "未附加任何文件",
+    "documentName": "名称",
+    "documentType": "类型",
+    "documentSize": "大小",
+    "documentUploadedAt": "上传时间",
+    "downloadDocument": "下载",
+    "timelineEmpty": "暂无时间线事件",
+    "timelineBy": "由 {actor}",
+    "messagesComingSoon": "消息功能即将推出",
+    "actionWithdraw": "撤回申请",
+    "actionAcceptOffer": "接受录取",
+    "actionContactSchool": "联系学校",
+    "actionComingSoon": "即将推出"
+  },
+  "Auth": {
+    "signInTitle": "登录 SchoolGo",
+    "signInSubtitle": "登录您的账户，管理学校、申请及更多内容。",
+    "iAmA": "我是…",
+    "userTypes": {
+      "parent": "家长",
+      "agent": "中介",
+      "school": "学校"
+    },
+    "emailLabel": "电子邮件",
+    "emailPlaceholder": "you@example.com",
+    "passwordLabel": "密码",
+    "passwordPlaceholder": "请输入密码",
+    "signInButton": "登录",
+    "loginSuccess": "欢迎回来！",
+    "loginError": "邮箱或密码错误，请重试。",
+    "portalUnauthorized": "此账户无权访问该门户。",
+    "sessionExpired": "您的登录已过期，请重新登录。",
+    "noAccount": "还没有账户？",
+    "signUp": "立即注册",
+    "signUpTitle": "创建您的账户",
+    "signUpSubtitle": "加入 SchoolGo，查找、比较并申请澳大利亚学校。",
+    "nameLabel": "全名",
+    "namePlaceholder": "您的全名",
+    "createPasswordPlaceholder": "创建密码（至少6个字符）",
+    "signUpButton": "创建账户",
+    "registerSuccess": "账户已创建！欢迎来到 SchoolGo。",
+    "registerError": "无法创建账户，请重试。",
+    "hasAccount": "已有账户？",
+    "signInLink": "登录",
+    "close": "关闭",
+    "portalSwitch": {
+      "backTo": "[TODO: zh] Back to"
+    },
+    "parent": {
+      "signInTitle": "[TODO: zh] Welcome back, Parent",
+      "signInSubtitle": "[TODO: zh] Sign in to find and compare the best schools for your child.",
+      "signUpTitle": "[TODO: zh] Start your school search",
+      "signUpSubtitle": "[TODO: zh] Create an account to shortlist, compare and apply to Australian schools.",
+      "stat1Value": "2,400+",
+      "stat1Label": "学校",
+      "stat2Value": "7",
+      "stat2Label": "语言",
+      "stat3Value": "98%",
+      "stat3Label": "满意度"
+    },
+    "agent": {
+      "signInTitle": "[TODO: zh] Agent Portal",
+      "signInSubtitle": "[TODO: zh] Sign in to manage your pipeline and student placements.",
+      "signUpTitle": "[TODO: zh] Grow your agency",
+      "signUpSubtitle": "[TODO: zh] Join SchoolGo to access verified schools and streamline placements.",
+      "stat1Value": "850+",
+      "stat1Label": "中介",
+      "stat2Value": "15%",
+      "stat2Label": "佣金",
+      "stat3Value": "24h",
+      "stat3Label": "响应"
+    },
+    "school": {
+      "signInTitle": "[TODO: zh] School Portal",
+      "signInSubtitle": "[TODO: zh] Sign in to manage enrolments and connect with agents.",
+      "signUpTitle": "[TODO: zh] List your school",
+      "signUpSubtitle": "[TODO: zh] Create an account to reach international students and education agents.",
+      "stat1Value": "500+",
+      "stat1Label": "中介",
+      "stat2Value": "12k",
+      "stat2Label": "学生",
+      "stat3Value": "Free",
+      "stat3Label": "免费列表"
+    },
+    "nav": {
+      "parent": {
+        "howItWorks": "使用方法",
+        "compare": "比较",
+        "faq": "常见问题"
+      },
+      "agent": {
+        "howItWorks": "使用方法",
+        "commission": "佣金",
+        "trust": "信任"
+      },
+      "school": {
+        "howItWorks": "使用方法",
+        "pricing": "定价",
+        "faq": "常见问题"
+      }
+    }
+  },
+  "Errors": {
+    "generic": "出了点问题",
+    "genericSubtitle": "[TODO: zh] We hit an unexpected bump. Don't worry — your data is safe.",
+    "tryAgain": "再试一次",
+    "notFound": "页面未找到",
+    "notFoundCode": "[TODO: zh] 404",
+    "notFoundSubtitle": "[TODO: zh] The page you're looking for doesn't exist or has been moved.",
+    "goHome": "回到首页",
+    "searchInstead": "[TODO: zh] Search schools"
+  },
+  "LaunchingSoon": {
+    "title": "我们即将上线",
+    "subtitle": "SchoolGo 正在为您准备澳大利亚最好的学校资源。我们正在为您打造一个出色的平台，即将完成。",
+    "stayTuned": "敬请期待——我们很快就会正式上线。",
+    "portals": {
+      "heading": "我们的平台",
+      "parents": "家长端",
+      "schools": "学校端",
+      "agents": "中介端"
+    }
+  },
+  "Dashboard": {
+    "nav": {
+      "dashboard": "[TODO: zh] Dashboard",
+      "students": "[TODO: zh] Students",
+      "applications": "[TODO: zh] Applications",
+      "pipeline": "[TODO: zh] Pipeline",
+      "searchSchools": "[TODO: zh] Search Schools",
+      "messages": "[TODO: zh] Messages",
+      "settings": "[TODO: zh] Settings",
+      "profile": "[TODO: zh] My Profile",
+      "logout": "[TODO: zh] Log out",
+      "portalLabel": "代理",
+      "portalBadge": {
+        "agent": "代理",
+        "parent": "家长",
+        "school": "学校"
+      }
+    },
+    "greeting": {
+      "morning": "早上好，",
+      "afternoon": "下午好，",
+      "evening": "晚上好，",
+      "fallbackName": "您好"
+    },
+    "actionBanner": {
+      "title": "需要处理"
+    },
+    "cards": {
+      "activeStudents": "活跃学生",
+      "appsInProgress": "进行中的申请",
+      "offersReceived": "收到的录取",
+      "enrolledThisTerm": "本学期已入学"
+    },
+    "activity": {
+      "title": "最近动态",
+      "empty": "暂无最近动态。可以先添加学生或浏览学校。"
+    },
+    "deadlines": {
+      "title": "即将到期",
+      "empty": "暂无即将到期事项。"
+    },
+    "quickActions": {
+      "addStudent": "添加新学生",
+      "newApplication": "新建申请",
+      "reviewApplications": "查看申请",
+      "searchSchools": "搜索学校"
+    }
+  },
+  "Students": {
+    "title": "[TODO: zh] Students",
+    "subtitle": "[TODO: zh] Manage your student profiles, documents, and test results.",
+    "searchPlaceholder": "[TODO: zh] Search by name...",
+    "clearSearch": "[TODO: zh] Clear search",
+    "allStatuses": "[TODO: zh] All statuses",
+    "statusActive": "[TODO: zh] Active",
+    "statusArchived": "[TODO: zh] Archived",
+    "statusEnrolled": "[TODO: zh] Enrolled",
+    "addStudent": "[TODO: zh] Add Student",
+    "columnName": "[TODO: zh] Name",
+    "columnNationality": "[TODO: zh] Nationality",
+    "columnYearLevel": "[TODO: zh] Year Level",
+    "columnTargetEntry": "[TODO: zh] Target Entry",
+    "columnEnglishTest": "英语考试",
+    "columnApps": "申请",
+    "columnStatus": "[TODO: zh] Status",
+    "filters": "筛选",
+    "sort": "排序",
+    "emptyTitle": "暂无学生",
+    "emptySubtitle": "添加您的第一位学生，开始建立档案并申请学校。",
+    "archive": "归档",
+    "paginationShowing": "显示",
+    "paginationOf": "共 {total} 条",
+    "allRows": "全部",
+    "createTitle": "[TODO: zh] Add New Student",
+    "createButton": "[TODO: zh] Create Student",
+    "createSuccess": "[TODO: zh] Student created successfully.",
+    "createError": "[TODO: zh] Could not create student. Please try again.",
+    "profileTitle": "[TODO: zh] Student Profile",
+    "notFound": "[TODO: zh] Student not found.",
+    "backToList": "[TODO: zh] Back",
+    "edit": "[TODO: zh] Edit",
+    "sectionPersonal": "[TODO: zh] Personal Information",
+    "sectionEducation": "[TODO: zh] Education",
+    "sectionParent": "[TODO: zh] Parent / Guardian",
+    "fieldFirstName": "[TODO: zh] First name",
+    "fieldLastName": "[TODO: zh] Last name",
+    "fieldDob": "[TODO: zh] Date of birth",
+    "fieldGender": "[TODO: zh] Gender",
+    "fieldNationality": "[TODO: zh] Nationality",
+    "fieldCurrentSchool": "[TODO: zh] Current school",
+    "fieldCurrentYear": "[TODO: zh] Current year level",
+    "fieldTargetYear": "[TODO: zh] Target entry year",
+    "fieldTargetTerm": "[TODO: zh] Target intake",
+    "fieldParentName": "[TODO: zh] Name",
+    "fieldParentEmail": "[TODO: zh] Email",
+    "fieldParentPhone": "[TODO: zh] Phone",
+    "fieldParentWechat": "[TODO: zh] WeChat ID",
+    "fieldNotes": "[TODO: zh] Agent Notes",
+    "notesPlaceholder": "[TODO: zh] Private notes about this student (only visible to you)...",
+    "selectGender": "[TODO: zh] Select gender",
+    "selectYear": "[TODO: zh] Select year level",
+    "genderMale": "[TODO: zh] Male",
+    "genderFemale": "[TODO: zh] Female",
+    "genderOther": "[TODO: zh] Other",
+    "tabOverview": "[TODO: zh] Overview",
+    "tabDocuments": "[TODO: zh] Documents",
+    "tabTests": "[TODO: zh] Tests",
+    "tabApplications": "[TODO: zh] Applications",
+    "documentsComingSoon": "[TODO: zh] Document management coming soon.",
+    "testsComingSoon": "[TODO: zh] Test results coming soon.",
+    "applicationsComingSoon": "[TODO: zh] Applications coming soon.",
+    "docUpload": "[TODO: zh] Upload Document",
+    "docUploadTitle": "[TODO: zh] Upload Document",
+    "docUploadButton": "[TODO: zh] Upload",
+    "docCancel": "[TODO: zh] Cancel",
+    "docDropzone": "[TODO: zh] Drag & drop a file here, or click to browse",
+    "docDropzoneHint": "[TODO: zh] PDF, JPG, PNG, DOCX up to 10 MB",
+    "docTypeLabel": "[TODO: zh] Document Type",
+    "docTypeSelect": "[TODO: zh] Select document type",
+    "docFileNameLabel": "[TODO: zh] Display Name (optional)",
+    "docFileNamePlaceholder": "[TODO: zh] e.g. John Passport 2026",
+    "docExpiresLabel": "[TODO: zh] Expiry Date (optional)",
+    "docNotesLabel": "[TODO: zh] Notes (optional)",
+    "docNotesPlaceholder": "[TODO: zh] Any notes about this document...",
+    "docAllTypes": "[TODO: zh] All types",
+    "docEmptyTitle": "[TODO: zh] No documents yet",
+    "docEmptySubtitle": "[TODO: zh] Upload your first document to get started.",
+    "docColName": "[TODO: zh] File",
+    "docColType": "[TODO: zh] Type",
+    "docColStatus": "[TODO: zh] Status",
+    "docColExpiry": "[TODO: zh] Expiry",
+    "docColUploaded": "[TODO: zh] Uploaded",
+    "docDeleteTitle": "[TODO: zh] Delete Document",
+    "docDeleteConfirm": "[TODO: zh] Are you sure you want to delete this document? This action cannot be undone.",
+    "docDeleteButton": "[TODO: zh] Delete",
+    "docUploadSuccess": "[TODO: zh] Document uploaded successfully.",
+    "docUploadError": "[TODO: zh] Could not upload document. Please try again.",
+    "docDeleteSuccess": "[TODO: zh] Document deleted.",
+    "docDeleteError": "[TODO: zh] Could not delete document.",
+    "docType_passport": "[TODO: zh] Passport",
+    "docType_school_reports": "[TODO: zh] School Reports",
+    "docType_english_test": "[TODO: zh] English Test Report",
+    "docType_birth_certificate": "[TODO: zh] Birth Certificate",
+    "docType_parent_passport": "[TODO: zh] Parent Passport",
+    "docType_immunisation": "[TODO: zh] Immunisation Records",
+    "docType_personal_statement": "[TODO: zh] Personal Statement",
+    "docType_guardian_nomination": "[TODO: zh] Guardian Nomination",
+    "docType_current_visa": "[TODO: zh] Current Visa",
+    "docType_welfare_docs": "[TODO: zh] Welfare Documents",
+    "docType_financial_evidence": "[TODO: zh] Financial Evidence",
+    "docType_oshc": "[TODO: zh] OSHC",
+    "docType_written_agreement": "[TODO: zh] Written Agreement",
+    "docType_conditions_of_entry": "[TODO: zh] Conditions of Entry",
+    "docType_offer_acceptance": "[TODO: zh] Offer Acceptance",
+    "docType_coe": "[TODO: zh] CoE (Confirmation of Enrolment)",
+    "docType_caaw_letter": "[TODO: zh] CAAW Letter",
+    "docType_photo": "[TODO: zh] Photo",
+    "docType_other": "[TODO: zh] Other",
+    "docStatus_active": "[TODO: zh] Active",
+    "docStatus_replaced": "[TODO: zh] Replaced",
+    "docStatus_archived": "[TODO: zh] Archived"
+  },
+  "Pipeline": {
+    "title": "申请管道",
+    "totalApplications": "{count, plural, one {# 份申请} other {# 份申请}}",
+    "emptyTitle": "管道中暂无申请",
+    "emptySubtitle": "先为您的学生创建一份申请。",
+    "columnNew": "新申请",
+    "columnInReview": "审核中",
+    "columnActionRequired": "需要处理",
+    "columnOffers": "录取通知",
+    "columnPreEnrolment": "预入学",
+    "columnEnrolled": "已入学",
+    "columnClosed": "已关闭",
+    "daysLabel": "{count}天",
+    "moreApplications": "+{count} 更多"
+  },
+  "SchoolDetail": {
+    "backToSearch": "[TODO: zh] Back to search",
+    "cricosVerified": "[TODO: zh] CRICOS verified",
+    "claimedProfile": "[TODO: zh] Claimed profile",
+    "admissionsProfileLabel": "[TODO: zh] Admissions profile",
+    "admissionsProfileDescription": "[TODO: zh] Compare fees, entry requirements, intakes, and contact details.",
+    "trustNotice": "[TODO: zh] SchoolGo profiles combine public provider data with admissions information so families can compare schools before contacting an agent or school.",
+    "intlBanner": "[TODO: zh] This guide is for international full fee-paying students and their families.",
+    "breadcrumbs": {
+      "aria": "[TODO: zh] Breadcrumb",
+      "home": "[TODO: zh] Home",
+      "schools": "[TODO: zh] Schools"
+    },
+    "hero": {
+      "altText": "[TODO: zh] {name} campus, international student admissions guide",
+      "intlGuideLabel": "[TODO: zh] International student admissions guide"
+    },
+    "stats": {
+      "type": "[TODO: zh] Type",
+      "students": "[TODO: zh] Students",
+      "gender": "[TODO: zh] Gender",
+      "tuitionFrom": "[TODO: zh] Tuition from",
+      "boarding": "[TODO: zh] Boarding",
+      "perYear": "[TODO: zh] AUD / year (intl)",
+      "dayAndBoarding": "[TODO: zh] Day & boarding",
+      "notListed": "[TODO: zh] Not listed",
+      "notOffered": "[TODO: zh] Not offered",
+      "available": "[TODO: zh] Available",
+      "coed": "[TODO: zh] Co-ed",
+      "boys": "[TODO: zh] Boys",
+      "girls": "[TODO: zh] Girls"
+    },
+    "about": {
+      "eyebrow": "[TODO: zh] About this school",
+      "heading": "[TODO: zh] About {name}",
+      "defaultHeading": "[TODO: zh] About {name}",
+      "intlNoticeLead": "[TODO: zh] For international families:",
+      "intlNoticeBody": "[TODO: zh] This profile is designed to help overseas families evaluate {name}. It covers CRICOS registration, visa requirements, English language prerequisites, and the international application process.",
+      "defaultDescription": "[TODO: zh] {name} is listed in SchoolGo's Australian school directory. Use this profile to review key admissions facts before shortlisting or contacting the school.",
+      "sourceNote": "[TODO: zh] This profile was written by SchoolGo's editorial team using publicly available data from the CRICOS register and the school's published materials. It is not endorsed by or affiliated with the school.",
+      "lastReviewed": "[TODO: zh] Last reviewed {date}."
+    },
+    "curriculum": {
+      "eyebrow": "[TODO: zh] Academics",
+      "heading": "[TODO: zh] Curriculum and academic pathways",
+      "intro": "[TODO: zh] International students at {name} follow the curriculum and assessment pathways listed below. Specialist programmes and learning support help students transition into Australian schooling.",
+      "yearLevels": "[TODO: zh] Year levels offered",
+      "cricosAgeRange": "[TODO: zh] CRICOS age range",
+      "proposedEntryLevel": "[TODO: zh] Proposed entry level",
+      "proposedEntryTerm": "[TODO: zh] Proposed entry term",
+      "languages": "[TODO: zh] Languages taught",
+      "learningSupport": "[TODO: zh] Learning support",
+      "elicosYes": "[TODO: zh] ELICOS / EAL support available",
+      "atar": "[TODO: zh] ATAR pathway",
+      "yes": "[TODO: zh] Yes",
+      "no": "[TODO: zh] No",
+      "cricosCode": "[TODO: zh] CRICOS code",
+      "coursesHeading": "[TODO: zh] CRICOS registered courses",
+      "courseTable": {
+        "course": "[TODO: zh] Course",
+        "code": "[TODO: zh] Code",
+        "level": "[TODO: zh] Level"
+      },
+      "sourceNote": "[TODO: zh] Source: CRICOS Register (Commonwealth Government) and the school's published international fee schedule."
+    },
+    "fees": {
+      "eyebrow": "[TODO: zh] Fees for international students",
+      "heading": "[TODO: zh] School fees and costs",
+      "intro": "[TODO: zh] The following fees are for international full fee-paying students. All figures are annual and in Australian dollars (AUD). Confirm the current schedule directly with the school before budgeting.",
+      "primary": "[TODO: zh] Primary",
+      "junior": "[TODO: zh] Junior secondary",
+      "senior": "[TODO: zh] Senior secondary",
+      "perYearTuition": "[TODO: zh] tuition / year",
+      "perYear": "[TODO: zh] per year",
+      "boardingAll": "[TODO: zh] Boarding (all grades)",
+      "totalSenior": "[TODO: zh] Total (senior)",
+      "applicationFee": "[TODO: zh] Application fee",
+      "enrolmentFee": "[TODO: zh] Enrolment fee",
+      "refundable": "[TODO: zh] Application fee refundable",
+      "scholarshipAvailable": "[TODO: zh] Scholarships available",
+      "intakePeriods": "[TODO: zh] Intake periods",
+      "applicationDeadline": "[TODO: zh] Application deadline",
+      "nextIntake": "[TODO: zh] Next intake",
+      "feesNotListed": "[TODO: zh] Fees are not publicly listed yet. Contact the school directly for the current international fee schedule.",
+      "yes": "[TODO: zh] Yes",
+      "no": "[TODO: zh] No",
+      "sourceNote": "[TODO: zh] Source: school's published international fee schedule. Credit card surcharge may apply. Confirm current fees directly with the school before budgeting."
+    },
+    "english": {
+      "eyebrow": "[TODO: zh] English requirements",
+      "heading": "[TODO: zh] English language proficiency",
+      "intro": "[TODO: zh] Minimum scores accepted for international applicants. Schools may also accept evidence of prior English-medium schooling or an interview.",
+      "noScores": "[TODO: zh] No minimum English test scores are listed yet. Contact the school for accepted forms of English proficiency evidence."
+    },
+    "admissions": {
+      "eyebrow": "[TODO: zh] International admissions",
+      "heading": "[TODO: zh] How to apply as an international student",
+      "intro": "[TODO: zh] {name} accepts international students on a Student Visa (subclass 500). Applications can be made directly through the school or via an approved education agent.",
+      "visa": "[TODO: zh] Visa subclass",
+      "visaValue": "[TODO: zh] 500 (Student visa)",
+      "oshcRequired": "[TODO: zh] OSHC required",
+      "oshcArrangement": "[TODO: zh] OSHC arrangement",
+      "oshcProvider": "[TODO: zh] OSHC preferred provider",
+      "applicationDeadline": "[TODO: zh] Application deadline",
+      "offerWindow": "[TODO: zh] Offer acceptance window",
+      "offerWindowValue": "[TODO: zh] {days} days",
+      "partnerAgentsOnly": "[TODO: zh] Partner agents only",
+      "contactRoleLabel": "[TODO: zh] International contact",
+      "intlContact": "[TODO: zh] Enrolments office / International Student Coordinator",
+      "emailLabel": "[TODO: zh] Email",
+      "phoneLabel": "[TODO: zh] Phone",
+      "yes": "[TODO: zh] Yes",
+      "no": "[TODO: zh] No",
+      "sourceNote": "[TODO: zh] Based on information from the school's international students page and requirements under the ESOS Act 2000 and National Code 2018. Verify current requirements directly with the school.",
+      "steps": {
+        "s1": {
+          "title": "[TODO: zh] Contact the enrolments office or an approved agent",
+          "desc": "[TODO: zh] Reach out to the school's enrolments office to request an Application for Enrolment form. You can also work with one of the school's listed education agents."
+        },
+        "s2": {
+          "title": "[TODO: zh] Prepare English proficiency evidence",
+          "desc": "[TODO: zh] Provide AEAS, IELTS, PTE, Duolingo, Cambridge or iDAT results, or evidence of three or more years of schooling delivered in English."
+        },
+        "s3": {
+          "title": "[TODO: zh] Gather supporting documents",
+          "desc": "[TODO: zh] Student's passport, academic transcripts and reports from the current school, evidence of English proficiency, and any other assessments requested."
+        },
+        "s4": {
+          "title": "[TODO: zh] Submit the application",
+          "desc": "[TODO: zh] Complete and return the Application for Enrolment form along with the application fee. Lodging the form is not an offer of enrolment."
+        },
+        "s5": {
+          "title": "[TODO: zh] Application assessment",
+          "desc": "[TODO: zh] The school evaluates academic reports and English proficiency. The Director of Learning makes the final decision on acceptance."
+        },
+        "s6": {
+          "title": "[TODO: zh] Receive a Letter of Offer",
+          "desc": "[TODO: zh] If successful, the Principal issues a Letter of Offer in writing, accompanied by a fee invoice."
+        },
+        "s7": {
+          "title": "[TODO: zh] Accept and pay advance fees",
+          "desc": "[TODO: zh] Complete the acceptance forms and pay the advance fee (typically 50% of annual tuition and a one-off capital fee)."
+        },
+        "s8": {
+          "title": "[TODO: zh] Receive your eCoE and apply for your visa",
+          "desc": "[TODO: zh] On receipt of payment the school issues an electronic Confirmation of Enrolment (eCoE). Lodge a Student Visa (subclass 500) with the Department of Home Affairs. OSHC is mandatory for the visa duration."
+        }
+      }
+    },
+    "boarding": {
+      "eyebrow": "[TODO: zh] Boarding",
+      "heading": "[TODO: zh] Boarding at {name}",
+      "intro": "[TODO: zh] Boarding accommodation is available at {name}. Boarders live on campus with pastoral care, supervised study, and weekend activities.",
+      "accommodation": "[TODO: zh] Accommodation",
+      "intake": "[TODO: zh] Intake periods",
+      "years": "[TODO: zh] Boarding years",
+      "type": "[TODO: zh] Boarding type",
+      "fee": "[TODO: zh] Boarding fee",
+      "perYear": "[TODO: zh] per year",
+      "affiliations": "[TODO: zh] Affiliations",
+      "features": {
+        "pastoralCare": {
+          "title": "[TODO: zh] Pastoral care",
+          "desc": "[TODO: zh] Resident boarding staff during term time. Medical centre on site or a registered nurse available; first-aid trained boarding staff."
+        },
+        "academicSupport": {
+          "title": "[TODO: zh] Academic support",
+          "desc": "[TODO: zh] Supervised prep sessions on weekday evenings. Teachers available in the learning hub after class."
+        },
+        "weekendActivities": {
+          "title": "[TODO: zh] Weekend activities",
+          "desc": "[TODO: zh] Sport, outdoor education, city trips to local markets, parks, theatre and cinema."
+        },
+        "intlSupport": {
+          "title": "[TODO: zh] International support",
+          "desc": "[TODO: zh] Dedicated International Student Coordinator; personalised orientation; English as an Additional Language (EAL) programme."
+        }
+      }
+    },
+    "cocurricular": {
+      "eyebrow": "[TODO: zh] Co-curricular",
+      "heading": "[TODO: zh] Sport, arts and activities",
+      "intro": "[TODO: zh] Students participate in at least one area of the co-curricular programme. Inter-school sport, outdoor education and performing arts run year-round.",
+      "defaultActivities": "[TODO: zh] Rowing, Cricket, Football, Soccer, Tennis, Swimming, Athletics, Mountain biking, Music, Drama, Debating, Duke of Edinburgh, Outdoor education, Community service"
+    },
+    "location": {
+      "eyebrow": "[TODO: zh] Location",
+      "heading": "[TODO: zh] Living in {suburb}",
+      "intro": "[TODO: zh] {suburb} offers a safe environment with strong community connections. International students typically arrive via a connecting domestic flight from Sydney or Melbourne.",
+      "airport": {
+        "title": "[TODO: zh] Airport",
+        "desc": "[TODO: zh] Nearest commercial airport with connecting domestic services from Sydney or Melbourne."
+      },
+      "transport": {
+        "title": "[TODO: zh] Transport",
+        "desc": "[TODO: zh] Local bus services and school transport arrangements available for boarders and day students."
+      },
+      "healthcare": {
+        "title": "[TODO: zh] Healthcare",
+        "desc": "[TODO: zh] Public hospital nearby; on-campus medical support during school hours."
+      },
+      "distanceLabel": "[TODO: zh] Distance to CBD",
+      "kmFromCbd": "[TODO: zh] {km} km from CBD",
+      "viewOnMap": "[TODO: zh] View on map",
+      "coordinates": "[TODO: zh] Coordinates"
+    },
+    "compare": {
+      "eyebrow": "[TODO: zh] Compare",
+      "heading": "[TODO: zh] Similar schools",
+      "intro": "[TODO: zh] Considering other options? These schools accept international students and may suit similar families.",
+      "viewSchool": "[TODO: zh] View school",
+      "noResults": "[TODO: zh] No similar schools listed yet.",
+      "sector": "[TODO: zh] Sector",
+      "students": "[TODO: zh] Students",
+      "gender": "[TODO: zh] Gender",
+      "boarding": "[TODO: zh] Boarding",
+      "yes": "[TODO: zh] Yes",
+      "no": "[TODO: zh] No"
+    },
+    "faq": {
+      "eyebrow": "[TODO: zh] FAQ",
+      "heading": "[TODO: zh] Frequently asked questions",
+      "items": {
+        "q1": {
+          "q": "[TODO: zh] What subjects and curriculum does {name} offer for international students?",
+          "a": "[TODO: zh] International students at {name} follow the {curriculum} curriculum. Schools commonly offer specialist programmes such as outdoor education, music and the arts alongside core subjects."
+        },
+        "q2": {
+          "q": "[TODO: zh] How much are the school fees at {name} for international students?",
+          "a": "[TODO: zh] International tuition fees at {name} start from {tuition} per year. Boarding (if offered) is approximately {boardingFee} per year. A one-off application fee of {applicationFee} also applies. Confirm current figures with the school."
+        },
+        "q3": {
+          "q": "[TODO: zh] Can international students apply to {name} from overseas?",
+          "a": "[TODO: zh] Yes. {name} is registered on CRICOS (code {cricos}) and accepts international students. Applicants need to demonstrate adequate English proficiency and can apply directly or via an approved education agent."
+        },
+        "q4": {
+          "q": "[TODO: zh] Is boarding available at {name} for international students?",
+          "a": "[TODO: zh] {name} provides boarding accommodation with separate boys' and girls' houses where applicable, pastoral care, supervised prep sessions and weekend activities. Contact the school for current availability and intake levels."
+        },
+        "q5": {
+          "q": "[TODO: zh] What English proficiency test do I need to get into {name}?",
+          "a": "[TODO: zh] The school accepts several forms of evidence: AEAS results, IELTS, PTE, Duolingo or Cambridge scores; an approved ELICOS programme; demonstrated proficiency during an enrolment interview; or evidence of three or more years of schooling delivered entirely in English."
+        },
+        "q6": {
+          "q": "[TODO: zh] What sports and activities are available at {name}?",
+          "a": "[TODO: zh] The school offers a range of co-curricular activities including team sports, music ensembles, drama, debating, outdoor education and community service. Students participate in at least one area of the co-curricular programme."
+        },
+        "q7": {
+          "q": "[TODO: zh] What visa does my child need to study at {name} in Australia?",
+          "a": "[TODO: zh] International students studying full-time require a Student Visa (subclass 500). After receiving a Confirmation of Enrolment (eCoE) from {name}, you apply through the Department of Home Affairs. Overseas Student Health Cover (OSHC) is mandatory."
+        },
+        "q8": {
+          "q": "[TODO: zh] Does {name} work with education agents?",
+          "a": "[TODO: zh] Yes. {name} works with approved education agents who can assist international families with the application process. Families can also apply directly by contacting the school's enrolments office."
+        }
+      }
+    },
+    "sidebar": {
+      "apply": {
+        "heading": "[TODO: zh] Applying from overseas?",
+        "intro": "[TODO: zh] This guide is for international full fee-paying students on a Student Visa (subclass 500).",
+        "intlCta": "[TODO: zh] International application",
+        "websiteCta": "[TODO: zh] Visit school website",
+        "shortlistCta": "[TODO: zh] Add to shortlist",
+        "domesticHint": "[TODO: zh] Australian resident?",
+        "domesticLink": "[TODO: zh] Domestic enrolments"
+      },
+      "contact": {
+        "heading": "[TODO: zh] International admissions contact",
+        "emailLabel": "[TODO: zh] Email",
+        "phoneLabel": "[TODO: zh] Phone",
+        "addressLabel": "[TODO: zh] Address",
+        "principalRole": "[TODO: zh] Principal"
+      },
+      "toc": {
+        "heading": "[TODO: zh] On this page",
+        "about": "[TODO: zh] About this school",
+        "curriculum": "[TODO: zh] Curriculum & pathways",
+        "fees": "[TODO: zh] Fees & costs",
+        "english": "[TODO: zh] English requirements",
+        "admissions": "[TODO: zh] International admissions",
+        "boarding": "[TODO: zh] Boarding",
+        "cocurricular": "[TODO: zh] Sport & activities",
+        "location": "[TODO: zh] Location",
+        "compare": "[TODO: zh] Similar schools",
+        "faq": "[TODO: zh] FAQ"
+      },
+      "keyFacts": {
+        "heading": "[TODO: zh] Key facts",
+        "schoolType": "[TODO: zh] School type",
+        "religion": "[TODO: zh] Religious affiliation",
+        "gender": "[TODO: zh] Gender",
+        "cricos": "[TODO: zh] CRICOS",
+        "curriculum": "[TODO: zh] Curriculum",
+        "campuses": "[TODO: zh] Campuses",
+        "locationType": "[TODO: zh] Location type",
+        "sector": "[TODO: zh] Sector",
+        "accommodation": "[TODO: zh] Accommodation",
+        "distance": "[TODO: zh] Distance to CBD"
+      }
+    },
+    "jsonLd": {
+      "intlGuideDescription": "[TODO: zh] International student admissions guide for {name}.",
+      "howToName": "[TODO: zh] How to apply to {name} as an international student"
+    },
+    "infoCards": {
+      "annualTuition": "[TODO: zh] Annual tuition",
+      "contactSchool": "[TODO: zh] Contact school",
+      "lowestListedTuition": "[TODO: zh] Lowest listed tuition",
+      "feesNotListedYet": "[TODO: zh] Fees not listed yet",
+      "curriculum": "[TODO: zh] Curriculum",
+      "notListed": "[TODO: zh] Not listed",
+      "enrolment": "[TODO: zh] Enrolment",
+      "internationalPercent": "[TODO: zh] {pct}% international",
+      "boarding": "[TODO: zh] Boarding",
+      "boardingAvailable": "[TODO: zh] Available",
+      "scholarshipsListed": "[TODO: zh] Scholarships listed"
+    },
+    "aboutSection": {
+      "heading": "[TODO: zh] About the school",
+      "defaultDescription": "[TODO: zh] {name} is listed in SchoolGo's Australian school directory."
+    },
+    "admissionsSection": {
+      "heading": "[TODO: zh] Admissions",
+      "nextIntake": "[TODO: zh] Next intake",
+      "applicationDeadline": "[TODO: zh] Application deadline",
+      "intakePeriods": "[TODO: zh] Intake periods",
+      "applicationFee": "[TODO: zh] Application fee",
+      "cricosCode": "[TODO: zh] CRICOS code"
+    },
+    "englishSection": {
+      "heading": "[TODO: zh] English requirements",
+      "noScoresListed": "[TODO: zh] No minimum test scores are listed yet."
+    },
+    "contactSection": {
+      "heading": "[TODO: zh] Contact and apply",
+      "startApplication": "[TODO: zh] Start application",
+      "visitWebsite": "[TODO: zh] Visit website",
+      "nextIntakeDate": "[TODO: zh] Next intake: {date}"
+    }
+  },
+  "SearchMetadata": {
+    "title": "搜索学校 — SchoolGo",
+    "description": "搜索和比较澳大利亚学校。按地区、学费、课程、寄宿等条件筛选。",
+    "ogDescription": "在SchoolGo上搜索和比较澳大利亚学校。",
+    "parentTitle": "为孩子搜索澳大利亚学校 — SchoolGo",
+    "parentDescription": "按地点、学费、课程、寄宿和学生支持搜索并比较澳大利亚学校。",
+    "parentOgDescription": "在SchoolGo比较澳大利亚学校，为孩子找到合适选择。",
+    "schoolTitle": "浏览澳大利亚学校列表 — SchoolGo",
+    "schoolDescription": "在SchoolGo查看澳大利亚学校列表、地点、课程、学费和学生支持信息。",
+    "schoolOgDescription": "在SchoolGo浏览澳大利亚学校列表并比较课程。",
+    "agentTitle": "为学生搜索澳大利亚学校 — SchoolGo",
+    "agentDescription": "为国际学生查找澳大利亚学校，并比较地点、学费、课程、寄宿和支持服务。",
+    "agentOgDescription": "在SchoolGo为学生搜索并比较澳大利亚学校。"
+  }
 }

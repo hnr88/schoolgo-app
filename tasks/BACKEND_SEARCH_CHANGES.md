@@ -7,7 +7,7 @@
 Use the spec's exact filter names and enum values throughout. Do not invent fields not implied by the spec.
 
 ---
-
+ adfsdafaD
 ## 1. Overview
 
 Search powers a map + sidebar + results panel UI with two access tiers (anonymous "basic" and authenticated "advanced"). The backend must expose a single filtered/sorted/paginated school search endpoint, plus autocomplete (school + suburb), saved searches, bookmarks, and a compare endpoint. The schools dataset needs new columns/relations to support tuition-per-level, religious affiliation, program type, six English test minimums, CRICOS age range, enrolment status, and curriculum codes.

@@ -1537,6 +1537,305 @@
     "claimedProfile": "Claimed profile",
     "admissionsProfileLabel": "Admissions profile",
     "admissionsProfileDescription": "Compare fees, entry requirements, intakes, and contact details.",
+    "trustNotice": "SchoolGo profiles combine public provider data with admissions information so families can compare schools before contacting an agent or school.",
+    "intlBanner": "This guide is for international full fee-paying students and their families.",
+    "breadcrumbs": {
+      "aria": "Breadcrumb",
+      "home": "Home",
+      "schools": "Schools"
+    },
+    "hero": {
+      "altText": "{name} campus, international student admissions guide",
+      "intlGuideLabel": "International student admissions guide"
+    },
+    "stats": {
+      "type": "Type",
+      "students": "Students",
+      "gender": "Gender",
+      "tuitionFrom": "Tuition from",
+      "boarding": "Boarding",
+      "perYear": "AUD / year (intl)",
+      "dayAndBoarding": "Day & boarding",
+      "notListed": "Not listed",
+      "notOffered": "Not offered",
+      "available": "Available",
+      "coed": "Co-ed",
+      "boys": "Boys",
+      "girls": "Girls"
+    },
+    "about": {
+      "eyebrow": "About this school",
+      "heading": "About {name}",
+      "defaultHeading": "About {name}",
+      "intlNoticeLead": "For international families:",
+      "intlNoticeBody": "This profile is designed to help overseas families evaluate {name}. It covers CRICOS registration, visa requirements, English language prerequisites, and the international application process.",
+      "defaultDescription": "{name} is listed in SchoolGo's Australian school directory. Use this profile to review key admissions facts before shortlisting or contacting the school.",
+      "sourceNote": "This profile was written by SchoolGo's editorial team using publicly available data from the CRICOS register and the school's published materials. It is not endorsed by or affiliated with the school.",
+      "lastReviewed": "Last reviewed {date}."
+    },
+    "curriculum": {
+      "eyebrow": "Academics",
+      "heading": "Curriculum and academic pathways",
+      "intro": "International students at {name} follow the curriculum and assessment pathways listed below. Specialist programmes and learning support help students transition into Australian schooling.",
+      "yearLevels": "Year levels offered",
+      "cricosAgeRange": "CRICOS age range",
+      "proposedEntryLevel": "Proposed entry level",
+      "proposedEntryTerm": "Proposed entry term",
+      "languages": "Languages taught",
+      "learningSupport": "Learning support",
+      "elicosYes": "ELICOS / EAL support available",
+      "atar": "ATAR pathway",
+      "yes": "Yes",
+      "no": "No",
+      "cricosCode": "CRICOS code",
+      "coursesHeading": "CRICOS registered courses",
+      "courseTable": {
+        "course": "Course",
+        "code": "Code",
+        "level": "Level"
+      },
+      "sourceNote": "Source: CRICOS Register (Commonwealth Government) and the school's published international fee schedule."
+    },
+    "fees": {
+      "eyebrow": "Fees for international students",
+      "heading": "School fees and costs",
+      "intro": "The following fees are for international full fee-paying students. All figures are annual and in Australian dollars (AUD). Confirm the current schedule directly with the school before budgeting.",
+      "primary": "Primary",
+      "junior": "Junior secondary",
+      "senior": "Senior secondary",
+      "perYearTuition": "tuition / year",
+      "perYear": "per year",
+      "boardingAll": "Boarding (all grades)",
+      "totalSenior": "Total (senior)",
+      "applicationFee": "Application fee",
+      "enrolmentFee": "Enrolment fee",
+      "refundable": "Application fee refundable",
+      "scholarshipAvailable": "Scholarships available",
+      "intakePeriods": "Intake periods",
+      "applicationDeadline": "Application deadline",
+      "nextIntake": "Next intake",
+      "feesNotListed": "Fees are not publicly listed yet. Contact the school directly for the current international fee schedule.",
+      "yes": "Yes",
+      "no": "No",
+      "sourceNote": "Source: school's published international fee schedule. Credit card surcharge may apply. Confirm current fees directly with the school before budgeting."
+    },
+    "english": {
+      "eyebrow": "English requirements",
+      "heading": "English language proficiency",
+      "intro": "Minimum scores accepted for international applicants. Schools may also accept evidence of prior English-medium schooling or an interview.",
+      "noScores": "No minimum English test scores are listed yet. Contact the school for accepted forms of English proficiency evidence."
+    },
+    "admissions": {
+      "eyebrow": "International admissions",
+      "heading": "How to apply as an international student",
+      "intro": "{name} accepts international students on a Student Visa (subclass 500). Applications can be made directly through the school or via an approved education agent.",
+      "visa": "Visa subclass",
+      "visaValue": "500 (Student visa)",
+      "oshcRequired": "OSHC required",
+      "oshcArrangement": "OSHC arrangement",
+      "oshcProvider": "OSHC preferred provider",
+      "applicationDeadline": "Application deadline",
+      "offerWindow": "Offer acceptance window",
+      "offerWindowValue": "{days} days",
+      "partnerAgentsOnly": "Partner agents only",
+      "contactRoleLabel": "International contact",
+      "intlContact": "Enrolments office / International Student Coordinator",
+      "emailLabel": "Email",
+      "phoneLabel": "Phone",
+      "yes": "Yes",
+      "no": "No",
+      "sourceNote": "Based on information from the school's international students page and requirements under the ESOS Act 2000 and National Code 2018. Verify current requirements directly with the school.",
+      "steps": {
+        "s1": {
+          "title": "Contact the enrolments office or an approved agent",
+          "desc": "Reach out to the school's enrolments office to request an Application for Enrolment form. You can also work with one of the school's listed education agents."
+        },
+        "s2": {
+          "title": "Prepare English proficiency evidence",
+          "desc": "Provide AEAS, IELTS, PTE, Duolingo, Cambridge or iDAT results, or evidence of three or more years of schooling delivered in English."
+        },
+        "s3": {
+          "title": "Gather supporting documents",
+          "desc": "Student's passport, academic transcripts and reports from the current school, evidence of English proficiency, and any other assessments requested."
+        },
+        "s4": {
+          "title": "Submit the application",
+          "desc": "Complete and return the Application for Enrolment form along with the application fee. Lodging the form is not an offer of enrolment."
+        },
+        "s5": {
+          "title": "Application assessment",
+          "desc": "The school evaluates academic reports and English proficiency. The Director of Learning makes the final decision on acceptance."
+        },
+        "s6": {
+          "title": "Receive a Letter of Offer",
+          "desc": "If successful, the Principal issues a Letter of Offer in writing, accompanied by a fee invoice."
+        },
+        "s7": {
+          "title": "Accept and pay advance fees",
+          "desc": "Complete the acceptance forms and pay the advance fee (typically 50% of annual tuition and a one-off capital fee)."
+        },
+        "s8": {
+          "title": "Receive your eCoE and apply for your visa",
+          "desc": "On receipt of payment the school issues an electronic Confirmation of Enrolment (eCoE). Lodge a Student Visa (subclass 500) with the Department of Home Affairs. OSHC is mandatory for the visa duration."
+        }
+      }
+    },
+    "boarding": {
+      "eyebrow": "Boarding",
+      "heading": "Boarding at {name}",
+      "intro": "Boarding accommodation is available at {name}. Boarders live on campus with pastoral care, supervised study, and weekend activities.",
+      "accommodation": "Accommodation",
+      "intake": "Intake periods",
+      "years": "Boarding years",
+      "type": "Boarding type",
+      "fee": "Boarding fee",
+      "perYear": "per year",
+      "affiliations": "Affiliations",
+      "features": {
+        "pastoralCare": {
+          "title": "Pastoral care",
+          "desc": "Resident boarding staff during term time. Medical centre on site or a registered nurse available; first-aid trained boarding staff."
+        },
+        "academicSupport": {
+          "title": "Academic support",
+          "desc": "Supervised prep sessions on weekday evenings. Teachers available in the learning hub after class."
+        },
+        "weekendActivities": {
+          "title": "Weekend activities",
+          "desc": "Sport, outdoor education, city trips to local markets, parks, theatre and cinema."
+        },
+        "intlSupport": {
+          "title": "International support",
+          "desc": "Dedicated International Student Coordinator; personalised orientation; English as an Additional Language (EAL) programme."
+        }
+      }
+    },
+    "cocurricular": {
+      "eyebrow": "Co-curricular",
+      "heading": "Sport, arts and activities",
+      "intro": "Students participate in at least one area of the co-curricular programme. Inter-school sport, outdoor education and performing arts run year-round.",
+      "defaultActivities": "Rowing, Cricket, Football, Soccer, Tennis, Swimming, Athletics, Mountain biking, Music, Drama, Debating, Duke of Edinburgh, Outdoor education, Community service"
+    },
+    "location": {
+      "eyebrow": "Location",
+      "heading": "Living in {suburb}",
+      "intro": "{suburb} offers a safe environment with strong community connections. International students typically arrive via a connecting domestic flight from Sydney or Melbourne.",
+      "airport": {
+        "title": "Airport",
+        "desc": "Nearest commercial airport with connecting domestic services from Sydney or Melbourne."
+      },
+      "transport": {
+        "title": "Transport",
+        "desc": "Local bus services and school transport arrangements available for boarders and day students."
+      },
+      "healthcare": {
+        "title": "Healthcare",
+        "desc": "Public hospital nearby; on-campus medical support during school hours."
+      },
+      "distanceLabel": "Distance to CBD",
+      "kmFromCbd": "{km} km from CBD",
+      "viewOnMap": "View on map",
+      "coordinates": "Coordinates"
+    },
+    "compare": {
+      "eyebrow": "Compare",
+      "heading": "Similar schools",
+      "intro": "Considering other options? These schools accept international students and may suit similar families.",
+      "viewSchool": "View school",
+      "noResults": "No similar schools listed yet.",
+      "sector": "Sector",
+      "students": "Students",
+      "gender": "Gender",
+      "boarding": "Boarding",
+      "yes": "Yes",
+      "no": "No"
+    },
+    "faq": {
+      "eyebrow": "FAQ",
+      "heading": "Frequently asked questions",
+      "items": {
+        "q1": {
+          "q": "What subjects and curriculum does {name} offer for international students?",
+          "a": "International students at {name} follow the {curriculum} curriculum. Schools commonly offer specialist programmes such as outdoor education, music and the arts alongside core subjects."
+        },
+        "q2": {
+          "q": "How much are the school fees at {name} for international students?",
+          "a": "International tuition fees at {name} start from {tuition} per year. Boarding (if offered) is approximately {boardingFee} per year. A one-off application fee of {applicationFee} also applies. Confirm current figures with the school."
+        },
+        "q3": {
+          "q": "Can international students apply to {name} from overseas?",
+          "a": "Yes. {name} is registered on CRICOS (code {cricos}) and accepts international students. Applicants need to demonstrate adequate English proficiency and can apply directly or via an approved education agent."
+        },
+        "q4": {
+          "q": "Is boarding available at {name} for international students?",
+          "a": "{name} provides boarding accommodation with separate boys' and girls' houses where applicable, pastoral care, supervised prep sessions and weekend activities. Contact the school for current availability and intake levels."
+        },
+        "q5": {
+          "q": "What English proficiency test do I need to get into {name}?",
+          "a": "The school accepts several forms of evidence: AEAS results, IELTS, PTE, Duolingo or Cambridge scores; an approved ELICOS programme; demonstrated proficiency during an enrolment interview; or evidence of three or more years of schooling delivered entirely in English."
+        },
+        "q6": {
+          "q": "What sports and activities are available at {name}?",
+          "a": "The school offers a range of co-curricular activities including team sports, music ensembles, drama, debating, outdoor education and community service. Students participate in at least one area of the co-curricular programme."
+        },
+        "q7": {
+          "q": "What visa does my child need to study at {name} in Australia?",
+          "a": "International students studying full-time require a Student Visa (subclass 500). After receiving a Confirmation of Enrolment (eCoE) from {name}, you apply through the Department of Home Affairs. Overseas Student Health Cover (OSHC) is mandatory."
+        },
+        "q8": {
+          "q": "Does {name} work with education agents?",
+          "a": "Yes. {name} works with approved education agents who can assist international families with the application process. Families can also apply directly by contacting the school's enrolments office."
+        }
+      }
+    },
+    "sidebar": {
+      "apply": {
+        "heading": "Applying from overseas?",
+        "intro": "This guide is for international full fee-paying students on a Student Visa (subclass 500).",
+        "intlCta": "International application",
+        "websiteCta": "Visit school website",
+        "shortlistCta": "Add to shortlist",
+        "domesticHint": "Australian resident?",
+        "domesticLink": "Domestic enrolments"
+      },
+      "contact": {
+        "heading": "International admissions contact",
+        "emailLabel": "Email",
+        "phoneLabel": "Phone",
+        "addressLabel": "Address",
+        "principalRole": "Principal"
+      },
+      "toc": {
+        "heading": "On this page",
+        "about": "About this school",
+        "curriculum": "Curriculum & pathways",
+        "fees": "Fees & costs",
+        "english": "English requirements",
+        "admissions": "International admissions",
+        "boarding": "Boarding",
+        "cocurricular": "Sport & activities",
+        "location": "Location",
+        "compare": "Similar schools",
+        "faq": "FAQ"
+      },
+      "keyFacts": {
+        "heading": "Key facts",
+        "schoolType": "School type",
+        "religion": "Religious affiliation",
+        "gender": "Gender",
+        "cricos": "CRICOS",
+        "curriculum": "Curriculum",
+        "campuses": "Campuses",
+        "locationType": "Location type",
+        "sector": "Sector",
+        "accommodation": "Accommodation",
+        "distance": "Distance to CBD"
+      }
+    },
+    "jsonLd": {
+      "intlGuideDescription": "International student admissions guide for {name}.",
+      "howToName": "How to apply to {name} as an international student"
+    },
     "infoCards": {
       "annualTuition": "Annual tuition",
       "contactSchool": "Contact school",
@@ -1552,7 +1851,7 @@
     },
     "aboutSection": {
       "heading": "About the school",
-      "defaultDescription": "{name} is listed in SchoolGo's Australian school directory. Use this profile to review key admissions facts before shortlisting or contacting the school."
+      "defaultDescription": "{name} is listed in SchoolGo's Australian school directory."
     },
     "admissionsSection": {
       "heading": "Admissions",
@@ -1571,8 +1870,7 @@
       "startApplication": "Start application",
       "visitWebsite": "Visit website",
       "nextIntakeDate": "Next intake: {date}"
-    },
-    "trustNotice": "SchoolGo profiles combine public provider data with admissions information so families can compare schools before contacting an agent or school."
+    }
   },
   "SearchMetadata": {
     "title": "Search Schools — SchoolGo",

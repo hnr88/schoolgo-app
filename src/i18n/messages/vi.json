@@ -1,1591 +1,1889 @@
 {
-	"Metadata": {
-		"title": "SchoolGo Úc | Tìm Trường Tốt Nhất",
-		"description": "Tìm kiếm và so sánh các trường tốt nhất trên toàn nước Úc. Lọc theo chương trình, giá cả, vị trí và nhiều hơn nữa.",
-		"ogDescription": "Tìm kiếm và so sánh các trường tốt nhất trên toàn nước Úc."
-	},
-	"Common": {
-		"step": "Step {number, number}",
-		"cricosVerified": "CRICOS Verified",
-		"qeacVerified": "QEAC Verified",
-		"claimedBySchool": "Claimed by school",
-		"addToShortlist": "Add to shortlist",
-		"removeFromShortlist": "Remove from shortlist",
-		"comingSoon": "Coming soon",
-		"skipToContent": "Bỏ qua đến nội dung",
-		"primaryNavigation": "Điều hướng chính"
-	},
-	"ParentsMetadata": {
-		"title": "SchoolGo — Tìm trường Úc cho con bạn",
-		"description": "Tìm kiếm mọi trường học Úc đăng ký CRICOS. So sánh học phí, yêu cầu thi tiếng Anh và kỳ tuyển sinh — bằng bảy ngôn ngữ, miễn phí.",
-		"ogDescription": "Mọi trường CRICOS. Đã xác minh. Bằng ngôn ngữ của bạn."
-	},
-	"MarketingHeader": {
-		"findSchools": "Tìm trường",
-		"audiences": {
-			"parents": "Phụ huynh",
-			"agents": "Tư vấn",
-			"schools": "Trường học"
-		},
-		"nav": {
-			"parent": {
-				"howItWorks": "Cách thức hoạt động",
-				"compare": "So sánh",
-				"faq": "Câu hỏi thường gặp"
-			},
-			"agent": {
-				"howItWorks": "Cách thức hoạt động",
-				"commission": "Hoa hồng",
-				"trust": "Tin cậy"
-			},
-			"school": {
-				"howItWorks": "Cách thức hoạt động",
-				"pricing": "Bảng giá",
-				"faq": "Câu hỏi thường gặp"
-			}
-		},
-		"language": "Ngôn ngữ",
-		"signIn": "Đăng nhập",
-		"getStarted": "Bắt đầu",
-		"openMenu": "Mở menu",
-		"closeMenu": "Đóng menu",
-		"menu": "Menu",
-		"subNav": {
-			"explore": {
-				"label": "Khám phá",
-				"items": {
-					"browseSchools": "Duyệt trường học",
-					"browseSchoolsDesc": "Tìm kiếm tất cả trường Úc đã đăng ký",
-					"compareSchools": "So sánh trường",
-					"compareSchoolsDesc": "So sánh học phí, bài thi & kỳ tuyển sinh song song",
-					"schoolTypes": "Loại trường",
-					"schoolTypesDesc": "So sánh trường công lập, Công giáo & tư thục",
-					"englishTests": "Thi tiếng Anh",
-					"englishTestsDesc": "Hướng dẫn AEAS, IELTS & các bài thi được chấp nhận"
-				}
-			},
-			"resources": {
-				"label": "Tài nguyên",
-				"items": {
-					"admissionsGuide": "Hướng dẫn tuyển sinh",
-					"admissionsGuideDesc": "Quy trình nhập học từng bước",
-					"schoolFees": "Học phí trường",
-					"schoolFeesDesc": "Học phí, phụ phí & chi phí năm đầu tiên",
-					"visaRequirements": "Yêu cầu visa",
-					"visaRequirementsDesc": "Những điều cần biết về visa học sinh 500",
-					"allGuides": "Tất cả hướng dẫn",
-					"allGuidesDesc": "Xem mọi hướng dẫn dành cho gia đình quốc tế"
-				}
-			},
-			"about": {
-				"label": "Giới thiệu",
-				"items": {
-					"aboutSchoolGo": "Về SchoolGo",
-					"aboutSchoolGoDesc": "Sứ mệnh và câu chuyện của chúng tôi",
-					"contactUs": "Liên hệ chúng tôi",
-					"contactUsDesc": "Kết nối với đội ngũ của chúng tôi",
-					"forAgents": "Dành cho tư vấn",
-					"forAgentsDesc": "Công cụ dành cho tư vấn giáo dục",
-					"forSchools": "Dành cho trường",
-					"forSchoolsDesc": "Phát triển nhóm học sinh quốc tế của bạn"
-				}
-			}
-		}
-	},
-	"MarketingFooter": {
-		"tagline": "Kết nối các nhà lãnh đạo tương lai với những trường học tốt nhất của Úc — khắp đất nước, bằng bảy ngôn ngữ.",
-		"columns": {
-			"parents": {
-				"title": "Dành cho phụ huynh",
-				"links": {
-					"findSchools": "Tìm trường",
-					"compare": "So sánh",
-					"scholarships": "Học bổng",
-					"english": "Thi tiếng Anh"
-				}
-			},
-			"agents": {
-				"title": "Dành cho tư vấn",
-				"links": {
-					"overview": "Tổng quan tư vấn",
-					"qeac": "Xác minh QEAC",
-					"pipeline": "Pipeline tools [Soon]",
-					"login": "Agent login [Soon]"
-				}
-			},
-			"schools": {
-				"title": "Dành cho trường",
-				"links": {
-					"overview": "Tổng quan trường",
-					"claim": "Xác nhận hồ sơ",
-					"login": "School login [Soon]",
-					"pricing": "Bảng giá"
-				}
-			},
-			"resources": {
-				"title": "Tài nguyên",
-				"links": {
-					"help": "Trung tâm hỗ trợ",
-					"contact": "Liên hệ",
-					"privacy": "Chính sách bảo mật",
-					"terms": "Điều khoản"
-				}
-			}
-		},
-		"language": "Ngôn ngữ",
-		"copyright": "© {year} SchoolGo Australia. Bảo lưu mọi quyền.",
-		"attribution": "Nguồn từ data.gov.au · CC BY 2.5 AU · Tuân thủ đạo luật ESOS",
-		"portals": "Tôi là...",
-		"portalLabels": {
-			"parents": "Phụ huynh",
-			"agents": "Tư vấn",
-			"schools": "Trường học"
-		}
-	},
-	"ParentsHero": {
-		"trustPill": {
-			"brand": "Chính phủ",
-			"brandAccent": "Đã đăng ký",
-			"source": "dữ liệu từ data.gov.au"
-		},
-		"headlinePrefix": "Tìm trường",
-		"headlineEmphasis": "Úc",
-		"headlineSuffix": "cho con bạn.",
-		"lede": "Mọi trường K–12 đăng ký CRICOS tại một nơi. So sánh học phí, nội trú, thi tiếng Anh — tìm kiếm bằng tiếng Trung, Hàn, Thái, Việt, Mã Lai, Bahasa hoặc tiếng Anh.",
-		"searchAriaLabel": "Tìm kiếm trường học",
-		"searchFields": {
-			"where": {
-				"label": "Nơi",
-				"value": "Bất kỳ nơi nào tại Úc"
-			},
-			"yearLevel": {
-				"label": "Năm học",
-				"value": "Year 7 – Year 12"
-			},
-			"fees": {
-				"label": "Học phí",
-				"value": "$15k – $45k AUD"
-			}
-		},
-		"searchButtonLabel": "Tìm kiếm",
-		"searchClearLabel": "Xóa tìm kiếm",
-		"featured": {
-			"eyebrow": "Nổi bật",
-			"shortlistAdd": "Thêm {name} vào danh sách chọn",
-			"shortlistRemove": "Xóa {name} khỏi danh sách chọn",
-			"cards": {
-				"a": {
-					"name": "Scotch College Melbourne",
-					"location": "Hawthorn, VIC",
-					"curriculum": "VCE",
-					"fee": "$38.5k AUD",
-					"boarding": "Nội trú",
-					"rating": "4.9"
-				},
-				"b": {
-					"name": "Sydney Grammar School",
-					"location": "Darlinghurst, NSW",
-					"curriculum": "HSC",
-					"fee": "$41.2k AUD",
-					"boarding": "Chỉ ngoại trú",
-					"rating": "4.8"
-				},
-				"c": {
-					"name": "Brisbane Grammar School",
-					"location": "Spring Hill, QLD",
-					"curriculum": "QCE/IB",
-					"fee": "$35.8k AUD",
-					"boarding": "Nội trú",
-					"rating": "4.7"
-				}
-			}
-		}
-	},
-	"ParentsFourSteps": {
-		"eyebrow": "Cách thức hoạt động",
-		"heading": "Từ lần duyệt đầu tiên đến thư mời nhập học — bốn bước đơn giản.",
-		"subheading": "Không phí ẩn. Không cần đăng nhập cho đến khi nộp đơn.",
-		"steps": {
-			"browse": {
-				"title": "Duyệt mọi trường CRICOS",
-				"description": "Lọc {count, number} trường theo bang, học phí, loại hình, chương trình, nội trú và học bổng — bằng ngôn ngữ của bạn."
-			},
-			"shortlist": {
-				"title": "Chọn bốn trường. So sánh song song",
-				"description": "Đặt học phí, kỳ tuyển sinh, ICSEA và bài thi tiếng Anh được chấp nhận cạnh nhau. Quyết định trong vài phút, không phải vài tháng."
-			},
-			"prepare": {
-				"title": "Xem yêu cầu chính xác",
-				"description": "Mỗi hồ sơ trường đều hiển thị bài thi được chấp nhận, điểm tối thiểu, tài liệu và thời gian tuyển sinh."
-			},
-			"apply": {
-				"title": "Nộp đơn qua tư vấn đã xác minh",
-				"description": "Tư vấn của bạn có huy hiệu QEAC. Hồ sơ được theo dõi từ đầu đến cuối trên một bảng điều khiển.",
-				"comingSoon": "Coming soon"
-			}
-		},
-		"ctaBrowse": "Bắt đầu duyệt",
-		"ctaLearn": "Xem cách hoạt động",
-		"badge": {
-			"cricosVerified": "CRICOS Verified · Claimed by school",
-			"updated": "Updated April 2026"
-		},
-		"visuals": {
-			"browse": {
-				"title": "[TODO: vi] 695 schools loaded",
-				"subtitle": "[TODO: vi] Filtered by state, fees & curriculum"
-			},
-			"shortlist": {
-				"title": "[TODO: vi] Wei's shortlist",
-				"subtitle": "[TODO: vi] 3 schools in Victoria · All accept AEAS"
-			},
-			"prepare": {
-				"title": "[TODO: vi] Requirements matched",
-				"subtitle": "[TODO: vi] AEAS 70+ · IELTS 5.5+ · Documents ready"
-			},
-			"apply": {
-				"title": "[TODO: vi] Application submitted",
-				"subtitle": "[TODO: vi] Tracked end-to-end · Status: Under review"
-			}
-		}
-	},
-	"ParentsVerified": {
-		"eyebrow": "Mọi trường CRICOS",
-		"heading": "Đã xác minh. Bằng ngôn ngữ của bạn.",
-		"subheading": "Ảnh thực tế của tòa nhà. Học phí thực. Lịch tuyển sinh thực. Dữ liệu trường được lấy từ CRICOS và ACARA, cập nhật hàng tháng.",
-		"cards": {
-			"a": {
-				"name": "Scotch College",
-				"location": "Hawthorn, VIC",
-				"sector": "Tư thục"
-			},
-			"b": {
-				"name": "Sydney Grammar",
-				"location": "Darlinghurst, NSW",
-				"sector": "Tư thục"
-			},
-			"c": {
-				"name": "Brisbane Grammar",
-				"location": "Spring Hill, QLD",
-				"sector": "Tư thục"
-			},
-			"d": {
-				"name": "Christ Church Grammar",
-				"location": "Claremont, WA",
-				"sector": "Tư thục"
-			}
-		}
-	},
-	"ParentsComparison": {
-		"eyebrow": "So sánh",
-		"heading": "Đặt các trường cạnh nhau.",
-		"headingAccent": "Quyết định trong vài phút, không phải vài tháng.",
-		"columns": {
-			"fee": "Học phí hàng năm",
-			"tests": "Bài thi được chấp nhận",
-			"intakes": "Kỳ tuyển sinh",
-			"stateSector": "[TODO: vi] State & sector",
-			"curriculum": "[TODO: vi] Curriculum",
-			"boarding": "[TODO: vi] Boarding",
-			"minScore": "[TODO: vi] Min. AEAS score",
-			"scholarships": "[TODO: vi] Scholarships"
-		},
-		"notPublished": "Chưa công bố",
-		"shortlistLabel": "[TODO: vi] Shortlist · {count} schools",
-		"dayOnly": "[TODO: vi] — Day only",
-		"noneIntl": "[TODO: vi] — None intl."
-	},
-	"ParentsPickATest": {
-		"eyebrow": "Năng lực tiếng Anh",
-		"heading": "Chọn bài thi. Xem trường nào chấp nhận —",
-		"headingAccent": "và điểm tối thiểu.",
-		"subheading": "Chúng tôi tổng hợp bài thi tiếng Anh được chấp nhận trên mọi hồ sơ trường. Không còn phải lướt qua 50 website trường.",
-		"tests": {
-			"aeas": {
-				"name": "AEAS",
-				"fullName": "Australian Education Assessment Services",
-				"description": "Most commonly accepted by Australian independent schools"
-			},
-			"idat": {
-				"name": "iDAT",
-				"fullName": "International Digital Admissions Test",
-				"description": "Growing in popularity for K–12 admissions"
-			},
-			"duolingo": {
-				"name": "Duolingo",
-				"fullName": "Duolingo English Test",
-				"description": "Accepted by an increasing number of schools"
-			},
-			"ielts": {
-				"name": "IELTS",
-				"fullName": "International English Language Testing System",
-				"description": "Standard for senior secondary entry (Year 11+)"
-			},
-			"pte": {
-				"name": "PTE Academic",
-				"fullName": "Pearson Test of English Academic",
-				"description": "Accepted by some schools for Year 11–12 entry"
-			},
-			"cambridge": {
-				"name": "Cambridge",
-				"fullName": "Cambridge English Qualifications",
-				"description": "Accepted by select schools"
-			},
-			"toefl": {
-				"name": "TOEFL",
-				"fullName": "Test of English as a Foreign Language",
-				"description": "Accepted by select schools for senior entry"
-			}
-		},
-		"cta": "Xem các trường chấp nhận bài thi này"
-	},
-	"ParentsSevenLanguages": {
-		"eyebrow": "Bảy ngôn ngữ",
-		"heading": "Gia đình không nên phải dịch bảng học phí lúc nửa đêm.",
-		"subheading": "SchoolGo được dịch toàn bộ sang bảy ngôn ngữ phổ biến nhất trong khu vực châu Á - Thái Bình Dương.",
-		"languages": {
-			"en": "English",
-			"zh": "简体中文",
-			"vi": "Tiếng Việt",
-			"ko": "한국어",
-			"ms": "Bahasa Melayu",
-			"th": "ภาษาไทย",
-			"id": "Bahasa Indonesia"
-		}
-	},
-	"ParentsArticles": {
-		"eyebrow": "Thư viện tuyển sinh",
-		"heading": "Do nhân viên tuyển sinh viết. Dịch sang bảy ngôn ngữ.",
-		"subheading": "Hướng dẫn đơn giản về visa, kỳ tuyển sinh, thi tiếng Anh và học phí. Miễn phí, không cần đăng nhập.",
-		"items": {
-			"intakes": {
-				"title": "Hiểu kỳ tuyển sinh của các trường Úc",
-				"meta": "6 phút đọc · Cập nhật hàng tháng"
-			},
-			"englishTests": {
-				"title": "Trường bạn chấp nhận bài thi tiếng Anh nào?",
-				"meta": "8 phút đọc · Phân tích từng bài thi"
-			},
-			"boarding": {
-				"title": "Nội trú hay ngoại trú: lựa chọn của gia đình và lý do",
-				"meta": "5 phút đọc · Các trường hợp thực tế"
-			}
-		},
-		"readMore": "Đọc bài viết"
-	},
-	"ParentsStatsBar": {
-		"eyebrow": "Con số nổi bật",
-		"heading": "Danh bạ trường CRICOS lớn nhất Úc.",
-		"subheading": "Mọi trường đã đăng ký, được xác minh và có thể tìm kiếm — từ công lập đến tư thục, trên toàn bộ tám bang và vùng lãnh thổ.",
-		"items": {
-			"schools": {
-				"value": "{count, number}+",
-				"label": "CRICOS Schools"
-			},
-			"states": {
-				"value": "8",
-				"label": "States & Territories"
-			},
-			"sectors": {
-				"value": "All 3 Sectors",
-				"label": "Government · Independent · Catholic"
-			},
-			"fees": {
-				"value": "$3.5k – $78k",
-				"label": "Annual Fee Range"
-			}
-		}
-	},
-	"ParentsFinalCta": {
-		"eyebrow": "Bắt đầu tại đây",
-		"headingPrefix": "Hành trình tìm kiếm của bạn",
-		"headingEmphasis": "bắt đầu",
-		"headingSuffix": "bằng bảy ngôn ngữ.",
-		"subheading": "Miễn phí. Không cần đăng nhập. Cập nhật {month} {year, number}.",
-		"ctaPrimary": "Tìm trường của bạn",
-		"ctaSecondary": "Liên hệ tư vấn đã xác minh"
-	},
-	"ParentsTrustBar": {
-		"eyebrow": "Tin cậy & tuân thủ",
-		"heading": "Dữ liệu bạn có thể tin tưởng.",
-		"subheading": "Mọi thông tin trường trên SchoolGo đều được hỗ trợ bởi các nguồn dữ liệu chính phủ chính thức — đã xác minh, được cấp phép và cập nhật hàng tháng.",
-		"items": {
-			"cricos": {
-				"label": "Trường đăng ký với chính phủ",
-				"description": "Mọi thông tin trường đều được đối chiếu với Sổ đăng ký Liên bang chính thức."
-			},
-			"datagov": {
-				"label": "Luôn cập nhật",
-				"description": "Dữ liệu mở được cấp phép theo CC BY 2.5 AU — minh bạch và có thể kiểm tra công khai."
-			},
-			"acara": {
-				"label": "Dữ liệu chương trình quốc gia",
-				"description": "Chương trình học, điểm ICSEA và dữ liệu tuyển sinh lấy từ cơ quan quốc gia."
-			},
-			"esos": {
-				"label": "Bảo vệ học sinh",
-				"description": "SchoolGo hoạt động trong khuôn khổ Đạo luật Dịch vụ Giáo dục cho Học sinh Nước ngoài của Úc."
-			}
-		},
-		"attribution": "Dữ liệu trường lấy từ Sổ đăng ký Liên bang về Cơ sở và Khóa học cho Học sinh Nước ngoài (CRICOS) và Cơ quan Chương trình, Đánh giá và Báo cáo Úc (ACARA). Cập nhật tháng 4 năm 2026."
-	},
-	"ParentsFaq": {
-		"heading": "Frequently Asked Questions",
-		"items": {
-			"free": {
-				"question": "Is SchoolGo free?",
-				"answer": "Yes. SchoolGo is completely free for parents, education agents, and schools. There are no listing fees, application fees, or subscription costs."
-			},
-			"dataSource": {
-				"question": "Where does the school data come from?",
-				"answer": "All school listings are sourced from CRICOS (the Commonwealth Register of Institutions and Courses for Overseas Students), which is the Australian Government's official register of schools authorised to enrol international students. We cross-reference this with ACARA school profile data for enrolment figures, ICSEA scores, and GPS coordinates."
-			},
-			"englishTests": {
-				"question": "What English proficiency tests do Australian schools accept?",
-				"answer": "Different schools accept different tests. The most common are AEAS (Australian Education Assessment Services), iDAT (International Digital Admissions Test), Duolingo English Test, IELTS, and PTE Academic. SchoolGo shows which specific tests each school accepts on their profile page."
-			},
-			"doINeedAgent": {
-				"question": "[TODO: vi] Do I need an education agent?",
-				"answer": "[TODO: vi] You don't have to use one, but most families do — and it's free. Education agents help you choose the right school, prepare documents, and manage the application. SchoolGo shows which agents work with each school, so you can find someone who already knows the admissions process."
-			},
-			"updateFrequency": {
-				"question": "How often is the data updated?",
-				"answer": "CRICOS data is refreshed monthly from data.gov.au. School-specific details (fees, requirements, intake dates) are updated by schools who have claimed their profiles. If a school hasn't claimed their profile, the data shown is from CRICOS and ACARA public datasets."
-			}
-		}
-	},
-	"AgentsMetadata": {
-		"title": "SchoolGo — Vận hành công ty tư vấn như một danh mục đầu tư",
-		"description": "Công cụ được xác minh QEAC dành cho tư vấn giáo dục đưa học sinh vào các trường Úc. Hồ sơ chuẩn hóa, theo dõi tiến trình trực tiếp, hoa hồng đầy đủ.",
-		"ogDescription": "Vận hành công việc như một danh mục đầu tư. Giữ lại 100% hoa hồng của bạn."
-	},
-	"AgentsHero": {
-		"eyebrow": "Dành cho tư vấn giáo dục · Được hỗ trợ bởi QEAC",
-		"headlinePrefix": "Vận hành công việc của bạn",
-		"headlineEmphasis": "như một danh mục đầu tư.",
-		"lede": "Một hồ sơ được xác minh. {count, number} trường CRICOS. Một bảng theo dõi mà gia đình có thể xem. SchoolGo thu phí từ các trường, không thu từ bạn.",
-		"ctaPrimary": "Đăng ký xác minh",
-		"ctaSecondary": "Xem cách hoạt động",
-		"badgeMeta": "Sample agent profile",
-		"stats": {
-			"schools": {
-				"value": "{count, number}",
-				"label": "Trường CRICOS đã xác minh"
-			},
-			"sectors": {
-				"value": "3",
-				"label": "Sectors — Gov, Independent, Catholic"
-			},
-			"commission": {
-				"value": "100%",
-				"label": "Hoa hồng được giữ lại hoàn toàn"
-			}
-		}
-	},
-	"AgentsPainPoints": {
-		"eyebrow": "Why agents switch",
-		"heading": "Built for Education Agents Who Manage Real Pipelines",
-		"subheading": "76% of international school enrolments come through education agents. SchoolGo is built to make you more effective, not to replace you.",
-		"items": {
-			"email": {
-				"question": "Tired of emailing 15 admissions offices?",
-				"answer": "One platform, one application workflow. Submit to multiple schools and track responses in real time. Every application carries your verified agent attribution."
-			},
-			"status": {
-				"question": "Students keep asking 'did you hear back?'",
-				"answer": "Live application tracker your students can see. Status updates flow automatically — you spend less time chasing and more time advising."
-			},
-			"trust": {
-				"question": "Schools don't know if you're legitimate?",
-				"answer": "SchoolGo agent verification with your QEAC credentials. Your verified badge and track record appear on every application you submit."
-			},
-			"requirements": {
-				"question": "Different requirements for every school?",
-				"answer": "SchoolGo maps each school's specific entry requirements: accepted English tests, minimum scores, required documents, intake dates, and application fees. No more digging through 50 school websites."
-			}
-		}
-	},
-	"AgentsStatsBar": {
-		"items": {
-			"schools": "{count, number}+ School Profiles",
-			"requirements": "Entry Requirements Mapped",
-			"tests": "English Test Requirements Listed",
-			"free": "Free for Agents"
-		}
-	},
-	"AgentsMatching": {
-		"eyebrow": "Ghép trường · Nộp hồ sơ · Theo dõi",
-		"heading": "Phụ huynh gọi lúc 10 giờ sáng. Ba trường phù hợp trước 10:30.",
-		"subheading": "SchoolGo gợi ý các trường phù hợp theo bang, học phí, trình độ tiếng Anh và kỳ tuyển sinh — rồi cho phép bạn nộp hồ sơ chuẩn hóa trong vài phút.",
-		"steps": {
-			"listen": {
-				"title": "Ghi lại nhu cầu của gia đình",
-				"description": "Ngân sách, địa điểm, trình độ tiếng Anh, kỳ nhập học mong muốn — trong một biểu mẫu duy nhất, bằng ngôn ngữ của họ."
-			},
-			"match": {
-				"title": "Xem các trường phù hợp nhất",
-				"description": "Lọc theo hồ sơ của học sinh. Xem bài thi được chấp nhận và điểm tối thiểu của từng trường.",
-				"comingSoon": "Coming soon"
-			},
-			"deliver": {
-				"title": "Giao danh sách gọn gàng, không lộn xộn",
-				"description": "Một file PDF có thương hiệu mà gia đình có thể chụp màn hình và gửi cho bố. Không cần PDF từ mười lăm trường khác nhau.",
-				"comingSoon": "Coming soon"
-			}
-		},
-		"inboxLabel": "Hộp thư tuyển sinh",
-		"inboxRows": {
-			"scotch": {
-				"school": "Scotch College",
-				"location": "Hawthorn, VIC",
-				"status": "Phù hợp · AEAS 70+"
-			},
-			"brisbane": {
-				"school": "Brisbane Grammar",
-				"location": "Spring Hill, QLD",
-				"status": "Phù hợp · AEAS 68+"
-			},
-			"sydney": {
-				"school": "Sydney Grammar",
-				"location": "Darlinghurst, NSW",
-				"status": "Phù hợp · AEAS 65+"
-			}
-		}
-	},
-	"AgentsCommission": {
-		"eyebrow": "Phí dịch vụ",
-		"heading": "Bạn giữ lại 100% hoa hồng từ trường.",
-		"subheading": "Chúng tôi thu phí từ trường, không từ bạn. Mối quan hệ thương mại của bạn với các trường vẫn trực tiếp.",
-		"statValue": "$0",
-		"statLabel": "Platform cost per agent. Zero fees, zero commission splits — ever.",
-		"bullets": {
-			"zero": {
-				"title": "Không phí theo từng học sinh",
-				"description": "Không chia hoa hồng. Không phí xếp chỗ. Không phí đăng ký."
-			},
-			"direct": {
-				"title": "Quan hệ trực tiếp với trường",
-				"description": "Quyền ghi nhận của bạn được khóa vào hồ sơ ngay khi bạn nộp."
-			},
-			"audit": {
-				"title": "Lịch sử kiểm tra đầy đủ",
-				"description": "Mọi thay đổi trạng thái đều có dấu thời gian. Tranh chấp kết thúc tại hồ sơ giấy tờ."
-			}
-		}
-	},
-	"AgentsQeacTrust": {
-		"eyebrow": "Đã xác minh",
-		"heading": "Một hồ sơ mà phụ huynh — và nhà trường — thực sự tin tưởng.",
-		"subheading": "Chứng chỉ QEAC của bạn được xác minh một lần. Huy hiệu và thành tích của bạn sẽ xuất hiện trên mọi hồ sơ bạn nộp.",
-		"sampleLabel": "Sample profile",
-		"profile": {
-			"name": "Hồ sơ tư vấn",
-			"agentName": "Mei Lin",
-			"qeac": "QEAC đã xác minh",
-			"yearsActive": "Năm hoạt động",
-			"students": "Học sinh đã xếp chỗ",
-			"placements": "Trường đã xếp chỗ",
-			"languages": "Ngôn ngữ sử dụng",
-			"languagesValue": "中 · EN"
-		}
-	},
-	"AgentsScale": {
-		"eyebrow": "Mạng lưới",
-		"heading": "Agents across APAC are joining. Be one of the first.",
-		"subheading": "From Shanghai to Jakarta, Ho Chi Minh to Seoul — agents placing families into Australian K–12.",
-		"agents": {
-			"a": {
-				"name": "Li Wei",
-				"region": "Shanghai · 中国",
-				"meta": "QEAC verified · Independent schools"
-			},
-			"b": {
-				"name": "Nguyễn Minh",
-				"region": "Ho Chi Minh · Việt Nam",
-				"meta": "QEAC verified · All sectors"
-			},
-			"c": {
-				"name": "Siti Rahman",
-				"region": "Kuala Lumpur · Malaysia",
-				"meta": "QEAC verified · Boarding specialist"
-			},
-			"d": {
-				"name": "Ji-eun Park",
-				"region": "Seoul · 대한민국",
-				"meta": "QEAC verified · VIC & NSW"
-			}
-		},
-		"cta": "Đăng ký xác minh"
-	},
-	"AgentsTestimonial": {
-		"eyebrow": "[TODO: vi] From the field",
-		"heading": "[TODO: vi] What agents are saying",
-		"items": {
-			"a": {
-				"quote": "[TODO: vi] I used to forward 40 PDFs a week between parents on WeChat and six admissions offices over email. One platform would cut my admin in half.",
-				"attribution": "[TODO: vi] Agency director, Shanghai",
-				"meta": "[TODO: vi] 60+ students · 3 counsellors"
-			},
-			"b": {
-				"quote": "[TODO: vi] My families want updates at 11pm their time. A live tracker they can check themselves would save me two hours a day on WhatsApp.",
-				"attribution": "[TODO: vi] Independent agent, Ho Chi Minh City",
-				"meta": "[TODO: vi] 25+ students · Solo practice"
-			},
-			"c": {
-				"quote": "[TODO: vi] I re-type the same passport number into five different school forms every week. Enter-once, apply-many would change everything.",
-				"attribution": "[TODO: vi] Senior counsellor, Kuala Lumpur",
-				"meta": "[TODO: vi] 40+ students · 2 branches"
-			}
-		},
-		"disclaimer": "[TODO: vi] Composite quotes based on agent interviews"
-	},
-	"AgentsFinalCta": {
-		"eyebrow": "Được xác minh",
-		"headingPrefix": "Danh mục của bạn",
-		"headingEmphasis": "xứng đáng",
-		"headingSuffix": "hơn thế.",
-		"subheading": "Miễn phí. Yêu cầu xác minh QEAC. Onboarding trong 48 giờ.",
-		"ctaPrimary": "Đăng ký xác minh",
-		"ctaSecondary": "Đặt lịch giới thiệu"
-	},
-	"SchoolsMetadata": {
-		"title": "SchoolGo — Lấp đầy chỉ tiêu quốc tế với ít email hơn",
-		"description": "Hộp thư tuyển sinh thống nhất cho các trường Úc. Tư vấn được xác minh QEAC, hồ sơ thực, không phí theo từng học sinh.",
-		"ogDescription": "Lấp đầy chỉ tiêu quốc tế của bạn. Với ít email hơn."
-	},
-	"SchoolsHero": {
-		"eyebrow": "Dành cho các trường Úc",
-		"headlinePrefix": "Lấp đầy",
-		"headlineEmphasis": "chỉ tiêu quốc tế",
-		"headlineSuffix": "của bạn. Với ít email hơn.",
-		"lede": "Một hồ sơ được xác minh, được các gia đình ở bảy quốc gia nhìn thấy. Nhận hồ sơ chuẩn hóa từ tư vấn được xác minh QEAC — đúng định dạng mà đội tuyển sinh của bạn đang dùng.",
-		"ctaPrimary": "Xác nhận hồ sơ trường",
-		"ctaSecondary": "Đặt lịch giới thiệu",
-		"inbox": {
-			"eyebrow": "Applications inbox — preview",
-			"countLabel": "Tháng này",
-			"rows": {
-				"a": {
-					"name": "Sophie Chen",
-					"status": "Mới",
-					"meta": "VIC · Year 9 · AEAS 78"
-				},
-				"b": {
-					"name": "Minh Tran",
-					"status": "Đang xét",
-					"meta": "VIC · Year 11 · IELTS 6.5"
-				},
-				"c": {
-					"name": "Ji-woo Park",
-					"status": "Đã gửi thư mời",
-					"meta": "NSW · Year 10 · AEAS 74"
-				}
-			}
-		}
-	},
-	"SchoolsStats": {
-		"eyebrow": "Hiệu ứng mạng lưới",
-		"heading": "Một hồ sơ. Được các gia đình ở bảy quốc gia nhìn thấy.",
-		"subheading": "Thông tin trường của bạn xuất hiện trong mọi tìm kiếm, mọi so sánh, mọi danh sách gợi ý — bằng ngôn ngữ của gia đình.",
-		"items": {
-			"schools": {
-				"value": "695+",
-				"label": "CRICOS-registered schools"
-			},
-			"states": {
-				"value": "8",
-				"label": "States & territories"
-			},
-			"sectors": {
-				"value": "3",
-				"label": "Sectors — Government, Independent, Catholic"
-			},
-			"feeRange": {
-				"value": "$3.5k – $78k",
-				"label": "Annual fee range (AUD)"
-			}
-		}
-	},
-	"SchoolsThreeTools": {
-		"eyebrow": "Bộ công cụ",
-		"heading": "Ba công cụ. Một mục tiêu: đúng học sinh, ít việc hơn.",
-		"subheading": "SchoolGo cung cấp cho đội tuyển sinh ba thứ họ thực sự cần.",
-		"tools": {
-			"profile": {
-				"title": "Hồ sơ trường luôn cập nhật",
-				"description": "Học phí, kỳ tuyển sinh, bài thi được chấp nhận, học bổng và tài liệu — do bạn cập nhật, hiển thị bằng ngôn ngữ của gia đình."
-			},
-			"applications": {
-				"title": "Hồ sơ được chuẩn hóa",
-				"description": "Mọi hồ sơ đều đến theo cùng định dạng, với quy gán tư vấn được xác minh QEAC và đầy đủ tài liệu."
-			},
-			"inbox": {
-				"title": "Hộp thư tuyển sinh duy nhất",
-				"description": "Theo dõi trạng thái mọi hồ sơ. Mời nhập học, xếp danh sách chờ hoặc từ chối chỉ bằng một cú nhấp. Gia đình và tư vấn nhận cập nhật ngay lập tức."
-			}
-		}
-	},
-	"SchoolsTimeline": {
-		"eyebrow": "Hành trình tuyển sinh",
-		"heading": "Từ hồ sơ đầu tiên đến ngày khai giảng — không loay hoay với hộp thư.",
-		"subheading": "Toàn bộ chu trình tuyển sinh quốc tế, trong một nơi.",
-		"steps": {
-			"receive": {
-				"title": "Nhận hồ sơ",
-				"description": "Hồ sơ đến hộp thư kèm điểm tiếng Anh, tài liệu và tư vấn đã xác minh.",
-				"comingSoon": "Coming soon"
-			},
-			"review": {
-				"title": "Xét duyệt",
-				"description": "Đội của bạn đánh giá theo tiêu chí riêng. Ghi chú chỉ hiển thị nội bộ.",
-				"comingSoon": "Coming soon"
-			},
-			"decide": {
-				"title": "Quyết định",
-				"description": "Mời nhập học, xếp danh sách chờ hoặc từ chối chỉ bằng một cú nhấp. Trạng thái gửi ngay đến gia đình và tư vấn.",
-				"comingSoon": "Coming soon"
-			},
-			"onboard": {
-				"title": "Nhập học",
-				"description": "Chia sẻ giấy tờ ngày nhập học, thông tin chỗ ở và đường dẫn định hướng — tất cả trong một luồng hội thoại.",
-				"comingSoon": "Coming soon"
-			}
-		}
-	},
-	"SchoolsPricing": {
-		"eyebrow": "Bảng giá",
-		"heading": "Không phí theo tư vấn. Không hoa hồng. Một gói hàng năm.",
-		"subheading": "Các trường hỗ trợ SchoolGo trả một khoản phí hàng năm minh bạch. Gia đình và tư vấn không phải trả.",
-		"plans": {
-			"listing": {
-				"name": "Đăng ký cơ bản",
-				"price": "Free",
-				"priceMeta": "Vĩnh viễn",
-				"features": {
-					"a": "Hồ sơ CRICOS của bạn, tự động xuất bản",
-					"b": "Bài thi tiếng Anh được chấp nhận + điểm tối thiểu",
-					"c": "Hộp thư hồ sơ chuẩn hóa"
-				},
-				"cta": "Xác nhận hồ sơ của bạn"
-			},
-			"admissions": {
-				"name": "Tuyển sinh",
-				"price": "$12,800",
-				"priceMeta": "AUD / năm",
-				"badge": "Phổ biến nhất",
-				"features": {
-					"a": "Tất cả trong Đăng ký cơ bản",
-					"b": "Quy trình mời / danh sách chờ / từ chối",
-					"c": "Thư mục tư vấn được xác minh QEAC",
-					"d": "Dịch sang bảy ngôn ngữ trên mọi trang hồ sơ"
-				},
-				"cta": "Bắt đầu tuyển sinh"
-			}
-		}
-	},
-	"SchoolsTestimonial": {
-		"quote": "The hardest part of international admissions isn't finding students — it's processing incomplete applications from 15 different email threads.",
-		"attribution": "Composite quote based on admissions officer interviews"
-	},
-	"SchoolsFinalCta": {
-		"eyebrow": "Bắt đầu tại đây",
-		"headingPrefix": "Kỳ tuyển sinh tiếp theo của bạn",
-		"headingEmphasis": "bắt đầu",
-		"headingSuffix": "ở đây.",
-		"subheading": "Đăng ký miễn phí. Không cần thẻ tín dụng. Xác nhận trong 10 phút.",
-		"ctaPrimary": "Xác nhận hồ sơ trường",
-		"ctaSecondary": "Đặt lịch giới thiệu"
-	},
-	"SchoolsFaq": {
-		"heading": "[TODO: vi] Frequently Asked Questions",
-		"items": {
-			"claim": {
-				"question": "[TODO: vi] How do I claim my school's profile?",
-				"answer": "[TODO: vi] Search for your school on SchoolGo and click \"Claim This School.\" You'll verify your identity as a staff member, and once approved you can edit your profile, update fees, and manage applications."
-			},
-			"agents": {
-				"question": "[TODO: vi] How does SchoolGo work with education agents?",
-				"answer": "[TODO: vi] By default, your profile works with your school's existing agents. You can see which agents have placed students with you, invite new agents, or manage agent relationships from your dashboard."
-			},
-			"commission": {
-				"question": "[TODO: vi] Does SchoolGo charge schools or agents?",
-				"answer": "[TODO: vi] No. SchoolGo is free for everyone — schools, agents, and parents. There are no listing fees, per-student fees, or commission splits."
-			},
-			"data": {
-				"question": "[TODO: vi] Where does the school data come from?",
-				"answer": "[TODO: vi] All school profiles are auto-published from CRICOS (the Australian Government's official register) and cross-referenced with ACARA school profile data. Schools that claim their profile can update their own details at any time."
-			}
-		}
-	},
-	"Navbar": {
-		"brand": "School",
-		"brandAccent": "Go",
-		"region": "Úc",
-		"findSchools": "Tìm Trường",
-		"compare": "So Sánh",
-		"scholarships": "Học Bổng",
-		"admissions": "Tuyển Sinh",
-		"contactUs": "Liên Hệ",
-		"signIn": "Đăng Nhập"
-	},
-	"Footer": {
-		"brand": "School",
-		"brandAccent": "Go",
-		"region": "Úc",
-		"tagline": "Kết nối các nhà lãnh đạo tương lai với nền tảng học thuật tốt nhất trên toàn lục địa.",
-		"resources": "Tài Nguyên",
-		"directory": "Danh Mục",
-		"copyright": "© {year} SchoolGo Úc. Bảo lưu mọi quyền.",
-		"resourceLinks": {
-			"vceResources": "Tài Liệu VCE",
-			"hscGuides": "Hướng Dẫn HSC",
-			"ibRequirements": "Yêu Cầu IB"
-		},
-		"directoryLinks": {
-			"scholarshipTips": "Mẹo Học Bổng",
-			"contactSupport": "Liên Hệ Hỗ Trợ"
-		},
-		"social": {
-			"website": "Truy cập trang web",
-			"share": "Chia sẻ",
-			"email": "Gửi email cho chúng tôi"
-		}
-	},
-	"SchoolSearch": {
-		"searchPlaceholder": "Tìm theo tên trường, thành phố hoặc vùng ngoại ô...",
-		"clearSearch": "Xóa tìm kiếm",
-		"filters": {
-			"title": "Bộ Lọc Tìm Kiếm",
-			"subtitle": "Lọc Trường Học Úc",
-			"priceRangeLabel": "Khoảng Giá (AUD)",
-			"priceRangeValue": "${min}k – ${max}k",
-			"priceMin": "$5.000",
-			"priceMax": "$60.000+",
-			"englishTests": "Bài Thi Trình Độ Tiếng Anh",
-			"englishTestsHint": "Trường chấp nhận các bài thi tiếng Anh được công nhận",
-			"englishTestsToggle": "Bật/tắt bộ lọc bài thi trình độ tiếng Anh",
-			"curriculum": "Chương Trình Học",
-			"location": "Vị Trí",
-			"resetFilters": "Đặt Lại Bộ Lọc",
-			"resetAll": "Đặt lại tất cả",
-			"locked": {
-				"title": "Unlock this filter",
-				"cta": "Create free account"
-			},
-			"collapse": "Collapse",
-			"expand": "Expand"
-		},
-		"chips": {
-			"topRated": "Đánh Giá Cao",
-			"boarding": "Có Nội Trú",
-			"coed": "Nam Nữ Chung",
-			"scholarships": "Đang Mở Học Bổng",
-			"openDays": "Ngày Mở Cửa"
-		},
-		"states": {
-			"VIC": "Victoria (VIC)",
-			"NSW": "New South Wales (NSW)",
-			"QLD": "Queensland (QLD)",
-			"SA": "Nam Úc (SA)",
-			"WA": "Tây Úc (WA)",
-			"TAS": "Tasmania (TAS)",
-			"ACT": "Lãnh Thổ Thủ Đô Úc (ACT)",
-			"NT": "Lãnh Thổ Bắc Úc (NT)"
-		},
-		"autocomplete": {
-			"schoolsHeading": "Trường học",
-			"suburbsHeading": "Vùng ngoại ô & mã bưu chính",
-			"loading": "Đang tìm kiếm…",
-			"empty": "Không có kết quả"
-		},
-		"saveSearch": {
-			"cta": "Lưu tìm kiếm",
-			"promptTitle": "Lưu tìm kiếm này",
-			"nameLabel": "Tên",
-			"namePlaceholder": "vd. Danh sách ngắn Brisbane",
-			"confirm": "Lưu",
-			"cancel": "Hủy",
-			"successToast": "Đã lưu tìm kiếm",
-			"errorToast": "Không thể lưu tìm kiếm",
-			"signInRequired": "Đăng nhập để lưu tìm kiếm"
-		},
-		"savedSearches": {
-			"heading": "Tìm kiếm đã lưu",
-			"empty": "Chưa có tìm kiếm nào được lưu",
-			"applyCta": "Áp dụng",
-			"deleteCta": "Xóa",
-			"signInRequired": "Đăng nhập để xem tìm kiếm đã lưu",
-			"lastResultCount": "{count, plural, =0 {Không có kết quả} other {# kết quả}}"
-		},
-		"bookmark": {
-			"add": "Lưu trường học",
-			"remove": "Xóa khỏi danh sách đã lưu",
-			"signInRequired": "Đăng nhập để lưu trường học"
-		},
-		"results": {
-			"title": "Trường Có Sẵn",
-			"count": "{count, plural, one {# Kết Quả} other {# Kết Quả}}",
-			"viewAll": "Xem Tất Cả Trường",
-			"searching": "[TODO: vi] Searching…",
-			"error": "[TODO: vi] Something went wrong. Please try again.",
-			"empty": "[TODO: vi] No schools found. Try adjusting your filters.",
-			"loading": "Đang tải trường học…"
-		},
-		"map": {
-			"title": "Úc — Bản Đồ Trường Học",
-			"reset": "[TODO: vi] Reset filters and map",
-			"zoomIn": "Phóng to",
-			"zoomOut": "Thu nhỏ",
-			"ctrlScrollHint": "[TODO: vi] Use Ctrl + scroll to zoom the map",
-			"loading": "Đang tải bản đồ…"
-		},
-		"card": {
-			"currency": "AUD",
-			"viewDetails": "Xem {name}",
-			"topRated": "Top rated"
-		},
-		"loginPrompt": {
-			"title": "Mở khóa tìm kiếm đầy đủ",
-			"subtitle": "Đăng nhập để sử dụng bộ lọc chi tiết, lưu trường học và so sánh chương trình.",
-			"signIn": "Đăng nhập để tiếp tục",
-			"signUp": "Đăng ký"
-		},
-		"lockedDescription": "Đăng nhập để mở khóa — Tạo tài khoản miễn phí để sử dụng bộ lọc này",
-		"compare": {
-			"regionLabel": "So sánh trường học",
-			"clearAll": "Xóa tất cả lựa chọn so sánh",
-			"loading": "Đang tải dữ liệu so sánh…"
-		},
-		"spec": {
-			"previewBadge": "Preview",
-			"previewTitle": "Spec filters",
-			"modeBadge": {
-				"basic": "Cơ bản",
-				"advanced": "Nâng cao"
-			},
-			"lockedDescription": "Sign up to unlock this filter.",
-			"showFewer": "Show fewer",
-			"location": {
-				"title": "Vị trí",
-				"stateLabel": "Bang hoặc vùng lãnh thổ",
-				"suburbLabel": "Khu vực hoặc mã bưu điện",
-				"suburbPlaceholder": "VD: Hawthorn hoặc 3122"
-			},
-			"schoolProfile": {
-				"title": "School profile",
-				"sectorLabel": "Sector",
-				"accommodationLabel": "Accommodation",
-				"religionLabel": "Religious affiliation"
-			},
-			"enrolment": {
-				"title": "Enrolment & entry",
-				"yearLevelLabel": "Entry year level",
-				"ageLabel": "Student age",
-				"agePlaceholder": "—",
-				"ageHint": "Most {age}-year-olds enter {expected} — showing all results for your selection.",
-				"termLabel": "Entry term"
-			},
-			"academic": {
-				"title": "Academic",
-				"programLabel": "Program type",
-				"atarLabel": "ATAR available",
-				"atarTooltip": "Australian Tertiary Admission Rank — the score used for university entry in Australia",
-				"englishSupportLabel": "English language support",
-				"programTooltips": {
-					"australianCert": "The standard Australian senior secondary certificate — VCE (VIC), HSC (NSW), QCE (QLD), etc.",
-					"ib": "International Baccalaureate — a globally recognised program accepted by universities worldwide",
-					"elicos": "English Language Intensive Courses for Overseas Students — intensive English preparation before starting mainstream school"
-				}
-			},
-			"englishTest": {
-				"title": "Điểm bài thi tiếng Anh",
-				"selectorLabel": "Tôi có điểm cho",
-				"scoreLabel": "Điểm {label}",
-				"scorePlaceholder": "Nhập điểm",
-				"scoreHint": "Phạm vi: {min}–{max}",
-				"aeas": "AEAS",
-				"idat": "iDAT",
-				"duolingo": "Duolingo",
-				"ielts": "IELTS",
-				"pte": "PTE",
-				"cambridge": "Cambridge"
-			},
-			"tile": {
-				"status": {
-					"open": "Đang tuyển",
-					"limited": "Chỗ có hạn",
-					"waitlist": "Chỉ danh sách chờ",
-					"closed": "Đã đóng"
-				},
-				"sector": {
-					"government": "Công lập",
-					"nonGovernment": "Ngoài công lập",
-					"catholic": "Công giáo"
-				},
-				"accommodation": {
-					"boarding": "Nội trú",
-					"homestay": "Homestay",
-					"both": "Cả hai",
-					"none": "Không có"
-				},
-				"actions": {
-					"bookmark": "Đánh dấu {name}",
-					"bookmarkAdd": "Thêm {name} vào danh sách yêu thích",
-					"bookmarkRemove": "Xóa {name} khỏi danh sách yêu thích",
-					"compare": "Thêm {name} vào so sánh"
-				}
-			},
-			"sector": {
-				"government": "Government",
-				"nonGovernment": "Non-government",
-				"catholic": "Catholic"
-			},
-			"accommodation": {
-				"boarding": "Boarding",
-				"homestay": "Homestay",
-				"both": "Both",
-				"none": "None"
-			},
-			"religion": {
-				"nonDenominational": "Non-denominational",
-				"anglican": "Anglican",
-				"baptist": "Baptist",
-				"lutheran": "Lutheran",
-				"unitingChurch": "Uniting Church",
-				"presbyterian": "Presbyterian",
-				"islamic": "Islamic",
-				"jewish": "Jewish",
-				"buddhist": "Buddhist",
-				"copticOrthodox": "Coptic Orthodox",
-				"greekOrthodox": "Greek Orthodox",
-				"seventhDayAdventist": "Seventh-day Adventist",
-				"quaker": "Quaker",
-				"interdenominationalChristian": "Interdenominational Christian",
-				"showMore": "Show all ({count})",
-				"showLess": "Show less"
-			},
-			"yearLevel": {
-				"gr4": "Gr 4",
-				"gr5": "Gr 5",
-				"gr6": "Gr 6",
-				"yr7": "Yr 7",
-				"yr8": "Yr 8",
-				"yr9": "Yr 9",
-				"yr10": "Yr 10",
-				"yr11": "Yr 11",
-				"yr12": "Yr 12"
-			},
-			"entryTerm": {
-				"term1": "Term 1",
-				"term2": "Term 2",
-				"term3": "Term 3",
-				"term4": "Term 4"
-			},
-			"programType": {
-				"australianCert": "Australian Cert.",
-				"ib": "IB",
-				"elicos": "ELICOS"
-			},
-			"englishTestOption": {
-				"aeas": "AEAS",
-				"idat": "iDAT",
-				"duolingo": "Duolingo",
-				"ielts": "IELTS",
-				"pte": "PTE",
-				"cambridge": "Cambridge"
-			},
-			"gender": {
-				"boys": "Boys",
-				"girls": "Girls",
-				"coEd": "Co-ed"
-			},
-			"schoolLevel": {
-				"primary": "Primary",
-				"secondary": "Secondary"
-			},
-			"quickChip": {
-				"boys": "Boys",
-				"girls": "Girls",
-				"coEd": "Co-ed",
-				"primary": "Primary",
-				"secondary": "Secondary",
-				"boarding": "Boarding",
-				"groupAriaLabel": "Quick filters"
-			},
-			"sort": {
-				"label": "Sắp xếp theo",
-				"nameAsc": "Tên trường (A–Z)",
-				"nameDesc": "Tên trường (Z–A)",
-				"tuitionAsc": "Học phí thấp–cao",
-				"tuitionDesc": "Học phí cao–thấp",
-				"state": "Bang",
-				"enrolmentStatus": "Trạng thái tuyển sinh (đang mở trước)",
-				"applicationDeadlineAsc": "Hạn nộp hồ sơ (sớm nhất)",
-				"schoolSizeAsc": "Quy mô trường (nhỏ–lớn)",
-				"schoolSizeDesc": "Quy mô trường (lớn–nhỏ)",
-				"internationalPctAsc": "% học sinh quốc tế (thấp–cao)",
-				"internationalPctDesc": "% học sinh quốc tế (cao–thấp)"
-			},
-			"topBar": {
-				"searchPlaceholder": "Search by school name, city, or suburb",
-				"feeLabel": "Annual fee",
-				"feeReadout": "${min}k – ${max}k"
-			},
-			"compareBar": {
-				"label": "So sánh ({count}/{max})",
-				"remove": "Xóa {name}",
-				"cta": "So sánh trường",
-				"capReached": "Đã đạt giới hạn so sánh"
-			},
-			"tileCard": {
-				"tuitionFrom": "From ${amount} / year",
-				"viewSchool": "View school",
-				"bookmark": "Bookmark",
-				"bookmarkRemove": "Remove bookmark",
-				"compareCheckbox": "Add {name} to compare",
-				"status": {
-					"open": "Open",
-					"limited": "Limited places",
-					"waitlist": "Waitlist only",
-					"closed": "Closed"
-				}
-			},
-			"stepper": {
-				"decrease": "{label} decrease",
-				"increase": "{label} increase"
-			}
-		}
-	},
-	"Applications": {
-		"title": "Hồ sơ",
-		"subtitle": "Quản lý và theo dõi tất cả hồ sơ học sinh tại các trường.",
-		"searchPlaceholder": "Tìm theo học sinh hoặc trường...",
-		"clearSearch": "Xóa tìm kiếm",
-		"allStatuses": "Tất cả trạng thái",
-		"filterActive": "Đang hoạt động",
-		"filterNeedsAction": "Cần xử lý",
-		"statusDraft": "Bản nháp",
-		"statusSubmitted": "Đã nộp",
-		"statusReceived": "Đã nhận",
-		"statusUnderReview": "Đang xét duyệt",
-		"statusDocumentsRequested": "Yêu cầu tài liệu",
-		"statusAssessmentRequired": "Cần đánh giá",
-		"statusInterviewScheduled": "Đã lên lịch phỏng vấn",
-		"statusOfferMade": "Đã gửi thư mời",
-		"statusOfferAccepted": "Đã chấp nhận thư mời",
-		"statusPreEnrolment": "Tiền nhập học",
-		"statusCoeIssued": "Đã cấp CoE",
-		"statusEnrolled": "Đã nhập học",
-		"statusWithdrawn": "Đã rút hồ sơ",
-		"statusDeclined": "Bị từ chối",
-		"statusWaitlisted": "Danh sách chờ",
-		"columnStudent": "Học sinh",
-		"columnSchool": "Trường",
-		"columnState": "Bang",
-		"columnYearLevel": "Năm học",
-		"columnStatus": "Trạng thái",
-		"columnSubmitted": "Ngày nộp",
-		"columnDays": "Ngày",
-		"emptyTitle": "Chưa có hồ sơ nào",
-		"emptySubtitle": "Bắt đầu bằng cách tạo hồ sơ cho một trong các học sinh của bạn.",
-		"emptyFilteredTitle": "Không có hồ sơ nào khớp với bộ lọc của bạn",
-		"emptyFilteredSubtitle": "Hãy thử điều chỉnh bộ lọc hoặc từ khóa tìm kiếm.",
-		"addApplication": "Hồ sơ mới",
-		"paginationShowing": "Hiển thị",
-		"paginationOf": "trên tổng số {total}",
-		"allRows": "Tất cả",
-		"today": "Hôm nay",
-		"daysAgo": "{count} ngày trước",
-		"exportCsv": "Xuất CSV",
-		"detailTitle": "Chi Tiết Hồ Sơ",
-		"backToApplications": "Quay lại Hồ Sơ",
-		"tabDetails": "Chi Tiết",
-		"tabDocuments": "Tài Liệu",
-		"tabTimeline": "Dòng Thời Gian",
-		"tabMessages": "Tin Nhắn",
-		"studentToSchool": "{student} → {school}",
-		"submittedOn": "Ngày Nộp",
-		"lastUpdated": "Cập Nhật Lần Cuối",
-		"daysInCurrentStatus": "Ngày Trong Trạng Thái",
-		"applicationId": "Mã Hồ Sơ",
-		"progressSubmitted": "Đã Nộp",
-		"progressReview": "Xét Duyệt",
-		"progressDocuments": "Tài Liệu",
-		"progressOffer": "Thư Mời",
-		"progressEnrolment": "Nhập Học",
-		"progressEnrolled": "Đã Nhập Học",
-		"notFound": "Không tìm thấy hồ sơ.",
-		"loadError": "Không thể tải hồ sơ.",
-		"sectionStudent": "Thông tin học sinh",
-		"sectionSchool": "Thông tin trường",
-		"sectionApplication": "Thông tin hồ sơ",
-		"labelName": "Họ và tên",
-		"labelNationality": "Quốc tịch",
-		"labelSchoolName": "Tên trường",
-		"labelState": "Bang",
-		"labelCricosCode": "Mã CRICOS",
-		"labelYearLevel": "Năm học",
-		"labelIntake": "Kỳ tuyển sinh",
-		"labelStatus": "Trạng thái",
-		"labelSubmitted": "Ngày nộp",
-		"labelCreated": "Ngày tạo",
-		"labelUpdated": "Ngày cập nhật",
-		"notProvided": "Chưa cung cấp",
-		"documentsEmpty": "Không có tài liệu đính kèm",
-		"documentName": "Tên",
-		"documentType": "Loại",
-		"documentSize": "Kích thước",
-		"documentUploadedAt": "Đã tải lên",
-		"downloadDocument": "Tải xuống",
-		"timelineEmpty": "Chưa có sự kiện nào trong dòng thời gian",
-		"timelineBy": "bởi {actor}",
-		"messagesComingSoon": "Tin nhắn sắp ra mắt",
-		"actionWithdraw": "Rút hồ sơ",
-		"actionAcceptOffer": "Chấp nhận thư mời",
-		"actionContactSchool": "Liên hệ trường",
-		"actionComingSoon": "Sắp ra mắt"
-	},
-	"Auth": {
-		"signInTitle": "Đăng nhập vào SchoolGo",
-		"signInSubtitle": "Truy cập tài khoản để quản lý trường học, hồ sơ và nhiều hơn nữa.",
-		"iAmA": "Tôi là…",
-		"userTypes": {
-			"parent": "Phụ huynh",
-			"agent": "Tư vấn",
-			"school": "Trường học"
-		},
-		"emailLabel": "Email",
-		"emailPlaceholder": "you@example.com",
-		"passwordLabel": "Mật khẩu",
-		"passwordPlaceholder": "Nhập mật khẩu của bạn",
-		"signInButton": "Đăng nhập",
-		"loginSuccess": "Chào mừng trở lại!",
-		"loginError": "Email hoặc mật khẩu không hợp lệ. Vui lòng thử lại.",
-		"portalUnauthorized": "Tài khoản này không được phép truy cập cổng này.",
-		"sessionExpired": "Phiên đăng nhập của bạn đã hết hạn. Vui lòng đăng nhập lại.",
-		"noAccount": "Chưa có tài khoản?",
-		"signUp": "Đăng ký",
-		"signUpTitle": "Tạo tài khoản của bạn",
-		"signUpSubtitle": "Tham gia SchoolGo để tìm kiếm, so sánh và nộp đơn vào các trường Úc.",
-		"nameLabel": "Họ và tên",
-		"namePlaceholder": "Họ và tên của bạn",
-		"createPasswordPlaceholder": "Tạo mật khẩu (tối thiểu 6 ký tự)",
-		"signUpButton": "Tạo tài khoản",
-		"registerSuccess": "Tài khoản đã được tạo! Chào mừng bạn đến với SchoolGo.",
-		"registerError": "Không thể tạo tài khoản. Vui lòng thử lại.",
-		"hasAccount": "Đã có tài khoản?",
-		"signInLink": "Đăng nhập",
-		"close": "Đóng",
-		"portalSwitch": {
-			"backTo": "[TODO: vi] Back to"
-		},
-		"parent": {
-			"signInTitle": "[TODO: vi] Welcome back, Parent",
-			"signInSubtitle": "[TODO: vi] Sign in to find and compare the best schools for your child.",
-			"signUpTitle": "[TODO: vi] Start your school search",
-			"signUpSubtitle": "[TODO: vi] Create an account to shortlist, compare and apply to Australian schools.",
-			"stat1Value": "2,400+",
-			"stat1Label": "Trường học",
-			"stat2Value": "7",
-			"stat2Label": "Ngôn ngữ",
-			"stat3Value": "98%",
-			"stat3Label": "Hài lòng"
-		},
-		"agent": {
-			"signInTitle": "[TODO: vi] Agent Portal",
-			"signInSubtitle": "[TODO: vi] Sign in to manage your pipeline and student placements.",
-			"signUpTitle": "[TODO: vi] Grow your agency",
-			"signUpSubtitle": "[TODO: vi] Join SchoolGo to access verified schools and streamline placements.",
-			"stat1Value": "850+",
-			"stat1Label": "Tư vấn",
-			"stat2Value": "15%",
-			"stat2Label": "Hoa hồng",
-			"stat3Value": "24h",
-			"stat3Label": "Phản hồi"
-		},
-		"school": {
-			"signInTitle": "[TODO: vi] School Portal",
-			"signInSubtitle": "[TODO: vi] Sign in to manage enrolments and connect with agents.",
-			"signUpTitle": "[TODO: vi] List your school",
-			"signUpSubtitle": "[TODO: vi] Create an account to reach international students and education agents.",
-			"stat1Value": "500+",
-			"stat1Label": "Tư vấn",
-			"stat2Value": "12k",
-			"stat2Label": "Học sinh",
-			"stat3Value": "Free",
-			"stat3Label": "Đăng ký"
-		},
-		"nav": {
-			"parent": {
-				"howItWorks": "Cách thức hoạt động",
-				"compare": "So sánh",
-				"faq": "Câu hỏi thường gặp"
-			},
-			"agent": {
-				"howItWorks": "Cách thức hoạt động",
-				"commission": "Hoa hồng",
-				"trust": "Tin cậy"
-			},
-			"school": {
-				"howItWorks": "Cách thức hoạt động",
-				"pricing": "Bảng giá",
-				"faq": "Câu hỏi thường gặp"
-			}
-		}
-	},
-	"Errors": {
-		"generic": "Đã xảy ra lỗi",
-		"genericSubtitle": "[TODO: vi] We hit an unexpected bump. Don't worry — your data is safe.",
-		"tryAgain": "Thử lại",
-		"notFound": "Không tìm thấy trang",
-		"notFoundCode": "[TODO: vi] 404",
-		"notFoundSubtitle": "[TODO: vi] The page you're looking for doesn't exist or has been moved.",
-		"goHome": "Về trang chủ",
-		"searchInstead": "[TODO: vi] Search schools"
-	},
-	"LaunchingSoon": {
-		"title": "Chúng tôi sắp ra mắt",
-		"subtitle": "SchoolGo đang chuẩn bị giúp bạn tìm kiếm những trường học tốt nhất trên khắp nước Úc. Chúng tôi đang hoàn thiện những điều tuyệt vời.",
-		"stayTuned": "Hãy chú ý theo dõi — chúng tôi sẽ ra mắt chính thức trong thời gian tới.",
-		"portals": {
-			"heading": "Các nền tảng của chúng tôi",
-			"parents": "Dành cho Phụ huynh",
-			"schools": "Dành cho Trường học",
-			"agents": "Dành cho Tư vấn"
-		}
-	},
-	"Dashboard": {
-		"nav": {
-			"dashboard": "[TODO: vi] Dashboard",
-			"students": "[TODO: vi] Students",
-			"applications": "[TODO: vi] Applications",
-			"pipeline": "[TODO: vi] Pipeline",
-			"searchSchools": "[TODO: vi] Search Schools",
-			"messages": "[TODO: vi] Messages",
-			"settings": "[TODO: vi] Settings",
-			"profile": "[TODO: vi] My Profile",
-			"logout": "[TODO: vi] Log out",
-			"portalLabel": "Đại lý",
-			"portalBadge": {
-				"agent": "Đại lý",
-				"parent": "Phụ huynh",
-				"school": "Trường học"
-			}
-		},
-		"greeting": {
-			"morning": "Chào buổi sáng,",
-			"afternoon": "Chào buổi chiều,",
-			"evening": "Chào buổi tối,",
-			"fallbackName": "bạn"
-		},
-		"actionBanner": {
-			"title": "Cần xử lý"
-		},
-		"cards": {
-			"activeStudents": "Học sinh đang hoạt động",
-			"appsInProgress": "Hồ sơ đang xử lý",
-			"offersReceived": "Thư mời đã nhận",
-			"enrolledThisTerm": "Đã nhập học kỳ này"
-		},
-		"activity": {
-			"title": "Hoạt động gần đây",
-			"empty": "Chưa có hoạt động gần đây. Hãy thêm học sinh hoặc tìm trường."
-		},
-		"deadlines": {
-			"title": "Hạn sắp tới",
-			"empty": "Không có hạn sắp tới."
-		},
-		"quickActions": {
-			"addStudent": "Thêm học sinh mới",
-			"newApplication": "Hồ sơ mới",
-			"reviewApplications": "Xem hồ sơ",
-			"searchSchools": "Tìm trường"
-		}
-	},
-	"Students": {
-		"title": "[TODO: vi] Students",
-		"subtitle": "[TODO: vi] Manage your student profiles, documents, and test results.",
-		"searchPlaceholder": "[TODO: vi] Search by name...",
-		"clearSearch": "[TODO: vi] Clear search",
-		"allStatuses": "[TODO: vi] All statuses",
-		"statusActive": "[TODO: vi] Active",
-		"statusArchived": "[TODO: vi] Archived",
-		"statusEnrolled": "[TODO: vi] Enrolled",
-		"addStudent": "[TODO: vi] Add Student",
-		"columnName": "[TODO: vi] Name",
-		"columnNationality": "[TODO: vi] Nationality",
-		"columnYearLevel": "[TODO: vi] Year Level",
-		"columnTargetEntry": "[TODO: vi] Target Entry",
-		"columnEnglishTest": "Thi tiếng Anh",
-		"columnApps": "Hồ sơ",
-		"columnStatus": "[TODO: vi] Status",
-		"filters": "Bộ lọc",
-		"sort": "Sắp xếp",
-		"emptyTitle": "Chưa có học sinh nào",
-		"emptySubtitle": "Thêm học sinh đầu tiên để bắt đầu xây dựng hồ sơ và nộp đơn vào trường.",
-		"archive": "Lưu trữ",
-		"paginationShowing": "Hiển thị",
-		"paginationOf": "trên tổng số {total}",
-		"allRows": "Tất cả",
-		"createTitle": "[TODO: vi] Add New Student",
-		"createButton": "[TODO: vi] Create Student",
-		"createSuccess": "[TODO: vi] Student created successfully.",
-		"createError": "[TODO: vi] Could not create student. Please try again.",
-		"profileTitle": "[TODO: vi] Student Profile",
-		"notFound": "[TODO: vi] Student not found.",
-		"backToList": "[TODO: vi] Back",
-		"edit": "[TODO: vi] Edit",
-		"sectionPersonal": "[TODO: vi] Personal Information",
-		"sectionEducation": "[TODO: vi] Education",
-		"sectionParent": "[TODO: vi] Parent / Guardian",
-		"fieldFirstName": "[TODO: vi] First name",
-		"fieldLastName": "[TODO: vi] Last name",
-		"fieldDob": "[TODO: vi] Date of birth",
-		"fieldGender": "[TODO: vi] Gender",
-		"fieldNationality": "[TODO: vi] Nationality",
-		"fieldCurrentSchool": "[TODO: vi] Current school",
-		"fieldCurrentYear": "[TODO: vi] Current year level",
-		"fieldTargetYear": "[TODO: vi] Target entry year",
-		"fieldTargetTerm": "[TODO: vi] Target intake",
-		"fieldParentName": "[TODO: vi] Name",
-		"fieldParentEmail": "[TODO: vi] Email",
-		"fieldParentPhone": "[TODO: vi] Phone",
-		"fieldParentWechat": "[TODO: vi] WeChat ID",
-		"fieldNotes": "[TODO: vi] Agent Notes",
-		"notesPlaceholder": "[TODO: vi] Private notes about this student (only visible to you)...",
-		"selectGender": "[TODO: vi] Select gender",
-		"selectYear": "[TODO: vi] Select year level",
-		"genderMale": "[TODO: vi] Male",
-		"genderFemale": "[TODO: vi] Female",
-		"genderOther": "[TODO: vi] Other",
-		"tabOverview": "[TODO: vi] Overview",
-		"tabDocuments": "[TODO: vi] Documents",
-		"tabTests": "[TODO: vi] Tests",
-		"tabApplications": "[TODO: vi] Applications",
-		"documentsComingSoon": "[TODO: vi] Document management coming soon.",
-		"testsComingSoon": "[TODO: vi] Test results coming soon.",
-		"applicationsComingSoon": "[TODO: vi] Applications coming soon.",
-		"docUpload": "[TODO: vi] Upload Document",
-		"docUploadTitle": "[TODO: vi] Upload Document",
-		"docUploadButton": "[TODO: vi] Upload",
-		"docCancel": "[TODO: vi] Cancel",
-		"docDropzone": "[TODO: vi] Drag & drop a file here, or click to browse",
-		"docDropzoneHint": "[TODO: vi] PDF, JPG, PNG, DOCX up to 10 MB",
-		"docTypeLabel": "[TODO: vi] Document Type",
-		"docTypeSelect": "[TODO: vi] Select document type",
-		"docFileNameLabel": "[TODO: vi] Display Name (optional)",
-		"docFileNamePlaceholder": "[TODO: vi] e.g. John Passport 2026",
-		"docExpiresLabel": "[TODO: vi] Expiry Date (optional)",
-		"docNotesLabel": "[TODO: vi] Notes (optional)",
-		"docNotesPlaceholder": "[TODO: vi] Any notes about this document...",
-		"docAllTypes": "[TODO: vi] All types",
-		"docEmptyTitle": "[TODO: vi] No documents yet",
-		"docEmptySubtitle": "[TODO: vi] Upload your first document to get started.",
-		"docColName": "[TODO: vi] File",
-		"docColType": "[TODO: vi] Type",
-		"docColStatus": "[TODO: vi] Status",
-		"docColExpiry": "[TODO: vi] Expiry",
-		"docColUploaded": "[TODO: vi] Uploaded",
-		"docDeleteTitle": "[TODO: vi] Delete Document",
-		"docDeleteConfirm": "[TODO: vi] Are you sure you want to delete this document? This action cannot be undone.",
-		"docDeleteButton": "[TODO: vi] Delete",
-		"docUploadSuccess": "[TODO: vi] Document uploaded successfully.",
-		"docUploadError": "[TODO: vi] Could not upload document. Please try again.",
-		"docDeleteSuccess": "[TODO: vi] Document deleted.",
-		"docDeleteError": "[TODO: vi] Could not delete document.",
-		"docType_passport": "[TODO: vi] Passport",
-		"docType_school_reports": "[TODO: vi] School Reports",
-		"docType_english_test": "[TODO: vi] English Test Report",
-		"docType_birth_certificate": "[TODO: vi] Birth Certificate",
-		"docType_parent_passport": "[TODO: vi] Parent Passport",
-		"docType_immunisation": "[TODO: vi] Immunisation Records",
-		"docType_personal_statement": "[TODO: vi] Personal Statement",
-		"docType_guardian_nomination": "[TODO: vi] Guardian Nomination",
-		"docType_current_visa": "[TODO: vi] Current Visa",
-		"docType_welfare_docs": "[TODO: vi] Welfare Documents",
-		"docType_financial_evidence": "[TODO: vi] Financial Evidence",
-		"docType_oshc": "[TODO: vi] OSHC",
-		"docType_written_agreement": "[TODO: vi] Written Agreement",
-		"docType_conditions_of_entry": "[TODO: vi] Conditions of Entry",
-		"docType_offer_acceptance": "[TODO: vi] Offer Acceptance",
-		"docType_coe": "[TODO: vi] CoE (Confirmation of Enrolment)",
-		"docType_caaw_letter": "[TODO: vi] CAAW Letter",
-		"docType_photo": "[TODO: vi] Photo",
-		"docType_other": "[TODO: vi] Other",
-		"docStatus_active": "[TODO: vi] Active",
-		"docStatus_replaced": "[TODO: vi] Replaced",
-		"docStatus_archived": "[TODO: vi] Archived"
-	},
-	"Pipeline": {
-		"title": "Theo dõi hồ sơ",
-		"totalApplications": "{count, plural, one {# hồ sơ} other {# hồ sơ}}",
-		"emptyTitle": "Chưa có hồ sơ trong theo dõi",
-		"emptySubtitle": "Bắt đầu bằng cách tạo hồ sơ cho một trong các học sinh của bạn.",
-		"columnNew": "Mới",
-		"columnInReview": "Đang xét",
-		"columnActionRequired": "Cần xử lý",
-		"columnOffers": "Thư mời",
-		"columnPreEnrolment": "Tiền nhập học",
-		"columnEnrolled": "Đã nhập học",
-		"columnClosed": "Đã đóng",
-		"daysLabel": "{count}n",
-		"moreApplications": "+{count} hồ sơ"
-	},
-	"SchoolDetail": {
-		"backToSearch": "[TODO: vi] Back to search",
-		"cricosVerified": "[TODO: vi] CRICOS verified",
-		"claimedProfile": "[TODO: vi] Claimed profile",
-		"admissionsProfileLabel": "[TODO: vi] Admissions profile",
-		"admissionsProfileDescription": "[TODO: vi] Compare fees, entry requirements, intakes, and contact details.",
-		"infoCards": {
-			"annualTuition": "[TODO: vi] Annual tuition",
-			"contactSchool": "[TODO: vi] Contact school",
-			"lowestListedTuition": "[TODO: vi] Lowest listed tuition",
-			"feesNotListedYet": "[TODO: vi] Fees not listed yet",
-			"curriculum": "[TODO: vi] Curriculum",
-			"notListed": "[TODO: vi] Not listed",
-			"enrolment": "[TODO: vi] Enrolment",
-			"internationalPercent": "[TODO: vi] {pct}% international",
-			"boarding": "[TODO: vi] Boarding",
-			"boardingAvailable": "[TODO: vi] Available",
-			"scholarshipsListed": "[TODO: vi] Scholarships listed"
-		},
-		"aboutSection": {
-			"heading": "[TODO: vi] About the school",
-			"defaultDescription": "[TODO: vi] {name} is listed in SchoolGo's Australian school directory. Use this profile to review key admissions facts before shortlisting or contacting the school."
-		},
-		"admissionsSection": {
-			"heading": "[TODO: vi] Admissions",
-			"nextIntake": "[TODO: vi] Next intake",
-			"applicationDeadline": "[TODO: vi] Application deadline",
-			"intakePeriods": "[TODO: vi] Intake periods",
-			"applicationFee": "[TODO: vi] Application fee",
-			"cricosCode": "[TODO: vi] CRICOS code"
-		},
-		"englishSection": {
-			"heading": "[TODO: vi] English requirements",
-			"noScoresListed": "[TODO: vi] No minimum test scores are listed yet."
-		},
-		"contactSection": {
-			"heading": "[TODO: vi] Contact and apply",
-			"startApplication": "[TODO: vi] Start application",
-			"visitWebsite": "[TODO: vi] Visit website",
-			"nextIntakeDate": "[TODO: vi] Next intake: {date}"
-		},
-		"trustNotice": "[TODO: vi] SchoolGo profiles combine public provider data with admissions information so families can compare schools before contacting an agent or school."
-	},
-	"SearchMetadata": {
-		"title": "Tìm kiếm trường — SchoolGo",
-		"description": "Tìm kiếm và so sánh các trường học Úc. Lọc theo vị trí, học phí, chương trình giảng dạy, nội trú và nhiều hơn nữa.",
-		"ogDescription": "Tìm kiếm và so sánh các trường học Úc trên SchoolGo.",
-		"parentTitle": "Tìm Trường Úc cho Con Bạn — SchoolGo",
-		"parentDescription": "Tìm kiếm và so sánh các trường Úc theo vị trí, học phí, chương trình, nội trú và hỗ trợ học sinh.",
-		"parentOgDescription": "So sánh các trường Úc và tìm lựa chọn phù hợp cho con bạn trên SchoolGo.",
-		"schoolTitle": "Khám phá Danh sách Trường Úc — SchoolGo",
-		"schoolDescription": "Xem danh sách trường Úc, vị trí, chương trình, học phí và thông tin hỗ trợ học sinh trên SchoolGo.",
-		"schoolOgDescription": "Khám phá danh sách trường Úc và so sánh chương trình trên SchoolGo.",
-		"agentTitle": "Tìm Trường Úc cho Học sinh — SchoolGo",
-		"agentDescription": "Tìm trường Úc cho học sinh quốc tế và so sánh vị trí, học phí, chương trình, nội trú và hỗ trợ.",
-		"agentOgDescription": "Tìm kiếm và so sánh các trường Úc cho học sinh của bạn trên SchoolGo."
-	}
+  "Metadata": {
+    "title": "SchoolGo Úc | Tìm Trường Tốt Nhất",
+    "description": "Tìm kiếm và so sánh các trường tốt nhất trên toàn nước Úc. Lọc theo chương trình, giá cả, vị trí và nhiều hơn nữa.",
+    "ogDescription": "Tìm kiếm và so sánh các trường tốt nhất trên toàn nước Úc."
+  },
+  "Common": {
+    "step": "Step {number, number}",
+    "cricosVerified": "CRICOS Verified",
+    "qeacVerified": "QEAC Verified",
+    "claimedBySchool": "Claimed by school",
+    "addToShortlist": "Add to shortlist",
+    "removeFromShortlist": "Remove from shortlist",
+    "comingSoon": "Coming soon",
+    "skipToContent": "Bỏ qua đến nội dung",
+    "primaryNavigation": "Điều hướng chính"
+  },
+  "ParentsMetadata": {
+    "title": "SchoolGo — Tìm trường Úc cho con bạn",
+    "description": "Tìm kiếm mọi trường học Úc đăng ký CRICOS. So sánh học phí, yêu cầu thi tiếng Anh và kỳ tuyển sinh — bằng bảy ngôn ngữ, miễn phí.",
+    "ogDescription": "Mọi trường CRICOS. Đã xác minh. Bằng ngôn ngữ của bạn."
+  },
+  "MarketingHeader": {
+    "findSchools": "Tìm trường",
+    "audiences": {
+      "parents": "Phụ huynh",
+      "agents": "Tư vấn",
+      "schools": "Trường học"
+    },
+    "nav": {
+      "parent": {
+        "howItWorks": "Cách thức hoạt động",
+        "compare": "So sánh",
+        "faq": "Câu hỏi thường gặp"
+      },
+      "agent": {
+        "howItWorks": "Cách thức hoạt động",
+        "commission": "Hoa hồng",
+        "trust": "Tin cậy"
+      },
+      "school": {
+        "howItWorks": "Cách thức hoạt động",
+        "pricing": "Bảng giá",
+        "faq": "Câu hỏi thường gặp"
+      }
+    },
+    "language": "Ngôn ngữ",
+    "signIn": "Đăng nhập",
+    "getStarted": "Bắt đầu",
+    "openMenu": "Mở menu",
+    "closeMenu": "Đóng menu",
+    "menu": "Menu",
+    "subNav": {
+      "explore": {
+        "label": "Khám phá",
+        "items": {
+          "browseSchools": "Duyệt trường học",
+          "browseSchoolsDesc": "Tìm kiếm tất cả trường Úc đã đăng ký",
+          "compareSchools": "So sánh trường",
+          "compareSchoolsDesc": "So sánh học phí, bài thi & kỳ tuyển sinh song song",
+          "schoolTypes": "Loại trường",
+          "schoolTypesDesc": "So sánh trường công lập, Công giáo & tư thục",
+          "englishTests": "Thi tiếng Anh",
+          "englishTestsDesc": "Hướng dẫn AEAS, IELTS & các bài thi được chấp nhận"
+        }
+      },
+      "resources": {
+        "label": "Tài nguyên",
+        "items": {
+          "admissionsGuide": "Hướng dẫn tuyển sinh",
+          "admissionsGuideDesc": "Quy trình nhập học từng bước",
+          "schoolFees": "Học phí trường",
+          "schoolFeesDesc": "Học phí, phụ phí & chi phí năm đầu tiên",
+          "visaRequirements": "Yêu cầu visa",
+          "visaRequirementsDesc": "Những điều cần biết về visa học sinh 500",
+          "allGuides": "Tất cả hướng dẫn",
+          "allGuidesDesc": "Xem mọi hướng dẫn dành cho gia đình quốc tế"
+        }
+      },
+      "about": {
+        "label": "Giới thiệu",
+        "items": {
+          "aboutSchoolGo": "Về SchoolGo",
+          "aboutSchoolGoDesc": "Sứ mệnh và câu chuyện của chúng tôi",
+          "contactUs": "Liên hệ chúng tôi",
+          "contactUsDesc": "Kết nối với đội ngũ của chúng tôi",
+          "forAgents": "Dành cho tư vấn",
+          "forAgentsDesc": "Công cụ dành cho tư vấn giáo dục",
+          "forSchools": "Dành cho trường",
+          "forSchoolsDesc": "Phát triển nhóm học sinh quốc tế của bạn"
+        }
+      }
+    }
+  },
+  "MarketingFooter": {
+    "tagline": "Kết nối các nhà lãnh đạo tương lai với những trường học tốt nhất của Úc — khắp đất nước, bằng bảy ngôn ngữ.",
+    "columns": {
+      "parents": {
+        "title": "Dành cho phụ huynh",
+        "links": {
+          "findSchools": "Tìm trường",
+          "compare": "So sánh",
+          "scholarships": "Học bổng",
+          "english": "Thi tiếng Anh"
+        }
+      },
+      "agents": {
+        "title": "Dành cho tư vấn",
+        "links": {
+          "overview": "Tổng quan tư vấn",
+          "qeac": "Xác minh QEAC",
+          "pipeline": "Pipeline tools [Soon]",
+          "login": "Agent login [Soon]"
+        }
+      },
+      "schools": {
+        "title": "Dành cho trường",
+        "links": {
+          "overview": "Tổng quan trường",
+          "claim": "Xác nhận hồ sơ",
+          "login": "School login [Soon]",
+          "pricing": "Bảng giá"
+        }
+      },
+      "resources": {
+        "title": "Tài nguyên",
+        "links": {
+          "help": "Trung tâm hỗ trợ",
+          "contact": "Liên hệ",
+          "privacy": "Chính sách bảo mật",
+          "terms": "Điều khoản"
+        }
+      }
+    },
+    "language": "Ngôn ngữ",
+    "copyright": "© {year} SchoolGo Australia. Bảo lưu mọi quyền.",
+    "attribution": "Nguồn từ data.gov.au · CC BY 2.5 AU · Tuân thủ đạo luật ESOS",
+    "portals": "Tôi là...",
+    "portalLabels": {
+      "parents": "Phụ huynh",
+      "agents": "Tư vấn",
+      "schools": "Trường học"
+    }
+  },
+  "ParentsHero": {
+    "trustPill": {
+      "brand": "Chính phủ",
+      "brandAccent": "Đã đăng ký",
+      "source": "dữ liệu từ data.gov.au"
+    },
+    "headlinePrefix": "Tìm trường",
+    "headlineEmphasis": "Úc",
+    "headlineSuffix": "cho con bạn.",
+    "lede": "Mọi trường K–12 đăng ký CRICOS tại một nơi. So sánh học phí, nội trú, thi tiếng Anh — tìm kiếm bằng tiếng Trung, Hàn, Thái, Việt, Mã Lai, Bahasa hoặc tiếng Anh.",
+    "searchAriaLabel": "Tìm kiếm trường học",
+    "searchFields": {
+      "where": {
+        "label": "Nơi",
+        "value": "Bất kỳ nơi nào tại Úc"
+      },
+      "yearLevel": {
+        "label": "Năm học",
+        "value": "Year 7 – Year 12"
+      },
+      "fees": {
+        "label": "Học phí",
+        "value": "$15k – $45k AUD"
+      }
+    },
+    "searchButtonLabel": "Tìm kiếm",
+    "searchClearLabel": "Xóa tìm kiếm",
+    "featured": {
+      "eyebrow": "Nổi bật",
+      "shortlistAdd": "Thêm {name} vào danh sách chọn",
+      "shortlistRemove": "Xóa {name} khỏi danh sách chọn",
+      "cards": {
+        "a": {
+          "name": "Scotch College Melbourne",
+          "location": "Hawthorn, VIC",
+          "curriculum": "VCE",
+          "fee": "$38.5k AUD",
+          "boarding": "Nội trú",
+          "rating": "4.9"
+        },
+        "b": {
+          "name": "Sydney Grammar School",
+          "location": "Darlinghurst, NSW",
+          "curriculum": "HSC",
+          "fee": "$41.2k AUD",
+          "boarding": "Chỉ ngoại trú",
+          "rating": "4.8"
+        },
+        "c": {
+          "name": "Brisbane Grammar School",
+          "location": "Spring Hill, QLD",
+          "curriculum": "QCE/IB",
+          "fee": "$35.8k AUD",
+          "boarding": "Nội trú",
+          "rating": "4.7"
+        }
+      }
+    }
+  },
+  "ParentsFourSteps": {
+    "eyebrow": "Cách thức hoạt động",
+    "heading": "Từ lần duyệt đầu tiên đến thư mời nhập học — bốn bước đơn giản.",
+    "subheading": "Không phí ẩn. Không cần đăng nhập cho đến khi nộp đơn.",
+    "steps": {
+      "browse": {
+        "title": "Duyệt mọi trường CRICOS",
+        "description": "Lọc {count, number} trường theo bang, học phí, loại hình, chương trình, nội trú và học bổng — bằng ngôn ngữ của bạn."
+      },
+      "shortlist": {
+        "title": "Chọn bốn trường. So sánh song song",
+        "description": "Đặt học phí, kỳ tuyển sinh, ICSEA và bài thi tiếng Anh được chấp nhận cạnh nhau. Quyết định trong vài phút, không phải vài tháng."
+      },
+      "prepare": {
+        "title": "Xem yêu cầu chính xác",
+        "description": "Mỗi hồ sơ trường đều hiển thị bài thi được chấp nhận, điểm tối thiểu, tài liệu và thời gian tuyển sinh."
+      },
+      "apply": {
+        "title": "Nộp đơn qua tư vấn đã xác minh",
+        "description": "Tư vấn của bạn có huy hiệu QEAC. Hồ sơ được theo dõi từ đầu đến cuối trên một bảng điều khiển.",
+        "comingSoon": "Coming soon"
+      }
+    },
+    "ctaBrowse": "Bắt đầu duyệt",
+    "ctaLearn": "Xem cách hoạt động",
+    "badge": {
+      "cricosVerified": "CRICOS Verified · Claimed by school",
+      "updated": "Updated April 2026"
+    },
+    "visuals": {
+      "browse": {
+        "title": "[TODO: vi] 695 schools loaded",
+        "subtitle": "[TODO: vi] Filtered by state, fees & curriculum"
+      },
+      "shortlist": {
+        "title": "[TODO: vi] Wei's shortlist",
+        "subtitle": "[TODO: vi] 3 schools in Victoria · All accept AEAS"
+      },
+      "prepare": {
+        "title": "[TODO: vi] Requirements matched",
+        "subtitle": "[TODO: vi] AEAS 70+ · IELTS 5.5+ · Documents ready"
+      },
+      "apply": {
+        "title": "[TODO: vi] Application submitted",
+        "subtitle": "[TODO: vi] Tracked end-to-end · Status: Under review"
+      }
+    }
+  },
+  "ParentsVerified": {
+    "eyebrow": "Mọi trường CRICOS",
+    "heading": "Đã xác minh. Bằng ngôn ngữ của bạn.",
+    "subheading": "Ảnh thực tế của tòa nhà. Học phí thực. Lịch tuyển sinh thực. Dữ liệu trường được lấy từ CRICOS và ACARA, cập nhật hàng tháng.",
+    "cards": {
+      "a": {
+        "name": "Scotch College",
+        "location": "Hawthorn, VIC",
+        "sector": "Tư thục"
+      },
+      "b": {
+        "name": "Sydney Grammar",
+        "location": "Darlinghurst, NSW",
+        "sector": "Tư thục"
+      },
+      "c": {
+        "name": "Brisbane Grammar",
+        "location": "Spring Hill, QLD",
+        "sector": "Tư thục"
+      },
+      "d": {
+        "name": "Christ Church Grammar",
+        "location": "Claremont, WA",
+        "sector": "Tư thục"
+      }
+    }
+  },
+  "ParentsComparison": {
+    "eyebrow": "So sánh",
+    "heading": "Đặt các trường cạnh nhau.",
+    "headingAccent": "Quyết định trong vài phút, không phải vài tháng.",
+    "columns": {
+      "fee": "Học phí hàng năm",
+      "tests": "Bài thi được chấp nhận",
+      "intakes": "Kỳ tuyển sinh",
+      "stateSector": "[TODO: vi] State & sector",
+      "curriculum": "[TODO: vi] Curriculum",
+      "boarding": "[TODO: vi] Boarding",
+      "minScore": "[TODO: vi] Min. AEAS score",
+      "scholarships": "[TODO: vi] Scholarships"
+    },
+    "notPublished": "Chưa công bố",
+    "shortlistLabel": "[TODO: vi] Shortlist · {count} schools",
+    "dayOnly": "[TODO: vi] — Day only",
+    "noneIntl": "[TODO: vi] — None intl."
+  },
+  "ParentsPickATest": {
+    "eyebrow": "Năng lực tiếng Anh",
+    "heading": "Chọn bài thi. Xem trường nào chấp nhận —",
+    "headingAccent": "và điểm tối thiểu.",
+    "subheading": "Chúng tôi tổng hợp bài thi tiếng Anh được chấp nhận trên mọi hồ sơ trường. Không còn phải lướt qua 50 website trường.",
+    "tests": {
+      "aeas": {
+        "name": "AEAS",
+        "fullName": "Australian Education Assessment Services",
+        "description": "Most commonly accepted by Australian independent schools"
+      },
+      "idat": {
+        "name": "iDAT",
+        "fullName": "International Digital Admissions Test",
+        "description": "Growing in popularity for K–12 admissions"
+      },
+      "duolingo": {
+        "name": "Duolingo",
+        "fullName": "Duolingo English Test",
+        "description": "Accepted by an increasing number of schools"
+      },
+      "ielts": {
+        "name": "IELTS",
+        "fullName": "International English Language Testing System",
+        "description": "Standard for senior secondary entry (Year 11+)"
+      },
+      "pte": {
+        "name": "PTE Academic",
+        "fullName": "Pearson Test of English Academic",
+        "description": "Accepted by some schools for Year 11–12 entry"
+      },
+      "cambridge": {
+        "name": "Cambridge",
+        "fullName": "Cambridge English Qualifications",
+        "description": "Accepted by select schools"
+      },
+      "toefl": {
+        "name": "TOEFL",
+        "fullName": "Test of English as a Foreign Language",
+        "description": "Accepted by select schools for senior entry"
+      }
+    },
+    "cta": "Xem các trường chấp nhận bài thi này"
+  },
+  "ParentsSevenLanguages": {
+    "eyebrow": "Bảy ngôn ngữ",
+    "heading": "Gia đình không nên phải dịch bảng học phí lúc nửa đêm.",
+    "subheading": "SchoolGo được dịch toàn bộ sang bảy ngôn ngữ phổ biến nhất trong khu vực châu Á - Thái Bình Dương.",
+    "languages": {
+      "en": "English",
+      "zh": "简体中文",
+      "vi": "Tiếng Việt",
+      "ko": "한국어",
+      "ms": "Bahasa Melayu",
+      "th": "ภาษาไทย",
+      "id": "Bahasa Indonesia"
+    }
+  },
+  "ParentsArticles": {
+    "eyebrow": "Thư viện tuyển sinh",
+    "heading": "Do nhân viên tuyển sinh viết. Dịch sang bảy ngôn ngữ.",
+    "subheading": "Hướng dẫn đơn giản về visa, kỳ tuyển sinh, thi tiếng Anh và học phí. Miễn phí, không cần đăng nhập.",
+    "items": {
+      "intakes": {
+        "title": "Hiểu kỳ tuyển sinh của các trường Úc",
+        "meta": "6 phút đọc · Cập nhật hàng tháng"
+      },
+      "englishTests": {
+        "title": "Trường bạn chấp nhận bài thi tiếng Anh nào?",
+        "meta": "8 phút đọc · Phân tích từng bài thi"
+      },
+      "boarding": {
+        "title": "Nội trú hay ngoại trú: lựa chọn của gia đình và lý do",
+        "meta": "5 phút đọc · Các trường hợp thực tế"
+      }
+    },
+    "readMore": "Đọc bài viết"
+  },
+  "ParentsStatsBar": {
+    "eyebrow": "Con số nổi bật",
+    "heading": "Danh bạ trường CRICOS lớn nhất Úc.",
+    "subheading": "Mọi trường đã đăng ký, được xác minh và có thể tìm kiếm — từ công lập đến tư thục, trên toàn bộ tám bang và vùng lãnh thổ.",
+    "items": {
+      "schools": {
+        "value": "{count, number}+",
+        "label": "CRICOS Schools"
+      },
+      "states": {
+        "value": "8",
+        "label": "States & Territories"
+      },
+      "sectors": {
+        "value": "All 3 Sectors",
+        "label": "Government · Independent · Catholic"
+      },
+      "fees": {
+        "value": "$3.5k – $78k",
+        "label": "Annual Fee Range"
+      }
+    }
+  },
+  "ParentsFinalCta": {
+    "eyebrow": "Bắt đầu tại đây",
+    "headingPrefix": "Hành trình tìm kiếm của bạn",
+    "headingEmphasis": "bắt đầu",
+    "headingSuffix": "bằng bảy ngôn ngữ.",
+    "subheading": "Miễn phí. Không cần đăng nhập. Cập nhật {month} {year, number}.",
+    "ctaPrimary": "Tìm trường của bạn",
+    "ctaSecondary": "Liên hệ tư vấn đã xác minh"
+  },
+  "ParentsTrustBar": {
+    "eyebrow": "Tin cậy & tuân thủ",
+    "heading": "Dữ liệu bạn có thể tin tưởng.",
+    "subheading": "Mọi thông tin trường trên SchoolGo đều được hỗ trợ bởi các nguồn dữ liệu chính phủ chính thức — đã xác minh, được cấp phép và cập nhật hàng tháng.",
+    "items": {
+      "cricos": {
+        "label": "Trường đăng ký với chính phủ",
+        "description": "Mọi thông tin trường đều được đối chiếu với Sổ đăng ký Liên bang chính thức."
+      },
+      "datagov": {
+        "label": "Luôn cập nhật",
+        "description": "Dữ liệu mở được cấp phép theo CC BY 2.5 AU — minh bạch và có thể kiểm tra công khai."
+      },
+      "acara": {
+        "label": "Dữ liệu chương trình quốc gia",
+        "description": "Chương trình học, điểm ICSEA và dữ liệu tuyển sinh lấy từ cơ quan quốc gia."
+      },
+      "esos": {
+        "label": "Bảo vệ học sinh",
+        "description": "SchoolGo hoạt động trong khuôn khổ Đạo luật Dịch vụ Giáo dục cho Học sinh Nước ngoài của Úc."
+      }
+    },
+    "attribution": "Dữ liệu trường lấy từ Sổ đăng ký Liên bang về Cơ sở và Khóa học cho Học sinh Nước ngoài (CRICOS) và Cơ quan Chương trình, Đánh giá và Báo cáo Úc (ACARA). Cập nhật tháng 4 năm 2026."
+  },
+  "ParentsFaq": {
+    "heading": "Frequently Asked Questions",
+    "items": {
+      "free": {
+        "question": "Is SchoolGo free?",
+        "answer": "Yes. SchoolGo is completely free for parents, education agents, and schools. There are no listing fees, application fees, or subscription costs."
+      },
+      "dataSource": {
+        "question": "Where does the school data come from?",
+        "answer": "All school listings are sourced from CRICOS (the Commonwealth Register of Institutions and Courses for Overseas Students), which is the Australian Government's official register of schools authorised to enrol international students. We cross-reference this with ACARA school profile data for enrolment figures, ICSEA scores, and GPS coordinates."
+      },
+      "englishTests": {
+        "question": "What English proficiency tests do Australian schools accept?",
+        "answer": "Different schools accept different tests. The most common are AEAS (Australian Education Assessment Services), iDAT (International Digital Admissions Test), Duolingo English Test, IELTS, and PTE Academic. SchoolGo shows which specific tests each school accepts on their profile page."
+      },
+      "doINeedAgent": {
+        "question": "[TODO: vi] Do I need an education agent?",
+        "answer": "[TODO: vi] You don't have to use one, but most families do — and it's free. Education agents help you choose the right school, prepare documents, and manage the application. SchoolGo shows which agents work with each school, so you can find someone who already knows the admissions process."
+      },
+      "updateFrequency": {
+        "question": "How often is the data updated?",
+        "answer": "CRICOS data is refreshed monthly from data.gov.au. School-specific details (fees, requirements, intake dates) are updated by schools who have claimed their profiles. If a school hasn't claimed their profile, the data shown is from CRICOS and ACARA public datasets."
+      }
+    }
+  },
+  "AgentsMetadata": {
+    "title": "SchoolGo — Vận hành công ty tư vấn như một danh mục đầu tư",
+    "description": "Công cụ được xác minh QEAC dành cho tư vấn giáo dục đưa học sinh vào các trường Úc. Hồ sơ chuẩn hóa, theo dõi tiến trình trực tiếp, hoa hồng đầy đủ.",
+    "ogDescription": "Vận hành công việc như một danh mục đầu tư. Giữ lại 100% hoa hồng của bạn."
+  },
+  "AgentsHero": {
+    "eyebrow": "Dành cho tư vấn giáo dục · Được hỗ trợ bởi QEAC",
+    "headlinePrefix": "Vận hành công việc của bạn",
+    "headlineEmphasis": "như một danh mục đầu tư.",
+    "lede": "Một hồ sơ được xác minh. {count, number} trường CRICOS. Một bảng theo dõi mà gia đình có thể xem. SchoolGo thu phí từ các trường, không thu từ bạn.",
+    "ctaPrimary": "Đăng ký xác minh",
+    "ctaSecondary": "Xem cách hoạt động",
+    "badgeMeta": "Sample agent profile",
+    "stats": {
+      "schools": {
+        "value": "{count, number}",
+        "label": "Trường CRICOS đã xác minh"
+      },
+      "sectors": {
+        "value": "3",
+        "label": "Sectors — Gov, Independent, Catholic"
+      },
+      "commission": {
+        "value": "100%",
+        "label": "Hoa hồng được giữ lại hoàn toàn"
+      }
+    }
+  },
+  "AgentsPainPoints": {
+    "eyebrow": "Why agents switch",
+    "heading": "Built for Education Agents Who Manage Real Pipelines",
+    "subheading": "76% of international school enrolments come through education agents. SchoolGo is built to make you more effective, not to replace you.",
+    "items": {
+      "email": {
+        "question": "Tired of emailing 15 admissions offices?",
+        "answer": "One platform, one application workflow. Submit to multiple schools and track responses in real time. Every application carries your verified agent attribution."
+      },
+      "status": {
+        "question": "Students keep asking 'did you hear back?'",
+        "answer": "Live application tracker your students can see. Status updates flow automatically — you spend less time chasing and more time advising."
+      },
+      "trust": {
+        "question": "Schools don't know if you're legitimate?",
+        "answer": "SchoolGo agent verification with your QEAC credentials. Your verified badge and track record appear on every application you submit."
+      },
+      "requirements": {
+        "question": "Different requirements for every school?",
+        "answer": "SchoolGo maps each school's specific entry requirements: accepted English tests, minimum scores, required documents, intake dates, and application fees. No more digging through 50 school websites."
+      }
+    }
+  },
+  "AgentsStatsBar": {
+    "items": {
+      "schools": "{count, number}+ School Profiles",
+      "requirements": "Entry Requirements Mapped",
+      "tests": "English Test Requirements Listed",
+      "free": "Free for Agents"
+    }
+  },
+  "AgentsMatching": {
+    "eyebrow": "Ghép trường · Nộp hồ sơ · Theo dõi",
+    "heading": "Phụ huynh gọi lúc 10 giờ sáng. Ba trường phù hợp trước 10:30.",
+    "subheading": "SchoolGo gợi ý các trường phù hợp theo bang, học phí, trình độ tiếng Anh và kỳ tuyển sinh — rồi cho phép bạn nộp hồ sơ chuẩn hóa trong vài phút.",
+    "steps": {
+      "listen": {
+        "title": "Ghi lại nhu cầu của gia đình",
+        "description": "Ngân sách, địa điểm, trình độ tiếng Anh, kỳ nhập học mong muốn — trong một biểu mẫu duy nhất, bằng ngôn ngữ của họ."
+      },
+      "match": {
+        "title": "Xem các trường phù hợp nhất",
+        "description": "Lọc theo hồ sơ của học sinh. Xem bài thi được chấp nhận và điểm tối thiểu của từng trường.",
+        "comingSoon": "Coming soon"
+      },
+      "deliver": {
+        "title": "Giao danh sách gọn gàng, không lộn xộn",
+        "description": "Một file PDF có thương hiệu mà gia đình có thể chụp màn hình và gửi cho bố. Không cần PDF từ mười lăm trường khác nhau.",
+        "comingSoon": "Coming soon"
+      }
+    },
+    "inboxLabel": "Hộp thư tuyển sinh",
+    "inboxRows": {
+      "scotch": {
+        "school": "Scotch College",
+        "location": "Hawthorn, VIC",
+        "status": "Phù hợp · AEAS 70+"
+      },
+      "brisbane": {
+        "school": "Brisbane Grammar",
+        "location": "Spring Hill, QLD",
+        "status": "Phù hợp · AEAS 68+"
+      },
+      "sydney": {
+        "school": "Sydney Grammar",
+        "location": "Darlinghurst, NSW",
+        "status": "Phù hợp · AEAS 65+"
+      }
+    }
+  },
+  "AgentsCommission": {
+    "eyebrow": "Phí dịch vụ",
+    "heading": "Bạn giữ lại 100% hoa hồng từ trường.",
+    "subheading": "Chúng tôi thu phí từ trường, không từ bạn. Mối quan hệ thương mại của bạn với các trường vẫn trực tiếp.",
+    "statValue": "$0",
+    "statLabel": "Platform cost per agent. Zero fees, zero commission splits — ever.",
+    "bullets": {
+      "zero": {
+        "title": "Không phí theo từng học sinh",
+        "description": "Không chia hoa hồng. Không phí xếp chỗ. Không phí đăng ký."
+      },
+      "direct": {
+        "title": "Quan hệ trực tiếp với trường",
+        "description": "Quyền ghi nhận của bạn được khóa vào hồ sơ ngay khi bạn nộp."
+      },
+      "audit": {
+        "title": "Lịch sử kiểm tra đầy đủ",
+        "description": "Mọi thay đổi trạng thái đều có dấu thời gian. Tranh chấp kết thúc tại hồ sơ giấy tờ."
+      }
+    }
+  },
+  "AgentsQeacTrust": {
+    "eyebrow": "Đã xác minh",
+    "heading": "Một hồ sơ mà phụ huynh — và nhà trường — thực sự tin tưởng.",
+    "subheading": "Chứng chỉ QEAC của bạn được xác minh một lần. Huy hiệu và thành tích của bạn sẽ xuất hiện trên mọi hồ sơ bạn nộp.",
+    "sampleLabel": "Sample profile",
+    "profile": {
+      "name": "Hồ sơ tư vấn",
+      "agentName": "Mei Lin",
+      "qeac": "QEAC đã xác minh",
+      "yearsActive": "Năm hoạt động",
+      "students": "Học sinh đã xếp chỗ",
+      "placements": "Trường đã xếp chỗ",
+      "languages": "Ngôn ngữ sử dụng",
+      "languagesValue": "中 · EN"
+    }
+  },
+  "AgentsScale": {
+    "eyebrow": "Mạng lưới",
+    "heading": "Agents across APAC are joining. Be one of the first.",
+    "subheading": "From Shanghai to Jakarta, Ho Chi Minh to Seoul — agents placing families into Australian K–12.",
+    "agents": {
+      "a": {
+        "name": "Li Wei",
+        "region": "Shanghai · 中国",
+        "meta": "QEAC verified · Independent schools"
+      },
+      "b": {
+        "name": "Nguyễn Minh",
+        "region": "Ho Chi Minh · Việt Nam",
+        "meta": "QEAC verified · All sectors"
+      },
+      "c": {
+        "name": "Siti Rahman",
+        "region": "Kuala Lumpur · Malaysia",
+        "meta": "QEAC verified · Boarding specialist"
+      },
+      "d": {
+        "name": "Ji-eun Park",
+        "region": "Seoul · 대한민국",
+        "meta": "QEAC verified · VIC & NSW"
+      }
+    },
+    "cta": "Đăng ký xác minh"
+  },
+  "AgentsTestimonial": {
+    "eyebrow": "[TODO: vi] From the field",
+    "heading": "[TODO: vi] What agents are saying",
+    "items": {
+      "a": {
+        "quote": "[TODO: vi] I used to forward 40 PDFs a week between parents on WeChat and six admissions offices over email. One platform would cut my admin in half.",
+        "attribution": "[TODO: vi] Agency director, Shanghai",
+        "meta": "[TODO: vi] 60+ students · 3 counsellors"
+      },
+      "b": {
+        "quote": "[TODO: vi] My families want updates at 11pm their time. A live tracker they can check themselves would save me two hours a day on WhatsApp.",
+        "attribution": "[TODO: vi] Independent agent, Ho Chi Minh City",
+        "meta": "[TODO: vi] 25+ students · Solo practice"
+      },
+      "c": {
+        "quote": "[TODO: vi] I re-type the same passport number into five different school forms every week. Enter-once, apply-many would change everything.",
+        "attribution": "[TODO: vi] Senior counsellor, Kuala Lumpur",
+        "meta": "[TODO: vi] 40+ students · 2 branches"
+      }
+    },
+    "disclaimer": "[TODO: vi] Composite quotes based on agent interviews"
+  },
+  "AgentsFinalCta": {
+    "eyebrow": "Được xác minh",
+    "headingPrefix": "Danh mục của bạn",
+    "headingEmphasis": "xứng đáng",
+    "headingSuffix": "hơn thế.",
+    "subheading": "Miễn phí. Yêu cầu xác minh QEAC. Onboarding trong 48 giờ.",
+    "ctaPrimary": "Đăng ký xác minh",
+    "ctaSecondary": "Đặt lịch giới thiệu"
+  },
+  "SchoolsMetadata": {
+    "title": "SchoolGo — Lấp đầy chỉ tiêu quốc tế với ít email hơn",
+    "description": "Hộp thư tuyển sinh thống nhất cho các trường Úc. Tư vấn được xác minh QEAC, hồ sơ thực, không phí theo từng học sinh.",
+    "ogDescription": "Lấp đầy chỉ tiêu quốc tế của bạn. Với ít email hơn."
+  },
+  "SchoolsHero": {
+    "eyebrow": "Dành cho các trường Úc",
+    "headlinePrefix": "Lấp đầy",
+    "headlineEmphasis": "chỉ tiêu quốc tế",
+    "headlineSuffix": "của bạn. Với ít email hơn.",
+    "lede": "Một hồ sơ được xác minh, được các gia đình ở bảy quốc gia nhìn thấy. Nhận hồ sơ chuẩn hóa từ tư vấn được xác minh QEAC — đúng định dạng mà đội tuyển sinh của bạn đang dùng.",
+    "ctaPrimary": "Xác nhận hồ sơ trường",
+    "ctaSecondary": "Đặt lịch giới thiệu",
+    "inbox": {
+      "eyebrow": "Applications inbox — preview",
+      "countLabel": "Tháng này",
+      "rows": {
+        "a": {
+          "name": "Sophie Chen",
+          "status": "Mới",
+          "meta": "VIC · Year 9 · AEAS 78"
+        },
+        "b": {
+          "name": "Minh Tran",
+          "status": "Đang xét",
+          "meta": "VIC · Year 11 · IELTS 6.5"
+        },
+        "c": {
+          "name": "Ji-woo Park",
+          "status": "Đã gửi thư mời",
+          "meta": "NSW · Year 10 · AEAS 74"
+        }
+      }
+    }
+  },
+  "SchoolsStats": {
+    "eyebrow": "Hiệu ứng mạng lưới",
+    "heading": "Một hồ sơ. Được các gia đình ở bảy quốc gia nhìn thấy.",
+    "subheading": "Thông tin trường của bạn xuất hiện trong mọi tìm kiếm, mọi so sánh, mọi danh sách gợi ý — bằng ngôn ngữ của gia đình.",
+    "items": {
+      "schools": {
+        "value": "695+",
+        "label": "CRICOS-registered schools"
+      },
+      "states": {
+        "value": "8",
+        "label": "States & territories"
+      },
+      "sectors": {
+        "value": "3",
+        "label": "Sectors — Government, Independent, Catholic"
+      },
+      "feeRange": {
+        "value": "$3.5k – $78k",
+        "label": "Annual fee range (AUD)"
+      }
+    }
+  },
+  "SchoolsThreeTools": {
+    "eyebrow": "Bộ công cụ",
+    "heading": "Ba công cụ. Một mục tiêu: đúng học sinh, ít việc hơn.",
+    "subheading": "SchoolGo cung cấp cho đội tuyển sinh ba thứ họ thực sự cần.",
+    "tools": {
+      "profile": {
+        "title": "Hồ sơ trường luôn cập nhật",
+        "description": "Học phí, kỳ tuyển sinh, bài thi được chấp nhận, học bổng và tài liệu — do bạn cập nhật, hiển thị bằng ngôn ngữ của gia đình."
+      },
+      "applications": {
+        "title": "Hồ sơ được chuẩn hóa",
+        "description": "Mọi hồ sơ đều đến theo cùng định dạng, với quy gán tư vấn được xác minh QEAC và đầy đủ tài liệu."
+      },
+      "inbox": {
+        "title": "Hộp thư tuyển sinh duy nhất",
+        "description": "Theo dõi trạng thái mọi hồ sơ. Mời nhập học, xếp danh sách chờ hoặc từ chối chỉ bằng một cú nhấp. Gia đình và tư vấn nhận cập nhật ngay lập tức."
+      }
+    }
+  },
+  "SchoolsTimeline": {
+    "eyebrow": "Hành trình tuyển sinh",
+    "heading": "Từ hồ sơ đầu tiên đến ngày khai giảng — không loay hoay với hộp thư.",
+    "subheading": "Toàn bộ chu trình tuyển sinh quốc tế, trong một nơi.",
+    "steps": {
+      "receive": {
+        "title": "Nhận hồ sơ",
+        "description": "Hồ sơ đến hộp thư kèm điểm tiếng Anh, tài liệu và tư vấn đã xác minh.",
+        "comingSoon": "Coming soon"
+      },
+      "review": {
+        "title": "Xét duyệt",
+        "description": "Đội của bạn đánh giá theo tiêu chí riêng. Ghi chú chỉ hiển thị nội bộ.",
+        "comingSoon": "Coming soon"
+      },
+      "decide": {
+        "title": "Quyết định",
+        "description": "Mời nhập học, xếp danh sách chờ hoặc từ chối chỉ bằng một cú nhấp. Trạng thái gửi ngay đến gia đình và tư vấn.",
+        "comingSoon": "Coming soon"
+      },
+      "onboard": {
+        "title": "Nhập học",
+        "description": "Chia sẻ giấy tờ ngày nhập học, thông tin chỗ ở và đường dẫn định hướng — tất cả trong một luồng hội thoại.",
+        "comingSoon": "Coming soon"
+      }
+    }
+  },
+  "SchoolsPricing": {
+    "eyebrow": "Bảng giá",
+    "heading": "Không phí theo tư vấn. Không hoa hồng. Một gói hàng năm.",
+    "subheading": "Các trường hỗ trợ SchoolGo trả một khoản phí hàng năm minh bạch. Gia đình và tư vấn không phải trả.",
+    "plans": {
+      "listing": {
+        "name": "Đăng ký cơ bản",
+        "price": "Free",
+        "priceMeta": "Vĩnh viễn",
+        "features": {
+          "a": "Hồ sơ CRICOS của bạn, tự động xuất bản",
+          "b": "Bài thi tiếng Anh được chấp nhận + điểm tối thiểu",
+          "c": "Hộp thư hồ sơ chuẩn hóa"
+        },
+        "cta": "Xác nhận hồ sơ của bạn"
+      },
+      "admissions": {
+        "name": "Tuyển sinh",
+        "price": "$12,800",
+        "priceMeta": "AUD / năm",
+        "badge": "Phổ biến nhất",
+        "features": {
+          "a": "Tất cả trong Đăng ký cơ bản",
+          "b": "Quy trình mời / danh sách chờ / từ chối",
+          "c": "Thư mục tư vấn được xác minh QEAC",
+          "d": "Dịch sang bảy ngôn ngữ trên mọi trang hồ sơ"
+        },
+        "cta": "Bắt đầu tuyển sinh"
+      }
+    }
+  },
+  "SchoolsTestimonial": {
+    "quote": "The hardest part of international admissions isn't finding students — it's processing incomplete applications from 15 different email threads.",
+    "attribution": "Composite quote based on admissions officer interviews"
+  },
+  "SchoolsFinalCta": {
+    "eyebrow": "Bắt đầu tại đây",
+    "headingPrefix": "Kỳ tuyển sinh tiếp theo của bạn",
+    "headingEmphasis": "bắt đầu",
+    "headingSuffix": "ở đây.",
+    "subheading": "Đăng ký miễn phí. Không cần thẻ tín dụng. Xác nhận trong 10 phút.",
+    "ctaPrimary": "Xác nhận hồ sơ trường",
+    "ctaSecondary": "Đặt lịch giới thiệu"
+  },
+  "SchoolsFaq": {
+    "heading": "[TODO: vi] Frequently Asked Questions",
+    "items": {
+      "claim": {
+        "question": "[TODO: vi] How do I claim my school's profile?",
+        "answer": "[TODO: vi] Search for your school on SchoolGo and click \"Claim This School.\" You'll verify your identity as a staff member, and once approved you can edit your profile, update fees, and manage applications."
+      },
+      "agents": {
+        "question": "[TODO: vi] How does SchoolGo work with education agents?",
+        "answer": "[TODO: vi] By default, your profile works with your school's existing agents. You can see which agents have placed students with you, invite new agents, or manage agent relationships from your dashboard."
+      },
+      "commission": {
+        "question": "[TODO: vi] Does SchoolGo charge schools or agents?",
+        "answer": "[TODO: vi] No. SchoolGo is free for everyone — schools, agents, and parents. There are no listing fees, per-student fees, or commission splits."
+      },
+      "data": {
+        "question": "[TODO: vi] Where does the school data come from?",
+        "answer": "[TODO: vi] All school profiles are auto-published from CRICOS (the Australian Government's official register) and cross-referenced with ACARA school profile data. Schools that claim their profile can update their own details at any time."
+      }
+    }
+  },
+  "Navbar": {
+    "brand": "School",
+    "brandAccent": "Go",
+    "region": "Úc",
+    "findSchools": "Tìm Trường",
+    "compare": "So Sánh",
+    "scholarships": "Học Bổng",
+    "admissions": "Tuyển Sinh",
+    "contactUs": "Liên Hệ",
+    "signIn": "Đăng Nhập"
+  },
+  "Footer": {
+    "brand": "School",
+    "brandAccent": "Go",
+    "region": "Úc",
+    "tagline": "Kết nối các nhà lãnh đạo tương lai với nền tảng học thuật tốt nhất trên toàn lục địa.",
+    "resources": "Tài Nguyên",
+    "directory": "Danh Mục",
+    "copyright": "© {year} SchoolGo Úc. Bảo lưu mọi quyền.",
+    "resourceLinks": {
+      "vceResources": "Tài Liệu VCE",
+      "hscGuides": "Hướng Dẫn HSC",
+      "ibRequirements": "Yêu Cầu IB"
+    },
+    "directoryLinks": {
+      "scholarshipTips": "Mẹo Học Bổng",
+      "contactSupport": "Liên Hệ Hỗ Trợ"
+    },
+    "social": {
+      "website": "Truy cập trang web",
+      "share": "Chia sẻ",
+      "email": "Gửi email cho chúng tôi"
+    }
+  },
+  "SchoolSearch": {
+    "searchPlaceholder": "Tìm theo tên trường, thành phố hoặc vùng ngoại ô...",
+    "clearSearch": "Xóa tìm kiếm",
+    "filters": {
+      "title": "Bộ Lọc Tìm Kiếm",
+      "subtitle": "Lọc Trường Học Úc",
+      "priceRangeLabel": "Khoảng Giá (AUD)",
+      "priceRangeValue": "${min}k – ${max}k",
+      "priceMin": "$5.000",
+      "priceMax": "$60.000+",
+      "englishTests": "Bài Thi Trình Độ Tiếng Anh",
+      "englishTestsHint": "Trường chấp nhận các bài thi tiếng Anh được công nhận",
+      "englishTestsToggle": "Bật/tắt bộ lọc bài thi trình độ tiếng Anh",
+      "curriculum": "Chương Trình Học",
+      "location": "Vị Trí",
+      "resetFilters": "Đặt Lại Bộ Lọc",
+      "resetAll": "Đặt lại tất cả",
+      "locked": {
+        "title": "Unlock this filter",
+        "cta": "Create free account"
+      },
+      "collapse": "Collapse",
+      "expand": "Expand"
+    },
+    "chips": {
+      "topRated": "Đánh Giá Cao",
+      "boarding": "Có Nội Trú",
+      "coed": "Nam Nữ Chung",
+      "scholarships": "Đang Mở Học Bổng",
+      "openDays": "Ngày Mở Cửa"
+    },
+    "states": {
+      "VIC": "Victoria (VIC)",
+      "NSW": "New South Wales (NSW)",
+      "QLD": "Queensland (QLD)",
+      "SA": "Nam Úc (SA)",
+      "WA": "Tây Úc (WA)",
+      "TAS": "Tasmania (TAS)",
+      "ACT": "Lãnh Thổ Thủ Đô Úc (ACT)",
+      "NT": "Lãnh Thổ Bắc Úc (NT)"
+    },
+    "autocomplete": {
+      "schoolsHeading": "Trường học",
+      "suburbsHeading": "Vùng ngoại ô & mã bưu chính",
+      "loading": "Đang tìm kiếm…",
+      "empty": "Không có kết quả"
+    },
+    "saveSearch": {
+      "cta": "Lưu tìm kiếm",
+      "promptTitle": "Lưu tìm kiếm này",
+      "nameLabel": "Tên",
+      "namePlaceholder": "vd. Danh sách ngắn Brisbane",
+      "confirm": "Lưu",
+      "cancel": "Hủy",
+      "successToast": "Đã lưu tìm kiếm",
+      "errorToast": "Không thể lưu tìm kiếm",
+      "signInRequired": "Đăng nhập để lưu tìm kiếm"
+    },
+    "savedSearches": {
+      "heading": "Tìm kiếm đã lưu",
+      "empty": "Chưa có tìm kiếm nào được lưu",
+      "applyCta": "Áp dụng",
+      "deleteCta": "Xóa",
+      "signInRequired": "Đăng nhập để xem tìm kiếm đã lưu",
+      "lastResultCount": "{count, plural, =0 {Không có kết quả} other {# kết quả}}"
+    },
+    "bookmark": {
+      "add": "Lưu trường học",
+      "remove": "Xóa khỏi danh sách đã lưu",
+      "signInRequired": "Đăng nhập để lưu trường học"
+    },
+    "results": {
+      "title": "Trường Có Sẵn",
+      "count": "{count, plural, one {# Kết Quả} other {# Kết Quả}}",
+      "viewAll": "Xem Tất Cả Trường",
+      "searching": "[TODO: vi] Searching…",
+      "error": "[TODO: vi] Something went wrong. Please try again.",
+      "empty": "[TODO: vi] No schools found. Try adjusting your filters.",
+      "loading": "Đang tải trường học…"
+    },
+    "map": {
+      "title": "Úc — Bản Đồ Trường Học",
+      "reset": "[TODO: vi] Reset filters and map",
+      "zoomIn": "Phóng to",
+      "zoomOut": "Thu nhỏ",
+      "ctrlScrollHint": "[TODO: vi] Use Ctrl + scroll to zoom the map",
+      "loading": "Đang tải bản đồ…"
+    },
+    "card": {
+      "currency": "AUD",
+      "viewDetails": "Xem {name}",
+      "topRated": "Top rated"
+    },
+    "loginPrompt": {
+      "title": "Mở khóa tìm kiếm đầy đủ",
+      "subtitle": "Đăng nhập để sử dụng bộ lọc chi tiết, lưu trường học và so sánh chương trình.",
+      "signIn": "Đăng nhập để tiếp tục",
+      "signUp": "Đăng ký"
+    },
+    "lockedDescription": "Đăng nhập để mở khóa — Tạo tài khoản miễn phí để sử dụng bộ lọc này",
+    "compare": {
+      "regionLabel": "So sánh trường học",
+      "clearAll": "Xóa tất cả lựa chọn so sánh",
+      "loading": "Đang tải dữ liệu so sánh…"
+    },
+    "spec": {
+      "previewBadge": "Preview",
+      "previewTitle": "Spec filters",
+      "modeBadge": {
+        "basic": "Cơ bản",
+        "advanced": "Nâng cao"
+      },
+      "lockedDescription": "Sign up to unlock this filter.",
+      "showFewer": "Show fewer",
+      "location": {
+        "title": "Vị trí",
+        "stateLabel": "Bang hoặc vùng lãnh thổ",
+        "suburbLabel": "Khu vực hoặc mã bưu điện",
+        "suburbPlaceholder": "VD: Hawthorn hoặc 3122"
+      },
+      "schoolProfile": {
+        "title": "School profile",
+        "sectorLabel": "Sector",
+        "accommodationLabel": "Accommodation",
+        "religionLabel": "Religious affiliation"
+      },
+      "enrolment": {
+        "title": "Enrolment & entry",
+        "yearLevelLabel": "Entry year level",
+        "ageLabel": "Student age",
+        "agePlaceholder": "—",
+        "ageHint": "Most {age}-year-olds enter {expected} — showing all results for your selection.",
+        "termLabel": "Entry term"
+      },
+      "academic": {
+        "title": "Academic",
+        "programLabel": "Program type",
+        "atarLabel": "ATAR available",
+        "atarTooltip": "Australian Tertiary Admission Rank — the score used for university entry in Australia",
+        "englishSupportLabel": "English language support",
+        "programTooltips": {
+          "australianCert": "The standard Australian senior secondary certificate — VCE (VIC), HSC (NSW), QCE (QLD), etc.",
+          "ib": "International Baccalaureate — a globally recognised program accepted by universities worldwide",
+          "elicos": "English Language Intensive Courses for Overseas Students — intensive English preparation before starting mainstream school"
+        }
+      },
+      "englishTest": {
+        "title": "Điểm bài thi tiếng Anh",
+        "selectorLabel": "Tôi có điểm cho",
+        "scoreLabel": "Điểm {label}",
+        "scorePlaceholder": "Nhập điểm",
+        "scoreHint": "Phạm vi: {min}–{max}",
+        "aeas": "AEAS",
+        "idat": "iDAT",
+        "duolingo": "Duolingo",
+        "ielts": "IELTS",
+        "pte": "PTE",
+        "cambridge": "Cambridge"
+      },
+      "tile": {
+        "status": {
+          "open": "Đang tuyển",
+          "limited": "Chỗ có hạn",
+          "waitlist": "Chỉ danh sách chờ",
+          "closed": "Đã đóng"
+        },
+        "sector": {
+          "government": "Công lập",
+          "nonGovernment": "Ngoài công lập",
+          "catholic": "Công giáo"
+        },
+        "accommodation": {
+          "boarding": "Nội trú",
+          "homestay": "Homestay",
+          "both": "Cả hai",
+          "none": "Không có"
+        },
+        "actions": {
+          "bookmark": "Đánh dấu {name}",
+          "bookmarkAdd": "Thêm {name} vào danh sách yêu thích",
+          "bookmarkRemove": "Xóa {name} khỏi danh sách yêu thích",
+          "compare": "Thêm {name} vào so sánh"
+        }
+      },
+      "sector": {
+        "government": "Government",
+        "nonGovernment": "Non-government",
+        "catholic": "Catholic"
+      },
+      "accommodation": {
+        "boarding": "Boarding",
+        "homestay": "Homestay",
+        "both": "Both",
+        "none": "None"
+      },
+      "religion": {
+        "nonDenominational": "Non-denominational",
+        "anglican": "Anglican",
+        "baptist": "Baptist",
+        "lutheran": "Lutheran",
+        "unitingChurch": "Uniting Church",
+        "presbyterian": "Presbyterian",
+        "islamic": "Islamic",
+        "jewish": "Jewish",
+        "buddhist": "Buddhist",
+        "copticOrthodox": "Coptic Orthodox",
+        "greekOrthodox": "Greek Orthodox",
+        "seventhDayAdventist": "Seventh-day Adventist",
+        "quaker": "Quaker",
+        "interdenominationalChristian": "Interdenominational Christian",
+        "showMore": "Show all ({count})",
+        "showLess": "Show less"
+      },
+      "yearLevel": {
+        "gr4": "Gr 4",
+        "gr5": "Gr 5",
+        "gr6": "Gr 6",
+        "yr7": "Yr 7",
+        "yr8": "Yr 8",
+        "yr9": "Yr 9",
+        "yr10": "Yr 10",
+        "yr11": "Yr 11",
+        "yr12": "Yr 12"
+      },
+      "entryTerm": {
+        "term1": "Term 1",
+        "term2": "Term 2",
+        "term3": "Term 3",
+        "term4": "Term 4"
+      },
+      "programType": {
+        "australianCert": "Australian Cert.",
+        "ib": "IB",
+        "elicos": "ELICOS"
+      },
+      "englishTestOption": {
+        "aeas": "AEAS",
+        "idat": "iDAT",
+        "duolingo": "Duolingo",
+        "ielts": "IELTS",
+        "pte": "PTE",
+        "cambridge": "Cambridge"
+      },
+      "gender": {
+        "boys": "Boys",
+        "girls": "Girls",
+        "coEd": "Co-ed"
+      },
+      "schoolLevel": {
+        "primary": "Primary",
+        "secondary": "Secondary"
+      },
+      "quickChip": {
+        "boys": "Boys",
+        "girls": "Girls",
+        "coEd": "Co-ed",
+        "primary": "Primary",
+        "secondary": "Secondary",
+        "boarding": "Boarding",
+        "groupAriaLabel": "Quick filters"
+      },
+      "sort": {
+        "label": "Sắp xếp theo",
+        "nameAsc": "Tên trường (A–Z)",
+        "nameDesc": "Tên trường (Z–A)",
+        "tuitionAsc": "Học phí thấp–cao",
+        "tuitionDesc": "Học phí cao–thấp",
+        "state": "Bang",
+        "enrolmentStatus": "Trạng thái tuyển sinh (đang mở trước)",
+        "applicationDeadlineAsc": "Hạn nộp hồ sơ (sớm nhất)",
+        "schoolSizeAsc": "Quy mô trường (nhỏ–lớn)",
+        "schoolSizeDesc": "Quy mô trường (lớn–nhỏ)",
+        "internationalPctAsc": "% học sinh quốc tế (thấp–cao)",
+        "internationalPctDesc": "% học sinh quốc tế (cao–thấp)"
+      },
+      "topBar": {
+        "searchPlaceholder": "Search by school name, city, or suburb",
+        "feeLabel": "Annual fee",
+        "feeReadout": "${min}k – ${max}k"
+      },
+      "compareBar": {
+        "label": "So sánh ({count}/{max})",
+        "remove": "Xóa {name}",
+        "cta": "So sánh trường",
+        "capReached": "Đã đạt giới hạn so sánh"
+      },
+      "tileCard": {
+        "tuitionFrom": "From ${amount} / year",
+        "viewSchool": "View school",
+        "bookmark": "Bookmark",
+        "bookmarkRemove": "Remove bookmark",
+        "compareCheckbox": "Add {name} to compare",
+        "status": {
+          "open": "Open",
+          "limited": "Limited places",
+          "waitlist": "Waitlist only",
+          "closed": "Closed"
+        }
+      },
+      "stepper": {
+        "decrease": "{label} decrease",
+        "increase": "{label} increase"
+      }
+    }
+  },
+  "Applications": {
+    "title": "Hồ sơ",
+    "subtitle": "Quản lý và theo dõi tất cả hồ sơ học sinh tại các trường.",
+    "searchPlaceholder": "Tìm theo học sinh hoặc trường...",
+    "clearSearch": "Xóa tìm kiếm",
+    "allStatuses": "Tất cả trạng thái",
+    "filterActive": "Đang hoạt động",
+    "filterNeedsAction": "Cần xử lý",
+    "statusDraft": "Bản nháp",
+    "statusSubmitted": "Đã nộp",
+    "statusReceived": "Đã nhận",
+    "statusUnderReview": "Đang xét duyệt",
+    "statusDocumentsRequested": "Yêu cầu tài liệu",
+    "statusAssessmentRequired": "Cần đánh giá",
+    "statusInterviewScheduled": "Đã lên lịch phỏng vấn",
+    "statusOfferMade": "Đã gửi thư mời",
+    "statusOfferAccepted": "Đã chấp nhận thư mời",
+    "statusPreEnrolment": "Tiền nhập học",
+    "statusCoeIssued": "Đã cấp CoE",
+    "statusEnrolled": "Đã nhập học",
+    "statusWithdrawn": "Đã rút hồ sơ",
+    "statusDeclined": "Bị từ chối",
+    "statusWaitlisted": "Danh sách chờ",
+    "columnStudent": "Học sinh",
+    "columnSchool": "Trường",
+    "columnState": "Bang",
+    "columnYearLevel": "Năm học",
+    "columnStatus": "Trạng thái",
+    "columnSubmitted": "Ngày nộp",
+    "columnDays": "Ngày",
+    "emptyTitle": "Chưa có hồ sơ nào",
+    "emptySubtitle": "Bắt đầu bằng cách tạo hồ sơ cho một trong các học sinh của bạn.",
+    "emptyFilteredTitle": "Không có hồ sơ nào khớp với bộ lọc của bạn",
+    "emptyFilteredSubtitle": "Hãy thử điều chỉnh bộ lọc hoặc từ khóa tìm kiếm.",
+    "addApplication": "Hồ sơ mới",
+    "paginationShowing": "Hiển thị",
+    "paginationOf": "trên tổng số {total}",
+    "allRows": "Tất cả",
+    "today": "Hôm nay",
+    "daysAgo": "{count} ngày trước",
+    "exportCsv": "Xuất CSV",
+    "detailTitle": "Chi Tiết Hồ Sơ",
+    "backToApplications": "Quay lại Hồ Sơ",
+    "tabDetails": "Chi Tiết",
+    "tabDocuments": "Tài Liệu",
+    "tabTimeline": "Dòng Thời Gian",
+    "tabMessages": "Tin Nhắn",
+    "studentToSchool": "{student} → {school}",
+    "submittedOn": "Ngày Nộp",
+    "lastUpdated": "Cập Nhật Lần Cuối",
+    "daysInCurrentStatus": "Ngày Trong Trạng Thái",
+    "applicationId": "Mã Hồ Sơ",
+    "progressSubmitted": "Đã Nộp",
+    "progressReview": "Xét Duyệt",
+    "progressDocuments": "Tài Liệu",
+    "progressOffer": "Thư Mời",
+    "progressEnrolment": "Nhập Học",
+    "progressEnrolled": "Đã Nhập Học",
+    "notFound": "Không tìm thấy hồ sơ.",
+    "loadError": "Không thể tải hồ sơ.",
+    "sectionStudent": "Thông tin học sinh",
+    "sectionSchool": "Thông tin trường",
+    "sectionApplication": "Thông tin hồ sơ",
+    "labelName": "Họ và tên",
+    "labelNationality": "Quốc tịch",
+    "labelSchoolName": "Tên trường",
+    "labelState": "Bang",
+    "labelCricosCode": "Mã CRICOS",
+    "labelYearLevel": "Năm học",
+    "labelIntake": "Kỳ tuyển sinh",
+    "labelStatus": "Trạng thái",
+    "labelSubmitted": "Ngày nộp",
+    "labelCreated": "Ngày tạo",
+    "labelUpdated": "Ngày cập nhật",
+    "notProvided": "Chưa cung cấp",
+    "documentsEmpty": "Không có tài liệu đính kèm",
+    "documentName": "Tên",
+    "documentType": "Loại",
+    "documentSize": "Kích thước",
+    "documentUploadedAt": "Đã tải lên",
+    "downloadDocument": "Tải xuống",
+    "timelineEmpty": "Chưa có sự kiện nào trong dòng thời gian",
+    "timelineBy": "bởi {actor}",
+    "messagesComingSoon": "Tin nhắn sắp ra mắt",
+    "actionWithdraw": "Rút hồ sơ",
+    "actionAcceptOffer": "Chấp nhận thư mời",
+    "actionContactSchool": "Liên hệ trường",
+    "actionComingSoon": "Sắp ra mắt"
+  },
+  "Auth": {
+    "signInTitle": "Đăng nhập vào SchoolGo",
+    "signInSubtitle": "Truy cập tài khoản để quản lý trường học, hồ sơ và nhiều hơn nữa.",
+    "iAmA": "Tôi là…",
+    "userTypes": {
+      "parent": "Phụ huynh",
+      "agent": "Tư vấn",
+      "school": "Trường học"
+    },
+    "emailLabel": "Email",
+    "emailPlaceholder": "you@example.com",
+    "passwordLabel": "Mật khẩu",
+    "passwordPlaceholder": "Nhập mật khẩu của bạn",
+    "signInButton": "Đăng nhập",
+    "loginSuccess": "Chào mừng trở lại!",
+    "loginError": "Email hoặc mật khẩu không hợp lệ. Vui lòng thử lại.",
+    "portalUnauthorized": "Tài khoản này không được phép truy cập cổng này.",
+    "sessionExpired": "Phiên đăng nhập của bạn đã hết hạn. Vui lòng đăng nhập lại.",
+    "noAccount": "Chưa có tài khoản?",
+    "signUp": "Đăng ký",
+    "signUpTitle": "Tạo tài khoản của bạn",
+    "signUpSubtitle": "Tham gia SchoolGo để tìm kiếm, so sánh và nộp đơn vào các trường Úc.",
+    "nameLabel": "Họ và tên",
+    "namePlaceholder": "Họ và tên của bạn",
+    "createPasswordPlaceholder": "Tạo mật khẩu (tối thiểu 6 ký tự)",
+    "signUpButton": "Tạo tài khoản",
+    "registerSuccess": "Tài khoản đã được tạo! Chào mừng bạn đến với SchoolGo.",
+    "registerError": "Không thể tạo tài khoản. Vui lòng thử lại.",
+    "hasAccount": "Đã có tài khoản?",
+    "signInLink": "Đăng nhập",
+    "close": "Đóng",
+    "portalSwitch": {
+      "backTo": "[TODO: vi] Back to"
+    },
+    "parent": {
+      "signInTitle": "[TODO: vi] Welcome back, Parent",
+      "signInSubtitle": "[TODO: vi] Sign in to find and compare the best schools for your child.",
+      "signUpTitle": "[TODO: vi] Start your school search",
+      "signUpSubtitle": "[TODO: vi] Create an account to shortlist, compare and apply to Australian schools.",
+      "stat1Value": "2,400+",
+      "stat1Label": "Trường học",
+      "stat2Value": "7",
+      "stat2Label": "Ngôn ngữ",
+      "stat3Value": "98%",
+      "stat3Label": "Hài lòng"
+    },
+    "agent": {
+      "signInTitle": "[TODO: vi] Agent Portal",
+      "signInSubtitle": "[TODO: vi] Sign in to manage your pipeline and student placements.",
+      "signUpTitle": "[TODO: vi] Grow your agency",
+      "signUpSubtitle": "[TODO: vi] Join SchoolGo to access verified schools and streamline placements.",
+      "stat1Value": "850+",
+      "stat1Label": "Tư vấn",
+      "stat2Value": "15%",
+      "stat2Label": "Hoa hồng",
+      "stat3Value": "24h",
+      "stat3Label": "Phản hồi"
+    },
+    "school": {
+      "signInTitle": "[TODO: vi] School Portal",
+      "signInSubtitle": "[TODO: vi] Sign in to manage enrolments and connect with agents.",
+      "signUpTitle": "[TODO: vi] List your school",
+      "signUpSubtitle": "[TODO: vi] Create an account to reach international students and education agents.",
+      "stat1Value": "500+",
+      "stat1Label": "Tư vấn",
+      "stat2Value": "12k",
+      "stat2Label": "Học sinh",
+      "stat3Value": "Free",
+      "stat3Label": "Đăng ký"
+    },
+    "nav": {
+      "parent": {
+        "howItWorks": "Cách thức hoạt động",
+        "compare": "So sánh",
+        "faq": "Câu hỏi thường gặp"
+      },
+      "agent": {
+        "howItWorks": "Cách thức hoạt động",
+        "commission": "Hoa hồng",
+        "trust": "Tin cậy"
+      },
+      "school": {
+        "howItWorks": "Cách thức hoạt động",
+        "pricing": "Bảng giá",
+        "faq": "Câu hỏi thường gặp"
+      }
+    }
+  },
+  "Errors": {
+    "generic": "Đã xảy ra lỗi",
+    "genericSubtitle": "[TODO: vi] We hit an unexpected bump. Don't worry — your data is safe.",
+    "tryAgain": "Thử lại",
+    "notFound": "Không tìm thấy trang",
+    "notFoundCode": "[TODO: vi] 404",
+    "notFoundSubtitle": "[TODO: vi] The page you're looking for doesn't exist or has been moved.",
+    "goHome": "Về trang chủ",
+    "searchInstead": "[TODO: vi] Search schools"
+  },
+  "LaunchingSoon": {
+    "title": "Chúng tôi sắp ra mắt",
+    "subtitle": "SchoolGo đang chuẩn bị giúp bạn tìm kiếm những trường học tốt nhất trên khắp nước Úc. Chúng tôi đang hoàn thiện những điều tuyệt vời.",
+    "stayTuned": "Hãy chú ý theo dõi — chúng tôi sẽ ra mắt chính thức trong thời gian tới.",
+    "portals": {
+      "heading": "Các nền tảng của chúng tôi",
+      "parents": "Dành cho Phụ huynh",
+      "schools": "Dành cho Trường học",
+      "agents": "Dành cho Tư vấn"
+    }
+  },
+  "Dashboard": {
+    "nav": {
+      "dashboard": "[TODO: vi] Dashboard",
+      "students": "[TODO: vi] Students",
+      "applications": "[TODO: vi] Applications",
+      "pipeline": "[TODO: vi] Pipeline",
+      "searchSchools": "[TODO: vi] Search Schools",
+      "messages": "[TODO: vi] Messages",
+      "settings": "[TODO: vi] Settings",
+      "profile": "[TODO: vi] My Profile",
+      "logout": "[TODO: vi] Log out",
+      "portalLabel": "Đại lý",
+      "portalBadge": {
+        "agent": "Đại lý",
+        "parent": "Phụ huynh",
+        "school": "Trường học"
+      }
+    },
+    "greeting": {
+      "morning": "Chào buổi sáng,",
+      "afternoon": "Chào buổi chiều,",
+      "evening": "Chào buổi tối,",
+      "fallbackName": "bạn"
+    },
+    "actionBanner": {
+      "title": "Cần xử lý"
+    },
+    "cards": {
+      "activeStudents": "Học sinh đang hoạt động",
+      "appsInProgress": "Hồ sơ đang xử lý",
+      "offersReceived": "Thư mời đã nhận",
+      "enrolledThisTerm": "Đã nhập học kỳ này"
+    },
+    "activity": {
+      "title": "Hoạt động gần đây",
+      "empty": "Chưa có hoạt động gần đây. Hãy thêm học sinh hoặc tìm trường."
+    },
+    "deadlines": {
+      "title": "Hạn sắp tới",
+      "empty": "Không có hạn sắp tới."
+    },
+    "quickActions": {
+      "addStudent": "Thêm học sinh mới",
+      "newApplication": "Hồ sơ mới",
+      "reviewApplications": "Xem hồ sơ",
+      "searchSchools": "Tìm trường"
+    }
+  },
+  "Students": {
+    "title": "[TODO: vi] Students",
+    "subtitle": "[TODO: vi] Manage your student profiles, documents, and test results.",
+    "searchPlaceholder": "[TODO: vi] Search by name...",
+    "clearSearch": "[TODO: vi] Clear search",
+    "allStatuses": "[TODO: vi] All statuses",
+    "statusActive": "[TODO: vi] Active",
+    "statusArchived": "[TODO: vi] Archived",
+    "statusEnrolled": "[TODO: vi] Enrolled",
+    "addStudent": "[TODO: vi] Add Student",
+    "columnName": "[TODO: vi] Name",
+    "columnNationality": "[TODO: vi] Nationality",
+    "columnYearLevel": "[TODO: vi] Year Level",
+    "columnTargetEntry": "[TODO: vi] Target Entry",
+    "columnEnglishTest": "Thi tiếng Anh",
+    "columnApps": "Hồ sơ",
+    "columnStatus": "[TODO: vi] Status",
+    "filters": "Bộ lọc",
+    "sort": "Sắp xếp",
+    "emptyTitle": "Chưa có học sinh nào",
+    "emptySubtitle": "Thêm học sinh đầu tiên để bắt đầu xây dựng hồ sơ và nộp đơn vào trường.",
+    "archive": "Lưu trữ",
+    "paginationShowing": "Hiển thị",
+    "paginationOf": "trên tổng số {total}",
+    "allRows": "Tất cả",
+    "createTitle": "[TODO: vi] Add New Student",
+    "createButton": "[TODO: vi] Create Student",
+    "createSuccess": "[TODO: vi] Student created successfully.",
+    "createError": "[TODO: vi] Could not create student. Please try again.",
+    "profileTitle": "[TODO: vi] Student Profile",
+    "notFound": "[TODO: vi] Student not found.",
+    "backToList": "[TODO: vi] Back",
+    "edit": "[TODO: vi] Edit",
+    "sectionPersonal": "[TODO: vi] Personal Information",
+    "sectionEducation": "[TODO: vi] Education",
+    "sectionParent": "[TODO: vi] Parent / Guardian",
+    "fieldFirstName": "[TODO: vi] First name",
+    "fieldLastName": "[TODO: vi] Last name",
+    "fieldDob": "[TODO: vi] Date of birth",
+    "fieldGender": "[TODO: vi] Gender",
+    "fieldNationality": "[TODO: vi] Nationality",
+    "fieldCurrentSchool": "[TODO: vi] Current school",
+    "fieldCurrentYear": "[TODO: vi] Current year level",
+    "fieldTargetYear": "[TODO: vi] Target entry year",
+    "fieldTargetTerm": "[TODO: vi] Target intake",
+    "fieldParentName": "[TODO: vi] Name",
+    "fieldParentEmail": "[TODO: vi] Email",
+    "fieldParentPhone": "[TODO: vi] Phone",
+    "fieldParentWechat": "[TODO: vi] WeChat ID",
+    "fieldNotes": "[TODO: vi] Agent Notes",
+    "notesPlaceholder": "[TODO: vi] Private notes about this student (only visible to you)...",
+    "selectGender": "[TODO: vi] Select gender",
+    "selectYear": "[TODO: vi] Select year level",
+    "genderMale": "[TODO: vi] Male",
+    "genderFemale": "[TODO: vi] Female",
+    "genderOther": "[TODO: vi] Other",
+    "tabOverview": "[TODO: vi] Overview",
+    "tabDocuments": "[TODO: vi] Documents",
+    "tabTests": "[TODO: vi] Tests",
+    "tabApplications": "[TODO: vi] Applications",
+    "documentsComingSoon": "[TODO: vi] Document management coming soon.",
+    "testsComingSoon": "[TODO: vi] Test results coming soon.",
+    "applicationsComingSoon": "[TODO: vi] Applications coming soon.",
+    "docUpload": "[TODO: vi] Upload Document",
+    "docUploadTitle": "[TODO: vi] Upload Document",
+    "docUploadButton": "[TODO: vi] Upload",
+    "docCancel": "[TODO: vi] Cancel",
+    "docDropzone": "[TODO: vi] Drag & drop a file here, or click to browse",
+    "docDropzoneHint": "[TODO: vi] PDF, JPG, PNG, DOCX up to 10 MB",
+    "docTypeLabel": "[TODO: vi] Document Type",
+    "docTypeSelect": "[TODO: vi] Select document type",
+    "docFileNameLabel": "[TODO: vi] Display Name (optional)",
+    "docFileNamePlaceholder": "[TODO: vi] e.g. John Passport 2026",
+    "docExpiresLabel": "[TODO: vi] Expiry Date (optional)",
+    "docNotesLabel": "[TODO: vi] Notes (optional)",
+    "docNotesPlaceholder": "[TODO: vi] Any notes about this document...",
+    "docAllTypes": "[TODO: vi] All types",
+    "docEmptyTitle": "[TODO: vi] No documents yet",
+    "docEmptySubtitle": "[TODO: vi] Upload your first document to get started.",
+    "docColName": "[TODO: vi] File",
+    "docColType": "[TODO: vi] Type",
+    "docColStatus": "[TODO: vi] Status",
+    "docColExpiry": "[TODO: vi] Expiry",
+    "docColUploaded": "[TODO: vi] Uploaded",
+    "docDeleteTitle": "[TODO: vi] Delete Document",
+    "docDeleteConfirm": "[TODO: vi] Are you sure you want to delete this document? This action cannot be undone.",
+    "docDeleteButton": "[TODO: vi] Delete",
+    "docUploadSuccess": "[TODO: vi] Document uploaded successfully.",
+    "docUploadError": "[TODO: vi] Could not upload document. Please try again.",
+    "docDeleteSuccess": "[TODO: vi] Document deleted.",
+    "docDeleteError": "[TODO: vi] Could not delete document.",
+    "docType_passport": "[TODO: vi] Passport",
+    "docType_school_reports": "[TODO: vi] School Reports",
+    "docType_english_test": "[TODO: vi] English Test Report",
+    "docType_birth_certificate": "[TODO: vi] Birth Certificate",
+    "docType_parent_passport": "[TODO: vi] Parent Passport",
+    "docType_immunisation": "[TODO: vi] Immunisation Records",
+    "docType_personal_statement": "[TODO: vi] Personal Statement",
+    "docType_guardian_nomination": "[TODO: vi] Guardian Nomination",
+    "docType_current_visa": "[TODO: vi] Current Visa",
+    "docType_welfare_docs": "[TODO: vi] Welfare Documents",
+    "docType_financial_evidence": "[TODO: vi] Financial Evidence",
+    "docType_oshc": "[TODO: vi] OSHC",
+    "docType_written_agreement": "[TODO: vi] Written Agreement",
+    "docType_conditions_of_entry": "[TODO: vi] Conditions of Entry",
+    "docType_offer_acceptance": "[TODO: vi] Offer Acceptance",
+    "docType_coe": "[TODO: vi] CoE (Confirmation of Enrolment)",
+    "docType_caaw_letter": "[TODO: vi] CAAW Letter",
+    "docType_photo": "[TODO: vi] Photo",
+    "docType_other": "[TODO: vi] Other",
+    "docStatus_active": "[TODO: vi] Active",
+    "docStatus_replaced": "[TODO: vi] Replaced",
+    "docStatus_archived": "[TODO: vi] Archived"
+  },
+  "Pipeline": {
+    "title": "Theo dõi hồ sơ",
+    "totalApplications": "{count, plural, one {# hồ sơ} other {# hồ sơ}}",
+    "emptyTitle": "Chưa có hồ sơ trong theo dõi",
+    "emptySubtitle": "Bắt đầu bằng cách tạo hồ sơ cho một trong các học sinh của bạn.",
+    "columnNew": "Mới",
+    "columnInReview": "Đang xét",
+    "columnActionRequired": "Cần xử lý",
+    "columnOffers": "Thư mời",
+    "columnPreEnrolment": "Tiền nhập học",
+    "columnEnrolled": "Đã nhập học",
+    "columnClosed": "Đã đóng",
+    "daysLabel": "{count}n",
+    "moreApplications": "+{count} hồ sơ"
+  },
+  "SchoolDetail": {
+    "backToSearch": "[TODO: vi] Back to search",
+    "cricosVerified": "[TODO: vi] CRICOS verified",
+    "claimedProfile": "[TODO: vi] Claimed profile",
+    "admissionsProfileLabel": "[TODO: vi] Admissions profile",
+    "admissionsProfileDescription": "[TODO: vi] Compare fees, entry requirements, intakes, and contact details.",
+    "trustNotice": "[TODO: vi] SchoolGo profiles combine public provider data with admissions information so families can compare schools before contacting an agent or school.",
+    "intlBanner": "[TODO: vi] This guide is for international full fee-paying students and their families.",
+    "breadcrumbs": {
+      "aria": "[TODO: vi] Breadcrumb",
+      "home": "[TODO: vi] Home",
+      "schools": "[TODO: vi] Schools"
+    },
+    "hero": {
+      "altText": "[TODO: vi] {name} campus, international student admissions guide",
+      "intlGuideLabel": "[TODO: vi] International student admissions guide"
+    },
+    "stats": {
+      "type": "[TODO: vi] Type",
+      "students": "[TODO: vi] Students",
+      "gender": "[TODO: vi] Gender",
+      "tuitionFrom": "[TODO: vi] Tuition from",
+      "boarding": "[TODO: vi] Boarding",
+      "perYear": "[TODO: vi] AUD / year (intl)",
+      "dayAndBoarding": "[TODO: vi] Day & boarding",
+      "notListed": "[TODO: vi] Not listed",
+      "notOffered": "[TODO: vi] Not offered",
+      "available": "[TODO: vi] Available",
+      "coed": "[TODO: vi] Co-ed",
+      "boys": "[TODO: vi] Boys",
+      "girls": "[TODO: vi] Girls"
+    },
+    "about": {
+      "eyebrow": "[TODO: vi] About this school",
+      "heading": "[TODO: vi] About {name}",
+      "defaultHeading": "[TODO: vi] About {name}",
+      "intlNoticeLead": "[TODO: vi] For international families:",
+      "intlNoticeBody": "[TODO: vi] This profile is designed to help overseas families evaluate {name}. It covers CRICOS registration, visa requirements, English language prerequisites, and the international application process.",
+      "defaultDescription": "[TODO: vi] {name} is listed in SchoolGo's Australian school directory. Use this profile to review key admissions facts before shortlisting or contacting the school.",
+      "sourceNote": "[TODO: vi] This profile was written by SchoolGo's editorial team using publicly available data from the CRICOS register and the school's published materials. It is not endorsed by or affiliated with the school.",
+      "lastReviewed": "[TODO: vi] Last reviewed {date}."
+    },
+    "curriculum": {
+      "eyebrow": "[TODO: vi] Academics",
+      "heading": "[TODO: vi] Curriculum and academic pathways",
+      "intro": "[TODO: vi] International students at {name} follow the curriculum and assessment pathways listed below. Specialist programmes and learning support help students transition into Australian schooling.",
+      "yearLevels": "[TODO: vi] Year levels offered",
+      "cricosAgeRange": "[TODO: vi] CRICOS age range",
+      "proposedEntryLevel": "[TODO: vi] Proposed entry level",
+      "proposedEntryTerm": "[TODO: vi] Proposed entry term",
+      "languages": "[TODO: vi] Languages taught",
+      "learningSupport": "[TODO: vi] Learning support",
+      "elicosYes": "[TODO: vi] ELICOS / EAL support available",
+      "atar": "[TODO: vi] ATAR pathway",
+      "yes": "[TODO: vi] Yes",
+      "no": "[TODO: vi] No",
+      "cricosCode": "[TODO: vi] CRICOS code",
+      "coursesHeading": "[TODO: vi] CRICOS registered courses",
+      "courseTable": {
+        "course": "[TODO: vi] Course",
+        "code": "[TODO: vi] Code",
+        "level": "[TODO: vi] Level"
+      },
+      "sourceNote": "[TODO: vi] Source: CRICOS Register (Commonwealth Government) and the school's published international fee schedule."
+    },
+    "fees": {
+      "eyebrow": "[TODO: vi] Fees for international students",
+      "heading": "[TODO: vi] School fees and costs",
+      "intro": "[TODO: vi] The following fees are for international full fee-paying students. All figures are annual and in Australian dollars (AUD). Confirm the current schedule directly with the school before budgeting.",
+      "primary": "[TODO: vi] Primary",
+      "junior": "[TODO: vi] Junior secondary",
+      "senior": "[TODO: vi] Senior secondary",
+      "perYearTuition": "[TODO: vi] tuition / year",
+      "perYear": "[TODO: vi] per year",
+      "boardingAll": "[TODO: vi] Boarding (all grades)",
+      "totalSenior": "[TODO: vi] Total (senior)",
+      "applicationFee": "[TODO: vi] Application fee",
+      "enrolmentFee": "[TODO: vi] Enrolment fee",
+      "refundable": "[TODO: vi] Application fee refundable",
+      "scholarshipAvailable": "[TODO: vi] Scholarships available",
+      "intakePeriods": "[TODO: vi] Intake periods",
+      "applicationDeadline": "[TODO: vi] Application deadline",
+      "nextIntake": "[TODO: vi] Next intake",
+      "feesNotListed": "[TODO: vi] Fees are not publicly listed yet. Contact the school directly for the current international fee schedule.",
+      "yes": "[TODO: vi] Yes",
+      "no": "[TODO: vi] No",
+      "sourceNote": "[TODO: vi] Source: school's published international fee schedule. Credit card surcharge may apply. Confirm current fees directly with the school before budgeting."
+    },
+    "english": {
+      "eyebrow": "[TODO: vi] English requirements",
+      "heading": "[TODO: vi] English language proficiency",
+      "intro": "[TODO: vi] Minimum scores accepted for international applicants. Schools may also accept evidence of prior English-medium schooling or an interview.",
+      "noScores": "[TODO: vi] No minimum English test scores are listed yet. Contact the school for accepted forms of English proficiency evidence."
+    },
+    "admissions": {
+      "eyebrow": "[TODO: vi] International admissions",
+      "heading": "[TODO: vi] How to apply as an international student",
+      "intro": "[TODO: vi] {name} accepts international students on a Student Visa (subclass 500). Applications can be made directly through the school or via an approved education agent.",
+      "visa": "[TODO: vi] Visa subclass",
+      "visaValue": "[TODO: vi] 500 (Student visa)",
+      "oshcRequired": "[TODO: vi] OSHC required",
+      "oshcArrangement": "[TODO: vi] OSHC arrangement",
+      "oshcProvider": "[TODO: vi] OSHC preferred provider",
+      "applicationDeadline": "[TODO: vi] Application deadline",
+      "offerWindow": "[TODO: vi] Offer acceptance window",
+      "offerWindowValue": "[TODO: vi] {days} days",
+      "partnerAgentsOnly": "[TODO: vi] Partner agents only",
+      "contactRoleLabel": "[TODO: vi] International contact",
+      "intlContact": "[TODO: vi] Enrolments office / International Student Coordinator",
+      "emailLabel": "[TODO: vi] Email",
+      "phoneLabel": "[TODO: vi] Phone",
+      "yes": "[TODO: vi] Yes",
+      "no": "[TODO: vi] No",
+      "sourceNote": "[TODO: vi] Based on information from the school's international students page and requirements under the ESOS Act 2000 and National Code 2018. Verify current requirements directly with the school.",
+      "steps": {
+        "s1": {
+          "title": "[TODO: vi] Contact the enrolments office or an approved agent",
+          "desc": "[TODO: vi] Reach out to the school's enrolments office to request an Application for Enrolment form. You can also work with one of the school's listed education agents."
+        },
+        "s2": {
+          "title": "[TODO: vi] Prepare English proficiency evidence",
+          "desc": "[TODO: vi] Provide AEAS, IELTS, PTE, Duolingo, Cambridge or iDAT results, or evidence of three or more years of schooling delivered in English."
+        },
+        "s3": {
+          "title": "[TODO: vi] Gather supporting documents",
+          "desc": "[TODO: vi] Student's passport, academic transcripts and reports from the current school, evidence of English proficiency, and any other assessments requested."
+        },
+        "s4": {
+          "title": "[TODO: vi] Submit the application",
+          "desc": "[TODO: vi] Complete and return the Application for Enrolment form along with the application fee. Lodging the form is not an offer of enrolment."
+        },
+        "s5": {
+          "title": "[TODO: vi] Application assessment",
+          "desc": "[TODO: vi] The school evaluates academic reports and English proficiency. The Director of Learning makes the final decision on acceptance."
+        },
+        "s6": {
+          "title": "[TODO: vi] Receive a Letter of Offer",
+          "desc": "[TODO: vi] If successful, the Principal issues a Letter of Offer in writing, accompanied by a fee invoice."
+        },
+        "s7": {
+          "title": "[TODO: vi] Accept and pay advance fees",
+          "desc": "[TODO: vi] Complete the acceptance forms and pay the advance fee (typically 50% of annual tuition and a one-off capital fee)."
+        },
+        "s8": {
+          "title": "[TODO: vi] Receive your eCoE and apply for your visa",
+          "desc": "[TODO: vi] On receipt of payment the school issues an electronic Confirmation of Enrolment (eCoE). Lodge a Student Visa (subclass 500) with the Department of Home Affairs. OSHC is mandatory for the visa duration."
+        }
+      }
+    },
+    "boarding": {
+      "eyebrow": "[TODO: vi] Boarding",
+      "heading": "[TODO: vi] Boarding at {name}",
+      "intro": "[TODO: vi] Boarding accommodation is available at {name}. Boarders live on campus with pastoral care, supervised study, and weekend activities.",
+      "accommodation": "[TODO: vi] Accommodation",
+      "intake": "[TODO: vi] Intake periods",
+      "years": "[TODO: vi] Boarding years",
+      "type": "[TODO: vi] Boarding type",
+      "fee": "[TODO: vi] Boarding fee",
+      "perYear": "[TODO: vi] per year",
+      "affiliations": "[TODO: vi] Affiliations",
+      "features": {
+        "pastoralCare": {
+          "title": "[TODO: vi] Pastoral care",
+          "desc": "[TODO: vi] Resident boarding staff during term time. Medical centre on site or a registered nurse available; first-aid trained boarding staff."
+        },
+        "academicSupport": {
+          "title": "[TODO: vi] Academic support",
+          "desc": "[TODO: vi] Supervised prep sessions on weekday evenings. Teachers available in the learning hub after class."
+        },
+        "weekendActivities": {
+          "title": "[TODO: vi] Weekend activities",
+          "desc": "[TODO: vi] Sport, outdoor education, city trips to local markets, parks, theatre and cinema."
+        },
+        "intlSupport": {
+          "title": "[TODO: vi] International support",
+          "desc": "[TODO: vi] Dedicated International Student Coordinator; personalised orientation; English as an Additional Language (EAL) programme."
+        }
+      }
+    },
+    "cocurricular": {
+      "eyebrow": "[TODO: vi] Co-curricular",
+      "heading": "[TODO: vi] Sport, arts and activities",
+      "intro": "[TODO: vi] Students participate in at least one area of the co-curricular programme. Inter-school sport, outdoor education and performing arts run year-round.",
+      "defaultActivities": "[TODO: vi] Rowing, Cricket, Football, Soccer, Tennis, Swimming, Athletics, Mountain biking, Music, Drama, Debating, Duke of Edinburgh, Outdoor education, Community service"
+    },
+    "location": {
+      "eyebrow": "[TODO: vi] Location",
+      "heading": "[TODO: vi] Living in {suburb}",
+      "intro": "[TODO: vi] {suburb} offers a safe environment with strong community connections. International students typically arrive via a connecting domestic flight from Sydney or Melbourne.",
+      "airport": {
+        "title": "[TODO: vi] Airport",
+        "desc": "[TODO: vi] Nearest commercial airport with connecting domestic services from Sydney or Melbourne."
+      },
+      "transport": {
+        "title": "[TODO: vi] Transport",
+        "desc": "[TODO: vi] Local bus services and school transport arrangements available for boarders and day students."
+      },
+      "healthcare": {
+        "title": "[TODO: vi] Healthcare",
+        "desc": "[TODO: vi] Public hospital nearby; on-campus medical support during school hours."
+      },
+      "distanceLabel": "[TODO: vi] Distance to CBD",
+      "kmFromCbd": "[TODO: vi] {km} km from CBD",
+      "viewOnMap": "[TODO: vi] View on map",
+      "coordinates": "[TODO: vi] Coordinates"
+    },
+    "compare": {
+      "eyebrow": "[TODO: vi] Compare",
+      "heading": "[TODO: vi] Similar schools",
+      "intro": "[TODO: vi] Considering other options? These schools accept international students and may suit similar families.",
+      "viewSchool": "[TODO: vi] View school",
+      "noResults": "[TODO: vi] No similar schools listed yet.",
+      "sector": "[TODO: vi] Sector",
+      "students": "[TODO: vi] Students",
+      "gender": "[TODO: vi] Gender",
+      "boarding": "[TODO: vi] Boarding",
+      "yes": "[TODO: vi] Yes",
+      "no": "[TODO: vi] No"
+    },
+    "faq": {
+      "eyebrow": "[TODO: vi] FAQ",
+      "heading": "[TODO: vi] Frequently asked questions",
+      "items": {
+        "q1": {
+          "q": "[TODO: vi] What subjects and curriculum does {name} offer for international students?",
+          "a": "[TODO: vi] International students at {name} follow the {curriculum} curriculum. Schools commonly offer specialist programmes such as outdoor education, music and the arts alongside core subjects."
+        },
+        "q2": {
+          "q": "[TODO: vi] How much are the school fees at {name} for international students?",
+          "a": "[TODO: vi] International tuition fees at {name} start from {tuition} per year. Boarding (if offered) is approximately {boardingFee} per year. A one-off application fee of {applicationFee} also applies. Confirm current figures with the school."
+        },
+        "q3": {
+          "q": "[TODO: vi] Can international students apply to {name} from overseas?",
+          "a": "[TODO: vi] Yes. {name} is registered on CRICOS (code {cricos}) and accepts international students. Applicants need to demonstrate adequate English proficiency and can apply directly or via an approved education agent."
+        },
+        "q4": {
+          "q": "[TODO: vi] Is boarding available at {name} for international students?",
+          "a": "[TODO: vi] {name} provides boarding accommodation with separate boys' and girls' houses where applicable, pastoral care, supervised prep sessions and weekend activities. Contact the school for current availability and intake levels."
+        },
+        "q5": {
+          "q": "[TODO: vi] What English proficiency test do I need to get into {name}?",
+          "a": "[TODO: vi] The school accepts several forms of evidence: AEAS results, IELTS, PTE, Duolingo or Cambridge scores; an approved ELICOS programme; demonstrated proficiency during an enrolment interview; or evidence of three or more years of schooling delivered entirely in English."
+        },
+        "q6": {
+          "q": "[TODO: vi] What sports and activities are available at {name}?",
+          "a": "[TODO: vi] The school offers a range of co-curricular activities including team sports, music ensembles, drama, debating, outdoor education and community service. Students participate in at least one area of the co-curricular programme."
+        },
+        "q7": {
+          "q": "[TODO: vi] What visa does my child need to study at {name} in Australia?",
+          "a": "[TODO: vi] International students studying full-time require a Student Visa (subclass 500). After receiving a Confirmation of Enrolment (eCoE) from {name}, you apply through the Department of Home Affairs. Overseas Student Health Cover (OSHC) is mandatory."
+        },
+        "q8": {
+          "q": "[TODO: vi] Does {name} work with education agents?",
+          "a": "[TODO: vi] Yes. {name} works with approved education agents who can assist international families with the application process. Families can also apply directly by contacting the school's enrolments office."
+        }
+      }
+    },
+    "sidebar": {
+      "apply": {
+        "heading": "[TODO: vi] Applying from overseas?",
+        "intro": "[TODO: vi] This guide is for international full fee-paying students on a Student Visa (subclass 500).",
+        "intlCta": "[TODO: vi] International application",
+        "websiteCta": "[TODO: vi] Visit school website",
+        "shortlistCta": "[TODO: vi] Add to shortlist",
+        "domesticHint": "[TODO: vi] Australian resident?",
+        "domesticLink": "[TODO: vi] Domestic enrolments"
+      },
+      "contact": {
+        "heading": "[TODO: vi] International admissions contact",
+        "emailLabel": "[TODO: vi] Email",
+        "phoneLabel": "[TODO: vi] Phone",
+        "addressLabel": "[TODO: vi] Address",
+        "principalRole": "[TODO: vi] Principal"
+      },
+      "toc": {
+        "heading": "[TODO: vi] On this page",
+        "about": "[TODO: vi] About this school",
+        "curriculum": "[TODO: vi] Curriculum & pathways",
+        "fees": "[TODO: vi] Fees & costs",
+        "english": "[TODO: vi] English requirements",
+        "admissions": "[TODO: vi] International admissions",
+        "boarding": "[TODO: vi] Boarding",
+        "cocurricular": "[TODO: vi] Sport & activities",
+        "location": "[TODO: vi] Location",
+        "compare": "[TODO: vi] Similar schools",
+        "faq": "[TODO: vi] FAQ"
+      },
+      "keyFacts": {
+        "heading": "[TODO: vi] Key facts",
+        "schoolType": "[TODO: vi] School type",
+        "religion": "[TODO: vi] Religious affiliation",
+        "gender": "[TODO: vi] Gender",
+        "cricos": "[TODO: vi] CRICOS",
+        "curriculum": "[TODO: vi] Curriculum",
+        "campuses": "[TODO: vi] Campuses",
+        "locationType": "[TODO: vi] Location type",
+        "sector": "[TODO: vi] Sector",
+        "accommodation": "[TODO: vi] Accommodation",
+        "distance": "[TODO: vi] Distance to CBD"
+      }
+    },
+    "jsonLd": {
+      "intlGuideDescription": "[TODO: vi] International student admissions guide for {name}.",
+      "howToName": "[TODO: vi] How to apply to {name} as an international student"
+    },
+    "infoCards": {
+      "annualTuition": "[TODO: vi] Annual tuition",
+      "contactSchool": "[TODO: vi] Contact school",
+      "lowestListedTuition": "[TODO: vi] Lowest listed tuition",
+      "feesNotListedYet": "[TODO: vi] Fees not listed yet",
+      "curriculum": "[TODO: vi] Curriculum",
+      "notListed": "[TODO: vi] Not listed",
+      "enrolment": "[TODO: vi] Enrolment",
+      "internationalPercent": "[TODO: vi] {pct}% international",
+      "boarding": "[TODO: vi] Boarding",
+      "boardingAvailable": "[TODO: vi] Available",
+      "scholarshipsListed": "[TODO: vi] Scholarships listed"
+    },
+    "aboutSection": {
+      "heading": "[TODO: vi] About the school",
+      "defaultDescription": "[TODO: vi] {name} is listed in SchoolGo's Australian school directory."
+    },
+    "admissionsSection": {
+      "heading": "[TODO: vi] Admissions",
+      "nextIntake": "[TODO: vi] Next intake",
+      "applicationDeadline": "[TODO: vi] Application deadline",
+      "intakePeriods": "[TODO: vi] Intake periods",
+      "applicationFee": "[TODO: vi] Application fee",
+      "cricosCode": "[TODO: vi] CRICOS code"
+    },
+    "englishSection": {
+      "heading": "[TODO: vi] English requirements",
+      "noScoresListed": "[TODO: vi] No minimum test scores are listed yet."
+    },
+    "contactSection": {
+      "heading": "[TODO: vi] Contact and apply",
+      "startApplication": "[TODO: vi] Start application",
+      "visitWebsite": "[TODO: vi] Visit website",
+      "nextIntakeDate": "[TODO: vi] Next intake: {date}"
+    }
+  },
+  "SearchMetadata": {
+    "title": "Tìm kiếm trường — SchoolGo",
+    "description": "Tìm kiếm và so sánh các trường học Úc. Lọc theo vị trí, học phí, chương trình giảng dạy, nội trú và nhiều hơn nữa.",
+    "ogDescription": "Tìm kiếm và so sánh các trường học Úc trên SchoolGo.",
+    "parentTitle": "Tìm Trường Úc cho Con Bạn — SchoolGo",
+    "parentDescription": "Tìm kiếm và so sánh các trường Úc theo vị trí, học phí, chương trình, nội trú và hỗ trợ học sinh.",
+    "parentOgDescription": "So sánh các trường Úc và tìm lựa chọn phù hợp cho con bạn trên SchoolGo.",
+    "schoolTitle": "Khám phá Danh sách Trường Úc — SchoolGo",
+    "schoolDescription": "Xem danh sách trường Úc, vị trí, chương trình, học phí và thông tin hỗ trợ học sinh trên SchoolGo.",
+    "schoolOgDescription": "Khám phá danh sách trường Úc và so sánh chương trình trên SchoolGo.",
+    "agentTitle": "Tìm Trường Úc cho Học sinh — SchoolGo",
+    "agentDescription": "Tìm trường Úc cho học sinh quốc tế và so sánh vị trí, học phí, chương trình, nội trú và hỗ trợ.",
+    "agentOgDescription": "Tìm kiếm và so sánh các trường Úc cho học sinh của bạn trên SchoolGo."
+  }
 }
