@@ -161,7 +161,18 @@
           "privacy": "개인정보 처리방침",
           "terms": "이용약관"
         }
+      },
+      "company": {
+        "title": "Company",
+        "links": {
+          "about": "About SchoolGo",
+          "contact": "Contact us"
+        }
       }
+    },
+    "extraLinks": {
+      "aboutSchoolGo": "About SchoolGo",
+      "contactUs": "Contact us"
     },
     "language": "언어",
     "copyright": "© {year} SchoolGo Australia. 모든 권리 보유.",
@@ -175,7 +186,7 @@
   },
   "ParentsHero": {
     "trustPill": {
-      "brand": "정부",
+      "brand": "CRICOS",
       "brandAccent": "등록 인증",
       "source": "data.gov.au 데이터"
     },
@@ -206,19 +217,19 @@
       "shortlistRemove": "후보 목록에서 {name} 제거",
       "cards": {
         "a": {
-          "name": "Scotch College Melbourne",
-          "location": "Hawthorn, VIC",
-          "curriculum": "VCE",
-          "fee": "$38.5k AUD",
-          "boarding": "기숙",
-          "rating": "4.9"
-        },
-        "b": {
           "name": "Sydney Grammar School",
           "location": "Darlinghurst, NSW",
           "curriculum": "HSC",
           "fee": "$41.2k AUD",
-          "boarding": "통학 전용",
+          "boarding": "Day only",
+          "rating": "4.8"
+        },
+        "b": {
+          "name": "Melbourne Grammar School",
+          "location": "Melbourne, VIC",
+          "curriculum": "VCE/IB",
+          "fee": "$42.5k AUD",
+          "boarding": "Boarding",
           "rating": "4.8"
         },
         "c": {
@@ -229,6 +240,29 @@
           "boarding": "기숙",
           "rating": "4.7"
         }
+      }
+    }
+  },
+  "ParentsStatsBar": {
+    "eyebrow": "주요 수치",
+    "heading": "호주 최대 CRICOS 학교 디렉토리.",
+    "subheading": "모든 등록 학교를 검증하고 검색할 수 있습니다 — 공립부터 사립까지, 8개 주와 준주 전체를 포함합니다.",
+    "items": {
+      "schools": {
+        "value": "{count, number}+",
+        "label": "CRICOS Schools"
+      },
+      "states": {
+        "value": "8",
+        "label": "States & Territories"
+      },
+      "sectors": {
+        "value": "All 3 Sectors",
+        "label": "Government · Independent · Catholic"
+      },
+      "fees": {
+        "value": "$3.5k – $78k",
+        "label": "Annual Fee Range"
       }
     }
   },
@@ -281,9 +315,9 @@
     }
   },
   "ParentsVerified": {
-    "eyebrow": "모든 CRICOS 학교",
-    "heading": "검증 완료. 내 언어로.",
-    "subheading": "실제 건물 사진. 실제 학비. 실제 입학 일정. 학교 데이터는 CRICOS와 ACARA에서 가져오며 매월 갱신됩니다.",
+    "eyebrow": "Get expert help",
+    "heading": "Get expert help — free.",
+    "subheading": "Not sure where to start? Every school works with specialist education consultants who know their admissions process inside out. SchoolGo connects you with the right one — so you get expert guidance from choosing a school to submitting your application, at no cost to you.",
     "cards": {
       "a": {
         "name": "Scotch College",
@@ -309,27 +343,27 @@
   },
   "ParentsComparison": {
     "eyebrow": "비교",
-    "heading": "학교를 나란히 놓고 비교하세요.",
+    "heading": "Put three schools next to each other.",
     "headingAccent": "몇 달이 아닌 몇 분 안에 결정하세요.",
+    "shortlistLabel": "[TODO: ko] Shortlist · {count} schools",
     "columns": {
       "fee": "연간 학비",
-      "tests": "인정 시험",
-      "intakes": "입학 일정",
       "stateSector": "[TODO: ko] State & sector",
       "curriculum": "[TODO: ko] Curriculum",
       "boarding": "[TODO: ko] Boarding",
+      "tests": "인정 시험",
       "minScore": "[TODO: ko] Min. AEAS score",
-      "scholarships": "[TODO: ko] Scholarships"
+      "scholarships": "[TODO: ko] Scholarships",
+      "intakes": "입학 일정"
     },
     "notPublished": "미공개",
-    "shortlistLabel": "[TODO: ko] Shortlist · {count} schools",
     "dayOnly": "[TODO: ko] — Day only",
     "noneIntl": "[TODO: ko] — None intl."
   },
   "ParentsPickATest": {
     "eyebrow": "영어 능력",
-    "heading": "시험을 선택하세요. 어떤 학교가 인정하는지 확인하세요 —",
-    "headingAccent": "그리고 최저 점수까지.",
+    "heading": "Find out which English test the school requires —",
+    "headingAccent": "and the score your child needs to get in.",
     "subheading": "모든 프로필에서 인정 영어 시험을 확인할 수 있습니다. 50개 학교 웹사이트를 일일이 뒤질 필요가 없습니다.",
     "tests": {
       "aeas": {
@@ -368,12 +402,12 @@
         "description": "Accepted by select schools for senior entry"
       }
     },
-    "cta": "이 시험을 인정하는 학교 보기"
+    "cta": "Check your school's English requirements"
   },
   "ParentsSevenLanguages": {
     "eyebrow": "7개 언어",
     "heading": "가족이 자정에 학비 안내서를 번역할 필요는 없습니다.",
-    "subheading": "SchoolGo는 아시아태평양 지역에서 가장 많이 쓰이는 7개 언어로 완전히 번역되어 있습니다.",
+    "subheading": "Fees, entry requirements, VCE, ATAR, boarding, welfare — everything explained in your language. SchoolGo is translated end-to-end into seven languages spoken by families across the world.",
     "languages": {
       "en": "English",
       "zh": "简体中文",
@@ -404,41 +438,9 @@
     },
     "readMore": "기사 읽기"
   },
-  "ParentsStatsBar": {
-    "eyebrow": "주요 수치",
-    "heading": "호주 최대 CRICOS 학교 디렉토리.",
-    "subheading": "모든 등록 학교를 검증하고 검색할 수 있습니다 — 공립부터 사립까지, 8개 주와 준주 전체를 포함합니다.",
-    "items": {
-      "schools": {
-        "value": "{count, number}+",
-        "label": "CRICOS Schools"
-      },
-      "states": {
-        "value": "8",
-        "label": "States & Territories"
-      },
-      "sectors": {
-        "value": "All 3 Sectors",
-        "label": "Government · Independent · Catholic"
-      },
-      "fees": {
-        "value": "$3.5k – $78k",
-        "label": "Annual Fee Range"
-      }
-    }
-  },
-  "ParentsFinalCta": {
-    "eyebrow": "여기서 시작하세요",
-    "headingPrefix": "검색이",
-    "headingEmphasis": "시작됩니다",
-    "headingSuffix": "7개 언어로.",
-    "subheading": "무료. 로그인 불필요. {month} {year, number} 업데이트.",
-    "ctaPrimary": "학교 찾기",
-    "ctaSecondary": "인증 에이전트와 상담하기"
-  },
   "ParentsTrustBar": {
     "eyebrow": "신뢰와 규정 준수",
-    "heading": "믿을 수 있는 데이터.",
+    "heading": "Data you can trust — so you know you're looking at legitimate institutions and accurate information.",
     "subheading": "SchoolGo의 모든 학교 정보는 공식 정부 데이터 출처를 기반으로 — 검증되고, 라이선스가 부여되며, 매월 갱신됩니다.",
     "items": {
       "cricos": {
@@ -463,27 +465,43 @@
   "ParentsFaq": {
     "heading": "Frequently Asked Questions",
     "items": {
+      "enrol": {
+        "question": "How do I enrol my child in an Australian school from overseas?",
+        "answer": "Start by shortlisting schools that fit your child's year level, location, and budget on SchoolGo. Each school's profile shows the documents, English test scores, and intake dates you'll need to apply. Once you've chosen a school, an education agent or the school's admissions office will guide you through the application and student visa process."
+      },
+      "cost": {
+        "question": "How much does it cost to send my child to school in Australia?",
+        "answer": "International student tuition typically ranges from about A$15,000 to A$45,000 per year, depending on the school, year level, and sector. On top of tuition, plan for application fees, uniforms, technology, boarding (if applicable), and Overseas Student Health Cover. Every SchoolGo profile shows the school's published international fees so you can compare like-for-like."
+      },
+      "englishTest": {
+        "question": "What English test does my child need for an Australian school?",
+        "answer": "Different schools accept different tests — the most common are AEAS, iDAT, Duolingo English Test, IELTS, and PTE Academic, with minimum scores that vary by year level. SchoolGo shows the exact tests and minimum scores each school accepts on its profile."
+      },
+      "visa": {
+        "question": "Do international students need a visa to study at an Australian school?",
+        "answer": "Yes — full-fee international school students study on a Student visa (subclass 500), which requires a Confirmation of Enrolment from a CRICOS-registered school. You'll also need health cover (OSHC) for the duration of the visa. See our student visa guide for the full step-by-step."
+      },
+      "agent": {
+        "question": "What is an education agent and do I need one?",
+        "answer": "Education agents are licensed consultants who help families choose schools, prepare documents, and manage the application and visa process. You don't have to use one, but most international families do — and it's free for you, since agents are paid by the schools. SchoolGo shows you which agents each school works with so you can pick someone with a proven track record."
+      },
+      "schoolTypes": {
+        "question": "What types of schools are there in Australia?",
+        "answer": "Australian schools fall into three sectors — government (public), Catholic, and independent — and may be co-educational, single-sex, day-only, or boarding. Curricula include state certificates like the VCE, HSC, and QCE, plus the International Baccalaureate at many independent schools. Our school types guide explains how each sector works for international students."
+      },
       "free": {
         "question": "Is SchoolGo free?",
         "answer": "Yes. SchoolGo is completely free for parents, education agents, and schools. There are no listing fees, application fees, or subscription costs."
-      },
-      "dataSource": {
-        "question": "Where does the school data come from?",
-        "answer": "All school listings are sourced from CRICOS (the Commonwealth Register of Institutions and Courses for Overseas Students), which is the Australian Government's official register of schools authorised to enrol international students. We cross-reference this with ACARA school profile data for enrolment figures, ICSEA scores, and GPS coordinates."
-      },
-      "englishTests": {
-        "question": "What English proficiency tests do Australian schools accept?",
-        "answer": "Different schools accept different tests. The most common are AEAS (Australian Education Assessment Services), iDAT (International Digital Admissions Test), Duolingo English Test, IELTS, and PTE Academic. SchoolGo shows which specific tests each school accepts on their profile page."
-      },
-      "doINeedAgent": {
-        "question": "[TODO: ko] Do I need an education agent?",
-        "answer": "[TODO: ko] You don't have to use one, but most families do — and it's free. Education agents help you choose the right school, prepare documents, and manage the application. SchoolGo shows which agents work with each school, so you can find someone who already knows the admissions process."
-      },
-      "updateFrequency": {
-        "question": "How often is the data updated?",
-        "answer": "CRICOS data is refreshed monthly from data.gov.au. School-specific details (fees, requirements, intake dates) are updated by schools who have claimed their profiles. If a school hasn't claimed their profile, the data shown is from CRICOS and ACARA public datasets."
       }
     }
+  },
+  "ParentsFinalCta": {
+    "eyebrow": "여기서 시작하세요",
+    "headingPrefix": "검색이",
+    "headingEmphasis": "시작됩니다",
+    "headingSuffix": "7개 언어로.",
+    "subheading": "무료. 로그인 불필요. {month} {year, number} 업데이트.",
+    "ctaPrimary": "Find the right school"
   },
   "AgentsMetadata": {
     "title": "SchoolGo — 포트폴리오처럼 운영하는 유학원 비즈니스",
@@ -492,9 +510,9 @@
   },
   "AgentsHero": {
     "eyebrow": "교육 에이전트 전용 · QEAC 인증",
-    "headlinePrefix": "포트폴리오처럼",
+    "headlinePrefix": "All Australian schools. All your students.",
     "headlineEmphasis": "비즈니스를 운영하세요.",
-    "lede": "인증된 프로필 하나. CRICOS 학교 {count, number}개. 가족이 직접 확인하는 파이프라인. SchoolGo는 학교에 청구합니다. 에이전트에게는 청구하지 않습니다.",
+    "lede": "Every Australian school has different fees, English tests, entry requirements, and application forms. SchoolGo brings them all into one place — so you can match, compare, and apply without the guesswork.",
     "ctaPrimary": "인증 신청",
     "ctaSecondary": "운영 방식 보기",
     "badgeMeta": "Sample agent profile",
@@ -514,25 +532,25 @@
     }
   },
   "AgentsPainPoints": {
-    "eyebrow": "Why agents switch",
-    "heading": "Built for Education Agents Who Manage Real Pipelines",
-    "subheading": "76% of international school enrolments come through education agents. SchoolGo is built to make you more effective, not to replace you.",
+    "eyebrow": "What you can do",
+    "heading": "Everything you need to place students into Australian schools.",
+    "subheading": "Search, match, apply, and track — every part of the placement workflow, in one platform.",
     "items": {
       "email": {
-        "question": "Tired of emailing 15 admissions offices?",
-        "answer": "One platform, one application workflow. Submit to multiple schools and track responses in real time. Every application carries your verified agent attribution."
+        "question": "Search 695 schools by what matters",
+        "answer": "Filter by fees, English tests, intakes, boarding, and scholarships. Compare side by side. No more digging through school websites one at a time."
       },
       "status": {
-        "question": "Students keep asking 'did you hear back?'",
-        "answer": "Live application tracker your students can see. Status updates flow automatically — you spend less time chasing and more time advising."
+        "question": "One student profile, every school",
+        "answer": "Enter your student's details once. SchoolGo maps them to each school's requirements — so you see which schools fit and apply without re-entering data."
       },
       "trust": {
-        "question": "Schools don't know if you're legitimate?",
-        "answer": "SchoolGo agent verification with your QEAC credentials. Your verified badge and track record appear on every application you submit."
+        "question": "Documents organised, scores verified",
+        "answer": "Passports, transcripts, and test scores uploaded once, tracked for expiry. English scores checked against official records automatically."
       },
       "requirements": {
-        "question": "Different requirements for every school?",
-        "answer": "SchoolGo maps each school's specific entry requirements: accepted English tests, minimum scores, required documents, intake dates, and application fees. No more digging through 50 school websites."
+        "question": "Your commission stays yours",
+        "answer": "SchoolGo is free. No platform fees, no commission splits, no per-student charges. Your relationship with schools stays direct."
       }
     }
   },
@@ -551,16 +569,16 @@
     "steps": {
       "listen": {
         "title": "가족의 요구 사항 파악",
-        "description": "예산, 지역, 영어 수준, 희망 입학 시기 — 부모 언어로 한 장의 양식에 입력."
+        "description": "Budget, location, intake."
       },
       "match": {
         "title": "최적 학교 확인",
-        "description": "학생 프로필에 맞게 필터링. 학교별 인정 시험과 최저 점수를 바로 확인.",
+        "description": "Including English test scores.",
         "comingSoon": "Coming soon"
       },
       "deliver": {
         "title": "정리된 후보 목록 제공",
-        "description": "가족이 캡처해서 아버지에게 보낼 수 있는 브랜드 PDF. 15개 학교에서 각각 보내온 PDF는 이제 필요 없습니다.",
+        "description": "A branded PDF the family can screenshot and send to Dad.",
         "comingSoon": "Coming soon"
       }
     },
@@ -622,7 +640,7 @@
   },
   "AgentsScale": {
     "eyebrow": "네트워크",
-    "heading": "Agents across APAC are joining. Be one of the first.",
+    "heading": "Agents across APAC are joining.",
     "subheading": "From Shanghai to Jakarta, Ho Chi Minh to Seoul — agents placing families into Australian K–12.",
     "agents": {
       "a": {
@@ -653,17 +671,17 @@
     "heading": "[TODO: ko] What agents are saying",
     "items": {
       "a": {
-        "quote": "[TODO: ko] I used to forward 40 PDFs a week between parents on WeChat and six admissions offices over email. One platform would cut my admin in half.",
+        "quote": "Every school wants a different form, different documents, different English scores. I spend more time on admin than actually helping families.",
         "attribution": "[TODO: ko] Agency director, Shanghai",
         "meta": "[TODO: ko] 60+ students · 3 counsellors"
       },
       "b": {
-        "quote": "[TODO: ko] My families want updates at 11pm their time. A live tracker they can check themselves would save me two hours a day on WhatsApp.",
+        "quote": "A parent asks which English test their child needs and I have to check three different school websites to give them an answer. That should take ten seconds.",
         "attribution": "[TODO: ko] Independent agent, Ho Chi Minh City",
-        "meta": "[TODO: ko] 25+ students · Solo practice"
+        "meta": "Solo practice"
       },
       "c": {
-        "quote": "[TODO: ko] I re-type the same passport number into five different school forms every week. Enter-once, apply-many would change everything.",
+        "quote": "I've placed into the same twelve schools for years because I know their process. A platform that maps every school's requirements would let me place into hundreds.",
         "attribution": "[TODO: ko] Senior counsellor, Kuala Lumpur",
         "meta": "[TODO: ko] 40+ students · 2 branches"
       }
@@ -672,12 +690,40 @@
   },
   "AgentsFinalCta": {
     "eyebrow": "인증 받기",
-    "headingPrefix": "내 포트폴리오는",
-    "headingEmphasis": "더 나은 것을",
-    "headingSuffix": "받을 자격이 있습니다.",
+    "headingPrefix": "You deserve",
+    "headingEmphasis": "better tools",
+    "headingSuffix": "to build a better business.",
     "subheading": "무료. QEAC 인증 필요. 온보딩은 48시간 이내.",
-    "ctaPrimary": "인증 신청",
-    "ctaSecondary": "데모 예약"
+    "ctaPrimary": "인증 신청"
+  },
+  "AgentsFaq": {
+    "heading": "Frequently Asked Questions",
+    "items": {
+      "find": {
+        "question": "How do education agents find Australian schools for international students?",
+        "answer": "Agents typically build long-term relationships with a handful of schools and check each school's website, fees, and English requirements one at a time. SchoolGo replaces that workflow with a single searchable database of every CRICOS-registered school — filterable by fees, English tests, intakes, boarding, and scholarships."
+      },
+      "englishTests": {
+        "question": "What English tests do Australian schools accept for international admissions?",
+        "answer": "Most Australian schools accept AEAS, with a growing number accepting iDAT, Duolingo English Test, IELTS, PTE Academic, Cambridge English, and TOEFL. Minimum scores vary by school and year level. SchoolGo lists the exact accepted tests and minimum scores on every school profile."
+      },
+      "verifyScores": {
+        "question": "How do education agents verify student English test scores?",
+        "answer": "Most test providers offer an official verification portal where agents and schools can confirm a score against the candidate's record. SchoolGo automates this — uploaded English scores are checked against the official record so you and the school know the result is genuine."
+      },
+      "becomeAgent": {
+        "question": "How do I become an education agent for Australian schools?",
+        "answer": "There's no single licence to become an Australian education agent, but most schools and the AAERI/QEAC quality frameworks expect training in Australian education, ethical practice, and student welfare. The QEAC (Qualified Education Agent Counsellor) certification is the most widely recognised credential."
+      },
+      "fees": {
+        "question": "Do education agents pay fees to use SchoolGo?",
+        "answer": "No. SchoolGo is free for every agent — no platform fees, no commission splits, no per-student charges. Your commercial relationship with schools stays direct."
+      },
+      "manage": {
+        "question": "How do education agents manage multiple student applications at once?",
+        "answer": "SchoolGo gives you one student profile per family that maps to every school's requirements automatically — so you don't re-key passport numbers, transcripts, or English scores into 15 different forms. Documents are organised, version-controlled, and tracked for expiry, with every status change timestamped for audit."
+      }
+    }
   },
   "SchoolsMetadata": {
     "title": "SchoolGo — 더 적은 이메일로 국제 학생 정원을 채우세요",
@@ -688,10 +734,9 @@
     "eyebrow": "호주 학교 전용",
     "headlinePrefix": "채우세요",
     "headlineEmphasis": "국제 학생",
-    "headlineSuffix": "정원을. 이메일은 줄이고.",
+    "headlineSuffix": "cohort with students who belong.",
     "lede": "7개국 가족들이 보는 하나의 인증된 프로필. QEAC 인증 에이전트로부터 표준화된 지원서를 받으세요 — 입학팀이 이미 사용하는 형식으로.",
     "ctaPrimary": "학교 프로필 등록",
-    "ctaSecondary": "데모 예약",
     "inbox": {
       "eyebrow": "Applications inbox — preview",
       "countLabel": "이번 달",
@@ -815,7 +860,7 @@
     }
   },
   "SchoolsTestimonial": {
-    "quote": "The hardest part of international admissions isn't finding students — it's processing incomplete applications from 15 different email threads.",
+    "quote": "Finding the right students is hard enough. Processing their applications shouldn't be. A single inbox with complete, verified applications changes everything.",
     "attribution": "Composite quote based on admissions officer interviews"
   },
   "SchoolsFinalCta": {
@@ -826,27 +871,6 @@
     "subheading": "무료 등록. 신용카드 불필요. 등록 10분이면 완료.",
     "ctaPrimary": "학교 프로필 등록",
     "ctaSecondary": "데모 예약"
-  },
-  "SchoolsFaq": {
-    "heading": "[TODO: ko] Frequently Asked Questions",
-    "items": {
-      "claim": {
-        "question": "[TODO: ko] How do I claim my school's profile?",
-        "answer": "[TODO: ko] Search for your school on SchoolGo and click \"Claim This School.\" You'll verify your identity as a staff member, and once approved you can edit your profile, update fees, and manage applications."
-      },
-      "agents": {
-        "question": "[TODO: ko] How does SchoolGo work with education agents?",
-        "answer": "[TODO: ko] By default, your profile works with your school's existing agents. You can see which agents have placed students with you, invite new agents, or manage agent relationships from your dashboard."
-      },
-      "commission": {
-        "question": "[TODO: ko] Does SchoolGo charge schools or agents?",
-        "answer": "[TODO: ko] No. SchoolGo is free for everyone — schools, agents, and parents. There are no listing fees, per-student fees, or commission splits."
-      },
-      "data": {
-        "question": "[TODO: ko] Where does the school data come from?",
-        "answer": "[TODO: ko] All school profiles are auto-published from CRICOS (the Australian Government's official register) and cross-referenced with ACARA school profile data. Schools that claim their profile can update their own details at any time."
-      }
-    }
   },
   "Navbar": {
     "brand": "School",
@@ -996,6 +1020,10 @@
       },
       "lockedDescription": "Sign up to unlock this filter.",
       "showFewer": "Show fewer",
+      "stepper": {
+        "decrease": "{label} decrease",
+        "increase": "{label} increase"
+      },
       "location": {
         "title": "위치",
         "stateLabel": "주 또는 준주",
@@ -1180,10 +1208,6 @@
           "waitlist": "Waitlist only",
           "closed": "Closed"
         }
-      },
-      "stepper": {
-        "decrease": "{label} decrease",
-        "increase": "{label} increase"
       }
     }
   },
@@ -1292,8 +1316,6 @@
     "signInButton": "로그인",
     "loginSuccess": "다시 오셨군요!",
     "loginError": "이메일 또는 비밀번호가 올바르지 않습니다. 다시 시도해주세요.",
-    "portalUnauthorized": "이 계정은 해당 포털에 대한 접근 권한이 없습니다.",
-    "sessionExpired": "세션이 만료되었습니다. 다시 로그인해 주세요.",
     "noAccount": "계정이 없으신가요?",
     "signUp": "회원가입",
     "signUpTitle": "계정 만들기",
@@ -1307,6 +1329,8 @@
     "hasAccount": "이미 계정이 있으신가요?",
     "signInLink": "로그인",
     "close": "닫기",
+    "portalUnauthorized": "이 계정은 해당 포털에 대한 접근 권한이 없습니다.",
+    "sessionExpired": "세션이 만료되었습니다. 다시 로그인해 주세요.",
     "portalSwitch": {
       "backTo": "[TODO: ko] Back to"
     },
@@ -1366,24 +1390,13 @@
   },
   "Errors": {
     "generic": "문제가 발생했습니다",
-    "genericSubtitle": "[TODO: ko] We hit an unexpected bump. Don't worry — your data is safe.",
     "tryAgain": "다시 시도",
     "notFound": "페이지를 찾을 수 없습니다",
+    "goHome": "홈으로 이동",
+    "genericSubtitle": "[TODO: ko] We hit an unexpected bump. Don't worry — your data is safe.",
     "notFoundCode": "[TODO: ko] 404",
     "notFoundSubtitle": "[TODO: ko] The page you're looking for doesn't exist or has been moved.",
-    "goHome": "홈으로 이동",
     "searchInstead": "[TODO: ko] Search schools"
-  },
-  "LaunchingSoon": {
-    "title": "곧 출시됩니다",
-    "subtitle": "SchoolGo가 호주 전역의 최고의 학교를 찾을 수 있도록 준비하고 있습니다. 멋진 서비스의 마무리 작업이 한창입니다.",
-    "stayTuned": "기대해 주세요 — 곧 정식 출시됩니다.",
-    "portals": {
-      "heading": "우리 플랫폼",
-      "parents": "학부모 포털",
-      "schools": "학교 포털",
-      "agents": "에이전트 포털"
-    }
   },
   "Dashboard": {
     "nav": {
@@ -1454,7 +1467,6 @@
     "sort": "정렬",
     "emptyTitle": "아직 학생이 없습니다",
     "emptySubtitle": "첫 번째 학생을 추가하여 프로필을 구성하고 학교에 지원을 시작하세요.",
-    "archive": "보관",
     "paginationShowing": "표시",
     "paginationOf": "전체 {total}개",
     "allRows": "전체",
@@ -1466,6 +1478,7 @@
     "notFound": "[TODO: ko] Student not found.",
     "backToList": "[TODO: ko] Back",
     "edit": "[TODO: ko] Edit",
+    "archive": "보관",
     "sectionPersonal": "[TODO: ko] Personal Information",
     "sectionEducation": "[TODO: ko] Education",
     "sectionParent": "[TODO: ko] Parent / Guardian",
@@ -1546,6 +1559,46 @@
     "docStatus_active": "[TODO: ko] Active",
     "docStatus_replaced": "[TODO: ko] Replaced",
     "docStatus_archived": "[TODO: ko] Archived"
+  },
+  "SchoolsFaq": {
+    "heading": "[TODO: ko] Frequently Asked Questions",
+    "items": {
+      "attract": {
+        "question": "How do Australian schools attract more international students?",
+        "answer": "Schools grow their international cohort by being visible to families and agents in the markets they want to reach, and by making it easy to apply once a family is interested. SchoolGo lists every CRICOS-registered school in seven languages, with translated profiles, fees, and English requirements — so families and agents can find and shortlist your school directly."
+      },
+      "verify": {
+        "question": "How do schools verify international students' English test scores?",
+        "answer": "Each English test provider (AEAS, IELTS, PTE, Duolingo, Cambridge, TOEFL) offers an official verification portal where schools can confirm a candidate's score against the original record. SchoolGo automates this — every English score on an application is checked against the official record before it lands in your inbox."
+      },
+      "agents": {
+        "question": "[TODO: ko] How does SchoolGo work with education agents?",
+        "answer": "[TODO: ko] By default, your profile works with your school's existing agents. You can see which agents have placed students with you, invite new agents, or manage agent relationships from your dashboard."
+      },
+      "documents": {
+        "question": "What documents do schools need for an international student application?",
+        "answer": "Standard documents include the student's passport, last two years of school reports, an English test result, proof of guardianship for younger students, and any additional medical or character documents your school requires. SchoolGo arrives applications complete — passports, transcripts, English scores, and required forms in one packaged record."
+      },
+      "cost": {
+        "question": "How much does it cost to list on SchoolGo?",
+        "answer": "Nothing. SchoolGo is free for every school — no listing fees, no per-student fees, no commissions. Your profile auto-publishes from official government data, and claiming it unlocks full editing, applications, and analytics at no cost."
+      },
+      "diversify": {
+        "question": "How do schools diversify their international student intake beyond China?",
+        "answer": "Diversification starts with visibility in the markets you want to grow — Vietnam, Korea, Indonesia, Malaysia, Thailand, and beyond. SchoolGo translates your profile into seven languages and surfaces it to families and agents across the Asia-Pacific, so you can build a balanced cohort across multiple source countries."
+      }
+    }
+  },
+  "LaunchingSoon": {
+    "title": "곧 출시됩니다",
+    "subtitle": "SchoolGo가 호주 전역의 최고의 학교를 찾을 수 있도록 준비하고 있습니다. 멋진 서비스의 마무리 작업이 한창입니다.",
+    "stayTuned": "기대해 주세요 — 곧 정식 출시됩니다.",
+    "portals": {
+      "heading": "우리 플랫폼",
+      "parents": "학부모 포털",
+      "schools": "학교 포털",
+      "agents": "에이전트 포털"
+    }
   },
   "Pipeline": {
     "title": "파이프라인",

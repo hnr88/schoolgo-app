@@ -118,7 +118,7 @@ export function MarketingHeaderClient({
               width={559}
               height={125}
               priority
-              className='h-3 w-auto md:h-4'
+              className='h-4 w-auto md:h-5'
             />
           </a>
 

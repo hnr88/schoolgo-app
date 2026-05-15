@@ -90,15 +90,6 @@ function isObject(v) {
   return v !== null && typeof v === 'object' && !Array.isArray(v);
 }
 
-function getAtPath(obj, path) {
-  let cur = obj;
-  for (const seg of path) {
-    if (!isObject(cur) || !(seg in cur)) return undefined;
-    cur = cur[seg];
-  }
-  return cur;
-}
-
 // Walk en.json's structure. For each leaf or array, decide what value to write.
 function buildSynced(enNode, targetNode, pathParts) {
   if (Array.isArray(enNode)) {

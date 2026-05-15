@@ -161,7 +161,18 @@
           "privacy": "隐私政策",
           "terms": "使用条款"
         }
+      },
+      "company": {
+        "title": "Company",
+        "links": {
+          "about": "About SchoolGo",
+          "contact": "Contact us"
+        }
       }
+    },
+    "extraLinks": {
+      "aboutSchoolGo": "About SchoolGo",
+      "contactUs": "Contact us"
     },
     "language": "语言",
     "copyright": "© {year} SchoolGo Australia。保留所有权利。",
@@ -175,7 +186,7 @@
   },
   "ParentsHero": {
     "trustPill": {
-      "brand": "政府",
+      "brand": "CRICOS",
       "brandAccent": "注册认证",
       "source": "数据来源 data.gov.au"
     },
@@ -206,19 +217,19 @@
       "shortlistRemove": "从候选名单中移除 {name}",
       "cards": {
         "a": {
-          "name": "Scotch College Melbourne",
-          "location": "Hawthorn, VIC",
-          "curriculum": "VCE",
-          "fee": "$38.5k AUD",
-          "boarding": "寄宿",
-          "rating": "4.9"
-        },
-        "b": {
           "name": "Sydney Grammar School",
           "location": "Darlinghurst, NSW",
           "curriculum": "HSC",
           "fee": "$41.2k AUD",
-          "boarding": "仅走读",
+          "boarding": "Day only",
+          "rating": "4.8"
+        },
+        "b": {
+          "name": "Melbourne Grammar School",
+          "location": "Melbourne, VIC",
+          "curriculum": "VCE/IB",
+          "fee": "$42.5k AUD",
+          "boarding": "Boarding",
           "rating": "4.8"
         },
         "c": {
@@ -229,6 +240,29 @@
           "boarding": "寄宿",
           "rating": "4.7"
         }
+      }
+    }
+  },
+  "ParentsStatsBar": {
+    "eyebrow": "数据一览",
+    "heading": "澳大利亚最大的CRICOS学校目录。",
+    "subheading": "每一所注册学校，经过验证且可搜索——从公立到私立，覆盖全部八个州和领地。",
+    "items": {
+      "schools": {
+        "value": "{count, number}+",
+        "label": "CRICOS Schools"
+      },
+      "states": {
+        "value": "8",
+        "label": "States & Territories"
+      },
+      "sectors": {
+        "value": "All 3 Sectors",
+        "label": "Government · Independent · Catholic"
+      },
+      "fees": {
+        "value": "$3.5k – $78k",
+        "label": "Annual Fee Range"
       }
     }
   },
@@ -281,9 +315,9 @@
     }
   },
   "ParentsVerified": {
-    "eyebrow": "每一所 CRICOS 学校",
-    "heading": "已认证。用您的语言。",
-    "subheading": "真实建筑照片。真实学费。真实入学日历。学校数据来源于 CRICOS 和 ACARA，每月更新。",
+    "eyebrow": "Get expert help",
+    "heading": "Get expert help — free.",
+    "subheading": "Not sure where to start? Every school works with specialist education consultants who know their admissions process inside out. SchoolGo connects you with the right one — so you get expert guidance from choosing a school to submitting your application, at no cost to you.",
     "cards": {
       "a": {
         "name": "Scotch College",
@@ -309,27 +343,27 @@
   },
   "ParentsComparison": {
     "eyebrow": "比较",
-    "heading": "将学校并排对比。",
+    "heading": "Put three schools next to each other.",
     "headingAccent": "几分钟内做出决定，无需数月等待。",
+    "shortlistLabel": "[TODO: zh] Shortlist · {count} schools",
     "columns": {
       "fee": "年费",
-      "tests": "认可考试",
-      "intakes": "入学时间",
       "stateSector": "[TODO: zh] State & sector",
       "curriculum": "[TODO: zh] Curriculum",
       "boarding": "[TODO: zh] Boarding",
+      "tests": "认可考试",
       "minScore": "[TODO: zh] Min. AEAS score",
-      "scholarships": "[TODO: zh] Scholarships"
+      "scholarships": "[TODO: zh] Scholarships",
+      "intakes": "入学时间"
     },
     "notPublished": "未公开",
-    "shortlistLabel": "[TODO: zh] Shortlist · {count} schools",
     "dayOnly": "[TODO: zh] — Day only",
     "noneIntl": "[TODO: zh] — None intl."
   },
   "ParentsPickATest": {
     "eyebrow": "英语水平",
-    "heading": "选择考试，查看哪些学校认可——",
-    "headingAccent": "及最低分数要求。",
+    "heading": "Find out which English test the school requires —",
+    "headingAccent": "and the score your child needs to get in.",
     "subheading": "我们在每所学校的主页上列明认可的英语考试。无需再逐一浏览50个学校网站。",
     "tests": {
       "aeas": {
@@ -368,12 +402,12 @@
         "description": "Accepted by select schools for senior entry"
       }
     },
-    "cta": "查看认可该考试的学校"
+    "cta": "Check your school's English requirements"
   },
   "ParentsSevenLanguages": {
     "eyebrow": "七种语言",
     "heading": "家庭不应在午夜翻译学费单。",
-    "subheading": "SchoolGo 全程翻译为亚太地区最常用的七种语言。",
+    "subheading": "Fees, entry requirements, VCE, ATAR, boarding, welfare — everything explained in your language. SchoolGo is translated end-to-end into seven languages spoken by families across the world.",
     "languages": {
       "en": "English",
       "zh": "简体中文",
@@ -404,41 +438,9 @@
     },
     "readMore": "阅读文章"
   },
-  "ParentsStatsBar": {
-    "eyebrow": "数据一览",
-    "heading": "澳大利亚最大的CRICOS学校目录。",
-    "subheading": "每一所注册学校，经过验证且可搜索——从公立到私立，覆盖全部八个州和领地。",
-    "items": {
-      "schools": {
-        "value": "{count, number}+",
-        "label": "CRICOS Schools"
-      },
-      "states": {
-        "value": "8",
-        "label": "States & Territories"
-      },
-      "sectors": {
-        "value": "All 3 Sectors",
-        "label": "Government · Independent · Catholic"
-      },
-      "fees": {
-        "value": "$3.5k – $78k",
-        "label": "Annual Fee Range"
-      }
-    }
-  },
-  "ParentsFinalCta": {
-    "eyebrow": "从这里开始",
-    "headingPrefix": "您的搜索，",
-    "headingEmphasis": "就此",
-    "headingSuffix": "开始，支持七种语言。",
-    "subheading": "免费。无需登录。更新至 {month} {year, number}。",
-    "ctaPrimary": "找到您的学校",
-    "ctaSecondary": "联系认证中介"
-  },
   "ParentsTrustBar": {
     "eyebrow": "信任与合规",
-    "heading": "您可信赖的数据。",
+    "heading": "Data you can trust — so you know you're looking at legitimate institutions and accurate information.",
     "subheading": "SchoolGo 上的每一条学校信息均来自官方政府数据来源——经过验证、持有授权，并每月更新。",
     "items": {
       "cricos": {
@@ -463,27 +465,43 @@
   "ParentsFaq": {
     "heading": "Frequently Asked Questions",
     "items": {
+      "enrol": {
+        "question": "How do I enrol my child in an Australian school from overseas?",
+        "answer": "Start by shortlisting schools that fit your child's year level, location, and budget on SchoolGo. Each school's profile shows the documents, English test scores, and intake dates you'll need to apply. Once you've chosen a school, an education agent or the school's admissions office will guide you through the application and student visa process."
+      },
+      "cost": {
+        "question": "How much does it cost to send my child to school in Australia?",
+        "answer": "International student tuition typically ranges from about A$15,000 to A$45,000 per year, depending on the school, year level, and sector. On top of tuition, plan for application fees, uniforms, technology, boarding (if applicable), and Overseas Student Health Cover. Every SchoolGo profile shows the school's published international fees so you can compare like-for-like."
+      },
+      "englishTest": {
+        "question": "What English test does my child need for an Australian school?",
+        "answer": "Different schools accept different tests — the most common are AEAS, iDAT, Duolingo English Test, IELTS, and PTE Academic, with minimum scores that vary by year level. SchoolGo shows the exact tests and minimum scores each school accepts on its profile."
+      },
+      "visa": {
+        "question": "Do international students need a visa to study at an Australian school?",
+        "answer": "Yes — full-fee international school students study on a Student visa (subclass 500), which requires a Confirmation of Enrolment from a CRICOS-registered school. You'll also need health cover (OSHC) for the duration of the visa. See our student visa guide for the full step-by-step."
+      },
+      "agent": {
+        "question": "What is an education agent and do I need one?",
+        "answer": "Education agents are licensed consultants who help families choose schools, prepare documents, and manage the application and visa process. You don't have to use one, but most international families do — and it's free for you, since agents are paid by the schools. SchoolGo shows you which agents each school works with so you can pick someone with a proven track record."
+      },
+      "schoolTypes": {
+        "question": "What types of schools are there in Australia?",
+        "answer": "Australian schools fall into three sectors — government (public), Catholic, and independent — and may be co-educational, single-sex, day-only, or boarding. Curricula include state certificates like the VCE, HSC, and QCE, plus the International Baccalaureate at many independent schools. Our school types guide explains how each sector works for international students."
+      },
       "free": {
         "question": "Is SchoolGo free?",
         "answer": "Yes. SchoolGo is completely free for parents, education agents, and schools. There are no listing fees, application fees, or subscription costs."
-      },
-      "dataSource": {
-        "question": "Where does the school data come from?",
-        "answer": "All school listings are sourced from CRICOS (the Commonwealth Register of Institutions and Courses for Overseas Students), which is the Australian Government's official register of schools authorised to enrol international students. We cross-reference this with ACARA school profile data for enrolment figures, ICSEA scores, and GPS coordinates."
-      },
-      "englishTests": {
-        "question": "What English proficiency tests do Australian schools accept?",
-        "answer": "Different schools accept different tests. The most common are AEAS (Australian Education Assessment Services), iDAT (International Digital Admissions Test), Duolingo English Test, IELTS, and PTE Academic. SchoolGo shows which specific tests each school accepts on their profile page."
-      },
-      "doINeedAgent": {
-        "question": "[TODO: zh] Do I need an education agent?",
-        "answer": "[TODO: zh] You don't have to use one, but most families do — and it's free. Education agents help you choose the right school, prepare documents, and manage the application. SchoolGo shows which agents work with each school, so you can find someone who already knows the admissions process."
-      },
-      "updateFrequency": {
-        "question": "How often is the data updated?",
-        "answer": "CRICOS data is refreshed monthly from data.gov.au. School-specific details (fees, requirements, intake dates) are updated by schools who have claimed their profiles. If a school hasn't claimed their profile, the data shown is from CRICOS and ACARA public datasets."
       }
     }
+  },
+  "ParentsFinalCta": {
+    "eyebrow": "从这里开始",
+    "headingPrefix": "您的搜索，",
+    "headingEmphasis": "就此",
+    "headingSuffix": "开始，支持七种语言。",
+    "subheading": "免费。无需登录。更新至 {month} {year, number}。",
+    "ctaPrimary": "Find the right school"
   },
   "AgentsMetadata": {
     "title": "SchoolGo — 像管理投资组合一样经营您的中介业务",
@@ -492,9 +510,9 @@
   },
   "AgentsHero": {
     "eyebrow": "面向教育中介 · QEAC 认证",
-    "headlinePrefix": "像管理投资组合一样",
+    "headlinePrefix": "All Australian schools. All your students.",
     "headlineEmphasis": "经营您的业务。",
-    "lede": "一个认证主页。{count, number} 所 CRICOS 学校。一个家庭可查看的进度看板。SchoolGo 向学校收费，不向您收费。",
+    "lede": "Every Australian school has different fees, English tests, entry requirements, and application forms. SchoolGo brings them all into one place — so you can match, compare, and apply without the guesswork.",
     "ctaPrimary": "申请认证",
     "ctaSecondary": "查看运作方式",
     "badgeMeta": "Sample agent profile",
@@ -514,25 +532,25 @@
     }
   },
   "AgentsPainPoints": {
-    "eyebrow": "Why agents switch",
-    "heading": "Built for Education Agents Who Manage Real Pipelines",
-    "subheading": "76% of international school enrolments come through education agents. SchoolGo is built to make you more effective, not to replace you.",
+    "eyebrow": "What you can do",
+    "heading": "Everything you need to place students into Australian schools.",
+    "subheading": "Search, match, apply, and track — every part of the placement workflow, in one platform.",
     "items": {
       "email": {
-        "question": "Tired of emailing 15 admissions offices?",
-        "answer": "One platform, one application workflow. Submit to multiple schools and track responses in real time. Every application carries your verified agent attribution."
+        "question": "Search 695 schools by what matters",
+        "answer": "Filter by fees, English tests, intakes, boarding, and scholarships. Compare side by side. No more digging through school websites one at a time."
       },
       "status": {
-        "question": "Students keep asking 'did you hear back?'",
-        "answer": "Live application tracker your students can see. Status updates flow automatically — you spend less time chasing and more time advising."
+        "question": "One student profile, every school",
+        "answer": "Enter your student's details once. SchoolGo maps them to each school's requirements — so you see which schools fit and apply without re-entering data."
       },
       "trust": {
-        "question": "Schools don't know if you're legitimate?",
-        "answer": "SchoolGo agent verification with your QEAC credentials. Your verified badge and track record appear on every application you submit."
+        "question": "Documents organised, scores verified",
+        "answer": "Passports, transcripts, and test scores uploaded once, tracked for expiry. English scores checked against official records automatically."
       },
       "requirements": {
-        "question": "Different requirements for every school?",
-        "answer": "SchoolGo maps each school's specific entry requirements: accepted English tests, minimum scores, required documents, intake dates, and application fees. No more digging through 50 school websites."
+        "question": "Your commission stays yours",
+        "answer": "SchoolGo is free. No platform fees, no commission splits, no per-student charges. Your relationship with schools stays direct."
       }
     }
   },
@@ -551,16 +569,16 @@
     "steps": {
       "listen": {
         "title": "记录家庭需求",
-        "description": "预算、地点、英语水平、期望入学时间——用家长的语言填写一份表格。"
+        "description": "Budget, location, intake."
       },
       "match": {
         "title": "查看最匹配的学校",
-        "description": "按学生档案筛选。查看每所学校认可的考试及最低分数要求。",
+        "description": "Including English test scores.",
         "comingSoon": "即将推出"
       },
       "deliver": {
         "title": "交付精准候选名单，而非杂乱材料",
-        "description": "一份家庭可截图发给父亲的品牌 PDF。无需来自十五所学校的各自 PDF。",
+        "description": "A branded PDF the family can screenshot and send to Dad.",
         "comingSoon": "即将推出"
       }
     },
@@ -622,7 +640,7 @@
   },
   "AgentsScale": {
     "eyebrow": "网络",
-    "heading": "Agents across APAC are joining. Be one of the first.",
+    "heading": "Agents across APAC are joining.",
     "subheading": "From Shanghai to Jakarta, Ho Chi Minh to Seoul — agents placing families into Australian K–12.",
     "agents": {
       "a": {
@@ -653,17 +671,17 @@
     "heading": "[TODO: zh] What agents are saying",
     "items": {
       "a": {
-        "quote": "[TODO: zh] I used to forward 40 PDFs a week between parents on WeChat and six admissions offices over email. One platform would cut my admin in half.",
+        "quote": "Every school wants a different form, different documents, different English scores. I spend more time on admin than actually helping families.",
         "attribution": "[TODO: zh] Agency director, Shanghai",
         "meta": "[TODO: zh] 60+ students · 3 counsellors"
       },
       "b": {
-        "quote": "[TODO: zh] My families want updates at 11pm their time. A live tracker they can check themselves would save me two hours a day on WhatsApp.",
+        "quote": "A parent asks which English test their child needs and I have to check three different school websites to give them an answer. That should take ten seconds.",
         "attribution": "[TODO: zh] Independent agent, Ho Chi Minh City",
-        "meta": "[TODO: zh] 25+ students · Solo practice"
+        "meta": "Solo practice"
       },
       "c": {
-        "quote": "[TODO: zh] I re-type the same passport number into five different school forms every week. Enter-once, apply-many would change everything.",
+        "quote": "I've placed into the same twelve schools for years because I know their process. A platform that maps every school's requirements would let me place into hundreds.",
         "attribution": "[TODO: zh] Senior counsellor, Kuala Lumpur",
         "meta": "[TODO: zh] 40+ students · 2 branches"
       }
@@ -672,12 +690,40 @@
   },
   "AgentsFinalCta": {
     "eyebrow": "获得认证",
-    "headingPrefix": "您的投资组合",
-    "headingEmphasis": "值得",
-    "headingSuffix": "更好的。",
+    "headingPrefix": "You deserve",
+    "headingEmphasis": "better tools",
+    "headingSuffix": "to build a better business.",
     "subheading": "免费。需要 QEAC 认证。入驻流程 48 小时内完成。",
-    "ctaPrimary": "申请认证",
-    "ctaSecondary": "预约演示"
+    "ctaPrimary": "申请认证"
+  },
+  "AgentsFaq": {
+    "heading": "Frequently Asked Questions",
+    "items": {
+      "find": {
+        "question": "How do education agents find Australian schools for international students?",
+        "answer": "Agents typically build long-term relationships with a handful of schools and check each school's website, fees, and English requirements one at a time. SchoolGo replaces that workflow with a single searchable database of every CRICOS-registered school — filterable by fees, English tests, intakes, boarding, and scholarships."
+      },
+      "englishTests": {
+        "question": "What English tests do Australian schools accept for international admissions?",
+        "answer": "Most Australian schools accept AEAS, with a growing number accepting iDAT, Duolingo English Test, IELTS, PTE Academic, Cambridge English, and TOEFL. Minimum scores vary by school and year level. SchoolGo lists the exact accepted tests and minimum scores on every school profile."
+      },
+      "verifyScores": {
+        "question": "How do education agents verify student English test scores?",
+        "answer": "Most test providers offer an official verification portal where agents and schools can confirm a score against the candidate's record. SchoolGo automates this — uploaded English scores are checked against the official record so you and the school know the result is genuine."
+      },
+      "becomeAgent": {
+        "question": "How do I become an education agent for Australian schools?",
+        "answer": "There's no single licence to become an Australian education agent, but most schools and the AAERI/QEAC quality frameworks expect training in Australian education, ethical practice, and student welfare. The QEAC (Qualified Education Agent Counsellor) certification is the most widely recognised credential."
+      },
+      "fees": {
+        "question": "Do education agents pay fees to use SchoolGo?",
+        "answer": "No. SchoolGo is free for every agent — no platform fees, no commission splits, no per-student charges. Your commercial relationship with schools stays direct."
+      },
+      "manage": {
+        "question": "How do education agents manage multiple student applications at once?",
+        "answer": "SchoolGo gives you one student profile per family that maps to every school's requirements automatically — so you don't re-key passport numbers, transcripts, or English scores into 15 different forms. Documents are organised, version-controlled, and tracked for expiry, with every status change timestamped for audit."
+      }
+    }
   },
   "SchoolsMetadata": {
     "title": "SchoolGo — 用更少的邮件填满您的国际生名额",
@@ -688,10 +734,9 @@
     "eyebrow": "面向澳大利亚学校",
     "headlinePrefix": "填满您的",
     "headlineEmphasis": "国际生",
-    "headlineSuffix": "名额。用更少的邮件。",
+    "headlineSuffix": "cohort with students who belong.",
     "lede": "一个认证主页，被七个国家的家庭看到。从 QEAC 认证中介收取标准化申请——格式与您招生团队已在使用的一致。",
     "ctaPrimary": "认领您的学校主页",
-    "ctaSecondary": "预约演示",
     "inbox": {
       "eyebrow": "Applications inbox — preview",
       "countLabel": "本月",
@@ -815,7 +860,7 @@
     }
   },
   "SchoolsTestimonial": {
-    "quote": "The hardest part of international admissions isn't finding students — it's processing incomplete applications from 15 different email threads.",
+    "quote": "Finding the right students is hard enough. Processing their applications shouldn't be. A single inbox with complete, verified applications changes everything.",
     "attribution": "Composite quote based on admissions officer interviews"
   },
   "SchoolsFinalCta": {
@@ -826,27 +871,6 @@
     "subheading": "免费列表。无需信用卡。认领仅需10分钟。",
     "ctaPrimary": "认领您的学校主页",
     "ctaSecondary": "预约演示"
-  },
-  "SchoolsFaq": {
-    "heading": "[TODO: zh] Frequently Asked Questions",
-    "items": {
-      "claim": {
-        "question": "[TODO: zh] How do I claim my school's profile?",
-        "answer": "[TODO: zh] Search for your school on SchoolGo and click \"Claim This School.\" You'll verify your identity as a staff member, and once approved you can edit your profile, update fees, and manage applications."
-      },
-      "agents": {
-        "question": "[TODO: zh] How does SchoolGo work with education agents?",
-        "answer": "[TODO: zh] By default, your profile works with your school's existing agents. You can see which agents have placed students with you, invite new agents, or manage agent relationships from your dashboard."
-      },
-      "commission": {
-        "question": "[TODO: zh] Does SchoolGo charge schools or agents?",
-        "answer": "[TODO: zh] No. SchoolGo is free for everyone — schools, agents, and parents. There are no listing fees, per-student fees, or commission splits."
-      },
-      "data": {
-        "question": "[TODO: zh] Where does the school data come from?",
-        "answer": "[TODO: zh] All school profiles are auto-published from CRICOS (the Australian Government's official register) and cross-referenced with ACARA school profile data. Schools that claim their profile can update their own details at any time."
-      }
-    }
   },
   "Navbar": {
     "brand": "School",
@@ -996,6 +1020,10 @@
       },
       "lockedDescription": "Sign up to unlock this filter.",
       "showFewer": "Show fewer",
+      "stepper": {
+        "decrease": "{label} decrease",
+        "increase": "{label} increase"
+      },
       "location": {
         "title": "位置",
         "stateLabel": "州或领地",
@@ -1180,10 +1208,6 @@
           "waitlist": "Waitlist only",
           "closed": "Closed"
         }
-      },
-      "stepper": {
-        "decrease": "{label} decrease",
-        "increase": "{label} increase"
       }
     }
   },
@@ -1292,8 +1316,6 @@
     "signInButton": "登录",
     "loginSuccess": "欢迎回来！",
     "loginError": "邮箱或密码错误，请重试。",
-    "portalUnauthorized": "此账户无权访问该门户。",
-    "sessionExpired": "您的登录已过期，请重新登录。",
     "noAccount": "还没有账户？",
     "signUp": "立即注册",
     "signUpTitle": "创建您的账户",
@@ -1307,6 +1329,8 @@
     "hasAccount": "已有账户？",
     "signInLink": "登录",
     "close": "关闭",
+    "portalUnauthorized": "此账户无权访问该门户。",
+    "sessionExpired": "您的登录已过期，请重新登录。",
     "portalSwitch": {
       "backTo": "[TODO: zh] Back to"
     },
@@ -1366,24 +1390,13 @@
   },
   "Errors": {
     "generic": "出了点问题",
-    "genericSubtitle": "[TODO: zh] We hit an unexpected bump. Don't worry — your data is safe.",
     "tryAgain": "再试一次",
     "notFound": "页面未找到",
+    "goHome": "回到首页",
+    "genericSubtitle": "[TODO: zh] We hit an unexpected bump. Don't worry — your data is safe.",
     "notFoundCode": "[TODO: zh] 404",
     "notFoundSubtitle": "[TODO: zh] The page you're looking for doesn't exist or has been moved.",
-    "goHome": "回到首页",
     "searchInstead": "[TODO: zh] Search schools"
-  },
-  "LaunchingSoon": {
-    "title": "我们即将上线",
-    "subtitle": "SchoolGo 正在为您准备澳大利亚最好的学校资源。我们正在为您打造一个出色的平台，即将完成。",
-    "stayTuned": "敬请期待——我们很快就会正式上线。",
-    "portals": {
-      "heading": "我们的平台",
-      "parents": "家长端",
-      "schools": "学校端",
-      "agents": "中介端"
-    }
   },
   "Dashboard": {
     "nav": {
@@ -1454,7 +1467,6 @@
     "sort": "排序",
     "emptyTitle": "暂无学生",
     "emptySubtitle": "添加您的第一位学生，开始建立档案并申请学校。",
-    "archive": "归档",
     "paginationShowing": "显示",
     "paginationOf": "共 {total} 条",
     "allRows": "全部",
@@ -1466,6 +1478,7 @@
     "notFound": "[TODO: zh] Student not found.",
     "backToList": "[TODO: zh] Back",
     "edit": "[TODO: zh] Edit",
+    "archive": "归档",
     "sectionPersonal": "[TODO: zh] Personal Information",
     "sectionEducation": "[TODO: zh] Education",
     "sectionParent": "[TODO: zh] Parent / Guardian",
@@ -1546,6 +1559,46 @@
     "docStatus_active": "[TODO: zh] Active",
     "docStatus_replaced": "[TODO: zh] Replaced",
     "docStatus_archived": "[TODO: zh] Archived"
+  },
+  "SchoolsFaq": {
+    "heading": "[TODO: zh] Frequently Asked Questions",
+    "items": {
+      "attract": {
+        "question": "How do Australian schools attract more international students?",
+        "answer": "Schools grow their international cohort by being visible to families and agents in the markets they want to reach, and by making it easy to apply once a family is interested. SchoolGo lists every CRICOS-registered school in seven languages, with translated profiles, fees, and English requirements — so families and agents can find and shortlist your school directly."
+      },
+      "verify": {
+        "question": "How do schools verify international students' English test scores?",
+        "answer": "Each English test provider (AEAS, IELTS, PTE, Duolingo, Cambridge, TOEFL) offers an official verification portal where schools can confirm a candidate's score against the original record. SchoolGo automates this — every English score on an application is checked against the official record before it lands in your inbox."
+      },
+      "agents": {
+        "question": "[TODO: zh] How does SchoolGo work with education agents?",
+        "answer": "[TODO: zh] By default, your profile works with your school's existing agents. You can see which agents have placed students with you, invite new agents, or manage agent relationships from your dashboard."
+      },
+      "documents": {
+        "question": "What documents do schools need for an international student application?",
+        "answer": "Standard documents include the student's passport, last two years of school reports, an English test result, proof of guardianship for younger students, and any additional medical or character documents your school requires. SchoolGo arrives applications complete — passports, transcripts, English scores, and required forms in one packaged record."
+      },
+      "cost": {
+        "question": "How much does it cost to list on SchoolGo?",
+        "answer": "Nothing. SchoolGo is free for every school — no listing fees, no per-student fees, no commissions. Your profile auto-publishes from official government data, and claiming it unlocks full editing, applications, and analytics at no cost."
+      },
+      "diversify": {
+        "question": "How do schools diversify their international student intake beyond China?",
+        "answer": "Diversification starts with visibility in the markets you want to grow — Vietnam, Korea, Indonesia, Malaysia, Thailand, and beyond. SchoolGo translates your profile into seven languages and surfaces it to families and agents across the Asia-Pacific, so you can build a balanced cohort across multiple source countries."
+      }
+    }
+  },
+  "LaunchingSoon": {
+    "title": "我们即将上线",
+    "subtitle": "SchoolGo 正在为您准备澳大利亚最好的学校资源。我们正在为您打造一个出色的平台，即将完成。",
+    "stayTuned": "敬请期待——我们很快就会正式上线。",
+    "portals": {
+      "heading": "我们的平台",
+      "parents": "家长端",
+      "schools": "学校端",
+      "agents": "中介端"
+    }
   },
   "Pipeline": {
     "title": "申请管道",
