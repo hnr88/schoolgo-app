@@ -34,8 +34,8 @@ export async function SchoolDetailPage({ school, activePortal, locale }: SchoolD
 
   return (
     <>
-      <IntlBanner />
       <MarketingHeader activePortal={activePortal} variant="dark" />
+      <IntlBanner />
       <main className="bg-background">
         <Hero school={school} activePortal={activePortal} />
         <BreadcrumbNav school={school} activePortal={activePortal} />

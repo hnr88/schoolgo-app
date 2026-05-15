@@ -27,6 +27,11 @@
       "agents": "Tư vấn",
       "schools": "Trường học"
     },
+    "audienceHrefs": {
+      "parents": "[TODO: vi] Parents landing page",
+      "agents": "[TODO: vi] Agents landing page",
+      "schools": "[TODO: vi] Schools landing page"
+    },
     "nav": {
       "parent": {
         "howItWorks": "Cách thức hoạt động",
@@ -51,6 +56,32 @@
     "closeMenu": "Đóng menu",
     "menu": "Menu",
     "subNav": {
+      "findSchools": {
+        "label": "[TODO: vi] Find Schools",
+        "items": {
+          "searchAllSchools": "[TODO: vi] Search all schools",
+          "searchAllSchoolsDesc": "[TODO: vi] Browse every registered Australian school",
+          "compareSchools": "[TODO: vi] Compare schools",
+          "compareSchoolsDesc": "[TODO: vi] Side-by-side fees, tests & intakes",
+          "schoolTypes": "[TODO: vi] School types in Australia",
+          "schoolTypesDesc": "[TODO: vi] Government, Catholic & independent compared",
+          "englishRequirements": "[TODO: vi] English test requirements",
+          "englishRequirementsDesc": "[TODO: vi] AEAS, IELTS & every accepted test"
+        }
+      },
+      "guides": {
+        "label": "[TODO: vi] Guides",
+        "items": {
+          "chooseSchool": "[TODO: vi] How to choose a school",
+          "chooseSchoolDesc": "[TODO: vi] A step-by-step framework for parents",
+          "understandFees": "[TODO: vi] Understanding school fees",
+          "understandFeesDesc": "[TODO: vi] Tuition, extras & first-year costs",
+          "visaGuide": "[TODO: vi] Student visa guide",
+          "visaGuideDesc": "[TODO: vi] Student visa 500 essentials",
+          "allGuides": "[TODO: vi] All guides",
+          "allGuidesDesc": "[TODO: vi] Browse every guide for international families"
+        }
+      },
       "explore": {
         "label": "Khám phá",
         "items": {

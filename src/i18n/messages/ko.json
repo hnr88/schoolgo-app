@@ -27,6 +27,11 @@
       "agents": "유학원",
       "schools": "학교"
     },
+    "audienceHrefs": {
+      "parents": "[TODO: ko] Parents landing page",
+      "agents": "[TODO: ko] Agents landing page",
+      "schools": "[TODO: ko] Schools landing page"
+    },
     "nav": {
       "parent": {
         "howItWorks": "이용 방법",
@@ -51,6 +56,32 @@
     "closeMenu": "메뉴 닫기",
     "menu": "Menu",
     "subNav": {
+      "findSchools": {
+        "label": "[TODO: ko] Find Schools",
+        "items": {
+          "searchAllSchools": "[TODO: ko] Search all schools",
+          "searchAllSchoolsDesc": "[TODO: ko] Browse every registered Australian school",
+          "compareSchools": "[TODO: ko] Compare schools",
+          "compareSchoolsDesc": "[TODO: ko] Side-by-side fees, tests & intakes",
+          "schoolTypes": "[TODO: ko] School types in Australia",
+          "schoolTypesDesc": "[TODO: ko] Government, Catholic & independent compared",
+          "englishRequirements": "[TODO: ko] English test requirements",
+          "englishRequirementsDesc": "[TODO: ko] AEAS, IELTS & every accepted test"
+        }
+      },
+      "guides": {
+        "label": "[TODO: ko] Guides",
+        "items": {
+          "chooseSchool": "[TODO: ko] How to choose a school",
+          "chooseSchoolDesc": "[TODO: ko] A step-by-step framework for parents",
+          "understandFees": "[TODO: ko] Understanding school fees",
+          "understandFeesDesc": "[TODO: ko] Tuition, extras & first-year costs",
+          "visaGuide": "[TODO: ko] Student visa guide",
+          "visaGuideDesc": "[TODO: ko] Student visa 500 essentials",
+          "allGuides": "[TODO: ko] All guides",
+          "allGuidesDesc": "[TODO: ko] Browse every guide for international families"
+        }
+      },
       "explore": {
         "label": "탐색",
         "items": {

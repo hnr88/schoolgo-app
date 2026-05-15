@@ -27,6 +27,11 @@
       "agents": "Agents",
       "schools": "Schools"
     },
+    "audienceHrefs": {
+      "parents": "Parents landing page",
+      "agents": "Agents landing page",
+      "schools": "Schools landing page"
+    },
     "nav": {
       "parent": {
         "howItWorks": "How it works",
@@ -51,26 +56,52 @@
     "closeMenu": "Close menu",
     "menu": "Menu",
     "subNav": {
+      "findSchools": {
+        "label": "Find Schools",
+        "items": {
+          "searchAllSchools": "Search all schools",
+          "searchAllSchoolsDesc": "Browse every registered Australian school",
+          "compareSchools": "Compare schools",
+          "compareSchoolsDesc": "Side-by-side fees, tests & intakes",
+          "schoolTypes": "School types in Australia",
+          "schoolTypesDesc": "Government, Catholic & independent compared",
+          "englishRequirements": "English test requirements",
+          "englishRequirementsDesc": "AEAS, IELTS & every accepted test"
+        }
+      },
+      "guides": {
+        "label": "Guides",
+        "items": {
+          "chooseSchool": "How to choose a school",
+          "chooseSchoolDesc": "A step-by-step framework for parents",
+          "understandFees": "Understanding school fees",
+          "understandFeesDesc": "Tuition, extras & first-year costs",
+          "visaGuide": "Student visa guide",
+          "visaGuideDesc": "Student visa 500 essentials",
+          "allGuides": "All guides",
+          "allGuidesDesc": "Browse every guide for international families"
+        }
+      },
       "explore": {
         "label": "Explore",
         "items": {
           "browseSchools": "Browse schools",
-          "browseSchoolsDesc": "Search all registered Australian schools",
+          "browseSchoolsDesc": "Search every registered Australian school",
           "compareSchools": "Compare schools",
-          "compareSchoolsDesc": "Side-by-side fees, tests & intakes",
+          "compareSchoolsDesc": "Side-by-side fees, tests, and intakes",
           "schoolTypes": "School types",
-          "schoolTypesDesc": "Government, Catholic & independent compared",
+          "schoolTypesDesc": "Government, Catholic, and independent compared",
           "englishTests": "English tests",
-          "englishTestsDesc": "AEAS, IELTS & accepted test guide"
+          "englishTestsDesc": "AEAS, IELTS, and every accepted test"
         }
       },
       "resources": {
         "label": "Resources",
         "items": {
           "admissionsGuide": "Admissions guide",
-          "admissionsGuideDesc": "Step-by-step enrolment process",
+          "admissionsGuideDesc": "Step-by-step framework for international families",
           "schoolFees": "School fees",
-          "schoolFeesDesc": "Tuition, extras & first-year costs",
+          "schoolFeesDesc": "Tuition, extras, and first-year costs",
           "visaRequirements": "Visa requirements",
           "visaRequirementsDesc": "Student visa 500 essentials",
           "allGuides": "All guides",
@@ -81,13 +112,13 @@
         "label": "About",
         "items": {
           "aboutSchoolGo": "About SchoolGo",
-          "aboutSchoolGoDesc": "Our mission and story",
+          "aboutSchoolGoDesc": "Our mission for international families",
           "contactUs": "Contact us",
-          "contactUsDesc": "Get in touch with our team",
+          "contactUsDesc": "Talk to our team",
           "forAgents": "For agents",
-          "forAgentsDesc": "Tools for education agents",
+          "forAgentsDesc": "Partner with SchoolGo",
           "forSchools": "For schools",
-          "forSchoolsDesc": "Grow your international cohort"
+          "forSchoolsDesc": "List your school on SchoolGo"
         }
       }
     }
@@ -130,7 +161,18 @@
           "privacy": "Privacy",
           "terms": "Terms"
         }
+      },
+      "company": {
+        "title": "Company",
+        "links": {
+          "about": "About SchoolGo",
+          "contact": "Contact us"
+        }
       }
+    },
+    "extraLinks": {
+      "aboutSchoolGo": "About SchoolGo",
+      "contactUs": "Contact us"
     },
     "language": "Language",
     "copyright": "© {year} SchoolGo Australia. All rights reserved.",
@@ -144,7 +186,7 @@
   },
   "ParentsHero": {
     "trustPill": {
-      "brand": "Government",
+      "brand": "CRICOS",
       "brandAccent": "Registered",
       "source": "data from data.gov.au"
     },
@@ -175,19 +217,19 @@
       "shortlistRemove": "Remove {name} from shortlist",
       "cards": {
         "a": {
-          "name": "Scotch College Melbourne",
-          "location": "Hawthorn, VIC",
-          "curriculum": "VCE",
-          "fee": "$38.5k AUD",
-          "boarding": "Boarding",
-          "rating": "4.9"
-        },
-        "b": {
           "name": "Sydney Grammar School",
           "location": "Darlinghurst, NSW",
           "curriculum": "HSC",
           "fee": "$41.2k AUD",
           "boarding": "Day only",
+          "rating": "4.8"
+        },
+        "b": {
+          "name": "Melbourne Grammar School",
+          "location": "Melbourne, VIC",
+          "curriculum": "VCE/IB",
+          "fee": "$42.5k AUD",
+          "boarding": "Boarding",
           "rating": "4.8"
         },
         "c": {
@@ -273,9 +315,9 @@
     }
   },
   "ParentsVerified": {
-    "eyebrow": "Trusted agents",
-    "heading": "Every school has agents who know it best.",
-    "subheading": "Don't rely on a single agent you haven't vetted. SchoolGo shows you which education agents each school actually works with — so you can choose someone with a track record at the schools you're considering.",
+    "eyebrow": "Get expert help",
+    "heading": "Get expert help — free.",
+    "subheading": "Not sure where to start? Every school works with specialist education consultants who know their admissions process inside out. SchoolGo connects you with the right one — so you get expert guidance from choosing a school to submitting your application, at no cost to you.",
     "cards": {
       "a": {
         "name": "Scotch College",
@@ -301,7 +343,7 @@
   },
   "ParentsComparison": {
     "eyebrow": "Side-by-side comparison",
-    "heading": "Put five schools next to each other.",
+    "heading": "Put three schools next to each other.",
     "headingAccent": "Decide in minutes, not months.",
     "shortlistLabel": "Shortlist · {count} schools",
     "columns": {
@@ -320,8 +362,8 @@
   },
   "ParentsPickATest": {
     "eyebrow": "English proficiency",
-    "heading": "Pick a test. See which schools accept it —",
-    "headingAccent": "and the minimum scores.",
+    "heading": "Find out which English test the school requires —",
+    "headingAccent": "and the score your child needs to get in.",
     "subheading": "Every school accepts different English tests at different levels. We map them all — so you can see at a glance which schools match your child's score.",
     "tests": {
       "aeas": {
@@ -360,12 +402,12 @@
         "description": "Accepted by select schools for senior entry"
       }
     },
-    "cta": "See schools accepting this test"
+    "cta": "Check your school's English requirements"
   },
   "ParentsSevenLanguages": {
     "eyebrow": "Seven languages",
     "heading": "The Australian school system shouldn't feel like a mystery.",
-    "subheading": "Fees, entry requirements, VCE, ATAR, boarding, welfare — everything explained in your language. SchoolGo is translated end-to-end into seven languages spoken by families across Asia-Pacific.",
+    "subheading": "Fees, entry requirements, VCE, ATAR, boarding, welfare — everything explained in your language. SchoolGo is translated end-to-end into seven languages spoken by families across the world.",
     "languages": {
       "en": "English",
       "zh": "简体中文",
@@ -398,7 +440,7 @@
   },
   "ParentsTrustBar": {
     "eyebrow": "Trust & compliance",
-    "heading": "Data you can trust.",
+    "heading": "Data you can trust — so you know you're looking at legitimate institutions and accurate information.",
     "subheading": "Every school listed is verified against official Australian government registers — so you know you're looking at legitimate institutions.",
     "items": {
       "cricos": {
@@ -423,25 +465,33 @@
   "ParentsFaq": {
     "heading": "Frequently Asked Questions",
     "items": {
+      "enrol": {
+        "question": "How do I enrol my child in an Australian school from overseas?",
+        "answer": "Start by shortlisting schools that fit your child's year level, location, and budget on SchoolGo. Each school's profile shows the documents, English test scores, and intake dates you'll need to apply. Once you've chosen a school, an education agent or the school's admissions office will guide you through the application and student visa process."
+      },
+      "cost": {
+        "question": "How much does it cost to send my child to school in Australia?",
+        "answer": "International student tuition typically ranges from about A$15,000 to A$45,000 per year, depending on the school, year level, and sector. On top of tuition, plan for application fees, uniforms, technology, boarding (if applicable), and Overseas Student Health Cover. Every SchoolGo profile shows the school's published international fees so you can compare like-for-like."
+      },
+      "englishTest": {
+        "question": "What English test does my child need for an Australian school?",
+        "answer": "Different schools accept different tests — the most common are AEAS, iDAT, Duolingo English Test, IELTS, and PTE Academic, with minimum scores that vary by year level. SchoolGo shows the exact tests and minimum scores each school accepts on its profile."
+      },
+      "visa": {
+        "question": "Do international students need a visa to study at an Australian school?",
+        "answer": "Yes — full-fee international school students study on a Student visa (subclass 500), which requires a Confirmation of Enrolment from a CRICOS-registered school. You'll also need health cover (OSHC) for the duration of the visa. See our student visa guide for the full step-by-step."
+      },
+      "agent": {
+        "question": "What is an education agent and do I need one?",
+        "answer": "Education agents are licensed consultants who help families choose schools, prepare documents, and manage the application and visa process. You don't have to use one, but most international families do — and it's free for you, since agents are paid by the schools. SchoolGo shows you which agents each school works with so you can pick someone with a proven track record."
+      },
+      "schoolTypes": {
+        "question": "What types of schools are there in Australia?",
+        "answer": "Australian schools fall into three sectors — government (public), Catholic, and independent — and may be co-educational, single-sex, day-only, or boarding. Curricula include state certificates like the VCE, HSC, and QCE, plus the International Baccalaureate at many independent schools. Our school types guide explains how each sector works for international students."
+      },
       "free": {
         "question": "Is SchoolGo free?",
         "answer": "Yes. SchoolGo is completely free for parents, education agents, and schools. There are no listing fees, application fees, or subscription costs."
-      },
-      "dataSource": {
-        "question": "Where does the school data come from?",
-        "answer": "All school listings come from the Australian Government's official register of schools approved to enrol international students. We cross-reference this with national school profile data for enrolment figures, performance scores, and locations."
-      },
-      "englishTests": {
-        "question": "What English proficiency tests do Australian schools accept?",
-        "answer": "Different schools accept different tests. The most common are AEAS (Australian Education Assessment Services), iDAT (International Digital Admissions Test), Duolingo English Test, IELTS, and PTE Academic. SchoolGo shows which specific tests each school accepts on their profile page."
-      },
-      "doINeedAgent": {
-        "question": "Do I need an education agent?",
-        "answer": "You don't have to use one, but most families do — and it's free. Education agents help you choose the right school, prepare documents, and manage the application process. SchoolGo shows which agents each school works with, so you can pick someone with a proven track record — not just whoever found you first."
-      },
-      "updateFrequency": {
-        "question": "How often is the data updated?",
-        "answer": "School data is refreshed regularly from official government sources. Schools that have claimed their profile can update their own fees, requirements, and intake dates at any time."
       }
     }
   },
@@ -451,8 +501,7 @@
     "headingEmphasis": "starts",
     "headingSuffix": "with the right school.",
     "subheading": "The right school. The right university. The right career. Start searching — free, no login required.",
-    "ctaPrimary": "Find your school",
-    "ctaSecondary": "Talk to a verified agent"
+    "ctaPrimary": "Find the right school"
   },
   "AgentsMetadata": {
     "title": "SchoolGo — Your entire pipeline. One platform.",
@@ -461,9 +510,9 @@
   },
   "AgentsHero": {
     "eyebrow": "For education agents",
-    "headlinePrefix": "Your entire pipeline.",
+    "headlinePrefix": "All Australian schools. All your students.",
     "headlineEmphasis": "One platform.",
-    "lede": "Stop juggling WeChat threads, WhatsApp groups, and spreadsheets. Every student, every document, every application — one system, from first enquiry to offer letter. Free for every agent.",
+    "lede": "Every Australian school has different fees, English tests, entry requirements, and application forms. SchoolGo brings them all into one place — so you can match, compare, and apply without the guesswork.",
     "ctaPrimary": "Create your agent profile",
     "ctaSecondary": "See how it works",
     "badgeMeta": "Sample agent profile",
@@ -483,25 +532,25 @@
     }
   },
   "AgentsPainPoints": {
-    "eyebrow": "Why agents switch",
-    "heading": "You're the backbone of international admissions. Your tools should act like it.",
-    "subheading": "76% of international school enrolments come through education agents. SchoolGo is built to make you more effective, not to replace you.",
+    "eyebrow": "What you can do",
+    "heading": "Everything you need to place students into Australian schools.",
+    "subheading": "Search, match, apply, and track — every part of the placement workflow, in one platform.",
     "items": {
       "email": {
-        "question": "Scattered across WeChat, WhatsApp, and email?",
-        "answer": "One platform replaces the chaos. Stop copying student details between WeChat threads, WhatsApp groups, and email chains. Every application carries your verified agent attribution — automatically."
+        "question": "Search 695 schools by what matters",
+        "answer": "Filter by fees, English tests, intakes, boarding, and scholarships. Compare side by side. No more digging through school websites one at a time."
       },
       "status": {
-        "question": "Can't see what needs attention today?",
-        "answer": "A daily action queue shows which applications need a follow-up, which documents are expiring, and which families are waiting for an update. No more scrolling through threads to figure out where you left off."
+        "question": "One student profile, every school",
+        "answer": "Enter your student's details once. SchoolGo maps them to each school's requirements — so you see which schools fit and apply without re-entering data."
       },
       "trust": {
-        "question": "Drowning in documents — or worse, fraudulent ones?",
-        "answer": "Families upload passports, test scores, and school reports once. Everything is organised, version-controlled, and tracked for expiry. English scores are verified against official records — so you never unknowingly submit a forged report."
+        "question": "Documents organised, scores verified",
+        "answer": "Passports, transcripts, and test scores uploaded once, tracked for expiry. English scores checked against official records automatically."
       },
       "requirements": {
-        "question": "Re-entering the same student data for every school?",
-        "answer": "Enter a student's profile once. SchoolGo maps it to each school's requirements and generates applications — no more re-keying names, dates, and passport numbers across different forms."
+        "question": "Your commission stays yours",
+        "answer": "SchoolGo is free. No platform fees, no commission splits, no per-student charges. Your relationship with schools stays direct."
       }
     }
   },
@@ -520,16 +569,16 @@
     "steps": {
       "listen": {
         "title": "Capture what the family wants",
-        "description": "Budget, location, English level, desired intake — in one form, in their language."
+        "description": "Budget, location, intake."
       },
       "match": {
         "title": "See best-fit schools",
-        "description": "Filtered by your student's profile. See accepted tests and minimum scores per school.",
+        "description": "Including English test scores.",
         "comingSoon": "Coming soon"
       },
       "deliver": {
         "title": "Deliver a shortlist, not a mess",
-        "description": "A branded PDF the family can screenshot and send to Dad. No PDFs from fifteen different schools.",
+        "description": "A branded PDF the family can screenshot and send to Dad.",
         "comingSoon": "Coming soon"
       }
     },
@@ -591,7 +640,7 @@
   },
   "AgentsScale": {
     "eyebrow": "Network",
-    "heading": "Agents across APAC are joining. Be one of the first.",
+    "heading": "Agents across APAC are joining.",
     "subheading": "From Shanghai to Jakarta, Ho Chi Minh to Seoul — solo agents and multi-branch agencies placing families into Australian K–12.",
     "agents": {
       "a": {
@@ -622,17 +671,17 @@
     "heading": "What agents are saying",
     "items": {
       "a": {
-        "quote": "I used to forward 40 PDFs a week between parents on WeChat and six admissions offices over email. One platform would cut my admin in half.",
+        "quote": "Every school wants a different form, different documents, different English scores. I spend more time on admin than actually helping families.",
         "attribution": "Agency director, Shanghai",
         "meta": "60+ students · 3 counsellors"
       },
       "b": {
-        "quote": "My families want updates at 11pm their time. A live tracker they can check themselves would save me two hours a day on WhatsApp.",
+        "quote": "A parent asks which English test their child needs and I have to check three different school websites to give them an answer. That should take ten seconds.",
         "attribution": "Independent agent, Ho Chi Minh City",
-        "meta": "25+ students · Solo practice"
+        "meta": "Solo practice"
       },
       "c": {
-        "quote": "I re-type the same passport number into five different school forms every week. Enter-once, apply-many would change everything.",
+        "quote": "I've placed into the same twelve schools for years because I know their process. A platform that maps every school's requirements would let me place into hundreds.",
         "attribution": "Senior counsellor, Kuala Lumpur",
         "meta": "40+ students · 2 branches"
       }
@@ -641,12 +690,40 @@
   },
   "AgentsFinalCta": {
     "eyebrow": "Get started",
-    "headingPrefix": "Your students",
-    "headingEmphasis": "deserve",
-    "headingSuffix": "better tools.",
+    "headingPrefix": "You deserve",
+    "headingEmphasis": "better tools",
+    "headingSuffix": "to build a better business.",
     "subheading": "Free. Instant onboarding. One system for every student, every school, every document.",
-    "ctaPrimary": "Create your agent profile",
-    "ctaSecondary": "Book a walkthrough"
+    "ctaPrimary": "Create your agent profile"
+  },
+  "AgentsFaq": {
+    "heading": "Frequently Asked Questions",
+    "items": {
+      "find": {
+        "question": "How do education agents find Australian schools for international students?",
+        "answer": "Agents typically build long-term relationships with a handful of schools and check each school's website, fees, and English requirements one at a time. SchoolGo replaces that workflow with a single searchable database of every CRICOS-registered school — filterable by fees, English tests, intakes, boarding, and scholarships."
+      },
+      "englishTests": {
+        "question": "What English tests do Australian schools accept for international admissions?",
+        "answer": "Most Australian schools accept AEAS, with a growing number accepting iDAT, Duolingo English Test, IELTS, PTE Academic, Cambridge English, and TOEFL. Minimum scores vary by school and year level. SchoolGo lists the exact accepted tests and minimum scores on every school profile."
+      },
+      "verifyScores": {
+        "question": "How do education agents verify student English test scores?",
+        "answer": "Most test providers offer an official verification portal where agents and schools can confirm a score against the candidate's record. SchoolGo automates this — uploaded English scores are checked against the official record so you and the school know the result is genuine."
+      },
+      "becomeAgent": {
+        "question": "How do I become an education agent for Australian schools?",
+        "answer": "There's no single licence to become an Australian education agent, but most schools and the AAERI/QEAC quality frameworks expect training in Australian education, ethical practice, and student welfare. The QEAC (Qualified Education Agent Counsellor) certification is the most widely recognised credential."
+      },
+      "fees": {
+        "question": "Do education agents pay fees to use SchoolGo?",
+        "answer": "No. SchoolGo is free for every agent — no platform fees, no commission splits, no per-student charges. Your commercial relationship with schools stays direct."
+      },
+      "manage": {
+        "question": "How do education agents manage multiple student applications at once?",
+        "answer": "SchoolGo gives you one student profile per family that maps to every school's requirements automatically — so you don't re-key passport numbers, transcripts, or English scores into 15 different forms. Documents are organised, version-controlled, and tracked for expiry, with every status change timestamped for audit."
+      }
+    }
   },
   "SchoolsMetadata": {
     "title": "SchoolGo — Grow your international cohort. Simplify admissions.",
@@ -657,10 +734,9 @@
     "eyebrow": "For Australian schools",
     "headlinePrefix": "Grow your",
     "headlineEmphasis": "international",
-    "headlineSuffix": "cohort. Simplify admissions.",
+    "headlineSuffix": "cohort with students who belong.",
     "lede": "Reach qualified international families. Receive complete applications with verified English scores and documents — in one inbox, in a standard format. Free for every school.",
     "ctaPrimary": "Claim your school profile",
-    "ctaSecondary": "Book a walkthrough",
     "inbox": {
       "eyebrow": "Applications inbox — preview",
       "countLabel": "This month",
@@ -784,7 +860,7 @@
     }
   },
   "SchoolsTestimonial": {
-    "quote": "The hardest part of international admissions isn't finding students — it's processing incomplete applications from 15 different email threads. A standardised inbox would change everything.",
+    "quote": "Finding the right students is hard enough. Processing their applications shouldn't be. A single inbox with complete, verified applications changes everything.",
     "attribution": "Composite quote based on admissions officer interviews"
   },
   "SchoolsFinalCta": {
@@ -1487,21 +1563,29 @@
   "SchoolsFaq": {
     "heading": "Frequently Asked Questions",
     "items": {
-      "claim": {
-        "question": "How do I claim my school's profile?",
-        "answer": "Search for your school on SchoolGo and click \"Claim This School.\" You'll verify your identity as a staff member, and once approved you can edit your profile, update fees, and manage applications."
+      "attract": {
+        "question": "How do Australian schools attract more international students?",
+        "answer": "Schools grow their international cohort by being visible to families and agents in the markets they want to reach, and by making it easy to apply once a family is interested. SchoolGo lists every CRICOS-registered school in seven languages, with translated profiles, fees, and English requirements — so families and agents can find and shortlist your school directly."
+      },
+      "verify": {
+        "question": "How do schools verify international students' English test scores?",
+        "answer": "Each English test provider (AEAS, IELTS, PTE, Duolingo, Cambridge, TOEFL) offers an official verification portal where schools can confirm a candidate's score against the original record. SchoolGo automates this — every English score on an application is checked against the official record before it lands in your inbox."
       },
       "agents": {
-        "question": "How does SchoolGo work with education agents?",
-        "answer": "By default, your profile works with your school's existing agents. You can see which agents have placed students with you, invite new agents, or manage agent relationships from your dashboard."
+        "question": "How do Australian schools work with education agents?",
+        "answer": "Most schools approve a list of education agents who can recommend the school to families and submit applications on their behalf. Schools usually pay the agent a commission only when a placed student enrols. SchoolGo lets you approve or block agents, see which agents have placed students with you, and review every application's agent attribution."
       },
-      "commission": {
-        "question": "Does SchoolGo charge schools or agents?",
-        "answer": "No. SchoolGo is free for everyone — schools, agents, and parents. There are no listing fees, per-student fees, or commission splits."
+      "documents": {
+        "question": "What documents do schools need for an international student application?",
+        "answer": "Standard documents include the student's passport, last two years of school reports, an English test result, proof of guardianship for younger students, and any additional medical or character documents your school requires. SchoolGo arrives applications complete — passports, transcripts, English scores, and required forms in one packaged record."
       },
-      "data": {
-        "question": "Where does the school data come from?",
-        "answer": "All school profiles are auto-published from CRICOS (the Australian Government's official register) and cross-referenced with ACARA school profile data. Schools that claim their profile can update their own details at any time."
+      "cost": {
+        "question": "How much does it cost to list on SchoolGo?",
+        "answer": "Nothing. SchoolGo is free for every school — no listing fees, no per-student fees, no commissions. Your profile auto-publishes from official government data, and claiming it unlocks full editing, applications, and analytics at no cost."
+      },
+      "diversify": {
+        "question": "How do schools diversify their international student intake beyond China?",
+        "answer": "Diversification starts with visibility in the markets you want to grow — Vietnam, Korea, Indonesia, Malaysia, Thailand, and beyond. SchoolGo translates your profile into seven languages and surfaces it to families and agents across the Asia-Pacific, so you can build a balanced cohort across multiple source countries."
       }
     }
   },

@@ -27,6 +27,11 @@
       "agents": "Ejen",
       "schools": "Sekolah"
     },
+    "audienceHrefs": {
+      "parents": "[TODO: ms] Parents landing page",
+      "agents": "[TODO: ms] Agents landing page",
+      "schools": "[TODO: ms] Schools landing page"
+    },
     "nav": {
       "parent": {
         "howItWorks": "Cara penggunaan",
@@ -51,6 +56,32 @@
     "closeMenu": "Tutup menu",
     "menu": "Menu",
     "subNav": {
+      "findSchools": {
+        "label": "[TODO: ms] Find Schools",
+        "items": {
+          "searchAllSchools": "[TODO: ms] Search all schools",
+          "searchAllSchoolsDesc": "[TODO: ms] Browse every registered Australian school",
+          "compareSchools": "[TODO: ms] Compare schools",
+          "compareSchoolsDesc": "[TODO: ms] Side-by-side fees, tests & intakes",
+          "schoolTypes": "[TODO: ms] School types in Australia",
+          "schoolTypesDesc": "[TODO: ms] Government, Catholic & independent compared",
+          "englishRequirements": "[TODO: ms] English test requirements",
+          "englishRequirementsDesc": "[TODO: ms] AEAS, IELTS & every accepted test"
+        }
+      },
+      "guides": {
+        "label": "[TODO: ms] Guides",
+        "items": {
+          "chooseSchool": "[TODO: ms] How to choose a school",
+          "chooseSchoolDesc": "[TODO: ms] A step-by-step framework for parents",
+          "understandFees": "[TODO: ms] Understanding school fees",
+          "understandFeesDesc": "[TODO: ms] Tuition, extras & first-year costs",
+          "visaGuide": "[TODO: ms] Student visa guide",
+          "visaGuideDesc": "[TODO: ms] Student visa 500 essentials",
+          "allGuides": "[TODO: ms] All guides",
+          "allGuidesDesc": "[TODO: ms] Browse every guide for international families"
+        }
+      },
       "explore": {
         "label": "Terokai",
         "items": {

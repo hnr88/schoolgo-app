@@ -27,6 +27,11 @@
       "agents": "中介",
       "schools": "学校"
     },
+    "audienceHrefs": {
+      "parents": "[TODO: zh] Parents landing page",
+      "agents": "[TODO: zh] Agents landing page",
+      "schools": "[TODO: zh] Schools landing page"
+    },
     "nav": {
       "parent": {
         "howItWorks": "使用方法",
@@ -51,6 +56,32 @@
     "closeMenu": "关闭菜单",
     "menu": "Menu",
     "subNav": {
+      "findSchools": {
+        "label": "[TODO: zh] Find Schools",
+        "items": {
+          "searchAllSchools": "[TODO: zh] Search all schools",
+          "searchAllSchoolsDesc": "[TODO: zh] Browse every registered Australian school",
+          "compareSchools": "[TODO: zh] Compare schools",
+          "compareSchoolsDesc": "[TODO: zh] Side-by-side fees, tests & intakes",
+          "schoolTypes": "[TODO: zh] School types in Australia",
+          "schoolTypesDesc": "[TODO: zh] Government, Catholic & independent compared",
+          "englishRequirements": "[TODO: zh] English test requirements",
+          "englishRequirementsDesc": "[TODO: zh] AEAS, IELTS & every accepted test"
+        }
+      },
+      "guides": {
+        "label": "[TODO: zh] Guides",
+        "items": {
+          "chooseSchool": "[TODO: zh] How to choose a school",
+          "chooseSchoolDesc": "[TODO: zh] A step-by-step framework for parents",
+          "understandFees": "[TODO: zh] Understanding school fees",
+          "understandFeesDesc": "[TODO: zh] Tuition, extras & first-year costs",
+          "visaGuide": "[TODO: zh] Student visa guide",
+          "visaGuideDesc": "[TODO: zh] Student visa 500 essentials",
+          "allGuides": "[TODO: zh] All guides",
+          "allGuidesDesc": "[TODO: zh] Browse every guide for international families"
+        }
+      },
       "explore": {
         "label": "探索",
         "items": {
