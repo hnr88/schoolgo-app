@@ -10,6 +10,7 @@ import { useTypedSchoolSearch } from '@/modules/school-search/queries/use-school
 import { mapStoreToTypedRequest } from '@/modules/school-search/lib/store-to-typed-request';
 import { useMapViewportReporter } from '@/modules/school-search/hooks/useMapViewportReporter';
 import { useGeocodeSearch } from '@/modules/school-search/hooks/useGeocodeSearch';
+import { useMapResultFocus } from '@/modules/school-search/hooks/useMapResultFocus';
 import { useStateFilterMapSync } from '@/modules/school-search/hooks/useStateFilterMapSync';
 import { MapZoomControls } from '@/modules/school-search/components/MapZoomControls';
 import { ScrollWheelZoomHandler } from '@/modules/school-search/components/ScrollWheelZoomHandler';
@@ -116,8 +117,30 @@ export function MapView({ className, activePortal }: MapViewProps) {
     () => ({ ...typedRequest, pageSize: 100 }),
     [typedRequest],
   );
+  const cameraRequestKey = useMemo(
+    () =>
+      JSON.stringify({
+        query: typedRequest.q,
+        states: typedRequest.states,
+        suburb: typedRequest.suburb,
+        postcode: typedRequest.postcode,
+        sectors: typedRequest.sectors,
+        accommodation: typedRequest.accommodation,
+        religiousAffiliations: typedRequest.religiousAffiliations,
+        entryYearLevels: typedRequest.entryYearLevels,
+        studentAge: typedRequest.studentAge,
+        entryTerms: typedRequest.entryTerms,
+        programTypes: typedRequest.programTypes,
+        atarAvailable: typedRequest.atarAvailable,
+        englishLanguageSupport: typedRequest.englishLanguageSupport,
+        englishTest: typedRequest.englishTest,
+        feeMin: typedRequest.feeMin,
+        feeMax: typedRequest.feeMax,
+      }),
+    [typedRequest],
+  );
 
-  const { data } = useTypedSchoolSearch(mapTypedRequest);
+  const { data, isFetching, isPlaceholderData } = useTypedSchoolSearch(mapTypedRequest);
   const freshSchools = data?.data?.hits ?? EMPTY_SCHOOLS;
   const prevSchoolsRef = useRef<SchoolHit[]>(EMPTY_SCHOOLS);
 
@@ -186,6 +209,7 @@ export function MapView({ className, activePortal }: MapViewProps) {
   useMapViewportReporter(map);
   useGeocodeSearch(map);
   useStateFilterMapSync(map);
+  useMapResultFocus(map, freshSchools, cameraRequestKey, isFetching || isPlaceholderData);
 
   return (
     <>
