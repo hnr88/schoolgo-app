@@ -51,7 +51,7 @@ export async function AgentsScale() {
         </div>
 
         <div>
-          <CtaLink href='/agents' arrow>
+          <CtaLink href='/search' arrow>
             {t('cta')}
           </CtaLink>
         </div>

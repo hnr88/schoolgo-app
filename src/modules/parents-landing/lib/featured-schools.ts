@@ -9,12 +9,52 @@ import type {
 interface FeaturedTarget {
   name: string;
   slug: string;
+  fallback: FeaturedSchool;
 }
 
 const FEATURED: FeaturedTarget[] = [
-  { name: 'Sydney Grammar School', slug: 'sydney-grammar-school' },
-  { name: 'Melbourne Grammar School', slug: 'melbourne-grammar-school' },
-  { name: 'Brisbane Grammar School', slug: 'brisbane-grammar-school' },
+  {
+    name: 'Sydney Grammar School',
+    slug: 'sydney-grammar-school',
+    fallback: {
+      documentId: 'featured-sydney-grammar-school',
+      slug: 'sydney-grammar-school',
+      name: 'Sydney Grammar School',
+      suburb: 'Darlinghurst',
+      state: 'NSW',
+      curriculumOffered: 'HSC',
+      lowestAnnualTuition: 52410,
+      photoUrl: pickImage('featured-sydney-grammar-school'),
+    },
+  },
+  {
+    name: 'Melbourne Grammar School',
+    slug: 'melbourne-grammar-school',
+    fallback: {
+      documentId: 'featured-melbourne-grammar-school',
+      slug: 'melbourne-grammar-school',
+      name: 'Melbourne Grammar School',
+      suburb: 'Melbourne',
+      state: 'VIC',
+      curriculumOffered: 'VCE',
+      lowestAnnualTuition: 64000,
+      photoUrl: pickImage('featured-melbourne-grammar-school'),
+    },
+  },
+  {
+    name: 'Brisbane Grammar School',
+    slug: 'brisbane-grammar-school',
+    fallback: {
+      documentId: 'featured-brisbane-grammar-school',
+      slug: 'brisbane-grammar-school',
+      name: 'Brisbane Grammar School',
+      suburb: 'Brisbane',
+      state: 'QLD',
+      curriculumOffered: 'QCE, IB Diploma',
+      lowestAnnualTuition: 41000,
+      photoUrl: pickImage('featured-brisbane-grammar-school'),
+    },
+  },
 ];
 
 export interface FeaturedSchool {
@@ -84,6 +124,14 @@ function fromHit(hit: SchoolHit): FeaturedSchool {
   };
 }
 
+function normalizedName(value: string): string {
+  return value.toLowerCase().replace(/[^a-z0-9]/g, '');
+}
+
+function isTargetSchool(name: string, target: FeaturedTarget): boolean {
+  return normalizedName(name).includes(normalizedName(target.name));
+}
+
 async function fetchByQuery(query: string): Promise<SchoolApiRecord | null> {
   try {
     const response = await fetch(
@@ -147,9 +195,9 @@ async function resolveOne(target: FeaturedTarget): Promise<FeaturedSchool | null
   if (byContains) return fromRecord(byContains);
 
   const hit = await fetchByName(target.name);
-  if (hit) return fromHit(hit);
+  if (hit && isTargetSchool(hit.name, target)) return fromHit(hit);
 
-  return null;
+  return target.fallback;
 }
 
 export async function getFeaturedSchools(): Promise<FeaturedSchool[]> {

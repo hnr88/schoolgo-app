@@ -11,8 +11,8 @@ export const HERO_ROWS: HeroRow[] = [
 ];
 
 export const PLANS: Plan[] = [
-  { key: 'listing', featureKeys: ['a', 'b', 'c'], ctaHref: '/schools' },
-  { key: 'admissions', featured: true, featureKeys: ['a', 'b', 'c', 'd'], ctaHref: '/schools' },
+  { key: 'listing', featureKeys: ['a', 'b', 'c'], ctaHref: '/search' },
+  { key: 'admissions', featured: true, featureKeys: ['a', 'b', 'c', 'd'], ctaHref: '/search' },
 ];
 
 export const STATS_ITEMS = ['schools', 'states', 'sectors', 'feeRange'] as const;

@@ -74,7 +74,7 @@ export async function ParentsHero() {
               {featuredSchools.map((school) => (
                 <div key={school.documentId} className='w-64 snap-start sm:w-auto'>
                   <SchoolCard
-                    href={`/parent/schools/${school.slug}`}
+                    href='/search'
                     photoUrl={school.photoUrl}
                     name={school.name}
                     location={`${school.suburb}, ${school.state}`}

@@ -129,15 +129,16 @@ export function MarketingHeaderClient({
                 <a
                   key={link.href}
                   href={link.href}
+                  aria-current={isActive ? 'page' : undefined}
                   className={cn(
-                    'rounded-pill px-3 py-1 text-sm font-medium no-underline transition-colors',
+                    'rounded-pill border px-3 py-1 text-sm font-semibold no-underline transition-colors',
                     isDark && !scrolled
                       ? isActive
-                        ? 'text-white'
-                        : 'text-white/70 hover:bg-white/10 hover:text-white'
+                        ? 'border-background bg-background text-ink-900 shadow-1'
+                        : 'border-background/35 bg-background/5 text-background/80 hover:bg-background/10 hover:text-background'
                       : isActive
-                        ? 'text-ink-900'
-                        : 'text-foggy hover:bg-muted hover:text-ink-900',
+                        ? 'border-primary bg-primary text-on-primary shadow-brand'
+                        : 'border-border bg-card text-foreground hover:border-primary/40 hover:bg-muted',
                   )}
                 >
                   {link.label}
@@ -148,7 +149,7 @@ export function MarketingHeaderClient({
 
           <div className='ml-auto hidden shrink-0 items-center gap-2 md:flex'>
             <Link
-              href='/sign-in'
+              href='/search'
               data-slot='button'
               className={cn(
                 'rounded-pill px-3 py-1.5 text-sm font-medium no-underline transition-colors',
@@ -245,16 +246,27 @@ export function MarketingHeaderClient({
 
           <div data-scroll className='flex flex-1 flex-col overflow-y-auto px-4 py-2'>
             <div className='flex flex-col'>
-              {navLinks.map((link) => (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  onClick={() => setMobileOpen(false)}
-                  className='rounded-lg px-3 py-2 text-sm font-semibold text-foreground no-underline hover:bg-muted'
-                >
-                  {link.label}
-                </a>
-              ))}
+              <div className='flex flex-wrap gap-2 px-1 py-2'>
+                {navLinks.map((link) => {
+                  const isActive = link.isActive;
+                  return (
+                    <a
+                      key={link.href}
+                      href={link.href}
+                      aria-current={isActive ? 'page' : undefined}
+                      onClick={() => setMobileOpen(false)}
+                      className={cn(
+                        'rounded-pill border px-3 py-2 text-sm font-semibold no-underline transition-colors',
+                        isActive
+                          ? 'border-primary bg-primary text-on-primary shadow-brand'
+                          : 'border-border bg-card text-foreground hover:border-primary/40 hover:bg-muted',
+                      )}
+                    >
+                      {link.label}
+                    </a>
+                  );
+                })}
+              </div>
             </div>
 
             {subMenus.map((menu) => (
@@ -278,7 +290,7 @@ export function MarketingHeaderClient({
 
           <div className='flex items-center gap-2 border-t border-divider px-4 py-3'>
             <Link
-              href='/sign-in'
+              href='/search'
               onClick={() => setMobileOpen(false)}
               data-slot='button'
               className='flex-1 rounded-pill border border-border px-3 py-2 text-center text-sm font-semibold text-foreground no-underline transition-colors hover:bg-muted'

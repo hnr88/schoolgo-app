@@ -53,6 +53,7 @@ const FORCE_EN_PATHS = new Set([
   // AgentsHero
   'AgentsHero.headlinePrefix',
   'AgentsHero.lede',
+  'AgentsHero.stats.sectors.label',
   // AgentsPainPoints (entire content replaced)
   'AgentsPainPoints.eyebrow',
   'AgentsPainPoints.heading',
@@ -69,6 +70,8 @@ const FORCE_EN_PATHS = new Set([
   'AgentsMatching.steps.listen.description',
   'AgentsMatching.steps.match.description',
   'AgentsMatching.steps.deliver.description',
+  // AgentsCommission
+  'AgentsCommission.statLabel',
   // AgentsScale
   'AgentsScale.heading',
   // AgentsTestimonial — quote and b.meta changed
@@ -80,10 +83,32 @@ const FORCE_EN_PATHS = new Set([
   'AgentsFinalCta.headingPrefix',
   'AgentsFinalCta.headingEmphasis',
   'AgentsFinalCta.headingSuffix',
+  // AgentsFaq
+  'AgentsFaq.items.find.answer',
+  'AgentsFaq.items.verifyScores.answer',
+  'AgentsFaq.items.fees.answer',
+  'AgentsFaq.items.manage.answer',
+  // ParentsFaq
+  'ParentsFaq.items.englishTest.answer',
+  'ParentsFaq.items.visa.answer',
+  'ParentsFaq.items.agent.answer',
+  'ParentsFaq.items.schoolTypes.answer',
   // SchoolsHero
   'SchoolsHero.headlineSuffix',
+  'SchoolsHero.inbox.eyebrow',
+  // SchoolsStats
+  'SchoolsStats.items.sectors.label',
+  // SchoolsTimeline
+  'SchoolsTimeline.heading',
   // SchoolsTestimonial
   'SchoolsTestimonial.quote',
+  'SchoolsTestimonial.attribution',
+  // SchoolsFaq
+  'SchoolsFaq.items.attract.answer',
+  'SchoolsFaq.items.verify.answer',
+  'SchoolsFaq.items.documents.answer',
+  'SchoolsFaq.items.cost.answer',
+  'SchoolsFaq.items.diversify.answer',
 ]);
 
 function isObject(v) {

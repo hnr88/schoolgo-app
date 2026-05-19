@@ -33,7 +33,7 @@ export async function AgentsHero() {
             {t('lede', { count: stats.totalSchools })}
           </p>
           <div className='flex flex-wrap gap-3 pt-2'>
-            <CtaLink href='/agents' size='lg' arrow>
+            <CtaLink href='/search' size='lg' arrow>
               {t('ctaPrimary')}
             </CtaLink>
             <CtaLink href='#how-it-works' variant='secondary' size='lg'>

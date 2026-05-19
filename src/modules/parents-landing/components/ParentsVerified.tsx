@@ -22,10 +22,12 @@ export async function ParentsVerified() {
             {VERIFIED_CARDS.map((card) => (
               <div key={card.key} className='w-64 snap-start sm:w-auto'>
                 <SchoolCard
+                  href='/search'
                   photoUrl={card.image}
                   name={t(`cards.${card.key}.name`)}
                   location={`${t(`cards.${card.key}.location`)} · ${t(`cards.${card.key}.sector`)}`}
                   cricosLabel={tc('cricosVerified')}
+                  className='transition-transform hover:-translate-y-1'
                 />
               </div>
             ))}

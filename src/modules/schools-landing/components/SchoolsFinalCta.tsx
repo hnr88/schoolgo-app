@@ -22,10 +22,10 @@ export async function SchoolsFinalCta() {
         />
 
         <div className='mt-4 flex flex-wrap justify-center gap-3'>
-          <CtaLink href='/schools' size='lg' arrow>
+          <CtaLink href='/search' size='lg' arrow>
             {t('ctaPrimary')}
           </CtaLink>
-          <CtaLink href='/schools' variant='secondary' size='lg'>
+          <CtaLink href='/search' variant='secondary' size='lg'>
             {t('ctaSecondary')}
           </CtaLink>
         </div>

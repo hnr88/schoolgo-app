@@ -25,7 +25,7 @@ const PARENT_SECONDARY_COLUMN: FooterColumn = {
     { label: 'How it works', path: '/#how-it-works' },
     { label: 'Trusted agents', path: '/#trusted-agents' },
     { label: 'FAQ', path: '/#faq' },
-    { label: 'Parent sign in', path: '/sign-in' },
+    { label: 'Parent sign in', path: '/search' },
   ],
 };
 
@@ -55,8 +55,8 @@ const AGENT_SECONDARY_COLUMN: FooterColumn = {
   links: [
     { label: 'How it works', path: '/#how-it-works' },
     { label: 'Agent profile', path: '/#trust' },
-    { columnKey: 'agents', linkKey: 'login', path: '/sign-in' },
-    { label: 'Create agent account', path: '/sign-up' },
+    { columnKey: 'agents', linkKey: 'login', path: '/search' },
+    { label: 'Create agent account', path: '/search' },
   ],
 };
 
@@ -75,15 +75,15 @@ const SCHOOL_SECONDARY_COLUMN: FooterColumn = {
   links: [
     { label: 'How it works', path: '/#how-it-works' },
     { label: 'FAQ', path: '/#faq' },
-    { columnKey: 'schools', linkKey: 'login', path: '/sign-in' },
-    { label: 'Create school account', path: '/sign-up' },
+    { columnKey: 'schools', linkKey: 'login', path: '/search' },
+    { label: 'Create school account', path: '/search' },
   ],
 };
 
 const COMPANY_COLUMN: FooterColumn = {
   links: [
-    { columnKey: 'company', linkKey: 'about', path: '/launching-soon' },
-    { columnKey: 'company', linkKey: 'contact', path: '/launching-soon' },
+    { columnKey: 'company', linkKey: 'about', path: '/search' },
+    { columnKey: 'company', linkKey: 'contact', path: '/search' },
   ],
 };
 

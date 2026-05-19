@@ -22,7 +22,7 @@ export async function AgentsFinalCta() {
         />
 
         <div className='mt-4 flex flex-wrap justify-center gap-3'>
-          <CtaLink href='/agents' size='lg' arrow>
+          <CtaLink href='/search' size='lg' arrow>
             {t('ctaPrimary')}
           </CtaLink>
         </div>

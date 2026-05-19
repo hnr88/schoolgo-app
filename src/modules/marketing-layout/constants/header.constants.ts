@@ -9,7 +9,7 @@ export const SUB_MENU_ITEMS: Record<
 > = {
   findSchools: [
     { key: 'searchAllSchools', href: '/search', icon: 'search' },
-    { key: 'compareSchools', href: '/launching-soon', icon: 'compare' },
+    { key: 'compareSchools', href: '/search', icon: 'compare' },
     { key: 'schoolTypes', href: '/guides/school-types', icon: 'school' },
     { key: 'englishRequirements', href: '/guides/english-requirements', icon: 'languages' },
   ],

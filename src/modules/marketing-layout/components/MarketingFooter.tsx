@@ -102,8 +102,8 @@ export async function MarketingFooter({ activePortal }: MarketingFooterProps) {
                   aria-current={isActive ? 'page' : undefined}
                   className={`rounded-pill border px-3 py-1 text-sm leading-none no-underline transition-colors ${
                     isActive
-                      ? 'border-white/25 bg-white/10 font-semibold text-white'
-                      : 'border-white/10 text-white/60 hover:border-white/25 hover:text-white/85'
+                      ? 'border-background bg-background font-semibold text-ink-900'
+                      : 'border-background/20 bg-background/5 text-background/70 hover:border-background/40 hover:bg-background/10 hover:text-background'
                   }`}
                 >
                   {t(`portalLabels.${a.key}`)}
