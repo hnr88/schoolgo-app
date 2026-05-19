@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from 'react';
 import { ChevronDown, Sparkles } from 'lucide-react';
+import { Link } from '@/i18n/navigation';
 import { cn } from '@/lib/utils';
 import type { MarketingSubHeaderProps } from '@/modules/marketing-layout/types/header.types';
 import { ICONS } from '../constants/sub-header.constants';
@@ -75,16 +76,16 @@ export function MarketingSubHeader({
 
               {openIndex === i && (
                 <div className='absolute right-0 top-full z-50 pt-2'>
-                  <div className='w-[22rem] rounded-xl border border-border bg-background p-2 shadow-4 ring-1 ring-ink-900/[0.03]'>
+                  <div className='w-88 rounded-xl border border-border bg-background p-2 shadow-4 ring-1 ring-border'>
                     <div className='grid gap-1'>
                       {menu.items.map((item) => {
                         const Icon =
                           ICONS[item.icon as keyof typeof ICONS] ?? Sparkles;
                         return (
-                          <a
+                          <Link
                             key={item.key}
                             href={item.href}
-                            className='group/item grid grid-cols-[2rem_1fr] gap-3 rounded-lg px-2.5 py-2.5 no-underline transition-colors hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring'
+                            className='group/item flex gap-3 rounded-lg px-2.5 py-2.5 no-underline transition-colors hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring'
                           >
                             <span className='flex h-8 w-8 items-center justify-center rounded-lg bg-rausch-50 text-primary transition-colors group-hover/item:bg-primary group-hover/item:text-on-primary'>
                               <Icon className='h-4 w-4' strokeWidth={1.8} aria-hidden='true' />
@@ -99,7 +100,7 @@ export function MarketingSubHeader({
                                 </span>
                               )}
                             </span>
-                          </a>
+                          </Link>
                         );
                       })}
                     </div>

@@ -33,6 +33,8 @@ const GUIDES_COLUMN: FooterColumn = {
   links: [
     { label: 'Choose a school', path: '/guides/choose-a-school' },
     { label: 'School fees', path: '/guides/school-fees' },
+    { label: 'Admissions hub', path: '/admissions' },
+    { label: 'Resource examples', path: '/resources' },
     { label: 'Accommodation', path: '/guides/accommodation' },
     { label: 'Student visa', path: '/guides/student-visa' },
     { label: 'English requirements', path: '/guides/english-requirements' },
@@ -82,8 +84,10 @@ const SCHOOL_SECONDARY_COLUMN: FooterColumn = {
 
 const COMPANY_COLUMN: FooterColumn = {
   links: [
-    { columnKey: 'company', linkKey: 'about', path: '/search' },
-    { columnKey: 'company', linkKey: 'contact', path: '/search' },
+    { columnKey: 'company', linkKey: 'about', path: '/about' },
+    { columnKey: 'company', linkKey: 'contact', path: '/contact' },
+    { label: 'Data methodology', path: '/resources/schoolgo-data-methodology' },
+    { label: 'Privacy and safety', path: '/resources/privacy-and-safety' },
   ],
 };
 

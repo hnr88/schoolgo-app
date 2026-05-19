@@ -12,8 +12,8 @@ export function SearchBar({ className }: SearchBarProps) {
   const t = useTranslations('SchoolSearch');
   const query = useSchoolSearchStore((s) => s.query);
   const setQuery = useSchoolSearchStore((s) => s.setQuery);
-  const setSuburb = useSchoolSearchStore((s) => s.setSuburb);
-  const setPostcode = useSchoolSearchStore((s) => s.setPostcode);
+  const clearSearch = useSchoolSearchStore((s) => s.clearSearch);
+  const setLocationSearch = useSchoolSearchStore((s) => s.setLocationSearch);
   const inputRef = useRef<HTMLInputElement>(null);
   const blurTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const [isFocused, setIsFocused] = useState(false);
@@ -32,6 +32,11 @@ export function SearchBar({ className }: SearchBarProps) {
 
   const handleBlur = () => {
     blurTimerRef.current = setTimeout(() => setIsFocused(false), 150);
+  };
+
+  const handleClearSearch = () => {
+    clearSearch();
+    requestAnimationFrame(() => inputRef.current?.focus());
   };
 
   return (
@@ -64,7 +69,7 @@ export function SearchBar({ className }: SearchBarProps) {
         {query && (
           <button
             type='button'
-            onClick={() => setQuery('')}
+            onClick={handleClearSearch}
             aria-label={t('clearSearch')}
             className='flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-muted text-foggy transition-colors hover:bg-ink-200 hover:text-foreground'
           >
@@ -80,8 +85,7 @@ export function SearchBar({ className }: SearchBarProps) {
           setIsFocused(false);
         }}
         onSelectSuburb={(hit) => {
-          setSuburb(hit.suburb);
-          setPostcode(hit.postcode);
+          setLocationSearch({ suburb: hit.suburb, postcode: hit.postcode });
           setIsFocused(false);
         }}
         onClose={() => setIsFocused(false)}

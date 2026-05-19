@@ -409,6 +409,8 @@
 
 .school-map-cluster__circle {
   display: grid;
+  width: 100%;
+  height: 100%;
   place-items: center;
   border-radius: 999px;
   background: var(--primary);

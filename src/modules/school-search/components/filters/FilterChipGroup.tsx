@@ -12,6 +12,7 @@ type FilterChipGroupProps<T extends string> = {
   size?: 'sm' | 'md';
   getLabel: (option: FilterOption<T>) => string;
   className?: string;
+  buttonClassName?: string;
 };
 
 function isSelected<T extends string>(
@@ -48,6 +49,7 @@ export function FilterChipGroup<T extends string>({
   size = 'md',
   getLabel,
   className,
+  buttonClassName,
 }: FilterChipGroupProps<T>) {
   return (
     <div
@@ -71,6 +73,7 @@ export function FilterChipGroup<T extends string>({
               selected
                 ? 'border-primary bg-primary text-primary-foreground'
                 : 'border-border bg-background text-foreground hover:bg-muted',
+              buttonClassName,
             )}
           >
             {getLabel(option)}

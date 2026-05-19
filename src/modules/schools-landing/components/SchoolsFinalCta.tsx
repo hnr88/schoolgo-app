@@ -25,7 +25,7 @@ export async function SchoolsFinalCta() {
           <CtaLink href='/search' size='lg' arrow>
             {t('ctaPrimary')}
           </CtaLink>
-          <CtaLink href='/search' variant='secondary' size='lg'>
+          <CtaLink href='/launching-soon?variant=dashboard' variant='secondary' size='lg'>
             {t('ctaSecondary')}
           </CtaLink>
         </div>

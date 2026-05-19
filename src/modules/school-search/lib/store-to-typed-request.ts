@@ -32,15 +32,39 @@ export interface SchoolSearchStoreSnapshot {
   sortBy: SortOption;
 }
 
+function normalizeSearchText(value: string): string {
+  return value.toLowerCase().replace(/[^a-z0-9]/g, '');
+}
+
+function isLocationDisplayQuery(query: string, suburb: string, postcode: string): boolean {
+  const normalizedQuery = normalizeSearchText(query);
+  if (!normalizedQuery || !suburb) return false;
+
+  const normalizedSuburb = normalizeSearchText(suburb);
+  const normalizedPostcode = normalizeSearchText(postcode);
+  const locationLabels = [
+    normalizedSuburb,
+    normalizedPostcode,
+    `${normalizedSuburb}${normalizedPostcode}`,
+  ];
+
+  return locationLabels.includes(normalizedQuery);
+}
+
 export function mapStoreToTypedRequest(
   store: SchoolSearchStoreSnapshot,
 ): TypedSearchRequest {
   const trimmedQuery = store.query.trim();
   const trimmedSuburb = store.suburb?.trim();
   const trimmedPostcode = store.postcode?.trim();
+  const shouldSendQuery = !isLocationDisplayQuery(
+    trimmedQuery,
+    trimmedSuburb,
+    trimmedPostcode,
+  );
 
   return {
-    q: trimmedQuery || undefined,
+    q: shouldSendQuery ? trimmedQuery || undefined : undefined,
     states: store.states.length ? store.states : undefined,
     suburb: trimmedSuburb || undefined,
     postcode: trimmedPostcode || undefined,

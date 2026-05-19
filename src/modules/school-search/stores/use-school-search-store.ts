@@ -68,6 +68,8 @@ interface SchoolSearchState {
   resetCount: number;
 
   setQuery: (q: string) => void;
+  clearSearch: () => void;
+  setLocationSearch: (location: { suburb: string; postcode: string }) => void;
   setSuburb: (suburb: string) => void;
   setPostcode: (postcode: string) => void;
   setFeeRange: (min: number, max: number) => void;
@@ -147,9 +149,12 @@ function toggleArrayItem<T>(arr: T[], item: T): T[] {
 
 export const useSchoolSearchStore = create<SchoolSearchState>((set, get) => ({
   ...initialState,
-  setQuery: (query) => set({ query }),
-  setSuburb: (suburb) => set({ suburb }),
-  setPostcode: (postcode) => set({ postcode }),
+  setQuery: (query) => set({ query, suburb: '', postcode: '', geocodedQuery: '' }),
+  clearSearch: () => set({ query: '', suburb: '', postcode: '', geocodedQuery: '' }),
+  setLocationSearch: ({ suburb, postcode }) =>
+    set({ query: suburb, suburb, postcode, geocodedQuery: '' }),
+  setSuburb: (suburb) => set({ suburb, geocodedQuery: '' }),
+  setPostcode: (postcode) => set({ postcode, geocodedQuery: '' }),
   setFeeRange: (feeMin, feeMax) =>
     set({
       feeMin: Math.max(FEE_MIN, feeMin),

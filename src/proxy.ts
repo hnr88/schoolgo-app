@@ -181,6 +181,18 @@ export function proxy(request: NextRequest) {
     return withRobotsHeader(NextResponse.next(), hostname);
   }
 
+  if (
+    pathAfterLocale === 'resources' ||
+    pathAfterLocale.startsWith('resources/') ||
+    ['about', 'contact', 'admissions', 'fees', 'student-life'].includes(pathAfterLocale)
+  ) {
+    if (!hasLocale) {
+      url.pathname = `/${locale}/${pathAfterLocale}`;
+      return withRobotsHeader(NextResponse.rewrite(url), hostname);
+    }
+    return withRobotsHeader(NextResponse.next(), hostname);
+  }
+
   const isPortalSearchPath = pathAfterLocale === `${portal}/search`;
   if (loggedInPortal && loggedInPortal === portal && isPortalSearchPath) {
     url.pathname = `/${locale}/dashboard/search`;

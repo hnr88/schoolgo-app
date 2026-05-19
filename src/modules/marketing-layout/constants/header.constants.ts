@@ -1,7 +1,7 @@
 import type { Portal } from '@/lib/portal-url';
 import type { AudienceKey } from '@/modules/marketing-layout/types/header.types';
 
-export const SUB_MENUS = ['findSchools', 'guides'] as const;
+export const SUB_MENUS = ['findSchools', 'guides', 'resources', 'explore', 'about'] as const;
 
 export const SUB_MENU_ITEMS: Record<
   string,
@@ -18,6 +18,24 @@ export const SUB_MENU_ITEMS: Record<
     { key: 'understandFees', href: '/guides/school-fees', icon: 'wallet' },
     { key: 'visaGuide', href: '/guides/student-visa', icon: 'badge' },
     { key: 'allGuides', href: '/guides', icon: 'library' },
+  ],
+  resources: [
+    { key: 'admissionsGuide', href: '/admissions', icon: 'book' },
+    { key: 'schoolFees', href: '/fees', icon: 'wallet' },
+    { key: 'visaRequirements', href: '/resources/student-visa-overview', icon: 'badge' },
+    { key: 'allGuides', href: '/resources', icon: 'library' },
+  ],
+  explore: [
+    { key: 'browseSchools', href: '/search', icon: 'search' },
+    { key: 'compareSchools', href: '/resources/compare-schools-guide', icon: 'compare' },
+    { key: 'schoolTypes', href: '/resources/religious-and-independent-schools', icon: 'school' },
+    { key: 'englishTests', href: '/resources/english-test-pathways', icon: 'languages' },
+  ],
+  about: [
+    { key: 'aboutSchoolGo', href: '/about', icon: 'sparkles' },
+    { key: 'contactUs', href: '/contact', icon: 'message' },
+    { key: 'forAgents', href: '/agent', icon: 'users' },
+    { key: 'forSchools', href: '/school', icon: 'building' },
   ],
 };
 

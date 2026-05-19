@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from 'react';
 import Image from 'next/image';
+import { Loader2 } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { useAutocompleteSchools } from '@/modules/school-search/queries/use-autocomplete-schools.query';
 import { useAutocompleteSuburbs } from '@/modules/school-search/queries/use-autocomplete-suburbs.query';
@@ -38,9 +39,9 @@ export function SearchAutocompleteDropdown({
   const schoolsQuery = useAutocompleteSchools(query, 6);
   const suburbsQuery = useAutocompleteSuburbs(query, 5);
 
-  const schools = schoolsQuery.data?.data ?? [];
-  const suburbs = suburbsQuery.data?.data ?? [];
-  const isLoading = schoolsQuery.isPending && suburbsQuery.isPending;
+  const schools = schoolsQuery.isPlaceholderData ? [] : schoolsQuery.data?.data ?? [];
+  const suburbs = suburbsQuery.isPlaceholderData ? [] : suburbsQuery.data?.data ?? [];
+  const isLoading = schoolsQuery.isFetching || suburbsQuery.isFetching;
   const isEmpty = !isLoading && schools.length === 0 && suburbs.length === 0;
 
   useEffect(() => {
@@ -62,7 +63,12 @@ export function SearchAutocompleteDropdown({
       className='absolute left-0 right-0 top-full z-20 mt-2 max-h-80 overflow-y-auto rounded-xl border border-border bg-card p-2 shadow-3'
     >
       {isLoading && (
-        <div role='status' className='px-3 py-2 text-sm text-muted-foreground'>
+        <div
+          role='status'
+          className='flex min-h-10 items-center gap-2 px-3 py-2 text-sm text-muted-foreground'
+          aria-live='polite'
+        >
+          <Loader2 className='h-3.5 w-3.5 animate-spin' aria-hidden='true' />
           {t('autocomplete.loading')}
         </div>
       )}

@@ -27,7 +27,7 @@ export function SchoolResultsPanel({ activePortal }: SchoolResultsPanelProps) {
         </span>
         {isRefetching ? (
           <span
-            className='inline-flex items-center gap-1.5 rounded-pill bg-muted px-2.5 py-1 text-caption font-semibold text-foggy'
+            className='inline-flex min-w-24 items-center justify-center gap-1.5 rounded-pill bg-muted px-2.5 py-1 text-caption font-semibold text-foggy'
             role='status'
             aria-live='polite'
           >
@@ -35,7 +35,7 @@ export function SchoolResultsPanel({ activePortal }: SchoolResultsPanelProps) {
             {t('searching')}
           </span>
         ) : (
-          <span className='inline-flex items-center rounded-pill bg-rausch-50 px-2.5 py-1 text-caption font-semibold text-primary'>
+          <span className='inline-flex min-w-24 items-center justify-center rounded-pill bg-rausch-50 px-2.5 py-1 text-caption font-semibold text-primary'>
             {t('count', { count: totalHits })}
           </span>
         )}

@@ -35,7 +35,7 @@ export function SearchTopBar({ className }: SearchTopBarProps) {
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder={t('searchPlaceholder')}
-          className="pl-9"
+          className="h-8 pl-9"
           aria-label={t('searchPlaceholder')}
         />
       </div>

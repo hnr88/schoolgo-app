@@ -207,7 +207,7 @@ export function MapView({ className, activePortal }: MapViewProps) {
   }, [map]);
 
   useMapViewportReporter(map);
-  useGeocodeSearch(map);
+  useGeocodeSearch(map, freshSchools);
   useStateFilterMapSync(map);
   useMapResultFocus(map, freshSchools, cameraRequestKey, isFetching || isPlaceholderData);
 
