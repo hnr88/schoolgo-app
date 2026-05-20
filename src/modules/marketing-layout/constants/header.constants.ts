@@ -23,6 +23,8 @@ export const SUB_MENU_ITEMS: Record<
     { key: 'admissionsGuide', href: '/admissions', icon: 'book' },
     { key: 'schoolFees', href: '/fees', icon: 'wallet' },
     { key: 'visaRequirements', href: '/resources/student-visa-overview', icon: 'badge' },
+    { key: 'blockLibrary', href: '/resources/blocks', icon: 'sparkles' },
+    { key: 'pageDesigns', href: '/resources/designs', icon: 'library' },
     { key: 'allGuides', href: '/resources', icon: 'library' },
   ],
   explore: [

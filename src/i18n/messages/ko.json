@@ -104,6 +104,10 @@
           "schoolFeesDesc": "등록금·기타 비용·첫해 총비용",
           "visaRequirements": "비자 요건",
           "visaRequirementsDesc": "학생 비자 500 필수 사항",
+          "blockLibrary": "재사용 블록",
+          "blockLibraryDesc": "맞춤 콘텐츠 블록 라이브러리 보기",
+          "pageDesigns": "페이지 디자인",
+          "pageDesignsDesc": "20개 재사용 페이지 구성 보기",
           "allGuides": "모든 가이드",
           "allGuidesDesc": "국제 가족을 위한 모든 가이드 보기"
         }

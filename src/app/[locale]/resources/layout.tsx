@@ -5,7 +5,7 @@ export default function ResourcesLayout({ children }: { children: ReactNode }) {
   return (
     <>
       <MarketingHeader activePortal='parent' />
-      <main>{children}</main>
+      <main id='main-content'>{children}</main>
       <MarketingFooter activePortal='parent' />
     </>
   );

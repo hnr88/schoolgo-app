@@ -6,7 +6,7 @@ export function ContentStandalonePage({ page }: { page: ContentPage }) {
   return (
     <>
       <MarketingHeader activePortal='parent' />
-      <main>
+      <main id='main-content'>
         <ContentPageView page={page} />
       </main>
       <MarketingFooter activePortal='parent' />

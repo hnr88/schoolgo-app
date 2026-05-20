@@ -11,6 +11,7 @@ export {
   getContentCategory,
   getContentPage,
   getContentPagesByCategory,
+  getRelatedContentPages,
   getContentHref,
 } from '@/modules/content-pages/data/content-pages';
 export type {

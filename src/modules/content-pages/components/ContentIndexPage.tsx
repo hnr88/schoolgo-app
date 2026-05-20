@@ -25,6 +25,14 @@ export function ContentIndexPage({ currentPage = 1 }: { currentPage?: number }) 
           <p className='mt-4 max-w-2xl text-lg leading-relaxed text-foggy'>
             Browse 60 dummy pages across admissions, fees, curriculum, boarding, events, agents, schools, and company content.
           </p>
+          <div className='mt-7 flex flex-wrap gap-3'>
+            <Link href='/resources/blocks' className='rounded-pill bg-primary px-5 py-3 text-sm font-semibold text-on-primary no-underline shadow-brand'>
+              View 24 reusable blocks
+            </Link>
+            <Link href='/resources/designs' className='rounded-pill border border-border bg-card px-5 py-3 text-sm font-semibold text-hof no-underline hover:bg-muted'>
+              View 20 page designs
+            </Link>
+          </div>
         </SectionContainer>
       </section>
       <section className='border-b border-divider bg-background py-10'>

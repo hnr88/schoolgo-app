@@ -104,6 +104,10 @@
           "schoolFeesDesc": "学费、附加费及第一年总费用",
           "visaRequirements": "签证要求",
           "visaRequirementsDesc": "学生签证 500 核心要点",
+          "blockLibrary": "可复用模块",
+          "blockLibraryDesc": "查看自定义内容模块库",
+          "pageDesigns": "页面设计",
+          "pageDesignsDesc": "浏览 20 个可复用页面方案",
           "allGuides": "全部指南",
           "allGuidesDesc": "浏览所有面向国际家庭的指南"
         }

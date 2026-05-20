@@ -94,7 +94,7 @@ export function MarketingHeaderClient({
     <>
       <header
         className={cn(
-          'fixed top-0 z-50 w-full transition-[background-color,box-shadow,border-color] duration-200',
+          'fixed top-0 z-50 w-full transition-colors duration-200',
           scrolled
             ? 'border-b border-divider bg-background shadow-1 md:bg-background/90 md:backdrop-blur-xl'
             : 'border-b border-transparent bg-background md:bg-background/0',

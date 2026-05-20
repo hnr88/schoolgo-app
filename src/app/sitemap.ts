@@ -7,6 +7,7 @@ import {
   contentTotalPages,
   getContentHref,
 } from '@/modules/content-pages';
+import { contentPageDesigns } from '@/modules/content-blocks';
 import { GUIDE_SLUGS } from '@/modules/guides';
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -26,6 +27,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/guides',
     ...GUIDE_SLUGS.map((slug) => `/guides/${slug}`),
     '/resources',
+    '/resources/blocks',
+    '/resources/designs',
     '/about',
     '/contact',
     '/admissions',
@@ -33,6 +36,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/student-life',
     ...resourcePageRoutes,
     ...contentCategories.map((category) => `/resources/category/${category.slug}`),
+    ...contentPageDesigns.map((design) => `/resources/designs/${design.slug}`),
     ...contentPages.map(getContentHref),
   ];
 
