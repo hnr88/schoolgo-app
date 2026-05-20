@@ -2,13 +2,14 @@ import { Layers3 } from 'lucide-react';
 import { SectionContainer, SectionHeader } from '@/modules/design-system';
 import { contentBlockDefinitions } from '@/modules/content-blocks/lib/block-registry';
 import { getContentPage } from '@/modules/content-pages';
-import { getDesignForContentPage } from '@/modules/content-blocks/lib/content-block-designs';
+import { getContentPageDesign } from '@/modules/content-blocks/lib/content-block-designs';
 import { ContentPageBlocksRenderer } from '@/modules/content-blocks/components/ContentPageBlocksRenderer';
 
 export function ContentBlocksGalleryPage() {
-  const page = getContentPage('admissions-hub-australian-schools');
+  const page = getContentPage('student-application-pipeline');
+  const design = getContentPageDesign('enterprise-agent-portal');
   if (!page) return null;
-  const design = getDesignForContentPage(page);
+  if (!design) return null;
 
   return (
     <>
@@ -19,10 +20,10 @@ export function ContentBlocksGalleryPage() {
             <span className='text-sm font-semibold uppercase'>Block library</span>
           </div>
           <h1 className='mt-3 max-w-3xl text-4xl font-bold text-ink-900 md:text-5xl'>
-            24 reusable SchoolGo content blocks
+            {contentBlockDefinitions.length} reusable SchoolGo content blocks
           </h1>
           <p className='mt-4 max-w-2xl text-lg leading-relaxed text-foggy'>
-            These are the small React modules used to compose the resource page designs.
+            These are the React modules used to compose the resource and enterprise page designs.
           </p>
         </SectionContainer>
       </section>
@@ -48,8 +49,8 @@ export function ContentBlocksGalleryPage() {
         <SectionContainer>
           <SectionHeader
             eyebrow='Example assembly'
-            heading='One page assembled from selected blocks'
-            subheading='The same page data can be recomposed with different block arrays.'
+            heading='Enterprise page assembled from selected blocks'
+            subheading='The same page data can be recomposed into workflow, governance, evidence, and integration sections.'
           />
         </SectionContainer>
       </section>

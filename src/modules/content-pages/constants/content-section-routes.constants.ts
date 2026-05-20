@@ -1,0 +1,133 @@
+import type { ContentSectionRoute } from '@/modules/content-pages/types/content-section-routes.types';
+
+export const contentSectionRoutes = [
+  'admissions',
+  'fees',
+  'international',
+  'curriculum',
+  'student-life',
+  'boarding',
+  'partners',
+  'school-solutions',
+  'events',
+  'pathways',
+  'company',
+  'school-search',
+] as const satisfies readonly ContentSectionRoute[];
+
+export const contentSectionRouteMap = {
+  admissions: [
+    'admissions-hub-australian-schools',
+    'how-to-apply-year-7',
+    'application-documents-checklist',
+    'interview-preparation-guide',
+    'enrolment-decision-timeline',
+  ],
+  fees: [
+    'school-fees-planning',
+    'tuition-payment-calendar',
+    'scholarships-and-bursaries',
+    'first-year-costs-checklist',
+    'refund-and-withdrawal-policy',
+  ],
+  international: [
+    'international-family-start-here',
+    'student-visa-overview',
+    'english-test-pathways',
+    'relocation-and-arrival',
+    'health-cover-and-wellbeing',
+  ],
+  curriculum: [
+    'australian-curriculum-overview',
+    'ib-programme-pathways',
+    'stem-subject-selection',
+    'arts-sport-co-curricular',
+    'english-language-support',
+  ],
+  'student-life': [
+    'student-life-overview',
+    'clubs-and-activities',
+    'wellbeing-support',
+    'uniforms-transport-and-meals',
+    'parent-community',
+  ],
+  boarding: [
+    'boarding-school-overview',
+    'homestay-vs-boarding',
+    'weekend-life-for-boarders',
+    'boarding-application-process',
+    'accommodation-safety',
+  ],
+  partners: [
+    'agent-partner-overview',
+    'authorised-agent-directory',
+    'agent-training-resources',
+    'student-application-pipeline',
+    'compliance-for-agents',
+  ],
+  'school-solutions': [
+    'school-profile-claiming',
+    'admissions-team-workflow',
+    'international-student-growth',
+    'school-pricing-plan',
+    'school-data-quality',
+  ],
+  events: [
+    'open-day-calendar',
+    'virtual-school-tours',
+    'admissions-webinars',
+    'orientation-week',
+    'regional-family-briefings',
+  ],
+  pathways: [
+    'high-school-to-university',
+    'career-counselling-roadmap',
+    'subject-prerequisites',
+    'exam-and-assessment-calendar',
+    'graduate-outcomes',
+  ],
+  company: [
+    'about-schoolgo',
+    'contact-admissions-team',
+    'schoolgo-data-methodology',
+    'privacy-and-safety',
+    'partner-network',
+  ],
+  'school-search': [
+    'compare-schools-guide',
+    'choose-school-by-location',
+    'religious-and-independent-schools',
+    'selective-and-specialist-programs',
+    'cricos-and-enrolment-status',
+  ],
+} as const satisfies Record<ContentSectionRoute, readonly string[]>;
+
+export const contentSectionLabels = {
+  admissions: 'Admissions',
+  fees: 'Fees and funding',
+  international: 'International families',
+  curriculum: 'Curriculum',
+  'student-life': 'Student life',
+  boarding: 'Boarding',
+  partners: 'Partner operations',
+  'school-solutions': 'School solutions',
+  events: 'Events',
+  pathways: 'Pathways',
+  company: 'Company',
+  'school-search': 'School search',
+} as const satisfies Record<ContentSectionRoute, string>;
+
+export const contentSectionDescriptions = {
+  admissions: 'Public admissions examples with application steps, documents, interviews, and decision timelines.',
+  fees: 'Tuition, funding, payment, first-year cost, and withdrawal examples for families.',
+  international: 'Visa, English, relocation, health, and arrival pages for overseas families.',
+  curriculum: 'Curriculum, IB, STEM, arts, sport, and English support examples.',
+  'student-life': 'Student life pages for clubs, wellbeing, logistics, and parent community.',
+  boarding: 'Boarding and homestay pages for residential life, applications, weekends, and safety.',
+  partners: 'Agent and partner operations pages with training, pipeline, directory, and compliance examples.',
+  'school-solutions': 'School-facing enterprise pages for profile quality, admissions workflow, growth, pricing, and data controls.',
+  events: 'Open day, tour, webinar, orientation, and regional briefing examples.',
+  pathways: 'Senior-school, university, career, assessment, and outcomes pages.',
+  company: 'Company, contact, methodology, privacy, and partner-network examples.',
+  'school-search': 'Search and comparison pages for school selection, sectors, programs, and CRICOS signals.',
+} as const satisfies Record<ContentSectionRoute, string>;

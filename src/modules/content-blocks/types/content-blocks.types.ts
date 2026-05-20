@@ -6,9 +6,13 @@ export interface ContentBlockProps {
   relatedPages?: ContentPage[];
   categoryPages?: ContentPage[];
   designLabel?: string;
+  getPageHref?: (page: ContentPage) => string;
+  getCategoryHref?: (categorySlug: string) => string;
+  sectionLabel?: string;
 }
 
 export type ContentBlockKey =
+  | 'approvalFlow'
   | 'anchorPillNav'
   | 'audienceCards'
   | 'breadcrumbTrail'
@@ -17,22 +21,31 @@ export type ContentBlockKey =
   | 'contactRouting'
   | 'ctaBanner'
   | 'deadlineTimeline'
+  | 'evidencePack'
   | 'faqRows'
   | 'featureTileGrid'
   | 'feeSummary'
+  | 'governanceMatrix'
   | 'heroIntro'
   | 'heroMedia'
   | 'imageText'
+  | 'integrationMap'
   | 'keyFactRows'
+  | 'kpiDashboard'
   | 'linkRail'
   | 'metricStrip'
+  | 'operatingModel'
   | 'processStepper'
   | 'programCards'
   | 'quoteBand'
   | 'relatedPages'
   | 'resourceRows'
+  | 'riskRegister'
+  | 'segmentStrategy'
+  | 'serviceLevel'
   | 'storyPreview'
-  | 'trustBadgeRow';
+  | 'trustBadgeRow'
+  | 'workflowBoard';
 
 export interface ContentBlockDefinition {
   key: ContentBlockKey;

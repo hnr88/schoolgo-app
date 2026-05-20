@@ -13,10 +13,10 @@ export function ContentDesignGalleryPage() {
             <span className='text-sm font-semibold uppercase'>Page designs</span>
           </div>
           <h1 className='mt-3 max-w-3xl text-4xl font-bold text-ink-900 md:text-5xl'>
-            20 page designs composed from the block module
+            {contentPageDesigns.length} page designs composed from the block module
           </h1>
           <p className='mt-4 max-w-2xl text-lg leading-relaxed text-foggy'>
-            Each design chooses a different combination of reusable content blocks.
+            Each design chooses a different combination of reusable blocks, including enterprise operations layouts.
           </p>
         </SectionContainer>
       </section>

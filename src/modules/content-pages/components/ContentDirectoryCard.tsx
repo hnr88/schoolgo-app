@@ -3,10 +3,18 @@ import { Link } from '@/i18n/navigation';
 import type { ContentPage } from '@/modules/content-pages/types/content-pages.types';
 import { getContentHref } from '@/modules/content-pages/data/content-pages';
 
-export function ContentDirectoryCard({ page }: { page: ContentPage }) {
+interface ContentDirectoryCardProps {
+  page: ContentPage;
+  getPageHref?: (page: ContentPage) => string;
+}
+
+export function ContentDirectoryCard({
+  page,
+  getPageHref = getContentHref,
+}: ContentDirectoryCardProps) {
   return (
     <Link
-      href={getContentHref(page)}
+      href={getPageHref(page)}
       className='group flex h-full flex-col rounded-lg border border-border bg-card p-5 no-underline shadow-1 hover:shadow-3'
     >
       <span className='text-xs font-semibold uppercase text-primary'>{page.eyebrow}</span>

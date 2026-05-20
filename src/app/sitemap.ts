@@ -4,8 +4,12 @@ import { getAlternateLanguageUrls, getLocalizedPath, siteUrl } from '@/modules/s
 import {
   contentCategories,
   contentPages,
+  contentSectionRoutes,
   contentTotalPages,
   getContentHref,
+  getContentSectionPageHref,
+  getContentSectionPages,
+  getContentSectionRootHref,
 } from '@/modules/content-pages';
 import { contentPageDesigns } from '@/modules/content-blocks';
 import { GUIDE_SLUGS } from '@/modules/guides';
@@ -31,13 +35,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/resources/designs',
     '/about',
     '/contact',
-    '/admissions',
-    '/fees',
-    '/student-life',
     ...resourcePageRoutes,
     ...contentCategories.map((category) => `/resources/category/${category.slug}`),
     ...contentPageDesigns.map((design) => `/resources/designs/${design.slug}`),
     ...contentPages.map(getContentHref),
+    ...contentSectionRoutes.map(getContentSectionRootHref),
+    ...contentSectionRoutes.flatMap((section) =>
+      getContentSectionPages(section).map(getContentSectionPageHref),
+    ),
   ];
 
   return routes.flatMap((route) =>

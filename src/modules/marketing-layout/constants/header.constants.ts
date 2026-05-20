@@ -10,8 +10,8 @@ export const SUB_MENU_ITEMS: Record<
   findSchools: [
     { key: 'searchAllSchools', href: '/search', icon: 'search' },
     { key: 'compareSchools', href: '/search', icon: 'compare' },
-    { key: 'schoolTypes', href: '/guides/school-types', icon: 'school' },
-    { key: 'englishRequirements', href: '/guides/english-requirements', icon: 'languages' },
+    { key: 'schoolTypes', href: '/school-search/religious-and-independent-schools', icon: 'school' },
+    { key: 'englishRequirements', href: '/international/english-test-pathways', icon: 'languages' },
   ],
   guides: [
     { key: 'chooseSchool', href: '/guides/choose-a-school', icon: 'book' },
@@ -20,24 +20,24 @@ export const SUB_MENU_ITEMS: Record<
     { key: 'allGuides', href: '/guides', icon: 'library' },
   ],
   resources: [
-    { key: 'admissionsGuide', href: '/admissions', icon: 'book' },
-    { key: 'schoolFees', href: '/fees', icon: 'wallet' },
-    { key: 'visaRequirements', href: '/resources/student-visa-overview', icon: 'badge' },
+    { key: 'admissionsGuide', href: '/admissions/admissions-hub-australian-schools', icon: 'book' },
+    { key: 'schoolFees', href: '/fees/school-fees-planning', icon: 'wallet' },
+    { key: 'visaRequirements', href: '/international/student-visa-overview', icon: 'badge' },
     { key: 'blockLibrary', href: '/resources/blocks', icon: 'sparkles' },
     { key: 'pageDesigns', href: '/resources/designs', icon: 'library' },
     { key: 'allGuides', href: '/resources', icon: 'library' },
   ],
   explore: [
     { key: 'browseSchools', href: '/search', icon: 'search' },
-    { key: 'compareSchools', href: '/resources/compare-schools-guide', icon: 'compare' },
-    { key: 'schoolTypes', href: '/resources/religious-and-independent-schools', icon: 'school' },
-    { key: 'englishTests', href: '/resources/english-test-pathways', icon: 'languages' },
+    { key: 'compareSchools', href: '/school-search/compare-schools-guide', icon: 'compare' },
+    { key: 'schoolTypes', href: '/school-search/religious-and-independent-schools', icon: 'school' },
+    { key: 'englishTests', href: '/international/english-test-pathways', icon: 'languages' },
   ],
   about: [
-    { key: 'aboutSchoolGo', href: '/about', icon: 'sparkles' },
-    { key: 'contactUs', href: '/contact', icon: 'message' },
-    { key: 'forAgents', href: '/agent', icon: 'users' },
-    { key: 'forSchools', href: '/school', icon: 'building' },
+    { key: 'aboutSchoolGo', href: '/company/about-schoolgo', icon: 'sparkles' },
+    { key: 'contactUs', href: '/company/contact-admissions-team', icon: 'message' },
+    { key: 'forAgents', href: '/partners/agent-partner-overview', icon: 'users' },
+    { key: 'forSchools', href: '/school-solutions/school-profile-claiming', icon: 'building' },
   ],
 };
 

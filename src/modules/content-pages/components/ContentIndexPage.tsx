@@ -1,12 +1,20 @@
 import { BookOpen } from 'lucide-react';
 import { Link } from '@/i18n/navigation';
 import { SectionContainer, SectionHeader } from '@/modules/design-system';
+import { contentBlockDefinitions } from '@/modules/content-blocks/lib/block-registry';
+import { contentPageDesigns } from '@/modules/content-blocks/lib/content-block-designs';
+import { contentSectionRoutes } from '@/modules/content-pages/constants/content-section-routes.constants';
 import { ContentDirectoryGrid } from '@/modules/content-pages/components/ContentDirectoryGrid';
 import { ContentPagination } from '@/modules/content-pages/components/ContentPagination';
 import {
   contentCategories,
   getPaginatedContentPages,
 } from '@/modules/content-pages/data/content-pages';
+import {
+  getContentSectionDescription,
+  getContentSectionLabel,
+  getContentSectionRootHref,
+} from '@/modules/content-pages/lib/content-section-routes';
 
 export function ContentIndexPage({ currentPage = 1 }: { currentPage?: number }) {
   const pages = getPaginatedContentPages(currentPage);
@@ -27,11 +35,34 @@ export function ContentIndexPage({ currentPage = 1 }: { currentPage?: number }) 
           </p>
           <div className='mt-7 flex flex-wrap gap-3'>
             <Link href='/resources/blocks' className='rounded-pill bg-primary px-5 py-3 text-sm font-semibold text-on-primary no-underline shadow-brand'>
-              View 24 reusable blocks
+              View {contentBlockDefinitions.length} reusable blocks
             </Link>
             <Link href='/resources/designs' className='rounded-pill border border-border bg-card px-5 py-3 text-sm font-semibold text-hof no-underline hover:bg-muted'>
-              View 20 page designs
+              View {contentPageDesigns.length} page designs
             </Link>
+          </div>
+        </SectionContainer>
+      </section>
+      <section className='border-b border-divider bg-background py-10'>
+        <SectionContainer>
+          <SectionHeader
+            eyebrow='Public routes'
+            heading='Dummy pages outside resources'
+            subheading='These section hubs expose the same block-composed pages through top-level public URLs.'
+          />
+          <div className='mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4'>
+            {contentSectionRoutes.map((section) => (
+              <Link
+                key={section}
+                href={getContentSectionRootHref(section)}
+                className='rounded-lg border border-border bg-card p-5 no-underline shadow-1 hover:shadow-3'
+              >
+                <span className='font-semibold text-ink-900'>{getContentSectionLabel(section)}</span>
+                <span className='mt-2 block text-sm leading-6 text-foggy'>
+                  {getContentSectionDescription(section)}
+                </span>
+              </Link>
+            ))}
           </div>
         </SectionContainer>
       </section>

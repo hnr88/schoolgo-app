@@ -79,6 +79,27 @@ const COUNTRY_TO_LOCALE: Record<string, string> = {
   TH: 'th',
 };
 
+const PUBLIC_CONTENT_PREFIXES = [
+  'admissions',
+  'fees',
+  'international',
+  'curriculum',
+  'student-life',
+  'boarding',
+  'partners',
+  'school-solutions',
+  'events',
+  'pathways',
+  'company',
+  'school-search',
+] as const;
+
+function isPublicContentPath(path: string) {
+  return PUBLIC_CONTENT_PREFIXES.some(
+    (prefix) => path === prefix || path.startsWith(`${prefix}/`),
+  );
+}
+
 function detectLocale(request: NextRequest): string {
   const country =
     request.headers.get('x-vercel-ip-country') ??
@@ -184,7 +205,8 @@ export function proxy(request: NextRequest) {
   if (
     pathAfterLocale === 'resources' ||
     pathAfterLocale.startsWith('resources/') ||
-    ['about', 'contact', 'admissions', 'fees', 'student-life'].includes(pathAfterLocale)
+    ['about', 'contact'].includes(pathAfterLocale) ||
+    isPublicContentPath(pathAfterLocale)
   ) {
     if (!hasLocale) {
       url.pathname = `/${locale}/${pathAfterLocale}`;
