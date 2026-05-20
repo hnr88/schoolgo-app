@@ -20,8 +20,8 @@ export function DeadlineTimelineBlock({ page, relatedPages = [] }: ContentBlockP
             </div>
             <div className='p-6'>
               <h3 className='text-lg font-semibold text-ink-900'>{item.title}</h3>
-              <p className='mt-2 text-sm leading-6 text-foggy'>{item.description}</p>
-              {item.href && <Link href={item.href} className='mt-4 inline-flex text-sm font-semibold text-primary'>Open link</Link>}
+              <p className='mt-2 text-sm leading-6 text-hof'>{item.description}</p>
+              {item.href && <Link href={item.href} className='mt-4 inline-flex text-sm font-semibold text-rausch-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rausch-700'>Open {item.title}</Link>}
             </div>
           </li>
           );

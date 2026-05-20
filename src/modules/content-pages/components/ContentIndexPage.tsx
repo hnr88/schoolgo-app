@@ -1,16 +1,15 @@
 import { BookOpen } from 'lucide-react';
 import { Link } from '@/i18n/navigation';
 import { SectionContainer, SectionHeader } from '@/modules/design-system';
-import { contentBlockDefinitions } from '@/modules/content-blocks/lib/block-registry';
-import { contentPageDesigns } from '@/modules/content-blocks/lib/content-block-designs';
+import { contentBlockDefinitions, contentPageDesigns } from '@/modules/content-blocks';
 import { contentSectionRoutes } from '@/modules/content-pages/constants/content-section-routes.constants';
 import { ContentListStructuredData } from '@/modules/content-pages/components/ContentListStructuredData';
 import { ContentDirectoryGrid } from '@/modules/content-pages/components/ContentDirectoryGrid';
 import { ContentPagination } from '@/modules/content-pages/components/ContentPagination';
+import { ContentStaticRoutesGrid } from '@/modules/content-pages/components/ContentStaticRoutesGrid';
 import {
   contentCategories,
   contentPages,
-  getContentHref,
   getPaginatedContentPages,
 } from '@/modules/content-pages/data/content-pages';
 import {
@@ -18,25 +17,27 @@ import {
   getContentSectionLabel,
   getContentSectionRootHref,
 } from '@/modules/content-pages/lib/content-section-routes';
+import { getContentStaticPageHref } from '@/modules/content-pages/lib/content-static-routes';
+import type { ContentIndexPageProps } from '@/modules/content-pages/types/content-component-props.types';
 
-export function ContentIndexPage({ currentPage = 1 }: { currentPage?: number }) {
+export function ContentIndexPage({ currentPage = 1 }: ContentIndexPageProps) {
   const pages = getPaginatedContentPages(currentPage);
 
   return (
     <>
       <ContentListStructuredData
         name='SchoolGo resource page examples'
-        description='Dummy content pages composed from reusable SchoolGo content blocks.'
+        description='Structured content pages composed from reusable SchoolGo content blocks.'
         href='/resources'
         items={contentPages.map((page) => ({
           name: page.title,
           description: page.description,
-          href: getContentHref(page),
+          href: getContentStaticPageHref(page),
         }))}
       />
       <section className='border-b border-divider bg-muted pt-28 md:pt-40'>
         <SectionContainer className='pb-12 md:pb-16'>
-          <div className='flex items-center gap-2 text-primary'>
+          <div className='flex items-center gap-2 text-rausch-700'>
             <BookOpen className='h-5 w-5' aria-hidden='true' />
             <span className='text-sm font-semibold uppercase'>Resources</span>
           </div>
@@ -44,10 +45,10 @@ export function ContentIndexPage({ currentPage = 1 }: { currentPage?: number }) 
             Example content pages for every SchoolGo journey
           </h1>
           <p className='mt-4 max-w-2xl text-lg leading-relaxed text-foggy'>
-            Browse 60 dummy pages across admissions, fees, curriculum, boarding, events, agents, schools, and company content.
+            Browse {contentPages.length} structured pages across admissions, fees, curriculum, boarding, events, agents, schools, company content, and replaceable public policy pages.
           </p>
           <div className='mt-7 flex flex-wrap gap-3'>
-            <Link href='/resources/blocks' className='rounded-pill bg-primary px-5 py-3 text-sm font-semibold text-on-primary no-underline shadow-brand'>
+            <Link href='/resources/blocks' className='rounded-pill bg-rausch-700 px-5 py-3 text-sm font-semibold text-background no-underline shadow-brand'>
               View {contentBlockDefinitions.length} reusable blocks
             </Link>
             <Link href='/resources/designs' className='rounded-pill border border-border bg-card px-5 py-3 text-sm font-semibold text-hof no-underline hover:bg-muted'>
@@ -56,11 +57,12 @@ export function ContentIndexPage({ currentPage = 1 }: { currentPage?: number }) 
           </div>
         </SectionContainer>
       </section>
+      <ContentStaticRoutesGrid />
       <section className='border-b border-divider bg-background py-10'>
         <SectionContainer>
           <SectionHeader
             eyebrow='Public routes'
-            heading='Dummy pages outside resources'
+            heading='Pages outside resources'
             subheading='These section hubs expose the same block-composed pages through top-level public URLs.'
           />
           <div className='mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4'>

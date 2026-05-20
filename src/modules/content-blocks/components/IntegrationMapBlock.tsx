@@ -17,12 +17,12 @@ export function IntegrationMapBlock({ page }: ContentBlockProps) {
       <div className='rounded-lg border border-background/20 bg-background p-5 text-ink-900 shadow-2'>
         <div className='grid gap-4 lg:grid-cols-5'>
           {systems.map((system, index) => (
-            <div key={system} className='rounded-lg bg-muted p-4 transition-[transform,box-shadow] duration-300 hover:-translate-y-1 hover:shadow-2'>
+            <div key={system} className='rounded-lg bg-muted p-4 transition-transform duration-300 hover:-translate-y-1 hover:shadow-2'>
               <div className='flex items-center gap-2'>
                 {index === 0 ? (
-                  <PlugZap className='h-5 w-5 text-primary' aria-hidden='true' />
+                  <PlugZap className='h-5 w-5 text-rausch-700' aria-hidden='true' />
                 ) : (
-                  <Database className='h-5 w-5 text-primary' aria-hidden='true' />
+                  <Database className='h-5 w-5 text-rausch-700' aria-hidden='true' />
                 )}
                 <h3 className='text-sm font-semibold text-ink-900'>{system}</h3>
               </div>

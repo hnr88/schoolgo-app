@@ -86,8 +86,10 @@ const COMPANY_COLUMN: FooterColumn = {
   links: [
     { columnKey: 'company', linkKey: 'about', path: '/about' },
     { columnKey: 'company', linkKey: 'contact', path: '/contact' },
-    { label: 'Data methodology', path: '/resources/schoolgo-data-methodology' },
-    { label: 'Privacy and safety', path: '/resources/privacy-and-safety' },
+    { label: 'Data methodology', path: '/methodology' },
+    { label: 'Trust and safety', path: '/trust' },
+    { label: 'Privacy policy', path: '/privacy' },
+    { label: 'Terms of service', path: '/terms' },
   ],
 };
 

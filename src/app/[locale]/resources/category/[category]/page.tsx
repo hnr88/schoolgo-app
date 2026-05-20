@@ -1,10 +1,11 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { setRequestLocale } from 'next-intl/server';
-import { getAlternateLanguages, getCanonicalPath } from '@/modules/seo';
 import {
   ContentCategoryPage,
   contentCategorySlugs,
+  getContentDefaultCanonical,
+  getContentDefaultLanguages,
   getContentCategory,
 } from '@/modules/content-pages';
 
@@ -17,7 +18,7 @@ export function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const { locale, category } = await params;
+  const { category } = await params;
   const categoryData = getContentCategory(category);
   if (!categoryData) return {};
 
@@ -26,8 +27,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     title: `${categoryData.label} Resources | SchoolGo`,
     description: categoryData.description,
     alternates: {
-      canonical: getCanonicalPath(path, locale),
-      languages: getAlternateLanguages(path),
+      canonical: getContentDefaultCanonical(path),
+      languages: getContentDefaultLanguages(path),
     },
   };
 }

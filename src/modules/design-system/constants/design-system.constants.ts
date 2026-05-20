@@ -1,7 +1,10 @@
 import { BadgeCheck, ShieldCheck } from 'lucide-react';
 import { cva } from 'class-variance-authority';
 
-import type { EyebrowProps, TrustVariant } from '../types/design-system.types';
+import type {
+  EyebrowProps,
+  TrustVariant,
+} from '@/modules/design-system/types/design-system.types';
 
 export const buttonStyles = cva(
   'inline-flex items-center justify-center gap-2 rounded-pill font-semibold whitespace-nowrap transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary disabled:opacity-50 disabled:pointer-events-none',
@@ -9,18 +12,18 @@ export const buttonStyles = cva(
     variants: {
       variant: {
         primary:
-          'bg-primary text-on-primary shadow-brand hover:bg-rausch-600 active:bg-rausch-700 active:translate-y-px active:shadow-none',
+          'bg-rausch-700 text-background shadow-brand hover:bg-rausch-600 active:bg-rausch-700 active:translate-y-px active:shadow-none',
         secondary:
-          'border border-border bg-white text-hof hover:bg-muted active:border-quill',
+          'border border-border bg-background text-hof hover:bg-muted active:border-quill',
         tertiary:
           'bg-transparent text-hof underline underline-offset-4 decoration-border hover:decoration-hof',
         dark:
-          'bg-ink-900 text-white hover:bg-ink-900/90 active:bg-ink-900/80',
+          'bg-ink-900 text-primary-foreground hover:bg-ink-900/90 active:bg-ink-900/80',
         trust:
-          'bg-babu-500 text-on-primary hover:bg-babu-600 active:bg-babu-700',
+          'bg-babu-700 text-background hover:bg-babu-600 active:bg-babu-700',
         featured:
-          'bg-arches-500 text-on-primary hover:bg-arches-600 active:bg-arches-700',
-        link: 'px-0 bg-transparent text-primary underline-offset-4 hover:underline',
+          'bg-arches-700 text-background hover:bg-arches-700 active:bg-arches-700',
+        link: 'px-0 bg-transparent text-rausch-700 underline-offset-4 hover:underline',
       },
       size: {
         sm: 'px-3.5 py-1.5 text-sm',
@@ -42,7 +45,7 @@ export const chipStyles = cva(
     variants: {
       variant: {
         default: 'border border-transparent bg-muted text-hof hover:bg-ink-200',
-        selected: 'border border-primary bg-primary text-on-primary shadow-brand',
+        selected: 'border border-rausch-700 bg-rausch-700 text-background shadow-brand',
         soft: 'border border-transparent bg-muted text-hof',
       },
       size: {
@@ -63,11 +66,11 @@ export const ctaLinkStyles = cva(
     variants: {
       variant: {
         primary:
-          'bg-primary text-on-primary shadow-brand hover:bg-rausch-600 active:bg-rausch-700',
+          'bg-rausch-700 text-background shadow-brand hover:bg-rausch-600 active:bg-rausch-700',
         secondary:
-          'border border-border bg-white text-hof hover:bg-muted',
+          'border border-border bg-background text-hof hover:bg-muted',
         dark:
-          'bg-ink-900 text-white hover:bg-ink-900/90 active:bg-ink-900/80',
+          'bg-ink-900 text-primary-foreground hover:bg-ink-900/90 active:bg-ink-900/80',
       },
       size: {
         sm: 'px-3.5 py-1.5 text-sm',
@@ -107,7 +110,7 @@ export const statusBadgeStyles = cva(
 
 export const TONE_CLASSES: Record<NonNullable<EyebrowProps['tone']>, string> = {
   default: 'text-foggy',
-  brand: 'text-primary',
+  brand: 'text-rausch-700',
   trust: 'text-babu-700',
   featured: 'text-arches-700',
 };

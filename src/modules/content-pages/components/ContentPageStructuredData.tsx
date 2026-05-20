@@ -2,13 +2,7 @@ import {
   getContentPageSchemas,
   safeJsonLd,
 } from '@/modules/content-pages/lib/content-page-schema';
-import type { ContentPage } from '@/modules/content-pages/types/content-pages.types';
-
-interface ContentPageStructuredDataProps {
-  page: ContentPage;
-  getPageHref?: (page: ContentPage) => string;
-  getCategoryHref?: (categorySlug: string) => string;
-}
+import type { ContentPageStructuredDataProps } from '@/modules/content-pages/types/content-component-props.types';
 
 export function ContentPageStructuredData(props: ContentPageStructuredDataProps) {
   return (

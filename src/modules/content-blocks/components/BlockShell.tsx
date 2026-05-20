@@ -1,15 +1,6 @@
-import type { ReactNode } from 'react';
 import { SectionContainer, SectionHeader } from '@/modules/design-system';
 import { cn } from '@/lib/utils';
-
-interface BlockShellProps {
-  id?: string;
-  eyebrow: string;
-  title: string;
-  description?: string;
-  tone?: 'plain' | 'muted' | 'dark' | 'brand' | 'trust' | 'featured' | 'ink';
-  children: ReactNode;
-}
+import type { BlockShellProps } from '@/modules/content-blocks/types/content-blocks.types';
 
 export function BlockShell({
   id,
@@ -23,7 +14,7 @@ export function BlockShell({
     <section
       id={id}
       className={cn(
-        'py-14 md:py-20',
+        'py-10 md:py-14',
         tone === 'plain' && 'bg-background',
         tone === 'muted' && 'bg-muted',
         tone === 'brand' && 'bg-rausch-50',
@@ -40,7 +31,7 @@ export function BlockShell({
           subheading={description}
           theme={tone === 'dark' || tone === 'ink' ? 'dark' : 'light'}
         />
-        <div className='mt-8'>{children}</div>
+        <div className='mt-6'>{children}</div>
       </SectionContainer>
     </section>
   );

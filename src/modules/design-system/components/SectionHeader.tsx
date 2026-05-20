@@ -49,7 +49,7 @@ export function SectionHeader({
           className={cn(
             'text-body md:text-lg',
             size === 'lg' && 'max-w-xl',
-            dark ? 'text-background/75' : 'text-foggy',
+            dark ? 'text-background/75' : 'text-hof',
           )}
         >
           {subheading}

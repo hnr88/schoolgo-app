@@ -25,7 +25,7 @@ export function OperatingModelBlock({ page }: ContentBlockProps) {
           <div className='absolute inset-0 bg-ink-900/20' />
         </div>
         <div className='p-6'>
-          <p className='text-sm font-semibold uppercase text-primary'>Operating view</p>
+          <p className='text-sm font-semibold uppercase text-rausch-700'>Operating view</p>
           <h3 className='mt-3 text-2xl font-bold text-ink-900'>{page.title}</h3>
           <p className='mt-3 text-sm leading-6 text-foggy'>{page.subtitle}</p>
           <dl className='mt-6 grid gap-4'>
@@ -45,10 +45,10 @@ export function OperatingModelBlock({ page }: ContentBlockProps) {
           return (
             <article key={stage.label} className='rounded-lg border border-border bg-card p-5 shadow-1'>
               <div className='flex items-center justify-between gap-3'>
-                <span className='rounded-pill bg-rausch-50 px-3 py-1 text-xs font-semibold uppercase text-primary'>
+                <span className='rounded-pill bg-rausch-50 px-3 py-1 text-xs font-semibold uppercase text-rausch-700'>
                   {stage.label}
                 </span>
-                <Icon className='h-5 w-5 text-primary' aria-hidden='true' />
+                <Icon className='h-5 w-5 text-rausch-700' aria-hidden='true' />
               </div>
               <h3 className='mt-5 text-lg font-semibold text-ink-900'>{item.title}</h3>
               <p className='mt-2 text-sm leading-6 text-foggy'>{item.description}</p>
@@ -65,7 +65,7 @@ export function OperatingModelBlock({ page }: ContentBlockProps) {
               {item.href ? (
                 <Link
                   href={item.href}
-                  className='mt-5 inline-flex items-center gap-2 text-sm font-semibold text-primary no-underline'
+                  className='mt-5 inline-flex items-center gap-2 text-sm font-semibold text-rausch-700 no-underline'
                 >
                   Open action
                   <ArrowRight className='h-4 w-4' aria-hidden='true' />

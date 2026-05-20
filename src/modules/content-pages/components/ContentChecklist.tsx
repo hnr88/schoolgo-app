@@ -1,9 +1,9 @@
 import { CheckCircle2 } from 'lucide-react';
 import { Link } from '@/i18n/navigation';
 import { SectionContainer, SectionHeader } from '@/modules/design-system';
-import type { ContentChecklistItem } from '@/modules/content-pages/types/content-pages.types';
+import type { ContentChecklistProps } from '@/modules/content-pages/types/content-component-props.types';
 
-export function ContentChecklist({ items }: { items: ContentChecklistItem[] }) {
+export function ContentChecklist({ items }: ContentChecklistProps) {
   return (
     <section id='checklist' className='bg-background py-16 md:py-24'>
       <SectionContainer>
@@ -16,7 +16,7 @@ export function ContentChecklist({ items }: { items: ContentChecklistItem[] }) {
           {items.map((item) => (
             <Link
               key={item.label}
-              href={item.href ?? '#'}
+              href={item.href ?? '/resources'}
               className='flex gap-4 p-5 no-underline hover:bg-muted'
             >
               <CheckCircle2 className='h-5 w-5 text-babu-700' aria-hidden='true' />

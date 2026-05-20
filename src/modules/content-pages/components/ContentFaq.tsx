@@ -1,7 +1,7 @@
 import { SectionContainer, SectionHeader } from '@/modules/design-system';
-import type { ContentFaqItem } from '@/modules/content-pages/types/content-pages.types';
+import type { ContentFaqProps } from '@/modules/content-pages/types/content-component-props.types';
 
-export function ContentFaq({ items }: { items: ContentFaqItem[] }) {
+export function ContentFaq({ items }: ContentFaqProps) {
   return (
     <section id='faq' className='bg-background py-16 md:py-24'>
       <SectionContainer>

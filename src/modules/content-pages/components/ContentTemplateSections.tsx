@@ -11,9 +11,9 @@ import { ContentSplitPanel } from '@/modules/content-pages/components/ContentSpl
 import { ContentStepCards } from '@/modules/content-pages/components/ContentStepCards';
 import { ContentTimeline } from '@/modules/content-pages/components/ContentTimeline';
 import { getContentPagesByCategory } from '@/modules/content-pages/data/content-pages';
-import type { ContentPage } from '@/modules/content-pages/types/content-pages.types';
+import type { ContentTemplateSectionsProps } from '@/modules/content-pages/types/content-component-props.types';
 
-export function ContentTemplateSections({ page }: { page: ContentPage }) {
+export function ContentTemplateSections({ page }: ContentTemplateSectionsProps) {
   const categoryPages = getContentPagesByCategory(page.category).filter(
     (item) => item.slug !== page.slug,
   );

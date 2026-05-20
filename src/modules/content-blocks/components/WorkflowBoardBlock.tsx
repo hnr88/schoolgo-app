@@ -20,9 +20,9 @@ export function WorkflowBoardBlock({ page }: ContentBlockProps) {
           const card = cards[index];
           const decision = page.decisionPoints[index % page.decisionPoints.length];
           return (
-            <section key={column} className='rounded-lg border border-border bg-card p-4 shadow-1 transition-[transform,box-shadow] duration-300 hover:-translate-y-1 hover:shadow-3'>
+            <section key={column} className='rounded-lg border border-border bg-card p-4 shadow-1 transition-transform duration-300 hover:-translate-y-1 hover:shadow-3'>
               <div className='flex items-center gap-2 border-b border-border pb-3'>
-                <KanbanSquare className='h-5 w-5 text-primary' aria-hidden='true' />
+                <KanbanSquare className='h-5 w-5 text-rausch-700' aria-hidden='true' />
                 <h3 className='text-sm font-semibold uppercase text-ink-900'>{column}</h3>
               </div>
               {card ? (
@@ -31,7 +31,7 @@ export function WorkflowBoardBlock({ page }: ContentBlockProps) {
                   className='mt-4 block rounded-lg bg-muted p-4 no-underline hover:bg-background'
                 >
                   <p className='flex flex-wrap items-center gap-2 text-sm font-semibold text-hof'>
-                    <CircleDot className='h-4 w-4 text-primary' aria-hidden='true' />
+                    <CircleDot className='h-4 w-4 text-rausch-700' aria-hidden='true' />
                     {card.label}
                     <StatusBadge tone={card.priority === 'Primary' ? 'brand' : 'muted'}>{card.priority}</StatusBadge>
                   </p>

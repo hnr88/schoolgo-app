@@ -19,9 +19,9 @@ export function EvidencePackBlock({ page }: ContentBlockProps) {
           <Link
             key={item.label}
             href={item.href ?? '/search'}
-            className='group flex gap-4 rounded-lg border border-border bg-card p-5 no-underline shadow-1 transition-[transform,box-shadow] duration-300 hover:-translate-y-0.5 hover:shadow-3'
+            className='group flex gap-4 rounded-lg border border-border bg-card p-5 no-underline shadow-1 transition-transform duration-300 hover:-translate-y-0.5 hover:shadow-3'
           >
-            <div className='flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-rausch-50 text-primary'>
+            <div className='flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-rausch-50 text-rausch-700'>
               {index === 0 ? (
                 <ClipboardCheck className='h-5 w-5' aria-hidden='true' />
               ) : (
@@ -35,7 +35,7 @@ export function EvidencePackBlock({ page }: ContentBlockProps) {
               </span>
               <span className='mt-1 block text-sm leading-6 text-foggy'>{item.detail}</span>
               {proof ? <span className='mt-2 block text-xs leading-5 text-foggy'>{proof.detail}</span> : null}
-              <span className='mt-3 inline-block text-sm font-semibold text-primary'>Review evidence</span>
+              <span className='mt-3 inline-block text-sm font-semibold text-rausch-700'>Review evidence</span>
             </span>
           </Link>
           );

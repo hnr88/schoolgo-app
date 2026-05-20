@@ -1,13 +1,6 @@
 import { SectionContainer, SectionHeader } from '@/modules/design-system';
 import { ContentDirectoryCard } from '@/modules/content-pages/components/ContentDirectoryCard';
-import type { ContentPage } from '@/modules/content-pages/types/content-pages.types';
-
-interface ContentDirectoryGridProps {
-  title: string;
-  description: string;
-  pages: ContentPage[];
-  getPageHref?: (page: ContentPage) => string;
-}
+import type { ContentDirectoryGridProps } from '@/modules/content-pages/types/content-component-props.types';
 
 export function ContentDirectoryGrid({
   title,

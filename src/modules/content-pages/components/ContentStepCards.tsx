@@ -1,9 +1,9 @@
 import { ArrowRight } from 'lucide-react';
 import { Link } from '@/i18n/navigation';
 import { SectionContainer, SectionHeader } from '@/modules/design-system';
-import type { ContentStep } from '@/modules/content-pages/types/content-pages.types';
+import type { ContentStepCardsProps } from '@/modules/content-pages/types/content-component-props.types';
 
-export function ContentStepCards({ steps }: { steps: ContentStep[] }) {
+export function ContentStepCards({ steps }: ContentStepCardsProps) {
   return (
     <section id='next-steps' className='bg-background py-16 md:py-24'>
       <SectionContainer>
@@ -16,15 +16,15 @@ export function ContentStepCards({ steps }: { steps: ContentStep[] }) {
           {steps.map((step, index) => (
             <Link
               key={step.title}
-              href={step.href ?? '#'}
+              href={step.href ?? '/resources'}
               className='rounded-lg border border-border bg-card p-6 no-underline shadow-1 hover:shadow-3'
             >
-              <span className='flex h-9 w-9 items-center justify-center rounded-pill bg-primary text-sm font-bold text-on-primary'>
+              <span className='flex h-9 w-9 items-center justify-center rounded-pill bg-rausch-700 text-sm font-bold text-background'>
                 {index + 1}
               </span>
               <span className='mt-5 block text-lg font-semibold text-ink-900'>{step.title}</span>
               <span className='mt-2 block text-sm leading-6 text-foggy'>{step.description}</span>
-              <span className='mt-5 inline-flex items-center gap-2 text-sm font-semibold text-primary'>
+              <span className='mt-5 inline-flex items-center gap-2 text-sm font-semibold text-rausch-700'>
                 Continue
                 <ArrowRight className='h-4 w-4' aria-hidden='true' />
               </span>

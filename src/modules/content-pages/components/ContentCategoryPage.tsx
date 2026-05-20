@@ -5,8 +5,9 @@ import {
   getContentCategory,
   getContentPagesByCategory,
 } from '@/modules/content-pages/data/content-pages';
+import type { ContentCategoryPageProps } from '@/modules/content-pages/types/content-component-props.types';
 
-export function ContentCategoryPage({ categorySlug }: { categorySlug: string }) {
+export function ContentCategoryPage({ categorySlug }: ContentCategoryPageProps) {
   const category = getContentCategory(categorySlug);
   if (!category) notFound();
 
@@ -16,7 +17,7 @@ export function ContentCategoryPage({ categorySlug }: { categorySlug: string }) 
     <>
       <section className='border-b border-divider bg-muted pt-28 md:pt-40'>
         <SectionContainer className='pb-12 md:pb-16'>
-          <p className='text-sm font-semibold uppercase text-primary'>Resource category</p>
+          <p className='text-sm font-semibold uppercase text-rausch-700'>Resource category</p>
           <h1 className='mt-3 max-w-3xl text-4xl font-bold text-ink-900 md:text-5xl'>
             {category.label}
           </h1>
@@ -27,7 +28,7 @@ export function ContentCategoryPage({ categorySlug }: { categorySlug: string }) 
       </section>
       <ContentDirectoryGrid
         title={`${category.label} page examples`}
-        description='Use these dummy pages to test multiple layouts and cross-page links within this category.'
+        description='Use these pages to test multiple layouts and cross-page links within this category.'
         pages={pages}
       />
     </>

@@ -1,7 +1,7 @@
 import { SectionContainer, SectionHeader } from '@/modules/design-system';
-import type { ContentComparisonRow } from '@/modules/content-pages/types/content-pages.types';
+import type { ContentComparisonTableProps } from '@/modules/content-pages/types/content-component-props.types';
 
-export function ContentComparisonTable({ rows }: { rows: ContentComparisonRow[] }) {
+export function ContentComparisonTable({ rows }: ContentComparisonTableProps) {
   return (
     <section id='compare' className='bg-muted py-16 md:py-24'>
       <SectionContainer>

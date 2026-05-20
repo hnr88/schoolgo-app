@@ -19,7 +19,7 @@ export function FeeSummaryBlock({ page }: ContentBlockProps) {
           </span>
             <div>
               <h3 className='text-xl font-semibold text-ink-900'>Cost snapshot</h3>
-              <p className='text-sm text-foggy'>Dummy values for reusable layout testing.</p>
+              <p className='text-sm text-hof'>Starter values for reusable layout testing.</p>
             </div>
           </div>
           <div className='flex flex-wrap gap-2'>

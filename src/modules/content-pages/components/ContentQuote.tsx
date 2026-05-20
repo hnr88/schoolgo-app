@@ -1,8 +1,8 @@
 import { Quote } from 'lucide-react';
 import { SectionContainer } from '@/modules/design-system';
-import type { ContentQuote as ContentQuoteData } from '@/modules/content-pages/types/content-pages.types';
+import type { ContentQuoteProps } from '@/modules/content-pages/types/content-component-props.types';
 
-export function ContentQuote({ quote }: { quote: ContentQuoteData }) {
+export function ContentQuote({ quote }: ContentQuoteProps) {
   return (
     <section className='bg-ink-900 py-16 text-background md:py-24'>
       <SectionContainer>

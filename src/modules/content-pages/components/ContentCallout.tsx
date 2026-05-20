@@ -1,9 +1,9 @@
 import { ArrowRight } from 'lucide-react';
 import { Link } from '@/i18n/navigation';
 import { SectionContainer } from '@/modules/design-system';
-import type { ContentPage } from '@/modules/content-pages/types/content-pages.types';
+import type { ContentCalloutProps } from '@/modules/content-pages/types/content-component-props.types';
 
-export function ContentCallout({ page }: { page: ContentPage }) {
+export function ContentCallout({ page }: ContentCalloutProps) {
   return (
     <section className='bg-background py-10'>
       <SectionContainer>
@@ -16,7 +16,7 @@ export function ContentCallout({ page }: { page: ContentPage }) {
           <Link
             href={page.cta.primary.href}
             data-slot='button'
-            className='mt-5 inline-flex items-center gap-2 rounded-pill bg-babu-500 px-5 py-3 text-sm font-semibold text-on-primary no-underline hover:bg-babu-600 md:mt-0'
+            className='mt-5 inline-flex items-center gap-2 rounded-pill bg-babu-700 px-5 py-3 text-sm font-semibold text-background no-underline hover:bg-babu-600 md:mt-0'
           >
             {page.cta.primary.label}
             <ArrowRight className='h-4 w-4' aria-hidden='true' />

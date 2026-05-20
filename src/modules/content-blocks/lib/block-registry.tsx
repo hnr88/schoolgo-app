@@ -1,5 +1,6 @@
 import { ApprovalFlowBlock } from '@/modules/content-blocks/components/ApprovalFlowBlock';
 import { AnchorPillNavBlock } from '@/modules/content-blocks/components/AnchorPillNavBlock';
+import { AnswerPanelBlock } from '@/modules/content-blocks/components/AnswerPanelBlock';
 import { AudienceCardsBlock } from '@/modules/content-blocks/components/AudienceCardsBlock';
 import { BreadcrumbTrailBlock } from '@/modules/content-blocks/components/BreadcrumbTrailBlock';
 import { ChecklistRowsBlock } from '@/modules/content-blocks/components/ChecklistRowsBlock';
@@ -39,6 +40,7 @@ import type {
 
 export const contentBlockDefinitions = [
   { key: 'approvalFlow', name: 'Approval Flow', description: 'Decision gates with evidence requirements.', component: ApprovalFlowBlock },
+  { key: 'answerPanel', name: 'Answer Panel', description: 'AEO-ready direct answer, entities, links, and proof signals.', component: AnswerPanelBlock },
   { key: 'breadcrumbTrail', name: 'Breadcrumb Trail', description: 'Small route context bar for detail pages.', component: BreadcrumbTrailBlock },
   { key: 'heroIntro', name: 'Hero Intro', description: 'Title, copy, and primary/secondary CTAs.', component: HeroIntroBlock },
   { key: 'heroMedia', name: 'Hero Media', description: 'Image-led hero media with stat cells.', component: HeroMediaBlock },

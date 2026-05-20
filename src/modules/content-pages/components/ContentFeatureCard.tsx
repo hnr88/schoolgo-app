@@ -11,7 +11,7 @@ import {
   Users,
 } from 'lucide-react';
 import { Link } from '@/i18n/navigation';
-import type { ContentFeature } from '@/modules/content-pages/types/content-pages.types';
+import type { ContentFeatureCardProps } from '@/modules/content-pages/types/content-component-props.types';
 
 const icons = {
   check: CheckCircle2,
@@ -26,12 +26,12 @@ const icons = {
   badge: BadgeCheck,
 };
 
-export function ContentFeatureCard({ feature }: { feature: ContentFeature }) {
+export function ContentFeatureCard({ feature }: ContentFeatureCardProps) {
   const Icon = icons[feature.icon as keyof typeof icons] ?? BadgeCheck;
 
   const content = (
     <>
-      <span className='flex h-10 w-10 items-center justify-center rounded-lg bg-rausch-50 text-primary'>
+      <span className='flex h-10 w-10 items-center justify-center rounded-lg bg-rausch-50 text-rausch-700'>
         <Icon className='h-5 w-5' strokeWidth={1.8} aria-hidden='true' />
       </span>
       <span className='mt-5 block text-lg font-semibold text-ink-900'>{feature.title}</span>
@@ -49,8 +49,8 @@ export function ContentFeatureCard({ feature }: { feature: ContentFeature }) {
       className='group rounded-lg border border-border bg-card p-6 no-underline shadow-1 hover:shadow-3'
     >
       {content}
-      <span className='mt-5 inline-flex text-sm font-semibold text-primary group-hover:text-rausch-600'>
-        Open link
+      <span className='mt-5 inline-flex text-sm font-semibold text-rausch-700 group-hover:text-rausch-600'>
+        Open {feature.title}
       </span>
     </Link>
   );

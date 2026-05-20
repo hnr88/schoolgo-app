@@ -15,7 +15,7 @@ export function AudienceCardsBlock({ page }: ContentBlockProps) {
     <BlockShell eyebrow='Audiences' title='Audience entry cards' description='Audience cards help one content page serve multiple visitor types.'>
       <div className='grid gap-5 md:grid-cols-3'>
         {audiences.map((audience) => (
-          <Link key={audience.label} href={audience.href} className='group overflow-hidden rounded-lg border border-border bg-card no-underline shadow-1 transition-[transform,box-shadow] duration-300 hover:-translate-y-1 hover:shadow-3'>
+          <Link key={audience.label} href={audience.href} className='group overflow-hidden rounded-lg border border-border bg-card no-underline shadow-1 transition-transform duration-300 hover:-translate-y-1 hover:shadow-3'>
             <span className='relative block aspect-video bg-muted'>
               <Image src={audience.image} alt='' fill sizes='(max-width: 768px) 100vw, 33vw' className='object-cover transition-transform group-hover:scale-105' aria-hidden='true' />
               <span className='absolute left-4 top-4'>
@@ -25,10 +25,10 @@ export function AudienceCardsBlock({ page }: ContentBlockProps) {
               </span>
             </span>
             <span className='block p-6'>
-              <Users className='h-5 w-5 text-primary' aria-hidden='true' />
+              <Users className='h-5 w-5 text-rausch-700' aria-hidden='true' />
               <span className='mt-5 block text-lg font-semibold text-ink-900'>{audience.label}</span>
               <span className='mt-2 block text-sm leading-6 text-foggy'>{audience.text}</span>
-              <span className='mt-4 block text-sm font-semibold text-primary'>Open {audience.label.toLowerCase()}</span>
+              <span className='mt-4 block text-sm font-semibold text-rausch-700'>Open {audience.label.toLowerCase()}</span>
             </span>
           </Link>
         ))}

@@ -3,16 +3,16 @@ import { ArrowRight } from 'lucide-react';
 import { Link } from '@/i18n/navigation';
 import { Eyebrow, SectionContainer } from '@/modules/design-system';
 import { cn } from '@/lib/utils';
-import type { ContentPage } from '@/modules/content-pages/types/content-pages.types';
+import type { ContentHeroProps } from '@/modules/content-pages/types/content-component-props.types';
 
 const accentClasses = {
-  brand: 'text-primary',
+  brand: 'text-rausch-700',
   trust: 'text-babu-700',
   featured: 'text-arches-700',
   muted: 'text-foggy',
 };
 
-export function ContentHero({ page }: { page: ContentPage }) {
+export function ContentHero({ page }: ContentHeroProps) {
   return (
     <section className='border-b border-divider bg-background'>
       <SectionContainer className='grid gap-10 py-14 md:grid-cols-2 md:items-center md:py-20'>
@@ -28,7 +28,7 @@ export function ContentHero({ page }: { page: ContentPage }) {
             <Link
               href={page.cta.primary.href}
               data-slot='button'
-              className='inline-flex items-center justify-center gap-2 rounded-pill bg-primary px-5 py-3 text-sm font-semibold text-on-primary shadow-brand no-underline hover:bg-rausch-600'
+              className='inline-flex items-center justify-center gap-2 rounded-pill bg-rausch-700 px-5 py-3 text-sm font-semibold text-background shadow-brand no-underline hover:bg-rausch-600'
             >
               {page.cta.primary.label}
               <ArrowRight className='h-4 w-4' aria-hidden='true' />

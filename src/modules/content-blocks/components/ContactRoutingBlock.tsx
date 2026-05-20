@@ -17,7 +17,7 @@ export function ContactRoutingBlock({ page }: ContentBlockProps) {
         {routes.map((route, index) => {
           const Icon = route.icon;
           return (
-            <Link key={route.label} href={route.href} className='group overflow-hidden rounded-lg border border-border bg-card no-underline shadow-1 transition-[transform,box-shadow] duration-300 hover:-translate-y-1 hover:shadow-3'>
+            <Link key={route.label} href={route.href} className='group overflow-hidden rounded-lg border border-border bg-card no-underline shadow-1 transition-transform duration-300 hover:-translate-y-1 hover:shadow-3'>
               <span className='relative block aspect-video bg-muted'>
                 <Image src={route.image} alt='' fill sizes='(max-width: 768px) 100vw, 33vw' className='object-cover transition-transform duration-300 group-hover:scale-105' aria-hidden='true' />
                 <span className='absolute left-4 top-4'>
@@ -25,7 +25,7 @@ export function ContactRoutingBlock({ page }: ContentBlockProps) {
                 </span>
               </span>
               <span className='block p-6'>
-                <Icon className='h-5 w-5 text-primary' aria-hidden='true' />
+                <Icon className='h-5 w-5 text-rausch-700' aria-hidden='true' />
                 <span className='mt-5 block text-lg font-semibold text-ink-900'>{route.label}</span>
                 <span className='mt-2 block text-sm leading-6 text-foggy'>{route.text}</span>
               </span>

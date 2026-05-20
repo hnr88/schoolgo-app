@@ -13,10 +13,10 @@ export function KpiDashboardBlock({ page }: ContentBlockProps) {
     >
       <div className='grid gap-5 lg:grid-cols-3'>
         {page.metrics.map((metric) => (
-          <div key={metric.label} className='rounded-lg border border-background bg-background p-6 text-ink-900 transition-transform duration-300 hover:-translate-y-1'>
-            <BarChart3 className='h-6 w-6 text-primary' aria-hidden='true' />
+          <div key={metric.label} className='rounded-lg border border-background bg-background p-6 text-ink-900'>
+            <BarChart3 className='h-6 w-6 text-rausch-700' aria-hidden='true' />
             <p className='mt-5 text-3xl font-bold'>{metric.value}</p>
-            <p className='mt-2 text-sm font-semibold uppercase text-foggy'>{metric.label}</p>
+            <p className='mt-2 text-sm font-semibold uppercase text-hof'>{metric.label}</p>
           </div>
         ))}
       </div>

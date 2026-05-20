@@ -20,8 +20,8 @@ export const SUB_MENU_ITEMS: Record<
     { key: 'allGuides', href: '/guides', icon: 'library' },
   ],
   resources: [
-    { key: 'admissionsGuide', href: '/admissions/admissions-hub-australian-schools', icon: 'book' },
-    { key: 'schoolFees', href: '/fees/school-fees-planning', icon: 'wallet' },
+    { key: 'admissionsGuide', href: '/admissions-requirements', icon: 'book' },
+    { key: 'schoolFees', href: '/payment-options', icon: 'wallet' },
     { key: 'visaRequirements', href: '/international/student-visa-overview', icon: 'badge' },
     { key: 'blockLibrary', href: '/resources/blocks', icon: 'sparkles' },
     { key: 'pageDesigns', href: '/resources/designs', icon: 'library' },
@@ -34,10 +34,10 @@ export const SUB_MENU_ITEMS: Record<
     { key: 'englishTests', href: '/international/english-test-pathways', icon: 'languages' },
   ],
   about: [
-    { key: 'aboutSchoolGo', href: '/company/about-schoolgo', icon: 'sparkles' },
-    { key: 'contactUs', href: '/company/contact-admissions-team', icon: 'message' },
-    { key: 'forAgents', href: '/partners/agent-partner-overview', icon: 'users' },
-    { key: 'forSchools', href: '/school-solutions/school-profile-claiming', icon: 'building' },
+    { key: 'aboutSchoolGo', href: '/about', icon: 'sparkles' },
+    { key: 'contactUs', href: '/contact', icon: 'message' },
+    { key: 'forAgents', href: '/for-agents', icon: 'users' },
+    { key: 'forSchools', href: '/for-schools', icon: 'building' },
   ],
 };
 

@@ -27,8 +27,8 @@ export function RiskRegisterBlock({ page, relatedPages = [] }: ContentBlockProps
             </div>
             <div className='p-6'>
               <div className='flex items-start justify-between gap-4'>
-                <AlertTriangle className='h-6 w-6 text-primary' aria-hidden='true' />
-                <span className='rounded-pill bg-rausch-50 px-3 py-1 text-xs font-semibold uppercase text-primary'>
+                <AlertTriangle className='h-6 w-6 text-rausch-700' aria-hidden='true' />
+                <span className='rounded-pill bg-rausch-50 px-3 py-1 text-xs font-semibold uppercase text-rausch-700'>
                   {severity[index]}
                 </span>
               </div>
@@ -36,7 +36,7 @@ export function RiskRegisterBlock({ page, relatedPages = [] }: ContentBlockProps
               <p className='mt-2 text-sm leading-6 text-foggy'>{risk.detail}</p>
               <div className='mt-5 rounded-lg bg-muted p-4'>
                 <p className='flex items-center gap-2 text-sm font-semibold text-hof'>
-                  <CheckCircle2 className='h-4 w-4 text-primary' aria-hidden='true' />
+                  <CheckCircle2 className='h-4 w-4 text-rausch-700' aria-hidden='true' />
                   Mitigation
                 </p>
                 <p className='mt-2 text-sm leading-6 text-foggy'>
@@ -44,7 +44,7 @@ export function RiskRegisterBlock({ page, relatedPages = [] }: ContentBlockProps
                 </p>
               </div>
               {risk.href ? (
-                <Link href={risk.href} className='mt-5 inline-flex text-sm font-semibold text-primary'>
+                <Link href={risk.href} className='mt-5 inline-flex text-sm font-semibold text-rausch-700'>
                   Review linked control
                 </Link>
               ) : null}

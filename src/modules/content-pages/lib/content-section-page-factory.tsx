@@ -1,9 +1,13 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { setRequestLocale } from 'next-intl/server';
-import { getAlternateLanguages, getCanonicalPath } from '@/modules/seo';
 import { ContentSectionIndexPage } from '@/modules/content-pages/components/ContentSectionIndexPage';
 import { ContentStandalonePage } from '@/modules/content-pages/components/ContentStandalonePage';
+import {
+  getContentDefaultCanonical,
+  getContentDefaultLanguages,
+  getContentPageMetadata,
+} from '@/modules/content-pages/lib/content-page-metadata';
 import {
   getContentSectionCategoryHref,
   getContentSectionDescription,
@@ -14,15 +18,11 @@ import {
   getContentSectionStaticParams,
   withContentSectionLinks,
 } from '@/modules/content-pages/lib/content-section-routes';
-import type { ContentSectionRoute } from '@/modules/content-pages/types/content-section-routes.types';
-
-interface SectionPageProps {
-  params: Promise<{ locale: string; slug: string }>;
-}
-
-interface SectionIndexProps {
-  params: Promise<{ locale: string }>;
-}
+import type {
+  ContentSectionIndexProps,
+  ContentSectionPageProps,
+  ContentSectionRoute,
+} from '@/modules/content-pages/types/content-section-routes.types';
 
 export function createContentSectionGenerateStaticParams(
   section: ContentSectionRoute,
@@ -37,30 +37,18 @@ export function createContentSectionGenerateMetadata(
 ) {
   return async function generateMetadata({
     params,
-  }: SectionPageProps): Promise<Metadata> {
+  }: ContentSectionPageProps): Promise<Metadata> {
     const { locale, slug } = await params;
     const page = getContentSectionPage(section, slug);
     if (!page) return {};
 
     const path = getContentSectionPageHref(page);
-    return {
-      title: `${page.title} | SchoolGo`,
-      description: page.description,
-      alternates: {
-        canonical: getCanonicalPath(path, locale),
-        languages: getAlternateLanguages(path),
-      },
-      openGraph: {
-        title: page.title,
-        description: page.description,
-        type: 'article',
-      },
-    };
+    return getContentPageMetadata({ page, path, locale, type: 'article' });
   };
 }
 
 export function createContentSectionPage(section: ContentSectionRoute) {
-  return async function ContentSectionPage({ params }: SectionPageProps) {
+  return async function ContentSectionPage({ params }: ContentSectionPageProps) {
     const { locale, slug } = await params;
     const page = getContentSectionPage(section, slug);
     if (!page) notFound();
@@ -82,8 +70,8 @@ export function createContentSectionIndexGenerateMetadata(
 ) {
   return async function generateMetadata({
     params,
-  }: SectionIndexProps): Promise<Metadata> {
-    const { locale } = await params;
+  }: ContentSectionIndexProps): Promise<Metadata> {
+    await params;
     const title = getContentSectionLabel(section);
     const description = getContentSectionDescription(section);
     const path = getContentSectionRootHref(section);
@@ -92,20 +80,27 @@ export function createContentSectionIndexGenerateMetadata(
       title: `${title} Examples | SchoolGo`,
       description,
       alternates: {
-        canonical: getCanonicalPath(path, locale),
-        languages: getAlternateLanguages(path),
+        canonical: getContentDefaultCanonical(path),
+        languages: getContentDefaultLanguages(path),
       },
       openGraph: {
         title: `${title} Examples | SchoolGo`,
         description,
         type: 'website',
+        images: [{ url: '/images/auth/school.jpg', width: 1200, height: 630, alt: title }],
+      },
+      twitter: {
+        card: 'summary_large_image',
+        title: `${title} Examples | SchoolGo`,
+        description,
+        images: ['/images/auth/school.jpg'],
       },
     };
   };
 }
 
 export function createContentSectionIndexPage(section: ContentSectionRoute) {
-  return async function ContentSectionIndexRoute({ params }: SectionIndexProps) {
+  return async function ContentSectionIndexRoute({ params }: ContentSectionIndexProps) {
     const { locale } = await params;
     setRequestLocale(locale);
     return <ContentSectionIndexPage section={section} />;

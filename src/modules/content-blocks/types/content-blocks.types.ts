@@ -1,4 +1,4 @@
-import type { ComponentType } from 'react';
+import type { ComponentType, ReactNode } from 'react';
 import type { ContentPage } from '@/modules/content-pages';
 
 export interface ContentBlockProps {
@@ -14,6 +14,7 @@ export interface ContentBlockProps {
 export type ContentBlockKey =
   | 'approvalFlow'
   | 'anchorPillNav'
+  | 'answerPanel'
   | 'audienceCards'
   | 'breadcrumbTrail'
   | 'checklistRows'
@@ -52,6 +53,28 @@ export interface ContentBlockDefinition {
   name: string;
   description: string;
   component: ComponentType<ContentBlockProps>;
+}
+
+export interface BlockShellProps {
+  id?: string;
+  eyebrow: string;
+  title: string;
+  description?: string;
+  tone?: 'plain' | 'muted' | 'dark' | 'brand' | 'trust' | 'featured' | 'ink';
+  children: ReactNode;
+}
+
+export interface ContentPageBlocksRendererProps {
+  page: ContentPage;
+  design: ContentPageDesign;
+  getPageHref?: (page: ContentPage) => string;
+  getCategoryHref?: (categorySlug: string) => string;
+  sectionLabel?: string;
+}
+
+export interface ContentDesignPageViewProps {
+  design: ContentPageDesign;
+  page: ContentPage;
 }
 
 export interface ContentPageDesign {

@@ -4,10 +4,10 @@ import type { ContentBlockProps } from '@/modules/content-blocks/types/content-b
 
 export function HeroIntroBlock({ page, designLabel }: ContentBlockProps) {
   return (
-    <section className='relative overflow-hidden border-b border-divider bg-ink-900 pt-28 text-background md:pt-36'>
+    <section className='relative overflow-hidden border-b border-divider bg-ink-900 pt-20 text-background md:pt-28'>
       <Image src={page.image} alt='' fill priority sizes='100vw' className='object-cover opacity-45 motion-safe:animate-in motion-safe:fade-in motion-safe:duration-700' aria-hidden='true' />
       <div className='absolute inset-0 bg-ink-900/60' />
-      <SectionContainer className='relative pb-14 md:pb-20'>
+      <SectionContainer className='relative pb-12 md:pb-16'>
         <div className='flex flex-wrap items-center gap-2'>
           {page.searchSignals.slice(0, 3).map((signal) => (
             <StatusBadge key={signal.label} tone={signal.tone}>
@@ -31,12 +31,12 @@ export function HeroIntroBlock({ page, designLabel }: ContentBlockProps) {
               </CtaLink>
             </div>
           </div>
-          <div className='rounded-xl border border-background/20 bg-background/95 p-5 text-ink-900 shadow-4 transition-[transform,box-shadow] duration-300 hover:-translate-y-1 hover:shadow-5 lg:col-span-2'>
-            <p className='text-sm font-semibold uppercase text-primary'>{designLabel ?? 'Page intelligence'}</p>
+          <div className='rounded-xl border border-background/20 bg-background/95 p-5 text-ink-900 shadow-4 lg:col-span-2'>
+            <p className='text-sm font-semibold uppercase text-rausch-700'>{designLabel ?? 'Page intelligence'}</p>
             <div className='mt-4 grid gap-3'>
               {page.decisionPoints.map((point) => (
                 <div key={point.title} className='rounded-lg bg-muted p-4 transition-colors hover:bg-rausch-50'>
-                  <p className='text-xs font-semibold uppercase text-primary'>{point.owner}</p>
+                  <p className='text-xs font-semibold uppercase text-rausch-700'>{point.owner}</p>
                   <p className='mt-1 text-sm font-semibold text-ink-900'>{point.title}</p>
                   <p className='mt-1 line-clamp-2 text-xs leading-5 text-foggy'>{point.evidence}</p>
                 </div>

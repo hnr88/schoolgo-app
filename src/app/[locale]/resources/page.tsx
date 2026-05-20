@@ -1,26 +1,40 @@
 import type { Metadata } from 'next';
 import { setRequestLocale } from 'next-intl/server';
-import { getAlternateLanguages, getCanonicalPath } from '@/modules/seo';
-import { ContentIndexPage } from '@/modules/content-pages';
+import {
+  ContentIndexPage,
+  getContentDefaultCanonical,
+  getContentDefaultLanguages,
+} from '@/modules/content-pages';
+
+const title = 'SchoolGo Resource Page Examples | SchoolGo';
+const description =
+  'Browse example SchoolGo content pages for admissions, fees, curriculum, events, schools, company content, and replaceable public pages.';
+const image = '/images/auth/school.jpg';
 
 export async function generateMetadata({
   params,
 }: {
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
-  const { locale } = await params;
+  await params;
   return {
-    title: 'SchoolGo Resource Page Examples | SchoolGo',
-    description:
-      'Browse 60 example SchoolGo content pages for admissions, fees, curriculum, boarding, events, agents, schools, and company content.',
+    title,
+    description,
     alternates: {
-      canonical: getCanonicalPath('/resources', locale),
-      languages: getAlternateLanguages('/resources'),
+      canonical: getContentDefaultCanonical('/resources'),
+      languages: getContentDefaultLanguages('/resources'),
     },
     openGraph: {
-      title: 'SchoolGo Resource Page Examples | SchoolGo',
-      description: 'Browse reusable SchoolGo content page examples.',
+      title,
+      description,
       type: 'website',
+      images: [{ url: image, width: 1200, height: 630, alt: title }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: [image],
     },
   };
 }

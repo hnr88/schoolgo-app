@@ -1,13 +1,6 @@
 import { ContentPageBlocksRenderer, getDesignForContentPage } from '@/modules/content-blocks';
 import { ContentPageStructuredData } from '@/modules/content-pages/components/ContentPageStructuredData';
-import type { ContentPage } from '@/modules/content-pages/types/content-pages.types';
-
-interface ContentPageViewProps {
-  page: ContentPage;
-  getPageHref?: (page: ContentPage) => string;
-  getCategoryHref?: (categorySlug: string) => string;
-  sectionLabel?: string;
-}
+import type { ContentPageViewProps } from '@/modules/content-pages/types/content-component-props.types';
 
 export function ContentPageView({
   page,
@@ -23,6 +16,8 @@ export function ContentPageView({
         page={page}
         getPageHref={getPageHref}
         getCategoryHref={getCategoryHref}
+        contentBlocks={design.blocks}
+        designName={design.name}
       />
       <ContentPageBlocksRenderer
         page={page}

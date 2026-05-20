@@ -22,12 +22,27 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const pageDesign = getContentPageDesign(design);
   if (!pageDesign) return {};
   const path = `/resources/designs/${design}`;
+  const title = `${pageDesign.name} Design | SchoolGo`;
+  const image = '/images/auth/school.jpg';
   return {
-    title: `${pageDesign.name} Design | SchoolGo`,
+    title,
     description: pageDesign.description,
+    robots: { index: false, follow: true },
     alternates: {
       canonical: getCanonicalPath(path, locale),
       languages: getAlternateLanguages(path),
+    },
+    openGraph: {
+      title,
+      description: pageDesign.description,
+      type: 'website',
+      images: [{ url: image, width: 1200, height: 630, alt: pageDesign.name }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description: pageDesign.description,
+      images: [image],
     },
   };
 }

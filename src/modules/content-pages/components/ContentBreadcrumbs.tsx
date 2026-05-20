@@ -1,10 +1,5 @@
 import { Link } from '@/i18n/navigation';
-import type { ContentCategory } from '@/modules/content-pages/types/content-pages.types';
-
-interface ContentBreadcrumbsProps {
-  category?: ContentCategory;
-  title: string;
-}
+import type { ContentBreadcrumbsProps } from '@/modules/content-pages/types/content-component-props.types';
 
 export function ContentBreadcrumbs({ category, title }: ContentBreadcrumbsProps) {
   return (

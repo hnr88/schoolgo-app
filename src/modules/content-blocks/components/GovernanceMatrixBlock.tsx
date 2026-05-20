@@ -27,7 +27,7 @@ export function GovernanceMatrixBlock({ page }: ContentBlockProps) {
           <div className='grid gap-4 border-b border-border bg-muted p-5 md:grid-cols-4'>
             {page.facts.map((fact) => (
               <div key={fact.label}>
-                <p className='text-xs font-semibold uppercase text-primary'>{fact.label}</p>
+                <p className='text-xs font-semibold uppercase text-rausch-700'>{fact.label}</p>
                 <p className='mt-1 text-sm font-semibold text-ink-900'>{fact.value}</p>
               </div>
             ))}
@@ -36,7 +36,7 @@ export function GovernanceMatrixBlock({ page }: ContentBlockProps) {
             {governanceRows.map(([area, owner, evidence, cadence], index) => (
               <div key={area} className='grid gap-4 p-5 transition-colors hover:bg-muted md:grid-cols-4 md:items-center'>
                 <div className='flex items-center gap-3'>
-                  <ShieldCheck className='h-5 w-5 text-primary' aria-hidden='true' />
+                  <ShieldCheck className='h-5 w-5 text-rausch-700' aria-hidden='true' />
                   <span className='font-semibold text-ink-900'>{area}</span>
                 </div>
                 <span className='text-sm text-foggy'>{owner}</span>
@@ -65,7 +65,7 @@ export function GovernanceMatrixBlock({ page }: ContentBlockProps) {
         </aside>
       </div>
       {firstLink ? (
-        <Link href={firstLink.href} className='mt-5 inline-flex text-sm font-semibold text-primary'>
+        <Link href={firstLink.href} className='mt-5 inline-flex text-sm font-semibold text-rausch-700'>
           {firstLink.label}
         </Link>
       ) : null}

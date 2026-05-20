@@ -1,13 +1,6 @@
 import { MarketingFooter, MarketingHeader } from '@/modules/marketing-layout';
 import { ContentPageView } from '@/modules/content-pages/components/ContentPageView';
-import type { ContentPage } from '@/modules/content-pages/types/content-pages.types';
-
-interface ContentStandalonePageProps {
-  page: ContentPage;
-  getPageHref?: (page: ContentPage) => string;
-  getCategoryHref?: (categorySlug: string) => string;
-  sectionLabel?: string;
-}
+import type { ContentStandalonePageProps } from '@/modules/content-pages/types/content-component-props.types';
 
 export function ContentStandalonePage({
   page,

@@ -1,0 +1,42 @@
+import type { ContentStaticRoute } from '@/modules/content-pages/types/content-static-routes.types';
+
+export const contentStaticRouteMap = {
+  about: 'about-schoolgo',
+  contact: 'contact-admissions-team',
+  privacy: 'privacy-policy',
+  terms: 'terms-of-service',
+  cookies: 'cookie-policy',
+  accessibility: 'accessibility-statement',
+  safety: 'safety-and-trust',
+  trust: 'trust-and-safety-center',
+  security: 'security-center',
+  'data-privacy': 'data-privacy-center',
+  methodology: 'schoolgo-data-methodology',
+  help: 'help-center',
+  faq: 'schoolgo-faq',
+  careers: 'careers-at-schoolgo',
+  press: 'media-room',
+  'for-families': 'family-guide-start',
+  'for-agents': 'agent-partner-overview',
+  'for-schools': 'school-profile-claiming',
+  'request-info': 'request-information',
+  'book-a-tour': 'book-a-tour',
+  'admissions-requirements': 'application-requirements',
+  'payment-options': 'payment-options',
+  'how-to-apply': 'how-to-apply-year-7',
+  'tuition-fees': 'school-fees-planning',
+  scholarships: 'scholarships-and-bursaries',
+  'international-students': 'international-family-start-here',
+  'agent-resources': 'agent-training-resources',
+  'campus-tours': 'campus-tour-planning',
+  'virtual-tours': 'virtual-school-tours',
+  'entry-requirements': 'entry-requirements',
+  'new-families': 'new-family-transitions',
+  'open-days': 'open-day-calendar',
+  'college-counselling': 'career-counselling-roadmap',
+  publications: 'admissions-publications',
+} as const satisfies Record<ContentStaticRoute, string>;
+
+export const contentStaticRoutes = Object.keys(
+  contentStaticRouteMap,
+) as ContentStaticRoute[];

@@ -15,7 +15,7 @@ export function ContentBlocksGalleryPage() {
     <>
       <section className='border-b border-divider bg-muted pt-28 md:pt-40'>
         <SectionContainer className='pb-12 md:pb-16'>
-          <div className='flex items-center gap-2 text-primary'>
+          <div className='flex items-center gap-2 text-rausch-700'>
             <Layers3 className='h-5 w-5' aria-hidden='true' />
             <span className='text-sm font-semibold uppercase'>Block library</span>
           </div>
@@ -37,7 +37,7 @@ export function ContentBlocksGalleryPage() {
           <div className='mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3'>
             {contentBlockDefinitions.map((block) => (
               <div key={block.key} className='rounded-lg border border-border bg-card p-5 shadow-1'>
-                <p className='text-xs font-semibold uppercase text-primary'>{block.key}</p>
+                <p className='text-xs font-semibold uppercase text-rausch-700'>{block.key}</p>
                 <h2 className='mt-2 text-lg font-semibold text-ink-900'>{block.name}</h2>
                 <p className='mt-2 text-sm leading-6 text-foggy'>{block.description}</p>
               </div>

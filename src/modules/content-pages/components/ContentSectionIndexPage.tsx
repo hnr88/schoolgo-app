@@ -10,13 +10,11 @@ import {
   getContentSectionPages,
   getContentSectionRootHref,
 } from '@/modules/content-pages/lib/content-section-routes';
-import type { ContentSectionRoute } from '@/modules/content-pages/types/content-section-routes.types';
+import type { ContentSectionIndexPageProps } from '@/modules/content-pages/types/content-section-routes.types';
 
 export function ContentSectionIndexPage({
   section,
-}: {
-  section: ContentSectionRoute;
-}) {
+}: ContentSectionIndexPageProps) {
   const label = getContentSectionLabel(section);
   const description = getContentSectionDescription(section);
   const pages = getContentSectionPages(section);
@@ -39,7 +37,7 @@ export function ContentSectionIndexPage({
       <main id='main-content'>
         <section className='border-b border-divider bg-muted pt-28 md:pt-40'>
           <SectionContainer className='pb-12 md:pb-16'>
-            <p className='text-sm font-semibold uppercase text-primary'>Public section</p>
+            <p className='text-sm font-semibold uppercase text-rausch-700'>Public section</p>
             <h1 className='mt-3 max-w-3xl text-4xl font-bold text-ink-900 md:text-5xl'>
               {label} page examples
             </h1>
@@ -50,7 +48,7 @@ export function ContentSectionIndexPage({
               {firstPage ? (
                 <Link
                   href={getContentSectionPageHref(firstPage)}
-                  className='rounded-pill bg-primary px-5 py-3 text-sm font-semibold text-on-primary no-underline shadow-brand'
+                  className='rounded-pill bg-rausch-700 px-5 py-3 text-sm font-semibold text-background no-underline shadow-brand'
                 >
                   Open first example
                 </Link>
@@ -68,7 +66,7 @@ export function ContentSectionIndexPage({
           <SectionContainer>
             <SectionHeader
               eyebrow='Top-level routes'
-              heading='Clickable dummy pages outside resources'
+              heading='Clickable pages outside resources'
               subheading='These pages use the same reusable block components, but live under a public section path.'
             />
           </SectionContainer>

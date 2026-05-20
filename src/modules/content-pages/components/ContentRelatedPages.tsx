@@ -1,8 +1,8 @@
 import { SectionContainer, SectionHeader } from '@/modules/design-system';
 import { ContentDirectoryCard } from '@/modules/content-pages/components/ContentDirectoryCard';
-import type { ContentPage } from '@/modules/content-pages/types/content-pages.types';
+import type { ContentRelatedPagesProps } from '@/modules/content-pages/types/content-component-props.types';
 
-export function ContentRelatedPages({ pages }: { pages: ContentPage[] }) {
+export function ContentRelatedPages({ pages }: ContentRelatedPagesProps) {
   if (pages.length === 0) return null;
 
   return (

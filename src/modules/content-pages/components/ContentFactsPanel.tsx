@@ -1,7 +1,7 @@
 import { SectionContainer, SectionHeader } from '@/modules/design-system';
-import type { ContentFact } from '@/modules/content-pages/types/content-pages.types';
+import type { ContentFactsPanelProps } from '@/modules/content-pages/types/content-component-props.types';
 
-export function ContentFactsPanel({ facts }: { facts: ContentFact[] }) {
+export function ContentFactsPanel({ facts }: ContentFactsPanelProps) {
   return (
     <section id='key-facts' className='bg-background py-16 md:py-20'>
       <SectionContainer>

@@ -23,9 +23,9 @@ export function ApprovalFlowBlock({ page }: ContentBlockProps) {
           const item = page.timeline[index];
           const Icon = gate.icon;
           return (
-            <article key={gate.label} className='rounded-lg border border-border bg-card p-6 shadow-1 transition-[transform,box-shadow] duration-300 hover:-translate-y-1 hover:shadow-3'>
+            <article key={gate.label} className='rounded-lg border border-border bg-card p-6 shadow-1 transition-transform duration-300 hover:-translate-y-1 hover:shadow-3'>
               <div className='flex items-center justify-between'>
-                <Icon className='h-6 w-6 text-primary' aria-hidden='true' />
+                <Icon className='h-6 w-6 text-rausch-700' aria-hidden='true' />
                 <StatusBadge tone={index === 0 ? 'brand' : 'trust'}>Gate {index + 1}</StatusBadge>
               </div>
               <h3 className='mt-5 text-lg font-semibold text-ink-900'>{gate.label}</h3>
@@ -37,7 +37,7 @@ export function ApprovalFlowBlock({ page }: ContentBlockProps) {
                 </p>
               </div>
               {item.href ? (
-                <Link href={item.href} className='mt-5 inline-flex text-sm font-semibold text-primary'>
+                <Link href={item.href} className='mt-5 inline-flex text-sm font-semibold text-rausch-700'>
                   Open gate detail
                 </Link>
               ) : null}

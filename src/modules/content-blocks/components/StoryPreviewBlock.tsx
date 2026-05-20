@@ -10,7 +10,7 @@ export function StoryPreviewBlock({ page }: ContentBlockProps) {
           <Image src={page.image} alt='' fill sizes='(max-width: 768px) 100vw, 50vw' className='object-cover' aria-hidden='true' />
         </div>
         <div className='p-6 md:p-8'>
-          <p className='text-sm font-semibold text-primary'>Dummy story</p>
+          <p className='text-sm font-semibold text-rausch-700'>Story preview</p>
           <h3 className='mt-3 text-2xl font-bold text-ink-900'>{page.title}</h3>
           <p className='mt-3 text-sm leading-6 text-foggy'>{page.description}</p>
         </div>

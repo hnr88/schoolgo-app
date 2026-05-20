@@ -22,8 +22,8 @@ export function ResourceRowsBlock({ page }: ContentBlockProps) {
         </aside>
         <div className='grid gap-4 lg:col-span-3'>
           {page.resources.map((resource) => (
-            <Link key={resource.href} href={resource.href} className='group flex flex-col gap-4 rounded-lg border border-border bg-card p-5 no-underline shadow-1 transition-[transform,box-shadow] duration-300 hover:-translate-y-0.5 hover:shadow-3 md:flex-row md:items-start'>
-              <span className='flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-rausch-50 text-primary group-hover:bg-primary group-hover:text-on-primary'>
+            <Link key={resource.href} href={resource.href} className='group flex flex-col gap-4 rounded-lg border border-border bg-card p-5 no-underline shadow-1 transition-transform duration-300 hover:-translate-y-0.5 hover:shadow-3 md:flex-row md:items-start'>
+              <span className='flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-rausch-50 text-rausch-700 group-hover:bg-rausch-700 group-hover:text-background'>
                 <FileText className='h-5 w-5' aria-hidden='true' />
               </span>
               <span>

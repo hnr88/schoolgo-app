@@ -1,26 +1,17 @@
 import {
   getContentBlockDefinition,
 } from '@/modules/content-blocks/lib/block-registry';
-import type { ContentPageDesign } from '@/modules/content-blocks/types/content-blocks.types';
+import type { ContentPageBlocksRendererProps } from '@/modules/content-blocks/types/content-blocks.types';
 import {
-  getContentHref,
   getContentPagesByCategory,
+  getContentStaticPageHref,
   getRelatedContentPages,
-  type ContentPage,
 } from '@/modules/content-pages';
-
-interface ContentPageBlocksRendererProps {
-  page: ContentPage;
-  design: ContentPageDesign;
-  getPageHref?: (page: ContentPage) => string;
-  getCategoryHref?: (categorySlug: string) => string;
-  sectionLabel?: string;
-}
 
 export function ContentPageBlocksRenderer({
   page,
   design,
-  getPageHref = getContentHref,
+  getPageHref = getContentStaticPageHref,
   getCategoryHref = (categorySlug) => `/resources/category/${categorySlug}`,
   sectionLabel,
 }: ContentPageBlocksRendererProps) {

@@ -1,9 +1,9 @@
 import { ArrowRight } from 'lucide-react';
 import { Link } from '@/i18n/navigation';
 import { SectionContainer } from '@/modules/design-system';
-import type { ContentPage } from '@/modules/content-pages/types/content-pages.types';
+import type { ContentCtaBandProps } from '@/modules/content-pages/types/content-component-props.types';
 
-export function ContentCtaBand({ page }: { page: ContentPage }) {
+export function ContentCtaBand({ page }: ContentCtaBandProps) {
   return (
     <section className='bg-background py-16 md:py-24'>
       <SectionContainer>

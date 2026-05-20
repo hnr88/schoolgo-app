@@ -1,17 +1,5 @@
 import { siteUrl } from '@/modules/seo';
-
-interface StructuredListItem {
-  name: string;
-  description: string;
-  href: string;
-}
-
-interface ContentListStructuredDataProps {
-  name: string;
-  description: string;
-  href: string;
-  items: StructuredListItem[];
-}
+import type { ContentListStructuredDataProps } from '@/modules/content-pages/types/content-component-props.types';
 
 function safeJson(schema: unknown) {
   return JSON.stringify(schema).replace(/</g, '\\u003c');

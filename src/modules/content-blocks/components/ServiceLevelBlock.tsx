@@ -23,13 +23,13 @@ export function ServiceLevelBlock({ page }: ContentBlockProps) {
           return (
           <div key={standard} className='grid gap-4 border-b border-border p-5 transition-colors last:border-b-0 hover:bg-muted md:grid-cols-4 md:items-center'>
             <div className='flex items-center gap-3 md:col-span-2'>
-              <Clock3 className='h-5 w-5 text-primary' aria-hidden='true' />
+              <Clock3 className='h-5 w-5 text-rausch-700' aria-hidden='true' />
               <div>
                 <p className='font-semibold text-ink-900'>{standard}</p>
                 <p className='mt-1 text-sm text-foggy'>{stakeholder.goal}</p>
               </div>
             </div>
-            <span className='rounded-pill bg-rausch-50 px-3 py-1 text-sm font-semibold text-primary'>
+            <span className='rounded-pill bg-rausch-50 px-3 py-1 text-sm font-semibold text-rausch-700'>
               {target}
             </span>
             <span className='space-y-1 text-sm font-semibold text-hof'>
