@@ -82,6 +82,51 @@ export interface ContentResource {
   meta: string;
 }
 
+export type ContentSignalTone = 'brand' | 'trust' | 'featured' | 'muted';
+
+export interface ContentSearchSignal {
+  label: string;
+  value: string;
+  tone: ContentSignalTone;
+}
+
+export interface ContentDecisionPoint {
+  title: string;
+  summary: string;
+  owner: string;
+  evidence: string;
+  href?: string;
+}
+
+export interface ContentAiSummary {
+  answer: string;
+  intent: string;
+  entities: string[];
+  followUps: ContentLink[];
+}
+
+export interface ContentProofPoint {
+  label: string;
+  detail: string;
+  confidence: string;
+  href?: string;
+}
+
+export interface ContentStakeholder {
+  name: string;
+  goal: string;
+  owner: string;
+  metric: string;
+  href: string;
+}
+
+export interface ContentActionPath {
+  label: string;
+  description: string;
+  href: string;
+  priority: 'Primary' | 'Secondary' | 'Support';
+}
+
 export interface ContentQuote {
   quote: string;
   name: string;
@@ -113,6 +158,14 @@ export interface ContentPage extends ContentPageSeed {
   faqs: ContentFaqItem[];
   resources: ContentResource[];
   links: ContentLink[];
+  searchSignals: ContentSearchSignal[];
+  decisionPoints: ContentDecisionPoint[];
+  aiSummary: ContentAiSummary;
+  proofPoints: ContentProofPoint[];
+  stakeholders: ContentStakeholder[];
+  actionPaths: ContentActionPath[];
+  schemaKeywords: string[];
+  lastReviewed: string;
   quote: ContentQuote;
   cta: {
     title: string;

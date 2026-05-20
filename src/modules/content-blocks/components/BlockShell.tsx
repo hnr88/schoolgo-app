@@ -7,7 +7,7 @@ interface BlockShellProps {
   eyebrow: string;
   title: string;
   description?: string;
-  tone?: 'plain' | 'muted' | 'dark';
+  tone?: 'plain' | 'muted' | 'dark' | 'brand' | 'trust' | 'featured' | 'ink';
   children: ReactNode;
 }
 
@@ -26,6 +26,10 @@ export function BlockShell({
         'py-14 md:py-20',
         tone === 'plain' && 'bg-background',
         tone === 'muted' && 'bg-muted',
+        tone === 'brand' && 'bg-rausch-50',
+        tone === 'trust' && 'bg-babu-50',
+        tone === 'featured' && 'bg-arches-50',
+        tone === 'ink' && 'bg-ink-900 text-background',
         tone === 'dark' && 'bg-ink-900 text-background',
       )}
     >
@@ -34,7 +38,7 @@ export function BlockShell({
           eyebrow={eyebrow}
           heading={title}
           subheading={description}
-          theme={tone === 'dark' ? 'dark' : 'light'}
+          theme={tone === 'dark' || tone === 'ink' ? 'dark' : 'light'}
         />
         <div className='mt-8'>{children}</div>
       </SectionContainer>

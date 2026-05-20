@@ -169,6 +169,8 @@ function createPage(seed: ContentPageSeed, index: number): ContentPage {
   const category = categoryBySlug[seed.category];
   const relatedCategoryHref = `/resources/category/${seed.category}`;
   const typeLabel = typeEyebrows[seed.type].toLowerCase();
+  const audienceLabel = seed.audience === 'all' ? 'All audiences' : seed.audience;
+  const categoryLabel = category?.label ?? 'Resources';
 
   return {
     ...seed,
@@ -304,6 +306,125 @@ function createPage(seed: ContentPageSeed, index: number): ContentPage {
       { label: 'Find schools', href: '/search' },
       { label: 'See all examples', href: '/resources' },
     ],
+    searchSignals: [
+      { label: 'Intent', value: typeEyebrows[seed.type], tone: 'brand' },
+      { label: 'Audience', value: audienceLabel, tone: 'trust' },
+      { label: 'Journey', value: categoryLabel, tone: 'featured' },
+      { label: 'Reviewed', value: 'May 2026', tone: 'muted' },
+    ],
+    decisionPoints: [
+      {
+        title: 'Fit decision',
+        summary: `Confirm whether ${categoryLabel.toLowerCase()} is the right journey for the family, agent, or school team.`,
+        owner: seed.audience === 'schools' ? 'School growth lead' : 'Family success lead',
+        evidence: 'Shortlist notes, priority constraints, and linked comparison pages.',
+        href: '/resources/compare-schools-guide',
+      },
+      {
+        title: 'Readiness decision',
+        summary: 'Check whether the user has the documents, dates, budget, and support signals needed to move forward.',
+        owner: seed.audience === 'agents' ? 'Agent operations lead' : 'Admissions operations lead',
+        evidence: 'Reports, passports, fee assumptions, English evidence, and timing notes.',
+        href: '/resources/application-documents-checklist',
+      },
+      {
+        title: 'Next action decision',
+        summary: 'Route the visitor into search, contact, a related policy page, or the next application step.',
+        owner: 'SchoolGo content operations',
+        evidence: 'CTA clicks, related pages, resource rows, and category-level navigation.',
+        href: relatedCategoryHref,
+      },
+    ],
+    aiSummary: {
+      answer: `${seed.title} helps ${audienceLabel.toLowerCase()} understand the practical next step for ${categoryLabel.toLowerCase()}, including timing, evidence, ownership, and linked follow-up actions.`,
+      intent: `${typeEyebrows[seed.type]} research and decision support`,
+      entities: [
+        seed.title,
+        categoryLabel,
+        typeEyebrows[seed.type],
+        audienceLabel,
+        'SchoolGo',
+      ],
+      followUps: [
+        { label: 'Compare school options', href: '/resources/compare-schools-guide' },
+        { label: 'Prepare documents', href: '/resources/application-documents-checklist' },
+        { label: 'Find schools', href: '/search' },
+      ],
+    },
+    proofPoints: [
+      {
+        label: 'Visible next step',
+        detail: 'Primary and secondary CTAs are rendered near the top and repeated in the final action banner.',
+        confidence: 'High',
+        href: pagePath(seed.slug),
+      },
+      {
+        label: 'Evidence path',
+        detail: 'Checklist, timeline, and resource rows expose the exact documents or decisions needed before action.',
+        confidence: seed.type === 'faq' ? 'Medium' : 'High',
+        href: '/resources/application-documents-checklist',
+      },
+      {
+        label: 'Internal linking',
+        detail: 'Related pages, category hubs, resources, and action links make the page easy to crawl and navigate.',
+        confidence: 'High',
+        href: relatedCategoryHref,
+      },
+    ],
+    stakeholders: [
+      {
+        name: 'Family decision maker',
+        goal: 'Understand school fit, timing, budget, and support before making contact.',
+        owner: 'Family success',
+        metric: 'Shortlist clarity',
+        href: '/parent',
+      },
+      {
+        name: 'Agent or counsellor',
+        goal: 'Translate the page into evidence, tasks, and next-step guidance for the family.',
+        owner: 'Agent operations',
+        metric: 'Application readiness',
+        href: '/agent',
+      },
+      {
+        name: 'School admissions team',
+        goal: 'Use the same structure to explain requirements, service levels, and response expectations.',
+        owner: 'School growth',
+        metric: 'Response quality',
+        href: '/school',
+      },
+    ],
+    actionPaths: [
+      {
+        label: 'Research',
+        description: `Read the ${categoryLabel.toLowerCase()} context and compare related pages before choosing a school path.`,
+        href: relatedCategoryHref,
+        priority: 'Support',
+      },
+      {
+        label: 'Prepare',
+        description: 'Collect evidence, clarify timing, and identify the owner for each decision point.',
+        href: '/resources/application-documents-checklist',
+        priority: 'Secondary',
+      },
+      {
+        label: 'Act',
+        description: 'Move from content into school search, enquiry, contact, or application readiness.',
+        href: '/search',
+        priority: 'Primary',
+      },
+    ],
+    schemaKeywords: [
+      seed.title,
+      categoryLabel,
+      typeEyebrows[seed.type],
+      audienceLabel,
+      'SchoolGo',
+      'Australian schools',
+      'international students',
+      'school admissions',
+    ],
+    lastReviewed: '2026-05-20',
     quote: {
       quote: `A useful ${typeLabel} page should answer the immediate question and make the next click obvious.`,
       name: 'SchoolGo content team',

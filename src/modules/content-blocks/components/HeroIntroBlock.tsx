@@ -1,25 +1,48 @@
-import { ArrowRight } from 'lucide-react';
-import { Link } from '@/i18n/navigation';
-import { Eyebrow, SectionContainer } from '@/modules/design-system';
+import Image from 'next/image';
+import { SectionContainer, CtaLink, StatusBadge, TrustBadge } from '@/modules/design-system';
 import type { ContentBlockProps } from '@/modules/content-blocks/types/content-blocks.types';
 
 export function HeroIntroBlock({ page, designLabel }: ContentBlockProps) {
   return (
-    <section className='border-b border-divider bg-background pt-28 md:pt-36'>
-      <SectionContainer className='pb-14 md:pb-20'>
-        <Eyebrow>{designLabel ?? page.eyebrow}</Eyebrow>
-        <h1 className='mt-4 max-w-4xl text-4xl font-bold leading-display text-ink-900 md:text-6xl'>
-          {page.title}
-        </h1>
-        <p className='mt-5 max-w-2xl text-lg leading-relaxed text-foggy'>{page.subtitle}</p>
-        <div className='mt-7 flex flex-wrap gap-3'>
-          <Link href={page.cta.primary.href} className='inline-flex items-center gap-2 rounded-pill bg-primary px-5 py-3 text-sm font-semibold text-on-primary no-underline shadow-brand'>
-            {page.cta.primary.label}
-            <ArrowRight className='h-4 w-4' aria-hidden='true' />
-          </Link>
-          <Link href={page.cta.secondary.href} className='rounded-pill border border-border bg-card px-5 py-3 text-sm font-semibold text-hof no-underline hover:bg-muted'>
-            {page.cta.secondary.label}
-          </Link>
+    <section className='relative overflow-hidden border-b border-divider bg-ink-900 pt-28 text-background md:pt-36'>
+      <Image src={page.image} alt='' fill priority sizes='100vw' className='object-cover opacity-45 motion-safe:animate-in motion-safe:fade-in motion-safe:duration-700' aria-hidden='true' />
+      <div className='absolute inset-0 bg-ink-900/60' />
+      <SectionContainer className='relative pb-14 md:pb-20'>
+        <div className='flex flex-wrap items-center gap-2'>
+          {page.searchSignals.slice(0, 3).map((signal) => (
+            <StatusBadge key={signal.label} tone={signal.tone}>
+              {signal.label}: {signal.value}
+            </StatusBadge>
+          ))}
+          <TrustBadge variant='claimed' label='Reusable block page' className='bg-background text-ink-900' />
+        </div>
+        <div className='mt-8 grid gap-8 lg:grid-cols-5 lg:items-end'>
+          <div className='lg:col-span-3'>
+            <h1 className='max-w-4xl text-4xl font-bold leading-display text-background md:text-6xl'>
+              {page.title}
+            </h1>
+            <p className='mt-5 max-w-2xl text-lg leading-relaxed text-background/80'>{page.subtitle}</p>
+            <div className='mt-7 flex flex-wrap gap-3'>
+              <CtaLink href={page.cta.primary.href} size='lg' arrow>
+                {page.cta.primary.label}
+              </CtaLink>
+              <CtaLink href={page.cta.secondary.href} variant='secondary' size='lg'>
+                {page.cta.secondary.label}
+              </CtaLink>
+            </div>
+          </div>
+          <div className='rounded-xl border border-background/20 bg-background/95 p-5 text-ink-900 shadow-4 transition-[transform,box-shadow] duration-300 hover:-translate-y-1 hover:shadow-5 lg:col-span-2'>
+            <p className='text-sm font-semibold uppercase text-primary'>{designLabel ?? 'Page intelligence'}</p>
+            <div className='mt-4 grid gap-3'>
+              {page.decisionPoints.map((point) => (
+                <div key={point.title} className='rounded-lg bg-muted p-4 transition-colors hover:bg-rausch-50'>
+                  <p className='text-xs font-semibold uppercase text-primary'>{point.owner}</p>
+                  <p className='mt-1 text-sm font-semibold text-ink-900'>{point.title}</p>
+                  <p className='mt-1 line-clamp-2 text-xs leading-5 text-foggy'>{point.evidence}</p>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </SectionContainer>
     </section>

@@ -1,4 +1,5 @@
 import { Clock3 } from 'lucide-react';
+import { StatusBadge } from '@/modules/design-system';
 import { BlockShell } from '@/modules/content-blocks/components/BlockShell';
 import type { ContentBlockProps } from '@/modules/content-blocks/types/content-blocks.types';
 
@@ -17,21 +18,27 @@ export function ServiceLevelBlock({ page }: ContentBlockProps) {
       description='A table block for enterprise content that needs service promises, accountability, and escalation context.'
     >
       <div className='overflow-hidden rounded-lg border border-border bg-card shadow-2'>
-        {serviceLevels.map(([standard, target, owner], index) => (
-          <div key={standard} className='grid gap-4 border-b border-border p-5 last:border-b-0 md:grid-cols-4 md:items-center'>
+        {serviceLevels.map(([standard, target, owner], index) => {
+          const stakeholder = page.stakeholders[index % page.stakeholders.length];
+          return (
+          <div key={standard} className='grid gap-4 border-b border-border p-5 transition-colors last:border-b-0 hover:bg-muted md:grid-cols-4 md:items-center'>
             <div className='flex items-center gap-3 md:col-span-2'>
               <Clock3 className='h-5 w-5 text-primary' aria-hidden='true' />
               <div>
                 <p className='font-semibold text-ink-900'>{standard}</p>
-                <p className='mt-1 text-sm text-foggy'>{page.timeline[index % page.timeline.length].title}</p>
+                <p className='mt-1 text-sm text-foggy'>{stakeholder.goal}</p>
               </div>
             </div>
             <span className='rounded-pill bg-rausch-50 px-3 py-1 text-sm font-semibold text-primary'>
               {target}
             </span>
-            <span className='text-sm font-semibold text-hof'>{owner}</span>
+            <span className='space-y-1 text-sm font-semibold text-hof'>
+              <span className='block'>{owner}</span>
+              <StatusBadge tone='muted'>{stakeholder.metric}</StatusBadge>
+            </span>
           </div>
-        ))}
+          );
+        })}
       </div>
     </BlockShell>
   );

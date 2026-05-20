@@ -121,6 +121,20 @@ export function withContentSectionLinks(page: ContentPage): ContentPage {
       href: rewriteContentHref(resource.href),
     })),
     links: page.links.map(rewriteLink),
+    decisionPoints: page.decisionPoints.map(rewriteOptionalHref),
+    aiSummary: {
+      ...page.aiSummary,
+      followUps: page.aiSummary.followUps.map(rewriteLink),
+    },
+    proofPoints: page.proofPoints.map(rewriteOptionalHref),
+    stakeholders: page.stakeholders.map((stakeholder) => ({
+      ...stakeholder,
+      href: rewriteContentHref(stakeholder.href),
+    })),
+    actionPaths: page.actionPaths.map((path) => ({
+      ...path,
+      href: rewriteContentHref(path.href),
+    })),
     cta: {
       ...page.cta,
       primary: rewriteLink(page.cta.primary),

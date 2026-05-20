@@ -1,21 +1,22 @@
-import { ArrowRight } from 'lucide-react';
-import { Link } from '@/i18n/navigation';
-import { SectionContainer } from '@/modules/design-system';
+import Image from 'next/image';
+import { CtaLink, SectionContainer, StatusBadge } from '@/modules/design-system';
 import type { ContentBlockProps } from '@/modules/content-blocks/types/content-blocks.types';
 
 export function CtaBannerBlock({ page }: ContentBlockProps) {
   return (
     <section className='bg-background py-12'>
       <SectionContainer>
-        <div className='rounded-xl bg-ink-900 p-7 text-background shadow-4 md:flex md:items-center md:justify-between md:gap-8 md:p-10'>
-          <div>
+        <div className='relative overflow-hidden rounded-xl bg-ink-900 p-7 text-background shadow-4 md:flex md:items-center md:justify-between md:gap-8 md:p-10'>
+          <Image src={page.image} alt='' fill sizes='100vw' className='object-cover opacity-35' aria-hidden='true' />
+          <div className='absolute inset-0 bg-ink-900/65' />
+          <div className='relative'>
+            <StatusBadge tone='featured'>Next action</StatusBadge>
             <h2 className='text-3xl font-bold text-background'>{page.cta.title}</h2>
             <p className='mt-3 max-w-2xl text-sm leading-6 text-background/70'>{page.cta.description}</p>
           </div>
-          <Link href={page.cta.primary.href} className='mt-6 inline-flex items-center gap-2 rounded-pill bg-background px-5 py-3 text-sm font-semibold text-ink-900 no-underline hover:bg-muted md:mt-0'>
+          <CtaLink href={page.cta.primary.href} variant='secondary' className='relative mt-6 bg-background md:mt-0' arrow>
             {page.cta.primary.label}
-            <ArrowRight className='h-4 w-4' aria-hidden='true' />
-          </Link>
+          </CtaLink>
         </div>
       </SectionContainer>
     </section>

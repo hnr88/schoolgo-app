@@ -4,10 +4,13 @@ import { SectionContainer, SectionHeader } from '@/modules/design-system';
 import { contentBlockDefinitions } from '@/modules/content-blocks/lib/block-registry';
 import { contentPageDesigns } from '@/modules/content-blocks/lib/content-block-designs';
 import { contentSectionRoutes } from '@/modules/content-pages/constants/content-section-routes.constants';
+import { ContentListStructuredData } from '@/modules/content-pages/components/ContentListStructuredData';
 import { ContentDirectoryGrid } from '@/modules/content-pages/components/ContentDirectoryGrid';
 import { ContentPagination } from '@/modules/content-pages/components/ContentPagination';
 import {
   contentCategories,
+  contentPages,
+  getContentHref,
   getPaginatedContentPages,
 } from '@/modules/content-pages/data/content-pages';
 import {
@@ -21,6 +24,16 @@ export function ContentIndexPage({ currentPage = 1 }: { currentPage?: number }) 
 
   return (
     <>
+      <ContentListStructuredData
+        name='SchoolGo resource page examples'
+        description='Dummy content pages composed from reusable SchoolGo content blocks.'
+        href='/resources'
+        items={contentPages.map((page) => ({
+          name: page.title,
+          description: page.description,
+          href: getContentHref(page),
+        }))}
+      />
       <section className='border-b border-divider bg-muted pt-28 md:pt-40'>
         <SectionContainer className='pb-12 md:pb-16'>
           <div className='flex items-center gap-2 text-primary'>

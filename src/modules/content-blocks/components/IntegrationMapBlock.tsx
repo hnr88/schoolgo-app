@@ -1,5 +1,6 @@
 import { Database, PlugZap } from 'lucide-react';
 import { Link } from '@/i18n/navigation';
+import { StatusBadge } from '@/modules/design-system';
 import { BlockShell } from '@/modules/content-blocks/components/BlockShell';
 import type { ContentBlockProps } from '@/modules/content-blocks/types/content-blocks.types';
 
@@ -11,11 +12,12 @@ export function IntegrationMapBlock({ page }: ContentBlockProps) {
       eyebrow='Integration map'
       title='Connected systems and content handoffs'
       description='A systems block for enterprise pages that explain how content, workflow, and data move together.'
+      tone='ink'
     >
-      <div className='rounded-lg border border-border bg-card p-5 shadow-2'>
+      <div className='rounded-lg border border-background/20 bg-background p-5 text-ink-900 shadow-2'>
         <div className='grid gap-4 lg:grid-cols-5'>
           {systems.map((system, index) => (
-            <div key={system} className='rounded-lg bg-muted p-4'>
+            <div key={system} className='rounded-lg bg-muted p-4 transition-[transform,box-shadow] duration-300 hover:-translate-y-1 hover:shadow-2'>
               <div className='flex items-center gap-2'>
                 {index === 0 ? (
                   <PlugZap className='h-5 w-5 text-primary' aria-hidden='true' />
@@ -27,6 +29,9 @@ export function IntegrationMapBlock({ page }: ContentBlockProps) {
               <p className='mt-3 text-sm leading-6 text-foggy'>
                 {page.resources[index % page.resources.length].description}
               </p>
+              <StatusBadge tone={index === 0 ? 'brand' : 'muted'} className='mt-4'>
+                {page.searchSignals[index % page.searchSignals.length].value}
+              </StatusBadge>
             </div>
           ))}
         </div>
@@ -36,7 +41,7 @@ export function IntegrationMapBlock({ page }: ContentBlockProps) {
           <Link
             key={link.href}
             href={link.href}
-            className='rounded-pill border border-border px-4 py-2 text-sm font-semibold text-hof no-underline'
+            className='rounded-pill border border-background/30 bg-background/10 px-4 py-2 text-sm font-semibold text-background no-underline transition-colors hover:bg-background hover:text-ink-900'
           >
             {link.label}
           </Link>

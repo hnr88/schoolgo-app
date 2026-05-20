@@ -2,11 +2,13 @@ import { Link } from '@/i18n/navigation';
 import { SectionContainer, SectionHeader } from '@/modules/design-system';
 import { MarketingFooter, MarketingHeader } from '@/modules/marketing-layout';
 import { ContentDirectoryGrid } from '@/modules/content-pages/components/ContentDirectoryGrid';
+import { ContentListStructuredData } from '@/modules/content-pages/components/ContentListStructuredData';
 import {
   getContentSectionDescription,
   getContentSectionLabel,
   getContentSectionPageHref,
   getContentSectionPages,
+  getContentSectionRootHref,
 } from '@/modules/content-pages/lib/content-section-routes';
 import type { ContentSectionRoute } from '@/modules/content-pages/types/content-section-routes.types';
 
@@ -19,9 +21,20 @@ export function ContentSectionIndexPage({
   const description = getContentSectionDescription(section);
   const pages = getContentSectionPages(section);
   const firstPage = pages[0];
+  const sectionHref = getContentSectionRootHref(section);
 
   return (
     <>
+      <ContentListStructuredData
+        name={`${label} page examples`}
+        description={description}
+        href={sectionHref}
+        items={pages.map((page) => ({
+          name: page.title,
+          description: page.description,
+          href: getContentSectionPageHref(page),
+        }))}
+      />
       <MarketingHeader activePortal='parent' />
       <main id='main-content'>
         <section className='border-b border-divider bg-muted pt-28 md:pt-40'>

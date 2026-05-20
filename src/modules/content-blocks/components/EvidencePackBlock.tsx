@@ -1,5 +1,6 @@
 import { ClipboardCheck, FileText } from 'lucide-react';
 import { Link } from '@/i18n/navigation';
+import { StatusBadge } from '@/modules/design-system';
 import { BlockShell } from '@/modules/content-blocks/components/BlockShell';
 import type { ContentBlockProps } from '@/modules/content-blocks/types/content-blocks.types';
 
@@ -12,11 +13,13 @@ export function EvidencePackBlock({ page }: ContentBlockProps) {
       tone='muted'
     >
       <div className='grid gap-4 lg:grid-cols-2'>
-        {page.checklist.map((item, index) => (
+        {page.checklist.map((item, index) => {
+          const proof = page.proofPoints[index];
+          return (
           <Link
             key={item.label}
             href={item.href ?? '/search'}
-            className='flex gap-4 rounded-lg border border-border bg-card p-5 no-underline shadow-1 hover:shadow-3'
+            className='group flex gap-4 rounded-lg border border-border bg-card p-5 no-underline shadow-1 transition-[transform,box-shadow] duration-300 hover:-translate-y-0.5 hover:shadow-3'
           >
             <div className='flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-rausch-50 text-primary'>
               {index === 0 ? (
@@ -26,12 +29,17 @@ export function EvidencePackBlock({ page }: ContentBlockProps) {
               )}
             </div>
             <span>
-              <span className='block font-semibold text-ink-900'>{item.label}</span>
+              <span className='flex flex-wrap items-center gap-2'>
+                <span className='font-semibold text-ink-900'>{item.label}</span>
+                {proof ? <StatusBadge tone='trust'>{proof.confidence}</StatusBadge> : null}
+              </span>
               <span className='mt-1 block text-sm leading-6 text-foggy'>{item.detail}</span>
+              {proof ? <span className='mt-2 block text-xs leading-5 text-foggy'>{proof.detail}</span> : null}
               <span className='mt-3 inline-block text-sm font-semibold text-primary'>Review evidence</span>
             </span>
           </Link>
-        ))}
+          );
+        })}
       </div>
     </BlockShell>
   );
