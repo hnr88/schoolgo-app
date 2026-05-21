@@ -41,3 +41,9 @@ export const VERIFIED_CARDS: Array<{ key: 'a' | 'b' | 'c' | 'd'; image: string }
   { key: 'c', image: 'https://images.unsplash.com/photo-1651313976327-f10851420a08?auto=format&fit=crop&w=640&h=480&q=80' },
   { key: 'd', image: 'https://images.unsplash.com/photo-1751510397614-e289eb4ce57a?auto=format&fit=crop&w=640&h=480&q=80' },
 ];
+
+export const FEATURED_SCHOOL_SLUGS: readonly string[] = [
+  'shore-sydney-church-of-england-grammar-school-north-sydney',
+  'melbourne-grammar-school-melbourne',
+  'brisbane-grammar-school-brisbane',
+];
