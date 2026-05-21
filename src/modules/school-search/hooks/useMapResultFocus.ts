@@ -61,18 +61,24 @@ export function useMapResultFocus(
 
     if (!target) return;
 
-    const focusKey = `${requestKey}:${target.type}:${target.key}`;
+    const focusKey = `${target.type}:${target.key}`;
     if (focusedKeyRef.current === focusKey) return;
 
     focusedKeyRef.current = focusKey;
 
+    const currentBounds = map.getBounds();
+
     if (target.type === 'school') {
       const center = L.latLng(target.center);
+      if (currentBounds.contains(center)) return;
       const zoom = Math.max(map.getZoom(), target.zoom);
       if (isAlreadyFocused(map, center, zoom)) return;
       map.flyTo(center, zoom, { animate: true });
       return;
     }
+
+    const targetBounds = L.latLngBounds(target.bounds);
+    if (currentBounds.contains(targetBounds)) return;
 
     const camera = getBoundsCamera(map, target.bounds, target.maxZoom);
     if (isAlreadyFocused(map, camera.center, camera.zoom)) return;

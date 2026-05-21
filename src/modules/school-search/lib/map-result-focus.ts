@@ -40,7 +40,7 @@ export function getMapResultFocusTarget(schools: SchoolHit[]) {
 
   return {
     type: 'bounds' as const,
-    key: points.map((point) => point.key).join('|'),
+    key: points.map((point) => point.key).sort().join('|'),
     bounds: [
       [Math.min(...lats), Math.min(...lngs)],
       [Math.max(...lats), Math.max(...lngs)],
