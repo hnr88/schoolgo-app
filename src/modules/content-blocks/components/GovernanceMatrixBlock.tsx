@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import { ShieldCheck } from 'lucide-react';
 import { Link } from '@/i18n/navigation';
-import { StatusBadge } from '@/modules/design-system';
 import { BlockShell } from '@/modules/content-blocks/components/BlockShell';
 import type { ContentBlockProps } from '@/modules/content-blocks/types/content-blocks.types';
 
@@ -41,7 +40,7 @@ export function GovernanceMatrixBlock({ page }: ContentBlockProps) {
                 </div>
                 <span className='text-sm text-foggy'>{owner}</span>
                 <span className='text-sm text-foggy'>{page.decisionPoints[index % page.decisionPoints.length].evidence || evidence}</span>
-                <span className='rounded-pill bg-babu-50 px-3 py-1 text-sm font-semibold text-hof'>
+                <span className='text-sm font-semibold text-hof'>
                   {cadence}
                 </span>
               </div>
@@ -53,14 +52,12 @@ export function GovernanceMatrixBlock({ page }: ContentBlockProps) {
             <Image src={page.image} alt={page.imageAlt} fill sizes='(max-width: 1024px) 100vw, 33vw' className='object-cover' />
           </div>
           <div className='p-5'>
-            <StatusBadge tone='trust'>Evidence context</StatusBadge>
+            <p className='text-xs font-semibold uppercase text-rausch-700'>Evidence context</p>
             <p className='mt-3 text-lg font-semibold text-ink-900'>{page.title}</p>
             <p className='mt-2 text-sm leading-6 text-foggy'>{page.description}</p>
-            <div className='mt-4 flex flex-wrap gap-2'>
-              {page.schemaKeywords.slice(1, 5).map((keyword) => (
-                <StatusBadge key={keyword} tone='muted'>{keyword}</StatusBadge>
-              ))}
-            </div>
+            <p className='mt-4 text-sm leading-6 text-hof'>
+              {page.schemaKeywords.slice(1, 5).join(', ')}
+            </p>
           </div>
         </aside>
       </div>

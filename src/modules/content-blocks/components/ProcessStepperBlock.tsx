@@ -1,6 +1,5 @@
 import { ArrowRight } from 'lucide-react';
 import { Link } from '@/i18n/navigation';
-import { StatusBadge } from '@/modules/design-system';
 import { BlockShell } from '@/modules/content-blocks/components/BlockShell';
 import type { ContentBlockProps } from '@/modules/content-blocks/types/content-blocks.types';
 
@@ -14,7 +13,7 @@ export function ProcessStepperBlock({ page }: ContentBlockProps) {
           <Link key={step.title} href={step.href ?? '/resources'} className='group rounded-lg border border-border bg-card p-6 no-underline shadow-1 transition-transform duration-300 hover:-translate-y-1 hover:shadow-3 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rausch-700'>
             <span className='flex items-center justify-between gap-3'>
               <span className='flex h-9 w-9 items-center justify-center rounded-pill bg-rausch-700 text-sm font-bold text-background'>{index + 1}</span>
-              <StatusBadge tone={index === 0 ? 'brand' : 'muted'}>{index === 0 ? 'Start here' : 'Next gate'}</StatusBadge>
+              <span className='text-xs font-semibold uppercase text-foggy'>{index === 0 ? 'Start here' : 'Next gate'}</span>
             </span>
             <span className='mt-5 block text-lg font-semibold text-ink-900'>{step.title}</span>
             <span className='mt-2 block text-sm leading-6 text-hof'>{step.description}</span>

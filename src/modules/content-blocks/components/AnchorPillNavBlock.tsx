@@ -1,5 +1,4 @@
 import { Link } from '@/i18n/navigation';
-import { StatusBadge } from '@/modules/design-system';
 import type { ContentBlockProps } from '@/modules/content-blocks/types/content-blocks.types';
 
 export function AnchorPillNavBlock({ page, designLabel }: ContentBlockProps) {
@@ -14,14 +13,9 @@ export function AnchorPillNavBlock({ page, designLabel }: ContentBlockProps) {
             </Link>
           ))}
         </div>
-        <div className='flex gap-2 overflow-x-auto'>
-          {page.searchSignals.map((signal) => (
-            <StatusBadge key={signal.label} tone={signal.tone}>
-              {signal.value}
-            </StatusBadge>
-          ))}
-          <StatusBadge tone='muted'>{designLabel ?? page.eyebrow}</StatusBadge>
-        </div>
+        <p className='shrink-0 text-xs font-semibold uppercase text-foggy'>
+          {page.eyebrow} / {designLabel ?? 'Page sections'}
+        </p>
       </div>
     </div>
   );

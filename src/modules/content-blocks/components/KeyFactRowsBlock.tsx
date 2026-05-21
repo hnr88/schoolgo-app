@@ -1,5 +1,4 @@
 import { Link } from '@/i18n/navigation';
-import { StatusBadge } from '@/modules/design-system';
 import { BlockShell } from '@/modules/content-blocks/components/BlockShell';
 import type { ContentBlockProps } from '@/modules/content-blocks/types/content-blocks.types';
 
@@ -8,14 +7,12 @@ export function KeyFactRowsBlock({ page }: ContentBlockProps) {
     <BlockShell id='proof' eyebrow='Key facts' title='Details at a glance' description='Rows are useful when users need quick scanning before deeper content.'>
       <div className='grid gap-5 lg:grid-cols-5'>
         <aside className='rounded-lg border border-border bg-card p-6 shadow-2 lg:col-span-2'>
-          <StatusBadge tone='brand'>AI summary</StatusBadge>
+          <p className='text-xs font-semibold uppercase text-rausch-700'>Summary</p>
           <h3 className='mt-4 text-xl font-semibold text-ink-900'>{page.aiSummary.intent}</h3>
-          <p className='mt-3 text-sm leading-6 text-foggy'>{page.aiSummary.answer}</p>
-          <div className='mt-5 flex flex-wrap gap-2'>
-            {page.aiSummary.entities.map((entity) => (
-              <StatusBadge key={entity} tone='muted'>{entity}</StatusBadge>
-            ))}
-          </div>
+          <p className='mt-3 text-sm leading-6 text-hof'>{page.aiSummary.answer}</p>
+          <p className='mt-5 border-t border-divider pt-4 text-sm leading-6 text-hof'>
+            {page.aiSummary.entities.join(', ')}
+          </p>
         </aside>
         <dl className='divide-y divide-divider rounded-lg border border-border bg-card shadow-1 lg:col-span-3'>
           {page.facts.map((fact) => (

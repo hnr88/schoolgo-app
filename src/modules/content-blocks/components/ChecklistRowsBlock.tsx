@@ -1,6 +1,5 @@
 import { CheckCircle2 } from 'lucide-react';
 import { Link } from '@/i18n/navigation';
-import { StatusBadge } from '@/modules/design-system';
 import { BlockShell } from '@/modules/content-blocks/components/BlockShell';
 import type { ContentBlockProps } from '@/modules/content-blocks/types/content-blocks.types';
 
@@ -14,7 +13,7 @@ export function ChecklistRowsBlock({ page }: ContentBlockProps) {
             <span>
               <span className='flex flex-wrap items-center gap-2'>
                 <span className='font-semibold text-ink-900'>{item.label}</span>
-                <StatusBadge tone={index === 0 ? 'brand' : 'muted'}>{page.proofPoints[index]?.confidence ?? 'Ready'}</StatusBadge>
+                <span className='text-xs font-semibold uppercase text-foggy'>{page.proofPoints[index]?.confidence ?? 'Ready'}</span>
               </span>
               <span className='mt-1 block text-sm leading-6 text-hof'>{item.detail}</span>
               {page.proofPoints[index] ? (

@@ -1,6 +1,5 @@
 import { Database, PlugZap } from 'lucide-react';
 import { Link } from '@/i18n/navigation';
-import { StatusBadge } from '@/modules/design-system';
 import { BlockShell } from '@/modules/content-blocks/components/BlockShell';
 import type { ContentBlockProps } from '@/modules/content-blocks/types/content-blocks.types';
 
@@ -29,9 +28,9 @@ export function IntegrationMapBlock({ page }: ContentBlockProps) {
               <p className='mt-3 text-sm leading-6 text-foggy'>
                 {page.resources[index % page.resources.length].description}
               </p>
-              <StatusBadge tone={index === 0 ? 'brand' : 'muted'} className='mt-4'>
+              <p className='mt-4 text-xs font-semibold uppercase text-foggy'>
                 {page.searchSignals[index % page.searchSignals.length].value}
-              </StatusBadge>
+              </p>
             </div>
           ))}
         </div>

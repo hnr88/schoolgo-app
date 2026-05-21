@@ -1,6 +1,5 @@
 import { GitBranch, LockKeyhole, Stamp } from 'lucide-react';
 import { Link } from '@/i18n/navigation';
-import { StatusBadge } from '@/modules/design-system';
 import { BlockShell } from '@/modules/content-blocks/components/BlockShell';
 import type { ContentBlockProps } from '@/modules/content-blocks/types/content-blocks.types';
 
@@ -26,7 +25,7 @@ export function ApprovalFlowBlock({ page }: ContentBlockProps) {
             <article key={gate.label} className='rounded-lg border border-border bg-card p-6 shadow-1 transition-transform duration-300 hover:-translate-y-1 hover:shadow-3'>
               <div className='flex items-center justify-between'>
                 <Icon className='h-6 w-6 text-rausch-700' aria-hidden='true' />
-                <StatusBadge tone={index === 0 ? 'brand' : 'trust'}>Gate {index + 1}</StatusBadge>
+                <span className='text-xs font-semibold uppercase text-foggy'>Gate {index + 1}</span>
               </div>
               <h3 className='mt-5 text-lg font-semibold text-ink-900'>{gate.label}</h3>
               <p className='mt-2 text-sm leading-6 text-foggy'>{item.description}</p>

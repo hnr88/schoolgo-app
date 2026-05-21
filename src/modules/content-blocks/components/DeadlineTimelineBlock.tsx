@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import { Link } from '@/i18n/navigation';
-import { StatusBadge } from '@/modules/design-system';
 import { BlockShell } from '@/modules/content-blocks/components/BlockShell';
 import type { ContentBlockProps } from '@/modules/content-blocks/types/content-blocks.types';
 
@@ -14,11 +13,9 @@ export function DeadlineTimelineBlock({ page, relatedPages = [] }: ContentBlockP
           <li key={item.title} className='group overflow-hidden rounded-lg border border-border bg-card shadow-1 hover:shadow-3'>
             <div className='relative aspect-video bg-muted'>
               <Image src={imagePage.image} alt='' fill sizes='(max-width: 768px) 100vw, 33vw' className='object-cover transition-transform group-hover:scale-105' aria-hidden='true' />
-              <span className='absolute left-4 top-4'>
-                <StatusBadge tone='brand'>{item.date}</StatusBadge>
-              </span>
             </div>
             <div className='p-6'>
+              <p className='text-xs font-semibold uppercase text-rausch-700'>{item.date}</p>
               <h3 className='text-lg font-semibold text-ink-900'>{item.title}</h3>
               <p className='mt-2 text-sm leading-6 text-hof'>{item.description}</p>
               {item.href && <Link href={item.href} className='mt-4 inline-flex text-sm font-semibold text-rausch-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rausch-700'>Open {item.title}</Link>}

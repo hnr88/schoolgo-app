@@ -1,5 +1,4 @@
 import { BarChart3, TrendingUp } from 'lucide-react';
-import { StatusBadge } from '@/modules/design-system';
 import { BlockShell } from '@/modules/content-blocks/components/BlockShell';
 import type { ContentBlockProps } from '@/modules/content-blocks/types/content-blocks.types';
 
@@ -29,7 +28,6 @@ export function KpiDashboardBlock({ page }: ContentBlockProps) {
             </p>
             <p className='mt-3 text-2xl font-bold text-background'>{point.confidence}</p>
             <p className='mt-1 text-sm text-background'>{point.detail}</p>
-            <StatusBadge tone='muted' className='mt-4 bg-background text-ink-900'>Visible proof</StatusBadge>
           </div>
         ))}
       </div>

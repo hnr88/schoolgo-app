@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import { Users } from 'lucide-react';
 import { Link } from '@/i18n/navigation';
-import { StatusBadge } from '@/modules/design-system';
 import { BlockShell } from '@/modules/content-blocks/components/BlockShell';
 import type { ContentBlockProps } from '@/modules/content-blocks/types/content-blocks.types';
 
@@ -18,15 +17,13 @@ export function AudienceCardsBlock({ page }: ContentBlockProps) {
           <Link key={audience.label} href={audience.href} className='group overflow-hidden rounded-lg border border-border bg-card no-underline shadow-1 transition-transform duration-300 hover:-translate-y-1 hover:shadow-3'>
             <span className='relative block aspect-video bg-muted'>
               <Image src={audience.image} alt='' fill sizes='(max-width: 768px) 100vw, 33vw' className='object-cover transition-transform group-hover:scale-105' aria-hidden='true' />
-              <span className='absolute left-4 top-4'>
-                <StatusBadge tone={audience.audience === page.audience ? 'brand' : 'muted'}>
-                  {audience.audience === page.audience ? 'Primary' : 'Route'}
-                </StatusBadge>
-              </span>
             </span>
             <span className='block p-6'>
               <Users className='h-5 w-5 text-rausch-700' aria-hidden='true' />
               <span className='mt-5 block text-lg font-semibold text-ink-900'>{audience.label}</span>
+              <span className='mt-1 block text-xs font-semibold uppercase text-foggy'>
+                {audience.audience === page.audience ? 'Primary audience' : 'Audience route'}
+              </span>
               <span className='mt-2 block text-sm leading-6 text-foggy'>{audience.text}</span>
               <span className='mt-4 block text-sm font-semibold text-rausch-700'>Open {audience.label.toLowerCase()}</span>
             </span>

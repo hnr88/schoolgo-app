@@ -1,5 +1,4 @@
 import { Clock3 } from 'lucide-react';
-import { StatusBadge } from '@/modules/design-system';
 import { BlockShell } from '@/modules/content-blocks/components/BlockShell';
 import type { ContentBlockProps } from '@/modules/content-blocks/types/content-blocks.types';
 
@@ -29,12 +28,12 @@ export function ServiceLevelBlock({ page }: ContentBlockProps) {
                 <p className='mt-1 text-sm text-foggy'>{stakeholder.goal}</p>
               </div>
             </div>
-            <span className='rounded-pill bg-rausch-50 px-3 py-1 text-sm font-semibold text-rausch-700'>
+            <span className='text-sm font-semibold text-rausch-700'>
               {target}
             </span>
             <span className='space-y-1 text-sm font-semibold text-hof'>
               <span className='block'>{owner}</span>
-              <StatusBadge tone='muted'>{stakeholder.metric}</StatusBadge>
+              <span className='block text-xs font-semibold uppercase text-foggy'>{stakeholder.metric}</span>
             </span>
           </div>
           );

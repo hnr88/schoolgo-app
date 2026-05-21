@@ -1,5 +1,4 @@
 import { Wallet } from 'lucide-react';
-import { StatusBadge } from '@/modules/design-system';
 import { BlockShell } from '@/modules/content-blocks/components/BlockShell';
 import type { ContentBlockProps } from '@/modules/content-blocks/types/content-blocks.types';
 
@@ -22,11 +21,7 @@ export function FeeSummaryBlock({ page }: ContentBlockProps) {
               <p className='text-sm text-hof'>Starter values for reusable layout testing.</p>
             </div>
           </div>
-          <div className='flex flex-wrap gap-2'>
-            {page.searchSignals.slice(0, 3).map((signal) => (
-              <StatusBadge key={signal.label} tone={signal.tone}>{signal.value}</StatusBadge>
-            ))}
-          </div>
+          <p className='text-sm font-semibold text-rausch-700'>{page.eyebrow}</p>
         </div>
         <dl className='mt-6 grid gap-3 md:grid-cols-3'>
           {rows.map((row) => (

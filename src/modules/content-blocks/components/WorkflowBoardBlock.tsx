@@ -1,6 +1,5 @@
 import { CircleDot, KanbanSquare } from 'lucide-react';
 import { Link } from '@/i18n/navigation';
-import { StatusBadge } from '@/modules/design-system';
 import { BlockShell } from '@/modules/content-blocks/components/BlockShell';
 import type { ContentBlockProps } from '@/modules/content-blocks/types/content-blocks.types';
 
@@ -33,8 +32,8 @@ export function WorkflowBoardBlock({ page }: ContentBlockProps) {
                   <p className='flex flex-wrap items-center gap-2 text-sm font-semibold text-hof'>
                     <CircleDot className='h-4 w-4 text-rausch-700' aria-hidden='true' />
                     {card.label}
-                    <StatusBadge tone={card.priority === 'Primary' ? 'brand' : 'muted'}>{card.priority}</StatusBadge>
                   </p>
+                  <p className='mt-1 text-xs font-semibold uppercase text-foggy'>{card.priority}</p>
                   <p className='mt-2 text-sm leading-6 text-foggy'>{card.description}</p>
                   <p className='mt-3 rounded-lg bg-card p-3 text-xs leading-5 text-foggy'>
                     {decision.owner}: {decision.evidence}

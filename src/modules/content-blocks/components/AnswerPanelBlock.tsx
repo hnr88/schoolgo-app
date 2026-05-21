@@ -1,6 +1,5 @@
 import { ArrowRight, SearchCheck, ShieldCheck } from 'lucide-react';
 import { Link } from '@/i18n/navigation';
-import { StatusBadge } from '@/modules/design-system';
 import { BlockShell } from '@/modules/content-blocks/components/BlockShell';
 import type { ContentBlockProps } from '@/modules/content-blocks/types/content-blocks.types';
 
@@ -15,16 +14,16 @@ export function AnswerPanelBlock({ page }: ContentBlockProps) {
     >
       <div className='grid gap-5 lg:grid-cols-5'>
         <article className='rounded-xl border border-border bg-card p-6 shadow-2 lg:col-span-3'>
-          <div className='flex flex-wrap gap-2'>
-            {page.aiSummary.entities.slice(0, 5).map((entity) => (
-              <StatusBadge key={entity} tone='muted'>
-                {entity}
-              </StatusBadge>
-            ))}
-          </div>
+          <p className='text-xs font-semibold uppercase text-rausch-700'>Direct answer</p>
           <p className='mt-5 text-xl font-semibold leading-relaxed text-ink-900'>
             {page.aiSummary.answer}
           </p>
+          <div className='mt-5 border-t border-divider pt-4'>
+            <p className='text-xs font-semibold uppercase text-foggy'>Referenced topics</p>
+            <p className='mt-2 text-sm leading-6 text-hof'>
+              {page.aiSummary.entities.slice(0, 5).join(', ')}
+            </p>
+          </div>
           <div className='mt-6 grid gap-3 md:grid-cols-3'>
             {page.aiSummary.followUps.map((link) => (
               <Link
@@ -50,17 +49,17 @@ export function AnswerPanelBlock({ page }: ContentBlockProps) {
               <details key={point.label} className='group py-3'>
                 <summary className='flex cursor-pointer list-none items-center justify-between gap-3 text-sm font-semibold text-ink-900'>
                   <span>{point.label}</span>
-                  <StatusBadge tone={point.confidence === 'High' ? 'trust' : 'muted'}>
+                  <span className='text-xs font-semibold uppercase text-babu-700'>
                     {point.confidence}
-                  </StatusBadge>
+                  </span>
                 </summary>
                 <p className='mt-2 text-sm leading-6 text-hof'>{point.detail}</p>
               </details>
             ))}
           </div>
-          <div className='mt-4 flex items-center gap-2 rounded-lg bg-babu-50 p-3 text-sm font-semibold text-babu-700'>
+          <div className='mt-4 flex items-center gap-2 border-t border-divider pt-4 text-sm font-semibold text-babu-700'>
             <ShieldCheck className='h-4 w-4' aria-hidden='true' />
-            JSON-LD mirrors the visible summary, links, proof list, and any visible FAQ or step blocks.
+            Structured for clear answers, proof, and next-step links.
           </div>
         </aside>
       </div>

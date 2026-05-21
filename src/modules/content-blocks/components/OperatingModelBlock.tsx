@@ -45,7 +45,7 @@ export function OperatingModelBlock({ page }: ContentBlockProps) {
           return (
             <article key={stage.label} className='rounded-lg border border-border bg-card p-5 shadow-1'>
               <div className='flex items-center justify-between gap-3'>
-                <span className='rounded-pill bg-rausch-50 px-3 py-1 text-xs font-semibold uppercase text-rausch-700'>
+                <span className='text-xs font-semibold uppercase text-rausch-700'>
                   {stage.label}
                 </span>
                 <Icon className='h-5 w-5 text-rausch-700' aria-hidden='true' />

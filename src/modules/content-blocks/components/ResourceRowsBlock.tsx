@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import { FileText } from 'lucide-react';
 import { Link } from '@/i18n/navigation';
-import { StatusBadge } from '@/modules/design-system';
 import { BlockShell } from '@/modules/content-blocks/components/BlockShell';
 import type { ContentBlockProps } from '@/modules/content-blocks/types/content-blocks.types';
 
@@ -14,7 +13,7 @@ export function ResourceRowsBlock({ page }: ContentBlockProps) {
             <Image src={page.image} alt={page.imageAlt} fill sizes='(max-width: 1024px) 100vw, 40vw' className='object-cover' />
             <div className='absolute inset-0 bg-ink-900/25' />
             <div className='absolute inset-x-5 bottom-5'>
-              <StatusBadge tone='featured'>Resource pack</StatusBadge>
+              <p className='text-xs font-semibold uppercase text-background/70'>Resource pack</p>
               <h3 className='mt-3 text-2xl font-bold text-background'>{page.title}</h3>
               <p className='mt-2 text-sm leading-6 text-background/80'>{page.subtitle}</p>
             </div>
@@ -30,7 +29,7 @@ export function ResourceRowsBlock({ page }: ContentBlockProps) {
                 <span className='block font-semibold text-ink-900'>{resource.title}</span>
                 <span className='mt-1 block text-sm leading-6 text-foggy'>{resource.description}</span>
               </span>
-              <StatusBadge tone='muted' className='md:ml-auto'>{resource.meta}</StatusBadge>
+              <span className='text-xs font-semibold uppercase text-foggy md:ml-auto'>{resource.meta}</span>
             </Link>
           ))}
         </div>

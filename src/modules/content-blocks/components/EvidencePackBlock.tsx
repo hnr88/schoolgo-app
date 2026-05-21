@@ -1,6 +1,5 @@
 import { ClipboardCheck, FileText } from 'lucide-react';
 import { Link } from '@/i18n/navigation';
-import { StatusBadge } from '@/modules/design-system';
 import { BlockShell } from '@/modules/content-blocks/components/BlockShell';
 import type { ContentBlockProps } from '@/modules/content-blocks/types/content-blocks.types';
 
@@ -31,7 +30,7 @@ export function EvidencePackBlock({ page }: ContentBlockProps) {
             <span>
               <span className='flex flex-wrap items-center gap-2'>
                 <span className='font-semibold text-ink-900'>{item.label}</span>
-                {proof ? <StatusBadge tone='trust'>{proof.confidence}</StatusBadge> : null}
+                {proof ? <span className='text-xs font-semibold uppercase text-foggy'>{proof.confidence}</span> : null}
               </span>
               <span className='mt-1 block text-sm leading-6 text-foggy'>{item.detail}</span>
               {proof ? <span className='mt-2 block text-xs leading-5 text-foggy'>{proof.detail}</span> : null}

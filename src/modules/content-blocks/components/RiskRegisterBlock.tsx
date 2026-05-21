@@ -28,7 +28,7 @@ export function RiskRegisterBlock({ page, relatedPages = [] }: ContentBlockProps
             <div className='p-6'>
               <div className='flex items-start justify-between gap-4'>
                 <AlertTriangle className='h-6 w-6 text-rausch-700' aria-hidden='true' />
-                <span className='rounded-pill bg-rausch-50 px-3 py-1 text-xs font-semibold uppercase text-rausch-700'>
+                <span className='text-xs font-semibold uppercase text-rausch-700'>
                   {severity[index]}
                 </span>
               </div>

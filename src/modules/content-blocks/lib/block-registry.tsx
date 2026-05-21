@@ -66,7 +66,7 @@ export const contentBlockDefinitions = [
   { key: 'segmentStrategy', name: 'Segment Strategy', description: 'Stakeholder segmentation and routing cards.', component: SegmentStrategyBlock },
   { key: 'serviceLevel', name: 'Service Level', description: 'Operational standards and escalation paths.', component: ServiceLevelBlock },
   { key: 'linkRail', name: 'Link Rail', description: 'Compact row of high-intent links.', component: LinkRailBlock },
-  { key: 'trustBadgeRow', name: 'Trust Badge Row', description: 'Small trust markers or verification badges.', component: TrustBadgeRowBlock },
+  { key: 'trustBadgeRow', name: 'Trust Marker Row', description: 'Small trust markers for data quality, safety, and ownership.', component: TrustBadgeRowBlock },
   { key: 'audienceCards', name: 'Audience Cards', description: 'Three-way routing for families, agents, schools.', component: AudienceCardsBlock },
   { key: 'programCards', name: 'Program Cards', description: 'Related program or pathway cards.', component: ProgramCardsBlock },
   { key: 'contactRouting', name: 'Contact Routing', description: 'Routes visitors to the correct contact path.', component: ContactRoutingBlock },

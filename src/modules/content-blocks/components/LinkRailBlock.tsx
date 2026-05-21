@@ -1,6 +1,5 @@
 import { ArrowRight } from 'lucide-react';
 import { Link } from '@/i18n/navigation';
-import { StatusBadge } from '@/modules/design-system';
 import { BlockShell } from '@/modules/content-blocks/components/BlockShell';
 import type { ContentBlockProps } from '@/modules/content-blocks/types/content-blocks.types';
 
@@ -11,7 +10,7 @@ export function LinkRailBlock({ page }: ContentBlockProps) {
         {page.actionPaths.map((link) => (
           <Link key={link.href} href={link.href} className='group flex min-h-40 flex-col justify-between gap-4 rounded-lg border border-border bg-card p-5 text-sm font-semibold text-ink-900 no-underline shadow-1 transition-transform duration-300 hover:-translate-y-1 hover:shadow-3'>
             <span className='flex items-center justify-between gap-3'>
-              <StatusBadge tone={link.priority === 'Primary' ? 'brand' : 'muted'}>{link.priority}</StatusBadge>
+              <span className='text-xs font-semibold uppercase text-foggy'>{link.priority}</span>
               <ArrowRight className='h-4 w-4 text-rausch-700 group-hover:translate-x-1' aria-hidden='true' />
             </span>
             <span>

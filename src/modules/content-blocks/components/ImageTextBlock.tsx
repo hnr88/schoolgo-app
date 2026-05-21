@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import { StatusBadge } from '@/modules/design-system';
 import { BlockShell } from '@/modules/content-blocks/components/BlockShell';
 import type { ContentBlockProps } from '@/modules/content-blocks/types/content-blocks.types';
 
@@ -9,14 +8,9 @@ export function ImageTextBlock({ page }: ContentBlockProps) {
       <div className='grid gap-8 md:grid-cols-2 md:items-center'>
         <div className='group relative aspect-video overflow-hidden rounded-xl border border-border bg-card shadow-3'>
           <Image src={page.image} alt='' fill sizes='(max-width: 768px) 100vw, 50vw' className='object-cover transition-transform duration-500 group-hover:scale-105' aria-hidden='true' />
-          <div className='absolute inset-x-4 bottom-4 flex flex-wrap gap-2'>
-            {page.searchSignals.slice(0, 2).map((signal) => (
-              <StatusBadge key={signal.label} tone={signal.tone}>{signal.value}</StatusBadge>
-            ))}
-          </div>
         </div>
         <div className='rounded-lg border border-border bg-card p-6 shadow-2'>
-          <StatusBadge tone='trust'>Editorial proof</StatusBadge>
+          <p className='text-xs font-semibold uppercase text-rausch-700'>Editorial proof</p>
           <p className='text-lg font-semibold text-ink-900'>{page.quote.quote}</p>
           <p className='mt-4 text-sm text-foggy'>{page.quote.name} · {page.quote.role}</p>
           <div className='mt-5 grid gap-3'>

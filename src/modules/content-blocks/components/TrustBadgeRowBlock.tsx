@@ -5,8 +5,8 @@ import type { ContentBlockProps } from '@/modules/content-blocks/types/content-b
 export function TrustBadgeRowBlock({ page }: ContentBlockProps) {
   const items = [
     { icon: ShieldCheck, label: 'Verified school data' },
-    { icon: BadgeCheck, label: `${page.eyebrow} page type` },
-    { icon: Sparkles, label: 'Reusable content block' },
+    { icon: BadgeCheck, label: `${page.eyebrow} ownership` },
+    { icon: Sparkles, label: 'Reviewed content structure' },
   ];
   return (
     <BlockShell eyebrow='Trust' title='Trust markers' description='A small badge row can reinforce data quality, safety, or verified workflows.'>
