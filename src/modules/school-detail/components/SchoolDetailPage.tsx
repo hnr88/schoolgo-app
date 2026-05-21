@@ -33,7 +33,7 @@ export async function SchoolDetailPage({ school, activePortal, locale }: SchoolD
 
   return (
     <>
-      <MarketingHeader activePortal={activePortal} variant="dark" />
+      <MarketingHeader activePortal={activePortal} />
       <main className="bg-background">
         <Hero school={school} activePortal={activePortal} />
         <BreadcrumbNav school={school} activePortal={activePortal} />

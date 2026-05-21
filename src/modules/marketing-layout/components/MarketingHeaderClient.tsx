@@ -16,14 +16,12 @@ export function MarketingHeaderClient({
   activePortal,
   portalUrls,
   navLinks,
-  variant,
   fullWidth = false,
   labels,
 }: MarketingHeaderClientProps) {
   const t = useTranslations('Common');
   const pathname = usePathname();
   const isSearchPage = pathname.endsWith('/search');
-  const isDark = variant === 'dark';
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -94,13 +92,11 @@ export function MarketingHeaderClient({
     <>
       <header
         className={cn(
-          'fixed top-0 z-50 w-full transition-colors duration-200',
-          scrolled
-            ? 'border-b border-divider bg-background shadow-1 md:bg-background/90 md:backdrop-blur-xl'
-            : 'border-b border-transparent bg-background md:bg-background/0',
+          'fixed top-0 z-50 w-full border-b border-divider bg-background transition-shadow duration-200 md:bg-background/90 md:backdrop-blur-xl',
+          scrolled && 'shadow-1',
         )}
       >
-        <MarketingSubHeader menus={subMenus} inverted={isDark && !scrolled} fullWidth={fullWidth} />
+        <MarketingSubHeader menus={subMenus} inverted={false} fullWidth={fullWidth} />
         <div
           className={cn(
             'flex h-11 items-center gap-4 px-5 md:h-12 md:px-8',
@@ -113,7 +109,7 @@ export function MarketingHeaderClient({
             aria-label='SchoolGo home'
           >
             <Image
-              src={isDark && !scrolled ? '/logos/logo-white-text.png' : '/logos/logo-red-text.png'}
+              src='/logos/logo-red-text.png'
               alt='SchoolGo'
               width={559}
               height={125}
@@ -132,13 +128,9 @@ export function MarketingHeaderClient({
                   aria-current={isActive ? 'page' : undefined}
                   className={cn(
                     'rounded-pill border px-3 py-1 text-sm font-semibold no-underline transition-colors',
-                    isDark && !scrolled
-                      ? isActive
-                        ? 'border-background bg-background text-ink-900 shadow-1'
-                        : 'border-background/35 bg-background/5 text-background/80 hover:bg-background/10 hover:text-background'
-                      : isActive
-                        ? 'border-primary bg-primary text-on-primary shadow-brand'
-                        : 'border-border bg-card text-foreground hover:border-primary/40 hover:bg-muted',
+                    isActive
+                      ? 'border-primary bg-primary text-on-primary shadow-brand'
+                      : 'border-border bg-card text-foreground hover:border-primary/40 hover:bg-muted',
                   )}
                 >
                   {link.label}
@@ -151,12 +143,7 @@ export function MarketingHeaderClient({
             <Link
               href='/search'
               data-slot='button'
-              className={cn(
-                'rounded-pill px-3 py-1.5 text-sm font-medium no-underline transition-colors',
-                isDark && !scrolled
-                  ? 'text-white/88 hover:bg-white/10 hover:text-white'
-                  : 'text-foreground hover:bg-muted',
-              )}
+              className='rounded-pill px-3 py-1.5 text-sm font-medium text-foreground no-underline transition-colors hover:bg-muted'
             >
               {labels.signIn}
             </Link>
@@ -176,12 +163,7 @@ export function MarketingHeaderClient({
             type='button'
             onClick={() => setMobileOpen(true)}
             aria-label={labels.openMenu}
-            className={cn(
-              'ml-auto flex h-10 w-10 shrink-0 items-center justify-center rounded-pill md:hidden',
-              isDark && !scrolled
-                ? 'text-white hover:bg-white/10'
-                : 'text-foreground hover:bg-muted',
-            )}
+            className='ml-auto flex h-10 w-10 shrink-0 items-center justify-center rounded-pill text-foreground hover:bg-muted md:hidden'
           >
             <Menu className='h-5 w-5' strokeWidth={1.75} aria-hidden='true' />
           </button>

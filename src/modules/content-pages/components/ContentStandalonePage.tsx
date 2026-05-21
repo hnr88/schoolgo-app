@@ -10,7 +10,7 @@ export function ContentStandalonePage({
 }: ContentStandalonePageProps) {
   return (
     <>
-      <MarketingHeader activePortal='parent' variant='dark' />
+      <MarketingHeader activePortal='parent' />
       <main id='main-content'>
         <ContentPageView
           page={page}
