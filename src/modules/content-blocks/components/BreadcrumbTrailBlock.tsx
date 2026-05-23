@@ -21,7 +21,7 @@ export function BreadcrumbTrailBlock({
     <Breadcrumb>
       <nav
         aria-label='Breadcrumb'
-        className='border-b border-divider bg-muted pt-16 md:pt-24'
+        className='border-b border-divider bg-muted pt-[var(--header-height)]'
       >
         <SectionContainer className='py-3'>
           <BreadcrumbList className='text-sm text-foggy'>

@@ -2,8 +2,9 @@ import { Fragment } from 'react';
 import Image from 'next/image';
 import { Star } from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
+import { Link } from '@/i18n/navigation';
 import { formatFeeAud, parseFeeAud } from '@/lib/schools/format-fee';
-import { SectionContainer } from '@/modules/design-system';
+import { SectionContainer, SchoolCard } from '@/modules/design-system';
 import { getComparisonSchoolsWithPhotos, boardingBedsForSchool } from '../lib/comparison';
 import { MIN_SCORES, RATINGS, SCHOLARSHIPS_MAP, TESTS_MAP } from '../constants/comparison.constants';
 
@@ -36,9 +37,53 @@ function getAvatarColor(name: string): string {
   return AVATAR_COLORS[index];
 }
 
+function SchoolPhotoOrLogo({
+  photoUrl,
+  logoUrl,
+  name,
+  size = 'lg',
+}: {
+  photoUrl: string | null;
+  logoUrl: string | null;
+  name: string;
+  size?: 'lg' | 'sm';
+}) {
+  const h = size === 'lg' ? 'h-40' : 'h-20';
+  const textSize = size === 'lg' ? 'text-2xl' : 'text-lg';
+
+  if (photoUrl) {
+    return (
+      <div className={`relative w-full overflow-hidden rounded-xl border border-border bg-muted ${h}`}>
+        <Image src={photoUrl} alt={name} fill sizes='200px' className='object-cover' />
+      </div>
+    );
+  }
+
+  if (logoUrl) {
+    return (
+      <div className={`flex w-full items-center justify-center overflow-hidden rounded-xl border border-border bg-gradient-to-br from-rausch-50 to-rausch-100 ${h}`}>
+        <div className='relative flex h-16 w-16 items-center justify-center overflow-hidden rounded-full bg-white shadow-2 md:h-20 md:w-20'>
+          <Image src={logoUrl} alt={name} fill sizes='80px' className='object-contain p-2' />
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div
+      className={`flex w-full items-center justify-center overflow-hidden rounded-xl border border-border ${h} ${getAvatarColor(name)}`}
+      role='img'
+      aria-label={name}
+    >
+      <span className={`font-bold ${textSize}`}>{getSchoolInitials(name)}</span>
+    </div>
+  );
+}
+
 export async function ParentsComparison() {
-  const [t, schools] = await Promise.all([
+  const [t, tc, schools] = await Promise.all([
     getTranslations('ParentsComparison'),
+    getTranslations('Common'),
     getComparisonSchoolsWithPhotos(),
   ]);
   const set = schools;
@@ -120,6 +165,26 @@ export async function ParentsComparison() {
           </h2>
         </div>
 
+        {/* School cards */}
+        <div className='grid gap-4 sm:grid-cols-2 lg:grid-cols-3'>
+          {set.map((s) => (
+            <SchoolCard
+              key={s.slug}
+              href={`/parent/schools/${s.slug}`}
+              photoUrl={s.photoUrl ?? undefined}
+              logoUrl={s.logoUrl ?? undefined}
+              name={s.name}
+              location={`${s.suburb}, ${s.state}`}
+              cricosLabel={tc('cricosVerified')}
+              className='transition-transform hover:-translate-y-1'
+            />
+          ))}
+        </div>
+
+        <p className='text-sm text-foggy'>
+          {t('shortlistLabel', { count: set.length })}
+        </p>
+
         {/* Desktop: classic column layout */}
         <div className='hidden rounded-2xl shadow-4 lg:block'>
           <div className='overflow-hidden rounded-2xl border border-border bg-card'>
@@ -131,7 +196,7 @@ export async function ParentsComparison() {
                     className='w-48 border-b border-divider bg-card px-8 pb-6 pt-8 text-left align-bottom'
                   >
                     <span className='text-xs font-semibold uppercase tracking-widest text-foggy'>
-                      {t('shortlistLabel', { count: set.length })}
+                      {t('compareLabel')}
                     </span>
                   </th>
                   {set.map((s, i) => (
@@ -141,27 +206,19 @@ export async function ParentsComparison() {
                       className='min-w-52 border-b border-divider px-6 pb-6 pt-8 text-left align-top'
                     >
                       <div className='flex flex-col gap-3'>
-                        {s.photoUrl ? (
-                          <div className='relative h-40 w-full overflow-hidden rounded-xl border border-border bg-muted'>
-                            <Image
-                              src={s.photoUrl}
-                              alt={s.name}
-                              fill
-                              sizes='200px'
-                              className='object-cover'
-                            />
-                          </div>
-                        ) : (
-                          <div
-                            className={`relative flex h-40 w-full items-center justify-center overflow-hidden rounded-xl border border-border ${getAvatarColor(s.name)}`}
-                            role='img'
-                            aria-label={s.name}
-                          >
-                            <span className='text-2xl font-bold'>{getSchoolInitials(s.name)}</span>
-                          </div>
-                        )}
+                        <SchoolPhotoOrLogo
+                          photoUrl={s.photoUrl}
+                          logoUrl={s.logoUrl}
+                          name={s.name}
+                          size='lg'
+                        />
                         <div className='flex flex-col gap-0.5'>
-                          <span className='line-clamp-1 text-sm font-semibold text-ink-900'>{s.name}</span>
+                          <Link
+                            href={`/parent/schools/${s.slug}`}
+                            className='line-clamp-1 text-sm font-semibold text-ink-900 no-underline hover:underline'
+                          >
+                            {s.name}
+                          </Link>
                           <span className='flex items-center gap-1 text-xs text-foggy'>
                             {s.suburb}, {s.state} \u00B7{' '}
                             <Star className='inline h-3 w-3 fill-ink-900 text-ink-900' aria-hidden='true' />
@@ -202,34 +259,26 @@ export async function ParentsComparison() {
           <div className='overflow-hidden rounded-2xl border border-border bg-card'>
             <table className='w-full'>
               <caption className='px-4 pb-4 pt-6 text-left text-xs font-semibold uppercase tracking-widest text-foggy'>
-                {t('shortlistLabel', { count: set.length })}
+                {t('compareLabel')}
               </caption>
               <thead>
                 <tr>
                   {set.map((s, i) => (
                     <th key={s.slug} scope='col' className='border-b border-divider px-3 pb-4 text-left align-top'>
                       <div className='flex flex-col gap-2'>
-                        {s.photoUrl ? (
-                          <div className='relative h-20 w-full overflow-hidden rounded-xl border border-border bg-muted'>
-                            <Image
-                              src={s.photoUrl}
-                              alt={s.name}
-                              fill
-                              sizes='33vw'
-                              className='object-cover'
-                            />
-                          </div>
-                        ) : (
-                          <div
-                            className={`relative flex h-20 w-full items-center justify-center overflow-hidden rounded-xl border border-border ${getAvatarColor(s.name)}`}
-                            role='img'
-                            aria-label={s.name}
-                          >
-                            <span className='text-lg font-bold'>{getSchoolInitials(s.name)}</span>
-                          </div>
-                        )}
+                        <SchoolPhotoOrLogo
+                          photoUrl={s.photoUrl}
+                          logoUrl={s.logoUrl}
+                          name={s.name}
+                          size='sm'
+                        />
                         <div className='flex flex-col gap-0.5'>
-                          <span className='line-clamp-1 text-xs font-semibold text-ink-900'>{s.name}</span>
+                          <Link
+                            href={`/parent/schools/${s.slug}`}
+                            className='line-clamp-1 text-xs font-semibold text-ink-900 no-underline hover:underline'
+                          >
+                            {s.name}
+                          </Link>
                           <span className='flex items-center gap-1 text-xs text-foggy'>
                             {s.suburb}, {s.state} \u00B7{' '}
                             <Star className='inline h-3 w-3 fill-ink-900 text-ink-900' aria-hidden='true' />

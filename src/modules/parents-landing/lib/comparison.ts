@@ -5,7 +5,8 @@ import { parseFeeAud } from '@/lib/schools/format-fee';
 import type { SchoolRecord } from '@/lib/schools/types';
 
 export interface ComparisonSchool extends SchoolRecord {
-  photoUrl: string;
+  photoUrl: string | null;
+  logoUrl: string | null;
 }
 
 interface StrapiMedia {
@@ -57,7 +58,7 @@ export async function getComparisonSchoolsWithPhotos(): Promise<ComparisonSchool
   if (set.length === 0) return [];
 
   // Try to fetch photos from API for these specific schools
-  const photoMap = new Map<string, string>();
+  const photoMap = new Map<string, { photoUrl: string | null; logoUrl: string | null }>();
   try {
     const slugs = set.map(s => s.slug);
     const params = new URLSearchParams();
@@ -74,20 +75,24 @@ export async function getComparisonSchoolsWithPhotos(): Promise<ComparisonSchool
     if (response.ok) {
       const payload = (await response.json()) as StrapiResponse;
       for (const record of payload.data ?? []) {
-        const photoUrl = mediaUrl(record.logo) ?? mediaUrl(record.coverImage);
-        if (photoUrl) {
-          photoMap.set(record.slug, photoUrl);
-        }
+        photoMap.set(record.slug, {
+          logoUrl: mediaUrl(record.logo),
+          photoUrl: mediaUrl(record.coverImage),
+        });
       }
     }
   } catch {
     // Ignore API errors, we'll use initials fallback
   }
 
-  return set.map(s => ({
-    ...s,
-    photoUrl: photoMap.get(s.slug) ?? '',
-  }));
+  return set.map(s => {
+    const photos = photoMap.get(s.slug);
+    return {
+      ...s,
+      photoUrl: photos?.photoUrl ?? null,
+      logoUrl: photos?.logoUrl ?? null,
+    };
+  });
 }
 
 export function boardingBedsForSchool(school: { slug: string }): number {

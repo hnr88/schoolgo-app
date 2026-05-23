@@ -75,7 +75,8 @@ export async function ParentsHero() {
                 <div key={school.documentId} className='w-64 snap-start sm:w-auto'>
                   <SchoolCard
                     href='/search'
-                    photoUrl={school.photoUrl}
+                    photoUrl={school.photoUrl ?? undefined}
+                    logoUrl={school.logoUrl ?? undefined}
                     name={school.name}
                     location={`${school.suburb}, ${school.state}`}
                     curriculum={school.curriculumOffered ?? undefined}

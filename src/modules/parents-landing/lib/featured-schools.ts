@@ -1,6 +1,5 @@
 import 'server-only';
 import { env } from '@/lib/env';
-import { generateSchoolPlaceholder } from '@/lib/schools/generate-school-placeholder';
 import { FEATURED_SCHOOL_SLUGS } from '@/modules/parents-landing/constants/parents-landing.constants';
 
 export interface FeaturedSchool {
@@ -11,7 +10,8 @@ export interface FeaturedSchool {
   state: string;
   curriculumOffered: string | null;
   lowestAnnualTuition: number | null;
-  photoUrl: string;
+  photoUrl: string | null;
+  logoUrl: string | null;
 }
 
 interface StrapiMedia {
@@ -34,10 +34,6 @@ interface SchoolApiRecord {
 
 interface SchoolApiResponse {
   data?: SchoolApiRecord[];
-}
-
-function fallbackImage(id: string): string {
-  return generateSchoolPlaceholder(id);
 }
 
 function mediaUrl(media?: StrapiMedia | null): string | null {
@@ -67,7 +63,8 @@ function fromRecord(record: SchoolApiRecord): FeaturedSchool {
     state: record.state ?? '',
     curriculumOffered: record.curriculumOffered,
     lowestAnnualTuition: lowestTuition(record),
-    photoUrl: logo ?? cover ?? fallbackImage(record.documentId),
+    photoUrl: cover ?? null,
+    logoUrl: logo ?? null,
   };
 }
 
