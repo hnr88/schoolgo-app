@@ -61,9 +61,9 @@ function SchoolPhotoOrLogo({
 
   if (logoUrl) {
     return (
-      <div className={`flex w-full items-center justify-center overflow-hidden rounded-xl border border-border bg-gradient-to-br from-rausch-50 to-rausch-100 ${h}`}>
-        <div className='relative flex h-16 w-16 items-center justify-center overflow-hidden rounded-full bg-white shadow-2 md:h-20 md:w-20'>
-          <Image src={logoUrl} alt={name} fill sizes='80px' className='object-contain p-2' />
+      <div className={`flex w-full items-center justify-center overflow-hidden rounded-xl border border-border bg-muted ${h}`}>
+        <div className='relative h-1/2 w-1/2 max-w-32'>
+          <Image src={logoUrl} alt={name} fill sizes='200px' className='object-contain' />
         </div>
       </div>
     );

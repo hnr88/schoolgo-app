@@ -73,7 +73,7 @@ export async function Hero({ school, activePortal }: HeroProps) {
 
           <div className="rounded-xl border border-background/15 bg-background/10 p-5 backdrop-blur-md">
             <div className="flex items-center gap-4">
-              <div className="relative flex h-16 w-16 shrink-0 items-center justify-center overflow-hidden rounded-lg bg-card text-primary">
+              <div className="relative flex h-16 w-16 shrink-0 items-center justify-center overflow-hidden rounded-lg bg-muted text-primary">
                 {logo ? (
                   <Image src={logo} alt="" fill sizes="64px" className="object-contain p-2" aria-hidden="true" />
                 ) : (

@@ -51,14 +51,14 @@ export function SchoolCard({
             onError={() => setPhotoFailed(true)}
           />
         ) : logoUrl && !logoFailed ? (
-          <div className='flex h-full w-full items-center justify-center bg-gradient-to-br from-rausch-50 to-rausch-100'>
-            <div className='relative flex h-16 w-16 items-center justify-center overflow-hidden rounded-full bg-white shadow-2 md:h-20 md:w-20'>
+          <div className='flex h-full w-full items-center justify-center bg-muted'>
+            <div className='relative h-1/2 w-1/2 max-w-32'>
               <Image
                 src={logoUrl}
                 alt=''
                 fill
-                sizes='80px'
-                className='object-contain p-2 transition-transform duration-300 group-hover:scale-105'
+                sizes='200px'
+                className='object-contain transition-transform duration-300 group-hover:scale-105'
                 aria-hidden='true'
                 onError={() => setLogoFailed(true)}
               />

@@ -24,15 +24,15 @@ export function SchoolCardImage({
   return (
     <div className="relative flex aspect-[16/10] items-center justify-center overflow-hidden rounded-xl bg-muted">
       {logo ? (
-        <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-rausch-50 to-rausch-100">
-          <div className="relative flex h-16 w-16 items-center justify-center overflow-hidden rounded-full bg-white shadow-2 md:h-20 md:w-20">
+        <div className="flex h-full w-full items-center justify-center bg-muted">
+          <div className="relative h-1/2 w-1/2 max-w-32">
             <Image
               src={logo}
               alt={name}
               fill
               priority={priority}
-              sizes="80px"
-              className="object-contain p-2"
+              sizes="200px"
+              className="object-contain"
             />
           </div>
         </div>
