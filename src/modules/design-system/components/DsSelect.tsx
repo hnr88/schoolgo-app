@@ -12,7 +12,7 @@ export const DsSelect = forwardRef<HTMLSelectElement, DsSelectProps>(
         <select
           ref={ref}
           className={cn(
-            'w-full appearance-none rounded-xl border border-border bg-white py-3 pr-10 pl-3.5 text-sm text-hof outline-none transition-colors',
+            'w-full appearance-none rounded-xl border border-border bg-background py-3 pr-10 pl-3.5 text-sm text-hof outline-none transition-colors',
             'focus-visible:border-primary focus-visible:ring-3 focus-visible:ring-primary/18',
             error && 'border-primary ring-3 ring-primary/18',
             props.disabled && 'pointer-events-none opacity-50',

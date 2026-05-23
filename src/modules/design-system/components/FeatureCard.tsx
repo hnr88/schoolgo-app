@@ -12,9 +12,9 @@ export function FeatureCard({
   return (
     <article
       className={cn(
-        'flex flex-col rounded-lg border border-border bg-card shadow-2 transition-shadow hover:shadow-3',
-        size === 'sm' && 'gap-3 p-6',
-        size === 'md' && 'gap-4 p-6 md:p-8',
+        'flex flex-col rounded-xl border border-border bg-card shadow-2 transition-[transform,box-shadow] duration-300 hover:-translate-y-1 hover:shadow-3',
+        size === 'sm' && 'gap-3 p-5',
+        size === 'md' && 'gap-4 p-5 md:p-6',
         className,
       )}
     >

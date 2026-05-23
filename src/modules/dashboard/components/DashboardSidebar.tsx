@@ -27,7 +27,7 @@ export function DashboardSidebar() {
   return (
     <aside
       className={cn(
-        'flex h-full flex-col bg-card transition-colors duration-200',
+        'flex h-full flex-col bg-card transition-all duration-300',
         isCollapsed ? 'w-16' : 'w-64',
       )}
     >
@@ -55,7 +55,7 @@ export function DashboardSidebar() {
                 'flex items-center gap-3 rounded-xl text-sm font-medium transition-colors',
                 isCollapsed ? 'justify-center p-3' : 'px-4 py-3',
                 isActive
-                  ? 'bg-primary text-on-primary shadow-brand'
+                  ? 'bg-primary text-on-primary shadow-2'
                   : 'text-foggy hover:bg-rausch-50 hover:text-primary',
               )}
             >

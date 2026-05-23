@@ -35,7 +35,7 @@ export function RegisterForm({ userType }: RegisterFormProps) {
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(handleRegister)} className="flex flex-col gap-5">
+      <form onSubmit={form.handleSubmit(handleRegister)} className="flex flex-col gap-6">
         <FormField
           control={form.control}
           name="username"
@@ -48,7 +48,7 @@ export function RegisterForm({ userType }: RegisterFormProps) {
                 <Input
                   type="text"
                   placeholder={t('namePlaceholder')}
-                  className="h-auto rounded-xl px-3.5 py-3 text-sm focus-visible:border-primary focus-visible:ring-primary/18"
+                  className="rounded-xl"
                   {...field}
                 />
               </FormControl>
@@ -68,7 +68,7 @@ export function RegisterForm({ userType }: RegisterFormProps) {
                 <Input
                   type="email"
                   placeholder={t('emailPlaceholder')}
-                  className="h-auto rounded-xl px-3.5 py-3 text-sm focus-visible:border-primary focus-visible:ring-primary/18"
+                  className="rounded-xl"
                   {...field}
                 />
               </FormControl>
@@ -88,7 +88,7 @@ export function RegisterForm({ userType }: RegisterFormProps) {
                 <Input
                   type="password"
                   placeholder={t('createPasswordPlaceholder')}
-                  className="h-auto rounded-xl px-3.5 py-3 text-sm focus-visible:border-primary focus-visible:ring-primary/18"
+                  className="rounded-xl"
                   {...field}
                 />
               </FormControl>
@@ -102,7 +102,7 @@ export function RegisterForm({ userType }: RegisterFormProps) {
         <Button
           type="submit"
           disabled={isSubmitting}
-          className="mt-2 h-auto w-full rounded-xl py-3 text-sm font-semibold shadow-brand"
+          className="mt-2 h-10 w-full rounded-pill text-sm font-semibold shadow-brand"
         >
           {isSubmitting && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
           {t('signUpButton')}

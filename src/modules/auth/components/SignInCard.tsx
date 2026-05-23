@@ -37,7 +37,7 @@ export function SignInCard({ portal }: SignInCardProps) {
         </div>
       </div>
 
-      <div className='mt-8 overflow-hidden rounded-2xl border border-border/60 bg-white/80 shadow-lg'>
+      <div className='mt-8 overflow-hidden rounded-2xl border border-border/60 bg-card/80 shadow-3'>
         <div className='p-6 sm:p-8'>
           <LoginForm userType={portal} />
         </div>

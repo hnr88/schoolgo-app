@@ -6,7 +6,7 @@ export function Eyebrow({ tone = 'default', className, children, ...props }: Eye
   return (
     <span
       className={cn(
-        'text-label font-semibold uppercase tracking-[0.08em]',
+        'text-label font-semibold uppercase tracking-eyebrow',
         TONE_CLASSES[tone],
         className,
       )}

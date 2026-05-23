@@ -74,7 +74,7 @@ export function CompareBar({
                   type="button"
                   onClick={() => toggleCompare(id, max)}
                   aria-label={t('remove', { name })}
-                  className="text-muted-foreground hover:text-foreground"
+                  className="h-6 w-6 rounded-sm p-0.5 text-muted-foreground hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
                 >
                   <X size={12} aria-hidden />
                 </button>
@@ -87,7 +87,7 @@ export function CompareBar({
             href={compareHref}
             aria-disabled={compareList.length === 0}
             className={cn(
-              'shrink-0 rounded-pill bg-primary px-4 py-2 text-xs font-semibold text-primary-foreground shadow-1 hover:bg-primary/90',
+              'shrink-0 rounded-pill bg-primary px-4 py-2 text-xs font-semibold text-primary-foreground shadow-brand hover:bg-primary/90',
               compareList.length === 0 && 'pointer-events-none opacity-50',
             )}
           >

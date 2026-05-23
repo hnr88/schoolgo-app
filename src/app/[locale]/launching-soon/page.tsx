@@ -65,7 +65,7 @@ export default async function LaunchingSoonPage({
                 priority
               />
             </a>
-            <span className="inline-flex items-center gap-2 rounded-pill border border-black/10 bg-white/85 px-3 py-1.5 text-xs font-semibold text-ink-900 shadow-1 backdrop-blur-md">
+            <span className="inline-flex items-center gap-2 rounded-pill border border-ink-900/10 bg-background/85 px-3 py-1.5 text-xs font-semibold text-ink-900 shadow-1 backdrop-blur-md">
               <Sparkles className="h-3.5 w-3.5 text-primary" aria-hidden="true" />
               2026
             </span>
@@ -79,7 +79,7 @@ export default async function LaunchingSoonPage({
             )}
           </section>
 
-          <footer className="border-t border-black/10 py-5 text-center text-xs text-foggy sm:text-left">
+          <footer className="border-t border-ink-900/10 py-5 text-center text-xs text-foggy sm:text-left">
             Search is open while we finish building.
           </footer>
         </div>
@@ -91,7 +91,7 @@ export default async function LaunchingSoonPage({
 function GenericContent({ locale }: { locale: string }) {
   return (
     <div className="mx-auto w-full max-w-lg">
-      <div className="rounded-xl border border-black/10 bg-white/95 p-8 text-center shadow-4 backdrop-blur-xl sm:p-12">
+      <div className="rounded-xl border border-ink-900/10 bg-background/95 p-8 text-center shadow-4 backdrop-blur-xl sm:p-12">
         <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-rausch-50">
           <Clock className="h-7 w-7 text-primary" strokeWidth={1.75} aria-hidden="true" />
         </div>
@@ -113,7 +113,7 @@ function GenericContent({ locale }: { locale: string }) {
           </a>
           <a
             href={portalUrl('parent', locale)}
-            className="inline-flex items-center justify-center gap-2 rounded-md border border-black/10 bg-white px-6 py-3 text-sm font-semibold text-ink-900 shadow-1 transition-colors hover:border-primary/25 hover:text-primary"
+            className="inline-flex items-center justify-center gap-2 rounded-md border border-ink-900/10 bg-card px-6 py-3 text-sm font-semibold text-ink-900 shadow-1 transition-colors hover:border-primary/25 hover:text-primary"
           >
             Back to SchoolGo
           </a>
@@ -126,7 +126,7 @@ function GenericContent({ locale }: { locale: string }) {
 function DashboardContent({ locale }: { locale: string }) {
   return (
     <div className="mx-auto grid w-full max-w-screen-2xl grid-cols-1 items-center gap-10 lg:grid-cols-[minmax(0,0.98fr)_minmax(420px,0.95fr)]">
-      <div className="rounded-xl border border-black/10 bg-white/95 p-6 shadow-4 backdrop-blur-xl sm:p-10 lg:p-12">
+      <div className="rounded-xl border border-ink-900/10 bg-background/95 p-6 shadow-4 backdrop-blur-xl sm:p-10 lg:p-12">
         <div className="flex max-w-2xl flex-col">
           <p className="mb-5 inline-flex w-fit items-center gap-2 rounded-pill bg-rausch-50 px-3 py-1.5 text-xs font-semibold uppercase tracking-widest text-primary">
             <LayoutDashboard className="h-3.5 w-3.5" aria-hidden="true" />
@@ -165,7 +165,7 @@ function DashboardContent({ locale }: { locale: string }) {
             </a>
             <a
               href={portalUrl('parent', locale)}
-              className="inline-flex items-center justify-center gap-2 rounded-md border border-black/10 bg-white px-6 py-3 text-sm font-semibold text-ink-900 shadow-1 transition-colors hover:border-primary/25 hover:text-primary"
+              className="inline-flex items-center justify-center gap-2 rounded-md border border-ink-900/10 bg-card px-6 py-3 text-sm font-semibold text-ink-900 shadow-1 transition-colors hover:border-primary/25 hover:text-primary"
             >
               Back to SchoolGo
             </a>
@@ -174,7 +174,7 @@ function DashboardContent({ locale }: { locale: string }) {
       </div>
 
       <div className="relative min-h-[26rem] lg:min-h-[34rem]">
-        <div className="absolute left-4 top-6 w-[82%] max-w-md rotate-[-4deg] rounded-xl border border-black/10 bg-white p-4 shadow-4 sm:left-8">
+        <div className="absolute left-4 top-6 w-[82%] max-w-md rotate-[-4deg] rounded-xl border border-ink-900/10 bg-card p-4 shadow-4 sm:left-8">
           <div className="mb-5 flex items-center justify-between">
             <div className="flex gap-1.5" aria-hidden="true">
               <span className="h-2.5 w-2.5 rounded-full bg-rausch-500" />
@@ -234,7 +234,7 @@ function DashboardContent({ locale }: { locale: string }) {
 
         <a
           href={portalUrl('parent', locale) + '/search'}
-          className="absolute bottom-8 right-4 w-56 rotate-[5deg] rounded-xl bg-ink-900 p-4 text-white no-underline shadow-4 transition-transform hover:rotate-[3deg] hover:scale-[1.02] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 sm:right-8"
+          className="absolute bottom-8 right-4 w-56 rotate-[5deg] rounded-xl bg-ink-900 p-4 text-white no-underline shadow-4 transition-transform hover:rotate-[3deg] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 sm:right-8"
         >
           <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-full bg-primary">
             <MapPin className="h-5 w-5" aria-hidden="true" />

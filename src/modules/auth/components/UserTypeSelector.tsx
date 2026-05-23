@@ -15,8 +15,8 @@ export function UserTypeSelector({ value, onChange }: UserTypeSelectorProps) {
           key={type}
           type='button'
           onClick={() => onChange(type)}
-          className={cn(
-            'flex flex-col items-center gap-2 rounded-xl border-2 px-4 py-4 text-sm font-medium transition-all',
+            className={cn(
+              'flex flex-col items-center gap-2 rounded-xl border px-4 py-4 text-sm font-medium transition-all',
             value === type
               ? 'border-primary bg-primary/5 text-primary'
               : 'border-border bg-card text-foggy hover:border-primary/40 hover:text-ink-900',

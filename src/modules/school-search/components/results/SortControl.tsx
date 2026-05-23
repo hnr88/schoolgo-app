@@ -49,7 +49,7 @@ export function SortControl({ isAdvanced, className }: SortControlProps) {
         aria-haspopup="listbox"
         aria-expanded={open}
         className={cn(
-          'inline-flex items-center gap-1.5 rounded-pill border border-border bg-background px-3 py-1.5 text-xs font-medium text-foreground hover:bg-muted',
+          'inline-flex items-center gap-1.5 rounded-pill border border-border bg-background px-3 py-1.5 text-xs font-medium text-foreground hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring',
         )}
       >
         <span className="text-muted-foreground">{t('label')}</span>

@@ -23,7 +23,7 @@ export function AuthPortalTabs({ activePortal }: AuthPortalTabsProps) {
             href={portalUrl(portal, locale)}
             aria-current={isActive ? 'page' : undefined}
             className={cn(
-              'rounded-pill px-4 py-1.5 text-body-sm font-semibold no-underline transition-colors md:px-5 md:py-2',
+              'rounded-pill px-4 py-1.5 text-body-sm font-semibold no-underline transition-colors md:px-5 md:py-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1',
               isActive
                 ? 'bg-card text-ink-900 shadow-2'
                 : 'text-foggy hover:text-ink-900',

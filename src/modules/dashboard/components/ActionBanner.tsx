@@ -10,7 +10,7 @@ export async function ActionBanner({ items }: { items: ActionItem[] }) {
 
   return (
     <div className='flex items-start gap-3 rounded-xl border border-babu-100 bg-babu-50 p-4'>
-      <span className='flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-vivid-mint-soft text-vivid-mint'>
+      <span className='flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-babu-100 text-babu-600'>
         <Info className='h-4 w-4' strokeWidth={2} />
       </span>
       <div className='flex flex-col gap-1'>

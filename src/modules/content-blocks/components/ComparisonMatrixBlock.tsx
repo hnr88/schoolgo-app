@@ -13,7 +13,7 @@ export function ComparisonMatrixBlock({ page }: ContentBlockProps) {
           </div>
         ))}
       </div>
-      <div className='overflow-x-auto rounded-lg border border-border bg-card shadow-1'>
+      <div className='overflow-x-auto rounded-xl border border-border bg-card shadow-1'>
         <table className='w-full min-w-full text-sm'>
           <thead className='bg-muted text-left text-ink-900'>
             <tr>

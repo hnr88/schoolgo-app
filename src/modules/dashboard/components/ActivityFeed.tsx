@@ -1,6 +1,8 @@
 import { getTranslations } from 'next-intl/server';
+import { Inbox } from 'lucide-react';
 import { Link } from '@/i18n/navigation';
 import { cn } from '@/lib/utils';
+import { EmptyState } from '@/modules/core';
 import type { ActivityEvent } from '@/modules/dashboard/types/dashboard.types';
 import { EVENT_COLOR, EVENT_ICON } from '../constants/ui.constants';
 
@@ -14,7 +16,7 @@ export async function ActivityFeed({ events }: { events: ActivityEvent[] }) {
       </div>
       <div className='flex flex-col divide-y divide-divider'>
         {events.length === 0 ? (
-          <p className='px-5 py-8 text-center text-sm text-foggy'>{t('empty')}</p>
+          <EmptyState icon={Inbox} title={t('empty')} />
         ) : (
           events.map((event) => {
             const Icon = EVENT_ICON[event.type];

@@ -9,7 +9,7 @@ export default function RootNotFound() {
       <body>
         <div className='relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-6'>
           <div className='pointer-events-none absolute inset-0' aria-hidden='true'>
-            <div className='absolute inset-0 bg-gradient-to-br from-babu-50/40 via-white to-rausch-50/20' />
+            <div className='absolute inset-0 bg-gradient-to-br from-babu-50/40 via-background to-rausch-50/20' />
             <div className='absolute -right-40 top-1/4 h-[500px] w-[500px] rounded-full bg-babu-200 opacity-20 blur-[160px]' />
             <div className='absolute -left-32 bottom-1/4 h-[400px] w-[400px] rounded-full bg-rausch-100 opacity-25 blur-[140px]' />
           </div>
@@ -45,7 +45,7 @@ export default function RootNotFound() {
               </Link>
               <Link
                 href='/search'
-                className='inline-flex items-center justify-center rounded-xl border border-border bg-white px-8 py-3 text-sm font-semibold text-hof hover:bg-muted'
+                className='inline-flex items-center justify-center rounded-xl border border-border bg-card px-8 py-3 text-sm font-semibold text-hof hover:bg-muted'
               >
                 <Search className='mr-2 h-4 w-4' />
                 Search schools

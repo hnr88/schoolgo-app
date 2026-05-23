@@ -13,7 +13,7 @@ export function KanbanCard({ application }: KanbanCardProps) {
 
   return (
     <Link href={`/dashboard/applications/${application.documentId}`}>
-      <div className="rounded-lg border border-border bg-white p-3 transition-shadow hover:shadow-md">
+      <div className="rounded-lg border border-border bg-card p-3 transition-shadow hover:shadow-2">
         <div className="mb-1.5">
           <p className="text-sm font-semibold text-foreground">
             {student.firstName} {student.lastName}

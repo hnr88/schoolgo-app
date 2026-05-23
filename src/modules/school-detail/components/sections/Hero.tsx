@@ -34,7 +34,7 @@ export async function Hero({ school, activePortal }: HeroProps) {
   const searchHref = activePortal === 'parent' ? '/search' : `/${activePortal}/search`;
 
   return (
-    <section className="relative overflow-hidden border-b border-divider bg-ink-900 pt-28 text-white md:pt-40">
+    <section className="relative overflow-hidden border-b border-divider bg-ink-900 pt-28 text-background md:pt-40">
       <div className="absolute inset-0 opacity-35" aria-hidden="true">
         <Image src={heroImage} alt="" fill sizes="100vw" className="object-cover" priority />
       </div>
@@ -43,7 +43,7 @@ export async function Hero({ school, activePortal }: HeroProps) {
       <SectionContainer size="wide" className="relative py-8 md:py-12 lg:py-16">
         <Link
           href={searchHref}
-          className="mb-8 inline-flex items-center gap-2 rounded-pill bg-white/10 px-4 py-2 text-body-sm font-medium text-white/78 transition-colors hover:bg-white/18 hover:text-white"
+          className="mb-8 inline-flex items-center gap-2 rounded-pill bg-background/10 px-4 py-2 text-body-sm font-medium text-background/80 transition-colors hover:bg-background/18 hover:text-background"
         >
           <ArrowLeft className="h-3.5 w-3.5" aria-hidden="true" />
           {t('backToSearch')}
@@ -64,7 +64,7 @@ export async function Hero({ school, activePortal }: HeroProps) {
             </h1>
 
             {location && (
-              <p className="mt-5 flex items-center gap-2 text-lg text-white/78">
+              <p className="mt-5 flex items-center gap-2 text-lg text-background/80">
                 <MapPin className="h-5 w-5 shrink-0" aria-hidden="true" />
                 {location}
               </p>
@@ -72,9 +72,9 @@ export async function Hero({ school, activePortal }: HeroProps) {
 
           </div>
 
-          <div className="rounded-lg border border-white/15 bg-white/10 p-5 backdrop-blur-md">
+          <div className="rounded-xl border border-background/15 bg-background/10 p-5 backdrop-blur-md">
             <div className="flex items-center gap-4">
-              <div className="relative flex h-16 w-16 shrink-0 items-center justify-center overflow-hidden rounded-lg bg-white text-primary">
+              <div className="relative flex h-16 w-16 shrink-0 items-center justify-center overflow-hidden rounded-lg bg-card text-primary">
                 {logo ? (
                   <Image src={logo} alt="" fill sizes="64px" className="object-contain p-2" aria-hidden="true" />
                 ) : (
@@ -82,10 +82,10 @@ export async function Hero({ school, activePortal }: HeroProps) {
                 )}
               </div>
               <div>
-                <p className="text-caption font-semibold uppercase text-white/60">
+                <p className="text-caption font-semibold uppercase text-background/60">
                   {t('admissionsProfileLabel')}
                 </p>
-                <p className="mt-1 text-body-sm text-white/82">
+                <p className="mt-1 text-body-sm text-background/80">
                   {t('admissionsProfileDescription')}
                 </p>
               </div>

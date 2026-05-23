@@ -4,19 +4,19 @@ import type { SchoolDetail } from '@/modules/school-detail/lib/school-detail-api
 
 function formatAud(value: number | null | undefined): string | null {
   if (value == null) return null;
-  return new Intl.NumberFormat('en-AU', { style: 'currency', currency: 'AUD', maximumFractionDigits: 0 }).format(value);
+  return new Intl.NumberFormat('en', { style: 'currency', currency: 'AUD', maximumFractionDigits: 0 }).format(value);
 }
 
 function compactNumber(value: number | null | undefined): string | null {
   if (value == null) return null;
-  return new Intl.NumberFormat('en-AU').format(value);
+  return new Intl.NumberFormat('en').format(value);
 }
 
 function formatLabel(value: string | null | undefined): string | null {
   if (!value) return null;
   return value
     .split(/[_-]/)
-    .map((w) => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase())
+    .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
     .join(' ');
 }
 

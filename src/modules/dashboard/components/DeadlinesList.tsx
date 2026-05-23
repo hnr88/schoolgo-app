@@ -2,6 +2,7 @@ import { getTranslations } from 'next-intl/server';
 import { CheckCircle } from 'lucide-react';
 import { Link } from '@/i18n/navigation';
 import { cn } from '@/lib/utils';
+import { EmptyState } from '@/modules/core';
 import type { Deadline } from '@/modules/dashboard/types/dashboard.types';
 import { DATE_STYLE } from '../constants/ui.constants';
 
@@ -14,10 +15,7 @@ export async function DeadlinesList({ deadlines }: { deadlines: Deadline[] }) {
         <h2 className='text-base font-bold text-ink-900'>{t('title')}</h2>
       </div>
       {deadlines.length === 0 ? (
-        <div className='flex flex-col items-center gap-2 px-5 py-8'>
-          <CheckCircle className='h-8 w-8 text-babu-500' strokeWidth={1.5} />
-          <p className='text-sm text-foggy'>{t('empty')}</p>
-        </div>
+        <EmptyState icon={CheckCircle} title={t('empty')} />
       ) : (
         <div className='flex flex-col divide-y divide-divider'>
           {deadlines.map((d) => {

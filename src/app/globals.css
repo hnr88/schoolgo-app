@@ -366,9 +366,7 @@
       color 200ms var(--ease-standard),
       background-color 200ms var(--ease-standard),
       border-color 200ms var(--ease-standard),
-      opacity 200ms var(--ease-standard),
-      box-shadow 200ms var(--ease-standard),
-      transform 120ms var(--ease-standard);
+      opacity 200ms var(--ease-standard);
   }
   body {
     @apply bg-background text-foreground font-sans antialiased;
@@ -511,6 +509,17 @@
 }
 
 @layer utilities {
+  @keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+  }
+
+  .animate-shimmer {
+    background: linear-gradient(90deg, var(--muted) 25%, var(--surface-container-high) 50%, var(--muted) 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+  }
+
   .no-scrollbar::-webkit-scrollbar {
     display: none;
   }
@@ -550,7 +559,7 @@ button:not(:disabled),
     border-color 200ms var(--ease-standard),
     opacity 200ms var(--ease-standard),
     box-shadow 200ms var(--ease-standard),
-    scale 200ms cubic-bezier(0.25, 0.1, 0.25, 1);
+    scale 200ms var(--ease-standard);
 }
 
 button:not(:disabled):not([aria-haspopup]):active,

@@ -2,7 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import { Link, useRouter } from '@/i18n/navigation';
-import { Users, ArrowUp, ArrowDown, ArrowUpDown } from 'lucide-react';
+import { Users } from 'lucide-react';
 import {
   Table,
   TableBody,
@@ -12,51 +12,26 @@ import {
   TableRow,
 } from '@/components/ui/table';
 import { Skeleton } from '@/components/ui/skeleton';
+import { DataTableSortHeader, StatusBadge } from '@/modules/design-system';
+import { EmptyState } from '@/modules/core';
 import { STATUS_STYLES } from '@/modules/students/constants/status.constants';
-import { HEADER_CLASS } from '../constants/profile.constants';
-import type { StudentTableProps, SortField, SortIconProps } from '@/modules/students/types/component.types';
+import type { StudentTableProps, SortField } from '@/modules/students/types/component.types';
 
-function SortIcon({ field, activeField, direction }: SortIconProps) {
-  if (activeField !== field) return <ArrowUpDown className='ml-1 h-3 w-3 text-quill' />;
-  if (direction === 'asc') return <ArrowUp className='ml-1 h-3 w-3 text-primary' />;
-  return <ArrowDown className='ml-1 h-3 w-3 text-primary' />;
-}
+const STUDENT_STATUS_TO_TONE: Record<string, NonNullable<React.ComponentProps<typeof StatusBadge>['tone']>> = {
+  active: 'trust',
+  archived: 'muted',
+  enrolled: 'enrolled',
+};
 
 export function StudentTable({ students, isLoading, sortField, sortDirection, onSort, pageSize }: StudentTableProps) {
   const t = useTranslations('Students');
   const router = useRouter();
 
-  function renderSortableHead(field: SortField, label: string, className?: string) {
-    const isActive = sortField === field;
-
-    return (
-      <TableHead
-        className={`${HEADER_CLASS} ${className ?? ''}`}
-        aria-sort={isActive ? (sortDirection === 'asc' ? 'ascending' : 'descending') : 'none'}
-      >
-        <button
-          type='button'
-          className='inline-flex items-center rounded-sm text-left hover:text-ink-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2'
-          onClick={() => onSort(field)}
-        >
-          {label}
-          <SortIcon field={field} activeField={sortField} direction={sortDirection} />
-        </button>
-      </TableHead>
-    );
-  }
-
   const rowCount = pageSize || 10;
 
   if (students.length === 0 && !isLoading) {
     return (
-      <div className='flex flex-col items-center justify-center py-20'>
-        <div className='flex h-14 w-14 items-center justify-center rounded-full bg-muted'>
-          <Users className='h-6 w-6 text-foggy' />
-        </div>
-        <p className='mt-4 text-sm font-medium text-ink-900'>{t('emptyTitle')}</p>
-        <p className='mt-1 text-xs text-foggy'>{t('emptySubtitle')}</p>
-      </div>
+      <EmptyState icon={Users} title={t('emptyTitle')} description={t('emptySubtitle')} />
     );
   }
 
@@ -65,13 +40,49 @@ export function StudentTable({ students, isLoading, sortField, sortDirection, on
       <Table>
         <TableHeader>
           <TableRow className='border-b border-border bg-muted/50 hover:bg-muted/50'>
-            {renderSortableHead('name', t('columnName'), 'pl-6')}
-            {renderSortableHead('nationality', t('columnNationality'))}
-            {renderSortableHead('currentYearLevel', t('columnYearLevel'))}
-            {renderSortableHead('targetEntryYear', t('columnTargetEntry'))}
-            <TableHead className={HEADER_CLASS}>{t('columnEnglishTest')}</TableHead>
-            <TableHead className={HEADER_CLASS}>{t('columnApps')}</TableHead>
-            {renderSortableHead('status', t('columnStatus'), 'pr-6')}
+            <DataTableSortHeader
+              field='name'
+              activeField={sortField}
+              direction={sortDirection}
+              onSort={(field) => onSort(field as SortField)}
+              label={t('columnName')}
+              className='pl-6'
+            />
+            <DataTableSortHeader
+              field='nationality'
+              activeField={sortField}
+              direction={sortDirection}
+              onSort={(field) => onSort(field as SortField)}
+              label={t('columnNationality')}
+            />
+            <DataTableSortHeader
+              field='currentYearLevel'
+              activeField={sortField}
+              direction={sortDirection}
+              onSort={(field) => onSort(field as SortField)}
+              label={t('columnYearLevel')}
+            />
+            <DataTableSortHeader
+              field='targetEntryYear'
+              activeField={sortField}
+              direction={sortDirection}
+              onSort={(field) => onSort(field as SortField)}
+              label={t('columnTargetEntry')}
+            />
+            <TableHead className='text-xs font-semibold uppercase tracking-wider text-foggy select-none'>
+              {t('columnEnglishTest')}
+            </TableHead>
+            <TableHead className='text-xs font-semibold uppercase tracking-wider text-foggy select-none'>
+              {t('columnApps')}
+            </TableHead>
+            <DataTableSortHeader
+              field='status'
+              activeField={sortField}
+              direction={sortDirection}
+              onSort={(field) => onSort(field as SortField)}
+              label={t('columnStatus')}
+              className='pr-6'
+            />
           </TableRow>
         </TableHeader>
         <TableBody>
@@ -97,11 +108,12 @@ export function StudentTable({ students, isLoading, sortField, sortDirection, on
               {students.map((student) => {
                 const style = STATUS_STYLES[student.status] ?? STATUS_STYLES.archived;
                 const initials = `${student.firstName?.[0] ?? ''}${student.lastName?.[0] ?? ''}`.toUpperCase();
+                const tone = STUDENT_STATUS_TO_TONE[student.status] ?? 'muted';
 
                 return (
                   <TableRow
                     key={student.documentId}
-                    className='group h-12 cursor-pointer border-b-border hover:bg-babu-50/50'
+                    className='group h-12 cursor-pointer border-b-border hover:bg-accent/50'
                     onClick={() => router.push(`/dashboard/students/${student.documentId}`)}
                   >
                     <TableCell className='pl-6'>
@@ -132,10 +144,10 @@ export function StudentTable({ students, isLoading, sortField, sortDirection, on
                     <TableCell className='text-sm text-foggy'>—</TableCell>
                     <TableCell className='text-sm text-foggy'>—</TableCell>
                     <TableCell className='pr-6'>
-                      <span className={`inline-flex items-center gap-1.5 rounded-full px-2.5 py-0.5 text-xs font-medium ${style.bg} ${style.text}`}>
+                      <StatusBadge tone={tone}>
                         <span className={`inline-block h-1.5 w-1.5 rounded-full ${style.dot}`} />
                         {t(`status${student.status.charAt(0).toUpperCase()}${student.status.slice(1)}`)}
-                      </span>
+                      </StatusBadge>
                     </TableCell>
                   </TableRow>
                 );

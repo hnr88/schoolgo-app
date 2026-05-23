@@ -14,4 +14,5 @@ export { DsSelect } from '@/modules/design-system/components/DsSelect';
 export { DsField } from '@/modules/design-system/components/DsField';
 export { SearchInput } from '@/modules/design-system/components/SearchInput';
 export { FaqSection } from '@/modules/design-system/components/FaqSection';
+export { DataTableSortHeader } from '@/modules/design-system/components/DataTableSortHeader';
 export type { IconComponent, TrustVariant, DsInputProps, DsSelectProps, FaqItem, FaqSectionProps } from '@/modules/design-system/types/design-system.types';

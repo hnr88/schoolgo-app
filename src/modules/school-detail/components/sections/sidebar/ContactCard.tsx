@@ -31,7 +31,7 @@ export async function ContactCard({ school }: { school: SchoolDetail }) {
   const t = await getTranslations('SchoolDetail.sidebar.contact');
 
   return (
-    <section aria-labelledby="contact-heading" className="rounded-lg border border-border bg-card p-6 shadow-1">
+    <section aria-labelledby="contact-heading" className="rounded-xl border border-border bg-card p-5 shadow-2">
       <h2 id="contact-heading" className="text-xl font-semibold text-ink-900">{t('heading')}</h2>
 
       <div className="mt-4 space-y-3">

@@ -19,7 +19,7 @@ export async function TocCard() {
   const t = await getTranslations('SchoolDetail.sidebar.toc');
 
   return (
-    <section aria-labelledby="toc-heading" className="rounded-lg border border-border bg-card p-6 shadow-1">
+    <section aria-labelledby="toc-heading" className="rounded-xl border border-border bg-card p-5 shadow-2">
       <h2 id="toc-heading" className="mb-4 text-xl font-semibold text-ink-900">{t('heading')}</h2>
       <nav aria-labelledby="toc-heading">
         <ul className="space-y-1">

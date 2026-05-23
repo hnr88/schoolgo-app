@@ -107,7 +107,7 @@ export interface SectionHeaderProps {
 }
 
 export interface StatusBadgeProps {
-  tone?: 'brand' | 'trust' | 'featured' | 'danger' | 'muted' | null;
+  tone?: 'brand' | 'trust' | 'featured' | 'danger' | 'muted' | 'submitted' | 'underReview' | 'accepted' | 'rejected' | 'enrolled' | null;
   size?: 'sm' | 'md' | null;
   children: ReactNode;
   className?: string;

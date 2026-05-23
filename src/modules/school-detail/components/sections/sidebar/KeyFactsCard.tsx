@@ -7,7 +7,7 @@ function formatLabel(value: string | null | undefined): string | null {
   if (!value) return null;
   return value
     .split(/[_-]/)
-    .map((w) => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase())
+    .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
     .join(' ');
 }
 
@@ -22,8 +22,8 @@ interface RowProps {
 
 function FactRow({ label, children }: RowProps) {
   return (
-    <div className="flex items-start justify-between gap-4 border-b border-white/10 py-3 last:border-b-0">
-      <dt className="text-body-sm text-white/70">{label}</dt>
+    <div className="flex items-start justify-between gap-4 border-b border-background/10 py-3 last:border-b-0">
+      <dt className="text-body-sm text-background/70">{label}</dt>
       <dd className="text-body-sm font-semibold text-right max-w-[60%]">{children}</dd>
     </div>
   );
@@ -45,8 +45,8 @@ export async function KeyFactsCard({ school, activePortal }: { school: SchoolDet
   const base = searchHref(activePortal);
 
   return (
-    <section aria-labelledby="key-facts-heading" className="bg-ink-900 text-white border border-ink-900 rounded-lg p-6 shadow-2">
-      <h2 id="key-facts-heading" className="text-xl font-semibold text-white mb-4">{t('heading')}</h2>
+    <section aria-labelledby="key-facts-heading" className="bg-ink-900 text-background border border-ink-900 rounded-xl p-5 shadow-2">
+      <h2 id="key-facts-heading" className="text-xl font-semibold text-background mb-4">{t('heading')}</h2>
       <dl>
         {formatLabel(school.schoolType) && (
           <FactRow label={t('schoolType')}>{formatLabel(school.schoolType)}</FactRow>

@@ -2,6 +2,7 @@
 
 import { usePathname } from '@/i18n/navigation';
 import { Settings, User, LogOut, ChevronDown } from 'lucide-react';
+import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 import { useTranslations } from 'next-intl';
 import { useRouter } from '@/i18n/navigation';
 import { useAuthStore } from '@/modules/auth/stores/use-auth-store';
@@ -54,10 +55,12 @@ export function DashboardHeader() {
 
         <div className={isSearchPage ? 'shrink-0' : 'ml-auto'}>
           <DropdownMenu>
-            <DropdownMenuTrigger className='flex items-center gap-2.5 rounded-xl px-2 py-1.5 text-sm font-medium text-ink-900 outline-none transition-colors hover:bg-muted'>
-              <span className='flex h-8 w-8 items-center justify-center rounded-full bg-primary/10 text-xs font-bold text-primary'>
-                {initials}
-              </span>
+            <DropdownMenuTrigger className='flex items-center gap-2.5 rounded-xl px-2 py-1.5 text-sm font-medium text-ink-900 outline-none transition-colors hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1'>
+              <Avatar className='h-8 w-8'>
+                <AvatarFallback className='bg-primary/10 text-xs font-bold text-primary'>
+                  {initials}
+                </AvatarFallback>
+              </Avatar>
               <span className='hidden text-sm text-ink-900 sm:block'>
                 {greeting} <span className='font-bold'>{firstName}</span>
               </span>

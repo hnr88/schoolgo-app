@@ -126,7 +126,7 @@ export function DocumentUploadDialog({
                   <p className='truncate text-sm font-medium text-ink-900'>{files[0].name}</p>
                   <p className='text-xs text-foggy'>{formatSize(files[0].size)}</p>
                 </div>
-                <button type='button' onClick={removeFile} className='text-foggy hover:text-ink-900'>
+                <button type='button' onClick={removeFile} className='rounded-sm text-foggy hover:text-ink-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring'>
                   <X className='h-4 w-4' />
                 </button>
               </div>

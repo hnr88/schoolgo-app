@@ -163,7 +163,7 @@ export function MarketingHeaderClient({
             type='button'
             onClick={() => setMobileOpen(true)}
             aria-label={labels.openMenu}
-            className='ml-auto flex h-10 w-10 shrink-0 items-center justify-center rounded-pill text-foreground hover:bg-muted md:hidden'
+            className='ml-auto flex h-10 w-10 shrink-0 items-center justify-center rounded-pill text-foreground hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1 md:hidden'
           >
             <Menu className='h-5 w-5' strokeWidth={1.75} aria-hidden='true' />
           </button>

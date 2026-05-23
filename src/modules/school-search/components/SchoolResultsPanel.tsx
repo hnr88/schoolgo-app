@@ -1,8 +1,10 @@
 'use client';
 
-import { Loader2 } from 'lucide-react';
+import { Loader2, SearchX } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { Skeleton } from '@/components/ui/skeleton';
+import { ScrollArea } from '@/components/ui/scroll-area';
+import { EmptyState } from '@/modules/core';
 import { cn } from '@/lib/utils';
 import { SearchSchoolCard } from '@/modules/school-search/components/SchoolCard';
 import { useSearchWithFilters } from '@/modules/school-search/hooks/useSearchWithFilters';
@@ -41,7 +43,7 @@ export function SchoolResultsPanel({ activePortal }: SchoolResultsPanelProps) {
         )}
       </div>
 
-      <div className='custom-scrollbar flex flex-1 flex-col gap-4 overflow-y-auto bg-muted p-4'>
+      <ScrollArea className='flex flex-1 bg-muted p-4'>
         {isLoading && (
           <>
             {Array.from({ length: 3 }).map((_, i) => (
@@ -75,9 +77,10 @@ export function SchoolResultsPanel({ activePortal }: SchoolResultsPanelProps) {
         )}
 
         {!isLoading && !isError && hits.length === 0 && (
-          <p className='py-8 text-center text-sm text-foggy'>
-            {t('empty')}
-          </p>
+          <EmptyState
+            icon={SearchX}
+            title={t('empty')}
+          />
         )}
 
         {!isLoading && hits.length > 0 && (
@@ -97,13 +100,13 @@ export function SchoolResultsPanel({ activePortal }: SchoolResultsPanelProps) {
             ))}
           </div>
         )}
-      </div>
+      </ScrollArea>
 
       {totalHits > hits.length && (
         <div className='border-t border-divider bg-card p-4 text-center'>
           <button
             type='button'
-            className='text-body-sm font-semibold text-primary hover:underline'
+            className='text-body-sm font-semibold text-primary hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1 rounded-md'
           >
             {t('viewAll')}
           </button>

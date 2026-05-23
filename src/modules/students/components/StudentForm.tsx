@@ -52,7 +52,7 @@ export function StudentForm({ defaultValues, onSubmit, isLoading, submitLabel }:
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className='flex flex-col gap-8'>
+      <form onSubmit={form.handleSubmit(onSubmit)} className='flex flex-col gap-6'>
         <section className='flex flex-col gap-4'>
           <h2 className='text-lg font-semibold text-ink-900'>{t('sectionPersonal')}</h2>
           <div className='grid grid-cols-1 gap-4 sm:grid-cols-2'>
@@ -185,8 +185,7 @@ export function StudentForm({ defaultValues, onSubmit, isLoading, submitLabel }:
               render={({ field }) => (
                 <FormItem>
                   <FormLabel>{t('fieldTargetTerm')}</FormLabel>
-                  {/* TODO i18n: Students.fieldTargetTermPlaceholder — e.g. "e.g. Term 1, 2027" */}
-                  <FormControl><Input placeholder='e.g. Term 1, 2027' {...field} /></FormControl>
+                  <FormControl><Input placeholder={t('fieldTargetTermPlaceholder')} {...field} /></FormControl>
                   <FormMessage />
                 </FormItem>
               )}

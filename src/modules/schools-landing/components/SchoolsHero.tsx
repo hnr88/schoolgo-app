@@ -29,7 +29,7 @@ export async function SchoolsHero() {
       <SectionContainer className='relative grid grid-cols-1 items-center gap-10 md:grid-cols-12 md:gap-12'>
         <div className='flex flex-col gap-6 md:col-span-6'>
           <Eyebrow tone='brand'>{t('eyebrow')}</Eyebrow>
-          <h1 className='font-display text-5xl font-bold leading-display-xl tracking-display-lg text-ink-900 md:text-7xl'>
+          <h1 className='font-display text-5xl font-extrabold leading-display-xl tracking-display-lg text-ink-900 md:text-7xl'>
             {t('headlinePrefix')}{' '}
             <em className='font-bold italic text-primary'>{t('headlineEmphasis')}</em>{' '}
             {t('headlineSuffix')}

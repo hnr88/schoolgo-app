@@ -35,7 +35,7 @@ export function SchoolCard({
   const card = (
     <article
       className={cn(
-        'group relative flex flex-col overflow-hidden rounded-xl border border-border bg-card shadow-2 transition-shadow hover:shadow-3',
+        'group relative flex flex-col overflow-hidden rounded-xl border border-border bg-card shadow-2 transition-[transform,box-shadow] duration-300 hover:-translate-y-1 hover:shadow-3',
         className,
       )}
     >
@@ -91,7 +91,7 @@ export function SchoolCard({
         )}
       </div>
 
-      <div className='flex flex-1 flex-col gap-1 p-4'>
+      <div className='flex flex-1 flex-col gap-1 p-5'>
         <div className='flex items-start justify-between gap-3'>
           <h3 className='line-clamp-1 text-body font-semibold text-ink-900'>{name}</h3>
           {rating && (

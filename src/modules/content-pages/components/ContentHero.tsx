@@ -28,7 +28,7 @@ export function ContentHero({ page }: ContentHeroProps) {
             <Link
               href={page.cta.primary.href}
               data-slot='button'
-              className='inline-flex items-center justify-center gap-2 rounded-pill bg-rausch-700 px-5 py-3 text-sm font-semibold text-background shadow-brand no-underline hover:bg-rausch-600'
+              className='inline-flex items-center justify-center gap-2 rounded-pill bg-rausch-700 px-5 py-3 text-sm font-semibold text-background shadow-brand no-underline hover:bg-rausch-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1'
             >
               {page.cta.primary.label}
               <ArrowRight className='h-4 w-4' aria-hidden='true' />
@@ -36,7 +36,7 @@ export function ContentHero({ page }: ContentHeroProps) {
             <Link
               href={page.cta.secondary.href}
               data-slot='button'
-              className='inline-flex items-center justify-center rounded-pill border border-border bg-card px-5 py-3 text-sm font-semibold text-hof no-underline hover:bg-muted'
+              className='inline-flex items-center justify-center rounded-pill border border-border bg-card px-5 py-3 text-sm font-semibold text-hof no-underline hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1'
             >
               {page.cta.secondary.label}
             </Link>

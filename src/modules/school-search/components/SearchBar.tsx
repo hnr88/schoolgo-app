@@ -3,6 +3,7 @@ import { useRef, useState } from 'react';
 import { Search, X } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { cn } from '@/lib/utils';
+import { Input } from '@/components/ui/input';
 import { SearchAutocompleteDropdown } from '@/modules/school-search/components/SearchAutocompleteDropdown';
 import { useSearchShortcut } from '@/modules/school-search/hooks/use-search-shortcut';
 import { useSchoolSearchStore } from '@/modules/school-search/stores/use-school-search-store';
@@ -47,7 +48,7 @@ export function SearchBar({ className }: SearchBarProps) {
           strokeWidth={1.75}
           aria-hidden='true'
         />
-        <input
+        <Input
           ref={inputRef}
           type='search'
           value={query}
@@ -56,7 +57,7 @@ export function SearchBar({ className }: SearchBarProps) {
           onBlur={handleBlur}
           placeholder={t('searchPlaceholder')}
           aria-label={t('searchPlaceholder')}
-          className='w-full border-0 bg-transparent text-body text-foreground placeholder:text-quill outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1'
+          className='h-auto w-full border-0 bg-transparent px-0 py-0 text-body shadow-none placeholder:text-quill focus-visible:ring-0'
         />
         {query.length === 0 && (
           <kbd
@@ -71,7 +72,7 @@ export function SearchBar({ className }: SearchBarProps) {
             type='button'
             onClick={handleClearSearch}
             aria-label={t('clearSearch')}
-            className='flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-muted text-foggy transition-colors hover:bg-ink-200 hover:text-foreground'
+            className='flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-muted text-foggy transition-colors hover:bg-ink-200 hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1'
           >
             <X className='h-3 w-3' strokeWidth={2.5} aria-hidden='true' />
           </button>

@@ -7,7 +7,7 @@ import type {
 } from '@/modules/design-system/types/design-system.types';
 
 export const buttonStyles = cva(
-  'inline-flex items-center justify-center gap-2 rounded-pill font-semibold whitespace-nowrap transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary disabled:opacity-50 disabled:pointer-events-none',
+  'inline-flex items-center justify-center gap-2 rounded-pill font-semibold whitespace-nowrap transition-colors focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none',
   {
     variants: {
       variant: {
@@ -61,7 +61,7 @@ export const chipStyles = cva(
 );
 
 export const ctaLinkStyles = cva(
-  'inline-flex items-center gap-2 rounded-pill font-semibold no-underline',
+  'inline-flex items-center gap-2 rounded-pill font-semibold no-underline focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2',
   {
     variants: {
       variant: {
@@ -95,6 +95,11 @@ export const statusBadgeStyles = cva(
         featured: 'bg-arches-50 text-arches-700',
         danger: 'bg-rausch-50 text-rausch-700',
         muted: 'bg-muted text-hof',
+        submitted: 'bg-babu-50 text-babu-700',
+        underReview: 'bg-vivid-iris-soft text-vivid-iris',
+        accepted: 'bg-vivid-mint-soft text-babu-700',
+        rejected: 'bg-rausch-50 text-rausch-700',
+        enrolled: 'bg-vivid-mint-soft text-babu-700',
       },
       size: {
         sm: 'px-2 py-0.5',

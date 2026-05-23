@@ -9,7 +9,7 @@ export async function ApplyCard({ school }: { school: SchoolDetail }) {
   const primaryUrl = school.internationalEnrolmentUrl ?? school.schoolHomepageUrl;
 
   return (
-    <section aria-labelledby="apply-heading" className="rounded-lg border border-border bg-card p-6 shadow-2">
+    <section aria-labelledby="apply-heading" className="rounded-xl border border-border bg-card p-5 shadow-2">
       <h2 id="apply-heading" className="text-xl font-semibold text-ink-900">{t('heading')}</h2>
       <p className="mt-2 text-body-sm text-foggy">{t('intro')}</p>
 
@@ -31,7 +31,7 @@ export async function ApplyCard({ school }: { school: SchoolDetail }) {
             href={school.schoolHomepageUrl}
             target="_blank"
             rel="noreferrer noopener"
-            className="inline-flex w-full items-center justify-center gap-2 rounded-pill border border-border bg-white px-4 py-3 text-body-sm font-semibold text-hof hover:bg-muted"
+            className="inline-flex w-full items-center justify-center gap-2 rounded-pill border border-border bg-card px-4 py-3 text-body-sm font-semibold text-hof hover:bg-muted"
           >
             {t('websiteCta')}
             <ExternalLink className="h-4 w-4" aria-hidden="true" />

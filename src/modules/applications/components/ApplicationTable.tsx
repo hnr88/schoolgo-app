@@ -2,28 +2,20 @@
 
 import { useLocale, useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
-import { FileText, ArrowUp, ArrowDown, ArrowUpDown } from 'lucide-react';
-import { cn } from '@/lib/utils';
+import { FileText } from 'lucide-react';
 import {
   Table,
   TableBody,
   TableCell,
-  TableHead,
   TableHeader,
   TableRow,
 } from '@/components/ui/table';
 import { Skeleton } from '@/components/ui/skeleton';
+import { DataTableSortHeader } from '@/modules/design-system';
 import { EmptyState } from '@/modules/core';
 import { ApplicationStatusBadge } from '@/modules/applications/components/ApplicationStatusBadge';
 import { formatDaysClass, formatSubmittedDate } from '@/modules/applications/lib/format';
-import { HEADER_CLASS } from '@/modules/applications/constants/table.constants';
-import type { ApplicationTableProps, ApplicationSortField, SortIconProps } from '@/modules/applications/types/component.types';
-
-function SortIcon({ field, activeField, direction }: SortIconProps) {
-  if (activeField !== field) return <ArrowUpDown className='ml-1 h-3 w-3 text-quill' />;
-  if (direction === 'asc') return <ArrowUp className='ml-1 h-3 w-3 text-primary' />;
-  return <ArrowDown className='ml-1 h-3 w-3 text-primary' />;
-}
+import type { ApplicationTableProps, ApplicationSortField } from '@/modules/applications/types/component.types';
 
 export function ApplicationTable({
   applications,
@@ -35,26 +27,6 @@ export function ApplicationTable({
 }: ApplicationTableProps) {
   const t = useTranslations('Applications');
   const locale = useLocale();
-
-  function renderSortableHead(field: ApplicationSortField, label: string, className?: string) {
-    const isActive = sortField === field;
-
-    return (
-      <TableHead
-        className={cn(HEADER_CLASS, className)}
-        aria-sort={isActive ? (sortDirection === 'asc' ? 'ascending' : 'descending') : 'none'}
-      >
-        <button
-          type='button'
-          className='inline-flex items-center rounded-sm text-left hover:text-ink-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2'
-          onClick={() => onSort(field)}
-        >
-          {label}
-          <SortIcon field={field} activeField={sortField} direction={sortDirection} />
-        </button>
-      </TableHead>
-    );
-  }
 
   const rowCount = pageSize || 10;
 
@@ -73,13 +45,57 @@ export function ApplicationTable({
       <Table>
         <TableHeader>
           <TableRow className='border-b border-border bg-muted/50 hover:bg-muted/50'>
-            {renderSortableHead('student', t('columnStudent'), 'pl-6')}
-            {renderSortableHead('school', t('columnSchool'))}
-            {renderSortableHead('state', t('columnState'))}
-            {renderSortableHead('targetYearLevel', t('columnYearLevel'))}
-            {renderSortableHead('status', t('columnStatus'))}
-            {renderSortableHead('submittedAt', t('columnSubmitted'))}
-            {renderSortableHead('daysInStatus', t('columnDays'), 'pr-6')}
+            <DataTableSortHeader
+              field='student'
+              activeField={sortField}
+              direction={sortDirection}
+              onSort={(field) => onSort(field as ApplicationSortField)}
+              label={t('columnStudent')}
+              className='pl-6'
+            />
+            <DataTableSortHeader
+              field='school'
+              activeField={sortField}
+              direction={sortDirection}
+              onSort={(field) => onSort(field as ApplicationSortField)}
+              label={t('columnSchool')}
+            />
+            <DataTableSortHeader
+              field='state'
+              activeField={sortField}
+              direction={sortDirection}
+              onSort={(field) => onSort(field as ApplicationSortField)}
+              label={t('columnState')}
+            />
+            <DataTableSortHeader
+              field='targetYearLevel'
+              activeField={sortField}
+              direction={sortDirection}
+              onSort={(field) => onSort(field as ApplicationSortField)}
+              label={t('columnYearLevel')}
+            />
+            <DataTableSortHeader
+              field='status'
+              activeField={sortField}
+              direction={sortDirection}
+              onSort={(field) => onSort(field as ApplicationSortField)}
+              label={t('columnStatus')}
+            />
+            <DataTableSortHeader
+              field='submittedAt'
+              activeField={sortField}
+              direction={sortDirection}
+              onSort={(field) => onSort(field as ApplicationSortField)}
+              label={t('columnSubmitted')}
+            />
+            <DataTableSortHeader
+              field='daysInStatus'
+              activeField={sortField}
+              direction={sortDirection}
+              onSort={(field) => onSort(field as ApplicationSortField)}
+              label={t('columnDays')}
+              className='pr-6'
+            />
           </TableRow>
         </TableHeader>
         <TableBody>
@@ -108,7 +124,7 @@ export function ApplicationTable({
                 return (
                   <TableRow
                     key={application.documentId}
-                    className='group h-12 border-b-border hover:bg-babu-50/50'
+                    className='group h-12 border-b-border hover:bg-accent/50'
                   >
                     <TableCell className='pl-6'>
                       <Link
@@ -141,7 +157,7 @@ export function ApplicationTable({
                     <TableCell className='text-sm text-hof'>
                       {formatSubmittedDate(application.submittedAt, t, locale)}
                     </TableCell>
-                    <TableCell className={cn('pr-6 text-sm font-medium', formatDaysClass(application.daysInStatus))}>
+                    <TableCell className={`pr-6 text-sm font-medium ${formatDaysClass(application.daysInStatus)}`}>
                       {application.daysInStatus}
                     </TableCell>
                   </TableRow>
