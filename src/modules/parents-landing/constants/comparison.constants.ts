@@ -1,11 +1,3 @@
-import { generateGradientPlaceholder } from '@/lib/schools/generate-school-placeholder';
-
-export const COMPARISON_IMAGES = [
-  generateGradientPlaceholder('comparison-0'),
-  generateGradientPlaceholder('comparison-1'),
-  generateGradientPlaceholder('comparison-2'),
-];
-
 export const RATINGS = ['4.9', '4.8', '4.9'];
 
 export const TESTS_MAP: Record<string, string> = {

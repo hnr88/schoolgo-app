@@ -10,7 +10,7 @@ export function GuideSectionNav({ navItems }: { navItems: GuideNavItem[] }) {
   const activeId = useActiveSection(ids);
 
   return (
-    <nav className='sticky top-20 z-30 border-b border-border bg-background md:top-22'>
+    <nav className='sticky top-[var(--header-height)] z-30 border-b border-border bg-background'>
       <SectionContainer className='flex gap-0 overflow-x-auto'>
         {navItems.map((item) => (
           <a

@@ -1,17 +1,16 @@
+import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
-import { loadSchools } from '@/lib/schools';
 import { SectionContainer, SectionHeader, StatusBadge, TrustBadge } from '@/modules/design-system';
+import { getFeaturedSchools } from '@/modules/schools-landing/lib/featured-schools';
 import { MATCHING_STEPS } from '../constants/agents-landing.constants';
-import { getFeaturedSchoolsForAgents, hueFromString, initialsFromName } from '../lib/featured-schools';
+import { hueFromString, initialsFromName } from '../lib/featured-schools';
 
 export async function AgentsMatching() {
   const [t, tc, schools] = await Promise.all([
     getTranslations('AgentsMatching'),
     getTranslations('Common'),
-    loadSchools(),
+    getFeaturedSchools(3),
   ]);
-
-  const inboxSchools = getFeaturedSchoolsForAgents(schools, 3);
 
   return (
     <section id='how-it-works' className='py-16 md:py-20'>
@@ -58,16 +57,29 @@ export async function AgentsMatching() {
               <TrustBadge variant='qeac' label={tc('qeacVerified')} />
             </div>
             <ul className='divide-y divide-divider'>
-              {inboxSchools.map((school) => {
+              {schools.map((school) => {
                 const hue = hueFromString(school.name);
                 return (
                   <li key={school.slug} className='flex items-center gap-4 px-5 py-4'>
-                    <div
-                      className='flex h-12 w-12 shrink-0 items-center justify-center rounded-md border border-border text-caption font-bold text-white'
-                      style={{ backgroundColor: `hsl(${hue} 65% 45%)` }}
-                      aria-hidden='true'
-                    >
-                      {initialsFromName(school.name)}
+                    <div className='relative h-12 w-12 shrink-0 overflow-hidden rounded-md border border-border bg-card'>
+                      {school.logoUrl ? (
+                        <Image
+                          src={school.logoUrl}
+                          alt=''
+                          fill
+                          sizes='48px'
+                          className='object-contain p-1.5'
+                          aria-hidden='true'
+                        />
+                      ) : (
+                        <div
+                          className='flex h-full w-full items-center justify-center text-caption font-bold text-white'
+                          style={{ backgroundColor: `hsl(${hue} 65% 45%)` }}
+                          aria-hidden='true'
+                        >
+                          {initialsFromName(school.name)}
+                        </div>
+                      )}
                     </div>
                     <div className='flex min-w-0 flex-1 flex-col'>
                       <span className='text-body-sm font-semibold text-ink-900'>

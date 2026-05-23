@@ -33,7 +33,7 @@ export function SchoolCardImage({
           className="object-cover"
         />
       ) : (
-        <DefaultPhoto />
+        <DefaultPhoto name={name} />
       )}
       <div className="absolute right-2 top-2 z-10">
         <CardActions

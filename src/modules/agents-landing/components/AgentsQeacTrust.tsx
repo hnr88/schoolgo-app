@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
 import { loadSchools, computeSchoolStats } from '@/lib/schools';
 import { SectionContainer, SectionHeader, StatusBadge, TrustBadge } from '@/modules/design-system';
@@ -34,8 +35,14 @@ export async function AgentsQeacTrust() {
               {t('sampleLabel')}
             </StatusBadge>
             <header className='flex items-center gap-4 border-b border-divider pb-5'>
-              <div className='flex h-14 w-14 shrink-0 items-center justify-center rounded-pill border border-border bg-gradient-to-br from-rausch-100 to-babu-100 text-body font-bold text-ink-900'>
-                {t('profile.agentName').charAt(0)}
+              <div className='relative h-14 w-14 shrink-0 overflow-hidden rounded-pill border border-border'>
+                <Image
+                  src='https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=200&q=80'
+                  alt=''
+                  fill
+                  sizes='56px'
+                  className='object-cover'
+                />
               </div>
               <div className='flex min-w-0 flex-1 flex-col'>
                 <span

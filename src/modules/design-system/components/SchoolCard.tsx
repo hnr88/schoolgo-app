@@ -61,7 +61,7 @@ export function SchoolCard({
             onError={() => setLogoFailed(true)}
           />
         ) : (
-          <DefaultPhoto />
+          <DefaultPhoto name={name} />
         )}
 
         {topRatedLabel && (

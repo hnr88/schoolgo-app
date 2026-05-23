@@ -201,8 +201,8 @@
   --space-24: 6rem;     /* 96px */
 
   /* Header height */
-  --header-height: 4.5rem; /* 72px */
-  --header-height-mobile: 3.5rem; /* 56px */
+  --header-height: 4.875rem; /* 78px desktop */
+  --header-height-mobile: 2.8125rem; /* 45px mobile */
 
   /* Section spacing */
   --section-padding-y: 3rem;      /* 48px */
@@ -340,6 +340,17 @@
   --dur-2: 200ms;
   --dur-3: 320ms;
   --dur-4: 520ms;
+}
+
+/* Responsive header height override */
+:root {
+  --header-height: 2.8125rem; /* 45px mobile */
+}
+
+@media (min-width: 768px) {
+  :root {
+    --header-height: 4.875rem; /* 78px desktop */
+  }
 }
 
 /* Dark mode disabled for v1 — marketing pages stay light. Keep vars in place

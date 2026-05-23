@@ -12,7 +12,7 @@ import type { ContentBreadcrumbsProps } from '@/modules/content-pages/types/cont
 export function ContentBreadcrumbs({ category, title }: ContentBreadcrumbsProps) {
   return (
     <Breadcrumb>
-      <nav className='border-b border-divider bg-muted pt-16 md:pt-20'>
+      <nav className='border-b border-divider bg-muted pt-14 md:pt-16'>
         <div className='mx-auto flex max-w-content flex-wrap items-center gap-y-1 px-5 py-3 text-sm md:px-8'>
           <BreadcrumbList className='text-foggy'>
             <BreadcrumbItem>

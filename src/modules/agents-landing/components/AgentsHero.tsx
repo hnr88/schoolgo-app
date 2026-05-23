@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { BadgeCheck } from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
 import { loadSchools, computeSchoolStats } from '@/lib/schools';
@@ -60,12 +61,15 @@ export async function AgentsHero() {
         </div>
 
         <div className='relative md:col-span-5'>
-          <div className='relative aspect-[4/5] overflow-hidden rounded-2xl border border-border bg-gradient-to-br from-babu-50 via-rausch-50 to-hackberry-50 shadow-3'>
-            <div className='absolute inset-0 opacity-30' aria-hidden='true'>
-              <div className='absolute -right-20 -top-20 h-72 w-72 rounded-full bg-rausch-200 blur-[80px]' />
-              <div className='absolute -bottom-20 -left-20 h-72 w-72 rounded-full bg-babu-200 blur-[80px]' />
-              <div className='absolute left-1/3 top-1/3 h-48 w-48 rounded-full bg-hackberry-100 blur-[60px]' />
-            </div>
+          <div className='relative aspect-[4/5] overflow-hidden rounded-2xl border border-border shadow-3'>
+            <Image
+              src='https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=800&q=80'
+              alt=''
+              fill
+              sizes='(max-width: 768px) 100vw, 40vw'
+              className='object-cover'
+              priority
+            />
           </div>
           <div className='absolute -left-4 top-6 flex max-w-[16rem] items-center gap-3 rounded-lg border border-border bg-card p-3 shadow-3'>
             <div className='flex h-10 w-10 items-center justify-center rounded-pill bg-babu-50 text-babu-700'>

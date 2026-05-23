@@ -3,6 +3,7 @@ import { ArrowRight } from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
 import { CtaLink, Eyebrow, SectionContainer, TrustBadge } from '@/modules/design-system';
 import { Link } from '@/i18n/navigation';
+import { hueFromString, initialsFromName } from '@/modules/agents-landing/lib/featured-schools';
 
 import { getFeaturedSchools } from '../lib/featured-schools';
 
@@ -71,8 +72,11 @@ export async function SchoolsHero() {
                           aria-hidden='true'
                         />
                       ) : (
-                        <div className='flex h-full w-full items-center justify-center bg-muted text-xs font-bold uppercase text-foggy'>
-                          {school.name.charAt(0)}
+                        <div
+                          className='flex h-full w-full items-center justify-center text-xs font-bold uppercase text-white'
+                          style={{ backgroundColor: `hsl(${hueFromString(school.name)} 65% 45%)` }}
+                        >
+                          {initialsFromName(school.name)}
                         </div>
                       )}
                     </div>
