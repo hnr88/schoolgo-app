@@ -16,9 +16,9 @@ export function ProcessStepperBlock({ page }: ContentBlockProps) {
               <span className='text-xs font-semibold uppercase text-foggy'>{index === 0 ? 'Start here' : 'Next gate'}</span>
             </span>
             <span className='mt-5 block text-lg font-semibold text-ink-900'>{step.title}</span>
-            <span className='mt-2 block text-sm leading-6 text-hof'>{step.description}</span>
+            <span className='mt-3 block text-sm leading-6 text-hof'>{step.description}</span>
             {decision ? (
-              <span className='mt-5 block rounded-lg bg-muted p-3'>
+              <span className='mt-5 block rounded-lg bg-muted p-4'>
                 <span className='block text-xs font-semibold uppercase text-rausch-700'>{decision.owner}</span>
                 <span className='mt-1 block text-xs leading-5 text-foggy'>{decision.evidence}</span>
               </span>

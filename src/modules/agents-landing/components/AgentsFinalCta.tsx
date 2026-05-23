@@ -5,8 +5,8 @@ export async function AgentsFinalCta() {
   const t = await getTranslations('AgentsFinalCta');
 
   return (
-    <section className='py-24 md:py-32'>
-      <SectionContainer className='flex flex-col items-center gap-6 text-center'>
+    <section className='py-20 md:py-24'>
+      <SectionContainer className='flex flex-col items-center gap-8 text-center'>
         <SectionHeader
           align='center'
           size='lg'

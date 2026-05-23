@@ -9,7 +9,7 @@ export function ContentDirectoryGrid({
   getPageHref,
 }: ContentDirectoryGridProps) {
   return (
-    <section id='directory' className='bg-background py-16 md:py-24'>
+    <section id='directory' className='bg-background py-12 md:py-16'>
       <SectionContainer>
         <SectionHeader eyebrow='Directory' heading={title} subheading={description} />
         <div className='mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3'>

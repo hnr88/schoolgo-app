@@ -23,7 +23,7 @@ export function ContactRoutingBlock({ page }: ContentBlockProps) {
               <span className='block p-6'>
                 <Icon className='h-5 w-5 text-rausch-700' aria-hidden='true' />
                 <span className='mt-5 block text-lg font-semibold text-ink-900'>{route.label}</span>
-                <span className='mt-1 block text-xs font-semibold uppercase text-foggy'>{page.stakeholders[index]?.metric ?? 'Contact'}</span>
+                <span className='mt-2 block text-xs font-semibold uppercase text-foggy'>{page.stakeholders[index]?.metric ?? 'Contact'}</span>
                 <span className='mt-2 block text-sm leading-6 text-foggy'>{route.text}</span>
               </span>
             </Link>

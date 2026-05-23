@@ -101,7 +101,7 @@ export function ApplicationTable({
         <TableBody>
           {isLoading ? (
             Array.from({ length: rowCount }).map((_, i) => (
-              <TableRow key={`skeleton-${i}`} className='h-12 hover:bg-transparent'>
+              <TableRow key={`skeleton-${i}`} className='h-14 hover:bg-transparent'>
                 <TableCell className='pl-6'>
                   <div className='flex items-center gap-3'>
                     <Skeleton className='h-8 w-8 rounded-full' />
@@ -124,7 +124,7 @@ export function ApplicationTable({
                 return (
                   <TableRow
                     key={application.documentId}
-                    className='group h-12 border-b-border hover:bg-accent/50'
+                    className='group h-14 border-b-border hover:bg-accent/50'
                   >
                     <TableCell className='pl-6'>
                       <Link
@@ -164,7 +164,7 @@ export function ApplicationTable({
                 );
               })}
               {applications.length < pageSize && Array.from({ length: pageSize - applications.length }).map((_, i) => (
-                <TableRow key={`empty-${i}`} className='h-12 hover:bg-transparent'>
+                <TableRow key={`empty-${i}`} className='h-14 hover:bg-transparent'>
                   <TableCell colSpan={7} />
                 </TableRow>
               ))}

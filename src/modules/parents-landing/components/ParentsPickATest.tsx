@@ -7,10 +7,10 @@ export async function ParentsPickATest() {
   const testCards = [...PICK_A_TEST_FEATURED, ...PICK_A_TEST_SECONDARY];
 
   return (
-    <section className='bg-muted py-20 md:py-28'>
+    <section className='bg-muted py-16 md:py-20'>
       <SectionContainer className='flex flex-col gap-10'>
-        <div className='grid grid-cols-1 items-start gap-10 md:grid-cols-2 md:gap-16'>
-          <div className='flex flex-col gap-6'>
+        <div className='grid grid-cols-1 items-start gap-8 md:grid-cols-2 md:gap-10'>
+          <div className='flex flex-col gap-8'>
             <SectionHeader
               eyebrow={t('eyebrow')}
               heading={
@@ -30,7 +30,7 @@ export async function ParentsPickATest() {
             </div>
           </div>
 
-          <div className='grid grid-cols-2 gap-3 sm:hidden'>
+          <div className='grid grid-cols-2 gap-4 sm:hidden'>
             {testCards.map((key, index) => (
               <article
                 key={key}
@@ -51,8 +51,8 @@ export async function ParentsPickATest() {
             ))}
           </div>
 
-          <div className='hidden flex-col gap-4 sm:flex'>
-            <div className='grid grid-cols-2 gap-4'>
+          <div className='hidden flex-col gap-5 sm:flex'>
+            <div className='grid grid-cols-2 gap-5'>
               {PICK_A_TEST_FEATURED.map((key) => (
                 <article
                   key={key}
@@ -71,7 +71,7 @@ export async function ParentsPickATest() {
               ))}
             </div>
 
-            <div className='grid grid-cols-3 gap-4'>
+            <div className='grid grid-cols-3 gap-5'>
               {PICK_A_TEST_SECONDARY.map((key) => (
                 <article
                   key={key}

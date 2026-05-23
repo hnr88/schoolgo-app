@@ -11,9 +11,9 @@ export async function AgentsStatsBar() {
   const stats = computeSchoolStats(schools);
 
   return (
-    <section className='bg-ink-900 py-10 md:py-12'>
+    <section className='bg-ink-900 py-12 md:py-16'>
       <SectionContainer>
-        <ul className='grid grid-cols-2 gap-6 md:grid-cols-4'>
+        <ul className='grid grid-cols-2 gap-8 md:grid-cols-4'>
           {STATS_BAR_ITEMS.map((key) => (
             <li
               key={key}

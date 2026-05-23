@@ -14,7 +14,7 @@ export function GuideHero({
   return (
     <>
       <nav
-        className='border-b border-divider bg-muted pt-24 md:pt-32'
+        className='border-b border-divider bg-muted pt-20 md:pt-28'
         aria-label='Breadcrumb'
       >
         <SectionContainer className='flex flex-wrap items-center gap-y-1 py-3 text-sm'>

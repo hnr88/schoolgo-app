@@ -70,14 +70,14 @@ export async function BoardingSection({ school }: BoardingSectionProps) {
     <section
       id="boarding"
       aria-labelledby="boarding-heading"
-      className="rounded-lg border border-border bg-card p-6 shadow-1 md:p-8"
+      className="rounded-lg border border-border bg-card py-10 px-6 shadow-1 md:py-14 md:px-8"
     >
       <Eyebrow>{t('eyebrow')}</Eyebrow>
       <h2 id="boarding-heading" className="mt-2 text-2xl font-bold text-ink-900 md:text-3xl">
         {t('heading')}
       </h2>
       {school.internationalStudentDescription && (
-        <p className="mt-4 max-w-3xl text-body text-foggy">
+        <p className="mt-6 max-w-3xl text-body text-foggy">
           {school.internationalStudentDescription}
         </p>
       )}
@@ -100,7 +100,7 @@ export async function BoardingSection({ school }: BoardingSectionProps) {
       </dl>
 
       {features.length > 0 && (
-        <div className="mt-6 grid gap-3 sm:grid-cols-2">
+        <div className="mt-6 grid gap-4 sm:grid-cols-2">
           {features.map((f, i) => (
             <div key={i} className="rounded-lg bg-muted p-4">
               <p className="text-body-sm font-semibold text-ink-900">{f.title}</p>

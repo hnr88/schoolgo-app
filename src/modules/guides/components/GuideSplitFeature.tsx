@@ -13,7 +13,7 @@ export function GuideSplitFeature({
   features,
 }: GuideSplitData) {
   return (
-    <section id={id} className="border-y border-border bg-muted py-20 md:py-28">
+    <section id={id} className="border-y border-border bg-muted py-10 md:py-14">
       <SectionContainer
         className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20"
       >

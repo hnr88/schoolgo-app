@@ -15,7 +15,7 @@ const accentClasses = {
 export function ContentHero({ page }: ContentHeroProps) {
   return (
     <section className='border-b border-divider bg-background'>
-      <SectionContainer className='grid gap-10 py-14 md:grid-cols-2 md:items-center md:py-20'>
+      <SectionContainer className='grid gap-10 py-12 md:grid-cols-2 md:items-center md:py-16'>
         <div>
           <Eyebrow className={accentClasses[page.accent]}>{page.eyebrow}</Eyebrow>
           <h1 className='mt-4 max-w-3xl font-display text-4xl font-bold leading-display text-ink-900 md:text-6xl'>

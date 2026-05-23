@@ -24,7 +24,7 @@ export async function ActivityFeed({ events }: { events: ActivityEvent[] }) {
               <Link
                 key={event.id}
                 href={event.href}
-                className='group flex items-center gap-3 px-5 py-3.5 no-underline transition-colors hover:bg-muted'
+                className='group flex items-center gap-3 px-5 py-4 no-underline transition-colors hover:bg-muted'
               >
                 <span
                   className={cn(

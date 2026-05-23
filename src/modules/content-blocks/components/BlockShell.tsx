@@ -14,7 +14,7 @@ export function BlockShell({
     <section
       id={id}
       className={cn(
-        'py-10 md:py-14',
+        'py-12 md:py-16',
         tone === 'plain' && 'bg-background',
         tone === 'muted' && 'bg-muted',
         tone === 'brand' && 'bg-rausch-50',
@@ -31,7 +31,7 @@ export function BlockShell({
           subheading={description}
           theme={tone === 'dark' || tone === 'ink' ? 'dark' : 'light'}
         />
-        <div className='mt-6'>{children}</div>
+        <div className='mt-8'>{children}</div>
       </SectionContainer>
     </section>
   );

@@ -58,7 +58,7 @@ export function SpecFilterSidebar({ className, alwaysOn = false }: SpecFilterSid
   return (
     <aside
       className={cn(
-        'hidden shrink-0 lg:sticky lg:top-16 lg:block lg:h-[calc(100vh-4.5rem)] lg:w-[22rem] lg:py-6 lg:pl-3',
+        'hidden shrink-0 lg:sticky lg:top-[var(--header-height)] lg:block lg:h-[calc(100vh-var(--header-height))] lg:w-[22rem] lg:py-6 lg:pl-3',
         className,
       )}
       data-testid="spec-filter-sidebar"

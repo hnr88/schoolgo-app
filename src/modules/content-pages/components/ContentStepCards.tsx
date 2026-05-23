@@ -5,7 +5,7 @@ import type { ContentStepCardsProps } from '@/modules/content-pages/types/conten
 
 export function ContentStepCards({ steps }: ContentStepCardsProps) {
   return (
-    <section id='next-steps' className='bg-background py-16 md:py-24'>
+    <section id='next-steps' className='bg-background py-12 md:py-16'>
       <SectionContainer>
         <SectionHeader
           eyebrow='Next steps'

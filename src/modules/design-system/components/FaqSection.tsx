@@ -12,14 +12,14 @@ import type { FaqSectionProps } from '@/modules/design-system/types/design-syste
 
 export function FaqSection({ heading, items, id, className }: FaqSectionProps) {
   return (
-    <section id={id} className={cn('bg-muted py-20 md:py-28', className)}>
+    <section id={id} className={cn('bg-muted py-16 md:py-20', className)}>
       <SectionContainer className='flex flex-col gap-10'>
         <h2 className='font-display text-4xl font-bold leading-display tracking-display text-ink-900 md:text-5xl'>
           {heading}
         </h2>
         <Accordion>
           {items.map((item, i) => (
-            <AccordionItem key={i} className='border-border py-2'>
+            <AccordionItem key={i} className='border-border py-3'>
               <AccordionTrigger className='py-4 text-h4 font-semibold text-ink-900 hover:no-underline'>
                 {item.question}
               </AccordionTrigger>

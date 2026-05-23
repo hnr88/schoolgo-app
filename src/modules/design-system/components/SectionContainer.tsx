@@ -10,7 +10,7 @@ export function SectionContainer({
   return (
     <div
       className={cn(
-        'mx-auto w-full px-5 md:px-8',
+        'mx-auto w-full px-5 py-0 md:px-8',
         size === 'marketing' ? 'max-w-content' : 'max-w-wide',
         className,
       )}

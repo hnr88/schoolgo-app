@@ -11,9 +11,9 @@ export async function ApplyCard({ school }: { school: SchoolDetail }) {
   return (
     <section aria-labelledby="apply-heading" className="rounded-xl border border-border bg-card p-5 shadow-2">
       <h2 id="apply-heading" className="text-xl font-semibold text-ink-900">{t('heading')}</h2>
-      <p className="mt-2 text-body-sm text-foggy">{t('intro')}</p>
+      <p className="mt-4 text-body-sm text-foggy">{t('intro')}</p>
 
-      <div className="mt-4 space-y-3">
+      <div className="mt-5 space-y-4">
         {primaryUrl && (
           <a
             href={primaryUrl}
@@ -39,7 +39,7 @@ export async function ApplyCard({ school }: { school: SchoolDetail }) {
         )}
 
         <CtaLink
-          href="/launching-soon?variant=dashboard"
+          href="/search"
           variant="secondary"
           size="lg"
           justify
@@ -49,7 +49,7 @@ export async function ApplyCard({ school }: { school: SchoolDetail }) {
       </div>
 
       {school.schoolHomepageUrl && (
-        <p className="mt-4 text-center text-caption text-quill">
+        <p className="mt-5 text-center text-caption text-quill">
           {t('domesticHint')}{' '}
           <a
             href={`${school.schoolHomepageUrl}/enrolments`}

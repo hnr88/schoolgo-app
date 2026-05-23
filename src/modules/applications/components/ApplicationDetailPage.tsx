@@ -92,7 +92,7 @@ export function ApplicationDetailPage({ documentId }: { documentId: string }) {
           </TabsContent>
 
           <TabsContent value='messages' className='mt-6'>
-            <div className='flex flex-col items-center justify-center rounded-xl border border-dashed border-border bg-card py-20'>
+            <div className='flex flex-col items-center justify-center rounded-xl border border-dashed border-border bg-card py-16'>
               <p className='text-sm text-foggy'>{t('tabMessages')}</p>
             </div>
           </TabsContent>

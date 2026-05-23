@@ -8,8 +8,8 @@ export async function ParentsFinalCta() {
   const year = now.getFullYear();
 
   return (
-    <section className='py-20 md:py-28'>
-      <SectionContainer className='flex flex-col items-center gap-6 text-center'>
+    <section className='py-20 md:py-24'>
+      <SectionContainer className='flex flex-col items-center gap-8 text-center'>
         <SectionHeader
           align='center'
           size='lg'

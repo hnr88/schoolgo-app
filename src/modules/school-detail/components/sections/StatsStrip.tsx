@@ -36,10 +36,10 @@ interface CellProps {
 
 function StatCell({ label, value, note, ariaLabel }: CellProps) {
   return (
-    <div className="p-4 md:p-6 text-center" aria-label={ariaLabel}>
+    <div className="py-5 px-4 md:py-6 md:px-6 text-center" aria-label={ariaLabel}>
       <p className="text-caption font-semibold uppercase text-foggy">{label}</p>
-      <p className="text-xl font-bold text-ink-900 mt-1">{value}</p>
-      {note && <p className="text-body-sm text-foggy mt-1">{note}</p>}
+      <p className="text-xl font-bold text-ink-900 mt-2">{value}</p>
+      {note && <p className="text-body-sm text-foggy mt-2">{note}</p>}
     </div>
   );
 }
@@ -66,7 +66,7 @@ export async function StatsStrip({ school }: { school: SchoolDetail }) {
     : t('notOffered');
 
   return (
-    <SectionContainer size="wide" className="relative z-10 -mt-12 md:-mt-16 lg:-mt-20">
+    <SectionContainer size="wide" className="relative z-10 -mt-[var(--space-12)] md:-mt-[var(--space-16)] lg:-mt-[var(--space-20)]">
       <div className="grid grid-cols-2 md:grid-cols-5 bg-card border border-divider rounded-lg shadow-2 overflow-hidden divide-x divide-y divide-divider md:divide-y-0">
         <StatCell
           label={t('type')}

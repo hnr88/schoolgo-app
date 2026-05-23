@@ -11,7 +11,7 @@ export const SECURITY_HEADERS: Readonly<Record<string, string>> = {
     "default-src 'self'",
     "script-src 'self' 'unsafe-inline' 'unsafe-eval'",
     "style-src 'self' 'unsafe-inline'",
-    "img-src 'self' data: https://picsum.photos https://images.unsplash.com https://staging-api.schoolgo.com.au https://api.schoolgo.com.au https://*.schoolgo.com.au https://*.tile.openstreetmap.org",
+    "img-src 'self' data: https://staging-api.schoolgo.com.au https://api.schoolgo.com.au https://*.schoolgo.com.au https://*.tile.openstreetmap.org",
     "font-src 'self' data:",
     "connect-src 'self' https://staging-api.schoolgo.com.au https://api.schoolgo.com.au https://nominatim.openstreetmap.org https://*.tile.openstreetmap.org",
     "frame-ancestors 'none'",

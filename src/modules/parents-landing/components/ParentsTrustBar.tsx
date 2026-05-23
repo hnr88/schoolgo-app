@@ -5,9 +5,9 @@ import { TRUST_BAR_ITEMS } from '../constants/parents-landing.constants';
 export async function ParentsTrustBar() {
   const t = await getTranslations('ParentsTrustBar');
   return (
-    <section className='bg-ink-900 py-20 md:py-28'>
-      <SectionContainer className='flex flex-col gap-12'>
-        <div className='grid grid-cols-1 items-start gap-10 md:grid-cols-2 md:gap-16'>
+    <section className='bg-ink-900 py-16 md:py-20'>
+      <SectionContainer className='flex flex-col gap-10'>
+        <div className='grid grid-cols-1 items-start gap-8 md:grid-cols-2 md:gap-10'>
           <SectionHeader
             theme='dark'
             eyebrow={t('eyebrow')}

@@ -32,26 +32,26 @@ export async function CompareSection({ similarSchools, activePortal }: CompareSe
     <section
       id="compare"
       aria-labelledby="compare-heading"
-      className="rounded-lg border border-border bg-card p-6 shadow-1 md:p-8"
+      className="rounded-lg border border-border bg-card py-10 px-6 shadow-1 md:py-14 md:px-8"
     >
       <Eyebrow>{t('eyebrow')}</Eyebrow>
       <h2 id="compare-heading" className="mt-2 text-2xl font-bold text-ink-900 md:text-3xl">
         {t('heading')}
       </h2>
-      <p className="mt-4 max-w-3xl text-body text-foggy">{t('intro')}</p>
+      <p className="mt-6 max-w-3xl text-body text-foggy">{t('intro')}</p>
 
-      <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {similarSchools.map((other) => (
           <Link
             key={other.documentId}
             href={`${basePath}/${other.slug}`}
-            className="block rounded-lg border border-border bg-card p-4 transition-shadow hover:shadow-2"
+            className="block rounded-lg border border-border bg-card p-5 transition-shadow hover:shadow-2"
           >
             <p className="text-body-sm font-semibold text-ink-900">{other.name}</p>
             <p className="mt-1 text-caption text-foggy">
               {[other.suburb, other.state].filter(Boolean).join(', ')}
             </p>
-            <dl className="mt-3 space-y-1">
+            <dl className="mt-4 space-y-2">
               {formatLabel(other.sector) && (
                 <div className="flex items-center justify-between">
                   <dt className="text-caption text-foggy">{t('sector')}</dt>

@@ -34,7 +34,7 @@ export async function AboutSection({ school }: AboutSectionProps) {
     <section
       id="about"
       aria-labelledby="about-heading"
-      className="rounded-lg border border-border bg-card p-6 shadow-1 md:p-8"
+      className="rounded-lg border border-border bg-card py-10 px-6 shadow-1 md:py-14 md:px-8"
     >
       <Eyebrow>{t('eyebrow')}</Eyebrow>
       <h2
@@ -56,7 +56,7 @@ export async function AboutSection({ school }: AboutSectionProps) {
         )}
       </div>
       {isIntlRelevant && (
-        <div className="mt-4 rounded-lg border border-babu-100 bg-babu-50 p-4">
+        <div className="mt-6 rounded-lg border border-babu-100 bg-babu-50 p-4">
           <p className="text-body-sm leading-relaxed text-babu-800">
             <strong>{t('intlNoticeLead')}</strong> {t('intlNoticeBody', { name: school.name })}
           </p>

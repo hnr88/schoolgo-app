@@ -15,8 +15,8 @@ export function ContentCategoryPage({ categorySlug }: ContentCategoryPageProps) 
 
   return (
     <>
-      <section className='border-b border-divider bg-muted pt-28 md:pt-40'>
-        <SectionContainer className='pb-12 md:pb-16'>
+      <section className='border-b border-divider bg-muted pt-24 md:pt-32'>
+        <SectionContainer className='pb-8 md:pb-12'>
           <p className='text-sm font-semibold uppercase text-rausch-700'>Resource category</p>
           <h1 className='mt-3 max-w-3xl text-4xl font-bold text-ink-900 md:text-5xl'>
             {category.label}

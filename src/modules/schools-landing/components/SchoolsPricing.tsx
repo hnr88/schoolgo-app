@@ -7,7 +7,7 @@ import { PLANS } from '../constants/schools-landing.constants';
 export async function SchoolsPricing() {
   const t = await getTranslations('SchoolsPricing');
   return (
-    <section id='pricing' className='py-20 md:py-28'>
+    <section id='pricing' className='py-16 md:py-20'>
       <SectionContainer className='flex flex-col gap-10'>
         <SectionHeader
           eyebrow={t('eyebrow')}

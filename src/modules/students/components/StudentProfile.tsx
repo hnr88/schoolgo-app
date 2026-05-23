@@ -159,13 +159,13 @@ export function StudentProfile({ documentId }: StudentProfileProps) {
         </TabsContent>
 
         <TabsContent value='tests' className='mt-6'>
-          <div className='flex flex-col items-center justify-center rounded-xl border border-dashed border-border bg-card py-20'>
+          <div className='flex flex-col items-center justify-center rounded-xl border border-dashed border-border bg-card py-16'>
             <p className='text-sm text-foggy'>{t('testsComingSoon')}</p>
           </div>
         </TabsContent>
 
         <TabsContent value='applications' className='mt-6'>
-          <div className='flex flex-col items-center justify-center rounded-xl border border-dashed border-border bg-card py-20'>
+          <div className='flex flex-col items-center justify-center rounded-xl border border-dashed border-border bg-card py-16'>
             <p className='text-sm text-foggy'>{t('applicationsComingSoon')}</p>
           </div>
         </TabsContent>

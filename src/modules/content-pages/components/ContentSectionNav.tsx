@@ -3,7 +3,7 @@ import type { ContentSectionNavProps } from '@/modules/content-pages/types/conte
 
 export function ContentSectionNav({ items }: ContentSectionNavProps) {
   return (
-    <div className='sticky top-16 z-30 border-b border-divider bg-background/90 backdrop-blur-xl'>
+    <div className='sticky top-[var(--header-height)] z-30 border-b border-divider bg-background/90 backdrop-blur-xl'>
       <div className='mx-auto flex max-w-content gap-2 overflow-x-auto px-5 py-3 md:px-8'>
         {items.map((item) => (
           <Link

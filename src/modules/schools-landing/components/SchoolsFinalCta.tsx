@@ -5,8 +5,8 @@ export async function SchoolsFinalCta() {
   const t = await getTranslations('SchoolsFinalCta');
 
   return (
-    <section className='py-24 md:py-32'>
-      <SectionContainer className='flex flex-col items-center gap-6 text-center'>
+    <section className='py-20 md:py-24'>
+      <SectionContainer className='flex flex-col items-center gap-8 text-center'>
         <SectionHeader
           align='center'
           size='lg'
@@ -25,7 +25,7 @@ export async function SchoolsFinalCta() {
           <CtaLink href='/search' size='lg' arrow>
             {t('ctaPrimary')}
           </CtaLink>
-          <CtaLink href='/launching-soon?variant=dashboard' variant='secondary' size='lg'>
+          <CtaLink href='/contact' variant='secondary' size='lg'>
             {t('ctaSecondary')}
           </CtaLink>
         </div>

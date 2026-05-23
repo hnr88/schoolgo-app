@@ -20,14 +20,14 @@ export async function EnglishRequirementsSection({ school }: { school: SchoolDet
     <section
       id="english"
       aria-labelledby="english-heading"
-      className="rounded-lg border border-border bg-card p-6 shadow-1 md:p-8"
+      className="rounded-lg border border-border bg-card py-10 px-6 shadow-1 md:py-14 md:px-8"
     >
       <Eyebrow>{t('eyebrow')}</Eyebrow>
       <h2 id="english-heading" className="text-2xl font-bold text-ink-900 mt-2 md:text-3xl">
         {t('heading')}
       </h2>
 
-      <div className="mt-6 grid gap-2 sm:grid-cols-2">
+      <div className="mt-6 grid gap-3 sm:grid-cols-2">
         {scoreRows.map((row) => (
           <StatusBadge
             key={row.label}

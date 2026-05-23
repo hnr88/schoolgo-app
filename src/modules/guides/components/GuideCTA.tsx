@@ -13,7 +13,7 @@ export function GuideCTA({
   return (
     <>
       {relatedGuides && relatedGuides.length > 0 && (
-        <section className="border-t border-border py-20 md:py-28">
+        <section className="border-t border-border py-10 md:py-14">
           <SectionContainer>
             <h2 className="mb-8 font-display text-4xl font-bold leading-display tracking-display text-ink-900 md:text-5xl">
               Related guides
@@ -67,7 +67,7 @@ export function GuideCTA({
         </section>
       )}
 
-      <section className="relative overflow-hidden bg-ink-900 py-20 md:py-28">
+      <section className="relative overflow-hidden bg-ink-900 py-10 md:py-14">
         <div
           className="absolute inset-0 opacity-10"
           style={{

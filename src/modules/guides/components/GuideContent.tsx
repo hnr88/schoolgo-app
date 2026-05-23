@@ -18,7 +18,7 @@ export function GuideContent({
   const hasImage = !!image;
 
   return (
-    <section id={id} className="bg-background py-20 md:py-28">
+    <section id={id} className="bg-background py-10 md:py-14">
       <SectionContainer>
         {hasImage ? (
           <div

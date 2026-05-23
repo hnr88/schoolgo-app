@@ -21,7 +21,7 @@ export function RelatedPagesBlock({
             <span className='block p-5'>
               <span className='text-xs font-semibold uppercase text-rausch-700'>{page.eyebrow}</span>
               <span className='mt-3 block text-lg font-semibold text-ink-900'>{page.title}</span>
-              <span className='mt-2 line-clamp-3 text-sm leading-6 text-foggy'>{page.subtitle}</span>
+              <span className='mt-3 line-clamp-3 text-sm leading-6 text-foggy'>{page.subtitle}</span>
               <span className='mt-5 inline-flex items-center gap-2 text-sm font-semibold text-rausch-700'>View page <ArrowRight className='h-4 w-4 group-hover:translate-x-1' aria-hidden='true' /></span>
             </span>
           </Link>

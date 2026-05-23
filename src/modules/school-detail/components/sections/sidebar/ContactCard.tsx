@@ -34,7 +34,7 @@ export async function ContactCard({ school }: { school: SchoolDetail }) {
     <section aria-labelledby="contact-heading" className="rounded-xl border border-border bg-card p-5 shadow-2">
       <h2 id="contact-heading" className="text-xl font-semibold text-ink-900">{t('heading')}</h2>
 
-      <div className="mt-4 space-y-3">
+      <div className="mt-5 space-y-4">
         {school.admissionsEmail && (
           <ContactRow
             icon={<Mail className="h-4 w-4" aria-hidden="true" />}

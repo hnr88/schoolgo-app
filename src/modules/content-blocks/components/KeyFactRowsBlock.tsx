@@ -16,7 +16,7 @@ export function KeyFactRowsBlock({ page }: ContentBlockProps) {
         </aside>
         <dl className='divide-y divide-divider rounded-lg border border-border bg-card shadow-1 lg:col-span-3'>
           {page.facts.map((fact) => (
-            <div key={fact.label} className='grid gap-2 p-5 transition-colors hover:bg-muted md:grid-cols-3'>
+            <div key={fact.label} className='grid gap-4 p-6 transition-colors hover:bg-muted md:grid-cols-3'>
               <dt className='text-sm font-semibold text-foggy'>{fact.label}</dt>
               <dd className='font-semibold text-ink-900 md:col-span-2'>{fact.value}</dd>
             </div>

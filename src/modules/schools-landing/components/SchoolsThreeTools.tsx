@@ -6,7 +6,7 @@ import { TOOLS } from '../constants/schools-landing.constants';
 export async function SchoolsThreeTools() {
   const t = await getTranslations('SchoolsThreeTools');
   return (
-    <section id='how-it-works' className='py-20 md:py-28'>
+    <section id='how-it-works' className='py-16 md:py-20'>
       <SectionContainer className='flex flex-col gap-10'>
         <SectionHeader
           eyebrow={t('eyebrow')}
@@ -14,7 +14,7 @@ export async function SchoolsThreeTools() {
           subheading={t('subheading')}
         />
 
-        <div className='grid grid-cols-1 gap-5 md:grid-cols-3'>
+        <div className='grid grid-cols-1 gap-6 md:grid-cols-3'>
           {TOOLS.map(({ key, icon }) => (
             <FeatureCard
               key={key}

@@ -1,14 +1,26 @@
-import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
+import { loadSchools, computeSchoolStats } from '@/lib/schools';
 import { SectionContainer, SectionHeader, StatusBadge, TrustBadge } from '@/modules/design-system';
-import { QEAC_PROFILE_STAT_KEYS, QEAC_PROFILE_STAT_VALUES } from '../constants/agents-landing.constants';
+import { QEAC_PROFILE_STAT_KEYS } from '../constants/agents-landing.constants';
 
 export async function AgentsQeacTrust() {
-  const t = await getTranslations('AgentsQeacTrust');
+  const [t, schools] = await Promise.all([
+    getTranslations('AgentsQeacTrust'),
+    loadSchools(),
+  ]);
+  const stats = computeSchoolStats(schools);
+
+  const statValues: Record<string, string> = {
+    yearsActive: String(stats.statesCount),
+    students: String(stats.totalSchools),
+    placements: String(stats.sectors.length),
+    languages: t('profile.languagesValue'),
+  };
+
   return (
-    <section id='trust' className='py-20 md:py-28'>
-      <SectionContainer className='grid grid-cols-1 items-center gap-12 md:grid-cols-12 md:gap-16'>
-        <div className='flex flex-col gap-6 md:col-span-6'>
+    <section id='trust' className='py-16 md:py-20'>
+      <SectionContainer className='grid grid-cols-1 items-center gap-10 md:grid-cols-12 md:gap-12'>
+        <div className='flex flex-col gap-8 md:col-span-6'>
           <SectionHeader
             eyebrow={t('eyebrow')}
             heading={t('heading')}
@@ -22,15 +34,8 @@ export async function AgentsQeacTrust() {
               {t('sampleLabel')}
             </StatusBadge>
             <header className='flex items-center gap-4 border-b border-divider pb-5'>
-              <div className='relative h-14 w-14 shrink-0 overflow-hidden rounded-pill border border-border bg-muted'>
-                <Image
-                  src='https://images.unsplash.com/photo-1758518729459-235dcaadc611?auto=format&fit=crop&w=160&h=160&q=80'
-                  alt=''
-                  fill
-                  sizes='56px'
-                  className='object-cover'
-                  aria-hidden='true'
-                />
+              <div className='flex h-14 w-14 shrink-0 items-center justify-center rounded-pill border border-border bg-gradient-to-br from-rausch-100 to-babu-100 text-body font-bold text-ink-900'>
+                {t('profile.agentName').charAt(0)}
               </div>
               <div className='flex min-w-0 flex-1 flex-col'>
                 <span
@@ -54,7 +59,7 @@ export async function AgentsQeacTrust() {
                     {t(`profile.${key}`)}
                   </dt>
                   <dd className='text-h3 font-bold text-ink-900'>
-                    {QEAC_PROFILE_STAT_VALUES[key] ?? t('profile.languagesValue')}
+                    {statValues[key]}
                   </dd>
                 </div>
               ))}

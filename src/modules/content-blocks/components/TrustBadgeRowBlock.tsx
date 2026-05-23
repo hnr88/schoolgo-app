@@ -10,11 +10,11 @@ export function TrustBadgeRowBlock({ page }: ContentBlockProps) {
   ];
   return (
     <BlockShell eyebrow='Trust' title='Trust markers' description='A small badge row can reinforce data quality, safety, or verified workflows.'>
-      <div className='grid gap-4 md:grid-cols-3'>
+      <div className='grid gap-5 md:grid-cols-3'>
         {items.map((item) => {
           const Icon = item.icon;
           return (
-            <div key={item.label} className='flex items-center gap-3 rounded-lg border border-border bg-card p-5 shadow-1'>
+            <div key={item.label} className='flex items-center gap-4 rounded-lg border border-border bg-card p-5 shadow-1'>
               <span className='flex h-10 w-10 items-center justify-center rounded-lg bg-babu-50 text-babu-700'>
                 <Icon className='h-5 w-5' aria-hidden='true' />
               </span>

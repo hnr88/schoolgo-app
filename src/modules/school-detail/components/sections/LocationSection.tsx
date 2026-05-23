@@ -62,7 +62,7 @@ export async function LocationSection({ school }: LocationSectionProps) {
     <section
       id="location"
       aria-labelledby="location-heading"
-      className="rounded-lg border border-border bg-card p-6 shadow-1 md:p-8"
+      className="rounded-lg border border-border bg-card py-10 px-6 shadow-1 md:py-14 md:px-8"
     >
       <Eyebrow>{t('eyebrow')}</Eyebrow>
       <h2 id="location-heading" className="mt-2 text-2xl font-bold text-ink-900 md:text-3xl">
@@ -70,11 +70,11 @@ export async function LocationSection({ school }: LocationSectionProps) {
       </h2>
 
       {tiles.length > 0 && (
-        <div className="mt-6 grid gap-3 sm:grid-cols-3">
+        <div className="mt-6 grid gap-4 sm:grid-cols-3">
           {tiles.map((tile) => {
             const Icon = ICON_MAP[tile.key] ?? MapPin;
             return (
-              <div key={tile.key} className="rounded-lg bg-muted p-4 text-center">
+              <div key={tile.key} className="rounded-lg bg-muted p-5 text-center">
                 <Icon className="mx-auto mb-2 h-6 w-6 text-primary" aria-hidden="true" />
                 <p className="text-body-sm font-semibold text-ink-900">{tile.title}</p>
                 <p className="mt-1 text-caption text-foggy">{tile.desc}</p>
@@ -104,7 +104,7 @@ export async function LocationSection({ school }: LocationSectionProps) {
       )}
 
       {school.distanceToCbd != null && (
-        <p className="mt-3 text-body-sm text-foggy">
+        <p className="mt-4 text-body-sm text-foggy">
           {t('distanceLabel')}:{' '}
           <span className="font-semibold text-ink-900">
             {t('kmFromCbd', { km: school.distanceToCbd })}

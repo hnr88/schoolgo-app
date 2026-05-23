@@ -22,7 +22,7 @@ export function ProgramCardsBlock({
             <span className='block p-6'>
               <BookOpen className='h-5 w-5 text-rausch-700' aria-hidden='true' />
               <span className='mt-5 block text-lg font-semibold text-ink-900'>{page.title}</span>
-              <span className='mt-2 line-clamp-3 text-sm leading-6 text-foggy'>{page.subtitle}</span>
+              <span className='mt-3 line-clamp-3 text-sm leading-6 text-foggy'>{page.subtitle}</span>
             </span>
           </Link>
         ))}

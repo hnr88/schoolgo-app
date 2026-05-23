@@ -1,6 +1,6 @@
 import 'server-only';
 import { env } from '@/lib/env';
-import { SCHOOL_IMAGES } from '@/modules/school-search/constants/school-card.constants';
+import { generateSchoolPlaceholder } from '@/lib/schools/generate-school-placeholder';
 import { FEATURED_SCHOOL_SLUGS } from '@/modules/parents-landing/constants/parents-landing.constants';
 
 export interface FeaturedSchool {
@@ -37,8 +37,7 @@ interface SchoolApiResponse {
 }
 
 function fallbackImage(id: string): string {
-  const hash = Math.abs([...id].reduce((h, c) => h * 31 + c.charCodeAt(0), 0));
-  return SCHOOL_IMAGES[hash % SCHOOL_IMAGES.length];
+  return generateSchoolPlaceholder(id);
 }
 
 function mediaUrl(media?: StrapiMedia | null): string | null {

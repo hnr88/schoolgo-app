@@ -7,12 +7,12 @@ export async function QuickActions() {
   const t = await getTranslations('Dashboard.quickActions');
 
   return (
-    <div className='grid grid-cols-1 gap-4 sm:grid-cols-3'>
+    <div className='grid grid-cols-1 gap-5 sm:grid-cols-3'>
       {QUICK_ACTIONS.map(({ href, icon: Icon, labelKey, bg, color }) => (
         <Link
           key={href}
           href={href}
-          className='group flex items-center gap-3 rounded-xl border border-border bg-card px-4 py-3 no-underline transition-colors hover:border-primary/30'
+          className='group flex items-center gap-3 rounded-xl border border-border bg-card px-5 py-4 no-underline transition-colors hover:border-primary/30'
         >
           <span
             className={cn(

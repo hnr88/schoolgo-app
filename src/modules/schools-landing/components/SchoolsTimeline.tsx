@@ -9,7 +9,7 @@ export async function SchoolsTimeline() {
     getTranslations('Common'),
   ]);
   return (
-    <section className='bg-muted py-20 md:py-28'>
+    <section className='bg-muted py-16 md:py-20'>
       <SectionContainer className='flex flex-col gap-10'>
         <SectionHeader
           eyebrow={t('eyebrow')}
@@ -17,7 +17,7 @@ export async function SchoolsTimeline() {
           subheading={t('subheading')}
         />
 
-        <ol className='relative grid grid-cols-1 gap-6 md:grid-cols-4'>
+        <ol className='relative grid grid-cols-1 gap-8 md:grid-cols-4'>
           <div
             className='pointer-events-none absolute left-6 top-6 hidden h-px w-[calc(100%-3rem)] bg-border md:block'
             aria-hidden='true'

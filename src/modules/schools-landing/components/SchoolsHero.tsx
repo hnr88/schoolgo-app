@@ -1,18 +1,19 @@
 import Image from 'next/image';
+import { ArrowRight } from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
-import { CtaLink, Eyebrow, SectionContainer, StatusBadge, TrustBadge } from '@/modules/design-system';
+import { CtaLink, Eyebrow, SectionContainer, TrustBadge } from '@/modules/design-system';
+import { Link } from '@/i18n/navigation';
 
-import { HERO_ROWS } from '../constants/schools-landing.constants';
-import { getFeaturedSchoolLogos } from '../lib/featured-school-logos';
+import { getFeaturedSchools } from '../lib/featured-schools';
 
 export async function SchoolsHero() {
-  const [t, tc, schoolLogos] = await Promise.all([
+  const [t, tc, schools] = await Promise.all([
     getTranslations('SchoolsHero'),
     getTranslations('Common'),
-    getFeaturedSchoolLogos(HERO_ROWS.length),
+    getFeaturedSchools(3),
   ]);
   return (
-    <section className='relative overflow-hidden bg-gradient-to-br from-arches-50/40 via-arches-50/10 to-transparent pt-28 pb-16 md:pt-40 md:pb-24'>
+    <section className='relative overflow-hidden bg-gradient-to-br from-arches-50/40 via-arches-50/10 to-transparent pt-28 pb-16 md:pt-36 md:pb-20'>
       <div className='pointer-events-none absolute inset-0' aria-hidden='true'>
         <div className='absolute -right-20 -top-20 h-[700px] w-[700px] rounded-full bg-arches-200 opacity-25 blur-[140px]' />
         <div className='absolute -left-32 bottom-[-10%] h-[500px] w-[500px] rounded-full bg-arches-100 opacity-30 blur-[120px]' />
@@ -27,7 +28,7 @@ export async function SchoolsHero() {
         </svg>
       </div>
       <SectionContainer className='relative grid grid-cols-1 items-center gap-10 md:grid-cols-12 md:gap-12'>
-        <div className='flex flex-col gap-6 md:col-span-6'>
+        <div className='flex flex-col gap-8 md:col-span-6'>
           <Eyebrow tone='brand'>{t('eyebrow')}</Eyebrow>
           <h1 className='font-display text-5xl font-extrabold leading-display-xl tracking-display-lg text-ink-900 md:text-7xl'>
             {t('headlinePrefix')}{' '}
@@ -47,48 +48,46 @@ export async function SchoolsHero() {
         <div className='md:col-span-6'>
           <div className='overflow-hidden rounded-2xl border border-border bg-card shadow-3'>
             <div className='flex items-center justify-between border-b border-divider bg-muted px-5 py-3'>
-              <div className='flex flex-col'>
-                <span
-                  className='text-caption font-semibold uppercase tracking-eyebrow text-foggy'
-
-                >
-                  {t('inbox.eyebrow')}
-                </span>
-                <span className='text-body-sm font-semibold text-ink-900'>
-                  {t('inbox.countLabel')} · 23
-                </span>
-              </div>
+              <span className='text-body-sm font-semibold text-ink-900'>
+                {tc('featured.eyebrow')}
+              </span>
               <TrustBadge variant='qeac' label={tc('qeacVerified')} />
             </div>
             <ul className='divide-y divide-divider'>
-              {HERO_ROWS.map((row, index) => {
-                const logoUrl = schoolLogos[index] ?? null;
-                return (
-                <li key={row.key} className='flex items-center gap-4 px-5 py-4'>
-                  <div className='relative h-11 w-11 shrink-0 overflow-hidden rounded-pill border border-border bg-card'>
-                    <Image
-                      src={logoUrl ?? row.image}
-                      alt=''
-                      fill
-                      sizes='44px'
-                      className={logoUrl ? 'object-contain p-2' : 'object-cover'}
-                      aria-hidden='true'
-                    />
-                  </div>
-                  <div className='flex min-w-0 flex-1 flex-col'>
-                    <span className='text-body-sm font-semibold text-ink-900'>
-                      {t(`inbox.rows.${row.key}.name`)}
-                    </span>
-                    <span className='text-caption text-foggy'>
-                      {t(`inbox.rows.${row.key}.meta`)}
-                    </span>
-                  </div>
-                  <StatusBadge tone={row.tone} size='md'>
-                    {t(`inbox.rows.${row.key}.status`)}
-                  </StatusBadge>
+              {schools.map((school) => (
+                <li key={school.slug}>
+                  <Link
+                    href={`/school/schools/${school.slug}`}
+                    className='group flex items-center gap-4 px-5 py-4 transition-colors hover:bg-muted/50'
+                  >
+                    <div className='relative h-11 w-11 shrink-0 overflow-hidden rounded-pill border border-border bg-card'>
+                      {school.logoUrl ? (
+                        <Image
+                          src={school.logoUrl}
+                          alt=''
+                          fill
+                          sizes='44px'
+                          className='object-contain p-2'
+                          aria-hidden='true'
+                        />
+                      ) : (
+                        <div className='flex h-full w-full items-center justify-center bg-muted text-xs font-bold uppercase text-foggy'>
+                          {school.name.charAt(0)}
+                        </div>
+                      )}
+                    </div>
+                    <div className='flex min-w-0 flex-1 flex-col'>
+                      <span className='text-body-sm font-semibold text-ink-900 group-hover:text-primary'>
+                        {school.name}
+                      </span>
+                      <span className='text-caption text-foggy'>
+                        {school.suburb}, {school.state}
+                      </span>
+                    </div>
+                    <ArrowRight className='h-4 w-4 shrink-0 text-foggy transition-transform group-hover:translate-x-0.5 group-hover:text-primary' />
+                  </Link>
                 </li>
-                );
-              })}
+              ))}
             </ul>
           </div>
         </div>

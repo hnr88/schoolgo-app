@@ -193,10 +193,13 @@ export function MarketingHeaderClient({
           onTouchMove={handleTouchMove}
           onTouchEnd={handleTouchEnd}
           className={cn(
-            'absolute inset-x-0 bottom-0 top-16 flex flex-col rounded-t-3xl bg-background shadow-5 transition-transform duration-300',
+            'absolute inset-x-0 bottom-0 flex flex-col rounded-t-3xl bg-background shadow-5 transition-transform duration-300',
             mobileOpen ? 'translate-y-0' : 'translate-y-full',
           )}
-          style={{ transitionTimingFunction: 'cubic-bezier(0.16, 1, 0.3, 1)' }}
+          style={{
+            top: 'var(--header-height-mobile)',
+            transitionTimingFunction: 'cubic-bezier(0.16, 1, 0.3, 1)',
+          }}
         >
           <div className='flex justify-center pt-2' aria-hidden='true'>
             <span className='h-1 w-8 rounded-full bg-ink-900/15' />

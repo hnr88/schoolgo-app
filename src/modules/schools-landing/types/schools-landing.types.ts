@@ -1,14 +1,5 @@
 import type { IconComponent } from '@/modules/design-system';
 
-export type HeroRowKey = 'a' | 'b' | 'c';
-export type HeroRowTone = 'brand' | 'featured' | 'trust';
-
-export type HeroRow = {
-  key: HeroRowKey;
-  tone: HeroRowTone;
-  image: string;
-};
-
 export type PlanKey = 'listing' | 'admissions';
 
 export type Plan = {

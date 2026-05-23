@@ -44,8 +44,8 @@ export default async function GuidesIndexPage({
 
   return (
     <>
-      <section className='border-b border-divider bg-gradient-to-b from-muted/50 to-background pt-28 md:pt-40'>
-        <SectionContainer className='pb-12 md:pb-16'>
+      <section className='border-b border-divider bg-gradient-to-b from-muted/50 to-background pt-20 md:pt-28'>
+        <SectionContainer className='pb-10 md:pb-14'>
           <div className='flex items-center gap-2 text-primary'>
             <BookOpen className='h-5 w-5' strokeWidth={2} aria-hidden='true' />
             <span className='text-caption font-semibold uppercase'>Guides</span>
@@ -59,7 +59,7 @@ export default async function GuidesIndexPage({
         </SectionContainer>
       </section>
 
-      <SectionContainer className='py-12 md:py-16'>
+      <SectionContainer className='py-10 md:py-14'>
         <div className='grid gap-6 sm:grid-cols-2 lg:grid-cols-3'>
           {GUIDE_SLUGS.map((slug) => {
             const guide = guideRegistry[slug];

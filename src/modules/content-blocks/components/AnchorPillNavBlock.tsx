@@ -4,7 +4,7 @@ import type { ContentBlockProps } from '@/modules/content-blocks/types/content-b
 export function AnchorPillNavBlock({ page, designLabel }: ContentBlockProps) {
   const items = ['answer', 'overview', 'steps', 'links', 'related'];
   return (
-    <div className='sticky top-16 z-30 border-b border-divider bg-background/90 backdrop-blur-xl'>
+    <div className='sticky top-[var(--header-height)] z-30 border-b border-divider bg-background/90 backdrop-blur-xl'>
       <div className='mx-auto flex max-w-content flex-col gap-3 px-5 py-3 md:px-8 lg:flex-row lg:items-center lg:justify-between'>
         <div className='flex gap-2 overflow-x-auto'>
           {items.map((item) => (

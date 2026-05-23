@@ -24,7 +24,7 @@ export async function DeadlinesList({ deadlines }: { deadlines: Deadline[] }) {
               <Link
                 key={d.id}
                 href={d.href}
-                className='group flex items-center gap-4 px-5 py-3.5 no-underline transition-colors hover:bg-muted'
+                className='group flex items-center gap-4 px-5 py-4 no-underline transition-colors hover:bg-muted'
               >
                 <span
                   className={cn(

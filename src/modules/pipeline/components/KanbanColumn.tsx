@@ -24,7 +24,7 @@ export function KanbanColumn({ column, applications, isLoading }: KanbanColumnPr
   const overflow = applications.length - MAX_CARDS_PER_COLUMN;
 
   return (
-    <div className={cn('flex min-w-72 flex-col rounded-xl p-3', column.color)}>
+    <div className={cn('flex min-w-72 flex-col rounded-xl p-4', column.color)}>
       <div className="mb-3 flex items-center gap-2">
         <span className={cn('h-2 w-2 shrink-0 rounded-full', column.dotColor)} />
         <span className="text-sm font-semibold text-foreground">{t(column.label)}</span>
@@ -36,7 +36,7 @@ export function KanbanColumn({ column, applications, isLoading }: KanbanColumnPr
       {isLoading ? (
         <KanbanColumnSkeleton />
       ) : (
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-3">
           {visible.map((application) => (
             <KanbanCard key={application.documentId} application={application} />
           ))}

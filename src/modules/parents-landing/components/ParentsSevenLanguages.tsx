@@ -6,7 +6,7 @@ import { LANGS } from '../constants/parents-landing.constants';
 export async function ParentsSevenLanguages() {
   const t = await getTranslations('ParentsSevenLanguages');
   return (
-    <section className='bg-ink-900 py-20 text-background md:py-28'>
+    <section className='bg-ink-900 py-16 text-background md:py-20'>
       <SectionContainer className='flex flex-col items-center gap-10 text-center'>
         <SectionHeader
           align='center'

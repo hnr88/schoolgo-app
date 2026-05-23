@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import { TrustBadge, StatusBadge, SectionContainer } from '@/modules/design-system';
-import { SCHOOL_IMAGES } from '@/modules/school-search/constants/school-card.constants';
+import { generateSchoolPlaceholder } from '@/lib/schools/generate-school-placeholder';
 import { mediaUrl, type SchoolDetail } from '@/modules/school-detail/lib/school-detail-api';
 import type { Portal } from '@/lib/portal-url';
 
@@ -13,8 +13,7 @@ interface HeroProps {
 }
 
 function pickFallbackImage(id: string): string {
-  const hash = Math.abs([...id].reduce((h, c) => h * 31 + c.charCodeAt(0), 0));
-  return SCHOOL_IMAGES[hash % SCHOOL_IMAGES.length].replace('w=480&h=360', 'w=1600&h=900');
+  return generateSchoolPlaceholder(id);
 }
 
 function formatLabel(value: string | null | undefined): string | null {

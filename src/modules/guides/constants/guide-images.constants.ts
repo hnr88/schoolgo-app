@@ -1,82 +1,84 @@
+import { generateGradientPlaceholder } from '@/lib/schools/generate-school-placeholder';
+
 export const GUIDE_IMAGES = {
   'choose-a-school': {
-    hero: 'https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=1600&h=900&fit=crop&q=80',
+    hero: generateGradientPlaceholder('guide-choose-a-school-hero'),
     sections: [
-      'https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=800&h=600&fit=crop&q=80',
-      'https://images.unsplash.com/photo-1509062522246-3755977927d7?w=800&h=600&fit=crop&q=80',
+      generateGradientPlaceholder('guide-choose-a-school-s1'),
+      generateGradientPlaceholder('guide-choose-a-school-s2'),
     ],
-    card: 'https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=600&h=400&fit=crop&q=80',
+    card: generateGradientPlaceholder('guide-choose-a-school-card'),
   },
   'accommodation': {
-    hero: 'https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=1600&h=900&fit=crop&q=80',
+    hero: generateGradientPlaceholder('guide-accommodation-hero'),
     sections: [
-      'https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&h=600&fit=crop&q=80',
-      'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&h=600&fit=crop&q=80',
+      generateGradientPlaceholder('guide-accommodation-s1'),
+      generateGradientPlaceholder('guide-accommodation-s2'),
     ],
-    card: 'https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=600&h=400&fit=crop&q=80',
+    card: generateGradientPlaceholder('guide-accommodation-card'),
   },
   'english-requirements': {
-    hero: 'https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=1600&h=900&fit=crop&q=80',
+    hero: generateGradientPlaceholder('guide-english-requirements-hero'),
     sections: [
-      'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&h=600&fit=crop&q=80',
-      'https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=800&h=600&fit=crop&q=80',
+      generateGradientPlaceholder('guide-english-requirements-s1'),
+      generateGradientPlaceholder('guide-english-requirements-s2'),
     ],
-    card: 'https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=600&h=400&fit=crop&q=80',
+    card: generateGradientPlaceholder('guide-english-requirements-card'),
   },
   'health-cover': {
-    hero: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1600&h=900&fit=crop&q=80',
+    hero: generateGradientPlaceholder('guide-health-cover-hero'),
     sections: [
-      'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&h=600&fit=crop&q=80',
-      'https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=800&h=600&fit=crop&q=80',
+      generateGradientPlaceholder('guide-health-cover-s1'),
+      generateGradientPlaceholder('guide-health-cover-s2'),
     ],
-    card: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&h=400&fit=crop&q=80',
+    card: generateGradientPlaceholder('guide-health-cover-card'),
   },
   'high-school-preparation': {
-    hero: 'https://images.unsplash.com/photo-1577896851231-70ef18881754?w=1600&h=900&fit=crop&q=80',
+    hero: generateGradientPlaceholder('guide-high-school-preparation-hero'),
     sections: [
-      'https://images.unsplash.com/photo-1577896851231-70ef18881754?w=800&h=600&fit=crop&q=80',
-      'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&h=600&fit=crop&q=80',
+      generateGradientPlaceholder('guide-high-school-preparation-s1'),
+      generateGradientPlaceholder('guide-high-school-preparation-s2'),
     ],
-    card: 'https://images.unsplash.com/photo-1577896851231-70ef18881754?w=600&h=400&fit=crop&q=80',
+    card: generateGradientPlaceholder('guide-high-school-preparation-card'),
   },
   'school-fees': {
-    hero: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1600&h=900&fit=crop&q=80',
+    hero: generateGradientPlaceholder('guide-school-fees-hero'),
     sections: [
-      'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&h=600&fit=crop&q=80',
-      'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&h=600&fit=crop&q=80',
+      generateGradientPlaceholder('guide-school-fees-s1'),
+      generateGradientPlaceholder('guide-school-fees-s2'),
     ],
-    card: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&h=400&fit=crop&q=80',
+    card: generateGradientPlaceholder('guide-school-fees-card'),
   },
   'school-types': {
-    hero: 'https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=1600&h=900&fit=crop&q=80',
+    hero: generateGradientPlaceholder('guide-school-types-hero'),
     sections: [
-      'https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=800&h=600&fit=crop&q=80',
-      'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=800&h=600&fit=crop&q=80',
+      generateGradientPlaceholder('guide-school-types-s1'),
+      generateGradientPlaceholder('guide-school-types-s2'),
     ],
-    card: 'https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=600&h=400&fit=crop&q=80',
+    card: generateGradientPlaceholder('guide-school-types-card'),
   },
   'student-visa': {
-    hero: 'https://images.unsplash.com/photo-1452421822248-d4c2b47f0c81?w=1600&h=900&fit=crop&q=80',
+    hero: generateGradientPlaceholder('guide-student-visa-hero'),
     sections: [
-      'https://images.unsplash.com/photo-1452421822248-d4c2b47f0c81?w=800&h=600&fit=crop&q=80',
-      'https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800&h=600&fit=crop&q=80',
+      generateGradientPlaceholder('guide-student-visa-s1'),
+      generateGradientPlaceholder('guide-student-visa-s2'),
     ],
-    card: 'https://images.unsplash.com/photo-1452421822248-d4c2b47f0c81?w=600&h=400&fit=crop&q=80',
+    card: generateGradientPlaceholder('guide-student-visa-card'),
   },
   'student-welfare': {
-    hero: 'https://images.unsplash.com/photo-1529390079861-591de354faf5?w=1600&h=900&fit=crop&q=80',
+    hero: generateGradientPlaceholder('guide-student-welfare-hero'),
     sections: [
-      'https://images.unsplash.com/photo-1529390079861-591de354faf5?w=800&h=600&fit=crop&q=80',
-      'https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?w=800&h=600&fit=crop&q=80',
+      generateGradientPlaceholder('guide-student-welfare-s1'),
+      generateGradientPlaceholder('guide-student-welfare-s2'),
     ],
-    card: 'https://images.unsplash.com/photo-1529390079861-591de354faf5?w=600&h=400&fit=crop&q=80',
+    card: generateGradientPlaceholder('guide-student-welfare-card'),
   },
   'term-dates-intakes': {
-    hero: 'https://images.unsplash.com/photo-1506784983877-45594efa4cbe?w=1600&h=900&fit=crop&q=80',
+    hero: generateGradientPlaceholder('guide-term-dates-intakes-hero'),
     sections: [
-      'https://images.unsplash.com/photo-1506784983877-45594efa4cbe?w=800&h=600&fit=crop&q=80',
-      'https://images.unsplash.com/photo-1435527173128-983b87201f4d?w=800&h=600&fit=crop&q=80',
+      generateGradientPlaceholder('guide-term-dates-intakes-s1'),
+      generateGradientPlaceholder('guide-term-dates-intakes-s2'),
     ],
-    card: 'https://images.unsplash.com/photo-1506784983877-45594efa4cbe?w=600&h=400&fit=crop&q=80',
+    card: generateGradientPlaceholder('guide-term-dates-intakes-card'),
   },
 } as const;

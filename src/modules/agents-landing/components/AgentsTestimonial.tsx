@@ -6,9 +6,9 @@ import { TESTIMONIAL_KEYS } from '../constants/agents-landing.constants';
 export async function AgentsTestimonial() {
   const t = await getTranslations('AgentsTestimonial');
   return (
-    <section className='py-20 md:py-28'>
+    <section className='py-16 md:py-20'>
       <SectionContainer className='flex flex-col gap-10'>
-        <div className='flex flex-col gap-3'>
+        <div className='flex flex-col gap-4'>
           <span className='text-xs font-semibold uppercase tracking-widest text-primary'>
             {t('eyebrow')}
           </span>
@@ -17,7 +17,7 @@ export async function AgentsTestimonial() {
           </h2>
         </div>
 
-        <div className='grid grid-cols-1 gap-5 md:grid-cols-3'>
+        <div className='grid grid-cols-1 gap-6 md:grid-cols-3'>
           {TESTIMONIAL_KEYS.map((key) => (
             <article
               key={key}

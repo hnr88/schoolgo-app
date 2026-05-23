@@ -1,24 +1,29 @@
-import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
+import { loadSchools } from '@/lib/schools';
 import { SectionContainer, SectionHeader, StatusBadge, TrustBadge } from '@/modules/design-system';
-import { INBOX_ROWS, MATCHING_STEPS } from '../constants/agents-landing.constants';
+import { MATCHING_STEPS } from '../constants/agents-landing.constants';
+import { getFeaturedSchoolsForAgents, hueFromString, initialsFromName } from '../lib/featured-schools';
 
 export async function AgentsMatching() {
-  const [t, tc] = await Promise.all([
+  const [t, tc, schools] = await Promise.all([
     getTranslations('AgentsMatching'),
     getTranslations('Common'),
+    loadSchools(),
   ]);
+
+  const inboxSchools = getFeaturedSchoolsForAgents(schools, 3);
+
   return (
-    <section id='how-it-works' className='py-20 md:py-28'>
-      <SectionContainer className='grid grid-cols-1 items-center gap-12 md:grid-cols-12 md:gap-16'>
-        <div className='flex flex-col gap-6 md:col-span-6'>
+    <section id='how-it-works' className='py-16 md:py-20'>
+      <SectionContainer className='grid grid-cols-1 items-center gap-10 md:grid-cols-12 md:gap-12'>
+        <div className='flex flex-col gap-8 md:col-span-6'>
           <SectionHeader
             eyebrow={t('eyebrow')}
             heading={t('heading')}
             subheading={t('subheading')}
           />
 
-          <ol className='mt-4 flex flex-col gap-6'>
+          <ol className='mt-4 flex flex-col gap-8'>
             {MATCHING_STEPS.map((step) => {
               const Icon = step.icon;
               return (
@@ -53,31 +58,31 @@ export async function AgentsMatching() {
               <TrustBadge variant='qeac' label={tc('qeacVerified')} />
             </div>
             <ul className='divide-y divide-divider'>
-              {INBOX_ROWS.map((row) => (
-                <li key={row.key} className='flex items-center gap-4 px-5 py-4'>
-                  <div className='relative h-12 w-12 shrink-0 overflow-hidden rounded-md border border-border bg-muted'>
-                    <Image
-                      src={row.image}
-                      alt=''
-                      fill
-                      sizes='48px'
-                      className='object-cover'
+              {inboxSchools.map((school) => {
+                const hue = hueFromString(school.name);
+                return (
+                  <li key={school.slug} className='flex items-center gap-4 px-5 py-4'>
+                    <div
+                      className='flex h-12 w-12 shrink-0 items-center justify-center rounded-md border border-border text-caption font-bold text-white'
+                      style={{ backgroundColor: `hsl(${hue} 65% 45%)` }}
                       aria-hidden='true'
-                    />
-                  </div>
-                  <div className='flex min-w-0 flex-1 flex-col'>
-                    <span className='text-body-sm font-semibold text-ink-900'>
-                      {t(`inboxRows.${row.key}.school`)}
-                    </span>
-                    <span className='text-caption text-foggy'>
-                      {t(`inboxRows.${row.key}.location`)}
-                    </span>
-                  </div>
-                  <StatusBadge tone='trust' size='md'>
-                    {t(`inboxRows.${row.key}.status`)}
-                  </StatusBadge>
-                </li>
-              ))}
+                    >
+                      {initialsFromName(school.name)}
+                    </div>
+                    <div className='flex min-w-0 flex-1 flex-col'>
+                      <span className='text-body-sm font-semibold text-ink-900'>
+                        {school.name}
+                      </span>
+                      <span className='text-caption text-foggy'>
+                        {school.suburb}, {school.state}
+                      </span>
+                    </div>
+                    <StatusBadge tone='trust' size='md'>
+                      {school.sector}
+                    </StatusBadge>
+                  </li>
+                );
+              })}
             </ul>
           </div>
         </div>

@@ -81,9 +81,9 @@ export async function ParentsComparison() {
   ];
 
   return (
-    <section id='compare' className='py-20 md:py-28'>
+    <section id='compare' className='py-16 md:py-20'>
       <SectionContainer className='flex flex-col gap-10'>
-        <div className='flex flex-col gap-3'>
+        <div className='flex flex-col gap-4'>
           <span className='text-xs font-semibold uppercase tracking-widest text-primary'>
             {t('eyebrow')}
           </span>

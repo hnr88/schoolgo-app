@@ -13,7 +13,7 @@ export async function ParentsHero() {
   ]);
 
   return (
-    <section id='main-content' className='relative overflow-hidden pb-16 pt-28 md:pb-24 md:pt-40'>
+    <section id='main-content' className='relative overflow-hidden pt-28 pb-16 md:pt-36 md:pb-20'>
       <div className='pointer-events-none absolute inset-0' aria-hidden='true'>
         {/* arbitrary value: hero ambient blob, no token */}
         <div className='absolute -right-24 -top-24 h-[800px] w-[800px] rounded-full bg-rausch-100 opacity-30 blur-[140px]' />
@@ -28,8 +28,8 @@ export async function ParentsHero() {
           <rect width='100%' height='100%' fill='url(#parents-waves)' />
         </svg>
       </div>
-      <SectionContainer className='relative flex flex-col gap-12'>
-        <div className='flex flex-col gap-6'>
+      <SectionContainer className='relative flex flex-col gap-10'>
+        <div className='flex flex-col gap-8'>
           <span className='inline-flex w-fit items-center gap-1.5 rounded-pill border border-border px-3 py-1 text-sm text-babu-700'>
             <MapPin className='h-3.5 w-3.5 shrink-0 text-babu-500' strokeWidth={2} aria-hidden='true' />
             <span className='font-semibold'>{t('trustPill.brand')}</span>

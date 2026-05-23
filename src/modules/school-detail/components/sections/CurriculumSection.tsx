@@ -79,7 +79,7 @@ export async function CurriculumSection({ school }: { school: SchoolDetail }) {
     <section
       id="curriculum"
       aria-labelledby="curriculum-heading"
-      className="rounded-lg border border-border bg-card p-6 shadow-1 md:p-8"
+      className="rounded-lg border border-border bg-card py-10 px-6 shadow-1 md:py-14 md:px-8"
     >
       <Eyebrow>{t('eyebrow')}</Eyebrow>
       <h2 id="curriculum-heading" className="mt-2 text-2xl font-bold text-ink-900 md:text-3xl">
@@ -113,24 +113,24 @@ export async function CurriculumSection({ school }: { school: SchoolDetail }) {
       {courses.length > 0 && (
         <>
           <h3 className="mt-8 text-xl font-semibold text-ink-900">{t('coursesHeading')}</h3>
-          <table className="mt-3 w-full border-collapse text-body-sm">
+          <table className="mt-6 w-full border-collapse text-body-sm">
             <thead>
               <tr className="border-b border-divider text-left">
-                <th className="py-2 text-caption font-semibold uppercase text-foggy">{t('courseTable.course')}</th>
-                <th className="py-2 text-caption font-semibold uppercase text-foggy">{t('courseTable.code')}</th>
-                <th className="py-2 text-caption font-semibold uppercase text-foggy">{t('courseTable.level')}</th>
+                <th className="py-3 text-caption font-semibold uppercase text-foggy">{t('courseTable.course')}</th>
+                <th className="py-3 text-caption font-semibold uppercase text-foggy">{t('courseTable.code')}</th>
+                <th className="py-3 text-caption font-semibold uppercase text-foggy">{t('courseTable.level')}</th>
               </tr>
             </thead>
             <tbody>
               {courses.map((course, i) => (
                 <tr key={i} className="border-b border-divider last:border-b-0">
-                  <td className="py-2 text-ink-900">{course.name}</td>
-                  <td className="py-2">
+                  <td className="py-3 text-ink-900">{course.name}</td>
+                  <td className="py-3">
                     <span className="rounded-md bg-muted px-2 py-0.5 font-mono text-xs font-semibold text-ink-900">
                       {course.code}
                     </span>
                   </td>
-                  <td className="py-2 text-foggy">{course.level}</td>
+                  <td className="py-3 text-foggy">{course.level}</td>
                 </tr>
               ))}
             </tbody>

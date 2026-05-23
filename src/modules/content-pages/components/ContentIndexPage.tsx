@@ -35,8 +35,8 @@ export function ContentIndexPage({ currentPage = 1 }: ContentIndexPageProps) {
           href: getContentStaticPageHref(page),
         }))}
       />
-      <section className='border-b border-divider bg-muted pt-28 md:pt-40'>
-        <SectionContainer className='pb-12 md:pb-16'>
+      <section className='border-b border-divider bg-muted pt-24 md:pt-32'>
+        <SectionContainer className='pb-8 md:pb-12'>
           <div className='flex items-center gap-2 text-rausch-700'>
             <BookOpen className='h-5 w-5' aria-hidden='true' />
             <span className='text-sm font-semibold uppercase'>Resources</span>
@@ -58,7 +58,7 @@ export function ContentIndexPage({ currentPage = 1 }: ContentIndexPageProps) {
         </SectionContainer>
       </section>
       <ContentStaticRoutesGrid />
-      <section className='border-b border-divider bg-background py-10'>
+      <section className='border-b border-divider bg-background py-12 md:py-16'>
         <SectionContainer>
           <SectionHeader
             eyebrow='Public routes'
@@ -81,7 +81,7 @@ export function ContentIndexPage({ currentPage = 1 }: ContentIndexPageProps) {
           </div>
         </SectionContainer>
       </section>
-      <section className='border-b border-divider bg-background py-10'>
+      <section className='border-b border-divider bg-background py-12 md:py-16'>
         <SectionContainer>
           <SectionHeader
             eyebrow='Categories'

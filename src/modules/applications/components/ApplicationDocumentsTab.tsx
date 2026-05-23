@@ -35,7 +35,7 @@ export function ApplicationDocumentsTab({ application }: { application: Applicat
       {documents.map((doc) => (
         <div
           key={doc.id}
-          className='flex items-center justify-between gap-4 border-b border-border px-4 py-3 last:border-b-0'
+          className='flex items-center justify-between gap-4 border-b border-border px-5 py-4 last:border-b-0'
         >
           <div className='flex flex-1 flex-col gap-0.5 min-w-0'>
             <span className='truncate text-sm font-medium text-ink-900'>{doc.name}</span>

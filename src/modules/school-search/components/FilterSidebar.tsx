@@ -43,7 +43,7 @@ export function FilterSidebar({ className, cardClassName }: FilterSidebarProps) 
     activeChips.length > 0;
 
   return (
-    <aside className={cn('hidden shrink-0 lg:sticky lg:top-18 lg:block lg:h-[calc(100vh-4.5rem)] lg:w-[20rem] lg:py-6 lg:pl-6', className)}>
+    <aside className={cn('hidden shrink-0 lg:sticky lg:top-[var(--header-height)] lg:block lg:h-[calc(100vh-var(--header-height))] lg:w-[20rem] lg:py-6 lg:pl-6', className)}>
       <div className={cn('flex h-full min-h-0 flex-col overflow-hidden rounded-xl border border-border bg-card shadow-2', cardClassName)}>
         <div className='shrink-0 border-b border-divider px-4 py-2.5'>
           <div className='flex items-center gap-2.5'>

@@ -28,9 +28,9 @@ export function OperatingModelBlock({ page }: ContentBlockProps) {
           <p className='text-sm font-semibold uppercase text-rausch-700'>Operating view</p>
           <h3 className='mt-3 text-2xl font-bold text-ink-900'>{page.title}</h3>
           <p className='mt-3 text-sm leading-6 text-foggy'>{page.subtitle}</p>
-          <dl className='mt-6 grid gap-4'>
+          <dl className='mt-6 grid gap-5'>
             {page.metrics.map((metric) => (
-              <div key={metric.label} className='rounded-lg bg-muted p-4'>
+              <div key={metric.label} className='rounded-lg bg-muted p-5'>
                 <dt className='text-xs font-semibold uppercase text-foggy'>{metric.label}</dt>
                 <dd className='mt-1 text-2xl font-bold text-ink-900'>{metric.value}</dd>
               </div>
@@ -38,7 +38,7 @@ export function OperatingModelBlock({ page }: ContentBlockProps) {
           </dl>
         </div>
       </div>
-      <div className='grid gap-4 lg:grid-cols-4'>
+      <div className='grid gap-5 lg:grid-cols-4'>
         {stages.map((stage, index) => {
           const item = page.steps[index % page.steps.length];
           const Icon = stage.icon;

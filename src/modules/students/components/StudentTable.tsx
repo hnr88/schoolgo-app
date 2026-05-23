@@ -88,7 +88,7 @@ export function StudentTable({ students, isLoading, sortField, sortDirection, on
         <TableBody>
           {isLoading ? (
             Array.from({ length: rowCount }).map((_, i) => (
-              <TableRow key={`skeleton-${i}`} className='h-12 hover:bg-transparent'>
+              <TableRow key={`skeleton-${i}`} className='h-14 hover:bg-transparent'>
                 <TableCell className='pl-6'>
                   <div className='flex items-center gap-3'>
                     <Skeleton className='h-8 w-8 rounded-full' />
@@ -113,7 +113,7 @@ export function StudentTable({ students, isLoading, sortField, sortDirection, on
                 return (
                   <TableRow
                     key={student.documentId}
-                    className='group h-12 cursor-pointer border-b-border hover:bg-accent/50'
+                    className='group h-14 cursor-pointer border-b-border hover:bg-accent/50'
                     onClick={() => router.push(`/dashboard/students/${student.documentId}`)}
                   >
                     <TableCell className='pl-6'>
@@ -153,7 +153,7 @@ export function StudentTable({ students, isLoading, sortField, sortDirection, on
                 );
               })}
               {students.length < pageSize && Array.from({ length: pageSize - students.length }).map((_, i) => (
-                <TableRow key={`empty-${i}`} className='h-12 hover:bg-transparent'>
+                <TableRow key={`empty-${i}`} className='h-14 hover:bg-transparent'>
                   <TableCell colSpan={7} />
                 </TableRow>
               ))}

@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import { BadgeCheck } from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
 import { loadSchools, computeSchoolStats } from '@/lib/schools';
@@ -14,14 +13,14 @@ export async function AgentsHero() {
   const stats = computeSchoolStats(schools);
 
   return (
-    <section className='relative overflow-hidden pt-28 pb-20 md:pt-40 md:pb-28'>
+    <section className='relative overflow-hidden pt-28 pb-16 md:pt-36 md:pb-20'>
       <div className='pointer-events-none absolute inset-0' aria-hidden='true'>
         <div className='absolute -right-40 -top-20 h-[600px] w-[600px] rounded-full bg-rausch-100 opacity-40 blur-[120px]' />
         <div className='absolute -left-20 bottom-0 h-[400px] w-[400px] rounded-full bg-babu-50 opacity-50 blur-[100px]' />
       </div>
 
       <SectionContainer className='relative grid grid-cols-1 items-center gap-10 md:grid-cols-12 md:gap-12'>
-        <div className='flex flex-col gap-6 md:col-span-7'>
+        <div className='flex flex-col gap-8 md:col-span-7'>
           <Eyebrow tone='brand'>{t('eyebrow')}</Eyebrow>
           <h1 className='font-display text-5xl font-extrabold leading-display-xl tracking-display-lg text-ink-900 md:text-7xl'>
             {t('headlinePrefix')}{' '}
@@ -61,16 +60,12 @@ export async function AgentsHero() {
         </div>
 
         <div className='relative md:col-span-5'>
-          <div className='relative aspect-[4/5] overflow-hidden rounded-2xl border border-border bg-muted shadow-3'>
-            <Image
-              src='https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=720&h=900&q=80'
-              alt=''
-              fill
-              sizes='(max-width: 768px) 100vw, 420px'
-              className='object-cover'
-              aria-hidden='true'
-              priority
-            />
+          <div className='relative aspect-[4/5] overflow-hidden rounded-2xl border border-border bg-gradient-to-br from-babu-50 via-rausch-50 to-hackberry-50 shadow-3'>
+            <div className='absolute inset-0 opacity-30' aria-hidden='true'>
+              <div className='absolute -right-20 -top-20 h-72 w-72 rounded-full bg-rausch-200 blur-[80px]' />
+              <div className='absolute -bottom-20 -left-20 h-72 w-72 rounded-full bg-babu-200 blur-[80px]' />
+              <div className='absolute left-1/3 top-1/3 h-48 w-48 rounded-full bg-hackberry-100 blur-[60px]' />
+            </div>
           </div>
           <div className='absolute -left-4 top-6 flex max-w-[16rem] items-center gap-3 rounded-lg border border-border bg-card p-3 shadow-3'>
             <div className='flex h-10 w-10 items-center justify-center rounded-pill bg-babu-50 text-babu-700'>

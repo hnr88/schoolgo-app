@@ -5,7 +5,7 @@ import { PAIN_POINT_ITEMS } from '../constants/agents-landing.constants';
 export async function AgentsPainPoints() {
   const t = await getTranslations('AgentsPainPoints');
   return (
-    <section className='bg-muted py-20 md:py-28'>
+    <section className='bg-muted py-16 md:py-20'>
       <SectionContainer className='flex flex-col gap-10'>
         <SectionHeader
           eyebrow={t('eyebrow')}
@@ -13,7 +13,7 @@ export async function AgentsPainPoints() {
           subheading={t('subheading')}
         />
 
-        <div className='grid grid-cols-1 gap-5 md:grid-cols-2'>
+        <div className='grid grid-cols-1 gap-6 md:grid-cols-2'>
           {PAIN_POINT_ITEMS.map(({ key, icon }) => (
             <FeatureCard
               key={key}

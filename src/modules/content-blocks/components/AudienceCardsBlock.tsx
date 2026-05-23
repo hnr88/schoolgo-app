@@ -21,7 +21,7 @@ export function AudienceCardsBlock({ page }: ContentBlockProps) {
             <span className='block p-6'>
               <Users className='h-5 w-5 text-rausch-700' aria-hidden='true' />
               <span className='mt-5 block text-lg font-semibold text-ink-900'>{audience.label}</span>
-              <span className='mt-1 block text-xs font-semibold uppercase text-foggy'>
+              <span className='mt-2 block text-xs font-semibold uppercase text-foggy'>
                 {audience.audience === page.audience ? 'Primary audience' : 'Audience route'}
               </span>
               <span className='mt-2 block text-sm leading-6 text-foggy'>{audience.text}</span>

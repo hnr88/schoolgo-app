@@ -5,16 +5,16 @@ import { COMMISSION_BULLETS } from '../constants/agents-landing.constants';
 export async function AgentsCommission() {
   const t = await getTranslations('AgentsCommission');
   return (
-    <section id='commission' className='bg-ink-900 py-20 text-background md:py-28'>
-      <SectionContainer className='grid grid-cols-1 items-center gap-12 md:grid-cols-12 md:gap-16'>
-        <div className='flex flex-col gap-6 md:col-span-6'>
+    <section id='commission' className='bg-ink-900 py-16 text-background md:py-20'>
+      <SectionContainer className='grid grid-cols-1 items-center gap-10 md:grid-cols-12 md:gap-12'>
+        <div className='flex flex-col gap-8 md:col-span-6'>
           <SectionHeader
             theme='dark'
             eyebrow={t('eyebrow')}
             heading={t('heading')}
             subheading={t('subheading')}
           />
-          <ul className='mt-4 flex flex-col gap-4'>
+          <ul className='mt-4 flex flex-col gap-5'>
             {COMMISSION_BULLETS.map(({ key, icon: Icon }) => (
               <li key={key} className='flex gap-4'>
                 <span className='flex h-11 w-11 shrink-0 items-center justify-center rounded-pill bg-background/10 text-background'>

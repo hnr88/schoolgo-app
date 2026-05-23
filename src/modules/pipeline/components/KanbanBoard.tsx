@@ -19,7 +19,7 @@ function KanbanBoardSkeleton() {
 
 export function KanbanBoard({ columns, applicationsByColumn, isLoading }: KanbanBoardProps) {
   return (
-    <div className="flex gap-4 overflow-x-auto pb-4">
+    <div className="flex gap-5 overflow-x-auto pb-4">
       {isLoading ? (
         <KanbanBoardSkeleton />
       ) : (

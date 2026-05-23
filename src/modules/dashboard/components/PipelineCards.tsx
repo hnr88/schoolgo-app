@@ -9,7 +9,7 @@ export async function PipelineCards({ cards }: { cards: PipelineCard[] }) {
   const t = await getTranslations('Dashboard.cards');
 
   return (
-    <div className='grid grid-cols-2 gap-3 lg:grid-cols-4'>
+    <div className='grid grid-cols-2 gap-5 lg:grid-cols-4'>
       {cards.map((card) => {
         const style = CARD_STYLE[card.labelKey];
         const Icon = style?.icon ?? Users;
@@ -19,7 +19,7 @@ export async function PipelineCards({ cards }: { cards: PipelineCard[] }) {
           <Link
             key={card.labelKey}
             href={card.href}
-            className='flex items-center gap-3 rounded-xl border border-border bg-card px-5 py-4 no-underline transition-colors hover:border-primary/30'
+            className='flex items-center gap-3 rounded-xl border border-border bg-card px-5 py-5 no-underline transition-colors hover:border-primary/30'
           >
             <span
               className={cn(

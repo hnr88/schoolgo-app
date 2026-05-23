@@ -22,20 +22,6 @@ export type MatchingStep = {
   comingSoon?: true;
 };
 
-export type InboxRowKey = 'scotch' | 'brisbane' | 'sydney';
-
-export type InboxRow = {
-  key: InboxRowKey;
-  image: string;
-};
-
-export type ScaleAgentKey = 'a' | 'b' | 'c' | 'd';
-
-export type ScaleAgent = {
-  key: ScaleAgentKey;
-  image: string;
-};
-
 export type TestimonialKey = 'a' | 'b' | 'c';
 
 export type HeroStatKey = 'schools' | 'sectors' | 'commission';

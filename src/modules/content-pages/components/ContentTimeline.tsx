@@ -4,14 +4,14 @@ import type { ContentTimelineProps } from '@/modules/content-pages/types/content
 
 export function ContentTimeline({ items }: ContentTimelineProps) {
   return (
-    <section id='timeline' className='bg-muted py-16 md:py-24'>
+    <section id='timeline' className='bg-muted py-12 md:py-16'>
       <SectionContainer>
         <SectionHeader
           eyebrow='Timeline'
           heading='How this page can guide a decision'
           subheading='A compact timeline works well for admissions, event, policy, and onboarding pages.'
         />
-        <ol className='mt-8 grid gap-4 md:grid-cols-3'>
+        <ol className='mt-8 grid gap-6 md:grid-cols-3'>
           {items.map((item) => (
             <li key={item.title} className='rounded-lg border border-border bg-card p-6 shadow-1'>
               <p className='text-sm font-semibold text-rausch-700'>{item.date}</p>

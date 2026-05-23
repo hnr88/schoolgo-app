@@ -46,7 +46,7 @@ export async function KeyFactsCard({ school, activePortal }: { school: SchoolDet
 
   return (
     <section aria-labelledby="key-facts-heading" className="bg-ink-900 text-background border border-ink-900 rounded-xl p-5 shadow-2">
-      <h2 id="key-facts-heading" className="text-xl font-semibold text-background mb-4">{t('heading')}</h2>
+      <h2 id="key-facts-heading" className="text-xl font-semibold text-background mb-5">{t('heading')}</h2>
       <dl>
         {formatLabel(school.schoolType) && (
           <FactRow label={t('schoolType')}>{formatLabel(school.schoolType)}</FactRow>

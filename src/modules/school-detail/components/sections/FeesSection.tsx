@@ -72,19 +72,19 @@ export async function FeesSection({ school }: { school: SchoolDetail }) {
     <section
       id="fees"
       aria-labelledby="fees-heading"
-      className="rounded-lg border border-border bg-card p-6 shadow-1 md:p-8"
+      className="rounded-lg border border-border bg-card py-10 px-6 shadow-1 md:py-14 md:px-8"
     >
       <Eyebrow>{t('eyebrow')}</Eyebrow>
       <h2 id="fees-heading" className="text-2xl font-bold text-ink-900 mt-2 md:text-3xl">
         {t('heading')}
       </h2>
       {feeCards.length > 0 && (
-        <div className="mt-6 grid gap-3 sm:grid-cols-3">
+        <div className="mt-6 grid gap-4 sm:grid-cols-3">
           {feeCards.map((card) => (
-            <div key={card.label} className="bg-muted rounded-lg p-4 text-center">
+            <div key={card.label} className="bg-muted rounded-lg p-5 text-center">
               <p className="text-caption font-semibold uppercase text-foggy">{card.label}</p>
-              <p className="text-2xl font-bold text-ink-900 mt-1">{card.value}</p>
-              <p className="text-caption text-foggy mt-1">{t('perYearTuition')}</p>
+              <p className="text-2xl font-bold text-ink-900 mt-2">{card.value}</p>
+              <p className="text-caption text-foggy mt-2">{t('perYearTuition')}</p>
             </div>
           ))}
         </div>
@@ -94,28 +94,28 @@ export async function FeesSection({ school }: { school: SchoolDetail }) {
         <div
           className={
             highlightCount === 1
-              ? 'mt-4 grid gap-3'
-              : 'mt-4 grid gap-3 sm:grid-cols-2'
+              ? 'mt-6 grid gap-4'
+              : 'mt-6 grid gap-4 sm:grid-cols-2'
           }
         >
           {showBoardingHighlight && (
-            <div className="bg-ink-900 text-white rounded-lg p-4 text-center">
+            <div className="bg-ink-900 text-white rounded-lg p-5 text-center">
               <p className="text-caption font-semibold uppercase text-white/70">
                 {t('boardingAll')}
               </p>
-              <p className="text-2xl font-bold text-white mt-1">
+              <p className="text-2xl font-bold text-white mt-2">
                 {formatAud(school.feeBoardingAnnual)}
               </p>
-              <p className="text-caption text-white/70 mt-1">{t('perYear')}</p>
+              <p className="text-caption text-white/70 mt-2">{t('perYear')}</p>
             </div>
           )}
           {showTotalHighlight && totalFee != null && (
-            <div className="bg-ink-900 text-white rounded-lg p-4 text-center">
+            <div className="bg-ink-900 text-white rounded-lg p-5 text-center">
               <p className="text-caption font-semibold uppercase text-white/70">
                 {t('totalSenior')}
               </p>
-              <p className="text-2xl font-bold text-white mt-1">{formatAud(totalFee)}</p>
-              <p className="text-caption text-white/70 mt-1">{t('perYear')}</p>
+              <p className="text-2xl font-bold text-white mt-2">{formatAud(totalFee)}</p>
+              <p className="text-caption text-white/70 mt-2">{t('perYear')}</p>
             </div>
           )}
         </div>

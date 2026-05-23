@@ -10,9 +10,9 @@ export async function ParentsStatsBar() {
   const stats = computeSchoolStats(schools);
 
   return (
-    <section className='bg-ink-900 py-20 md:py-28'>
+    <section className='bg-ink-900 py-12 md:py-16'>
       <SectionContainer>
-        <div className='grid grid-cols-1 items-start gap-6 md:grid-cols-2 md:gap-12'>
+        <div className='grid grid-cols-1 items-start gap-8 md:grid-cols-2 md:gap-10'>
           <SectionHeader
             theme='dark'
             eyebrow={t('eyebrow')}

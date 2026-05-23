@@ -4,7 +4,7 @@ import type { ContentFeatureGridProps } from '@/modules/content-pages/types/cont
 
 export function ContentFeatureGrid({ title, description, features }: ContentFeatureGridProps) {
   return (
-    <section id='details' className='bg-background py-16 md:py-24'>
+    <section id='details' className='bg-background py-12 md:py-16'>
       <SectionContainer>
         <SectionHeader eyebrow='Details' heading={title} subheading={description} />
         <div className='mt-8 grid gap-5 md:grid-cols-3'>
