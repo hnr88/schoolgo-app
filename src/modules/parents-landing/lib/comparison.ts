@@ -1,23 +1,11 @@
 import 'server-only';
 import { env } from '@/lib/env';
-import { generateSchoolPlaceholder } from '@/lib/schools/generate-school-placeholder';
+import { loadSchools } from '@/lib/schools';
 import { parseFeeAud } from '@/lib/schools/format-fee';
+import type { SchoolRecord } from '@/lib/schools/types';
 
-export interface ComparisonSchool {
-  documentId: string;
-  slug: string;
-  name: string;
-  suburb: string;
-  state: string;
-  sector: string;
-  schoolType: string;
-  annualFeeAud: string;
-  intakePeriods: string;
-  boardingAvailable: string;
-  icseaScore: number | null;
+export interface ComparisonSchool extends SchoolRecord {
   photoUrl: string;
-  logoUrl: string | null;
-  coverImageUrl: string | null;
 }
 
 interface StrapiMedia {
@@ -27,15 +15,6 @@ interface StrapiMedia {
 interface StrapiSchool {
   documentId: string;
   slug: string;
-  name: string;
-  suburb: string | null;
-  state: string | null;
-  sector: string | null;
-  schoolType: string | null;
-  annualFeeAud: string | null;
-  intakePeriods: string | null;
-  boardingAvailable: string | null;
-  icseaScore: number | null;
   logo?: StrapiMedia | null;
   coverImage?: StrapiMedia | null;
 }
@@ -51,31 +30,39 @@ function mediaUrl(media?: StrapiMedia | null): string | null {
   return `${env.NEXT_PUBLIC_API_URL.replace(/\/+$/, '')}${url}`;
 }
 
-function fromStrapi(record: StrapiSchool): ComparisonSchool {
-  const logoUrl = mediaUrl(record.logo);
-  const coverUrl = mediaUrl(record.coverImage);
-  return {
-    documentId: record.documentId,
-    slug: record.slug,
-    name: record.name,
-    suburb: record.suburb ?? '',
-    state: record.state ?? '',
-    sector: record.sector ?? '',
-    schoolType: record.schoolType ?? '',
-    annualFeeAud: record.annualFeeAud ?? '',
-    intakePeriods: record.intakePeriods ?? '',
-    boardingAvailable: record.boardingAvailable ?? '',
-    icseaScore: record.icseaScore ?? null,
-    photoUrl: logoUrl ?? coverUrl ?? generateSchoolPlaceholder(record.documentId),
-    logoUrl,
-    coverImageUrl: coverUrl,
-  };
+export function pickComparisonSet(schools: SchoolRecord[]) {
+  const candidates = schools
+    .filter(
+      (s) =>
+        s.sector === 'Independent' &&
+        s.icseaScore !== null &&
+        parseFeeAud(s.annualFeeAud),
+    )
+    .sort((a, b) => (b.icseaScore as number) - (a.icseaScore as number));
+  const picked: SchoolRecord[] = [];
+  const seenStates = new Set<string>();
+  for (const s of candidates) {
+    if (seenStates.has(s.state)) continue;
+    seenStates.add(s.state);
+    picked.push(s);
+    if (picked.length === 3) break;
+  }
+  return picked;
 }
 
-export async function getComparisonSchools(): Promise<ComparisonSchool[]> {
+export async function getComparisonSchoolsWithPhotos(): Promise<ComparisonSchool[]> {
+  const schools = await loadSchools();
+  const set = pickComparisonSet(schools);
+  
+  if (set.length === 0) return [];
+
+  // Try to fetch photos from API for these specific schools
+  const photoMap = new Map<string, string>();
   try {
+    const slugs = set.map(s => s.slug);
     const params = new URLSearchParams();
-    params.set('pagination[pageSize]', '50');
+    params.set('pagination[pageSize]', '10');
+    params.set('filters[slug][$in]', slugs.join(','));
     params.set('populate[logo][fields][0]', 'url');
     params.set('populate[coverImage][fields][0]', 'url');
 
@@ -84,33 +71,23 @@ export async function getComparisonSchools(): Promise<ComparisonSchool[]> {
       { next: { revalidate: 300 } },
     );
 
-    if (!response.ok) return [];
-    const payload = (await response.json()) as StrapiResponse;
-    const records = payload.data ?? [];
-
-    // Filter for independent schools with fees and ICSEA
-    const candidates = records
-      .filter((s) => {
-        const hasFee = parseFeeAud(s.annualFeeAud ?? '');
-        const isIndependent = (s.sector ?? '').toLowerCase() === 'independent';
-        return isIndependent && hasFee && s.icseaScore != null;
-      })
-      .sort((a, b) => (b.icseaScore ?? 0) - (a.icseaScore ?? 0));
-
-    // Pick top 3 from different states
-    const picked: StrapiSchool[] = [];
-    const seenStates = new Set<string>();
-    for (const s of candidates) {
-      if (!s.state || seenStates.has(s.state)) continue;
-      seenStates.add(s.state);
-      picked.push(s);
-      if (picked.length === 3) break;
+    if (response.ok) {
+      const payload = (await response.json()) as StrapiResponse;
+      for (const record of payload.data ?? []) {
+        const photoUrl = mediaUrl(record.logo) ?? mediaUrl(record.coverImage);
+        if (photoUrl) {
+          photoMap.set(record.slug, photoUrl);
+        }
+      }
     }
-
-    return picked.map(fromStrapi);
   } catch {
-    return [];
+    // Ignore API errors, we'll use initials fallback
   }
+
+  return set.map(s => ({
+    ...s,
+    photoUrl: photoMap.get(s.slug) ?? '',
+  }));
 }
 
 export function boardingBedsForSchool(school: { slug: string }): number {

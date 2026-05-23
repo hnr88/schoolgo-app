@@ -4,13 +4,42 @@ import { Star } from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
 import { formatFeeAud, parseFeeAud } from '@/lib/schools/format-fee';
 import { SectionContainer } from '@/modules/design-system';
-import { getComparisonSchools, boardingBedsForSchool } from '../lib/comparison';
+import { getComparisonSchoolsWithPhotos, boardingBedsForSchool } from '../lib/comparison';
 import { MIN_SCORES, RATINGS, SCHOLARSHIPS_MAP, TESTS_MAP } from '../constants/comparison.constants';
+
+const AVATAR_COLORS = [
+  'bg-sky-100 text-sky-700',
+  'bg-emerald-100 text-emerald-700',
+  'bg-amber-100 text-amber-700',
+  'bg-violet-100 text-violet-700',
+  'bg-cyan-100 text-cyan-700',
+  'bg-rose-100 text-rose-700',
+  'bg-indigo-100 text-indigo-700',
+  'bg-teal-100 text-teal-700',
+];
+
+function getSchoolInitials(name: string): string {
+  return name
+    .split(' ')
+    .map((w) => w[0])
+    .join('')
+    .slice(0, 2)
+    .toUpperCase();
+}
+
+function getAvatarColor(name: string): string {
+  let hash = 0;
+  for (let i = 0; i < name.length; i++) {
+    hash = name.charCodeAt(i) + ((hash << 5) - hash);
+  }
+  const index = Math.abs(hash) % AVATAR_COLORS.length;
+  return AVATAR_COLORS[index];
+}
 
 export async function ParentsComparison() {
   const [t, schools] = await Promise.all([
     getTranslations('ParentsComparison'),
-    getComparisonSchools(),
+    getComparisonSchoolsWithPhotos(),
   ]);
   const set = schools;
 
@@ -112,15 +141,25 @@ export async function ParentsComparison() {
                       className='min-w-52 border-b border-divider px-6 pb-6 pt-8 text-left align-top'
                     >
                       <div className='flex flex-col gap-3'>
-                        <div className='relative h-40 w-full overflow-hidden rounded-xl border border-border bg-muted'>
-                          <Image
-                            src={s.photoUrl}
-                            alt={s.name}
-                            fill
-                            sizes='200px'
-                            className='object-cover'
-                          />
-                        </div>
+                        {s.photoUrl ? (
+                          <div className='relative h-40 w-full overflow-hidden rounded-xl border border-border bg-muted'>
+                            <Image
+                              src={s.photoUrl}
+                              alt={s.name}
+                              fill
+                              sizes='200px'
+                              className='object-cover'
+                            />
+                          </div>
+                        ) : (
+                          <div
+                            className={`relative flex h-40 w-full items-center justify-center overflow-hidden rounded-xl border border-border ${getAvatarColor(s.name)}`}
+                            role='img'
+                            aria-label={s.name}
+                          >
+                            <span className='text-2xl font-bold'>{getSchoolInitials(s.name)}</span>
+                          </div>
+                        )}
                         <div className='flex flex-col gap-0.5'>
                           <span className='line-clamp-1 text-sm font-semibold text-ink-900'>{s.name}</span>
                           <span className='flex items-center gap-1 text-xs text-foggy'>
@@ -170,15 +209,25 @@ export async function ParentsComparison() {
                   {set.map((s, i) => (
                     <th key={s.slug} scope='col' className='border-b border-divider px-3 pb-4 text-left align-top'>
                       <div className='flex flex-col gap-2'>
-                        <div className='relative h-20 w-full overflow-hidden rounded-xl border border-border bg-muted'>
-                          <Image
-                            src={s.photoUrl}
-                            alt={s.name}
-                            fill
-                            sizes='33vw'
-                            className='object-cover'
-                          />
-                        </div>
+                        {s.photoUrl ? (
+                          <div className='relative h-20 w-full overflow-hidden rounded-xl border border-border bg-muted'>
+                            <Image
+                              src={s.photoUrl}
+                              alt={s.name}
+                              fill
+                              sizes='33vw'
+                              className='object-cover'
+                            />
+                          </div>
+                        ) : (
+                          <div
+                            className={`relative flex h-20 w-full items-center justify-center overflow-hidden rounded-xl border border-border ${getAvatarColor(s.name)}`}
+                            role='img'
+                            aria-label={s.name}
+                          >
+                            <span className='text-lg font-bold'>{getSchoolInitials(s.name)}</span>
+                          </div>
+                        )}
                         <div className='flex flex-col gap-0.5'>
                           <span className='line-clamp-1 text-xs font-semibold text-ink-900'>{s.name}</span>
                           <span className='flex items-center gap-1 text-xs text-foggy'>

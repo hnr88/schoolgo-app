@@ -1,5 +1,13 @@
 import Image from 'next/image';
 import { Link } from '@/i18n/navigation';
+import {
+  Breadcrumb,
+  BreadcrumbList,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbSeparator,
+  BreadcrumbPage,
+} from '@/components/ui/breadcrumb';
 import { SectionContainer } from '@/modules/design-system';
 import { GuideSectionNav } from '@/modules/guides/components/GuideSectionNav';
 import type { GuideHeroData } from '@/modules/guides/types/guides.types';
@@ -13,22 +21,44 @@ export function GuideHero({
 }: GuideHeroData) {
   return (
     <>
-      <nav
-        className='border-b border-divider bg-muted pt-20 md:pt-28'
-        aria-label='Breadcrumb'
-      >
-        <SectionContainer className='flex flex-wrap items-center gap-y-1 py-3 text-sm'>
-          <Link href='/' className='text-foggy underline hover:text-ink-900'>
-            Home
-          </Link>
-          <span className='mx-2 text-quill'>/</span>
-          <Link href='/guides' className='text-foggy underline hover:text-ink-900'>
-            Guides
-          </Link>
-          <span className='mx-2 text-quill'>/</span>
-          <span className='text-foggy'>{breadcrumbLabel}</span>
-        </SectionContainer>
-      </nav>
+      <Breadcrumb>
+        <nav
+          aria-label='Breadcrumb'
+          className='border-b border-divider bg-muted pt-16 md:pt-24'
+        >
+          <SectionContainer className='py-3'>
+            <BreadcrumbList className='text-sm text-foggy'>
+              <BreadcrumbItem>
+                <BreadcrumbLink
+                  render={<Link href='/' />}
+                  className='text-hof underline hover:text-ink-900'
+                >
+                  Home
+                </BreadcrumbLink>
+              </BreadcrumbItem>
+
+              <BreadcrumbSeparator className='text-quill' />
+
+              <BreadcrumbItem>
+                <BreadcrumbLink
+                  render={<Link href='/guides' />}
+                  className='text-hof underline hover:text-ink-900'
+                >
+                  Guides
+                </BreadcrumbLink>
+              </BreadcrumbItem>
+
+              <BreadcrumbSeparator className='text-quill' />
+
+              <BreadcrumbItem>
+                <BreadcrumbPage className='text-hof'>
+                  {breadcrumbLabel}
+                </BreadcrumbPage>
+              </BreadcrumbItem>
+            </BreadcrumbList>
+          </SectionContainer>
+        </nav>
+      </Breadcrumb>
 
       <section className='relative overflow-hidden border-b border-border bg-ink-900 py-16 md:py-24'>
         {image && (

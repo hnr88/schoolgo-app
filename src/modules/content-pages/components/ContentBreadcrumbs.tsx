@@ -9,42 +9,47 @@ import {
 } from '@/components/ui/breadcrumb';
 import type { ContentBreadcrumbsProps } from '@/modules/content-pages/types/content-component-props.types';
 
+import { SectionContainer } from '@/modules/design-system';
+
 export function ContentBreadcrumbs({ category, title }: ContentBreadcrumbsProps) {
   return (
     <Breadcrumb>
-      <nav className='border-b border-divider bg-muted pt-14 md:pt-16'>
-        <div className='mx-auto flex max-w-content flex-wrap items-center gap-y-1 px-5 py-3 text-sm md:px-8'>
-          <BreadcrumbList className='text-foggy'>
+      <nav
+        aria-label='Breadcrumb'
+        className='border-b border-divider bg-muted pt-16 md:pt-24'
+      >
+        <SectionContainer className='py-3'>
+          <BreadcrumbList className='text-sm text-foggy'>
             <BreadcrumbItem>
-              <BreadcrumbLink render={<Link href='/' />} className='text-foggy underline hover:text-ink-900'>
+              <BreadcrumbLink render={<Link href='/' />} className='text-hof underline hover:text-ink-900'>
                 Home
               </BreadcrumbLink>
             </BreadcrumbItem>
-            <BreadcrumbSeparator className='mx-2 text-quill' />
+            <BreadcrumbSeparator className='text-quill' />
             <BreadcrumbItem>
-              <BreadcrumbLink render={<Link href='/resources' />} className='text-foggy underline hover:text-ink-900'>
+              <BreadcrumbLink render={<Link href='/resources' />} className='text-hof underline hover:text-ink-900'>
                 Resources
               </BreadcrumbLink>
             </BreadcrumbItem>
             {category && (
               <>
-                <BreadcrumbSeparator className='mx-2 text-quill' />
+                <BreadcrumbSeparator className='text-quill' />
                 <BreadcrumbItem>
                   <BreadcrumbLink
                     render={<Link href={`/resources/category/${category.slug}`} />}
-                    className='text-foggy underline hover:text-ink-900'
+                    className='text-hof underline hover:text-ink-900'
                   >
                     {category.label}
                   </BreadcrumbLink>
                 </BreadcrumbItem>
               </>
             )}
-            <BreadcrumbSeparator className='mx-2 text-quill' />
+            <BreadcrumbSeparator className='text-quill' />
             <BreadcrumbItem>
-              <BreadcrumbPage className='text-foggy'>{title}</BreadcrumbPage>
+              <BreadcrumbPage className='text-hof'>{title}</BreadcrumbPage>
             </BreadcrumbItem>
           </BreadcrumbList>
-        </div>
+        </SectionContainer>
       </nav>
     </Breadcrumb>
   );

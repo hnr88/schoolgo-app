@@ -1,4 +1,13 @@
 import { Link } from '@/i18n/navigation';
+import {
+  Breadcrumb,
+  BreadcrumbList,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbSeparator,
+  BreadcrumbPage,
+} from '@/components/ui/breadcrumb';
+import { SectionContainer } from '@/modules/design-system';
 import type { ContentBlockProps } from '@/modules/content-blocks/types/content-blocks.types';
 
 export function BreadcrumbTrailBlock({
@@ -7,19 +16,54 @@ export function BreadcrumbTrailBlock({
   sectionLabel = 'Resources',
 }: ContentBlockProps) {
   const sectionHref = sectionLabel === 'Resources' ? '/resources' : getCategoryHref(page.category);
-  const linkClass = 'text-hof underline hover:text-ink-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rausch-700';
 
   return (
-    <nav aria-label='Breadcrumb' className='border-b border-divider bg-muted pt-14 md:pt-16'>
-      <ol className='mx-auto flex max-w-content flex-wrap items-center gap-y-1 px-5 py-3 text-sm md:px-8'>
-        <li><Link href='/' className={linkClass}>Home</Link></li>
-        <li className='mx-2 text-quill' aria-hidden='true'>/</li>
-        <li><Link href={sectionHref} className={linkClass}>{sectionLabel}</Link></li>
-        <li className='mx-2 text-quill' aria-hidden='true'>/</li>
-        <li><Link href={getCategoryHref(page.category)} className={linkClass}>{page.eyebrow}</Link></li>
-        <li className='mx-2 text-quill' aria-hidden='true'>/</li>
-        <li className='text-hof' aria-current='page'>{page.title}</li>
-      </ol>
-    </nav>
+    <Breadcrumb>
+      <nav
+        aria-label='Breadcrumb'
+        className='border-b border-divider bg-muted pt-16 md:pt-24'
+      >
+        <SectionContainer className='py-3'>
+          <BreadcrumbList className='text-sm text-foggy'>
+            <BreadcrumbItem>
+              <BreadcrumbLink
+                render={<Link href='/' />}
+                className='text-hof underline hover:text-ink-900'
+              >
+                Home
+              </BreadcrumbLink>
+            </BreadcrumbItem>
+
+            <BreadcrumbSeparator className='text-quill' />
+
+            <BreadcrumbItem>
+              <BreadcrumbLink
+                render={<Link href={sectionHref} />}
+                className='text-hof underline hover:text-ink-900'
+              >
+                {sectionLabel}
+              </BreadcrumbLink>
+            </BreadcrumbItem>
+
+            <BreadcrumbSeparator className='text-quill' />
+
+            <BreadcrumbItem>
+              <BreadcrumbLink
+                render={<Link href={getCategoryHref(page.category)} />}
+                className='text-hof underline hover:text-ink-900'
+              >
+                {page.eyebrow}
+              </BreadcrumbLink>
+            </BreadcrumbItem>
+
+            <BreadcrumbSeparator className='text-quill' />
+
+            <BreadcrumbItem>
+              <BreadcrumbPage className='text-hof'>{page.title}</BreadcrumbPage>
+            </BreadcrumbItem>
+          </BreadcrumbList>
+        </SectionContainer>
+      </nav>
+    </Breadcrumb>
   );
 }

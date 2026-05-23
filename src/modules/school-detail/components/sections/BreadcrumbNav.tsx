@@ -25,10 +25,10 @@ export async function BreadcrumbNav({ school, activePortal }: BreadcrumbNavProps
 
   return (
     <Breadcrumb>
-      <SectionContainer size="wide" className="py-4">
-        <BreadcrumbList className="text-body-sm text-foggy">
+      <SectionContainer size="wide" className="py-3">
+        <BreadcrumbList className="text-sm text-foggy">
           <BreadcrumbItem>
-            <BreadcrumbLink render={<Link href={homeHref} />} className="text-primary hover:underline">
+            <BreadcrumbLink render={<Link href={homeHref} />} className="text-hof underline hover:text-ink-900">
               {t('breadcrumbs.home')}
             </BreadcrumbLink>
           </BreadcrumbItem>
@@ -36,7 +36,7 @@ export async function BreadcrumbNav({ school, activePortal }: BreadcrumbNavProps
           <BreadcrumbSeparator className="text-quill" />
 
           <BreadcrumbItem>
-            <BreadcrumbLink render={<Link href={searchHref} />} className="text-primary hover:underline">
+            <BreadcrumbLink render={<Link href={searchHref} />} className="text-hof underline hover:text-ink-900">
               {t('breadcrumbs.schools')}
             </BreadcrumbLink>
           </BreadcrumbItem>
@@ -47,7 +47,7 @@ export async function BreadcrumbNav({ school, activePortal }: BreadcrumbNavProps
               <BreadcrumbItem>
                 <BreadcrumbLink
                   render={<Link href={`${searchHref}?state=${school.state.toLowerCase()}`} />}
-                  className="text-primary hover:underline"
+                  className="text-hof underline hover:text-ink-900"
                 >
                   {school.state}
                 </BreadcrumbLink>
@@ -61,7 +61,7 @@ export async function BreadcrumbNav({ school, activePortal }: BreadcrumbNavProps
               <BreadcrumbItem>
                 <BreadcrumbLink
                   render={<Link href={`${searchHref}?city=${encodeURIComponent(school.suburb.toLowerCase())}`} />}
-                  className="text-primary hover:underline"
+                  className="text-hof underline hover:text-ink-900"
                 >
                   {school.suburb}
                 </BreadcrumbLink>
@@ -72,7 +72,7 @@ export async function BreadcrumbNav({ school, activePortal }: BreadcrumbNavProps
           <BreadcrumbSeparator className="text-quill" />
 
           <BreadcrumbItem>
-            <BreadcrumbPage className="font-medium text-hof">
+            <BreadcrumbPage className="text-hof">
               {school.name}
             </BreadcrumbPage>
           </BreadcrumbItem>
