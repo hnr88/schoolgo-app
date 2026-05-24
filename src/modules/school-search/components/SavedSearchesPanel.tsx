@@ -10,10 +10,7 @@ import { useDeleteSavedSearch } from '@/modules/school-search/queries/use-delete
 import { useSchoolSearchStore } from '@/modules/school-search/stores/use-school-search-store';
 import type { SavedSearch } from '@/modules/school-search/types/saved-searches.types';
 import type { TypedSearchRequest } from '@/modules/school-search/types/search-api.types';
-
-interface SavedSearchesPanelProps {
-  className?: string;
-}
+import type { SavedSearchesPanelProps } from '@/modules/school-search/types/component.types';
 
 export function SavedSearchesPanel({ className }: SavedSearchesPanelProps) {
   const t = useTranslations('SchoolSearch.savedSearches');

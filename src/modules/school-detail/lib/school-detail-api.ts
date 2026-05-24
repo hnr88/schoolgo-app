@@ -1,6 +1,7 @@
 import 'server-only';
 import { cache } from 'react';
 import { env } from '@/lib/env';
+import { publicApi } from '@/lib/axios';
 
 interface StrapiMedia {
   url?: string | null;
@@ -132,19 +133,14 @@ export function mediaUrl(media?: StrapiMedia | null): string | null {
 export const getSchoolBySlug = cache(async function getSchoolBySlug(
   slug: string,
 ): Promise<SchoolDetail | null> {
-  const response = await fetch(
-    `${env.NEXT_PUBLIC_API_URL}/api/schools?${buildSchoolQuery(slug)}`,
-    {
-      next: { revalidate: 300 },
-    },
-  );
-
-  if (!response.ok) {
+  try {
+    const { data: payload } = await publicApi.get<SchoolsResponse>(
+      `${env.NEXT_PUBLIC_API_URL}/api/schools?${buildSchoolQuery(slug)}`,
+    );
+    return payload.data?.[0] ?? null;
+  } catch {
     return null;
   }
-
-  const payload = (await response.json()) as SchoolsResponse;
-  return payload.data?.[0] ?? null;
 });
 
 export const getSimilarSchools = cache(async function getSimilarSchools(
@@ -152,14 +148,9 @@ export const getSimilarSchools = cache(async function getSimilarSchools(
 ): Promise<SchoolDetail[]> {
   if (!school.state) return [];
   try {
-    const response = await fetch(
+    const { data: payload } = await publicApi.get<SchoolsResponse>(
       `${env.NEXT_PUBLIC_API_URL}/api/schools?${buildSimilarSchoolsQuery(school)}`,
-      {
-        next: { revalidate: 600 },
-      },
     );
-    if (!response.ok) return [];
-    const payload = (await response.json()) as SchoolsResponse;
     return payload.data ?? [];
   } catch {
     return [];

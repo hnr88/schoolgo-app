@@ -2,12 +2,7 @@ import 'server-only';
 import type { SchoolDetail } from '@/modules/school-detail/lib/school-detail-api';
 import type { Portal } from '@/lib/portal-url';
 import { portalUrl } from '@/lib/portal-url';
-
-interface Props {
-  school: SchoolDetail;
-  activePortal: Portal;
-  locale?: string;
-}
+import type { StructuredDataProps, FaqItem, StepItem } from '@/modules/school-detail/types/structured-data.types';
 
 function safeJson(obj: unknown): string {
   return JSON.stringify(obj).replace(/</g, '\\u003c');
@@ -109,9 +104,6 @@ function parseCourses(school: SchoolDetail): Record<string, unknown>[] | null {
   return courses.length > 0 ? courses : null;
 }
 
-interface FaqItem { q: string; a: string }
-interface StepItem { title: string; desc: string }
-
 function parseFaqItems(raw: unknown): FaqItem[] {
   if (!Array.isArray(raw)) return [];
   return raw
@@ -153,7 +145,7 @@ function howToLd(school: SchoolDetail): Record<string, unknown> | null {
   };
 }
 
-export async function StructuredData({ school, activePortal, locale }: Props) {
+export async function StructuredData({ school, activePortal, locale }: StructuredDataProps) {
   const eduOrg = educationalOrgLd(school);
   const localBiz = localBusinessLd(school);
   const breadcrumb = breadcrumbLd(school, activePortal, locale);

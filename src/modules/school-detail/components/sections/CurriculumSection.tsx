@@ -1,15 +1,10 @@
 import { getTranslations } from 'next-intl/server';
 import { Eyebrow, Chip } from '@/modules/design-system';
 import type { SchoolDetail } from '@/modules/school-detail/lib/school-detail-api';
+import type { ParsedCourse } from '@/modules/school-detail/types/curriculum.types';
 
 function parseStringArray(value: unknown): string[] {
   return Array.isArray(value) ? value.filter((v): v is string => typeof v === 'string') : [];
-}
-
-interface ParsedCourse {
-  name: string;
-  code: string;
-  level: string;
 }
 
 function parseCricosCourses(raw: string): ParsedCourse[] {

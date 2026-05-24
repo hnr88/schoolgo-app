@@ -3,7 +3,7 @@
 import { useSearchParams } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 import { useEffect } from 'react';
-import type { Portal } from '@/lib/portal-url';
+
 import { cn } from '@/lib/utils';
 import { useAuthStore } from '@/modules/auth';
 import { SortControl } from '@/modules/school-search/components/results/SortControl';
@@ -15,13 +15,7 @@ import {
 } from '@/modules/school-search/lib/store-to-typed-request';
 import { useTypedSchoolSearch } from '@/modules/school-search/queries/use-school-search.query';
 import { useSchoolSearchStore } from '@/modules/school-search/stores/use-school-search-store';
-
-interface SpecResultsPanelProps {
-  activePortal: Portal;
-  className?: string;
-  alwaysOn?: boolean;
-  floating?: boolean;
-}
+import type { SpecResultsPanelProps } from '@/modules/school-search/types/component.types';
 
 export function SpecResultsPanel({
   activePortal,

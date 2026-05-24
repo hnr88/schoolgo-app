@@ -6,16 +6,7 @@ import { Loader2 } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { useAutocompleteSchools } from '@/modules/school-search/queries/use-autocomplete-schools.query';
 import { useAutocompleteSuburbs } from '@/modules/school-search/queries/use-autocomplete-suburbs.query';
-import type { AutocompleteSchoolHit } from '@/modules/school-search/types/autocomplete-schools.types';
-import type { AutocompleteSuburbHit } from '@/modules/school-search/types/autocomplete-suburbs.types';
-
-interface SearchAutocompleteDropdownProps {
-  query: string;
-  isOpen: boolean;
-  onSelectSchool: (hit: AutocompleteSchoolHit) => void;
-  onSelectSuburb: (hit: AutocompleteSuburbHit) => void;
-  onClose: () => void;
-}
+import type { SearchAutocompleteDropdownProps } from '@/modules/school-search/types/component.types';
 
 function getInitials(name: string): string {
   return name

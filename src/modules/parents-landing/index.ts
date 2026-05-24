@@ -11,3 +11,4 @@ export { ParentsFaq } from '@/modules/parents-landing/components/ParentsFaq';
 export { FaqAccordion } from '@/modules/parents-landing/components/FaqAccordion';
 export { ParentsFinalCta } from '@/modules/parents-landing/components/ParentsFinalCta';
 export type { FaqItem, FaqAccordionProps, StepData, ParentsFourStepsClientProps, ParentsHeroSearchProps } from '@/modules/parents-landing/types/parents-landing.types';
+export type { SchoolPhotoOrLogoProps, ComparisonCell, ComparisonRow, ComparisonSchoolCardsProps, ComparisonDesktopTableProps, ComparisonMobileTableProps } from '@/modules/parents-landing/types/parents-comparison.types';

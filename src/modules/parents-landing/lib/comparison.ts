@@ -1,5 +1,8 @@
+'use cache';
 import 'server-only';
 import { env } from '@/lib/env';
+import { publicApi } from '@/lib/axios';
+import { cacheLife, cacheTag } from 'next/cache';
 import { loadSchools } from '@/lib/schools';
 import { parseFeeAud } from '@/lib/schools/format-fee';
 import type { SchoolRecord } from '@/lib/schools/types';
@@ -52,12 +55,13 @@ export function pickComparisonSet(schools: SchoolRecord[]) {
 }
 
 export async function getComparisonSchoolsWithPhotos(): Promise<ComparisonSchool[]> {
+  cacheLife('hours');
+  cacheTag('comparison-schools');
   const schools = await loadSchools();
   const set = pickComparisonSet(schools);
-  
+
   if (set.length === 0) return [];
 
-  // Try to fetch photos from API for these specific schools
   const photoMap = new Map<string, { photoUrl: string | null; logoUrl: string | null }>();
   try {
     const slugs = set.map(s => s.slug);
@@ -67,19 +71,14 @@ export async function getComparisonSchoolsWithPhotos(): Promise<ComparisonSchool
     params.set('populate[logo][fields][0]', 'url');
     params.set('populate[coverImage][fields][0]', 'url');
 
-    const response = await fetch(
+    const { data: payload } = await publicApi.get<StrapiResponse>(
       `${env.NEXT_PUBLIC_API_URL}/api/schools?${params.toString()}`,
-      { next: { revalidate: 300 } },
     );
-
-    if (response.ok) {
-      const payload = (await response.json()) as StrapiResponse;
-      for (const record of payload.data ?? []) {
-        photoMap.set(record.slug, {
-          logoUrl: mediaUrl(record.logo),
-          photoUrl: mediaUrl(record.coverImage),
-        });
-      }
+    for (const record of payload.data ?? []) {
+      photoMap.set(record.slug, {
+        logoUrl: mediaUrl(record.logo),
+        photoUrl: mediaUrl(record.coverImage),
+      });
     }
   } catch {
     // Ignore API errors, we'll use initials fallback

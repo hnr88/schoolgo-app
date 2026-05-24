@@ -88,3 +88,8 @@ export type {
   BookmarkResponse,
   BookmarksListResponse,
 } from '@/modules/school-search/types/bookmarks.types';
+export type {
+  SearchAutocompleteDropdownProps,
+  SavedSearchesPanelProps,
+  SpecResultsPanelProps,
+} from '@/modules/school-search/types/component.types';

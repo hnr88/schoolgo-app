@@ -1,3 +1,4 @@
+import type { Control } from 'react-hook-form';
 import type { StudentFormValues } from '@/modules/students/schemas/student.schema';
 import type { Student } from '@/modules/students/types/student.types';
 
@@ -45,4 +46,29 @@ export interface StudentTableProps {
   sortDirection: SortDirection;
   onSort: (field: SortField) => void;
   pageSize: number;
+}
+
+export interface UseStudentFormOptions {
+  defaultValues?: Partial<StudentFormValues>;
+}
+
+export interface StudentFormPersonalSectionProps {
+  control: Control<StudentFormValues>;
+}
+
+export interface StudentFormEducationSectionProps {
+  control: Control<StudentFormValues>;
+}
+
+export interface StudentFormParentSectionProps {
+  control: Control<StudentFormValues>;
+}
+
+export interface StudentFormNotesFieldProps {
+  control: Control<StudentFormValues>;
+}
+
+export interface StudentFormSubmitButtonProps {
+  isLoading: boolean;
+  submitLabel: string;
 }

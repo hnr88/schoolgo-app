@@ -1,5 +1,8 @@
+'use cache';
 import 'server-only';
 import { env } from '@/lib/env';
+import { publicApi } from '@/lib/axios';
+import { cacheLife, cacheTag } from 'next/cache';
 import { FEATURED_SCHOOL_SLUGS } from '@/modules/parents-landing/constants/parents-landing.constants';
 
 export interface FeaturedSchool {
@@ -75,12 +78,9 @@ async function fetchBySlug(slug: string): Promise<SchoolApiRecord | null> {
     params.set('pagination[pageSize]', '1');
     params.set('populate[logo][fields][0]', 'url');
     params.set('populate[coverImage][fields][0]', 'url');
-    const response = await fetch(
+    const { data: payload } = await publicApi.get<SchoolApiResponse>(
       `${env.NEXT_PUBLIC_API_URL}/api/schools?${params.toString()}`,
-      { next: { revalidate: 300 } },
     );
-    if (!response.ok) return null;
-    const payload = (await response.json()) as SchoolApiResponse;
     return payload.data?.[0] ?? null;
   } catch {
     return null;
@@ -88,6 +88,8 @@ async function fetchBySlug(slug: string): Promise<SchoolApiRecord | null> {
 }
 
 export async function getFeaturedSchools(): Promise<FeaturedSchool[]> {
+  cacheLife('hours');
+  cacheTag('featured-schools');
   try {
     const records = await Promise.all(FEATURED_SCHOOL_SLUGS.map(fetchBySlug));
     return records.filter((r): r is SchoolApiRecord => r !== null).map(fromRecord);

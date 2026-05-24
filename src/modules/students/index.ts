@@ -6,3 +6,4 @@ export { StudentDocumentsTab } from '@/modules/students/components/StudentDocume
 export { DocumentUploadDialog } from '@/modules/students/components/DocumentUploadDialog';
 export type { Student } from '@/modules/students/types/student.types';
 export type { StudentDocument, DocumentType, DocumentStatus } from '@/modules/students/types/document.types';
+export type { UseStudentFormOptions, StudentFormPersonalSectionProps, StudentFormEducationSectionProps, StudentFormParentSectionProps, StudentFormNotesFieldProps, StudentFormSubmitButtonProps } from '@/modules/students/types/component.types';

@@ -1,5 +1,7 @@
 import type { ReactNode } from 'react';
 import type { Portal } from '@/lib/portal-url';
+import type { AutocompleteSchoolHit } from '@/modules/school-search/types/autocomplete-schools.types';
+import type { AutocompleteSuburbHit } from '@/modules/school-search/types/autocomplete-suburbs.types';
 
 export interface FilterChipsProps {
   className?: string;
@@ -37,4 +39,23 @@ export interface SearchPageContentProps {
 
 export interface SchoolResultsPanelProps {
   activePortal: Portal;
+}
+
+export interface SearchAutocompleteDropdownProps {
+  query: string;
+  isOpen: boolean;
+  onSelectSchool: (hit: AutocompleteSchoolHit) => void;
+  onSelectSuburb: (hit: AutocompleteSuburbHit) => void;
+  onClose: () => void;
+}
+
+export interface SavedSearchesPanelProps {
+  className?: string;
+}
+
+export interface SpecResultsPanelProps {
+  activePortal: Portal;
+  className?: string;
+  alwaysOn?: boolean;
+  floating?: boolean;
 }
