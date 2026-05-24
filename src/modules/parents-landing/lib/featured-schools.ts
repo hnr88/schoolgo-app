@@ -1,8 +1,6 @@
-'use cache';
 import 'server-only';
 import { env } from '@/lib/env';
 import { publicApi } from '@/lib/axios';
-import { cacheLife, cacheTag } from 'next/cache';
 import { FEATURED_SCHOOL_SLUGS } from '@/modules/parents-landing/constants/parents-landing.constants';
 
 export interface FeaturedSchool {
@@ -88,8 +86,6 @@ async function fetchBySlug(slug: string): Promise<SchoolApiRecord | null> {
 }
 
 export async function getFeaturedSchools(): Promise<FeaturedSchool[]> {
-  cacheLife('hours');
-  cacheTag('featured-schools');
   try {
     const records = await Promise.all(FEATURED_SCHOOL_SLUGS.map(fetchBySlug));
     return records.filter((r): r is SchoolApiRecord => r !== null).map(fromRecord);

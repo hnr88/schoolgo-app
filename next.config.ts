@@ -6,7 +6,6 @@ const withNextIntl = createNextIntlPlugin('./src/i18n/request.ts');
 
 const nextConfig: NextConfig = {
   output: 'standalone',
-  cacheComponents: true,
   allowedDevOrigins: [
     '192.168.68.55',
     '*.local',

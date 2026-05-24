@@ -1,8 +1,6 @@
-'use cache';
 import 'server-only';
 import { env } from '@/lib/env';
 import { publicApi } from '@/lib/axios';
-import { cacheLife, cacheTag } from 'next/cache';
 import { loadSchools } from '@/lib/schools';
 import { parseFeeAud } from '@/lib/schools/format-fee';
 import type { SchoolRecord } from '@/lib/schools/types';
@@ -55,8 +53,6 @@ export function pickComparisonSet(schools: SchoolRecord[]) {
 }
 
 export async function getComparisonSchoolsWithPhotos(): Promise<ComparisonSchool[]> {
-  cacheLife('hours');
-  cacheTag('comparison-schools');
   const schools = await loadSchools();
   const set = pickComparisonSet(schools);
 
