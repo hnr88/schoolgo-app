@@ -1407,7 +1407,10 @@
         "pricing": "定价",
         "faq": "常见问题"
       }
-    }
+    },
+    "showPassword": "Show password",
+    "hidePassword": "Hide password",
+    "rememberMe": "Remember me"
   },
   "Errors": {
     "generic": "出了点问题",

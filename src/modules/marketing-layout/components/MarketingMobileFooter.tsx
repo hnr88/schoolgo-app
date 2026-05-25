@@ -6,7 +6,7 @@ export function MarketingMobileFooter({ isSearchPage, onLinkClick, labels }: Mar
   return (
     <div className='flex items-center gap-2 border-t border-divider px-4 py-3'>
       <Link
-        href='/search'
+        href='/sign-in'
         onClick={onLinkClick}
         data-slot='button'
         className='flex-1 rounded-pill border border-border px-3 py-2 text-center text-sm font-semibold text-foreground no-underline transition-colors hover:bg-muted'

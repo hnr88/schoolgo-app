@@ -6,7 +6,7 @@ export function MarketingDesktopActions({ isSearchPage, labels }: MarketingDeskt
   return (
     <div className='ml-auto hidden shrink-0 items-center gap-2 md:flex'>
       <Link
-        href='/search'
+        href='/sign-in'
         data-slot='button'
         className='rounded-pill px-3 py-1.5 text-sm font-medium text-foreground no-underline transition-colors hover:bg-muted'
       >

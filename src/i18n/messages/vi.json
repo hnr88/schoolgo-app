@@ -1407,7 +1407,10 @@
         "pricing": "Bảng giá",
         "faq": "Câu hỏi thường gặp"
       }
-    }
+    },
+    "showPassword": "Show password",
+    "hidePassword": "Hide password",
+    "rememberMe": "Remember me"
   },
   "Errors": {
     "generic": "Đã xảy ra lỗi",

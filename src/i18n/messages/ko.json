@@ -1407,7 +1407,10 @@
         "pricing": "요금제",
         "faq": "자주 묻는 질문"
       }
-    }
+    },
+    "showPassword": "Show password",
+    "hidePassword": "Hide password",
+    "rememberMe": "Remember me"
   },
   "Errors": {
     "generic": "문제가 발생했습니다",

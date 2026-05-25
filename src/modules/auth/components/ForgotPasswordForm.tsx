@@ -36,34 +36,49 @@ export function ForgotPasswordForm() {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit((data) => handleForgotPassword(data.email))}
-        className="flex flex-col gap-6"
+        className='flex flex-col gap-5'
+        noValidate
       >
         <FormField
           control={form.control}
-          name="email"
+          name='email'
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="text-xs font-semibold text-hof">
+              <FormLabel
+                htmlFor='forgot-email'
+                className='text-sm font-semibold text-ink-900'
+              >
                 {t('emailLabel')}
               </FormLabel>
               <FormControl>
                 <Input
-                  type="email"
+                  id='forgot-email'
+                  type='email'
+                  autoComplete='email'
                   placeholder={t('emailPlaceholder')}
-                  className="rounded-xl"
+                  aria-required='true'
+                  aria-invalid={!!form.formState.errors.email}
+                  aria-describedby={
+                    form.formState.errors.email ? 'forgot-email-error' : undefined
+                  }
+                  className='h-12 rounded-xl border-border/60 bg-muted/30 px-4 text-base transition-all focus:bg-white focus:ring-2 focus:ring-primary/20'
                   {...field}
                 />
               </FormControl>
-              <FormMessage />
+              <FormMessage id='forgot-email-error' />
             </FormItem>
           )}
         />
+
         <Button
-          type="submit"
+          type='submit'
           disabled={isPending}
-          className="mt-2 h-10 w-full rounded-pill text-sm font-semibold shadow-brand"
+          aria-busy={isPending}
+          className='h-12 w-full rounded-xl text-sm font-semibold shadow-brand transition-all hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 disabled:opacity-70'
         >
-          {isPending && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+          {isPending && (
+            <Loader2 className='mr-2 h-4 w-4 animate-spin' aria-hidden='true' />
+          )}
           {t('forgotPasswordButton')}
         </Button>
       </form>
