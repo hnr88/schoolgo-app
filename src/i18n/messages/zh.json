@@ -1360,36 +1360,36 @@
       "signInSubtitle": "登录以寻找和比较最适合您孩子的学校",
       "signUpTitle": "开始寻找学校",
       "signUpSubtitle": "创建账户以收藏、比较和申请澳大利亚学校",
-      "stat1Value": "2,400+",
+      "stat1Value": "300+",
       "stat1Label": "学校",
       "stat2Value": "7",
       "stat2Label": "语言",
-      "stat3Value": "98%",
-      "stat3Label": "满意度"
+      "stat3Value": "CRICOS",
+      "stat3Label": "已认证"
     },
     "agent": {
       "signInTitle": "代理门户",
       "signInSubtitle": "登录以管理您的流程和学生安置",
       "signUpTitle": "发展您的代理机构",
       "signUpSubtitle": "加入 SchoolGo，访问经过验证的学校并简化安置流程",
-      "stat1Value": "850+",
-      "stat1Label": "中介",
-      "stat2Value": "15%",
-      "stat2Label": "佣金",
-      "stat3Value": "24h",
-      "stat3Label": "响应"
+      "stat1Value": "300+",
+      "stat1Label": "学校",
+      "stat2Value": "100%",
+      "stat2Label": "免费",
+      "stat3Value": "全球",
+      "stat3Label": "覆盖"
     },
     "school": {
       "signInTitle": "学校门户",
       "signInSubtitle": "登录以管理招生并与代理建立联系",
       "signUpTitle": "列出您的学校",
       "signUpSubtitle": "创建账户以接触国际学生和教育代理",
-      "stat1Value": "500+",
-      "stat1Label": "中介",
-      "stat2Value": "12k",
-      "stat2Label": "学生",
+      "stat1Value": "300+",
+      "stat1Label": "学校",
+      "stat2Value": "国际",
+      "stat2Label": "覆盖",
       "stat3Value": "Free",
-      "stat3Label": "免费列表"
+      "stat3Label": " listing"
     },
     "nav": {
       "parent": {

@@ -1,4 +1,5 @@
 import { cn } from '@/lib/utils';
+import type { Portal } from '@/lib/portal-url';
 import { MarketingMobileBackdrop } from '@/modules/marketing-layout/components/MarketingMobileBackdrop';
 import { MarketingMobileSheet } from '@/modules/marketing-layout/components/MarketingMobileSheet';
 import { MarketingMobileSheetHeader } from '@/modules/marketing-layout/components/MarketingMobileSheetHeader';
@@ -6,6 +7,10 @@ import { MarketingMobileNavLinks } from '@/modules/marketing-layout/components/M
 import { MarketingMobileSubMenus } from '@/modules/marketing-layout/components/MarketingMobileSubMenus';
 import { MarketingMobileFooter } from '@/modules/marketing-layout/components/MarketingMobileFooter';
 import type { MarketingMobileMenuProps } from '@/modules/marketing-layout/types/header.types';
+
+interface ExtendedMarketingMobileMenuProps extends MarketingMobileMenuProps {
+  activePortal?: Portal;
+}
 
 export function MarketingMobileMenu({
   mobileOpen,
@@ -19,7 +24,8 @@ export function MarketingMobileMenu({
   portalUrl,
   isSearchPage,
   labels,
-}: MarketingMobileMenuProps) {
+  activePortal,
+}: ExtendedMarketingMobileMenuProps) {
   return (
     <div
       className={cn(
@@ -52,6 +58,7 @@ export function MarketingMobileMenu({
           isSearchPage={isSearchPage}
           onLinkClick={() => setMobileOpen(false)}
           labels={{ signIn: labels.signIn, findSchools: labels.findSchools }}
+          activePortal={activePortal}
         />
       </MarketingMobileSheet>
     </div>

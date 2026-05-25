@@ -1,8 +1,15 @@
 import { Link } from '@/i18n/navigation';
 import { LanguageSelector } from '@/modules/layout/components/LanguageSelector';
+import type { Portal } from '@/lib/portal-url';
 import type { MarketingDesktopActionsProps } from '@/modules/marketing-layout/types/header.types';
 
-export function MarketingDesktopActions({ isSearchPage, labels }: MarketingDesktopActionsProps) {
+interface ExtendedMarketingDesktopActionsProps extends MarketingDesktopActionsProps {
+  activePortal?: Portal;
+}
+
+export function MarketingDesktopActions({ isSearchPage, labels, activePortal }: ExtendedMarketingDesktopActionsProps) {
+  const showFindSchools = activePortal === 'parent' && !isSearchPage;
+
   return (
     <div className='ml-auto hidden shrink-0 items-center gap-2 md:flex'>
       <Link
@@ -12,7 +19,7 @@ export function MarketingDesktopActions({ isSearchPage, labels }: MarketingDeskt
       >
         {labels.signIn}
       </Link>
-      {!isSearchPage && (
+      {showFindSchools && (
         <Link
           href='/search'
           data-slot='button'

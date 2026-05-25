@@ -1,8 +1,15 @@
 import { Link } from '@/i18n/navigation';
 import { LanguageSelector } from '@/modules/layout/components/LanguageSelector';
+import type { Portal } from '@/lib/portal-url';
 import type { MarketingMobileFooterProps } from '@/modules/marketing-layout/types/header.types';
 
-export function MarketingMobileFooter({ isSearchPage, onLinkClick, labels }: MarketingMobileFooterProps) {
+interface ExtendedMarketingMobileFooterProps extends MarketingMobileFooterProps {
+  activePortal?: Portal;
+}
+
+export function MarketingMobileFooter({ isSearchPage, onLinkClick, labels, activePortal }: ExtendedMarketingMobileFooterProps) {
+  const showFindSchools = activePortal === 'parent' && !isSearchPage;
+
   return (
     <div className='flex items-center gap-2 border-t border-divider px-4 py-3'>
       <Link
@@ -13,7 +20,7 @@ export function MarketingMobileFooter({ isSearchPage, onLinkClick, labels }: Mar
       >
         {labels.signIn}
       </Link>
-      {!isSearchPage && (
+      {showFindSchools && (
         <Link
           href='/search'
           onClick={onLinkClick}

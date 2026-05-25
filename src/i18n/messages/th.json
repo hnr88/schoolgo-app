@@ -1360,36 +1360,36 @@
       "signInSubtitle": "เข้าสู่ระบบเพื่อค้นหาและเปรียบเทียบโรงเรียนที่ดีที่สุดสำหรับบุตรหลานของคุณ",
       "signUpTitle": "เริ่มต้นค้นหาโรงเรียน",
       "signUpSubtitle": "สร้างบัญชีเพื่อบันทึกรายการโปรด เปรียบเทียบ และสมัครเข้าโรงเรียนในออสเตรเลีย",
-      "stat1Value": "2,400+",
+      "stat1Value": "300+",
       "stat1Label": "โรงเรียน",
       "stat2Value": "7",
       "stat2Label": "ภาษา",
-      "stat3Value": "98%",
-      "stat3Label": "ความพึงพอใจ"
+      "stat3Value": "CRICOS",
+      "stat3Label": "รับรองแล้ว"
     },
     "agent": {
       "signInTitle": "พอร์ทัลตัวแทน",
       "signInSubtitle": "เข้าสู่ระบบเพื่อจัดการกระบวนการและการจัดหานักเรียน",
       "signUpTitle": "ขยายบริษัทของคุณ",
       "signUpSubtitle": "เข้าร่วม SchoolGo เพื่อเข้าถึงโรงเรียนที่ได้รับการยืนยันและทำให้การจัดหาง่ายขึ้น",
-      "stat1Value": "850+",
-      "stat1Label": "ตัวแทน",
-      "stat2Value": "15%",
-      "stat2Label": "ค่าคอมมิชชัน",
-      "stat3Value": "24h",
-      "stat3Label": "การตอบสนอง"
+      "stat1Value": "300+",
+      "stat1Label": "โรงเรียน",
+      "stat2Value": "100%",
+      "stat2Label": "ฟรี",
+      "stat3Value": "ทั่วโลก",
+      "stat3Label": "การเข้าถึง"
     },
     "school": {
       "signInTitle": "พอร์ทัลโรงเรียน",
       "signInSubtitle": "เข้าสู่ระบบเพื่อจัดการการรับสมัครและเชื่อมต่อกับตัวแทน",
       "signUpTitle": "ลงทะเบียนโรงเรียนของคุณ",
       "signUpSubtitle": "สร้างบัญชีเพื่อเข้าถึงนักเรียนต่างชาติและตัวแทนการศึกษา",
-      "stat1Value": "500+",
-      "stat1Label": "ตัวแทน",
-      "stat2Value": "12k",
-      "stat2Label": "นักเรียน",
+      "stat1Value": "300+",
+      "stat1Label": "โรงเรียน",
+      "stat2Value": "นานาชาติ",
+      "stat2Label": "การเข้าถึง",
       "stat3Value": "Free",
-      "stat3Label": "การลงรายการ"
+      "stat3Label": "ลงรายการ"
     },
     "nav": {
       "parent": {

@@ -55,6 +55,7 @@ export function MarketingHeaderClient({
           <MarketingDesktopActions
             isSearchPage={isSearchPage}
             labels={{ signIn: labels.signIn, findSchools: labels.findSchools }}
+            activePortal={activePortal}
           />
           <button
             type='button'
@@ -79,6 +80,7 @@ export function MarketingHeaderClient({
         portalUrl={portalUrls[activePortal]}
         isSearchPage={isSearchPage}
         labels={labels}
+        activePortal={activePortal}
       />
     </>
   );

@@ -1360,36 +1360,36 @@
       "signInSubtitle": "Đăng nhập để tìm và so sánh các trường tốt nhất cho con bạn",
       "signUpTitle": "Bắt đầu tìm kiếm trường",
       "signUpSubtitle": "Tạo tài khoản để lưu danh sách yêu thích, so sánh và đăng ký vào trường tại Úc",
-      "stat1Value": "2,400+",
+      "stat1Value": "300+",
       "stat1Label": "Trường học",
       "stat2Value": "7",
       "stat2Label": "Ngôn ngữ",
-      "stat3Value": "98%",
-      "stat3Label": "Hài lòng"
+      "stat3Value": "CRICOS",
+      "stat3Label": "Đã xác minh"
     },
     "agent": {
       "signInTitle": "Cổng thông tin Đại lý",
       "signInSubtitle": "Đăng nhập để quản lý quy trình và đặt học sinh",
       "signUpTitle": "Phát triển công ty của bạn",
       "signUpSubtitle": "Tham gia SchoolGo để truy cập các trường đã xác minh và hợp lý hóa việc đặt học sinh",
-      "stat1Value": "850+",
-      "stat1Label": "Tư vấn",
-      "stat2Value": "15%",
-      "stat2Label": "Hoa hồng",
-      "stat3Value": "24h",
-      "stat3Label": "Phản hồi"
+      "stat1Value": "300+",
+      "stat1Label": "Trường học",
+      "stat2Value": "100%",
+      "stat2Label": "Miễn phí",
+      "stat3Value": "Toàn cầu",
+      "stat3Label": "Phạm vi"
     },
     "school": {
       "signInTitle": "Cổng thông tin Trường học",
       "signInSubtitle": "Đăng nhập để quản lý tuyển sinh và kết nối với đại lý",
       "signUpTitle": "Liệt kê trường của bạn",
       "signUpSubtitle": "Tạo tài khoản để tiếp cận học sinh quốc tế và đại lý giáo dục",
-      "stat1Value": "500+",
-      "stat1Label": "Tư vấn",
-      "stat2Value": "12k",
-      "stat2Label": "Học sinh",
+      "stat1Value": "300+",
+      "stat1Label": "Trường học",
+      "stat2Value": "Quốc tế",
+      "stat2Label": "Phạm vi",
       "stat3Value": "Free",
-      "stat3Label": "Đăng ký"
+      "stat3Label": "Liệt kê"
     },
     "nav": {
       "parent": {
