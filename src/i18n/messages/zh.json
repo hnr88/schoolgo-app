@@ -145,7 +145,7 @@
           "overview": "中介概览",
           "qeac": "QEAC 认证",
           "pipeline": "Pipeline tools [Soon]",
-          "login": "Agent login [Soon]"
+          "login": "Agent login"
         }
       },
       "schools": {
@@ -153,7 +153,7 @@
         "links": {
           "overview": "学校概览",
           "claim": "认领主页",
-          "login": "School login [Soon]",
+          "login": "School login",
           "pricing": "定价"
         }
       },
@@ -1305,6 +1305,23 @@
     "actionComingSoon": "即将推出"
   },
   "Auth": {
+    "forgotPasswordTitle": "Reset your password",
+    "forgotPasswordSubtitle": "Enter your email and we'll send you a reset link.",
+    "resetPasswordTitle": "Create new password",
+    "resetPasswordSubtitle": "Enter the code from your email and choose a new password.",
+    "forgotPasswordButton": "Send reset link",
+    "resetPasswordButton": "Reset password",
+    "forgotPasswordSuccess": "Check your email for the reset link.",
+    "forgotPasswordError": "Could not send reset link. Please try again.",
+    "resetPasswordSuccess": "Password reset successfully. Please sign in.",
+    "resetPasswordError": "Could not reset password. Please try again.",
+    "backToSignIn": "Back to sign in",
+    "forgotPasswordLink": "Forgot password?",
+    "codeLabel": "Reset code",
+    "codePlaceholder": "Enter reset code",
+    "newPasswordLabel": "New password",
+    "confirmPasswordLabel": "Confirm new password",
+    "confirmPasswordPlaceholder": "Re-enter new password",
     "signInTitle": "登录 SchoolGo",
     "signInSubtitle": "登录您的账户，管理学校、申请及更多内容。",
     "iAmA": "我是…",

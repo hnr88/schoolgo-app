@@ -145,7 +145,7 @@
           "overview": "Tổng quan tư vấn",
           "qeac": "Xác minh QEAC",
           "pipeline": "Pipeline tools [Soon]",
-          "login": "Agent login [Soon]"
+          "login": "Agent login"
         }
       },
       "schools": {
@@ -153,7 +153,7 @@
         "links": {
           "overview": "Tổng quan trường",
           "claim": "Xác nhận hồ sơ",
-          "login": "School login [Soon]",
+          "login": "School login",
           "pricing": "Bảng giá"
         }
       },
@@ -1305,6 +1305,23 @@
     "actionComingSoon": "Sắp ra mắt"
   },
   "Auth": {
+    "forgotPasswordTitle": "Reset your password",
+    "forgotPasswordSubtitle": "Enter your email and we'll send you a reset link.",
+    "resetPasswordTitle": "Create new password",
+    "resetPasswordSubtitle": "Enter the code from your email and choose a new password.",
+    "forgotPasswordButton": "Send reset link",
+    "resetPasswordButton": "Reset password",
+    "forgotPasswordSuccess": "Check your email for the reset link.",
+    "forgotPasswordError": "Could not send reset link. Please try again.",
+    "resetPasswordSuccess": "Password reset successfully. Please sign in.",
+    "resetPasswordError": "Could not reset password. Please try again.",
+    "backToSignIn": "Back to sign in",
+    "forgotPasswordLink": "Forgot password?",
+    "codeLabel": "Reset code",
+    "codePlaceholder": "Enter reset code",
+    "newPasswordLabel": "New password",
+    "confirmPasswordLabel": "Confirm new password",
+    "confirmPasswordPlaceholder": "Re-enter new password",
     "signInTitle": "Đăng nhập vào SchoolGo",
     "signInSubtitle": "Truy cập tài khoản để quản lý trường học, hồ sơ và nhiều hơn nữa.",
     "iAmA": "Tôi là…",

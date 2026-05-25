@@ -1,5 +1,6 @@
 import type { ReactNode } from 'react';
 import type { Portal } from '@/lib/portal-url';
+import type { UserRole } from '@/modules/auth/types/auth.types';
 import type { IconComponent } from '@/modules/design-system';
 
 export interface AuthCloseButtonProps {
@@ -34,6 +35,7 @@ export interface LoginFormProps {
 
 export interface ProtectedLayoutProps {
   children: ReactNode;
+  allowedRoles?: UserRole[];
 }
 
 export interface RegisterFormProps {
@@ -54,6 +56,24 @@ export interface SignUpCardProps {
 
 export interface SignUpPageContentProps {
   portal: Portal;
+}
+
+export interface ForgotPasswordCardProps {
+  portal: Portal;
+}
+
+export interface ForgotPasswordPageContentProps {
+  portal: Portal;
+}
+
+export interface ResetPasswordCardProps {
+  portal: Portal;
+  code: string;
+}
+
+export interface ResetPasswordPageContentProps {
+  portal: Portal;
+  code: string;
 }
 
 export interface UserTypeSelectorProps {

@@ -4,9 +4,11 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Loader2 } from 'lucide-react';
 import { useTranslations } from 'next-intl';
-import { Link } from '@/i18n/navigation';
-import { loginSchema, type LoginValues } from '@/modules/auth/schemas/login.schema';
-import { useLogin } from '@/modules/auth/hooks/useLogin';
+import {
+  resetPasswordSchema,
+  type ResetPasswordValues,
+} from '@/modules/auth/schemas/reset-password.schema';
+import { useResetPassword } from '@/modules/auth/hooks/useResetPassword';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import {
@@ -17,38 +19,42 @@ import {
   FormLabel,
   FormMessage,
 } from '@/components/ui/form';
-import type { LoginFormProps } from '@/modules/auth/types/component.types';
-import { PORTAL_LINK_COLOR } from '../constants/portal.constants';
 
-export function LoginForm({ userType }: LoginFormProps) {
+interface ResetPasswordFormProps {
+  code: string;
+}
+
+export function ResetPasswordForm({ code }: ResetPasswordFormProps) {
   const t = useTranslations('Auth');
 
-  const form = useForm<LoginValues>({
-    resolver: zodResolver(loginSchema),
+  const form = useForm<ResetPasswordValues>({
+    resolver: zodResolver(resetPasswordSchema),
     defaultValues: {
-      identifier: '',
+      code,
       password: '',
+      passwordConfirmation: '',
     },
   });
 
-  const { handleLogin } = useLogin({ portal: userType, setError: form.setError });
-  const { isSubmitting } = form.formState;
+  const { handleResetPassword, isPending } = useResetPassword();
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(handleLogin)} className="flex flex-col gap-6">
+      <form
+        onSubmit={form.handleSubmit(handleResetPassword)}
+        className="flex flex-col gap-6"
+      >
         <FormField
           control={form.control}
-          name="identifier"
+          name="code"
           render={({ field }) => (
             <FormItem>
               <FormLabel className="text-xs font-semibold text-hof">
-                {t('emailLabel')}
+                {t('codeLabel')}
               </FormLabel>
               <FormControl>
                 <Input
-                  type="email"
-                  placeholder={t('emailPlaceholder')}
+                  placeholder={t('codePlaceholder')}
                   className="rounded-xl"
                   {...field}
                 />
@@ -63,12 +69,12 @@ export function LoginForm({ userType }: LoginFormProps) {
           render={({ field }) => (
             <FormItem>
               <FormLabel className="text-xs font-semibold text-hof">
-                {t('passwordLabel')}
+                {t('newPasswordLabel')}
               </FormLabel>
               <FormControl>
                 <Input
                   type="password"
-                  placeholder={t('passwordPlaceholder')}
+                  placeholder={t('createPasswordPlaceholder')}
                   className="rounded-xl"
                   {...field}
                 />
@@ -77,24 +83,36 @@ export function LoginForm({ userType }: LoginFormProps) {
             </FormItem>
           )}
         />
-        <div className="flex justify-end">
-          <Link
-            href="/forgot-password"
-            className={`text-sm font-medium underline-offset-4 hover:underline ${PORTAL_LINK_COLOR[userType]}`}
-          >
-            {t('forgotPasswordLink')}
-          </Link>
-        </div>
+        <FormField
+          control={form.control}
+          name="passwordConfirmation"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel className="text-xs font-semibold text-hof">
+                {t('confirmPasswordLabel')}
+              </FormLabel>
+              <FormControl>
+                <Input
+                  type="password"
+                  placeholder={t('confirmPasswordPlaceholder')}
+                  className="rounded-xl"
+                  {...field}
+                />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
         {form.formState.errors.root && (
           <FormMessage>{form.formState.errors.root.message}</FormMessage>
         )}
         <Button
           type="submit"
-          disabled={isSubmitting}
+          disabled={isPending}
           className="mt-2 h-10 w-full rounded-pill text-sm font-semibold shadow-brand"
         >
-          {isSubmitting && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-          {t('signInButton')}
+          {isPending && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+          {t('resetPasswordButton')}
         </Button>
       </form>
     </Form>

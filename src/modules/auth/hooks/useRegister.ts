@@ -1,14 +1,14 @@
 'use client';
 
 import { toast } from 'sonner';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import type { UseFormSetError } from 'react-hook-form';
-import { useRouter } from '@/i18n/navigation';
 import { useAuthStore } from '@/modules/auth/stores/use-auth-store';
 import { registerRequest } from '@/modules/auth/lib/auth-api';
 import { getPortalDashboardPath } from '@/modules/auth/lib/get-portal-dashboard-path';
+import { getPortalFromRole } from '@/modules/auth/lib/get-portal-from-role';
+import { portalUrl, type Portal } from '@/lib/portal-url';
 import type { RegisterValues } from '@/modules/auth/schemas/register.schema';
-import type { Portal } from '@/lib/portal-url';
 
 interface UseRegisterOptions {
   portal: Portal;
@@ -17,7 +17,7 @@ interface UseRegisterOptions {
 
 export function useRegister({ portal, setError }: UseRegisterOptions) {
   const t = useTranslations('Auth');
-  const router = useRouter();
+  const locale = useLocale();
   const setUserType = useAuthStore((s) => s.setUserType);
   const login = useAuthStore((s) => s.login);
 
@@ -25,10 +25,17 @@ export function useRegister({ portal, setError }: UseRegisterOptions) {
     try {
       await registerRequest({ ...data, userType: portal });
       await login({ identifier: data.email, password: data.password });
-      setUserType(portal);
+
+      const actualUser = useAuthStore.getState().user;
+      const actualRole = actualUser?.role;
+      const actualPortal = actualRole ? getPortalFromRole(actualRole) : portal;
+
+      setUserType(actualPortal);
       toast.success(t('registerSuccess'));
-      const dashboardPath = getPortalDashboardPath(portal);
-      if (dashboardPath) router.push(dashboardPath);
+      const dashboardPath = getPortalDashboardPath(actualPortal);
+      if (dashboardPath) {
+        window.location.href = `${portalUrl(actualPortal, locale)}${dashboardPath}`;
+      }
     } catch (err) {
       const message = t('registerError');
       if (setError) {

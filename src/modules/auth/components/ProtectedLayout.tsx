@@ -4,8 +4,8 @@ import { useRequireAuth } from '@/modules/auth/hooks/useRequireAuth';
 import { Skeleton } from '@/components/ui/skeleton';
 import type { ProtectedLayoutProps } from '@/modules/auth/types/component.types';
 
-export function ProtectedLayout({ children }: ProtectedLayoutProps) {
-  const { isAuthenticated, isInitialized } = useRequireAuth();
+export function ProtectedLayout({ children, allowedRoles }: ProtectedLayoutProps) {
+  const { isAuthenticated, isInitialized } = useRequireAuth({ allowedRoles });
 
   if (!isInitialized) {
     return (

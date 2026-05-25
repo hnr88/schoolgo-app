@@ -25,7 +25,8 @@ const PARENT_SECONDARY_COLUMN: FooterColumn = {
     { label: 'How it works', path: '/#how-it-works' },
     { label: 'Trusted agents', path: '/#trusted-agents' },
     { label: 'FAQ', path: '/#faq' },
-    { label: 'Parent sign in', path: '/search' },
+    { label: 'Parent sign in', path: '/sign-in' },
+    { label: 'Create parent account', path: '/sign-up' },
   ],
 };
 
@@ -57,8 +58,8 @@ const AGENT_SECONDARY_COLUMN: FooterColumn = {
   links: [
     { label: 'How it works', path: '/#how-it-works' },
     { label: 'Agent profile', path: '/#trust' },
-    { columnKey: 'agents', linkKey: 'login', path: '/search' },
-    { label: 'Create agent account', path: '/search' },
+    { columnKey: 'agents', linkKey: 'login', path: '/sign-in' },
+    { label: 'Create agent account', path: '/sign-up' },
   ],
 };
 
@@ -77,8 +78,8 @@ const SCHOOL_SECONDARY_COLUMN: FooterColumn = {
   links: [
     { label: 'How it works', path: '/#how-it-works' },
     { label: 'FAQ', path: '/#faq' },
-    { columnKey: 'schools', linkKey: 'login', path: '/search' },
-    { label: 'Create school account', path: '/search' },
+    { columnKey: 'schools', linkKey: 'login', path: '/sign-in' },
+    { label: 'Create school account', path: '/sign-up' },
   ],
 };
 
