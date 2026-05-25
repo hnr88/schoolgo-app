@@ -1356,10 +1356,10 @@
       "backTo": "[TODO: ms] Back to"
     },
     "parent": {
-      "signInTitle": "[TODO: ms] Welcome back, Parent",
-      "signInSubtitle": "[TODO: ms] Sign in to find and compare the best schools for your child.",
-      "signUpTitle": "[TODO: ms] Start your school search",
-      "signUpSubtitle": "[TODO: ms] Create an account to shortlist, compare and apply to Australian schools.",
+      "signInTitle": "Selamat kembali, Ibu Bapa",
+      "signInSubtitle": "Log masuk untuk mencari dan membandingkan sekolah terbaik untuk anak anda",
+      "signUpTitle": "Mulakan carian sekolah",
+      "signUpSubtitle": "Cipta akaun untuk menyimpan senarai kegemaran, membandingkan dan memohon ke sekolah di Australia",
       "stat1Value": "2,400+",
       "stat1Label": "Sekolah",
       "stat2Value": "7",
@@ -1368,10 +1368,10 @@
       "stat3Label": "Kepuasan"
     },
     "agent": {
-      "signInTitle": "[TODO: ms] Agent Portal",
-      "signInSubtitle": "[TODO: ms] Sign in to manage your pipeline and student placements.",
-      "signUpTitle": "[TODO: ms] Grow your agency",
-      "signUpSubtitle": "[TODO: ms] Join SchoolGo to access verified schools and streamline placements.",
+      "signInTitle": "Portal Ejen",
+      "signInSubtitle": "Log masuk untuk menguruskan pipeline dan penempatan pelajar",
+      "signUpTitle": "Kembangkan agensi anda",
+      "signUpSubtitle": "Sertai SchoolGo untuk mengakses sekolah yang disahkan dan memudahkan penempatan",
       "stat1Value": "850+",
       "stat1Label": "Ejen",
       "stat2Value": "15%",
@@ -1380,10 +1380,10 @@
       "stat3Label": "Respons"
     },
     "school": {
-      "signInTitle": "[TODO: ms] School Portal",
-      "signInSubtitle": "[TODO: ms] Sign in to manage enrolments and connect with agents.",
-      "signUpTitle": "[TODO: ms] List your school",
-      "signUpSubtitle": "[TODO: ms] Create an account to reach international students and education agents.",
+      "signInTitle": "Portal Sekolah",
+      "signInSubtitle": "Log masuk untuk menguruskan pendaftaran dan berhubung dengan ejen",
+      "signUpTitle": "Senaraikan sekolah anda",
+      "signUpSubtitle": "Cipta akaun untuk mencapai pelajar antarabangsa dan ejen pendidikan",
       "stat1Value": "500+",
       "stat1Label": "Ejen",
       "stat2Value": "12k",

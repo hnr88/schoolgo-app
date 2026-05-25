@@ -1356,10 +1356,10 @@
       "backTo": "[TODO: zh] Back to"
     },
     "parent": {
-      "signInTitle": "[TODO: zh] Welcome back, Parent",
-      "signInSubtitle": "[TODO: zh] Sign in to find and compare the best schools for your child.",
-      "signUpTitle": "[TODO: zh] Start your school search",
-      "signUpSubtitle": "[TODO: zh] Create an account to shortlist, compare and apply to Australian schools.",
+      "signInTitle": "欢迎回来，家长",
+      "signInSubtitle": "登录以寻找和比较最适合您孩子的学校",
+      "signUpTitle": "开始寻找学校",
+      "signUpSubtitle": "创建账户以收藏、比较和申请澳大利亚学校",
       "stat1Value": "2,400+",
       "stat1Label": "学校",
       "stat2Value": "7",
@@ -1368,10 +1368,10 @@
       "stat3Label": "满意度"
     },
     "agent": {
-      "signInTitle": "[TODO: zh] Agent Portal",
-      "signInSubtitle": "[TODO: zh] Sign in to manage your pipeline and student placements.",
-      "signUpTitle": "[TODO: zh] Grow your agency",
-      "signUpSubtitle": "[TODO: zh] Join SchoolGo to access verified schools and streamline placements.",
+      "signInTitle": "代理门户",
+      "signInSubtitle": "登录以管理您的流程和学生安置",
+      "signUpTitle": "发展您的代理机构",
+      "signUpSubtitle": "加入 SchoolGo，访问经过验证的学校并简化安置流程",
       "stat1Value": "850+",
       "stat1Label": "中介",
       "stat2Value": "15%",
@@ -1380,10 +1380,10 @@
       "stat3Label": "响应"
     },
     "school": {
-      "signInTitle": "[TODO: zh] School Portal",
-      "signInSubtitle": "[TODO: zh] Sign in to manage enrolments and connect with agents.",
-      "signUpTitle": "[TODO: zh] List your school",
-      "signUpSubtitle": "[TODO: zh] Create an account to reach international students and education agents.",
+      "signInTitle": "学校门户",
+      "signInSubtitle": "登录以管理招生并与代理建立联系",
+      "signUpTitle": "列出您的学校",
+      "signUpSubtitle": "创建账户以接触国际学生和教育代理",
       "stat1Value": "500+",
       "stat1Label": "中介",
       "stat2Value": "12k",

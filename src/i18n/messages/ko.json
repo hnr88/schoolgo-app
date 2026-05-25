@@ -1356,10 +1356,10 @@
       "backTo": "[TODO: ko] Back to"
     },
     "parent": {
-      "signInTitle": "[TODO: ko] Welcome back, Parent",
-      "signInSubtitle": "[TODO: ko] Sign in to find and compare the best schools for your child.",
-      "signUpTitle": "[TODO: ko] Start your school search",
-      "signUpSubtitle": "[TODO: ko] Create an account to shortlist, compare and apply to Australian schools.",
+      "signInTitle": "다시 오신 것을 환영합니다, 학부모님",
+      "signInSubtitle": "자녀를 위한 최고의 학교를 찾고 비교하려면 로그인하세요",
+      "signUpTitle": "학교 검색 시작하기",
+      "signUpSubtitle": "호주 학교에 단골 목록 저장, 비교 및 신청하려면 계정을 만드세요",
       "stat1Value": "2,400+",
       "stat1Label": "학교",
       "stat2Value": "7",
@@ -1368,10 +1368,10 @@
       "stat3Label": "만족도"
     },
     "agent": {
-      "signInTitle": "[TODO: ko] Agent Portal",
-      "signInSubtitle": "[TODO: ko] Sign in to manage your pipeline and student placements.",
-      "signUpTitle": "[TODO: ko] Grow your agency",
-      "signUpSubtitle": "[TODO: ko] Join SchoolGo to access verified schools and streamline placements.",
+      "signInTitle": "에이전트 포털",
+      "signInSubtitle": "파이프라인 관리 및 학생 배치를 위해 로그인하세요",
+      "signUpTitle": "에이전시 성장시키기",
+      "signUpSubtitle": "SchoolGo에 가입하여 검증된 학교에 접근하고 배치를 간소화하세요",
       "stat1Value": "850+",
       "stat1Label": "유학원",
       "stat2Value": "15%",
@@ -1380,10 +1380,10 @@
       "stat3Label": "응답"
     },
     "school": {
-      "signInTitle": "[TODO: ko] School Portal",
-      "signInSubtitle": "[TODO: ko] Sign in to manage enrolments and connect with agents.",
-      "signUpTitle": "[TODO: ko] List your school",
-      "signUpSubtitle": "[TODO: ko] Create an account to reach international students and education agents.",
+      "signInTitle": "학교 포털",
+      "signInSubtitle": "입학 관리 및 에이전트 연결을 위해 로그인하세요",
+      "signUpTitle": "학교 등록하기",
+      "signUpSubtitle": "국제 학생 및 교육 에이전트에게 다가가려면 계정을 만드세요",
       "stat1Value": "500+",
       "stat1Label": "유학원",
       "stat2Value": "12k",

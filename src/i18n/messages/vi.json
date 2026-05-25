@@ -1356,10 +1356,10 @@
       "backTo": "[TODO: vi] Back to"
     },
     "parent": {
-      "signInTitle": "[TODO: vi] Welcome back, Parent",
-      "signInSubtitle": "[TODO: vi] Sign in to find and compare the best schools for your child.",
-      "signUpTitle": "[TODO: vi] Start your school search",
-      "signUpSubtitle": "[TODO: vi] Create an account to shortlist, compare and apply to Australian schools.",
+      "signInTitle": "Chào mừng quay lại, Phụ huynh",
+      "signInSubtitle": "Đăng nhập để tìm và so sánh các trường tốt nhất cho con bạn",
+      "signUpTitle": "Bắt đầu tìm kiếm trường",
+      "signUpSubtitle": "Tạo tài khoản để lưu danh sách yêu thích, so sánh và đăng ký vào trường tại Úc",
       "stat1Value": "2,400+",
       "stat1Label": "Trường học",
       "stat2Value": "7",
@@ -1368,10 +1368,10 @@
       "stat3Label": "Hài lòng"
     },
     "agent": {
-      "signInTitle": "[TODO: vi] Agent Portal",
-      "signInSubtitle": "[TODO: vi] Sign in to manage your pipeline and student placements.",
-      "signUpTitle": "[TODO: vi] Grow your agency",
-      "signUpSubtitle": "[TODO: vi] Join SchoolGo to access verified schools and streamline placements.",
+      "signInTitle": "Cổng thông tin Đại lý",
+      "signInSubtitle": "Đăng nhập để quản lý quy trình và đặt học sinh",
+      "signUpTitle": "Phát triển công ty của bạn",
+      "signUpSubtitle": "Tham gia SchoolGo để truy cập các trường đã xác minh và hợp lý hóa việc đặt học sinh",
       "stat1Value": "850+",
       "stat1Label": "Tư vấn",
       "stat2Value": "15%",
@@ -1380,10 +1380,10 @@
       "stat3Label": "Phản hồi"
     },
     "school": {
-      "signInTitle": "[TODO: vi] School Portal",
-      "signInSubtitle": "[TODO: vi] Sign in to manage enrolments and connect with agents.",
-      "signUpTitle": "[TODO: vi] List your school",
-      "signUpSubtitle": "[TODO: vi] Create an account to reach international students and education agents.",
+      "signInTitle": "Cổng thông tin Trường học",
+      "signInSubtitle": "Đăng nhập để quản lý tuyển sinh và kết nối với đại lý",
+      "signUpTitle": "Liệt kê trường của bạn",
+      "signUpSubtitle": "Tạo tài khoản để tiếp cận học sinh quốc tế và đại lý giáo dục",
       "stat1Value": "500+",
       "stat1Label": "Tư vấn",
       "stat2Value": "12k",

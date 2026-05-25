@@ -1356,10 +1356,10 @@
       "backTo": "[TODO: th] Back to"
     },
     "parent": {
-      "signInTitle": "[TODO: th] Welcome back, Parent",
-      "signInSubtitle": "[TODO: th] Sign in to find and compare the best schools for your child.",
-      "signUpTitle": "[TODO: th] Start your school search",
-      "signUpSubtitle": "[TODO: th] Create an account to shortlist, compare and apply to Australian schools.",
+      "signInTitle": "ยินดีต้อนรับกลับ ผู้ปกครอง",
+      "signInSubtitle": "เข้าสู่ระบบเพื่อค้นหาและเปรียบเทียบโรงเรียนที่ดีที่สุดสำหรับบุตรหลานของคุณ",
+      "signUpTitle": "เริ่มต้นค้นหาโรงเรียน",
+      "signUpSubtitle": "สร้างบัญชีเพื่อบันทึกรายการโปรด เปรียบเทียบ และสมัครเข้าโรงเรียนในออสเตรเลีย",
       "stat1Value": "2,400+",
       "stat1Label": "โรงเรียน",
       "stat2Value": "7",
@@ -1368,10 +1368,10 @@
       "stat3Label": "ความพึงพอใจ"
     },
     "agent": {
-      "signInTitle": "[TODO: th] Agent Portal",
-      "signInSubtitle": "[TODO: th] Sign in to manage your pipeline and student placements.",
-      "signUpTitle": "[TODO: th] Grow your agency",
-      "signUpSubtitle": "[TODO: th] Join SchoolGo to access verified schools and streamline placements.",
+      "signInTitle": "พอร์ทัลตัวแทน",
+      "signInSubtitle": "เข้าสู่ระบบเพื่อจัดการกระบวนการและการจัดหานักเรียน",
+      "signUpTitle": "ขยายบริษัทของคุณ",
+      "signUpSubtitle": "เข้าร่วม SchoolGo เพื่อเข้าถึงโรงเรียนที่ได้รับการยืนยันและทำให้การจัดหาง่ายขึ้น",
       "stat1Value": "850+",
       "stat1Label": "ตัวแทน",
       "stat2Value": "15%",
@@ -1380,10 +1380,10 @@
       "stat3Label": "การตอบสนอง"
     },
     "school": {
-      "signInTitle": "[TODO: th] School Portal",
-      "signInSubtitle": "[TODO: th] Sign in to manage enrolments and connect with agents.",
-      "signUpTitle": "[TODO: th] List your school",
-      "signUpSubtitle": "[TODO: th] Create an account to reach international students and education agents.",
+      "signInTitle": "พอร์ทัลโรงเรียน",
+      "signInSubtitle": "เข้าสู่ระบบเพื่อจัดการการรับสมัครและเชื่อมต่อกับตัวแทน",
+      "signUpTitle": "ลงทะเบียนโรงเรียนของคุณ",
+      "signUpSubtitle": "สร้างบัญชีเพื่อเข้าถึงนักเรียนต่างชาติและตัวแทนการศึกษา",
       "stat1Value": "500+",
       "stat1Label": "ตัวแทน",
       "stat2Value": "12k",
