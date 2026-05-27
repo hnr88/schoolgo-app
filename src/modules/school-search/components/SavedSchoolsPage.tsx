@@ -74,7 +74,7 @@ export function SavedSchoolsPage() {
         <div className={GRID_CLASS}>
           {schools.map((school) => (
             <SavedSchoolItem
-              key={school.documentId}
+              key={school.id}
               school={school}
               removeLabel={t('remove')}
               isRemoving={deleteBookmark.isPending}
