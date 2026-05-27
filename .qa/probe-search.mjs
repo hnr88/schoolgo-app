@@ -1,0 +1,18 @@
+import { chromium } from '@playwright/test';
+const b = await chromium.launch();
+const ctx = await b.newContext({ storageState: 'tests/e2e/.auth/parent.json', viewport: {width:1440,height:900} });
+const page = await ctx.newPage();
+const errs = [];
+page.on('console', m => { if (m.type()==='error') errs.push(m.text().slice(0,160)); });
+page.on('pageerror', e => errs.push('PAGEERROR '+e.message.slice(0,160)));
+await page.goto('http://localhost:3000/en/parent/search?preview=spec', { waitUntil:'networkidle', timeout:45000 });
+await page.waitForTimeout(2500);
+const sidebar = await page.locator('[data-testid="spec-filter-sidebar"]').count();
+const sidebarVisible = sidebar ? await page.locator('[data-testid="spec-filter-sidebar"]').first().isVisible() : false;
+const btns = await page.getByRole('button').allInnerTexts();
+const saveBtn = await page.getByRole('button', { name: /save search/i }).count();
+console.log('sidebar count:', sidebar, 'visible:', sidebarVisible);
+console.log('saveSearch button (regex) count:', saveBtn);
+console.log('button texts:', JSON.stringify(btns.filter(Boolean).slice(0,30)));
+console.log('console errors:', JSON.stringify(errs.slice(0,10)));
+await b.close();

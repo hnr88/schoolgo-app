@@ -1,0 +1,50 @@
+{
+  "detectedAt": "2026-05-27",
+  "frontend": {
+    "name": "schoolgo-app",
+    "path": "/Users/hunor.nagy/Code/schoolgo-app",
+    "framework": "Next.js",
+    "version": "16.2.3",
+    "react": "19.2.4",
+    "router": "app",
+    "packageManager": "pnpm",
+    "startCmd": "pnpm dev",
+    "port": 3000,
+    "apiBaseUrl": "http://localhost:1337",
+    "envFile": ".env.local",
+    "qaBranch": "qa/autonomous-2026-05-27"
+  },
+  "backend": {
+    "name": "schoolgo-api",
+    "path": "/Users/hunor.nagy/Code/schoolgo-api",
+    "framework": "Strapi",
+    "version": "5.43.0",
+    "apiStyle": "documentService",
+    "packageManager": "pnpm",
+    "startCmd": "set -a; . ./.env.e2e; set +a; pnpm develop",
+    "port": 1337,
+    "adminUrl": "http://localhost:1337/admin",
+    "restBase": "http://localhost:1337/api",
+    "envFileLocal": ".env.e2e",
+    "doNotUseEnv": ".env (points at staging DB 192.168.0.234)",
+    "qaBranch": "qa/autonomous-2026-05-27"
+  },
+  "database": {
+    "client": "postgres",
+    "container": "schoolgo-pg",
+    "host": "127.0.0.1",
+    "port": 5433,
+    "name": "schoolgo",
+    "user": "schoolgo",
+    "password": "schoolgo",
+    "inspectCmd": "PGPASSWORD=schoolgo psql -h 127.0.0.1 -p 5433 -U schoolgo -d schoolgo",
+    "tableCountAtStart": 111
+  },
+  "search": {
+    "engine": "meilisearch",
+    "container": "schoolgo-meili",
+    "host": "http://127.0.0.1:7700"
+  },
+  "scope": "both",
+  "authPlan": "run seed-e2e + create dedicated test users via real flows"
+}

@@ -1,0 +1,10 @@
+
+Running 5 tests using 1 worker
+
+  ✓  1 [setup] › tests/e2e/parent/auth.setup.ts:7:6 › authenticate parent (1.8s)
+  ✓  2 [chromium] › tests/e2e/parent/a11y.spec.ts:30:9 › a11y payments @ desktop (2.5s)
+  ✓  3 [chromium] › tests/e2e/parent/a11y.spec.ts:30:9 › a11y search-spec @ desktop (6.2s)
+  ✓  4 [chromium] › tests/e2e/parent/a11y.spec.ts:30:9 › a11y payments @ mobile (2.4s)
+  ✓  5 [chromium] › tests/e2e/parent/a11y.spec.ts:30:9 › a11y search-spec @ mobile (5.6s)
+
+  5 passed (19.6s)

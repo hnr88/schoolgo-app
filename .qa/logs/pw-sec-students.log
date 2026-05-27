@@ -1,0 +1,14 @@
+
+Running 10 tests using 1 worker
+
+[1A[2K[1/10] [setup] › tests/e2e/parent/auth.setup.ts:7:6 › authenticate parent
+[1A[2K[2/10] [chromium] › tests/e2e/parent/03-students.spec.ts:4:5 › students list shows the parent’s seeded students
+[1A[2K[3/10] [chromium] › tests/e2e/parent/03-students.spec.ts:16:5 › student profile opens from the list
+[1A[2K[4/10] [chromium] › tests/e2e/parent/students-list-detail.spec.ts:34:5 › students list: renders 6 student rows without crash
+[1A[2K[5/10] [chromium] › tests/e2e/parent/students-list-detail.spec.ts:56:5 › students list: search box filters rows to matching students
+[1A[2K[6/10] [chromium] › tests/e2e/parent/students-list-detail.spec.ts:111:5 › students list: sort by Name column changes order without crash
+[1A[2K[7/10] [chromium] › tests/e2e/parent/students-list-detail.spec.ts:147:5 › students list: archive toggle switch is present and NOT toggled by default
+[1A[2K[8/10] [chromium] › tests/e2e/parent/students-list-detail.spec.ts:174:5 › student detail: navigating from list opens detail page with personal, education, and guardian sections
+[1A[2K[9/10] [chromium] › tests/e2e/parent/students-list-detail.spec.ts:232:5 › student detail: avatar-or-initials renders in profile header
+[1A[2K[10/10] [chromium] › tests/e2e/parent/students-list-detail.spec.ts:261:5 › student detail: voice intro audio element renders for a student with a voice intro
+[1A[2K  10 passed (12.6s)

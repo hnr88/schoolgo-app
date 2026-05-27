@@ -1,0 +1,13 @@
+
+Running 8 tests using 1 worker
+
+  ✓  1 [setup] › tests/e2e/parent/auth.setup.ts:7:6 › authenticate parent (1.5s)
+  ✓  2 [chromium] › tests/e2e/parent/students-list-detail.spec.ts:34:5 › students list: renders 6 student rows without crash (1.0s)
+  ✓  3 [chromium] › tests/e2e/parent/students-list-detail.spec.ts:56:5 › students list: search box filters rows to matching students (1.0s)
+  ✓  4 [chromium] › tests/e2e/parent/students-list-detail.spec.ts:111:5 › students list: sort by Name column changes order without crash (1.3s)
+  ✓  5 [chromium] › tests/e2e/parent/students-list-detail.spec.ts:147:5 › students list: archive toggle switch is present and NOT toggled by default (964ms)
+  ✓  6 [chromium] › tests/e2e/parent/students-list-detail.spec.ts:174:5 › student detail: navigating from list opens detail page with personal, education, and guardian sections (1.2s)
+  ✓  7 [chromium] › tests/e2e/parent/students-list-detail.spec.ts:232:5 › student detail: avatar-or-initials renders in profile header (1.2s)
+  ✓  8 [chromium] › tests/e2e/parent/students-list-detail.spec.ts:261:5 › student detail: voice intro audio element renders for a student with a voice intro (1.1s)
+
+  8 passed (10.1s)

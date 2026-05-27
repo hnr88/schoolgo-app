@@ -1,0 +1,28 @@
+
+Running 23 tests using 1 worker
+
+  ✓   1 [setup] › tests/e2e/parent/auth.setup.ts:7:6 › authenticate parent (1.4s)
+  ✓   2 [chromium] › tests/e2e/parent/a11y.spec.ts:30:9 › a11y dashboard @ desktop (2.6s)
+  ✓   3 [chromium] › tests/e2e/parent/a11y.spec.ts:30:9 › a11y students @ desktop (2.6s)
+  ✓   4 [chromium] › tests/e2e/parent/a11y.spec.ts:30:9 › a11y students-new @ desktop (2.5s)
+  ✓   5 [chromium] › tests/e2e/parent/a11y.spec.ts:30:9 › a11y applications @ desktop (2.4s)
+  ✓   6 [chromium] › tests/e2e/parent/a11y.spec.ts:30:9 › a11y results @ desktop (2.4s)
+  ✓   7 [chromium] › tests/e2e/parent/a11y.spec.ts:30:9 › a11y settings @ desktop (2.4s)
+  ✓   8 [chromium] › tests/e2e/parent/a11y.spec.ts:30:9 › a11y notifications @ desktop (2.5s)
+  ✓   9 [chromium] › tests/e2e/parent/a11y.spec.ts:30:9 › a11y saved-schools @ desktop (2.4s)
+  ✓  10 [chromium] › tests/e2e/parent/a11y.spec.ts:30:9 › a11y saved-searches @ desktop (2.4s)
+  ✓  11 [chromium] › tests/e2e/parent/a11y.spec.ts:30:9 › a11y payments @ desktop (2.4s)
+  ✓  12 [chromium] › tests/e2e/parent/a11y.spec.ts:30:9 › a11y search-spec @ desktop (6.0s)
+  ✓  13 [chromium] › tests/e2e/parent/a11y.spec.ts:30:9 › a11y dashboard @ mobile (2.5s)
+  ✓  14 [chromium] › tests/e2e/parent/a11y.spec.ts:30:9 › a11y students @ mobile (2.5s)
+  ✓  15 [chromium] › tests/e2e/parent/a11y.spec.ts:30:9 › a11y students-new @ mobile (2.4s)
+  ✓  16 [chromium] › tests/e2e/parent/a11y.spec.ts:30:9 › a11y applications @ mobile (2.5s)
+  ✓  17 [chromium] › tests/e2e/parent/a11y.spec.ts:30:9 › a11y results @ mobile (2.5s)
+  ✓  18 [chromium] › tests/e2e/parent/a11y.spec.ts:30:9 › a11y settings @ mobile (2.4s)
+  ✓  19 [chromium] › tests/e2e/parent/a11y.spec.ts:30:9 › a11y notifications @ mobile (2.4s)
+  ✓  20 [chromium] › tests/e2e/parent/a11y.spec.ts:30:9 › a11y saved-schools @ mobile (2.4s)
+  ✓  21 [chromium] › tests/e2e/parent/a11y.spec.ts:30:9 › a11y saved-searches @ mobile (2.4s)
+  ✓  22 [chromium] › tests/e2e/parent/a11y.spec.ts:30:9 › a11y payments @ mobile (2.4s)
+  ✓  23 [chromium] › tests/e2e/parent/a11y.spec.ts:30:9 › a11y search-spec @ mobile (5.8s)
+
+  23 passed (1.0m)

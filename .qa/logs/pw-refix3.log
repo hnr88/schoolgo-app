@@ -1,0 +1,48 @@
+
+Running 5 tests using 1 worker
+
+  ✓  1 [setup] › tests/e2e/parent/auth.setup.ts:7:6 › authenticate parent (1.6s)
+[saved-schools] Bookmarking school: "A B Paterson College"
+[saved-schools] POST /api/bookmarks → 200
+[saved-schools] DELETE /api/bookmarks/:id → 204
+[saved-schools] List is empty — cleanup complete.
+  ✓  2 [chromium] › tests/e2e/parent/saved-schools-searches.spec.ts:77:7 › saved schools (B14/D11) › bookmark a school, verify it lists, then delete it (2.4s)
+[saved-searches] POST /api/saved-searches → 200
+[saved-searches] VIC filter pressed after run: "true"
+[saved-searches] DELETE /api/saved-searches/:id → 204
+[saved-searches] List is empty — cleanup complete.
+  ✓  3 [chromium] › tests/e2e/parent/saved-schools-searches.spec.ts:176:7 › saved searches (B13/D12) › save a search, verify it lists, run it, then delete it (4.2s)
+[CREATE] Captured documentId: d41w2dgl22kkr2cvm76m2l4r
+  ✘  4 [chromium] › tests/e2e/parent/student-create-edit.spec.ts:99:5 › CREATE wizard: submits new student and lands on detail page (1.8s)
+[EDIT] createdDocumentId at start: ""
+  -  5 [chromium] › tests/e2e/parent/student-create-edit.spec.ts:166:5 › EDIT wizard: updates last name and persists after reload
+
+
+  1) [chromium] › tests/e2e/parent/student-create-edit.spec.ts:99:5 › CREATE wizard: submits new student and lands on detail page 
+
+    Error: Unexpected browser errors on http://localhost:3000/parent/students/d41w2dgl22kkr2cvm76m2l4r:
+      [console.error] Loading the image 'http://localhost:1337/uploads/photo_d8618ac392.png' violates the following Content Security Policy directive: "img-src 'self' data: https://staging-api.schoolgo.com.au https://api.schoolgo.com.au https://*.schoolgo.com.au https://*.tile.openstreetmap.org". The action has been blocked.
+      [console.error] Loading the image 'http://localhost:1337/uploads/photo_d8618ac392.png' violates the following Content Security Policy directive: "img-src 'self' data: https://staging-api.schoolgo.com.au https://api.schoolgo.com.au https://*.schoolgo.com.au https://*.tile.openstreetmap.org". The action has been blocked.
+
+       at parent/_helpers.ts:63
+
+      61 |   const errors = (page as Page & { _consoleErrors?: string[] })._consoleErrors ?? [];
+      62 |   if (errors.length > 0) {
+    > 63 |     throw new Error(
+         |           ^
+      64 |       `Unexpected browser errors on ${page.url()}:\n  ${errors.join('\n  ')}`,
+      65 |     );
+      66 |   }
+        at assertNoConsoleErrors (/Users/hunor.nagy/Code/schoolgo-app/tests/e2e/parent/_helpers.ts:63:11)
+        at /Users/hunor.nagy/Code/schoolgo-app/tests/e2e/parent/student-create-edit.spec.ts:159:24
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/parent-student-create-edit-09e24-nt-and-lands-on-detail-page-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/parent-student-create-edit-09e24-nt-and-lands-on-detail-page-chromium/error-context.md
+
+  1 failed
+    [chromium] › tests/e2e/parent/student-create-edit.spec.ts:99:5 › CREATE wizard: submits new student and lands on detail page 
+  1 skipped
+  3 passed (11.4s)

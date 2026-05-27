@@ -1,0 +1,10 @@
+
+Running 3 tests using 1 worker
+
+  ✓  1 [setup] › tests/e2e/parent/auth.setup.ts:7:6 › authenticate parent (1.5s)
+[CREATE] Captured documentId: pdxepevcxuyg3kvssa2m1cf9
+  ✓  2 [chromium] › tests/e2e/parent/student-create-edit.spec.ts:99:5 › CREATE wizard: submits new student and lands on detail page (1.9s)
+[EDIT] createdDocumentId at start: "pdxepevcxuyg3kvssa2m1cf9"
+  ✓  3 [chromium] › tests/e2e/parent/student-create-edit.spec.ts:166:5 › EDIT wizard: updates last name and persists after reload (4.3s)
+
+  3 passed (8.7s)

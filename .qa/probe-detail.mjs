@@ -1,0 +1,11 @@
+import { chromium } from '@playwright/test';
+const SID = process.argv[2];
+const b = await chromium.launch();
+const ctx = await b.newContext({ storageState: 'tests/e2e/.auth/parent.json', viewport:{width:1440,height:900} });
+const page = await ctx.newPage();
+const failed = [];
+page.on('response', r => { if (r.status()>=400) failed.push(r.status()+' '+r.url().slice(0,140)); });
+await page.goto('http://localhost:3000/parent/students/'+SID, { waitUntil:'networkidle', timeout:45000 });
+await page.waitForTimeout(2500);
+console.log('failed requests:', JSON.stringify(failed));
+await b.close();
