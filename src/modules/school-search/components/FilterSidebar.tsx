@@ -65,7 +65,7 @@ export function FilterSidebar({ className, cardClassName }: FilterSidebarProps) 
               <Label className='text-body-sm font-semibold text-ink-900'>
                 {t('priceRangeLabel')}
               </Label>
-              <span className='rounded-pill bg-rausch-50 px-2 py-0.5 font-mono text-caption font-semibold text-primary'>
+              <span className='rounded-pill bg-rausch-50 px-2 py-0.5 font-mono text-caption font-semibold text-rausch-700'>
                 {t('priceRangeValue', {
                   min: Math.round(priceMin / 1000),
                   max: Math.round(priceMax / 1000),

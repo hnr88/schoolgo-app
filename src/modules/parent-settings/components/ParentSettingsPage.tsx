@@ -39,9 +39,9 @@ export function ParentSettingsPage() {
   return (
     <Tabs defaultValue='profile' className='gap-6'>
       <TabsList>
-        <TabsTrigger value='profile'>{t('tabProfile')}</TabsTrigger>
-        <TabsTrigger value='password'>{t('tabPassword')}</TabsTrigger>
-        <TabsTrigger value='preferences'>{t('tabPreferences')}</TabsTrigger>
+        <TabsTrigger value='profile' className='text-foreground/80'>{t('tabProfile')}</TabsTrigger>
+        <TabsTrigger value='password' className='text-foreground/80'>{t('tabPassword')}</TabsTrigger>
+        <TabsTrigger value='preferences' className='text-foreground/80'>{t('tabPreferences')}</TabsTrigger>
       </TabsList>
 
       <TabsContent value='profile'>

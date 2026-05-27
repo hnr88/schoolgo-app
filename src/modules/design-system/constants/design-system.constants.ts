@@ -96,7 +96,7 @@ export const statusBadgeStyles = cva(
         danger: 'bg-rausch-50 text-rausch-700',
         muted: 'bg-muted text-hof',
         submitted: 'bg-babu-50 text-babu-700',
-        underReview: 'bg-vivid-iris-soft text-vivid-iris',
+        underReview: 'bg-vivid-iris-soft text-vivid-iris-strong',
         accepted: 'bg-vivid-mint-soft text-babu-700',
         rejected: 'bg-rausch-50 text-rausch-700',
         enrolled: 'bg-vivid-mint-soft text-babu-700',

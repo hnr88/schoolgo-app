@@ -1470,7 +1470,9 @@
       "newApplication": "새 지원서",
       "reviewApplications": "지원서 확인",
       "searchSchools": "학교 검색"
-    }
+    },
+    "collapseSidebar": "사이드바 접기",
+    "expandSidebar": "사이드바 펼치기"
   },
   "Students": {
     "title": "[TODO: ko] Students",

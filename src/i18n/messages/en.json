@@ -1470,7 +1470,9 @@
       "newApplication": "New application",
       "reviewApplications": "Review applications",
       "searchSchools": "Search schools"
-    }
+    },
+    "collapseSidebar": "Collapse sidebar",
+    "expandSidebar": "Expand sidebar"
   },
   "ParentNav": {
     "dashboard": "Dashboard",

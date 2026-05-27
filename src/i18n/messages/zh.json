@@ -1470,7 +1470,9 @@
       "newApplication": "新建申请",
       "reviewApplications": "查看申请",
       "searchSchools": "搜索学校"
-    }
+    },
+    "collapseSidebar": "收起侧边栏",
+    "expandSidebar": "展开侧边栏"
   },
   "Students": {
     "title": "[TODO: zh] Students",

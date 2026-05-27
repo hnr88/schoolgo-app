@@ -51,7 +51,7 @@ export function DashboardSidebar() {
         </Link>
       </div>
 
-      <nav className={cn('flex flex-1 flex-col gap-1.5 py-4', isCollapsed ? 'px-2' : 'px-3')}>
+      <nav className={cn('flex flex-1 flex-col gap-2 py-4', isCollapsed ? 'px-2' : 'px-3')}>
         {items.map(({ href, icon: Icon, labelKey }) => {
           const isActive = pathname === href || (href !== home && pathname.startsWith(href));
           return (
@@ -61,7 +61,7 @@ export function DashboardSidebar() {
               title={isCollapsed ? navLabel(labelKey) : undefined}
               className={cn(
                 'flex items-center gap-3 rounded-xl text-sm font-medium transition-colors',
-                isCollapsed ? 'justify-center p-3' : 'px-4 py-3',
+                isCollapsed ? 'justify-center p-3' : 'px-4 py-4',
                 isActive
                   ? 'bg-primary text-on-primary shadow-2'
                   : 'text-foggy hover:bg-rausch-50 hover:text-primary',
@@ -77,6 +77,7 @@ export function DashboardSidebar() {
       <div className={cn('py-3', isCollapsed ? 'px-2' : 'px-3')}>
         <button
           type='button'
+          aria-label={t(isCollapsed ? 'expandSidebar' : 'collapseSidebar')}
           onClick={() =>
             setManualCollapse({
               pathname,

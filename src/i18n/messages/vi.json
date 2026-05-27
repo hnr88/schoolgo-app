@@ -1470,7 +1470,9 @@
       "newApplication": "Hồ sơ mới",
       "reviewApplications": "Xem hồ sơ",
       "searchSchools": "Tìm trường"
-    }
+    },
+    "collapseSidebar": "Thu gọn thanh bên",
+    "expandSidebar": "Mở rộng thanh bên"
   },
   "Students": {
     "title": "[TODO: vi] Students",

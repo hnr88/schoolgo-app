@@ -165,6 +165,7 @@
   --color-vivid-amber-soft: var(--vivid-amber-soft);
   --color-vivid-iris: var(--vivid-iris);
   --color-vivid-iris-soft: var(--vivid-iris-soft);
+  --color-vivid-iris-strong: var(--vivid-iris-strong);
 
   /* Z-index scale */
   --z-index-map-controls: 1000;
@@ -249,6 +250,8 @@
   --vivid-amber-soft: oklch(0.96 0.03 75);
   --vivid-iris: oklch(0.6 0.2 280);
   --vivid-iris-soft: oklch(0.94 0.03 280);
+  /* AA-compliant (>=4.5:1) iris for small text on --vivid-iris-soft (e.g. status badges) */
+  --vivid-iris-strong: oklch(0.45 0.18 280);
 
   /* ========== Neutrals (Airbnb) ========== */
   --ink-900: oklch(0.236 0 0); /* #222222 — headings deeper than Hof */

@@ -1470,7 +1470,9 @@
       "newApplication": "ใบสมัครใหม่",
       "reviewApplications": "ตรวจสอบใบสมัคร",
       "searchSchools": "ค้นหาโรงเรียน"
-    }
+    },
+    "collapseSidebar": "ย่อแถบด้านข้าง",
+    "expandSidebar": "ขยายแถบด้านข้าง"
   },
   "Students": {
     "title": "[TODO: th] Students",
