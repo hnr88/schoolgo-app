@@ -6,6 +6,7 @@ export type ApplicationStatus =
   | 'documents_requested'
   | 'assessment_required'
   | 'interview_scheduled'
+  | 'interview_completed'
   | 'offer_made'
   | 'offer_accepted'
   | 'pre_enrolment'

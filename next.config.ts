@@ -13,6 +13,14 @@ const nextConfig: NextConfig = {
     'school.localhost',
   ],
   images: {
+    // Next 16's optimizer refuses upstreams that resolve to private/loopback IPs
+    // (SSRF protection). When the configured backend IS local (dev/e2e against
+    // localhost:1337), allow it so real student/school media optimizes through the
+    // real backend. In production NEXT_PUBLIC_API_URL is a public host, so this
+    // stays false and the SSRF guard remains active.
+    dangerouslyAllowLocalIP:
+      env.NEXT_PUBLIC_API_URL.includes('localhost') ||
+      env.NEXT_PUBLIC_API_URL.includes('127.0.0.1'),
     remotePatterns: [
       { protocol: 'https', hostname: 'picsum.photos' },
       { protocol: 'https', hostname: 'images.unsplash.com' },

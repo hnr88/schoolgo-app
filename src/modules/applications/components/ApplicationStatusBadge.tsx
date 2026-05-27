@@ -14,6 +14,7 @@ const STATUS_TO_TONE: Record<ApplicationStatus, NonNullable<React.ComponentProps
   documents_requested: 'featured',
   assessment_required: 'underReview',
   interview_scheduled: 'underReview',
+  interview_completed: 'underReview',
   offer_made: 'accepted',
   offer_accepted: 'accepted',
   pre_enrolment: 'submitted',
