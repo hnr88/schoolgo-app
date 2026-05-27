@@ -16,10 +16,10 @@
 | FE `pnpm lint` | 0 errors (1 pre-existing test-file warning, not in scope) |
 | BE `pnpm tsc --noEmit` | clean |
 | i18n key consistency | 2079 keys × 6 locales, fully consistent |
-| API security (S1–S6) | enforced; 1 real leak fixed; S5 documented recommendation |
+| API security (S1–S6) | enforced; 1 real leak fixed; **S5 upload limits fixed** |
 | Final dummy/stub scan (touched code) | clean (no mocks/fallbacks/TODOs introduced) |
 
-Counts: ~60 tracked tasks (`.qa/STATE.json`) — all DONE/verified except **S5 upload limits** = documented recommendation (specific limit/types are a product decision; see `.qa/SECURITY.md`).
+Counts: ~60 tracked tasks (`.qa/STATE.json`) — **all DONE/verified**. No remaining blocked items.
 
 ---
 
@@ -63,7 +63,7 @@ Confirmed live via Playwright + real DB: notifications (bell/list/mark-read/mark
 - S3 mass-assignment: injected `parent`/`role`/`isAdmin` ignored (owner server-assigned).
 - S4 exposure: `users/me` leaks no password/tokens.
 - S6: CORS allowlisted; real secrets gitignored.
-- **S5 (recommendation, not auto-fixed):** `/api/upload` accepts 25MB/arbitrary MIME (Strapi 200MB default). Correct limit/types is a product decision; recommend configuring `plugin::upload` sizeLimit + MIME allowlist per context.
+- **S5 FIXED:** `plugin::upload` sizeLimit = 25MB + `upload-guard` middleware denylists executable/script MIME+extensions. Verified: png 201, text/html 400, .exe 400, 30MB 413; upload E2E green.
 
 ## Seed / test data (additive, real API path — `.qa/DECISIONS.md`)
 - Seed extended to 6 canonical students (Aarav, Diya, Kabir, Ananya, Vihaan, Saanvi).
@@ -71,8 +71,7 @@ Confirmed live via Playwright + real DB: notifications (bell/list/mark-read/mark
 - 2nd parent `parent2-qa@schoolgo.test` + 1 child: cross-tenant security fixture (isolated; does not affect parent1 specs).
 
 ## BLOCKED / follow-ups
-- **S5 upload limits** — product decision on max size + allowed MIME types per upload context.
-- Pre-existing lint warning: unused `path` import in `tests/e2e/parent/student-create-edit.spec.ts` (not touched).
+- None. (S5 upload limits fixed; lint warning resolved.)
 
 ## Notes
 - Watchdog: the user's pre-existing `/tmp/parent-run/api-watchdog.sh` (babysits :1337 + :3000) was left running; I did **not** start a duplicate (snapshot at `.qa/qa-watchdog.sh`).
