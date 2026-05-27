@@ -346,6 +346,7 @@
     }
   },
   "ParentsComparison": {
+    "compareLabel": "เปรียบเทียบ",
     "eyebrow": "เปรียบเทียบ",
     "heading": "Put three schools next to each other.",
     "headingAccent": "ตัดสินใจในไม่กี่นาที ไม่ใช่หลายเดือน",

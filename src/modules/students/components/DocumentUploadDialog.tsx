@@ -138,7 +138,7 @@ export function DocumentUploadDialog({
               render={({ field }) => (
                 <FormItem>
                   <FormLabel>{t('docTypeLabel')}</FormLabel>
-                  <Select onValueChange={field.onChange} value={field.value}>
+                  <Select onValueChange={field.onChange} value={field.value ?? ''}>
                     <FormControl>
                       <SelectTrigger>
                         <SelectValue placeholder={t('docTypeSelect')} />

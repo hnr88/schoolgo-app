@@ -346,6 +346,7 @@
     }
   },
   "ParentsComparison": {
+    "compareLabel": "对比",
     "eyebrow": "比较",
     "heading": "Put three schools next to each other.",
     "headingAccent": "几分钟内做出决定，无需数月等待。",

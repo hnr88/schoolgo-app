@@ -346,6 +346,7 @@
     }
   },
   "ParentsComparison": {
+    "compareLabel": "Compare",
     "eyebrow": "Side-by-side comparison",
     "heading": "Put three schools next to each other.",
     "headingAccent": "Decide in minutes, not months.",

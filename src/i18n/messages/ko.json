@@ -346,6 +346,7 @@
     }
   },
   "ParentsComparison": {
+    "compareLabel": "비교",
     "eyebrow": "비교",
     "heading": "Put three schools next to each other.",
     "headingAccent": "몇 달이 아닌 몇 분 안에 결정하세요.",

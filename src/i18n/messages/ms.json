@@ -346,6 +346,7 @@
     }
   },
   "ParentsComparison": {
+    "compareLabel": "Bandingkan",
     "eyebrow": "Bandingkan",
     "heading": "Put three schools next to each other.",
     "headingAccent": "Buat keputusan dalam minit, bukan bulan.",

@@ -346,6 +346,7 @@
     }
   },
   "ParentsComparison": {
+    "compareLabel": "So sánh",
     "eyebrow": "So sánh",
     "heading": "Put three schools next to each other.",
     "headingAccent": "Quyết định trong vài phút, không phải vài tháng.",

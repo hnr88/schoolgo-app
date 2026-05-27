@@ -23,7 +23,7 @@ export function StepPersonal({ control }: ParentStepProps) {
   const t = useTranslations('StudentWizard');
 
   return (
-    <div className='grid grid-cols-1 gap-4 sm:grid-cols-2'>
+    <div className='grid grid-cols-1 gap-5 sm:grid-cols-2'>
       <FormField
         control={control}
         name='firstName'
@@ -74,7 +74,7 @@ export function StepPersonal({ control }: ParentStepProps) {
         render={({ field }) => (
           <FormItem>
             <FormLabel>{t('fieldGender')}</FormLabel>
-            <Select onValueChange={field.onChange} value={field.value}>
+            <Select onValueChange={field.onChange} value={field.value ?? ''}>
               <FormControl>
                 <SelectTrigger><SelectValue placeholder={t('selectGender')} /></SelectTrigger>
               </FormControl>

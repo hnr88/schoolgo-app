@@ -99,8 +99,13 @@ export function proxy(request: NextRequest) {
     return withRobotsHeader(NextResponse.next(), hostname);
   }
 
+  // Agent/school dashboards have a dedicated /{portal}/dashboard/search route, so a
+  // logged-in user hitting the public /{portal}/search is sent to /dashboard/search.
+  // The parent portal has NO dashboard/search route — its canonical search lives at
+  // /parent/search (see PORTAL_NAV.parent + ParentQuickActions), so redirecting it
+  // produced a 404. Serve /parent/search directly for the parent portal.
   const isPortalSearchPath = pathAfterLocale === `${portal}/search`;
-  if (loggedInPortal && loggedInPortal === portal && isPortalSearchPath) {
+  if (loggedInPortal && loggedInPortal === portal && isPortalSearchPath && portal !== 'parent') {
     url.pathname = `/${locale}/dashboard/search`;
     return withRobotsHeader(NextResponse.redirect(url), hostname);
   }
