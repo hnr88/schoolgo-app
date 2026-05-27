@@ -2,26 +2,35 @@ import {
   ArrowRight,
   Award,
   BarChart3,
+  Bell,
+  Bookmark,
   CheckCircle,
   ClipboardCheck,
+  CreditCard,
   FileQuestion,
   FilePlus,
   FileText,
+  GraduationCap,
   Gift,
+  Heart,
   LayoutDashboard,
   MessageSquare,
   Search,
   Send,
+  Settings,
   ShieldCheck,
+  Trophy,
   UserPlus,
   Users,
 } from 'lucide-react';
 
+import type { Portal } from '@/lib/portal-url';
+
 import type {
   ActivityEventType,
   DeadlineUrgency,
-  NavItem,
   PipelineCardStyle,
+  PortalNav,
   QuickAction,
 } from '../types/dashboard.types';
 
@@ -36,14 +45,37 @@ export const ROUTE_TITLE_MAP: Record<string, string> = {
   '/dashboard/profile': 'profile',
 };
 
-export const NAV_ITEMS: NavItem[] = [
-  { href: '/dashboard', icon: LayoutDashboard, labelKey: 'dashboard', agentOnly: false },
-  { href: '/dashboard/students', icon: Users, labelKey: 'students', agentOnly: true },
-  { href: '/dashboard/applications', icon: FileText, labelKey: 'applications', agentOnly: true },
-  { href: '/dashboard/pipeline', icon: BarChart3, labelKey: 'pipeline', agentOnly: true },
-  { href: '/dashboard/search', icon: Search, labelKey: 'searchSchools', agentOnly: true },
-  { href: '/dashboard/messages', icon: MessageSquare, labelKey: 'messages', agentOnly: true },
-];
+export const PORTAL_NAV: Record<Portal, PortalNav> = {
+  agent: {
+    home: '/dashboard',
+    items: [
+      { href: '/dashboard', icon: LayoutDashboard, labelKey: 'dashboard' },
+      { href: '/dashboard/students', icon: Users, labelKey: 'students' },
+      { href: '/dashboard/applications', icon: FileText, labelKey: 'applications' },
+      { href: '/dashboard/pipeline', icon: BarChart3, labelKey: 'pipeline' },
+      { href: '/dashboard/search', icon: Search, labelKey: 'searchSchools' },
+      { href: '/dashboard/messages', icon: MessageSquare, labelKey: 'messages' },
+    ],
+  },
+  school: {
+    home: '/dashboard',
+    items: [{ href: '/dashboard', icon: LayoutDashboard, labelKey: 'dashboard' }],
+  },
+  parent: {
+    home: '/parent/dashboard',
+    items: [
+      { href: '/parent/dashboard', icon: LayoutDashboard, labelKey: 'dashboard' },
+      { href: '/parent/notifications', icon: Bell, labelKey: 'notifications' },
+      { href: '/parent/students', icon: GraduationCap, labelKey: 'students' },
+      { href: '/parent/applications', icon: FileText, labelKey: 'applications' },
+      { href: '/parent/saved-schools', icon: Heart, labelKey: 'savedSchools' },
+      { href: '/parent/saved-searches', icon: Bookmark, labelKey: 'savedSearches' },
+      { href: '/parent/results', icon: Trophy, labelKey: 'results' },
+      { href: '/parent/settings', icon: Settings, labelKey: 'settings' },
+      { href: '/parent/payments', icon: CreditCard, labelKey: 'payments' },
+    ],
+  },
+};
 
 export const EVENT_ICON: Record<ActivityEventType, typeof ArrowRight> = {
   status_change: ArrowRight,

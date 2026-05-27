@@ -6,6 +6,7 @@ import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 import { useTranslations } from 'next-intl';
 import { useRouter } from '@/i18n/navigation';
 import { useAuthStore } from '@/modules/auth/stores/use-auth-store';
+import { NotificationBell } from '@/modules/notifications';
 import { SearchBar } from '@/modules/school-search/components/SearchBar';
 import {
   DropdownMenu,
@@ -53,7 +54,8 @@ export function DashboardHeader() {
           </div>
         )}
 
-        <div className={isSearchPage ? 'shrink-0' : 'ml-auto'}>
+        <div className={`flex items-center gap-2 ${isSearchPage ? 'shrink-0' : 'ml-auto'}`}>
+          {pathname.startsWith('/parent') && <NotificationBell />}
           <DropdownMenu>
             <DropdownMenuTrigger className='flex items-center gap-2.5 rounded-xl px-2 py-1.5 text-sm font-medium text-ink-900 outline-none transition-colors hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1'>
               <Avatar className='h-8 w-8'>

@@ -37,6 +37,7 @@ export interface AuthState {
   login: (credentials: LoginCredentials) => Promise<void>;
   logout: () => void;
   setUser: (user: User | null) => void;
+  setJwt: (jwt: string) => void;
   setUserType: (userType: Portal) => void;
   initialize: () => Promise<void>;
 }

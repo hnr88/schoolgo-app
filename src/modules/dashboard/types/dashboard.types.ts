@@ -58,7 +58,11 @@ export type NavItem = {
   href: string;
   icon: IconComponent;
   labelKey: string;
-  agentOnly: boolean;
+};
+
+export type PortalNav = {
+  home: string;
+  items: NavItem[];
 };
 
 export type PipelineCardStyle = {

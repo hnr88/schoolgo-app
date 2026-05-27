@@ -18,6 +18,7 @@ const nextConfig: NextConfig = {
       { protocol: 'https', hostname: 'images.unsplash.com' },
       { protocol: 'https', hostname: 'staging-api.schoolgo.com.au', pathname: '/uploads/**' },
       { protocol: 'https', hostname: 'api.schoolgo.com.au', pathname: '/uploads/**' },
+      { protocol: 'http', hostname: 'localhost', port: '1337', pathname: '/uploads/**' },
     ],
   },
   async rewrites() {

@@ -8,12 +8,20 @@ import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import { useAuthStore } from '@/modules/auth/stores/use-auth-store';
 import { cn } from '@/lib/utils';
-import { NAV_ITEMS } from '../constants/ui.constants';
+import { PORTAL_NAV } from '../constants/ui.constants';
 
 export function DashboardSidebar() {
   const t = useTranslations('Dashboard');
+  const tParent = useTranslations('ParentNav');
   const pathname = usePathname();
   const userType = useAuthStore((s) => s.userType);
+
+  const portal = userType ?? 'agent';
+  const { home, items } = PORTAL_NAV[portal];
+  const navLabel =
+    portal === 'parent'
+      ? (key: string) => tParent(key)
+      : (key: string) => t(`nav.${key}`);
 
   const isSearchRoute = pathname.includes('/dashboard/search');
   const [manualCollapse, setManualCollapse] = useState<{
@@ -32,7 +40,7 @@ export function DashboardSidebar() {
       )}
     >
       <div className={cn('flex h-16 items-center overflow-hidden', isCollapsed ? 'justify-center px-2' : 'px-5')}>
-        <Link href='/dashboard' className='flex shrink-0 items-center'>
+        <Link href={home} className='flex shrink-0 items-center'>
           <Image
             src='/logos/logo-red.png'
             alt='SchoolGo'
@@ -44,13 +52,13 @@ export function DashboardSidebar() {
       </div>
 
       <nav className={cn('flex flex-1 flex-col gap-1.5 py-4', isCollapsed ? 'px-2' : 'px-3')}>
-        {NAV_ITEMS.filter((item) => !item.agentOnly || userType === 'agent').map(({ href, icon: Icon, labelKey }) => {
-          const isActive = pathname === href || (href !== '/dashboard' && pathname.startsWith(href));
+        {items.map(({ href, icon: Icon, labelKey }) => {
+          const isActive = pathname === href || (href !== home && pathname.startsWith(href));
           return (
             <Link
               key={href}
               href={href}
-              title={isCollapsed ? t(`nav.${labelKey}`) : undefined}
+              title={isCollapsed ? navLabel(labelKey) : undefined}
               className={cn(
                 'flex items-center gap-3 rounded-xl text-sm font-medium transition-colors',
                 isCollapsed ? 'justify-center p-3' : 'px-4 py-3',
@@ -60,7 +68,7 @@ export function DashboardSidebar() {
               )}
             >
               <Icon className='h-5 w-5 shrink-0' strokeWidth={isActive ? 2 : 1.5} />
-              {!isCollapsed && t(`nav.${labelKey}`)}
+              {!isCollapsed && navLabel(labelKey)}
             </Link>
           );
         })}

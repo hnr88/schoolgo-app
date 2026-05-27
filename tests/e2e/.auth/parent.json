@@ -1,0 +1,25 @@
+{
+  "cookies": [
+    {
+      "name": "schoolgo-logged-in",
+      "value": "parent",
+      "domain": "localhost",
+      "path": "/",
+      "expires": 1811367244.417708,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    }
+  ],
+  "origins": [
+    {
+      "origin": "http://localhost:3000",
+      "localStorage": [
+        {
+          "name": "schoolgo-auth",
+          "value": "{\"state\":{\"jwt\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzc5ODMxMjQ0LCJleHAiOjE3ODA0MzYwNDR9.TVCgrahQnn8D8OButRluAAnvUhtfux3TGJdjRF2ivfU\",\"userType\":\"parent\",\"user\":{\"id\":1,\"documentId\":\"gmke2n2b28kuaee1lhsxgwyo\",\"username\":\"parent@schoolgo.test\",\"email\":\"parent@schoolgo.test\",\"displayName\":\"parent@schoolgo.test\",\"role\":\"parent\"}},\"version\":0}"
+        }
+      ]
+    }
+  ]
+}

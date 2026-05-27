@@ -7,6 +7,8 @@ export { MapView } from '@/modules/school-search/components/MapView';
 export { SearchPageContent } from '@/modules/school-search/components/SearchPageContent';
 export { SaveSearchButton } from '@/modules/school-search/components/SaveSearchButton';
 export { SavedSearchesPanel } from '@/modules/school-search/components/SavedSearchesPanel';
+export { SavedSchoolsPage } from '@/modules/school-search/components/SavedSchoolsPage';
+export { ParentSavedSearchesPage } from '@/modules/school-search/components/ParentSavedSearchesPage';
 export { SearchAutocompleteDropdown } from '@/modules/school-search/components/SearchAutocompleteDropdown';
 export { useSchoolSearch, useTypedSchoolSearch } from '@/modules/school-search/queries/use-school-search.query';
 export { useAutocompleteSchools } from '@/modules/school-search/queries/use-autocomplete-schools.query';
@@ -19,6 +21,7 @@ export { useBookmarks } from '@/modules/school-search/queries/use-bookmarks.quer
 export { useCreateBookmark } from '@/modules/school-search/queries/use-create-bookmark.mutation';
 export { useDeleteBookmark } from '@/modules/school-search/queries/use-delete-bookmark.mutation';
 export { useSearchWithFilters } from '@/modules/school-search/hooks/useSearchWithFilters';
+export { useApplySavedSearch } from '@/modules/school-search/hooks/useApplySavedSearch';
 export { typedSearchSchools, searchSchools } from '@/modules/school-search/lib/search-api';
 export { autocompleteSchools } from '@/modules/school-search/lib/autocomplete-schools-api';
 export { autocompleteSuburbs } from '@/modules/school-search/lib/autocomplete-suburbs-api';

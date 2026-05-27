@@ -4,7 +4,7 @@ export interface Student {
   firstName: string;
   lastName: string;
   dateOfBirth: string | null;
-  gender: 'male' | 'female' | 'other' | null;
+  gender: 'male' | 'female' | 'other' | 'prefer_not_to_say' | null;
   nationality: string | null;
   passportNumber: string | null;
   currentSchool: string | null;

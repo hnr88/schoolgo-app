@@ -64,6 +64,10 @@ export const useAuthStore = create<AuthState>()(
         set({ user });
       },
 
+      setJwt: (jwt: string) => {
+        set({ jwt });
+      },
+
       setUserType: (userType: Portal) => {
         set({ userType });
         if (get().isAuthenticated) setAuthCookie(userType);

@@ -1,6 +1,12 @@
 export { ApplicationListPage } from '@/modules/applications/components/ApplicationListPage';
 export { ApplicationDetailPage } from '@/modules/applications/components/ApplicationDetailPage';
 
+export { ParentApplicationListPage } from '@/modules/applications/components/ParentApplicationListPage';
+export { ParentApplicationDetailPage } from '@/modules/applications/components/ParentApplicationDetailPage';
+export { ApplicationStatusBadge } from '@/modules/applications/components/ApplicationStatusBadge';
+export { useParentApplications } from '@/modules/applications/queries/use-parent-applications.query';
+export type { ParentApplication } from '@/modules/applications/types/parent-application.types';
+
 export {
   APPLICATION_STATUS_STYLES,
   APPLICATION_STATUS_LABELS,
