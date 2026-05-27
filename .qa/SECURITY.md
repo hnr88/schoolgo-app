@@ -22,6 +22,9 @@ Tested against the real backend (:1337) + real DB. Parent: `parent@schoolgo.test
 - CORS configured with an `origin` allowlist (not `*`) in `config/middlewares.ts`.
 - Real secrets gitignored: `.env`, `.env.staging`, `.env.production` not tracked. `.env.e2e` is tracked but holds only local-throwaway dev creds (localhost DB `schoolgo/schoolgo`, local Meili key) — low risk; flagged for awareness.
 
-## S5 — File upload limits — RECOMMENDATION (not auto-fixed)
-- `POST /api/upload` accepted a **25MB `application/octet-stream`** file (HTTP 201). No custom size/type restriction beyond Strapi's 200MB default; arbitrary MIME types accepted.
-- NOT auto-fixed: the correct max size and allowed MIME set is a **product decision** (the endpoint is shared by student photos/voice, school logos, document uploads with distinct needs). Guessing a limit risks breaking legitimate flows (prompt rule: no functional assumptions). **Recommendation:** configure `plugin::upload` `sizeLimit` (e.g. 10–25MB) and validate allowed MIME types per upload context.
+## S5 — File upload limits ✓ (FIXED)
+- **Before:** `POST /api/upload` accepted a 25MB `application/octet-stream` (201); no size/type limit beyond Strapi's 200MB default.
+- **Fix:**
+  - `config/plugins.ts` → `upload.config.sizeLimit = 25MB` (DoS guard).
+  - New global middleware `src/middlewares/upload-guard.ts` (registered after `strapi::body`) denylists executable/script content by MIME **and** extension (exe/dll/sh/bat/php/js/html/jsp/… ) — non-breaking for all legit media/PDF/doc flows.
+- **Proof:** legit `image/png` → 201; `text/html` → 400 "File type not allowed: text/html"; `.exe` → 400; 30MB → 413 "exceeds size limit of 26 MB". Document-upload + student-create wizard E2E specs still green (5 passed).
