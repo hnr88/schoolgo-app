@@ -1471,6 +1471,7 @@
       "searchSchools": "[TODO: ms] Search Schools",
       "savedSchools": "Sekolah disimpan",
       "savedSearches": "Carian disimpan",
+      "results": "Keputusan",
       "messages": "[TODO: ms] Messages",
       "settings": "[TODO: ms] Settings",
       "profile": "[TODO: ms] My Profile",
@@ -2462,6 +2463,7 @@
   "ParentTestResults": {
     "title": "Keputusan Ujian Bahasa Inggeris",
     "subtitle": "Lihat skor ujian Bahasa Inggeris dan status pengesahan anak-anak anda.",
+    "agentSubtitle": "Lihat skor ujian Bahasa Inggeris dan status pengesahan pelajar anda.",
     "selectStudentLabel": "Pelajar",
     "selectStudentPlaceholder": "Pilih pelajar",
     "pickStudentTitle": "Pilih pelajar",

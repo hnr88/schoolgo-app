@@ -1471,6 +1471,7 @@
       "searchSchools": "[TODO: ko] Search Schools",
       "savedSchools": "저장한 학교",
       "savedSearches": "저장한 검색",
+      "results": "결과",
       "messages": "[TODO: ko] Messages",
       "settings": "[TODO: ko] Settings",
       "profile": "[TODO: ko] My Profile",
@@ -2462,6 +2463,7 @@
   "ParentTestResults": {
     "title": "영어 시험 결과",
     "subtitle": "자녀의 영어 시험 점수 및 인증 상태를 확인하세요.",
+    "agentSubtitle": "학생들의 영어 시험 점수 및 인증 상태를 확인하세요.",
     "selectStudentLabel": "학생",
     "selectStudentPlaceholder": "학생을 선택하세요",
     "pickStudentTitle": "학생 선택",

@@ -1471,6 +1471,7 @@
       "searchSchools": "[TODO: vi] Search Schools",
       "savedSchools": "Trường đã lưu",
       "savedSearches": "Tìm kiếm đã lưu",
+      "results": "Kết quả",
       "messages": "[TODO: vi] Messages",
       "settings": "[TODO: vi] Settings",
       "profile": "[TODO: vi] My Profile",
@@ -2462,6 +2463,7 @@
   "ParentTestResults": {
     "title": "Kết quả thi tiếng Anh",
     "subtitle": "Xem điểm thi tiếng Anh và trạng thái xác minh của con bạn.",
+    "agentSubtitle": "Xem điểm thi tiếng Anh và trạng thái xác minh của học sinh của bạn.",
     "selectStudentLabel": "Học sinh",
     "selectStudentPlaceholder": "Chọn học sinh",
     "pickStudentTitle": "Chọn học sinh",

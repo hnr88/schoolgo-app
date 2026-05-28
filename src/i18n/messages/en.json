@@ -1471,6 +1471,7 @@
       "searchSchools": "Search Schools",
       "savedSchools": "Saved schools",
       "savedSearches": "Saved searches",
+      "results": "Results",
       "messages": "Messages",
       "settings": "Settings",
       "profile": "My Profile",
@@ -2052,6 +2053,7 @@
   "ParentTestResults": {
     "title": "English Test Results",
     "subtitle": "View your children's English test scores and verification status.",
+    "agentSubtitle": "View your students' English test scores and verification status.",
     "selectStudentLabel": "Student",
     "selectStudentPlaceholder": "Select a student",
     "pickStudentTitle": "Select a student",

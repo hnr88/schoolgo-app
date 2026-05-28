@@ -9,9 +9,10 @@ import { EmptyState, ErrorState } from '@/modules/core';
 import { TestResultsList } from '@/modules/test-results/components/TestResultsList';
 import { TestResultsStudentSelector } from '@/modules/test-results/components/TestResultsStudentSelector';
 import { useStudentSelection } from '@/modules/test-results/hooks/useStudentSelection';
+import { newStudentPath } from '@/modules/test-results/lib/portal-paths';
 import type { TestResultsPanelProps } from '@/modules/test-results/types/component.types';
 
-export function TestResultsPanel({ studentDocumentId }: TestResultsPanelProps) {
+export function TestResultsPanel({ studentDocumentId, portal = 'parent' }: TestResultsPanelProps) {
   const t = useTranslations('ParentTestResults');
   const { selected, setSelected, students, isLoading, isError, refetch } =
     useStudentSelection(studentDocumentId);
@@ -33,7 +34,7 @@ export function TestResultsPanel({ studentDocumentId }: TestResultsPanelProps) {
         title={t('noStudentsTitle')}
         description={t('noStudentsSubtitle')}
         action={
-          <Link href='/parent/students/new'>
+          <Link href={newStudentPath(portal)}>
             <Button>{t('addStudent')}</Button>
           </Link>
         }

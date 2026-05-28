@@ -1471,6 +1471,7 @@
       "searchSchools": "[TODO: th] Search Schools",
       "savedSchools": "โรงเรียนที่บันทึกไว้",
       "savedSearches": "การค้นหาที่บันทึกไว้",
+      "results": "ผลการทดสอบ",
       "messages": "[TODO: th] Messages",
       "settings": "[TODO: th] Settings",
       "profile": "[TODO: th] My Profile",
@@ -2462,6 +2463,7 @@
   "ParentTestResults": {
     "title": "ผลการทดสอบภาษาอังกฤษ",
     "subtitle": "ดูคะแนนการทดสอบภาษาอังกฤษและสถานะการยืนยันของบุตรหลานคุณ",
+    "agentSubtitle": "ดูคะแนนการทดสอบภาษาอังกฤษและสถานะการยืนยันของนักเรียนของคุณ",
     "selectStudentLabel": "นักเรียน",
     "selectStudentPlaceholder": "เลือกนักเรียน",
     "pickStudentTitle": "เลือกนักเรียน",

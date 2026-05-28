@@ -1471,6 +1471,7 @@
       "searchSchools": "[TODO: zh] Search Schools",
       "savedSchools": "已保存的学校",
       "savedSearches": "已保存的搜索",
+      "results": "成绩",
       "messages": "[TODO: zh] Messages",
       "settings": "[TODO: zh] Settings",
       "profile": "[TODO: zh] My Profile",
@@ -2462,6 +2463,7 @@
   "ParentTestResults": {
     "title": "英语考试成绩",
     "subtitle": "查看孩子的英语考试分数和核验状态。",
+    "agentSubtitle": "查看学生的英语考试分数和核验状态。",
     "selectStudentLabel": "学生",
     "selectStudentPlaceholder": "选择学生",
     "pickStudentTitle": "选择学生",

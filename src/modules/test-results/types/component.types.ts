@@ -1,3 +1,5 @@
+import type { Portal } from '@/lib/portal-url';
+
 import type { TestResult } from '@/modules/test-results/types/test-result.types';
 
 export interface TestResultsListProps {
@@ -16,4 +18,5 @@ export interface StudentSelectorOption {
 
 export interface TestResultsPanelProps {
   studentDocumentId?: string;
+  portal?: Portal;
 }
