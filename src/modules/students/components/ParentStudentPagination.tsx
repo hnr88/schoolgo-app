@@ -75,7 +75,14 @@ export function ParentStudentPagination({
 
       {showPagination && pagination ? (
         <div className='flex items-center gap-1'>
-          <Button variant='ghost' size='icon' className='h-8 w-8' disabled={pagination.page <= 1} onClick={() => setPage((p) => p - 1)}>
+          <Button
+            variant='ghost'
+            size='icon'
+            className='h-8 w-8'
+            aria-label={t('paginationPrevious')}
+            disabled={pagination.page <= 1}
+            onClick={() => setPage((p) => p - 1)}
+          >
             <ChevronLeft className='h-4 w-4' />
           </Button>
           {getPageNumbers(pagination.page, pagination.pageCount).map((p, i) =>
@@ -87,13 +94,22 @@ export function ParentStudentPagination({
                 variant={p === pagination.page ? 'default' : 'ghost'}
                 size='icon'
                 className='h-8 w-8 text-xs'
+                aria-label={t('paginationGoToPage', { page: p })}
+                aria-current={p === pagination.page ? 'page' : undefined}
                 onClick={() => setPage(p as number)}
               >
                 {p}
               </Button>
             ),
           )}
-          <Button variant='ghost' size='icon' className='h-8 w-8' disabled={pagination.page >= pagination.pageCount} onClick={() => setPage((p) => p + 1)}>
+          <Button
+            variant='ghost'
+            size='icon'
+            className='h-8 w-8'
+            aria-label={t('paginationNext')}
+            disabled={pagination.page >= pagination.pageCount}
+            onClick={() => setPage((p) => p + 1)}
+          >
             <ChevronRight className='h-4 w-4' />
           </Button>
         </div>
