@@ -1325,7 +1325,30 @@
     "actionWithdraw": "Tarik Balik Permohonan",
     "actionAcceptOffer": "Terima Tawaran",
     "actionContactSchool": "Hubungi Sekolah",
-    "actionComingSoon": "Akan datang"
+    "actionComingSoon": "Akan datang",
+    "createTitle": "Permohonan Baharu",
+    "createSubtitle": "Pilih pelajar dan sekolah, tetapkan tahap tahun dan kemasukan sasaran, kemudian hantar permohonan.",
+    "createStudentLabel": "Pelajar",
+    "createSelectStudent": "Pilih pelajar",
+    "createLoadingStudents": "Memuatkan pelajar…",
+    "createNoStudents": "Anda belum mempunyai pelajar aktif. Tambah pelajar dahulu.",
+    "createSchoolLabel": "Sekolah",
+    "createSelectSchool": "Pilih sekolah",
+    "createSearchSchool": "Cari sekolah…",
+    "createSchoolHint": "Taip sekurang-kurangnya 2 aksara untuk mencari.",
+    "createSearching": "Mencari…",
+    "createNoSchools": "Tiada sekolah dijumpai.",
+    "createYearLevelLabel": "Tahap tahun sasaran",
+    "createSelectYearLevel": "Pilih tahap tahun",
+    "createIntakeLabel": "Kemasukan sasaran",
+    "createSelectIntake": "Pilih kemasukan",
+    "createBoardingLabel": "Asrama diperlukan",
+    "createSubmitButton": "Cipta & hantar permohonan",
+    "createSubmitting": "Menghantar…",
+    "createSubmitSuccess": "Permohonan dihantar.",
+    "createDraftSavedSubmitFailed": "Draf disimpan, tetapi penghantaran gagal. Anda boleh menghantarnya dari halaman permohonan.",
+    "createError": "Tidak dapat mencipta permohonan. Sila cuba lagi.",
+    "createLoading": "Memuatkan…"
   },
   "Auth": {
     "forgotPasswordTitle": "Reset your password",
@@ -1952,7 +1975,8 @@
         "websiteCta": "[TODO: ms] Visit school website",
         "shortlistCta": "[TODO: ms] Add to shortlist",
         "domesticHint": "[TODO: ms] Australian resident?",
-        "domesticLink": "[TODO: ms] Domestic enrolments"
+        "domesticLink": "[TODO: ms] Domestic enrolments",
+        "startApplicationCta": "Mula permohonan"
       },
       "contact": {
         "heading": "[TODO: ms] International admissions contact",

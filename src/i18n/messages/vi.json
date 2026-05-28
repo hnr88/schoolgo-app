@@ -1325,7 +1325,30 @@
     "actionWithdraw": "Rút hồ sơ",
     "actionAcceptOffer": "Chấp nhận thư mời",
     "actionContactSchool": "Liên hệ trường",
-    "actionComingSoon": "Sắp ra mắt"
+    "actionComingSoon": "Sắp ra mắt",
+    "createTitle": "Hồ sơ mới",
+    "createSubtitle": "Chọn học sinh và trường, đặt khối lớp và kỳ nhập học mục tiêu, sau đó gửi hồ sơ.",
+    "createStudentLabel": "Học sinh",
+    "createSelectStudent": "Chọn học sinh",
+    "createLoadingStudents": "Đang tải học sinh…",
+    "createNoStudents": "Bạn chưa có học sinh đang hoạt động. Hãy thêm học sinh trước.",
+    "createSchoolLabel": "Trường",
+    "createSelectSchool": "Chọn trường",
+    "createSearchSchool": "Tìm trường…",
+    "createSchoolHint": "Nhập ít nhất 2 ký tự để tìm kiếm.",
+    "createSearching": "Đang tìm…",
+    "createNoSchools": "Không tìm thấy trường nào.",
+    "createYearLevelLabel": "Khối lớp mục tiêu",
+    "createSelectYearLevel": "Chọn khối lớp",
+    "createIntakeLabel": "Kỳ nhập học mục tiêu",
+    "createSelectIntake": "Chọn kỳ nhập học",
+    "createBoardingLabel": "Cần nội trú",
+    "createSubmitButton": "Tạo & gửi hồ sơ",
+    "createSubmitting": "Đang gửi…",
+    "createSubmitSuccess": "Đã gửi hồ sơ.",
+    "createDraftSavedSubmitFailed": "Đã lưu bản nháp nhưng gửi thất bại. Bạn có thể gửi từ trang hồ sơ.",
+    "createError": "Không thể tạo hồ sơ. Vui lòng thử lại.",
+    "createLoading": "Đang tải…"
   },
   "Auth": {
     "forgotPasswordTitle": "Reset your password",
@@ -1952,7 +1975,8 @@
         "websiteCta": "[TODO: vi] Visit school website",
         "shortlistCta": "[TODO: vi] Add to shortlist",
         "domesticHint": "[TODO: vi] Australian resident?",
-        "domesticLink": "[TODO: vi] Domestic enrolments"
+        "domesticLink": "[TODO: vi] Domestic enrolments",
+        "startApplicationCta": "Bắt đầu hồ sơ"
       },
       "contact": {
         "heading": "[TODO: vi] International admissions contact",

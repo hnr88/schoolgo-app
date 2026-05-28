@@ -1325,7 +1325,30 @@
     "actionWithdraw": "ถอนใบสมัคร",
     "actionAcceptOffer": "ยอมรับข้อเสนอ",
     "actionContactSchool": "ติดต่อโรงเรียน",
-    "actionComingSoon": "เร็ว ๆ นี้"
+    "actionComingSoon": "เร็ว ๆ นี้",
+    "createTitle": "ใบสมัครใหม่",
+    "createSubtitle": "เลือกนักเรียนและโรงเรียน กำหนดระดับชั้นและภาคเรียนเป้าหมาย จากนั้นส่งใบสมัคร",
+    "createStudentLabel": "นักเรียน",
+    "createSelectStudent": "เลือกนักเรียน",
+    "createLoadingStudents": "กำลังโหลดนักเรียน…",
+    "createNoStudents": "คุณยังไม่มีนักเรียนที่ใช้งานอยู่ กรุณาเพิ่มนักเรียนก่อน",
+    "createSchoolLabel": "โรงเรียน",
+    "createSelectSchool": "เลือกโรงเรียน",
+    "createSearchSchool": "ค้นหาโรงเรียน…",
+    "createSchoolHint": "พิมพ์อย่างน้อย 2 ตัวอักษรเพื่อค้นหา",
+    "createSearching": "กำลังค้นหา…",
+    "createNoSchools": "ไม่พบโรงเรียน",
+    "createYearLevelLabel": "ระดับชั้นเป้าหมาย",
+    "createSelectYearLevel": "เลือกระดับชั้น",
+    "createIntakeLabel": "ภาคเรียนเป้าหมาย",
+    "createSelectIntake": "เลือกภาคเรียน",
+    "createBoardingLabel": "ต้องการหอพัก",
+    "createSubmitButton": "สร้างและส่งใบสมัคร",
+    "createSubmitting": "กำลังส่ง…",
+    "createSubmitSuccess": "ส่งใบสมัครแล้ว",
+    "createDraftSavedSubmitFailed": "บันทึกฉบับร่างแล้ว แต่ส่งไม่สำเร็จ คุณสามารถส่งได้จากหน้าใบสมัคร",
+    "createError": "ไม่สามารถสร้างใบสมัครได้ กรุณาลองอีกครั้ง",
+    "createLoading": "กำลังโหลด…"
   },
   "Auth": {
     "forgotPasswordTitle": "Reset your password",
@@ -1952,7 +1975,8 @@
         "websiteCta": "[TODO: th] Visit school website",
         "shortlistCta": "[TODO: th] Add to shortlist",
         "domesticHint": "[TODO: th] Australian resident?",
-        "domesticLink": "[TODO: th] Domestic enrolments"
+        "domesticLink": "[TODO: th] Domestic enrolments",
+        "startApplicationCta": "เริ่มสมัคร"
       },
       "contact": {
         "heading": "[TODO: th] International admissions contact",

@@ -1,5 +1,7 @@
+import { Suspense } from 'react';
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { CreateApplicationPage } from '@/modules/applications';
 
 export async function generateMetadata({
   params,
@@ -8,7 +10,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'Applications' });
-  return { title: t('addApplication') };
+  return { title: t('createTitle') };
 }
 
 export default async function NewApplicationPage({
@@ -18,12 +20,10 @@ export default async function NewApplicationPage({
 }) {
   const { locale } = await params;
   setRequestLocale(locale);
-  const t = await getTranslations({ locale, namespace: 'Applications' });
 
   return (
-    <div className='flex flex-col items-center justify-center py-24 text-center'>
-      <p className='text-lg font-semibold text-ink-900'>{t('addApplication')}</p>
-      <p className='mt-2 text-sm text-foggy'>{t('actionComingSoon')}</p>
-    </div>
+    <Suspense>
+      <CreateApplicationPage />
+    </Suspense>
   );
 }

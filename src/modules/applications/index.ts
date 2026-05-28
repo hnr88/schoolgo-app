@@ -1,5 +1,6 @@
 export { ApplicationListPage } from '@/modules/applications/components/ApplicationListPage';
 export { ApplicationDetailPage } from '@/modules/applications/components/ApplicationDetailPage';
+export { CreateApplicationPage } from '@/modules/applications/components/CreateApplicationPage';
 export { AgentMessagesPage } from '@/modules/applications/components/AgentMessagesPage';
 
 export { ParentApplicationListPage } from '@/modules/applications/components/ParentApplicationListPage';

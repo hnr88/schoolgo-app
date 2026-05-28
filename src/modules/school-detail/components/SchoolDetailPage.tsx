@@ -55,7 +55,7 @@ export async function SchoolDetailPage({ school, activePortal, locale }: SchoolD
             </article>
 
             <aside className="space-y-4 lg:sticky lg:top-28 lg:self-start">
-              <ApplyCard school={school} />
+              <ApplyCard school={school} activePortal={activePortal} />
               <ContactCard school={school} />
               <TocCard />
               <KeyFactsCard school={school} activePortal={activePortal} />

@@ -1325,7 +1325,30 @@
     "actionWithdraw": "撤回申请",
     "actionAcceptOffer": "接受录取",
     "actionContactSchool": "联系学校",
-    "actionComingSoon": "即将推出"
+    "actionComingSoon": "即将推出",
+    "createTitle": "新建申请",
+    "createSubtitle": "选择学生和学校，设置目标年级和入学期，然后提交申请。",
+    "createStudentLabel": "学生",
+    "createSelectStudent": "选择学生",
+    "createLoadingStudents": "正在加载学生…",
+    "createNoStudents": "您还没有在读学生。请先添加学生。",
+    "createSchoolLabel": "学校",
+    "createSelectSchool": "选择学校",
+    "createSearchSchool": "搜索学校…",
+    "createSchoolHint": "请至少输入 2 个字符进行搜索。",
+    "createSearching": "正在搜索…",
+    "createNoSchools": "未找到学校。",
+    "createYearLevelLabel": "目标年级",
+    "createSelectYearLevel": "选择年级",
+    "createIntakeLabel": "目标入学期",
+    "createSelectIntake": "选择入学期",
+    "createBoardingLabel": "需要寄宿",
+    "createSubmitButton": "创建并提交申请",
+    "createSubmitting": "正在提交…",
+    "createSubmitSuccess": "申请已提交。",
+    "createDraftSavedSubmitFailed": "草稿已保存，但提交失败。您可以在申请页面提交。",
+    "createError": "无法创建申请，请重试。",
+    "createLoading": "加载中…"
   },
   "Auth": {
     "forgotPasswordTitle": "Reset your password",
@@ -1952,7 +1975,8 @@
         "websiteCta": "[TODO: zh] Visit school website",
         "shortlistCta": "[TODO: zh] Add to shortlist",
         "domesticHint": "[TODO: zh] Australian resident?",
-        "domesticLink": "[TODO: zh] Domestic enrolments"
+        "domesticLink": "[TODO: zh] Domestic enrolments",
+        "startApplicationCta": "开始申请"
       },
       "contact": {
         "heading": "[TODO: zh] International admissions contact",

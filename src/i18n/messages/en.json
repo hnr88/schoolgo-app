@@ -1325,7 +1325,30 @@
     "actionWithdraw": "Withdraw Application",
     "actionAcceptOffer": "Accept Offer",
     "actionContactSchool": "Contact School",
-    "actionComingSoon": "Coming soon"
+    "actionComingSoon": "Coming soon",
+    "createTitle": "New Application",
+    "createSubtitle": "Select a student and school, set the target year level and intake, then submit the application.",
+    "createStudentLabel": "Student",
+    "createSelectStudent": "Select a student",
+    "createLoadingStudents": "Loading students…",
+    "createNoStudents": "You have no active students yet. Add a student first.",
+    "createSchoolLabel": "School",
+    "createSelectSchool": "Select a school",
+    "createSearchSchool": "Search schools…",
+    "createSchoolHint": "Type at least 2 characters to search.",
+    "createSearching": "Searching…",
+    "createNoSchools": "No schools found.",
+    "createYearLevelLabel": "Target year level",
+    "createSelectYearLevel": "Select year level",
+    "createIntakeLabel": "Target intake",
+    "createSelectIntake": "Select intake",
+    "createBoardingLabel": "Boarding required",
+    "createSubmitButton": "Create & submit application",
+    "createSubmitting": "Submitting…",
+    "createSubmitSuccess": "Application submitted.",
+    "createDraftSavedSubmitFailed": "Draft saved, but submission failed. You can submit it from the application page.",
+    "createError": "Could not create the application. Please try again.",
+    "createLoading": "Loading…"
   },
   "Auth": {
     "forgotPasswordTitle": "Reset your password",
@@ -2457,7 +2480,8 @@
         "websiteCta": "Visit school website",
         "shortlistCta": "Add to shortlist",
         "domesticHint": "Australian resident?",
-        "domesticLink": "Domestic enrolments"
+        "domesticLink": "Domestic enrolments",
+        "startApplicationCta": "Start application"
       },
       "contact": {
         "heading": "International admissions contact",
