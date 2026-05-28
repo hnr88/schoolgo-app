@@ -1,10 +1,12 @@
-import { getTranslations } from 'next-intl/server';
+'use client';
+
+import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import { cn } from '@/lib/utils';
-import { QUICK_ACTIONS } from '../constants/ui.constants';
+import { QUICK_ACTIONS } from '@/modules/dashboard/constants/ui.constants';
 
-export async function QuickActions() {
-  const t = await getTranslations('Dashboard.quickActions');
+export function QuickActions() {
+  const t = useTranslations('Dashboard.quickActions');
 
   return (
     <div className='grid grid-cols-1 gap-5 sm:grid-cols-3'>

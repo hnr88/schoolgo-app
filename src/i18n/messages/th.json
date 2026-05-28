@@ -1471,6 +1471,9 @@
       "reviewApplications": "ตรวจสอบใบสมัคร",
       "searchSchools": "ค้นหาโรงเรียน"
     },
+    "loadError": "ไม่สามารถโหลดแดชบอร์ดได้ กรุณาลองอีกครั้ง",
+    "retry": "ลองอีกครั้ง",
+    "quickActionsTitle": "การดำเนินการด่วน",
     "collapseSidebar": "ย่อแถบด้านข้าง",
     "expandSidebar": "ขยายแถบด้านข้าง"
   },

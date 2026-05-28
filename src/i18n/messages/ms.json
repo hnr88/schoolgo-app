@@ -1471,6 +1471,9 @@
       "reviewApplications": "Semak permohonan",
       "searchSchools": "Cari sekolah"
     },
+    "loadError": "Tidak dapat memuatkan papan pemuka anda. Sila cuba lagi.",
+    "retry": "Cuba lagi",
+    "quickActionsTitle": "Tindakan pantas",
     "collapseSidebar": "Lipat bar sisi",
     "expandSidebar": "Kembangkan bar sisi"
   },

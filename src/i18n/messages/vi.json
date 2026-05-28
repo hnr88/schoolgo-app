@@ -1471,6 +1471,9 @@
       "reviewApplications": "Xem hồ sơ",
       "searchSchools": "Tìm trường"
     },
+    "loadError": "Không thể tải bảng điều khiển. Vui lòng thử lại.",
+    "retry": "Thử lại",
+    "quickActionsTitle": "Thao tác nhanh",
     "collapseSidebar": "Thu gọn thanh bên",
     "expandSidebar": "Mở rộng thanh bên"
   },

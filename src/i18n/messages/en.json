@@ -1471,6 +1471,9 @@
       "reviewApplications": "Review applications",
       "searchSchools": "Search schools"
     },
+    "loadError": "Could not load your dashboard. Please try again.",
+    "retry": "Try again",
+    "quickActionsTitle": "Quick actions",
     "collapseSidebar": "Collapse sidebar",
     "expandSidebar": "Expand sidebar"
   },

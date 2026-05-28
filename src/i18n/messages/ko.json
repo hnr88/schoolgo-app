@@ -1471,6 +1471,9 @@
       "reviewApplications": "지원서 확인",
       "searchSchools": "학교 검색"
     },
+    "loadError": "대시보드를 불러올 수 없습니다. 다시 시도해 주세요.",
+    "retry": "다시 시도",
+    "quickActionsTitle": "빠른 실행",
     "collapseSidebar": "사이드바 접기",
     "expandSidebar": "사이드바 펼치기"
   },

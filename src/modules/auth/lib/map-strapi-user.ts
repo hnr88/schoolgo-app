@@ -1,13 +1,25 @@
 import type { User, UserRole } from '@/modules/auth/types/auth.types';
 
+// users-permissions /users/me does not populate `role` by default, but the user
+// record carries a `userType` field (agent | parent | school). Map it to the
+// app's UserRole so portal resolution works without a populated role relation.
+const USER_TYPE_TO_ROLE: Record<string, UserRole> = {
+  agent: 'agent' as UserRole,
+  parent: 'parent' as UserRole,
+  school: 'school-admin' as UserRole,
+};
+
 export function mapStrapiUser(raw: Record<string, unknown>): User {
   const role = raw.role;
+  const userType = raw.userType;
   let resolvedRole: UserRole;
 
   if (typeof role === 'object' && role !== null && 'type' in role) {
     resolvedRole = (role as { type: string }).type as UserRole;
   } else if (typeof role === 'string') {
     resolvedRole = role as UserRole;
+  } else if (typeof userType === 'string' && userType in USER_TYPE_TO_ROLE) {
+    resolvedRole = USER_TYPE_TO_ROLE[userType];
   } else {
     resolvedRole = 'parent' as UserRole;
   }
