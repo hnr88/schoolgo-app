@@ -57,6 +57,7 @@ export const PORTAL_NAV: Record<Portal, PortalNav> = {
       { href: '/dashboard/pipeline', icon: BarChart3, labelKey: 'pipeline' },
       { href: '/dashboard/search', icon: Search, labelKey: 'searchSchools' },
       { href: '/dashboard/messages', icon: MessageSquare, labelKey: 'messages' },
+      { href: '/dashboard/settings', icon: Settings, labelKey: 'settings' },
     ],
   },
   school: {
