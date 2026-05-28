@@ -20,6 +20,7 @@ import {
   Settings,
   ShieldCheck,
   Trophy,
+  UserCircle,
   UserPlus,
   Users,
 } from 'lucide-react';
@@ -63,6 +64,7 @@ export const PORTAL_NAV: Record<Portal, PortalNav> = {
       { href: '/dashboard/saved-searches', icon: Bookmark, labelKey: 'savedSearches' },
       { href: '/dashboard/results', icon: Trophy, labelKey: 'results' },
       { href: '/dashboard/messages', icon: MessageSquare, labelKey: 'messages' },
+      { href: '/dashboard/profile', icon: UserCircle, labelKey: 'profile' },
       { href: '/dashboard/settings', icon: Settings, labelKey: 'settings' },
     ],
   },
