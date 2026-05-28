@@ -3,6 +3,7 @@
 import { useTranslations } from 'next-intl';
 import { SchoolCard as DsSchoolCard } from '@/modules/design-system';
 import type { Portal } from '@/lib/portal-url';
+import { useBookmarkToggle } from '@/modules/school-search/hooks/useBookmarkToggle';
 import type { SchoolHit } from '@/modules/school-search/types/search-api.types';
 
 const formatFee = (amount: number | null) => {
@@ -24,6 +25,7 @@ export function SearchSchoolCard({
 }) {
   const t = useTranslations('SchoolSearch.card');
   const tc = useTranslations('Common');
+  const { isBookmarked, isPending, toggle } = useBookmarkToggle(school);
 
   return (
     <DsSchoolCard
@@ -38,6 +40,9 @@ export function SearchSchoolCard({
       cricosLabel={tc('cricosVerified')}
       shortlistAddLabel={tc('addToShortlist')}
       shortlistRemoveLabel={tc('removeFromShortlist')}
+      shortlisted={isBookmarked}
+      onShortlistToggle={toggle}
+      shortlistDisabled={isPending}
     />
   );
 }

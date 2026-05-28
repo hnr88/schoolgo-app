@@ -82,6 +82,9 @@ export interface SchoolCardProps {
   topRatedLabel?: string;
   shortlistAddLabel?: string;
   shortlistRemoveLabel?: string;
+  shortlisted?: boolean;
+  onShortlistToggle?: () => void;
+  shortlistDisabled?: boolean;
   className?: string;
 }
 

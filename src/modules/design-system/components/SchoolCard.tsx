@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, type MouseEvent } from 'react';
 import Image from 'next/image';
 import { Heart, Star } from 'lucide-react';
 import { Link } from '@/i18n/navigation';
@@ -24,11 +24,27 @@ export function SchoolCard({
   topRatedLabel,
   shortlistAddLabel,
   shortlistRemoveLabel,
+  shortlisted: shortlistedProp,
+  onShortlistToggle,
+  shortlistDisabled = false,
   className,
 }: SchoolCardProps) {
-  const [shortlisted, setShortlisted] = useState(false);
+  const [shortlistedLocal, setShortlistedLocal] = useState(false);
   const [photoFailed, setPhotoFailed] = useState(false);
   const [logoFailed, setLogoFailed] = useState(false);
+
+  const isControlled = shortlistedProp !== undefined;
+  const shortlisted = isControlled ? shortlistedProp : shortlistedLocal;
+
+  const handleShortlistToggle = (e: MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    e.stopPropagation();
+    if (isControlled) {
+      onShortlistToggle?.();
+    } else {
+      setShortlistedLocal((s) => !s);
+    }
+  };
 
   const hasShortlist = Boolean(shortlistAddLabel && shortlistRemoveLabel);
 
@@ -78,10 +94,11 @@ export function SchoolCard({
         {hasShortlist && (
           <button
             type='button'
-            onClick={() => setShortlisted((s) => !s)}
+            onClick={handleShortlistToggle}
+            disabled={shortlistDisabled}
             aria-pressed={shortlisted}
             aria-label={shortlisted ? shortlistRemoveLabel : shortlistAddLabel}
-            className='absolute right-3 top-3 z-[2] flex h-8 w-8 items-center justify-center rounded-full bg-card/90 text-foreground shadow-2 backdrop-blur-sm transition-transform hover:bg-card active:scale-95'
+            className='absolute right-3 top-3 z-[2] flex h-8 w-8 items-center justify-center rounded-full bg-card/90 text-foreground shadow-2 backdrop-blur-sm transition-transform hover:bg-card active:scale-95 disabled:cursor-not-allowed disabled:opacity-70'
           >
             <Heart
               className={cn(
