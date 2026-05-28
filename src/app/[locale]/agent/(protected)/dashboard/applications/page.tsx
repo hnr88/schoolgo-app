@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { ApplicationListPage } from '@/modules/applications';
+import { PageHeader } from '@/modules/dashboard';
 
 export async function generateMetadata({
   params,
@@ -19,5 +20,11 @@ export default async function ApplicationsPage({
 }) {
   const { locale } = await params;
   setRequestLocale(locale);
-  return <ApplicationListPage />;
+  const t = await getTranslations({ locale, namespace: 'Applications' });
+  return (
+    <div className='flex flex-col gap-6'>
+      <PageHeader title={t('title')} description={t('subtitle')} />
+      <ApplicationListPage />
+    </div>
+  );
 }

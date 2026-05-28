@@ -4,6 +4,7 @@ import { useTranslations } from 'next-intl';
 import { MessageSquare } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { EmptyState } from '@/modules/core';
+import { PageHeader } from '@/modules/dashboard';
 import { useAgentMessages } from '@/modules/applications/hooks/useAgentMessages';
 import { ConversationList } from '@/modules/applications/components/ConversationList';
 import { MessageThreadPanel } from '@/modules/applications/components/MessageThreadPanel';
@@ -24,10 +25,7 @@ export function AgentMessagesPage() {
 
   return (
     <div className='flex flex-col gap-6'>
-      <header>
-        <h2 className='font-display text-2xl font-bold text-ink-900'>{t('title')}</h2>
-        <p className='mt-1 text-sm text-muted-foreground'>{t('subtitle')}</p>
-      </header>
+      <PageHeader title={t('title')} description={t('subtitle')} />
 
       <div className='grid h-[calc(100vh-16rem)] min-h-96 grid-cols-1 gap-4 lg:grid-cols-[20rem_1fr]'>
         <section

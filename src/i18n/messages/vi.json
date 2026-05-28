@@ -1506,7 +1506,13 @@
         "parent": "Phụ huynh",
         "school": "Trường học"
       },
-      "documents": "[TODO: vi] Documents"
+      "documents": "[TODO: vi] Documents",
+      "groupOverview": "Tổng quan",
+      "groupStudents": "Học sinh",
+      "groupApplications": "Hồ sơ",
+      "groupSchools": "Trường học",
+      "groupComms": "Liên lạc",
+      "groupAccount": "Tài khoản"
     },
     "greeting": {
       "morning": "Chào buổi sáng,",
@@ -1541,7 +1547,8 @@
     "retry": "Thử lại",
     "quickActionsTitle": "Thao tác nhanh",
     "collapseSidebar": "Thu gọn thanh bên",
-    "expandSidebar": "Mở rộng thanh bên"
+    "expandSidebar": "Mở rộng thanh bên",
+    "pageSubtitle": "Theo dõi hoạt động, hạn chót và tiến trình hồ sơ của bạn trong nháy mắt."
   },
   "Students": {
     "title": "[TODO: vi] Students",
@@ -1715,7 +1722,8 @@
     "columnEnrolled": "Đã nhập học",
     "columnClosed": "Đã đóng",
     "daysLabel": "{count}n",
-    "moreApplications": "+{count} hồ sơ"
+    "moreApplications": "+{count} hồ sơ",
+    "subtitle": "Theo dõi mọi hồ sơ qua từng giai đoạn của quá trình tuyển sinh."
   },
   "SchoolDetail": {
     "backToSearch": "[TODO: vi] Back to search",

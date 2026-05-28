@@ -56,21 +56,49 @@ export const ROUTE_TITLE_MAP: Record<string, string> = {
 export const PORTAL_NAV: Record<Portal, PortalNav> = {
   agent: {
     home: '/dashboard',
-    items: [
-      { href: '/dashboard', icon: LayoutDashboard, labelKey: 'dashboard' },
-      { href: '/dashboard/notifications', icon: Bell, labelKey: 'notifications' },
-      { href: '/dashboard/students', icon: Users, labelKey: 'students' },
-      { href: '/dashboard/applications', icon: FileText, labelKey: 'applications' },
-      { href: '/dashboard/offers', icon: Gift, labelKey: 'offers' },
-      { href: '/dashboard/documents', icon: FolderOpen, labelKey: 'documents' },
-      { href: '/dashboard/pipeline', icon: BarChart3, labelKey: 'pipeline' },
-      { href: '/dashboard/search', icon: Search, labelKey: 'searchSchools' },
-      { href: '/dashboard/saved-schools', icon: Heart, labelKey: 'savedSchools' },
-      { href: '/dashboard/saved-searches', icon: Bookmark, labelKey: 'savedSearches' },
-      { href: '/dashboard/results', icon: Trophy, labelKey: 'results' },
-      { href: '/dashboard/messages', icon: MessageSquare, labelKey: 'messages' },
-      { href: '/dashboard/profile', icon: UserCircle, labelKey: 'profile' },
-      { href: '/dashboard/settings', icon: Settings, labelKey: 'settings' },
+    groups: [
+      {
+        labelKey: 'groupOverview',
+        items: [{ href: '/dashboard', icon: LayoutDashboard, labelKey: 'dashboard' }],
+      },
+      {
+        labelKey: 'groupStudents',
+        items: [
+          { href: '/dashboard/students', icon: Users, labelKey: 'students' },
+          { href: '/dashboard/documents', icon: FolderOpen, labelKey: 'documents' },
+          { href: '/dashboard/results', icon: Trophy, labelKey: 'results' },
+        ],
+      },
+      {
+        labelKey: 'groupApplications',
+        items: [
+          { href: '/dashboard/applications', icon: FileText, labelKey: 'applications' },
+          { href: '/dashboard/offers', icon: Gift, labelKey: 'offers' },
+          { href: '/dashboard/pipeline', icon: BarChart3, labelKey: 'pipeline' },
+        ],
+      },
+      {
+        labelKey: 'groupSchools',
+        items: [
+          { href: '/dashboard/search', icon: Search, labelKey: 'searchSchools' },
+          { href: '/dashboard/saved-schools', icon: Heart, labelKey: 'savedSchools' },
+          { href: '/dashboard/saved-searches', icon: Bookmark, labelKey: 'savedSearches' },
+        ],
+      },
+      {
+        labelKey: 'groupComms',
+        items: [
+          { href: '/dashboard/messages', icon: MessageSquare, labelKey: 'messages' },
+          { href: '/dashboard/notifications', icon: Bell, labelKey: 'notifications' },
+        ],
+      },
+      {
+        labelKey: 'groupAccount',
+        items: [
+          { href: '/dashboard/profile', icon: UserCircle, labelKey: 'profile' },
+          { href: '/dashboard/settings', icon: Settings, labelKey: 'settings' },
+        ],
+      },
     ],
   },
   school: {

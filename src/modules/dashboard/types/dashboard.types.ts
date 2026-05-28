@@ -60,9 +60,15 @@ export type NavItem = {
   labelKey: string;
 };
 
+export type NavGroup = {
+  labelKey: string;
+  items: NavItem[];
+};
+
 export type PortalNav = {
   home: string;
-  items: NavItem[];
+  items?: NavItem[];
+  groups?: NavGroup[];
 };
 
 export type PipelineCardStyle = {

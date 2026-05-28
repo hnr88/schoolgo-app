@@ -1506,7 +1506,13 @@
         "parent": "家长",
         "school": "学校"
       },
-      "documents": "[TODO: zh] Documents"
+      "documents": "[TODO: zh] Documents",
+      "groupOverview": "概览",
+      "groupStudents": "学生",
+      "groupApplications": "申请",
+      "groupSchools": "学校",
+      "groupComms": "沟通",
+      "groupAccount": "账户"
     },
     "greeting": {
       "morning": "早上好，",
@@ -1541,7 +1547,8 @@
     "retry": "重试",
     "quickActionsTitle": "快速操作",
     "collapseSidebar": "收起侧边栏",
-    "expandSidebar": "展开侧边栏"
+    "expandSidebar": "展开侧边栏",
+    "pageSubtitle": "一目了然地掌握动态、截止日期和申请进度。"
   },
   "Students": {
     "title": "[TODO: zh] Students",
@@ -1715,7 +1722,8 @@
     "columnEnrolled": "已入学",
     "columnClosed": "已关闭",
     "daysLabel": "{count}天",
-    "moreApplications": "+{count} 更多"
+    "moreApplications": "+{count} 更多",
+    "subtitle": "跟踪每份申请在入学流程各阶段的进展。"
   },
   "SchoolDetail": {
     "backToSearch": "[TODO: zh] Back to search",

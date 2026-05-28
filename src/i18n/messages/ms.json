@@ -1506,7 +1506,13 @@
         "parent": "Ibu Bapa",
         "school": "Sekolah"
       },
-      "documents": "[TODO: ms] Documents"
+      "documents": "[TODO: ms] Documents",
+      "groupOverview": "Ikhtisar",
+      "groupStudents": "Pelajar",
+      "groupApplications": "Permohonan",
+      "groupSchools": "Sekolah",
+      "groupComms": "Komunikasi",
+      "groupAccount": "Akaun"
     },
     "greeting": {
       "morning": "Selamat pagi,",
@@ -1541,7 +1547,8 @@
     "retry": "Cuba lagi",
     "quickActionsTitle": "Tindakan pantas",
     "collapseSidebar": "Lipat bar sisi",
-    "expandSidebar": "Kembangkan bar sisi"
+    "expandSidebar": "Kembangkan bar sisi",
+    "pageSubtitle": "Pantau aktiviti, tarikh akhir, dan saluran permohonan anda sekali pandang."
   },
   "Students": {
     "title": "[TODO: ms] Students",
@@ -1715,7 +1722,8 @@
     "columnEnrolled": "Didaftarkan",
     "columnClosed": "Ditutup",
     "daysLabel": "{count}h",
-    "moreApplications": "+{count} lagi"
+    "moreApplications": "+{count} lagi",
+    "subtitle": "Jejaki setiap permohonan melalui setiap peringkat perjalanan pendaftaran."
   },
   "SchoolDetail": {
     "backToSearch": "[TODO: ms] Back to search",

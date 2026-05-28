@@ -13,6 +13,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
+import { PageHeader } from '@/modules/dashboard';
 import { DOCUMENT_TYPES, DOCUMENT_STATUSES } from '@/modules/students/types/document.types';
 import { useStudents } from '@/modules/students/queries/use-students.query';
 import { useAgentDocuments } from '@/modules/agent-documents/queries/use-agent-documents.query';
@@ -54,16 +55,16 @@ export function AgentDocumentsPage() {
 
   return (
     <div className='flex flex-col gap-6'>
-      <div className='flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between'>
-        <div>
-          <h1 className='text-xl font-semibold text-ink-900'>{t('title')}</h1>
-          <p className='mt-1 text-sm text-foggy'>{t('subtitle')}</p>
-        </div>
-        <Button onClick={() => setUploadOpen(true)}>
-          <Plus className='mr-2 h-4 w-4' />
-          {t('upload')}
-        </Button>
-      </div>
+      <PageHeader
+        title={t('title')}
+        description={t('subtitle')}
+        actions={
+          <Button onClick={() => setUploadOpen(true)}>
+            <Plus className='mr-2 h-4 w-4' />
+            {t('upload')}
+          </Button>
+        }
+      />
 
       <div className='flex flex-wrap items-center gap-3'>
         <Select value={studentFilter} onValueChange={(v) => { if (v) setStudentFilter(v); }}>

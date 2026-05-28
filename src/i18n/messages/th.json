@@ -1506,7 +1506,13 @@
         "parent": "ผู้ปกครอง",
         "school": "โรงเรียน"
       },
-      "documents": "[TODO: th] Documents"
+      "documents": "[TODO: th] Documents",
+      "groupOverview": "ภาพรวม",
+      "groupStudents": "นักเรียน",
+      "groupApplications": "ใบสมัคร",
+      "groupSchools": "โรงเรียน",
+      "groupComms": "การสื่อสาร",
+      "groupAccount": "บัญชี"
     },
     "greeting": {
       "morning": "สวัสดีตอนเช้า",
@@ -1541,7 +1547,8 @@
     "retry": "ลองอีกครั้ง",
     "quickActionsTitle": "การดำเนินการด่วน",
     "collapseSidebar": "ย่อแถบด้านข้าง",
-    "expandSidebar": "ขยายแถบด้านข้าง"
+    "expandSidebar": "ขยายแถบด้านข้าง",
+    "pageSubtitle": "ติดตามกิจกรรม กำหนดเวลา และไปป์ไลน์ใบสมัครของคุณได้ในที่เดียว"
   },
   "Students": {
     "title": "[TODO: th] Students",
@@ -1715,7 +1722,8 @@
     "columnEnrolled": "ลงทะเบียนแล้ว",
     "columnClosed": "ปิดแล้ว",
     "daysLabel": "{count}ว",
-    "moreApplications": "+{count} เพิ่มเติม"
+    "moreApplications": "+{count} เพิ่มเติม",
+    "subtitle": "ติดตามทุกใบสมัครในแต่ละขั้นตอนของกระบวนการลงทะเบียน"
   },
   "SchoolDetail": {
     "backToSearch": "[TODO: th] Back to search",

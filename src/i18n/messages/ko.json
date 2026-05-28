@@ -1506,7 +1506,13 @@
         "parent": "학부모",
         "school": "학교"
       },
-      "documents": "[TODO: ko] Documents"
+      "documents": "[TODO: ko] Documents",
+      "groupOverview": "개요",
+      "groupStudents": "학생",
+      "groupApplications": "지원서",
+      "groupSchools": "학교",
+      "groupComms": "커뮤니케이션",
+      "groupAccount": "계정"
     },
     "greeting": {
       "morning": "좋은 아침입니다,",
@@ -1541,7 +1547,8 @@
     "retry": "다시 시도",
     "quickActionsTitle": "빠른 실행",
     "collapseSidebar": "사이드바 접기",
-    "expandSidebar": "사이드바 펼치기"
+    "expandSidebar": "사이드바 펼치기",
+    "pageSubtitle": "활동, 마감일, 지원 현황을 한눈에 확인하세요."
   },
   "Students": {
     "title": "[TODO: ko] Students",
@@ -1715,7 +1722,8 @@
     "columnEnrolled": "등록 완료",
     "columnClosed": "종료",
     "daysLabel": "{count}일",
-    "moreApplications": "+{count}건 더"
+    "moreApplications": "+{count}건 더",
+    "subtitle": "입학 과정의 각 단계에서 모든 지원서를 추적하세요."
   },
   "SchoolDetail": {
     "backToSearch": "[TODO: ko] Back to search",

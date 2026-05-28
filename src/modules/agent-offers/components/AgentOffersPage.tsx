@@ -4,6 +4,7 @@ import { useTranslations } from 'next-intl';
 import { AlertCircle, ClipboardCheck, Gift } from 'lucide-react';
 import { Skeleton } from '@/components/ui/skeleton';
 import { EmptyState } from '@/modules/core/components/EmptyState';
+import { PageHeader } from '@/modules/dashboard';
 import { useAgentOffers } from '@/modules/applications/queries/use-agent-offers.query';
 import { usePostOfferApplications } from '@/modules/applications/queries/use-post-offer-applications.query';
 import { OfferCard } from '@/modules/agent-offers/components/OfferCard';
@@ -38,10 +39,7 @@ export function AgentOffersPage() {
 
   return (
     <div className='flex flex-col gap-10'>
-      <div>
-        <h1 className='text-xl font-semibold text-ink-900'>{t('title')}</h1>
-        <p className='mt-1 text-sm text-foggy'>{t('subtitle')}</p>
-      </div>
+      <PageHeader title={t('title')} description={t('subtitle')} />
 
       <section className='flex flex-col gap-4'>
         <h2 className='text-base font-semibold text-ink-900'>{t('offersToReview')}</h2>

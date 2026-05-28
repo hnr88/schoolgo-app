@@ -1506,7 +1506,13 @@
         "parent": "Parent",
         "school": "School"
       },
-      "documents": "Documents"
+      "documents": "Documents",
+      "groupOverview": "Overview",
+      "groupStudents": "Students",
+      "groupApplications": "Applications",
+      "groupSchools": "Schools",
+      "groupComms": "Communication",
+      "groupAccount": "Account"
     },
     "greeting": {
       "morning": "Good morning,",
@@ -1541,7 +1547,8 @@
     "retry": "Try again",
     "quickActionsTitle": "Quick actions",
     "collapseSidebar": "Collapse sidebar",
-    "expandSidebar": "Expand sidebar"
+    "expandSidebar": "Expand sidebar",
+    "pageSubtitle": "Track activity, deadlines, and your application pipeline at a glance."
   },
   "ParentNav": {
     "dashboard": "Dashboard",
@@ -2269,7 +2276,8 @@
     "columnEnrolled": "Enrolled",
     "columnClosed": "Closed",
     "daysLabel": "in status",
-    "moreApplications": "more"
+    "moreApplications": "more",
+    "subtitle": "Track every application through each stage of the enrolment journey."
   },
   "SchoolDetail": {
     "backToSearch": "Back to search",
