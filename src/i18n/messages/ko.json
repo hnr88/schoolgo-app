@@ -1453,6 +1453,8 @@
       "applications": "[TODO: ko] Applications",
       "pipeline": "[TODO: ko] Pipeline",
       "searchSchools": "[TODO: ko] Search Schools",
+      "savedSchools": "저장한 학교",
+      "savedSearches": "저장한 검색",
       "messages": "[TODO: ko] Messages",
       "settings": "[TODO: ko] Settings",
       "profile": "[TODO: ko] My Profile",

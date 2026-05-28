@@ -1453,6 +1453,8 @@
       "applications": "[TODO: th] Applications",
       "pipeline": "[TODO: th] Pipeline",
       "searchSchools": "[TODO: th] Search Schools",
+      "savedSchools": "โรงเรียนที่บันทึกไว้",
+      "savedSearches": "การค้นหาที่บันทึกไว้",
       "messages": "[TODO: th] Messages",
       "settings": "[TODO: th] Settings",
       "profile": "[TODO: th] My Profile",

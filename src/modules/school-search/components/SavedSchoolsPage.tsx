@@ -3,11 +3,13 @@
 import { useTranslations } from 'next-intl';
 import { Heart } from 'lucide-react';
 import { Link } from '@/i18n/navigation';
+import type { Portal } from '@/lib/portal-url';
 import { Skeleton } from '@/components/ui/skeleton';
 import { EmptyState } from '@/modules/core';
 import { SearchSchoolCard } from '@/modules/school-search/components/SchoolCard';
 import { useBookmarks } from '@/modules/school-search/queries/use-bookmarks.query';
 import { useDeleteBookmark } from '@/modules/school-search/queries/use-delete-bookmark.mutation';
+import { portalSearchPath } from '@/modules/school-search/lib/portal-paths';
 import type { SchoolHit } from '@/modules/school-search/types/search-api.types';
 
 const GRID_CLASS = 'grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3';
@@ -17,15 +19,17 @@ function SavedSchoolItem({
   onRemove,
   removeLabel,
   isRemoving,
+  portal,
 }: {
   school: SchoolHit;
   onRemove: () => void;
   removeLabel: string;
   isRemoving: boolean;
+  portal: Portal;
 }) {
   return (
     <div className='flex flex-col gap-2'>
-      <SearchSchoolCard school={school} activePortal='parent' />
+      <SearchSchoolCard school={school} activePortal={portal} />
       <button
         type='button'
         onClick={onRemove}
@@ -39,7 +43,7 @@ function SavedSchoolItem({
   );
 }
 
-export function SavedSchoolsPage() {
+export function SavedSchoolsPage({ portal = 'parent' }: { portal?: Portal }) {
   const t = useTranslations('ParentSavedSchools');
   const { data, isLoading } = useBookmarks();
   const deleteBookmark = useDeleteBookmark();
@@ -63,7 +67,7 @@ export function SavedSchoolsPage() {
           description={t('emptyDescription')}
           action={
             <Link
-              href='/parent/search'
+              href={portalSearchPath(portal)}
               className='inline-flex items-center justify-center rounded-pill bg-primary px-4 py-2 text-body-sm font-semibold text-on-primary transition-colors hover:bg-rausch-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2'
             >
               {t('browseSchools')}
@@ -76,6 +80,7 @@ export function SavedSchoolsPage() {
             <SavedSchoolItem
               key={school.id}
               school={school}
+              portal={portal}
               removeLabel={t('remove')}
               isRemoving={deleteBookmark.isPending}
               onRemove={() => {

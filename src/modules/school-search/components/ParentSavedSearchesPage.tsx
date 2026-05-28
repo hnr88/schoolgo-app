@@ -3,14 +3,16 @@
 import { useTranslations } from 'next-intl';
 import { Search, Trash2 } from 'lucide-react';
 import { Link, useRouter } from '@/i18n/navigation';
+import type { Portal } from '@/lib/portal-url';
 import { Button } from '@/components/ui/button';
 import { EmptyState } from '@/modules/core';
 import { useSavedSearches } from '@/modules/school-search/queries/use-saved-searches.query';
 import { useDeleteSavedSearch } from '@/modules/school-search/queries/use-delete-saved-search.mutation';
 import { useApplySavedSearch } from '@/modules/school-search/hooks/useApplySavedSearch';
+import { portalSearchPath } from '@/modules/school-search/lib/portal-paths';
 import type { SavedSearch } from '@/modules/school-search/types/saved-searches.types';
 
-export function ParentSavedSearchesPage() {
+export function ParentSavedSearchesPage({ portal = 'parent' }: { portal?: Portal }) {
   const t = useTranslations('ParentSavedSearches');
   const router = useRouter();
   const { data, isLoading } = useSavedSearches();
@@ -21,7 +23,7 @@ export function ParentSavedSearchesPage() {
 
   const handleRun = (search: SavedSearch) => {
     applySavedSearch(search.filterState);
-    router.push('/parent/search');
+    router.push(portalSearchPath(portal));
   };
 
   return (
@@ -44,7 +46,7 @@ export function ParentSavedSearchesPage() {
           description={t('emptyDescription')}
           action={
             <Link
-              href='/parent/search'
+              href={portalSearchPath(portal)}
               className='inline-flex items-center justify-center rounded-pill bg-primary px-4 py-2 text-body-sm font-semibold text-on-primary transition-colors hover:bg-rausch-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2'
             >
               {t('browseSchools')}
