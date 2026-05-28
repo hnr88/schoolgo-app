@@ -10,6 +10,7 @@ import { ApplicationDetailHeader } from '@/modules/applications/components/Appli
 import { ApplicationDetailsTab } from '@/modules/applications/components/ApplicationDetailsTab';
 import { ApplicationDocumentsTab } from '@/modules/applications/components/ApplicationDocumentsTab';
 import { ApplicationTimelineTab } from '@/modules/applications/components/ApplicationTimelineTab';
+import { ApplicationMessagesTab } from '@/modules/applications/components/ApplicationMessagesTab';
 import { ApplicationActions } from '@/modules/applications/components/ApplicationActions';
 
 function DetailSkeleton() {
@@ -92,9 +93,7 @@ export function ApplicationDetailPage({ documentId }: { documentId: string }) {
           </TabsContent>
 
           <TabsContent value='messages' className='mt-6'>
-            <div className='flex flex-col items-center justify-center rounded-xl border border-dashed border-border bg-card py-16'>
-              <p className='text-sm text-foggy'>{t('tabMessages')}</p>
-            </div>
+            <ApplicationMessagesTab documentId={application.documentId} />
           </TabsContent>
         </Tabs>
 
