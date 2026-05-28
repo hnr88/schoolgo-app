@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
-import { DashboardPlaceholder } from '@/modules/dashboard/components/DashboardPlaceholder';
+import { AgentMessagesPage } from '@/modules/applications';
 
 export async function generateMetadata({
   params,
@@ -8,8 +8,8 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'Dashboard' });
-  return { title: t('nav.messages') };
+  const t = await getTranslations({ locale, namespace: 'AgentMessages' });
+  return { title: t('title'), description: t('subtitle') };
 }
 
 export default async function MessagesPage({
@@ -19,5 +19,5 @@ export default async function MessagesPage({
 }) {
   const { locale } = await params;
   setRequestLocale(locale);
-  return <DashboardPlaceholder titleKey='messages' />;
+  return <AgentMessagesPage />;
 }

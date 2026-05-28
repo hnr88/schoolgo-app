@@ -1445,6 +1445,22 @@
     "notFoundSubtitle": "[TODO: ms] The page you're looking for doesn't exist or has been moved.",
     "searchInstead": "[TODO: ms] Search schools"
   },
+  "AgentMessages": {
+    "title": "Mesej",
+    "subtitle": "Perbualan dengan sekolah tentang permohonan anda.",
+    "searchPlaceholder": "Cari perbualan",
+    "empty": "Tiada perbualan lagi",
+    "emptyDescription": "Mesej dengan sekolah akan dipaparkan di sini apabila bualan bermula.",
+    "noSearchResults": "Tiada perbualan sepadan dengan carian anda.",
+    "loadError": "Gagal memuatkan perbualan.",
+    "selectPrompt": "Pilih perbualan untuk membaca dan membalas.",
+    "back": "Kembali ke perbualan",
+    "unread": "Belum dibaca",
+    "unknownSchool": "Sekolah tidak diketahui",
+    "unknownStudent": "Pelajar tidak diketahui",
+    "threadEmpty": "Tiada mesej lagi. Mulakan perbualan di bawah.",
+    "threadLoadError": "Gagal memuatkan mesej."
+  },
   "Dashboard": {
     "nav": {
       "dashboard": "[TODO: ms] Dashboard",

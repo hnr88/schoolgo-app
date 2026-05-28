@@ -1445,6 +1445,22 @@
     "notFoundSubtitle": "The page you're looking for doesn't exist or has been moved.",
     "searchInstead": "Search schools"
   },
+  "AgentMessages": {
+    "title": "Messages",
+    "subtitle": "Conversations with schools about your applications.",
+    "searchPlaceholder": "Search conversations",
+    "empty": "No conversations yet",
+    "emptyDescription": "Messages with schools will appear here once a thread starts.",
+    "noSearchResults": "No conversations match your search.",
+    "loadError": "Failed to load conversations.",
+    "selectPrompt": "Select a conversation to read and reply.",
+    "back": "Back to conversations",
+    "unread": "Unread",
+    "unknownSchool": "Unknown school",
+    "unknownStudent": "Unknown student",
+    "threadEmpty": "No messages yet. Start the conversation below.",
+    "threadLoadError": "Failed to load messages."
+  },
   "Dashboard": {
     "nav": {
       "dashboard": "Dashboard",

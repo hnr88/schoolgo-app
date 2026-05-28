@@ -1445,6 +1445,22 @@
     "notFoundSubtitle": "[TODO: zh] The page you're looking for doesn't exist or has been moved.",
     "searchInstead": "[TODO: zh] Search schools"
   },
+  "AgentMessages": {
+    "title": "消息",
+    "subtitle": "与学校就您的申请进行的对话。",
+    "searchPlaceholder": "搜索对话",
+    "empty": "暂无对话",
+    "emptyDescription": "对话开始后，与学校的消息将显示在此处。",
+    "noSearchResults": "没有与您的搜索匹配的对话。",
+    "loadError": "加载对话失败。",
+    "selectPrompt": "选择一个对话以阅读和回复。",
+    "back": "返回对话列表",
+    "unread": "未读",
+    "unknownSchool": "未知学校",
+    "unknownStudent": "未知学生",
+    "threadEmpty": "暂无消息。在下方开始对话。",
+    "threadLoadError": "加载消息失败。"
+  },
   "Dashboard": {
     "nav": {
       "dashboard": "[TODO: zh] Dashboard",

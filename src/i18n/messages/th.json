@@ -1445,6 +1445,22 @@
     "notFoundSubtitle": "[TODO: th] The page you're looking for doesn't exist or has been moved.",
     "searchInstead": "[TODO: th] Search schools"
   },
+  "AgentMessages": {
+    "title": "ข้อความ",
+    "subtitle": "บทสนทนากับโรงเรียนเกี่ยวกับใบสมัครของคุณ",
+    "searchPlaceholder": "ค้นหาบทสนทนา",
+    "empty": "ยังไม่มีบทสนทนา",
+    "emptyDescription": "ข้อความกับโรงเรียนจะปรากฏที่นี่เมื่อมีการเริ่มบทสนทนา",
+    "noSearchResults": "ไม่มีบทสนทนาที่ตรงกับการค้นหาของคุณ",
+    "loadError": "ไม่สามารถโหลดบทสนทนาได้",
+    "selectPrompt": "เลือกบทสนทนาเพื่ออ่านและตอบกลับ",
+    "back": "กลับไปยังบทสนทนา",
+    "unread": "ยังไม่ได้อ่าน",
+    "unknownSchool": "ไม่ทราบชื่อโรงเรียน",
+    "unknownStudent": "ไม่ทราบชื่อนักเรียน",
+    "threadEmpty": "ยังไม่มีข้อความ เริ่มบทสนทนาด้านล่าง",
+    "threadLoadError": "ไม่สามารถโหลดข้อความได้"
+  },
   "Dashboard": {
     "nav": {
       "dashboard": "[TODO: th] Dashboard",

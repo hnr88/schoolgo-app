@@ -1445,6 +1445,22 @@
     "notFoundSubtitle": "[TODO: vi] The page you're looking for doesn't exist or has been moved.",
     "searchInstead": "[TODO: vi] Search schools"
   },
+  "AgentMessages": {
+    "title": "Tin nhắn",
+    "subtitle": "Cuộc trò chuyện với trường về hồ sơ của bạn.",
+    "searchPlaceholder": "Tìm cuộc trò chuyện",
+    "empty": "Chưa có cuộc trò chuyện nào",
+    "emptyDescription": "Tin nhắn với trường sẽ hiển thị ở đây khi một cuộc trò chuyện bắt đầu.",
+    "noSearchResults": "Không có cuộc trò chuyện nào khớp với tìm kiếm của bạn.",
+    "loadError": "Không tải được cuộc trò chuyện.",
+    "selectPrompt": "Chọn một cuộc trò chuyện để đọc và trả lời.",
+    "back": "Quay lại danh sách trò chuyện",
+    "unread": "Chưa đọc",
+    "unknownSchool": "Trường không xác định",
+    "unknownStudent": "Học sinh không xác định",
+    "threadEmpty": "Chưa có tin nhắn. Bắt đầu cuộc trò chuyện bên dưới.",
+    "threadLoadError": "Không tải được tin nhắn."
+  },
   "Dashboard": {
     "nav": {
       "dashboard": "[TODO: vi] Dashboard",
