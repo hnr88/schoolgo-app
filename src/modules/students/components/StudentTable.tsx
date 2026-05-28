@@ -14,7 +14,7 @@ import {
 import { Skeleton } from '@/components/ui/skeleton';
 import { DataTableSortHeader, StatusBadge } from '@/modules/design-system';
 import { EmptyState } from '@/modules/core';
-import { STATUS_STYLES } from '@/modules/students/constants/status.constants';
+import { STATUS_STYLES, TEST_VERIFICATION_TONE } from '@/modules/students/constants/status.constants';
 import type { StudentTableProps, SortField } from '@/modules/students/types/component.types';
 
 const STUDENT_STATUS_TO_TONE: Record<string, NonNullable<React.ComponentProps<typeof StatusBadge>['tone']>> = {
@@ -109,6 +109,9 @@ export function StudentTable({ students, isLoading, sortField, sortDirection, on
                 const style = STATUS_STYLES[student.status] ?? STATUS_STYLES.archived;
                 const initials = `${student.firstName?.[0] ?? ''}${student.lastName?.[0] ?? ''}`.toUpperCase();
                 const tone = STUDENT_STATUS_TO_TONE[student.status] ?? 'muted';
+                const test = student.englishTestSummary;
+                const testTone = test ? TEST_VERIFICATION_TONE[test.verificationStatus] ?? 'muted' : 'muted';
+                const appCount = student.activeApplicationCount ?? 0;
 
                 return (
                   <TableRow
@@ -141,8 +144,17 @@ export function StudentTable({ students, isLoading, sortField, sortDirection, on
                         ? `${student.targetEntryYear}${student.targetEntryTerm ? ` · ${student.targetEntryTerm}` : ''}`
                         : '—'}
                     </TableCell>
-                    <TableCell className='text-sm text-foggy'>—</TableCell>
-                    <TableCell className='text-sm text-foggy'>—</TableCell>
+                    <TableCell className='text-sm'>
+                      {test ? (
+                        <StatusBadge tone={testTone}>
+                          {test.testType.toUpperCase()}
+                          {test.overallScore ? ` · ${test.overallScore}` : ''}
+                        </StatusBadge>
+                      ) : (
+                        <span className='text-foggy'>—</span>
+                      )}
+                    </TableCell>
+                    <TableCell className='text-sm text-hof'>{appCount}</TableCell>
                     <TableCell className='pr-6'>
                       <StatusBadge tone={tone}>
                         <span className={`inline-block h-1.5 w-1.5 rounded-full ${style.dot}`} />

@@ -1,3 +1,9 @@
+export interface StudentEnglishTestSummary {
+  testType: string;
+  overallScore: string | null;
+  verificationStatus: string;
+}
+
 export interface Student {
   id: number;
   documentId: string;
@@ -17,6 +23,8 @@ export interface Student {
   parentGuardianWechat: string | null;
   agentNotes: string | null;
   status: 'active' | 'archived' | 'enrolled';
+  activeApplicationCount?: number;
+  englishTestSummary?: StudentEnglishTestSummary | null;
   createdAt: string;
   updatedAt: string;
 }

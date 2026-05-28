@@ -2,9 +2,10 @@
 
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
-import { ArrowLeft } from 'lucide-react';
+import { ArrowLeft, Pencil } from 'lucide-react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Skeleton } from '@/components/ui/skeleton';
+import { Button } from '@/components/ui/button';
 import { useStudent } from '@/modules/students/queries/use-student.query';
 import { StudentDocumentsTab } from '@/modules/students/components/StudentDocumentsTab';
 import { STATUS_DOT } from '@/modules/students/constants/profile.constants';
@@ -107,6 +108,12 @@ export function StudentProfile({ documentId }: StudentProfileProps) {
               )}
             </div>
           </div>
+          <Link href={`/dashboard/students/${student.documentId}/edit`}>
+            <Button variant='outline' size='sm'>
+              <Pencil className='mr-1 h-4 w-4' />
+              {t('edit')}
+            </Button>
+          </Link>
         </div>
       </div>
 

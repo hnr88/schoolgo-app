@@ -4,6 +4,7 @@ export { ParentStudentListPage } from '@/modules/students/components/ParentStude
 export { ParentStudentProfile } from '@/modules/students/components/ParentStudentProfile';
 export { ParentStudentAvatar } from '@/modules/students/components/ParentStudentAvatar';
 export { CreateStudentPage } from '@/modules/students/components/CreateStudentPage';
+export { AgentEditStudentPage } from '@/modules/students/components/AgentEditStudentPage';
 export { ParentStudentWizard } from '@/modules/students/components/parent-wizard/ParentStudentWizard';
 export { EditStudentPage } from '@/modules/students/components/EditStudentPage';
 export { StudentForm } from '@/modules/students/components/StudentForm';

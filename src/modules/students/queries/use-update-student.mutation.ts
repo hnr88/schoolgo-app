@@ -2,6 +2,7 @@
 
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { privateApi } from '@/lib/axios';
+import { buildStudentPayload } from '@/modules/students/lib/build-student-payload';
 import type { StudentFormValues } from '@/modules/students/schemas/student.schema';
 import type { Student, StrapiSingleResponse } from '@/modules/students/types/student.types';
 
@@ -11,7 +12,7 @@ export function useUpdateStudent(documentId: string) {
     mutationFn: async (values: StudentFormValues) => {
       const { data } = await privateApi.put<StrapiSingleResponse<Student>>(
         `/api/students/${documentId}`,
-        { data: values },
+        { data: buildStudentPayload(values) },
       );
       return data.data;
     },
