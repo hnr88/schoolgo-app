@@ -1427,6 +1427,7 @@
   "Dashboard": {
     "nav": {
       "dashboard": "[TODO: th] Dashboard",
+      "notifications": "การแจ้งเตือน",
       "students": "[TODO: th] Students",
       "applications": "[TODO: th] Applications",
       "pipeline": "[TODO: th] Pipeline",

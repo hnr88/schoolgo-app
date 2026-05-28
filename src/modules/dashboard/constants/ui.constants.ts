@@ -36,6 +36,7 @@ import type {
 
 export const ROUTE_TITLE_MAP: Record<string, string> = {
   '/dashboard': 'dashboard',
+  '/dashboard/notifications': 'notifications',
   '/dashboard/students': 'students',
   '/dashboard/applications': 'applications',
   '/dashboard/pipeline': 'pipeline',
@@ -50,6 +51,7 @@ export const PORTAL_NAV: Record<Portal, PortalNav> = {
     home: '/dashboard',
     items: [
       { href: '/dashboard', icon: LayoutDashboard, labelKey: 'dashboard' },
+      { href: '/dashboard/notifications', icon: Bell, labelKey: 'notifications' },
       { href: '/dashboard/students', icon: Users, labelKey: 'students' },
       { href: '/dashboard/applications', icon: FileText, labelKey: 'applications' },
       { href: '/dashboard/pipeline', icon: BarChart3, labelKey: 'pipeline' },

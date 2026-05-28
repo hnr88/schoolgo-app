@@ -1,9 +1,11 @@
 'use client';
 
-import { useFormatter, useTranslations } from 'next-intl';
+import { useFormatter, useNow, useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
+import { useAuthStore } from '@/modules/auth/stores/use-auth-store';
 import { cn } from '@/lib/utils';
 import { NOTIFICATION_EVENT_ICON, NOTIFICATION_PRIORITY_DOT } from '../constants/notification.constants';
+import { notificationEntityPath } from '../lib/notification-paths';
 import type { ParentNotification } from '../types/notification.types';
 
 interface NotificationItemProps {
@@ -14,6 +16,8 @@ interface NotificationItemProps {
 export function NotificationItem({ notification, onMarkRead }: NotificationItemProps) {
   const t = useTranslations('ParentNotifications');
   const format = useFormatter();
+  const now = useNow();
+  const userType = useAuthStore((s) => s.userType);
   const {
     documentId,
     eventType,
@@ -29,12 +33,7 @@ export function NotificationItem({ notification, onMarkRead }: NotificationItemP
   const Icon = NOTIFICATION_EVENT_ICON[eventType];
   const isUnread = readAt === null;
 
-  const href =
-    entityType === 'application' && entityDocumentId
-      ? (`/parent/applications/${entityDocumentId}` as const)
-      : entityType === 'student' && entityDocumentId
-        ? (`/parent/students/${entityDocumentId}` as const)
-        : null;
+  const href = notificationEntityPath(userType, entityType, entityDocumentId);
 
   const handleActivate = () => {
     if (isUnread) onMarkRead(documentId);
@@ -62,7 +61,7 @@ export function NotificationItem({ notification, onMarkRead }: NotificationItemP
         </div>
         {body && <p className='text-sm text-muted-foreground'>{body}</p>}
         <time dateTime={createdAt} className='text-xs text-foggy'>
-          {format.relativeTime(new Date(createdAt))}
+          {format.relativeTime(new Date(createdAt), { now })}
         </time>
       </div>
     </div>

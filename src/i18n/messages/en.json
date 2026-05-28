@@ -1427,6 +1427,7 @@
   "Dashboard": {
     "nav": {
       "dashboard": "Dashboard",
+      "notifications": "Notifications",
       "students": "Students",
       "applications": "Applications",
       "pipeline": "Pipeline",

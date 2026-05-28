@@ -22,7 +22,7 @@ export function DashboardHeader() {
   const t = useTranslations('Dashboard');
   const pathname = usePathname();
   const router = useRouter();
-  const { user, logout } = useAuthStore();
+  const { user, userType, logout } = useAuthStore();
 
   const titleKey = resolvePageTitle(pathname);
   const isSearchPage = pathname.includes('/dashboard/search');
@@ -55,7 +55,7 @@ export function DashboardHeader() {
         )}
 
         <div className={`flex items-center gap-2 ${isSearchPage ? 'shrink-0' : 'ml-auto'}`}>
-          {pathname.startsWith('/parent') && <NotificationBell />}
+          {(userType === 'parent' || userType === 'agent') && <NotificationBell />}
           <DropdownMenu>
             <DropdownMenuTrigger className='flex items-center gap-2.5 rounded-xl px-2 py-1.5 text-sm font-medium text-ink-900 outline-none transition-colors hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1'>
               <Avatar className='h-8 w-8'>

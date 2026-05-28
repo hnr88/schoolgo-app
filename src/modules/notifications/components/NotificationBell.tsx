@@ -4,11 +4,14 @@ import { Bell } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 
 import { Link } from '@/i18n/navigation';
+import { useAuthStore } from '@/modules/auth/stores/use-auth-store';
 
+import { notificationsListPath } from '../lib/notification-paths';
 import { useParentUnreadCount } from '../queries/use-parent-unread-count.query';
 
 export function NotificationBell() {
   const t = useTranslations('ParentNotifications');
+  const userType = useAuthStore((s) => s.userType);
   const { data: count = 0 } = useParentUnreadCount();
 
   const hasUnread = count > 0;
@@ -16,7 +19,7 @@ export function NotificationBell() {
 
   return (
     <Link
-      href='/parent/notifications'
+      href={notificationsListPath(userType)}
       aria-label={t('bellLabel')}
       className='relative flex h-9 w-9 items-center justify-center rounded-xl text-ink-900 outline-none transition-colors hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1'
     >

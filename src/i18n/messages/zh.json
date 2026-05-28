@@ -1427,6 +1427,7 @@
   "Dashboard": {
     "nav": {
       "dashboard": "[TODO: zh] Dashboard",
+      "notifications": "通知",
       "students": "[TODO: zh] Students",
       "applications": "[TODO: zh] Applications",
       "pipeline": "[TODO: zh] Pipeline",

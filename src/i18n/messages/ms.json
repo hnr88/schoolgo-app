@@ -1427,6 +1427,7 @@
   "Dashboard": {
     "nav": {
       "dashboard": "[TODO: ms] Dashboard",
+      "notifications": "Pemberitahuan",
       "students": "[TODO: ms] Students",
       "applications": "[TODO: ms] Applications",
       "pipeline": "[TODO: ms] Pipeline",

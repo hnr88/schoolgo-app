@@ -1427,6 +1427,7 @@
   "Dashboard": {
     "nav": {
       "dashboard": "[TODO: ko] Dashboard",
+      "notifications": "알림",
       "students": "[TODO: ko] Students",
       "applications": "[TODO: ko] Applications",
       "pipeline": "[TODO: ko] Pipeline",
