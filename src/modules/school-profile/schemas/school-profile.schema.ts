@@ -57,11 +57,10 @@ const nonNegativeInt = z
   .min(0)
   .nullable();
 
-const decimalScore = z
-  .number()
-  .min(0)
-  .max(9)
-  .nullable();
+const ieltsScore = z.number().min(0).max(9).nullable();
+const aeasScore = z.number().min(0).max(100).nullable();
+const pteScore = z.number().min(0).max(90).nullable();
+const duolingoScore = z.number().min(0).max(160).nullable();
 
 export const identitySchema = z.object({
   name: z.string().trim().min(1).max(255),
@@ -94,10 +93,10 @@ export const feesSchema = z.object({
 });
 
 export const academicSchema = z.object({
-  ieltsMinScore: decimalScore,
-  aeasMinScore: decimalScore,
-  pteMinScore: decimalScore,
-  duolingoMinScore: decimalScore,
+  ieltsMinScore: ieltsScore,
+  aeasMinScore: aeasScore,
+  pteMinScore: pteScore,
+  duolingoMinScore: duolingoScore,
   curriculumOffered: z.string().trim().max(255).optional().or(z.literal('')),
   levelsOffered: z.string().trim().max(255).optional().or(z.literal('')),
   intakePeriods: z.string().trim().max(2000).optional().or(z.literal('')),
