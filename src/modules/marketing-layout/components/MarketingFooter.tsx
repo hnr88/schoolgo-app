@@ -35,7 +35,7 @@ export async function MarketingFooter({ activePortal }: MarketingFooterProps) {
               />
             </a>
             <p className='text-sm leading-relaxed text-white/60'>{t('tagline')}</p>
-            <p className='text-xs text-white/40'>{t('attribution')}</p>
+            <p className='text-xs text-white/60'>{t('attribution')}</p>
           </div>
 
           {footerColumns.map((col, index) => (

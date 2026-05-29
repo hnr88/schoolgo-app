@@ -48,21 +48,20 @@ export function ParentsFourStepsClient({
                     )}
                   </div>
                   <div className='flex flex-col gap-1 pt-0.5 lg:gap-1.5 lg:pt-1'>
-                    <span className='text-xs font-semibold uppercase tracking-widest text-primary'>
+                    <span className='text-xs font-semibold uppercase tracking-widest text-primary-strong'>
                       {step.stepLabel}
                     </span>
                     <h3 className='flex flex-wrap items-center gap-2 text-base font-semibold text-ink-900 lg:text-lg'>
                       {step.title}
                       {step.comingSoon && (
-                        <span className='inline-flex items-center rounded-pill border border-primary/20 bg-rausch-50 px-2 py-0.5 text-xs font-semibold text-primary'>
+                        <span className='inline-flex items-center rounded-pill border border-primary/20 bg-rausch-50 px-2 py-0.5 text-xs font-semibold text-primary-strong'>
                           {step.comingSoon}
                         </span>
                       )}
                     </h3>
                     <p
                       className={cn(
-                        'max-w-md text-sm leading-relaxed transition-colors',
-                        isActive ? 'text-foggy' : 'text-foggy/70',
+                        'max-w-md text-sm leading-relaxed text-foggy transition-colors',
                         isActive ? 'block' : 'hidden lg:block',
                       )}
                     >

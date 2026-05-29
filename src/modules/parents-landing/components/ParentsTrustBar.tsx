@@ -38,7 +38,7 @@ export async function ParentsTrustBar() {
           </div>
         </div>
 
-        <p className='border-t border-background/10 pt-6 text-caption text-background/30'>
+        <p className='border-t border-background/10 pt-6 text-caption text-background/55'>
           {t('attribution')}
         </p>
       </SectionContainer>
