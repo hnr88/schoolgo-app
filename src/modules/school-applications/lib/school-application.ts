@@ -40,14 +40,18 @@ export function isTerminalStatus(status: SchoolApplicationStatus): boolean {
   return TERMINAL.includes(status);
 }
 
-// Which workflow actions are available from a given status. Mirrors the
-// backend `assertTransition` allowances for the school role.
+// Which workflow actions are available from a given status for the school role.
+// This MUST stay in sync with the backend, which enforces transitions in TWO
+// places: the per-action `assertTransition` in the application controller AND
+// the document-service middleware `VALID_TRANSITIONS` map in `src/index.ts`.
+// The lists below are the intersection of both guards (offering an action the
+// backend rejects renders a dead button that 403/400s on click).
 export function availableActions(status: SchoolApplicationStatus): SchoolActionKey[] {
   switch (status) {
     case 'submitted':
-      return ['receive', 'decline', 'waitlist'];
+      return ['receive'];
     case 'received':
-      return ['review', 'request-documents', 'decline', 'waitlist'];
+      return ['review', 'decline', 'waitlist'];
     case 'under_review':
       return [
         'request-documents',
@@ -58,22 +62,22 @@ export function availableActions(status: SchoolApplicationStatus): SchoolActionK
         'waitlist',
       ];
     case 'documents_requested':
-      return ['review', 'require-assessment', 'make-offer', 'decline', 'waitlist'];
+      return ['review'];
     case 'assessment_required':
-      return ['exam-outcome', 'schedule-interview', 'make-offer', 'decline', 'waitlist'];
+      return ['review', 'exam-outcome'];
     case 'interview_scheduled':
-      return ['complete-interview', 'decline', 'waitlist'];
+      return ['complete-interview'];
     case 'interview_completed':
       return ['make-offer', 'decline', 'waitlist'];
     case 'offer_made':
-      return ['extend-offer', 'withdraw-offer', 'issue-coe', 'enroll'];
+      return ['extend-offer', 'withdraw-offer'];
     case 'offer_accepted':
     case 'pre_enrolment':
-      return ['issue-coe', 'enroll'];
+      return ['issue-coe'];
     case 'coe_issued':
       return ['enroll'];
     case 'waitlisted':
-      return ['review', 'make-offer', 'decline'];
+      return ['make-offer', 'decline'];
     default:
       return [];
   }

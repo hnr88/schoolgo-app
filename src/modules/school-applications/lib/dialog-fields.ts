@@ -23,9 +23,11 @@ export const FIELD_DIALOG_CONFIG: Partial<
         labelKey: 'interviewMethodLabel',
         type: 'select',
         required: true,
+        // Values MUST match the backend `interviewMethod` enum
+        // (skype, zoom, wechat_video, teams, phone, in_person). Only the
+        // values with an existing label key are offered here.
         options: [
           { value: 'in_person', labelKey: 'interviewMethod_in_person' },
-          { value: 'video', labelKey: 'interviewMethod_video' },
           { value: 'phone', labelKey: 'interviewMethod_phone' },
         ],
       },
@@ -50,10 +52,13 @@ export const FIELD_DIALOG_CONFIG: Partial<
         labelKey: 'interviewOutcomeLabel',
         type: 'select',
         required: true,
+        // Values MUST match the backend `interviewOutcome` enum
+        // (pending, passed, further_review, not_recommended). The existing
+        // `examOutcome_*` label keys carry the correct human-readable text.
         options: [
-          { value: 'positive', labelKey: 'interviewOutcome_positive' },
-          { value: 'neutral', labelKey: 'interviewOutcome_neutral' },
-          { value: 'negative', labelKey: 'interviewOutcome_negative' },
+          { value: 'passed', labelKey: 'examOutcome_passed' },
+          { value: 'further_review', labelKey: 'examOutcome_further_review' },
+          { value: 'not_recommended', labelKey: 'examOutcome_not_recommended' },
         ],
       },
       { name: 'interviewNotes', labelKey: 'interviewNotesLabel', type: 'textarea' },
