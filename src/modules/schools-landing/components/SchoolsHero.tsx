@@ -81,14 +81,14 @@ export async function SchoolsHero() {
                       )}
                     </div>
                     <div className='flex min-w-0 flex-1 flex-col'>
-                      <span className='text-body-sm font-semibold text-ink-900 group-hover:text-primary'>
+                      <span className='text-body-sm font-semibold text-ink-900 group-hover:text-primary-strong'>
                         {school.name}
                       </span>
                       <span className='text-caption text-foggy'>
                         {school.suburb}, {school.state}
                       </span>
                     </div>
-                    <ArrowRight className='h-4 w-4 shrink-0 text-foggy transition-transform group-hover:translate-x-0.5 group-hover:text-primary' />
+                    <ArrowRight className='h-4 w-4 shrink-0 text-foggy transition-transform group-hover:translate-x-0.5 group-hover:text-primary-strong' />
                   </Link>
                 </li>
               ))}

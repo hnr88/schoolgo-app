@@ -63,7 +63,7 @@ export function ParentStudentsSummaryCard() {
                     size={36}
                   />
                   <span className='flex min-w-0 flex-1 flex-col'>
-                    <span className='truncate text-sm font-semibold text-ink-900 group-hover:text-primary'>
+                    <span className='truncate text-sm font-semibold text-ink-900 group-hover:text-primary-strong'>
                       {student.firstName} {student.lastName}
                     </span>
                     {student.targetEntryYear && (

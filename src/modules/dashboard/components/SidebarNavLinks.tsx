@@ -53,7 +53,7 @@ export function SidebarNavLinks({ isCollapsed = false, onNavigate }: SidebarNavL
                   isCollapsed ? 'justify-center p-3' : 'px-4 py-3',
                   isActive
                     ? 'bg-primary text-on-primary shadow-2'
-                    : 'text-foggy hover:bg-rausch-50 hover:text-primary',
+                    : 'text-foggy hover:bg-rausch-50 hover:text-primary-strong',
                 )}
               >
                 <Icon className='h-5 w-5 shrink-0' strokeWidth={isActive ? 2 : 1.5} />

@@ -59,6 +59,7 @@
   --color-popover-foreground: var(--popover-foreground);
   --color-primary: var(--primary);
   --color-primary-foreground: var(--primary-foreground);
+  --color-primary-strong: var(--primary-strong);
   --color-secondary: var(--secondary);
   --color-secondary-foreground: var(--secondary-foreground);
   --color-muted: var(--muted);
@@ -272,6 +273,7 @@
   --popover-foreground: var(--hof);
   --primary: var(--rausch-500);
   --primary-foreground: oklch(1 0 0); /* white on Rausch */
+  --primary-strong: var(--rausch-600); /* AA text-on-light red (>=4.5:1 on white & rausch-50) */
   --secondary: oklch(0.972 0 0); /* #F7F7F7 surface */
   --secondary-foreground: var(--hof);
   --muted: oklch(0.972 0 0); /* #F7F7F7 */
@@ -370,6 +372,7 @@
   --popover-foreground: oklch(0.931 0 0);
   --primary: var(--rausch-500);
   --primary-foreground: oklch(1 0 0);
+  --primary-strong: var(--rausch-400); /* lighter red reads on dark surfaces */
   --secondary: oklch(0.26 0 0);
   --secondary-foreground: oklch(0.931 0 0);
   --muted: oklch(0.26 0 0);

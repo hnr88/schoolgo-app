@@ -61,7 +61,7 @@ export function DashboardHeader() {
           <DropdownMenu>
             <DropdownMenuTrigger className='flex items-center gap-2.5 rounded-xl px-2 py-1.5 text-sm font-medium text-ink-900 outline-none transition-colors hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1'>
               <Avatar className='h-8 w-8'>
-                <AvatarFallback className='bg-primary/10 text-xs font-bold text-primary'>
+                <AvatarFallback className='bg-primary/10 text-xs font-bold text-primary-strong'>
                   {initials}
                 </AvatarFallback>
               </Avatar>

@@ -29,7 +29,7 @@ export function PortalSwitcher({ activePortal }: PortalSwitcherProps) {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger
-        className='flex items-center gap-1.5 rounded-md bg-primary/10 px-2 py-0.5 text-xs font-medium text-primary transition-colors hover:bg-primary/15'
+        className='flex items-center gap-1.5 rounded-md bg-primary/10 px-2 py-0.5 text-xs font-medium text-primary-strong transition-colors hover:bg-primary/15'
       >
         <span className={cn('h-1.5 w-1.5 rounded-full', PORTAL_DOT[activePortal])} />
         {activeTab ? t(`audiences.${activeTab.key}`) : activePortal}

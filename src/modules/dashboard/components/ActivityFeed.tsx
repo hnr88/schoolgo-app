@@ -35,7 +35,7 @@ export function ActivityFeed({ events }: { events: ActivityRowView[] }) {
                 >
                   <Icon className='h-4 w-4' strokeWidth={1.75} />
                 </span>
-                <span className='min-w-0 flex-1 text-sm text-ink-900 group-hover:text-primary'>
+                <span className='min-w-0 flex-1 text-sm text-ink-900 group-hover:text-primary-strong'>
                   {event.text}
                 </span>
                 {event.timestamp && (

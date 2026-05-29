@@ -24,7 +24,7 @@ export function SchoolActivityFeed({ events }: { events: SchoolActivityRowView[]
               href={event.href}
               className='group flex items-center gap-3 px-6 py-4 no-underline transition-colors hover:bg-muted'
             >
-              <span className='min-w-0 flex-1 text-sm text-ink-900 group-hover:text-primary'>
+              <span className='min-w-0 flex-1 text-sm text-ink-900 group-hover:text-primary-strong'>
                 {event.text}
               </span>
               {event.timestamp && (

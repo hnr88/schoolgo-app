@@ -56,7 +56,7 @@ export function ParentApplicationsSummaryCard() {
                 className='group flex items-center gap-3 px-5 py-3.5 no-underline transition-colors hover:bg-muted'
               >
                 <span className='flex min-w-0 flex-1 flex-col'>
-                  <span className='truncate text-sm font-semibold text-ink-900 group-hover:text-primary'>
+                  <span className='truncate text-sm font-semibold text-ink-900 group-hover:text-primary-strong'>
                     {application.student.firstName} {application.student.lastName}
                   </span>
                   <span className='truncate text-xs text-foggy'>{application.school.name}</span>

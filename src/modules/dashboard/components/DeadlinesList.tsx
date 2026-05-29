@@ -35,7 +35,7 @@ export function DeadlinesList({ deadlines }: { deadlines: DeadlineRowView[] }) {
                 <span className='text-xs font-medium uppercase'>{d.month}</span>
               </span>
               <div className='min-w-0 flex-1'>
-                <span className='text-sm font-medium text-ink-900 group-hover:text-primary'>
+                <span className='text-sm font-medium text-ink-900 group-hover:text-primary-strong'>
                   {d.label}
                 </span>
                 {d.description && (

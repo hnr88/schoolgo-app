@@ -19,7 +19,7 @@ export function ParentDashboardCard({
         {viewAllHref && viewAllLabel && (
           <Link
             href={viewAllHref}
-            className='flex items-center gap-1 text-sm font-semibold text-primary no-underline hover:underline'
+            className='flex items-center gap-1 text-sm font-semibold text-primary-strong no-underline hover:underline'
           >
             {viewAllLabel}
             <ArrowRight className='h-3.5 w-3.5' strokeWidth={2} aria-hidden='true' />

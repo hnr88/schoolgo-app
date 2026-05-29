@@ -27,7 +27,7 @@ export function SchoolExpiringOffers({ offers }: { offers: SchoolExpiringOffer[]
               <span className='flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-rausch-50 text-rausch-600'>
                 <CalendarClock className='h-4 w-4' strokeWidth={1.75} />
               </span>
-              <span className='min-w-0 flex-1 text-sm text-ink-900 group-hover:text-primary'>
+              <span className='min-w-0 flex-1 text-sm text-ink-900 group-hover:text-primary-strong'>
                 {offer.studentName}
               </span>
               <span className='shrink-0 rounded-full bg-rausch-50 px-2 py-0.5 text-xs font-semibold text-rausch-600'>
