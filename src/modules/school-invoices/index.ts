@@ -1,6 +1,10 @@
+export { SchoolInvoicesPage } from '@/modules/school-invoices/components/SchoolInvoicesPage';
 export type {
-  SchoolInvoiceStatus,
+  InvoiceStatus,
+  InvoiceKind,
   SchoolInvoice,
-  SchoolPayoutStatus,
+  SchoolInvoicesResponse,
+  PayoutStatus,
   SchoolPayout,
+  SchoolPayoutsResponse,
 } from '@/modules/school-invoices/types/school-invoices.types';

@@ -1,5 +1,9 @@
+export { SchoolSettingsPage } from '@/modules/school-settings/components/SchoolSettingsPage';
 export type {
   SchoolUserMe,
+  SchoolPreferences,
   SchoolNotificationPreferences,
-  ChangePasswordPayload,
+  SchoolSettingsLocale,
+  UpdateSchoolProfilePayload,
+  ChangePasswordResponse,
 } from '@/modules/school-settings/types/school-settings.types';

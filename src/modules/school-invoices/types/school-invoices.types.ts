@@ -1,22 +1,71 @@
-export type SchoolInvoiceStatus = 'draft' | 'sent' | 'paid' | 'overdue' | 'void';
+export type InvoiceStatus =
+  | 'draft'
+  | 'issued'
+  | 'paid'
+  | 'overdue'
+  | 'cancelled'
+  | 'refunded';
+
+export type InvoiceKind = 'application_fee' | 'tuition' | 'enrolment' | 'boarding';
+
+export interface InvoiceApplication {
+  documentId: string;
+  status: string;
+  targetYearLevel: string | null;
+  targetIntake: string | null;
+  student?: {
+    documentId: string;
+    firstName: string | null;
+    lastName: string | null;
+  } | null;
+}
+
+export interface InvoiceAgent {
+  documentId: string;
+  companyName: string | null;
+}
 
 export interface SchoolInvoice {
   documentId: string;
-  reference: string;
-  amount: number;
-  currency: string;
-  status: SchoolInvoiceStatus;
+  invoiceNumber: string | null;
+  kind: InvoiceKind;
+  amountAud: number;
+  currency: string | null;
+  status: InvoiceStatus;
+  dueDate: string | null;
   issuedAt: string | null;
-  dueAt: string | null;
+  paidAt: string | null;
+  application: InvoiceApplication | null;
+  agent: InvoiceAgent | null;
 }
 
-export type SchoolPayoutStatus = 'pending' | 'processing' | 'paid' | 'failed';
+export interface SchoolInvoicesResponse {
+  data: SchoolInvoice[];
+}
+
+export type PayoutStatus = 'pending' | 'scheduled' | 'paid' | 'failed';
+
+export interface PayoutInvoice {
+  documentId: string;
+  invoiceNumber: string | null;
+  kind: InvoiceKind;
+  amountAud: number;
+  status: InvoiceStatus;
+}
 
 export interface SchoolPayout {
   documentId: string;
-  reference: string;
-  amount: number;
-  currency: string;
-  status: SchoolPayoutStatus;
-  issuedAt: string | null;
+  amountAud: number;
+  platformFeeAud: number | null;
+  netAmountAud: number | null;
+  status: PayoutStatus;
+  scheduledFor: string | null;
+  paidAt: string | null;
+  reference: string | null;
+  invoice: PayoutInvoice | null;
+  application: InvoiceApplication | null;
+}
+
+export interface SchoolPayoutsResponse {
+  data: SchoolPayout[];
 }
