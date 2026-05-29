@@ -32,13 +32,13 @@ export function ParentApplicationDetailBody({ application }: { application: Pare
         <h2 className='mb-2 text-base font-semibold text-ink-900'>{t('sectionOffer')}</h2>
         {hasOffer ? (
           <div className='flex flex-col'>
-            <div className='flex items-baseline justify-between border-b border-border/50 py-3'>
+            <div className='flex items-baseline justify-between border-b border-border/50 py-4'>
               <span className='text-sm text-foggy'>{t('labelAnnualFee')}</span>
               <span className='text-sm font-medium text-ink-900'>
                 {formatOfferFee(application.offerAnnualFee, locale) ?? '—'}
               </span>
             </div>
-            <div className='flex items-baseline justify-between py-3'>
+            <div className='flex items-baseline justify-between py-4'>
               <span className='text-sm text-foggy'>{t('labelOfferDeadline')}</span>
               <span className='text-sm font-medium text-ink-900'>
                 {formatDate(application.offerDeadline, locale) ?? '—'}
@@ -46,7 +46,7 @@ export function ParentApplicationDetailBody({ application }: { application: Pare
             </div>
           </div>
         ) : (
-          <p className='py-3 text-sm text-foggy'>{t('noOfferYet')}</p>
+          <p className='py-4 text-sm text-foggy'>{t('noOfferYet')}</p>
         )}
 
         <div className='mt-4 border-t border-border/50 pt-4'>

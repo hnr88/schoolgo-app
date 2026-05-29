@@ -26,7 +26,7 @@ export default async function ParentApplicationsPage({
 
   return (
     <div className='flex flex-col gap-6'>
-      <header className='flex flex-col gap-1'>
+      <header className='flex flex-col gap-2'>
         <h1 className='font-display text-2xl font-bold text-ink-900'>{t('title')}</h1>
         <p className='text-sm text-muted-foreground'>{t('subtitle')}</p>
       </header>

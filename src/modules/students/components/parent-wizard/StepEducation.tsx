@@ -26,7 +26,7 @@ export function StepEducation({ control }: ParentStepProps) {
   const t = useTranslations('StudentWizard');
 
   return (
-    <div className='grid grid-cols-1 gap-4 sm:grid-cols-2'>
+    <div className='grid grid-cols-1 gap-5 sm:grid-cols-2'>
       <FormField
         control={control}
         name='currentSchool'

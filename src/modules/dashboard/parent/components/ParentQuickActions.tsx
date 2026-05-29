@@ -9,7 +9,7 @@ import {
 } from '@/modules/dashboard/parent/constants/parent-dashboard.constants';
 
 const TILE_CLASS =
-  'flex items-center gap-3 rounded-xl border border-border bg-card px-5 py-4 no-underline transition-colors';
+  'flex items-center gap-3 rounded-xl border border-border bg-card px-6 py-5 no-underline transition-colors';
 
 export function ParentQuickActions() {
   const t = useTranslations('ParentDashboard');
@@ -20,7 +20,7 @@ export function ParentQuickActions() {
       {PARENT_QUICK_ACTIONS.map(({ href, icon: Icon, labelKey, bg, color }) => (
         <Link key={labelKey} href={href} className={cn(TILE_CLASS, 'hover:border-primary/30')}>
           <span
-            className={cn('flex h-9 w-9 shrink-0 items-center justify-center rounded-lg', bg, color)}
+            className={cn('flex h-10 w-10 shrink-0 items-center justify-center rounded-lg', bg, color)}
           >
             <Icon className='h-4 w-4' strokeWidth={1.75} aria-hidden='true' />
           </span>
@@ -30,7 +30,7 @@ export function ParentQuickActions() {
       <Link href='/parent/payments' className={cn(TILE_CLASS, 'hover:border-primary/30')}>
         <span
           className={cn(
-            'flex h-9 w-9 shrink-0 items-center justify-center rounded-lg',
+            'flex h-10 w-10 shrink-0 items-center justify-center rounded-lg',
             PARENT_PAYMENTS_ACTION.bg,
             PARENT_PAYMENTS_ACTION.color,
           )}

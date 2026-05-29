@@ -54,7 +54,7 @@ export function ParentStudentsSummaryCard() {
               <li key={student.documentId}>
                 <Link
                   href={`/parent/students/${student.documentId}`}
-                  className='group flex items-center gap-3 px-5 py-3.5 no-underline transition-colors hover:bg-muted'
+                  className='group flex items-center gap-3 px-5 py-4 no-underline transition-colors hover:bg-muted'
                 >
                   <ParentStudentAvatar
                     firstName={student.firstName}

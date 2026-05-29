@@ -17,7 +17,7 @@ export function StudentFormParentSection({ control }: StudentFormParentSectionPr
   return (
     <section className='flex flex-col gap-4'>
       <h2 className='text-lg font-semibold text-ink-900'>{t('sectionParent')}</h2>
-      <div className='grid grid-cols-1 gap-4 sm:grid-cols-2'>
+      <div className='grid grid-cols-1 gap-5 sm:grid-cols-2'>
         <FormField
           control={control}
           name='parentGuardianName'

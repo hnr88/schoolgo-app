@@ -26,7 +26,7 @@ export function ParentDashboardCard({
           </Link>
         )}
       </div>
-      <div className='flex flex-1 flex-col'>{children}</div>
+      <div className='flex flex-1 flex-col px-5 py-4'>{children}</div>
     </section>
   );
 }

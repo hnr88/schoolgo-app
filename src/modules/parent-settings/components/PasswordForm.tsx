@@ -53,7 +53,7 @@ export function PasswordForm() {
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(handleSubmit)} className='flex flex-col gap-5' noValidate>
+      <form onSubmit={form.handleSubmit(handleSubmit)} className='flex flex-col gap-6' noValidate>
         <FormField
           control={form.control}
           name='currentPassword'

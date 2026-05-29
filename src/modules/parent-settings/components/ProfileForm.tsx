@@ -41,8 +41,8 @@ export function ProfileForm({ me }: { me: ParentMe }) {
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(handleSubmit)} className='flex flex-col gap-5' noValidate>
-        <div className='grid grid-cols-1 gap-4 sm:grid-cols-2'>
+      <form onSubmit={form.handleSubmit(handleSubmit)} className='flex flex-col gap-6' noValidate>
+        <div className='grid grid-cols-1 gap-6 sm:grid-cols-2'>
           <FormField
             control={form.control}
             name='firstName'

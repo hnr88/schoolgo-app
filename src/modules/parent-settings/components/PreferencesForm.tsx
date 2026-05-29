@@ -81,13 +81,13 @@ export function PreferencesForm({ me }: { me: ParentMe }) {
           )}
         />
 
-        <fieldset className='flex flex-col gap-3'>
+        <fieldset className='flex flex-col gap-4'>
           <legend className='text-sm font-medium text-ink-900'>{t('notificationsLabel')}</legend>
           <FormField
             control={form.control}
             name='notifications.email'
             render={({ field }) => (
-              <FormItem className='flex items-center justify-between rounded-lg border border-border bg-muted/40 px-4 py-3'>
+              <FormItem className='flex items-center justify-between rounded-lg border border-border bg-muted/40 px-4 py-4'>
                 <div className='flex flex-col gap-0.5'>
                   <FormLabel>{t('notifyEmailLabel')}</FormLabel>
                   <FormDescription>{t('notifyEmailHint')}</FormDescription>
@@ -106,7 +106,7 @@ export function PreferencesForm({ me }: { me: ParentMe }) {
             control={form.control}
             name='notifications.sms'
             render={({ field }) => (
-              <FormItem className='flex items-center justify-between rounded-lg border border-border bg-muted/40 px-4 py-3'>
+              <FormItem className='flex items-center justify-between rounded-lg border border-border bg-muted/40 px-4 py-4'>
                 <div className='flex flex-col gap-0.5'>
                   <FormLabel>{t('notifySmsLabel')}</FormLabel>
                   <FormDescription>{t('notifySmsHint')}</FormDescription>
