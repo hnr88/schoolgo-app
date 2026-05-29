@@ -4,18 +4,23 @@ import {
   BarChart3,
   Bell,
   Bookmark,
+  Building2,
   CheckCircle,
   ClipboardCheck,
   CreditCard,
   FileQuestion,
   FilePlus,
+  FileSpreadsheet,
   FileText,
   FolderOpen,
   GraduationCap,
   Gift,
+  Handshake,
   Heart,
   LayoutDashboard,
+  LayoutTemplate,
   MessageSquare,
+  Receipt,
   Search,
   Send,
   Settings,
@@ -51,6 +56,13 @@ export const ROUTE_TITLE_MAP: Record<string, string> = {
   '/dashboard/messages': 'messages',
   '/dashboard/settings': 'settings',
   '/dashboard/profile': 'profile',
+  '/dashboard/partnerships': 'partnerships',
+  '/dashboard/templates': 'templates',
+  '/dashboard/staff': 'staff',
+  '/dashboard/capacity': 'capacity',
+  '/dashboard/invoices': 'invoices',
+  '/dashboard/payouts': 'payouts',
+  '/dashboard/pre-enrolment': 'preEnrolment',
 };
 
 export const PORTAL_NAV: Record<Portal, PortalNav> = {
@@ -103,7 +115,52 @@ export const PORTAL_NAV: Record<Portal, PortalNav> = {
   },
   school: {
     home: '/dashboard',
-    items: [{ href: '/dashboard', icon: LayoutDashboard, labelKey: 'dashboard' }],
+    groups: [
+      {
+        labelKey: 'groupOverview',
+        items: [{ href: '/dashboard', icon: LayoutDashboard, labelKey: 'dashboard' }],
+      },
+      {
+        labelKey: 'groupApplications',
+        items: [
+          { href: '/dashboard/applications', icon: FileText, labelKey: 'applications' },
+          { href: '/dashboard/pre-enrolment', icon: ClipboardCheck, labelKey: 'preEnrolment' },
+        ],
+      },
+      {
+        labelKey: 'groupPartnerships',
+        items: [
+          { href: '/dashboard/partnerships', icon: Handshake, labelKey: 'partnerships' },
+          { href: '/dashboard/templates', icon: LayoutTemplate, labelKey: 'templates' },
+        ],
+      },
+      {
+        labelKey: 'groupFinance',
+        items: [
+          { href: '/dashboard/invoices', icon: Receipt, labelKey: 'invoices' },
+          { href: '/dashboard/payouts', icon: CreditCard, labelKey: 'payouts' },
+        ],
+      },
+      {
+        labelKey: 'groupSchool',
+        items: [
+          { href: '/dashboard/profile', icon: Building2, labelKey: 'profile' },
+          { href: '/dashboard/capacity', icon: FileSpreadsheet, labelKey: 'capacity' },
+          { href: '/dashboard/staff', icon: Users, labelKey: 'staff' },
+        ],
+      },
+      {
+        labelKey: 'groupComms',
+        items: [
+          { href: '/dashboard/messages', icon: MessageSquare, labelKey: 'messages' },
+          { href: '/dashboard/notifications', icon: Bell, labelKey: 'notifications' },
+        ],
+      },
+      {
+        labelKey: 'groupAccount',
+        items: [{ href: '/dashboard/settings', icon: Settings, labelKey: 'settings' }],
+      },
+    ],
   },
   parent: {
     home: '/parent/dashboard',
