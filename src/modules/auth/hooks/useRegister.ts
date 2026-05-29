@@ -7,6 +7,7 @@ import { useAuthStore } from '@/modules/auth/stores/use-auth-store';
 import { registerRequest } from '@/modules/auth/lib/auth-api';
 import { getPortalDashboardPath } from '@/modules/auth/lib/get-portal-dashboard-path';
 import { getPortalFromRole } from '@/modules/auth/lib/get-portal-from-role';
+import { env } from '@/lib/env';
 import { portalUrl, type Portal } from '@/lib/portal-url';
 import type { RegisterValues } from '@/modules/auth/schemas/register.schema';
 
@@ -43,7 +44,7 @@ export function useRegister({ portal, setError }: UseRegisterOptions) {
       } else {
         toast.error(message);
       }
-      if (process.env.NODE_ENV === 'development') {
+      if (env.NODE_ENV === 'development') {
         console.error('[useRegister]', err);
       }
     }

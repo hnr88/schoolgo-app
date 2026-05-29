@@ -13,12 +13,15 @@ import {
   useSchoolMessages,
   useSendSchoolMessage,
 } from '@/modules/school-applications/queries/use-school-messages.query';
+import { useMarkSchoolThreadRead } from '@/modules/school-applications/hooks/useMarkSchoolThreadRead';
 
 export function SchoolMessagesTab({ documentId }: { documentId: string }) {
   const t = useTranslations('SchoolApplications');
   const { data: messages, isLoading, isError } = useSchoolMessages(documentId);
   const sendMessage = useSendSchoolMessage(documentId);
   const [content, setContent] = useState('');
+
+  useMarkSchoolThreadRead(documentId, messages);
 
   function handleSend() {
     const trimmed = content.trim();

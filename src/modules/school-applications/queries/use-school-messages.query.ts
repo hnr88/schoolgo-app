@@ -42,3 +42,20 @@ export function useSendSchoolMessage(applicationDocumentId: string) {
     },
   });
 }
+
+export function useMarkSchoolMessagesRead(applicationDocumentId: string) {
+  const queryClient = useQueryClient();
+
+  return useMutation({
+    mutationFn: async (messageDocumentIds: string[]) => {
+      await Promise.all(
+        messageDocumentIds.map((documentId) =>
+          privateApi.put(`/api/messages/${documentId}/school-read`),
+        ),
+      );
+    },
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: schoolMessagesKey(applicationDocumentId) });
+    },
+  });
+}

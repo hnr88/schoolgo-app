@@ -31,6 +31,9 @@ interface Props {
   onSearchChange: (value: string) => void;
   status: string;
   onStatusChange: (value: string) => void;
+  intake: string;
+  onIntakeChange: (value: string) => void;
+  intakes: string[];
   onExport: () => void;
 }
 
@@ -39,10 +42,14 @@ export function SchoolApplicationToolbar({
   onSearchChange,
   status,
   onStatusChange,
+  intake,
+  onIntakeChange,
+  intakes,
   onExport,
 }: Props) {
   const t = useTranslations('SchoolApplications');
   const activeLabel = t(FILTERS.find((f) => f.value === status)?.labelKey ?? 'allStatuses');
+  const intakeLabel = intake === 'all' ? t('allIntakes') : intake;
 
   return (
     <div className='flex items-center gap-3'>
@@ -79,6 +86,32 @@ export function SchoolApplicationToolbar({
               className={status === f.value ? 'font-semibold text-primary' : ''}
             >
               {t(f.labelKey)}
+            </DropdownMenuItem>
+          ))}
+        </DropdownMenuContent>
+      </DropdownMenu>
+      <DropdownMenu>
+        <DropdownMenuTrigger
+          aria-label={t('filterIntake')}
+          className={cn(buttonVariants({ variant: 'outline', size: 'lg' }), 'gap-2 text-foggy')}
+        >
+          <SlidersHorizontal className='h-4 w-4' />
+          {intakeLabel}
+        </DropdownMenuTrigger>
+        <DropdownMenuContent align='end' sideOffset={6}>
+          <DropdownMenuItem
+            onClick={() => onIntakeChange('all')}
+            className={intake === 'all' ? 'font-semibold text-primary' : ''}
+          >
+            {t('allIntakes')}
+          </DropdownMenuItem>
+          {intakes.map((value) => (
+            <DropdownMenuItem
+              key={value}
+              onClick={() => onIntakeChange(value)}
+              className={intake === value ? 'font-semibold text-primary' : ''}
+            >
+              {value}
             </DropdownMenuItem>
           ))}
         </DropdownMenuContent>

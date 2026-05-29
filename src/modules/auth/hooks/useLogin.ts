@@ -4,6 +4,7 @@ import { toast } from 'sonner';
 import { useTranslations, useLocale } from 'next-intl';
 import type { UseFormSetError } from 'react-hook-form';
 import { useAuthStore } from '@/modules/auth/stores/use-auth-store';
+import { env } from '@/lib/env';
 import { portalUrl, type Portal } from '@/lib/portal-url';
 import { getPortalDashboardPath } from '@/modules/auth/lib/get-portal-dashboard-path';
 import { getPortalFromRole } from '@/modules/auth/lib/get-portal-from-role';
@@ -41,7 +42,7 @@ export function useLogin({ portal, setError }: UseLoginOptions) {
       } else {
         toast.error(message);
       }
-      if (process.env.NODE_ENV === 'development') {
+      if (env.NODE_ENV === 'development') {
         console.error('[useLogin]', err);
       }
     }

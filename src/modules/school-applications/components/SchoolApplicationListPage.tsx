@@ -11,8 +11,19 @@ import { downloadCsv } from '@/modules/school-applications/lib/download-csv';
 
 export function SchoolApplicationListPage() {
   const t = useTranslations('SchoolApplications');
-  const { search, setSearch, status, setStatus, applications, isLoading, isError, refetch } =
-    useSchoolApplicationList();
+  const {
+    search,
+    setSearch,
+    status,
+    setStatus,
+    intake,
+    setIntake,
+    intakes,
+    applications,
+    isLoading,
+    isError,
+    refetch,
+  } = useSchoolApplicationList();
   const exportCsv = useSchoolApplicationsExport();
 
   function handleExport() {
@@ -41,6 +52,9 @@ export function SchoolApplicationListPage() {
           onSearchChange={setSearch}
           status={status}
           onStatusChange={setStatus}
+          intake={intake}
+          onIntakeChange={setIntake}
+          intakes={intakes}
           onExport={handleExport}
         />
       </div>

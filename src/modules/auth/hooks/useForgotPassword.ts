@@ -2,6 +2,7 @@
 
 import { toast } from 'sonner';
 import { useTranslations } from 'next-intl';
+import { env } from '@/lib/env';
 import { useForgotPasswordMutation } from '@/modules/auth/queries/use-forgot-password.mutation';
 
 export function useForgotPassword() {
@@ -14,7 +15,7 @@ export function useForgotPassword() {
       toast.success(t('forgotPasswordSuccess'));
     } catch (err) {
       toast.error(t('forgotPasswordError'));
-      if (process.env.NODE_ENV === 'development') {
+      if (env.NODE_ENV === 'development') {
         console.error('[useForgotPassword]', err);
       }
     }

@@ -7,10 +7,25 @@ import type { SchoolApplicationListItem } from '@/modules/school-applications/ty
 export function useSchoolApplicationList() {
   const [search, setSearch] = useState('');
   const [status, setStatus] = useState('all');
+  const [intake, setIntake] = useState('all');
+
+  const statusFilter = status === 'all' ? undefined : status;
 
   const { data, isLoading, isError, refetch } = useSchoolApplications({
-    status: status === 'all' ? undefined : status,
+    status: statusFilter,
+    intake: intake === 'all' ? undefined : intake,
   });
+
+  // Source the intake options from the status-filtered set without the intake
+  // filter applied, so selecting an intake never collapses the option list.
+  const { data: intakeOptionsData } = useSchoolApplications({ status: statusFilter });
+  const intakes = useMemo<string[]>(() => {
+    const set = new Set<string>();
+    for (const app of intakeOptionsData ?? []) {
+      if (app.targetIntake) set.add(app.targetIntake);
+    }
+    return Array.from(set).sort();
+  }, [intakeOptionsData]);
 
   const applications = useMemo<SchoolApplicationListItem[]>(() => {
     const items = data ?? [];
@@ -28,6 +43,9 @@ export function useSchoolApplicationList() {
     setSearch,
     status,
     setStatus,
+    intake,
+    setIntake,
+    intakes,
     applications,
     isLoading,
     isError,

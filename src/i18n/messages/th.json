@@ -2807,6 +2807,8 @@
     "searchPlaceholder": "Search by student or reference",
     "clearSearch": "Clear search",
     "allStatuses": "All statuses",
+    "allIntakes": "All intakes",
+    "filterIntake": "Filter by intake",
     "filterActive": "Active",
     "filterNeedsAction": "Needs action",
     "exportCsv": "Export CSV",
