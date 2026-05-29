@@ -24,11 +24,14 @@ export const FIELD_DIALOG_CONFIG: Partial<
         type: 'select',
         required: true,
         // Values MUST match the backend `interviewMethod` enum
-        // (skype, zoom, wechat_video, teams, phone, in_person). Only the
-        // values with an existing label key are offered here.
+        // (skype, zoom, wechat_video, teams, phone, in_person).
         options: [
-          { value: 'in_person', labelKey: 'interviewMethod_in_person' },
+          { value: 'skype', labelKey: 'interviewMethod_skype' },
+          { value: 'zoom', labelKey: 'interviewMethod_zoom' },
+          { value: 'wechat_video', labelKey: 'interviewMethod_wechat_video' },
+          { value: 'teams', labelKey: 'interviewMethod_teams' },
           { value: 'phone', labelKey: 'interviewMethod_phone' },
+          { value: 'in_person', labelKey: 'interviewMethod_in_person' },
         ],
       },
       { name: 'interviewWith', labelKey: 'interviewWithLabel', type: 'text' },
@@ -53,12 +56,12 @@ export const FIELD_DIALOG_CONFIG: Partial<
         type: 'select',
         required: true,
         // Values MUST match the backend `interviewOutcome` enum
-        // (pending, passed, further_review, not_recommended). The existing
-        // `examOutcome_*` label keys carry the correct human-readable text.
+        // (pending, passed, further_review, not_recommended).
         options: [
-          { value: 'passed', labelKey: 'examOutcome_passed' },
-          { value: 'further_review', labelKey: 'examOutcome_further_review' },
-          { value: 'not_recommended', labelKey: 'examOutcome_not_recommended' },
+          { value: 'pending', labelKey: 'interviewOutcome_pending' },
+          { value: 'passed', labelKey: 'interviewOutcome_passed' },
+          { value: 'further_review', labelKey: 'interviewOutcome_further_review' },
+          { value: 'not_recommended', labelKey: 'interviewOutcome_not_recommended' },
         ],
       },
       { name: 'interviewNotes', labelKey: 'interviewNotesLabel', type: 'textarea' },
