@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { SchoolDashboard } from '@/modules/school-dashboard';
 
 export async function generateMetadata({
   params,
@@ -18,11 +19,6 @@ export default async function SchoolDashboardPage({
 }) {
   const { locale } = await params;
   setRequestLocale(locale);
-  const t = await getTranslations('Dashboard');
 
-  return (
-    <div>
-      <h1 className='text-2xl font-bold text-ink-900'>{t('nav.dashboard')}</h1>
-    </div>
-  );
+  return <SchoolDashboard />;
 }

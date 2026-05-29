@@ -1,5 +1,6 @@
+export { SchoolDashboard } from '@/modules/school-dashboard/components/SchoolDashboard';
 export type {
-  SchoolDashboardKpis,
   SchoolStaffMe,
+  SchoolDashboardData,
   SchoolOnboardingState,
 } from '@/modules/school-dashboard/types/school-dashboard.types';
