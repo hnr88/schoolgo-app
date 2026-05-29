@@ -159,6 +159,7 @@
   /* Vivid accents */
   --color-vivid-coral: var(--vivid-coral);
   --color-vivid-coral-soft: var(--vivid-coral-soft);
+  --color-vivid-coral-strong: var(--vivid-coral-strong);
   --color-vivid-mint: var(--vivid-mint);
   --color-vivid-mint-soft: var(--vivid-mint-soft);
   --color-vivid-amber: var(--vivid-amber);
@@ -244,6 +245,8 @@
   /* ========== Vivid accents (dashboard icons, badges) ========== */
   --vivid-coral: oklch(0.68 0.19 18);
   --vivid-coral-soft: oklch(0.95 0.025 18);
+  /* AA-compliant (>=4.5:1) coral for small text on white / soft surfaces (e.g. "Unread") */
+  --vivid-coral-strong: oklch(0.5 0.19 22);
   --vivid-mint: oklch(0.72 0.14 162);
   --vivid-mint-soft: oklch(0.95 0.025 162);
   --vivid-amber: oklch(0.8 0.15 75);
@@ -437,6 +440,16 @@
   .leaflet-tile-pane {
     filter: grayscale(0.9) contrast(0.85) brightness(1.05);
   }
+
+}
+
+/* Focusable horizontal-scroll region for data tables: the wrapper owns the
+   scroll (and is keyboard-focusable via tabindex), so the inner shadcn
+   table-container must not create its own un-focusable scroll region
+   (WCAG scrollable-region-focusable). Placed outside @layer so it wins over
+   the shadcn `overflow-x-auto` utility on the table-container. */
+.table-scroll-region [data-slot='table-container'] {
+  overflow: visible;
 }
 
 .school-map-cluster {

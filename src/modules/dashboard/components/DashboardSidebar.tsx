@@ -58,7 +58,7 @@ export function DashboardSidebar() {
         {sections.map((section, sectionIndex) => (
           <div key={section.labelKey || sectionIndex} className='flex flex-col gap-1'>
             {section.labelKey && !isCollapsed && (
-              <p className='px-4 pb-1 text-caption font-semibold uppercase tracking-wide text-quill'>
+              <p className='px-4 pb-1 text-caption font-semibold uppercase tracking-wide text-foggy'>
                 {t(`nav.${section.labelKey}`)}
               </p>
             )}

@@ -26,7 +26,12 @@ export function SchoolPayoutsTable({ payouts }: { payouts: SchoolPayout[] }) {
   }
 
   return (
-    <div className='overflow-hidden rounded-xl border border-border bg-card'>
+    <div
+      tabIndex={0}
+      role='region'
+      aria-label={t('tableRegionPayouts')}
+      className='table-scroll-region overflow-x-auto rounded-xl border border-border bg-card focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring'
+    >
       <Table>
         <TableHeader>
           <TableRow>

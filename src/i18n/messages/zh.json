@@ -3150,7 +3150,9 @@
     "payoutsLoadError": "Could not load payouts",
     "summaryTotalInvoiced": "Total invoiced",
     "summaryTotalPaid": "Total paid",
-    "summaryTotalPayouts": "Total payouts (net)"
+    "summaryTotalPayouts": "Total payouts (net)",
+    "tableRegionInvoices": "发票表格",
+    "tableRegionPayouts": "付款表格"
   },
   "SchoolProfile": {
     "title": "School Profile",

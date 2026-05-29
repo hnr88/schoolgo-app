@@ -20,7 +20,7 @@ function BackLink({ label }: { label: string }) {
   return (
     <Link
       href='/dashboard/applications'
-      className='inline-flex items-center gap-1 text-sm text-primary hover:underline'
+      className='inline-flex items-center gap-1 text-sm text-rausch-700 hover:underline'
     >
       <ArrowLeft className='h-4 w-4' />
       {label}
@@ -64,12 +64,12 @@ export function SchoolApplicationDetailPage({ documentId }: { documentId: string
 
       <Tabs defaultValue='details'>
         <TabsList>
-          <TabsTrigger value='details'>{t('tabDetails')}</TabsTrigger>
-          <TabsTrigger value='documents'>{t('tabDocuments')}</TabsTrigger>
-          <TabsTrigger value='timeline'>{t('tabTimeline')}</TabsTrigger>
-          <TabsTrigger value='messages'>{t('tabMessages')}</TabsTrigger>
-          <TabsTrigger value='notes'>{t('tabNotes')}</TabsTrigger>
-          <TabsTrigger value='preEnrolment'>{t('tabPreEnrolment')}</TabsTrigger>
+          <TabsTrigger value='details' className='text-foreground/80'>{t('tabDetails')}</TabsTrigger>
+          <TabsTrigger value='documents' className='text-foreground/80'>{t('tabDocuments')}</TabsTrigger>
+          <TabsTrigger value='timeline' className='text-foreground/80'>{t('tabTimeline')}</TabsTrigger>
+          <TabsTrigger value='messages' className='text-foreground/80'>{t('tabMessages')}</TabsTrigger>
+          <TabsTrigger value='notes' className='text-foreground/80'>{t('tabNotes')}</TabsTrigger>
+          <TabsTrigger value='preEnrolment' className='text-foreground/80'>{t('tabPreEnrolment')}</TabsTrigger>
         </TabsList>
 
         <TabsContent value='details' className='mt-6'>

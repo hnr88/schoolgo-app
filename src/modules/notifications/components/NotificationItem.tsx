@@ -56,7 +56,7 @@ export function NotificationItem({ notification, onMarkRead }: NotificationItemP
         <div className='flex items-start justify-between gap-2'>
           <p className='truncate text-sm font-semibold text-ink-900'>{title}</p>
           {isUnread && (
-            <span className='shrink-0 text-xs font-medium text-vivid-coral'>{t('unread')}</span>
+            <span className='shrink-0 text-xs font-medium text-vivid-coral-strong'>{t('unread')}</span>
           )}
         </div>
         {body && <p className='text-sm text-muted-foreground'>{body}</p>}

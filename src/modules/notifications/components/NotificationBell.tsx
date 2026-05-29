@@ -25,7 +25,7 @@ export function NotificationBell() {
     >
       <Bell className='h-5 w-5' strokeWidth={1.5} />
       {hasUnread && (
-        <span className='absolute -right-0.5 -top-0.5 flex h-4 min-w-4 items-center justify-center rounded-full bg-vivid-coral px-1 text-caption font-bold leading-none text-white'>
+        <span className='absolute -right-0.5 -top-0.5 flex h-4 min-w-4 items-center justify-center rounded-full bg-vivid-coral-strong px-1 text-caption font-bold leading-none text-white'>
           {badgeLabel}
         </span>
       )}
