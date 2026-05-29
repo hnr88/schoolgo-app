@@ -1558,7 +1558,9 @@
     "quickActionsTitle": "Thao tác nhanh",
     "collapseSidebar": "Thu gọn thanh bên",
     "expandSidebar": "Mở rộng thanh bên",
-    "pageSubtitle": "Theo dõi hoạt động, hạn chót và tiến trình hồ sơ của bạn trong nháy mắt."
+    "pageSubtitle": "Theo dõi hoạt động, hạn chót và tiến trình hồ sơ của bạn trong nháy mắt.",
+    "openMenu": "Open menu",
+    "navTitle": "Navigation menu"
   },
   "Students": {
     "title": "[TODO: vi] Students",

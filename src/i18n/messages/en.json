@@ -1558,7 +1558,9 @@
     "quickActionsTitle": "Quick actions",
     "collapseSidebar": "Collapse sidebar",
     "expandSidebar": "Expand sidebar",
-    "pageSubtitle": "Track activity, deadlines, and your application pipeline at a glance."
+    "pageSubtitle": "Track activity, deadlines, and your application pipeline at a glance.",
+    "openMenu": "Open menu",
+    "navTitle": "Navigation menu"
   },
   "ParentNav": {
     "dashboard": "Dashboard",

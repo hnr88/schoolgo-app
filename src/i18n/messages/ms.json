@@ -1558,7 +1558,9 @@
     "quickActionsTitle": "Tindakan pantas",
     "collapseSidebar": "Lipat bar sisi",
     "expandSidebar": "Kembangkan bar sisi",
-    "pageSubtitle": "Pantau aktiviti, tarikh akhir, dan saluran permohonan anda sekali pandang."
+    "pageSubtitle": "Pantau aktiviti, tarikh akhir, dan saluran permohonan anda sekali pandang.",
+    "openMenu": "Open menu",
+    "navTitle": "Navigation menu"
   },
   "Students": {
     "title": "[TODO: ms] Students",

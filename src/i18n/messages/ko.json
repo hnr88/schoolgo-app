@@ -1558,7 +1558,9 @@
     "quickActionsTitle": "빠른 실행",
     "collapseSidebar": "사이드바 접기",
     "expandSidebar": "사이드바 펼치기",
-    "pageSubtitle": "활동, 마감일, 지원 현황을 한눈에 확인하세요."
+    "pageSubtitle": "활동, 마감일, 지원 현황을 한눈에 확인하세요.",
+    "openMenu": "Open menu",
+    "navTitle": "Navigation menu"
   },
   "Students": {
     "title": "[TODO: ko] Students",

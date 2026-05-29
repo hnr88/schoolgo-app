@@ -1558,7 +1558,9 @@
     "quickActionsTitle": "快速操作",
     "collapseSidebar": "收起侧边栏",
     "expandSidebar": "展开侧边栏",
-    "pageSubtitle": "一目了然地掌握动态、截止日期和申请进度。"
+    "pageSubtitle": "一目了然地掌握动态、截止日期和申请进度。",
+    "openMenu": "Open menu",
+    "navTitle": "Navigation menu"
   },
   "Students": {
     "title": "[TODO: zh] Students",

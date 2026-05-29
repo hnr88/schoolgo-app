@@ -8,6 +8,7 @@ import { useRouter } from '@/i18n/navigation';
 import { useAuthStore } from '@/modules/auth/stores/use-auth-store';
 import { NotificationBell } from '@/modules/notifications';
 import { SearchBar } from '@/modules/school-search/components/SearchBar';
+import { DashboardMobileNav } from './DashboardMobileNav';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -44,6 +45,7 @@ export function DashboardHeader() {
   return (
     <header className='shrink-0 bg-card'>
       <div className={`flex h-14 items-center gap-4 ${isSearchPage ? 'px-4' : 'px-6'}`}>
+        <DashboardMobileNav />
         <h1 className={`shrink-0 text-lg font-bold text-ink-900 ${isSearchPage ? 'w-80' : ''}`}>
           {t(`nav.${titleKey}`)}
         </h1>

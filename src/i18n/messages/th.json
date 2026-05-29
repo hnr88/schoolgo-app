@@ -1558,7 +1558,9 @@
     "quickActionsTitle": "การดำเนินการด่วน",
     "collapseSidebar": "ย่อแถบด้านข้าง",
     "expandSidebar": "ขยายแถบด้านข้าง",
-    "pageSubtitle": "ติดตามกิจกรรม กำหนดเวลา และไปป์ไลน์ใบสมัครของคุณได้ในที่เดียว"
+    "pageSubtitle": "ติดตามกิจกรรม กำหนดเวลา และไปป์ไลน์ใบสมัครของคุณได้ในที่เดียว",
+    "openMenu": "Open menu",
+    "navTitle": "Navigation menu"
   },
   "Students": {
     "title": "[TODO: th] Students",
