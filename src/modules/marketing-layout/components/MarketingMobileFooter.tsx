@@ -16,7 +16,7 @@ export function MarketingMobileFooter({ isSearchPage, onLinkClick, labels, activ
         href='/sign-in'
         onClick={onLinkClick}
         data-slot='button'
-        className='flex-1 rounded-pill border border-border px-3 py-2 text-center text-sm font-semibold text-foreground no-underline transition-colors hover:bg-muted'
+        className='flex min-h-11 flex-1 items-center justify-center rounded-pill border border-border px-3 text-center text-sm font-semibold text-foreground no-underline transition-colors hover:bg-muted'
       >
         {labels.signIn}
       </Link>
@@ -25,7 +25,7 @@ export function MarketingMobileFooter({ isSearchPage, onLinkClick, labels, activ
           href='/search'
           onClick={onLinkClick}
           data-slot='button'
-          className='flex-1 rounded-pill bg-primary px-3 py-2 text-center text-sm font-semibold text-on-primary shadow-brand no-underline transition-colors hover:bg-rausch-600'
+          className='flex min-h-11 flex-1 items-center justify-center rounded-pill bg-primary px-3 text-center text-sm font-semibold text-on-primary shadow-brand no-underline transition-colors hover:bg-rausch-600'
         >
           {labels.findSchools}
         </Link>

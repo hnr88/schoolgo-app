@@ -61,7 +61,7 @@ export const chipStyles = cva(
 );
 
 export const ctaLinkStyles = cva(
-  'inline-flex items-center gap-2 rounded-pill font-semibold no-underline focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2',
+  'inline-flex min-h-11 items-center justify-center gap-2 rounded-pill font-semibold no-underline focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2',
   {
     variants: {
       variant: {
