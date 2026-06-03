@@ -3,6 +3,7 @@
 import { useTranslations } from 'next-intl';
 import { useRouter } from '@/i18n/navigation';
 import {
+  Command,
   CommandDialog,
   CommandEmpty,
   CommandGroup,
@@ -44,27 +45,29 @@ export function CommandPalette() {
       title={t('dialogTitle')}
       description={t('dialogDescription')}
     >
-      <CommandInput placeholder={t('inputPlaceholder')} />
-      <CommandList>
-        <CommandEmpty>{t('empty')}</CommandEmpty>
+      <Command>
+        <CommandInput placeholder={t('inputPlaceholder')} />
+        <CommandList>
+          <CommandEmpty>{t('empty')}</CommandEmpty>
 
-        <CommandGroup heading={t('sections.goTo')}>
-          {navItems.map(({ href, icon: Icon, labelKey }) => (
-            <CommandItem
-              key={href}
-              value={`goto-${navLabel(labelKey)}`}
-              onSelect={() => handleSelect(href)}
-            >
-              <Icon strokeWidth={1.5} />
-              <span>{navLabel(labelKey)}</span>
-            </CommandItem>
-          ))}
-        </CommandGroup>
+          <CommandGroup heading={t('sections.goTo')}>
+            {navItems.map(({ href, icon: Icon, labelKey }) => (
+              <CommandItem
+                key={href}
+                value={`goto-${navLabel(labelKey)}`}
+                onSelect={() => handleSelect(href)}
+              >
+                <Icon strokeWidth={1.5} />
+                <span>{navLabel(labelKey)}</span>
+              </CommandItem>
+            ))}
+          </CommandGroup>
 
-        {portal === 'parent' && open && (
-          <CommandPaletteParentSections onSelect={handleSelect} />
-        )}
-      </CommandList>
+          {portal === 'parent' && open && (
+            <CommandPaletteParentSections onSelect={handleSelect} />
+          )}
+        </CommandList>
+      </Command>
     </CommandDialog>
   );
 }

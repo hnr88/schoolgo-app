@@ -23,7 +23,9 @@ export function StepGuardian({ control }: ParentStepProps) {
   const t = useTranslations('StudentWizard');
 
   return (
-    <div className='grid grid-cols-1 gap-5 sm:grid-cols-2'>
+    <div className='flex flex-col gap-6'>
+      <p className='text-sm text-muted-foreground'>{t('descGuardian')}</p>
+      <div className='grid grid-cols-1 gap-5 sm:grid-cols-2'>
       <FormField
         control={control}
         name='parentGuardianName'
@@ -41,7 +43,7 @@ export function StepGuardian({ control }: ParentStepProps) {
         render={({ field }) => (
           <FormItem>
             <FormLabel>{t('fieldParentPhone')}</FormLabel>
-            <FormControl><Input className='h-12' type='tel' {...field} /></FormControl>
+            <FormControl><Input className='h-12' type='tel' placeholder={t('placeholderPhone')} {...field} /></FormControl>
             <FormMessage />
           </FormItem>
         )}
@@ -63,7 +65,7 @@ export function StepGuardian({ control }: ParentStepProps) {
         render={({ field }) => (
           <FormItem>
             <FormLabel>{t('fieldParentWechat')}</FormLabel>
-            <FormControl><Input className='h-12' {...field} /></FormControl>
+            <FormControl><Input className='h-12' placeholder={t('placeholderWechat')} {...field} /></FormControl>
             <FormMessage />
           </FormItem>
         )}
@@ -88,6 +90,7 @@ export function StepGuardian({ control }: ParentStepProps) {
           </FormItem>
         )}
       />
+      </div>
     </div>
   );
 }

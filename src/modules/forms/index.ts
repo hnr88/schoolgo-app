@@ -4,6 +4,7 @@ export { WizardProgress } from '@/modules/forms/components/WizardProgress';
 export { WizardNav } from '@/modules/forms/components/WizardNav';
 
 export { useWizard } from '@/modules/forms/hooks/use-wizard';
+export { useWizardNavigation } from '@/modules/forms/hooks/use-wizard-navigation';
 
 export type {
   WizardStepConfig,
@@ -11,6 +12,8 @@ export type {
   WizardLabels,
   WizardStepRenderer,
   WizardCanAdvance,
+  WizardChrome,
+  WizardChromeState,
   UseWizardOptions,
   UseWizardReturn,
 } from '@/modules/forms/types/wizard.types';

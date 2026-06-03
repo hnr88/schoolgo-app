@@ -34,7 +34,19 @@ export interface WizardLabels {
 export type WizardStepRenderer = (
   activeStep: WizardStepConfig,
   index: number,
+  goTo: (index: number) => void,
 ) => ReactNode;
+
+export type WizardChrome = (state: WizardChromeState) => ReactNode;
+
+export interface WizardChromeState {
+  stepIndex: number;
+  stepCount: number;
+  activeStep: WizardStepConfig;
+  steps: WizardStepConfig[];
+  goTo: (index: number) => void;
+  backLabel?: string;
+}
 
 export interface WizardProps {
   steps: WizardStepConfig[];
@@ -45,6 +57,12 @@ export interface WizardProps {
   initialStep?: number;
   isSubmitting?: boolean;
   className?: string;
+  /** Optional content rendered above the active step (title, step counter). */
+  header?: WizardChrome;
+  /** Optional rail rendered alongside the step on lg+ (stepper, summary). */
+  aside?: WizardChrome;
+  /** Hide the default inline horizontal stepper (use when `aside` renders one). */
+  hideProgress?: boolean;
 }
 
 export interface WizardStepProps {
@@ -58,6 +76,7 @@ export interface WizardProgressProps {
   activeIndex: number;
   onStepSelect?: (index: number) => void;
   backLabel?: string;
+  orientation?: 'horizontal' | 'vertical';
   className?: string;
 }
 

@@ -74,7 +74,7 @@ export function EditStudentPage({ documentId }: { documentId: string }) {
       {student ? (
         <>
           <CurrentMedia student={student} />
-          <div className='rounded-lg border border-border bg-card p-6'>
+          <div className='rounded-lg border border-border bg-card p-6 shadow-1 sm:p-8 lg:p-10'>
             <ParentStudentWizard
               documentId={documentId}
               initialValues={parentStudentToFormValues(student)}

@@ -41,7 +41,10 @@ export function SidebarNavLinks({ isCollapsed = false, onNavigate }: SidebarNavL
             <div className='mx-auto h-px w-6 bg-divider' aria-hidden='true' />
           )}
           {section.items.map(({ href, icon: Icon, labelKey }) => {
-            const isActive = pathname === href || (href !== home && pathname.startsWith(href));
+            const isActive =
+              href === home
+                ? pathname === href || pathname === '/dashboard'
+                : pathname === href || pathname.startsWith(`${href}/`);
             return (
               <Link
                 key={href}

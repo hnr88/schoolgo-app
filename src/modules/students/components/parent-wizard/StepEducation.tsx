@@ -26,14 +26,16 @@ export function StepEducation({ control }: ParentStepProps) {
   const t = useTranslations('StudentWizard');
 
   return (
-    <div className='grid grid-cols-1 gap-5 sm:grid-cols-2'>
+    <div className='flex flex-col gap-6'>
+      <p className='text-sm text-muted-foreground'>{t('descEducation')}</p>
+      <div className='grid grid-cols-1 gap-5 sm:grid-cols-2'>
       <FormField
         control={control}
         name='currentSchool'
         render={({ field }) => (
           <FormItem>
             <FormLabel>{t('fieldCurrentSchool')}</FormLabel>
-            <FormControl><Input className='h-12' {...field} /></FormControl>
+            <FormControl><Input className='h-12' placeholder={t('placeholderSchool')} {...field} /></FormControl>
             <FormMessage />
           </FormItem>
         )}
@@ -64,7 +66,7 @@ export function StepEducation({ control }: ParentStepProps) {
         render={({ field }) => (
           <FormItem>
             <FormLabel>{t('fieldTargetYear')}</FormLabel>
-            <FormControl><Input className='h-12' inputMode='numeric' {...field} /></FormControl>
+            <FormControl><Input className='h-12' inputMode='numeric' placeholder={t('placeholderTargetYear')} {...field} /></FormControl>
             <FormMessage />
           </FormItem>
         )}
@@ -89,6 +91,7 @@ export function StepEducation({ control }: ParentStepProps) {
           </FormItem>
         )}
       />
+      </div>
     </div>
   );
 }

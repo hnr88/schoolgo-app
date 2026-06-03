@@ -38,4 +38,5 @@ export interface ParentStepReviewProps {
   values: ParentStudentFormValues;
   photo: UploadedMedia | null;
   voiceIntro: UploadedMedia | null;
+  onEdit: (stepIndex: number) => void;
 }

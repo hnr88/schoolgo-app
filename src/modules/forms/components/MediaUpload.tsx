@@ -79,15 +79,17 @@ export function MediaUpload({
           variant='outline'
           disabled={isBusy}
           onClick={() => inputRef.current?.click()}
-          className='h-auto flex-col gap-2 py-6'
+          className='h-auto flex-col gap-2 border-dashed py-8 text-muted-foreground transition-colors duration-200 ease-out-quart hover:border-primary/60 hover:bg-primary/5 hover:text-foreground'
         >
-          {isPending ? (
-            <Loader2 className='size-6 animate-spin' aria-hidden='true' />
-          ) : isImage ? (
-            <ImagePlus className='size-6' aria-hidden='true' />
-          ) : (
-            <Mic className='size-6' aria-hidden='true' />
-          )}
+          <span className='flex size-11 items-center justify-center rounded-full bg-muted text-foreground'>
+            {isPending ? (
+              <Loader2 className='size-5 animate-spin' aria-hidden='true' />
+            ) : isImage ? (
+              <ImagePlus className='size-5' aria-hidden='true' />
+            ) : (
+              <Mic className='size-5' aria-hidden='true' />
+            )}
+          </span>
           <span className='flex items-center gap-1.5 text-sm font-medium'>
             <Upload className='size-4' aria-hidden='true' />
             {isPending ? `${progress}%` : label}

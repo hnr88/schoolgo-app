@@ -23,7 +23,9 @@ export function StepPersonal({ control }: ParentStepProps) {
   const t = useTranslations('StudentWizard');
 
   return (
-    <div className='grid grid-cols-1 gap-5 sm:grid-cols-2'>
+    <div className='flex flex-col gap-6'>
+      <p className='text-sm text-muted-foreground'>{t('descPersonal')}</p>
+      <div className='grid grid-cols-1 gap-5 sm:grid-cols-2'>
       <FormField
         control={control}
         name='firstName'
@@ -52,7 +54,7 @@ export function StepPersonal({ control }: ParentStepProps) {
         render={({ field }) => (
           <FormItem>
             <FormLabel>{t('fieldEmail')}</FormLabel>
-            <FormControl><Input className='h-12' type='email' {...field} /></FormControl>
+            <FormControl><Input className='h-12' type='email' placeholder={t('placeholderEmail')} {...field} /></FormControl>
             <FormMessage />
           </FormItem>
         )}
@@ -94,11 +96,12 @@ export function StepPersonal({ control }: ParentStepProps) {
         render={({ field }) => (
           <FormItem>
             <FormLabel>{t('fieldNationality')}</FormLabel>
-            <FormControl><Input className='h-12' {...field} /></FormControl>
+            <FormControl><Input className='h-12' placeholder={t('placeholderNationality')} {...field} /></FormControl>
             <FormMessage />
           </FormItem>
         )}
       />
+      </div>
     </div>
   );
 }
