@@ -9,7 +9,7 @@ import {
 } from '@/modules/dashboard/parent/constants/parent-dashboard.constants';
 
 const TILE_CLASS =
-  'flex items-center gap-3 rounded-xl border border-border bg-card px-6 py-5 no-underline transition-colors';
+  'flex items-center gap-3 rounded-lg border border-border bg-card px-6 py-5 no-underline shadow-1 transition-colors';
 
 export function ParentQuickActions() {
   const t = useTranslations('ParentDashboard');

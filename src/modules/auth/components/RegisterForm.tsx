@@ -18,6 +18,14 @@ import {
   FormMessage,
 } from '@/components/ui/form';
 import type { RegisterFormProps } from '@/modules/auth/types/component.types';
+import {
+  AUTH_ERROR_SUMMARY_CLASS,
+  AUTH_INPUT_CLASS,
+  AUTH_LABEL_CLASS,
+  AUTH_PASSWORD_INPUT_CLASS,
+  AUTH_PASSWORD_TOGGLE_CLASS,
+  AUTH_SUBMIT_CLASS,
+} from '../constants/auth-field.constants';
 
 export function RegisterForm({ userType }: RegisterFormProps) {
   const t = useTranslations('Auth');
@@ -40,16 +48,12 @@ export function RegisterForm({ userType }: RegisterFormProps) {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(handleRegister)}
-        className='flex flex-col gap-5'
+        className='flex flex-col gap-6'
         noValidate
       >
         {/* Error summary */}
         {rootError && (
-          <div
-            role='alert'
-            aria-live='assertive'
-            className='rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700'
-          >
+          <div role='alert' aria-live='assertive' className={AUTH_ERROR_SUMMARY_CLASS}>
             {rootError}
           </div>
         )}
@@ -59,10 +63,7 @@ export function RegisterForm({ userType }: RegisterFormProps) {
           name='username'
           render={({ field }) => (
             <FormItem>
-              <FormLabel
-                htmlFor='register-name'
-                className='text-sm font-semibold text-ink-900'
-              >
+              <FormLabel htmlFor='register-name' className={AUTH_LABEL_CLASS}>
                 {t('nameLabel')}
               </FormLabel>
               <FormControl>
@@ -76,7 +77,7 @@ export function RegisterForm({ userType }: RegisterFormProps) {
                   aria-describedby={
                     form.formState.errors.username ? 'register-name-error' : undefined
                   }
-                  className='h-12 rounded-xl border-border/60 bg-muted/30 px-4 text-base transition-all focus:bg-white focus:ring-2 focus:ring-primary/20'
+                  className={AUTH_INPUT_CLASS}
                   {...field}
                 />
               </FormControl>
@@ -90,10 +91,7 @@ export function RegisterForm({ userType }: RegisterFormProps) {
           name='email'
           render={({ field }) => (
             <FormItem>
-              <FormLabel
-                htmlFor='register-email'
-                className='text-sm font-semibold text-ink-900'
-              >
+              <FormLabel htmlFor='register-email' className={AUTH_LABEL_CLASS}>
                 {t('emailLabel')}
               </FormLabel>
               <FormControl>
@@ -107,7 +105,7 @@ export function RegisterForm({ userType }: RegisterFormProps) {
                   aria-describedby={
                     form.formState.errors.email ? 'register-email-error' : undefined
                   }
-                  className='h-12 rounded-xl border-border/60 bg-muted/30 px-4 text-base transition-all focus:bg-white focus:ring-2 focus:ring-primary/20'
+                  className={AUTH_INPUT_CLASS}
                   {...field}
                 />
               </FormControl>
@@ -121,10 +119,7 @@ export function RegisterForm({ userType }: RegisterFormProps) {
           name='password'
           render={({ field }) => (
             <FormItem>
-              <FormLabel
-                htmlFor='register-password'
-                className='text-sm font-semibold text-ink-900'
-              >
+              <FormLabel htmlFor='register-password' className={AUTH_LABEL_CLASS}>
                 {t('passwordLabel')}
               </FormLabel>
               <FormControl>
@@ -139,15 +134,15 @@ export function RegisterForm({ userType }: RegisterFormProps) {
                     aria-describedby={
                       form.formState.errors.password
                         ? 'register-password-error'
-                        : undefined
+                        : 'register-password-hint'
                     }
-                    className='h-12 rounded-xl border-border/60 bg-muted/30 px-4 pr-12 text-base transition-all focus:bg-white focus:ring-2 focus:ring-primary/20'
+                    className={AUTH_PASSWORD_INPUT_CLASS}
                     {...field}
                   />
                   <button
                     type='button'
                     onClick={() => setShowPassword(!showPassword)}
-                    className='absolute right-3 top-1/2 -translate-y-1/2 rounded-md p-1.5 text-foggy transition-colors hover:text-ink-900 focus:outline-none focus:ring-2 focus:ring-primary'
+                    className={AUTH_PASSWORD_TOGGLE_CLASS}
                     aria-label={showPassword ? t('hidePassword') : t('showPassword')}
                     aria-pressed={showPassword}
                   >
@@ -159,6 +154,9 @@ export function RegisterForm({ userType }: RegisterFormProps) {
                   </button>
                 </div>
               </FormControl>
+              <p id='register-password-hint' className='mt-1.5 text-xs text-foggy'>
+                {t('passwordHint')}
+              </p>
               <FormMessage id='register-password-error' />
             </FormItem>
           )}
@@ -168,7 +166,7 @@ export function RegisterForm({ userType }: RegisterFormProps) {
           type='submit'
           disabled={isSubmitting}
           aria-busy={isSubmitting}
-          className='h-12 w-full rounded-xl text-sm font-semibold shadow-brand transition-all hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 disabled:opacity-70'
+          className={AUTH_SUBMIT_CLASS}
         >
           {isSubmitting && (
             <Loader2 className='mr-2 h-4 w-4 animate-spin' aria-hidden='true' />

@@ -7,7 +7,13 @@ import { useTranslations } from 'next-intl';
 import { useRouter } from '@/i18n/navigation';
 import { useAuthStore } from '@/modules/auth/stores/use-auth-store';
 import { NotificationBell } from '@/modules/notifications';
+import {
+  CommandPalette,
+  CommandPaletteTrigger,
+  useCommandPaletteHotkey,
+} from '@/modules/command-palette';
 import { SearchBar } from '@/modules/school-search/components/SearchBar';
+import { ParentChildSwitcher } from '@/modules/dashboard/parent/components/ParentChildSwitcher';
 import { DashboardMobileNav } from './DashboardMobileNav';
 import {
   DropdownMenu,
@@ -24,6 +30,8 @@ export function DashboardHeader() {
   const pathname = usePathname();
   const router = useRouter();
   const { user, userType, logout } = useAuthStore();
+
+  useCommandPaletteHotkey();
 
   const titleKey = resolvePageTitle(pathname);
   const isSearchPage = pathname.includes('/dashboard/search');
@@ -44,6 +52,7 @@ export function DashboardHeader() {
 
   return (
     <header className='shrink-0 bg-card'>
+      <CommandPalette />
       <div className={`flex h-14 items-center gap-4 ${isSearchPage ? 'px-4' : 'px-6'}`}>
         <DashboardMobileNav />
         <h1 className={`shrink-0 text-lg font-bold text-ink-900 ${isSearchPage ? 'w-80' : ''}`}>
@@ -57,6 +66,8 @@ export function DashboardHeader() {
         )}
 
         <div className={`flex items-center gap-2 ${isSearchPage ? 'shrink-0' : 'ml-auto'}`}>
+          {userType === 'parent' && <ParentChildSwitcher />}
+          <CommandPaletteTrigger />
           {(userType === 'parent' || userType === 'agent') && <NotificationBell />}
           <DropdownMenu>
             <DropdownMenuTrigger className='flex items-center gap-2.5 rounded-xl px-2 py-1.5 text-sm font-medium text-ink-900 outline-none transition-colors hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1'>

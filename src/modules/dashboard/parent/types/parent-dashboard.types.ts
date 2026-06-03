@@ -12,6 +12,23 @@ export interface ParentQuickAction {
   color: string;
 }
 
+export type ParentStatTileKey =
+  | 'applicationsInProgress'
+  | 'children'
+  | 'savedSchools'
+  | 'offers';
+
+export interface ParentStatTileConfig {
+  key: ParentStatTileKey;
+  href: LinkHref;
+  icon: IconComponent;
+  labelKey: string;
+  iconBg: string;
+  iconColor: string;
+}
+
+export type ParentStatCounts = Record<ParentStatTileKey, number>;
+
 export interface ParentDashboardCardProps {
   title: string;
   icon: IconComponent;

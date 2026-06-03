@@ -65,8 +65,15 @@ export function useParentStudentWizard(options?: {
     form.setValue('voiceIntro', media?.id, { shouldValidate: true });
   }
 
-  const canAdvance = (stepIndex: number) =>
-    form.trigger(STEP_FIELDS[PARENT_WIZARD_STEP_IDS[stepIndex] as ParentWizardStepId]);
+  const canAdvance = async (stepIndex: number) => {
+    const fields = STEP_FIELDS[PARENT_WIZARD_STEP_IDS[stepIndex] as ParentWizardStepId];
+    const ok = await form.trigger(fields);
+    if (!ok) {
+      const firstInvalid = fields.find((field) => form.getFieldState(field).invalid);
+      if (firstInvalid) form.setFocus(firstInvalid);
+    }
+    return ok;
+  };
 
   async function submit(values: ParentStudentFormValues) {
     if (options?.documentId) {

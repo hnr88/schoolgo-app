@@ -2,10 +2,11 @@
 
 import { useTranslations } from 'next-intl';
 import { ParentDashboardHeader } from '@/modules/dashboard/parent/components/ParentDashboardHeader';
+import { ParentStatTiles } from '@/modules/dashboard/parent/components/ParentStatTiles';
+import { ParentRecentApplicationsTable } from '@/modules/dashboard/parent/components/ParentRecentApplicationsTable';
 import { ParentStudentsSummaryCard } from '@/modules/dashboard/parent/components/ParentStudentsSummaryCard';
-import { ParentApplicationsSummaryCard } from '@/modules/dashboard/parent/components/ParentApplicationsSummaryCard';
-import { ParentTestsSummaryCard } from '@/modules/dashboard/parent/components/ParentTestsSummaryCard';
 import { ParentQuickActions } from '@/modules/dashboard/parent/components/ParentQuickActions';
+import { ParentOnboardingSection } from '@/modules/onboarding';
 
 export function ParentDashboard() {
   const t = useTranslations('ParentDashboard');
@@ -14,15 +15,16 @@ export function ParentDashboard() {
     <div className='flex flex-col gap-8'>
       <ParentDashboardHeader />
 
+      <ParentOnboardingSection />
+
+      <ParentStatTiles />
+
       <div className='grid grid-cols-1 gap-6 lg:grid-cols-3'>
+        <div className='lg:col-span-2'>
+          <ParentRecentApplicationsTable />
+        </div>
         <div className='lg:col-span-1'>
           <ParentStudentsSummaryCard />
-        </div>
-        <div className='lg:col-span-1'>
-          <ParentApplicationsSummaryCard />
-        </div>
-        <div className='lg:col-span-1'>
-          <ParentTestsSummaryCard />
         </div>
       </div>
 

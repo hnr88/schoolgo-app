@@ -1456,7 +1456,15 @@
     },
     "showPassword": "Show password",
     "hidePassword": "Hide password",
-    "rememberMe": "Remember me"
+    "rememberMe": "Remember me",
+    "trustHeading": "Trusted by families across Australia",
+    "trustStat1Value": "300+",
+    "trustStat1Label": "Schools",
+    "trustStat2Value": "7",
+    "trustStat2Label": "Languages",
+    "trustStat3Value": "CRICOS",
+    "trustStat3Label": "Verified",
+    "passwordHint": "Use at least 6 characters for a stronger password."
   },
   "Errors": {
     "generic": "出了点问题",
@@ -2098,11 +2106,14 @@
     "notifications": "通知",
     "students": "学生",
     "applications": "申请",
+    "offers": "录取通知",
     "savedSchools": "已保存的学校",
+    "compare": "对比",
     "savedSearches": "已保存的搜索",
     "results": "成绩",
     "settings": "设置",
-    "payments": "付款"
+    "payments": "付款",
+    "messages": "消息"
   },
   "ParentSavedSchools": {
     "title": "已保存的学校",
@@ -2110,6 +2121,41 @@
     "emptyDescription": "浏览时收藏学校，稍后可在此处进行比较。",
     "browseSchools": "浏览学校",
     "remove": "移除"
+  },
+  "SchoolComparison": {
+    "title": "对比学校",
+    "subtitle": "将您最多 3 所已保存的学校并排对比。",
+    "selectorTitle": "选择要对比的学校",
+    "limitHint": "最多可对比 3 所学校。移除一所以添加另一所。",
+    "attributeColumn": "属性",
+    "removeColumn": "从对比中移除 {name}",
+    "attrState": "州",
+    "attrSuburb": "城区",
+    "attrPostcode": "邮编",
+    "attrSchoolType": "学校类型",
+    "attrSector": "类别",
+    "attrGender": "性别",
+    "attrReligiousAffiliation": "宗教背景",
+    "attrCurriculum": "提供的课程",
+    "attrLevelsOffered": "提供的年级",
+    "attrLowestTuition": "最低年度学费",
+    "attrHighestTuition": "最高年度学费",
+    "attrTotalEnrolment": "在校学生总数",
+    "attrInternationalPct": "国际学生占比 (%)",
+    "attrBoarding": "提供住宿",
+    "attrScholarship": "提供奖学金",
+    "attrOpenCapacity": "有招生名额",
+    "attrAcceptingApplications": "接受申请",
+    "valueYes": "是",
+    "valueNo": "否",
+    "valueEmpty": "—",
+    "emptyTitle": "没有可对比的已保存学校",
+    "emptyDescription": "浏览时收藏学校即可在此对比。",
+    "browseSchools": "浏览学校",
+    "noSelectionTitle": "选择要对比的学校",
+    "noSelectionDescription": "从上方列表中选择最多 3 所已保存的学校。",
+    "errorTitle": "无法加载您已保存的学校",
+    "errorDescription": "请稍后重试。"
   },
   "ParentSavedSearches": {
     "title": "已保存的搜索",
@@ -2132,6 +2178,23 @@
     "unread": "未读",
     "markRead": "标记为已读",
     "bellLabel": "通知"
+  },
+  "Onboarding": {
+    "title": "开始使用",
+    "subtitle": "完成这些步骤以查找并申请学校。",
+    "progressLabel": "已完成 {completed} / {total}",
+    "percent": "{percent}%",
+    "dismiss": "关闭清单",
+    "start": "开始",
+    "done": "完成",
+    "stepProfileLabel": "完善您的资料",
+    "stepProfileDescription": "添加您的电话号码，以便学校与您联系。",
+    "stepChildLabel": "添加您的第一个孩子",
+    "stepChildDescription": "创建学生资料以开始申请。",
+    "stepSchoolsLabel": "收藏一些学校",
+    "stepSchoolsDescription": "浏览并收藏您喜欢的学校。",
+    "stepApplicationLabel": "开始您的第一份申请",
+    "stepApplicationDescription": "申请一所学校以跟踪其进度。"
   },
   "ParentDashboard": {
     "title": "控制台",
@@ -2163,7 +2226,22 @@
     "quickAddStudent": "添加学生",
     "quickSearchSchools": "搜索学校",
     "quickSettings": "设置",
-    "quickPayments": "付款"
+    "quickPayments": "付款",
+    "statApplicationsInProgress": "进行中的申请",
+    "statChildren": "孩子",
+    "statSavedSchools": "已保存的学校",
+    "statOffers": "录取通知",
+    "recentApplicationsTitle": "最近的申请",
+    "tableChild": "孩子",
+    "tableSchool": "学校",
+    "tableStatus": "状态",
+    "tableView": "查看",
+    "tableViewApplication": "查看{name}的申请"
+  },
+  "ParentChildSwitcher": {
+    "allChildren": "所有孩子",
+    "addChild": "添加孩子",
+    "triggerAriaLabel": "当前孩子：{name}。切换当前孩子"
   },
   "ParentPayments": {
     "title": "付款",
@@ -2384,6 +2462,21 @@
     "documentType_caaw_letter": "CAAW 信函",
     "documentType_photo": "照片",
     "documentType_other": "其他"
+  },
+  "ParentOffers": {
+    "title": "录取通知",
+    "subtitle": "查看并回复您孩子收到的录取通知。",
+    "errorMessage": "无法加载您的录取通知，请重试。",
+    "retry": "重试",
+    "emptyTitle": "暂无录取通知",
+    "emptySubtitle": "当学校发出录取通知时，将在此处显示供您查看。",
+    "searchSchools": "搜索学校",
+    "yearLevel": "年级",
+    "intake": "入学批次",
+    "offerDate": "录取日期",
+    "contextOfferMade": "已发出录取通知。打开申请以查看详情并继续——最终接受由您的代理完成。",
+    "contextOfferAccepted": "已接受录取。打开申请以继续您的预注册。",
+    "viewApplication": "查看申请"
   },
   "ParentSettings": {
     "title": "设置",
@@ -3361,5 +3454,28 @@
     "empty": "No notifications yet",
     "loadError": "Could not load notifications",
     "retry": "Try again"
+  },
+  "CommandPalette": {
+    "triggerLabel": "打开命令面板",
+    "triggerPlaceholder": "搜索或跳转…",
+    "kbdHint": "⌘K",
+    "dialogTitle": "命令面板",
+    "dialogDescription": "搜索页面、孩子、申请和操作",
+    "inputPlaceholder": "输入命令或搜索…",
+    "empty": "无结果",
+    "sections": {
+      "goTo": "前往",
+      "children": "孩子",
+      "applications": "申请",
+      "actions": "操作"
+    },
+    "actions": {
+      "searchSchools": "搜索学校"
+    }
+  },
+  "ParentMessages": {
+    "title": "消息",
+    "subtitle": "在一处查看您与学校的所有对话。",
+    "selectPrompt": "选择一个对话以阅读和回复。"
   }
 }

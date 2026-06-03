@@ -1456,7 +1456,15 @@
     },
     "showPassword": "Show password",
     "hidePassword": "Hide password",
-    "rememberMe": "Remember me"
+    "rememberMe": "Remember me",
+    "trustHeading": "Trusted by families across Australia",
+    "trustStat1Value": "300+",
+    "trustStat1Label": "Schools",
+    "trustStat2Value": "7",
+    "trustStat2Label": "Languages",
+    "trustStat3Value": "CRICOS",
+    "trustStat3Label": "Verified",
+    "passwordHint": "Use at least 6 characters for a stronger password."
   },
   "Errors": {
     "generic": "Đã xảy ra lỗi",
@@ -2098,11 +2106,14 @@
     "notifications": "Thông báo",
     "students": "Học sinh",
     "applications": "Hồ sơ",
+    "offers": "Lời mời",
     "savedSchools": "Trường đã lưu",
+    "compare": "So sánh",
     "savedSearches": "Tìm kiếm đã lưu",
     "results": "Kết quả",
     "settings": "Cài đặt",
-    "payments": "Thanh toán"
+    "payments": "Thanh toán",
+    "messages": "Tin nhắn"
   },
   "ParentSavedSchools": {
     "title": "Trường đã lưu",
@@ -2110,6 +2121,41 @@
     "emptyDescription": "Đánh dấu các trường khi duyệt để so sánh chúng tại đây sau này.",
     "browseSchools": "Duyệt trường",
     "remove": "Xóa"
+  },
+  "SchoolComparison": {
+    "title": "So sánh trường học",
+    "subtitle": "So sánh tối đa 3 trường đã lưu của bạn cạnh nhau.",
+    "selectorTitle": "Chọn trường để so sánh",
+    "limitHint": "Bạn có thể so sánh tối đa 3 trường. Xóa một trường để thêm trường khác.",
+    "attributeColumn": "Thuộc tính",
+    "removeColumn": "Xóa {name} khỏi so sánh",
+    "attrState": "Bang",
+    "attrSuburb": "Khu vực",
+    "attrPostcode": "Mã bưu điện",
+    "attrSchoolType": "Loại trường",
+    "attrSector": "Khối",
+    "attrGender": "Giới tính",
+    "attrReligiousAffiliation": "Tôn giáo",
+    "attrCurriculum": "Chương trình giảng dạy",
+    "attrLevelsOffered": "Cấp học",
+    "attrLowestTuition": "Học phí năm thấp nhất",
+    "attrHighestTuition": "Học phí năm cao nhất",
+    "attrTotalEnrolment": "Tổng số học sinh",
+    "attrInternationalPct": "Học sinh quốc tế (%)",
+    "attrBoarding": "Có nội trú",
+    "attrScholarship": "Có học bổng",
+    "attrOpenCapacity": "Còn chỗ trống",
+    "attrAcceptingApplications": "Đang nhận hồ sơ",
+    "valueYes": "Có",
+    "valueNo": "Không",
+    "valueEmpty": "—",
+    "emptyTitle": "Chưa có trường đã lưu để so sánh",
+    "emptyDescription": "Đánh dấu trường khi duyệt để so sánh tại đây.",
+    "browseSchools": "Duyệt trường",
+    "noSelectionTitle": "Chọn trường để so sánh",
+    "noSelectionDescription": "Chọn tối đa 3 trường đã lưu từ danh sách trên.",
+    "errorTitle": "Không thể tải các trường đã lưu của bạn",
+    "errorDescription": "Vui lòng thử lại sau giây lát."
   },
   "ParentSavedSearches": {
     "title": "Tìm kiếm đã lưu",
@@ -2132,6 +2178,23 @@
     "unread": "Chưa đọc",
     "markRead": "Đánh dấu là đã đọc",
     "bellLabel": "Thông báo"
+  },
+  "Onboarding": {
+    "title": "Bắt đầu",
+    "subtitle": "Hoàn thành các bước này để tìm và nộp đơn vào trường học.",
+    "progressLabel": "Hoàn thành {completed} trên {total}",
+    "percent": "{percent}%",
+    "dismiss": "Đóng danh sách kiểm tra",
+    "start": "Bắt đầu",
+    "done": "Xong",
+    "stepProfileLabel": "Hoàn thiện hồ sơ của bạn",
+    "stepProfileDescription": "Thêm số điện thoại để các trường có thể liên hệ với bạn.",
+    "stepChildLabel": "Thêm con đầu tiên của bạn",
+    "stepChildDescription": "Tạo hồ sơ học sinh để bắt đầu nộp đơn.",
+    "stepSchoolsLabel": "Lưu một số trường",
+    "stepSchoolsDescription": "Duyệt và đánh dấu các trường bạn thích.",
+    "stepApplicationLabel": "Bắt đầu đơn đăng ký đầu tiên của bạn",
+    "stepApplicationDescription": "Nộp đơn vào một trường để theo dõi tiến trình."
   },
   "ParentDashboard": {
     "title": "Trang chủ",
@@ -2163,7 +2226,22 @@
     "quickAddStudent": "Thêm học sinh",
     "quickSearchSchools": "Tìm trường",
     "quickSettings": "Cài đặt",
-    "quickPayments": "Thanh toán"
+    "quickPayments": "Thanh toán",
+    "statApplicationsInProgress": "Hồ sơ đang xử lý",
+    "statChildren": "Con",
+    "statSavedSchools": "Trường đã lưu",
+    "statOffers": "Thư mời",
+    "recentApplicationsTitle": "Hồ sơ gần đây",
+    "tableChild": "Con",
+    "tableSchool": "Trường",
+    "tableStatus": "Trạng thái",
+    "tableView": "Xem",
+    "tableViewApplication": "Xem hồ sơ của {name}"
+  },
+  "ParentChildSwitcher": {
+    "allChildren": "Tất cả các con",
+    "addChild": "Thêm con",
+    "triggerAriaLabel": "Con đang chọn: {name}. Đổi con đang chọn"
   },
   "ParentPayments": {
     "title": "Thanh toán",
@@ -2384,6 +2462,21 @@
     "documentType_caaw_letter": "Thư CAAW",
     "documentType_photo": "Ảnh",
     "documentType_other": "Khác"
+  },
+  "ParentOffers": {
+    "title": "Lời mời",
+    "subtitle": "Xem lại và phản hồi các lời mời mà con bạn đã nhận được.",
+    "errorMessage": "Chúng tôi không thể tải lời mời của bạn. Vui lòng thử lại.",
+    "retry": "Thử lại",
+    "emptyTitle": "Chưa có lời mời nào",
+    "emptySubtitle": "Khi một trường đưa ra lời mời, nó sẽ xuất hiện ở đây để bạn xem lại.",
+    "searchSchools": "Tìm trường",
+    "yearLevel": "Khối lớp",
+    "intake": "Đợt nhập học",
+    "offerDate": "Ngày mời",
+    "contextOfferMade": "Đã có lời mời. Mở hồ sơ để xem chi tiết và tiếp tục — đại lý của bạn sẽ hoàn tất việc chấp nhận.",
+    "contextOfferAccepted": "Đã chấp nhận lời mời. Mở hồ sơ để tiếp tục ghi danh trước của bạn.",
+    "viewApplication": "Xem hồ sơ"
   },
   "ParentSettings": {
     "title": "Cài đặt",
@@ -3361,5 +3454,28 @@
     "empty": "No notifications yet",
     "loadError": "Could not load notifications",
     "retry": "Try again"
+  },
+  "CommandPalette": {
+    "triggerLabel": "Mở bảng lệnh",
+    "triggerPlaceholder": "Tìm kiếm hoặc chuyển đến…",
+    "kbdHint": "⌘K",
+    "dialogTitle": "Bảng lệnh",
+    "dialogDescription": "Tìm trang, con, hồ sơ và hành động",
+    "inputPlaceholder": "Nhập lệnh hoặc tìm kiếm…",
+    "empty": "Không có kết quả",
+    "sections": {
+      "goTo": "Đi tới",
+      "children": "Con",
+      "applications": "Hồ sơ",
+      "actions": "Hành động"
+    },
+    "actions": {
+      "searchSchools": "Tìm trường"
+    }
+  },
+  "ParentMessages": {
+    "title": "Tin nhắn",
+    "subtitle": "Tất cả cuộc trò chuyện của bạn với trường ở cùng một nơi.",
+    "selectPrompt": "Chọn một cuộc trò chuyện để đọc và trả lời."
   }
 }

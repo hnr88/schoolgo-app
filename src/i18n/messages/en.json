@@ -1456,7 +1456,15 @@
     },
     "showPassword": "Show password",
     "hidePassword": "Hide password",
-    "rememberMe": "Remember me"
+    "rememberMe": "Remember me",
+    "trustHeading": "Trusted by families across Australia",
+    "trustStat1Value": "300+",
+    "trustStat1Label": "Schools",
+    "trustStat2Value": "7",
+    "trustStat2Label": "Languages",
+    "trustStat3Value": "CRICOS",
+    "trustStat3Label": "Verified",
+    "passwordHint": "Use at least 6 characters for a stronger password."
   },
   "Errors": {
     "generic": "Something went wrong",
@@ -1567,11 +1575,14 @@
     "notifications": "Notifications",
     "students": "Students",
     "applications": "Applications",
+    "offers": "Offers",
     "savedSchools": "Saved schools",
+    "compare": "Compare",
     "savedSearches": "Saved searches",
     "results": "Results",
     "settings": "Settings",
-    "payments": "Payments"
+    "payments": "Payments",
+    "messages": "Messages"
   },
   "ParentSavedSchools": {
     "title": "Saved schools",
@@ -1579,6 +1590,41 @@
     "emptyDescription": "Bookmark schools while browsing to compare them here later.",
     "browseSchools": "Browse schools",
     "remove": "Remove"
+  },
+  "SchoolComparison": {
+    "title": "Compare schools",
+    "subtitle": "Compare up to 3 of your saved schools side by side.",
+    "selectorTitle": "Choose schools to compare",
+    "limitHint": "You can compare up to 3 schools. Remove one to add another.",
+    "attributeColumn": "Attribute",
+    "removeColumn": "Remove {name} from comparison",
+    "attrState": "State",
+    "attrSuburb": "Suburb",
+    "attrPostcode": "Postcode",
+    "attrSchoolType": "School type",
+    "attrSector": "Sector",
+    "attrGender": "Gender",
+    "attrReligiousAffiliation": "Religious affiliation",
+    "attrCurriculum": "Curriculum offered",
+    "attrLevelsOffered": "Levels offered",
+    "attrLowestTuition": "Lowest annual tuition",
+    "attrHighestTuition": "Highest annual tuition",
+    "attrTotalEnrolment": "Total enrolment",
+    "attrInternationalPct": "International students (%)",
+    "attrBoarding": "Boarding available",
+    "attrScholarship": "Scholarships available",
+    "attrOpenCapacity": "Open capacity",
+    "attrAcceptingApplications": "Accepting applications",
+    "valueYes": "Yes",
+    "valueNo": "No",
+    "valueEmpty": "—",
+    "emptyTitle": "No saved schools to compare",
+    "emptyDescription": "Bookmark schools while browsing to compare them here.",
+    "browseSchools": "Browse schools",
+    "noSelectionTitle": "Select schools to compare",
+    "noSelectionDescription": "Pick up to 3 saved schools from the list above.",
+    "errorTitle": "Could not load your saved schools",
+    "errorDescription": "Please try again in a moment."
   },
   "ParentSavedSearches": {
     "title": "Saved searches",
@@ -1601,6 +1647,23 @@
     "unread": "Unread",
     "markRead": "Mark as read",
     "bellLabel": "Notifications"
+  },
+  "Onboarding": {
+    "title": "Get started",
+    "subtitle": "Complete these steps to find and apply to schools.",
+    "progressLabel": "{completed} of {total} complete",
+    "percent": "{percent}%",
+    "dismiss": "Dismiss checklist",
+    "start": "Start",
+    "done": "Done",
+    "stepProfileLabel": "Complete your profile",
+    "stepProfileDescription": "Add your phone number so schools can reach you.",
+    "stepChildLabel": "Add your first child",
+    "stepChildDescription": "Create a student profile to begin applying.",
+    "stepSchoolsLabel": "Save some schools",
+    "stepSchoolsDescription": "Browse and bookmark schools you like.",
+    "stepApplicationLabel": "Start your first application",
+    "stepApplicationDescription": "Apply to a school to track its progress."
   },
   "ParentDashboard": {
     "title": "Dashboard",
@@ -1632,7 +1695,22 @@
     "quickAddStudent": "Add student",
     "quickSearchSchools": "Search schools",
     "quickSettings": "Settings",
-    "quickPayments": "Payments"
+    "quickPayments": "Payments",
+    "statApplicationsInProgress": "Applications in progress",
+    "statChildren": "Children",
+    "statSavedSchools": "Saved schools",
+    "statOffers": "Offers",
+    "recentApplicationsTitle": "Recent applications",
+    "tableChild": "Child",
+    "tableSchool": "School",
+    "tableStatus": "Status",
+    "tableView": "View",
+    "tableViewApplication": "View {name}'s application"
+  },
+  "ParentChildSwitcher": {
+    "allChildren": "All children",
+    "addChild": "Add child",
+    "triggerAriaLabel": "Active child: {name}. Change active child"
   },
   "ParentPayments": {
     "title": "Payments",
@@ -1972,6 +2050,21 @@
     "documentType_caaw_letter": "CAAW letter",
     "documentType_photo": "Photo",
     "documentType_other": "Other"
+  },
+  "ParentOffers": {
+    "title": "Offers",
+    "subtitle": "Review and respond to the offers your children have received.",
+    "errorMessage": "We could not load your offers. Please try again.",
+    "retry": "Try again",
+    "emptyTitle": "No offers yet",
+    "emptySubtitle": "When a school makes an offer, it will appear here for you to review.",
+    "searchSchools": "Search schools",
+    "yearLevel": "Year level",
+    "intake": "Intake",
+    "offerDate": "Offer date",
+    "contextOfferMade": "An offer has been made. Open the application to review the details and continue — your agent finalises acceptance.",
+    "contextOfferAccepted": "Offer accepted. Open the application to continue your pre-enrolment.",
+    "viewApplication": "View application"
   },
   "ParentSettings": {
     "title": "Settings",
@@ -3361,5 +3454,28 @@
     "empty": "No notifications yet",
     "loadError": "Could not load notifications",
     "retry": "Try again"
+  },
+  "CommandPalette": {
+    "triggerLabel": "Open command palette",
+    "triggerPlaceholder": "Search or jump to…",
+    "kbdHint": "⌘K",
+    "dialogTitle": "Command palette",
+    "dialogDescription": "Search pages, children, applications and actions",
+    "inputPlaceholder": "Type a command or search…",
+    "empty": "No results",
+    "sections": {
+      "goTo": "Go to",
+      "children": "Children",
+      "applications": "Applications",
+      "actions": "Actions"
+    },
+    "actions": {
+      "searchSchools": "Search schools"
+    }
+  },
+  "ParentMessages": {
+    "title": "Messages",
+    "subtitle": "All your conversations with schools in one place.",
+    "selectPrompt": "Select a conversation to read and reply."
   }
 }

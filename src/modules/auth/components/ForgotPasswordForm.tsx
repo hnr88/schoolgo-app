@@ -19,6 +19,11 @@ import {
   FormLabel,
   FormMessage,
 } from '@/components/ui/form';
+import {
+  AUTH_INPUT_CLASS,
+  AUTH_LABEL_CLASS,
+  AUTH_SUBMIT_CLASS,
+} from '../constants/auth-field.constants';
 
 export function ForgotPasswordForm() {
   const t = useTranslations('Auth');
@@ -36,7 +41,7 @@ export function ForgotPasswordForm() {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit((data) => handleForgotPassword(data.email))}
-        className='flex flex-col gap-5'
+        className='flex flex-col gap-6'
         noValidate
       >
         <FormField
@@ -44,10 +49,7 @@ export function ForgotPasswordForm() {
           name='email'
           render={({ field }) => (
             <FormItem>
-              <FormLabel
-                htmlFor='forgot-email'
-                className='text-sm font-semibold text-ink-900'
-              >
+              <FormLabel htmlFor='forgot-email' className={AUTH_LABEL_CLASS}>
                 {t('emailLabel')}
               </FormLabel>
               <FormControl>
@@ -61,7 +63,7 @@ export function ForgotPasswordForm() {
                   aria-describedby={
                     form.formState.errors.email ? 'forgot-email-error' : undefined
                   }
-                  className='h-12 rounded-xl border-border/60 bg-muted/30 px-4 text-base transition-all focus:bg-white focus:ring-2 focus:ring-primary/20'
+                  className={AUTH_INPUT_CLASS}
                   {...field}
                 />
               </FormControl>
@@ -74,7 +76,7 @@ export function ForgotPasswordForm() {
           type='submit'
           disabled={isPending}
           aria-busy={isPending}
-          className='h-12 w-full rounded-xl text-sm font-semibold shadow-brand transition-all hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 disabled:opacity-70'
+          className={AUTH_SUBMIT_CLASS}
         >
           {isPending && (
             <Loader2 className='mr-2 h-4 w-4 animate-spin' aria-hidden='true' />

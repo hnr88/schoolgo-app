@@ -33,7 +33,7 @@ export function StepEducation({ control }: ParentStepProps) {
         render={({ field }) => (
           <FormItem>
             <FormLabel>{t('fieldCurrentSchool')}</FormLabel>
-            <FormControl><Input {...field} /></FormControl>
+            <FormControl><Input className='h-12' {...field} /></FormControl>
             <FormMessage />
           </FormItem>
         )}
@@ -46,7 +46,7 @@ export function StepEducation({ control }: ParentStepProps) {
             <FormLabel>{t('fieldCurrentYear')}</FormLabel>
             <Select onValueChange={field.onChange} value={field.value}>
               <FormControl>
-                <SelectTrigger><SelectValue placeholder={t('selectYear')} /></SelectTrigger>
+                <SelectTrigger className='h-12 w-full'><SelectValue placeholder={t('selectYear')} /></SelectTrigger>
               </FormControl>
               <SelectContent>
                 {YEAR_LEVEL_OPTIONS.map((y) => (
@@ -64,7 +64,7 @@ export function StepEducation({ control }: ParentStepProps) {
         render={({ field }) => (
           <FormItem>
             <FormLabel>{t('fieldTargetYear')}</FormLabel>
-            <FormControl><Input inputMode='numeric' {...field} /></FormControl>
+            <FormControl><Input className='h-12' inputMode='numeric' {...field} /></FormControl>
             <FormMessage />
           </FormItem>
         )}
@@ -77,7 +77,7 @@ export function StepEducation({ control }: ParentStepProps) {
             <FormLabel>{t('fieldTargetTerm')}</FormLabel>
             <Select onValueChange={field.onChange} value={field.value}>
               <FormControl>
-                <SelectTrigger><SelectValue placeholder={t('selectTerm')} /></SelectTrigger>
+                <SelectTrigger className='h-12 w-full'><SelectValue placeholder={t('selectTerm')} /></SelectTrigger>
               </FormControl>
               <SelectContent>
                 {PARENT_TARGET_TERM_OPTIONS.map((term) => (

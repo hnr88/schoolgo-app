@@ -7,6 +7,7 @@ export { ParentApplicationListPage } from '@/modules/applications/components/Par
 export { ParentApplicationDetailPage } from '@/modules/applications/components/ParentApplicationDetailPage';
 export { ApplicationStatusBadge } from '@/modules/applications/components/ApplicationStatusBadge';
 export { useParentApplications } from '@/modules/applications/queries/use-parent-applications.query';
+export { useParentApplicationCount } from '@/modules/applications/queries/use-parent-application-count.query';
 export type { ParentApplication } from '@/modules/applications/types/parent-application.types';
 
 export {

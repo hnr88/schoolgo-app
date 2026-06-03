@@ -8,7 +8,10 @@ export function WizardStep({ step, children, className }: WizardStepProps) {
       aria-labelledby={`wizard-step-${step.id}-title`}
       className={cn('flex flex-col gap-6', className)}
     >
-      <h2 id={`wizard-step-${step.id}-title`} className='text-lg font-semibold'>
+      <h2
+        id={`wizard-step-${step.id}-title`}
+        className='text-xl font-semibold tracking-tight text-foreground'
+      >
         {step.title}
       </h2>
       {children}

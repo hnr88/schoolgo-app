@@ -20,7 +20,7 @@ export function SignInCard({ portal }: SignInCardProps) {
   return (
     <article className='flex flex-col gap-6'>
       <header className='flex flex-col gap-3'>
-        <h1 className='font-display text-2xl font-bold tracking-tight text-ink-900 sm:text-3xl'>
+        <h1 className='font-display text-3xl font-bold tracking-tight text-ink-900 sm:text-4xl'>
           {t(`${portal}.signInTitle`)}
         </h1>
         <div className={`h-1 w-12 rounded-full ${PORTAL_ACCENT_BAR[portal]}`} aria-hidden='true' />

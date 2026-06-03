@@ -1456,7 +1456,15 @@
     },
     "showPassword": "Show password",
     "hidePassword": "Hide password",
-    "rememberMe": "Remember me"
+    "rememberMe": "Remember me",
+    "trustHeading": "Trusted by families across Australia",
+    "trustStat1Value": "300+",
+    "trustStat1Label": "Schools",
+    "trustStat2Value": "7",
+    "trustStat2Label": "Languages",
+    "trustStat3Value": "CRICOS",
+    "trustStat3Label": "Verified",
+    "passwordHint": "Use at least 6 characters for a stronger password."
   },
   "Errors": {
     "generic": "Sesuatu telah berlaku",
@@ -2098,11 +2106,14 @@
     "notifications": "Pemberitahuan",
     "students": "Pelajar",
     "applications": "Permohonan",
+    "offers": "Tawaran",
     "savedSchools": "Sekolah disimpan",
+    "compare": "Banding",
     "savedSearches": "Carian disimpan",
     "results": "Keputusan",
     "settings": "Tetapan",
-    "payments": "Pembayaran"
+    "payments": "Pembayaran",
+    "messages": "Mesej"
   },
   "ParentSavedSchools": {
     "title": "Sekolah disimpan",
@@ -2110,6 +2121,41 @@
     "emptyDescription": "Tandakan sekolah semasa melayari untuk membandingkannya di sini kemudian.",
     "browseSchools": "Layari sekolah",
     "remove": "Buang"
+  },
+  "SchoolComparison": {
+    "title": "Banding sekolah",
+    "subtitle": "Bandingkan sehingga 3 sekolah disimpan anda secara bersebelahan.",
+    "selectorTitle": "Pilih sekolah untuk dibandingkan",
+    "limitHint": "Anda boleh membandingkan sehingga 3 sekolah. Alih keluar satu untuk menambah yang lain.",
+    "attributeColumn": "Atribut",
+    "removeColumn": "Alih keluar {name} daripada perbandingan",
+    "attrState": "Negeri",
+    "attrSuburb": "Pinggir bandar",
+    "attrPostcode": "Poskod",
+    "attrSchoolType": "Jenis sekolah",
+    "attrSector": "Sektor",
+    "attrGender": "Jantina",
+    "attrReligiousAffiliation": "Gabungan agama",
+    "attrCurriculum": "Kurikulum ditawarkan",
+    "attrLevelsOffered": "Tahap ditawarkan",
+    "attrLowestTuition": "Yuran tahunan terendah",
+    "attrHighestTuition": "Yuran tahunan tertinggi",
+    "attrTotalEnrolment": "Jumlah pendaftaran",
+    "attrInternationalPct": "Pelajar antarabangsa (%)",
+    "attrBoarding": "Asrama tersedia",
+    "attrScholarship": "Biasiswa tersedia",
+    "attrOpenCapacity": "Kapasiti terbuka",
+    "attrAcceptingApplications": "Menerima permohonan",
+    "valueYes": "Ya",
+    "valueNo": "Tidak",
+    "valueEmpty": "—",
+    "emptyTitle": "Tiada sekolah disimpan untuk dibandingkan",
+    "emptyDescription": "Tandai sekolah semasa melayari untuk membandingkannya di sini.",
+    "browseSchools": "Layari sekolah",
+    "noSelectionTitle": "Pilih sekolah untuk dibandingkan",
+    "noSelectionDescription": "Pilih sehingga 3 sekolah disimpan daripada senarai di atas.",
+    "errorTitle": "Tidak dapat memuatkan sekolah disimpan anda",
+    "errorDescription": "Sila cuba lagi sebentar."
   },
   "ParentSavedSearches": {
     "title": "Carian disimpan",
@@ -2132,6 +2178,23 @@
     "unread": "Belum dibaca",
     "markRead": "Tandakan sebagai dibaca",
     "bellLabel": "Pemberitahuan"
+  },
+  "Onboarding": {
+    "title": "Mulakan",
+    "subtitle": "Lengkapkan langkah-langkah ini untuk mencari dan memohon ke sekolah.",
+    "progressLabel": "{completed} daripada {total} selesai",
+    "percent": "{percent}%",
+    "dismiss": "Tutup senarai semak",
+    "start": "Mula",
+    "done": "Selesai",
+    "stepProfileLabel": "Lengkapkan profil anda",
+    "stepProfileDescription": "Tambah nombor telefon anda supaya sekolah boleh menghubungi anda.",
+    "stepChildLabel": "Tambah anak pertama anda",
+    "stepChildDescription": "Cipta profil pelajar untuk mula memohon.",
+    "stepSchoolsLabel": "Simpan beberapa sekolah",
+    "stepSchoolsDescription": "Lihat dan tanda buku sekolah yang anda suka.",
+    "stepApplicationLabel": "Mulakan permohonan pertama anda",
+    "stepApplicationDescription": "Mohon ke sekolah untuk menjejaki kemajuannya."
   },
   "ParentDashboard": {
     "title": "Papan Pemuka",
@@ -2163,7 +2226,22 @@
     "quickAddStudent": "Tambah pelajar",
     "quickSearchSchools": "Cari sekolah",
     "quickSettings": "Tetapan",
-    "quickPayments": "Pembayaran"
+    "quickPayments": "Pembayaran",
+    "statApplicationsInProgress": "Permohonan dalam proses",
+    "statChildren": "Anak",
+    "statSavedSchools": "Sekolah disimpan",
+    "statOffers": "Tawaran",
+    "recentApplicationsTitle": "Permohonan terkini",
+    "tableChild": "Anak",
+    "tableSchool": "Sekolah",
+    "tableStatus": "Status",
+    "tableView": "Lihat",
+    "tableViewApplication": "Lihat permohonan {name}"
+  },
+  "ParentChildSwitcher": {
+    "allChildren": "Semua anak",
+    "addChild": "Tambah anak",
+    "triggerAriaLabel": "Anak aktif: {name}. Tukar anak aktif"
   },
   "ParentPayments": {
     "title": "Pembayaran",
@@ -2384,6 +2462,21 @@
     "documentType_caaw_letter": "Surat CAAW",
     "documentType_photo": "Foto",
     "documentType_other": "Lain-lain"
+  },
+  "ParentOffers": {
+    "title": "Tawaran",
+    "subtitle": "Semak dan balas tawaran yang diterima oleh anak anda.",
+    "errorMessage": "Kami tidak dapat memuatkan tawaran anda. Sila cuba lagi.",
+    "retry": "Cuba lagi",
+    "emptyTitle": "Belum ada tawaran",
+    "emptySubtitle": "Apabila sekolah membuat tawaran, ia akan dipaparkan di sini untuk semakan anda.",
+    "searchSchools": "Cari sekolah",
+    "yearLevel": "Tahap tahun",
+    "intake": "Pengambilan",
+    "offerDate": "Tarikh tawaran",
+    "contextOfferMade": "Tawaran telah dibuat. Buka permohonan untuk menyemak butiran dan teruskan — ejen anda memuktamadkan penerimaan.",
+    "contextOfferAccepted": "Tawaran diterima. Buka permohonan untuk meneruskan pra-pendaftaran anda.",
+    "viewApplication": "Lihat permohonan"
   },
   "ParentSettings": {
     "title": "Tetapan",
@@ -3361,5 +3454,28 @@
     "empty": "No notifications yet",
     "loadError": "Could not load notifications",
     "retry": "Try again"
+  },
+  "CommandPalette": {
+    "triggerLabel": "Buka palet arahan",
+    "triggerPlaceholder": "Cari atau lompat ke…",
+    "kbdHint": "⌘K",
+    "dialogTitle": "Palet arahan",
+    "dialogDescription": "Cari halaman, anak, permohonan dan tindakan",
+    "inputPlaceholder": "Taip arahan atau cari…",
+    "empty": "Tiada hasil",
+    "sections": {
+      "goTo": "Pergi ke",
+      "children": "Anak",
+      "applications": "Permohonan",
+      "actions": "Tindakan"
+    },
+    "actions": {
+      "searchSchools": "Cari sekolah"
+    }
+  },
+  "ParentMessages": {
+    "title": "Mesej",
+    "subtitle": "Semua perbualan anda dengan sekolah di satu tempat.",
+    "selectPrompt": "Pilih perbualan untuk membaca dan membalas."
   }
 }

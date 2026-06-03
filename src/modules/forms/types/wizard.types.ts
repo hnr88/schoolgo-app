@@ -56,6 +56,8 @@ export interface WizardStepProps {
 export interface WizardProgressProps {
   steps: WizardStepConfig[];
   activeIndex: number;
+  onStepSelect?: (index: number) => void;
+  backLabel?: string;
   className?: string;
 }
 

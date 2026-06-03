@@ -1456,7 +1456,15 @@
     },
     "showPassword": "Show password",
     "hidePassword": "Hide password",
-    "rememberMe": "Remember me"
+    "rememberMe": "Remember me",
+    "trustHeading": "Trusted by families across Australia",
+    "trustStat1Value": "300+",
+    "trustStat1Label": "Schools",
+    "trustStat2Value": "7",
+    "trustStat2Label": "Languages",
+    "trustStat3Value": "CRICOS",
+    "trustStat3Label": "Verified",
+    "passwordHint": "Use at least 6 characters for a stronger password."
   },
   "Errors": {
     "generic": "เกิดข้อผิดพลาด",
@@ -2098,11 +2106,14 @@
     "notifications": "การแจ้งเตือน",
     "students": "นักเรียน",
     "applications": "ใบสมัคร",
+    "offers": "ข้อเสนอ",
     "savedSchools": "โรงเรียนที่บันทึกไว้",
+    "compare": "เปรียบเทียบ",
     "savedSearches": "การค้นหาที่บันทึกไว้",
     "results": "ผลการทดสอบ",
     "settings": "การตั้งค่า",
-    "payments": "การชำระเงิน"
+    "payments": "การชำระเงิน",
+    "messages": "ข้อความ"
   },
   "ParentSavedSchools": {
     "title": "โรงเรียนที่บันทึกไว้",
@@ -2110,6 +2121,41 @@
     "emptyDescription": "บันทึกโรงเรียนขณะเรียกดูเพื่อเปรียบเทียบที่นี่ในภายหลัง",
     "browseSchools": "เรียกดูโรงเรียน",
     "remove": "ลบ"
+  },
+  "SchoolComparison": {
+    "title": "เปรียบเทียบโรงเรียน",
+    "subtitle": "เปรียบเทียบโรงเรียนที่บันทึกไว้ได้สูงสุด 3 แห่งเคียงข้างกัน",
+    "selectorTitle": "เลือกโรงเรียนเพื่อเปรียบเทียบ",
+    "limitHint": "คุณเปรียบเทียบได้สูงสุด 3 โรงเรียน นำออกหนึ่งแห่งเพื่อเพิ่มอีกแห่ง",
+    "attributeColumn": "คุณสมบัติ",
+    "removeColumn": "นำ {name} ออกจากการเปรียบเทียบ",
+    "attrState": "รัฐ",
+    "attrSuburb": "ย่าน",
+    "attrPostcode": "รหัสไปรษณีย์",
+    "attrSchoolType": "ประเภทโรงเรียน",
+    "attrSector": "ภาคส่วน",
+    "attrGender": "เพศ",
+    "attrReligiousAffiliation": "สังกัดศาสนา",
+    "attrCurriculum": "หลักสูตรที่เปิดสอน",
+    "attrLevelsOffered": "ระดับชั้นที่เปิดสอน",
+    "attrLowestTuition": "ค่าเล่าเรียนต่อปีต่ำสุด",
+    "attrHighestTuition": "ค่าเล่าเรียนต่อปีสูงสุด",
+    "attrTotalEnrolment": "จำนวนนักเรียนทั้งหมด",
+    "attrInternationalPct": "นักเรียนต่างชาติ (%)",
+    "attrBoarding": "มีหอพัก",
+    "attrScholarship": "มีทุนการศึกษา",
+    "attrOpenCapacity": "มีที่ว่างรับสมัคร",
+    "attrAcceptingApplications": "เปิดรับใบสมัคร",
+    "valueYes": "ใช่",
+    "valueNo": "ไม่",
+    "valueEmpty": "—",
+    "emptyTitle": "ไม่มีโรงเรียนที่บันทึกไว้ให้เปรียบเทียบ",
+    "emptyDescription": "บันทึกโรงเรียนขณะเรียกดูเพื่อเปรียบเทียบที่นี่",
+    "browseSchools": "เรียกดูโรงเรียน",
+    "noSelectionTitle": "เลือกโรงเรียนเพื่อเปรียบเทียบ",
+    "noSelectionDescription": "เลือกโรงเรียนที่บันทึกไว้ได้สูงสุด 3 แห่งจากรายการด้านบน",
+    "errorTitle": "ไม่สามารถโหลดโรงเรียนที่บันทึกไว้ได้",
+    "errorDescription": "โปรดลองอีกครั้งในอีกสักครู่"
   },
   "ParentSavedSearches": {
     "title": "การค้นหาที่บันทึกไว้",
@@ -2132,6 +2178,23 @@
     "unread": "ยังไม่ได้อ่าน",
     "markRead": "ทำเครื่องหมายว่าอ่านแล้ว",
     "bellLabel": "การแจ้งเตือน"
+  },
+  "Onboarding": {
+    "title": "เริ่มต้นใช้งาน",
+    "subtitle": "ทำตามขั้นตอนเหล่านี้ให้ครบเพื่อค้นหาและสมัครเข้าโรงเรียน",
+    "progressLabel": "เสร็จ {completed} จาก {total}",
+    "percent": "{percent}%",
+    "dismiss": "ปิดรายการตรวจสอบ",
+    "start": "เริ่ม",
+    "done": "เสร็จแล้ว",
+    "stepProfileLabel": "กรอกโปรไฟล์ให้สมบูรณ์",
+    "stepProfileDescription": "เพิ่มหมายเลขโทรศัพท์เพื่อให้โรงเรียนติดต่อคุณได้",
+    "stepChildLabel": "เพิ่มบุตรคนแรกของคุณ",
+    "stepChildDescription": "สร้างโปรไฟล์นักเรียนเพื่อเริ่มสมัคร",
+    "stepSchoolsLabel": "บันทึกโรงเรียน",
+    "stepSchoolsDescription": "เรียกดูและบุ๊กมาร์กโรงเรียนที่คุณชอบ",
+    "stepApplicationLabel": "เริ่มการสมัครครั้งแรกของคุณ",
+    "stepApplicationDescription": "สมัครเข้าโรงเรียนเพื่อติดตามความคืบหน้า"
   },
   "ParentDashboard": {
     "title": "แดชบอร์ด",
@@ -2163,7 +2226,22 @@
     "quickAddStudent": "เพิ่มนักเรียน",
     "quickSearchSchools": "ค้นหาโรงเรียน",
     "quickSettings": "การตั้งค่า",
-    "quickPayments": "การชำระเงิน"
+    "quickPayments": "การชำระเงิน",
+    "statApplicationsInProgress": "ใบสมัครที่กำลังดำเนินการ",
+    "statChildren": "บุตรหลาน",
+    "statSavedSchools": "โรงเรียนที่บันทึกไว้",
+    "statOffers": "ข้อเสนอ",
+    "recentApplicationsTitle": "ใบสมัครล่าสุด",
+    "tableChild": "บุตรหลาน",
+    "tableSchool": "โรงเรียน",
+    "tableStatus": "สถานะ",
+    "tableView": "ดู",
+    "tableViewApplication": "ดูใบสมัครของ {name}"
+  },
+  "ParentChildSwitcher": {
+    "allChildren": "บุตรทั้งหมด",
+    "addChild": "เพิ่มบุตร",
+    "triggerAriaLabel": "บุตรที่ใช้งานอยู่: {name} เปลี่ยนบุตรที่ใช้งานอยู่"
   },
   "ParentPayments": {
     "title": "การชำระเงิน",
@@ -2384,6 +2462,21 @@
     "documentType_caaw_letter": "จดหมาย CAAW",
     "documentType_photo": "รูปถ่าย",
     "documentType_other": "อื่น ๆ"
+  },
+  "ParentOffers": {
+    "title": "ข้อเสนอ",
+    "subtitle": "ตรวจสอบและตอบกลับข้อเสนอที่บุตรหลานของคุณได้รับ",
+    "errorMessage": "เราไม่สามารถโหลดข้อเสนอของคุณได้ โปรดลองอีกครั้ง",
+    "retry": "ลองอีกครั้ง",
+    "emptyTitle": "ยังไม่มีข้อเสนอ",
+    "emptySubtitle": "เมื่อโรงเรียนเสนอข้อเสนอ ข้อเสนอจะปรากฏที่นี่ให้คุณตรวจสอบ",
+    "searchSchools": "ค้นหาโรงเรียน",
+    "yearLevel": "ระดับชั้นปี",
+    "intake": "รอบการรับเข้า",
+    "offerDate": "วันที่ของข้อเสนอ",
+    "contextOfferMade": "มีข้อเสนอแล้ว เปิดใบสมัครเพื่อตรวจสอบรายละเอียดและดำเนินการต่อ — ตัวแทนของคุณจะเป็นผู้ยืนยันการยอมรับขั้นสุดท้าย",
+    "contextOfferAccepted": "ยอมรับข้อเสนอแล้ว เปิดใบสมัครเพื่อดำเนินการลงทะเบียนล่วงหน้าต่อ",
+    "viewApplication": "ดูใบสมัคร"
   },
   "ParentSettings": {
     "title": "การตั้งค่า",
@@ -3361,5 +3454,28 @@
     "empty": "No notifications yet",
     "loadError": "Could not load notifications",
     "retry": "Try again"
+  },
+  "CommandPalette": {
+    "triggerLabel": "เปิดแผงคำสั่ง",
+    "triggerPlaceholder": "ค้นหาหรือไปที่…",
+    "kbdHint": "⌘K",
+    "dialogTitle": "แผงคำสั่ง",
+    "dialogDescription": "ค้นหาหน้า บุตรหลาน ใบสมัคร และการดำเนินการ",
+    "inputPlaceholder": "พิมพ์คำสั่งหรือค้นหา…",
+    "empty": "ไม่พบผลลัพธ์",
+    "sections": {
+      "goTo": "ไปที่",
+      "children": "บุตรหลาน",
+      "applications": "ใบสมัคร",
+      "actions": "การดำเนินการ"
+    },
+    "actions": {
+      "searchSchools": "ค้นหาโรงเรียน"
+    }
+  },
+  "ParentMessages": {
+    "title": "ข้อความ",
+    "subtitle": "บทสนทนาทั้งหมดกับโรงเรียนของคุณรวมไว้ในที่เดียว",
+    "selectPrompt": "เลือกบทสนทนาเพื่ออ่านและตอบกลับ"
   }
 }

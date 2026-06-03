@@ -14,9 +14,10 @@ export function WizardNav({
   onFinish,
 }: WizardNavProps) {
   return (
-    <div className='flex items-center justify-between gap-3'>
+    <div className='flex items-center justify-between gap-3 border-t border-border pt-6'>
       <Button
         type='button'
+        size='lg'
         variant='outline'
         onClick={onBack}
         disabled={isFirst || isBusy}
@@ -25,6 +26,7 @@ export function WizardNav({
       </Button>
       <Button
         type='button'
+        size='lg'
         onClick={isLast ? onFinish : onNext}
         disabled={isBusy}
         aria-busy={isBusy}

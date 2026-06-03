@@ -11,6 +11,7 @@ export { StudentForm } from '@/modules/students/components/StudentForm';
 export { StudentDocumentsTab } from '@/modules/students/components/StudentDocumentsTab';
 export { DocumentUploadDialog } from '@/modules/students/components/DocumentUploadDialog';
 export { useParentStudents } from '@/modules/students/queries/use-parent-students.query';
+export { useActiveChildStore } from '@/modules/students/stores/use-active-child-store';
 export type { Student } from '@/modules/students/types/student.types';
 export type {
   ParentStudent,

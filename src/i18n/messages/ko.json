@@ -1456,7 +1456,15 @@
     },
     "showPassword": "Show password",
     "hidePassword": "Hide password",
-    "rememberMe": "Remember me"
+    "rememberMe": "Remember me",
+    "trustHeading": "Trusted by families across Australia",
+    "trustStat1Value": "300+",
+    "trustStat1Label": "Schools",
+    "trustStat2Value": "7",
+    "trustStat2Label": "Languages",
+    "trustStat3Value": "CRICOS",
+    "trustStat3Label": "Verified",
+    "passwordHint": "Use at least 6 characters for a stronger password."
   },
   "Errors": {
     "generic": "문제가 발생했습니다",
@@ -2098,11 +2106,14 @@
     "notifications": "알림",
     "students": "학생",
     "applications": "지원서",
+    "offers": "오퍼",
     "savedSchools": "저장한 학교",
+    "compare": "학교 비교",
     "savedSearches": "저장한 검색",
     "results": "결과",
     "settings": "설정",
-    "payments": "결제"
+    "payments": "결제",
+    "messages": "메시지"
   },
   "ParentSavedSchools": {
     "title": "저장한 학교",
@@ -2110,6 +2121,41 @@
     "emptyDescription": "검색하는 동안 학교를 북마크하면 나중에 여기에서 비교할 수 있습니다.",
     "browseSchools": "학교 둘러보기",
     "remove": "삭제"
+  },
+  "SchoolComparison": {
+    "title": "학교 비교",
+    "subtitle": "저장한 학교를 최대 3개까지 나란히 비교하세요.",
+    "selectorTitle": "비교할 학교 선택",
+    "limitHint": "최대 3개 학교까지 비교할 수 있습니다. 추가하려면 하나를 제거하세요.",
+    "attributeColumn": "항목",
+    "removeColumn": "비교에서 {name} 제거",
+    "attrState": "주",
+    "attrSuburb": "지역",
+    "attrPostcode": "우편번호",
+    "attrSchoolType": "학교 유형",
+    "attrSector": "구분",
+    "attrGender": "성별",
+    "attrReligiousAffiliation": "종교 계열",
+    "attrCurriculum": "제공 교육과정",
+    "attrLevelsOffered": "제공 학년",
+    "attrLowestTuition": "최저 연간 학비",
+    "attrHighestTuition": "최고 연간 학비",
+    "attrTotalEnrolment": "전체 재학생 수",
+    "attrInternationalPct": "국제 학생 비율 (%)",
+    "attrBoarding": "기숙사 제공",
+    "attrScholarship": "장학금 제공",
+    "attrOpenCapacity": "모집 정원 여유",
+    "attrAcceptingApplications": "지원 접수 중",
+    "valueYes": "예",
+    "valueNo": "아니요",
+    "valueEmpty": "—",
+    "emptyTitle": "비교할 저장된 학교가 없습니다",
+    "emptyDescription": "탐색하면서 학교를 북마크하면 여기에서 비교할 수 있습니다.",
+    "browseSchools": "학교 둘러보기",
+    "noSelectionTitle": "비교할 학교를 선택하세요",
+    "noSelectionDescription": "위 목록에서 저장한 학교를 최대 3개까지 선택하세요.",
+    "errorTitle": "저장한 학교를 불러올 수 없습니다",
+    "errorDescription": "잠시 후 다시 시도해 주세요."
   },
   "ParentSavedSearches": {
     "title": "저장한 검색",
@@ -2132,6 +2178,23 @@
     "unread": "읽지 않음",
     "markRead": "읽음으로 표시",
     "bellLabel": "알림"
+  },
+  "Onboarding": {
+    "title": "시작하기",
+    "subtitle": "다음 단계를 완료하여 학교를 찾고 지원하세요.",
+    "progressLabel": "{total}개 중 {completed}개 완료",
+    "percent": "{percent}%",
+    "dismiss": "체크리스트 닫기",
+    "start": "시작",
+    "done": "완료",
+    "stepProfileLabel": "프로필 완성하기",
+    "stepProfileDescription": "학교에서 연락할 수 있도록 전화번호를 추가하세요.",
+    "stepChildLabel": "첫 자녀 추가하기",
+    "stepChildDescription": "지원을 시작하려면 학생 프로필을 만드세요.",
+    "stepSchoolsLabel": "학교 저장하기",
+    "stepSchoolsDescription": "마음에 드는 학교를 둘러보고 북마크하세요.",
+    "stepApplicationLabel": "첫 지원 시작하기",
+    "stepApplicationDescription": "학교에 지원하여 진행 상황을 추적하세요."
   },
   "ParentDashboard": {
     "title": "대시보드",
@@ -2163,7 +2226,22 @@
     "quickAddStudent": "학생 추가",
     "quickSearchSchools": "학교 검색",
     "quickSettings": "설정",
-    "quickPayments": "결제"
+    "quickPayments": "결제",
+    "statApplicationsInProgress": "진행 중인 지원",
+    "statChildren": "자녀",
+    "statSavedSchools": "저장한 학교",
+    "statOffers": "합격 통보",
+    "recentApplicationsTitle": "최근 지원",
+    "tableChild": "자녀",
+    "tableSchool": "학교",
+    "tableStatus": "상태",
+    "tableView": "보기",
+    "tableViewApplication": "{name}님의 지원 보기"
+  },
+  "ParentChildSwitcher": {
+    "allChildren": "모든 자녀",
+    "addChild": "자녀 추가",
+    "triggerAriaLabel": "현재 자녀: {name}. 현재 자녀 변경"
   },
   "ParentPayments": {
     "title": "결제",
@@ -2384,6 +2462,21 @@
     "documentType_caaw_letter": "CAAW 레터",
     "documentType_photo": "사진",
     "documentType_other": "기타"
+  },
+  "ParentOffers": {
+    "title": "오퍼",
+    "subtitle": "자녀가 받은 오퍼를 검토하고 응답하세요.",
+    "errorMessage": "오퍼를 불러오지 못했습니다. 다시 시도해 주세요.",
+    "retry": "다시 시도",
+    "emptyTitle": "아직 오퍼가 없습니다",
+    "emptySubtitle": "학교에서 오퍼를 보내면 여기에 표시되어 검토할 수 있습니다.",
+    "searchSchools": "학교 검색",
+    "yearLevel": "학년",
+    "intake": "입학 시기",
+    "offerDate": "오퍼 날짜",
+    "contextOfferMade": "오퍼가 제안되었습니다. 지원서를 열어 세부 정보를 검토하고 계속 진행하세요. 최종 수락은 에이전트가 처리합니다.",
+    "contextOfferAccepted": "오퍼가 수락되었습니다. 지원서를 열어 사전 등록을 계속 진행하세요.",
+    "viewApplication": "지원서 보기"
   },
   "ParentSettings": {
     "title": "설정",
@@ -3361,5 +3454,28 @@
     "empty": "No notifications yet",
     "loadError": "Could not load notifications",
     "retry": "Try again"
+  },
+  "CommandPalette": {
+    "triggerLabel": "명령 팔레트 열기",
+    "triggerPlaceholder": "검색 또는 이동…",
+    "kbdHint": "⌘K",
+    "dialogTitle": "명령 팔레트",
+    "dialogDescription": "페이지, 자녀, 지원서 및 작업 검색",
+    "inputPlaceholder": "명령을 입력하거나 검색…",
+    "empty": "결과 없음",
+    "sections": {
+      "goTo": "이동",
+      "children": "자녀",
+      "applications": "지원서",
+      "actions": "작업"
+    },
+    "actions": {
+      "searchSchools": "학교 검색"
+    }
+  },
+  "ParentMessages": {
+    "title": "메시지",
+    "subtitle": "학교와의 모든 대화를 한곳에서 확인하세요.",
+    "selectPrompt": "읽고 답장하려면 대화를 선택하세요."
   }
 }

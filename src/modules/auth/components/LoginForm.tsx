@@ -20,6 +20,14 @@ import {
 } from '@/components/ui/form';
 import type { LoginFormProps } from '@/modules/auth/types/component.types';
 import { PORTAL_LINK_COLOR } from '../constants/portal.constants';
+import {
+  AUTH_ERROR_SUMMARY_CLASS,
+  AUTH_INPUT_CLASS,
+  AUTH_LABEL_CLASS,
+  AUTH_PASSWORD_INPUT_CLASS,
+  AUTH_PASSWORD_TOGGLE_CLASS,
+  AUTH_SUBMIT_CLASS,
+} from '../constants/auth-field.constants';
 
 export function LoginForm({ userType }: LoginFormProps) {
   const t = useTranslations('Auth');
@@ -41,16 +49,12 @@ export function LoginForm({ userType }: LoginFormProps) {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(handleLogin)}
-        className='flex flex-col gap-5'
+        className='flex flex-col gap-6'
         noValidate
       >
         {/* Error summary */}
         {rootError && (
-          <div
-            role='alert'
-            aria-live='assertive'
-            className='rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700'
-          >
+          <div role='alert' aria-live='assertive' className={AUTH_ERROR_SUMMARY_CLASS}>
             {rootError}
           </div>
         )}
@@ -60,10 +64,7 @@ export function LoginForm({ userType }: LoginFormProps) {
           name='identifier'
           render={({ field }) => (
             <FormItem>
-              <FormLabel
-                htmlFor='login-email'
-                className='text-sm font-semibold text-ink-900'
-              >
+              <FormLabel htmlFor='login-email' className={AUTH_LABEL_CLASS}>
                 {t('emailLabel')}
               </FormLabel>
               <FormControl>
@@ -77,7 +78,7 @@ export function LoginForm({ userType }: LoginFormProps) {
                   aria-describedby={
                     form.formState.errors.identifier ? 'login-email-error' : undefined
                   }
-                  className='h-12 rounded-xl border-border/60 bg-muted/30 px-4 text-base transition-all focus:bg-white focus:ring-2 focus:ring-primary/20'
+                  className={AUTH_INPUT_CLASS}
                   {...field}
                 />
               </FormControl>
@@ -91,10 +92,7 @@ export function LoginForm({ userType }: LoginFormProps) {
           name='password'
           render={({ field }) => (
             <FormItem>
-              <FormLabel
-                htmlFor='login-password'
-                className='text-sm font-semibold text-ink-900'
-              >
+              <FormLabel htmlFor='login-password' className={AUTH_LABEL_CLASS}>
                 {t('passwordLabel')}
               </FormLabel>
               <FormControl>
@@ -111,13 +109,13 @@ export function LoginForm({ userType }: LoginFormProps) {
                         ? 'login-password-error'
                         : undefined
                     }
-                    className='h-12 rounded-xl border-border/60 bg-muted/30 px-4 pr-12 text-base transition-all focus:bg-white focus:ring-2 focus:ring-primary/20'
+                    className={AUTH_PASSWORD_INPUT_CLASS}
                     {...field}
                   />
                   <button
                     type='button'
                     onClick={() => setShowPassword(!showPassword)}
-                    className='absolute right-3 top-1/2 -translate-y-1/2 rounded-md p-1.5 text-foggy transition-colors hover:text-ink-900 focus:outline-none focus:ring-2 focus:ring-primary'
+                    className={AUTH_PASSWORD_TOGGLE_CLASS}
                     aria-label={showPassword ? t('hidePassword') : t('showPassword')}
                     aria-pressed={showPassword}
                   >
@@ -139,7 +137,7 @@ export function LoginForm({ userType }: LoginFormProps) {
             <input
               id='remember-me'
               type='checkbox'
-              className='h-4 w-4 rounded border-border text-primary focus:ring-primary'
+              className='h-4 w-4 rounded border-input text-primary focus-visible:ring-2 focus-visible:ring-ring/50'
             />
             <label htmlFor='remember-me' className='text-sm text-foggy'>
               {t('rememberMe')}
@@ -157,7 +155,7 @@ export function LoginForm({ userType }: LoginFormProps) {
           type='submit'
           disabled={isSubmitting}
           aria-busy={isSubmitting}
-          className='h-12 w-full rounded-xl text-sm font-semibold shadow-brand transition-all hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 disabled:opacity-70'
+          className={AUTH_SUBMIT_CLASS}
         >
           {isSubmitting && (
             <Loader2 className='mr-2 h-4 w-4 animate-spin' aria-hidden='true' />

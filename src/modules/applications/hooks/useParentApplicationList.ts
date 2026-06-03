@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { useActiveChildStore } from '@/modules/students';
 import { useParentApplications } from '@/modules/applications/queries/use-parent-applications.query';
 import {
   PARENT_APPLICATIONS_DEFAULT_PAGE_SIZE,
@@ -17,6 +18,9 @@ export function useParentApplicationList(studentDocumentId?: string) {
   const [sortField, setSortField] = useState<ParentApplicationSortField | null>(null);
   const [sortDirection, setSortDirection] = useState<ParentApplicationSortDirection>('asc');
 
+  const activeChildId = useActiveChildStore((s) => s.activeChildId);
+  const student = studentDocumentId ?? activeChildId ?? undefined;
+
   const sortParam = sortField
     ? `${PARENT_APPLICATION_SORT_FIELD_TO_API[sortField]}:${sortDirection}`
     : undefined;
@@ -25,7 +29,7 @@ export function useParentApplicationList(studentDocumentId?: string) {
     page,
     pageSize: PARENT_APPLICATIONS_DEFAULT_PAGE_SIZE,
     status,
-    student: studentDocumentId,
+    student,
     sort: sortParam,
   });
 

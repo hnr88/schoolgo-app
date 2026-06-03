@@ -30,7 +30,7 @@ export function StepGuardian({ control }: ParentStepProps) {
         render={({ field }) => (
           <FormItem>
             <FormLabel>{t('fieldParentName')}</FormLabel>
-            <FormControl><Input {...field} /></FormControl>
+            <FormControl><Input className='h-12' {...field} /></FormControl>
             <FormMessage />
           </FormItem>
         )}
@@ -41,7 +41,7 @@ export function StepGuardian({ control }: ParentStepProps) {
         render={({ field }) => (
           <FormItem>
             <FormLabel>{t('fieldParentPhone')}</FormLabel>
-            <FormControl><Input type='tel' {...field} /></FormControl>
+            <FormControl><Input className='h-12' type='tel' {...field} /></FormControl>
             <FormMessage />
           </FormItem>
         )}
@@ -52,7 +52,7 @@ export function StepGuardian({ control }: ParentStepProps) {
         render={({ field }) => (
           <FormItem>
             <FormLabel>{t('fieldParentEmail')}</FormLabel>
-            <FormControl><Input type='email' {...field} /></FormControl>
+            <FormControl><Input className='h-12' type='email' {...field} /></FormControl>
             <FormMessage />
           </FormItem>
         )}
@@ -63,7 +63,7 @@ export function StepGuardian({ control }: ParentStepProps) {
         render={({ field }) => (
           <FormItem>
             <FormLabel>{t('fieldParentWechat')}</FormLabel>
-            <FormControl><Input {...field} /></FormControl>
+            <FormControl><Input className='h-12' {...field} /></FormControl>
             <FormMessage />
           </FormItem>
         )}
@@ -76,7 +76,7 @@ export function StepGuardian({ control }: ParentStepProps) {
             <FormLabel>{t('fieldContactChannel')}</FormLabel>
             <Select onValueChange={field.onChange} value={field.value}>
               <FormControl>
-                <SelectTrigger><SelectValue /></SelectTrigger>
+                <SelectTrigger className='h-12 w-full'><SelectValue /></SelectTrigger>
               </FormControl>
               <SelectContent>
                 {PARENT_CONTACT_CHANNEL_OPTIONS.map((channel) => (

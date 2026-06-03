@@ -15,9 +15,9 @@ export function ParentDashboardHeader() {
   const greeting = t(`greeting_${getTimeOfDay()}`);
 
   return (
-    <div className='flex flex-wrap items-center justify-between gap-4'>
+    <div className='flex flex-wrap items-center justify-between gap-4 border-b border-divider pb-6'>
       <div className='flex flex-col gap-1'>
-        <h1 className='text-2xl font-bold text-ink-900'>
+        <h1 className='font-display text-2xl font-bold tracking-tight text-ink-900 sm:text-3xl'>
           {greeting} <span className='text-primary'>{firstName}</span>
         </h1>
         <p className='text-sm text-foggy'>{t('subtitle')}</p>

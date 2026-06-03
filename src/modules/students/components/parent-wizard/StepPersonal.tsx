@@ -30,7 +30,7 @@ export function StepPersonal({ control }: ParentStepProps) {
         render={({ field }) => (
           <FormItem>
             <FormLabel>{t('fieldFirstName')}</FormLabel>
-            <FormControl><Input {...field} /></FormControl>
+            <FormControl><Input className='h-12' {...field} /></FormControl>
             <FormMessage />
           </FormItem>
         )}
@@ -41,7 +41,7 @@ export function StepPersonal({ control }: ParentStepProps) {
         render={({ field }) => (
           <FormItem>
             <FormLabel>{t('fieldLastName')}</FormLabel>
-            <FormControl><Input {...field} /></FormControl>
+            <FormControl><Input className='h-12' {...field} /></FormControl>
             <FormMessage />
           </FormItem>
         )}
@@ -52,7 +52,7 @@ export function StepPersonal({ control }: ParentStepProps) {
         render={({ field }) => (
           <FormItem>
             <FormLabel>{t('fieldEmail')}</FormLabel>
-            <FormControl><Input type='email' {...field} /></FormControl>
+            <FormControl><Input className='h-12' type='email' {...field} /></FormControl>
             <FormMessage />
           </FormItem>
         )}
@@ -63,7 +63,7 @@ export function StepPersonal({ control }: ParentStepProps) {
         render={({ field }) => (
           <FormItem>
             <FormLabel>{t('fieldDob')}</FormLabel>
-            <FormControl><Input type='date' {...field} /></FormControl>
+            <FormControl><Input className='h-12' type='date' {...field} /></FormControl>
             <FormMessage />
           </FormItem>
         )}
@@ -76,7 +76,7 @@ export function StepPersonal({ control }: ParentStepProps) {
             <FormLabel>{t('fieldGender')}</FormLabel>
             <Select onValueChange={field.onChange} value={field.value ?? ''}>
               <FormControl>
-                <SelectTrigger><SelectValue placeholder={t('selectGender')} /></SelectTrigger>
+                <SelectTrigger className='h-12 w-full'><SelectValue placeholder={t('selectGender')} /></SelectTrigger>
               </FormControl>
               <SelectContent>
                 {PARENT_GENDER_OPTIONS.map((g) => (
@@ -94,7 +94,7 @@ export function StepPersonal({ control }: ParentStepProps) {
         render={({ field }) => (
           <FormItem>
             <FormLabel>{t('fieldNationality')}</FormLabel>
-            <FormControl><Input {...field} /></FormControl>
+            <FormControl><Input className='h-12' {...field} /></FormControl>
             <FormMessage />
           </FormItem>
         )}

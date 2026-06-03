@@ -1,7 +1,65 @@
-import { CreditCard, Search, Settings, UserPlus } from 'lucide-react';
-import type { ParentQuickAction } from '@/modules/dashboard/parent/types/parent-dashboard.types';
+import { Award, CreditCard, FileText, Heart, Search, Settings, UserPlus, Users } from 'lucide-react';
+import type { ApplicationStatus } from '@/modules/applications/types/application.types';
+import type {
+  ParentQuickAction,
+  ParentStatTileConfig,
+} from '@/modules/dashboard/parent/types/parent-dashboard.types';
 
 export const PARENT_DASHBOARD_RECENT_LIMIT = 4;
+
+export const PARENT_APPLICATION_IN_PROGRESS_STATUSES: ApplicationStatus[] = [
+  'submitted',
+  'received',
+  'under_review',
+  'documents_requested',
+  'assessment_required',
+  'interview_scheduled',
+  'interview_completed',
+  'offer_made',
+  'offer_accepted',
+  'pre_enrolment',
+  'coe_issued',
+];
+
+export const PARENT_APPLICATION_OFFER_STATUSES: ApplicationStatus[] = [
+  'offer_made',
+  'offer_accepted',
+];
+
+export const PARENT_STAT_TILES: ParentStatTileConfig[] = [
+  {
+    key: 'applicationsInProgress',
+    href: '/parent/applications',
+    icon: FileText,
+    labelKey: 'statApplicationsInProgress',
+    iconBg: 'bg-vivid-iris-soft',
+    iconColor: 'text-vivid-iris',
+  },
+  {
+    key: 'children',
+    href: '/parent/students',
+    icon: Users,
+    labelKey: 'statChildren',
+    iconBg: 'bg-vivid-coral-soft',
+    iconColor: 'text-vivid-coral',
+  },
+  {
+    key: 'savedSchools',
+    href: '/parent/saved-schools',
+    icon: Heart,
+    labelKey: 'statSavedSchools',
+    iconBg: 'bg-vivid-mint-soft',
+    iconColor: 'text-vivid-mint',
+  },
+  {
+    key: 'offers',
+    href: '/parent/applications',
+    icon: Award,
+    labelKey: 'statOffers',
+    iconBg: 'bg-vivid-amber-soft',
+    iconColor: 'text-arches-700',
+  },
+];
 
 export const PARENT_QUICK_ACTIONS: ParentQuickAction[] = [
   {
