@@ -19,7 +19,7 @@ export function SchoolOnboardingChecklist({
   const percent = total > 0 ? Math.round((completed / total) * 100) : 0;
 
   return (
-    <section className='flex flex-col gap-4 rounded-xl border border-border bg-card p-6 shadow-1'>
+    <section className='flex flex-col gap-4 rounded-lg border border-border bg-card p-6 shadow-1'>
       <div className='flex flex-col gap-1'>
         <h2 className='text-base font-bold text-ink-900'>{t('onboardingChecklistTitle')}</h2>
         <p className='text-sm text-foggy'>{t('onboardingDescription')}</p>
@@ -61,7 +61,7 @@ export function SchoolOnboardingChecklist({
 
       <Link
         href='/dashboard/profile'
-        className='self-start rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground no-underline transition-opacity hover:opacity-90'
+        className='inline-flex h-11 items-center self-start rounded-md bg-primary px-4 text-sm font-semibold text-primary-foreground no-underline transition-transform duration-200 ease-out-quart hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2'
       >
         {t('onboardingCta')}
       </Link>

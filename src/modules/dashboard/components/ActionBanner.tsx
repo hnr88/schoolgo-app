@@ -13,11 +13,15 @@ export function ActionBanner({ items }: { items: ActionRowView[] }) {
   if (items.length === 0) return null;
 
   return (
-    <div className='flex items-start gap-3 rounded-xl border border-babu-100 bg-babu-50 p-6'>
-      <span className='flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-babu-100 text-babu-600'>
-        <Info className='h-4 w-4' strokeWidth={2} />
+    <div
+      role='region'
+      aria-label={t('title')}
+      className='flex items-start gap-3 rounded-lg border border-babu-100 bg-babu-50 p-5'
+    >
+      <span className='flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-babu-100 text-babu-600'>
+        <Info className='h-4 w-4' strokeWidth={2} aria-hidden='true' />
       </span>
-      <div className='flex flex-col gap-2'>
+      <div className='flex min-w-0 flex-col gap-2'>
         <span className='text-xs font-bold uppercase tracking-wide text-babu-700'>
           {t('title')}
         </span>
@@ -26,7 +30,7 @@ export function ActionBanner({ items }: { items: ActionRowView[] }) {
             <li key={item.id}>
               <Link
                 href={item.href}
-                className='group flex items-center gap-2 no-underline'
+                className='group flex items-center gap-2 rounded-md no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2'
               >
                 <span
                   className={cn(

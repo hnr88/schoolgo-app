@@ -4,7 +4,6 @@ import { useTranslations } from 'next-intl';
 import { Plus, RefreshCw } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Skeleton } from '@/components/ui/skeleton';
-import { Card, CardContent } from '@/components/ui/card';
 import { useSchoolStaffMe } from '@/modules/school-templates/queries/use-school-staff-me.query';
 import { useSchoolTemplates } from '@/modules/school-templates/queries/use-school-templates.query';
 import { useTemplatesPageState } from '@/modules/school-templates/hooks/useTemplatesPageState';
@@ -27,7 +26,7 @@ export function SchoolTemplatesPage() {
     return (
       <div className='flex flex-col gap-3'>
         <Skeleton className='h-10 w-40' />
-        <Skeleton className='h-48 w-full rounded-xl' />
+        <Skeleton className='h-48 w-full rounded-lg' />
       </div>
     );
   }
@@ -55,24 +54,20 @@ export function SchoolTemplatesPage() {
       </div>
 
       {templates.length === 0 ? (
-        <Card>
-          <CardContent className='flex flex-col items-center gap-1 py-12 text-center'>
-            <p className='text-base font-semibold text-ink-900'>{t('empty')}</p>
-            <p className='text-sm text-foggy'>{t('emptyHint')}</p>
-          </CardContent>
-        </Card>
+        <div className='flex flex-col items-center gap-1 rounded-lg border border-border bg-card py-12 text-center shadow-1'>
+          <p className='text-base font-semibold text-ink-900'>{t('empty')}</p>
+          <p className='text-sm text-foggy'>{t('emptyHint')}</p>
+        </div>
       ) : (
-        <Card>
-          <CardContent className='pt-6'>
-            <TemplateVersionTable
-              templates={templates}
-              canManage={isAdmin}
-              onView={state.openView}
-              onEdit={state.openEdit}
-              onPublish={(tpl) => state.setPublishId(tpl.documentId)}
-            />
-          </CardContent>
-        </Card>
+        <div className='overflow-hidden rounded-lg border border-border bg-card shadow-1'>
+          <TemplateVersionTable
+            templates={templates}
+            canManage={isAdmin}
+            onView={state.openView}
+            onEdit={state.openEdit}
+            onPublish={(tpl) => state.setPublishId(tpl.documentId)}
+          />
+        </div>
       )}
 
       <TemplateBuilder

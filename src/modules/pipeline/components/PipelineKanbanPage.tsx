@@ -33,30 +33,38 @@ export function PipelineKanbanPage() {
 
   return (
     <div className='flex flex-col gap-6'>
-      <div className='flex items-center justify-between'>
-        <span className='text-sm text-foggy'>
+      <div className='flex items-center justify-between gap-3'>
+        <span className='text-sm font-medium text-foggy tabular-nums'>
           {t('totalApplications', { count: data?.total ?? 0 })}
         </span>
-        <div className='flex items-center gap-1 rounded-lg bg-muted p-1'>
+        <div
+          role='group'
+          aria-label={t('viewToggleLabel')}
+          className='flex items-center gap-1 rounded-lg border border-border bg-muted p-1'
+        >
           <button
             type='button'
             onClick={() => setView('kanban')}
+            aria-pressed={view === 'kanban'}
+            aria-label={t('viewKanban')}
             className={cn(
-              'rounded-md p-1.5 transition-colors',
-              view === 'kanban' ? 'bg-card text-ink-900 shadow-sm' : 'text-foggy hover:text-ink-900',
+              'flex h-11 w-11 items-center justify-center rounded-md transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring',
+              view === 'kanban' ? 'bg-card text-ink-900 shadow-1' : 'text-foggy hover:text-ink-900',
             )}
           >
-            <LayoutGrid className='h-4 w-4' />
+            <LayoutGrid className='h-4 w-4' strokeWidth={1.75} aria-hidden='true' />
           </button>
           <button
             type='button'
             onClick={() => setView('table')}
+            aria-pressed={view === 'table'}
+            aria-label={t('viewTable')}
             className={cn(
-              'rounded-md p-1.5 transition-colors',
-              view === 'table' ? 'bg-card text-ink-900 shadow-sm' : 'text-foggy hover:text-ink-900',
+              'flex h-11 w-11 items-center justify-center rounded-md transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring',
+              view === 'table' ? 'bg-card text-ink-900 shadow-1' : 'text-foggy hover:text-ink-900',
             )}
           >
-            <List className='h-4 w-4' />
+            <List className='h-4 w-4' strokeWidth={1.75} aria-hidden='true' />
           </button>
         </div>
       </div>
@@ -74,7 +82,7 @@ export function PipelineKanbanPage() {
           isLoading={isLoading}
         />
       ) : (
-        <div className='overflow-hidden rounded-xl border border-border bg-card'>
+        <div className='overflow-hidden rounded-lg border border-border bg-card shadow-1'>
           <ApplicationTable
             applications={data?.applications ?? []}
             isLoading={isLoading}

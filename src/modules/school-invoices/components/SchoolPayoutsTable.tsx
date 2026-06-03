@@ -30,42 +30,42 @@ export function SchoolPayoutsTable({ payouts }: { payouts: SchoolPayout[] }) {
       tabIndex={0}
       role='region'
       aria-label={t('tableRegionPayouts')}
-      className='table-scroll-region overflow-x-auto rounded-xl border border-border bg-card focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring'
+      className='table-scroll-region overflow-x-auto rounded-lg border border-border bg-card shadow-1 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring'
     >
       <Table>
         <TableHeader>
-          <TableRow>
-            <TableHead>{t('columnReference')}</TableHead>
-            <TableHead>{t('columnInvoice')}</TableHead>
-            <TableHead className='text-right'>{t('columnAmount')}</TableHead>
-            <TableHead className='text-right'>{t('columnNet')}</TableHead>
-            <TableHead>{t('columnStatus')}</TableHead>
-            <TableHead>{t('columnScheduled')}</TableHead>
+          <TableRow className='border-b border-divider hover:bg-transparent'>
+            <TableHead className='text-xs font-semibold uppercase tracking-wide text-foggy'>{t('columnReference')}</TableHead>
+            <TableHead className='text-xs font-semibold uppercase tracking-wide text-foggy'>{t('columnInvoice')}</TableHead>
+            <TableHead className='text-right text-xs font-semibold uppercase tracking-wide text-foggy'>{t('columnAmount')}</TableHead>
+            <TableHead className='text-right text-xs font-semibold uppercase tracking-wide text-foggy'>{t('columnNet')}</TableHead>
+            <TableHead className='text-xs font-semibold uppercase tracking-wide text-foggy'>{t('columnStatus')}</TableHead>
+            <TableHead className='text-xs font-semibold uppercase tracking-wide text-foggy'>{t('columnScheduled')}</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
           {payouts.map((payout) => (
-            <TableRow key={payout.documentId}>
-              <TableCell className='font-medium text-ink-900'>
+            <TableRow key={payout.documentId} className='hover:bg-muted'>
+              <TableCell className='py-3.5 font-semibold text-ink-900'>
                 {payout.reference ?? t('noReference')}
               </TableCell>
-              <TableCell className='text-foggy'>
+              <TableCell className='py-3.5 text-foggy'>
                 {payout.invoice?.invoiceNumber ?? t('unnumbered')}
               </TableCell>
-              <TableCell className='text-right text-foggy'>
+              <TableCell className='py-3.5 text-right text-foggy tabular-nums'>
                 {formatAud(payout.amountAud)}
               </TableCell>
-              <TableCell className='text-right font-medium text-ink-900'>
+              <TableCell className='py-3.5 text-right font-semibold text-ink-900 tabular-nums'>
                 {formatAud(payout.netAmountAud ?? payout.amountAud)}
               </TableCell>
-              <TableCell>
+              <TableCell className='py-3.5'>
                 <StatusBadge
                   status={payout.status}
                   label={t(PAYOUT_STATUS_LABEL_KEY[payout.status])}
                   styles={PAYOUT_STATUS_STYLES}
                 />
               </TableCell>
-              <TableCell className='text-foggy'>{formatFinanceDate(payout.scheduledFor)}</TableCell>
+              <TableCell className='py-3.5 text-foggy'>{formatFinanceDate(payout.scheduledFor)}</TableCell>
             </TableRow>
           ))}
         </TableBody>

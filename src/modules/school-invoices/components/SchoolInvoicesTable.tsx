@@ -37,46 +37,46 @@ export function SchoolInvoicesTable({ invoices }: { invoices: SchoolInvoice[] })
       tabIndex={0}
       role='region'
       aria-label={t('tableRegionInvoices')}
-      className='table-scroll-region overflow-x-auto rounded-xl border border-border bg-card focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring'
+      className='table-scroll-region overflow-x-auto rounded-lg border border-border bg-card shadow-1 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring'
     >
       <Table>
         <TableHeader>
-          <TableRow>
-            <TableHead>{t('columnInvoice')}</TableHead>
-            <TableHead>{t('columnKind')}</TableHead>
-            <TableHead>{t('columnStudent')}</TableHead>
-            <TableHead>{t('columnAgent')}</TableHead>
-            <TableHead className='text-right'>{t('columnAmount')}</TableHead>
-            <TableHead>{t('columnStatus')}</TableHead>
-            <TableHead>{t('columnIssued')}</TableHead>
+          <TableRow className='border-b border-divider hover:bg-transparent'>
+            <TableHead className='text-xs font-semibold uppercase tracking-wide text-foggy'>{t('columnInvoice')}</TableHead>
+            <TableHead className='text-xs font-semibold uppercase tracking-wide text-foggy'>{t('columnKind')}</TableHead>
+            <TableHead className='text-xs font-semibold uppercase tracking-wide text-foggy'>{t('columnStudent')}</TableHead>
+            <TableHead className='text-xs font-semibold uppercase tracking-wide text-foggy'>{t('columnAgent')}</TableHead>
+            <TableHead className='text-right text-xs font-semibold uppercase tracking-wide text-foggy'>{t('columnAmount')}</TableHead>
+            <TableHead className='text-xs font-semibold uppercase tracking-wide text-foggy'>{t('columnStatus')}</TableHead>
+            <TableHead className='text-xs font-semibold uppercase tracking-wide text-foggy'>{t('columnIssued')}</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
           {invoices.map((invoice) => {
             const student = studentName(invoice);
             return (
-              <TableRow key={invoice.documentId}>
-                <TableCell className='font-medium text-ink-900'>
+              <TableRow key={invoice.documentId} className='hover:bg-muted'>
+                <TableCell className='py-3.5 font-semibold text-ink-900'>
                   {invoice.invoiceNumber ?? t('unnumbered')}
                 </TableCell>
-                <TableCell className='text-foggy'>
+                <TableCell className='py-3.5 text-foggy'>
                   {t(INVOICE_KIND_LABEL_KEY[invoice.kind])}
                 </TableCell>
-                <TableCell className='text-foggy'>{student ?? t('noReference')}</TableCell>
-                <TableCell className='text-foggy'>
+                <TableCell className='py-3.5 text-foggy'>{student ?? t('noReference')}</TableCell>
+                <TableCell className='py-3.5 text-foggy'>
                   {invoice.agent?.companyName ?? t('agentNone')}
                 </TableCell>
-                <TableCell className='text-right font-medium text-ink-900'>
+                <TableCell className='py-3.5 text-right font-semibold text-ink-900 tabular-nums'>
                   {formatAud(invoice.amountAud, invoice.currency)}
                 </TableCell>
-                <TableCell>
+                <TableCell className='py-3.5'>
                   <StatusBadge
                     status={invoice.status}
                     label={t(INVOICE_STATUS_LABEL_KEY[invoice.status])}
                     styles={INVOICE_STATUS_STYLES}
                   />
                 </TableCell>
-                <TableCell className='text-foggy'>{formatFinanceDate(invoice.issuedAt)}</TableCell>
+                <TableCell className='py-3.5 text-foggy'>{formatFinanceDate(invoice.issuedAt)}</TableCell>
               </TableRow>
             );
           })}

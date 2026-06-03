@@ -14,12 +14,16 @@ export function mapStrapiUser(raw: Record<string, unknown>): User {
   const userType = raw.userType;
   let resolvedRole: UserRole;
 
-  if (typeof role === 'object' && role !== null && 'type' in role) {
+  // userType (agent|parent|school) is the authoritative PORTAL signal. The Strapi
+  // `role` relation is the users-permissions role (e.g. "authenticated") and is NOT
+  // the portal role, so it must NOT win over userType — doing so makes portal access
+  // checks fail and bounce the user in a redirect loop.
+  if (typeof userType === 'string' && userType in USER_TYPE_TO_ROLE) {
+    resolvedRole = USER_TYPE_TO_ROLE[userType];
+  } else if (typeof role === 'object' && role !== null && 'type' in role) {
     resolvedRole = (role as { type: string }).type as UserRole;
   } else if (typeof role === 'string') {
     resolvedRole = role as UserRole;
-  } else if (typeof userType === 'string' && userType in USER_TYPE_TO_ROLE) {
-    resolvedRole = USER_TYPE_TO_ROLE[userType];
   } else {
     resolvedRole = 'parent' as UserRole;
   }

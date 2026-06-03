@@ -169,6 +169,7 @@ export const PORTAL_NAV: Record<Portal, PortalNav> = {
       { href: '/parent/dashboard', icon: LayoutDashboard, labelKey: 'dashboard' },
       { href: '/parent/notifications', icon: Bell, labelKey: 'notifications' },
       { href: '/parent/students', icon: GraduationCap, labelKey: 'students' },
+      { href: '/parent/documents', icon: FolderOpen, labelKey: 'documents' },
       { href: '/parent/applications', icon: FileText, labelKey: 'applications' },
       { href: '/parent/offers', icon: Gift, labelKey: 'offers' },
       { href: '/parent/saved-schools', icon: Heart, labelKey: 'savedSchools' },

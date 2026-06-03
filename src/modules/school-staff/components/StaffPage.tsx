@@ -3,7 +3,6 @@
 import { useTranslations } from 'next-intl';
 import { Plus, RefreshCw, Users } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Card } from '@/components/ui/card';
 import { Skeleton } from '@/components/ui/skeleton';
 import { EmptyState } from '@/modules/core';
 import { StaffTable } from '@/modules/school-staff/components/StaffTable';
@@ -19,7 +18,7 @@ export function StaffPage() {
     <div className='flex flex-col gap-6'>
       <div className='flex items-center justify-between gap-4'>
         <div>
-          <h1 className='text-2xl font-bold text-ink-900'>{t('title')}</h1>
+          <h1 className='font-display text-2xl font-bold text-ink-900'>{t('title')}</h1>
           <p className='mt-1 text-sm text-foggy'>{t('subtitle')}</p>
         </div>
         {page.isAdmin && (
@@ -55,7 +54,7 @@ export function StaffPage() {
       ) : page.members.length === 0 ? (
         <EmptyState icon={Users} title={t('empty')} />
       ) : (
-        <Card className='overflow-hidden p-0'>
+        <div className='overflow-hidden rounded-lg border border-border bg-card shadow-1'>
           <StaffTable
             members={page.members}
             currentStaffDocumentId={page.currentStaffDocumentId}
@@ -64,7 +63,7 @@ export function StaffPage() {
             onPromote={page.handlePromote}
             onDeactivate={page.setDeactivateTarget}
           />
-        </Card>
+        </div>
       )}
 
       <InviteStaffDialog

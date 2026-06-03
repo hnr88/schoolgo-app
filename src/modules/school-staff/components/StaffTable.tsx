@@ -27,12 +27,12 @@ export function StaffTable({
   return (
     <Table>
       <TableHeader>
-        <TableRow className='border-b border-border bg-muted/50 hover:bg-muted/50'>
-          <TableHead className='pl-6'>{t('columnName')}</TableHead>
-          <TableHead>{t('columnEmail')}</TableHead>
-          <TableHead>{t('columnRole')}</TableHead>
-          <TableHead>{t('columnStatus')}</TableHead>
-          {isAdmin && <TableHead className='pr-6 text-right'>{t('columnActions')}</TableHead>}
+        <TableRow className='border-b border-divider hover:bg-transparent'>
+          <TableHead className='pl-5 text-xs font-semibold uppercase tracking-wide text-foggy'>{t('columnName')}</TableHead>
+          <TableHead className='text-xs font-semibold uppercase tracking-wide text-foggy'>{t('columnEmail')}</TableHead>
+          <TableHead className='text-xs font-semibold uppercase tracking-wide text-foggy'>{t('columnRole')}</TableHead>
+          <TableHead className='text-xs font-semibold uppercase tracking-wide text-foggy'>{t('columnStatus')}</TableHead>
+          {isAdmin && <TableHead className='pr-5 text-right text-xs font-semibold uppercase tracking-wide text-foggy'>{t('columnActions')}</TableHead>}
         </TableRow>
       </TableHeader>
       <TableBody>
@@ -43,9 +43,9 @@ export function StaffTable({
           const canDeactivate = m.status === 'active' && !isSelf;
 
           return (
-            <TableRow key={m.documentId} data-testid='staff-row' data-email={m.email}>
-              <TableCell className='pl-6'>
-                <span className='font-medium text-ink-900'>{m.fullName || '—'}</span>
+            <TableRow key={m.documentId} className='hover:bg-muted' data-testid='staff-row' data-email={m.email}>
+              <TableCell className='pl-5 py-3.5'>
+                <span className='font-semibold text-ink-900'>{m.fullName || '—'}</span>
                 {m.permissionLevel === 'admin' && (
                   <span className='ml-2 inline-flex items-center gap-1 text-xs text-foggy'>
                     <ShieldCheck className='h-3 w-3' />
@@ -53,13 +53,13 @@ export function StaffTable({
                   </span>
                 )}
               </TableCell>
-              <TableCell className='text-sm text-foggy'>{m.email || '—'}</TableCell>
-              <TableCell className='text-sm text-ink-900'>{m.roleTitle || '—'}</TableCell>
-              <TableCell>
+              <TableCell className='py-3.5 text-sm text-foggy'>{m.email || '—'}</TableCell>
+              <TableCell className='py-3.5 text-sm text-ink-900'>{m.roleTitle || '—'}</TableCell>
+              <TableCell className='py-3.5'>
                 <StaffStatusBadge status={m.status} />
               </TableCell>
               {isAdmin && (
-                <TableCell className='pr-6'>
+                <TableCell className='pr-5 py-3.5'>
                   <div className='flex justify-end gap-2'>
                     {canPromote && (
                       <Button

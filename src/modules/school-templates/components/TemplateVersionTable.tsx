@@ -29,20 +29,20 @@ export function TemplateVersionTable({ templates, canManage, onView, onEdit, onP
   return (
     <Table>
       <TableHeader>
-        <TableRow>
-          <TableHead>{t('columnVersion')}</TableHead>
-          <TableHead>{t('columnStatus')}</TableHead>
-          <TableHead>{t('columnUpdated')}</TableHead>
-          <TableHead className='text-right'>{t('columnActions')}</TableHead>
+        <TableRow className='border-b border-divider hover:bg-transparent'>
+          <TableHead className='pl-5 text-xs font-semibold uppercase tracking-wide text-foggy'>{t('columnVersion')}</TableHead>
+          <TableHead className='text-xs font-semibold uppercase tracking-wide text-foggy'>{t('columnStatus')}</TableHead>
+          <TableHead className='text-xs font-semibold uppercase tracking-wide text-foggy'>{t('columnUpdated')}</TableHead>
+          <TableHead className='pr-5 text-right text-xs font-semibold uppercase tracking-wide text-foggy'>{t('columnActions')}</TableHead>
         </TableRow>
       </TableHeader>
       <TableBody>
         {templates.map((tpl) => (
-          <TableRow key={tpl.documentId} data-testid={`template-row-${tpl.version}`}>
-            <TableCell className='font-medium'>{t('versionLabel', { version: tpl.version })}</TableCell>
-            <TableCell><TemplateStatusBadge status={tpl.status} /></TableCell>
-            <TableCell className='text-foggy'>{fmt(tpl.updatedAt)}</TableCell>
-            <TableCell>
+          <TableRow key={tpl.documentId} className='hover:bg-muted' data-testid={`template-row-${tpl.version}`}>
+            <TableCell className='pl-5 py-3.5 font-semibold text-ink-900'>{t('versionLabel', { version: tpl.version })}</TableCell>
+            <TableCell className='py-3.5'><TemplateStatusBadge status={tpl.status} /></TableCell>
+            <TableCell className='py-3.5 text-foggy'>{fmt(tpl.updatedAt)}</TableCell>
+            <TableCell className='pr-5 py-3.5'>
               <div className='flex justify-end gap-1'>
                 {tpl.status === 'draft' && canManage ? (
                   <>

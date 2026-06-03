@@ -20,14 +20,14 @@ import {
 function DashboardSkeleton() {
   return (
     <div className='flex flex-col gap-8'>
-      <div className='grid grid-cols-2 gap-5 lg:grid-cols-4'>
+      <div className='grid grid-cols-2 gap-4 lg:grid-cols-4'>
         {Array.from({ length: 4 }).map((_, i) => (
-          <Skeleton key={i} className='h-24 w-full rounded-xl' />
+          <Skeleton key={i} className='h-32 w-full rounded-lg' />
         ))}
       </div>
       <div className='grid gap-6 lg:grid-cols-[3fr_2fr]'>
-        <Skeleton className='h-80 w-full rounded-xl' />
-        <Skeleton className='h-80 w-full rounded-xl' />
+        <Skeleton className='h-80 w-full rounded-lg' />
+        <Skeleton className='h-80 w-full rounded-lg' />
       </div>
     </div>
   );
@@ -42,7 +42,7 @@ export function AgentDashboard() {
 
   if (isError || !data) {
     return (
-      <div className='rounded-xl border border-border bg-card shadow-1'>
+      <div className='rounded-lg border border-border bg-card shadow-1'>
         <ErrorState
           message={t('loadError')}
           onRetry={() => refetch()}

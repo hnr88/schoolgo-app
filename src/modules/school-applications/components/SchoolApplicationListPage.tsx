@@ -35,7 +35,7 @@ export function SchoolApplicationListPage() {
 
   if (isError) {
     return (
-      <div className='flex flex-col items-center gap-3 rounded-xl border border-border bg-card py-12'>
+      <div className='flex flex-col items-center gap-3 rounded-lg border border-border bg-card py-12 shadow-1'>
         <p className='text-sm text-foggy'>{t('loadError')}</p>
         <Button variant='outline' onClick={() => refetch()}>
           {t('retry')}
@@ -45,8 +45,8 @@ export function SchoolApplicationListPage() {
   }
 
   return (
-    <div className='overflow-hidden rounded-xl border border-border bg-card'>
-      <div className='border-b border-border px-6 py-4'>
+    <div className='overflow-hidden rounded-lg border border-border bg-card shadow-1'>
+      <div className='border-b border-divider px-5 py-4'>
         <SchoolApplicationToolbar
           search={search}
           onSearchChange={setSearch}

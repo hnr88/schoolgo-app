@@ -29,20 +29,20 @@ export function PartnershipTable({
   return (
     <Table>
       <TableHeader>
-        <TableRow className='border-b border-border bg-muted/50 hover:bg-muted/50'>
-          <TableHead className='pl-6'>{t('columnAgent')}</TableHead>
-          <TableHead>{t('columnStatus')}</TableHead>
-          <TableHead>{t('columnRequested')}</TableHead>
-          <TableHead className='pr-6 text-right'>{t('columnActions')}</TableHead>
+        <TableRow className='border-b border-divider hover:bg-transparent'>
+          <TableHead className='pl-5 text-xs font-semibold uppercase tracking-wide text-foggy'>{t('columnAgent')}</TableHead>
+          <TableHead className='text-xs font-semibold uppercase tracking-wide text-foggy'>{t('columnStatus')}</TableHead>
+          <TableHead className='text-xs font-semibold uppercase tracking-wide text-foggy'>{t('columnRequested')}</TableHead>
+          <TableHead className='pr-5 text-right text-xs font-semibold uppercase tracking-wide text-foggy'>{t('columnActions')}</TableHead>
         </TableRow>
       </TableHeader>
       <TableBody>
         {partnerships.map((p) => {
           const busy = pendingActionId === p.documentId;
           return (
-            <TableRow key={p.documentId}>
-              <TableCell className='pl-6'>
-                <span className='font-medium text-ink-900'>
+            <TableRow key={p.documentId} className='hover:bg-muted'>
+              <TableCell className='pl-5 py-3.5'>
+                <span className='font-semibold text-ink-900'>
                   {p.agent?.companyName ?? '—'}
                 </span>
                 {p.agent?.qeacNumber && (
@@ -54,13 +54,13 @@ export function PartnershipTable({
                   </span>
                 )}
               </TableCell>
-              <TableCell>
+              <TableCell className='py-3.5'>
                 <PartnershipStatusBadge status={p.status} />
               </TableCell>
-              <TableCell className='text-sm text-foggy'>
+              <TableCell className='py-3.5 text-sm text-foggy'>
                 {formatPartnershipDate(p.createdAt, locale)}
               </TableCell>
-              <TableCell className='pr-6'>
+              <TableCell className='pr-5 py-3.5'>
                 <div className='flex justify-end gap-2'>
                   {variant === 'pending' ? (
                     <>

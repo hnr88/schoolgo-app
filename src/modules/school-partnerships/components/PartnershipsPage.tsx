@@ -3,7 +3,6 @@
 import { useTranslations } from 'next-intl';
 import { Handshake, Plus, RefreshCw } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Card } from '@/components/ui/card';
 import { Skeleton } from '@/components/ui/skeleton';
 import { EmptyState } from '@/modules/core';
 import { PartnershipTable } from '@/modules/school-partnerships/components/PartnershipTable';
@@ -19,7 +18,7 @@ export function PartnershipsPage() {
     <div className='flex flex-col gap-6'>
       <div className='flex items-center justify-between gap-4'>
         <div>
-          <h1 className='text-2xl font-bold text-ink-900'>{t('title')}</h1>
+          <h1 className='font-display text-2xl font-bold text-ink-900'>{t('title')}</h1>
           <p className='mt-1 text-sm text-foggy'>{t('subtitle')}</p>
         </div>
         <Button onClick={() => page.setAddOpen(true)}>
@@ -51,7 +50,7 @@ export function PartnershipsPage() {
           {page.pending.length > 0 && (
             <section className='flex flex-col gap-3'>
               <h2 className='text-sm font-semibold text-ink-900'>{t('statusPending')}</h2>
-              <Card className='overflow-hidden p-0'>
+              <div className='overflow-hidden rounded-lg border border-border bg-card shadow-1'>
                 <PartnershipTable
                   partnerships={page.pending}
                   variant='pending'
@@ -60,7 +59,7 @@ export function PartnershipsPage() {
                   onDeny={page.handleDeny}
                   onRemove={page.setRemoveTarget}
                 />
-              </Card>
+              </div>
             </section>
           )}
 
@@ -69,7 +68,7 @@ export function PartnershipsPage() {
             {page.active.length === 0 ? (
               <EmptyState icon={Handshake} title={t('empty')} description={t('emptyHint')} />
             ) : (
-              <Card className='overflow-hidden p-0'>
+              <div className='overflow-hidden rounded-lg border border-border bg-card shadow-1'>
                 <PartnershipTable
                   partnerships={page.active}
                   variant='active'
@@ -78,7 +77,7 @@ export function PartnershipsPage() {
                   onDeny={page.handleDeny}
                   onRemove={page.setRemoveTarget}
                 />
-              </Card>
+              </div>
             )}
           </section>
         </div>

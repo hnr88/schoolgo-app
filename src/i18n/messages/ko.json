@@ -1549,7 +1549,8 @@
     },
     "activity": {
       "title": "최근 활동",
-      "empty": "최근 활동이 없습니다. 학생을 추가하거나 학교를 검색해 보세요."
+      "empty": "최근 활동이 없습니다. 학생을 추가하거나 학교를 검색해 보세요.",
+      "viewAll": "모두 보기"
     },
     "deadlines": {
       "title": "다가오는 마감일",
@@ -1743,7 +1744,10 @@
     "columnClosed": "종료",
     "daysLabel": "{count}일",
     "moreApplications": "+{count}건 더",
-    "subtitle": "입학 과정의 각 단계에서 모든 지원서를 추적하세요."
+    "subtitle": "입학 과정의 각 단계에서 모든 지원서를 추적하세요.",
+    "viewToggleLabel": "파이프라인 보기 전환",
+    "viewKanban": "보드 보기",
+    "viewTable": "테이블 보기"
   },
   "SchoolDetail": {
     "backToSearch": "[TODO: ko] Back to search",
@@ -2105,6 +2109,7 @@
     "dashboard": "대시보드",
     "notifications": "알림",
     "students": "학생",
+    "documents": "Documents",
     "applications": "지원서",
     "offers": "오퍼",
     "savedSchools": "저장한 학교",
@@ -2873,6 +2878,7 @@
     "pipelineTitle": "Application pipeline",
     "activityTitle": "Recent activity",
     "activityEmpty": "No recent activity",
+    "viewAll": "모두 보기",
     "quickActionsTitle": "Quick actions",
     "quickActionReviewApplications": "Review applications",
     "quickActionInviteAgent": "Invite an agent",
@@ -3477,5 +3483,46 @@
     "title": "메시지",
     "subtitle": "학교와의 모든 대화를 한곳에서 확인하세요.",
     "selectPrompt": "읽고 답장하려면 대화를 선택하세요."
+  },
+  "DocumentVault": {
+    "title": "Document Vault",
+    "subtitle": "Securely store and manage your family documents in one place.",
+    "upload": "Upload Document",
+    "uploadTitle": "Upload Document",
+    "uploadButton": "Upload",
+    "cancel": "Cancel",
+    "dropzone": "Drag & drop a file here, or click to browse",
+    "dropzoneHint": "PDF, JPG, PNG, DOCX up to 10 MB",
+    "removeFile": "Remove file",
+    "titleLabel": "Title",
+    "titlePlaceholder": "e.g. My Birth Certificate",
+    "typeLabel": "Document Type",
+    "typeSelect": "Select document type",
+    "notesLabel": "Notes (optional)",
+    "notesPlaceholder": "Any notes about this document...",
+    "uploadedOn": "Uploaded {date}",
+    "download": "Download",
+    "noFile": "No file",
+    "emptyTitle": "No documents yet",
+    "emptySubtitle": "Upload your first document to get started.",
+    "errorTitle": "Could not load documents",
+    "errorSubtitle": "Something went wrong. Please try again.",
+    "deleteTitle": "Delete Document",
+    "deleteConfirm": "Are you sure you want to delete “{title}”? This action cannot be undone.",
+    "deleteButton": "Delete",
+    "uploadSuccess": "Document uploaded successfully.",
+    "uploadError": "Could not upload document. Please try again.",
+    "deleteSuccess": "Document deleted.",
+    "deleteError": "Could not delete document.",
+    "docType_birth_certificate": "Birth Certificate",
+    "docType_passport": "Passport",
+    "docType_school_reports": "School Reports",
+    "docType_transcript": "Transcript",
+    "docType_english_test": "English Test Report",
+    "docType_immunisation": "Immunisation Records",
+    "docType_personal_statement": "Personal Statement",
+    "docType_financial_evidence": "Financial Evidence",
+    "docType_photo": "Photo",
+    "docType_other": "Other"
   }
 }

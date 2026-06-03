@@ -1549,7 +1549,8 @@
     },
     "activity": {
       "title": "Recent activity",
-      "empty": "No recent activity. Start by adding a student or browsing schools."
+      "empty": "No recent activity. Start by adding a student or browsing schools.",
+      "viewAll": "View all"
     },
     "deadlines": {
       "title": "Upcoming deadlines",
@@ -1574,6 +1575,7 @@
     "dashboard": "Dashboard",
     "notifications": "Notifications",
     "students": "Students",
+    "documents": "Documents",
     "applications": "Applications",
     "offers": "Offers",
     "savedSchools": "Saved schools",
@@ -2385,7 +2387,10 @@
     "columnClosed": "Closed",
     "daysLabel": "in status",
     "moreApplications": "more",
-    "subtitle": "Track every application through each stage of the enrolment journey."
+    "subtitle": "Track every application through each stage of the enrolment journey.",
+    "viewToggleLabel": "Switch pipeline view",
+    "viewKanban": "Board view",
+    "viewTable": "Table view"
   },
   "SchoolDetail": {
     "backToSearch": "Back to search",
@@ -2873,6 +2878,7 @@
     "pipelineTitle": "Application pipeline",
     "activityTitle": "Recent activity",
     "activityEmpty": "No recent activity",
+    "viewAll": "View all",
     "quickActionsTitle": "Quick actions",
     "quickActionReviewApplications": "Review applications",
     "quickActionInviteAgent": "Invite an agent",
@@ -3477,5 +3483,46 @@
     "title": "Messages",
     "subtitle": "All your conversations with schools in one place.",
     "selectPrompt": "Select a conversation to read and reply."
+  },
+  "DocumentVault": {
+    "title": "Document Vault",
+    "subtitle": "Securely store and manage your family documents in one place.",
+    "upload": "Upload Document",
+    "uploadTitle": "Upload Document",
+    "uploadButton": "Upload",
+    "cancel": "Cancel",
+    "dropzone": "Drag & drop a file here, or click to browse",
+    "dropzoneHint": "PDF, JPG, PNG, DOCX up to 10 MB",
+    "removeFile": "Remove file",
+    "titleLabel": "Title",
+    "titlePlaceholder": "e.g. My Birth Certificate",
+    "typeLabel": "Document Type",
+    "typeSelect": "Select document type",
+    "notesLabel": "Notes (optional)",
+    "notesPlaceholder": "Any notes about this document...",
+    "uploadedOn": "Uploaded {date}",
+    "download": "Download",
+    "noFile": "No file",
+    "emptyTitle": "No documents yet",
+    "emptySubtitle": "Upload your first document to get started.",
+    "errorTitle": "Could not load documents",
+    "errorSubtitle": "Something went wrong. Please try again.",
+    "deleteTitle": "Delete Document",
+    "deleteConfirm": "Are you sure you want to delete “{title}”? This action cannot be undone.",
+    "deleteButton": "Delete",
+    "uploadSuccess": "Document uploaded successfully.",
+    "uploadError": "Could not upload document. Please try again.",
+    "deleteSuccess": "Document deleted.",
+    "deleteError": "Could not delete document.",
+    "docType_birth_certificate": "Birth Certificate",
+    "docType_passport": "Passport",
+    "docType_school_reports": "School Reports",
+    "docType_transcript": "Transcript",
+    "docType_english_test": "English Test Report",
+    "docType_immunisation": "Immunisation Records",
+    "docType_personal_statement": "Personal Statement",
+    "docType_financial_evidence": "Financial Evidence",
+    "docType_photo": "Photo",
+    "docType_other": "Other"
   }
 }

@@ -11,9 +11,9 @@ import { SchoolPayoutsTable } from '@/modules/school-invoices/components/SchoolP
 
 function TableSkeleton() {
   return (
-    <div className='flex flex-col gap-2 rounded-xl border border-border bg-card p-4'>
+    <div className='flex flex-col gap-2 rounded-lg border border-border bg-card p-4 shadow-1'>
       {Array.from({ length: 3 }).map((_, index) => (
-        <Skeleton key={index} className='h-12 w-full rounded-lg' />
+        <Skeleton key={index} className='h-12 w-full rounded-md' />
       ))}
     </div>
   );
@@ -31,7 +31,7 @@ export function SchoolInvoicesPage() {
       <div className='flex flex-col gap-8'>
         <div className='grid grid-cols-1 gap-4 sm:grid-cols-3'>
           {Array.from({ length: 3 }).map((_, index) => (
-            <Skeleton key={index} className='h-20 w-full rounded-xl' />
+            <Skeleton key={index} className='h-28 w-full rounded-lg' />
           ))}
         </div>
         <TableSkeleton />

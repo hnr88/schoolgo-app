@@ -34,7 +34,12 @@ export function useRequireAuth(options: UseRequireAuthOptions = {}) {
       const portal = userType ?? 'parent';
       const path = getPortalDashboardPath(portal);
       if (path) {
-        window.location.href = `${portalUrl(portal, locale)}${path}`;
+        const target = `${portalUrl(portal, locale)}${path}`;
+        // Never redirect to the page we are already on — that produces an
+        // infinite full-page reload loop.
+        if (!window.location.href.startsWith(target)) {
+          window.location.href = target;
+        }
       }
     }
   }, [isAuthenticated, isInitialized, user?.role, allowedRoles, loginPath, router, userType, locale]);

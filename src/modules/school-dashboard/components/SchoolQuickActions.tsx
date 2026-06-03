@@ -42,12 +42,14 @@ export function SchoolQuickActions() {
             <Link
               key={action.labelKey}
               href={action.href}
-              className='flex items-center gap-3 rounded-xl border border-border bg-card px-5 py-4 no-underline shadow-1 transition-colors hover:border-primary/30'
+              className='group flex items-center gap-3 rounded-lg border border-border bg-card px-5 py-4 no-underline shadow-1 transition-transform duration-200 ease-out-quart hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2'
             >
-              <span className='flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-muted text-ink-900'>
-                <Icon className='h-5 w-5' strokeWidth={1.75} />
+              <span className='flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-muted text-ink-900'>
+                <Icon className='h-5 w-5' strokeWidth={1.75} aria-hidden='true' />
               </span>
-              <span className='text-sm font-medium text-ink-900'>{t(action.labelKey)}</span>
+              <span className='text-sm font-medium text-ink-900 group-hover:text-primary-strong'>
+                {t(action.labelKey)}
+              </span>
             </Link>
           );
         })}
