@@ -8,6 +8,7 @@ import { useMe } from '@/modules/parent-settings/queries/use-me.query';
 import { ProfileForm } from '@/modules/parent-settings/components/ProfileForm';
 import { PasswordForm } from '@/modules/parent-settings/components/PasswordForm';
 import { PreferencesForm } from '@/modules/parent-settings/components/PreferencesForm';
+import { NotificationPreferencesPanel } from '@/modules/parent-settings/components/NotificationPreferencesPanel';
 
 function SettingsSkeleton() {
   return (
@@ -42,6 +43,7 @@ export function ParentSettingsPage() {
         <TabsTrigger value='profile' className='text-foreground/80'>{t('tabProfile')}</TabsTrigger>
         <TabsTrigger value='password' className='text-foreground/80'>{t('tabPassword')}</TabsTrigger>
         <TabsTrigger value='preferences' className='text-foreground/80'>{t('tabPreferences')}</TabsTrigger>
+        <TabsTrigger value='notifications' className='text-foreground/80'>{t('tabNotifications')}</TabsTrigger>
       </TabsList>
 
       <TabsContent value='profile'>
@@ -59,6 +61,12 @@ export function ParentSettingsPage() {
       <TabsContent value='preferences'>
         <section className='rounded-xl border border-border bg-card p-6'>
           <PreferencesForm me={me} />
+        </section>
+      </TabsContent>
+
+      <TabsContent value='notifications'>
+        <section className='rounded-xl border border-border bg-card p-6'>
+          <NotificationPreferencesPanel />
         </section>
       </TabsContent>
     </Tabs>
