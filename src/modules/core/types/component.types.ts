@@ -34,7 +34,7 @@ export interface StatTileProps {
   icon: SvgIcon;
   label: string;
   value: React.ReactNode;
-  /** soft-bg + strong-text color classes for the icon chip */
+  /** Color classes for the quiet accent icon; any `bg-*` token is ignored (no filled box). */
   iconClassName?: string;
   subMetric?: string;
   delta?: StatTileDelta;

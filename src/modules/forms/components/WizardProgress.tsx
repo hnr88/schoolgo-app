@@ -17,7 +17,7 @@ export function WizardProgress({
   return (
     <ol
       className={cn(
-        isVertical ? 'flex flex-col gap-0' : 'flex items-center gap-2',
+        isVertical ? 'flex flex-col gap-1' : 'flex items-center gap-3',
         className,
       )}
     >

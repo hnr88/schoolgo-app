@@ -45,23 +45,20 @@ export function ParentUpcomingCard() {
           }
         />
       ) : (
-        <ul className='flex flex-col gap-2'>
+        <ul className='flex flex-col gap-0.5'>
           {upcoming.map((item) => {
             const Icon = item.icon;
             return (
               <li key={item.id}>
                 <Link
                   href={item.href}
-                  className='group flex items-center gap-3 rounded-lg px-1 py-2 no-underline transition-colors hover:bg-muted'
+                  className='group flex items-center gap-3 rounded-xl px-2 py-2.5 no-underline transition-colors duration-200 ease-out-quart hover:bg-muted'
                 >
-                  <span
-                    className={cn(
-                      'flex h-9 w-9 shrink-0 items-center justify-center rounded-md',
-                      item.iconClassName,
-                    )}
-                  >
-                    <Icon className='h-4 w-4' strokeWidth={1.75} aria-hidden='true' />
-                  </span>
+                  <Icon
+                    className='h-4 w-4 shrink-0 text-foggy transition-colors duration-200 ease-out-quart group-hover:text-ink-900'
+                    strokeWidth={1.75}
+                    aria-hidden='true'
+                  />
                   <span className='flex min-w-0 flex-1 flex-col'>
                     <span className='truncate text-sm font-semibold text-ink-900 group-hover:text-primary-strong'>
                       {t('upcomingOfferDeadline')}

@@ -1,6 +1,7 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
+import { Eyebrow } from '@/modules/design-system';
 import { ParentDashboardHeader } from '@/modules/dashboard/parent/components/ParentDashboardHeader';
 import { ParentStatTiles } from '@/modules/dashboard/parent/components/ParentStatTiles';
 import { ParentPipelineCard } from '@/modules/dashboard/parent/components/ParentPipelineCard';
@@ -56,8 +57,13 @@ export function ParentDashboard() {
         </div>
       </div>
 
-      <section className='flex flex-col gap-4'>
-        <h2 className='text-base font-bold text-ink-900'>{t('quickActionsTitle')}</h2>
+      <section className='flex flex-col gap-6 rounded-2xl bg-ink-900 p-6 shadow-2 md:p-8'>
+        <div className='flex flex-col gap-1.5'>
+          <Eyebrow className='text-background/60'>{t('quickActionsTitle')}</Eyebrow>
+          <h2 className='font-display text-xl font-bold tracking-tight text-background'>
+            {t('subtitle')}
+          </h2>
+        </div>
         <ParentQuickActions />
       </section>
     </div>

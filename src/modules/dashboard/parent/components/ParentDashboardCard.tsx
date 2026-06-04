@@ -9,14 +9,14 @@ export function ParentDashboardCard({
   children,
 }: ParentDashboardCardProps) {
   return (
-    <section className='flex flex-col overflow-hidden rounded-lg border border-border bg-card shadow-1'>
+    <section className='flex flex-col gap-5 rounded-2xl border border-border bg-card p-6 shadow-2'>
       <ParentSectionHeader
         title={title}
         icon={icon}
         viewAllHref={viewAllHref}
         viewAllLabel={viewAllLabel}
       />
-      <div className='flex flex-1 flex-col px-5 py-4'>{children}</div>
+      <div className='flex flex-1 flex-col'>{children}</div>
     </section>
   );
 }

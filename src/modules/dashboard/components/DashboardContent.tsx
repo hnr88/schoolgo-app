@@ -15,8 +15,8 @@ export function DashboardContent({ children }: { children: React.ReactNode }) {
     <div
       className={cn(
         isFullBleed
-          ? 'w-full px-6 py-8'
-          : 'container px-6 py-8 lg:px-8',
+          ? 'w-full px-6 py-8 lg:px-10'
+          : 'mx-auto w-full max-w-wide px-6 py-8 lg:px-10',
       )}
     >
       {children}

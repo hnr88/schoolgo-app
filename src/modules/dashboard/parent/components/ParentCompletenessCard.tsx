@@ -31,27 +31,31 @@ export function ParentCompletenessCard() {
           description={t('completenessEmptySubtitle')}
         />
       ) : (
-        <ul className='flex flex-col gap-3'>
+        <ul className='-mx-3 flex flex-col gap-1'>
           {items.map((item) => (
             <li key={item.documentId}>
               <Link
                 href={`/parent/students/${item.documentId}`}
-                className='group flex items-center gap-3 rounded-lg px-1 py-1.5 no-underline transition-colors hover:bg-muted'
+                className='group flex items-center gap-4 rounded-xl px-3 py-2.5 no-underline transition-colors duration-200 ease-out-quart hover:bg-muted'
               >
                 <ParentStudentAvatar
                   firstName={item.name.split(' ')[0] ?? ''}
                   lastName={item.name.split(' ').slice(1).join(' ')}
                   photoUrl={item.photoUrl}
-                  size={36}
+                  size={40}
                 />
-                <span className='flex min-w-0 flex-1 flex-col'>
-                  <span className='truncate text-sm font-semibold text-ink-900 group-hover:text-primary-strong'>
+                <span className='flex min-w-0 flex-1 flex-col gap-0.5'>
+                  <span className='truncate text-sm font-semibold text-ink-900 transition-colors group-hover:text-primary-strong'>
                     {item.name}
                   </span>
                   <span className='flex items-center gap-1 text-xs text-foggy'>
                     {item.isComplete ? (
                       <>
-                        <CheckCircle2 className='h-3 w-3 text-vivid-mint' aria-hidden='true' />
+                        <CheckCircle2
+                          className='h-3.5 w-3.5 text-vivid-mint'
+                          strokeWidth={2}
+                          aria-hidden='true'
+                        />
                         {t('completenessComplete')}
                       </>
                     ) : (

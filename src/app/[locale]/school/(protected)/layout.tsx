@@ -11,7 +11,7 @@ export default function SchoolProtectedLayout({ children }: { children: React.Re
         <DashboardSidebar />
         <div className='flex flex-1 flex-col overflow-hidden'>
           <DashboardHeader />
-          <main className='relative flex-1 overflow-y-auto bg-muted'>
+          <main className='relative flex-1 overflow-y-auto bg-page-surface'>
             <DashboardContent>{children}</DashboardContent>
           </main>
         </div>

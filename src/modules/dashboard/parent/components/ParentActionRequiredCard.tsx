@@ -3,7 +3,6 @@
 import { useTranslations } from 'next-intl';
 import { CheckCircle2, ChevronRight, ShieldAlert } from 'lucide-react';
 import { Link } from '@/i18n/navigation';
-import { cn } from '@/lib/utils';
 import { ErrorState } from '@/modules/core';
 import { ParentDashboardCard } from '@/modules/dashboard/parent/components/ParentDashboardCard';
 import { ParentSummaryRowsSkeleton } from '@/modules/dashboard/parent/components/ParentSummaryStates';
@@ -24,8 +23,8 @@ export function ParentActionRequiredCard() {
           retryLabel={t('retry')}
         />
       ) : actionItems.length === 0 ? (
-        <div className='flex items-center gap-3 rounded-lg bg-vivid-mint-soft px-4 py-3.5'>
-          <CheckCircle2 className='h-5 w-5 shrink-0 text-vivid-mint' aria-hidden='true' />
+        <div className='flex items-center gap-3 rounded-xl bg-muted px-4 py-4 shadow-1'>
+          <CheckCircle2 className='h-5 w-5 shrink-0 text-foggy' strokeWidth={1.75} aria-hidden='true' />
           <span className='flex flex-col'>
             <span className='text-sm font-semibold text-ink-900'>
               {t('actionRequiredEmptyTitle')}
@@ -34,23 +33,20 @@ export function ParentActionRequiredCard() {
           </span>
         </div>
       ) : (
-        <ul className='flex flex-col gap-2'>
+        <ul className='flex flex-col gap-1.5'>
           {actionItems.map((item) => {
             const Icon = item.icon;
             return (
               <li key={item.id}>
                 <Link
                   href={item.href}
-                  className='group flex items-center gap-3 rounded-lg border border-border px-3 py-3 no-underline transition-colors hover:border-primary/30 hover:bg-muted'
+                  className='group flex items-center gap-3 rounded-xl px-3 py-3 no-underline transition-colors duration-200 ease-out-quart hover:bg-muted'
                 >
-                  <span
-                    className={cn(
-                      'flex h-9 w-9 shrink-0 items-center justify-center rounded-md',
-                      item.iconClassName,
-                    )}
-                  >
-                    <Icon className='h-4 w-4' strokeWidth={1.75} aria-hidden='true' />
-                  </span>
+                  <Icon
+                    className='h-4 w-4 shrink-0 text-foggy'
+                    strokeWidth={1.75}
+                    aria-hidden='true'
+                  />
                   <span className='flex min-w-0 flex-1 flex-col'>
                     <span className='truncate text-sm font-semibold text-ink-900'>
                       {t(item.labelKey)}
@@ -59,7 +55,7 @@ export function ParentActionRequiredCard() {
                       {item.studentName} · {item.schoolName}
                     </span>
                   </span>
-                  <span className='flex shrink-0 items-center gap-0.5 text-sm font-semibold text-primary-strong group-hover:underline'>
+                  <span className='flex shrink-0 items-center gap-0.5 text-sm font-semibold text-primary-strong transition-transform duration-200 ease-out-quart group-hover:translate-x-0.5'>
                     {t('actionReview')}
                     <ChevronRight className='h-3.5 w-3.5' strokeWidth={2} aria-hidden='true' />
                   </span>

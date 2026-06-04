@@ -5,6 +5,7 @@ import { FileText, Search } from 'lucide-react';
 import { Link } from '@/i18n/navigation';
 import { Button } from '@/components/ui/button';
 import { EmptyState, ErrorState } from '@/modules/core';
+import { ParentStudentAvatar } from '@/modules/students';
 import { ApplicationStatusBadge, useParentApplications } from '@/modules/applications';
 import { ParentDashboardCard } from '@/modules/dashboard/parent/components/ParentDashboardCard';
 import { ParentSummaryRowsSkeleton } from '@/modules/dashboard/parent/components/ParentSummaryStates';
@@ -48,15 +49,21 @@ export function ParentApplicationsSummaryCard() {
           }
         />
       ) : (
-        <ul className='flex flex-col divide-y divide-divider'>
+        <ul className='-mx-3 flex flex-col gap-1'>
           {applications.map((application) => (
             <li key={application.documentId}>
               <Link
                 href={`/parent/applications/${application.documentId}`}
-                className='group flex items-center gap-3 px-5 py-3.5 no-underline transition-colors hover:bg-muted'
+                className='group flex items-center gap-4 rounded-xl px-3 py-2.5 no-underline transition-colors duration-200 ease-out-quart hover:bg-muted'
               >
-                <span className='flex min-w-0 flex-1 flex-col'>
-                  <span className='truncate text-sm font-semibold text-ink-900 group-hover:text-primary-strong'>
+                <ParentStudentAvatar
+                  firstName={application.student.firstName}
+                  lastName={application.student.lastName}
+                  photoUrl={null}
+                  size={40}
+                />
+                <span className='flex min-w-0 flex-1 flex-col gap-0.5'>
+                  <span className='truncate text-sm font-semibold text-ink-900 transition-colors group-hover:text-primary-strong'>
                     {application.student.firstName} {application.student.lastName}
                   </span>
                   <span className='truncate text-xs text-foggy'>{application.school.name}</span>

@@ -1,7 +1,7 @@
 'use client';
 
 import { Loader2 } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { DsButton } from '@/modules/design-system';
 import type { WizardNavProps } from '@/modules/forms/types/wizard.types';
 
 export function WizardNav({
@@ -14,18 +14,19 @@ export function WizardNav({
   onFinish,
 }: WizardNavProps) {
   return (
-    <div className='flex items-center justify-between gap-3 border-t border-border pt-6'>
-      <Button
+    <div className='flex items-center justify-between gap-4 border-t border-border pt-8'>
+      <DsButton
         type='button'
+        variant='secondary'
         size='lg'
-        variant='outline'
         onClick={onBack}
         disabled={isFirst || isBusy}
       >
         {labels.back}
-      </Button>
-      <Button
+      </DsButton>
+      <DsButton
         type='button'
+        variant='primary'
         size='lg'
         onClick={isLast ? onFinish : onNext}
         disabled={isBusy}
@@ -33,7 +34,7 @@ export function WizardNav({
       >
         {isBusy && <Loader2 className='size-4 animate-spin' aria-hidden='true' />}
         {isLast ? labels.finish : labels.next}
-      </Button>
+      </DsButton>
     </div>
   );
 }

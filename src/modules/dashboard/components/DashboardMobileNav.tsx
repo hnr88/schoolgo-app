@@ -28,10 +28,10 @@ export function DashboardMobileNav() {
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger
-        className='flex size-11 shrink-0 items-center justify-center rounded-xl text-ink-900 transition-colors hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1 lg:hidden'
+        className='flex size-10 shrink-0 items-center justify-center rounded-full text-ink-900 transition-colors duration-200 ease-out-quart hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1 lg:hidden'
         aria-label={t('openMenu')}
       >
-        <Menu className='h-6 w-6' strokeWidth={1.5} />
+        <Menu className='h-5 w-5' strokeWidth={1.75} />
       </DialogTrigger>
 
       <DialogPortal>

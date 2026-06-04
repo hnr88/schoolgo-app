@@ -11,7 +11,7 @@ export default function ParentProtectedLayout({ children }: { children: React.Re
         <DashboardSidebar />
         <div className='flex flex-1 flex-col overflow-hidden'>
           <DashboardHeader />
-          <main tabIndex={0} className='relative flex-1 overflow-y-auto bg-muted outline-none'>
+          <main tabIndex={0} className='relative flex-1 overflow-y-auto bg-page-surface outline-none'>
             <DashboardContent>{children}</DashboardContent>
           </main>
         </div>

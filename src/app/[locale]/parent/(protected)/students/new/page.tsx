@@ -22,17 +22,17 @@ export default async function ParentNewStudentPage({
   const t = await getTranslations('StudentWizard');
 
   return (
-    <div className='flex w-full max-w-5xl flex-col gap-8'>
-      <header className='flex flex-col gap-2'>
-        <h1 className='font-display text-3xl font-bold tracking-tight text-ink-900'>
+    <div className='flex w-full max-w-6xl flex-col gap-10 xl:max-w-7xl'>
+      <header className='flex flex-col gap-3'>
+        <h1 className='font-display text-4xl font-bold tracking-tight text-ink-900'>
           {t('title')}
         </h1>
-        <p className='max-w-prose text-sm text-muted-foreground'>{t('subtitle')}</p>
+        <p className='max-w-prose text-base leading-relaxed text-muted-foreground'>
+          {t('subtitle')}
+        </p>
       </header>
 
-      <div className='rounded-lg border border-border bg-card p-6 shadow-1 sm:p-8 lg:p-10'>
-        <ParentStudentWizard />
-      </div>
+      <ParentStudentWizard />
     </div>
   );
 }

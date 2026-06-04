@@ -57,11 +57,16 @@ export function DashboardHeader() {
     .toUpperCase() ?? '';
 
   return (
-    <header className='shrink-0 border-b border-divider bg-card'>
+    <header className='relative z-10 shrink-0 border-b border-border/60 bg-card shadow-1'>
       <CommandPalette />
-      <div className={cn('flex h-14 items-center gap-4', isSearchPage ? 'px-4' : 'px-6')}>
+      <div className={cn('flex h-16 items-center gap-4', isSearchPage ? 'px-4' : 'px-6')}>
         <DashboardMobileNav />
-        <h1 className={cn('shrink-0 text-lg font-bold text-ink-900', isSearchPage && 'w-80')}>
+        <h1
+          className={cn(
+            'shrink-0 truncate text-lg font-bold tracking-tight text-ink-900',
+            isSearchPage && 'w-80',
+          )}
+        >
           {pageTitle}
         </h1>
 
@@ -76,7 +81,7 @@ export function DashboardHeader() {
           <CommandPaletteTrigger />
           {(userType === 'parent' || userType === 'agent') && <NotificationBell />}
           <DropdownMenu>
-            <DropdownMenuTrigger className='flex items-center gap-2.5 rounded-xl px-2 py-1.5 text-sm font-medium text-ink-900 outline-none transition-colors hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1'>
+            <DropdownMenuTrigger className='group flex items-center gap-2.5 rounded-full border border-border/70 bg-card py-1 pl-1 pr-2.5 text-sm font-medium text-ink-900 outline-none transition-[color,box-shadow,border-color] duration-200 ease-out-quart hover:border-border hover:shadow-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1 sm:pr-3'>
               <Avatar className='h-8 w-8'>
                 <AvatarFallback className='bg-primary/10 text-xs font-bold text-primary-strong'>
                   {initials}
@@ -85,16 +90,28 @@ export function DashboardHeader() {
               <span className='hidden text-sm font-semibold text-ink-900 sm:block'>
                 {firstName}
               </span>
-              <ChevronDown className='h-4 w-4 text-foggy' strokeWidth={1.5} />
+              <ChevronDown
+                className='h-4 w-4 text-foggy transition-transform duration-200 ease-out-quart group-data-popup-open:rotate-180'
+                strokeWidth={1.5}
+              />
             </DropdownMenuTrigger>
 
-            <DropdownMenuContent align='end' sideOffset={8} className='w-56 bg-card shadow-3'>
+            <DropdownMenuContent align='end' sideOffset={10} className='w-60 bg-card shadow-3'>
               {user?.displayName && (
-                <div className='px-2 py-2'>
-                  <p className='text-sm font-semibold text-ink-900'>{user.displayName}</p>
-                  {user.email && (
-                    <p className='text-caption text-foggy'>{user.email}</p>
-                  )}
+                <div className='flex items-center gap-3 px-2 py-2.5'>
+                  <Avatar className='h-9 w-9'>
+                    <AvatarFallback className='bg-primary/10 text-xs font-bold text-primary-strong'>
+                      {initials}
+                    </AvatarFallback>
+                  </Avatar>
+                  <div className='min-w-0'>
+                    <p className='truncate text-sm font-semibold text-ink-900'>
+                      {user.displayName}
+                    </p>
+                    {user.email && (
+                      <p className='truncate text-caption text-foggy'>{user.email}</p>
+                    )}
+                  </div>
                 </div>
               )}
               <DropdownMenuSeparator />

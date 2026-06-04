@@ -28,10 +28,14 @@ export function Breadcrumbs({ items, className }: BreadcrumbsProps) {
             <Fragment key={`${item.label}-${index}`}>
               <BreadcrumbItem>
                 {isLast || !item.href ? (
-                  <BreadcrumbPage className='max-w-48 truncate'>{item.label}</BreadcrumbPage>
+                  <BreadcrumbPage className='max-w-48 truncate font-semibold text-ink-900'>
+                    {item.label}
+                  </BreadcrumbPage>
                 ) : (
                   <BreadcrumbLink
-                    className={cn('max-w-40 truncate hover:text-ink-900')}
+                    className={cn(
+                      'max-w-40 truncate text-foggy transition-colors hover:text-ink-900',
+                    )}
                     render={<Link href={item.href} />}
                   >
                     {item.label}

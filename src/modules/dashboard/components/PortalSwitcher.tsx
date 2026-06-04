@@ -29,11 +29,11 @@ export function PortalSwitcher({ activePortal }: PortalSwitcherProps) {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger
-        className='flex items-center gap-1.5 rounded-md bg-primary/10 px-2 py-0.5 text-xs font-medium text-primary-strong transition-colors hover:bg-primary/15'
+        className='flex items-center gap-1.5 rounded-pill border border-border bg-card px-2.5 py-1 text-xs font-semibold text-ink-900 shadow-1 transition-colors hover:border-divider hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring'
       >
         <span className={cn('h-1.5 w-1.5 rounded-full', PORTAL_DOT[activePortal])} />
         {activeTab ? t(`audiences.${activeTab.key}`) : activePortal}
-        <ChevronDown className='h-3 w-3' />
+        <ChevronDown className='h-3 w-3 text-foggy' />
       </DropdownMenuTrigger>
       <DropdownMenuContent align='start' className='min-w-36'>
         {PORTAL_TABS.map((tab) => (

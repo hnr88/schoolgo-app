@@ -120,6 +120,9 @@
   --color-surface-container-highest: var(--surface-container-highest);
   --color-surface-variant: var(--surface-variant);
 
+  /* Soft unified page-surface tone for dashboard shells */
+  --color-page-surface: var(--page-surface);
+
   --color-on-surface: var(--on-surface);
   --color-on-surface-variant: var(--on-surface-variant);
   --color-on-background: var(--on-background);
@@ -314,6 +317,10 @@
   --surface-container-highest: oklch(0.878 0 0); /* #DDDDDD */
   --surface-variant: oklch(0.931 0 0); /* #EBEBEB */
 
+  /* Soft unified dashboard page canvas — a barely-warm neutral that reads as an
+     intentional surface beside white cards, not a jarring gray content panel. */
+  --page-surface: oklch(0.979 0.002 95); /* ~#F8F8F6 warm off-white */
+
   /* On-surface ink */
   --on-surface: var(--hof); /* #484848 */
   --on-surface-variant: var(--foggy); /* #767676 */
@@ -388,6 +395,7 @@
   --ring: var(--rausch-500);
 
   --surface: oklch(0.164 0 0);
+  --page-surface: oklch(0.18 0 0); /* soft dashboard canvas below card elevation */
   --surface-container-lowest: oklch(0.2 0 0);
   --surface-container-low: oklch(0.22 0 0);
   --surface-container: oklch(0.24 0 0);

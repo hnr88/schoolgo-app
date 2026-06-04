@@ -24,6 +24,15 @@ function DeltaChip({ delta }: { delta: NonNullable<StatTileProps['delta']> }) {
   );
 }
 
+/** Strip any pastel `bg-*` token so iconClassName only tints the icon, never boxes it. */
+function iconTint(iconClassName?: string) {
+  const tint = (iconClassName ?? '')
+    .split(/\s+/)
+    .filter((token) => token && !token.startsWith('bg-'))
+    .join(' ');
+  return tint || 'text-foggy';
+}
+
 function TileInner({
   icon: Icon,
   iconClassName,
@@ -37,34 +46,33 @@ function TileInner({
   return (
     <>
       <div className='flex items-start justify-between gap-2'>
-        <span
-          className={cn(
-            'flex h-9 w-9 shrink-0 items-center justify-center rounded-md',
-            iconClassName ?? 'bg-rausch-50 text-primary-strong',
-          )}
-        >
-          <Icon className='h-4 w-4' strokeWidth={1.75} aria-hidden='true' />
-        </span>
-        {delta ? <DeltaChip delta={delta} /> : null}
-        {href && !delta ? (
-          <ArrowRight
-            className='h-4 w-4 -translate-x-1 text-foggy opacity-0 transition duration-200 ease-out-quart group-hover:translate-x-0 group-hover:opacity-100'
-            strokeWidth={2}
+        <span className='text-xs font-semibold uppercase tracking-wide text-foggy'>{label}</span>
+        <span className='flex items-center gap-2'>
+          {delta ? <DeltaChip delta={delta} /> : null}
+          <Icon
+            className={cn('h-4 w-4 shrink-0', iconTint(iconClassName))}
+            strokeWidth={1.75}
             aria-hidden='true'
           />
-        ) : null}
+          {href ? (
+            <ArrowRight
+              className='h-4 w-4 -translate-x-1 text-foggy opacity-0 transition duration-200 ease-out-quart group-hover:translate-x-0 group-hover:opacity-100'
+              strokeWidth={2}
+              aria-hidden='true'
+            />
+          ) : null}
+        </span>
       </div>
       {isLoading ? (
-        <Skeleton className='mt-1 h-8 w-14' />
+        <Skeleton className='mt-1 h-9 w-16' />
       ) : (
         <span className='font-display text-3xl font-bold leading-none tracking-tight text-ink-900 tabular-nums'>
           {value}
         </span>
       )}
-      <div className='flex flex-col gap-0.5'>
-        <span className='text-sm font-medium text-foggy'>{label}</span>
-        {subMetric ? <span className='text-xs text-muted-foreground'>{subMetric}</span> : null}
-      </div>
+      {subMetric ? (
+        <span className='text-xs text-muted-foreground'>{subMetric}</span>
+      ) : null}
     </>
   );
 }
@@ -73,7 +81,7 @@ export function StatTile(props: StatTileProps) {
   const { href, className } = props;
   const base = cn(
     surfaceCardVariants({ elevation: href ? 'interactive' : 'flat', padding: 'sm' }),
-    'group flex flex-col gap-3',
+    'group flex flex-col gap-2',
     className,
   );
 

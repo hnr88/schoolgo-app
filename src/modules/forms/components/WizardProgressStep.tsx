@@ -30,7 +30,7 @@ export function WizardProgressStep({
   const isVertical = orientation === 'vertical';
 
   return (
-    <li className={cn('flex gap-3', isVertical ? 'flex-col' : 'flex-1 items-center')}>
+    <li className={cn('flex gap-4', isVertical ? 'flex-col' : 'flex-1 items-center')}>
       <button
         type='button'
         disabled={!isNavigable}
@@ -38,30 +38,32 @@ export function WizardProgressStep({
         aria-current={isActive ? 'step' : undefined}
         aria-label={isNavigable && backLabel ? `${backLabel}: ${step.title}` : undefined}
         className={cn(
-          'group flex items-center gap-3 rounded-md text-left',
+          'group flex items-center gap-4 rounded-lg text-left',
           'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2',
           isNavigable ? 'cursor-pointer' : 'cursor-default',
-          isVertical ? 'w-full px-1 py-1' : 'min-w-0',
+          isVertical ? 'w-full px-1 py-1.5' : 'min-w-0',
         )}
       >
         <span
           className={cn(
-            'flex size-9 shrink-0 items-center justify-center rounded-full border text-sm font-semibold',
-            'transition-colors duration-300 ease-out-quart',
-            isComplete && 'border-primary bg-primary text-primary-foreground',
+            'flex size-11 shrink-0 items-center justify-center rounded-full border-2 text-base font-semibold',
+            'transition-[transform,box-shadow,background-color,border-color,color] duration-300 ease-out-quart',
+            isComplete && 'border-primary bg-primary text-primary-foreground shadow-1',
             isActive &&
-              'border-primary bg-primary text-primary-foreground shadow-brand ring-4 ring-primary/15',
+              'scale-105 border-primary bg-primary text-primary-foreground shadow-brand ring-4 ring-primary/15',
             !isComplete && !isActive && 'border-border bg-card text-muted-foreground',
-            isNavigable && 'group-hover:border-primary/60',
+            isNavigable && 'group-hover:border-primary/60 group-hover:shadow-1',
           )}
         >
-          {isComplete ? <Check className='size-4' aria-hidden='true' /> : index + 1}
+          {isComplete ? <Check className='size-5' aria-hidden='true' /> : index + 1}
         </span>
         <span
           className={cn(
-            'min-w-0 truncate text-sm font-medium transition-colors duration-300 ease-out-quart',
-            isVertical ? 'inline' : 'hidden sm:inline',
-            isActive ? 'text-foreground' : 'text-muted-foreground',
+            'min-w-0 truncate font-medium transition-colors duration-300 ease-out-quart',
+            isVertical
+              ? 'inline text-sm'
+              : 'hidden text-sm sm:inline',
+            isActive ? 'font-semibold text-foreground' : 'text-muted-foreground',
           )}
         >
           {step.title}
@@ -72,7 +74,7 @@ export function WizardProgressStep({
           aria-hidden='true'
           className={cn(
             'rounded-full transition-colors duration-300 ease-out-quart',
-            isVertical ? 'ml-4 h-6 w-0.5' : 'h-0.5 flex-1',
+            isVertical ? 'ml-5 h-7 w-0.5' : 'h-0.5 flex-1',
             isComplete ? 'bg-primary' : 'bg-border',
           )}
         />

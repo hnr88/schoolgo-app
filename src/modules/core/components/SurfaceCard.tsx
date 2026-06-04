@@ -2,14 +2,14 @@ import { cva, type VariantProps } from 'class-variance-authority';
 import { cn } from '@/lib/utils';
 
 export const surfaceCardVariants = cva(
-  'rounded-lg border bg-card ease-out-quart',
+  'rounded-2xl border bg-card ease-out-quart',
   {
     variants: {
       elevation: {
-        flat: 'border-border shadow-1',
+        flat: 'border-border shadow-2',
         raised: 'border-border shadow-2',
         interactive:
-          'border-border shadow-1 transition-transform duration-200 hover:-translate-y-0.5 hover:shadow-2 focus-within:-translate-y-0.5',
+          'border-border shadow-2 transition-[transform,box-shadow] duration-300 ease-out-quart hover:-translate-y-0.5 hover:shadow-3 focus-within:-translate-y-0.5 focus-within:shadow-3',
       },
       accent: {
         none: '',
@@ -18,7 +18,7 @@ export const surfaceCardVariants = cva(
       padding: {
         none: '',
         sm: 'p-4',
-        md: 'p-5',
+        md: 'p-6',
         lg: 'p-6',
       },
     },

@@ -5,6 +5,7 @@ import { GraduationCap, UserPlus, Users } from 'lucide-react';
 import { Link } from '@/i18n/navigation';
 import { buttonVariants } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
+import { Eyebrow } from '@/modules/design-system';
 import { EmptyState, ErrorState } from '@/modules/core';
 import { ParentStudentAvatar, useParentStudents } from '@/modules/students';
 import { ParentDashboardCard } from '@/modules/dashboard/parent/components/ParentDashboardCard';
@@ -44,30 +45,32 @@ export function ParentStudentsSummaryCard() {
           }
         />
       ) : (
-        <>
-          <p className='border-b border-divider px-5 py-3 text-sm text-foggy'>
-            {t('studentsCount', { count: total })}
-          </p>
-          <ul className='flex flex-col divide-y divide-divider'>
+        <div className='flex flex-col gap-2'>
+          <Eyebrow>{t('studentsCount', { count: total })}</Eyebrow>
+          <ul className='-mx-3 flex flex-col gap-1'>
             {students.map((student) => (
               <li key={student.documentId}>
                 <Link
                   href={`/parent/students/${student.documentId}`}
-                  className='group flex items-center gap-3 px-5 py-4 no-underline transition-colors hover:bg-muted'
+                  className='group flex items-center gap-4 rounded-xl px-3 py-2.5 no-underline transition-colors duration-200 ease-out-quart hover:bg-muted'
                 >
                   <ParentStudentAvatar
                     firstName={student.firstName}
                     lastName={student.lastName}
                     photoUrl={student.photo?.url}
-                    size={36}
+                    size={40}
                   />
-                  <span className='flex min-w-0 flex-1 flex-col'>
-                    <span className='truncate text-sm font-semibold text-ink-900 group-hover:text-primary-strong'>
+                  <span className='flex min-w-0 flex-1 flex-col gap-0.5'>
+                    <span className='truncate text-sm font-semibold text-ink-900 transition-colors group-hover:text-primary-strong'>
                       {student.firstName} {student.lastName}
                     </span>
                     {student.targetEntryYear && (
                       <span className='flex items-center gap-1 text-xs text-foggy'>
-                        <GraduationCap className='h-3 w-3' aria-hidden='true' />
+                        <GraduationCap
+                          className='h-3.5 w-3.5 text-foggy'
+                          strokeWidth={1.75}
+                          aria-hidden='true'
+                        />
                         {t('targetEntry', {
                           term: student.targetEntryTerm ?? '',
                           year: student.targetEntryYear,
@@ -79,7 +82,7 @@ export function ParentStudentsSummaryCard() {
               </li>
             ))}
           </ul>
-        </>
+        </div>
       )}
     </ParentDashboardCard>
   );

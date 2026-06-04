@@ -29,11 +29,11 @@ export function SidebarNavLinks({ isCollapsed = false, onNavigate }: SidebarNavL
   const sections: NavGroup[] = groups ?? [{ labelKey: '', items: items ?? [] }];
 
   return (
-    <nav className={cn('flex flex-1 flex-col gap-6 overflow-y-auto py-4', isCollapsed ? 'px-2' : 'px-3')}>
+    <nav className={cn('flex flex-1 flex-col gap-5 overflow-y-auto py-4', isCollapsed ? 'px-2' : 'px-3')}>
       {sections.map((section, sectionIndex) => (
         <div key={section.labelKey || sectionIndex} className='flex flex-col gap-1'>
           {section.labelKey && !isCollapsed && (
-            <p className='px-4 pb-1 text-caption font-semibold uppercase tracking-wide text-foggy'>
+            <p className='px-3 pb-1 text-caption font-semibold uppercase tracking-wider text-foggy/80'>
               {t(`nav.${section.labelKey}`)}
             </p>
           )}
@@ -53,20 +53,20 @@ export function SidebarNavLinks({ isCollapsed = false, onNavigate }: SidebarNavL
                 title={isCollapsed ? navLabel(labelKey) : undefined}
                 aria-current={isActive ? 'page' : undefined}
                 className={cn(
-                  'relative flex items-center gap-3 rounded-md text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring',
-                  isCollapsed ? 'justify-center p-3' : 'px-4 py-3',
+                  'group relative flex items-center gap-3 rounded-xl text-sm transition-[transform,background-color,box-shadow,color] duration-200 ease-out-quart focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring',
+                  isCollapsed ? 'justify-center p-2.5' : 'px-3 py-2.5',
                   isActive
-                    ? 'bg-rausch-50 font-semibold text-primary-strong'
-                    : 'font-medium text-foggy hover:bg-muted hover:text-ink-900',
+                    ? 'bg-card font-semibold text-ink-900 shadow-1'
+                    : 'font-medium text-foggy hover:bg-card/70 hover:text-ink-900',
                 )}
               >
-                {isActive && !isCollapsed && (
-                  <span
-                    className='absolute left-0 top-1/2 h-5 w-1 -translate-y-1/2 rounded-pill bg-primary'
-                    aria-hidden='true'
-                  />
-                )}
-                <Icon className='h-5 w-5 shrink-0' strokeWidth={isActive ? 2 : 1.5} />
+                <Icon
+                  className={cn(
+                    'h-5 w-5 shrink-0 transition-colors',
+                    isActive ? 'text-primary' : 'text-foggy group-hover:text-ink-900',
+                  )}
+                  strokeWidth={isActive ? 2 : 1.75}
+                />
                 {!isCollapsed && navLabel(labelKey)}
               </Link>
             );

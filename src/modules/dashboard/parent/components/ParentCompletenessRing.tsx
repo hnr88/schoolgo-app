@@ -6,8 +6,8 @@ interface ParentCompletenessRingProps {
   label: string;
 }
 
-const SIZE = 44;
-const STROKE = 4;
+const SIZE = 52;
+const STROKE = 5;
 const RADIUS = (SIZE - STROKE) / 2;
 const CIRCUMFERENCE = 2 * Math.PI * RADIUS;
 
@@ -41,7 +41,9 @@ export function ParentCompletenessRing({ percent, isComplete, label }: ParentCom
           )}
         />
       </svg>
-      <span className='absolute text-caption font-bold tabular-nums text-ink-900'>{label}</span>
+      <span className='absolute font-display text-xs font-bold tabular-nums text-ink-900'>
+        {label}
+      </span>
     </span>
   );
 }
