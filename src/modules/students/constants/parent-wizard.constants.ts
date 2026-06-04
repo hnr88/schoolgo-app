@@ -21,7 +21,7 @@ export const PARENT_CONTACT_CHANNEL_OPTIONS = CONTACT_CHANNEL_VALUES;
 
 export const PARENT_TARGET_TERM_OPTIONS = ['Term 1', 'Term 2', 'Term 3', 'Term 4'] as const;
 
-export const PARENT_PHOTO_MAX_MB = 5;
+export const PARENT_PHOTO_MAX_MB = 15;
 
 export const PARENT_VOICE_INTRO_MAX_MB = 10;
 

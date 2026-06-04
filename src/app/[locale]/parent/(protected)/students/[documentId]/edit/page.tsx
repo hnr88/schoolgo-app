@@ -21,7 +21,7 @@ export default async function ParentEditStudentPage({
   setRequestLocale(locale);
 
   return (
-    <div className='mx-auto flex w-full max-w-6xl flex-col gap-6 xl:max-w-7xl'>
+    <div className='flex w-full max-w-6xl flex-col gap-6 xl:max-w-7xl'>
       <EditStudentPage documentId={documentId} />
     </div>
   );

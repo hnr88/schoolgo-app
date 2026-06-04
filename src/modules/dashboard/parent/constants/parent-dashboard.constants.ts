@@ -28,36 +28,34 @@ export const PARENT_APPLICATION_OFFER_STATUSES: ApplicationStatus[] = [
   'offer_accepted',
 ];
 
-const QUIET_ICON_CLASS = 'text-foggy';
-
 export const PARENT_STAT_TILES: ParentStatTileConfig[] = [
   {
     key: 'applicationsInProgress',
     href: '/parent/applications',
     icon: FileText,
     labelKey: 'statApplicationsInProgress',
-    iconClassName: QUIET_ICON_CLASS,
+    gradient: 'from-rausch-500 to-rausch-700',
   },
   {
     key: 'children',
     href: '/parent/students',
     icon: Users,
     labelKey: 'statChildren',
-    iconClassName: QUIET_ICON_CLASS,
+    gradient: 'from-babu-500 to-babu-700',
   },
   {
     key: 'savedSchools',
     href: '/parent/saved-schools',
     icon: Heart,
     labelKey: 'statSavedSchools',
-    iconClassName: QUIET_ICON_CLASS,
+    gradient: 'from-arches-600 to-arches-700',
   },
   {
     key: 'offers',
     href: '/parent/offers',
     icon: Award,
     labelKey: 'statOffers',
-    iconClassName: QUIET_ICON_CLASS,
+    gradient: 'from-vivid-iris to-vivid-iris-strong',
   },
 ];
 

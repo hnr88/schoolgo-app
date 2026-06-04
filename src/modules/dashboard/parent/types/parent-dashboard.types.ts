@@ -23,8 +23,8 @@ export interface ParentStatTileConfig {
   href: LinkHref;
   icon: IconComponent;
   labelKey: string;
-  /** combined soft-bg + strong-text classes for the icon chip */
-  iconClassName: string;
+  /** brand gradient color-stop classes for the bold stat card surface */
+  gradient: string;
 }
 
 export type ParentStatCounts = Record<ParentStatTileKey, number>;
