@@ -29,7 +29,7 @@ export function SchoolInvoicesTable({ invoices }: { invoices: SchoolInvoice[] })
   const t = useTranslations('SchoolInvoices');
 
   if (invoices.length === 0) {
-    return <EmptyState icon={Receipt} title={t('empty')} />;
+    return <EmptyState framed icon={Receipt} title={t('empty')} />;
   }
 
   return (
@@ -41,7 +41,7 @@ export function SchoolInvoicesTable({ invoices }: { invoices: SchoolInvoice[] })
     >
       <Table>
         <TableHeader>
-          <TableRow className='border-b border-divider hover:bg-transparent'>
+          <TableRow className='border-b border-divider bg-muted/40 hover:bg-muted/40'>
             <TableHead className='text-xs font-semibold uppercase tracking-wide text-foggy'>{t('columnInvoice')}</TableHead>
             <TableHead className='text-xs font-semibold uppercase tracking-wide text-foggy'>{t('columnKind')}</TableHead>
             <TableHead className='text-xs font-semibold uppercase tracking-wide text-foggy'>{t('columnStudent')}</TableHead>
@@ -55,7 +55,7 @@ export function SchoolInvoicesTable({ invoices }: { invoices: SchoolInvoice[] })
           {invoices.map((invoice) => {
             const student = studentName(invoice);
             return (
-              <TableRow key={invoice.documentId} className='hover:bg-muted'>
+              <TableRow key={invoice.documentId} className='border-b border-divider transition-colors hover:bg-muted/60'>
                 <TableCell className='py-3.5 font-semibold text-ink-900'>
                   {invoice.invoiceNumber ?? t('unnumbered')}
                 </TableCell>

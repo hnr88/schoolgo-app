@@ -14,10 +14,10 @@ function DetailSkeleton() {
   return (
     <div className='flex flex-col gap-6'>
       <Skeleton className='h-5 w-40' />
-      <Skeleton className='h-48 w-full rounded-xl' />
+      <Skeleton className='h-48 w-full rounded-lg' />
       <div className='grid gap-6 lg:grid-cols-2'>
-        <Skeleton className='h-56 w-full rounded-xl' />
-        <Skeleton className='h-56 w-full rounded-xl' />
+        <Skeleton className='h-56 w-full rounded-lg' />
+        <Skeleton className='h-56 w-full rounded-lg' />
       </div>
     </div>
   );
@@ -39,7 +39,7 @@ export function ParentApplicationDetailPage({ documentId }: ParentApplicationDet
   const backLink = (
     <Link
       href='/parent/applications'
-      className='inline-flex items-center gap-1 text-sm text-primary hover:underline'
+      className='inline-flex items-center gap-1 text-sm font-medium text-primary-strong hover:underline'
     >
       <ArrowLeft className='h-4 w-4' />
       {t('backToList')}

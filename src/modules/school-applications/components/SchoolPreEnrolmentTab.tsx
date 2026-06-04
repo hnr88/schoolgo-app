@@ -5,7 +5,8 @@ import { ClipboardList } from 'lucide-react';
 import { toast } from 'sonner';
 import { Button } from '@/components/ui/button';
 import { Skeleton } from '@/components/ui/skeleton';
-import { EmptyState } from '@/modules/core';
+import { cn } from '@/lib/utils';
+import { EmptyState, SurfaceCard, surfaceCardVariants } from '@/modules/core';
 import { StatusBadge } from '@/modules/design-system';
 import {
   useSchoolPreEnrolment,
@@ -60,22 +61,18 @@ export function SchoolPreEnrolmentTab({ documentId }: { documentId: string }) {
 
   if (isLoading) {
     return (
-      <div className='rounded-xl border border-border bg-card p-6'>
+      <SurfaceCard padding='lg'>
         <Skeleton className='h-16 w-full rounded-lg' />
-      </div>
+      </SurfaceCard>
     );
   }
 
   if (!items || items.length === 0) {
-    return (
-      <div className='rounded-xl border border-border bg-card p-6'>
-        <EmptyState icon={ClipboardList} title={t('preEnrolEmpty')} />
-      </div>
-    );
+    return <EmptyState framed icon={ClipboardList} title={t('preEnrolEmpty')} />;
   }
 
   return (
-    <ul className='flex flex-col gap-3 rounded-xl border border-border bg-card p-6'>
+    <ul className={cn(surfaceCardVariants({ padding: 'lg' }), 'flex flex-col gap-3')}>
       {items.map((item) => (
         <ItemRow key={item.documentId} item={item} documentId={documentId} />
       ))}

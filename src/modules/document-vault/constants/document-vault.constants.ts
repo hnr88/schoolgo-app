@@ -11,7 +11,10 @@ import {
   Wallet,
 } from 'lucide-react';
 
-import type { VaultDocumentType } from '@/modules/document-vault/types/document-vault.types';
+import type {
+  VaultDocumentType,
+  VaultSortOption,
+} from '@/modules/document-vault/types/document-vault.types';
 
 export const VAULT_DOCUMENT_TYPE_ICON: Record<VaultDocumentType, typeof FileText> = {
   birth_certificate: FileCheck,
@@ -36,3 +39,21 @@ export const ACCEPTED_VAULT_FILE_TYPES: Record<string, string[]> = {
 };
 
 export const MAX_VAULT_FILE_SIZE = 10 * 1024 * 1024;
+
+export const DEFAULT_VAULT_SORT: VaultSortOption = 'newest';
+
+export const VAULT_SORT_LABEL_KEY: Record<VaultSortOption, string> = {
+  newest: 'sortNewest',
+  oldest: 'sortOldest',
+  title_asc: 'sortTitleAsc',
+  title_desc: 'sortTitleDesc',
+};
+
+export const VAULT_REJECTION_MESSAGE_KEY: Record<string, string> = {
+  'file-too-large': 'dropRejectedTooLarge',
+  'file-invalid-type': 'dropRejectedInvalidType',
+  'too-many-files': 'dropRejectedTooMany',
+};
+
+export const VAULT_IMAGE_MIME_PREFIX = 'image/';
+export const VAULT_PDF_MIME = 'application/pdf';

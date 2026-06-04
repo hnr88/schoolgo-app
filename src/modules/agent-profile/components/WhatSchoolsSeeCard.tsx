@@ -4,6 +4,7 @@ import { useTranslations } from 'next-intl';
 import { BadgeCheck, Globe, MapPin } from 'lucide-react';
 import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 import { Badge } from '@/components/ui/badge';
+import { SectionHeading, SurfaceCard } from '@/modules/core';
 import type { AgentPublicPreview } from '@/modules/agent-profile/types/agent-profile.types';
 
 interface WhatSchoolsSeeCardProps {
@@ -26,26 +27,23 @@ export function WhatSchoolsSeeCard({ preview }: WhatSchoolsSeeCardProps) {
   const initials = getInitials(preview.fullName, preview.companyName);
 
   return (
-    <section className='flex flex-col gap-4 rounded-xl border border-border bg-card p-6'>
-      <div className='flex flex-col gap-1'>
-        <h2 className='font-display text-lg font-bold text-ink-900'>{t('previewTitle')}</h2>
-        <p className='text-sm text-muted-foreground'>{t('previewSubtitle')}</p>
-      </div>
+    <SurfaceCard padding='lg' className='flex flex-col gap-5'>
+      <SectionHeading title={t('previewTitle')} description={t('previewSubtitle')} level={2} />
 
       <div className='flex flex-col gap-4 rounded-lg border border-border bg-muted/40 p-5'>
         <div className='flex items-start gap-4'>
           <Avatar className='h-14 w-14'>
-            <AvatarFallback className='bg-primary/10 text-sm font-bold text-primary'>
+            <AvatarFallback className='bg-babu-50 text-sm font-bold text-babu-700'>
               {initials}
             </AvatarFallback>
           </Avatar>
           <div className='flex flex-1 flex-col gap-1'>
             <div className='flex flex-wrap items-center gap-2'>
-              <span className='text-base font-bold text-ink-900'>
+              <span className='font-display text-base font-bold tracking-tight text-ink-900'>
                 {preview.fullName || t('previewNoName')}
               </span>
               {preview.verified && (
-                <Badge className='gap-1 bg-vivid-mint text-white'>
+                <Badge className='gap-1 bg-vivid-mint-soft text-vivid-mint'>
                   <BadgeCheck className='h-3.5 w-3.5' strokeWidth={2} aria-hidden='true' />
                   {t('badgeVerified')}
                 </Badge>
@@ -75,7 +73,7 @@ export function WhatSchoolsSeeCard({ preview }: WhatSchoolsSeeCardProps) {
                 href={preview.website}
                 target='_blank'
                 rel='noopener noreferrer'
-                className='text-primary hover:underline'
+                className='rounded-sm font-medium text-babu-700 underline-offset-2 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2'
               >
                 {preview.website.replace(/^https?:\/\//, '')}
               </a>
@@ -95,6 +93,6 @@ export function WhatSchoolsSeeCard({ preview }: WhatSchoolsSeeCardProps) {
           <p className='text-sm italic text-muted-foreground'>{t('previewNoBio')}</p>
         )}
       </div>
-    </section>
+    </SurfaceCard>
   );
 }

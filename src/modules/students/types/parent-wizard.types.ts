@@ -18,8 +18,8 @@ export interface ParentStudentCreatePayload {
   parentGuardianPhone: string;
   parentGuardianWechat?: string;
   preferredContactChannel: ParentStudentFormValues['preferredContactChannel'];
-  photo?: number;
-  voiceIntro?: number;
+  photo?: number | null;
+  voiceIntro?: number | null;
 }
 
 export interface ParentStepProps {

@@ -51,7 +51,7 @@ export function SearchAutocompleteDropdown({
       ref={containerRef}
       role='listbox'
       aria-label={t('searchPlaceholder')}
-      className='absolute left-0 right-0 top-full z-20 mt-2 max-h-80 overflow-y-auto rounded-xl border border-border bg-card p-2 shadow-3'
+      className='absolute left-0 right-0 top-full z-20 mt-2 max-h-80 overflow-y-auto rounded-lg border border-border bg-card p-2 shadow-3'
     >
       {isLoading && (
         <div
@@ -83,7 +83,7 @@ export function SearchAutocompleteDropdown({
                 onSelectSchool(hit);
                 onClose();
               }}
-              className='flex items-center gap-3 rounded-lg px-3 py-2 text-left text-sm text-foreground transition-colors hover:bg-muted focus:bg-muted focus:outline-none'
+              className='flex items-center gap-3 rounded-md px-3 py-2 text-left text-sm text-foreground transition-colors hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1'
             >
               {hit.logoUrl ? (
                 <Image
@@ -125,7 +125,7 @@ export function SearchAutocompleteDropdown({
                 onSelectSuburb(hit);
                 onClose();
               }}
-              className='flex items-center justify-between gap-3 rounded-lg px-3 py-2 text-left text-sm text-foreground transition-colors hover:bg-muted focus:bg-muted focus:outline-none'
+              className='flex items-center justify-between gap-3 rounded-md px-3 py-2 text-left text-sm text-foreground transition-colors hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1'
             >
               <span className='font-medium text-foreground'>{hit.suburb}</span>
               <span className='text-xs text-muted-foreground'>

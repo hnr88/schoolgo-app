@@ -7,6 +7,7 @@ import { AlertCircle, FolderOpen, Plus } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
 import { Skeleton } from '@/components/ui/skeleton';
+import { EmptyState } from '@/modules/core';
 import { useVaultDocuments } from '@/modules/document-vault/queries/use-vault-documents.query';
 import { useDeleteVaultDocument } from '@/modules/document-vault/queries/use-delete-vault-document.mutation';
 import { VaultDocumentCard } from '@/modules/document-vault/components/VaultDocumentCard';
@@ -50,21 +51,25 @@ export function DocumentVaultPage() {
           ))}
         </div>
       ) : isError ? (
-        <div className='flex flex-col items-center justify-center rounded-lg border border-dashed border-border py-16'>
-          <AlertCircle className='mb-3 h-10 w-10 text-destructive' />
-          <p className='text-sm font-medium text-ink-900'>{t('errorTitle')}</p>
-          <p className='mt-1 text-xs text-foggy'>{t('errorSubtitle')}</p>
-        </div>
+        <EmptyState
+          framed
+          icon={AlertCircle}
+          title={t('errorTitle')}
+          description={t('errorSubtitle')}
+        />
       ) : documents.length === 0 ? (
-        <div className='flex flex-col items-center justify-center rounded-lg border border-dashed border-border py-16'>
-          <FolderOpen className='mb-3 h-10 w-10 text-foggy' />
-          <p className='text-sm font-medium text-ink-900'>{t('emptyTitle')}</p>
-          <p className='mt-1 text-xs text-foggy'>{t('emptySubtitle')}</p>
-          <Button variant='outline' size='sm' className='mt-4' onClick={() => setUploadOpen(true)}>
-            <Plus className='mr-2 h-4 w-4' />
-            {t('upload')}
-          </Button>
-        </div>
+        <EmptyState
+          framed
+          icon={FolderOpen}
+          title={t('emptyTitle')}
+          description={t('emptySubtitle')}
+          action={
+            <Button variant='outline' size='sm' onClick={() => setUploadOpen(true)}>
+              <Plus className='mr-2 h-4 w-4' />
+              {t('upload')}
+            </Button>
+          }
+        />
       ) : (
         <div className='grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3'>
           {documents.map((doc) => (

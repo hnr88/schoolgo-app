@@ -35,7 +35,7 @@ export function ParentApplicationToolbar({ status, onStatusChange }: ParentAppli
             <DropdownMenuItem
               key={option.value}
               onClick={() => onStatusChange(option.value)}
-              className={status === option.value ? 'font-semibold text-primary' : ''}
+              className={status === option.value ? 'font-semibold text-primary-strong' : ''}
             >
               {option.label}
             </DropdownMenuItem>

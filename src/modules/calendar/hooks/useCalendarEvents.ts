@@ -23,9 +23,18 @@ export function useCalendarEvents() {
     [bookingsQuery.data, toursQuery.data, applicationsQuery.data],
   );
 
+  async function refetchAll() {
+    await Promise.all([
+      bookingsQuery.refetch(),
+      toursQuery.refetch(),
+      applicationsQuery.refetch(),
+    ]);
+  }
+
   return {
     events,
     isLoading: bookingsQuery.isLoading || toursQuery.isLoading || applicationsQuery.isLoading,
     isError: bookingsQuery.isError || toursQuery.isError || applicationsQuery.isError,
+    refetchAll,
   };
 }

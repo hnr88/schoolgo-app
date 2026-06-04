@@ -52,9 +52,35 @@ export interface UploadVaultDocumentInput {
   file: File;
 }
 
+export const VAULT_SORT_OPTIONS = ['newest', 'oldest', 'title_asc', 'title_desc'] as const;
+
+export type VaultSortOption = (typeof VAULT_SORT_OPTIONS)[number];
+
+export type VaultTypeFilter = VaultDocumentType | 'all';
+
+export type VaultPreviewKind = 'image' | 'pdf' | 'none';
+
 export interface VaultDocumentCardProps {
   document: VaultDocument;
   onDelete: (document: VaultDocument) => void;
+  onPreview: (document: VaultDocument) => void;
+}
+
+export interface VaultDocumentsToolbarProps {
+  totalCount: number;
+  resultCount: number;
+  search: string;
+  onSearchChange: (value: string) => void;
+  typeFilter: VaultTypeFilter;
+  onTypeFilterChange: (value: VaultTypeFilter) => void;
+  sort: VaultSortOption;
+  onSortChange: (value: VaultSortOption) => void;
+  availableTypes: VaultDocumentType[];
+}
+
+export interface VaultDocumentPreviewDialogProps {
+  document: VaultDocument | null;
+  onOpenChange: (open: boolean) => void;
 }
 
 export interface VaultUploadDialogProps {

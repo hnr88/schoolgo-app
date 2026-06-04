@@ -6,6 +6,7 @@ import { useAuthStore } from '@/modules/auth/stores/use-auth-store';
 import {
   TEST_RESULTS_DEFAULT_PAGE_SIZE,
   TEST_RESULTS_POPULATE,
+  TEST_RESULTS_VERIFYING_POLL_INTERVAL_MS,
 } from '@/modules/test-results/constants/test-results.constants';
 import type {
   TestResultsResponse,
@@ -22,6 +23,12 @@ export function useTestResults({
   return useQuery({
     queryKey: ['parent', 'test-results', studentDocumentId],
     enabled: isAuthenticated && Boolean(studentDocumentId),
+    refetchInterval: (query) => {
+      const hasVerifying = query.state.data?.data.some(
+        (result) => result.verificationStatus === 'verifying',
+      );
+      return hasVerifying ? TEST_RESULTS_VERIFYING_POLL_INTERVAL_MS : false;
+    },
     queryFn: async () => {
       const params: Record<string, unknown> = {
         ...TEST_RESULTS_POPULATE,

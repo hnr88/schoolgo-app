@@ -29,7 +29,7 @@ export function PartnershipTable({
   return (
     <Table>
       <TableHeader>
-        <TableRow className='border-b border-divider hover:bg-transparent'>
+        <TableRow className='border-b border-divider bg-muted/40 hover:bg-muted/40'>
           <TableHead className='pl-5 text-xs font-semibold uppercase tracking-wide text-foggy'>{t('columnAgent')}</TableHead>
           <TableHead className='text-xs font-semibold uppercase tracking-wide text-foggy'>{t('columnStatus')}</TableHead>
           <TableHead className='text-xs font-semibold uppercase tracking-wide text-foggy'>{t('columnRequested')}</TableHead>
@@ -40,7 +40,7 @@ export function PartnershipTable({
         {partnerships.map((p) => {
           const busy = pendingActionId === p.documentId;
           return (
-            <TableRow key={p.documentId} className='hover:bg-muted'>
+            <TableRow key={p.documentId} className='border-b border-divider transition-colors hover:bg-muted/60'>
               <TableCell className='pl-5 py-3.5'>
                 <span className='font-semibold text-ink-900'>
                   {p.agent?.companyName ?? '—'}

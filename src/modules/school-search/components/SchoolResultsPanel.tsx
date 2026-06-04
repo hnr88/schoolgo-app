@@ -49,7 +49,7 @@ export function SchoolResultsPanel({ activePortal }: SchoolResultsPanelProps) {
             {Array.from({ length: 3 }).map((_, i) => (
               <div
                 key={i}
-                className='flex flex-col overflow-hidden rounded-xl border border-border bg-card shadow-2'
+                className='flex flex-col overflow-hidden rounded-lg border border-border bg-card shadow-1'
               >
                 <Skeleton className='aspect-[16/10] w-full rounded-none' />
                 <div className='flex flex-col gap-2 p-4'>

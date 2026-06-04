@@ -4,7 +4,8 @@ import { useTranslations } from 'next-intl';
 import { ClipboardList, Users } from 'lucide-react';
 import { Skeleton } from '@/components/ui/skeleton';
 import { Link } from '@/i18n/navigation';
-import { Button } from '@/components/ui/button';
+import { buttonVariants } from '@/components/ui/button';
+import { cn } from '@/lib/utils';
 import { EmptyState, ErrorState } from '@/modules/core';
 import { TestResultsList } from '@/modules/test-results/components/TestResultsList';
 import { TestResultsStudentSelector } from '@/modules/test-results/components/TestResultsStudentSelector';
@@ -18,12 +19,17 @@ export function TestResultsPanel({ studentDocumentId, portal = 'parent' }: TestR
     useStudentSelection(studentDocumentId);
 
   if (isLoading) {
-    return <Skeleton className='h-40 w-full rounded-xl' />;
+    return <Skeleton className='h-40 w-full rounded-lg' />;
   }
 
   if (isError) {
     return (
-      <ErrorState message={t('studentsErrorMessage')} onRetry={() => refetch()} retryLabel={t('retry')} />
+      <ErrorState
+        message={t('studentsErrorMessage')}
+        onRetry={() => refetch()}
+        retryLabel={t('retry')}
+        framed
+      />
     );
   }
 
@@ -33,9 +39,10 @@ export function TestResultsPanel({ studentDocumentId, portal = 'parent' }: TestR
         icon={Users}
         title={t('noStudentsTitle')}
         description={t('noStudentsSubtitle')}
+        framed
         action={
-          <Link href={newStudentPath(portal)}>
-            <Button>{t('addStudent')}</Button>
+          <Link href={newStudentPath(portal)} className={cn(buttonVariants())}>
+            {t('addStudent')}
           </Link>
         }
       />
@@ -53,6 +60,7 @@ export function TestResultsPanel({ studentDocumentId, portal = 'parent' }: TestR
           icon={ClipboardList}
           title={t('pickStudentTitle')}
           description={t('pickStudentSubtitle')}
+          framed
         />
       )}
     </div>

@@ -10,7 +10,7 @@ import type { UploadedMedia } from '@/modules/forms';
 import {
   PARENT_WIZARD_STEP_IDS,
   STEP_FIELDS,
-  parentStudentSchema,
+  createParentStudentSchema,
   type ParentStudentFormValues,
   type ParentWizardStepId,
 } from '@/modules/students/schemas/parent-student.schema';
@@ -40,29 +40,49 @@ const DEFAULT_VALUES: ParentStudentFormValues = {
 export function useParentStudentWizard(options?: {
   documentId?: string;
   initialValues?: ParentStudentFormValues;
+  existingPhoto?: UploadedMedia | null;
+  existingVoiceIntro?: UploadedMedia | null;
 }) {
   const t = useTranslations('StudentWizard');
+  const tSchema = useTranslations('StudentWizardSchema');
   const router = useRouter();
   const createStudent = useCreateParentStudent();
   const updateStudent = useUpdateParentStudent(options?.documentId ?? '');
+  const isEditing = Boolean(options?.documentId);
 
-  const [photo, setPhoto] = useState<UploadedMedia | null>(null);
-  const [voiceIntro, setVoiceIntro] = useState<UploadedMedia | null>(null);
+  const [photo, setPhoto] = useState<UploadedMedia | null>(options?.existingPhoto ?? null);
+  const [voiceIntro, setVoiceIntro] = useState<UploadedMedia | null>(
+    options?.existingVoiceIntro ?? null,
+  );
 
   const form = useForm<ParentStudentFormValues>({
-    resolver: zodResolver(parentStudentSchema),
+    resolver: zodResolver(createParentStudentSchema(tSchema)),
     defaultValues: options?.initialValues ?? DEFAULT_VALUES,
     mode: 'onBlur',
   });
 
   function handlePhotoChange(media: UploadedMedia | null) {
     setPhoto(media);
-    form.setValue('photo', media?.id, { shouldValidate: true });
+    if (media) {
+      form.setValue('photo', media.id, { shouldValidate: true, shouldDirty: true });
+    } else {
+      form.setValue('photo', isEditing ? null : undefined, {
+        shouldValidate: true,
+        shouldDirty: true,
+      });
+    }
   }
 
   function handleVoiceIntroChange(media: UploadedMedia | null) {
     setVoiceIntro(media);
-    form.setValue('voiceIntro', media?.id, { shouldValidate: true });
+    if (media) {
+      form.setValue('voiceIntro', media.id, { shouldValidate: true, shouldDirty: true });
+    } else {
+      form.setValue('voiceIntro', isEditing ? null : undefined, {
+        shouldValidate: true,
+        shouldDirty: true,
+      });
+    }
   }
 
   const canAdvance = async (stepIndex: number) => {
@@ -105,5 +125,6 @@ export function useParentStudentWizard(options?: {
     canAdvance,
     onFinish: form.handleSubmit(submit),
     isSubmitting: createStudent.isPending || updateStudent.isPending,
+    isEditing,
   };
 }

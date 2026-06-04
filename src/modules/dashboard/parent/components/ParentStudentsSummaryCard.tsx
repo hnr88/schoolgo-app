@@ -3,7 +3,8 @@
 import { useTranslations } from 'next-intl';
 import { GraduationCap, UserPlus, Users } from 'lucide-react';
 import { Link } from '@/i18n/navigation';
-import { Button } from '@/components/ui/button';
+import { buttonVariants } from '@/components/ui/button';
+import { cn } from '@/lib/utils';
 import { EmptyState, ErrorState } from '@/modules/core';
 import { ParentStudentAvatar, useParentStudents } from '@/modules/students';
 import { ParentDashboardCard } from '@/modules/dashboard/parent/components/ParentDashboardCard';
@@ -36,11 +37,9 @@ export function ParentStudentsSummaryCard() {
           title={t('studentsEmptyTitle')}
           description={t('studentsEmptySubtitle')}
           action={
-            <Link href='/parent/students/new'>
-              <Button className='gap-1.5'>
-                <UserPlus className='h-4 w-4' aria-hidden='true' />
-                {t('addStudent')}
-              </Button>
+            <Link href='/parent/students/new' className={cn(buttonVariants(), 'gap-1.5')}>
+              <UserPlus className='h-4 w-4' aria-hidden='true' />
+              {t('addStudent')}
             </Link>
           }
         />

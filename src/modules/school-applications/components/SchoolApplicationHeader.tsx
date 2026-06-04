@@ -2,6 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import { Check } from 'lucide-react';
+import { SurfaceCard } from '@/modules/core';
 import { SchoolStatusBadge } from '@/modules/school-applications/components/SchoolStatusBadge';
 import {
   daysColorClass,
@@ -20,9 +21,9 @@ function StatusProgress({ application }: { application: SchoolApplicationDetail 
             <span
               className={`flex h-6 w-6 items-center justify-center rounded-full text-xs font-semibold ${
                 done
-                  ? 'bg-babu-500 text-white'
+                  ? 'bg-arches-700 text-background'
                   : active
-                    ? 'bg-babu-50 text-babu-600 ring-2 ring-babu-500'
+                    ? 'bg-arches-50 text-arches-700 ring-2 ring-arches-700'
                     : 'bg-muted text-foggy'
               }`}
             >
@@ -43,10 +44,10 @@ export function SchoolApplicationHeader({ application }: { application: SchoolAp
   const studentName = studentDisplayName(application.student);
 
   return (
-    <div className='flex flex-col gap-5 rounded-xl border border-border bg-card p-6'>
+    <SurfaceCard elevation='raised' padding='lg' className='flex flex-col gap-5'>
       <div className='flex flex-wrap items-start justify-between gap-4'>
         <div className='flex flex-col gap-1'>
-          <h1 className='text-xl font-semibold text-ink-900'>{studentName}</h1>
+          <h1 className='font-display text-2xl font-bold tracking-tight text-ink-900'>{studentName}</h1>
           <p className='text-sm text-foggy'>
             {application.targetYearLevel ?? '—'} · {application.targetIntake ?? '—'}
           </p>
@@ -60,6 +61,6 @@ export function SchoolApplicationHeader({ application }: { application: SchoolAp
       </div>
 
       <StatusProgress application={application} />
-    </div>
+    </SurfaceCard>
   );
 }

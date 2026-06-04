@@ -2,7 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import { Skeleton } from '@/components/ui/skeleton';
-import { ErrorState } from '@/modules/core';
+import { ErrorState, SectionHeading, SurfaceCard } from '@/modules/core';
 import { useAgentVerificationStatus } from '@/modules/agent-profile/queries/use-verification-status.query';
 import { useAgentPublicPreview } from '@/modules/agent-profile/queries/use-public-preview.query';
 import { VerificationSection } from '@/modules/agent-profile/components/VerificationSection';
@@ -12,9 +12,9 @@ import { WhatSchoolsSeeCard } from '@/modules/agent-profile/components/WhatSchoo
 function ProfileSkeleton() {
   return (
     <div className='flex flex-col gap-6'>
-      <Skeleton className='h-48 w-full rounded-xl' />
-      <Skeleton className='h-80 w-full rounded-xl' />
-      <Skeleton className='h-64 w-full rounded-xl' />
+      <Skeleton className='h-48 w-full rounded-lg' />
+      <Skeleton className='h-80 w-full rounded-lg' />
+      <Skeleton className='h-64 w-full rounded-lg' />
     </div>
   );
 }
@@ -37,6 +37,7 @@ export function AgentProfilePage() {
           preview.refetch();
         }}
         retryLabel={t('retry')}
+        framed
       />
     );
   }
@@ -45,13 +46,10 @@ export function AgentProfilePage() {
     <div className='flex flex-col gap-6'>
       <VerificationSection verification={verification.data} />
 
-      <section className='flex flex-col gap-4 rounded-xl border border-border bg-card p-6'>
-        <div className='flex flex-col gap-1'>
-          <h2 className='font-display text-lg font-bold text-ink-900'>{t('editorTitle')}</h2>
-          <p className='text-sm text-muted-foreground'>{t('editorSubtitle')}</p>
-        </div>
+      <SurfaceCard padding='lg' className='flex flex-col gap-5'>
+        <SectionHeading title={t('editorTitle')} description={t('editorSubtitle')} level={2} />
         <PublicProfileForm preview={preview.data} />
-      </section>
+      </SurfaceCard>
 
       <WhatSchoolsSeeCard preview={preview.data} />
     </div>

@@ -16,7 +16,7 @@ export function KanbanCard({ application }: KanbanCardProps) {
     <Link
       href={`/dashboard/applications/${application.documentId}`}
       aria-label={`${studentName} — ${school.name}`}
-      className='block rounded-md border border-border bg-card p-4 no-underline shadow-1 transition-transform duration-200 ease-out-quart hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2'
+      className='block rounded-lg border border-border bg-card p-4 no-underline shadow-1 transition-transform duration-200 ease-out-quart hover:-translate-y-0.5 hover:shadow-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2'
     >
       <div className='mb-1.5'>
         <p className='truncate text-sm font-semibold text-ink-900'>{studentName}</p>

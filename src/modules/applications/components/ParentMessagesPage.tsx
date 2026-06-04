@@ -30,7 +30,7 @@ export function ParentMessagesPage() {
       <div className='grid h-[calc(100vh-16rem)] min-h-96 grid-cols-1 gap-4 lg:grid-cols-[20rem_1fr]'>
         <section
           className={cn(
-            'flex-col rounded-xl border border-border bg-card p-4',
+            'flex-col rounded-lg border border-border bg-card p-4 shadow-1',
             selectedId ? 'hidden lg:flex' : 'flex',
           )}
         >
@@ -47,7 +47,7 @@ export function ParentMessagesPage() {
 
         <section
           className={cn(
-            'flex-col rounded-xl border border-border bg-card p-4',
+            'flex-col rounded-lg border border-border bg-card p-4 shadow-1',
             selectedId ? 'flex' : 'hidden lg:flex',
           )}
         >
@@ -59,7 +59,7 @@ export function ParentMessagesPage() {
             />
           ) : (
             <div className='flex h-full items-center justify-center'>
-              <EmptyState icon={MessageSquare} title={t('selectPrompt')} />
+              <EmptyState icon={MessageSquare} title={t('selectPrompt')} framed />
             </div>
           )}
         </section>

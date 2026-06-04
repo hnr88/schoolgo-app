@@ -4,6 +4,8 @@ import { useLocale, useTranslations } from 'next-intl';
 import { Clock, History } from 'lucide-react';
 import { Skeleton } from '@/components/ui/skeleton';
 import { EmptyState } from '@/modules/core/components/EmptyState';
+import { SectionHeading } from '@/modules/core/components/SectionHeading';
+import { SurfaceCard } from '@/modules/core/components/SurfaceCard';
 import { useParentApplicationTimeline } from '@/modules/applications/queries/use-parent-application-timeline.query';
 import { PARENT_TIMELINE_EVENT_ICON } from '@/modules/applications/constants/parent-timeline.constants';
 import { formatDate } from '@/modules/applications/lib/parent-format';
@@ -43,13 +45,13 @@ export function ParentApplicationTimelineSection({
   const events = data?.data ?? [];
 
   return (
-    <div className='rounded-xl border border-border bg-card p-6'>
-      <h2 className='mb-4 text-base font-semibold text-ink-900'>{t('timelineTitle')}</h2>
+    <SurfaceCard padding='lg'>
+      <SectionHeading title={t('timelineTitle')} level={2} icon={History} className='mb-4' />
 
       {isLoading ? (
         <ParentTimelineSkeleton />
       ) : events.length === 0 ? (
-        <EmptyState icon={Clock} title={t('timelineEmpty')} />
+        <EmptyState icon={Clock} title={t('timelineEmpty')} framed />
       ) : (
         <div className='flex flex-col'>
           {events.map((event, idx) => {
@@ -77,6 +79,6 @@ export function ParentApplicationTimelineSection({
           })}
         </div>
       )}
-    </div>
+    </SurfaceCard>
   );
 }

@@ -4,7 +4,7 @@ import { useTranslations } from 'next-intl';
 import { Plus, RefreshCw, Users } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Skeleton } from '@/components/ui/skeleton';
-import { EmptyState } from '@/modules/core';
+import { EmptyState, SectionHeading, SurfaceCard } from '@/modules/core';
 import { StaffTable } from '@/modules/school-staff/components/StaffTable';
 import { InviteStaffDialog } from '@/modules/school-staff/components/InviteStaffDialog';
 import { DeactivateStaffDialog } from '@/modules/school-staff/components/DeactivateStaffDialog';
@@ -16,18 +16,20 @@ export function StaffPage() {
 
   return (
     <div className='flex flex-col gap-6'>
-      <div className='flex items-center justify-between gap-4'>
-        <div>
-          <h1 className='font-display text-2xl font-bold text-ink-900'>{t('title')}</h1>
-          <p className='mt-1 text-sm text-foggy'>{t('subtitle')}</p>
-        </div>
-        {page.isAdmin && (
-          <Button onClick={() => page.setInviteOpen(true)} data-testid='invite-staff-trigger'>
-            <Plus className='h-4 w-4' />
-            {t('inviteStaff')}
-          </Button>
-        )}
-      </div>
+      <SectionHeading
+        level={1}
+        icon={Users}
+        title={t('title')}
+        description={t('subtitle')}
+        actions={
+          page.isAdmin ? (
+            <Button onClick={() => page.setInviteOpen(true)} data-testid='invite-staff-trigger'>
+              <Plus className='h-4 w-4' />
+              {t('inviteStaff')}
+            </Button>
+          ) : undefined
+        }
+      />
 
       {!page.isLoading && !page.isError && !page.isAdmin && (
         <p className='text-sm text-foggy' data-testid='staff-admin-only-note'>
@@ -43,6 +45,7 @@ export function StaffPage() {
         </div>
       ) : page.isError ? (
         <EmptyState
+          framed
           icon={RefreshCw}
           title={t('loadError')}
           action={
@@ -52,9 +55,9 @@ export function StaffPage() {
           }
         />
       ) : page.members.length === 0 ? (
-        <EmptyState icon={Users} title={t('empty')} />
+        <EmptyState framed icon={Users} title={t('empty')} />
       ) : (
-        <div className='overflow-hidden rounded-lg border border-border bg-card shadow-1'>
+        <SurfaceCard elevation='raised' padding='none' className='overflow-hidden'>
           <StaffTable
             members={page.members}
             currentStaffDocumentId={page.currentStaffDocumentId}
@@ -63,7 +66,7 @@ export function StaffPage() {
             onPromote={page.handlePromote}
             onDeactivate={page.setDeactivateTarget}
           />
-        </div>
+        </SurfaceCard>
       )}
 
       <InviteStaffDialog

@@ -23,9 +23,11 @@ export function ConversationListItem({
       onClick={() => onSelect(applicationDocumentId)}
       aria-current={isSelected ? 'true' : undefined}
       className={cn(
-        'flex w-full flex-col gap-1 rounded-lg border border-transparent px-4 py-3 text-left transition-colors',
+        'flex w-full flex-col gap-1 rounded-md border px-4 py-3 text-left transition-colors',
         'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring',
-        isSelected ? 'bg-muted' : 'hover:bg-muted/50',
+        isSelected
+          ? 'border-rausch-200 bg-rausch-50'
+          : 'border-transparent hover:bg-muted/50',
       )}
     >
       <div className='flex items-start justify-between gap-2'>

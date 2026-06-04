@@ -27,8 +27,8 @@ export function ParentMessageBubble({ message }: { message: ParentMessageThreadI
       </div>
       <div
         className={cn(
-          'max-w-[80%] rounded-xl px-4 py-2 text-sm whitespace-pre-wrap',
-          isOwn ? 'bg-primary text-primary-foreground' : 'bg-muted text-foreground',
+          'max-w-[80%] rounded-lg px-4 py-2 text-sm whitespace-pre-wrap',
+          isOwn ? 'bg-primary text-on-primary shadow-1' : 'bg-muted text-foreground',
         )}
       >
         {message.content}

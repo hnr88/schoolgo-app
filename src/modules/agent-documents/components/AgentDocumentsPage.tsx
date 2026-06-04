@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { toast } from 'sonner';
-import { Plus, FolderOpen, AlertCircle } from 'lucide-react';
+import { Plus, FolderOpen } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Skeleton } from '@/components/ui/skeleton';
 import {
@@ -13,6 +13,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
+import { EmptyState, ErrorState, SurfaceCard } from '@/modules/core';
 import { PageHeader } from '@/modules/dashboard';
 import { DOCUMENT_TYPES, DOCUMENT_STATUSES } from '@/modules/students/types/document.types';
 import { useStudents } from '@/modules/students/queries/use-students.query';
@@ -66,7 +67,7 @@ export function AgentDocumentsPage() {
         }
       />
 
-      <div className='flex flex-wrap items-center gap-3'>
+      <SurfaceCard padding='sm' className='flex flex-wrap items-center gap-3'>
         <Select value={studentFilter} onValueChange={(v) => { if (v) setStudentFilter(v); }}>
           <SelectTrigger className='w-48'><SelectValue placeholder={t('allStudents')} /></SelectTrigger>
           <SelectContent>
@@ -94,7 +95,7 @@ export function AgentDocumentsPage() {
             ))}
           </SelectContent>
         </Select>
-      </div>
+      </SurfaceCard>
 
       {isLoading ? (
         <div className='flex flex-col gap-3'>
@@ -102,21 +103,20 @@ export function AgentDocumentsPage() {
           <Skeleton className='h-40 w-full rounded-lg' />
         </div>
       ) : isError ? (
-        <div className='flex flex-col items-center justify-center rounded-lg border border-dashed border-border py-16'>
-          <AlertCircle className='mb-3 h-10 w-10 text-destructive' />
-          <p className='text-sm font-medium text-ink-900'>{t('errorTitle')}</p>
-          <p className='mt-1 text-xs text-foggy'>{t('errorSubtitle')}</p>
-        </div>
+        <ErrorState message={t('errorTitle')} framed />
       ) : documents.length === 0 ? (
-        <div className='flex flex-col items-center justify-center rounded-lg border border-dashed border-border py-16'>
-          <FolderOpen className='mb-3 h-10 w-10 text-foggy' />
-          <p className='text-sm font-medium text-ink-900'>{t('emptyTitle')}</p>
-          <p className='mt-1 text-xs text-foggy'>{t('emptySubtitle')}</p>
-          <Button variant='outline' size='sm' className='mt-4' onClick={() => setUploadOpen(true)}>
-            <Plus className='mr-2 h-4 w-4' />
-            {t('upload')}
-          </Button>
-        </div>
+        <EmptyState
+          icon={FolderOpen}
+          title={t('emptyTitle')}
+          description={t('emptySubtitle')}
+          framed
+          action={
+            <Button variant='outline' size='sm' onClick={() => setUploadOpen(true)}>
+              <Plus className='mr-2 h-4 w-4' />
+              {t('upload')}
+            </Button>
+          }
+        />
       ) : (
         <AgentDocumentsTable documents={documents} onDelete={setDeleteTarget} />
       )}

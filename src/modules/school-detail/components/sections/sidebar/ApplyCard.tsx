@@ -17,7 +17,7 @@ export async function ApplyCard({
   const primaryUrl = school.internationalEnrolmentUrl ?? school.schoolHomepageUrl;
 
   return (
-    <section aria-labelledby="apply-heading" className="rounded-xl border border-border bg-card p-5 shadow-2">
+    <section aria-labelledby="apply-heading" className="rounded-lg border border-border bg-card p-5 shadow-1">
       <h2 id="apply-heading" className="text-xl font-semibold text-ink-900">{t('heading')}</h2>
       <p className="mt-4 text-body-sm text-foggy">{t('intro')}</p>
 
@@ -25,7 +25,7 @@ export async function ApplyCard({
         {activePortal === 'agent' && (
           <Link
             href={`/dashboard/applications/new?school=${school.documentId}`}
-            className="inline-flex w-full items-center justify-center gap-2 rounded-pill bg-primary px-4 py-3 text-body-sm font-semibold text-on-primary shadow-brand hover:bg-rausch-600"
+            className="inline-flex w-full items-center justify-center gap-2 rounded-pill bg-primary px-4 py-3 text-body-sm font-semibold text-on-primary shadow-brand transition-colors hover:bg-rausch-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
           >
             {t('startApplicationCta')}
           </Link>
@@ -36,7 +36,7 @@ export async function ApplyCard({
             href={primaryUrl}
             target="_blank"
             rel="noreferrer noopener"
-            className="inline-flex w-full items-center justify-center gap-2 rounded-pill bg-primary px-4 py-3 text-body-sm font-semibold text-on-primary shadow-brand hover:bg-rausch-600"
+            className="inline-flex w-full items-center justify-center gap-2 rounded-pill bg-primary px-4 py-3 text-body-sm font-semibold text-on-primary shadow-brand transition-colors hover:bg-rausch-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
           >
             {t('intlCta')}
             <ExternalLink className="h-4 w-4" aria-hidden="true" />
@@ -48,7 +48,7 @@ export async function ApplyCard({
             href={school.schoolHomepageUrl}
             target="_blank"
             rel="noreferrer noopener"
-            className="inline-flex w-full items-center justify-center gap-2 rounded-pill border border-border bg-card px-4 py-3 text-body-sm font-semibold text-hof hover:bg-muted"
+            className="inline-flex w-full items-center justify-center gap-2 rounded-pill border border-border bg-card px-4 py-3 text-body-sm font-semibold text-hof transition-colors hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
           >
             {t('websiteCta')}
             <ExternalLink className="h-4 w-4" aria-hidden="true" />
@@ -72,7 +72,7 @@ export async function ApplyCard({
             href={`${school.schoolHomepageUrl}/enrolments`}
             target="_blank"
             rel="noreferrer noopener"
-            className="text-primary underline"
+            className="rounded-sm text-primary underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
           >
             {t('domesticLink')}
           </a>

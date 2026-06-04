@@ -36,7 +36,9 @@ export function ParentApplicationTable({
   const rowCount = pageSize || 10;
 
   if (applications.length === 0 && !isLoading) {
-    return <EmptyState icon={FileText} title={t('noResultsTitle')} description={t('noResultsSubtitle')} />;
+    return (
+      <EmptyState icon={FileText} title={t('noResultsTitle')} description={t('noResultsSubtitle')} framed />
+    );
   }
 
   const sortHeaders: { field: ParentApplicationSortField; label: string; className?: string }[] = [

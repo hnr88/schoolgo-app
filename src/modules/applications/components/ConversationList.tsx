@@ -50,6 +50,7 @@ export function ConversationList({
           icon={MessageSquare}
           title={search ? t('noSearchResults') : t('empty')}
           description={search ? undefined : t('emptyDescription')}
+          framed
         />
       ) : (
         <ScrollArea className='-mx-1 h-full px-1'>

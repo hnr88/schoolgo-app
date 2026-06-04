@@ -33,7 +33,7 @@ export function DocumentsEditor({ documents, disabled, onChange }: DocumentsEdit
       <Label className='text-sm font-semibold text-ink-900'>{t('documentsTitle')}</Label>
       {documents.map((doc, index) => (
         <div key={index} className='flex flex-col gap-2 rounded-lg border border-border p-3 sm:flex-row sm:items-end'>
-          <div className='flex flex-1 flex-col gap-1'>
+          <div className='flex flex-col gap-1 sm:basis-48 sm:grow-0'>
             <Label className='text-xs text-foggy'>{t('documentTypeLabel')}</Label>
             <Select value={doc.documentType} disabled={disabled} onValueChange={(v) => update(index, { documentType: v ?? '' })}>
               <SelectTrigger><SelectValue /></SelectTrigger>
@@ -44,7 +44,7 @@ export function DocumentsEditor({ documents, disabled, onChange }: DocumentsEdit
               </SelectContent>
             </Select>
           </div>
-          <div className='flex flex-[2] flex-col gap-1'>
+          <div className='flex flex-1 flex-col gap-1'>
             <Label className='text-xs text-foggy'>{t('documentInstructionsLabel')}</Label>
             <Input
               value={doc.instructions ?? ''}

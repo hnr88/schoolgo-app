@@ -8,16 +8,31 @@ export function useParentOffers(studentDocumentId?: string): UseParentOffersResu
   const activeChildId = useActiveChildStore((s) => s.activeChildId);
   const student = studentDocumentId ?? activeChildId ?? undefined;
 
-  const { data, isLoading, isError, refetch } = useParentOffersQuery(student);
+  const {
+    data,
+    isLoading,
+    isError,
+    hasNextPage,
+    isFetchingNextPage,
+    fetchNextPage,
+    refetch,
+  } = useParentOffersQuery(student);
 
-  const offers = data?.data ?? [];
+  const offers = data?.pages.flatMap((page) => page.data) ?? [];
+  const total = data?.pages[0]?.meta.pagination.total ?? 0;
   const isEmpty = !isLoading && !isError && offers.length === 0;
 
   return {
     offers,
+    total,
     isLoading,
     isError,
     isEmpty,
+    hasMore: hasNextPage,
+    isLoadingMore: isFetchingNextPage,
+    loadMore: () => {
+      if (hasNextPage && !isFetchingNextPage) fetchNextPage();
+    },
     refetch,
   };
 }

@@ -1,7 +1,7 @@
 'use client';
 
 import { ChevronRight } from 'lucide-react';
-import { useLocale } from 'next-intl';
+import { useFormatter } from 'next-intl';
 
 import { Link } from '@/i18n/navigation';
 import { EventTypeBadge } from '@/modules/calendar/components/EventTypeBadge';
@@ -9,17 +9,17 @@ import { formatEventDate } from '@/modules/calendar/lib/calendar-dates';
 import type { AgendaItemProps } from '@/modules/calendar/types/calendar.types';
 
 export function AgendaItem({ event }: AgendaItemProps) {
-  const locale = useLocale();
+  const format = useFormatter();
 
   return (
     <Link
       href={event.href}
-      className='flex items-center gap-4 rounded-lg border border-border bg-card p-4 shadow-1 transition-colors hover:bg-muted/50'
+      className='flex items-center gap-4 rounded-lg border border-border bg-card p-4 shadow-1 ease-out-quart transition-transform duration-200 hover:-translate-y-0.5 hover:shadow-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2'
     >
       <div className='flex min-w-0 flex-1 flex-col gap-1.5'>
         <div className='flex items-center gap-2'>
           <EventTypeBadge type={event.type} />
-          <time className='text-xs text-muted-foreground'>{formatEventDate(event.date, locale)}</time>
+          <time className='text-xs text-muted-foreground'>{formatEventDate(event.date, format.dateTime)}</time>
         </div>
         <p className='truncate text-sm font-medium text-ink-900'>{event.title}</p>
         {event.school && <p className='truncate text-xs text-foggy'>{event.school}</p>}

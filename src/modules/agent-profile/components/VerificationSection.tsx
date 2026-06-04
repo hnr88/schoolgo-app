@@ -4,6 +4,7 @@ import { useTranslations } from 'next-intl';
 import { CheckCircle2, Circle, Clock, ShieldAlert, ShieldCheck } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { cn } from '@/lib/utils';
+import { SectionHeading, SurfaceCard } from '@/modules/core';
 import { VERIFICATION_STEP_ORDER } from '@/modules/agent-profile/constants/agent-profile.constants';
 import type {
   AgentVerificationChecklistItem,
@@ -23,11 +24,8 @@ export function VerificationSection({ verification }: VerificationSectionProps) 
   );
 
   return (
-    <section className='flex flex-col gap-4 rounded-xl border border-border bg-card p-6'>
-      <div className='flex flex-col gap-1'>
-        <h2 className='font-display text-lg font-bold text-ink-900'>{t('verificationTitle')}</h2>
-        <p className='text-sm text-muted-foreground'>{t('verificationSubtitle')}</p>
-      </div>
+    <SurfaceCard padding='lg' className='flex flex-col gap-5'>
+      <SectionHeading title={t('verificationTitle')} description={t('verificationSubtitle')} level={2} />
 
       {verification.verified ? (
         <div className='flex items-start gap-3 rounded-lg border border-vivid-mint-soft bg-vivid-mint-soft p-4'>
@@ -35,7 +33,7 @@ export function VerificationSection({ verification }: VerificationSectionProps) 
           <div className='flex flex-col gap-1'>
             <div className='flex items-center gap-2'>
               <span className='text-sm font-bold text-ink-900'>{t('bannerVerifiedTitle')}</span>
-              <Badge className='bg-vivid-mint text-white'>{t('badgeVerified')}</Badge>
+              <Badge className='bg-vivid-mint-soft text-vivid-mint'>{t('badgeVerified')}</Badge>
             </div>
             <p className='text-sm text-ink-900/80'>{t('bannerVerifiedBody')}</p>
           </div>
@@ -91,13 +89,16 @@ export function VerificationSection({ verification }: VerificationSectionProps) 
                 <span className='text-sm font-medium text-ink-900'>{t(`step_${step}`)}</span>
                 <span className='text-xs text-muted-foreground'>{t(`stepHint_${step}`)}</span>
               </div>
-              <Badge variant={done ? 'default' : 'secondary'} className='shrink-0'>
+              <Badge
+                variant={done ? undefined : 'secondary'}
+                className={cn('shrink-0', done && 'bg-vivid-mint-soft text-vivid-mint')}
+              >
                 {done ? t('stepDone') : reviewPending ? t('stepInReview') : t('stepPending')}
               </Badge>
             </li>
           );
         })}
       </ul>
-    </section>
+    </SurfaceCard>
   );
 }

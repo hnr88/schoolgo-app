@@ -28,7 +28,7 @@ export function ParentSavedSearchesPage({ portal = 'parent' }: { portal?: Portal
 
   return (
     <div className='flex flex-col gap-6'>
-      <h2 className='font-display text-2xl font-bold text-ink-900'>{t('title')}</h2>
+      <h2 className='font-display text-2xl font-bold tracking-tight text-ink-900'>{t('title')}</h2>
 
       {isLoading ? (
         <ul className='flex flex-col gap-2'>
@@ -41,6 +41,7 @@ export function ParentSavedSearchesPage({ portal = 'parent' }: { portal?: Portal
         </ul>
       ) : items.length === 0 ? (
         <EmptyState
+          framed
           icon={Search}
           title={t('empty')}
           description={t('emptyDescription')}

@@ -38,3 +38,5 @@ export const TEST_RESULTS_POPULATE: Record<string, string> = {
 };
 
 export const TEST_RESULTS_DEFAULT_PAGE_SIZE = 50;
+
+export const TEST_RESULTS_VERIFYING_POLL_INTERVAL_MS = 15_000;

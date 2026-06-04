@@ -2,7 +2,8 @@
 
 import { useTranslations } from 'next-intl';
 import { toast } from 'sonner';
-import { Button } from '@/components/ui/button';
+import { cn } from '@/lib/utils';
+import { ErrorState, surfaceCardVariants } from '@/modules/core';
 import { useSchoolApplicationList } from '@/modules/school-applications/hooks/useSchoolApplicationList';
 import { useSchoolApplicationsExport } from '@/modules/school-applications/queries/use-school-applications-export.mutation';
 import { SchoolApplicationToolbar } from '@/modules/school-applications/components/SchoolApplicationToolbar';
@@ -35,17 +36,17 @@ export function SchoolApplicationListPage() {
 
   if (isError) {
     return (
-      <div className='flex flex-col items-center gap-3 rounded-lg border border-border bg-card py-12 shadow-1'>
-        <p className='text-sm text-foggy'>{t('loadError')}</p>
-        <Button variant='outline' onClick={() => refetch()}>
-          {t('retry')}
-        </Button>
-      </div>
+      <ErrorState
+        framed
+        message={t('loadError')}
+        onRetry={() => refetch()}
+        retryLabel={t('retry')}
+      />
     );
   }
 
   return (
-    <div className='overflow-hidden rounded-lg border border-border bg-card shadow-1'>
+    <div className={cn(surfaceCardVariants({ padding: 'none' }), 'overflow-hidden')}>
       <div className='border-b border-divider px-5 py-4'>
         <SchoolApplicationToolbar
           search={search}

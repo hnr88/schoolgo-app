@@ -3,6 +3,7 @@
 import { usePathname } from '@/i18n/navigation';
 import { Settings, User, LogOut, ChevronDown } from 'lucide-react';
 import { Avatar, AvatarFallback } from '@/components/ui/avatar';
+import { cn } from '@/lib/utils';
 import { useTranslations } from 'next-intl';
 import { useRouter } from '@/i18n/navigation';
 import { useAuthStore } from '@/modules/auth/stores/use-auth-store';
@@ -22,18 +23,25 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
-import { resolvePageTitle } from '../lib/resolve-page-title';
+import { resolvePageTitleEntry } from '../lib/resolve-page-title';
 import { getTimeOfDay } from '../lib/get-time-of-day';
 
 export function DashboardHeader() {
   const t = useTranslations('Dashboard');
+  const tParentNav = useTranslations('ParentNav');
   const pathname = usePathname();
   const router = useRouter();
   const { user, userType, logout } = useAuthStore();
 
   useCommandPaletteHotkey();
 
-  const titleKey = resolvePageTitle(pathname);
+  const isParent = userType === 'parent';
+  const titleEntry = resolvePageTitleEntry(pathname);
+  const pageTitle =
+    titleEntry.namespace === 'ParentNav'
+      ? tParentNav(titleEntry.key)
+      : t(`nav.${titleEntry.key}`);
+  const settingsHref = isParent ? '/parent/settings' : '/dashboard/settings';
   const isSearchPage = pathname.includes('/dashboard/search');
   const firstName = user?.displayName?.split(' ')[0] || t('greeting.fallbackName');
   const greeting = t(`greeting.${getTimeOfDay()}`);
@@ -51,12 +59,12 @@ export function DashboardHeader() {
     .toUpperCase() ?? '';
 
   return (
-    <header className='shrink-0 bg-card'>
+    <header className='shrink-0 border-b border-divider bg-card'>
       <CommandPalette />
-      <div className={`flex h-14 items-center gap-4 ${isSearchPage ? 'px-4' : 'px-6'}`}>
+      <div className={cn('flex h-14 items-center gap-4', isSearchPage ? 'px-4' : 'px-6')}>
         <DashboardMobileNav />
-        <h1 className={`shrink-0 text-lg font-bold text-ink-900 ${isSearchPage ? 'w-80' : ''}`}>
-          {t(`nav.${titleKey}`)}
+        <h1 className={cn('shrink-0 text-lg font-bold text-ink-900', isSearchPage && 'w-80')}>
+          {pageTitle}
         </h1>
 
         {isSearchPage && (
@@ -65,7 +73,7 @@ export function DashboardHeader() {
           </div>
         )}
 
-        <div className={`flex items-center gap-2 ${isSearchPage ? 'shrink-0' : 'ml-auto'}`}>
+        <div className={cn('flex items-center gap-2', isSearchPage ? 'shrink-0' : 'ml-auto')}>
           {userType === 'parent' && <ParentChildSwitcher />}
           <CommandPaletteTrigger />
           {(userType === 'parent' || userType === 'agent') && <NotificationBell />}
@@ -92,14 +100,16 @@ export function DashboardHeader() {
                 </div>
               )}
               <DropdownMenuSeparator />
-              <DropdownMenuItem onClick={() => router.push('/dashboard/settings')}>
+              <DropdownMenuItem onClick={() => router.push(settingsHref)}>
                 <Settings className='h-4 w-4' strokeWidth={1.5} />
                 {t('nav.settings')}
               </DropdownMenuItem>
-              <DropdownMenuItem onClick={() => router.push('/dashboard/profile')}>
-                <User className='h-4 w-4' strokeWidth={1.5} />
-                {t('nav.profile')}
-              </DropdownMenuItem>
+              {!isParent && (
+                <DropdownMenuItem onClick={() => router.push('/dashboard/profile')}>
+                  <User className='h-4 w-4' strokeWidth={1.5} />
+                  {t('nav.profile')}
+                </DropdownMenuItem>
+              )}
               <DropdownMenuSeparator />
               <DropdownMenuItem onClick={handleLogout}>
                 <LogOut className='h-4 w-4' strokeWidth={1.5} />

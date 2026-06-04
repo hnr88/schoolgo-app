@@ -1,7 +1,7 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { Link, useRouter } from '@/i18n/navigation';
+import { Link } from '@/i18n/navigation';
 import { Users } from 'lucide-react';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
 import { Skeleton } from '@/components/ui/skeleton';
@@ -26,11 +26,10 @@ export function ParentStudentTable({
 }: ParentStudentTableProps) {
   const t = useTranslations('ParentStudents');
   const tResults = useTranslations('ParentTestResults');
-  const router = useRouter();
   const rowCount = pageSize || 10;
 
   if (students.length === 0 && !isLoading) {
-    return <EmptyState icon={Users} title={t('noResultsTitle')} description={t('noResultsSubtitle')} />;
+    return <EmptyState icon={Users} title={t('noResultsTitle')} description={t('noResultsSubtitle')} framed />;
   }
 
   const sortFields: { field: ParentSortField; label: string; className?: string }[] = [
@@ -79,17 +78,15 @@ export function ParentStudentTable({
           : students.map((student) => (
               <TableRow
                 key={student.documentId}
-                className='group h-14 cursor-pointer border-b-border hover:bg-accent/50'
-                onClick={() => router.push(`/parent/students/${student.documentId}`)}
+                className='group h-14 border-b-border transition-colors duration-200 ease-out-quart hover:bg-accent/50'
               >
                 <TableCell className='pl-6'>
                   <Link
                     href={`/parent/students/${student.documentId}`}
-                    className='flex items-center gap-3'
-                    onClick={(event) => event.stopPropagation()}
+                    className='-mx-1 inline-flex items-center gap-3 rounded-md px-1 py-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2'
                   >
                     <ParentStudentAvatar firstName={student.firstName} lastName={student.lastName} photoUrl={student.photo?.url} />
-                    <span className='font-medium text-ink-900 group-hover:text-babu-600'>
+                    <span className='font-medium text-ink-900 transition-colors duration-200 ease-out-quart group-hover:text-babu-600'>
                       {student.firstName} {student.lastName}
                     </span>
                   </Link>

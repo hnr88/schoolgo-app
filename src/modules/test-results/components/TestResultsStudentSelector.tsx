@@ -1,7 +1,13 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { DsSelect } from '@/modules/design-system';
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/select';
 import type { StudentSelectorOption } from '@/modules/test-results/types/component.types';
 
 interface TestResultsStudentSelectorProps {
@@ -18,16 +24,27 @@ export function TestResultsStudentSelector({
   const t = useTranslations('ParentTestResults');
 
   return (
-    <label className='flex max-w-sm flex-col gap-2'>
-      <span className='text-sm font-medium text-foreground'>{t('selectStudentLabel')}</span>
-      <DsSelect value={value} onChange={(event) => onChange(event.target.value)}>
-        <option value=''>{t('selectStudentPlaceholder')}</option>
-        {students.map((student) => (
-          <option key={student.documentId} value={student.documentId}>
-            {student.firstName} {student.lastName}
-          </option>
-        ))}
-      </DsSelect>
-    </label>
+    <div className='flex max-w-sm flex-col gap-2'>
+      <span className='text-sm font-medium text-foreground' id='test-results-student-label'>
+        {t('selectStudentLabel')}
+      </span>
+      <Select
+        value={value === '' ? null : value}
+        onValueChange={(next) => {
+          if (typeof next === 'string') onChange(next);
+        }}
+      >
+        <SelectTrigger className='w-full' aria-labelledby='test-results-student-label'>
+          <SelectValue placeholder={t('selectStudentPlaceholder')} />
+        </SelectTrigger>
+        <SelectContent>
+          {students.map((student) => (
+            <SelectItem key={student.documentId} value={student.documentId}>
+              {student.firstName} {student.lastName}
+            </SelectItem>
+          ))}
+        </SelectContent>
+      </Select>
+    </div>
   );
 }

@@ -3,7 +3,8 @@
 import { useTranslations } from 'next-intl';
 import { ChevronRight, FileText, Search } from 'lucide-react';
 import { Link } from '@/i18n/navigation';
-import { Button } from '@/components/ui/button';
+import { buttonVariants } from '@/components/ui/button';
+import { cn } from '@/lib/utils';
 import {
   Table,
   TableBody,
@@ -31,7 +32,7 @@ export function ParentRecentApplicationsTable() {
   const hasRows = applications.length > 0;
 
   return (
-    <section className='flex flex-col overflow-hidden rounded-lg border border-border bg-card shadow-1'>
+    <section className='flex flex-col overflow-hidden rounded-lg border border-border bg-card shadow-2'>
       <ParentSectionHeader
         title={t('recentApplicationsTitle')}
         icon={FileText}
@@ -51,11 +52,12 @@ export function ParentRecentApplicationsTable() {
           title={t('applicationsEmptyTitle')}
           description={t('applicationsEmptySubtitle')}
           action={
-            <Link href='/parent/search'>
-              <Button variant='outline' className='gap-1.5'>
-                <Search className='h-4 w-4' aria-hidden='true' />
-                {t('searchSchools')}
-              </Button>
+            <Link
+              href='/parent/search'
+              className={cn(buttonVariants({ variant: 'outline' }), 'gap-1.5')}
+            >
+              <Search className='h-4 w-4' aria-hidden='true' />
+              {t('searchSchools')}
             </Link>
           }
         />

@@ -1,7 +1,9 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
+import { Coins } from 'lucide-react';
 import { Skeleton } from '@/components/ui/skeleton';
+import { Separator } from '@/components/ui/separator';
 import {
   Table,
   TableBody,
@@ -9,7 +11,7 @@ import {
   TableHeader,
   TableRow,
 } from '@/components/ui/table';
-import { ErrorState } from '@/modules/core';
+import { EmptyState, ErrorState } from '@/modules/core';
 import { useSchoolTuitions } from '@/modules/school-profile/queries/use-school-tuitions.query';
 import { TuitionRow } from '@/modules/school-profile/components/TuitionRow';
 import { TuitionAddForm } from '@/modules/school-profile/components/TuitionAddForm';
@@ -32,7 +34,7 @@ export function TuitionManager({ canEdit }: TuitionManagerProps) {
   return (
     <div className='flex flex-col gap-4'>
       {data.length === 0 ? (
-        <p className='text-sm text-muted-foreground'>{t('tuitionEmpty')}</p>
+        <EmptyState icon={Coins} title={t('tuitionEmpty')} framed />
       ) : (
         <Table>
           <TableHeader>
@@ -49,7 +51,12 @@ export function TuitionManager({ canEdit }: TuitionManagerProps) {
           </TableBody>
         </Table>
       )}
-      {canEdit && <TuitionAddForm usedLevels={usedLevels} />}
+      {canEdit && (
+        <>
+          {data.length > 0 && <Separator className='bg-divider' />}
+          <TuitionAddForm usedLevels={usedLevels} />
+        </>
+      )}
     </div>
   );
 }

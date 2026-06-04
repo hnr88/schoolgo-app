@@ -5,9 +5,9 @@ import type {
 
 export const PRE_ENROLMENT_STATUS_BADGE: Record<PreEnrolmentItemStatus, string> = {
   approved: 'bg-vivid-mint-soft text-vivid-mint',
-  submitted: 'bg-vivid-amber-soft text-vivid-amber',
+  submitted: 'bg-vivid-amber-soft text-arches-700',
   pending: 'bg-muted text-foggy',
-  rejected: 'bg-vivid-coral-soft text-vivid-coral',
+  rejected: 'bg-vivid-coral-soft text-vivid-coral-strong',
 };
 
 export const PRE_ENROLMENT_ITEM_LABEL_KEY: Record<PreEnrolmentItemType, string> = {

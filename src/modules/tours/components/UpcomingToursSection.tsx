@@ -3,7 +3,7 @@
 import { useTranslations } from 'next-intl';
 import { CalendarDays } from 'lucide-react';
 
-import { EmptyState } from '@/modules/core';
+import { EmptyState, SectionHeading } from '@/modules/core';
 import { TourCard } from '@/modules/tours/components/TourCard';
 import type { TourListItem } from '@/modules/tours/types/tours.types';
 
@@ -12,19 +12,21 @@ export function UpcomingToursSection({
   bookedTourIds,
   bookingTourId,
   onBook,
+  canBook,
 }: {
   tours: TourListItem[];
   bookedTourIds: Set<string>;
   bookingTourId: string | null;
   onBook: (tour: TourListItem) => void;
+  canBook: boolean;
 }) {
   const t = useTranslations('Tours');
 
   return (
     <section className='flex flex-col gap-4'>
-      <h2 className='text-lg font-semibold text-ink-900'>{t('upcomingTitle')}</h2>
+      <SectionHeading level={2} title={t('upcomingTitle')} />
       {tours.length === 0 ? (
-        <EmptyState icon={CalendarDays} title={t('emptyTitle')} description={t('emptySubtitle')} />
+        <EmptyState framed icon={CalendarDays} title={t('emptyTitle')} description={t('emptySubtitle')} />
       ) : (
         <div className='flex flex-col gap-4'>
           {tours.map((tour) => (
@@ -34,6 +36,7 @@ export function UpcomingToursSection({
               isBooked={bookedTourIds.has(tour.documentId)}
               isBooking={bookingTourId === tour.documentId}
               onBook={onBook}
+              canBook={canBook}
             />
           ))}
         </div>

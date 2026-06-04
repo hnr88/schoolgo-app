@@ -4,8 +4,8 @@ import { useTranslations } from 'next-intl';
 import { ArrowLeft } from 'lucide-react';
 import { Link } from '@/i18n/navigation';
 import { Skeleton } from '@/components/ui/skeleton';
-import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { ErrorState } from '@/modules/core';
 import { useSchoolApplication } from '@/modules/school-applications/queries/use-school-application.query';
 import { SchoolApplicationHeader } from '@/modules/school-applications/components/SchoolApplicationHeader';
 import { SchoolApplicationActions } from '@/modules/school-applications/components/SchoolApplicationActions';
@@ -36,8 +36,8 @@ export function SchoolApplicationDetailPage({ documentId }: { documentId: string
     return (
       <div className='flex flex-col gap-6'>
         <Skeleton className='h-5 w-40' />
-        <Skeleton className='h-32 w-full rounded-xl' />
-        <Skeleton className='h-64 w-full rounded-xl' />
+        <Skeleton className='h-32 w-full rounded-lg' />
+        <Skeleton className='h-64 w-full rounded-lg' />
       </div>
     );
   }
@@ -46,12 +46,12 @@ export function SchoolApplicationDetailPage({ documentId }: { documentId: string
     return (
       <div className='flex flex-col gap-6'>
         <BackLink label={t('detailBack')} />
-        <div className='flex flex-col items-center gap-3 rounded-xl border border-border bg-card py-12'>
-          <p className='text-sm text-foggy'>{t('loadError')}</p>
-          <Button variant='outline' onClick={() => refetch()}>
-            {t('retry')}
-          </Button>
-        </div>
+        <ErrorState
+          framed
+          message={t('loadError')}
+          onRetry={() => refetch()}
+          retryLabel={t('retry')}
+        />
       </div>
     );
   }

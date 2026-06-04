@@ -1,9 +1,49 @@
-import { isSameDay } from 'date-fns';
+import { format as formatDate, isSameDay } from 'date-fns';
+import type { useFormatter } from 'next-intl';
 
-import type { CalendarEvent } from '@/modules/calendar/types/calendar.types';
+import type { CalendarEvent, CalendarEventType } from '@/modules/calendar/types/calendar.types';
+
+type DateTimeFormatter = ReturnType<typeof useFormatter>['dateTime'];
+
+export const EVENT_DATE_TIME_OPTIONS = {
+  weekday: 'short',
+  day: 'numeric',
+  month: 'short',
+  year: 'numeric',
+  hour: 'numeric',
+  minute: '2-digit',
+} as const;
+
+const DAY_KEY_FORMAT = 'yyyy-MM-dd';
+
+export function toDayKey(date: Date): string {
+  return formatDate(date, DAY_KEY_FORMAT);
+}
 
 export function getEventDates(events: CalendarEvent[]): Date[] {
   return events.map((event) => new Date(event.date));
+}
+
+/**
+ * Maps each day (yyyy-MM-dd) to the ordered, de-duplicated event types that
+ * occur on it, so the calendar can render a coloured dot per event type.
+ */
+export function groupEventTypesByDay(events: CalendarEvent[]): Map<string, CalendarEventType[]> {
+  const byDay = new Map<string, CalendarEventType[]>();
+
+  for (const event of events) {
+    const parsed = new Date(event.date);
+    if (Number.isNaN(parsed.getTime())) continue;
+
+    const key = toDayKey(parsed);
+    const types = byDay.get(key) ?? [];
+    if (!types.includes(event.type)) {
+      types.push(event.type);
+    }
+    byDay.set(key, types);
+  }
+
+  return byDay;
 }
 
 export function filterEventsByDay(events: CalendarEvent[], day: Date | undefined): CalendarEvent[] {
@@ -11,15 +51,8 @@ export function filterEventsByDay(events: CalendarEvent[], day: Date | undefined
   return events.filter((event) => isSameDay(new Date(event.date), day));
 }
 
-export function formatEventDate(date: string, locale = 'en'): string {
+export function formatEventDate(date: string, formatDateTime: DateTimeFormatter): string {
   const parsed = new Date(date);
   if (Number.isNaN(parsed.getTime())) return '';
-  return parsed.toLocaleString(locale, {
-    weekday: 'short',
-    day: 'numeric',
-    month: 'short',
-    year: 'numeric',
-    hour: 'numeric',
-    minute: '2-digit',
-  });
+  return formatDateTime(parsed, EVENT_DATE_TIME_OPTIONS);
 }

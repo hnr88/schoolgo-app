@@ -1,9 +1,9 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { AlertCircle, ClipboardCheck, Gift } from 'lucide-react';
+import { ClipboardCheck, Gift } from 'lucide-react';
 import { Skeleton } from '@/components/ui/skeleton';
-import { EmptyState } from '@/modules/core/components/EmptyState';
+import { EmptyState, ErrorState, SectionHeading } from '@/modules/core';
 import { PageHeader } from '@/modules/dashboard';
 import { useAgentOffers } from '@/modules/applications/queries/use-agent-offers.query';
 import { usePostOfferApplications } from '@/modules/applications/queries/use-post-offer-applications.query';
@@ -14,17 +14,8 @@ function CardSkeletonGrid() {
   return (
     <div className='grid grid-cols-1 gap-4 lg:grid-cols-2'>
       {[0, 1].map((i) => (
-        <Skeleton key={i} className='h-48 w-full rounded-xl' />
+        <Skeleton key={i} className='h-48 w-full rounded-lg' />
       ))}
-    </div>
-  );
-}
-
-function SectionError({ message }: { message: string }) {
-  return (
-    <div className='flex flex-col items-center justify-center rounded-xl border border-dashed border-border py-12 text-center'>
-      <AlertCircle className='mb-3 h-8 w-8 text-destructive' />
-      <p className='text-sm font-medium text-ink-900'>{message}</p>
     </div>
   );
 }
@@ -42,13 +33,13 @@ export function AgentOffersPage() {
       <PageHeader title={t('title')} description={t('subtitle')} />
 
       <section className='flex flex-col gap-4'>
-        <h2 className='text-base font-semibold text-ink-900'>{t('offersToReview')}</h2>
+        <SectionHeading title={t('offersToReview')} level={2} />
         {offers.isLoading ? (
           <CardSkeletonGrid />
         ) : offers.isError ? (
-          <SectionError message={t('offersError')} />
+          <ErrorState message={t('offersError')} framed />
         ) : offerList.length === 0 ? (
-          <EmptyState icon={Gift} title={t('offersEmptyTitle')} description={t('offersEmptySubtitle')} />
+          <EmptyState icon={Gift} title={t('offersEmptyTitle')} description={t('offersEmptySubtitle')} framed />
         ) : (
           <div className='grid grid-cols-1 gap-4 lg:grid-cols-2'>
             {offerList.map((application) => (
@@ -59,16 +50,17 @@ export function AgentOffersPage() {
       </section>
 
       <section className='flex flex-col gap-4'>
-        <h2 className='text-base font-semibold text-ink-900'>{t('preEnrolmentTitle')}</h2>
+        <SectionHeading title={t('preEnrolmentTitle')} level={2} />
         {postOffer.isLoading ? (
           <CardSkeletonGrid />
         ) : postOffer.isError ? (
-          <SectionError message={t('preEnrolmentError')} />
+          <ErrorState message={t('preEnrolmentError')} framed />
         ) : postOfferList.length === 0 ? (
           <EmptyState
             icon={ClipboardCheck}
             title={t('preEnrolmentEmptyTitle')}
             description={t('preEnrolmentEmptySubtitle')}
+            framed
           />
         ) : (
           <div className='grid grid-cols-1 gap-4 lg:grid-cols-2'>

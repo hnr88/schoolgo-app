@@ -8,7 +8,7 @@ export function ValidationPanel({ result }: { result: TemplateValidationResult }
   const t = useTranslations('SchoolTemplates');
 
   return (
-    <div data-testid='validation-panel' className='flex flex-col gap-3 rounded-xl border border-border p-4'>
+    <div data-testid='validation-panel' className='flex flex-col gap-3 rounded-lg border border-border bg-muted/40 p-4 shadow-1'>
       <div className='flex items-center gap-2 text-sm font-semibold'>
         {result.valid ? (
           <>

@@ -41,7 +41,10 @@ export function buildParentStudentPayload(
   if (parentGuardianWechat) payload.parentGuardianWechat = parentGuardianWechat;
 
   if (typeof values.photo === 'number') payload.photo = values.photo;
+  else if (values.photo === null) payload.photo = null;
+
   if (typeof values.voiceIntro === 'number') payload.voiceIntro = values.voiceIntro;
+  else if (values.voiceIntro === null) payload.voiceIntro = null;
 
   return payload;
 }

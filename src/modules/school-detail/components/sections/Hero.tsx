@@ -42,7 +42,7 @@ export async function Hero({ school, activePortal }: HeroProps) {
       <SectionContainer size="wide" className="relative py-8 md:py-12 lg:py-16">
         <Link
           href={searchHref}
-          className="mb-8 inline-flex items-center gap-2 rounded-pill bg-background/10 px-4 py-2 text-body-sm font-medium text-background/80 transition-colors hover:bg-background/18 hover:text-background"
+          className="mb-8 inline-flex items-center gap-2 rounded-pill bg-background/10 px-4 py-2 text-body-sm font-medium text-background/80 transition-colors hover:bg-background/18 hover:text-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-background/60 focus-visible:ring-offset-2 focus-visible:ring-offset-ink-900"
         >
           <ArrowLeft className="h-3.5 w-3.5" aria-hidden="true" />
           {t('backToSearch')}
@@ -58,7 +58,7 @@ export async function Hero({ school, activePortal }: HeroProps) {
               )}
             </div>
 
-            <h1 className="font-display text-4xl font-bold leading-tight text-white md:text-6xl">
+            <h1 className="font-display text-4xl font-bold leading-tight tracking-tight text-background md:text-6xl">
               {school.name}
             </h1>
 
@@ -71,7 +71,7 @@ export async function Hero({ school, activePortal }: HeroProps) {
 
           </div>
 
-          <div className="rounded-xl border border-background/15 bg-background/10 p-5 backdrop-blur-md">
+          <div className="rounded-lg border border-border bg-card p-5 shadow-2">
             <div className="flex items-center gap-4">
               <div className="relative flex h-16 w-16 shrink-0 items-center justify-center overflow-hidden rounded-lg bg-muted text-primary">
                 {logo ? (
@@ -81,10 +81,10 @@ export async function Hero({ school, activePortal }: HeroProps) {
                 )}
               </div>
               <div>
-                <p className="text-caption font-semibold uppercase text-background/60">
+                <p className="text-caption font-semibold uppercase text-foggy">
                   {t('admissionsProfileLabel')}
                 </p>
-                <p className="mt-1 text-body-sm text-background/80">
+                <p className="mt-1 text-body-sm text-muted-foreground">
                   {t('admissionsProfileDescription')}
                 </p>
               </div>

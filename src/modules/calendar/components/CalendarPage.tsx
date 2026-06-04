@@ -12,7 +12,7 @@ import { ErrorState } from '@/modules/core';
 
 export function CalendarPage() {
   const t = useTranslations('Calendar');
-  const { events, isLoading, isError } = useCalendarEvents();
+  const { events, isLoading, isError, refetchAll } = useCalendarEvents();
   const [selectedDate, setSelectedDate] = useState<Date | undefined>(undefined);
 
   if (isLoading) {
@@ -20,7 +20,14 @@ export function CalendarPage() {
   }
 
   if (isError) {
-    return <ErrorState message={t('errorMessage')} />;
+    return (
+      <ErrorState
+        framed
+        message={t('errorMessage')}
+        onRetry={() => refetchAll()}
+        retryLabel={t('retry')}
+      />
+    );
   }
 
   return (

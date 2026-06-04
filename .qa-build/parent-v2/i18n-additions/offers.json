@@ -1,0 +1,11 @@
+{
+  "ParentOffers": {
+    "annualFee": "Annual fee",
+    "feePerYear": "{fee} / year",
+    "respondBy": "Respond by",
+    "ctaReviewOffer": "Review offer",
+    "ctaContinuePreEnrolment": "Continue pre-enrolment",
+    "loadMore": "Load more offers",
+    "shownCount": "Showing {shown} of {total} offers"
+  }
+}

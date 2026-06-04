@@ -1,6 +1,6 @@
 'use client';
 
-import { useQuery } from '@tanstack/react-query';
+import { useInfiniteQuery } from '@tanstack/react-query';
 import { privateApi } from '@/lib/axios';
 import { useAuthStore } from '@/modules/auth/stores/use-auth-store';
 import {
@@ -14,13 +14,14 @@ import type { ParentApplicationsResponse } from '@/modules/applications/types/pa
 export function useParentOffers(student?: string) {
   const isAuthenticated = useAuthStore((s) => s.isAuthenticated);
 
-  return useQuery({
+  return useInfiniteQuery({
     queryKey: [...PARENT_OFFERS_QUERY_KEY, student],
     enabled: isAuthenticated,
-    queryFn: async () => {
+    initialPageParam: 1,
+    queryFn: async ({ pageParam }) => {
       const params: Record<string, unknown> = {
         ...PARENT_OFFERS_POPULATE,
-        'pagination[page]': 1,
+        'pagination[page]': pageParam,
         'pagination[pageSize]': PARENT_OFFERS_PAGE_SIZE,
         'pagination[withCount]': true,
         'sort[0]': 'statusChangedAt:desc',
@@ -38,6 +39,10 @@ export function useParentOffers(student?: string) {
         params,
       });
       return data;
+    },
+    getNextPageParam: (lastPage) => {
+      const { page, pageCount } = lastPage.meta.pagination;
+      return page < pageCount ? page + 1 : undefined;
     },
   });
 }

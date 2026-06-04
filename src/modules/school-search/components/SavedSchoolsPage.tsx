@@ -52,16 +52,17 @@ export function SavedSchoolsPage({ portal = 'parent' }: { portal?: Portal }) {
 
   return (
     <div className='flex flex-col gap-6'>
-      <h2 className='font-display text-2xl font-bold text-ink-900'>{t('title')}</h2>
+      <h2 className='font-display text-2xl font-bold tracking-tight text-ink-900'>{t('title')}</h2>
 
       {isLoading ? (
         <div className={GRID_CLASS}>
           {Array.from({ length: 6 }).map((_, index) => (
-            <Skeleton key={index} className='h-72 w-full rounded-xl' />
+            <Skeleton key={index} className='h-72 w-full rounded-lg' />
           ))}
         </div>
       ) : schools.length === 0 ? (
         <EmptyState
+          framed
           icon={Heart}
           title={t('empty')}
           description={t('emptyDescription')}

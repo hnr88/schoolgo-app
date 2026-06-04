@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { LayoutGrid, List, Kanban } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import { EmptyState } from '@/modules/core/components/EmptyState';
+import { EmptyState, SurfaceCard } from '@/modules/core';
 import { ApplicationTable } from '@/modules/applications/components/ApplicationTable';
 import { KanbanBoard } from '@/modules/pipeline/components/KanbanBoard';
 import { PIPELINE_COLUMNS } from '@/modules/pipeline/constants/pipeline.constants';
@@ -74,6 +74,7 @@ export function PipelineKanbanPage() {
           icon={Kanban}
           title={t('emptyTitle')}
           description={t('emptySubtitle')}
+          framed
         />
       ) : view === 'kanban' ? (
         <KanbanBoard
@@ -82,7 +83,7 @@ export function PipelineKanbanPage() {
           isLoading={isLoading}
         />
       ) : (
-        <div className='overflow-hidden rounded-lg border border-border bg-card shadow-1'>
+        <SurfaceCard padding='none' className='overflow-hidden'>
           <ApplicationTable
             applications={data?.applications ?? []}
             isLoading={isLoading}
@@ -91,7 +92,7 @@ export function PipelineKanbanPage() {
             onSort={handleSort}
             pageSize={data?.applications?.length ?? 20}
           />
-        </div>
+        </SurfaceCard>
       )}
     </div>
   );

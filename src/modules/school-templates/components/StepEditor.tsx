@@ -25,11 +25,16 @@ export function StepEditor({ step, index, disabled, error, onChange, onRemove }:
   const t = useTranslations('SchoolTemplates');
 
   return (
-    <Card data-testid={`step-${index}`} className='border-border'>
+    <Card data-testid={`step-${index}`} className='border-border shadow-1'>
       <CardHeader className='flex flex-row items-center justify-between gap-2 pb-2'>
-        <div className='flex flex-col gap-0.5'>
-          <span className='text-xs font-medium text-foggy'>{t('stepBadge', { number: index + 1 })}</span>
-          <span className='text-base font-semibold text-ink-900'>{t(`stepType_${step.stepType}`)}</span>
+        <div className='flex items-center gap-3'>
+          <span className='flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-arches-50 text-sm font-bold tabular-nums text-arches-700'>
+            {index + 1}
+          </span>
+          <div className='flex flex-col gap-0.5'>
+            <span className='text-xs font-medium text-foggy'>{t('stepBadge', { number: index + 1 })}</span>
+            <span className='text-base font-semibold text-ink-900'>{t(`stepType_${step.stepType}`)}</span>
+          </div>
         </div>
         <div className='flex items-center gap-3'>
           <div className='flex items-center gap-2'>

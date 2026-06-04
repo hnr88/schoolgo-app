@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { Search, Plus, X } from 'lucide-react';
 import { Input } from '@/components/ui/input';
-import { Button } from '@/components/ui/button';
+import { buttonVariants } from '@/components/ui/button';
 import { Switch } from '@/components/ui/switch';
 import { Label } from '@/components/ui/label';
 import { cn } from '@/lib/utils';
@@ -57,11 +57,9 @@ export function ParentStudentListToolbar({
           {t('showArchived')}
         </Label>
       </div>
-      <Link href='/parent/students/new'>
-        <Button className='gap-1.5'>
-          <Plus className='h-4 w-4' />
-          {t('addStudent')}
-        </Button>
+      <Link href='/parent/students/new' className={cn(buttonVariants(), 'gap-1.5')}>
+        <Plus className='h-4 w-4' />
+        {t('addStudent')}
       </Link>
     </div>
   );

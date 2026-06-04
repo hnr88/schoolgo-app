@@ -81,6 +81,7 @@ export interface TourCardProps {
   isBooked: boolean;
   onBook: (tour: TourListItem) => void;
   isBooking: boolean;
+  canBook: boolean;
 }
 
 export interface MyBookingCardProps {

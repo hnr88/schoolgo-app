@@ -15,15 +15,20 @@ export function TestResultsList({ studentDocumentId }: TestResultsListProps) {
   if (isLoading) {
     return (
       <div className='flex flex-col gap-4'>
-        <Skeleton className='h-40 w-full rounded-xl' />
-        <Skeleton className='h-40 w-full rounded-xl' />
+        <Skeleton className='h-40 w-full rounded-lg' />
+        <Skeleton className='h-40 w-full rounded-lg' />
       </div>
     );
   }
 
   if (isError) {
     return (
-      <ErrorState message={t('errorMessage')} onRetry={() => refetch()} retryLabel={t('retry')} />
+      <ErrorState
+        message={t('errorMessage')}
+        onRetry={() => refetch()}
+        retryLabel={t('retry')}
+        framed
+      />
     );
   }
 
@@ -35,6 +40,7 @@ export function TestResultsList({ studentDocumentId }: TestResultsListProps) {
         icon={ClipboardList}
         title={t('emptyTitle')}
         description={t('emptySubtitle')}
+        framed
       />
     );
   }

@@ -11,6 +11,7 @@ import {
   TableHeader,
   TableRow,
 } from '@/components/ui/table';
+import { SurfaceCard } from '@/modules/core';
 import { DOCUMENT_STATUS_VARIANT } from '@/modules/students/constants/document.constants';
 import { toAbsoluteFileUrl } from '@/modules/agent-documents/lib/format-file-size';
 import type { AgentDocumentsTableProps } from '@/modules/agent-documents/types/component.types';
@@ -24,7 +25,7 @@ export function AgentDocumentsTable({ documents, onDelete }: AgentDocumentsTable
   const t = useTranslations('AgentDocuments');
 
   return (
-    <div className='rounded-lg border border-border'>
+    <SurfaceCard padding='none' className='overflow-hidden'>
       <Table>
         <TableHeader>
           <TableRow>
@@ -40,9 +41,11 @@ export function AgentDocumentsTable({ documents, onDelete }: AgentDocumentsTable
           {documents.map((doc) => (
             <TableRow key={doc.documentId}>
               <TableCell>
-                <div className='flex items-center gap-2'>
-                  <FileText className='h-4 w-4 shrink-0 text-foggy' />
-                  <span className='truncate text-sm font-medium'>
+                <div className='flex items-center gap-2.5'>
+                  <span className='flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-babu-50 text-babu-700'>
+                    <FileText className='h-4 w-4' strokeWidth={1.75} aria-hidden='true' />
+                  </span>
+                  <span className='truncate text-sm font-medium text-ink-900'>
                     {doc.fileName || doc.file?.name || '—'}
                   </span>
                 </div>
@@ -73,7 +76,7 @@ export function AgentDocumentsTable({ documents, onDelete }: AgentDocumentsTable
                       target='_blank'
                       rel='noopener noreferrer'
                       aria-label={t('viewFile')}
-                      className='inline-flex h-8 w-8 items-center justify-center rounded-md text-foggy hover:bg-muted hover:text-ink-900'
+                      className='inline-flex h-8 w-8 items-center justify-center rounded-md text-foggy transition-colors hover:bg-babu-50 hover:text-babu-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2'
                     >
                       <ExternalLink className='h-4 w-4' />
                     </a>
@@ -82,7 +85,7 @@ export function AgentDocumentsTable({ documents, onDelete }: AgentDocumentsTable
                     type='button'
                     onClick={() => onDelete(doc)}
                     aria-label={t('deleteButton')}
-                    className='inline-flex h-8 w-8 items-center justify-center rounded-md text-foggy hover:bg-muted hover:text-destructive'
+                    className='inline-flex h-8 w-8 items-center justify-center rounded-md text-foggy transition-colors hover:bg-muted hover:text-destructive focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2'
                   >
                     <Trash2 className='h-4 w-4' />
                   </button>
@@ -92,6 +95,6 @@ export function AgentDocumentsTable({ documents, onDelete }: AgentDocumentsTable
           ))}
         </TableBody>
       </Table>
-    </div>
+    </SurfaceCard>
   );
 }

@@ -5,7 +5,7 @@ import { ListChecks } from 'lucide-react';
 import { Progress } from '@/components/ui/progress';
 import { Skeleton } from '@/components/ui/skeleton';
 import { Link } from '@/i18n/navigation';
-import { EmptyState } from '@/modules/core/components/EmptyState';
+import { EmptyState, SurfaceCard } from '@/modules/core';
 import { ApplicationStatusBadge } from '@/modules/applications/components/ApplicationStatusBadge';
 import { usePreEnrolmentItems } from '@/modules/applications/queries/use-pre-enrolment-items.query';
 import { usePreEnrolmentSummary } from '@/modules/applications/queries/use-pre-enrolment-summary.query';
@@ -22,10 +22,10 @@ export function PreEnrolmentCard({ application }: { application: Application }) 
   const studentName = `${application.student.firstName} ${application.student.lastName}`;
 
   return (
-    <div className='flex flex-col gap-4 rounded-xl border border-border bg-card p-6'>
+    <SurfaceCard elevation='interactive' padding='lg' className='flex flex-col gap-4'>
       <div className='flex items-start justify-between gap-3'>
         <div className='flex flex-col gap-1'>
-          <h3 className='text-base font-semibold text-ink-900'>{application.school.name}</h3>
+          <h3 className='font-display text-base font-semibold tracking-tight text-ink-900'>{application.school.name}</h3>
           <span className='text-sm text-foggy'>{studentName}</span>
         </div>
         <ApplicationStatusBadge status={application.status} />
@@ -42,7 +42,7 @@ export function PreEnrolmentCard({ application }: { application: Application }) 
           ))}
         </div>
       ) : items.length === 0 ? (
-        <EmptyState icon={ListChecks} title={t('checklistEmpty')} />
+        <EmptyState icon={ListChecks} title={t('checklistEmpty')} framed />
       ) : (
         <div className='flex flex-col gap-3'>
           {summary && (
@@ -68,11 +68,11 @@ export function PreEnrolmentCard({ application }: { application: Application }) 
       <div className='border-t border-border/60 pt-4'>
         <Link
           href={`/dashboard/applications/${application.documentId}`}
-          className='text-sm font-medium text-vivid-iris hover:underline'
+          className='rounded-md text-sm font-semibold text-babu-700 underline-offset-2 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2'
         >
           {t('viewApplication')}
         </Link>
       </div>
-    </div>
+    </SurfaceCard>
   );
 }

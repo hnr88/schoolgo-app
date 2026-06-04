@@ -3,7 +3,7 @@
 import { useTranslations } from 'next-intl';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Skeleton } from '@/components/ui/skeleton';
-import { ErrorState } from '@/modules/core';
+import { ErrorState, SurfaceCard } from '@/modules/core';
 import { useMe } from '@/modules/parent-settings/queries/use-me.query';
 import { ProfileForm } from '@/modules/parent-settings/components/ProfileForm';
 import { PasswordForm } from '@/modules/parent-settings/components/PasswordForm';
@@ -13,17 +13,20 @@ import { NotificationPreferencesPanel } from '@/modules/parent-settings/componen
 function SettingsSkeleton() {
   return (
     <div className='flex flex-col gap-6'>
-      <Skeleton className='h-10 w-72' />
-      <div className='rounded-xl border border-border bg-card p-6'>
+      <Skeleton className='h-11 w-72 rounded-lg' />
+      <SurfaceCard elevation='flat' padding='lg'>
         <div className='flex flex-col gap-4'>
           <Skeleton className='h-10 w-full' />
           <Skeleton className='h-10 w-full' />
           <Skeleton className='h-10 w-40' />
         </div>
-      </div>
+      </SurfaceCard>
     </div>
   );
 }
+
+const TAB_TRIGGER_CLASS =
+  'text-foreground/70 data-active:bg-rausch-50 data-active:text-rausch-700';
 
 export function ParentSettingsPage() {
   const t = useTranslations('ParentSettings');
@@ -40,34 +43,34 @@ export function ParentSettingsPage() {
   return (
     <Tabs defaultValue='profile' className='gap-6'>
       <TabsList>
-        <TabsTrigger value='profile' className='text-foreground/80'>{t('tabProfile')}</TabsTrigger>
-        <TabsTrigger value='password' className='text-foreground/80'>{t('tabPassword')}</TabsTrigger>
-        <TabsTrigger value='preferences' className='text-foreground/80'>{t('tabPreferences')}</TabsTrigger>
-        <TabsTrigger value='notifications' className='text-foreground/80'>{t('tabNotifications')}</TabsTrigger>
+        <TabsTrigger value='profile' className={TAB_TRIGGER_CLASS}>{t('tabProfile')}</TabsTrigger>
+        <TabsTrigger value='password' className={TAB_TRIGGER_CLASS}>{t('tabPassword')}</TabsTrigger>
+        <TabsTrigger value='preferences' className={TAB_TRIGGER_CLASS}>{t('tabPreferences')}</TabsTrigger>
+        <TabsTrigger value='notifications' className={TAB_TRIGGER_CLASS}>{t('tabNotifications')}</TabsTrigger>
       </TabsList>
 
       <TabsContent value='profile'>
-        <section className='rounded-xl border border-border bg-card p-6'>
+        <SurfaceCard elevation='flat' padding='lg'>
           <ProfileForm me={me} />
-        </section>
+        </SurfaceCard>
       </TabsContent>
 
       <TabsContent value='password'>
-        <section className='rounded-xl border border-border bg-card p-6'>
+        <SurfaceCard elevation='flat' padding='lg'>
           <PasswordForm />
-        </section>
+        </SurfaceCard>
       </TabsContent>
 
       <TabsContent value='preferences'>
-        <section className='rounded-xl border border-border bg-card p-6'>
+        <SurfaceCard elevation='flat' padding='lg'>
           <PreferencesForm me={me} />
-        </section>
+        </SurfaceCard>
       </TabsContent>
 
       <TabsContent value='notifications'>
-        <section className='rounded-xl border border-border bg-card p-6'>
+        <SurfaceCard elevation='flat' padding='lg'>
           <NotificationPreferencesPanel />
-        </section>
+        </SurfaceCard>
       </TabsContent>
     </Tabs>
   );

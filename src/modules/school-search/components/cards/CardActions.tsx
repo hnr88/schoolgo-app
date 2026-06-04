@@ -86,9 +86,9 @@ export function CardActions({
         aria-label={bookmarkLabel}
         aria-pressed={isBookmarked}
         className={cn(
-          'flex size-9 items-center justify-center rounded-full border bg-background/90 backdrop-blur transition-colors disabled:cursor-not-allowed disabled:opacity-60',
+          'flex size-9 items-center justify-center rounded-full border bg-card shadow-1 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-60',
           isBookmarked
-            ? 'border-rose-300 bg-rose-50 text-rose-500'
+            ? 'border-rausch-200 bg-rausch-50 text-primary'
             : 'border-border text-muted-foreground hover:bg-muted',
         )}
       >
@@ -102,7 +102,7 @@ export function CardActions({
           aria-checked={isInCompare}
           aria-label={tActions('compare', { name: schoolName })}
           className={cn(
-            'flex size-9 items-center justify-center rounded-md border bg-background/90 backdrop-blur transition-colors',
+            'flex size-9 items-center justify-center rounded-md border bg-card shadow-1 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2',
             isInCompare
               ? 'border-primary bg-primary text-primary-foreground'
               : 'border-border text-muted-foreground hover:bg-muted',

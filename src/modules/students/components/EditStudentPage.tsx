@@ -3,7 +3,8 @@
 import { useTranslations } from 'next-intl';
 import { ArrowLeft } from 'lucide-react';
 import { Link } from '@/i18n/navigation';
-import { Button } from '@/components/ui/button';
+import { buttonVariants } from '@/components/ui/button';
+import { cn } from '@/lib/utils';
 import { Skeleton } from '@/components/ui/skeleton';
 import { ParentStudentAvatar } from '@/modules/students/components/ParentStudentAvatar';
 import { ParentStudentWizard } from '@/modules/students/components/parent-wizard/ParentStudentWizard';
@@ -51,13 +52,14 @@ export function EditStudentPage({ documentId }: { documentId: string }) {
   return (
     <div className='flex flex-col gap-6'>
       <header className='flex items-center gap-4'>
-        <Link href={`/parent/students/${documentId}`}>
-          <Button variant='ghost' size='sm'>
-            <ArrowLeft className='mr-1 h-4 w-4' />
-            {t('back')}
-          </Button>
+        <Link
+          href={`/parent/students/${documentId}`}
+          className={cn(buttonVariants({ variant: 'ghost', size: 'sm' }))}
+        >
+          <ArrowLeft className='mr-1 h-4 w-4' />
+          {t('back')}
         </Link>
-        <h1 className='font-display text-2xl font-bold text-ink-900'>{t('editTitle')}</h1>
+        <h1 className='font-display text-2xl font-bold tracking-tight text-ink-900'>{t('editTitle')}</h1>
       </header>
 
       {isLoading ? (

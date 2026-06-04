@@ -6,6 +6,8 @@ import { Progress } from '@/components/ui/progress';
 import { Skeleton } from '@/components/ui/skeleton';
 import { cn } from '@/lib/utils';
 import { EmptyState } from '@/modules/core/components/EmptyState';
+import { SectionHeading } from '@/modules/core/components/SectionHeading';
+import { SurfaceCard } from '@/modules/core/components/SurfaceCard';
 import { useParentPreEnrolment } from '@/modules/applications/queries/use-parent-pre-enrolment.query';
 import { computePreEnrolmentSummary } from '@/modules/applications/lib/pre-enrolment-summary';
 import {
@@ -41,7 +43,7 @@ function ParentPreEnrolmentRow({ item }: { item: ParentPreEnrolmentItem }) {
         <span className='text-sm text-ink-900'>{label}</span>
         <span
           className={cn(
-            'shrink-0 rounded-full px-2 py-0.5 text-xs font-medium',
+            'shrink-0 rounded-full px-2 py-0.5 text-xs font-semibold',
             PRE_ENROLMENT_STATUS_BADGE[item.status],
           )}
         >
@@ -66,13 +68,13 @@ export function ParentPreEnrolmentSection({
   const percent = summary.total > 0 ? (summary.approved / summary.total) * 100 : 0;
 
   return (
-    <div className='rounded-xl border border-border bg-card p-6'>
-      <h2 className='mb-4 text-base font-semibold text-ink-900'>{t('preEnrolmentTitle')}</h2>
+    <SurfaceCard padding='lg'>
+      <SectionHeading title={t('preEnrolmentTitle')} level={2} icon={ListChecks} className='mb-4' />
 
       {isLoading ? (
         <ParentPreEnrolmentSkeleton />
       ) : items.length === 0 ? (
-        <EmptyState icon={ListChecks} title={t('preEnrolmentEmpty')} />
+        <EmptyState icon={ListChecks} title={t('preEnrolmentEmpty')} framed />
       ) : (
         <div className='flex flex-col'>
           <div className='mb-4 flex flex-col gap-2'>
@@ -91,6 +93,6 @@ export function ParentPreEnrolmentSection({
           </div>
         </div>
       )}
-    </div>
+    </SurfaceCard>
   );
 }

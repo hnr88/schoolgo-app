@@ -45,7 +45,7 @@ export async function KeyFactsCard({ school, activePortal }: { school: SchoolDet
   const base = searchHref(activePortal);
 
   return (
-    <section aria-labelledby="key-facts-heading" className="bg-ink-900 text-background border border-ink-900 rounded-xl p-5 shadow-2">
+    <section aria-labelledby="key-facts-heading" className="bg-ink-900 text-background border border-ink-900 rounded-lg p-5 shadow-2">
       <h2 id="key-facts-heading" className="text-xl font-semibold text-background mb-5">{t('heading')}</h2>
       <dl>
         {formatLabel(school.schoolType) && (
@@ -64,7 +64,7 @@ export async function KeyFactsCard({ school, activePortal }: { school: SchoolDet
         )}
         {school.curriculumOffered && (
           <FactRow label={t('curriculum')}>
-            <Link href={`${base}?curriculum=${encodeURIComponent(school.curriculumOffered)}`} className="underline underline-offset-2">
+            <Link href={`${base}?curriculum=${encodeURIComponent(school.curriculumOffered)}`} className="rounded-sm underline underline-offset-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-background/60 focus-visible:ring-offset-2 focus-visible:ring-offset-ink-900">
               {school.curriculumOffered}
             </Link>
           </FactRow>

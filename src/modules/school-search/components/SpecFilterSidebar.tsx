@@ -63,8 +63,8 @@ export function SpecFilterSidebar({ className, alwaysOn = false }: SpecFilterSid
       )}
       data-testid="spec-filter-sidebar"
     >
-      <div className="flex h-full min-h-0 flex-col overflow-hidden rounded-xl border border-primary/40 bg-card shadow-2">
-        <div className="flex shrink-0 items-center justify-between gap-2 border-b border-divider bg-primary/5 px-4 py-2.5">
+      <div className="flex h-full min-h-0 flex-col overflow-hidden rounded-lg border border-border bg-card shadow-2">
+        <div className="flex shrink-0 items-center justify-between gap-2 border-b border-divider bg-rausch-50 px-4 py-2.5">
           <div className="flex items-center gap-2">
             <span className="text-caption font-semibold uppercase text-rausch-700">
               {t(isAdvanced ? 'modeBadge.advanced' : 'modeBadge.basic')}

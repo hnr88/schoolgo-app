@@ -35,7 +35,11 @@ export function SchoolApplicationTable({ applications, isLoading }: Props) {
   const t = useTranslations('SchoolApplications');
 
   if (!isLoading && applications.length === 0) {
-    return <EmptyState icon={FileText} title={t('empty')} description={t('emptyHint')} />;
+    return (
+      <div className='p-4'>
+        <EmptyState framed icon={FileText} title={t('empty')} description={t('emptyHint')} />
+      </div>
+    );
   }
 
   return (

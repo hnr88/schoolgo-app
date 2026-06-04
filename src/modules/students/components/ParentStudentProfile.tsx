@@ -24,10 +24,10 @@ export function ParentStudentProfile({ documentId }: ParentStudentProfileProps) 
     return (
       <div className='flex flex-col gap-6'>
         <Skeleton className='h-6 w-32' />
-        <Skeleton className='h-40 w-full rounded-xl' />
+        <Skeleton className='h-40 w-full rounded-lg' />
         <div className='grid gap-6 lg:grid-cols-2'>
-          <Skeleton className='h-64 w-full rounded-xl' />
-          <Skeleton className='h-64 w-full rounded-xl' />
+          <Skeleton className='h-64 w-full rounded-lg' />
+          <Skeleton className='h-64 w-full rounded-lg' />
         </div>
       </div>
     );

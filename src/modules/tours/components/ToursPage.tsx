@@ -21,6 +21,9 @@ export function ToursPage() {
     handleBook,
     handleCancelConfirm,
     isCancelling,
+    canBook,
+    isBookingsError,
+    refetchBookings,
   } = useToursPage();
 
   if (toursQuery.isLoading) {
@@ -30,6 +33,7 @@ export function ToursPage() {
   if (toursQuery.isError) {
     return (
       <ErrorState
+        framed
         message={t('errorMessage')}
         onRetry={() => toursQuery.refetch()}
         retryLabel={t('retry')}
@@ -41,12 +45,22 @@ export function ToursPage() {
 
   return (
     <div className='flex flex-col gap-8'>
-      <MyBookingsSection bookings={bookings} onCancel={setCancelTarget} />
+      {isBookingsError ? (
+        <ErrorState
+          framed
+          message={t('bookingsErrorMessage')}
+          onRetry={() => refetchBookings()}
+          retryLabel={t('retry')}
+        />
+      ) : (
+        <MyBookingsSection bookings={bookings} onCancel={setCancelTarget} />
+      )}
       <UpcomingToursSection
         tours={tours}
         bookedTourIds={bookedTourIds}
         bookingTourId={bookingTourId}
         onBook={handleBook}
+        canBook={canBook}
       />
 
       <CancelBookingDialog

@@ -23,11 +23,30 @@ import {
 } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
 
-import type { NotificationEventType, NotificationPriority } from '../types/notification.types';
+import type {
+  NotificationEventType,
+  NotificationPriority,
+  NotificationTimeGroup,
+} from '../types/notification.types';
 
 export const NOTIFICATIONS_DEFAULT_PAGE_SIZE = 50;
 
 export const UNREAD_COUNT_REFETCH_INTERVAL_MS = 60_000;
+
+export const NOTIFICATION_EVENT_FILTER_ALL = 'all';
+
+export const NOTIFICATION_EVENT_FILTER_OPTIONS: NotificationEventType[] = [
+  'application_submitted',
+  'status_changed',
+  'documents_requested',
+  'documents_uploaded',
+  'message_received',
+  'offer_made',
+  'offer_deadline_approaching',
+  'interview_scheduled',
+  'coe_issued',
+  'enrolled',
+];
 
 export const NOTIFICATION_EVENT_ICON: Record<NotificationEventType, LucideIcon> = {
   application_submitted: Send,
@@ -59,4 +78,18 @@ export const NOTIFICATION_PRIORITY_DOT: Record<NotificationPriority, string> = {
   high: 'bg-vivid-coral',
   medium: 'bg-vivid-amber',
   low: 'bg-foggy',
+};
+
+export const GROUP_ORDER: NotificationTimeGroup[] = [
+  'today',
+  'yesterday',
+  'this_week',
+  'older',
+];
+
+export const GROUP_LABEL_KEY: Record<NotificationTimeGroup, string> = {
+  today: 'groupToday',
+  yesterday: 'groupYesterday',
+  this_week: 'groupThisWeek',
+  older: 'groupOlder',
 };

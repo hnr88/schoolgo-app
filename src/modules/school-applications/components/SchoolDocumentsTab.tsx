@@ -3,7 +3,7 @@
 import { useTranslations } from 'next-intl';
 import { FileText, CheckCircle2, AlertCircle, XCircle } from 'lucide-react';
 import { Skeleton } from '@/components/ui/skeleton';
-import { EmptyState } from '@/modules/core';
+import { EmptyState, SurfaceCard } from '@/modules/core';
 import { useSchoolChecklist } from '@/modules/school-applications/queries/use-school-checklist.query';
 import type { SchoolApplicationDetail } from '@/modules/school-applications/types/school-applications.types';
 
@@ -14,9 +14,9 @@ const STATUS_ICON = {
 } as const;
 
 const STATUS_CLASS = {
-  complete: 'text-babu-600',
+  complete: 'text-babu-700',
   partial: 'text-arches-700',
-  missing: 'text-rausch-600',
+  missing: 'text-rausch-700',
 } as const;
 
 export function SchoolDocumentsTab({ application }: { application: SchoolApplicationDetail }) {
@@ -26,7 +26,7 @@ export function SchoolDocumentsTab({ application }: { application: SchoolApplica
 
   return (
     <div className='flex flex-col gap-6'>
-      <div className='rounded-xl border border-border bg-card p-6'>
+      <SurfaceCard padding='lg'>
         <h3 className='mb-4 text-sm font-semibold text-ink-900'>{t('checklistTitle')}</h3>
         {isLoading ? (
           <div className='flex flex-col gap-2'>
@@ -49,12 +49,12 @@ export function SchoolDocumentsTab({ application }: { application: SchoolApplica
             })}
           </ul>
         )}
-      </div>
+      </SurfaceCard>
 
-      <div className='rounded-xl border border-border bg-card p-6'>
+      <SurfaceCard padding='lg'>
         <h3 className='mb-4 text-sm font-semibold text-ink-900'>{t('documentsTitle')}</h3>
         {docs.length === 0 ? (
-          <EmptyState icon={FileText} title={t('documentsEmpty')} />
+          <EmptyState framed icon={FileText} title={t('documentsEmpty')} />
         ) : (
           <ul className='flex flex-col gap-3'>
             {docs.map((doc) => (
@@ -68,7 +68,7 @@ export function SchoolDocumentsTab({ application }: { application: SchoolApplica
             ))}
           </ul>
         )}
-      </div>
+      </SurfaceCard>
     </div>
   );
 }

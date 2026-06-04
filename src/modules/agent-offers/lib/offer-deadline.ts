@@ -19,8 +19,8 @@ export function offerDeadlineUrgency(deadline: string | null, now: number = Date
 }
 
 export const OFFER_URGENCY_BADGE: Record<OfferDeadlineUrgency, string> = {
-  urgent: 'bg-vivid-coral-soft text-vivid-coral',
-  soon: 'bg-vivid-amber-soft text-vivid-amber',
+  urgent: 'bg-vivid-coral-soft text-vivid-coral-strong',
+  soon: 'bg-vivid-amber-soft text-arches-700',
   normal: 'bg-muted text-foggy',
-  expired: 'bg-vivid-coral-soft text-vivid-coral',
+  expired: 'bg-vivid-coral-soft text-vivid-coral-strong',
 };

@@ -8,7 +8,7 @@ import { Link } from '@/i18n/navigation';
 import { AgendaItem } from '@/modules/calendar/components/AgendaItem';
 import { filterEventsByDay } from '@/modules/calendar/lib/calendar-dates';
 import type { AgendaListProps } from '@/modules/calendar/types/calendar.types';
-import { EmptyState } from '@/modules/core';
+import { EmptyState, SectionHeading } from '@/modules/core';
 
 export function AgendaList({ events, selectedDate, onClearFilter }: AgendaListProps) {
   const t = useTranslations('Calendar');
@@ -16,23 +16,25 @@ export function AgendaList({ events, selectedDate, onClearFilter }: AgendaListPr
 
   return (
     <section className='flex flex-col gap-4'>
-      <div className='flex items-center justify-between'>
-        <h2 className='text-sm font-semibold text-ink-900'>
-          {selectedDate ? t('agendaForDay') : t('agendaUpcoming')}
-        </h2>
-        {selectedDate && (
-          <button
-            type='button'
-            onClick={onClearFilter}
-            className='text-xs font-medium text-primary hover:underline'
-          >
-            {t('showAll')}
-          </button>
-        )}
-      </div>
+      <SectionHeading
+        title={selectedDate ? t('agendaForDay') : t('agendaUpcoming')}
+        level={3}
+        actions={
+          selectedDate ? (
+            <button
+              type='button'
+              onClick={onClearFilter}
+              className='rounded-md px-2 py-1 text-xs font-medium text-primary transition-colors hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring'
+            >
+              {t('showAll')}
+            </button>
+          ) : undefined
+        }
+      />
 
       {visible.length === 0 ? (
         <EmptyState
+          framed
           icon={CalendarDays}
           title={selectedDate ? t('emptyDayTitle') : t('emptyTitle')}
           description={selectedDate ? undefined : t('emptySubtitle')}

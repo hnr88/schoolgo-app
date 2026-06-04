@@ -1,8 +1,10 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { FileQuestion, FileText } from 'lucide-react';
+import { FileQuestion, FileText, FolderOpen } from 'lucide-react';
 import { EmptyState } from '@/modules/core/components/EmptyState';
+import { SectionHeading } from '@/modules/core/components/SectionHeading';
+import { SurfaceCard } from '@/modules/core/components/SurfaceCard';
 import { useParentDocumentRequests } from '@/modules/applications/queries/use-parent-document-requests.query';
 import { useParentStudentDocuments } from '@/modules/applications/queries/use-parent-student-documents.query';
 import { ParentDocumentUploadForm } from './ParentDocumentUploadForm';
@@ -27,8 +29,8 @@ export function ParentApplicationDocumentsSection({
   const uploadItems = uploads.data?.data ?? [];
 
   return (
-    <div className='rounded-xl border border-border bg-card p-6'>
-      <h2 className='mb-4 text-base font-semibold text-ink-900'>{t('documentsTitle')}</h2>
+    <SurfaceCard padding='lg'>
+      <SectionHeading title={t('documentsTitle')} level={2} icon={FolderOpen} className='mb-4' />
 
       <div className='flex flex-col gap-6'>
         <section>
@@ -36,7 +38,7 @@ export function ParentApplicationDocumentsSection({
           {requests.isLoading ? (
             <ParentDocumentListSkeleton />
           ) : requestItems.length === 0 ? (
-            <EmptyState icon={FileQuestion} title={t('documentsRequestsEmpty')} />
+            <EmptyState icon={FileQuestion} title={t('documentsRequestsEmpty')} framed />
           ) : (
             <div className='flex flex-col'>
               {requestItems.map((request) => (
@@ -51,7 +53,7 @@ export function ParentApplicationDocumentsSection({
           {uploads.isLoading ? (
             <ParentDocumentListSkeleton />
           ) : uploadItems.length === 0 ? (
-            <EmptyState icon={FileText} title={t('documentsUploadedEmpty')} />
+            <EmptyState icon={FileText} title={t('documentsUploadedEmpty')} framed />
           ) : (
             <div className='flex flex-col'>
               {uploadItems.map((document) => (
@@ -69,6 +71,6 @@ export function ParentApplicationDocumentsSection({
           />
         </section>
       </div>
-    </div>
+    </SurfaceCard>
   );
 }

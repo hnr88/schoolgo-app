@@ -21,11 +21,11 @@ export function NotificationBell() {
     <Link
       href={notificationsListPath(userType)}
       aria-label={t('bellLabel')}
-      className='relative flex h-9 w-9 items-center justify-center rounded-xl text-ink-900 outline-none transition-colors hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1'
+      className='relative flex h-11 w-11 items-center justify-center rounded-md text-ink-900 outline-none transition-colors hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1'
     >
       <Bell className='h-5 w-5' strokeWidth={1.5} />
       {hasUnread && (
-        <span className='absolute -right-0.5 -top-0.5 flex h-4 min-w-4 items-center justify-center rounded-full bg-vivid-coral-strong px-1 text-caption font-bold leading-none text-white'>
+        <span className='absolute right-1.5 top-1.5 flex h-4 min-w-4 items-center justify-center rounded-full bg-vivid-coral-strong px-1 text-caption font-bold leading-none text-primary-foreground'>
           {badgeLabel}
         </span>
       )}

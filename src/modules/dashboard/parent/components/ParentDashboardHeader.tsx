@@ -3,7 +3,8 @@
 import { useTranslations } from 'next-intl';
 import { UserPlus } from 'lucide-react';
 import { Link } from '@/i18n/navigation';
-import { Button } from '@/components/ui/button';
+import { buttonVariants } from '@/components/ui/button';
+import { cn } from '@/lib/utils';
 import { useAuthStore } from '@/modules/auth/stores/use-auth-store';
 import { getTimeOfDay } from '@/modules/dashboard/lib/get-time-of-day';
 
@@ -22,11 +23,9 @@ export function ParentDashboardHeader() {
         </h1>
         <p className='text-sm text-foggy'>{t('subtitle')}</p>
       </div>
-      <Link href='/parent/students/new'>
-        <Button className='gap-1.5'>
-          <UserPlus className='h-4 w-4' aria-hidden='true' />
-          {t('addStudent')}
-        </Button>
+      <Link href='/parent/students/new' className={cn(buttonVariants(), 'gap-1.5')}>
+        <UserPlus className='h-4 w-4' aria-hidden='true' />
+        {t('addStudent')}
       </Link>
     </div>
   );

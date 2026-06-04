@@ -33,7 +33,7 @@ export function ParentDocumentRequestRow({ request }: { request: ParentDocumentR
         <span className='text-sm text-ink-900'>{types}</span>
         <span
           className={cn(
-            'shrink-0 rounded-full px-2 py-0.5 text-xs font-medium',
+            'shrink-0 rounded-full px-2 py-0.5 text-xs font-semibold',
             PARENT_DOCUMENT_REQUEST_STATUS_BADGE[request.status],
           )}
         >
@@ -65,7 +65,7 @@ export function ParentUploadedDocumentRow({ document }: { document: ParentUpload
           href={document.file.url}
           target='_blank'
           rel='noopener noreferrer'
-          className='flex shrink-0 items-center gap-1 text-sm text-primary hover:underline'
+          className='flex shrink-0 items-center gap-1 text-sm font-medium text-primary-strong hover:underline'
         >
           {t('viewFile')}
           <ExternalLink className='h-3.5 w-3.5' />

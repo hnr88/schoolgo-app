@@ -1,15 +1,29 @@
-export function formatTourDateTime(dateStr: string | null, locale = 'en'): string | null {
+import type { useFormatter } from 'next-intl';
+
+type DateTimeFormatter = ReturnType<typeof useFormatter>['dateTime'];
+
+export const TOUR_DATE_TIME_OPTIONS = {
+  weekday: 'short',
+  day: 'numeric',
+  month: 'short',
+  year: 'numeric',
+  hour: 'numeric',
+  minute: '2-digit',
+} as const;
+
+export function parseTourDate(dateStr: string | null): Date | null {
   if (!dateStr) return null;
   const date = new Date(dateStr);
-  if (Number.isNaN(date.getTime())) return null;
-  return date.toLocaleString(locale, {
-    weekday: 'short',
-    day: 'numeric',
-    month: 'short',
-    year: 'numeric',
-    hour: 'numeric',
-    minute: '2-digit',
-  });
+  return Number.isNaN(date.getTime()) ? null : date;
+}
+
+export function formatTourDateTime(
+  dateStr: string | null,
+  formatDateTime: DateTimeFormatter,
+): string | null {
+  const date = parseTourDate(dateStr);
+  if (!date) return null;
+  return formatDateTime(date, TOUR_DATE_TIME_OPTIONS);
 }
 
 export function formatTourLocation(parts: Array<string | null>): string | null {

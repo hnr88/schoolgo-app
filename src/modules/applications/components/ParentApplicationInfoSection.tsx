@@ -1,3 +1,5 @@
+import { SectionHeading, SurfaceCard } from '@/modules/core';
+
 interface InfoRow {
   label: string;
   value: string | null | undefined;
@@ -10,8 +12,8 @@ interface ParentApplicationInfoSectionProps {
 
 export function ParentApplicationInfoSection({ title, rows }: ParentApplicationInfoSectionProps) {
   return (
-    <div className='rounded-xl border border-border bg-card p-6'>
-      <h2 className='mb-2 text-base font-semibold text-ink-900'>{title}</h2>
+    <SurfaceCard padding='lg'>
+      <SectionHeading title={title} level={2} className='mb-3' />
       {rows.map((row) => (
         <div
           key={row.label}
@@ -21,6 +23,6 @@ export function ParentApplicationInfoSection({ title, rows }: ParentApplicationI
           <span className='text-sm font-medium text-ink-900'>{row.value || '—'}</span>
         </div>
       ))}
-    </div>
+    </SurfaceCard>
   );
 }

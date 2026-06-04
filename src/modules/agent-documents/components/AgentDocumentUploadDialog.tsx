@@ -7,6 +7,7 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { toast } from 'sonner';
 import { Upload, X, FileText, Loader2 } from 'lucide-react';
+import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
@@ -74,21 +75,30 @@ export function AgentDocumentUploadDialog({ open, onOpenChange }: AgentDocumentU
           <form onSubmit={form.handleSubmit(onSubmit)} className='flex flex-col gap-4'>
             <div
               {...getRootProps()}
-              className={`flex cursor-pointer flex-col items-center justify-center rounded-lg border-2 border-dashed px-6 py-8 transition-colors ${isDragActive ? 'border-brand-500 bg-brand-50' : 'border-border hover:border-brand-300'}`}
+              className={cn(
+                'flex cursor-pointer flex-col items-center justify-center rounded-lg border-2 border-dashed px-6 py-8 transition-colors ease-out-quart',
+                isDragActive
+                  ? 'border-babu-500 bg-babu-50'
+                  : 'border-border hover:border-babu-500 hover:bg-babu-50/40',
+              )}
             >
               <input {...getInputProps()} />
-              <Upload className='mb-2 h-8 w-8 text-foggy' />
+              <span className='mb-2 flex h-12 w-12 items-center justify-center rounded-full bg-babu-50 text-babu-700'>
+                <Upload className='h-5 w-5' strokeWidth={1.75} aria-hidden='true' />
+              </span>
               <p className='text-sm font-medium text-ink-900'>{t('dropzone')}</p>
               <p className='mt-1 text-xs text-foggy'>{t('dropzoneHint')}</p>
             </div>
             {files.length > 0 && (
-              <div className='flex items-center gap-3 rounded-md border border-border p-3'>
-                <FileText className='h-5 w-5 shrink-0 text-foggy' />
+              <div className='flex items-center gap-3 rounded-lg border border-border bg-muted/40 p-3'>
+                <span className='flex h-9 w-9 shrink-0 items-center justify-center rounded-md bg-babu-50 text-babu-700'>
+                  <FileText className='h-4 w-4' strokeWidth={1.75} aria-hidden='true' />
+                </span>
                 <div className='min-w-0 flex-1'>
                   <p className='truncate text-sm font-medium text-ink-900'>{files[0].name}</p>
                   <p className='text-xs text-foggy'>{formatFileSize(files[0].size)}</p>
                 </div>
-                <button type='button' onClick={() => setFiles([])} className='rounded-sm text-foggy hover:text-ink-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring'>
+                <button type='button' onClick={() => setFiles([])} aria-label={t('cancel')} className='rounded-md p-1 text-foggy transition-colors hover:text-ink-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2'>
                   <X className='h-4 w-4' />
                 </button>
               </div>

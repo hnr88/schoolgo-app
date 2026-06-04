@@ -11,7 +11,7 @@ export async function DashboardSearchContent() {
         cardClassName='shadow-1'
       />
 
-      <div className='relative min-w-0 flex-1 overflow-hidden rounded-xl'>
+      <div className='relative min-w-0 flex-1 overflow-hidden rounded-lg'>
         <MapView className='rounded-none border-0 shadow-none' activePortal='agent' />
 
         <div className='absolute left-2 right-80 top-1 z-10 p-2'>

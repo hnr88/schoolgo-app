@@ -83,7 +83,7 @@ export async function FeesSection({ school }: { school: SchoolDetail }) {
           {feeCards.map((card) => (
             <div key={card.label} className="bg-muted rounded-lg p-5 text-center">
               <p className="text-caption font-semibold uppercase text-foggy">{card.label}</p>
-              <p className="text-2xl font-bold text-ink-900 mt-2">{card.value}</p>
+              <p className="font-display text-2xl font-bold text-ink-900 mt-2 tabular-nums">{card.value}</p>
               <p className="text-caption text-foggy mt-2">{t('perYearTuition')}</p>
             </div>
           ))}
@@ -99,23 +99,23 @@ export async function FeesSection({ school }: { school: SchoolDetail }) {
           }
         >
           {showBoardingHighlight && (
-            <div className="bg-ink-900 text-white rounded-lg p-5 text-center">
-              <p className="text-caption font-semibold uppercase text-white/70">
+            <div className="bg-ink-900 text-background rounded-lg p-5 text-center shadow-2">
+              <p className="text-caption font-semibold uppercase text-background/70">
                 {t('boardingAll')}
               </p>
-              <p className="text-2xl font-bold text-white mt-2">
+              <p className="font-display text-2xl font-bold text-background mt-2 tabular-nums">
                 {formatAud(school.feeBoardingAnnual)}
               </p>
-              <p className="text-caption text-white/70 mt-2">{t('perYear')}</p>
+              <p className="text-caption text-background/70 mt-2">{t('perYear')}</p>
             </div>
           )}
           {showTotalHighlight && totalFee != null && (
-            <div className="bg-ink-900 text-white rounded-lg p-5 text-center">
-              <p className="text-caption font-semibold uppercase text-white/70">
+            <div className="bg-ink-900 text-background rounded-lg p-5 text-center shadow-2">
+              <p className="text-caption font-semibold uppercase text-background/70">
                 {t('totalSenior')}
               </p>
-              <p className="text-2xl font-bold text-white mt-2">{formatAud(totalFee)}</p>
-              <p className="text-caption text-white/70 mt-2">{t('perYear')}</p>
+              <p className="font-display text-2xl font-bold text-background mt-2 tabular-nums">{formatAud(totalFee)}</p>
+              <p className="text-caption text-background/70 mt-2">{t('perYear')}</p>
             </div>
           )}
         </div>

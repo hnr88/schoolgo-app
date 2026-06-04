@@ -1,7 +1,9 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
+import { Users } from 'lucide-react';
 import { Skeleton } from '@/components/ui/skeleton';
+import { Separator } from '@/components/ui/separator';
 import {
   Table,
   TableBody,
@@ -9,7 +11,7 @@ import {
   TableHeader,
   TableRow,
 } from '@/components/ui/table';
-import { ErrorState } from '@/modules/core';
+import { EmptyState, ErrorState } from '@/modules/core';
 import { useSchoolCapacities } from '@/modules/school-profile/queries/use-school-capacities.query';
 import { CapacityRow } from '@/modules/school-profile/components/CapacityRow';
 import { CapacityAddForm } from '@/modules/school-profile/components/CapacityAddForm';
@@ -31,7 +33,7 @@ export function CapacityManager({ schoolDocumentId, canEdit }: CapacityManagerPr
   return (
     <div className='flex flex-col gap-4'>
       {data.length === 0 ? (
-        <p className='text-sm text-muted-foreground'>{t('capacityEmpty')}</p>
+        <EmptyState icon={Users} title={t('capacityEmpty')} framed />
       ) : (
         <Table>
           <TableHeader>
@@ -50,7 +52,12 @@ export function CapacityManager({ schoolDocumentId, canEdit }: CapacityManagerPr
           </TableBody>
         </Table>
       )}
-      {canEdit && <CapacityAddForm />}
+      {canEdit && (
+        <>
+          {data.length > 0 && <Separator className='bg-divider' />}
+          <CapacityAddForm />
+        </>
+      )}
     </div>
   );
 }

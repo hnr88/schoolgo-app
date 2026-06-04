@@ -1,7 +1,9 @@
 'use client';
 
 import { useFormatter, useNow, useTranslations } from 'next-intl';
+import { Check } from 'lucide-react';
 import { Link } from '@/i18n/navigation';
+import { Button } from '@/components/ui/button';
 import { useAuthStore } from '@/modules/auth/stores/use-auth-store';
 import { cn } from '@/lib/utils';
 import { NOTIFICATION_EVENT_ICON, NOTIFICATION_PRIORITY_DOT } from '../constants/notification.constants';
@@ -11,9 +13,10 @@ import type { ParentNotification } from '../types/notification.types';
 interface NotificationItemProps {
   notification: ParentNotification;
   onMarkRead: (documentId: string) => void;
+  isMarkingRead?: boolean;
 }
 
-export function NotificationItem({ notification, onMarkRead }: NotificationItemProps) {
+export function NotificationItem({ notification, onMarkRead, isMarkingRead }: NotificationItemProps) {
   const t = useTranslations('ParentNotifications');
   const format = useFormatter();
   const now = useNow();
@@ -32,20 +35,14 @@ export function NotificationItem({ notification, onMarkRead }: NotificationItemP
 
   const Icon = NOTIFICATION_EVENT_ICON[eventType];
   const isUnread = readAt === null;
-
   const href = notificationEntityPath(userType, entityType, entityDocumentId);
 
-  const handleActivate = () => {
+  const handleNavigate = () => {
     if (isUnread) onMarkRead(documentId);
   };
 
-  const content = (
-    <div
-      className={cn(
-        'flex items-start gap-3 rounded-lg border border-transparent px-4 py-3 transition-colors',
-        isUnread ? 'bg-muted/40' : 'bg-card',
-      )}
-    >
+  const body0 = (
+    <div className='flex min-w-0 flex-1 items-start gap-3'>
       <span className='mt-1.5 flex shrink-0 items-center'>
         <span className={cn('h-2 w-2 rounded-full', NOTIFICATION_PRIORITY_DOT[priority])} aria-hidden />
       </span>
@@ -67,25 +64,40 @@ export function NotificationItem({ notification, onMarkRead }: NotificationItemP
     </div>
   );
 
-  if (href) {
-    return (
-      <Link href={href} onClick={handleActivate} className='block rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring'>
-        {content}
-      </Link>
-    );
-  }
+  const primary = href ? (
+    <Link
+      href={href}
+      onClick={handleNavigate}
+      className='flex min-w-0 flex-1 rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring'
+    >
+      {body0}
+    </Link>
+  ) : (
+    body0
+  );
 
-  if (isUnread) {
-    return (
-      <button
-        type='button'
-        onClick={handleActivate}
-        className='block w-full rounded-lg text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring'
-      >
-        {content}
-      </button>
-    );
-  }
-
-  return content;
+  return (
+    <div
+      className={cn(
+        'flex items-start gap-2 rounded-lg border border-transparent px-4 py-3 transition-colors',
+        isUnread ? 'bg-muted/40' : 'bg-card',
+      )}
+    >
+      {primary}
+      {isUnread && (
+        <Button
+          type='button'
+          variant='ghost'
+          size='icon-sm'
+          onClick={() => onMarkRead(documentId)}
+          disabled={isMarkingRead}
+          aria-label={t('markRead')}
+          title={t('markRead')}
+          className='shrink-0'
+        >
+          <Check className='h-4 w-4' aria-hidden />
+        </Button>
+      )}
+    </div>
+  );
 }

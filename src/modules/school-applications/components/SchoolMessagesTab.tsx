@@ -8,7 +8,7 @@ import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
 import { Skeleton } from '@/components/ui/skeleton';
 import { ScrollArea } from '@/components/ui/scroll-area';
-import { EmptyState } from '@/modules/core';
+import { EmptyState, SurfaceCard } from '@/modules/core';
 import {
   useSchoolMessages,
   useSendSchoolMessage,
@@ -36,16 +36,16 @@ export function SchoolMessagesTab({ documentId }: { documentId: string }) {
   }
 
   return (
-    <div className='flex flex-col gap-4 rounded-xl border border-border bg-card p-6'>
+    <SurfaceCard padding='lg' className='flex flex-col gap-4'>
       {isLoading ? (
         <div className='flex flex-col gap-3'>
-          <Skeleton className='h-16 w-2/3 rounded-xl' />
-          <Skeleton className='ml-auto h-16 w-2/3 rounded-xl' />
+          <Skeleton className='h-16 w-2/3 rounded-lg' />
+          <Skeleton className='ml-auto h-16 w-2/3 rounded-lg' />
         </div>
       ) : isError ? (
         <p className='text-sm text-foggy'>{t('messagesLoadError')}</p>
       ) : !messages || messages.length === 0 ? (
-        <EmptyState icon={MessageSquare} title={t('messagesEmpty')} />
+        <EmptyState framed icon={MessageSquare} title={t('messagesEmpty')} />
       ) : (
         <ScrollArea className='max-h-96'>
           <div className='flex flex-col gap-3 pr-3'>
@@ -54,12 +54,12 @@ export function SchoolMessagesTab({ documentId }: { documentId: string }) {
               return (
                 <div
                   key={m.documentId}
-                  className={`max-w-[75%] rounded-xl px-4 py-2 text-sm ${
-                    isSchool ? 'ml-auto bg-babu-500 text-white' : 'bg-muted text-ink-900'
+                  className={`max-w-[75%] rounded-lg px-4 py-2 text-sm ${
+                    isSchool ? 'ml-auto bg-arches-700 text-background' : 'bg-muted text-ink-900'
                   }`}
                 >
                   <p>{m.content}</p>
-                  <p className={`mt-1 text-xs ${isSchool ? 'text-white/70' : 'text-foggy'}`}>
+                  <p className={`mt-1 text-xs ${isSchool ? 'text-background/80' : 'text-foggy'}`}>
                     {new Date(m.createdAt).toLocaleString('en-AU')}
                   </p>
                 </div>
@@ -88,6 +88,6 @@ export function SchoolMessagesTab({ documentId }: { documentId: string }) {
           </Button>
         </div>
       </div>
-    </div>
+    </SurfaceCard>
   );
 }

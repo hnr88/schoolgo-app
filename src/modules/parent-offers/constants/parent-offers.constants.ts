@@ -4,7 +4,7 @@ export const PARENT_OFFER_STATUSES: ApplicationStatus[] = ['offer_made', 'offer_
 
 export const PARENT_OFFERS_QUERY_KEY = ['parent', 'offers'] as const;
 
-export const PARENT_OFFERS_PAGE_SIZE = 100;
+export const PARENT_OFFERS_PAGE_SIZE = 12;
 
 export const PARENT_OFFERS_POPULATE: Record<string, string> = {
   'populate[student][fields][0]': 'firstName',

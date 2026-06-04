@@ -3,7 +3,7 @@
 import { useTranslations } from 'next-intl';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Skeleton } from '@/components/ui/skeleton';
-import { ErrorState } from '@/modules/core';
+import { ErrorState, SurfaceCard } from '@/modules/core';
 import { useAgentSettings } from '@/modules/agent-settings/queries/use-agent-settings.query';
 import { AgentProfileForm } from '@/modules/agent-settings/components/AgentProfileForm';
 import { AgentPasswordForm } from '@/modules/agent-settings/components/AgentPasswordForm';
@@ -15,13 +15,13 @@ function SettingsSkeleton() {
   return (
     <div className='flex flex-col gap-6'>
       <Skeleton className='h-10 w-96' />
-      <div className='rounded-xl border border-border bg-card p-6'>
+      <SurfaceCard padding='lg'>
         <div className='flex flex-col gap-4'>
           <Skeleton className='h-10 w-full' />
           <Skeleton className='h-10 w-full' />
           <Skeleton className='h-10 w-40' />
         </div>
-      </div>
+      </SurfaceCard>
     </div>
   );
 }
@@ -35,7 +35,7 @@ export function AgentSettingsPage() {
   }
 
   if (isError || !data) {
-    return <ErrorState message={t('loadError')} onRetry={() => refetch()} retryLabel={t('retry')} />;
+    return <ErrorState message={t('loadError')} onRetry={() => refetch()} retryLabel={t('retry')} framed />;
   }
 
   return (
@@ -49,33 +49,33 @@ export function AgentSettingsPage() {
       </TabsList>
 
       <TabsContent value='profile'>
-        <section className='rounded-xl border border-border bg-card p-6'>
+        <SurfaceCard padding='lg'>
           <AgentProfileForm user={data.user} profile={data.profile} />
-        </section>
+        </SurfaceCard>
       </TabsContent>
 
       <TabsContent value='password'>
-        <section className='rounded-xl border border-border bg-card p-6'>
+        <SurfaceCard padding='lg'>
           <AgentPasswordForm />
-        </section>
+        </SurfaceCard>
       </TabsContent>
 
       <TabsContent value='notifications'>
-        <section className='rounded-xl border border-border bg-card p-6'>
+        <SurfaceCard padding='lg'>
           <AgentNotificationsForm notifications={data.notifications} messaging={data.messaging} />
-        </section>
+        </SurfaceCard>
       </TabsContent>
 
       <TabsContent value='region'>
-        <section className='rounded-xl border border-border bg-card p-6'>
+        <SurfaceCard padding='lg'>
           <AgentRegionForm locale={data.locale} />
-        </section>
+        </SurfaceCard>
       </TabsContent>
 
       <TabsContent value='account'>
-        <section className='rounded-xl border border-border bg-card p-6'>
+        <SurfaceCard padding='lg'>
           <AgentAccountSection />
-        </section>
+        </SurfaceCard>
       </TabsContent>
     </Tabs>
   );

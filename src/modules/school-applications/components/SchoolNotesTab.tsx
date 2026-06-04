@@ -7,7 +7,7 @@ import { toast } from 'sonner';
 import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
 import { Skeleton } from '@/components/ui/skeleton';
-import { EmptyState } from '@/modules/core';
+import { EmptyState, SectionHeading, SurfaceCard } from '@/modules/core';
 import {
   useCreateSchoolNote,
   useSchoolNotes,
@@ -32,8 +32,8 @@ export function SchoolNotesTab({ documentId }: { documentId: string }) {
   }
 
   return (
-    <div className='flex flex-col gap-4 rounded-xl border border-border bg-card p-6'>
-      <h3 className='text-sm font-semibold text-ink-900'>{t('notesTitle')}</h3>
+    <SurfaceCard padding='lg' className='flex flex-col gap-4'>
+      <SectionHeading title={t('notesTitle')} level={3} />
 
       <div className='flex flex-col gap-2'>
         <Textarea
@@ -54,7 +54,7 @@ export function SchoolNotesTab({ documentId }: { documentId: string }) {
       {isLoading ? (
         <Skeleton className='h-16 w-full rounded-lg' />
       ) : !notes || notes.length === 0 ? (
-        <EmptyState icon={StickyNote} title={t('notesEmpty')} />
+        <EmptyState framed icon={StickyNote} title={t('notesEmpty')} />
       ) : (
         <ul className='flex flex-col gap-3'>
           {notes.map((note) => (
@@ -65,6 +65,6 @@ export function SchoolNotesTab({ documentId }: { documentId: string }) {
           ))}
         </ul>
       )}
-    </div>
+    </SurfaceCard>
   );
 }

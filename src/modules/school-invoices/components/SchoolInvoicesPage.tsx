@@ -2,7 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import { Skeleton } from '@/components/ui/skeleton';
-import { ErrorState } from '@/modules/core';
+import { ErrorState, SectionHeading, SurfaceCard } from '@/modules/core';
 import { useSchoolInvoices } from '@/modules/school-invoices/queries/use-school-invoices.query';
 import { useSchoolPayouts } from '@/modules/school-invoices/queries/use-school-payouts.query';
 import { SchoolFinanceSummary } from '@/modules/school-invoices/components/SchoolFinanceSummary';
@@ -11,11 +11,11 @@ import { SchoolPayoutsTable } from '@/modules/school-invoices/components/SchoolP
 
 function TableSkeleton() {
   return (
-    <div className='flex flex-col gap-2 rounded-lg border border-border bg-card p-4 shadow-1'>
+    <SurfaceCard padding='sm' className='flex flex-col gap-2'>
       {Array.from({ length: 3 }).map((_, index) => (
         <Skeleton key={index} className='h-12 w-full rounded-md' />
       ))}
-    </div>
+    </SurfaceCard>
   );
 }
 
@@ -43,6 +43,7 @@ export function SchoolInvoicesPage() {
   if (invoicesQuery.isError) {
     return (
       <ErrorState
+        framed
         message={t('loadError')}
         onRetry={() => invoicesQuery.refetch()}
         retryLabel={t('retry')}
@@ -58,20 +59,15 @@ export function SchoolInvoicesPage() {
       <SchoolFinanceSummary invoices={invoices} payouts={payouts} />
 
       <section className='flex flex-col gap-4'>
-        <div className='flex flex-col gap-1'>
-          <h2 className='font-display text-xl font-bold text-ink-900'>{t('title')}</h2>
-          <p className='text-sm text-muted-foreground'>{t('subtitle')}</p>
-        </div>
+        <SectionHeading title={t('title')} description={t('subtitle')} />
         <SchoolInvoicesTable invoices={invoices} />
       </section>
 
       <section className='flex flex-col gap-4'>
-        <div className='flex flex-col gap-1'>
-          <h2 className='font-display text-xl font-bold text-ink-900'>{t('payoutsTitle')}</h2>
-          <p className='text-sm text-muted-foreground'>{t('payoutsSubtitle')}</p>
-        </div>
+        <SectionHeading title={t('payoutsTitle')} description={t('payoutsSubtitle')} />
         {payoutsQuery.isError ? (
           <ErrorState
+            framed
             message={t('payoutsLoadError')}
             onRetry={() => payoutsQuery.refetch()}
             retryLabel={t('retry')}

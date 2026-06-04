@@ -1,6 +1,16 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
+import {
+  Building2,
+  Images,
+  FileText,
+  Wallet,
+  GraduationCap,
+  ShieldCheck,
+  Coins,
+  Lock,
+} from 'lucide-react';
 import { Skeleton } from '@/components/ui/skeleton';
 import { ErrorState } from '@/modules/core';
 import { useSchoolStaffMe } from '@/modules/school-profile/queries/use-school-staff-me.query';
@@ -17,9 +27,9 @@ import { TuitionManager } from '@/modules/school-profile/components/TuitionManag
 function ProfileSkeleton() {
   return (
     <div className='flex flex-col gap-6'>
-      <Skeleton className='h-64 w-full rounded-xl' />
-      <Skeleton className='h-64 w-full rounded-xl' />
-      <Skeleton className='h-48 w-full rounded-xl' />
+      <Skeleton className='h-64 w-full rounded-lg' />
+      <Skeleton className='h-64 w-full rounded-lg' />
+      <Skeleton className='h-48 w-full rounded-lg' />
     </div>
   );
 }
@@ -51,36 +61,37 @@ export function SchoolProfilePage() {
   return (
     <div className='flex flex-col gap-6'>
       {!canEdit && (
-        <p className='rounded-lg border border-border bg-muted/40 p-4 text-sm text-muted-foreground'>
+        <p className='flex items-center gap-2 rounded-lg border border-arches-100 bg-arches-50 px-4 py-3 text-sm font-medium text-arches-700'>
+          <Lock className='h-4 w-4 shrink-0' aria-hidden='true' />
           {t('adminOnly')}
         </p>
       )}
 
-      <ProfileSection title={t('sectionIdentity')} description={t('sectionIdentityDesc')}>
+      <ProfileSection icon={Building2} title={t('sectionIdentity')} description={t('sectionIdentityDesc')}>
         <IdentityForm school={details} disabled={!canEdit} />
       </ProfileSection>
 
-      <ProfileSection title={t('sectionMedia')} description={t('sectionMediaDesc')}>
+      <ProfileSection icon={Images} title={t('sectionMedia')} description={t('sectionMediaDesc')}>
         <MediaSection school={details} disabled={!canEdit} />
       </ProfileSection>
 
-      <ProfileSection title={t('sectionDescription')} description={t('sectionDescriptionDesc')}>
+      <ProfileSection icon={FileText} title={t('sectionDescription')} description={t('sectionDescriptionDesc')}>
         <DescriptionForm school={details} disabled={!canEdit} />
       </ProfileSection>
 
-      <ProfileSection title={t('sectionFees')} description={t('sectionFeesDesc')}>
+      <ProfileSection icon={Wallet} title={t('sectionFees')} description={t('sectionFeesDesc')}>
         <FeesForm school={details} disabled={!canEdit} />
       </ProfileSection>
 
-      <ProfileSection title={t('sectionAcademic')} description={t('sectionAcademicDesc')}>
+      <ProfileSection icon={GraduationCap} title={t('sectionAcademic')} description={t('sectionAcademicDesc')}>
         <AcademicForm school={details} disabled={!canEdit} />
       </ProfileSection>
 
-      <ProfileSection title={t('sectionPolicies')} description={t('sectionPoliciesDesc')}>
+      <ProfileSection icon={ShieldCheck} title={t('sectionPolicies')} description={t('sectionPoliciesDesc')}>
         <PoliciesForm school={details} disabled={!canEdit} />
       </ProfileSection>
 
-      <ProfileSection title={t('sectionTuition')} description={t('sectionTuitionDesc')}>
+      <ProfileSection icon={Coins} title={t('sectionTuition')} description={t('sectionTuitionDesc')}>
         <TuitionManager canEdit={canEdit} />
       </ProfileSection>
     </div>

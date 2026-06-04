@@ -33,9 +33,9 @@ export function toSubScoreEntries(subScores: unknown): SubScoreEntry[] {
   return entries;
 }
 
-export function formatTestDate(dateStr: string | null, locale = 'en'): string | null {
+export function parseTestDate(dateStr: string | null): Date | null {
   if (!dateStr) return null;
   const date = new Date(dateStr);
   if (Number.isNaN(date.getTime())) return null;
-  return date.toLocaleDateString(locale, { day: 'numeric', month: 'short', year: 'numeric' });
+  return date;
 }

@@ -22,7 +22,7 @@ export function SchoolPayoutsTable({ payouts }: { payouts: SchoolPayout[] }) {
   const t = useTranslations('SchoolInvoices');
 
   if (payouts.length === 0) {
-    return <EmptyState icon={Banknote} title={t('payoutsEmpty')} />;
+    return <EmptyState framed icon={Banknote} title={t('payoutsEmpty')} />;
   }
 
   return (
@@ -34,7 +34,7 @@ export function SchoolPayoutsTable({ payouts }: { payouts: SchoolPayout[] }) {
     >
       <Table>
         <TableHeader>
-          <TableRow className='border-b border-divider hover:bg-transparent'>
+          <TableRow className='border-b border-divider bg-muted/40 hover:bg-muted/40'>
             <TableHead className='text-xs font-semibold uppercase tracking-wide text-foggy'>{t('columnReference')}</TableHead>
             <TableHead className='text-xs font-semibold uppercase tracking-wide text-foggy'>{t('columnInvoice')}</TableHead>
             <TableHead className='text-right text-xs font-semibold uppercase tracking-wide text-foggy'>{t('columnAmount')}</TableHead>
@@ -45,7 +45,7 @@ export function SchoolPayoutsTable({ payouts }: { payouts: SchoolPayout[] }) {
         </TableHeader>
         <TableBody>
           {payouts.map((payout) => (
-            <TableRow key={payout.documentId} className='hover:bg-muted'>
+            <TableRow key={payout.documentId} className='border-b border-divider transition-colors hover:bg-muted/60'>
               <TableCell className='py-3.5 font-semibold text-ink-900'>
                 {payout.reference ?? t('noReference')}
               </TableCell>

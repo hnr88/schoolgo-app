@@ -3,8 +3,9 @@
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import { Plus, Users } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { EmptyState, ErrorState } from '@/modules/core';
+import { buttonVariants } from '@/components/ui/button';
+import { cn } from '@/lib/utils';
+import { EmptyState, ErrorState, SurfaceCard } from '@/modules/core';
 import { ParentStudentListToolbar } from '@/modules/students/components/ParentStudentListToolbar';
 import { ParentStudentTable } from '@/modules/students/components/ParentStudentTable';
 import { ParentStudentPagination } from '@/modules/students/components/ParentStudentPagination';
@@ -34,7 +35,7 @@ export function ParentStudentListPage() {
   } = useParentStudentList();
 
   if (isError) {
-    return <ErrorState message={t('errorMessage')} onRetry={() => refetch()} retryLabel={t('retry')} />;
+    return <ErrorState message={t('errorMessage')} onRetry={() => refetch()} retryLabel={t('retry')} framed />;
   }
 
   if (isEmpty) {
@@ -43,12 +44,11 @@ export function ParentStudentListPage() {
         icon={Users}
         title={t('emptyTitle')}
         description={t('emptySubtitle')}
+        framed
         action={
-          <Link href='/parent/students/new'>
-            <Button className='gap-1.5'>
-              <Plus className='h-4 w-4' />
-              {t('addStudent')}
-            </Button>
+          <Link href='/parent/students/new' className={cn(buttonVariants(), 'gap-1.5')}>
+            <Plus className='h-4 w-4' />
+            {t('addStudent')}
           </Link>
         }
       />
@@ -56,7 +56,7 @@ export function ParentStudentListPage() {
   }
 
   return (
-    <div className='overflow-hidden rounded-xl border border-border bg-card'>
+    <SurfaceCard padding='none' className='overflow-hidden'>
       <div className='border-b border-border px-6 py-4'>
         <ParentStudentListToolbar
           search={search}
@@ -83,6 +83,6 @@ export function ParentStudentListPage() {
         setPage={setPage}
         onPageSizeChange={handlePageSizeChange}
       />
-    </div>
+    </SurfaceCard>
   );
 }

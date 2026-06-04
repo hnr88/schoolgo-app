@@ -16,8 +16,8 @@ export function SchoolActionBanner({
 
   if (!hasActions) {
     return (
-      <div className='flex items-center gap-3 rounded-lg border border-babu-100 bg-babu-50 p-5 shadow-1'>
-        <span className='flex h-9 w-9 shrink-0 items-center justify-center rounded-md bg-babu-100 text-babu-600'>
+      <div className='flex items-center gap-3 rounded-lg border border-arches-100 bg-arches-50 p-5 shadow-1'>
+        <span className='flex h-9 w-9 shrink-0 items-center justify-center rounded-md bg-arches-100 text-arches-700'>
           <CheckCircle2 className='h-4 w-4' strokeWidth={2} aria-hidden='true' />
         </span>
         <span className='text-sm font-medium text-ink-900'>{t('actionAllClear')}</span>
@@ -26,12 +26,12 @@ export function SchoolActionBanner({
   }
 
   return (
-    <div className='flex items-start gap-3 rounded-lg border border-babu-100 bg-babu-50 p-5 shadow-1'>
-      <span className='flex h-9 w-9 shrink-0 items-center justify-center rounded-md bg-babu-100 text-babu-600'>
+    <div className='flex items-start gap-3 rounded-lg border border-arches-100 bg-arches-50 p-5 shadow-1'>
+      <span className='flex h-9 w-9 shrink-0 items-center justify-center rounded-md bg-arches-100 text-arches-700'>
         <Info className='h-4 w-4' strokeWidth={2} aria-hidden='true' />
       </span>
       <div className='flex flex-col gap-2'>
-        <span className='text-xs font-bold uppercase tracking-wide text-babu-700'>
+        <span className='text-xs font-bold uppercase tracking-wide text-arches-700'>
           {t('actionRequiredTitle')}
         </span>
         <ul className='flex flex-col gap-1.5'>

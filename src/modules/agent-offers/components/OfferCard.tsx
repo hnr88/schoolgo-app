@@ -9,6 +9,7 @@ import { Button } from '@/components/ui/button';
 import { Skeleton } from '@/components/ui/skeleton';
 import { cn } from '@/lib/utils';
 import { Link } from '@/i18n/navigation';
+import { SurfaceCard } from '@/modules/core';
 import { useAcceptOffer } from '@/modules/applications/queries/use-accept-offer.mutation';
 import { useAgentOfferDetail } from '@/modules/applications/queries/use-agent-offer-detail.query';
 import { ConfirmActionDialog } from '@/modules/applications/components/ConfirmActionDialog';
@@ -46,10 +47,10 @@ export function OfferCard({ application }: { application: Application }) {
   }
 
   return (
-    <div className='flex flex-col gap-4 rounded-xl border border-border bg-card p-6'>
+    <SurfaceCard elevation='interactive' padding='lg' className='flex flex-col gap-4'>
       <div className='flex items-start justify-between gap-3'>
         <div className='flex flex-col gap-1'>
-          <h3 className='text-base font-semibold text-ink-900'>{application.school.name}</h3>
+          <h3 className='font-display text-base font-semibold tracking-tight text-ink-900'>{application.school.name}</h3>
           <span className='flex items-center gap-1.5 text-sm text-foggy'>
             <GraduationCap className='h-4 w-4' />
             {studentName}
@@ -71,29 +72,29 @@ export function OfferCard({ application }: { application: Application }) {
         )}
       </div>
 
-      <div className='grid grid-cols-2 gap-4'>
-        <div className='flex flex-col gap-1'>
-          <span className='flex items-center gap-1.5 text-xs text-foggy'>
+      <div className='grid grid-cols-2 gap-3'>
+        <div className='flex flex-col gap-1.5 rounded-lg border border-border bg-muted/40 p-3'>
+          <span className='flex items-center gap-1.5 text-xs font-medium text-foggy'>
             <Wallet className='h-3.5 w-3.5' />
             {t('annualFee')}
           </span>
           {isLoading ? (
-            <Skeleton className='h-5 w-24' />
+            <Skeleton className='h-6 w-24' />
           ) : (
-            <span className='text-sm font-medium text-ink-900'>
+            <span className='font-display text-base font-bold tracking-tight text-ink-900 tabular-nums'>
               {formatOfferFee(detail?.offerAnnualFee ?? null, locale) ?? t('notProvided')}
             </span>
           )}
         </div>
-        <div className='flex flex-col gap-1'>
-          <span className='flex items-center gap-1.5 text-xs text-foggy'>
+        <div className='flex flex-col gap-1.5 rounded-lg border border-border bg-muted/40 p-3'>
+          <span className='flex items-center gap-1.5 text-xs font-medium text-foggy'>
             <CalendarClock className='h-3.5 w-3.5' />
             {t('offerDeadline')}
           </span>
           {isLoading ? (
-            <Skeleton className='h-5 w-24' />
+            <Skeleton className='h-6 w-24' />
           ) : (
-            <span className='text-sm font-medium text-ink-900'>
+            <span className='font-display text-base font-bold tracking-tight text-ink-900 tabular-nums'>
               {formatDate(deadline, locale) ?? t('notProvided')}
             </span>
           )}
@@ -103,7 +104,7 @@ export function OfferCard({ application }: { application: Application }) {
       <div className='flex items-center justify-between gap-3 border-t border-border/60 pt-4'>
         <Link
           href={`/dashboard/applications/${application.documentId}`}
-          className='text-sm font-medium text-vivid-iris hover:underline'
+          className='rounded-md text-sm font-semibold text-babu-700 underline-offset-2 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2'
         >
           {t('viewApplication')}
         </Link>
@@ -121,6 +122,6 @@ export function OfferCard({ application }: { application: Application }) {
         isPending={acceptOffer.isPending}
         onConfirm={handleAccept}
       />
-    </div>
+    </SurfaceCard>
   );
 }

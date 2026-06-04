@@ -27,7 +27,7 @@ export function StaffTable({
   return (
     <Table>
       <TableHeader>
-        <TableRow className='border-b border-divider hover:bg-transparent'>
+        <TableRow className='border-b border-divider bg-muted/40 hover:bg-muted/40'>
           <TableHead className='pl-5 text-xs font-semibold uppercase tracking-wide text-foggy'>{t('columnName')}</TableHead>
           <TableHead className='text-xs font-semibold uppercase tracking-wide text-foggy'>{t('columnEmail')}</TableHead>
           <TableHead className='text-xs font-semibold uppercase tracking-wide text-foggy'>{t('columnRole')}</TableHead>
@@ -43,7 +43,7 @@ export function StaffTable({
           const canDeactivate = m.status === 'active' && !isSelf;
 
           return (
-            <TableRow key={m.documentId} className='hover:bg-muted' data-testid='staff-row' data-email={m.email}>
+            <TableRow key={m.documentId} className='border-b border-divider transition-colors hover:bg-muted/60' data-testid='staff-row' data-email={m.email}>
               <TableCell className='pl-5 py-3.5'>
                 <span className='font-semibold text-ink-900'>{m.fullName || '—'}</span>
                 {m.permissionLevel === 'admin' && (

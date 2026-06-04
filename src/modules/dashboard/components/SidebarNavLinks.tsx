@@ -51,14 +51,21 @@ export function SidebarNavLinks({ isCollapsed = false, onNavigate }: SidebarNavL
                 href={href}
                 onClick={onNavigate}
                 title={isCollapsed ? navLabel(labelKey) : undefined}
+                aria-current={isActive ? 'page' : undefined}
                 className={cn(
-                  'flex items-center gap-3 rounded-xl text-sm font-medium transition-colors',
+                  'relative flex items-center gap-3 rounded-md text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring',
                   isCollapsed ? 'justify-center p-3' : 'px-4 py-3',
                   isActive
-                    ? 'bg-primary text-on-primary shadow-2'
-                    : 'text-foggy hover:bg-rausch-50 hover:text-primary-strong',
+                    ? 'bg-rausch-50 font-semibold text-primary-strong'
+                    : 'font-medium text-foggy hover:bg-muted hover:text-ink-900',
                 )}
               >
+                {isActive && !isCollapsed && (
+                  <span
+                    className='absolute left-0 top-1/2 h-5 w-1 -translate-y-1/2 rounded-pill bg-primary'
+                    aria-hidden='true'
+                  />
+                )}
                 <Icon className='h-5 w-5 shrink-0' strokeWidth={isActive ? 2 : 1.5} />
                 {!isCollapsed && navLabel(labelKey)}
               </Link>

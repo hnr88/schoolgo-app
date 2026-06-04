@@ -65,6 +65,10 @@ export function useToursPage() {
     setCancelTarget(null);
   }
 
+  // Booking depends on knowing the parent's existing bookings so we never let
+  // them double-book. Only enable Book once BOTH queries have settled with data.
+  const canBook = toursQuery.isSuccess && bookingsQuery.isSuccess;
+
   return {
     toursQuery,
     bookingsQuery,
@@ -76,5 +80,8 @@ export function useToursPage() {
     handleBook,
     handleCancelConfirm,
     isCancelling: cancelMutation.isPending,
+    canBook,
+    isBookingsError: bookingsQuery.isError,
+    refetchBookings: bookingsQuery.refetch,
   };
 }

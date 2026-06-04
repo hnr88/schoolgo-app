@@ -54,17 +54,16 @@ export function SchoolDashboard() {
 
   if (isError || !staff.data || !dashboard.data || !onboarding.data) {
     return (
-      <div className='rounded-lg border border-border bg-card shadow-1'>
-        <ErrorState
-          message={t('loadError')}
-          onRetry={() => {
-            void staff.refetch();
-            void dashboard.refetch();
-            void onboarding.refetch();
-          }}
-          retryLabel={t('retry')}
-        />
-      </div>
+      <ErrorState
+        framed
+        message={t('loadError')}
+        onRetry={() => {
+          void staff.refetch();
+          void dashboard.refetch();
+          void onboarding.refetch();
+        }}
+        retryLabel={t('retry')}
+      />
     );
   }
 

@@ -1,9 +1,10 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { Plus, RefreshCw } from 'lucide-react';
+import { FileStack, Lock, Plus } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Skeleton } from '@/components/ui/skeleton';
+import { EmptyState, ErrorState, SurfaceCard } from '@/modules/core';
 import { useSchoolStaffMe } from '@/modules/school-templates/queries/use-school-staff-me.query';
 import { useSchoolTemplates } from '@/modules/school-templates/queries/use-school-templates.query';
 import { useTemplatesPageState } from '@/modules/school-templates/hooks/useTemplatesPageState';
@@ -25,7 +26,7 @@ export function SchoolTemplatesPage() {
   if (staffQuery.isLoading || templatesQuery.isLoading) {
     return (
       <div className='flex flex-col gap-3'>
-        <Skeleton className='h-10 w-40' />
+        <Skeleton className='h-10 w-40 rounded-md' />
         <Skeleton className='h-48 w-full rounded-lg' />
       </div>
     );
@@ -33,19 +34,24 @@ export function SchoolTemplatesPage() {
 
   if (staffQuery.isError || templatesQuery.isError) {
     return (
-      <div className='flex flex-col items-center gap-4 py-16 text-center'>
-        <p className='text-sm text-foggy'>{t('loadError')}</p>
-        <Button type='button' variant='outline' onClick={() => templatesQuery.refetch()}>
-          <RefreshCw className='mr-1 h-4 w-4' />{t('retry')}
-        </Button>
-      </div>
+      <ErrorState
+        message={t('loadError')}
+        onRetry={() => templatesQuery.refetch()}
+        retryLabel={t('retry')}
+        framed
+      />
     );
   }
 
   return (
     <div className='flex flex-col gap-4'>
-      <div className='flex items-center justify-between gap-2'>
-        {!isAdmin && <p className='text-sm text-foggy'>{t('adminOnly')}</p>}
+      <div className='flex flex-wrap items-center justify-between gap-3'>
+        {!isAdmin && (
+          <p className='flex items-center gap-2 rounded-lg border border-arches-100 bg-arches-50 px-4 py-3 text-sm font-medium text-arches-700'>
+            <Lock className='h-4 w-4 shrink-0' aria-hidden='true' />
+            {t('adminOnly')}
+          </p>
+        )}
         {isAdmin && (
           <Button type='button' className='ml-auto' disabled={hasDraft} onClick={state.openNew} data-testid='new-template'>
             <Plus className='mr-1 h-4 w-4' />{t('createTemplate')}
@@ -54,12 +60,9 @@ export function SchoolTemplatesPage() {
       </div>
 
       {templates.length === 0 ? (
-        <div className='flex flex-col items-center gap-1 rounded-lg border border-border bg-card py-12 text-center shadow-1'>
-          <p className='text-base font-semibold text-ink-900'>{t('empty')}</p>
-          <p className='text-sm text-foggy'>{t('emptyHint')}</p>
-        </div>
+        <EmptyState icon={FileStack} title={t('empty')} description={t('emptyHint')} framed />
       ) : (
-        <div className='overflow-hidden rounded-lg border border-border bg-card shadow-1'>
+        <SurfaceCard elevation='flat' padding='none' className='overflow-hidden'>
           <TemplateVersionTable
             templates={templates}
             canManage={isAdmin}
@@ -67,7 +70,7 @@ export function SchoolTemplatesPage() {
             onEdit={state.openEdit}
             onPublish={(tpl) => state.setPublishId(tpl.documentId)}
           />
-        </div>
+        </SurfaceCard>
       )}
 
       <TemplateBuilder

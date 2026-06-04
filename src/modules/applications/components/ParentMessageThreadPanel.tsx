@@ -55,14 +55,14 @@ export function ParentMessageThreadPanel({
       <div className='flex min-h-0 flex-1 flex-col'>
         {isLoading ? (
           <div className='flex flex-col gap-3'>
-            <Skeleton className='h-16 w-2/3 rounded-xl' />
-            <Skeleton className='ml-auto h-16 w-2/3 rounded-xl' />
-            <Skeleton className='h-16 w-1/2 rounded-xl' />
+            <Skeleton className='h-16 w-2/3 rounded-lg' />
+            <Skeleton className='ml-auto h-16 w-2/3 rounded-lg' />
+            <Skeleton className='h-16 w-1/2 rounded-lg' />
           </div>
         ) : isError ? (
           <p className='text-sm text-foggy'>{t('threadLoadError')}</p>
         ) : !messages || messages.length === 0 ? (
-          <EmptyState icon={MessageSquare} title={t('threadEmpty')} />
+          <EmptyState icon={MessageSquare} title={t('threadEmpty')} framed />
         ) : (
           <ScrollArea className='h-full'>
             <div className='flex flex-col gap-4 pr-3'>

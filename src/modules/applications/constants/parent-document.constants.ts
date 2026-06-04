@@ -25,7 +25,7 @@ export const PARENT_DOCUMENT_TYPE_OPTIONS: DocumentType[] = [
 
 export const PARENT_DOCUMENT_REQUEST_STATUS_BADGE: Record<DocumentRequestStatus, string> = {
   pending: 'bg-muted text-foggy',
-  partially_fulfilled: 'bg-vivid-amber-soft text-vivid-amber',
+  partially_fulfilled: 'bg-vivid-amber-soft text-arches-700',
   fulfilled: 'bg-vivid-mint-soft text-vivid-mint',
 };
 

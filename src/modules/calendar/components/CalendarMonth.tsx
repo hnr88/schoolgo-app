@@ -5,6 +5,7 @@ import type { ComponentProps } from 'react';
 import { Calendar, CalendarDayButton } from '@/components/ui/calendar';
 import { getEventDates } from '@/modules/calendar/lib/calendar-dates';
 import type { CalendarMonthProps } from '@/modules/calendar/types/calendar.types';
+import { SurfaceCard } from '@/modules/core';
 
 function EventDayButton(props: ComponentProps<typeof CalendarDayButton>) {
   const hasEvents = Boolean(props.modifiers.hasEvents);
@@ -23,7 +24,7 @@ export function CalendarMonth({ events, selectedDate, onSelectDate }: CalendarMo
   const eventDates = getEventDates(events);
 
   return (
-    <div className='rounded-lg border border-border bg-card p-2 shadow-1'>
+    <SurfaceCard padding='sm'>
       <Calendar
         mode='single'
         selected={selectedDate}
@@ -33,6 +34,6 @@ export function CalendarMonth({ events, selectedDate, onSelectDate }: CalendarMo
         components={{ DayButton: EventDayButton }}
         className='w-full'
       />
-    </div>
+    </SurfaceCard>
   );
 }

@@ -3,7 +3,8 @@
 import { Activity, Inbox } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
-import { EmptyState } from '@/modules/core';
+import { cn } from '@/lib/utils';
+import { EmptyState, surfaceCardVariants } from '@/modules/core';
 import { SchoolSectionHeader } from '@/modules/school-dashboard/components/SchoolSectionHeader';
 import type { SchoolActivityRowView } from '@/modules/school-dashboard/types/school-dashboard.types';
 
@@ -12,7 +13,7 @@ export function SchoolActivityFeed({ events }: { events: SchoolActivityRowView[]
   const hasRows = events.length > 0;
 
   return (
-    <section className='flex flex-col overflow-hidden rounded-lg border border-border bg-card shadow-1'>
+    <section className={cn(surfaceCardVariants({ padding: 'none' }), 'flex flex-col overflow-hidden')}>
       <SchoolSectionHeader
         title={t('activityTitle')}
         icon={Activity}
@@ -21,7 +22,9 @@ export function SchoolActivityFeed({ events }: { events: SchoolActivityRowView[]
       />
       <div className='flex flex-col divide-y divide-divider'>
         {!hasRows ? (
-          <EmptyState icon={Inbox} title={t('activityEmpty')} />
+          <div className='p-4'>
+            <EmptyState framed icon={Inbox} title={t('activityEmpty')} />
+          </div>
         ) : (
           events.map((event) => (
             <Link

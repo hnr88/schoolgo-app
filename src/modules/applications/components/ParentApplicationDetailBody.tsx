@@ -2,6 +2,7 @@
 
 import { useLocale, useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
+import { SectionHeading, SurfaceCard } from '@/modules/core';
 import { ParentApplicationInfoSection } from '@/modules/applications/components/ParentApplicationInfoSection';
 import { ParentApplicationTimelineSection } from './ParentApplicationTimelineSection';
 import { ParentPreEnrolmentSection } from './ParentPreEnrolmentSection';
@@ -28,13 +29,17 @@ export function ParentApplicationDetailBody({ application }: { application: Pare
         ]}
       />
 
-      <div className='rounded-xl border border-border bg-card p-6'>
-        <h2 className='mb-2 text-base font-semibold text-ink-900'>{t('sectionOffer')}</h2>
+      <SurfaceCard
+        padding='lg'
+        elevation={hasOffer ? 'raised' : 'flat'}
+        accent={hasOffer ? 'brand' : 'none'}
+      >
+        <SectionHeading title={t('sectionOffer')} level={2} className='mb-3' />
         {hasOffer ? (
           <div className='flex flex-col'>
-            <div className='flex items-baseline justify-between border-b border-border/50 py-4'>
+            <div className='flex items-baseline justify-between border-b border-rausch-200/60 py-4'>
               <span className='text-sm text-foggy'>{t('labelAnnualFee')}</span>
-              <span className='text-sm font-medium text-ink-900'>
+              <span className='text-base font-semibold tabular-nums text-ink-900'>
                 {formatOfferFee(application.offerAnnualFee, locale) ?? '—'}
               </span>
             </div>
@@ -49,15 +54,15 @@ export function ParentApplicationDetailBody({ application }: { application: Pare
           <p className='py-4 text-sm text-foggy'>{t('noOfferYet')}</p>
         )}
 
-        <div className='mt-4 border-t border-border/50 pt-4'>
+        <div className={`mt-4 border-t pt-4 ${hasOffer ? 'border-rausch-200/60' : 'border-border/50'}`}>
           <Link
             href={`/parent/students/${application.student.documentId}`}
-            className='text-sm text-primary hover:underline'
+            className='text-sm font-medium text-primary-strong hover:underline'
           >
             {t('viewStudent')}
           </Link>
         </div>
-      </div>
+      </SurfaceCard>
       </div>
 
       <ParentApplicationTimelineSection applicationDocumentId={application.documentId} />

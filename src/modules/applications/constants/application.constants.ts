@@ -21,7 +21,7 @@ export const APPLICATION_STATUS_STYLES: Record<
   offer_accepted: { dot: 'bg-vivid-mint', bg: 'bg-vivid-mint-soft', text: 'text-babu-700' },
   pre_enrolment: { dot: 'bg-babu-600', bg: 'bg-babu-50', text: 'text-babu-700' },
   coe_issued: { dot: 'bg-babu-600', bg: 'bg-babu-100', text: 'text-babu-700' },
-  enrolled: { dot: 'bg-vivid-mint', bg: 'bg-vivid-mint', text: 'text-white' },
+  enrolled: { dot: 'bg-vivid-mint', bg: 'bg-vivid-mint-soft', text: 'text-vivid-mint' },
   withdrawn: { dot: 'bg-foggy/50', bg: 'bg-muted', text: 'text-foggy' },
   declined: { dot: 'bg-rausch-500', bg: 'bg-rausch-50', text: 'text-rausch-700' },
   waitlisted: { dot: 'bg-vivid-amber', bg: 'bg-vivid-amber-soft', text: 'text-arches-700' },

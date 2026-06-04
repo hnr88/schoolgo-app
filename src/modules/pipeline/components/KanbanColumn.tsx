@@ -11,9 +11,9 @@ import type { KanbanColumnProps } from '@/modules/pipeline/types/component.types
 function KanbanColumnSkeleton() {
   return (
     <div className="flex flex-col gap-3">
-      <Skeleton className="h-24 w-full rounded-md" />
-      <Skeleton className="h-24 w-full rounded-md" />
-      <Skeleton className="h-24 w-full rounded-md" />
+      <Skeleton className="h-24 w-full rounded-lg" />
+      <Skeleton className="h-24 w-full rounded-lg" />
+      <Skeleton className="h-24 w-full rounded-lg" />
     </div>
   );
 }
@@ -30,8 +30,8 @@ export function KanbanColumn({ column, applications, isLoading }: KanbanColumnPr
     >
       <div className="mb-3 flex items-center gap-2">
         <span className={cn('h-2 w-2 shrink-0 rounded-full', column.dotColor)} aria-hidden="true" />
-        <h3 className="text-sm font-semibold text-ink-900">{t(column.label)}</h3>
-        <span className="ml-auto rounded-full border border-border bg-card px-2 py-0.5 text-xs font-semibold text-foggy tabular-nums">
+        <h3 className="font-display text-sm font-bold tracking-tight text-ink-900">{t(column.label)}</h3>
+        <span className="ml-auto rounded-full border border-border bg-card px-2 py-0.5 text-xs font-semibold text-foggy tabular-nums shadow-1">
           {applications.length}
         </span>
       </div>
@@ -46,7 +46,7 @@ export function KanbanColumn({ column, applications, isLoading }: KanbanColumnPr
           {overflow > 0 && (
             <Link
               href="/dashboard/applications"
-              className="rounded-md py-1 text-center text-xs font-semibold text-primary-strong underline-offset-2 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+              className="rounded-md py-1 text-center text-xs font-semibold text-babu-700 underline-offset-2 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
             >
               {t('moreApplications', { count: overflow })}
             </Link>

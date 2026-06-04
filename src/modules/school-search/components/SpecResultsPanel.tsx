@@ -70,7 +70,7 @@ export function SpecResultsPanel({
   };
 
   const typedRequest = mapStoreToTypedRequest(snapshot);
-  const { data, error } = useTypedSchoolSearch(typedRequest);
+  const { data, error, isLoading, isError, refetch } = useTypedSchoolSearch(typedRequest);
 
   useEffect(() => {
     if (error) {
@@ -80,6 +80,9 @@ export function SpecResultsPanel({
 
   const hits = data?.data.hits ?? [];
   const count = data?.data.total ?? 0;
+  const handleRetry = () => {
+    void refetch();
+  };
 
   if (!isActive) return null;
 
@@ -87,7 +90,7 @@ export function SpecResultsPanel({
     return (
       <aside
         className={cn(
-          'absolute right-3 top-3 bottom-3 z-10 flex w-80 flex-col gap-2 overflow-hidden rounded-xl border border-border bg-card/95 shadow-2 backdrop-blur',
+          'absolute right-3 top-3 bottom-3 z-10 flex w-80 flex-col gap-2 overflow-hidden rounded-lg border border-border bg-card shadow-2',
           className,
         )}
         data-testid="spec-results-panel"
@@ -100,6 +103,9 @@ export function SpecResultsPanel({
           hits={hits}
           isAdvanced={isAdvanced}
           activePortal={activePortal}
+          isLoading={isLoading}
+          isError={isError}
+          onRetry={handleRetry}
           className="flex min-h-0 flex-1 flex-col gap-2 overflow-y-auto px-3 pb-3"
         />
       </aside>
@@ -121,6 +127,9 @@ export function SpecResultsPanel({
         hits={hits}
         isAdvanced={isAdvanced}
         activePortal={activePortal}
+        isLoading={isLoading}
+        isError={isError}
+        onRetry={handleRetry}
         className="grid min-h-0 flex-1 grid-cols-1 gap-3 overflow-y-auto pb-24 sm:grid-cols-2 xl:grid-cols-3"
         emptyClassName="col-span-full"
       />

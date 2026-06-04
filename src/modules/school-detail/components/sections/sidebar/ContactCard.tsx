@@ -31,7 +31,7 @@ export async function ContactCard({ school }: { school: SchoolDetail }) {
   const t = await getTranslations('SchoolDetail.sidebar.contact');
 
   return (
-    <section aria-labelledby="contact-heading" className="rounded-xl border border-border bg-card p-5 shadow-2">
+    <section aria-labelledby="contact-heading" className="rounded-lg border border-border bg-card p-5 shadow-1">
       <h2 id="contact-heading" className="text-xl font-semibold text-ink-900">{t('heading')}</h2>
 
       <div className="mt-5 space-y-4">
@@ -40,7 +40,7 @@ export async function ContactCard({ school }: { school: SchoolDetail }) {
             icon={<Mail className="h-4 w-4" aria-hidden="true" />}
             label={t('emailLabel')}
             value={
-              <a href={`mailto:${school.admissionsEmail}`} className="text-primary underline">
+              <a href={`mailto:${school.admissionsEmail}`} className="rounded-sm text-primary underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">
                 {school.admissionsEmail}
               </a>
             }
@@ -52,7 +52,7 @@ export async function ContactCard({ school }: { school: SchoolDetail }) {
             icon={<Phone className="h-4 w-4" aria-hidden="true" />}
             label={t('phoneLabel')}
             value={
-              <a href={`tel:${school.admissionsPhone}`} className="text-primary underline">
+              <a href={`tel:${school.admissionsPhone}`} className="rounded-sm text-primary underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">
                 {school.admissionsPhone}
               </a>
             }

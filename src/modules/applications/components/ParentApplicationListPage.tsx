@@ -3,7 +3,8 @@
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import { FileText, Search } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { buttonVariants } from '@/components/ui/button';
+import { cn } from '@/lib/utils';
 import { EmptyState, ErrorState } from '@/modules/core';
 import { ParentApplicationToolbar } from '@/modules/applications/components/ParentApplicationToolbar';
 import { ParentApplicationTable } from '@/modules/applications/components/ParentApplicationTable';
@@ -31,7 +32,9 @@ export function ParentApplicationListPage({ studentDocumentId }: ParentApplicati
   } = useParentApplicationList(studentDocumentId);
 
   if (isError) {
-    return <ErrorState message={t('errorMessage')} onRetry={() => refetch()} retryLabel={t('retry')} />;
+    return (
+      <ErrorState message={t('errorMessage')} onRetry={() => refetch()} retryLabel={t('retry')} framed />
+    );
   }
 
   if (isEmpty) {
@@ -40,12 +43,11 @@ export function ParentApplicationListPage({ studentDocumentId }: ParentApplicati
         icon={FileText}
         title={t('emptyTitle')}
         description={t('emptySubtitle')}
+        framed
         action={
-          <Link href='/parent/search'>
-            <Button className='gap-1.5'>
-              <Search className='h-4 w-4' />
-              {t('searchSchools')}
-            </Button>
+          <Link href='/parent/search' className={cn(buttonVariants({ variant: 'default' }), 'gap-1.5')}>
+            <Search className='h-4 w-4' />
+            {t('searchSchools')}
           </Link>
         }
       />
@@ -53,7 +55,7 @@ export function ParentApplicationListPage({ studentDocumentId }: ParentApplicati
   }
 
   return (
-    <div className='overflow-hidden rounded-xl border border-border bg-card'>
+    <div className='overflow-hidden rounded-lg border border-border bg-card shadow-1'>
       <div className='border-b border-border px-6 py-4'>
         <ParentApplicationToolbar status={status} onStatusChange={handleStatusChange} />
       </div>

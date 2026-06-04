@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { toast } from 'sonner';
 import { Button } from '@/components/ui/button';
+import { SectionHeading, SurfaceCard } from '@/modules/core';
 import { ConfirmActionDialog } from '@/modules/applications/components/ConfirmActionDialog';
 import { MakeOfferDialog } from '@/modules/school-applications/components/dialogs/MakeOfferDialog';
 import { DeclineDialog } from '@/modules/school-applications/components/dialogs/DeclineDialog';
@@ -133,8 +134,8 @@ export function SchoolApplicationActions({
   if (actions.length === 0) return null;
 
   return (
-    <div className='flex flex-col gap-3 rounded-xl border border-border bg-card p-6'>
-      <h2 className='text-sm font-semibold text-ink-900'>{t('actionsTitle')}</h2>
+    <SurfaceCard padding='lg' className='flex flex-col gap-3'>
+      <SectionHeading title={t('actionsTitle')} level={3} />
       <div className='flex flex-wrap gap-3'>
         {actions.map((action) =>
           SIMPLE_ACTIONS.includes(action) ? (
@@ -144,6 +145,6 @@ export function SchoolApplicationActions({
           ),
         )}
       </div>
-    </div>
+    </SurfaceCard>
   );
 }

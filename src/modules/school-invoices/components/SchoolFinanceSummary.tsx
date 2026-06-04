@@ -2,7 +2,7 @@
 
 import { CheckCircle2, Receipt, Wallet } from 'lucide-react';
 import { useTranslations } from 'next-intl';
-import { cn } from '@/lib/utils';
+import { StatTile } from '@/modules/core';
 import type { IconComponent } from '@/modules/design-system';
 import { formatAud, sumAud } from '@/modules/school-invoices/lib/format-finance';
 import type {
@@ -20,8 +20,7 @@ interface SummaryCard {
   label: string;
   value: number;
   icon: IconComponent;
-  bg: string;
-  iconColor: string;
+  iconClassName: string;
 }
 
 export function SchoolFinanceSummary({ invoices, payouts }: SummaryProps) {
@@ -39,52 +38,35 @@ export function SchoolFinanceSummary({ invoices, payouts }: SummaryProps) {
       label: t('summaryTotalInvoiced'),
       value: totalInvoiced,
       icon: Receipt,
-      bg: 'bg-vivid-amber-soft',
-      iconColor: 'text-vivid-amber',
+      iconClassName: 'bg-vivid-amber-soft text-arches-700',
     },
     {
       key: 'paid',
       label: t('summaryTotalPaid'),
       value: totalPaid,
       icon: CheckCircle2,
-      bg: 'bg-vivid-mint-soft',
-      iconColor: 'text-vivid-mint',
+      iconClassName: 'bg-vivid-mint-soft text-vivid-mint',
     },
     {
       key: 'payouts',
       label: t('summaryTotalPayouts'),
       value: totalPayouts,
       icon: Wallet,
-      bg: 'bg-vivid-iris-soft',
-      iconColor: 'text-vivid-iris',
+      iconClassName: 'bg-vivid-iris-soft text-vivid-iris-strong',
     },
   ];
 
   return (
     <div className='grid grid-cols-1 gap-4 sm:grid-cols-3'>
-      {cards.map((card) => {
-        const Icon = card.icon;
-        return (
-          <div
-            key={card.key}
-            className='flex flex-col gap-3 rounded-lg border border-border bg-card p-4 shadow-1'
-          >
-            <span
-              className={cn(
-                'flex h-9 w-9 shrink-0 items-center justify-center rounded-md',
-                card.bg,
-                card.iconColor,
-              )}
-            >
-              <Icon className='h-4 w-4' strokeWidth={1.75} aria-hidden='true' />
-            </span>
-            <span className='font-display text-2xl font-bold text-ink-900 tabular-nums'>
-              {formatAud(card.value)}
-            </span>
-            <span className='text-sm font-medium text-foggy'>{card.label}</span>
-          </div>
-        );
-      })}
+      {cards.map((card) => (
+        <StatTile
+          key={card.key}
+          icon={card.icon}
+          iconClassName={card.iconClassName}
+          label={card.label}
+          value={formatAud(card.value)}
+        />
+      ))}
     </div>
   );
 }

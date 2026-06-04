@@ -31,7 +31,7 @@ export function DashboardSidebar() {
   return (
     <aside
       className={cn(
-        'hidden h-full flex-col bg-card transition-all duration-300 lg:flex',
+        'hidden h-full flex-col border-r border-divider bg-card transition-all duration-300 lg:flex',
         isCollapsed ? 'w-16' : 'w-64',
       )}
     >
@@ -60,7 +60,7 @@ export function DashboardSidebar() {
             })
           }
           className={cn(
-            'flex w-full items-center gap-3 rounded-xl text-sm font-medium text-foggy transition-colors hover:bg-muted hover:text-ink-900',
+            'flex w-full items-center gap-3 rounded-md text-sm font-medium text-foggy transition-colors hover:bg-muted hover:text-ink-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring',
             isCollapsed ? 'justify-center p-3' : 'px-4 py-3',
           )}
         >

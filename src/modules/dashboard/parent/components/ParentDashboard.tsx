@@ -5,6 +5,7 @@ import { ParentDashboardHeader } from '@/modules/dashboard/parent/components/Par
 import { ParentStatTiles } from '@/modules/dashboard/parent/components/ParentStatTiles';
 import { ParentRecentApplicationsTable } from '@/modules/dashboard/parent/components/ParentRecentApplicationsTable';
 import { ParentStudentsSummaryCard } from '@/modules/dashboard/parent/components/ParentStudentsSummaryCard';
+import { ParentTestsSummaryCard } from '@/modules/dashboard/parent/components/ParentTestsSummaryCard';
 import { ParentQuickActions } from '@/modules/dashboard/parent/components/ParentQuickActions';
 import { ParentOnboardingSection } from '@/modules/onboarding';
 
@@ -23,8 +24,9 @@ export function ParentDashboard() {
         <div className='lg:col-span-2'>
           <ParentRecentApplicationsTable />
         </div>
-        <div className='lg:col-span-1'>
+        <div className='flex flex-col gap-6 lg:col-span-1'>
           <ParentStudentsSummaryCard />
+          <ParentTestsSummaryCard />
         </div>
       </div>
 

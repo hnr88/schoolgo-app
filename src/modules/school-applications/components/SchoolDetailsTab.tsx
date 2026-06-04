@@ -1,6 +1,7 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
+import { SurfaceCard } from '@/modules/core';
 import { agentUserName } from '@/modules/school-applications/lib/school-application';
 import type { SchoolApplicationDetail } from '@/modules/school-applications/types/school-applications.types';
 
@@ -27,7 +28,7 @@ export function SchoolDetailsTab({ application }: { application: SchoolApplicati
   );
 
   return (
-    <div className='flex flex-col gap-6 rounded-xl border border-border bg-card p-6'>
+    <SurfaceCard padding='lg' className='flex flex-col gap-6'>
       <section>
         <h3 className='mb-4 text-sm font-semibold text-ink-900'>{t('sectionStudent')}</h3>
         <div className='grid grid-cols-1 gap-4 md:grid-cols-2'>
@@ -68,6 +69,6 @@ export function SchoolDetailsTab({ application }: { application: SchoolApplicati
           </div>
         </section>
       )}
-    </div>
+    </SurfaceCard>
   );
 }
