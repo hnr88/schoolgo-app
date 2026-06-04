@@ -34,7 +34,7 @@ export function DashboardSidebar() {
   return (
     <aside
       className={cn(
-        'hidden h-full flex-col border-r border-divider bg-rausch-50 transition-all duration-300 ease-out-quart lg:flex',
+        'hidden h-full flex-col border-r border-background/10 bg-babu-700 transition-all duration-300 ease-out-quart lg:flex',
         isCollapsed ? 'w-16' : 'w-64',
       )}
     >
@@ -48,7 +48,7 @@ export function DashboardSidebar() {
       >
         <Link href={home} className='flex shrink-0 items-center'>
           <Image
-            src='/logos/logo-red.png'
+            src='/logos/logo-white.png'
             alt='SchoolGo'
             width={140}
             height={30}
@@ -59,7 +59,7 @@ export function DashboardSidebar() {
           type='button'
           aria-label={t(isCollapsed ? 'expandSidebar' : 'collapseSidebar')}
           onClick={() => setCollapsed(!isCollapsed)}
-          className='flex shrink-0 items-center justify-center rounded-lg p-2 text-foggy transition-colors hover:bg-card hover:text-ink-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring'
+          className='flex shrink-0 items-center justify-center rounded-lg p-2 text-background/70 transition-colors hover:bg-background/10 hover:text-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-background/50'
         >
           {isCollapsed ? (
             <PanelLeftOpen className='h-5 w-5' strokeWidth={1.75} />
@@ -77,22 +77,22 @@ export function DashboardSidebar() {
             href={settingsHref}
             title={isCollapsed ? displayName : undefined}
             className={cn(
-              'group flex items-center gap-3 rounded-xl border border-border bg-card no-underline shadow-1 transition-[box-shadow,background-color] duration-200 ease-out-quart hover:shadow-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring',
+              'group flex items-center gap-3 rounded-xl border border-background/15 bg-background/10 no-underline transition-[background-color] duration-200 ease-out-quart hover:bg-background/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-background/50',
               isCollapsed ? 'justify-center p-1.5' : 'p-2',
             )}
           >
             <Avatar className='h-9 w-9 shrink-0'>
-              <AvatarFallback className='bg-rausch-50 text-xs font-bold text-primary-strong'>
+              <AvatarFallback className='bg-background/20 text-xs font-bold text-background'>
                 {initials}
               </AvatarFallback>
             </Avatar>
             {!isCollapsed && (
               <>
-                <span className='min-w-0 flex-1 truncate text-sm font-semibold text-ink-900'>
+                <span className='min-w-0 flex-1 truncate text-sm font-semibold text-background'>
                   {displayName}
                 </span>
                 <Settings
-                  className='h-4 w-4 shrink-0 text-foggy transition-colors group-hover:text-ink-900'
+                  className='h-4 w-4 shrink-0 text-background/70 transition-colors group-hover:text-background'
                   strokeWidth={1.75}
                   aria-hidden='true'
                 />
