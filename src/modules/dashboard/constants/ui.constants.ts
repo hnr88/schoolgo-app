@@ -187,7 +187,6 @@ export const PORTAL_NAV: Record<Portal, PortalNav> = {
         items: [
           { href: '/parent/applications', icon: FileText, labelKey: 'applications' },
           { href: '/parent/offers', icon: Gift, labelKey: 'offers' },
-          { href: '/parent/tours', icon: CalendarDays, labelKey: 'tours' },
         ],
       },
       {
