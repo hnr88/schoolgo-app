@@ -3,6 +3,7 @@ import type { StudentFormValues } from '@/modules/students/schemas/student.schem
 const OPTIONAL_STRING_FIELDS = [
   'dateOfBirth',
   'nationality',
+  'passportNumber',
   'currentSchool',
   'currentYearLevel',
   'targetEntryYear',

@@ -1,6 +1,7 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
+import { User } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import {
   Select,
@@ -16,15 +17,19 @@ import {
   FormLabel,
   FormMessage,
 } from '@/components/ui/form';
-import { GENDER_OPTIONS } from '@/modules/students/constants/student.constants';
+import { StudentFormSectionCard } from '@/modules/students/components/StudentFormSectionCard';
+import { GENDER_OPTIONS, GENDER_LABEL_KEYS } from '@/modules/students/constants/student.constants';
 import type { StudentFormPersonalSectionProps } from '@/modules/students/types/component.types';
 
 export function StudentFormPersonalSection({ control }: StudentFormPersonalSectionProps) {
   const t = useTranslations('Students');
 
   return (
-    <section className='flex flex-col gap-4'>
-      <h2 className='text-lg font-semibold text-ink-900'>{t('sectionPersonal')}</h2>
+    <StudentFormSectionCard
+      icon={User}
+      title={t('sectionPersonal')}
+      description={t('sectionPersonalDesc')}
+    >
       <div className='grid grid-cols-1 gap-5 sm:grid-cols-2'>
         <FormField
           control={control}
@@ -32,7 +37,7 @@ export function StudentFormPersonalSection({ control }: StudentFormPersonalSecti
           render={({ field }) => (
             <FormItem>
               <FormLabel>{t('fieldFirstName')}</FormLabel>
-              <FormControl><Input {...field} /></FormControl>
+              <FormControl><Input placeholder={t('fieldFirstNamePlaceholder')} {...field} /></FormControl>
               <FormMessage />
             </FormItem>
           )}
@@ -43,7 +48,7 @@ export function StudentFormPersonalSection({ control }: StudentFormPersonalSecti
           render={({ field }) => (
             <FormItem>
               <FormLabel>{t('fieldLastName')}</FormLabel>
-              <FormControl><Input {...field} /></FormControl>
+              <FormControl><Input placeholder={t('fieldLastNamePlaceholder')} {...field} /></FormControl>
               <FormMessage />
             </FormItem>
           )}
@@ -71,7 +76,7 @@ export function StudentFormPersonalSection({ control }: StudentFormPersonalSecti
                 </FormControl>
                 <SelectContent>
                   {GENDER_OPTIONS.map((g) => (
-                    <SelectItem key={g} value={g}>{t(`gender${g.charAt(0).toUpperCase()}${g.slice(1)}`)}</SelectItem>
+                    <SelectItem key={g} value={g}>{t(GENDER_LABEL_KEYS[g])}</SelectItem>
                   ))}
                 </SelectContent>
               </Select>
@@ -85,12 +90,23 @@ export function StudentFormPersonalSection({ control }: StudentFormPersonalSecti
           render={({ field }) => (
             <FormItem>
               <FormLabel>{t('fieldNationality')}</FormLabel>
-              <FormControl><Input {...field} /></FormControl>
+              <FormControl><Input placeholder={t('fieldNationalityPlaceholder')} {...field} /></FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={control}
+          name='passportNumber'
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>{t('fieldPassport')}</FormLabel>
+              <FormControl><Input placeholder={t('fieldPassportPlaceholder')} {...field} /></FormControl>
               <FormMessage />
             </FormItem>
           )}
         />
       </div>
-    </section>
+    </StudentFormSectionCard>
   );
 }

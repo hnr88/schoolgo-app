@@ -1,5 +1,6 @@
 import { DashboardSidebar } from '@/modules/dashboard/components/DashboardSidebar';
 import { DashboardHeader } from '@/modules/dashboard/components/DashboardHeader';
+import { DashboardContent } from '@/modules/dashboard/components/DashboardContent';
 import { ProtectedLayout } from '@/modules/auth/components/ProtectedLayout';
 import { PORTAL_ALLOWED_ROLES } from '@/modules/auth/constants/auth.constants';
 
@@ -11,7 +12,7 @@ export default function AgentProtectedLayout({ children }: { children: React.Rea
         <div className='flex flex-1 flex-col overflow-hidden'>
           <DashboardHeader />
           <main className='relative flex-1 overflow-y-auto bg-muted'>
-            <div className='px-6 py-8'>{children}</div>
+            <DashboardContent>{children}</DashboardContent>
           </main>
         </div>
       </div>

@@ -20,7 +20,7 @@ export function ContactSchoolDialog({ documentId }: { documentId: string }) {
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger render={<Button variant='outline'>{t('actionContactSchool')}</Button>} />
-      <DialogContent>
+      <DialogContent className='sm:max-w-2xl'>
         <DialogHeader>
           <DialogTitle>{t('contactSchoolTitle')}</DialogTitle>
           <DialogDescription>{t('contactSchoolDescription')}</DialogDescription>

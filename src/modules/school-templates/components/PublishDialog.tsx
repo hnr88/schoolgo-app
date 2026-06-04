@@ -49,7 +49,7 @@ export function PublishDialog({ open, documentId, onOpenChange }: PublishDialogP
 
   return (
     <AlertDialog open={open} onOpenChange={(o) => (o ? onOpenChange(true) : close())}>
-      <AlertDialogContent>
+      <AlertDialogContent className='sm:max-w-md'>
         <AlertDialogHeader>
           <AlertDialogTitle>
             {impact ? t('publishImpactTitle') : t('publishTitle')}

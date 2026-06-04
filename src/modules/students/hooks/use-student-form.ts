@@ -13,6 +13,7 @@ export function useStudentForm({ defaultValues }: UseStudentFormOptions) {
       lastName: '',
       dateOfBirth: '',
       nationality: '',
+      passportNumber: '',
       currentSchool: '',
       currentYearLevel: '',
       targetEntryYear: '',

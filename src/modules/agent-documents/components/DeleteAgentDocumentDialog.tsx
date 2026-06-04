@@ -21,7 +21,7 @@ export function DeleteAgentDocumentDialog({
 
   return (
     <Dialog open={!!document} onOpenChange={(open) => { if (!open) onOpenChange(false); }}>
-      <DialogContent>
+      <DialogContent className='sm:max-w-md'>
         <DialogHeader>
           <DialogTitle>{t('deleteTitle')}</DialogTitle>
         </DialogHeader>

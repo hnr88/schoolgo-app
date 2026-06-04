@@ -28,7 +28,7 @@ export function CancelBookingDialog({
         if (!open) onOpenChange(false);
       }}
     >
-      <DialogContent>
+      <DialogContent className='sm:max-w-md'>
         <DialogHeader>
           <DialogTitle>{t('cancelTitle')}</DialogTitle>
         </DialogHeader>

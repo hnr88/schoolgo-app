@@ -1,7 +1,7 @@
 import type { StudentFormValues } from '@/modules/students/schemas/student.schema';
 import type { Student } from '@/modules/students/types/student.types';
 
-const FORM_GENDERS: ReadonlyArray<NonNullable<StudentFormValues['gender']>> = ['male', 'female', 'other'];
+const FORM_GENDERS: ReadonlyArray<NonNullable<StudentFormValues['gender']>> = ['male', 'female', 'other', 'prefer_not_to_say'];
 
 function asFormGender(gender: Student['gender']): StudentFormValues['gender'] {
   if (gender && (FORM_GENDERS as readonly string[]).includes(gender)) {
@@ -17,6 +17,7 @@ export function studentToFormValues(student: Student): Partial<StudentFormValues
     dateOfBirth: student.dateOfBirth ?? '',
     gender: asFormGender(student.gender),
     nationality: student.nationality ?? '',
+    passportNumber: student.passportNumber ?? '',
     currentSchool: student.currentSchool ?? '',
     currentYearLevel: student.currentYearLevel ?? '',
     targetEntryYear: student.targetEntryYear ?? '',

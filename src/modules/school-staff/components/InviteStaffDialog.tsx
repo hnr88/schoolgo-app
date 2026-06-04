@@ -108,7 +108,7 @@ export function InviteStaffDialog({ open, onOpenChange, schoolDocumentId }: Invi
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent>
+      <DialogContent className='sm:max-w-2xl'>
         <DialogHeader>
           <DialogTitle>{t('inviteTitle')}</DialogTitle>
           <DialogDescription>{t('inviteDescription')}</DialogDescription>

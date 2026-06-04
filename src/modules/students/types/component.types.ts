@@ -1,4 +1,5 @@
 import type { Control } from 'react-hook-form';
+import type { LucideIcon } from 'lucide-react';
 import type { StudentFormValues } from '@/modules/students/schemas/student.schema';
 import type { Student } from '@/modules/students/types/student.types';
 
@@ -17,6 +18,7 @@ export interface StudentFormProps {
   onSubmit: (values: StudentFormValues) => Promise<void>;
   isLoading: boolean;
   submitLabel: string;
+  cancelHref: string;
 }
 
 export interface StudentListToolbarProps {
@@ -68,7 +70,19 @@ export interface StudentFormNotesFieldProps {
   control: Control<StudentFormValues>;
 }
 
-export interface StudentFormSubmitButtonProps {
+export interface StudentFormSummaryProps {
+  control: Control<StudentFormValues>;
+}
+
+export interface StudentFormSectionCardProps {
+  icon: LucideIcon;
+  title: string;
+  description: string;
+  children: React.ReactNode;
+}
+
+export interface StudentFormActionBarProps {
   isLoading: boolean;
   submitLabel: string;
+  cancelHref: string;
 }

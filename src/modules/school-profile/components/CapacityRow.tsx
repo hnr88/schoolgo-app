@@ -93,7 +93,7 @@ export function CapacityRow({ capacity, disabled = false }: CapacityRowProps) {
               <Trash2 className='h-4 w-4' aria-hidden='true' />
               <span className='sr-only'>{t('removeCapacity')}</span>
             </AlertDialogTrigger>
-            <AlertDialogContent>
+            <AlertDialogContent className='sm:max-w-2xl'>
               <AlertDialogHeader>
                 <AlertDialogTitle>{t('removeCapacityTitle')}</AlertDialogTitle>
                 <AlertDialogDescription>{t('removeCapacityDesc')}</AlertDialogDescription>

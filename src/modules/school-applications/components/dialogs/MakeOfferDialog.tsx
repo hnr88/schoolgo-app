@@ -60,7 +60,7 @@ export function MakeOfferDialog({ documentId, open, onOpenChange, mode }: Props)
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent>
+      <DialogContent className='sm:max-w-2xl'>
         <DialogHeader>
           <DialogTitle>{mode === 'make-offer' ? t('actionMakeOffer') : t('actionExtendOffer')}</DialogTitle>
           <DialogDescription>{t('offerDialogDescription')}</DialogDescription>

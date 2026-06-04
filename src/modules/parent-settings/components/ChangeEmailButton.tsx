@@ -23,7 +23,7 @@ export function ChangeEmailButton() {
         <Mail className='mr-2 h-4 w-4' aria-hidden='true' />
         {t('changeEmailButton')}
       </AlertDialogTrigger>
-      <AlertDialogContent>
+      <AlertDialogContent className='sm:max-w-md'>
         <AlertDialogHeader>
           <AlertDialogTitle>{t('changeEmailButton')}</AlertDialogTitle>
           <AlertDialogDescription>{t('changeEmailUnavailable')}</AlertDialogDescription>

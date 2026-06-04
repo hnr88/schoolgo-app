@@ -22,7 +22,7 @@ export default async function ParentNewStudentPage({
   const t = await getTranslations('StudentWizard');
 
   return (
-    <div className='mx-auto flex w-full max-w-5xl flex-col gap-8'>
+    <div className='flex w-full max-w-5xl flex-col gap-8'>
       <header className='flex flex-col gap-2'>
         <h1 className='font-display text-3xl font-bold tracking-tight text-ink-900'>
           {t('title')}

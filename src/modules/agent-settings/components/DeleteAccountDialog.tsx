@@ -53,7 +53,7 @@ export function DeleteAccountDialog() {
       <AlertDialogTrigger render={<Button variant='destructive' />}>
         {t('deleteAccountButton')}
       </AlertDialogTrigger>
-      <AlertDialogContent>
+      <AlertDialogContent className='sm:max-w-md'>
         <AlertDialogHeader>
           <AlertDialogTitle>{t('deleteDialogTitle')}</AlertDialogTitle>
           <AlertDialogDescription>{t('deleteDialogDescription')}</AlertDialogDescription>

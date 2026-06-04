@@ -67,7 +67,7 @@ export function AgentDocumentUploadDialog({ open, onOpenChange }: AgentDocumentU
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className='max-w-lg'>
+      <DialogContent className='sm:max-w-2xl'>
         <DialogHeader>
           <DialogTitle>{t('uploadTitle')}</DialogTitle>
         </DialogHeader>

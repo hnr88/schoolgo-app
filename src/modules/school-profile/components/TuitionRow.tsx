@@ -83,7 +83,7 @@ export function TuitionRow({ tuition, disabled = false }: TuitionRowProps) {
               <Trash2 className='h-4 w-4' aria-hidden='true' />
               <span className='sr-only'>{t('removeTuition')}</span>
             </AlertDialogTrigger>
-            <AlertDialogContent>
+            <AlertDialogContent className='sm:max-w-2xl'>
               <AlertDialogHeader>
                 <AlertDialogTitle>{t('removeTuitionTitle')}</AlertDialogTitle>
                 <AlertDialogDescription>{t('removeTuitionDesc')}</AlertDialogDescription>

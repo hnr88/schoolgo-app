@@ -18,4 +18,4 @@ export type {
   ParentStudentsResponse,
 } from '@/modules/students/types/parent-student.types';
 export type { StudentDocument, DocumentType, DocumentStatus } from '@/modules/students/types/document.types';
-export type { UseStudentFormOptions, StudentFormPersonalSectionProps, StudentFormEducationSectionProps, StudentFormParentSectionProps, StudentFormNotesFieldProps, StudentFormSubmitButtonProps } from '@/modules/students/types/component.types';
+export type { UseStudentFormOptions, StudentFormPersonalSectionProps, StudentFormEducationSectionProps, StudentFormParentSectionProps, StudentFormNotesFieldProps } from '@/modules/students/types/component.types';

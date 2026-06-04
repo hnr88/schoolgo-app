@@ -38,7 +38,14 @@ export function DashboardSidebar() {
         isCollapsed ? 'w-16' : 'w-64',
       )}
     >
-      <div className={cn('flex h-16 items-center overflow-hidden', isCollapsed ? 'justify-center px-2' : 'px-5')}>
+      <div
+        className={cn(
+          'flex shrink-0 overflow-hidden border-b border-divider',
+          isCollapsed
+            ? 'flex-col items-center justify-center gap-3 py-4'
+            : 'h-16 items-center justify-between px-5',
+        )}
+      >
         <Link href={home} className='flex shrink-0 items-center'>
           <Image
             src='/logos/logo-red.png'
@@ -48,17 +55,29 @@ export function DashboardSidebar() {
             className='h-10 w-auto'
           />
         </Link>
+        <button
+          type='button'
+          aria-label={t(isCollapsed ? 'expandSidebar' : 'collapseSidebar')}
+          onClick={() => setCollapsed(!isCollapsed)}
+          className='flex shrink-0 items-center justify-center rounded-lg p-2 text-foggy transition-colors hover:bg-muted hover:text-ink-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring'
+        >
+          {isCollapsed ? (
+            <PanelLeftOpen className='h-5 w-5' strokeWidth={1.5} />
+          ) : (
+            <PanelLeftClose className='h-5 w-5' strokeWidth={1.5} />
+          )}
+        </button>
       </div>
 
       <SidebarNavLinks isCollapsed={isCollapsed} />
 
       {displayName && (
-        <div className={cn('border-t border-divider py-3', isCollapsed ? 'px-2' : 'px-3')}>
+        <div className={cn('mt-auto border-t border-divider py-3', isCollapsed ? 'px-2' : 'px-3')}>
           <Link
             href={settingsHref}
             title={isCollapsed ? displayName : undefined}
             className={cn(
-              'flex items-center gap-3 rounded-md no-underline transition-colors hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring',
+              'flex items-center gap-3 rounded-lg no-underline transition-colors hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring',
               isCollapsed ? 'justify-center p-1.5' : 'px-2 py-2',
             )}
           >
@@ -82,24 +101,6 @@ export function DashboardSidebar() {
           </Link>
         </div>
       )}
-
-      <div className={cn('py-3', isCollapsed ? 'px-2' : 'px-3')}>
-        <button
-          type='button'
-          aria-label={t(isCollapsed ? 'expandSidebar' : 'collapseSidebar')}
-          onClick={() => setCollapsed(!isCollapsed)}
-          className={cn(
-            'flex w-full items-center gap-3 rounded-md text-sm font-medium text-foggy transition-colors hover:bg-muted hover:text-ink-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring',
-            isCollapsed ? 'justify-center p-3' : 'px-4 py-3',
-          )}
-        >
-          {isCollapsed ? (
-            <PanelLeftOpen className='h-5 w-5 shrink-0' strokeWidth={1.5} />
-          ) : (
-            <PanelLeftClose className='h-5 w-5 shrink-0' strokeWidth={1.5} />
-          )}
-        </button>
-      </div>
     </aside>
   );
 }

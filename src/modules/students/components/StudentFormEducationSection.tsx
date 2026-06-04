@@ -1,6 +1,7 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
+import { GraduationCap } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import {
   Select,
@@ -16,6 +17,7 @@ import {
   FormLabel,
   FormMessage,
 } from '@/components/ui/form';
+import { StudentFormSectionCard } from '@/modules/students/components/StudentFormSectionCard';
 import { YEAR_LEVEL_OPTIONS } from '@/modules/students/constants/student.constants';
 import type { StudentFormEducationSectionProps } from '@/modules/students/types/component.types';
 
@@ -23,8 +25,11 @@ export function StudentFormEducationSection({ control }: StudentFormEducationSec
   const t = useTranslations('Students');
 
   return (
-    <section className='flex flex-col gap-4'>
-      <h2 className='text-lg font-semibold text-ink-900'>{t('sectionEducation')}</h2>
+    <StudentFormSectionCard
+      icon={GraduationCap}
+      title={t('sectionEducation')}
+      description={t('sectionEducationDesc')}
+    >
       <div className='grid grid-cols-1 gap-5 sm:grid-cols-2'>
         <FormField
           control={control}
@@ -32,7 +37,7 @@ export function StudentFormEducationSection({ control }: StudentFormEducationSec
           render={({ field }) => (
             <FormItem>
               <FormLabel>{t('fieldCurrentSchool')}</FormLabel>
-              <FormControl><Input {...field} /></FormControl>
+              <FormControl><Input placeholder={t('fieldCurrentSchoolPlaceholder')} {...field} /></FormControl>
               <FormMessage />
             </FormItem>
           )}
@@ -89,6 +94,6 @@ export function StudentFormEducationSection({ control }: StudentFormEducationSec
           )}
         />
       </div>
-    </section>
+    </StudentFormSectionCard>
   );
 }

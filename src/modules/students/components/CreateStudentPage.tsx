@@ -26,24 +26,26 @@ export function CreateStudentPage() {
   }
 
   return (
-    <div className='flex flex-col gap-6'>
-      <div className='flex items-center gap-4'>
+    <div className='flex flex-col gap-8'>
+      <header className='flex flex-col gap-3'>
         <Link href='/dashboard/students'>
-          <Button variant='ghost' size='sm'>
+          <Button variant='ghost' size='sm' className='-ml-2 w-fit text-foggy'>
             <ArrowLeft className='mr-1 h-4 w-4' />
             {t('backToList')}
           </Button>
         </Link>
-        <h1 className='font-display text-2xl font-bold text-ink-900'>{t('createTitle')}</h1>
-      </div>
+        <div className='flex flex-col gap-1'>
+          <h1 className='font-display text-3xl font-bold text-ink-900'>{t('createTitle')}</h1>
+          <p className='text-base text-foggy'>{t('createSubtitle')}</p>
+        </div>
+      </header>
 
-      <div className='rounded-lg border border-border bg-card p-6'>
-        <StudentForm
-          onSubmit={handleSubmit}
-          isLoading={createStudent.isPending}
-          submitLabel={t('createButton')}
-        />
-      </div>
+      <StudentForm
+        onSubmit={handleSubmit}
+        isLoading={createStudent.isPending}
+        submitLabel={t('createButton')}
+        cancelHref='/dashboard/students'
+      />
     </div>
   );
 }

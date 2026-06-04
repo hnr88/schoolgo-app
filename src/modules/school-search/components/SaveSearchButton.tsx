@@ -47,7 +47,7 @@ export function SaveSearchButton() {
         <BookmarkPlus className="size-4" aria-hidden="true" />
         {t('cta')}
       </DialogTrigger>
-      <DialogContent>
+      <DialogContent className='sm:max-w-md'>
         <DialogHeader>
           <DialogTitle>{t('promptTitle')}</DialogTitle>
         </DialogHeader>
