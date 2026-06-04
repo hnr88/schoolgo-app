@@ -8,6 +8,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Form, FormControl, FormField, FormItem } from '@/components/ui/form';
 import { cn } from '@/lib/utils';
 import { useParentMessageComposer } from '@/modules/applications/hooks/useParentMessageComposer';
+import { ParentMessageAttachmentsField } from '@/modules/applications/components/ParentMessageAttachmentsField';
 import { PARENT_MESSAGE_MAX_LENGTH } from '@/modules/applications/constants/parent-message.constants';
 import type { ParentMessageComposerProps } from '@/modules/applications/types/parent-message.types';
 
@@ -16,13 +17,11 @@ export function ParentMessageComposer({
   autoFocus,
 }: ParentMessageComposerProps) {
   const t = useTranslations('ParentMessages');
-  const { form, content, charCount, isPending, submit } = useParentMessageComposer(
-    applicationDocumentId,
-    {
+  const { form, content, charCount, attachments, setAttachments, isPending, submit } =
+    useParentMessageComposer(applicationDocumentId, {
       onSent: () => toast.success(t('sendSuccess')),
       onError: () => toast.error(t('sendErrorRetry')),
-    },
-  );
+    });
 
   const isOverLimit = charCount > PARENT_MESSAGE_MAX_LENGTH;
   const isEmpty = content.trim().length === 0;
@@ -46,6 +45,11 @@ export function ParentMessageComposer({
               </FormControl>
             </FormItem>
           )}
+        />
+        <ParentMessageAttachmentsField
+          files={attachments}
+          onFilesChange={setAttachments}
+          disabled={isPending}
         />
         <div className='flex items-center justify-between gap-3'>
           <span

@@ -1725,7 +1725,10 @@
     "browseSchools": "Browse schools",
     "runSearch": "Run search",
     "delete": "Delete",
-    "resultCount": "{count, plural, =0 {No results} one {# result} other {# results}}"
+    "resultCount": "{count, plural, =0 {No results} one {# result} other {# results}}",
+    "alertsLabel": "Email alerts",
+    "alertsHint": "Get notified when new schools match this search.",
+    "lastNotified": "Last alerted {date}"
   },
   "ParentNotifications": {
     "title": "Notifications",
@@ -2268,7 +2271,41 @@
     "searchPlaceholder": "Search by student or school",
     "searchAria": "Search applications",
     "childFilterAll": "All children",
-    "childFilterLabel": "Filter by child"
+    "childFilterLabel": "Filter by child",
+    "offerActionsTitle": "Respond to this offer",
+    "offerActionsSubtitle": "Accept to confirm the place, or decline if it is no longer right for your child.",
+    "actionAcceptOffer": "Accept offer",
+    "actionDeclineOffer": "Decline offer",
+    "acceptOfferConfirmTitle": "Accept this offer?",
+    "acceptOfferConfirmDescription": "Accepting confirms the offered place. The school and your agent will be notified.",
+    "acceptOfferSuccess": "Offer accepted",
+    "acceptOfferError": "Could not accept the offer. Please try again.",
+    "declineOfferConfirmTitle": "Decline this offer?",
+    "declineOfferConfirmDescription": "Declining releases the offered place. The school and your agent will be notified.",
+    "declineOfferSuccess": "Offer declined",
+    "declineOfferError": "Could not decline the offer. Please try again.",
+    "declineNoteLabel": "Reason (optional)",
+    "declineNotePlaceholder": "Let the school know why you are declining.",
+    "declineNoteTooLong": "Please keep the reason under 500 characters.",
+    "newTitle": "Start a new application",
+    "newSubtitle": "Choose your child and the school you would like to apply to.",
+    "newStudentLabel": "Child",
+    "newSelectStudent": "Select a child",
+    "newLoadingStudents": "Loading children…",
+    "newSchoolLabel": "School",
+    "newSelectSchool": "Select a school",
+    "newSearchSchool": "Search schools…",
+    "newSchoolHint": "Type at least 2 characters to search.",
+    "newSearching": "Searching…",
+    "newNoSchools": "No schools found.",
+    "newSubmitButton": "Create application",
+    "newCreateSuccess": "Application created",
+    "newCreateError": "Could not create the application. Please try again.",
+    "newNoStudentsTitle": "No children yet",
+    "newNoStudentsSubtitle": "Add a child profile before starting an application.",
+    "newAddStudent": "Add a child",
+    "studentRequired": "Please select a child.",
+    "schoolRequired": "Please select a school."
   },
   "ParentOffers": {
     "title": "Offers",
@@ -3899,7 +3936,12 @@
     "threadRetry": "Try again",
     "sendErrorRetry": "Message not sent. Try again.",
     "messageRead": "Read",
-    "messageSent": "Sent"
+    "messageSent": "Sent",
+    "attachLabel": "Attach files",
+    "attachRemove": "Remove {name}",
+    "attachmentTooLarge": "{name} is too large. Maximum size is {maxSize}.",
+    "attachmentInvalidType": "{name} is not a supported file type.",
+    "attachmentTooMany": "You can attach up to {max} files."
   },
   "DocumentVault": {
     "title": "Document Vault",
@@ -3963,7 +4005,12 @@
     "dropRejectedTooLarge": "{name} is too large. Maximum file size is {maxSize}.",
     "dropRejectedInvalidType": "{name} is not a supported file type. Use PDF, JPG, PNG, WEBP, DOC or DOCX.",
     "dropRejectedTooMany": "Only one file can be uploaded at a time.",
-    "dropRejectedGeneric": "{name} could not be added. Please choose a different file."
+    "dropRejectedGeneric": "{name} could not be added. Please choose a different file.",
+    "expiresAtLabel": "Expiry date (optional)",
+    "expiresAtPlaceholder": "Pick an expiry date",
+    "expiresOn": "Expires {date}",
+    "expiryBadgeSoon": "Expiring soon",
+    "expiryBadgeExpired": "Expired"
   },
   "Calendar": {
     "title": "Calendar",

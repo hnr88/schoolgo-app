@@ -7,6 +7,7 @@ import { buttonVariants } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { SectionHeading, SurfaceCard } from '@/modules/core';
 import { ParentApplicationInfoSection } from '@/modules/applications/components/ParentApplicationInfoSection';
+import { ParentApplicationActions } from '@/modules/applications/components/ParentApplicationActions';
 import { ParentApplicationTimelineSection } from './ParentApplicationTimelineSection';
 import { ParentPreEnrolmentSection } from './ParentPreEnrolmentSection';
 import { ParentApplicationDocumentsSection } from './ParentApplicationDocumentsSection';
@@ -81,6 +82,8 @@ export function ParentApplicationDetailBody({ application }: { application: Pare
         </div>
       </SurfaceCard>
       </div>
+
+      <ParentApplicationActions application={application} />
 
       <ParentApplicationTimelineSection applicationDocumentId={application.documentId} />
 

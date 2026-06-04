@@ -1,0 +1,1 @@
+export const PARENT_DECLINE_NOTE_MAX_LENGTH = 500;

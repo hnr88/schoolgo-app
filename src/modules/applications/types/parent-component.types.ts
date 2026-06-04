@@ -43,3 +43,10 @@ export interface ParentApplicationListPageProps {
 export interface ParentApplicationDetailProps {
   documentId: string;
 }
+
+export interface ParentDeclineOfferDialogProps {
+  open: boolean;
+  onOpenChange: (open: boolean) => void;
+  applicationDocumentId: string;
+  onDeclined?: () => void;
+}

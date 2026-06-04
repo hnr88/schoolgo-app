@@ -5,6 +5,7 @@ export { AgentMessagesPage } from '@/modules/applications/components/AgentMessag
 
 export { ParentApplicationListPage } from '@/modules/applications/components/ParentApplicationListPage';
 export { ParentApplicationDetailPage } from '@/modules/applications/components/ParentApplicationDetailPage';
+export { ParentCreateApplicationPage } from '@/modules/applications/components/ParentCreateApplicationPage';
 export { ParentMessagesPage } from '@/modules/applications/components/ParentMessagesPage';
 export { ApplicationStatusBadge } from '@/modules/applications/components/ApplicationStatusBadge';
 export { useParentApplications } from '@/modules/applications/queries/use-parent-applications.query';

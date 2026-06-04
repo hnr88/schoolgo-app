@@ -13,6 +13,7 @@ import {
 
 import type {
   VaultDocumentType,
+  VaultExpiryStatus,
   VaultSortOption,
 } from '@/modules/document-vault/types/document-vault.types';
 
@@ -57,3 +58,19 @@ export const VAULT_REJECTION_MESSAGE_KEY: Record<string, string> = {
 
 export const VAULT_IMAGE_MIME_PREFIX = 'image/';
 export const VAULT_PDF_MIME = 'application/pdf';
+
+export const VAULT_EXPIRY_BADGE_CLASS: Record<
+  Exclude<VaultExpiryStatus, 'none' | 'valid'>,
+  string
+> = {
+  expiring_soon: 'bg-vivid-amber-soft text-arches-700',
+  expired: 'bg-vivid-coral-soft text-vivid-coral-strong',
+};
+
+export const VAULT_EXPIRY_BADGE_LABEL_KEY: Record<
+  Exclude<VaultExpiryStatus, 'none' | 'valid'>,
+  string
+> = {
+  expiring_soon: 'expiryBadgeSoon',
+  expired: 'expiryBadgeExpired',
+};

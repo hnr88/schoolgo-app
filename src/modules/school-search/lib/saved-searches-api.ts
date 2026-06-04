@@ -3,12 +3,24 @@ import type {
   CreateSavedSearchInput,
   SavedSearchResponse,
   SavedSearchesListResponse,
+  UpdateSavedSearchInput,
 } from '@/modules/school-search/types/saved-searches.types';
 
 export async function createSavedSearch(
   input: CreateSavedSearchInput,
 ): Promise<SavedSearchResponse> {
   const { data } = await privateApi.post<SavedSearchResponse>('/api/saved-searches', input);
+  return data;
+}
+
+export async function updateSavedSearch(
+  documentId: string,
+  input: UpdateSavedSearchInput,
+): Promise<SavedSearchResponse> {
+  const { data } = await privateApi.put<SavedSearchResponse>(
+    `/api/saved-searches/${documentId}`,
+    input,
+  );
   return data;
 }
 

@@ -1,5 +1,6 @@
 'use client';
 
+import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import {
@@ -13,6 +14,7 @@ export function useParentMessageComposer(
   options?: { onSent?: () => void; onError?: () => void },
 ) {
   const sendMessage = useParentSendMessage(applicationDocumentId);
+  const [attachments, setAttachments] = useState<File[]>([]);
 
   const form = useForm<ParentMessageFormValues>({
     resolver: zodResolver(parentMessageSchema),
@@ -24,10 +26,11 @@ export function useParentMessageComposer(
 
   const submit = form.handleSubmit((values) => {
     sendMessage.mutate(
-      { content: values.content.trim() },
+      { content: values.content.trim(), attachments },
       {
         onSuccess: () => {
           form.reset({ content: '' });
+          setAttachments([]);
           options?.onSent?.();
         },
         onError: () => options?.onError?.(),
@@ -39,6 +42,8 @@ export function useParentMessageComposer(
     form,
     content,
     charCount: content.length,
+    attachments,
+    setAttachments,
     isPending: sendMessage.isPending,
     submit,
   };

@@ -1,16 +1,20 @@
 'use client';
 
 import { useState } from 'react';
-import { useTranslations } from 'next-intl';
+import { useFormatter, useTranslations } from 'next-intl';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { toast } from 'sonner';
-import { Loader2 } from 'lucide-react';
+import { CalendarIcon, Loader2 } from 'lucide-react';
+import { format as formatDate } from 'date-fns';
 
+import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
+import { Calendar } from '@/components/ui/calendar';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
+import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
 import { Textarea } from '@/components/ui/textarea';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { useUploadVaultDocument } from '@/modules/document-vault/queries/use-upload-vault-document.mutation';
@@ -24,12 +28,13 @@ import type { VaultUploadDialogProps } from '@/modules/document-vault/types/docu
 
 export function VaultUploadDialog({ open, onOpenChange }: VaultUploadDialogProps) {
   const t = useTranslations('DocumentVault');
+  const format = useFormatter();
   const [files, setFiles] = useState<File[]>([]);
   const uploadMutation = useUploadVaultDocument();
 
   const form = useForm<UploadVaultDocumentFormValues>({
     resolver: zodResolver(uploadVaultDocumentSchema),
-    defaultValues: { title: '', documentType: undefined, notes: '' },
+    defaultValues: { title: '', documentType: undefined, notes: '', expiresAt: undefined },
   });
 
   async function onSubmit(values: UploadVaultDocumentFormValues) {
@@ -39,6 +44,7 @@ export function VaultUploadDialog({ open, onOpenChange }: VaultUploadDialogProps
         title: values.title,
         documentType: values.documentType,
         notes: values.notes || undefined,
+        expiresAt: values.expiresAt ? formatDate(values.expiresAt, 'yyyy-MM-dd') : undefined,
         file: files[0],
       });
       toast.success(t('uploadSuccess'));
@@ -79,6 +85,38 @@ export function VaultUploadDialog({ open, onOpenChange }: VaultUploadDialogProps
                     ))}
                   </SelectContent>
                 </Select>
+                <FormMessage />
+              </FormItem>
+            )} />
+            <FormField control={form.control} name='expiresAt' render={({ field }) => (
+              <FormItem className='flex flex-col'>
+                <FormLabel>{t('expiresAtLabel')}</FormLabel>
+                <Popover>
+                  <FormControl>
+                    <PopoverTrigger
+                      render={
+                        <Button
+                          type='button'
+                          variant='outline'
+                          className={cn('justify-start font-normal', !field.value && 'text-foggy')}
+                        />
+                      }
+                    >
+                      <CalendarIcon className='mr-2 h-4 w-4 shrink-0 opacity-70' />
+                      {field.value
+                        ? format.dateTime(field.value, { dateStyle: 'medium' })
+                        : t('expiresAtPlaceholder')}
+                    </PopoverTrigger>
+                  </FormControl>
+                  <PopoverContent className='w-auto p-0' align='start'>
+                    <Calendar
+                      mode='single'
+                      selected={field.value}
+                      onSelect={field.onChange}
+                      autoFocus
+                    />
+                  </PopoverContent>
+                </Popover>
                 <FormMessage />
               </FormItem>
             )} />

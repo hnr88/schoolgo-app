@@ -26,6 +26,13 @@ export interface StrapiParentConversationsResponse {
 
 export interface ParentSendMessageInput {
   content: string;
+  attachments?: File[];
+}
+
+export interface ParentMessageAttachmentsFieldProps {
+  files: File[];
+  onFilesChange: (files: File[]) => void;
+  disabled?: boolean;
 }
 
 export interface ParentSendMessageResponse {

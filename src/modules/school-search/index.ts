@@ -17,6 +17,7 @@ export { useCompareSchools } from '@/modules/school-search/queries/use-compare-s
 export { useSavedSearches } from '@/modules/school-search/queries/use-saved-searches.query';
 export { useCreateSavedSearch } from '@/modules/school-search/queries/use-create-saved-search.mutation';
 export { useDeleteSavedSearch } from '@/modules/school-search/queries/use-delete-saved-search.mutation';
+export { useUpdateSavedSearch } from '@/modules/school-search/queries/use-update-saved-search.mutation';
 export { useBookmarks } from '@/modules/school-search/queries/use-bookmarks.query';
 export { useCreateBookmark } from '@/modules/school-search/queries/use-create-bookmark.mutation';
 export { useDeleteBookmark } from '@/modules/school-search/queries/use-delete-bookmark.mutation';
@@ -30,6 +31,7 @@ export {
   createSavedSearch,
   listSavedSearches,
   deleteSavedSearch,
+  updateSavedSearch,
 } from '@/modules/school-search/lib/saved-searches-api';
 export {
   createBookmark,
@@ -82,6 +84,7 @@ export type {
 export type {
   SavedSearch,
   CreateSavedSearchInput,
+  UpdateSavedSearchInput,
   SavedSearchResponse,
   SavedSearchesListResponse,
 } from '@/modules/school-search/types/saved-searches.types';

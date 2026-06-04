@@ -14,7 +14,7 @@ export function useUploadVaultDocument() {
   const queryClient = useQueryClient();
 
   return useMutation({
-    mutationFn: async ({ title, documentType, notes, file }: UploadVaultDocumentInput) => {
+    mutationFn: async ({ title, documentType, notes, expiresAt, file }: UploadVaultDocumentInput) => {
       const uploadForm = new FormData();
       uploadForm.append('files', file, file.name);
 
@@ -33,6 +33,7 @@ export function useUploadVaultDocument() {
           documentType,
           file: fileId,
           ...(notes ? { notes } : {}),
+          ...(expiresAt ? { expiresAt } : {}),
         },
       });
       return data.data;

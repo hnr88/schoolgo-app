@@ -5,12 +5,18 @@ export interface SavedSearch {
   name: string;
   filterState: TypedSearchRequest;
   lastResultCount: number;
+  alertsEnabled: boolean;
+  lastNotifiedAt: string | null;
   createdAt: string;
 }
 
 export interface CreateSavedSearchInput {
   name: string;
   filterState: TypedSearchRequest;
+}
+
+export interface UpdateSavedSearchInput {
+  alertsEnabled: boolean;
 }
 
 export interface SavedSearchResponse {

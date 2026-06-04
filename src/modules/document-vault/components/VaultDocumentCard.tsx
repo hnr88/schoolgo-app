@@ -4,10 +4,13 @@ import Image from 'next/image';
 import { useFormatter, useTranslations } from 'next-intl';
 import { Download, Eye, Trash2 } from 'lucide-react';
 
+import { cn } from '@/lib/utils';
 import { SurfaceCard } from '@/modules/core';
 import { VAULT_DOCUMENT_TYPE_ICON } from '@/modules/document-vault/constants/document-vault.constants';
 import { toAbsoluteVaultUrl } from '@/modules/document-vault/lib/format-vault-file';
 import { getVaultPreviewKind, isVaultImage } from '@/modules/document-vault/lib/vault-preview';
+import { getVaultExpiryStatus } from '@/modules/document-vault/lib/vault-expiry';
+import { VaultExpiryBadge } from '@/modules/document-vault/components/VaultExpiryBadge';
 import type { VaultDocumentCardProps } from '@/modules/document-vault/types/document-vault.types';
 
 export function VaultDocumentCard({ document, onDelete, onPreview }: VaultDocumentCardProps) {
@@ -16,6 +19,7 @@ export function VaultDocumentCard({ document, onDelete, onPreview }: VaultDocume
   const Icon = VAULT_DOCUMENT_TYPE_ICON[document.documentType];
   const canPreview = getVaultPreviewKind(document.file) !== 'none';
   const thumbnailUrl = isVaultImage(document.file) ? toAbsoluteVaultUrl(document.file!.url) : null;
+  const expiryStatus = getVaultExpiryStatus(document.expiresAt);
 
   return (
     <SurfaceCard elevation='interactive' padding='sm' className='flex flex-col gap-4'>
@@ -46,6 +50,7 @@ export function VaultDocumentCard({ document, onDelete, onPreview }: VaultDocume
           </h3>
           <p className='mt-0.5 text-xs text-foggy'>{t(`docType_${document.documentType}`)}</p>
         </div>
+        <VaultExpiryBadge status={expiryStatus} />
       </div>
 
       {document.notes ? (
@@ -55,11 +60,25 @@ export function VaultDocumentCard({ document, onDelete, onPreview }: VaultDocume
         </p>
       ) : null}
 
-      <p className='text-xs text-muted-foreground'>
-        {t('uploadedOn', {
-          date: format.dateTime(new Date(document.createdAt), { dateStyle: 'medium' }),
-        })}
-      </p>
+      <div className='flex flex-col gap-1'>
+        <p className='text-xs text-muted-foreground'>
+          {t('uploadedOn', {
+            date: format.dateTime(new Date(document.createdAt), { dateStyle: 'medium' }),
+          })}
+        </p>
+        {document.expiresAt ? (
+          <p
+            className={cn(
+              'text-xs',
+              expiryStatus === 'expired' ? 'text-vivid-coral-strong' : 'text-muted-foreground',
+            )}
+          >
+            {t('expiresOn', {
+              date: format.dateTime(new Date(document.expiresAt), { dateStyle: 'medium' }),
+            })}
+          </p>
+        ) : null}
+      </div>
 
       <div className='mt-auto flex items-center gap-2'>
         {canPreview ? (

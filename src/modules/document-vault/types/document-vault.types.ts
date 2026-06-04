@@ -29,11 +29,14 @@ export interface VaultDocument {
   title: string;
   documentType: VaultDocumentType;
   notes: string | null;
+  expiresAt: string | null;
   file: VaultFile | null;
   createdAt: string;
   updatedAt: string;
   publishedAt: string;
 }
+
+export type VaultExpiryStatus = 'none' | 'valid' | 'expiring_soon' | 'expired';
 
 export interface VaultListResponse {
   data: VaultDocument[];
@@ -49,6 +52,7 @@ export interface UploadVaultDocumentInput {
   title: string;
   documentType: VaultDocumentType;
   notes?: string;
+  expiresAt?: string;
   file: File;
 }
 
@@ -64,6 +68,10 @@ export interface VaultDocumentCardProps {
   document: VaultDocument;
   onDelete: (document: VaultDocument) => void;
   onPreview: (document: VaultDocument) => void;
+}
+
+export interface VaultExpiryBadgeProps {
+  status: VaultExpiryStatus;
 }
 
 export interface VaultDocumentsToolbarProps {
