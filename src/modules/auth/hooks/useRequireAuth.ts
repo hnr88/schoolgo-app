@@ -36,8 +36,17 @@ export function useRequireAuth(options: UseRequireAuthOptions = {}) {
       if (path) {
         const target = `${portalUrl(portal, locale)}${path}`;
         // Never redirect to the page we are already on — that produces an
-        // infinite full-page reload loop.
-        if (!window.location.href.startsWith(target)) {
+        // infinite full-page reload loop. Compare by origin + locale-normalised
+        // path: the default-locale ('en') target is prefix-less while the proxy
+        // leaves the browser on an '/en'-prefixed URL, so a raw startsWith never
+        // matches and the guard would fail.
+        const targetUrl = new URL(target);
+        const here = window.location;
+        const stripEn = (p: string) => p.replace(/^\/en(?=\/|$)/, '');
+        const alreadyHere =
+          here.origin === targetUrl.origin &&
+          stripEn(here.pathname) === stripEn(targetUrl.pathname);
+        if (!alreadyHere) {
           window.location.href = target;
         }
       }

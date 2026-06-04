@@ -90,6 +90,8 @@ export const useAuthStore = create<AuthState>()(
             isLoading: false,
             isInitialized: true,
           });
+          const { userType: currentType } = get();
+          if (currentType) setAuthCookie(currentType);
         } catch {
           clearAuthCookie();
           set({
@@ -116,7 +118,11 @@ export const useAuthStore = create<AuthState>()(
           state.isHydrated = true;
           if (state.jwt) {
             state.isAuthenticated = true;
-            if (state.userType) setAuthCookie(state.userType);
+            // Do NOT set the auth cookie from an unvalidated JWT here. The proxy
+            // trusts this cookie to redirect '/' -> '/dashboard'; if the JWT is
+            // stale, initialize() below fails and clears it, but setting it
+            // optimistically first lets the proxy bounce the user into a
+            // login<->dashboard loop. initialize() sets it on success instead.
             state.initialize();
           } else {
             clearAuthCookie();
