@@ -1,0 +1,3 @@
+export const AGENT_THREAD_POLL_INTERVAL_MS = 15_000;
+
+export const AGENT_MESSAGE_MAX_LENGTH = 2000;
