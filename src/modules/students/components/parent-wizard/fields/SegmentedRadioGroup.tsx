@@ -36,7 +36,7 @@ export function SegmentedRadioGroup({
           className={cn(
             'flex h-12 cursor-pointer items-center justify-center rounded-xl border border-gray-100 bg-background px-4 text-sm font-medium text-ink-900 transition-colors',
             'hover:bg-muted/40',
-            'has-[[data-state=checked]]:border-primary has-[[data-state=checked]]:bg-rausch-50 has-[[data-state=checked]]:text-primary-strong',
+            'has-[[data-checked]]:border-primary has-[[data-checked]]:bg-rausch-50 has-[[data-checked]]:text-primary-strong',
             'has-[:focus-visible]:ring-2 has-[:focus-visible]:ring-ring',
           )}
         >

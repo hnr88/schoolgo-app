@@ -96,9 +96,7 @@ export function StepPersonal({ control }: ParentStepProps) {
           render={({ field }) => (
             <FormItem>
               <FormLabel className={LABEL}>{t('fieldNationality')}</FormLabel>
-              <FormControl>
-                <NationalityCombobox value={field.value} onChange={field.onChange} />
-              </FormControl>
+              <FormControl><NationalityCombobox value={field.value} onChange={field.onChange} /></FormControl>
               <FormMessage />
             </FormItem>
           )}
@@ -109,9 +107,7 @@ export function StepPersonal({ control }: ParentStepProps) {
           render={({ field }) => (
             <FormItem>
               <FormLabel className={LABEL}>{t('fieldPassport')}</FormLabel>
-              <FormControl>
-                <Input className='h-12' placeholder={t('placeholderPassport')} {...field} value={field.value ?? ''} />
-              </FormControl>
+              <FormControl><Input className='h-12' placeholder={t('placeholderPassport')} {...field} value={field.value ?? ''} /></FormControl>
               <FormDescription>{t('helpPassport')}</FormDescription>
               <FormMessage />
             </FormItem>

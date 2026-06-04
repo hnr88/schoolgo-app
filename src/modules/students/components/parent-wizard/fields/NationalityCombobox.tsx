@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { Check, ChevronsUpDown } from 'lucide-react';
 import { useTranslations } from 'next-intl';
+import { Button } from '@/components/ui/button';
 import {
   Command,
   CommandEmpty,
@@ -26,22 +27,20 @@ export function NationalityCombobox({ value, onChange }: NationalityComboboxProp
 
   return (
     <Popover open={open} onOpenChange={setOpen}>
-      <PopoverTrigger asChild>
-        <button
-          type='button'
-          role='combobox'
-          aria-expanded={open}
-          className={cn(
-            'flex h-12 w-full items-center justify-between rounded-md border border-input bg-background px-3 text-sm transition-colors',
-            'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring',
-            value ? 'text-ink-900' : 'text-muted-foreground',
-          )}
-        >
-          {value || t('selectNationality')}
-          <ChevronsUpDown className='size-4 shrink-0 opacity-50' aria-hidden='true' />
-        </button>
+      <PopoverTrigger
+        render={
+          <Button
+            type='button'
+            variant='outline'
+            aria-expanded={open}
+            className={cn('h-12 w-full justify-between font-normal', !value && 'text-foggy')}
+          />
+        }
+      >
+        {value || t('selectNationality')}
+        <ChevronsUpDown className='ml-2 size-4 shrink-0 opacity-50' />
       </PopoverTrigger>
-      <PopoverContent className='w-[--radix-popover-trigger-width] p-0' align='start'>
+      <PopoverContent className='w-80 p-0' align='start'>
         <Command>
           <CommandInput placeholder={t('nationalitySearch')} />
           <CommandList>
@@ -57,8 +56,7 @@ export function NationalityCombobox({ value, onChange }: NationalityComboboxProp
                   }}
                 >
                   <Check
-                    className={cn('size-4', value === country ? 'opacity-100' : 'opacity-0')}
-                    aria-hidden='true'
+                    className={cn('mr-2 size-4', value === country ? 'opacity-100' : 'opacity-0')}
                   />
                   {country}
                 </CommandItem>
