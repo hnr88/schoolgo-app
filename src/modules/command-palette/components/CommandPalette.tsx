@@ -49,6 +49,7 @@ export function CommandPalette() {
       onOpenChange={setOpen}
       title={t('dialogTitle')}
       description={t('dialogDescription')}
+      className='sm:max-w-2xl'
     >
       <Command>
         <CommandInput placeholder={t('inputPlaceholder')} />

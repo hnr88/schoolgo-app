@@ -57,7 +57,7 @@ export function DashboardHeader() {
     .toUpperCase() ?? '';
 
   return (
-    <header className='relative z-10 shrink-0 border-b border-border/60 bg-card shadow-1'>
+    <header className='relative z-10 shrink-0 bg-card shadow-1'>
       <CommandPalette />
       <div className={cn('flex h-16 items-center gap-4', isSearchPage ? 'px-4' : 'px-6')}>
         <DashboardMobileNav />
@@ -72,7 +72,7 @@ export function DashboardHeader() {
 
         {isSearchPage && (
           <div className='flex-1'>
-            <SearchBar className='border-border px-4 py-1.5 shadow-none' />
+            <SearchBar className='px-4 py-1.5 shadow-none' />
           </div>
         )}
 
@@ -81,7 +81,7 @@ export function DashboardHeader() {
           <CommandPaletteTrigger />
           {(userType === 'parent' || userType === 'agent') && <NotificationBell />}
           <DropdownMenu>
-            <DropdownMenuTrigger className='group flex items-center gap-2.5 rounded-full border border-border/70 bg-card py-1 pl-1 pr-2.5 text-sm font-medium text-ink-900 outline-none transition-[color,box-shadow,border-color] duration-200 ease-out-quart hover:border-border hover:shadow-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1 sm:pr-3'>
+            <DropdownMenuTrigger className='group flex items-center gap-2.5 rounded-full bg-muted py-1 pl-1 pr-2.5 text-sm font-medium text-ink-900 outline-none transition-[color,box-shadow,background-color] duration-200 ease-out-quart hover:bg-rausch-50 hover:shadow-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1 sm:pr-3'>
               <Avatar className='h-8 w-8'>
                 <AvatarFallback className='bg-primary/10 text-xs font-bold text-primary-strong'>
                   {initials}

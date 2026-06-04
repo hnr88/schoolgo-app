@@ -9,7 +9,7 @@ export function ParentDashboardCard({
   children,
 }: ParentDashboardCardProps) {
   return (
-    <section className='flex flex-col gap-5 rounded-2xl border border-border bg-card p-6 shadow-2'>
+    <section className='flex h-full flex-col gap-5 rounded-xl bg-card p-6 shadow-2'>
       <ParentSectionHeader
         title={title}
         icon={icon}

@@ -2,18 +2,18 @@ import { cva, type VariantProps } from 'class-variance-authority';
 import { cn } from '@/lib/utils';
 
 export const surfaceCardVariants = cva(
-  'rounded-2xl border bg-card ease-out-quart',
+  'rounded-xl bg-card ease-out-quart',
   {
     variants: {
       elevation: {
-        flat: 'border-border shadow-2',
-        raised: 'border-border shadow-2',
+        flat: 'shadow-2',
+        raised: 'shadow-2',
         interactive:
-          'border-border shadow-2 transition-[transform,box-shadow] duration-300 ease-out-quart hover:-translate-y-0.5 hover:shadow-3 focus-within:-translate-y-0.5 focus-within:shadow-3',
+          'shadow-2 transition-[transform,box-shadow] duration-300 ease-out-quart hover:-translate-y-0.5 hover:shadow-3 focus-within:-translate-y-0.5 focus-within:shadow-3',
       },
       accent: {
         none: '',
-        brand: 'border-rausch-200 bg-rausch-50',
+        brand: 'bg-rausch-50',
       },
       padding: {
         none: '',
