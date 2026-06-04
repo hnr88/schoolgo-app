@@ -12,7 +12,7 @@ export async function ParentDashboardSearchContent() {
 
       <div className='relative flex min-h-0 flex-1 gap-4 overflow-hidden p-4'>
         <FilterSidebar
-          className='static block h-full w-[20rem] p-0 lg:sticky lg:top-0 lg:h-full lg:p-0'
+          className='static block h-full w-80 p-0 lg:sticky lg:top-0 lg:h-full lg:p-0'
           cardClassName='shadow-1'
         />
 
