@@ -2430,47 +2430,40 @@
   },
   "ParentPayments": {
     "title": "การชำระเงิน",
-    "subtitle": "ชำระเงินสำหรับโหมดทดสอบและจัดการการเรียกเก็บเงิน — ทั้งหมดในที่เดียว",
-    "badge": "เร็วๆ นี้",
-    "heading": "การชำระเงิน — เร็วๆ นี้",
-    "description": "เร็วๆ นี้คุณจะสามารถชำระเงินสำหรับโหมดทดสอบและจัดการทุกอย่างจากที่นี่ได้ เรากำลังเตรียมระบบชำระเงินที่ปลอดภัย โปรดรอสักครู่",
+    "subtitle": "ชำระเงินสำหรับโหมดทดสอบและจัดการการเรียกเก็บเงินของคุณ — ทั้งหมดในที่เดียว",
     "comingSoon": "เร็วๆ นี้",
-    "plansTitle": "สิ่งที่กำลังจะมา",
-    "plansDisclaimer": "ราคาที่แสดงเป็นราคาโดยประมาณและสำหรับการแสดงตัวอย่างเท่านั้น ยังไม่มีสิ่งใดวางจำหน่าย",
-    "plans": {
-      "practice": {
-        "name": "ฝึกซ้อม",
-        "price": "A$199 / month",
-        "description": "การทดสอบฝึกซ้อมต่อเนื่องเพื่อให้บุตรหลานของคุณเตรียมตัวได้อย่างมั่นใจทุกเดือน"
-      },
-      "placement": {
-        "name": "จัดระดับ",
-        "price": "A$449 one-off",
-        "description": "การประเมินระดับเริ่มต้นครั้งเดียวเพื่อหาระดับที่เหมาะสมสำหรับบุตรหลานของคุณ"
-      },
-      "progress": {
-        "name": "ติดตามความก้าวหน้า",
-        "price": "A$399 / year",
-        "description": "การติดตามความก้าวหน้าตลอดปีเพื่อดูพัฒนาการของบุตรหลานคุณ"
-      }
+    "manageMethods": "จัดการวิธีการชำระเงิน",
+    "previewNotice": "นี่คือตัวอย่างแดชบอร์ดการชำระเงินของคุณ ระบบชำระเงินที่ปลอดภัยยังไม่เปิดใช้งาน — ไม่มีรายการใดในนี้เป็นการเรียกเก็บเงินจริง",
+    "stats": {
+      "balanceDue": { "label": "ยอดค้างชำระ", "sub": "ครบกำหนดในภาคเรียนนี้" },
+      "totalPaid": { "label": "ชำระแล้วทั้งหมด", "sub": "การชำระเงินตลอดอายุการใช้งาน" },
+      "upcoming": { "label": "ที่กำลังจะถึง", "sub": "รายการเรียกเก็บที่กำหนดไว้" },
+      "methods": { "label": "วิธีที่บันทึกไว้", "sub": "บัตรที่บันทึกไว้" }
     },
-    "featuresTitle": "What's coming",
-    "features": {
-      "secure": {
-        "title": "Secure checkout",
-        "description": "Pay safely with bank-grade encryption when checkout goes live."
-      },
-      "receipts": {
-        "title": "Receipts & invoices",
-        "description": "Every payment is documented with a downloadable receipt for your records."
-      },
-      "history": {
-        "title": "Billing history",
-        "description": "Review everything you've paid for, all in one organised place."
-      }
+    "earning": { "title": "ภาพรวมการชำระเงิน", "paid": "ชำระแล้ว", "scheduled": "กำหนดไว้" },
+    "breakdown": {
+      "title": "รายละเอียดการใช้จ่าย",
+      "total": "ทั้งหมด",
+      "categories": { "practice": "ฝึกซ้อม", "placement": "จัดระดับ", "progress": "ความก้าวหน้า", "other": "อื่นๆ" }
     },
-    "ledgerEmptyTitle": "No billing history yet",
-    "ledgerEmptyDescription": "There's nothing to pay right now, and you have no past transactions. Once payments are available, anything you pay for will appear here."
+    "trend": { "title": "แนวโน้มยอดคงเหลือ", "caption": "6 เดือนล่าสุด" },
+    "transactions": {
+      "title": "ธุรกรรมล่าสุด",
+      "viewAll": "ดูทั้งหมด",
+      "columnInvoice": "ใบแจ้งหนี้",
+      "columnDescription": "รายละเอียด",
+      "columnAmount": "จำนวนเงิน",
+      "columnStatus": "สถานะ",
+      "columnDate": "วันที่",
+      "status": { "paid": "ชำระแล้ว", "pending": "รอดำเนินการ", "upcoming": "กำลังจะถึง" },
+      "items": { "practice": "ฝึกซ้อม — รายเดือน", "placement": "การประเมินจัดระดับ", "progress": "การติดตามความก้าวหน้า" }
+    },
+    "promo": {
+      "eyebrow": "เร็วๆ นี้",
+      "title": "ระบบชำระเงินที่ปลอดภัยกำลังจะมาถึง",
+      "description": "อีกไม่นานคุณจะสามารถชำระเงินสำหรับโหมดทดสอบและจัดการการเรียกเก็บเงินได้ที่นี่ ปกป้องด้วยการเข้ารหัสระดับธนาคาร",
+      "cta": "แจ้งเตือนฉัน"
+    }
   },
   "ParentStudents": {
     "title": "นักเรียน",
@@ -4038,21 +4031,41 @@
   },
   "Calendar": {
     "title": "ปฏิทิน",
-    "subtitle": "ทัวร์ วันเปิดบ้าน และกำหนดการสมัครที่จะมาถึงในที่เดียว",
-    "agendaUpcoming": "กิจกรรมที่จะมาถึง",
-    "agendaForDay": "กิจกรรมในวันนี้",
-    "showAll": "แสดงทั้งหมด",
-    "emptyTitle": "ไม่มีกิจกรรมที่จะมาถึง",
-    "emptySubtitle": "จองทัวร์หรือส่งใบสมัครเพื่อดูกิจกรรมที่นี่",
-    "emptyDayTitle": "ไม่มีกิจกรรมในวันนี้",
-    "browseTours": "เลือกดูทัวร์",
+    "subtitle": "กำหนดการสมัคร เส้นตายตอบรับ และการแจ้งเตือนทั้งหมดในที่เดียว",
     "errorMessage": "ไม่สามารถโหลดปฏิทินของคุณได้ โปรดลองอีกครั้ง",
-    "typeTourBooking": "จองทัวร์แล้ว",
-    "typeOpenDay": "วันเปิดบ้าน",
+    "retry": "ลองอีกครั้ง",
+    "today": "วันนี้",
+    "previousMonth": "เดือนก่อนหน้า",
+    "nextMonth": "เดือนถัดไป",
+    "addReminder": "เพิ่มการแจ้งเตือน",
+    "addReminderForDay": "เพิ่มการแจ้งเตือน",
+    "moreEvents": "{count, plural, one {+# กิจกรรมเพิ่มเติม} other {+# กิจกรรมเพิ่มเติม}}",
+    "dayPanelEmptyTitle": "ไม่มีกำหนดการ",
+    "dayPanelEmptyDescription": "เพิ่มการแจ้งเตือนเพื่อติดตามสิ่งสำคัญในวันนี้",
     "typeApplicationSubmitted": "ส่งใบสมัครแล้ว",
     "typeApplicationStatus": "อัปเดตสถานะแล้ว",
-    "retry": "Try again",
-    "moreEvents": "{count, plural, one {+# more event} other {+# more events}}"
+    "typeOfferDeadline": "เส้นตายตอบรับข้อเสนอ",
+    "typeReminder": "การแจ้งเตือน",
+    "reminderCreateTitle": "การแจ้งเตือนใหม่",
+    "reminderEditTitle": "แก้ไขการแจ้งเตือน",
+    "reminderDialogDescription": "ตั้งการแจ้งเตือนส่วนตัว โดยจะแสดงในปฏิทินของคุณตามวันที่เลือก",
+    "reminderTitleLabel": "หัวข้อ",
+    "reminderTitlePlaceholder": "เช่น ส่งแบบฟอร์มลงทะเบียนเรียน",
+    "reminderDateLabel": "วันที่",
+    "reminderTimeLabel": "เวลา (ไม่บังคับ)",
+    "reminderNoteLabel": "บันทึก (ไม่บังคับ)",
+    "reminderNotePlaceholder": "เพิ่มรายละเอียดใด ๆ…",
+    "save": "บันทึกการแจ้งเตือน",
+    "cancel": "ยกเลิก",
+    "editReminderAria": "แก้ไขการแจ้งเตือน",
+    "deleteReminderAria": "ลบการแจ้งเตือน",
+    "deleteReminderTitle": "ลบการแจ้งเตือนหรือไม่",
+    "deleteReminderDescription": "การแจ้งเตือนนี้จะถูกลบออกจากปฏิทินของคุณอย่างถาวร",
+    "deleteConfirm": "ลบ",
+    "reminderCreated": "เพิ่มการแจ้งเตือนแล้ว",
+    "reminderUpdated": "อัปเดตการแจ้งเตือนแล้ว",
+    "reminderDeleted": "ลบการแจ้งเตือนแล้ว",
+    "reminderError": "เกิดข้อผิดพลาดบางอย่าง โปรดลองอีกครั้ง"
   },
   "StudentWizardSchema": {
     "firstNameRequired": "First name is required.",

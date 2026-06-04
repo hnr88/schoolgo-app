@@ -1,16 +1,20 @@
+import type { Reminder } from '@/modules/calendar/types/reminder.types';
+
 export type CalendarEventType =
-  | 'tour_booking'
-  | 'open_day'
   | 'application_submitted'
-  | 'application_status';
+  | 'application_status'
+  | 'offer_deadline'
+  | 'reminder';
 
 export interface CalendarEvent {
   id: string;
   date: string;
   type: CalendarEventType;
   title: string;
-  href: string;
+  href?: string;
   school?: string;
+  note?: string | null;
+  reminderId?: string;
 }
 
 export interface CalendarEventStyle {
@@ -20,22 +24,41 @@ export interface CalendarEventStyle {
   labelKey: string;
 }
 
-export interface AgendaItemProps {
-  event: CalendarEvent;
-}
-
 export interface EventTypeBadgeProps {
   type: CalendarEventType;
 }
 
-export interface AgendaListProps {
-  events: CalendarEvent[];
-  selectedDate: Date | undefined;
-  onClearFilter: () => void;
+export interface CalendarEventChipProps {
+  event: CalendarEvent;
 }
 
-export interface CalendarMonthProps {
+export interface CalendarBoardProps {
+  month: Date;
+  selectedDate: Date;
   events: CalendarEvent[];
-  selectedDate: Date | undefined;
-  onSelectDate: (date: Date | undefined) => void;
+  onSelectDay: (day: Date) => void;
+  onToday: () => void;
+  onPrevMonth: () => void;
+  onNextMonth: () => void;
+  onAddReminder: () => void;
+}
+
+export interface CalendarDayCellProps {
+  day: Date;
+  month: Date;
+  isSelected: boolean;
+  events: CalendarEvent[];
+  onSelectDay: (day: Date) => void;
+}
+
+export interface DayPanelProps {
+  selectedDate: Date;
+  events: CalendarEvent[];
+  onAddReminder: () => void;
+  onEditReminder: (reminder: Reminder) => void;
+}
+
+export interface DayAgendaItemProps {
+  event: CalendarEvent;
+  onEditReminder: (reminder: Reminder) => void;
 }

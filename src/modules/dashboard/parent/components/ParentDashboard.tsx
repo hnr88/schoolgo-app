@@ -1,7 +1,7 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { Eyebrow } from '@/modules/design-system';
+import { Zap } from 'lucide-react';
 import { ParentDashboardHeader } from '@/modules/dashboard/parent/components/ParentDashboardHeader';
 import { ParentStatTiles } from '@/modules/dashboard/parent/components/ParentStatTiles';
 import { ParentPipelineCard } from '@/modules/dashboard/parent/components/ParentPipelineCard';
@@ -57,14 +57,33 @@ export function ParentDashboard() {
         </div>
       </div>
 
-      <section className='flex flex-col gap-6 rounded-2xl bg-primary p-6 shadow-2 md:p-8'>
-        <div className='flex flex-col gap-1.5'>
-          <Eyebrow className='text-background/60'>{t('quickActionsTitle')}</Eyebrow>
-          <h2 className='font-display text-xl font-bold tracking-tight text-background'>
-            {t('subtitle')}
-          </h2>
+      <section className='overflow-hidden rounded-3xl border border-gray-100 bg-card shadow-2'>
+        <div className='relative overflow-hidden border-b border-rausch-100 bg-primary-light p-6 md:p-7'>
+          <span
+            aria-hidden='true'
+            className='pointer-events-none absolute -right-10 -top-12 h-36 w-36 rounded-full bg-rausch-100/70'
+          />
+          <span
+            aria-hidden='true'
+            className='pointer-events-none absolute -bottom-16 -left-8 h-32 w-32 rotate-12 rounded-3xl bg-rausch-100/50'
+          />
+
+          <div className='relative flex items-center gap-3'>
+            <span className='flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-primary text-primary-foreground'>
+              <Zap className='h-5 w-5' strokeWidth={2} aria-hidden='true' />
+            </span>
+            <div className='min-w-0 flex-1'>
+              <h2 className='font-display text-xl font-bold tracking-tight text-ink-900'>
+                {t('quickActionsTitle')}
+              </h2>
+              <p className='truncate text-sm text-foggy'>{t('subtitle')}</p>
+            </div>
+          </div>
         </div>
-        <ParentQuickActions />
+
+        <div className='p-6 md:p-7'>
+          <ParentQuickActions />
+        </div>
       </section>
     </div>
   );

@@ -1,36 +1,10 @@
 import type { CalendarEvent } from '@/modules/calendar/types/calendar.types';
+import type { Reminder } from '@/modules/calendar/types/reminder.types';
 import type { ParentApplication } from '@/modules/applications/types/parent-application.types';
-import type { MyBooking, TourListItem } from '@/modules/tours/types/tours.types';
 
 function isValidDate(value: string | null | undefined): value is string {
   if (!value) return false;
   return !Number.isNaN(new Date(value).getTime());
-}
-
-export function mapBookingEvents(bookings: MyBooking[]): CalendarEvent[] {
-  return bookings
-    .filter((booking) => booking.status === 'booked' && isValidDate(booking.tour?.startsAt))
-    .map((booking) => ({
-      id: `tour-booking-${booking.documentId}`,
-      date: booking.tour!.startsAt,
-      type: 'tour_booking' as const,
-      title: booking.tour!.title,
-      href: '/parent/tours',
-      school: booking.tour!.school?.name ?? undefined,
-    }));
-}
-
-export function mapOpenDayEvents(tours: TourListItem[]): CalendarEvent[] {
-  return tours
-    .filter((tour) => isValidDate(tour.startsAt))
-    .map((tour) => ({
-      id: `open-day-${tour.documentId}`,
-      date: tour.startsAt,
-      type: 'open_day' as const,
-      title: tour.title,
-      href: '/parent/tours',
-      school: tour.school?.name ?? undefined,
-    }));
 }
 
 export function mapApplicationEvents(applications: ParentApplication[]): CalendarEvent[] {
@@ -39,6 +13,7 @@ export function mapApplicationEvents(applications: ParentApplication[]): Calenda
   for (const application of applications) {
     const title = `${application.student.firstName} ${application.student.lastName}`;
     const href = `/parent/applications/${application.documentId}`;
+    const school = application.school.name;
 
     if (isValidDate(application.submittedAt)) {
       events.push({
@@ -47,7 +22,7 @@ export function mapApplicationEvents(applications: ParentApplication[]): Calenda
         type: 'application_submitted',
         title,
         href,
-        school: application.school.name,
+        school,
       });
     }
 
@@ -58,7 +33,18 @@ export function mapApplicationEvents(applications: ParentApplication[]): Calenda
         type: 'application_status',
         title,
         href,
-        school: application.school.name,
+        school,
+      });
+    }
+
+    if (isValidDate(application.offerDeadline)) {
+      events.push({
+        id: `offer-deadline-${application.documentId}`,
+        date: application.offerDeadline,
+        type: 'offer_deadline',
+        title,
+        href,
+        school,
       });
     }
   }
@@ -66,14 +52,25 @@ export function mapApplicationEvents(applications: ParentApplication[]): Calenda
   return events;
 }
 
+export function mapReminderEvents(reminders: Reminder[]): CalendarEvent[] {
+  return reminders
+    .filter((reminder) => isValidDate(reminder.remindAt))
+    .map((reminder) => ({
+      id: `reminder-${reminder.documentId}`,
+      date: reminder.remindAt,
+      type: 'reminder' as const,
+      title: reminder.title,
+      note: reminder.note,
+      reminderId: reminder.documentId,
+    }));
+}
+
 export function aggregateCalendarEvents(input: {
-  bookings: MyBooking[];
-  tours: TourListItem[];
   applications: ParentApplication[];
+  reminders: Reminder[];
 }): CalendarEvent[] {
   return [
-    ...mapBookingEvents(input.bookings),
-    ...mapOpenDayEvents(input.tours),
     ...mapApplicationEvents(input.applications),
+    ...mapReminderEvents(input.reminders),
   ].sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
 }

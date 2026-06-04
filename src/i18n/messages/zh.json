@@ -2431,46 +2431,39 @@
   "ParentPayments": {
     "title": "付款",
     "subtitle": "在一处完成考试套餐付款并管理账单。",
-    "badge": "即将推出",
-    "heading": "付款 — 即将推出",
-    "description": "很快您将可以在这里支付考试套餐费用并管理所有内容。我们正在完善安全结账流程，请稍候。",
     "comingSoon": "即将推出",
-    "plansTitle": "即将推出的套餐",
-    "plansDisclaimer": "所示价格仅供参考，目前尚未开放购买。",
-    "plans": {
-      "practice": {
-        "name": "练习",
-        "price": "A$199 / month",
-        "description": "持续提供练习测试，让孩子每个月都能充满信心地备考。"
-      },
-      "placement": {
-        "name": "水平测定",
-        "price": "A$449 one-off",
-        "description": "一次性水平评估，为孩子找到合适的起始学习水平。"
-      },
-      "progress": {
-        "name": "进度追踪",
-        "price": "A$399 / year",
-        "description": "全年进度追踪，随时查看孩子的学习进步情况。"
-      }
+    "manageMethods": "管理付款方式",
+    "previewNotice": "这是您付款面板的预览。安全结账尚未上线，此处的任何内容都不会产生实际扣款。",
+    "stats": {
+      "balanceDue": { "label": "应付余额", "sub": "本学期应付" },
+      "totalPaid": { "label": "已付总额", "sub": "历史付款" },
+      "upcoming": { "label": "即将到期", "sub": "计划扣款" },
+      "methods": { "label": "已保存方式", "sub": "已绑定卡片" }
     },
-    "featuresTitle": "What's coming",
-    "features": {
-      "secure": {
-        "title": "Secure checkout",
-        "description": "Pay safely with bank-grade encryption when checkout goes live."
-      },
-      "receipts": {
-        "title": "Receipts & invoices",
-        "description": "Every payment is documented with a downloadable receipt for your records."
-      },
-      "history": {
-        "title": "Billing history",
-        "description": "Review everything you've paid for, all in one organised place."
-      }
+    "earning": { "title": "付款概览", "paid": "已付", "scheduled": "已计划" },
+    "breakdown": {
+      "title": "支出明细",
+      "total": "合计",
+      "categories": { "practice": "练习", "placement": "水平测定", "progress": "进度追踪", "other": "其他" }
     },
-    "ledgerEmptyTitle": "No billing history yet",
-    "ledgerEmptyDescription": "There's nothing to pay right now, and you have no past transactions. Once payments are available, anything you pay for will appear here."
+    "trend": { "title": "余额趋势", "caption": "最近 6 个月" },
+    "transactions": {
+      "title": "最近交易",
+      "viewAll": "查看全部",
+      "columnInvoice": "发票",
+      "columnDescription": "说明",
+      "columnAmount": "金额",
+      "columnStatus": "状态",
+      "columnDate": "日期",
+      "status": { "paid": "已付", "pending": "处理中", "upcoming": "即将到期" },
+      "items": { "practice": "练习 — 月度", "placement": "水平测定评估", "progress": "进度追踪" }
+    },
+    "promo": {
+      "eyebrow": "即将推出",
+      "title": "安全结账即将到来",
+      "description": "很快您就可以在这里支付考试套餐费用并管理账单，全程由银行级加密保护。",
+      "cta": "通知我"
+    }
   },
   "ParentStudents": {
     "title": "学生",
@@ -4038,21 +4031,41 @@
   },
   "Calendar": {
     "title": "日历",
-    "subtitle": "在一个地方查看您即将到来的参观、开放日和申请节点。",
-    "agendaUpcoming": "即将到来的事件",
-    "agendaForDay": "当天的事件",
-    "showAll": "显示全部",
-    "emptyTitle": "没有即将到来的事件",
-    "emptySubtitle": "预约参观或提交申请即可在此查看事件。",
-    "emptyDayTitle": "当天没有事件",
-    "browseTours": "浏览参观",
+    "subtitle": "在一个地方查看您的申请节点、录取截止日期和提醒。",
     "errorMessage": "无法加载您的日历。请重试。",
-    "typeTourBooking": "已预约参观",
-    "typeOpenDay": "开放日",
+    "retry": "重试",
+    "today": "今天",
+    "previousMonth": "上个月",
+    "nextMonth": "下个月",
+    "addReminder": "添加提醒",
+    "addReminderForDay": "添加提醒",
+    "moreEvents": "{count, plural, one {还有 # 个事件} other {还有 # 个事件}}",
+    "dayPanelEmptyTitle": "暂无安排",
+    "dayPanelEmptyDescription": "添加提醒，记录这一天的重要事项。",
     "typeApplicationSubmitted": "已提交申请",
     "typeApplicationStatus": "状态已更新",
-    "retry": "Try again",
-    "moreEvents": "{count, plural, one {+# more event} other {+# more events}}"
+    "typeOfferDeadline": "录取截止日期",
+    "typeReminder": "提醒",
+    "reminderCreateTitle": "新建提醒",
+    "reminderEditTitle": "编辑提醒",
+    "reminderDialogDescription": "设置个人提醒。它将在您选择的日期显示在日历上。",
+    "reminderTitleLabel": "标题",
+    "reminderTitlePlaceholder": "例如：提交入学表格",
+    "reminderDateLabel": "日期",
+    "reminderTimeLabel": "时间（可选）",
+    "reminderNoteLabel": "备注（可选）",
+    "reminderNotePlaceholder": "添加任何详情…",
+    "save": "保存提醒",
+    "cancel": "取消",
+    "editReminderAria": "编辑提醒",
+    "deleteReminderAria": "删除提醒",
+    "deleteReminderTitle": "删除提醒？",
+    "deleteReminderDescription": "此提醒将从您的日历中永久移除。",
+    "deleteConfirm": "删除",
+    "reminderCreated": "已添加提醒。",
+    "reminderUpdated": "已更新提醒。",
+    "reminderDeleted": "已删除提醒。",
+    "reminderError": "出了点问题。请重试。"
   },
   "StudentWizardSchema": {
     "firstNameRequired": "First name is required.",

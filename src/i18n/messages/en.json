@@ -1636,6 +1636,7 @@
     "applications": "Applications",
     "offers": "Offers",
     "tours": "Tours",
+    "searchSchools": "Search schools",
     "savedSchools": "Saved schools",
     "compare": "Compare",
     "savedSearches": "Saved searches",
@@ -1644,6 +1645,17 @@
     "payments": "Payments",
     "messages": "Messages",
     "calendar": "Calendar"
+  },
+  "ParentSearch": {
+    "searchingFor": "Searching for {name}",
+    "allChildren": "all your children",
+    "addStudentHint": "Add a student to personalize your search",
+    "addStudent": "Add a student",
+    "apply": "Apply",
+    "applyAria": "Apply to {school}",
+    "viewApplication": "View application",
+    "compareAdd": "Compare",
+    "compareAria": "Compare {school}"
   },
   "Tours": {
     "title": "School Tours",
@@ -1873,46 +1885,71 @@
   "ParentPayments": {
     "title": "Payments",
     "subtitle": "Pay for test modes and manage your billing — all in one place.",
-    "badge": "Coming soon",
-    "heading": "Payments — coming soon",
-    "description": "Soon you'll be able to pay for test modes and manage everything from here. We're putting the final touches on secure checkout, so hang tight.",
     "comingSoon": "Coming soon",
-    "plansTitle": "What's coming",
-    "plansDisclaimer": "Prices shown are indicative and for preview only. Nothing is for sale yet.",
-    "plans": {
-      "practice": {
-        "name": "Practice",
-        "price": "A$199 / month",
-        "description": "Ongoing practice tests so your child can prepare with confidence, month to month."
+    "manageMethods": "Manage payment methods",
+    "previewNotice": "This is a preview of your payments dashboard. Secure checkout isn't live yet — nothing here is a real charge.",
+    "stats": {
+      "balanceDue": {
+        "label": "Balance due",
+        "sub": "Due this term"
       },
-      "placement": {
-        "name": "Placement",
-        "price": "A$449 one-off",
-        "description": "A single placement assessment to find the right starting level for your child."
+      "totalPaid": {
+        "label": "Total paid",
+        "sub": "Lifetime payments"
       },
-      "progress": {
-        "name": "Progress",
-        "price": "A$399 / year",
-        "description": "Year-round progress tracking to see how your child improves over time."
+      "upcoming": {
+        "label": "Upcoming",
+        "sub": "Scheduled charges"
+      },
+      "methods": {
+        "label": "Saved methods",
+        "sub": "Cards on file"
       }
     },
-    "featuresTitle": "What's coming",
-    "features": {
-      "secure": {
-        "title": "Secure checkout",
-        "description": "Pay safely with bank-grade encryption when checkout goes live."
-      },
-      "receipts": {
-        "title": "Receipts & invoices",
-        "description": "Every payment is documented with a downloadable receipt for your records."
-      },
-      "history": {
-        "title": "Billing history",
-        "description": "Review everything you've paid for, all in one organised place."
+    "earning": {
+      "title": "Payment overview",
+      "paid": "Paid",
+      "scheduled": "Scheduled"
+    },
+    "breakdown": {
+      "title": "Spending breakdown",
+      "total": "Total",
+      "categories": {
+        "practice": "Practice",
+        "placement": "Placement",
+        "progress": "Progress",
+        "other": "Other"
       }
     },
-    "ledgerEmptyTitle": "No billing history yet",
-    "ledgerEmptyDescription": "There's nothing to pay right now, and you have no past transactions. Once payments are available, anything you pay for will appear here."
+    "trend": {
+      "title": "Balance trend",
+      "caption": "Last 6 months"
+    },
+    "transactions": {
+      "title": "Recent transactions",
+      "viewAll": "View all",
+      "columnInvoice": "Invoice",
+      "columnDescription": "Description",
+      "columnAmount": "Amount",
+      "columnStatus": "Status",
+      "columnDate": "Date",
+      "status": {
+        "paid": "Paid",
+        "pending": "Pending",
+        "upcoming": "Upcoming"
+      },
+      "items": {
+        "practice": "Practice — monthly",
+        "placement": "Placement assessment",
+        "progress": "Progress tracking"
+      }
+    },
+    "promo": {
+      "eyebrow": "Coming soon",
+      "title": "Secure checkout is on the way",
+      "description": "Soon you'll pay for test modes and manage your billing right here, protected by bank-grade encryption.",
+      "cta": "Notify me"
+    }
   },
   "Students": {
     "title": "Students",
@@ -2724,6 +2761,14 @@
     "placeholderPhone": "+44 7700 900000",
     "placeholderWechat": "WeChat ID",
     "placeholderNationality": "e.g. British",
+    "fieldPassport": "Passport number",
+    "placeholderPassport": "e.g. A12345678",
+    "helpPassport": "Optional — schools use this for enrolment paperwork.",
+    "selectNationality": "Select nationality",
+    "nationalitySearch": "Search countries…",
+    "nationalityEmpty": "No matching country.",
+    "selectTargetYear": "Select year",
+    "helpContactChannel": "How schools and SchoolGo will reach your family.",
     "placeholderSchool": "e.g. Oakwood Primary",
     "mediaPhotoHint": "JPG or PNG, up to {size}MB.",
     "mediaVoiceHint": "Audio file, up to {size}MB.",
@@ -4038,21 +4083,41 @@
   },
   "Calendar": {
     "title": "Calendar",
-    "subtitle": "Your upcoming tours, open days and application milestones in one place.",
-    "agendaUpcoming": "Upcoming events",
-    "agendaForDay": "Events on this day",
-    "showAll": "Show all",
-    "emptyTitle": "No upcoming events",
-    "emptySubtitle": "Book a tour or submit an application to see events here.",
-    "emptyDayTitle": "No events on this day",
-    "browseTours": "Browse tours",
+    "subtitle": "Your application milestones, offer deadlines and reminders in one place.",
     "errorMessage": "Could not load your calendar. Please try again.",
-    "typeTourBooking": "Tour booked",
-    "typeOpenDay": "Open day",
+    "retry": "Try again",
+    "today": "Today",
+    "previousMonth": "Previous month",
+    "nextMonth": "Next month",
+    "addReminder": "Add reminder",
+    "addReminderForDay": "Add reminder",
+    "moreEvents": "{count, plural, one {+# more event} other {+# more events}}",
+    "dayPanelEmptyTitle": "Nothing scheduled",
+    "dayPanelEmptyDescription": "Add a reminder to keep track of what matters on this day.",
     "typeApplicationSubmitted": "Application submitted",
     "typeApplicationStatus": "Status updated",
-    "retry": "Try again",
-    "moreEvents": "{count, plural, one {+# more event} other {+# more events}}"
+    "typeOfferDeadline": "Offer deadline",
+    "typeReminder": "Reminder",
+    "reminderCreateTitle": "New reminder",
+    "reminderEditTitle": "Edit reminder",
+    "reminderDialogDescription": "Set a personal reminder. It appears on your calendar on the date you choose.",
+    "reminderTitleLabel": "Title",
+    "reminderTitlePlaceholder": "e.g. Submit enrolment forms",
+    "reminderDateLabel": "Date",
+    "reminderTimeLabel": "Time (optional)",
+    "reminderNoteLabel": "Note (optional)",
+    "reminderNotePlaceholder": "Add any details…",
+    "save": "Save reminder",
+    "cancel": "Cancel",
+    "editReminderAria": "Edit reminder",
+    "deleteReminderAria": "Delete reminder",
+    "deleteReminderTitle": "Delete reminder?",
+    "deleteReminderDescription": "This reminder will be permanently removed from your calendar.",
+    "deleteConfirm": "Delete",
+    "reminderCreated": "Reminder added.",
+    "reminderUpdated": "Reminder updated.",
+    "reminderDeleted": "Reminder deleted.",
+    "reminderError": "Something went wrong. Please try again."
   },
   "StudentWizardSchema": {
     "firstNameRequired": "First name is required.",
@@ -4065,6 +4130,7 @@
     "dobTooOld": "Enter a realistic date of birth.",
     "nationalityRequired": "Nationality is required.",
     "nationalityMax": "Nationality must be 100 characters or fewer.",
+    "passportMax": "Passport number must be 50 characters or fewer.",
     "currentSchoolMax": "School name must be 255 characters or fewer.",
     "currentYearMax": "Year level must be 20 characters or fewer.",
     "targetYearRequired": "Target entry year is required.",

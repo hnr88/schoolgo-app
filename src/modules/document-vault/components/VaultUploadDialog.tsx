@@ -72,54 +72,56 @@ export function VaultUploadDialog({ open, onOpenChange }: VaultUploadDialogProps
                 <FormMessage />
               </FormItem>
             )} />
-            <FormField control={form.control} name='documentType' render={({ field }) => (
-              <FormItem>
-                <FormLabel>{t('typeLabel')}</FormLabel>
-                <Select onValueChange={field.onChange} value={field.value ?? ''}>
-                  <FormControl>
-                    <SelectTrigger><SelectValue placeholder={t('typeSelect')} /></SelectTrigger>
-                  </FormControl>
-                  <SelectContent>
-                    {VAULT_DOCUMENT_TYPES.map((type) => (
-                      <SelectItem key={type} value={type}>{t(`docType_${type}`)}</SelectItem>
-                    ))}
-                  </SelectContent>
-                </Select>
-                <FormMessage />
-              </FormItem>
-            )} />
-            <FormField control={form.control} name='expiresAt' render={({ field }) => (
-              <FormItem className='flex flex-col'>
-                <FormLabel>{t('expiresAtLabel')}</FormLabel>
-                <Popover>
-                  <FormControl>
-                    <PopoverTrigger
-                      render={
-                        <Button
-                          type='button'
-                          variant='outline'
-                          className={cn('justify-start font-normal', !field.value && 'text-foggy')}
-                        />
-                      }
-                    >
-                      <CalendarIcon className='mr-2 h-4 w-4 shrink-0 opacity-70' />
-                      {field.value
-                        ? format.dateTime(field.value, { dateStyle: 'medium' })
-                        : t('expiresAtPlaceholder')}
-                    </PopoverTrigger>
-                  </FormControl>
-                  <PopoverContent className='w-auto p-0' align='start'>
-                    <Calendar
-                      mode='single'
-                      selected={field.value}
-                      onSelect={field.onChange}
-                      autoFocus
-                    />
-                  </PopoverContent>
-                </Popover>
-                <FormMessage />
-              </FormItem>
-            )} />
+            <div className='grid grid-cols-1 gap-4 sm:grid-cols-2'>
+              <FormField control={form.control} name='documentType' render={({ field }) => (
+                <FormItem>
+                  <FormLabel>{t('typeLabel')}</FormLabel>
+                  <Select onValueChange={field.onChange} value={field.value ?? ''}>
+                    <FormControl>
+                      <SelectTrigger className='w-full'><SelectValue placeholder={t('typeSelect')} /></SelectTrigger>
+                    </FormControl>
+                    <SelectContent>
+                      {VAULT_DOCUMENT_TYPES.map((type) => (
+                        <SelectItem key={type} value={type}>{t(`docType_${type}`)}</SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                  <FormMessage />
+                </FormItem>
+              )} />
+              <FormField control={form.control} name='expiresAt' render={({ field }) => (
+                <FormItem className='flex flex-col'>
+                  <FormLabel>{t('expiresAtLabel')}</FormLabel>
+                  <Popover>
+                    <FormControl>
+                      <PopoverTrigger
+                        render={
+                          <Button
+                            type='button'
+                            variant='outline'
+                            className={cn('w-full justify-start font-normal', !field.value && 'text-foggy')}
+                          />
+                        }
+                      >
+                        <CalendarIcon className='mr-2 h-4 w-4 shrink-0 opacity-70' />
+                        {field.value
+                          ? format.dateTime(field.value, { dateStyle: 'medium' })
+                          : t('expiresAtPlaceholder')}
+                      </PopoverTrigger>
+                    </FormControl>
+                    <PopoverContent className='w-auto p-0' align='start'>
+                      <Calendar
+                        mode='single'
+                        selected={field.value}
+                        onSelect={field.onChange}
+                        autoFocus
+                      />
+                    </PopoverContent>
+                  </Popover>
+                  <FormMessage />
+                </FormItem>
+              )} />
+            </div>
             <FormField control={form.control} name='notes' render={({ field }) => (
               <FormItem>
                 <FormLabel>{t('notesLabel')}</FormLabel>

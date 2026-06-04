@@ -192,6 +192,7 @@ export const PORTAL_NAV: Record<Portal, PortalNav> = {
       {
         labelKey: 'groupSchools',
         items: [
+          { href: '/parent/search', icon: Search, labelKey: 'searchSchools' },
           { href: '/parent/saved-schools', icon: Heart, labelKey: 'savedSchools' },
           { href: '/parent/compare', icon: Columns3, labelKey: 'compare' },
           { href: '/parent/saved-searches', icon: Bookmark, labelKey: 'savedSearches' },

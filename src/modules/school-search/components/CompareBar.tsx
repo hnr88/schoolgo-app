@@ -17,12 +17,14 @@ interface CompareBarProps {
   isAdvanced?: boolean;
   schoolNamesById?: Record<string, string>;
   className?: string;
+  comparePath?: string;
 }
 
 export function CompareBar({
   isAdvanced: isAdvancedProp,
   schoolNamesById: schoolNamesByIdProp,
   className,
+  comparePath,
 }: CompareBarProps) {
   const t = useTranslations('SchoolSearch.spec.compareBar');
   const tCompare = useTranslations('SchoolSearch.compare');
@@ -41,7 +43,7 @@ export function CompareBar({
   if (compareList.length === 0) return null;
 
   const max = isAdvanced ? COMPARE_MAX_ADVANCED : COMPARE_MAX_BASIC;
-  const compareHref = `/compare?ids=${compareList.join(',')}`;
+  const compareHref = `${comparePath ?? '/compare'}?ids=${compareList.join(',')}`;
 
   const handleClearAll = () => {
     useSchoolSearchStore.setState({ compareList: [] });

@@ -45,7 +45,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/parent',
     '/school',
     '/agent',
-    '/parent/search',
     '/school/search',
     '/agent/search',
     '/search',

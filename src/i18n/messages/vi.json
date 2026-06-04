@@ -2430,47 +2430,40 @@
   },
   "ParentPayments": {
     "title": "Thanh toán",
-    "subtitle": "Thanh toán cho các gói thi và quản lý thanh toán — tất cả tại một nơi.",
-    "badge": "Sắp ra mắt",
-    "heading": "Thanh toán — sắp ra mắt",
-    "description": "Sắp tới bạn sẽ có thể thanh toán cho các gói thi và quản lý mọi thứ từ đây. Chúng tôi đang hoàn thiện hệ thống thanh toán an toàn, vui lòng chờ đợi.",
+    "subtitle": "Thanh toán cho các gói thi và quản lý hóa đơn — tất cả tại một nơi.",
     "comingSoon": "Sắp ra mắt",
-    "plansTitle": "Sắp có",
-    "plansDisclaimer": "Giá hiển thị chỉ mang tính tham khảo và để xem trước. Chưa có sản phẩm nào được bán.",
-    "plans": {
-      "practice": {
-        "name": "Luyện tập",
-        "price": "A$199 / month",
-        "description": "Các bài thi luyện tập liên tục để con bạn chuẩn bị tự tin từng tháng."
-      },
-      "placement": {
-        "name": "Xếp lớp",
-        "price": "A$449 one-off",
-        "description": "Bài kiểm tra xếp lớp một lần để tìm ra trình độ phù hợp cho con bạn."
-      },
-      "progress": {
-        "name": "Theo dõi tiến độ",
-        "price": "A$399 / year",
-        "description": "Theo dõi tiến độ quanh năm để thấy con bạn cải thiện theo thời gian."
-      }
+    "manageMethods": "Quản lý phương thức thanh toán",
+    "previewNotice": "Đây là bản xem trước bảng điều khiển thanh toán của bạn. Thanh toán an toàn chưa được kích hoạt — không có khoản nào ở đây là giao dịch thật.",
+    "stats": {
+      "balanceDue": { "label": "Số dư phải trả", "sub": "Đến hạn trong kỳ này" },
+      "totalPaid": { "label": "Tổng đã thanh toán", "sub": "Tổng cộng đã trả" },
+      "upcoming": { "label": "Sắp tới", "sub": "Khoản phí đã lên lịch" },
+      "methods": { "label": "Phương thức đã lưu", "sub": "Thẻ đã đăng ký" }
     },
-    "featuresTitle": "What's coming",
-    "features": {
-      "secure": {
-        "title": "Secure checkout",
-        "description": "Pay safely with bank-grade encryption when checkout goes live."
-      },
-      "receipts": {
-        "title": "Receipts & invoices",
-        "description": "Every payment is documented with a downloadable receipt for your records."
-      },
-      "history": {
-        "title": "Billing history",
-        "description": "Review everything you've paid for, all in one organised place."
-      }
+    "earning": { "title": "Tổng quan thanh toán", "paid": "Đã trả", "scheduled": "Đã lên lịch" },
+    "breakdown": {
+      "title": "Phân tích chi tiêu",
+      "total": "Tổng cộng",
+      "categories": { "practice": "Luyện tập", "placement": "Xếp lớp", "progress": "Tiến độ", "other": "Khác" }
     },
-    "ledgerEmptyTitle": "No billing history yet",
-    "ledgerEmptyDescription": "There's nothing to pay right now, and you have no past transactions. Once payments are available, anything you pay for will appear here."
+    "trend": { "title": "Xu hướng số dư", "caption": "6 tháng gần nhất" },
+    "transactions": {
+      "title": "Giao dịch gần đây",
+      "viewAll": "Xem tất cả",
+      "columnInvoice": "Hóa đơn",
+      "columnDescription": "Mô tả",
+      "columnAmount": "Số tiền",
+      "columnStatus": "Trạng thái",
+      "columnDate": "Ngày",
+      "status": { "paid": "Đã trả", "pending": "Đang chờ", "upcoming": "Sắp tới" },
+      "items": { "practice": "Luyện tập — hàng tháng", "placement": "Bài kiểm tra xếp lớp", "progress": "Theo dõi tiến độ" }
+    },
+    "promo": {
+      "eyebrow": "Sắp ra mắt",
+      "title": "Thanh toán an toàn sắp xuất hiện",
+      "description": "Sắp tới bạn sẽ thanh toán cho các gói thi và quản lý hóa đơn ngay tại đây, được bảo vệ bằng mã hóa cấp ngân hàng.",
+      "cta": "Thông báo cho tôi"
+    }
   },
   "ParentStudents": {
     "title": "Học sinh",
@@ -4038,21 +4031,41 @@
   },
   "Calendar": {
     "title": "Lịch",
-    "subtitle": "Các chuyến tham quan, ngày mở cửa và mốc đơn của bạn ở cùng một nơi.",
-    "agendaUpcoming": "Sự kiện sắp tới",
-    "agendaForDay": "Sự kiện trong ngày này",
-    "showAll": "Hiển thị tất cả",
-    "emptyTitle": "Không có sự kiện sắp tới",
-    "emptySubtitle": "Đặt một chuyến tham quan hoặc nộp đơn để xem sự kiện ở đây.",
-    "emptyDayTitle": "Không có sự kiện trong ngày này",
-    "browseTours": "Xem các chuyến tham quan",
+    "subtitle": "Các mốc nộp đơn, hạn chót đề nghị nhập học và lời nhắc của bạn ở cùng một nơi.",
     "errorMessage": "Không thể tải lịch của bạn. Vui lòng thử lại.",
-    "typeTourBooking": "Đã đặt tham quan",
-    "typeOpenDay": "Ngày mở cửa",
+    "retry": "Thử lại",
+    "today": "Hôm nay",
+    "previousMonth": "Tháng trước",
+    "nextMonth": "Tháng sau",
+    "addReminder": "Thêm lời nhắc",
+    "addReminderForDay": "Thêm lời nhắc",
+    "moreEvents": "{count, plural, one {+# sự kiện khác} other {+# sự kiện khác}}",
+    "dayPanelEmptyTitle": "Không có lịch nào",
+    "dayPanelEmptyDescription": "Thêm lời nhắc để theo dõi những việc quan trọng trong ngày này.",
     "typeApplicationSubmitted": "Đã nộp đơn",
     "typeApplicationStatus": "Đã cập nhật trạng thái",
-    "retry": "Try again",
-    "moreEvents": "{count, plural, one {+# more event} other {+# more events}}"
+    "typeOfferDeadline": "Hạn chót đề nghị nhập học",
+    "typeReminder": "Lời nhắc",
+    "reminderCreateTitle": "Lời nhắc mới",
+    "reminderEditTitle": "Chỉnh sửa lời nhắc",
+    "reminderDialogDescription": "Đặt một lời nhắc cá nhân. Lời nhắc sẽ xuất hiện trên lịch của bạn vào ngày bạn chọn.",
+    "reminderTitleLabel": "Tiêu đề",
+    "reminderTitlePlaceholder": "ví dụ: Nộp đơn ghi danh",
+    "reminderDateLabel": "Ngày",
+    "reminderTimeLabel": "Giờ (tùy chọn)",
+    "reminderNoteLabel": "Ghi chú (tùy chọn)",
+    "reminderNotePlaceholder": "Thêm chi tiết bất kỳ…",
+    "save": "Lưu lời nhắc",
+    "cancel": "Hủy",
+    "editReminderAria": "Chỉnh sửa lời nhắc",
+    "deleteReminderAria": "Xóa lời nhắc",
+    "deleteReminderTitle": "Xóa lời nhắc?",
+    "deleteReminderDescription": "Lời nhắc này sẽ bị xóa vĩnh viễn khỏi lịch của bạn.",
+    "deleteConfirm": "Xóa",
+    "reminderCreated": "Đã thêm lời nhắc.",
+    "reminderUpdated": "Đã cập nhật lời nhắc.",
+    "reminderDeleted": "Đã xóa lời nhắc.",
+    "reminderError": "Đã xảy ra lỗi. Vui lòng thử lại."
   },
   "StudentWizardSchema": {
     "firstNameRequired": "First name is required.",

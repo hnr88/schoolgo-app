@@ -3,7 +3,7 @@
 import { usePathname } from '@/i18n/navigation';
 import { cn } from '@/lib/utils';
 
-const FULL_BLEED_SEGMENTS = ['/dashboard/search', '/compare'] as const;
+const FULL_BLEED_SEGMENTS = ['/dashboard/search', '/compare', '/parent/search'] as const;
 
 export function DashboardContent({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
@@ -14,9 +14,8 @@ export function DashboardContent({ children }: { children: React.ReactNode }) {
   return (
     <div
       className={cn(
-        isFullBleed
-          ? 'w-full px-6 py-8 lg:px-10'
-          : 'w-full max-w-wide px-6 py-8 lg:px-10',
+        'w-full px-6 py-8 lg:px-10',
+        !isFullBleed && 'max-w-canvas',
       )}
     >
       {children}

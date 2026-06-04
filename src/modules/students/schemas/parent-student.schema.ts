@@ -76,6 +76,11 @@ export function createParentStudentSchema(t: SchemaTranslator) {
       .string()
       .min(1, { message: t('nationalityRequired') })
       .max(100, { message: t('nationalityMax') }),
+    passportNumber: z
+      .string()
+      .max(50, { message: t('passportMax') })
+      .optional()
+      .or(z.literal('')),
     currentSchool: z
       .string()
       .max(255, { message: t('currentSchoolMax') })
@@ -119,6 +124,7 @@ export const parentStudentSchema = z.object({
   dateOfBirth: z.string().optional().or(z.literal('')),
   gender: z.enum(GENDER_VALUES).optional(),
   nationality: z.string().min(1).max(100),
+  passportNumber: z.string().max(50).optional().or(z.literal('')),
   currentSchool: z.string().max(255).optional().or(z.literal('')),
   currentYearLevel: z.string().max(20).optional().or(z.literal('')),
   targetEntryYear: z.string().min(1).max(20),
@@ -139,7 +145,7 @@ export const PARENT_WIZARD_STEP_IDS = ['personal', 'education', 'guardian', 'med
 export type ParentWizardStepId = (typeof PARENT_WIZARD_STEP_IDS)[number];
 
 export const STEP_FIELDS: Record<ParentWizardStepId, (keyof ParentStudentFormValues)[]> = {
-  personal: ['firstName', 'lastName', 'email', 'dateOfBirth', 'gender', 'nationality'],
+  personal: ['firstName', 'lastName', 'email', 'dateOfBirth', 'gender', 'nationality', 'passportNumber'],
   education: ['currentSchool', 'currentYearLevel', 'targetEntryYear', 'targetEntryTerm'],
   guardian: [
     'parentGuardianName',

@@ -2,39 +2,32 @@
 
 import { useMemo } from 'react';
 
-import { aggregateCalendarEvents } from '@/modules/calendar/lib/aggregate-events';
 import { useParentApplications } from '@/modules/applications/queries/use-parent-applications.query';
-import { useMyTourBookings } from '@/modules/tours/queries/use-my-tour-bookings.query';
-import { useTours } from '@/modules/tours/queries/use-tours.query';
+import { aggregateCalendarEvents } from '@/modules/calendar/lib/aggregate-events';
+import { useReminders } from '@/modules/calendar/queries/use-reminders.query';
 
 export function useCalendarEvents() {
-  const bookingsQuery = useMyTourBookings();
-  const toursQuery = useTours();
   // Aggregate across all of the parent's applications, not just the first page.
   const applicationsQuery = useParentApplications({ pageSize: 100 });
+  const remindersQuery = useReminders();
 
   const events = useMemo(
     () =>
       aggregateCalendarEvents({
-        bookings: bookingsQuery.data?.data ?? [],
-        tours: toursQuery.data?.data ?? [],
         applications: applicationsQuery.data?.data ?? [],
+        reminders: remindersQuery.data ?? [],
       }),
-    [bookingsQuery.data, toursQuery.data, applicationsQuery.data],
+    [applicationsQuery.data, remindersQuery.data],
   );
 
   async function refetchAll() {
-    await Promise.all([
-      bookingsQuery.refetch(),
-      toursQuery.refetch(),
-      applicationsQuery.refetch(),
-    ]);
+    await Promise.all([applicationsQuery.refetch(), remindersQuery.refetch()]);
   }
 
   return {
     events,
-    isLoading: bookingsQuery.isLoading || toursQuery.isLoading || applicationsQuery.isLoading,
-    isError: bookingsQuery.isError || toursQuery.isError || applicationsQuery.isError,
+    isLoading: applicationsQuery.isLoading,
+    isError: applicationsQuery.isError,
     refetchAll,
   };
 }

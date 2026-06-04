@@ -3,14 +3,8 @@
 import { useTranslations } from 'next-intl';
 import { Input } from '@/components/ui/input';
 import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from '@/components/ui/select';
-import {
   FormControl,
+  FormDescription,
   FormField,
   FormItem,
   FormLabel,
@@ -22,6 +16,10 @@ import {
 } from '@/modules/students/constants/parent-wizard.constants';
 import type { ParentStepProps } from '@/modules/students/types/parent-wizard.types';
 import { StepCard } from '@/modules/students/components/parent-wizard/StepCard';
+import { NationalityCombobox } from '@/modules/students/components/parent-wizard/fields/NationalityCombobox';
+import { SegmentedRadioGroup } from '@/modules/students/components/parent-wizard/fields/SegmentedRadioGroup';
+
+const LABEL = 'text-sm font-medium text-ink-900';
 
 export function StepPersonal({ control }: ParentStepProps) {
   const t = useTranslations('StudentWizard');
@@ -34,7 +32,7 @@ export function StepPersonal({ control }: ParentStepProps) {
           name='firstName'
           render={({ field }) => (
             <FormItem>
-              <FormLabel className='text-sm font-medium text-ink-900'>{t('fieldFirstName')}</FormLabel>
+              <FormLabel className={LABEL}>{t('fieldFirstName')}</FormLabel>
               <FormControl><Input className='h-12' {...field} /></FormControl>
               <FormMessage />
             </FormItem>
@@ -45,7 +43,7 @@ export function StepPersonal({ control }: ParentStepProps) {
           name='lastName'
           render={({ field }) => (
             <FormItem>
-              <FormLabel className='text-sm font-medium text-ink-900'>{t('fieldLastName')}</FormLabel>
+              <FormLabel className={LABEL}>{t('fieldLastName')}</FormLabel>
               <FormControl><Input className='h-12' {...field} /></FormControl>
               <FormMessage />
             </FormItem>
@@ -56,7 +54,7 @@ export function StepPersonal({ control }: ParentStepProps) {
           name='email'
           render={({ field }) => (
             <FormItem>
-              <FormLabel className='text-sm font-medium text-ink-900'>{t('fieldEmail')}</FormLabel>
+              <FormLabel className={LABEL}>{t('fieldEmail')}</FormLabel>
               <FormControl><Input className='h-12' type='email' placeholder={t('placeholderEmail')} {...field} /></FormControl>
               <FormMessage />
             </FormItem>
@@ -67,7 +65,7 @@ export function StepPersonal({ control }: ParentStepProps) {
           name='dateOfBirth'
           render={({ field }) => (
             <FormItem>
-              <FormLabel className='text-sm font-medium text-ink-900'>{t('fieldDob')}</FormLabel>
+              <FormLabel className={LABEL}>{t('fieldDob')}</FormLabel>
               <FormControl><Input className='h-12' type='date' max={DOB_MAX_DATE} {...field} /></FormControl>
               <FormMessage />
             </FormItem>
@@ -77,18 +75,17 @@ export function StepPersonal({ control }: ParentStepProps) {
           control={control}
           name='gender'
           render={({ field }) => (
-            <FormItem>
-              <FormLabel className='text-sm font-medium text-ink-900'>{t('fieldGender')}</FormLabel>
-              <Select onValueChange={field.onChange} value={field.value ?? ''}>
-                <FormControl>
-                  <SelectTrigger className='h-12 w-full'><SelectValue placeholder={t('selectGender')} /></SelectTrigger>
-                </FormControl>
-                <SelectContent>
-                  {PARENT_GENDER_OPTIONS.map((g) => (
-                    <SelectItem key={g} value={g}>{t(`gender_${g}`)}</SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
+            <FormItem className='md:col-span-2'>
+              <FormLabel className={LABEL}>{t('fieldGender')}</FormLabel>
+              <FormControl>
+                <SegmentedRadioGroup
+                  value={field.value ?? ''}
+                  onValueChange={field.onChange}
+                  ariaLabel={t('fieldGender')}
+                  className='grid-cols-2 sm:grid-cols-4'
+                  options={PARENT_GENDER_OPTIONS.map((g) => ({ value: g, label: t(`gender_${g}`) }))}
+                />
+              </FormControl>
               <FormMessage />
             </FormItem>
           )}
@@ -98,8 +95,24 @@ export function StepPersonal({ control }: ParentStepProps) {
           name='nationality'
           render={({ field }) => (
             <FormItem>
-              <FormLabel className='text-sm font-medium text-ink-900'>{t('fieldNationality')}</FormLabel>
-              <FormControl><Input className='h-12' placeholder={t('placeholderNationality')} {...field} /></FormControl>
+              <FormLabel className={LABEL}>{t('fieldNationality')}</FormLabel>
+              <FormControl>
+                <NationalityCombobox value={field.value} onChange={field.onChange} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={control}
+          name='passportNumber'
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel className={LABEL}>{t('fieldPassport')}</FormLabel>
+              <FormControl>
+                <Input className='h-12' placeholder={t('placeholderPassport')} {...field} value={field.value ?? ''} />
+              </FormControl>
+              <FormDescription>{t('helpPassport')}</FormDescription>
               <FormMessage />
             </FormItem>
           )}

@@ -18,10 +18,14 @@ import {
 } from '@/components/ui/form';
 import {
   PARENT_TARGET_TERM_OPTIONS,
+  PARENT_TARGET_YEAR_OPTIONS,
 } from '@/modules/students/constants/parent-wizard.constants';
 import { YEAR_LEVEL_OPTIONS } from '@/modules/students/constants/student.constants';
 import type { ParentStepProps } from '@/modules/students/types/parent-wizard.types';
 import { StepCard } from '@/modules/students/components/parent-wizard/StepCard';
+import { SegmentedRadioGroup } from '@/modules/students/components/parent-wizard/fields/SegmentedRadioGroup';
+
+const LABEL = 'text-sm font-medium text-ink-900';
 
 export function StepEducation({ control }: ParentStepProps) {
   const t = useTranslations('StudentWizard');
@@ -34,7 +38,7 @@ export function StepEducation({ control }: ParentStepProps) {
           name='currentSchool'
           render={({ field }) => (
             <FormItem>
-              <FormLabel className='text-sm font-medium text-ink-900'>{t('fieldCurrentSchool')}</FormLabel>
+              <FormLabel className={LABEL}>{t('fieldCurrentSchool')}</FormLabel>
               <FormControl><Input className='h-12' placeholder={t('placeholderSchool')} {...field} /></FormControl>
               <FormMessage />
             </FormItem>
@@ -45,7 +49,7 @@ export function StepEducation({ control }: ParentStepProps) {
           name='currentYearLevel'
           render={({ field }) => (
             <FormItem>
-              <FormLabel className='text-sm font-medium text-ink-900'>{t('fieldCurrentYear')}</FormLabel>
+              <FormLabel className={LABEL}>{t('fieldCurrentYear')}</FormLabel>
               <Select onValueChange={field.onChange} value={field.value}>
                 <FormControl>
                   <SelectTrigger className='h-12 w-full'><SelectValue placeholder={t('selectYear')} /></SelectTrigger>
@@ -65,8 +69,17 @@ export function StepEducation({ control }: ParentStepProps) {
           name='targetEntryYear'
           render={({ field }) => (
             <FormItem>
-              <FormLabel className='text-sm font-medium text-ink-900'>{t('fieldTargetYear')}</FormLabel>
-              <FormControl><Input className='h-12' inputMode='numeric' placeholder={t('placeholderTargetYear')} {...field} /></FormControl>
+              <FormLabel className={LABEL}>{t('fieldTargetYear')}</FormLabel>
+              <Select onValueChange={field.onChange} value={field.value}>
+                <FormControl>
+                  <SelectTrigger className='h-12 w-full'><SelectValue placeholder={t('selectTargetYear')} /></SelectTrigger>
+                </FormControl>
+                <SelectContent>
+                  {PARENT_TARGET_YEAR_OPTIONS.map((year) => (
+                    <SelectItem key={year} value={year}>{year}</SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
               <FormMessage />
             </FormItem>
           )}
@@ -75,18 +88,17 @@ export function StepEducation({ control }: ParentStepProps) {
           control={control}
           name='targetEntryTerm'
           render={({ field }) => (
-            <FormItem>
-              <FormLabel className='text-sm font-medium text-ink-900'>{t('fieldTargetTerm')}</FormLabel>
-              <Select onValueChange={field.onChange} value={field.value}>
-                <FormControl>
-                  <SelectTrigger className='h-12 w-full'><SelectValue placeholder={t('selectTerm')} /></SelectTrigger>
-                </FormControl>
-                <SelectContent>
-                  {PARENT_TARGET_TERM_OPTIONS.map((term) => (
-                    <SelectItem key={term} value={term}>{term}</SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
+            <FormItem className='md:col-span-2'>
+              <FormLabel className={LABEL}>{t('fieldTargetTerm')}</FormLabel>
+              <FormControl>
+                <SegmentedRadioGroup
+                  value={field.value}
+                  onValueChange={field.onChange}
+                  ariaLabel={t('fieldTargetTerm')}
+                  className='grid-cols-2 sm:grid-cols-4'
+                  options={PARENT_TARGET_TERM_OPTIONS.map((term) => ({ value: term, label: term }))}
+                />
+              </FormControl>
               <FormMessage />
             </FormItem>
           )}

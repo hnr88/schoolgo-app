@@ -7,10 +7,11 @@ import { ScrollArea } from '@/components/ui/scroll-area';
 import { EmptyState, ErrorState } from '@/modules/core';
 import { cn } from '@/lib/utils';
 import { SearchSchoolCard } from '@/modules/school-search/components/SchoolCard';
+import { ParentSearchSchoolCard } from '@/modules/school-search/components/ParentSearchSchoolCard';
 import { useSearchWithFilters } from '@/modules/school-search/hooks/useSearchWithFilters';
 import type { SchoolResultsPanelProps } from '@/modules/school-search/types/component.types';
 
-export function SchoolResultsPanel({ activePortal }: SchoolResultsPanelProps) {
+export function SchoolResultsPanel({ activePortal, variant = 'default' }: SchoolResultsPanelProps) {
   const t = useTranslations('SchoolSearch.results');
   const { data, isLoading, isFetching, isError, refetch } = useSearchWithFilters();
 
@@ -96,13 +97,21 @@ export function SchoolResultsPanel({ activePortal }: SchoolResultsPanelProps) {
             )}
             aria-busy={isRefetching}
           >
-            {hits.map((school) => (
-              <SearchSchoolCard
-                key={school.documentId}
-                school={school}
-                activePortal={activePortal}
-              />
-            ))}
+            {hits.map((school) =>
+              variant === 'parent' ? (
+                <ParentSearchSchoolCard
+                  key={school.documentId}
+                  school={school}
+                  activePortal={activePortal}
+                />
+              ) : (
+                <SearchSchoolCard
+                  key={school.documentId}
+                  school={school}
+                  activePortal={activePortal}
+                />
+              ),
+            )}
           </div>
         )}
       </ScrollArea>

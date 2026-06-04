@@ -32,6 +32,7 @@ export function StepReview({ values, photo, voiceIntro, onEdit }: ParentStepRevi
           <ReviewRow label={t('fieldDob')} value={values.dateOfBirth || dash} />
           <ReviewRow label={t('fieldGender')} value={values.gender ? t(`gender_${values.gender}`) : dash} />
           <ReviewRow label={t('fieldNationality')} value={values.nationality || dash} />
+          <ReviewRow label={t('fieldPassport')} value={values.passportNumber || dash} />
         </dl>
       </ReviewSection>
 
