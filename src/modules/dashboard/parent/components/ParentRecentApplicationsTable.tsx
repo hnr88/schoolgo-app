@@ -32,7 +32,7 @@ export function ParentRecentApplicationsTable() {
   const hasRows = applications.length > 0;
 
   return (
-    <section className='flex h-full flex-col overflow-hidden rounded-xl bg-card shadow-2'>
+    <section className='flex h-full flex-col overflow-hidden rounded-xl bg-card shadow-1'>
       <div className='px-6 pt-6 pb-5'>
         <ParentSectionHeader
           title={t('recentApplicationsTitle')}

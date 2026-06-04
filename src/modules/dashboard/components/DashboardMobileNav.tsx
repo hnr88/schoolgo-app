@@ -38,13 +38,13 @@ export function DashboardMobileNav() {
         <DialogOverlay />
         <DialogPrimitive.Popup
           data-slot='mobile-nav'
-          className='fixed inset-y-0 left-0 z-50 flex w-72 max-w-full flex-col bg-babu-700 shadow-3 outline-none duration-150 data-open:animate-in data-open:slide-in-from-left data-closed:animate-out data-closed:slide-out-to-left'
+          className='fixed inset-y-0 left-0 z-50 flex w-72 max-w-full flex-col bg-sidebar-premium shadow-3 outline-none duration-150 data-open:animate-in data-open:slide-in-from-left data-closed:animate-out data-closed:slide-out-to-left'
         >
           <DialogTitle className='sr-only'>{t('navTitle')}</DialogTitle>
           <div className='flex h-16 items-center px-5'>
             <Link href={home} onClick={() => setOpen(false)} className='flex shrink-0 items-center'>
               <Image
-                src='/logos/logo-white.png'
+                src='/logos/logo-red.png'
                 alt='SchoolGo'
                 width={140}
                 height={30}

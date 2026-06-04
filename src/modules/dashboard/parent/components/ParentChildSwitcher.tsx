@@ -36,7 +36,7 @@ export function ParentChildSwitcher() {
     <DropdownMenu>
       <DropdownMenuTrigger
         aria-label={t('triggerAriaLabel', { name: label })}
-        className='flex h-11 items-center gap-2 rounded-pill border border-border bg-card pl-1.5 pr-3 text-sm font-semibold text-ink-900 shadow-1 outline-none transition-[background-color,box-shadow] duration-200 ease-out-quart hover:bg-muted hover:shadow-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1 data-[state=open]:bg-muted'
+        className='flex h-11 items-center gap-2 rounded-pill bg-muted pl-1.5 pr-3 text-sm font-semibold text-ink-900 outline-none transition-[background-color,box-shadow] duration-200 ease-out-quart hover:bg-surface-container-high focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1 data-[state=open]:bg-surface-container-high'
       >
         {activeChild ? (
           <ParentStudentAvatar

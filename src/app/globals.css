@@ -122,6 +122,7 @@
 
   /* Soft unified page-surface tone for dashboard shells */
   --color-page-surface: var(--page-surface);
+  --color-sidebar-premium: var(--sidebar-premium);
 
   --color-on-surface: var(--on-surface);
   --color-on-surface-variant: var(--on-surface-variant);
@@ -320,6 +321,7 @@
   /* Soft unified dashboard page canvas — a barely-warm neutral that reads as an
      intentional surface beside white cards, not a jarring gray content panel. */
   --page-surface: oklch(0.979 0.002 95); /* ~#F8F8F6 warm off-white */
+  --sidebar-premium: oklch(0.955 0.005 264); /* premium cool gray sidebar */
 
   /* On-surface ink */
   --on-surface: var(--hof); /* #484848 */

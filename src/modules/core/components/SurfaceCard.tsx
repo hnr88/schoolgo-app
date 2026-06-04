@@ -6,10 +6,10 @@ export const surfaceCardVariants = cva(
   {
     variants: {
       elevation: {
-        flat: 'shadow-2',
-        raised: 'shadow-2',
+        flat: 'shadow-1',
+        raised: 'shadow-1',
         interactive:
-          'shadow-2 transition-[transform,box-shadow] duration-300 ease-out-quart hover:-translate-y-0.5 hover:shadow-3 focus-within:-translate-y-0.5 focus-within:shadow-3',
+          'shadow-1 transition-[transform,box-shadow] duration-300 ease-out-quart hover:-translate-y-0.5 hover:shadow-2 focus-within:-translate-y-0.5 focus-within:shadow-2',
       },
       accent: {
         none: '',

@@ -31,7 +31,7 @@ export function StepMedia({
   return (
     <StepCard title={t('stepMedia')} description={t('mediaHint')}>
       <div className='grid grid-cols-1 gap-6 lg:grid-cols-2 lg:gap-8'>
-        <section className='flex flex-col gap-5 rounded-2xl border border-border bg-background p-6 shadow-1 lg:p-8'>
+        <section className='flex flex-col gap-5 rounded-2xl bg-muted p-6 lg:p-8'>
           <header className='flex items-start gap-4'>
             <span className='flex size-12 shrink-0 items-center justify-center rounded-2xl bg-muted text-muted-foreground'>
               <ImageIcon className='size-6' aria-hidden='true' />
@@ -54,7 +54,7 @@ export function StepMedia({
             maxSizeMb={PARENT_PHOTO_MAX_MB}
           />
         </section>
-        <section className='flex flex-col gap-5 rounded-2xl border border-border bg-background p-6 shadow-1 lg:p-8'>
+        <section className='flex flex-col gap-5 rounded-2xl bg-muted p-6 lg:p-8'>
           <header className='flex items-start gap-4'>
             <span className='flex size-12 shrink-0 items-center justify-center rounded-2xl bg-muted text-muted-foreground'>
               <Mic className='size-6' aria-hidden='true' />
