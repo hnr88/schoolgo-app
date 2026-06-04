@@ -34,7 +34,7 @@ export function DashboardSidebar() {
   return (
     <aside
       className={cn(
-        'hidden h-full flex-col border-r border-divider bg-gradient-to-b from-rausch-100 via-rausch-50 to-background transition-all duration-300 ease-out-quart lg:flex',
+        'hidden h-full flex-col border-r border-divider bg-rausch-50 transition-all duration-300 ease-out-quart lg:flex',
         isCollapsed ? 'w-16' : 'w-64',
       )}
     >

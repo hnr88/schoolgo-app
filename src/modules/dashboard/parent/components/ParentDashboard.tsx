@@ -57,7 +57,7 @@ export function ParentDashboard() {
         </div>
       </div>
 
-      <section className='flex flex-col gap-6 rounded-2xl bg-gradient-to-br from-rausch-500 to-rausch-700 p-6 shadow-2 md:p-8'>
+      <section className='flex flex-col gap-6 rounded-2xl bg-primary p-6 shadow-2 md:p-8'>
         <div className='flex flex-col gap-1.5'>
           <Eyebrow className='text-background/60'>{t('quickActionsTitle')}</Eyebrow>
           <h2 className='font-display text-xl font-bold tracking-tight text-background'>
