@@ -1,7 +1,6 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { User } from 'lucide-react';
 import { WizardProgress } from '@/modules/forms';
 import type { WizardChromeState } from '@/modules/forms';
 import { Eyebrow } from '@/modules/design-system';
@@ -21,13 +20,11 @@ export function ParentWizardRail({ chrome, studentName }: ParentWizardRailProps)
   return (
     <div className='flex flex-col gap-8 lg:sticky lg:top-8'>
       <div className='flex items-center gap-4 rounded-2xl bg-card p-5 shadow-1'>
-        <span className='flex size-14 shrink-0 items-center justify-center rounded-full bg-primary text-base font-bold text-primary-foreground'>
-          {initials ? (
-            initials
-          ) : (
-            <User className='size-6' strokeWidth={1.75} aria-hidden='true' />
-          )}
-        </span>
+        {initials && (
+          <span className='flex size-14 shrink-0 items-center justify-center rounded-full bg-primary text-base font-bold text-primary-foreground'>
+            {initials}
+          </span>
+        )}
         <div className='flex min-w-0 flex-col gap-0.5'>
           <Eyebrow tone='brand'>{t('railLabel')}</Eyebrow>
           <span className='truncate text-lg font-semibold tracking-tight text-ink-900'>
