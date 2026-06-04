@@ -19,7 +19,6 @@ export function ComparisonMobileTable({ schools, rows, t }: ComparisonMobileTabl
                 <th key={s.slug} scope='col' className='border-b border-divider px-3 pb-4 text-left align-top'>
                   <div className='flex flex-col gap-2'>
                     <SchoolPhotoOrLogo
-                      photoUrl={s.photoUrl}
                       logoUrl={s.logoUrl}
                       name={s.name}
                       size='sm'

@@ -25,7 +25,6 @@ export async function ParentsVerified() {
               <div key={school.slug} className='w-64 snap-start sm:w-auto'>
                 <SchoolCard
                   href={`/parent/schools/${school.slug}`}
-                  photoUrl={school.photoUrl ?? undefined}
                   logoUrl={school.logoUrl ?? undefined}
                   name={school.name}
                   location={`${school.suburb}, ${school.state}`}

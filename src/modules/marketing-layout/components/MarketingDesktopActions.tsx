@@ -15,7 +15,7 @@ export function MarketingDesktopActions({ isSearchPage, labels, activePortal }: 
       <Link
         href='/sign-in'
         data-slot='button'
-        className='inline-flex min-h-11 items-center justify-center rounded-pill px-3 text-sm font-medium text-foreground no-underline transition-colors hover:bg-muted'
+        className='inline-flex h-9 items-center justify-center rounded-pill px-3 text-sm font-medium text-foreground no-underline transition-colors hover:bg-muted'
       >
         {labels.signIn}
       </Link>
@@ -23,7 +23,7 @@ export function MarketingDesktopActions({ isSearchPage, labels, activePortal }: 
         <Link
           href='/search'
           data-slot='button'
-          className='inline-flex min-h-11 items-center justify-center rounded-pill bg-primary px-4 text-sm font-semibold text-on-primary shadow-brand no-underline transition-colors hover:bg-rausch-600 active:bg-rausch-700'
+          className='inline-flex h-9 items-center justify-center rounded-pill bg-primary px-4 text-sm font-semibold text-on-primary shadow-brand no-underline transition-colors hover:bg-rausch-600 active:bg-rausch-700'
         >
           {labels.findSchools}
         </Link>

@@ -1,7 +1,6 @@
 import type { ComparisonSchool } from '@/modules/parents-landing/lib/comparison';
 
 export interface SchoolPhotoOrLogoProps {
-  photoUrl: string | null;
   logoUrl: string | null;
   name: string;
   size?: 'lg' | 'sm';

@@ -8,7 +8,6 @@ export function ComparisonSchoolCards({ schools, tc }: ComparisonSchoolCardsProp
         <SchoolCard
           key={s.slug}
           href={`/parent/schools/${s.slug}`}
-          photoUrl={s.photoUrl ?? undefined}
           logoUrl={s.logoUrl ?? undefined}
           name={s.name}
           location={`${s.suburb}, ${s.state}`}

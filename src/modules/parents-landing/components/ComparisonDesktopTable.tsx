@@ -27,7 +27,6 @@ export function ComparisonDesktopTable({ schools, rows, t }: ComparisonDesktopTa
                 >
                   <div className='flex flex-col gap-3'>
                     <SchoolPhotoOrLogo
-                      photoUrl={s.photoUrl}
                       logoUrl={s.logoUrl}
                       name={s.name}
                       size='lg'
