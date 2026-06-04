@@ -25,8 +25,5 @@ export function useSchoolChangePassword() {
       setJwt(data.jwt);
       toast.success(t('passwordSuccess'));
     },
-    onError: () => {
-      toast.error(t('passwordError'));
-    },
   });
 }

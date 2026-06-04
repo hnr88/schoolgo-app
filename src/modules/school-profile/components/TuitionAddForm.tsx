@@ -1,5 +1,6 @@
 'use client';
 
+import { useMemo } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Loader2, Plus } from 'lucide-react';
@@ -22,7 +23,7 @@ import {
   SelectValue,
 } from '@/components/ui/select';
 import {
-  tuitionSchema,
+  createTuitionSchema,
   TUITION_LEVELS,
   type TuitionValues,
 } from '@/modules/school-profile/schemas/school-profile.schema';
@@ -39,9 +40,10 @@ export function TuitionAddForm({ usedLevels, disabled = false }: TuitionAddFormP
   const t = useTranslations('SchoolProfile');
   const create = useCreateTuition();
   const available = TUITION_LEVELS.filter((l) => !usedLevels.includes(l));
+  const schema = useMemo(() => createTuitionSchema(t), [t]);
 
   const form = useForm<TuitionValues>({
-    resolver: zodResolver(tuitionSchema),
+    resolver: zodResolver(schema),
     defaultValues: { level: available[0] ?? 'gr4', annualAmountAud: 0 },
   });
 

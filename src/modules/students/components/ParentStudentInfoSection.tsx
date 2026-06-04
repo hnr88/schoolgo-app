@@ -13,7 +13,7 @@ interface ParentStudentInfoSectionProps {
 export function ParentStudentInfoSection({ title, rows }: ParentStudentInfoSectionProps) {
   return (
     <SurfaceCard padding='lg'>
-      <SectionHeading title={title} level={3} className='mb-2' />
+      <SectionHeading title={title} level={2} className='mb-2' />
       {rows.map((row) => (
         <div
           key={row.label}

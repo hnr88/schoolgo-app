@@ -1,12 +1,12 @@
 'use client';
 
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Loader2, Eye, EyeOff } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
-import { loginSchema, type LoginValues } from '@/modules/auth/schemas/login.schema';
+import { createLoginSchema, type LoginValues } from '@/modules/auth/schemas/login.schema';
 import { useLogin } from '@/modules/auth/hooks/useLogin';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -32,9 +32,10 @@ import {
 export function LoginForm({ userType }: LoginFormProps) {
   const t = useTranslations('Auth');
   const [showPassword, setShowPassword] = useState(false);
+  const schema = useMemo(() => createLoginSchema(t), [t]);
 
   const form = useForm<LoginValues>({
-    resolver: zodResolver(loginSchema),
+    resolver: zodResolver(schema),
     defaultValues: {
       identifier: '',
       password: '',
@@ -52,7 +53,6 @@ export function LoginForm({ userType }: LoginFormProps) {
         className='flex flex-col gap-6'
         noValidate
       >
-        {/* Error summary */}
         {rootError && (
           <div role='alert' aria-live='assertive' className={AUTH_ERROR_SUMMARY_CLASS}>
             {rootError}
@@ -64,25 +64,17 @@ export function LoginForm({ userType }: LoginFormProps) {
           name='identifier'
           render={({ field }) => (
             <FormItem>
-              <FormLabel htmlFor='login-email' className={AUTH_LABEL_CLASS}>
-                {t('emailLabel')}
-              </FormLabel>
+              <FormLabel className={AUTH_LABEL_CLASS}>{t('emailLabel')}</FormLabel>
               <FormControl>
                 <Input
-                  id='login-email'
                   type='email'
                   autoComplete='email'
                   placeholder={t('emailPlaceholder')}
-                  aria-required='true'
-                  aria-invalid={!!form.formState.errors.identifier}
-                  aria-describedby={
-                    form.formState.errors.identifier ? 'login-email-error' : undefined
-                  }
                   className={AUTH_INPUT_CLASS}
                   {...field}
                 />
               </FormControl>
-              <FormMessage id='login-email-error' />
+              <FormMessage />
             </FormItem>
           )}
         />
@@ -92,23 +84,13 @@ export function LoginForm({ userType }: LoginFormProps) {
           name='password'
           render={({ field }) => (
             <FormItem>
-              <FormLabel htmlFor='login-password' className={AUTH_LABEL_CLASS}>
-                {t('passwordLabel')}
-              </FormLabel>
+              <FormLabel className={AUTH_LABEL_CLASS}>{t('passwordLabel')}</FormLabel>
               <FormControl>
                 <div className='relative'>
                   <Input
-                    id='login-password'
                     type={showPassword ? 'text' : 'password'}
                     autoComplete='current-password'
                     placeholder={t('passwordPlaceholder')}
-                    aria-required='true'
-                    aria-invalid={!!form.formState.errors.password}
-                    aria-describedby={
-                      form.formState.errors.password
-                        ? 'login-password-error'
-                        : undefined
-                    }
                     className={AUTH_PASSWORD_INPUT_CLASS}
                     {...field}
                   />
@@ -127,7 +109,7 @@ export function LoginForm({ userType }: LoginFormProps) {
                   </button>
                 </div>
               </FormControl>
-              <FormMessage id='login-password-error' />
+              <FormMessage />
             </FormItem>
           )}
         />

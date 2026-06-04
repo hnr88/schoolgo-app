@@ -1,5 +1,6 @@
 'use client';
 
+import { useMemo } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Loader2 } from 'lucide-react';
@@ -16,7 +17,7 @@ import {
   FormMessage,
 } from '@/components/ui/form';
 import {
-  descriptionSchema,
+  createDescriptionSchema,
   type DescriptionValues,
 } from '@/modules/school-profile/schemas/school-profile.schema';
 import { useUpdateSchool } from '@/modules/school-profile/queries/use-update-school.mutation';
@@ -31,9 +32,10 @@ interface DescriptionFormProps {
 export function DescriptionForm({ school, disabled = false }: DescriptionFormProps) {
   const t = useTranslations('SchoolProfile');
   const { mutateAsync, isPending } = useUpdateSchool(school.documentId);
+  const schema = useMemo(() => createDescriptionSchema(t), [t]);
 
   const form = useForm<DescriptionValues>({
-    resolver: zodResolver(descriptionSchema),
+    resolver: zodResolver(schema),
     defaultValues: {
       description: school.description ?? '',
       internationalStudentDescription: school.internationalStudentDescription ?? '',

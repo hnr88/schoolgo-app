@@ -1,5 +1,6 @@
 'use client';
 
+import { useMemo } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Loader2, Plus } from 'lucide-react';
@@ -16,7 +17,7 @@ import {
   FormMessage,
 } from '@/components/ui/form';
 import {
-  capacitySchema,
+  createCapacitySchema,
   type CapacityValues,
 } from '@/modules/school-profile/schemas/school-profile.schema';
 import { useCreateCapacity } from '@/modules/school-profile/queries/use-capacity.mutation';
@@ -29,9 +30,10 @@ interface CapacityAddFormProps {
 export function CapacityAddForm({ disabled = false }: CapacityAddFormProps) {
   const t = useTranslations('SchoolProfile');
   const create = useCreateCapacity();
+  const schema = useMemo(() => createCapacitySchema(t), [t]);
 
   const form = useForm<CapacityValues>({
-    resolver: zodResolver(capacitySchema),
+    resolver: zodResolver(schema),
     defaultValues: { yearLevel: '', intakePeriod: '', totalPlaces: 0, autoWaitlist: false },
   });
 

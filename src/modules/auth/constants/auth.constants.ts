@@ -6,3 +6,5 @@ export const PORTAL_ALLOWED_ROLES: Record<Portal, Set<UserRole>> = {
   agent: new Set([UserRole.AGENT]),
   school: new Set([UserRole.SCHOOL_ADMIN, UserRole.SUPER_ADMIN]),
 };
+
+export const FORGOT_PASSWORD_RESEND_COOLDOWN_SECONDS = 30;

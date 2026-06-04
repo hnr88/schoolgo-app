@@ -1,5 +1,6 @@
 'use client';
 
+import { useMemo } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Loader2 } from 'lucide-react';
@@ -16,7 +17,7 @@ import {
   FormMessage,
 } from '@/components/ui/form';
 import {
-  academicSchema,
+  createAcademicSchema,
   type AcademicValues,
 } from '@/modules/school-profile/schemas/school-profile.schema';
 import { useUpdateSchool } from '@/modules/school-profile/queries/use-update-school.mutation';
@@ -35,9 +36,10 @@ interface AcademicFormProps {
 export function AcademicForm({ school, disabled = false }: AcademicFormProps) {
   const t = useTranslations('SchoolProfile');
   const { mutateAsync, isPending } = useUpdateSchool(school.documentId);
+  const schema = useMemo(() => createAcademicSchema(t), [t]);
 
   const form = useForm<AcademicValues>({
-    resolver: zodResolver(academicSchema),
+    resolver: zodResolver(schema),
     defaultValues: {
       ieltsMinScore: school.ieltsMinScore,
       aeasMinScore: school.aeasMinScore,

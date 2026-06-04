@@ -28,8 +28,8 @@ export function SortControl({ isAdvanced, className }: SortControlProps) {
 
   const options = isAdvanced ? ADVANCED_SORT_OPTIONS : BASIC_SORT_OPTIONS;
 
-  const handleChange = (value: string) => {
-    setSortBy(value as SortOption);
+  const handleChange = (value: SortOption | null) => {
+    if (value) setSortBy(value);
   };
 
   return (

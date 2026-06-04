@@ -1,5 +1,12 @@
+import type { ComponentProps } from 'react';
 import type { Portal } from '@/lib/portal-url';
 import type { IconComponent } from '@/modules/design-system';
+import type { Link } from '@/i18n/navigation';
+
+export interface BreadcrumbItemEntry {
+  label: string;
+  href?: ComponentProps<typeof Link>['href'];
+}
 
 export interface DashboardPlaceholderProps {
   titleKey: string;

@@ -6,6 +6,7 @@ import { Progress } from '@/components/ui/progress';
 import { Skeleton } from '@/components/ui/skeleton';
 import { cn } from '@/lib/utils';
 import { EmptyState } from '@/modules/core/components/EmptyState';
+import { ErrorState } from '@/modules/core/components/ErrorState';
 import { SectionHeading } from '@/modules/core/components/SectionHeading';
 import { SurfaceCard } from '@/modules/core/components/SurfaceCard';
 import { useParentPreEnrolment } from '@/modules/applications/queries/use-parent-pre-enrolment.query';
@@ -61,7 +62,7 @@ export function ParentPreEnrolmentSection({
   applicationDocumentId: string;
 }) {
   const t = useTranslations('ParentApplications');
-  const { data, isLoading } = useParentPreEnrolment(applicationDocumentId);
+  const { data, isLoading, isError, refetch } = useParentPreEnrolment(applicationDocumentId);
 
   const items = data?.data ?? [];
   const summary = computePreEnrolmentSummary(items);
@@ -73,6 +74,13 @@ export function ParentPreEnrolmentSection({
 
       {isLoading ? (
         <ParentPreEnrolmentSkeleton />
+      ) : isError ? (
+        <ErrorState
+          message={t('preEnrolmentError')}
+          onRetry={() => refetch()}
+          retryLabel={t('retry')}
+          framed
+        />
       ) : items.length === 0 ? (
         <EmptyState icon={ListChecks} title={t('preEnrolmentEmpty')} framed />
       ) : (

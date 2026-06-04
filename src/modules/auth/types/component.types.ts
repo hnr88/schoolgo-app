@@ -97,6 +97,7 @@ export type PortalTheme = {
   blob2: string;
   image: string;
   overlayGradient: string;
+  scrim: string;
   panelBg: string;
   stats: PortalThemeStat[];
 };

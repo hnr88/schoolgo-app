@@ -1,7 +1,10 @@
 'use client';
 
 import { useLocale, useTranslations } from 'next-intl';
+import { MessageSquare } from 'lucide-react';
 import { Link } from '@/i18n/navigation';
+import { buttonVariants } from '@/components/ui/button';
+import { cn } from '@/lib/utils';
 import { SectionHeading, SurfaceCard } from '@/modules/core';
 import { ParentApplicationInfoSection } from '@/modules/applications/components/ParentApplicationInfoSection';
 import { ParentApplicationTimelineSection } from './ParentApplicationTimelineSection';
@@ -34,7 +37,21 @@ export function ParentApplicationDetailBody({ application }: { application: Pare
         elevation={hasOffer ? 'raised' : 'flat'}
         accent={hasOffer ? 'brand' : 'none'}
       >
-        <SectionHeading title={t('sectionOffer')} level={2} className='mb-3' />
+        <SectionHeading
+          title={t('sectionOffer')}
+          level={2}
+          className='mb-3'
+          actions={
+            <Link
+              href={`/parent/messages?application=${application.documentId}`}
+              aria-label={t('messageSchoolAria', { school: application.school.name })}
+              className={cn(buttonVariants({ variant: 'outline', size: 'sm' }), 'gap-1.5')}
+            >
+              <MessageSquare className='h-4 w-4' />
+              {t('messageSchool')}
+            </Link>
+          }
+        />
         {hasOffer ? (
           <div className='flex flex-col'>
             <div className='flex items-baseline justify-between border-b border-rausch-200/60 py-4'>

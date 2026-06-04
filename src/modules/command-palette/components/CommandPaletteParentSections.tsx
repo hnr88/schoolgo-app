@@ -12,7 +12,7 @@ import {
 } from '@/modules/command-palette/constants/command-palette.constants';
 
 interface CommandPaletteParentSectionsProps {
-  onSelect: (href: string) => void;
+  onSelect: (href: string, label: string) => void;
 }
 
 export function CommandPaletteParentSections({ onSelect }: CommandPaletteParentSectionsProps) {
@@ -33,7 +33,12 @@ export function CommandPaletteParentSections({ onSelect }: CommandPaletteParentS
             <CommandItem
               key={student.documentId}
               value={`child-${student.firstName} ${student.lastName}`}
-              onSelect={() => onSelect(`/parent/students/${student.documentId}`)}
+              onSelect={() =>
+                onSelect(
+                  `/parent/students/${student.documentId}`,
+                  `${student.firstName} ${student.lastName}`,
+                )
+              }
             >
               <GraduationCap strokeWidth={1.5} />
               <span>
@@ -52,7 +57,12 @@ export function CommandPaletteParentSections({ onSelect }: CommandPaletteParentS
             <CommandItem
               key={application.documentId}
               value={`application-${application.school.name} ${application.student.firstName}`}
-              onSelect={() => onSelect(`/parent/applications/${application.documentId}`)}
+              onSelect={() =>
+                onSelect(
+                  `/parent/applications/${application.documentId}`,
+                  `${application.school.name} · ${application.student.firstName} ${application.student.lastName}`,
+                )
+              }
             >
               <FileText strokeWidth={1.5} />
               <span>
@@ -64,7 +74,10 @@ export function CommandPaletteParentSections({ onSelect }: CommandPaletteParentS
       </CommandGroup>
 
       <CommandGroup heading={t('sections.actions')}>
-        <CommandItem value='action-search-schools' onSelect={() => onSelect('/parent/search')}>
+        <CommandItem
+          value='action-search-schools'
+          onSelect={() => onSelect('/parent/search', t('actions.searchSchools'))}
+        >
           <Search strokeWidth={1.5} />
           <span>{t('actions.searchSchools')}</span>
         </CommandItem>

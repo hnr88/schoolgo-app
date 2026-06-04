@@ -1,39 +1,37 @@
 'use client';
 
-import { useState } from 'react';
 import { useTranslations } from 'next-intl';
-import { Loader2, MessageSquare, Send } from 'lucide-react';
-import { toast } from 'sonner';
-import { Button } from '@/components/ui/button';
-import { Textarea } from '@/components/ui/textarea';
+import { MessageSquare } from 'lucide-react';
 import { Skeleton } from '@/components/ui/skeleton';
 import { ScrollArea } from '@/components/ui/scroll-area';
-import { EmptyState, SurfaceCard } from '@/modules/core';
-import {
-  useSchoolMessages,
-  useSendSchoolMessage,
-} from '@/modules/school-applications/queries/use-school-messages.query';
-import { useMarkSchoolThreadRead } from '@/modules/school-applications/hooks/useMarkSchoolThreadRead';
+import { cn } from '@/lib/utils';
+import { EmptyState, ErrorState, SurfaceCard } from '@/modules/core';
+import { useSchoolMessages } from '@/modules/school-applications/queries/use-school-messages.query';
+import { useSchoolThreadView } from '@/modules/school-applications/hooks/useSchoolThreadView';
+import { SchoolMessageComposer } from '@/modules/school-applications/components/SchoolMessageComposer';
+import type { SchoolMessageThreadItem } from '@/modules/school-applications/types/school-applications.types';
+
+function MessageBubble({ message }: { message: SchoolMessageThreadItem }) {
+  const isSchool = message.senderRole === 'school_staff';
+  return (
+    <div
+      className={cn(
+        'max-w-[75%] rounded-lg px-4 py-2 text-sm',
+        isSchool ? 'ml-auto bg-arches-700 text-background' : 'bg-muted text-ink-900',
+      )}
+    >
+      <p>{message.content}</p>
+      <p className={cn('mt-1 text-xs', isSchool ? 'text-background/80' : 'text-foggy')}>
+        {new Date(message.createdAt).toLocaleString('en-AU')}
+      </p>
+    </div>
+  );
+}
 
 export function SchoolMessagesTab({ documentId }: { documentId: string }) {
   const t = useTranslations('SchoolApplications');
-  const { data: messages, isLoading, isError } = useSchoolMessages(documentId);
-  const sendMessage = useSendSchoolMessage(documentId);
-  const [content, setContent] = useState('');
-
-  useMarkSchoolThreadRead(documentId, messages);
-
-  function handleSend() {
-    const trimmed = content.trim();
-    if (!trimmed) return;
-    sendMessage.mutate(trimmed, {
-      onSuccess: () => {
-        setContent('');
-        toast.success(t('messageSent'));
-      },
-      onError: () => toast.error(t('messageSendError')),
-    });
-  }
+  const { data: messages, isLoading, isError, refetch } = useSchoolMessages(documentId);
+  const { bottomRef } = useSchoolThreadView(documentId, messages);
 
   return (
     <SurfaceCard padding='lg' className='flex flex-col gap-4'>
@@ -43,51 +41,26 @@ export function SchoolMessagesTab({ documentId }: { documentId: string }) {
           <Skeleton className='ml-auto h-16 w-2/3 rounded-lg' />
         </div>
       ) : isError ? (
-        <p className='text-sm text-foggy'>{t('messagesLoadError')}</p>
+        <ErrorState
+          framed
+          message={t('messagesLoadError')}
+          onRetry={() => refetch()}
+          retryLabel={t('messagesRetry')}
+        />
       ) : !messages || messages.length === 0 ? (
         <EmptyState framed icon={MessageSquare} title={t('messagesEmpty')} />
       ) : (
         <ScrollArea className='max-h-96'>
           <div className='flex flex-col gap-3 pr-3'>
-            {messages.map((m) => {
-              const isSchool = m.senderRole === 'school_staff';
-              return (
-                <div
-                  key={m.documentId}
-                  className={`max-w-[75%] rounded-lg px-4 py-2 text-sm ${
-                    isSchool ? 'ml-auto bg-arches-700 text-background' : 'bg-muted text-ink-900'
-                  }`}
-                >
-                  <p>{m.content}</p>
-                  <p className={`mt-1 text-xs ${isSchool ? 'text-background/80' : 'text-foggy'}`}>
-                    {new Date(m.createdAt).toLocaleString('en-AU')}
-                  </p>
-                </div>
-              );
-            })}
+            {messages.map((message) => (
+              <MessageBubble key={message.documentId} message={message} />
+            ))}
+            <div ref={bottomRef} aria-hidden='true' />
           </div>
         </ScrollArea>
       )}
 
-      <div className='flex flex-col gap-2'>
-        <Textarea
-          value={content}
-          onChange={(e) => setContent(e.target.value)}
-          placeholder={t('messageComposerPlaceholder')}
-          disabled={sendMessage.isPending}
-          aria-label={t('messageComposerPlaceholder')}
-        />
-        <div className='flex justify-end'>
-          <Button type='button' onClick={handleSend} disabled={!content.trim() || sendMessage.isPending}>
-            {sendMessage.isPending ? (
-              <Loader2 className='mr-2 h-4 w-4 animate-spin' />
-            ) : (
-              <Send className='mr-2 h-4 w-4' />
-            )}
-            {t('messageSend')}
-          </Button>
-        </div>
-      </div>
+      <SchoolMessageComposer documentId={documentId} />
     </SurfaceCard>
   );
 }

@@ -17,12 +17,13 @@ export function useParentApplications({
   pageSize = PARENT_APPLICATIONS_DEFAULT_PAGE_SIZE,
   status,
   student,
+  search,
   sort,
 }: UseParentApplicationsParams = {}) {
   const isAuthenticated = useAuthStore((s) => s.isAuthenticated);
 
   return useQuery({
-    queryKey: ['parent', 'applications', { page, pageSize, status, student, sort }],
+    queryKey: ['parent', 'applications', { page, pageSize, status, student, search, sort }],
     enabled: isAuthenticated,
     queryFn: async () => {
       const params: Record<string, unknown> = {
@@ -39,6 +40,13 @@ export function useParentApplications({
 
       if (student) {
         params['filters[student][documentId][$eq]'] = student;
+      }
+
+      const trimmedSearch = search?.trim();
+      if (trimmedSearch) {
+        params['filters[$or][0][student][firstName][$containsi]'] = trimmedSearch;
+        params['filters[$or][1][student][lastName][$containsi]'] = trimmedSearch;
+        params['filters[$or][2][school][name][$containsi]'] = trimmedSearch;
       }
 
       const { data } = await privateApi.get<ParentApplicationsResponse>('/api/applications', {

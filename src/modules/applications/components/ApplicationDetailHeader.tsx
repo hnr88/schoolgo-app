@@ -1,10 +1,15 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { CheckIcon } from 'lucide-react';
+import { CalendarDays, CheckIcon, Clock, Hash, RefreshCw } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { StatTile } from '@/modules/core';
 import { ApplicationStatusBadge } from '@/modules/applications/components/ApplicationStatusBadge';
 import { PROGRESS_STEPS, TERMINAL_STATUSES } from '@/modules/applications/constants/detail.constants';
+import {
+  daysToneFromCount,
+  daysToneIconClass,
+} from '@/modules/applications/lib/days-in-status';
 import type { Application } from '@/modules/applications/types/application.types';
 import type { ProgressStep } from '@/modules/applications/types/detail.types';
 
@@ -25,11 +30,11 @@ function ProgressBar({ application }: { application: Application }) {
         const circleClass = cn(
           'flex h-7 w-7 shrink-0 items-center justify-center rounded-full text-xs font-semibold transition-colors',
           isTerminal && isCurrent
-            ? 'bg-rausch-500 text-white'
+            ? 'bg-rausch-500 text-background'
             : isCompleted
-              ? 'bg-babu-500 text-white'
+              ? 'bg-babu-500 text-background'
               : isCurrent
-                ? 'ring-2 ring-babu-500 ring-offset-1 bg-babu-500 text-white'
+                ? 'ring-2 ring-babu-500 ring-offset-1 bg-babu-500 text-background'
                 : 'bg-muted text-foggy',
         );
 
@@ -54,15 +59,6 @@ function ProgressBar({ application }: { application: Application }) {
   );
 }
 
-function MetaItem({ label, value }: { label: string; value: string }) {
-  return (
-    <div className='flex flex-col gap-0.5 rounded-lg bg-muted px-4 py-3'>
-      <span className='text-xs text-foggy'>{label}</span>
-      <span className='text-sm font-medium text-ink-900'>{value}</span>
-    </div>
-  );
-}
-
 export function ApplicationDetailHeader({ application }: { application: Application }) {
   const t = useTranslations('Applications');
   const studentName = `${application.student.firstName} ${application.student.lastName}`;
@@ -70,6 +66,7 @@ export function ApplicationDetailHeader({ application }: { application: Applicat
     ? new Date(application.submittedAt).toLocaleDateString(undefined, { day: 'numeric', month: 'short', year: 'numeric' })
     : '—';
   const updatedValue = new Date(application.updatedAt).toLocaleDateString(undefined, { day: 'numeric', month: 'short', year: 'numeric' });
+  const daysTone = daysToneFromCount(application.daysInStatus);
 
   return (
     <div className='flex flex-col gap-5 rounded-xl border border-border bg-card p-6'>
@@ -87,12 +84,22 @@ export function ApplicationDetailHeader({ application }: { application: Applicat
 
       <ProgressBar application={application} />
 
-      <div className='grid grid-cols-2 gap-3 sm:grid-cols-4'>
-        <MetaItem label={t('submittedOn')} value={submittedValue} />
-        <MetaItem label={t('lastUpdated')} value={updatedValue} />
-        <MetaItem label={t('daysInCurrentStatus')} value={String(application.daysInStatus)} />
-        <MetaItem label={t('applicationId')} value={application.documentId} />
+      <div className='grid grid-cols-2 gap-3 sm:grid-cols-3'>
+        <StatTile icon={CalendarDays} label={t('submittedOn')} value={submittedValue} />
+        <StatTile icon={RefreshCw} label={t('lastUpdated')} value={updatedValue} />
+        <StatTile
+          icon={Clock}
+          iconClassName={daysToneIconClass(daysTone)}
+          label={t('daysInCurrentStatus')}
+          value={String(application.daysInStatus)}
+        />
       </div>
+
+      <p className='flex items-center gap-1.5 text-xs text-foggy'>
+        <Hash className='h-3.5 w-3.5' aria-hidden='true' />
+        <span>{t('applicationId')}</span>
+        <span className='font-medium text-hof tabular-nums'>{application.documentId}</span>
+      </p>
     </div>
   );
 }

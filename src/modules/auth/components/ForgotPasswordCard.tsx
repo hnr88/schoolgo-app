@@ -29,7 +29,7 @@ export function ForgotPasswordCard({ portal }: ForgotPasswordCardProps) {
         </p>
       </header>
 
-      <ForgotPasswordForm />
+      <ForgotPasswordForm portal={portal} />
 
       <footer className='text-center text-sm text-foggy'>
         <Link

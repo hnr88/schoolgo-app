@@ -12,7 +12,7 @@ interface ProfileSectionProps {
 export function ProfileSection({ title, description, icon, children }: ProfileSectionProps) {
   return (
     <SurfaceCard
-      elevation='flat'
+      elevation='raised'
       padding='lg'
       className='flex flex-col gap-5'
     >

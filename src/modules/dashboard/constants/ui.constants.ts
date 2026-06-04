@@ -166,22 +166,52 @@ export const PORTAL_NAV: Record<Portal, PortalNav> = {
   },
   parent: {
     home: '/parent/dashboard',
-    items: [
-      { href: '/parent/dashboard', icon: LayoutDashboard, labelKey: 'dashboard' },
-      { href: '/parent/calendar', icon: CalendarDays, labelKey: 'calendar' },
-      { href: '/parent/notifications', icon: Bell, labelKey: 'notifications' },
-      { href: '/parent/students', icon: GraduationCap, labelKey: 'students' },
-      { href: '/parent/documents', icon: FolderOpen, labelKey: 'documents' },
-      { href: '/parent/applications', icon: FileText, labelKey: 'applications' },
-      { href: '/parent/messages', icon: MessageSquare, labelKey: 'messages' },
-      { href: '/parent/offers', icon: Gift, labelKey: 'offers' },
-      { href: '/parent/tours', icon: CalendarDays, labelKey: 'tours' },
-      { href: '/parent/saved-schools', icon: Heart, labelKey: 'savedSchools' },
-      { href: '/parent/compare', icon: Columns3, labelKey: 'compare' },
-      { href: '/parent/saved-searches', icon: Bookmark, labelKey: 'savedSearches' },
-      { href: '/parent/results', icon: Trophy, labelKey: 'results' },
-      { href: '/parent/settings', icon: Settings, labelKey: 'settings' },
-      { href: '/parent/payments', icon: CreditCard, labelKey: 'payments' },
+    groups: [
+      {
+        labelKey: 'groupOverview',
+        items: [
+          { href: '/parent/dashboard', icon: LayoutDashboard, labelKey: 'dashboard' },
+          { href: '/parent/calendar', icon: CalendarDays, labelKey: 'calendar' },
+        ],
+      },
+      {
+        labelKey: 'groupStudents',
+        items: [
+          { href: '/parent/students', icon: GraduationCap, labelKey: 'students' },
+          { href: '/parent/documents', icon: FolderOpen, labelKey: 'documents' },
+          { href: '/parent/results', icon: Trophy, labelKey: 'results' },
+        ],
+      },
+      {
+        labelKey: 'groupApplications',
+        items: [
+          { href: '/parent/applications', icon: FileText, labelKey: 'applications' },
+          { href: '/parent/offers', icon: Gift, labelKey: 'offers' },
+          { href: '/parent/tours', icon: CalendarDays, labelKey: 'tours' },
+        ],
+      },
+      {
+        labelKey: 'groupSchools',
+        items: [
+          { href: '/parent/saved-schools', icon: Heart, labelKey: 'savedSchools' },
+          { href: '/parent/compare', icon: Columns3, labelKey: 'compare' },
+          { href: '/parent/saved-searches', icon: Bookmark, labelKey: 'savedSearches' },
+        ],
+      },
+      {
+        labelKey: 'groupComms',
+        items: [
+          { href: '/parent/messages', icon: MessageSquare, labelKey: 'messages' },
+          { href: '/parent/notifications', icon: Bell, labelKey: 'notifications' },
+        ],
+      },
+      {
+        labelKey: 'groupAccount',
+        items: [
+          { href: '/parent/settings', icon: Settings, labelKey: 'settings' },
+          { href: '/parent/payments', icon: CreditCard, labelKey: 'payments' },
+        ],
+      },
     ],
   },
 };

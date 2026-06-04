@@ -5,10 +5,18 @@ import { Link } from '@/i18n/navigation';
 import { ArrowLeft } from 'lucide-react';
 import { notFound } from 'next/navigation';
 import { Skeleton } from '@/components/ui/skeleton';
-import { VERIFICATION_STATUS_LABELS, type VerificationStatus } from '@/modules/test-results';
+import { SectionHeading, SurfaceCard } from '@/modules/core';
+import {
+  VERIFICATION_STATUS_LABELS,
+  TestResultsList,
+  type VerificationStatus,
+} from '@/modules/test-results';
 import { useParentStudent } from '@/modules/students/queries/use-parent-student.query';
 import { ParentStudentProfileHeader } from '@/modules/students/components/ParentStudentProfileHeader';
 import { ParentStudentInfoSection } from '@/modules/students/components/ParentStudentInfoSection';
+import { ParentStudentCompleteness } from '@/modules/students/components/ParentStudentCompleteness';
+import { ParentStudentApplications } from '@/modules/students/components/ParentStudentApplications';
+import { StudentDocumentsTab } from '@/modules/students/components/StudentDocumentsTab';
 import type { ParentStudentProfileProps } from '@/modules/students/types/parent-component.types';
 
 export function ParentStudentProfile({ documentId }: ParentStudentProfileProps) {
@@ -50,6 +58,8 @@ export function ParentStudentProfile({ documentId }: ParentStudentProfileProps) 
       </Link>
 
       <ParentStudentProfileHeader student={student} />
+
+      <ParentStudentCompleteness student={student} />
 
       <div className='grid gap-6 lg:grid-cols-2'>
         <ParentStudentInfoSection
@@ -98,6 +108,23 @@ export function ParentStudentProfile({ documentId }: ParentStudentProfileProps) 
             },
           ]}
         />
+      </div>
+
+      <SurfaceCard padding='lg'>
+        <SectionHeading title={t('sectionDocuments')} level={2} className='mb-4' />
+        <StudentDocumentsTab studentDocumentId={student.documentId} />
+      </SurfaceCard>
+
+      <div className='grid gap-6 lg:grid-cols-2'>
+        <SurfaceCard padding='lg'>
+          <SectionHeading title={t('sectionApplications')} level={2} className='mb-4' />
+          <ParentStudentApplications studentDocumentId={student.documentId} />
+        </SurfaceCard>
+
+        <SurfaceCard padding='lg'>
+          <SectionHeading title={t('sectionResults')} level={2} className='mb-4' />
+          <TestResultsList studentDocumentId={student.documentId} />
+        </SurfaceCard>
       </div>
     </div>
   );

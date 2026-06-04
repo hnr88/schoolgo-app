@@ -18,7 +18,7 @@ export const COMPARE_ATTRIBUTES: readonly CompareAttribute[] = [
   {
     key: 'internationalStudentPercentage',
     labelKey: 'attrInternationalPct',
-    format: 'number',
+    format: 'percent',
   },
   { key: 'boardingAvailable', labelKey: 'attrBoarding', format: 'boolean' },
   { key: 'scholarshipAvailable', labelKey: 'attrScholarship', format: 'boolean' },

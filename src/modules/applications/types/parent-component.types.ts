@@ -13,9 +13,21 @@ export interface ParentApplicationTableProps {
   pageSize: number;
 }
 
+export interface ParentApplicationChildOption {
+  documentId: string;
+  firstName: string;
+  lastName: string;
+}
+
 export interface ParentApplicationToolbarProps {
   status: string;
   onStatusChange: (value: string) => void;
+  search: string;
+  onSearchChange: (value: string) => void;
+  childFilter: string;
+  onChildFilterChange: (value: string) => void;
+  childOptions: ParentApplicationChildOption[];
+  showChildFilter: boolean;
 }
 
 export interface ParentApplicationPaginationProps {

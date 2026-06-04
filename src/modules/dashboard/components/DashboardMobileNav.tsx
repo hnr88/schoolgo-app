@@ -38,7 +38,7 @@ export function DashboardMobileNav() {
         <DialogOverlay />
         <DialogPrimitive.Popup
           data-slot='mobile-nav'
-          className='fixed inset-y-0 left-0 z-50 flex w-72 max-w-[85vw] flex-col bg-card shadow-3 outline-none duration-150 data-open:animate-in data-open:slide-in-from-left data-closed:animate-out data-closed:slide-out-to-left'
+          className='fixed inset-y-0 left-0 z-50 flex w-72 max-w-full flex-col bg-card shadow-3 outline-none duration-150 data-open:animate-in data-open:slide-in-from-left data-closed:animate-out data-closed:slide-out-to-left'
         >
           <DialogTitle className='sr-only'>{t('navTitle')}</DialogTitle>
           <div className='flex h-16 items-center px-5'>

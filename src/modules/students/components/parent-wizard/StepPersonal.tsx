@@ -16,7 +16,10 @@ import {
   FormLabel,
   FormMessage,
 } from '@/components/ui/form';
-import { PARENT_GENDER_OPTIONS } from '@/modules/students/constants/parent-wizard.constants';
+import {
+  DOB_MAX_DATE,
+  PARENT_GENDER_OPTIONS,
+} from '@/modules/students/constants/parent-wizard.constants';
 import type { ParentStepProps } from '@/modules/students/types/parent-wizard.types';
 
 export function StepPersonal({ control }: ParentStepProps) {
@@ -65,7 +68,7 @@ export function StepPersonal({ control }: ParentStepProps) {
         render={({ field }) => (
           <FormItem>
             <FormLabel>{t('fieldDob')}</FormLabel>
-            <FormControl><Input className='h-12' type='date' {...field} /></FormControl>
+            <FormControl><Input className='h-12' type='date' max={DOB_MAX_DATE} {...field} /></FormControl>
             <FormMessage />
           </FormItem>
         )}

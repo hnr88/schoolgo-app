@@ -1,5 +1,6 @@
 'use client';
 
+import { useMemo } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Loader2 } from 'lucide-react';
@@ -22,7 +23,7 @@ import {
   SelectValue,
 } from '@/components/ui/select';
 import {
-  identitySchema,
+  createIdentitySchema,
   type IdentityValues,
 } from '@/modules/school-profile/schemas/school-profile.schema';
 import { useUpdateSchool } from '@/modules/school-profile/queries/use-update-school.mutation';
@@ -39,9 +40,10 @@ interface IdentityFormProps {
 export function IdentityForm({ school, disabled = false }: IdentityFormProps) {
   const t = useTranslations('SchoolProfile');
   const { mutateAsync, isPending } = useUpdateSchool(school.documentId);
+  const schema = useMemo(() => createIdentitySchema(t), [t]);
 
   const form = useForm<IdentityValues>({
-    resolver: zodResolver(identitySchema),
+    resolver: zodResolver(schema),
     defaultValues: {
       name: school.name,
       cricosCode: school.cricosCode ?? '',

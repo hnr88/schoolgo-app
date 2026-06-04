@@ -43,6 +43,7 @@ export const PORTAL_THEME: Record<Portal, PortalTheme> = {
     blob2: 'bg-babu-100',
     image: '/images/auth/parent.jpg',
     overlayGradient: 'from-rausch-500/20 to-rausch-600/30',
+    scrim: 'bg-rausch-800/70',
     panelBg: 'bg-rausch-50/40',
     stats: [
       { valueKey: 'parent.stat1Value', labelKey: 'parent.stat1Label' },
@@ -56,6 +57,7 @@ export const PORTAL_THEME: Record<Portal, PortalTheme> = {
     blob2: 'bg-babu-100',
     image: '/images/auth/agent.jpg',
     overlayGradient: 'from-babu-600/20 to-babu-700/30',
+    scrim: 'bg-babu-700/70',
     panelBg: 'bg-babu-50/40',
     stats: [
       { valueKey: 'agent.stat1Value', labelKey: 'agent.stat1Label' },
@@ -69,6 +71,7 @@ export const PORTAL_THEME: Record<Portal, PortalTheme> = {
     blob2: 'bg-arches-100',
     image: '/images/auth/school.jpg',
     overlayGradient: 'from-arches-500/20 to-arches-600/30',
+    scrim: 'bg-arches-700/70',
     panelBg: 'bg-arches-50/40',
     stats: [
       { valueKey: 'school.stat1Value', labelKey: 'school.stat1Label' },

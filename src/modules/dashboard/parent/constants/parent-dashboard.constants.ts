@@ -1,6 +1,8 @@
 import { Award, CreditCard, FileText, Heart, Search, Settings, UserPlus, Users } from 'lucide-react';
 import type { ApplicationStatus } from '@/modules/applications/types/application.types';
 import type {
+  ParentActionKind,
+  ParentPipelineStageKey,
   ParentQuickAction,
   ParentStatTileConfig,
 } from '@/modules/dashboard/parent/types/parent-dashboard.types';
@@ -87,3 +89,72 @@ export const PARENT_PAYMENTS_ACTION = {
   bg: 'bg-muted',
   color: 'text-foggy',
 } as const;
+
+/** Status -> pipeline stage bucket for the segmented-bar visualization. */
+export const PARENT_PIPELINE_STAGE_BY_STATUS: Record<ApplicationStatus, ParentPipelineStageKey> = {
+  draft: 'draft',
+  submitted: 'submitted',
+  received: 'submitted',
+  under_review: 'review',
+  documents_requested: 'action',
+  assessment_required: 'action',
+  interview_scheduled: 'action',
+  interview_completed: 'review',
+  offer_made: 'offer',
+  offer_accepted: 'offer',
+  pre_enrolment: 'enrolled',
+  coe_issued: 'enrolled',
+  enrolled: 'enrolled',
+  withdrawn: 'closed',
+  declined: 'closed',
+  waitlisted: 'review',
+};
+
+export interface ParentPipelineStageStyle {
+  labelKey: string;
+  barClass: string;
+  dotClass: string;
+}
+
+/** Ordered stages with OKLCH token styles for the segmented bar + legend. */
+export const PARENT_PIPELINE_STAGES: Array<{ key: ParentPipelineStageKey } & ParentPipelineStageStyle> = [
+  { key: 'draft', labelKey: 'pipelineStageDraft', barClass: 'bg-foggy', dotClass: 'bg-foggy' },
+  { key: 'submitted', labelKey: 'pipelineStageSubmitted', barClass: 'bg-babu-500', dotClass: 'bg-babu-500' },
+  { key: 'review', labelKey: 'pipelineStageReview', barClass: 'bg-vivid-iris', dotClass: 'bg-vivid-iris' },
+  { key: 'action', labelKey: 'pipelineStageAction', barClass: 'bg-vivid-amber', dotClass: 'bg-vivid-amber' },
+  { key: 'offer', labelKey: 'pipelineStageOffer', barClass: 'bg-vivid-mint', dotClass: 'bg-vivid-mint' },
+  { key: 'enrolled', labelKey: 'pipelineStageEnrolled', barClass: 'bg-babu-700', dotClass: 'bg-babu-700' },
+  { key: 'closed', labelKey: 'pipelineStageClosed', barClass: 'bg-rausch-300', dotClass: 'bg-rausch-300' },
+];
+
+/** Statuses that require a parent response, surfaced in the action-required panel. */
+export const PARENT_ACTION_REQUIRED_STATUSES: ParentActionKind[] = [
+  'documents_requested',
+  'assessment_required',
+  'interview_scheduled',
+];
+
+export const PARENT_ACTION_META: Record<
+  ParentActionKind,
+  { labelKey: string; iconClassName: string }
+> = {
+  documents_requested: {
+    labelKey: 'actionDocumentsRequested',
+    iconClassName: 'bg-vivid-amber-soft text-arches-700',
+  },
+  assessment_required: {
+    labelKey: 'actionAssessmentRequired',
+    iconClassName: 'bg-vivid-iris-soft text-vivid-iris',
+  },
+  interview_scheduled: {
+    labelKey: 'actionInterviewScheduled',
+    iconClassName: 'bg-vivid-iris-soft text-vivid-iris',
+  },
+};
+
+/** How many applications to fetch when deriving pipeline / timeline / actions. */
+export const PARENT_DASHBOARD_DERIVE_PAGE_SIZE = 100;
+
+/** Cap for the activity timeline + upcoming previews. */
+export const PARENT_TIMELINE_LIMIT = 6;
+export const PARENT_UPCOMING_LIMIT = 4;

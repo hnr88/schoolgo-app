@@ -17,12 +17,12 @@ export function StepMedia({
 }: ParentStepMediaProps) {
   const t = useTranslations('StudentWizard');
 
-  function buildMessages(label: string, size: number): MediaUploadMessages {
+  function buildMessages(label: string, size: number, removeLabel: string): MediaUploadMessages {
     return {
       invalidType: t('mediaInvalidType', { label }),
       tooLarge: t('mediaTooLarge', { label, size }),
       uploadFailed: t('mediaUploadFailed', { label }),
-      remove: t('removeMedia'),
+      remove: removeLabel,
     };
   }
 
@@ -36,7 +36,7 @@ export function StepMedia({
             value={photo}
             onChange={onPhotoChange}
             label={t('fieldPhoto')}
-            messages={buildMessages(t('fieldPhoto'), PARENT_PHOTO_MAX_MB)}
+            messages={buildMessages(t('fieldPhoto'), PARENT_PHOTO_MAX_MB, t('removePhoto'))}
             maxSizeMb={PARENT_PHOTO_MAX_MB}
           />
           <p className='text-xs text-muted-foreground'>
@@ -49,7 +49,7 @@ export function StepMedia({
             value={voiceIntro}
             onChange={onVoiceIntroChange}
             label={t('fieldVoiceIntro')}
-            messages={buildMessages(t('fieldVoiceIntro'), PARENT_VOICE_INTRO_MAX_MB)}
+            messages={buildMessages(t('fieldVoiceIntro'), PARENT_VOICE_INTRO_MAX_MB, t('removeVoiceIntro'))}
             maxSizeMb={PARENT_VOICE_INTRO_MAX_MB}
           />
           <p className='text-xs text-muted-foreground'>

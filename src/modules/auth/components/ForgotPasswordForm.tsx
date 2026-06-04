@@ -1,14 +1,16 @@
 'use client';
 
+import { useMemo } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Loader2 } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import {
-  forgotPasswordSchema,
+  createForgotPasswordSchema,
   type ForgotPasswordValues,
 } from '@/modules/auth/schemas/forgot-password.schema';
 import { useForgotPassword } from '@/modules/auth/hooks/useForgotPassword';
+import { ForgotPasswordSent } from '@/modules/auth/components/ForgotPasswordSent';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import {
@@ -19,23 +21,47 @@ import {
   FormLabel,
   FormMessage,
 } from '@/components/ui/form';
+import type { Portal } from '@/lib/portal-url';
+import { PORTAL_LINK_COLOR } from '../constants/portal.constants';
 import {
   AUTH_INPUT_CLASS,
   AUTH_LABEL_CLASS,
   AUTH_SUBMIT_CLASS,
 } from '../constants/auth-field.constants';
 
-export function ForgotPasswordForm() {
+interface ForgotPasswordFormProps {
+  portal: Portal;
+}
+
+export function ForgotPasswordForm({ portal }: ForgotPasswordFormProps) {
   const t = useTranslations('Auth');
+  const schema = useMemo(() => createForgotPasswordSchema(t), [t]);
 
   const form = useForm<ForgotPasswordValues>({
-    resolver: zodResolver(forgotPasswordSchema),
-    defaultValues: {
-      email: '',
-    },
+    resolver: zodResolver(schema),
+    defaultValues: { email: '' },
   });
 
-  const { handleForgotPassword, isPending } = useForgotPassword();
+  const { handleForgotPassword, handleResend, reset, sentEmail, cooldown, isPending } =
+    useForgotPassword();
+
+  const handleUseDifferentEmail = () => {
+    reset();
+    form.reset({ email: '' });
+  };
+
+  if (sentEmail) {
+    return (
+      <ForgotPasswordSent
+        email={sentEmail}
+        cooldown={cooldown}
+        isPending={isPending}
+        onResend={handleResend}
+        onUseDifferentEmail={handleUseDifferentEmail}
+        linkColorClass={PORTAL_LINK_COLOR[portal]}
+      />
+    );
+  }
 
   return (
     <Form {...form}>
@@ -49,25 +75,17 @@ export function ForgotPasswordForm() {
           name='email'
           render={({ field }) => (
             <FormItem>
-              <FormLabel htmlFor='forgot-email' className={AUTH_LABEL_CLASS}>
-                {t('emailLabel')}
-              </FormLabel>
+              <FormLabel className={AUTH_LABEL_CLASS}>{t('emailLabel')}</FormLabel>
               <FormControl>
                 <Input
-                  id='forgot-email'
                   type='email'
                   autoComplete='email'
                   placeholder={t('emailPlaceholder')}
-                  aria-required='true'
-                  aria-invalid={!!form.formState.errors.email}
-                  aria-describedby={
-                    form.formState.errors.email ? 'forgot-email-error' : undefined
-                  }
                   className={AUTH_INPUT_CLASS}
                   {...field}
                 />
               </FormControl>
-              <FormMessage id='forgot-email-error' />
+              <FormMessage />
             </FormItem>
           )}
         />

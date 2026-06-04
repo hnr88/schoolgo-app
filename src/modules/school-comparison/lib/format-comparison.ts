@@ -1,6 +1,6 @@
 import type {
   CompareAttribute,
-  CompareLabels,
+  CompareFormatHelpers,
   SchoolHit,
 } from '@/modules/school-comparison/types/comparison.types';
 
@@ -23,8 +23,9 @@ function humanizeEnum(value: string): string {
 export function formatCompareValue(
   attribute: CompareAttribute,
   school: SchoolHit,
-  labels: CompareLabels,
+  helpers: CompareFormatHelpers,
 ): string {
+  const { labels, translateEnum, formatPercent } = helpers;
   const raw = school[attribute.key];
 
   if (attribute.format === 'boolean') {
@@ -40,8 +41,12 @@ export function formatCompareValue(
       return typeof raw === 'number' ? currencyFormatter.format(raw) : labels.empty;
     case 'number':
       return typeof raw === 'number' ? numberFormatter.format(raw) : labels.empty;
+    case 'percent':
+      return typeof raw === 'number' ? formatPercent(raw) : labels.empty;
     case 'enum':
-      return typeof raw === 'string' ? humanizeEnum(raw) : labels.empty;
+      return typeof raw === 'string'
+        ? (translateEnum(raw) ?? humanizeEnum(raw))
+        : labels.empty;
     case 'text':
       return typeof raw === 'string' ? raw : labels.empty;
     default:

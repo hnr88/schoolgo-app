@@ -76,7 +76,7 @@ export function StudentProfile({ documentId }: StudentProfileProps) {
       <div className='rounded-xl border border-border bg-card p-6'>
         <div className='flex items-start justify-between'>
           <div className='flex items-center gap-5'>
-            <div className='flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-babu-500 text-xl font-bold text-white'>
+            <div className='flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-babu-500 text-xl font-bold text-background'>
               {initials}
             </div>
             <div>

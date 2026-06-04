@@ -4,6 +4,7 @@ import { useLocale, useTranslations } from 'next-intl';
 import { Clock, History } from 'lucide-react';
 import { Skeleton } from '@/components/ui/skeleton';
 import { EmptyState } from '@/modules/core/components/EmptyState';
+import { ErrorState } from '@/modules/core/components/ErrorState';
 import { SectionHeading } from '@/modules/core/components/SectionHeading';
 import { SurfaceCard } from '@/modules/core/components/SurfaceCard';
 import { useParentApplicationTimeline } from '@/modules/applications/queries/use-parent-application-timeline.query';
@@ -40,7 +41,7 @@ export function ParentApplicationTimelineSection({
 }) {
   const t = useTranslations('ParentApplications');
   const locale = useLocale();
-  const { data, isLoading } = useParentApplicationTimeline(applicationDocumentId);
+  const { data, isLoading, isError, refetch } = useParentApplicationTimeline(applicationDocumentId);
 
   const events = data?.data ?? [];
 
@@ -50,6 +51,13 @@ export function ParentApplicationTimelineSection({
 
       {isLoading ? (
         <ParentTimelineSkeleton />
+      ) : isError ? (
+        <ErrorState
+          message={t('timelineError')}
+          onRetry={() => refetch()}
+          retryLabel={t('retry')}
+          framed
+        />
       ) : events.length === 0 ? (
         <EmptyState icon={Clock} title={t('timelineEmpty')} framed />
       ) : (

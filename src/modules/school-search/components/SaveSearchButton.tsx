@@ -3,7 +3,6 @@
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { BookmarkPlus } from 'lucide-react';
-import { toast } from 'sonner';
 import { Button } from '@/components/ui/button';
 import {
   Dialog,
@@ -13,92 +12,37 @@ import {
   DialogTitle,
   DialogTrigger,
 } from '@/components/ui/dialog';
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
-import { useAuthStore } from '@/modules/auth';
-import { mapStoreToTypedRequest } from '@/modules/school-search/lib/store-to-typed-request';
-import { useCreateSavedSearch } from '@/modules/school-search/queries/use-create-saved-search.mutation';
-import { useSchoolSearchStore } from '@/modules/school-search/stores/use-school-search-store';
+import { useSaveSearchForm } from '@/modules/school-search/hooks/useSaveSearchForm';
+import { SAVE_SEARCH_NAME_MAX } from '@/modules/school-search/schemas/save-search-form.schema';
 
 export function SaveSearchButton() {
   const t = useTranslations('SchoolSearch.saveSearch');
-  const [name, setName] = useState('');
   const [open, setOpen] = useState(false);
 
-  const isAuthenticated = useAuthStore((s) => s.isAuthenticated);
-  const createSavedSearch = useCreateSavedSearch();
+  const { form, handleSubmit, isSaving } = useSaveSearchForm({
+    onSaved: () => setOpen(false),
+  });
 
-  const query = useSchoolSearchStore((s) => s.query);
-  const states = useSchoolSearchStore((s) => s.states);
-  const suburb = useSchoolSearchStore((s) => s.suburb);
-  const postcode = useSchoolSearchStore((s) => s.postcode);
-  const feeMin = useSchoolSearchStore((s) => s.feeMin);
-  const feeMax = useSchoolSearchStore((s) => s.feeMax);
-  const sectors = useSchoolSearchStore((s) => s.sectors);
-  const accommodation = useSchoolSearchStore((s) => s.accommodation);
-  const religiousAffiliations = useSchoolSearchStore((s) => s.religiousAffiliations);
-  const entryYearLevels = useSchoolSearchStore((s) => s.entryYearLevels);
-  const studentAge = useSchoolSearchStore((s) => s.studentAge);
-  const entryTerms = useSchoolSearchStore((s) => s.entryTerms);
-  const programTypes = useSchoolSearchStore((s) => s.programTypes);
-  const atarAvailable = useSchoolSearchStore((s) => s.atarAvailable);
-  const englishLanguageSupport = useSchoolSearchStore((s) => s.englishLanguageSupport);
-  const englishTest = useSchoolSearchStore((s) => s.englishTest);
-  const sortBy = useSchoolSearchStore((s) => s.sortBy);
+  const nameValue = form.watch('name');
 
-  const trimmed = name.trim();
-  const isInvalid = trimmed.length === 0 || trimmed.length > 100;
-  const isSaving = createSavedSearch.isPending;
-
-  const handleSave = () => {
-    if (!isAuthenticated) {
-      toast.error(t('signInRequired'));
-      return;
-    }
-    if (isInvalid) return;
-
-    const snapshot = {
-      query,
-      states,
-      suburb,
-      postcode,
-      feeMin,
-      feeMax,
-      sectors,
-      accommodation,
-      religiousAffiliations,
-      entryYearLevels,
-      studentAge,
-      entryTerms,
-      programTypes,
-      atarAvailable,
-      englishLanguageSupport,
-      englishTest,
-      sortBy,
-    };
-    const filterState = mapStoreToTypedRequest(snapshot);
-
-    createSavedSearch.mutate(
-      { name: trimmed, filterState },
-      {
-        onSuccess: () => {
-          toast.success(t('successToast'));
-          setName('');
-          setOpen(false);
-        },
-        onError: () => {
-          toast.error(t('errorToast'));
-        },
-      },
-    );
+  const handleOpenChange = (next: boolean) => {
+    setOpen(next);
+    if (!next) form.reset({ name: '' });
   };
 
   return (
-    <Dialog open={open} onOpenChange={setOpen}>
+    <Dialog open={open} onOpenChange={handleOpenChange}>
       <DialogTrigger
-        render={
-          <Button type="button" variant="outline" size="sm" className="w-full gap-2" />
-        }
+        render={<Button type="button" variant="outline" size="sm" className="w-full gap-2" />}
       >
         <BookmarkPlus className="size-4" aria-hidden="true" />
         {t('cta')}
@@ -107,29 +51,52 @@ export function SaveSearchButton() {
         <DialogHeader>
           <DialogTitle>{t('promptTitle')}</DialogTitle>
         </DialogHeader>
-        <div className="flex flex-col gap-2">
-          <Label htmlFor="save-search-name">{t('nameLabel')}</Label>
-          <Input
-            id="save-search-name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            maxLength={100}
-            autoFocus
-          />
-        </div>
-        <DialogFooter>
-          <Button
-            type="button"
-            variant="outline"
-            onClick={() => setOpen(false)}
-            disabled={isSaving}
-          >
-            {t('cancel')}
-          </Button>
-          <Button type="button" onClick={handleSave} disabled={isSaving || isInvalid}>
-            {t('confirm')}
-          </Button>
-        </DialogFooter>
+        <Form {...form}>
+          <form onSubmit={handleSubmit} noValidate className="flex flex-col gap-4">
+            <FormField
+              control={form.control}
+              name="name"
+              render={({ field }) => (
+                <FormItem>
+                  <div className="flex items-baseline justify-between gap-2">
+                    <FormLabel>{t('nameLabel')}</FormLabel>
+                    <span
+                      className="text-caption tabular-nums text-foggy"
+                      aria-hidden="true"
+                    >
+                      {t('nameCounter', {
+                        count: nameValue?.length ?? 0,
+                        max: SAVE_SEARCH_NAME_MAX,
+                      })}
+                    </span>
+                  </div>
+                  <FormControl>
+                    <Input
+                      {...field}
+                      maxLength={SAVE_SEARCH_NAME_MAX}
+                      placeholder={t('namePlaceholder')}
+                      autoFocus
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <DialogFooter>
+              <Button
+                type="button"
+                variant="outline"
+                onClick={() => handleOpenChange(false)}
+                disabled={isSaving}
+              >
+                {t('cancel')}
+              </Button>
+              <Button type="submit" disabled={isSaving}>
+                {t('confirm')}
+              </Button>
+            </DialogFooter>
+          </form>
+        </Form>
       </DialogContent>
     </Dialog>
   );

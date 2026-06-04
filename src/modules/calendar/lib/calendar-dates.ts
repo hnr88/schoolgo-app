@@ -20,14 +20,6 @@ export function toDayKey(date: Date): string {
   return formatDate(date, DAY_KEY_FORMAT);
 }
 
-export function getEventDates(events: CalendarEvent[]): Date[] {
-  return events.map((event) => new Date(event.date));
-}
-
-/**
- * Maps each day (yyyy-MM-dd) to the ordered, de-duplicated event types that
- * occur on it, so the calendar can render a coloured dot per event type.
- */
 export function groupEventTypesByDay(events: CalendarEvent[]): Map<string, CalendarEventType[]> {
   const byDay = new Map<string, CalendarEventType[]>();
 

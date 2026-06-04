@@ -3,9 +3,11 @@ import { ROUTE_TITLE_MAP, PORTAL_NAV } from '../constants/ui.constants';
 // Parent portal uses /parent/* routes whose labels live in the ParentNav namespace.
 // Match the longest href prefix first so /parent/saved-schools wins over shorter ones
 // and /parent/applications/{id} resolves to "applications".
-const PARENT_TITLE_ENTRIES = (PORTAL_NAV.parent.items ?? [])
-  .map((item) => [item.href as string, item.labelKey] as const)
-  .sort((a, b) => b[0].length - a[0].length);
+const PARENT_NAV_ITEMS =
+  PORTAL_NAV.parent.items ?? (PORTAL_NAV.parent.groups ?? []).flatMap((g) => g.items);
+const PARENT_TITLE_ENTRIES = PARENT_NAV_ITEMS.map(
+  (item) => [item.href as string, item.labelKey] as const,
+).sort((a, b) => b[0].length - a[0].length);
 
 export interface ResolvedPageTitle {
   /** translation key */

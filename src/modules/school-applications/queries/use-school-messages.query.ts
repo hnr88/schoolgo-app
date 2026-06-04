@@ -3,6 +3,7 @@
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 import { privateApi } from '@/lib/axios';
 import { useAuthStore } from '@/modules/auth/stores/use-auth-store';
+import { SCHOOL_THREAD_POLL_INTERVAL_MS } from '@/modules/school-applications/constants/school-message.constants';
 import type {
   SchoolMessageThreadItem,
   SchoolMessageThreadResponse,
@@ -18,6 +19,8 @@ export function useSchoolMessages(applicationDocumentId: string) {
   return useQuery({
     queryKey: schoolMessagesKey(applicationDocumentId),
     enabled: isAuthenticated && !!applicationDocumentId,
+    refetchInterval: SCHOOL_THREAD_POLL_INTERVAL_MS,
+    refetchOnWindowFocus: true,
     queryFn: async (): Promise<SchoolMessageThreadItem[]> => {
       const { data } = await privateApi.get<SchoolMessageThreadResponse>(
         `/api/messages/school-thread/${applicationDocumentId}`,

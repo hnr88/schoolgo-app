@@ -1,76 +1,91 @@
 'use client';
 
+import { Bell, KeyRound, SlidersHorizontal, UserRound } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Skeleton } from '@/components/ui/skeleton';
-import { ErrorState, SurfaceCard } from '@/modules/core';
+import { ErrorState } from '@/modules/core';
+import { useAuthStore } from '@/modules/auth/stores/use-auth-store';
 import { useMe } from '@/modules/parent-settings/queries/use-me.query';
 import { ProfileForm } from '@/modules/parent-settings/components/ProfileForm';
 import { PasswordForm } from '@/modules/parent-settings/components/PasswordForm';
 import { PreferencesForm } from '@/modules/parent-settings/components/PreferencesForm';
 import { NotificationPreferencesPanel } from '@/modules/parent-settings/components/NotificationPreferencesPanel';
-
-function SettingsSkeleton() {
-  return (
-    <div className='flex flex-col gap-6'>
-      <Skeleton className='h-11 w-72 rounded-lg' />
-      <SurfaceCard elevation='flat' padding='lg'>
-        <div className='flex flex-col gap-4'>
-          <Skeleton className='h-10 w-full' />
-          <Skeleton className='h-10 w-full' />
-          <Skeleton className='h-10 w-40' />
-        </div>
-      </SurfaceCard>
-    </div>
-  );
-}
+import { SettingsSkeleton } from '@/modules/parent-settings/components/SettingsSkeleton';
+import { SettingsCard } from '@/modules/parent-settings/components/SettingsCard';
 
 const TAB_TRIGGER_CLASS =
   'text-foreground/70 data-active:bg-rausch-50 data-active:text-rausch-700';
 
 export function ParentSettingsPage() {
   const t = useTranslations('ParentSettings');
+  const isAuthenticated = useAuthStore((s) => s.isAuthenticated);
   const { data: me, isLoading, isError, refetch } = useMe();
 
-  if (isLoading) {
-    return <SettingsSkeleton />;
+  if (isError) {
+    return (
+      <ErrorState framed message={t('loadError')} onRetry={() => refetch()} retryLabel={t('retry')} />
+    );
   }
 
-  if (isError || !me) {
-    return <ErrorState message={t('loadError')} onRetry={() => refetch()} retryLabel={t('retry')} />;
+  if (isLoading || !isAuthenticated || !me) {
+    return <SettingsSkeleton />;
   }
 
   return (
     <Tabs defaultValue='profile' className='gap-6'>
-      <TabsList>
-        <TabsTrigger value='profile' className={TAB_TRIGGER_CLASS}>{t('tabProfile')}</TabsTrigger>
-        <TabsTrigger value='password' className={TAB_TRIGGER_CLASS}>{t('tabPassword')}</TabsTrigger>
-        <TabsTrigger value='preferences' className={TAB_TRIGGER_CLASS}>{t('tabPreferences')}</TabsTrigger>
-        <TabsTrigger value='notifications' className={TAB_TRIGGER_CLASS}>{t('tabNotifications')}</TabsTrigger>
+      <TabsList className='max-w-full overflow-x-auto'>
+        <TabsTrigger value='profile' className={TAB_TRIGGER_CLASS}>
+          {t('tabProfile')}
+        </TabsTrigger>
+        <TabsTrigger value='password' className={TAB_TRIGGER_CLASS}>
+          {t('tabPassword')}
+        </TabsTrigger>
+        <TabsTrigger value='preferences' className={TAB_TRIGGER_CLASS}>
+          {t('tabPreferences')}
+        </TabsTrigger>
+        <TabsTrigger value='notifications' className={TAB_TRIGGER_CLASS}>
+          {t('tabNotifications')}
+        </TabsTrigger>
       </TabsList>
 
       <TabsContent value='profile'>
-        <SurfaceCard elevation='flat' padding='lg'>
+        <SettingsCard
+          icon={UserRound}
+          title={t('profileCardTitle')}
+          description={t('profileCardDescription')}
+        >
           <ProfileForm me={me} />
-        </SurfaceCard>
+        </SettingsCard>
       </TabsContent>
 
       <TabsContent value='password'>
-        <SurfaceCard elevation='flat' padding='lg'>
+        <SettingsCard
+          icon={KeyRound}
+          title={t('passwordCardTitle')}
+          description={t('passwordCardDescription')}
+        >
           <PasswordForm />
-        </SurfaceCard>
+        </SettingsCard>
       </TabsContent>
 
       <TabsContent value='preferences'>
-        <SurfaceCard elevation='flat' padding='lg'>
+        <SettingsCard
+          icon={SlidersHorizontal}
+          title={t('preferencesCardTitle')}
+          description={t('preferencesCardDescription')}
+        >
           <PreferencesForm me={me} />
-        </SurfaceCard>
+        </SettingsCard>
       </TabsContent>
 
       <TabsContent value='notifications'>
-        <SurfaceCard elevation='flat' padding='lg'>
+        <SettingsCard
+          icon={Bell}
+          title={t('notificationsCardTitle')}
+          description={t('notificationsCardDescription')}
+        >
           <NotificationPreferencesPanel />
-        </SurfaceCard>
+        </SettingsCard>
       </TabsContent>
     </Tabs>
   );

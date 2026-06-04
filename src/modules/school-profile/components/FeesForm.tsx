@@ -1,5 +1,6 @@
 'use client';
 
+import { useMemo } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Loader2 } from 'lucide-react';
@@ -16,7 +17,7 @@ import {
   FormMessage,
 } from '@/components/ui/form';
 import {
-  feesSchema,
+  createFeesSchema,
   type FeesValues,
 } from '@/modules/school-profile/schemas/school-profile.schema';
 import { useUpdateSchool } from '@/modules/school-profile/queries/use-update-school.mutation';
@@ -34,9 +35,10 @@ interface FeesFormProps {
 export function FeesForm({ school, disabled = false }: FeesFormProps) {
   const t = useTranslations('SchoolProfile');
   const { mutateAsync, isPending } = useUpdateSchool(school.documentId);
+  const schema = useMemo(() => createFeesSchema(t), [t]);
 
   const form = useForm<FeesValues>({
-    resolver: zodResolver(feesSchema),
+    resolver: zodResolver(schema),
     defaultValues: {
       applicationFee: school.applicationFee,
       enrolmentFee: school.enrolmentFee,

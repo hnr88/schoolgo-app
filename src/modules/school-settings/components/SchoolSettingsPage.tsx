@@ -6,7 +6,8 @@ import { Skeleton } from '@/components/ui/skeleton';
 import { ErrorState, SurfaceCard } from '@/modules/core';
 import { useSchoolMe } from '@/modules/school-settings/queries/use-school-me.query';
 import { SchoolProfileForm } from '@/modules/school-settings/components/SchoolProfileForm';
-import { SchoolPasswordForm } from '@/modules/school-settings/components/SchoolPasswordForm';
+import { SchoolSecuritySection } from '@/modules/school-settings/components/SchoolSecuritySection';
+import { SchoolNotificationsPanel } from '@/modules/school-settings/components/SchoolNotificationsPanel';
 import { SchoolPreferencesForm } from '@/modules/school-settings/components/SchoolPreferencesForm';
 
 function SettingsSkeleton() {
@@ -43,8 +44,13 @@ export function SchoolSettingsPage() {
     <Tabs defaultValue='profile' className='gap-6'>
       <TabsList>
         <TabsTrigger value='profile' className={TAB_TRIGGER_CLASS}>{t('tabProfile')}</TabsTrigger>
-        <TabsTrigger value='password' className={TAB_TRIGGER_CLASS}>{t('tabPassword')}</TabsTrigger>
-        <TabsTrigger value='preferences' className={TAB_TRIGGER_CLASS}>{t('tabPreferences')}</TabsTrigger>
+        <TabsTrigger value='security' className={TAB_TRIGGER_CLASS}>{t('tabSecurity')}</TabsTrigger>
+        <TabsTrigger value='notifications' className={TAB_TRIGGER_CLASS}>
+          {t('tabNotifications')}
+        </TabsTrigger>
+        <TabsTrigger value='preferences' className={TAB_TRIGGER_CLASS}>
+          {t('tabPreferences')}
+        </TabsTrigger>
       </TabsList>
 
       <TabsContent value='profile'>
@@ -53,9 +59,15 @@ export function SchoolSettingsPage() {
         </SurfaceCard>
       </TabsContent>
 
-      <TabsContent value='password'>
+      <TabsContent value='security'>
         <SurfaceCard elevation='flat' padding='lg'>
-          <SchoolPasswordForm />
+          <SchoolSecuritySection />
+        </SurfaceCard>
+      </TabsContent>
+
+      <TabsContent value='notifications'>
+        <SurfaceCard elevation='flat' padding='lg'>
+          <SchoolNotificationsPanel />
         </SurfaceCard>
       </TabsContent>
 

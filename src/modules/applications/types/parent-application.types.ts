@@ -46,5 +46,6 @@ export interface UseParentApplicationsParams {
   pageSize?: number;
   status?: string;
   student?: string;
+  search?: string;
   sort?: string;
 }

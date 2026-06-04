@@ -7,6 +7,7 @@ import { useAuthStore } from '@/modules/auth/stores/use-auth-store';
 import { registerRequest } from '@/modules/auth/lib/auth-api';
 import { getPortalDashboardPath } from '@/modules/auth/lib/get-portal-dashboard-path';
 import { getPortalFromRole } from '@/modules/auth/lib/get-portal-from-role';
+import { classifyAuthError } from '@/modules/auth/lib/classify-auth-error';
 import { env } from '@/lib/env';
 import { portalUrl, type Portal } from '@/lib/portal-url';
 import type { RegisterValues } from '@/modules/auth/schemas/register.schema';
@@ -38,9 +39,14 @@ export function useRegister({ portal, setError }: UseRegisterOptions) {
         window.location.href = `${portalUrl(actualPortal, locale)}${dashboardPath}`;
       }
     } catch (err) {
-      const message = t('registerError');
+      const classified = classifyAuthError(err);
+      const message = t(classified.messageKey);
       if (setError) {
-        setError('root', { type: 'server', message });
+        if (classified.field === 'email' || classified.field === 'username') {
+          setError(classified.field, { type: 'server', message });
+        } else {
+          setError('root', { type: 'server', message });
+        }
       } else {
         toast.error(message);
       }

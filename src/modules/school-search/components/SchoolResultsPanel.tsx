@@ -4,7 +4,7 @@ import { Loader2, SearchX } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { Skeleton } from '@/components/ui/skeleton';
 import { ScrollArea } from '@/components/ui/scroll-area';
-import { EmptyState } from '@/modules/core';
+import { EmptyState, ErrorState } from '@/modules/core';
 import { cn } from '@/lib/utils';
 import { SearchSchoolCard } from '@/modules/school-search/components/SchoolCard';
 import { useSearchWithFilters } from '@/modules/school-search/hooks/useSearchWithFilters';
@@ -12,7 +12,7 @@ import type { SchoolResultsPanelProps } from '@/modules/school-search/types/comp
 
 export function SchoolResultsPanel({ activePortal }: SchoolResultsPanelProps) {
   const t = useTranslations('SchoolSearch.results');
-  const { data, isLoading, isFetching, isError } = useSearchWithFilters();
+  const { data, isLoading, isFetching, isError, refetch } = useSearchWithFilters();
 
   const hits = data?.data?.hits ?? [];
   const totalHits = data?.data?.total ?? 0;
@@ -71,9 +71,14 @@ export function SchoolResultsPanel({ activePortal }: SchoolResultsPanelProps) {
         )}
 
         {isError && (
-          <p className='py-8 text-center text-sm text-foggy'>
-            {t('error')}
-          </p>
+          <ErrorState
+            framed
+            message={t('error')}
+            onRetry={() => {
+              void refetch();
+            }}
+            retryLabel={t('retry')}
+          />
         )}
 
         {!isLoading && !isError && hits.length === 0 && (
@@ -101,17 +106,6 @@ export function SchoolResultsPanel({ activePortal }: SchoolResultsPanelProps) {
           </div>
         )}
       </ScrollArea>
-
-      {totalHits > hits.length && (
-        <div className='border-t border-divider bg-card p-4 text-center'>
-          <button
-            type='button'
-            className='text-body-sm font-semibold text-primary hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1 rounded-md'
-          >
-            {t('viewAll')}
-          </button>
-        </div>
-      )}
     </div>
   );
 }

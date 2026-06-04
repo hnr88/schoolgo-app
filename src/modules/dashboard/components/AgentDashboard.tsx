@@ -6,7 +6,7 @@ import { ErrorState } from '@/modules/core';
 import { ActionBanner } from '@/modules/dashboard/components/ActionBanner';
 import { ActivityFeed } from '@/modules/dashboard/components/ActivityFeed';
 import { DeadlinesList } from '@/modules/dashboard/components/DeadlinesList';
-import { PipelineCards } from '@/modules/dashboard/components/PipelineCards';
+import { PipelineStatTiles } from '@/modules/dashboard/components/PipelineStatTiles';
 import { QuickActions } from '@/modules/dashboard/components/QuickActions';
 import { useAgentDashboard } from '@/modules/dashboard/queries/use-agent-dashboard.query';
 import { PageHeader } from '@/modules/dashboard/components/PageHeader';
@@ -14,7 +14,7 @@ import {
   mapActionRows,
   mapActivityRows,
   mapDeadlineRows,
-  mapStatCards,
+  mapStatTiles,
 } from '@/modules/dashboard/lib/agent-dashboard.lib';
 
 function DashboardSkeleton() {
@@ -25,9 +25,9 @@ function DashboardSkeleton() {
           <Skeleton key={i} className='h-32 w-full rounded-lg' />
         ))}
       </div>
-      <div className='grid gap-6 lg:grid-cols-[3fr_2fr]'>
-        <Skeleton className='h-80 w-full rounded-lg' />
-        <Skeleton className='h-80 w-full rounded-lg' />
+      <div className='grid gap-6 lg:grid-cols-5'>
+        <Skeleton className='h-80 w-full rounded-lg lg:col-span-3' />
+        <Skeleton className='h-80 w-full rounded-lg lg:col-span-2' />
       </div>
     </div>
   );
@@ -52,7 +52,7 @@ export function AgentDashboard() {
     );
   }
 
-  const cards = mapStatCards(data.stats);
+  const tiles = mapStatTiles(data.stats);
   const activity = mapActivityRows(data.activity, locale);
   const deadlines = mapDeadlineRows(data.deadlines.items, locale);
   const actions = mapActionRows(data.actionItems.items);
@@ -61,11 +61,15 @@ export function AgentDashboard() {
     <div className='flex flex-col gap-8'>
       <PageHeader title={t('nav.dashboard')} description={t('pageSubtitle')} />
       <ActionBanner items={actions} />
-      <PipelineCards cards={cards} />
+      <PipelineStatTiles tiles={tiles} />
 
-      <div className='grid gap-6 lg:grid-cols-[3fr_2fr]'>
-        <ActivityFeed events={activity} />
-        <DeadlinesList deadlines={deadlines} />
+      <div className='grid gap-6 lg:grid-cols-5'>
+        <div className='lg:col-span-3'>
+          <ActivityFeed events={activity} />
+        </div>
+        <div className='lg:col-span-2'>
+          <DeadlinesList deadlines={deadlines} />
+        </div>
       </div>
 
       <section className='flex flex-col gap-4'>

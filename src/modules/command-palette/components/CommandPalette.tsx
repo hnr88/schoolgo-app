@@ -13,8 +13,11 @@ import {
 } from '@/components/ui/command';
 import { useAuthStore } from '@/modules/auth/stores/use-auth-store';
 import { useCommandPaletteStore } from '@/modules/command-palette/stores/use-command-palette-store';
+import { useRecentPagesStore } from '@/modules/command-palette/stores/use-recent-pages-store';
 import { getNavItems } from '@/modules/command-palette/lib/get-nav-items';
 import { CommandPaletteParentSections } from './CommandPaletteParentSections';
+import { CommandPaletteRecent } from './CommandPaletteRecent';
+import { CommandPaletteFooter } from './CommandPaletteFooter';
 
 export function CommandPalette() {
   const t = useTranslations('CommandPalette');
@@ -25,6 +28,7 @@ export function CommandPalette() {
   const open = useCommandPaletteStore((s) => s.open);
   const setOpen = useCommandPaletteStore((s) => s.setOpen);
   const userType = useAuthStore((s) => s.userType);
+  const recordVisit = useRecentPagesStore((s) => s.recordVisit);
 
   const portal = userType ?? 'agent';
   const navItems = getNavItems(portal);
@@ -33,7 +37,8 @@ export function CommandPalette() {
       ? (key: string) => tParentNav(key)
       : (key: string) => tNav(`nav.${key}`);
 
-  function handleSelect(href: string) {
+  function handleSelect(href: string, label: string) {
+    recordVisit({ portal, href, label });
     setOpen(false);
     router.push(href);
   }
@@ -50,12 +55,14 @@ export function CommandPalette() {
         <CommandList>
           <CommandEmpty>{t('empty')}</CommandEmpty>
 
+          {open && <CommandPaletteRecent portal={portal} onSelect={handleSelect} />}
+
           <CommandGroup heading={t('sections.goTo')}>
             {navItems.map(({ href, icon: Icon, labelKey }) => (
               <CommandItem
                 key={href}
                 value={`goto-${navLabel(labelKey)}`}
-                onSelect={() => handleSelect(href)}
+                onSelect={() => handleSelect(href, navLabel(labelKey))}
               >
                 <Icon strokeWidth={1.5} />
                 <span>{navLabel(labelKey)}</span>
@@ -67,6 +74,7 @@ export function CommandPalette() {
             <CommandPaletteParentSections onSelect={handleSelect} />
           )}
         </CommandList>
+        <CommandPaletteFooter />
       </Command>
     </CommandDialog>
   );

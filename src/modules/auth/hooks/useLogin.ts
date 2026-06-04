@@ -8,6 +8,7 @@ import { env } from '@/lib/env';
 import { portalUrl, type Portal } from '@/lib/portal-url';
 import { getPortalDashboardPath } from '@/modules/auth/lib/get-portal-dashboard-path';
 import { getPortalFromRole } from '@/modules/auth/lib/get-portal-from-role';
+import { classifyAuthError } from '@/modules/auth/lib/classify-auth-error';
 import type { LoginValues } from '@/modules/auth/schemas/login.schema';
 
 interface UseLoginOptions {
@@ -36,7 +37,8 @@ export function useLogin({ portal, setError }: UseLoginOptions) {
         window.location.href = `${portalUrl(actualPortal, locale)}${dashboardPath}`;
       }
     } catch (err) {
-      const message = t('loginError');
+      const classified = classifyAuthError(err);
+      const message = t(classified.messageKey);
       if (setError) {
         setError('root', { type: 'server', message });
       } else {

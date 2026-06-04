@@ -6,7 +6,7 @@ import { FileText, GraduationCap, Pencil } from 'lucide-react';
 import { buttonVariants } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { SurfaceCard } from '@/modules/core';
-import { AudioPreview } from '@/modules/forms';
+import { ReadOnlyAudioPreview } from '@/modules/students/components/ReadOnlyMediaPreview';
 import { ParentStudentArchiveButton } from '@/modules/students/components/ParentStudentArchiveButton';
 import { ParentStudentAvatar } from '@/modules/students/components/ParentStudentAvatar';
 import { studentMediaUrl } from '@/modules/students/lib/media-url';
@@ -75,12 +75,7 @@ export function ParentStudentProfileHeader({ student }: { student: ParentStudent
       {voiceUrl && (
         <div className='mt-5'>
           <p className='mb-2 text-sm font-medium text-ink-900'>{t('voiceIntro')}</p>
-          <AudioPreview
-            media={{ id: 0, url: voiceUrl, mime: student.voiceIntro?.mime ?? '', name: t('voiceIntroName'), size: 0 }}
-            onRemove={() => undefined}
-            disabled
-            removeLabel={t('voiceIntro')}
-          />
+          <ReadOnlyAudioPreview url={voiceUrl} label={t('voiceIntroName')} />
         </div>
       )}
     </SurfaceCard>

@@ -8,14 +8,13 @@ import {
   ChevronDown,
   Loader2,
   MapPin,
-  School,
   Users,
 } from 'lucide-react';
 
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { SurfaceCard } from '@/modules/core';
+import { TourSchoolAvatar } from '@/modules/tours/components/TourSchoolAvatar';
 import { formatTourDateTime, formatTourLocation } from '@/modules/tours/lib/format-tour';
 import type { TourCardProps } from '@/modules/tours/types/tours.types';
 
@@ -34,14 +33,7 @@ export function TourCard({ tour, isBooked, onBook, isBooking, canBook }: TourCar
     <SurfaceCard elevation='interactive' padding='lg' className='flex flex-col gap-4'>
       <div className='flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between'>
         <div className='flex items-start gap-4'>
-          <Avatar className='h-11 w-11 shrink-0 rounded-lg after:rounded-lg'>
-            {tour.school?.logoUrl ? (
-              <AvatarImage src={tour.school.logoUrl} alt={tour.school.name} className='rounded-lg object-contain' />
-            ) : null}
-            <AvatarFallback className='rounded-lg bg-vivid-iris-soft text-vivid-iris-strong'>
-              <School className='h-5 w-5' />
-            </AvatarFallback>
-          </Avatar>
+          <TourSchoolAvatar logoUrl={tour.school?.logoUrl} schoolName={tour.school?.name} />
           <div className='flex flex-col gap-2'>
             <div className='flex flex-col gap-0.5'>
               <h3 className='text-base font-semibold text-ink-900'>{tour.title}</h3>

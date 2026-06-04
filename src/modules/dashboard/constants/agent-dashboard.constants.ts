@@ -10,9 +10,11 @@ import {
   ClipboardList,
   FileText,
   Gift,
+  GraduationCap,
   MessageCircle,
   Send,
   Upload,
+  Users,
   XCircle,
 } from 'lucide-react';
 
@@ -21,6 +23,18 @@ import type {
   ActionItemPriority,
   DeadlineUrgencyTone,
 } from '@/modules/dashboard/types/agent-dashboard.types';
+
+/** Premium StatTile config for the agent dashboard KPI row (unified babu palette). */
+export const AGENT_STAT_TILE_CONFIG: Array<{
+  labelKey: string;
+  icon: IconComponent;
+  iconClassName: string;
+}> = [
+  { labelKey: 'activeStudents', icon: Users, iconClassName: 'bg-babu-50 text-babu-700' },
+  { labelKey: 'appsInProgress', icon: FileText, iconClassName: 'bg-babu-50 text-babu-700' },
+  { labelKey: 'offersReceived', icon: Gift, iconClassName: 'bg-babu-50 text-babu-700' },
+  { labelKey: 'enrolledThisTerm', icon: GraduationCap, iconClassName: 'bg-babu-50 text-babu-700' },
+];
 
 export const ACTIVITY_ICON: Record<string, IconComponent> = {
   Activity,

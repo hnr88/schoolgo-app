@@ -14,7 +14,7 @@ export async function AuthPageShell({ portal, children }: AuthPageShellProps) {
       {/* Skip link */}
       <a
         href='#auth-main-content'
-        className='absolute left-4 top-4 z-50 -translate-y-20 rounded-lg bg-ink-900 px-4 py-3 text-sm font-semibold text-white transition-transform focus-visible:translate-y-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2'
+        className='absolute left-4 top-4 z-50 -translate-y-20 rounded-lg bg-ink-900 px-4 py-3 text-sm font-semibold text-on-primary transition-transform focus-visible:translate-y-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2'
       >
         {tCommon('skipToContent')}
       </a>
@@ -86,17 +86,17 @@ export async function AuthPageShell({ portal, children }: AuthPageShellProps) {
           priority
           sizes='(min-width: 1024px) 50vw, 0vw'
         />
-        <div className={`absolute inset-0 bg-gradient-to-br ${theme.overlayGradient} opacity-80`} />
-        <div className='absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent' />
+        {/* Single brand scrim */}
+        <div className={`absolute inset-0 ${theme.scrim}`} />
 
         {/* Content overlay */}
         <div className='absolute inset-0 flex flex-col justify-between p-12 xl:p-16'>
           {/* Top tagline */}
           <div className='max-w-md'>
-            <p className='font-display text-2xl font-bold leading-snug text-white xl:text-3xl'>
+            <p className='font-display text-2xl font-bold leading-snug text-on-primary xl:text-3xl'>
               {t(`${portal}.signInTitle`)}
             </p>
-            <p className='mt-3 text-base leading-relaxed text-white/70'>
+            <p className='mt-3 text-base leading-relaxed text-on-primary/70'>
               {t(`${portal}.signInSubtitle`)}
             </p>
           </div>
@@ -106,12 +106,12 @@ export async function AuthPageShell({ portal, children }: AuthPageShellProps) {
             {theme.stats.map((stat) => (
               <div
                 key={stat.labelKey}
-                className='rounded-lg bg-ink-900/60 px-5 py-4'
+                className='rounded-lg bg-ink-900/50 px-5 py-4'
               >
-                <p className='text-xl font-bold text-white xl:text-2xl'>
+                <p className='text-xl font-bold text-on-primary xl:text-2xl'>
                   {t(stat.valueKey)}
                 </p>
-                <p className='mt-1 text-xs font-medium text-white/70 xl:text-sm'>
+                <p className='mt-1 text-xs font-medium text-on-primary/70 xl:text-sm'>
                   {t(stat.labelKey)}
                 </p>
               </div>

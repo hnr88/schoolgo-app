@@ -9,6 +9,7 @@ import { EmptyState, ErrorState, SurfaceCard } from '@/modules/core';
 import { ParentStudentListToolbar } from '@/modules/students/components/ParentStudentListToolbar';
 import { ParentStudentTable } from '@/modules/students/components/ParentStudentTable';
 import { ParentStudentPagination } from '@/modules/students/components/ParentStudentPagination';
+import { ParentStudentStatsRow } from '@/modules/students/components/ParentStudentStatsRow';
 import { useParentStudentList } from '@/modules/students/hooks/useParentStudentList';
 
 export function ParentStudentListPage() {
@@ -21,6 +22,7 @@ export function ParentStudentListPage() {
     sortField,
     sortDirection,
     students,
+    stats,
     pagination,
     showPagination,
     isLoading,
@@ -56,33 +58,37 @@ export function ParentStudentListPage() {
   }
 
   return (
-    <SurfaceCard padding='none' className='overflow-hidden'>
-      <div className='border-b border-border px-6 py-4'>
-        <ParentStudentListToolbar
-          search={search}
-          onSearchChange={handleSearchChange}
-          showArchived={showArchived}
-          onToggleArchived={handleToggleArchived}
+    <div className='flex flex-col gap-6'>
+      <ParentStudentStatsRow stats={stats} isLoading={isLoading} />
+
+      <SurfaceCard padding='none' className='overflow-hidden'>
+        <div className='border-b border-border px-6 py-4'>
+          <ParentStudentListToolbar
+            search={search}
+            onSearchChange={handleSearchChange}
+            showArchived={showArchived}
+            onToggleArchived={handleToggleArchived}
+          />
+        </div>
+
+        <ParentStudentTable
+          students={students}
+          isLoading={isLoading}
+          sortField={sortField}
+          sortDirection={sortDirection}
+          onSort={handleSort}
+          pageSize={showAll ? students.length : pageSize}
         />
-      </div>
 
-      <ParentStudentTable
-        students={students}
-        isLoading={isLoading}
-        sortField={sortField}
-        sortDirection={sortDirection}
-        onSort={handleSort}
-        pageSize={showAll ? students.length : pageSize}
-      />
-
-      <ParentStudentPagination
-        pagination={pagination}
-        pageSize={pageSize}
-        showAll={showAll}
-        showPagination={showPagination}
-        setPage={setPage}
-        onPageSizeChange={handlePageSizeChange}
-      />
-    </SurfaceCard>
+        <ParentStudentPagination
+          pagination={pagination}
+          pageSize={pageSize}
+          showAll={showAll}
+          showPagination={showPagination}
+          setPage={setPage}
+          onPageSizeChange={handlePageSizeChange}
+        />
+      </SurfaceCard>
+    </div>
   );
 }

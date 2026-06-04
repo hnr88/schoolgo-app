@@ -5,7 +5,7 @@ import { MessageSquare, Search } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { Skeleton } from '@/components/ui/skeleton';
 import { ScrollArea } from '@/components/ui/scroll-area';
-import { EmptyState } from '@/modules/core';
+import { EmptyState, ErrorState } from '@/modules/core';
 import { ConversationListItem } from '@/modules/applications/components/ConversationListItem';
 import type { ConversationListProps } from '@/modules/applications/types/conversation.types';
 
@@ -17,6 +17,9 @@ export function ConversationList({
   search,
   onSearchChange,
   onSelect,
+  onRetry,
+  errorMessage,
+  retryLabel,
 }: ConversationListProps) {
   const t = useTranslations('AgentMessages');
 
@@ -44,7 +47,16 @@ export function ConversationList({
           ))}
         </div>
       ) : isError ? (
-        <p className='px-4 py-3 text-sm text-foggy'>{t('loadError')}</p>
+        onRetry ? (
+          <ErrorState
+            message={errorMessage ?? t('loadError')}
+            onRetry={onRetry}
+            retryLabel={retryLabel}
+            framed
+          />
+        ) : (
+          <p className='px-4 py-3 text-sm text-foggy'>{t('loadError')}</p>
+        )
       ) : conversations.length === 0 ? (
         <EmptyState
           icon={MessageSquare}

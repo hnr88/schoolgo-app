@@ -1,12 +1,17 @@
 'use client';
 
-import { useState } from 'react';
+import { useTranslations } from 'next-intl';
+import { useQueryClient } from '@tanstack/react-query';
+import { toast } from 'sonner';
 import { useAuthStore } from '@/modules/auth/stores/use-auth-store';
 import { useBookmarks } from '@/modules/school-search/queries/use-bookmarks.query';
 import { useCreateBookmark } from '@/modules/school-search/queries/use-create-bookmark.mutation';
 import { useDeleteBookmark } from '@/modules/school-search/queries/use-delete-bookmark.mutation';
 import { useSchoolSearchStore } from '@/modules/school-search/stores/use-school-search-store';
-import type { SchoolHit } from '@/modules/school-search/types/search-api.types';
+import type {
+  BookmarksListResponse,
+  SchoolHit,
+} from '@/modules/school-search/types/bookmarks.types';
 
 interface UseBookmarkToggleResult {
   isBookmarked: boolean;
@@ -14,8 +19,16 @@ interface UseBookmarkToggleResult {
   toggle: () => void;
 }
 
+const BOOKMARKS_KEY = ['bookmarks'] as const;
+
+function bookmarkId(hit: SchoolHit): string {
+  return hit.id ?? hit.documentId;
+}
+
 export function useBookmarkToggle(school: SchoolHit): UseBookmarkToggleResult {
-  const schoolId = school.id ?? school.documentId;
+  const schoolId = bookmarkId(school);
+  const t = useTranslations('SchoolSearch.card');
+  const queryClient = useQueryClient();
   const isAuthenticated = useAuthStore((s) => s.isAuthenticated);
   const localBookmarks = useSchoolSearchStore((s) => s.bookmarks);
   const toggleLocalBookmark = useSchoolSearchStore((s) => s.toggleBookmark);
@@ -24,11 +37,9 @@ export function useBookmarkToggle(school: SchoolHit): UseBookmarkToggleResult {
   const createBookmark = useCreateBookmark();
   const deleteBookmark = useDeleteBookmark();
 
-  const [optimistic, setOptimistic] = useState<boolean | null>(null);
-
   const bookmarkedIds = new Set(
     (bookmarksData?.data ?? [])
-      .map((h: SchoolHit) => h.id ?? h.documentId)
+      .map(bookmarkId)
       .filter((value): value is string => Boolean(value)),
   );
   const serverBookmarked = bookmarkedIds.has(schoolId);
@@ -42,19 +53,52 @@ export function useBookmarkToggle(school: SchoolHit): UseBookmarkToggleResult {
     };
   }
 
-  const isBookmarked = optimistic ?? serverBookmarked;
+  const applyOptimistic = (shouldAdd: boolean): BookmarksListResponse | undefined => {
+    const previous = queryClient.getQueryData<BookmarksListResponse>(BOOKMARKS_KEY);
+    const current = previous?.data ?? [];
+    const nextData = shouldAdd
+      ? current.some((hit) => bookmarkId(hit) === schoolId)
+        ? current
+        : [...current, school]
+      : current.filter((hit) => bookmarkId(hit) !== schoolId);
+
+    queryClient.setQueryData<BookmarksListResponse>(BOOKMARKS_KEY, {
+      data: nextData,
+      error: previous?.error ?? null,
+    });
+
+    return previous;
+  };
+
+  const rollback = (previous: BookmarksListResponse | undefined) => {
+    if (previous) {
+      queryClient.setQueryData<BookmarksListResponse>(BOOKMARKS_KEY, previous);
+    } else {
+      queryClient.invalidateQueries({ queryKey: BOOKMARKS_KEY });
+    }
+    toast.error(t('bookmarkError'));
+  };
 
   const toggle = () => {
     if (isPending) return;
-    const next = !isBookmarked;
-    setOptimistic(next);
-    const reset = () => setOptimistic(null);
-    if (next) {
-      createBookmark.mutate({ schoolId }, { onSettled: reset });
+    const shouldAdd = !serverBookmarked;
+    const previous = applyOptimistic(shouldAdd);
+
+    if (shouldAdd) {
+      createBookmark.mutate(
+        { schoolId },
+        {
+          onError: () => rollback(previous),
+          onSettled: () => queryClient.invalidateQueries({ queryKey: BOOKMARKS_KEY }),
+        },
+      );
     } else {
-      deleteBookmark.mutate(schoolId, { onSettled: reset });
+      deleteBookmark.mutate(schoolId, {
+        onError: () => rollback(previous),
+        onSettled: () => queryClient.invalidateQueries({ queryKey: BOOKMARKS_KEY }),
+      });
     }
   };
 
-  return { isBookmarked, isPending, toggle };
+  return { isBookmarked: serverBookmarked, isPending, toggle };
 }

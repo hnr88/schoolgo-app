@@ -1,129 +1,99 @@
 'use client';
 
+import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
+import { isAxiosError } from 'axios';
 import { Loader2 } from 'lucide-react';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
+import { useRouter, usePathname } from '@/i18n/navigation';
 import { Button } from '@/components/ui/button';
-import { Switch } from '@/components/ui/switch';
-import {
-  Form,
-  FormControl,
-  FormDescription,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from '@/components/ui/form';
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from '@/components/ui/select';
+import { Form } from '@/components/ui/form';
 import {
   preferencesSchema,
   type PreferencesValues,
 } from '@/modules/parent-settings/schemas/preferences.schema';
 import { useUpdateProfile } from '@/modules/parent-settings/queries/use-update-profile.mutation';
-import {
-  DEFAULT_SETTINGS_LOCALE,
-  SETTINGS_LOCALES,
-} from '@/modules/parent-settings/constants/parent-settings.constants';
+import { useUnsavedChangesGuard } from '@/modules/parent-settings/hooks/useUnsavedChangesGuard';
+import { persistLocaleCookie } from '@/modules/parent-settings/lib/apply-settings-locale';
+import { SettingsFormError } from '@/modules/parent-settings/components/SettingsFormError';
+import { PreferencesNotifyRow } from '@/modules/parent-settings/components/PreferencesNotifyRow';
+import { PreferencesLanguageField } from '@/modules/parent-settings/components/PreferencesLanguageField';
+import { DEFAULT_SETTINGS_LOCALE } from '@/modules/parent-settings/constants/parent-settings.constants';
 import type { ParentMe } from '@/modules/parent-settings/types/parent-settings.types';
+
+function toDefaults(me: ParentMe): PreferencesValues {
+  return {
+    language: me.preferences?.language ?? DEFAULT_SETTINGS_LOCALE,
+    notifications: {
+      email: me.preferences?.notifications?.email ?? true,
+      sms: me.preferences?.notifications?.sms ?? false,
+    },
+  };
+}
 
 export function PreferencesForm({ me }: { me: ParentMe }) {
   const t = useTranslations('ParentSettings');
+  const router = useRouter();
+  const pathname = usePathname();
+  const activeLocale = useLocale();
   const { mutateAsync, isPending } = useUpdateProfile();
+  const [formError, setFormError] = useState<string | null>(null);
 
   const form = useForm<PreferencesValues>({
     resolver: zodResolver(preferencesSchema),
-    defaultValues: {
-      language: me.preferences?.language ?? DEFAULT_SETTINGS_LOCALE,
-      notifications: {
-        email: me.preferences?.notifications?.email ?? true,
-        sms: me.preferences?.notifications?.sms ?? false,
-      },
-    },
+    defaultValues: toDefaults(me),
   });
 
+  useUnsavedChangesGuard(form.formState.isDirty);
+
   const handleSubmit = async (values: PreferencesValues) => {
-    await mutateAsync({ preferences: values });
+    setFormError(null);
+    try {
+      const next = await mutateAsync({ preferences: values });
+      form.reset(toDefaults(next));
+      if (values.language !== activeLocale) {
+        persistLocaleCookie(values.language);
+        router.replace(pathname, { locale: values.language });
+      }
+    } catch (error) {
+      const status = isAxiosError(error) ? error.response?.status : undefined;
+      const apiMessage = isAxiosError(error)
+        ? (error.response?.data?.error?.message as string | undefined)
+        : undefined;
+      setFormError(status === 422 && apiMessage ? apiMessage : t('saveError'));
+    }
   };
 
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(handleSubmit)} className='flex flex-col gap-6' noValidate>
-        <FormField
-          control={form.control}
-          name='language'
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>{t('languageLabel')}</FormLabel>
-              <Select onValueChange={field.onChange} defaultValue={field.value}>
-                <FormControl>
-                  <SelectTrigger className='w-full sm:w-64'>
-                    <SelectValue placeholder={t('languagePlaceholder')} />
-                  </SelectTrigger>
-                </FormControl>
-                <SelectContent>
-                  {SETTINGS_LOCALES.map((locale) => (
-                    <SelectItem key={locale} value={locale}>
-                      {t(`language_${locale}`)}
-                    </SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
-              <FormDescription>{t('languageHint')}</FormDescription>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
+        {formError ? <SettingsFormError message={formError} /> : null}
+
+        <PreferencesLanguageField control={form.control} />
 
         <fieldset className='flex flex-col gap-4'>
           <legend className='text-sm font-medium text-ink-900'>{t('notificationsLabel')}</legend>
-          <FormField
+          <PreferencesNotifyRow
             control={form.control}
             name='notifications.email'
-            render={({ field }) => (
-              <FormItem className='flex items-center justify-between rounded-lg border border-border bg-muted/40 px-4 py-4'>
-                <div className='flex flex-col gap-0.5'>
-                  <FormLabel>{t('notifyEmailLabel')}</FormLabel>
-                  <FormDescription>{t('notifyEmailHint')}</FormDescription>
-                </div>
-                <FormControl>
-                  <Switch
-                    checked={field.value}
-                    onCheckedChange={field.onChange}
-                    aria-label={t('notifyEmailLabel')}
-                  />
-                </FormControl>
-              </FormItem>
-            )}
+            label={t('notifyEmailLabel')}
+            hint={t('notifyEmailHint')}
           />
-          <FormField
+          <PreferencesNotifyRow
             control={form.control}
             name='notifications.sms'
-            render={({ field }) => (
-              <FormItem className='flex items-center justify-between rounded-lg border border-border bg-muted/40 px-4 py-4'>
-                <div className='flex flex-col gap-0.5'>
-                  <FormLabel>{t('notifySmsLabel')}</FormLabel>
-                  <FormDescription>{t('notifySmsHint')}</FormDescription>
-                </div>
-                <FormControl>
-                  <Switch
-                    checked={field.value}
-                    onCheckedChange={field.onChange}
-                    aria-label={t('notifySmsLabel')}
-                  />
-                </FormControl>
-              </FormItem>
-            )}
+            label={t('notifySmsLabel')}
+            hint={t('notifySmsHint')}
           />
         </fieldset>
 
-        <Button type='submit' disabled={isPending} aria-busy={isPending} className='self-start'>
+        <Button
+          type='submit'
+          disabled={isPending || !form.formState.isDirty}
+          aria-busy={isPending}
+          className='self-start'
+        >
           {isPending && <Loader2 className='mr-2 h-4 w-4 animate-spin' aria-hidden='true' />}
           {t('saveButton')}
         </Button>

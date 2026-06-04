@@ -90,6 +90,16 @@ export interface StatCardView {
   href: string;
 }
 
+export interface StatTileView {
+  labelKey: string;
+  count: number;
+  delta: number;
+  href: string;
+  icon: IconComponent;
+  /** soft-bg + strong-text OKLCH token classes for the StatTile icon chip */
+  iconClassName: string;
+}
+
 export interface ActivityRowView {
   id: string;
   icon: IconComponent;

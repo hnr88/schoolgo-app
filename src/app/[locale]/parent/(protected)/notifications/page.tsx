@@ -9,7 +9,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'ParentNotifications' });
-  return { title: t('title'), description: t('emptyDescription') };
+  return { title: t('title'), description: t('metaDescription') };
 }
 
 export default async function ParentNotificationsPage({

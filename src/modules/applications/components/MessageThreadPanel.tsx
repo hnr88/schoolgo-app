@@ -1,15 +1,13 @@
 'use client';
 
-import { useEffect } from 'react';
 import { useTranslations } from 'next-intl';
-import { useQueryClient } from '@tanstack/react-query';
 import { ArrowLeft, MessageSquare } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Skeleton } from '@/components/ui/skeleton';
 import { ScrollArea } from '@/components/ui/scroll-area';
-import { EmptyState } from '@/modules/core';
+import { EmptyState, ErrorState } from '@/modules/core';
 import { useApplicationMessages } from '@/modules/applications/queries/use-application-messages.query';
-import { AGENT_CONVERSATIONS_QUERY_KEY } from '@/modules/applications/queries/use-conversations.query';
+import { useAgentThreadView } from '@/modules/applications/hooks/useAgentThreadView';
 import { MessageBubble } from '@/modules/applications/components/MessageBubble';
 import { MessageComposer } from '@/modules/applications/components/MessageComposer';
 import type { MessageThreadPanelProps } from '@/modules/applications/types/conversation.types';
@@ -20,16 +18,9 @@ export function MessageThreadPanel({
   onBack,
 }: MessageThreadPanelProps) {
   const t = useTranslations('AgentMessages');
-  const queryClient = useQueryClient();
-  const { data: messages, isLoading, isError, isSuccess } = useApplicationMessages(applicationDocumentId);
-
-  // Opening the thread auto-marks messages read server-side; refresh the
-  // conversations list so unread badges and ordering stay in sync.
-  useEffect(() => {
-    if (isSuccess) {
-      queryClient.invalidateQueries({ queryKey: AGENT_CONVERSATIONS_QUERY_KEY });
-    }
-  }, [isSuccess, applicationDocumentId, queryClient]);
+  const { data: messages, isLoading, isError, refetch } =
+    useApplicationMessages(applicationDocumentId);
+  const { bottomRef } = useAgentThreadView(applicationDocumentId, messages);
 
   return (
     <div className='flex h-full flex-col gap-4'>
@@ -62,15 +53,21 @@ export function MessageThreadPanel({
             <Skeleton className='h-16 w-1/2 rounded-xl' />
           </div>
         ) : isError ? (
-          <p className='text-sm text-foggy'>{t('threadLoadError')}</p>
+          <ErrorState
+            message={t('threadLoadError')}
+            onRetry={() => refetch()}
+            retryLabel={t('threadRetry')}
+            framed
+          />
         ) : !messages || messages.length === 0 ? (
-          <EmptyState icon={MessageSquare} title={t('threadEmpty')} />
+          <EmptyState icon={MessageSquare} title={t('threadEmpty')} framed />
         ) : (
           <ScrollArea className='h-full'>
             <div className='flex flex-col gap-4 pr-3'>
               {messages.map((message) => (
                 <MessageBubble key={message.documentId} message={message} />
               ))}
+              <div ref={bottomRef} aria-hidden='true' />
             </div>
           </ScrollArea>
         )}

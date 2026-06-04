@@ -22,16 +22,15 @@ import {
   PARENT_DOCUMENT_TYPE_OPTIONS,
 } from '@/modules/applications/constants/parent-document.constants';
 import type { DocumentType } from '@/modules/students';
+import type { ParentDocumentUploadFormProps } from '@/modules/applications/types/parent-document.types';
 
 export function ParentDocumentUploadForm({
   applicationDocumentId,
   studentDocumentId,
-}: {
-  applicationDocumentId: string;
-  studentDocumentId: string;
-}) {
+  documentType,
+  onDocumentTypeChange,
+}: ParentDocumentUploadFormProps) {
   const t = useTranslations('ParentApplications');
-  const [documentType, setDocumentType] = useState<DocumentType | ''>('');
   const [file, setFile] = useState<File | null>(null);
   const inputRef = useRef<HTMLInputElement>(null);
   const upload = useMediaUpload();
@@ -41,7 +40,7 @@ export function ParentDocumentUploadForm({
 
   function resetForm() {
     setFile(null);
-    setDocumentType('');
+    onDocumentTypeChange('');
     if (inputRef.current) inputRef.current.value = '';
   }
 
@@ -80,7 +79,7 @@ export function ParentDocumentUploadForm({
         <Label htmlFor='document-type'>{t('documentsSelectType')}</Label>
         <Select
           value={documentType}
-          onValueChange={(value) => setDocumentType(value as DocumentType)}
+          onValueChange={(value) => onDocumentTypeChange(value as DocumentType)}
         >
           <SelectTrigger id='document-type' className='w-full'>
             <SelectValue placeholder={t('documentsSelectTypePlaceholder')} />

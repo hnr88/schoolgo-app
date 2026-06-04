@@ -12,8 +12,13 @@ import {
   TableRow,
 } from '@/components/ui/table';
 import { COMPARE_ATTRIBUTES } from '@/modules/school-comparison/constants/comparison.constants';
+import { createEnumTranslator } from '@/modules/school-comparison/lib/compare-enum-labels';
 import { formatCompareValue } from '@/modules/school-comparison/lib/format-comparison';
-import type { CompareLabels, SchoolHit } from '@/modules/school-comparison/types/comparison.types';
+import type {
+  CompareFormatHelpers,
+  CompareLabels,
+  SchoolHit,
+} from '@/modules/school-comparison/types/comparison.types';
 
 interface CompareTableProps {
   schools: SchoolHit[];
@@ -22,8 +27,17 @@ interface CompareTableProps {
   schoolKey: (school: SchoolHit) => string;
 }
 
+const percentFormatter = new Intl.NumberFormat('en-AU', { maximumFractionDigits: 1 });
+
 export function CompareTable({ schools, labels, onRemove, schoolKey }: CompareTableProps) {
   const t = useTranslations('SchoolComparison');
+  const tEnum = useTranslations('SchoolSearch.spec');
+
+  const helpers: CompareFormatHelpers = {
+    labels,
+    translateEnum: createEnumTranslator((key) => tEnum(key as never)),
+    formatPercent: (value) => t('valuePercent', { value: percentFormatter.format(value) }),
+  };
 
   return (
     <div className='overflow-x-auto rounded-lg border border-border bg-card shadow-1'>
@@ -36,12 +50,18 @@ export function CompareTable({ schools, labels, onRemove, schoolKey }: CompareTa
               return (
                 <TableHead key={id} className='align-bottom'>
                   <div className='flex items-start justify-between gap-2 py-2'>
-                    <Link
-                      href={`/parent/schools/${school.slug}`}
-                      className='text-body-sm font-semibold text-ink-900 hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2'
-                    >
-                      {school.name}
-                    </Link>
+                    {school.slug ? (
+                      <Link
+                        href={`/parent/schools/${school.slug}`}
+                        className='text-body-sm font-semibold text-ink-900 hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2'
+                      >
+                        {school.name}
+                      </Link>
+                    ) : (
+                      <span className='text-body-sm font-semibold text-ink-900'>
+                        {school.name}
+                      </span>
+                    )}
                     <button
                       type='button'
                       onClick={() => onRemove(id)}
@@ -62,7 +82,7 @@ export function CompareTable({ schools, labels, onRemove, schoolKey }: CompareTa
               <TableCell className='font-medium text-foggy'>{t(attribute.labelKey)}</TableCell>
               {schools.map((school) => (
                 <TableCell key={schoolKey(school)} className='whitespace-normal text-ink-900'>
-                  {formatCompareValue(attribute, school, labels)}
+                  {formatCompareValue(attribute, school, helpers)}
                 </TableCell>
               ))}
             </TableRow>

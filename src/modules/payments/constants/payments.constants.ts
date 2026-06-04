@@ -1,29 +1,26 @@
-import { GraduationCap, LineChart, Target } from 'lucide-react';
-import type { PaymentPlanCard } from '@/modules/payments/types/payments.types';
+import { ShieldCheck, ReceiptText, History } from 'lucide-react';
+import type { PaymentFeatureCard } from '@/modules/payments/types/payments.types';
 
-export const PAYMENT_PLAN_CARDS: PaymentPlanCard[] = [
+export const PAYMENT_FEATURE_CARDS: PaymentFeatureCard[] = [
   {
-    icon: GraduationCap,
-    nameKey: 'plans.practice.name',
-    priceKey: 'plans.practice.price',
-    descriptionKey: 'plans.practice.description',
+    icon: ShieldCheck,
+    titleKey: 'features.secure.title',
+    descriptionKey: 'features.secure.description',
     bg: 'bg-vivid-mint-soft',
     color: 'text-vivid-mint',
   },
   {
-    icon: Target,
-    nameKey: 'plans.placement.name',
-    priceKey: 'plans.placement.price',
-    descriptionKey: 'plans.placement.description',
-    bg: 'bg-vivid-coral-soft',
-    color: 'text-vivid-coral',
-  },
-  {
-    icon: LineChart,
-    nameKey: 'plans.progress.name',
-    priceKey: 'plans.progress.price',
-    descriptionKey: 'plans.progress.description',
+    icon: ReceiptText,
+    titleKey: 'features.receipts.title',
+    descriptionKey: 'features.receipts.description',
     bg: 'bg-vivid-iris-soft',
     color: 'text-vivid-iris',
+  },
+  {
+    icon: History,
+    titleKey: 'features.history.title',
+    descriptionKey: 'features.history.description',
+    bg: 'bg-vivid-coral-soft',
+    color: 'text-vivid-coral',
   },
 ];

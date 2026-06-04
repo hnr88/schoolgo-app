@@ -6,7 +6,7 @@ import { toast } from 'sonner';
 import { Button } from '@/components/ui/button';
 import { Skeleton } from '@/components/ui/skeleton';
 import { cn } from '@/lib/utils';
-import { EmptyState, SurfaceCard, surfaceCardVariants } from '@/modules/core';
+import { EmptyState, ErrorState, SurfaceCard, surfaceCardVariants } from '@/modules/core';
 import { StatusBadge } from '@/modules/design-system';
 import {
   useSchoolPreEnrolment,
@@ -57,13 +57,25 @@ function ItemRow({ item, documentId }: { item: SchoolPreEnrolmentItem; documentI
 
 export function SchoolPreEnrolmentTab({ documentId }: { documentId: string }) {
   const t = useTranslations('SchoolApplications');
-  const { data: items, isLoading } = useSchoolPreEnrolment(documentId);
+  const { data: items, isLoading, isError, refetch } = useSchoolPreEnrolment(documentId);
 
   if (isLoading) {
     return (
-      <SurfaceCard padding='lg'>
+      <SurfaceCard padding='lg' className='flex flex-col gap-3'>
+        <Skeleton className='h-16 w-full rounded-lg' />
         <Skeleton className='h-16 w-full rounded-lg' />
       </SurfaceCard>
+    );
+  }
+
+  if (isError) {
+    return (
+      <ErrorState
+        framed
+        message={t('preEnrolLoadError')}
+        onRetry={() => refetch()}
+        retryLabel={t('preEnrolRetry')}
+      />
     );
   }
 

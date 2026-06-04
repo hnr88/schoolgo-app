@@ -1,7 +1,8 @@
 import { getTranslations } from 'next-intl/server';
-import { CreditCard, Sparkles } from 'lucide-react';
+import { CreditCard, Sparkles, Wallet } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import { PAYMENT_PLAN_CARDS } from '@/modules/payments/constants/payments.constants';
+import { EmptyState } from '@/modules/core';
+import { PAYMENT_FEATURE_CARDS } from '@/modules/payments/constants/payments.constants';
 
 export async function PaymentsComingSoon() {
   const t = await getTranslations('ParentPayments');
@@ -25,37 +26,37 @@ export async function PaymentsComingSoon() {
       </div>
 
       <div className='flex flex-col gap-4'>
-        <h3 className='text-base font-semibold text-ink-900'>{t('plansTitle')}</h3>
+        <h3 className='text-base font-semibold text-ink-900'>{t('featuresTitle')}</h3>
         <ul className='grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3'>
-          {PAYMENT_PLAN_CARDS.map(({ icon: Icon, nameKey, priceKey, descriptionKey, bg, color }) => (
+          {PAYMENT_FEATURE_CARDS.map(({ icon: Icon, titleKey, descriptionKey, bg, color }) => (
             <li
-              key={nameKey}
+              key={titleKey}
               className='flex flex-col gap-4 rounded-lg border border-border bg-card p-6 shadow-1'
             >
-              <div className='flex items-center justify-between gap-3'>
-                <span
-                  className={cn(
-                    'flex h-10 w-10 shrink-0 items-center justify-center rounded-lg',
-                    bg,
-                    color,
-                  )}
-                >
-                  <Icon className='h-5 w-5' strokeWidth={1.75} aria-hidden='true' />
-                </span>
-                <span className='rounded-pill bg-muted px-2.5 py-1 text-xs font-medium text-foggy'>
-                  {t('comingSoon')}
-                </span>
-              </div>
+              <span
+                className={cn(
+                  'flex h-10 w-10 shrink-0 items-center justify-center rounded-lg',
+                  bg,
+                  color,
+                )}
+              >
+                <Icon className='h-5 w-5' strokeWidth={1.75} aria-hidden='true' />
+              </span>
               <div className='flex flex-col gap-1'>
-                <p className='text-sm font-semibold text-ink-900'>{t(nameKey)}</p>
-                <p className='text-lg font-bold text-ink-900'>{t(priceKey)}</p>
+                <p className='text-sm font-semibold text-ink-900'>{t(titleKey)}</p>
+                <p className='text-sm leading-relaxed text-muted-foreground'>{t(descriptionKey)}</p>
               </div>
-              <p className='text-sm leading-relaxed text-muted-foreground'>{t(descriptionKey)}</p>
             </li>
           ))}
         </ul>
-        <p className='text-xs text-foggy'>{t('plansDisclaimer')}</p>
       </div>
+
+      <EmptyState
+        icon={Wallet}
+        title={t('ledgerEmptyTitle')}
+        description={t('ledgerEmptyDescription')}
+        framed
+      />
     </section>
   );
 }

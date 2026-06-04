@@ -1,7 +1,7 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { CheckCircle2, Save } from 'lucide-react';
+import { CheckCircle2, ListChecks, Save } from 'lucide-react';
 import {
   Dialog,
   DialogContent,
@@ -12,6 +12,7 @@ import {
 } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
+import { EmptyState } from '@/modules/core';
 import { StepEditor } from '@/modules/school-templates/components/StepEditor';
 import { AddStepControl } from '@/modules/school-templates/components/AddStepControl';
 import { ValidationPanel } from '@/modules/school-templates/components/ValidationPanel';
@@ -68,7 +69,7 @@ export function TemplateBuilder({
 
         <div className='flex flex-col gap-4'>
           {steps.length === 0 && (
-            <p className='rounded-lg bg-muted px-4 py-3 text-sm text-foggy'>{t('noStepsHint')}</p>
+            <EmptyState icon={ListChecks} title={t('noStepsHint')} framed />
           )}
           {steps.map((step, index) => (
             <StepEditor

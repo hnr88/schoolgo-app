@@ -1,15 +1,13 @@
 'use client';
 
-import { useEffect } from 'react';
 import { useTranslations } from 'next-intl';
-import { useQueryClient } from '@tanstack/react-query';
 import { ArrowLeft, MessageSquare } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Skeleton } from '@/components/ui/skeleton';
 import { ScrollArea } from '@/components/ui/scroll-area';
-import { EmptyState } from '@/modules/core';
+import { EmptyState, ErrorState } from '@/modules/core';
 import { useParentThread } from '@/modules/applications/queries/use-parent-thread.query';
-import { PARENT_CONVERSATIONS_QUERY_KEY } from '@/modules/applications/queries/use-parent-conversations.query';
+import { useParentThreadView } from '@/modules/applications/hooks/useParentThreadView';
 import { ParentMessageBubble } from '@/modules/applications/components/ParentMessageBubble';
 import { ParentMessageComposer } from '@/modules/applications/components/ParentMessageComposer';
 import type { ParentMessageThreadPanelProps } from '@/modules/applications/types/parent-message.types';
@@ -20,14 +18,8 @@ export function ParentMessageThreadPanel({
   onBack,
 }: ParentMessageThreadPanelProps) {
   const t = useTranslations('ParentMessages');
-  const queryClient = useQueryClient();
-  const { data: messages, isLoading, isError, isSuccess } = useParentThread(applicationDocumentId);
-
-  useEffect(() => {
-    if (isSuccess) {
-      queryClient.invalidateQueries({ queryKey: PARENT_CONVERSATIONS_QUERY_KEY });
-    }
-  }, [isSuccess, applicationDocumentId, queryClient]);
+  const { data: messages, isLoading, isError, refetch } = useParentThread(applicationDocumentId);
+  const { bottomRef } = useParentThreadView(applicationDocumentId, messages);
 
   return (
     <div className='flex h-full flex-col gap-4'>
@@ -60,7 +52,12 @@ export function ParentMessageThreadPanel({
             <Skeleton className='h-16 w-1/2 rounded-lg' />
           </div>
         ) : isError ? (
-          <p className='text-sm text-foggy'>{t('threadLoadError')}</p>
+          <ErrorState
+            message={t('threadLoadError')}
+            onRetry={() => refetch()}
+            retryLabel={t('threadRetry')}
+            framed
+          />
         ) : !messages || messages.length === 0 ? (
           <EmptyState icon={MessageSquare} title={t('threadEmpty')} framed />
         ) : (
@@ -69,6 +66,7 @@ export function ParentMessageThreadPanel({
               {messages.map((message) => (
                 <ParentMessageBubble key={message.documentId} message={message} />
               ))}
+              <div ref={bottomRef} aria-hidden='true' />
             </div>
           </ScrollArea>
         )}

@@ -48,3 +48,15 @@ export interface UploadParentDocumentInput {
   student: string;
   application?: string;
 }
+
+export interface ParentDocumentUploadFormProps {
+  applicationDocumentId: string;
+  studentDocumentId: string;
+  documentType: DocumentType | '';
+  onDocumentTypeChange: (type: DocumentType | '') => void;
+}
+
+export interface ParentDocumentRequestRowProps {
+  request: ParentDocumentRequest;
+  onUpload: (type: DocumentType) => void;
+}

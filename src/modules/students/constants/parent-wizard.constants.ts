@@ -24,3 +24,5 @@ export const PARENT_TARGET_TERM_OPTIONS = ['Term 1', 'Term 2', 'Term 3', 'Term 4
 export const PARENT_PHOTO_MAX_MB = 5;
 
 export const PARENT_VOICE_INTRO_MAX_MB = 10;
+
+export const DOB_MAX_DATE = new Date().toISOString().slice(0, 10);

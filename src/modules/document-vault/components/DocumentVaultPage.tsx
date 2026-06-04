@@ -3,15 +3,17 @@
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { toast } from 'sonner';
-import { AlertCircle, FolderOpen, Plus } from 'lucide-react';
+import { AlertCircle, FolderOpen, Plus, SearchX } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
 import { Skeleton } from '@/components/ui/skeleton';
 import { EmptyState } from '@/modules/core';
-import { useVaultDocuments } from '@/modules/document-vault/queries/use-vault-documents.query';
+import { useDocumentVault } from '@/modules/document-vault/hooks/useDocumentVault';
 import { useDeleteVaultDocument } from '@/modules/document-vault/queries/use-delete-vault-document.mutation';
 import { VaultDocumentCard } from '@/modules/document-vault/components/VaultDocumentCard';
+import { VaultDocumentsToolbar } from '@/modules/document-vault/components/VaultDocumentsToolbar';
 import { VaultUploadDialog } from '@/modules/document-vault/components/VaultUploadDialog';
+import { VaultDocumentPreviewDialog } from '@/modules/document-vault/components/VaultDocumentPreviewDialog';
 import { DeleteVaultDocumentDialog } from '@/modules/document-vault/components/DeleteVaultDocumentDialog';
 import type { VaultDocument } from '@/modules/document-vault/types/document-vault.types';
 
@@ -19,10 +21,10 @@ export function DocumentVaultPage() {
   const t = useTranslations('DocumentVault');
   const [uploadOpen, setUploadOpen] = useState(false);
   const [deleteTarget, setDeleteTarget] = useState<VaultDocument | null>(null);
+  const [previewTarget, setPreviewTarget] = useState<VaultDocument | null>(null);
 
-  const { data, isLoading, isError } = useVaultDocuments();
+  const vault = useDocumentVault();
   const deleteMutation = useDeleteVaultDocument();
-  const documents = data?.data ?? [];
 
   async function handleDelete() {
     if (!deleteTarget) return;
@@ -44,20 +46,20 @@ export function DocumentVaultPage() {
         </Button>
       </div>
 
-      {isLoading ? (
+      {vault.isLoading ? (
         <div className='grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3'>
           {Array.from({ length: 6 }).map((_, i) => (
             <Skeleton key={i} className='h-40 w-full rounded-lg' />
           ))}
         </div>
-      ) : isError ? (
+      ) : vault.isError ? (
         <EmptyState
           framed
           icon={AlertCircle}
           title={t('errorTitle')}
           description={t('errorSubtitle')}
         />
-      ) : documents.length === 0 ? (
+      ) : vault.isEmpty ? (
         <EmptyState
           framed
           icon={FolderOpen}
@@ -71,14 +73,51 @@ export function DocumentVaultPage() {
           }
         />
       ) : (
-        <div className='grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3'>
-          {documents.map((doc) => (
-            <VaultDocumentCard key={doc.documentId} document={doc} onDelete={setDeleteTarget} />
-          ))}
-        </div>
+        <>
+          <VaultDocumentsToolbar
+            totalCount={vault.totalCount}
+            resultCount={vault.resultCount}
+            search={vault.search}
+            onSearchChange={vault.setSearch}
+            typeFilter={vault.typeFilter}
+            onTypeFilterChange={vault.setTypeFilter}
+            sort={vault.sort}
+            onSortChange={vault.setSort}
+            availableTypes={vault.availableTypes}
+          />
+
+          {vault.isNoResults ? (
+            <EmptyState
+              framed
+              icon={SearchX}
+              title={t('noResultsTitle')}
+              description={t('noResultsSubtitle')}
+              action={
+                <Button variant='outline' size='sm' onClick={vault.handleClearFilters}>
+                  {t('clearFilters')}
+                </Button>
+              }
+            />
+          ) : (
+            <div className='grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3'>
+              {vault.documents.map((doc) => (
+                <VaultDocumentCard
+                  key={doc.documentId}
+                  document={doc}
+                  onDelete={setDeleteTarget}
+                  onPreview={setPreviewTarget}
+                />
+              ))}
+            </div>
+          )}
+        </>
       )}
 
       <VaultUploadDialog open={uploadOpen} onOpenChange={setUploadOpen} />
+      <VaultDocumentPreviewDialog
+        document={previewTarget}
+        onOpenChange={() => setPreviewTarget(null)}
+      />
       <DeleteVaultDocumentDialog
         document={deleteTarget}
         onOpenChange={() => setDeleteTarget(null)}

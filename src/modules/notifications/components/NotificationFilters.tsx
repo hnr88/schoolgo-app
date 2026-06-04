@@ -30,6 +30,11 @@ export function NotificationFilters({
 }: NotificationFiltersProps) {
   const t = useTranslations('ParentNotifications');
 
+  const labelFor = (value: NotificationEventFilter): string =>
+    value === NOTIFICATION_EVENT_FILTER_ALL
+      ? t('filterEventAll')
+      : t(`eventType_${value}`);
+
   return (
     <div className='flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between'>
       <label className='flex min-h-11 cursor-pointer items-center gap-3 text-sm font-medium text-ink-900'>
@@ -47,8 +52,12 @@ export function NotificationFilters({
           onEventFilterChange(value as NotificationEventFilter)
         }
       >
-        <SelectTrigger className='h-11 w-full sm:w-64'>
-          <SelectValue aria-label={t('filterEventLabel')} />
+        <SelectTrigger className='h-11 w-full sm:w-64' aria-label={t('filterEventLabel')}>
+          <SelectValue>
+            {(value: NotificationEventFilter | null) =>
+              value ? labelFor(value) : t('filterEventAll')
+            }
+          </SelectValue>
         </SelectTrigger>
         <SelectContent>
           <SelectItem value={NOTIFICATION_EVENT_FILTER_ALL}>

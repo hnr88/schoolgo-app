@@ -19,7 +19,7 @@ export const agentNotificationsSchema = z.object({
   digest: z.enum(AGENT_NOTIFICATION_DIGESTS),
   sendOnEnter: z.boolean(),
   appendSignature: z.boolean(),
-  signature: z.string().trim().max(500).optional().or(z.literal('')),
+  signature: z.string().trim().max(500, 'signatureMax').optional().or(z.literal('')),
 });
 
 export type AgentNotificationsValues = z.infer<typeof agentNotificationsSchema>;

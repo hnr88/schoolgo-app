@@ -4,4 +4,4 @@ export const SCHOOL_SETTINGS_LOCALES = ['en', 'ko', 'ms', 'th', 'vi', 'zh'] as c
 
 export const DEFAULT_SCHOOL_SETTINGS_LOCALE: SchoolSettingsLocale = 'en';
 
-export const SCHOOL_PASSWORD_MIN_LENGTH = 6;
+export const SCHOOL_PASSWORD_MIN_LENGTH = 8;

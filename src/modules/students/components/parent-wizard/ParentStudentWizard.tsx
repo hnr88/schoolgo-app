@@ -3,6 +3,7 @@
 import { useTranslations } from 'next-intl';
 import { Form } from '@/components/ui/form';
 import { Wizard } from '@/modules/forms';
+import type { UploadedMedia } from '@/modules/forms';
 import {
   PARENT_WIZARD_STEPS,
   PARENT_WIZARD_STEP_TITLE_KEYS,
@@ -20,9 +21,13 @@ import { StepReview } from '@/modules/students/components/parent-wizard/StepRevi
 export function ParentStudentWizard({
   documentId,
   initialValues,
+  existingPhoto,
+  existingVoiceIntro,
 }: {
   documentId?: string;
   initialValues?: ParentStudentFormValues;
+  existingPhoto?: UploadedMedia | null;
+  existingVoiceIntro?: UploadedMedia | null;
 } = {}) {
   const t = useTranslations('StudentWizard');
   const {
@@ -34,7 +39,8 @@ export function ParentStudentWizard({
     canAdvance,
     onFinish,
     isSubmitting,
-  } = useParentStudentWizard({ documentId, initialValues });
+    isEditing,
+  } = useParentStudentWizard({ documentId, initialValues, existingPhoto, existingVoiceIntro });
 
   const steps = PARENT_WIZARD_STEPS.map((id) => ({
     id,
@@ -50,7 +56,7 @@ export function ParentStudentWizard({
       <form onSubmit={(e) => e.preventDefault()}>
         <Wizard
           steps={steps}
-          labels={{ back: t('back'), next: t('next'), finish: t('finish') }}
+          labels={{ back: t('back'), next: t('next'), finish: isEditing ? t('saveChanges') : t('finish') }}
           canAdvance={canAdvance}
           onFinish={onFinish}
           isSubmitting={isSubmitting}

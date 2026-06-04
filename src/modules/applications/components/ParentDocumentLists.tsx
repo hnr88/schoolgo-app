@@ -1,12 +1,13 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { ExternalLink } from 'lucide-react';
+import { ExternalLink, Upload } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 import { Skeleton } from '@/components/ui/skeleton';
 import { cn } from '@/lib/utils';
 import { PARENT_DOCUMENT_REQUEST_STATUS_BADGE } from '@/modules/applications/constants/parent-document.constants';
 import type {
-  ParentDocumentRequest,
+  ParentDocumentRequestRowProps,
   ParentUploadedDocument,
 } from '@/modules/applications/types/parent-document.types';
 
@@ -23,12 +24,13 @@ export function ParentDocumentListSkeleton() {
   );
 }
 
-export function ParentDocumentRequestRow({ request }: { request: ParentDocumentRequest }) {
+export function ParentDocumentRequestRow({ request, onUpload }: ParentDocumentRequestRowProps) {
   const t = useTranslations('ParentApplications');
   const types = request.documentTypes.map((type) => t(`documentType_${type}`)).join(', ');
+  const isFulfilled = request.status === 'fulfilled';
 
   return (
-    <div className='flex flex-col gap-1 border-b border-border/50 py-3 last:border-b-0'>
+    <div className='flex flex-col gap-2 border-b border-border/50 py-3 last:border-b-0'>
       <div className='flex items-start justify-between gap-3'>
         <span className='text-sm text-ink-900'>{types}</span>
         <span
@@ -44,6 +46,24 @@ export function ParentDocumentRequestRow({ request }: { request: ParentDocumentR
         <span className='text-xs text-foggy'>
           {t('documentsRequestNote')}: {request.note}
         </span>
+      )}
+      {!isFulfilled && request.documentTypes.length > 0 && (
+        <div className='flex flex-wrap gap-2'>
+          {request.documentTypes.map((type) => (
+            <Button
+              key={type}
+              type='button'
+              size='sm'
+              variant='outline'
+              className='gap-1.5'
+              onClick={() => onUpload(type)}
+              aria-label={t('uploadForRequestAria', { type: t(`documentType_${type}`) })}
+            >
+              <Upload className='h-3.5 w-3.5' />
+              {t('uploadForRequest')}
+            </Button>
+          ))}
+        </div>
       )}
     </div>
   );

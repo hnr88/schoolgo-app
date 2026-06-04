@@ -22,3 +22,12 @@ export interface ParentStudentListToolbarProps {
 export interface ParentStudentProfileProps {
   documentId: string;
 }
+
+export interface ParentStudentStats {
+  children: number;
+  activeApplications: number;
+  verifiedTests: number;
+  pendingTests: number;
+}
+
+export type ParentStudentStatKey = keyof ParentStudentStats;

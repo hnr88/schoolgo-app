@@ -15,6 +15,7 @@ export function ParentMessagesPage() {
     conversations,
     isLoading,
     isError,
+    refetch,
     search,
     setSearch,
     selectedId,
@@ -42,6 +43,9 @@ export function ParentMessagesPage() {
             search={search}
             onSearchChange={setSearch}
             onSelect={selectConversation}
+            onRetry={() => refetch()}
+            errorMessage={t('messagesError')}
+            retryLabel={t('retry')}
           />
         </section>
 

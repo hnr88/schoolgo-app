@@ -27,6 +27,9 @@ export interface ConversationListProps {
   search: string;
   onSearchChange: (value: string) => void;
   onSelect: (applicationDocumentId: string) => void;
+  onRetry?: () => void;
+  errorMessage?: string;
+  retryLabel?: string;
 }
 
 export interface ConversationListItemProps {

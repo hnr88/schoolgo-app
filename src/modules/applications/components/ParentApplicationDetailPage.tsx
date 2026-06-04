@@ -5,6 +5,7 @@ import { Link } from '@/i18n/navigation';
 import { ArrowLeft } from 'lucide-react';
 import { notFound } from 'next/navigation';
 import { Skeleton } from '@/components/ui/skeleton';
+import { ErrorState } from '@/modules/core';
 import { useParentApplication } from '@/modules/applications/queries/use-parent-application.query';
 import { ParentApplicationHeader } from '@/modules/applications/components/ParentApplicationHeader';
 import { ParentApplicationDetailBody } from '@/modules/applications/components/ParentApplicationDetailBody';
@@ -25,7 +26,7 @@ function DetailSkeleton() {
 
 export function ParentApplicationDetailPage({ documentId }: ParentApplicationDetailProps) {
   const t = useTranslations('ParentApplications');
-  const { data: application, isLoading, isError, error } = useParentApplication(documentId);
+  const { data: application, isLoading, isError, error, refetch } = useParentApplication(documentId);
 
   if (
     isError &&
@@ -54,7 +55,12 @@ export function ParentApplicationDetailPage({ documentId }: ParentApplicationDet
     return (
       <div className='flex flex-col gap-6'>
         {backLink}
-        <p className='text-sm text-foggy'>{t('loadError')}</p>
+        <ErrorState
+          message={t('loadError')}
+          onRetry={() => refetch()}
+          retryLabel={t('retry')}
+          framed
+        />
       </div>
     );
   }

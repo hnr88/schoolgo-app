@@ -7,3 +7,8 @@ export type {
   UpdateSchoolProfilePayload,
   ChangePasswordResponse,
 } from '@/modules/school-settings/types/school-settings.types';
+export type {
+  SchoolNotificationPreferencesData,
+  UpdateSchoolNotificationPreferencesPayload,
+  SchoolDigestFrequency,
+} from '@/modules/school-settings/types/notification-preferences.types';

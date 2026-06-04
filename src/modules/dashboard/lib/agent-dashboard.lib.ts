@@ -4,6 +4,7 @@ import {
   ACTIVITY_COLOR,
   ACTIVITY_COLOR_FALLBACK,
   ACTIVITY_ICON,
+  AGENT_STAT_TILE_CONFIG,
   DEADLINE_TONE,
 } from '@/modules/dashboard/constants/agent-dashboard.constants';
 import type {
@@ -15,6 +16,7 @@ import type {
   AgentDeadlineItem,
   DeadlineRowView,
   StatCardView,
+  StatTileView,
 } from '@/modules/dashboard/types/agent-dashboard.types';
 
 const APPLICATIONS_HREF = '/dashboard/applications';
@@ -70,6 +72,27 @@ export function mapStatCards(stats: AgentDashboardStats): StatCardView[] {
       href: APPLICATIONS_HREF,
     },
   ];
+}
+
+export function mapStatTiles(stats: AgentDashboardStats): StatTileView[] {
+  const counts: Record<string, { count: number; delta: number; href: string }> = {
+    activeStudents: { ...stats.activeStudents, href: STUDENTS_HREF },
+    appsInProgress: { ...stats.appsInProgress, href: APPLICATIONS_HREF },
+    offersReceived: { ...stats.offersReceived, href: APPLICATIONS_HREF },
+    enrolledThisTerm: { ...stats.enrolledThisTerm, href: APPLICATIONS_HREF },
+  };
+
+  return AGENT_STAT_TILE_CONFIG.map((config) => {
+    const stat = counts[config.labelKey];
+    return {
+      labelKey: config.labelKey,
+      count: stat.count,
+      delta: stat.delta,
+      href: stat.href,
+      icon: config.icon,
+      iconClassName: config.iconClassName,
+    };
+  });
 }
 
 export function mapActivityRows(

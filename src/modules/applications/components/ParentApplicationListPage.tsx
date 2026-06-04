@@ -17,6 +17,10 @@ export function ParentApplicationListPage({ studentDocumentId }: ParentApplicati
   const t = useTranslations('ParentApplications');
   const {
     status,
+    search,
+    childFilter,
+    childOptions,
+    showChildFilter,
     sortField,
     sortDirection,
     applications,
@@ -29,6 +33,8 @@ export function ParentApplicationListPage({ studentDocumentId }: ParentApplicati
     setPage,
     handleSort,
     handleStatusChange,
+    handleSearchChange,
+    handleChildFilterChange,
   } = useParentApplicationList(studentDocumentId);
 
   if (isError) {
@@ -57,7 +63,16 @@ export function ParentApplicationListPage({ studentDocumentId }: ParentApplicati
   return (
     <div className='overflow-hidden rounded-lg border border-border bg-card shadow-1'>
       <div className='border-b border-border px-6 py-4'>
-        <ParentApplicationToolbar status={status} onStatusChange={handleStatusChange} />
+        <ParentApplicationToolbar
+          status={status}
+          onStatusChange={handleStatusChange}
+          search={search}
+          onSearchChange={handleSearchChange}
+          childFilter={childFilter}
+          onChildFilterChange={handleChildFilterChange}
+          childOptions={childOptions}
+          showChildFilter={showChildFilter}
+        />
       </div>
 
       <ParentApplicationTable

@@ -1,5 +1,6 @@
 'use client';
 
+import { useMemo } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Loader2 } from 'lucide-react';
@@ -23,7 +24,7 @@ import {
   SelectValue,
 } from '@/components/ui/select';
 import {
-  policiesSchema,
+  createPoliciesSchema,
   type PoliciesValues,
 } from '@/modules/school-profile/schemas/school-profile.schema';
 import { useUpdateSchool } from '@/modules/school-profile/queries/use-update-school.mutation';
@@ -41,9 +42,10 @@ interface PoliciesFormProps {
 export function PoliciesForm({ school, disabled = false }: PoliciesFormProps) {
   const t = useTranslations('SchoolProfile');
   const { mutateAsync, isPending } = useUpdateSchool(school.documentId);
+  const schema = useMemo(() => createPoliciesSchema(t), [t]);
 
   const form = useForm<PoliciesValues>({
-    resolver: zodResolver(policiesSchema),
+    resolver: zodResolver(schema),
     defaultValues: {
       offerAcceptanceWindowDays: school.offerAcceptanceWindowDays ?? 14,
       autoWaitlistEnabled: school.autoWaitlistEnabled,

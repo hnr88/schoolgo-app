@@ -7,14 +7,7 @@ import { Loader2 } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from '@/components/ui/form';
+import { Form, FormControl, FormField, FormItem, FormLabel } from '@/components/ui/form';
 import {
   AlertDialog,
   AlertDialogCancel,
@@ -30,6 +23,7 @@ import {
   type AgentDeleteAccountValues,
 } from '@/modules/agent-settings/schemas/delete-account.schema';
 import { useDeleteAgentAccount } from '@/modules/agent-settings/queries/use-delete-agent-account.mutation';
+import { AgentSettingsFormMessage } from '@/modules/agent-settings/components/AgentSettingsFormMessage';
 
 export function DeleteAccountDialog() {
   const t = useTranslations('AgentSettings');
@@ -45,7 +39,7 @@ export function DeleteAccountDialog() {
     try {
       await mutateAsync(values);
     } catch {
-      form.setError('password', { type: 'server', message: t('deletePasswordInvalid') });
+      form.setError('password', { type: 'server', message: 'deletePasswordInvalid' });
     }
   };
 
@@ -75,7 +69,7 @@ export function DeleteAccountDialog() {
                   <FormControl>
                     <Input type='password' autoComplete='current-password' {...field} />
                   </FormControl>
-                  <FormMessage />
+                  <AgentSettingsFormMessage />
                 </FormItem>
               )}
             />

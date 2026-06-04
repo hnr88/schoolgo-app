@@ -24,7 +24,6 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 import { resolvePageTitleEntry } from '../lib/resolve-page-title';
-import { getTimeOfDay } from '../lib/get-time-of-day';
 
 export function DashboardHeader() {
   const t = useTranslations('Dashboard');
@@ -44,7 +43,6 @@ export function DashboardHeader() {
   const settingsHref = isParent ? '/parent/settings' : '/dashboard/settings';
   const isSearchPage = pathname.includes('/dashboard/search');
   const firstName = user?.displayName?.split(' ')[0] || t('greeting.fallbackName');
-  const greeting = t(`greeting.${getTimeOfDay()}`);
 
   function handleLogout() {
     logout();
@@ -84,8 +82,8 @@ export function DashboardHeader() {
                   {initials}
                 </AvatarFallback>
               </Avatar>
-              <span className='hidden text-sm text-ink-900 sm:block'>
-                {greeting} <span className='font-bold'>{firstName}</span>
+              <span className='hidden text-sm font-semibold text-ink-900 sm:block'>
+                {firstName}
               </span>
               <ChevronDown className='h-4 w-4 text-foggy' strokeWidth={1.5} />
             </DropdownMenuTrigger>

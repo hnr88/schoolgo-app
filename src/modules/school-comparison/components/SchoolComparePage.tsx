@@ -21,6 +21,7 @@ export function SchoolComparePage() {
     isLoading,
     isError,
     isEmpty,
+    hasUrlIds,
     schoolKey,
   } = useSchoolComparison();
 
@@ -53,13 +54,15 @@ export function SchoolComparePage() {
         />
       ) : (
         <div className='flex flex-col gap-6'>
-          <CompareSelectorBar
-            savedSchools={savedSchools}
-            isSelected={isSelected}
-            isAtCapacity={isAtCapacity}
-            onToggle={toggleSchool}
-            schoolKey={schoolKey}
-          />
+          {!hasUrlIds && (
+            <CompareSelectorBar
+              savedSchools={savedSchools}
+              isSelected={isSelected}
+              isAtCapacity={isAtCapacity}
+              onToggle={toggleSchool}
+              schoolKey={schoolKey}
+            />
+          )}
           {selectedSchools.length === 0 ? (
             <EmptyState
               icon={Columns3}

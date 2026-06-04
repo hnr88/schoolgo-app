@@ -1,7 +1,10 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { ImagePreview, AudioPreview } from '@/modules/forms';
+import {
+  ReadOnlyAudioPreview,
+  ReadOnlyImagePreview,
+} from '@/modules/students/components/ReadOnlyMediaPreview';
 import { ReviewRow } from '@/modules/students/components/parent-wizard/ReviewRow';
 import { ReviewSection } from '@/modules/students/components/parent-wizard/ReviewSection';
 import type { ParentStepReviewProps } from '@/modules/students/types/parent-wizard.types';
@@ -47,12 +50,12 @@ export function StepReview({ values, photo, voiceIntro, onEdit }: ParentStepRevi
       <ReviewSection title={t('stepMedia')} stepIndex={3} onEdit={onEdit}>
         <div className='grid grid-cols-1 gap-4 sm:grid-cols-2'>
           {photo ? (
-            <ImagePreview media={photo} alt={t('fieldPhoto')} onRemove={() => undefined} removeLabel={t('removeMedia')} disabled />
+            <ReadOnlyImagePreview url={photo.url} alt={t('fieldPhoto')} />
           ) : (
             <ReviewRow label={t('fieldPhoto')} value={dash} />
           )}
           {voiceIntro ? (
-            <AudioPreview media={voiceIntro} onRemove={() => undefined} removeLabel={t('removeMedia')} disabled />
+            <ReadOnlyAudioPreview url={voiceIntro.url} label={voiceIntro.name || t('fieldVoiceIntro')} />
           ) : (
             <ReviewRow label={t('fieldVoiceIntro')} value={dash} />
           )}

@@ -1,25 +1,23 @@
 'use client';
 
+import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
+import { isAxiosError } from 'axios';
 import { Loader2 } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { Badge } from '@/components/ui/badge';
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from '@/components/ui/form';
+import { Form, FormControl, FormItem, FormLabel } from '@/components/ui/form';
 import {
   agentProfileSchema,
   type AgentProfileValues,
 } from '@/modules/agent-settings/schemas/profile.schema';
 import { useUpdateAgentProfile } from '@/modules/agent-settings/queries/use-update-agent-profile.mutation';
+import { useUnsavedChangesGuard } from '@/modules/agent-settings/hooks/useUnsavedChangesGuard';
+import { AgentTextField } from '@/modules/agent-settings/components/AgentTextField';
+import { AgentSettingsFormError } from '@/modules/agent-settings/components/AgentSettingsFormError';
+import { AgentCompanyDetails } from '@/modules/agent-settings/components/AgentCompanyDetails';
 import type {
   AgentProfileSummary,
   AgentUserMe,
@@ -33,6 +31,7 @@ interface AgentProfileFormProps {
 export function AgentProfileForm({ user, profile }: AgentProfileFormProps) {
   const t = useTranslations('AgentSettings');
   const { mutateAsync, isPending } = useUpdateAgentProfile();
+  const [formError, setFormError] = useState<string | null>(null);
 
   const form = useForm<AgentProfileValues>({
     resolver: zodResolver(agentProfileSchema),
@@ -43,58 +42,57 @@ export function AgentProfileForm({ user, profile }: AgentProfileFormProps) {
     },
   });
 
+  const isDirty = form.formState.isDirty;
+  useUnsavedChangesGuard(isDirty);
+
   const handleSubmit = async (values: AgentProfileValues) => {
-    await mutateAsync({
-      firstName: values.firstName,
-      lastName: values.lastName,
-      phone: values.phone || '',
-    });
+    setFormError(null);
+    try {
+      const next = await mutateAsync({
+        firstName: values.firstName,
+        lastName: values.lastName,
+        phone: values.phone || '',
+      });
+      form.reset({
+        firstName: next.firstName ?? '',
+        lastName: next.lastName ?? '',
+        phone: next.phone ?? '',
+      });
+    } catch (error) {
+      const status = isAxiosError(error) ? error.response?.status : undefined;
+      const apiMessage = isAxiosError(error)
+        ? (error.response?.data?.error?.message as string | undefined)
+        : undefined;
+      setFormError(status === 422 && apiMessage ? apiMessage : t('saveError'));
+    }
   };
 
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(handleSubmit)} className='flex flex-col gap-6' noValidate>
+        {formError ? <AgentSettingsFormError message={formError} /> : null}
+
         <div className='grid grid-cols-1 gap-6 sm:grid-cols-2'>
-          <FormField
+          <AgentTextField
             control={form.control}
             name='firstName'
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>{t('firstNameLabel')}</FormLabel>
-                <FormControl>
-                  <Input autoComplete='given-name' {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
+            label={t('firstNameLabel')}
+            autoComplete='given-name'
           />
-          <FormField
+          <AgentTextField
             control={form.control}
             name='lastName'
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>{t('lastNameLabel')}</FormLabel>
-                <FormControl>
-                  <Input autoComplete='family-name' {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
+            label={t('lastNameLabel')}
+            autoComplete='family-name'
           />
         </div>
 
-        <FormField
+        <AgentTextField
           control={form.control}
           name='phone'
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>{t('phoneLabel')}</FormLabel>
-              <FormControl>
-                <Input type='tel' autoComplete='tel' {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
+          label={t('phoneLabel')}
+          type='tel'
+          autoComplete='tel'
         />
 
         <div className='flex flex-col gap-2'>
@@ -107,36 +105,14 @@ export function AgentProfileForm({ user, profile }: AgentProfileFormProps) {
           <p className='text-xs text-muted-foreground'>{t('emailHint')}</p>
         </div>
 
-        <fieldset className='grid grid-cols-1 gap-4 rounded-lg border border-border bg-muted/40 p-4 sm:grid-cols-2'>
-          <legend className='px-1 text-sm font-medium text-ink-900'>{t('companyLegend')}</legend>
-          <div className='flex flex-col gap-1'>
-            <span className='text-xs font-medium text-muted-foreground'>{t('companyLabel')}</span>
-            <span className='text-sm text-ink-900'>{profile.companyName || t('notProvided')}</span>
-          </div>
-          <div className='flex flex-col gap-1'>
-            <span className='text-xs font-medium text-muted-foreground'>{t('countryLabel')}</span>
-            <span className='text-sm text-ink-900'>
-              {profile.countryOfOperation || t('notProvided')}
-            </span>
-          </div>
-          <div className='flex flex-col gap-1'>
-            <span className='text-xs font-medium text-muted-foreground'>{t('qeacLabel')}</span>
-            <Badge variant={profile.qeacCertified ? 'default' : 'secondary'} className='w-fit'>
-              {profile.qeacCertified ? t('qeacCertified') : t('qeacNotCertified')}
-            </Badge>
-          </div>
-          <div className='flex flex-col gap-1'>
-            <span className='text-xs font-medium text-muted-foreground'>
-              {t('verifiedLabel')}
-            </span>
-            <Badge variant={profile.verified ? 'default' : 'secondary'} className='w-fit'>
-              {profile.verified ? t('verifiedYes') : t('verifiedNo')}
-            </Badge>
-          </div>
-          <p className='text-xs text-muted-foreground sm:col-span-2'>{t('companyHint')}</p>
-        </fieldset>
+        <AgentCompanyDetails profile={profile} />
 
-        <Button type='submit' disabled={isPending} aria-busy={isPending} className='self-start'>
+        <Button
+          type='submit'
+          disabled={isPending || !isDirty}
+          aria-busy={isPending}
+          className='self-start'
+        >
           {isPending && <Loader2 className='mr-2 h-4 w-4 animate-spin' aria-hidden='true' />}
           {t('saveButton')}
         </Button>

@@ -1,8 +1,9 @@
 'use client';
 
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 import { useDebouncedValue } from '@/modules/core/client';
 import { useParentStudents } from '@/modules/students/queries/use-parent-students.query';
+import { getParentStudentStats } from '@/modules/students/lib/parent-student-stats';
 import { PARENT_SORT_FIELD_TO_API } from '@/modules/students/constants/parent-sort.constants';
 import { SEARCH_DEBOUNCE_MS, SEARCH_MIN_LENGTH } from '@/modules/students/constants/search.constants';
 import { PARENT_STUDENTS_DEFAULT_PAGE_SIZE } from '@/modules/students/constants/parent-students.constants';
@@ -37,10 +38,15 @@ export function useParentStudentList() {
     status: showArchived ? 'archived' : undefined,
   });
 
-  const students = data?.data ?? [];
+  const students = useMemo(() => data?.data ?? [], [data?.data]);
   const pagination = data?.meta?.pagination;
   const showPagination = !showAll && pagination && pagination.pageCount > 1;
   const isEmpty = !isLoading && !isError && students.length === 0 && !effectiveSearch;
+
+  const stats = useMemo(
+    () => getParentStudentStats(students, pagination?.total ?? students.length),
+    [students, pagination?.total],
+  );
 
   function handleSort(field: ParentSortField) {
     if (sortField !== field) {
@@ -82,6 +88,7 @@ export function useParentStudentList() {
     sortField,
     sortDirection,
     students,
+    stats,
     pagination,
     showPagination,
     isLoading,

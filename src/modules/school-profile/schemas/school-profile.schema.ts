@@ -1,4 +1,5 @@
 import { z } from 'zod';
+import type { SchemaTranslator } from '@/modules/school-profile/types/schema.types';
 
 const SCHOOL_STATES = [
   'VIC',
@@ -29,112 +30,186 @@ export const TUITION_LEVELS = [
   'yr12',
 ] as const;
 
-const optionalText = z
-  .string()
-  .trim()
-  .max(255)
-  .optional()
-  .or(z.literal(''));
+const MAX_FEE = 10_000_000;
+const POSTCODE_PATTERN = /^\d{3,10}$/;
 
-const optionalUrl = z
-  .string()
-  .trim()
-  .url()
-  .max(500)
-  .optional()
-  .or(z.literal(''));
+export function createIdentitySchema(t: SchemaTranslator) {
+  return z.object({
+    name: z
+      .string()
+      .trim()
+      .min(1, { message: t('nameRequired') })
+      .max(255, { message: t('nameMax') }),
+    cricosCode: z
+      .string()
+      .trim()
+      .max(255, { message: t('cricosCodeMax') })
+      .optional()
+      .or(z.literal('')),
+    suburb: z
+      .string()
+      .trim()
+      .max(100, { message: t('suburbMax') })
+      .optional()
+      .or(z.literal('')),
+    state: z.enum(SCHOOL_STATES).nullable(),
+    postcode: z
+      .union([
+        z.literal(''),
+        z.string().trim().regex(POSTCODE_PATTERN, { message: t('postcodeInvalid') }),
+      ])
+      .optional(),
+  });
+}
 
-const optionalEmail = z
-  .string()
-  .trim()
-  .email()
-  .optional()
-  .or(z.literal(''));
+export function createDescriptionSchema(t: SchemaTranslator) {
+  const optionalUrl = z
+    .union([
+      z.literal(''),
+      z
+        .string()
+        .trim()
+        .url({ message: t('urlInvalid') })
+        .max(500, { message: t('urlMax') }),
+    ])
+    .optional();
 
-const nonNegativeInt = z
-  .number()
-  .int()
-  .min(0)
-  .nullable();
+  return z.object({
+    description: z
+      .string()
+      .trim()
+      .max(5000, { message: t('descriptionMax') })
+      .optional()
+      .or(z.literal('')),
+    internationalStudentDescription: z
+      .string()
+      .trim()
+      .max(5000, { message: t('intlDescriptionMax') })
+      .optional()
+      .or(z.literal('')),
+    schoolHomepageUrl: optionalUrl,
+    internationalEnrolmentUrl: optionalUrl,
+    admissionsEmail: z
+      .union([z.literal(''), z.string().trim().email({ message: t('emailInvalid') })])
+      .optional(),
+    admissionsPhone: z
+      .string()
+      .trim()
+      .max(50, { message: t('phoneMax') })
+      .optional()
+      .or(z.literal('')),
+  });
+}
 
-const ieltsScore = z.number().min(0).max(9).nullable();
-const aeasScore = z.number().min(0).max(100).nullable();
-const pteScore = z.number().min(0).max(90).nullable();
-const duolingoScore = z.number().min(0).max(160).nullable();
-
-export const identitySchema = z.object({
-  name: z.string().trim().min(1).max(255),
-  cricosCode: optionalText,
-  suburb: z.string().trim().max(100).optional().or(z.literal('')),
-  state: z.enum(SCHOOL_STATES).nullable(),
-  postcode: z.string().trim().max(10).optional().or(z.literal('')),
-});
-
-export const descriptionSchema = z.object({
-  description: z.string().trim().max(5000).optional().or(z.literal('')),
-  internationalStudentDescription: z
-    .string()
-    .trim()
-    .max(5000)
-    .optional()
-    .or(z.literal('')),
-  schoolHomepageUrl: optionalUrl,
-  internationalEnrolmentUrl: optionalUrl,
-  admissionsEmail: optionalEmail,
-  admissionsPhone: z.string().trim().max(50).optional().or(z.literal('')),
-});
-
-export const feesSchema = z.object({
-  applicationFee: nonNegativeInt,
-  enrolmentFee: nonNegativeInt,
-  feeBoardingAnnual: nonNegativeInt,
-  boardingAvailable: z.boolean(),
-  feeApplicationRefundable: z.boolean(),
-});
-
-export const academicSchema = z.object({
-  ieltsMinScore: ieltsScore,
-  aeasMinScore: aeasScore,
-  pteMinScore: pteScore,
-  duolingoMinScore: duolingoScore,
-  curriculumOffered: z.string().trim().max(255).optional().or(z.literal('')),
-  levelsOffered: z.string().trim().max(255).optional().or(z.literal('')),
-  intakePeriods: z.string().trim().max(2000).optional().or(z.literal('')),
-});
-
-export const policiesSchema = z.object({
-  offerAcceptanceWindowDays: z
-    .number()
+export function createFeesSchema(t: SchemaTranslator) {
+  const fee = z
+    .number({ message: t('feeRange') })
     .int()
-    .min(1)
-    .max(365),
-  autoWaitlistEnabled: z.boolean(),
-  partnerAgentsOnly: z.boolean(),
-  oshcArrangement: z.enum(OSHC_ARRANGEMENTS).nullable(),
-});
+    .min(0, { message: t('feeRange') })
+    .max(MAX_FEE, { message: t('feeMax') })
+    .nullable();
 
-export const tuitionSchema = z.object({
-  level: z.enum(TUITION_LEVELS),
-  annualAmountAud: z
-    .number()
-    .int()
-    .min(0),
-});
+  return z.object({
+    applicationFee: fee,
+    enrolmentFee: fee,
+    feeBoardingAnnual: fee,
+    boardingAvailable: z.boolean(),
+    feeApplicationRefundable: z.boolean(),
+  });
+}
 
-export const capacitySchema = z.object({
-  yearLevel: z.string().trim().min(1).max(20),
-  intakePeriod: z.string().trim().min(1).max(50),
-  totalPlaces: z
-    .number()
-    .int()
-    .min(0),
-  autoWaitlist: z.boolean(),
-});
+export function createAcademicSchema(t: SchemaTranslator) {
+  return z.object({
+    ieltsMinScore: z
+      .number({ message: t('ieltsRange') })
+      .min(0, { message: t('ieltsRange') })
+      .max(9, { message: t('ieltsRange') })
+      .nullable(),
+    aeasMinScore: z
+      .number({ message: t('aeasRange') })
+      .min(0, { message: t('aeasRange') })
+      .max(100, { message: t('aeasRange') })
+      .nullable(),
+    pteMinScore: z
+      .number({ message: t('pteRange') })
+      .min(0, { message: t('pteRange') })
+      .max(90, { message: t('pteRange') })
+      .nullable(),
+    duolingoMinScore: z
+      .number({ message: t('duolingoRange') })
+      .min(0, { message: t('duolingoRange') })
+      .max(160, { message: t('duolingoRange') })
+      .nullable(),
+    curriculumOffered: z
+      .string()
+      .trim()
+      .max(255, { message: t('curriculumMax') })
+      .optional()
+      .or(z.literal('')),
+    levelsOffered: z
+      .string()
+      .trim()
+      .max(255, { message: t('levelsMax') })
+      .optional()
+      .or(z.literal('')),
+    intakePeriods: z
+      .string()
+      .trim()
+      .max(2000, { message: t('intakePeriodsMax') })
+      .optional()
+      .or(z.literal('')),
+  });
+}
 
-export type IdentityValues = z.infer<typeof identitySchema>;
-export type DescriptionValues = z.infer<typeof descriptionSchema>;
-export type FeesValues = z.infer<typeof feesSchema>;
-export type AcademicValues = z.infer<typeof academicSchema>;
-export type PoliciesValues = z.infer<typeof policiesSchema>;
-export type TuitionValues = z.infer<typeof tuitionSchema>;
-export type CapacityValues = z.infer<typeof capacitySchema>;
+export function createPoliciesSchema(t: SchemaTranslator) {
+  return z.object({
+    offerAcceptanceWindowDays: z
+      .number({ message: t('offerWindowRequired') })
+      .int({ message: t('offerWindowRange') })
+      .min(1, { message: t('offerWindowRange') })
+      .max(365, { message: t('offerWindowRange') }),
+    autoWaitlistEnabled: z.boolean(),
+    partnerAgentsOnly: z.boolean(),
+    oshcArrangement: z.enum(OSHC_ARRANGEMENTS).nullable(),
+  });
+}
+
+export function createTuitionSchema(t: SchemaTranslator) {
+  return z.object({
+    level: z.enum(TUITION_LEVELS, { message: t('tuitionLevelRequired') }),
+    annualAmountAud: z
+      .number({ message: t('tuitionAmountRange') })
+      .int()
+      .min(0, { message: t('tuitionAmountRange') })
+      .max(MAX_FEE, { message: t('tuitionAmountMax') }),
+  });
+}
+
+export function createCapacitySchema(t: SchemaTranslator) {
+  return z.object({
+    yearLevel: z
+      .string()
+      .trim()
+      .min(1, { message: t('capacityYearLevelRequired') })
+      .max(20, { message: t('capacityYearLevelMax') }),
+    intakePeriod: z
+      .string()
+      .trim()
+      .min(1, { message: t('capacityIntakeRequired') })
+      .max(50, { message: t('capacityIntakeMax') }),
+    totalPlaces: z
+      .number({ message: t('capacityTotalRange') })
+      .int()
+      .min(0, { message: t('capacityTotalRange') })
+      .max(MAX_FEE, { message: t('capacityTotalMax') }),
+    autoWaitlist: z.boolean(),
+  });
+}
+
+export type IdentityValues = z.infer<ReturnType<typeof createIdentitySchema>>;
+export type DescriptionValues = z.infer<ReturnType<typeof createDescriptionSchema>>;
+export type FeesValues = z.infer<ReturnType<typeof createFeesSchema>>;
+export type AcademicValues = z.infer<ReturnType<typeof createAcademicSchema>>;
+export type PoliciesValues = z.infer<ReturnType<typeof createPoliciesSchema>>;
+export type TuitionValues = z.infer<ReturnType<typeof createTuitionSchema>>;
+export type CapacityValues = z.infer<ReturnType<typeof createCapacitySchema>>;
