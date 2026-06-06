@@ -1601,7 +1601,8 @@
       "analytics": "Analytics",
       "groupPartnerships": "Partnerships & Templates",
       "groupFinance": "Finance",
-      "groupSchool": "School"
+      "groupSchool": "School",
+      "payments": "Payments"
     },
     "greeting": {
       "morning": "早上好，",
@@ -2223,7 +2224,8 @@
     "messages": "消息",
     "calendar": "日历",
     "pipeline": "Pipeline",
-    "profile": "Profile"
+    "profile": "Profile",
+    "costEstimator": "Cost estimator"
   },
   "ParentSearch": {
     "searchingFor": "正在为 {name} 搜索",
@@ -3832,7 +3834,10 @@
     "summaryTotalPaid": "Total paid",
     "summaryTotalPayouts": "Total payouts (net)",
     "tableRegionInvoices": "发票表格",
-    "tableRegionPayouts": "付款表格"
+    "tableRegionPayouts": "付款表格",
+    "payoutSummaryPaid": "Paid out",
+    "payoutSummaryUpcoming": "Upcoming",
+    "payoutSummaryCount": "Payouts"
   },
   "SchoolProfile": {
     "title": "School Profile",
@@ -4504,5 +4509,64 @@
     "pipelineOffered": "Offered",
     "pipelineAccepted": "Accepted",
     "pipelineEnrolled": "Enrolled"
+  },
+  "ParentCostEstimator": {
+    "title": "Cost estimator",
+    "subtitle": "Project the multi-year tuition cost of your saved schools.",
+    "yearsLabel": "Projection length",
+    "yearsOption": "{count, plural, one {# year} other {# years}}",
+    "rateLabel": "Annual fee increase",
+    "rateOption": "{rate}% per year",
+    "basisLabel": "Fee basis",
+    "basisLowest": "Lowest fee",
+    "basisHighest": "Highest fee",
+    "assumptionNote": "Estimates use each school's published annual tuition, compounded yearly by the increase you choose. Actual fees, levies and extras may differ — always confirm with the school.",
+    "summaryCheapest": "Lowest total",
+    "summaryAverage": "Average total",
+    "summaryDearest": "Highest total",
+    "summaryPriced": "Priced schools",
+    "overYears": "over {count, plural, one {# year} other {# years}}",
+    "unpricedCount": "{count, plural, =0 {All schools priced} one {# fee on request} other {# fees on request}}",
+    "colSchool": "School",
+    "colAnnual": "Annual tuition",
+    "colTotal": "Projected total",
+    "badgeCheapest": "Lowest cost",
+    "badgeScholarship": "Scholarships",
+    "badgeBoarding": "Boarding",
+    "feeOnRequest": "Fee on request",
+    "emptyTitle": "No saved schools yet",
+    "emptyDescription": "Save schools from search to compare their projected tuition costs side by side.",
+    "emptyCta": "Find schools",
+    "errorMessage": "We couldn't load your saved schools.",
+    "retry": "Try again"
+  },
+  "AgentPayments": {
+    "title": "Payments",
+    "subtitle": "Track the payments recorded against your invoices.",
+    "summaryCompleted": "Completed",
+    "summaryThisMonth": "This month",
+    "summaryPending": "Pending",
+    "summaryCount": "Payments",
+    "colDate": "Date",
+    "colInvoice": "Invoice",
+    "colMethod": "Method",
+    "colAmount": "Amount",
+    "colStatus": "Status",
+    "noInvoice": "—",
+    "method": {
+      "bank_transfer": "Bank transfer",
+      "card": "Card",
+      "other": "Other"
+    },
+    "status": {
+      "pending": "Pending",
+      "completed": "Completed",
+      "failed": "Failed",
+      "refunded": "Refunded"
+    },
+    "emptyTitle": "No payments yet",
+    "emptyDescription": "Payments recorded against your invoices will appear here.",
+    "errorMessage": "We couldn't load your payments.",
+    "retry": "Try again"
   }
 }

@@ -74,3 +74,12 @@ export interface SchoolPayout {
 export interface SchoolPayoutsResponse {
   data: SchoolPayout[];
 }
+
+export interface PayoutSummary {
+  /** Net amount already paid out to the school. */
+  paidNet: number;
+  /** Gross amount still pending or scheduled. */
+  upcoming: number;
+  /** Total number of payout records. */
+  count: number;
+}

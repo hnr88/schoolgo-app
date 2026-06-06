@@ -5,6 +5,7 @@ import {
   Bell,
   Bookmark,
   Building2,
+  Calculator,
   CalendarDays,
   CheckCircle,
   ClipboardCheck,
@@ -31,6 +32,7 @@ import {
   UserCircle,
   UserPlus,
   Users,
+  Wallet,
 } from 'lucide-react';
 
 import type { Portal } from '@/lib/portal-url';
@@ -64,6 +66,7 @@ export const ROUTE_TITLE_MAP: Record<string, string> = {
   '/dashboard/capacity': 'capacity',
   '/dashboard/invoices': 'invoices',
   '/dashboard/payouts': 'payouts',
+  '/dashboard/payments': 'payments',
   '/dashboard/pre-enrolment': 'preEnrolment',
   '/dashboard/analytics': 'analytics',
 };
@@ -106,6 +109,10 @@ export const PORTAL_NAV: Record<Portal, PortalNav> = {
           { href: '/dashboard/messages', icon: MessageSquare, labelKey: 'messages' },
           { href: '/dashboard/notifications', icon: Bell, labelKey: 'notifications' },
         ],
+      },
+      {
+        labelKey: 'groupFinance',
+        items: [{ href: '/dashboard/payments', icon: Wallet, labelKey: 'payments' }],
       },
       {
         labelKey: 'groupAccount',
@@ -200,6 +207,7 @@ export const PORTAL_NAV: Record<Portal, PortalNav> = {
           { href: '/parent/search', icon: Search, labelKey: 'searchSchools' },
           { href: '/parent/saved-schools', icon: Heart, labelKey: 'savedSchools' },
           { href: '/parent/compare', icon: Columns3, labelKey: 'compare' },
+          { href: '/parent/cost-estimator', icon: Calculator, labelKey: 'costEstimator' },
           { href: '/parent/saved-searches', icon: Bookmark, labelKey: 'savedSearches' },
         ],
       },
