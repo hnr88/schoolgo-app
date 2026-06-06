@@ -23,7 +23,12 @@ export async function PaymentsTransactionsCard() {
   return (
     <section className='flex h-full flex-col gap-5 rounded-xl bg-card p-6 shadow-1'>
       <h2 className='text-base font-semibold text-ink-900'>{t('transactions.title')}</h2>
-      <div className='-mx-2 overflow-x-auto'>
+      <div
+        tabIndex={0}
+        role='region'
+        aria-label={t('transactions.tableRegion')}
+        className='table-scroll-region -mx-2 overflow-x-auto focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring'
+      >
         <Table>
           <TableHeader>
             <TableRow className='border-b border-divider hover:bg-transparent'>

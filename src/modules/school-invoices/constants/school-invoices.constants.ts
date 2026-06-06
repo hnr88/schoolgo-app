@@ -43,4 +43,5 @@ export const INVOICE_KIND_LABEL_KEY: Record<InvoiceKind, string> = {
   tuition: 'kindTuition',
   enrolment: 'kindEnrolment',
   boarding: 'kindBoarding',
+  add_on_service: 'kindAddOnService',
 };

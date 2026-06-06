@@ -49,7 +49,7 @@ export function ApplicationDetailPage({ documentId }: { documentId: string }) {
       <div className='flex flex-col gap-6'>
         <Link
           href='/dashboard/applications'
-          className='inline-flex items-center gap-1 text-sm text-primary hover:underline'
+          className='inline-flex items-center gap-1 text-sm text-primary-strong hover:underline'
         >
           <ArrowLeft className='h-4 w-4' />
           {t('backToApplications')}
@@ -74,10 +74,18 @@ export function ApplicationDetailPage({ documentId }: { documentId: string }) {
       <div className='flex flex-col gap-4'>
         <Tabs defaultValue='details'>
           <TabsList>
-            <TabsTrigger value='details'>{t('tabDetails')}</TabsTrigger>
-            <TabsTrigger value='documents'>{t('tabDocuments')}</TabsTrigger>
-            <TabsTrigger value='timeline'>{t('tabTimeline')}</TabsTrigger>
-            <TabsTrigger value='messages'>{t('tabMessages')}</TabsTrigger>
+            <TabsTrigger value='details' className='text-foreground/80'>
+              {t('tabDetails')}
+            </TabsTrigger>
+            <TabsTrigger value='documents' className='text-foreground/80'>
+              {t('tabDocuments')}
+            </TabsTrigger>
+            <TabsTrigger value='timeline' className='text-foreground/80'>
+              {t('tabTimeline')}
+            </TabsTrigger>
+            <TabsTrigger value='messages' className='text-foreground/80'>
+              {t('tabMessages')}
+            </TabsTrigger>
           </TabsList>
 
           <TabsContent value='details' className='mt-6'>

@@ -35,7 +35,7 @@ export function ApplicationDetailsTab({ application }: { application: Applicatio
         <InfoRow label={t('labelName')}>
           <Link
             href={`/dashboard/students/${application.student.documentId}`}
-            className='text-primary hover:underline'
+            className='text-primary-strong hover:underline'
           >
             {studentName}
           </Link>

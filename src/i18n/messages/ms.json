@@ -2212,7 +2212,7 @@
     "applications": "Permohonan",
     "offers": "Tawaran",
     "tours": "Lawatan",
-    "searchSchools": "Cari sekolah",
+    "searchSchools": "Search schools",
     "savedSchools": "Sekolah disimpan",
     "compare": "Banding",
     "savedSearches": "Carian disimpan",
@@ -2223,7 +2223,6 @@
     "messages": "Mesej",
     "calendar": "Kalendar",
     "pipeline": "Pipeline",
-    "searchSchools": "Search schools",
     "profile": "Profile"
   },
   "ParentSearch": {
@@ -2469,28 +2468,61 @@
     "manageMethods": "Urus kaedah pembayaran",
     "previewNotice": "Ini ialah pratonton papan pemuka pembayaran anda. Pembayaran selamat belum aktif lagi — tiada apa-apa di sini yang merupakan caj sebenar.",
     "stats": {
-      "balanceDue": { "label": "Baki perlu dibayar", "sub": "Perlu dibayar penggal ini" },
-      "totalPaid": { "label": "Jumlah dibayar", "sub": "Pembayaran sepanjang hayat" },
-      "upcoming": { "label": "Akan datang", "sub": "Caj berjadual" },
-      "methods": { "label": "Kaedah disimpan", "sub": "Kad dalam fail" }
+      "balanceDue": {
+        "label": "Baki perlu dibayar",
+        "sub": "Perlu dibayar penggal ini"
+      },
+      "totalPaid": {
+        "label": "Jumlah dibayar",
+        "sub": "Pembayaran sepanjang hayat"
+      },
+      "upcoming": {
+        "label": "Akan datang",
+        "sub": "Caj berjadual"
+      },
+      "methods": {
+        "label": "Kaedah disimpan",
+        "sub": "Kad dalam fail"
+      }
     },
-    "earning": { "title": "Gambaran keseluruhan pembayaran", "paid": "Dibayar", "scheduled": "Berjadual" },
+    "earning": {
+      "title": "Gambaran keseluruhan pembayaran",
+      "paid": "Dibayar",
+      "scheduled": "Berjadual"
+    },
     "breakdown": {
       "title": "Pecahan perbelanjaan",
       "total": "Jumlah",
-      "categories": { "practice": "Latihan", "placement": "Penempatan", "progress": "Kemajuan", "other": "Lain-lain" }
+      "categories": {
+        "practice": "Latihan",
+        "placement": "Penempatan",
+        "progress": "Kemajuan",
+        "other": "Lain-lain"
+      }
     },
-    "trend": { "title": "Aliran baki", "caption": "6 bulan terakhir" },
+    "trend": {
+      "title": "Aliran baki",
+      "caption": "6 bulan terakhir"
+    },
     "transactions": {
       "title": "Transaksi terkini",
+      "tableRegion": "Jadual transaksi terkini",
       "viewAll": "Lihat semua",
       "columnInvoice": "Invois",
       "columnDescription": "Penerangan",
       "columnAmount": "Jumlah",
       "columnStatus": "Status",
       "columnDate": "Tarikh",
-      "status": { "paid": "Dibayar", "pending": "Belum selesai", "upcoming": "Akan datang" },
-      "items": { "practice": "Latihan — bulanan", "placement": "Penilaian penempatan", "progress": "Pemantauan kemajuan" }
+      "status": {
+        "paid": "Dibayar",
+        "pending": "Belum selesai",
+        "upcoming": "Akan datang"
+      },
+      "items": {
+        "practice": "Latihan — bulanan",
+        "placement": "Penilaian penempatan",
+        "progress": "Pemantauan kemajuan"
+      }
     },
     "promo": {
       "eyebrow": "Akan datang",
@@ -3195,6 +3227,7 @@
     "currentVoice": "Pengenalan suara semasa",
     "stepCounter": "Step {current} of {total}",
     "stepProgress": "{percent}% complete",
+    "progressLabel": "Form completion progress",
     "railLabel": "Student profile",
     "railPlaceholder": "New student",
     "editStep": "Edit",
@@ -3782,6 +3815,7 @@
     "kindTuition": "Tuition",
     "kindEnrolment": "Enrolment",
     "kindBoarding": "Boarding",
+    "kindAddOnService": "Add-on service",
     "columnInvoice": "Invoice",
     "columnKind": "Type",
     "columnApplication": "Application",

@@ -39,7 +39,7 @@ export function ParentDashboardHeader() {
               <span
                 className={cn(
                   'font-semibold',
-                  actionItems.length > 0 ? 'text-arches-700' : 'text-vivid-mint',
+                  actionItems.length > 0 ? 'text-arches-700' : 'text-vivid-mint-strong',
                 )}
               >
                 {t('headerContextAttention', { count: actionItems.length })}

@@ -22,10 +22,11 @@ function SchoolMapMarkerComponent({ school, activePortal }: SchoolMapMarkerProps
   const lng = coords?.lng ?? 0;
   const position = useMemo<[number, number]>(() => [lat, lng], [lat, lng]);
 
-  if (!school.slug) return <Marker position={position} icon={SCHOOL_MAP_ICON} />;
+  if (!school.slug)
+    return <Marker position={position} icon={SCHOOL_MAP_ICON} title={school.name} alt={school.name} />;
 
   return (
-    <Marker position={position} icon={SCHOOL_MAP_ICON}>
+    <Marker position={position} icon={SCHOOL_MAP_ICON} title={school.name} alt={school.name}>
       <Popup
         className='schoolgo-map-popup schoolgo-map-popup--compact'
         closeButton={false}

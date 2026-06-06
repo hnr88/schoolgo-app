@@ -60,7 +60,7 @@ export function StudentFormSummary({ control }: StudentFormSummaryProps) {
             {t('summaryPercent', { percent })}
           </span>
         </div>
-        <Progress value={percent} />
+        <Progress value={percent} aria-label={t('completenessLabel')} />
         <p className='text-caption text-foggy'>
           {t('summaryFieldsFilled', { completed, total: STUDENT_COMPLETENESS_TOTAL })}
         </p>

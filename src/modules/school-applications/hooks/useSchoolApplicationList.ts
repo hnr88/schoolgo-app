@@ -1,13 +1,28 @@
 'use client';
 
 import { useMemo, useState } from 'react';
+import { useSearchParams } from 'next/navigation';
 import { useSchoolApplications } from '@/modules/school-applications/queries/use-school-applications.query';
-import type { SchoolApplicationListItem } from '@/modules/school-applications/types/school-applications.types';
+import { SCHOOL_STATUS_LABEL_KEY } from '@/modules/school-applications/lib/school-application';
+import type {
+  SchoolApplicationListItem,
+  SchoolApplicationStatus,
+} from '@/modules/school-applications/types/school-applications.types';
+
+function initialStatusFromUrl(value: string | null): string {
+  if (!value) return 'all';
+  return value in SCHOOL_STATUS_LABEL_KEY ? (value as SchoolApplicationStatus) : 'all';
+}
 
 export function useSchoolApplicationList() {
+  const searchParams = useSearchParams();
+
+  // The dashboard KPI tiles deep-link here as /dashboard/applications?status=...
+  // so the list must seed its filters from the URL — otherwise the deep-link
+  // navigates but the status filter never applies.
   const [search, setSearch] = useState('');
-  const [status, setStatus] = useState('all');
-  const [intake, setIntake] = useState('all');
+  const [status, setStatus] = useState(() => initialStatusFromUrl(searchParams.get('status')));
+  const [intake, setIntake] = useState(() => searchParams.get('intake') ?? 'all');
 
   const statusFilter = status === 'all' ? undefined : status;
 

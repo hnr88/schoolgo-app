@@ -43,7 +43,7 @@ export function WhatSchoolsSeeCard({ preview }: WhatSchoolsSeeCardProps) {
                 {preview.fullName || t('previewNoName')}
               </span>
               {preview.verified && (
-                <Badge className='gap-1 bg-vivid-mint-soft text-vivid-mint'>
+                <Badge className='gap-1 bg-vivid-mint-soft text-vivid-mint-strong'>
                   <BadgeCheck className='h-3.5 w-3.5' strokeWidth={2} aria-hidden='true' />
                   {t('badgeVerified')}
                 </Badge>

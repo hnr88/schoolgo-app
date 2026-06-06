@@ -119,10 +119,18 @@ export function StudentProfile({ documentId }: StudentProfileProps) {
 
       <Tabs defaultValue='overview'>
         <TabsList>
-          <TabsTrigger value='overview'>{t('tabOverview')}</TabsTrigger>
-          <TabsTrigger value='documents'>{t('tabDocuments')}</TabsTrigger>
-          <TabsTrigger value='tests'>{t('tabTests')}</TabsTrigger>
-          <TabsTrigger value='applications'>{t('tabApplications')}</TabsTrigger>
+          <TabsTrigger value='overview' className='text-foreground/80'>
+            {t('tabOverview')}
+          </TabsTrigger>
+          <TabsTrigger value='documents' className='text-foreground/80'>
+            {t('tabDocuments')}
+          </TabsTrigger>
+          <TabsTrigger value='tests' className='text-foreground/80'>
+            {t('tabTests')}
+          </TabsTrigger>
+          <TabsTrigger value='applications' className='text-foreground/80'>
+            {t('tabApplications')}
+          </TabsTrigger>
         </TabsList>
 
         <TabsContent value='overview' className='mt-6'>

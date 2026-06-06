@@ -2212,7 +2212,7 @@
     "applications": "申请",
     "offers": "录取通知",
     "tours": "校园参观",
-    "searchSchools": "搜索学校",
+    "searchSchools": "Search schools",
     "savedSchools": "已保存的学校",
     "compare": "对比",
     "savedSearches": "已保存的搜索",
@@ -2223,7 +2223,6 @@
     "messages": "消息",
     "calendar": "日历",
     "pipeline": "Pipeline",
-    "searchSchools": "Search schools",
     "profile": "Profile"
   },
   "ParentSearch": {
@@ -2469,28 +2468,61 @@
     "manageMethods": "管理付款方式",
     "previewNotice": "这是您付款面板的预览。安全结账尚未上线，此处的任何内容都不会产生实际扣款。",
     "stats": {
-      "balanceDue": { "label": "应付余额", "sub": "本学期应付" },
-      "totalPaid": { "label": "已付总额", "sub": "历史付款" },
-      "upcoming": { "label": "即将到期", "sub": "计划扣款" },
-      "methods": { "label": "已保存方式", "sub": "已绑定卡片" }
+      "balanceDue": {
+        "label": "应付余额",
+        "sub": "本学期应付"
+      },
+      "totalPaid": {
+        "label": "已付总额",
+        "sub": "历史付款"
+      },
+      "upcoming": {
+        "label": "即将到期",
+        "sub": "计划扣款"
+      },
+      "methods": {
+        "label": "已保存方式",
+        "sub": "已绑定卡片"
+      }
     },
-    "earning": { "title": "付款概览", "paid": "已付", "scheduled": "已计划" },
+    "earning": {
+      "title": "付款概览",
+      "paid": "已付",
+      "scheduled": "已计划"
+    },
     "breakdown": {
       "title": "支出明细",
       "total": "合计",
-      "categories": { "practice": "练习", "placement": "水平测定", "progress": "进度追踪", "other": "其他" }
+      "categories": {
+        "practice": "练习",
+        "placement": "水平测定",
+        "progress": "进度追踪",
+        "other": "其他"
+      }
     },
-    "trend": { "title": "余额趋势", "caption": "最近 6 个月" },
+    "trend": {
+      "title": "余额趋势",
+      "caption": "最近 6 个月"
+    },
     "transactions": {
       "title": "最近交易",
+      "tableRegion": "最近交易表格",
       "viewAll": "查看全部",
       "columnInvoice": "发票",
       "columnDescription": "说明",
       "columnAmount": "金额",
       "columnStatus": "状态",
       "columnDate": "日期",
-      "status": { "paid": "已付", "pending": "处理中", "upcoming": "即将到期" },
-      "items": { "practice": "练习 — 月度", "placement": "水平测定评估", "progress": "进度追踪" }
+      "status": {
+        "paid": "已付",
+        "pending": "处理中",
+        "upcoming": "即将到期"
+      },
+      "items": {
+        "practice": "练习 — 月度",
+        "placement": "水平测定评估",
+        "progress": "进度追踪"
+      }
     },
     "promo": {
       "eyebrow": "即将推出",
@@ -3195,6 +3227,7 @@
     "currentVoice": "当前语音介绍",
     "stepCounter": "Step {current} of {total}",
     "stepProgress": "{percent}% complete",
+    "progressLabel": "Form completion progress",
     "railLabel": "Student profile",
     "railPlaceholder": "New student",
     "editStep": "Edit",
@@ -3782,6 +3815,7 @@
     "kindTuition": "Tuition",
     "kindEnrolment": "Enrolment",
     "kindBoarding": "Boarding",
+    "kindAddOnService": "Add-on service",
     "columnInvoice": "Invoice",
     "columnKind": "Type",
     "columnApplication": "Application",

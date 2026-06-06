@@ -170,6 +170,7 @@
   --color-vivid-coral-strong: var(--vivid-coral-strong);
   --color-vivid-mint: var(--vivid-mint);
   --color-vivid-mint-soft: var(--vivid-mint-soft);
+  --color-vivid-mint-strong: var(--vivid-mint-strong);
   --color-vivid-amber: var(--vivid-amber);
   --color-vivid-amber-soft: var(--vivid-amber-soft);
   --color-vivid-iris: var(--vivid-iris);
@@ -259,6 +260,8 @@
   --vivid-coral-strong: oklch(0.5 0.19 22);
   --vivid-mint: oklch(0.72 0.14 162);
   --vivid-mint-soft: oklch(0.95 0.025 162);
+  /* AA-compliant (>=4.5:1) mint for small text on white / --vivid-mint-soft */
+  --vivid-mint-strong: oklch(0.5 0.14 162);
   --vivid-amber: oklch(0.8 0.15 75);
   --vivid-amber-soft: oklch(0.96 0.03 75);
   --vivid-iris: oklch(0.6 0.2 280);

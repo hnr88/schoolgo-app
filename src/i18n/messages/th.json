@@ -2212,7 +2212,7 @@
     "applications": "ใบสมัคร",
     "offers": "ข้อเสนอ",
     "tours": "ทัวร์",
-    "searchSchools": "ค้นหาโรงเรียน",
+    "searchSchools": "Search schools",
     "savedSchools": "โรงเรียนที่บันทึกไว้",
     "compare": "เปรียบเทียบ",
     "savedSearches": "การค้นหาที่บันทึกไว้",
@@ -2223,7 +2223,6 @@
     "messages": "ข้อความ",
     "calendar": "ปฏิทิน",
     "pipeline": "Pipeline",
-    "searchSchools": "Search schools",
     "profile": "Profile"
   },
   "ParentSearch": {
@@ -2469,28 +2468,61 @@
     "manageMethods": "จัดการวิธีการชำระเงิน",
     "previewNotice": "นี่คือตัวอย่างแดชบอร์ดการชำระเงินของคุณ ระบบชำระเงินที่ปลอดภัยยังไม่เปิดใช้งาน — ไม่มีรายการใดในนี้เป็นการเรียกเก็บเงินจริง",
     "stats": {
-      "balanceDue": { "label": "ยอดค้างชำระ", "sub": "ครบกำหนดในภาคเรียนนี้" },
-      "totalPaid": { "label": "ชำระแล้วทั้งหมด", "sub": "การชำระเงินตลอดอายุการใช้งาน" },
-      "upcoming": { "label": "ที่กำลังจะถึง", "sub": "รายการเรียกเก็บที่กำหนดไว้" },
-      "methods": { "label": "วิธีที่บันทึกไว้", "sub": "บัตรที่บันทึกไว้" }
+      "balanceDue": {
+        "label": "ยอดค้างชำระ",
+        "sub": "ครบกำหนดในภาคเรียนนี้"
+      },
+      "totalPaid": {
+        "label": "ชำระแล้วทั้งหมด",
+        "sub": "การชำระเงินตลอดอายุการใช้งาน"
+      },
+      "upcoming": {
+        "label": "ที่กำลังจะถึง",
+        "sub": "รายการเรียกเก็บที่กำหนดไว้"
+      },
+      "methods": {
+        "label": "วิธีที่บันทึกไว้",
+        "sub": "บัตรที่บันทึกไว้"
+      }
     },
-    "earning": { "title": "ภาพรวมการชำระเงิน", "paid": "ชำระแล้ว", "scheduled": "กำหนดไว้" },
+    "earning": {
+      "title": "ภาพรวมการชำระเงิน",
+      "paid": "ชำระแล้ว",
+      "scheduled": "กำหนดไว้"
+    },
     "breakdown": {
       "title": "รายละเอียดการใช้จ่าย",
       "total": "ทั้งหมด",
-      "categories": { "practice": "ฝึกซ้อม", "placement": "จัดระดับ", "progress": "ความก้าวหน้า", "other": "อื่นๆ" }
+      "categories": {
+        "practice": "ฝึกซ้อม",
+        "placement": "จัดระดับ",
+        "progress": "ความก้าวหน้า",
+        "other": "อื่นๆ"
+      }
     },
-    "trend": { "title": "แนวโน้มยอดคงเหลือ", "caption": "6 เดือนล่าสุด" },
+    "trend": {
+      "title": "แนวโน้มยอดคงเหลือ",
+      "caption": "6 เดือนล่าสุด"
+    },
     "transactions": {
       "title": "ธุรกรรมล่าสุด",
+      "tableRegion": "ตารางธุรกรรมล่าสุด",
       "viewAll": "ดูทั้งหมด",
       "columnInvoice": "ใบแจ้งหนี้",
       "columnDescription": "รายละเอียด",
       "columnAmount": "จำนวนเงิน",
       "columnStatus": "สถานะ",
       "columnDate": "วันที่",
-      "status": { "paid": "ชำระแล้ว", "pending": "รอดำเนินการ", "upcoming": "กำลังจะถึง" },
-      "items": { "practice": "ฝึกซ้อม — รายเดือน", "placement": "การประเมินจัดระดับ", "progress": "การติดตามความก้าวหน้า" }
+      "status": {
+        "paid": "ชำระแล้ว",
+        "pending": "รอดำเนินการ",
+        "upcoming": "กำลังจะถึง"
+      },
+      "items": {
+        "practice": "ฝึกซ้อม — รายเดือน",
+        "placement": "การประเมินจัดระดับ",
+        "progress": "การติดตามความก้าวหน้า"
+      }
     },
     "promo": {
       "eyebrow": "เร็วๆ นี้",
@@ -3195,6 +3227,7 @@
     "currentVoice": "เสียงแนะนำตัวปัจจุบัน",
     "stepCounter": "Step {current} of {total}",
     "stepProgress": "{percent}% complete",
+    "progressLabel": "Form completion progress",
     "railLabel": "Student profile",
     "railPlaceholder": "New student",
     "editStep": "Edit",
@@ -3782,6 +3815,7 @@
     "kindTuition": "Tuition",
     "kindEnrolment": "Enrolment",
     "kindBoarding": "Boarding",
+    "kindAddOnService": "Add-on service",
     "columnInvoice": "Invoice",
     "columnKind": "Type",
     "columnApplication": "Application",

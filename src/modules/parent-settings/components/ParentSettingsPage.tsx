@@ -14,7 +14,7 @@ import { SettingsSkeleton } from '@/modules/parent-settings/components/SettingsS
 import { SettingsCard } from '@/modules/parent-settings/components/SettingsCard';
 
 const TAB_TRIGGER_CLASS =
-  'text-foreground/70 data-active:bg-rausch-50 data-active:text-rausch-700';
+  'text-foreground/80 data-active:bg-rausch-50 data-active:text-rausch-700';
 
 export function ParentSettingsPage() {
   const t = useTranslations('ParentSettings');

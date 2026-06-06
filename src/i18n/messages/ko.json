@@ -2212,7 +2212,7 @@
     "applications": "지원서",
     "offers": "오퍼",
     "tours": "투어",
-    "searchSchools": "학교 검색",
+    "searchSchools": "Search schools",
     "savedSchools": "저장한 학교",
     "compare": "학교 비교",
     "savedSearches": "저장한 검색",
@@ -2223,7 +2223,6 @@
     "messages": "메시지",
     "calendar": "캘린더",
     "pipeline": "Pipeline",
-    "searchSchools": "Search schools",
     "profile": "Profile"
   },
   "ParentSearch": {
@@ -2469,28 +2468,61 @@
     "manageMethods": "결제 수단 관리",
     "previewNotice": "이 화면은 결제 대시보드의 미리보기입니다. 안전한 결제 기능은 아직 활성화되지 않았으며, 여기 표시된 내용은 실제 청구가 아닙니다.",
     "stats": {
-      "balanceDue": { "label": "미결제 잔액", "sub": "이번 학기 결제 예정" },
-      "totalPaid": { "label": "총 결제액", "sub": "누적 결제 금액" },
-      "upcoming": { "label": "예정", "sub": "예약된 청구" },
-      "methods": { "label": "저장된 수단", "sub": "등록된 카드" }
+      "balanceDue": {
+        "label": "미결제 잔액",
+        "sub": "이번 학기 결제 예정"
+      },
+      "totalPaid": {
+        "label": "총 결제액",
+        "sub": "누적 결제 금액"
+      },
+      "upcoming": {
+        "label": "예정",
+        "sub": "예약된 청구"
+      },
+      "methods": {
+        "label": "저장된 수단",
+        "sub": "등록된 카드"
+      }
     },
-    "earning": { "title": "결제 개요", "paid": "결제 완료", "scheduled": "예약됨" },
+    "earning": {
+      "title": "결제 개요",
+      "paid": "결제 완료",
+      "scheduled": "예약됨"
+    },
     "breakdown": {
       "title": "지출 분류",
       "total": "합계",
-      "categories": { "practice": "연습", "placement": "수준 배치", "progress": "진도 관리", "other": "기타" }
+      "categories": {
+        "practice": "연습",
+        "placement": "수준 배치",
+        "progress": "진도 관리",
+        "other": "기타"
+      }
     },
-    "trend": { "title": "잔액 추이", "caption": "최근 6개월" },
+    "trend": {
+      "title": "잔액 추이",
+      "caption": "최근 6개월"
+    },
     "transactions": {
       "title": "최근 거래",
+      "tableRegion": "최근 거래 표",
       "viewAll": "전체 보기",
       "columnInvoice": "청구서",
       "columnDescription": "설명",
       "columnAmount": "금액",
       "columnStatus": "상태",
       "columnDate": "날짜",
-      "status": { "paid": "결제 완료", "pending": "처리 중", "upcoming": "예정" },
-      "items": { "practice": "연습 — 월간", "placement": "수준 배치 평가", "progress": "진도 관리" }
+      "status": {
+        "paid": "결제 완료",
+        "pending": "처리 중",
+        "upcoming": "예정"
+      },
+      "items": {
+        "practice": "연습 — 월간",
+        "placement": "수준 배치 평가",
+        "progress": "진도 관리"
+      }
     },
     "promo": {
       "eyebrow": "곧 출시",
@@ -3195,6 +3227,7 @@
     "currentVoice": "현재 음성 자기소개",
     "stepCounter": "Step {current} of {total}",
     "stepProgress": "{percent}% complete",
+    "progressLabel": "Form completion progress",
     "railLabel": "Student profile",
     "railPlaceholder": "New student",
     "editStep": "Edit",
@@ -3782,6 +3815,7 @@
     "kindTuition": "Tuition",
     "kindEnrolment": "Enrolment",
     "kindBoarding": "Boarding",
+    "kindAddOnService": "Add-on service",
     "columnInvoice": "Invoice",
     "columnKind": "Type",
     "columnApplication": "Application",

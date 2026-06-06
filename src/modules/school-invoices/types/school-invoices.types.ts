@@ -6,7 +6,12 @@ export type InvoiceStatus =
   | 'cancelled'
   | 'refunded';
 
-export type InvoiceKind = 'application_fee' | 'tuition' | 'enrolment' | 'boarding';
+export type InvoiceKind =
+  | 'application_fee'
+  | 'tuition'
+  | 'enrolment'
+  | 'boarding'
+  | 'add_on_service';
 
 export interface InvoiceApplication {
   documentId: string;

@@ -1,3 +1,4 @@
+import { Suspense } from 'react';
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { SchoolApplicationListPage } from '@/modules/school-applications';
@@ -24,7 +25,9 @@ export default async function SchoolApplicationsPage({
   return (
     <div className='flex flex-col gap-6'>
       <PageHeader title={t('title')} description={t('subtitle')} />
-      <SchoolApplicationListPage />
+      <Suspense>
+        <SchoolApplicationListPage />
+      </Suspense>
     </div>
   );
 }

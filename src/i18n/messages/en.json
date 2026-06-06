@@ -1661,7 +1661,6 @@
     "messages": "Messages",
     "calendar": "Calendar",
     "pipeline": "Pipeline",
-    "searchSchools": "Search schools",
     "profile": "Profile"
   },
   "ParentSearch": {
@@ -1945,6 +1944,7 @@
     },
     "transactions": {
       "title": "Recent transactions",
+      "tableRegion": "Recent transactions table",
       "viewAll": "View all",
       "columnInvoice": "Invoice",
       "columnDescription": "Description",
@@ -2808,6 +2808,7 @@
     "currentVoice": "Current voice intro",
     "stepCounter": "Step {current} of {total}",
     "stepProgress": "{percent}% complete",
+    "progressLabel": "Form completion progress",
     "railLabel": "Student profile",
     "railPlaceholder": "New student",
     "editStep": "Edit",
@@ -3814,6 +3815,7 @@
     "kindTuition": "Tuition",
     "kindEnrolment": "Enrolment",
     "kindBoarding": "Boarding",
+    "kindAddOnService": "Add-on service",
     "columnInvoice": "Invoice",
     "columnKind": "Type",
     "columnApplication": "Application",

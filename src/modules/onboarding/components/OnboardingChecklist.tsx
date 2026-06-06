@@ -47,7 +47,7 @@ export function OnboardingChecklist({ progress }: OnboardingChecklistProps) {
             <h2 className='font-display text-xl font-bold tracking-tight text-ink-900'>
               {t('title')}
             </h2>
-            <p className='truncate text-sm text-foggy'>{t('subtitle')}</p>
+            <p className='truncate text-sm text-hof'>{t('subtitle')}</p>
           </div>
         </div>
 
@@ -59,7 +59,7 @@ export function OnboardingChecklist({ progress }: OnboardingChecklistProps) {
                 total: progress.total,
               })}
             </span>
-            <span className='tabular-nums text-foggy'>
+            <span className='tabular-nums text-hof'>
               {t('percent', { percent: progress.percent })}
             </span>
           </div>

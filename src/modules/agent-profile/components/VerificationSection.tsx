@@ -33,7 +33,7 @@ export function VerificationSection({ verification }: VerificationSectionProps) 
           <div className='flex flex-col gap-1'>
             <div className='flex items-center gap-2'>
               <span className='text-sm font-bold text-ink-900'>{t('bannerVerifiedTitle')}</span>
-              <Badge className='bg-vivid-mint-soft text-vivid-mint'>{t('badgeVerified')}</Badge>
+              <Badge className='bg-vivid-mint-soft text-vivid-mint-strong'>{t('badgeVerified')}</Badge>
             </div>
             <p className='text-sm text-ink-900/80'>{t('bannerVerifiedBody')}</p>
           </div>
@@ -91,7 +91,7 @@ export function VerificationSection({ verification }: VerificationSectionProps) 
               </div>
               <Badge
                 variant={done ? undefined : 'secondary'}
-                className={cn('shrink-0', done && 'bg-vivid-mint-soft text-vivid-mint')}
+                className={cn('shrink-0', done && 'bg-vivid-mint-soft text-vivid-mint-strong')}
               >
                 {done ? t('stepDone') : reviewPending ? t('stepInReview') : t('stepPending')}
               </Badge>

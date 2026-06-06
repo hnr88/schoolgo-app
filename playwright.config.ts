@@ -64,5 +64,12 @@ export default defineConfig({
       dependencies: ['setup'],
       testMatch: /school\/.*\.spec\.ts/,
     },
+    {
+      // API-level security probes (no browser, no storageState). They authenticate
+      // each seeded role directly against Strapi, so they need neither the portal
+      // login flow nor the setup project.
+      name: 'security',
+      testMatch: /security\/.*\.spec\.ts/,
+    },
   ],
 });

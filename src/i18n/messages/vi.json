@@ -2212,7 +2212,7 @@
     "applications": "Hồ sơ",
     "offers": "Lời mời",
     "tours": "Tham quan",
-    "searchSchools": "Tìm kiếm trường",
+    "searchSchools": "Search schools",
     "savedSchools": "Trường đã lưu",
     "compare": "So sánh",
     "savedSearches": "Tìm kiếm đã lưu",
@@ -2223,7 +2223,6 @@
     "messages": "Tin nhắn",
     "calendar": "Lịch",
     "pipeline": "Pipeline",
-    "searchSchools": "Search schools",
     "profile": "Profile"
   },
   "ParentSearch": {
@@ -2469,28 +2468,61 @@
     "manageMethods": "Quản lý phương thức thanh toán",
     "previewNotice": "Đây là bản xem trước bảng điều khiển thanh toán của bạn. Thanh toán an toàn chưa được kích hoạt — không có khoản nào ở đây là giao dịch thật.",
     "stats": {
-      "balanceDue": { "label": "Số dư phải trả", "sub": "Đến hạn trong kỳ này" },
-      "totalPaid": { "label": "Tổng đã thanh toán", "sub": "Tổng cộng đã trả" },
-      "upcoming": { "label": "Sắp tới", "sub": "Khoản phí đã lên lịch" },
-      "methods": { "label": "Phương thức đã lưu", "sub": "Thẻ đã đăng ký" }
+      "balanceDue": {
+        "label": "Số dư phải trả",
+        "sub": "Đến hạn trong kỳ này"
+      },
+      "totalPaid": {
+        "label": "Tổng đã thanh toán",
+        "sub": "Tổng cộng đã trả"
+      },
+      "upcoming": {
+        "label": "Sắp tới",
+        "sub": "Khoản phí đã lên lịch"
+      },
+      "methods": {
+        "label": "Phương thức đã lưu",
+        "sub": "Thẻ đã đăng ký"
+      }
     },
-    "earning": { "title": "Tổng quan thanh toán", "paid": "Đã trả", "scheduled": "Đã lên lịch" },
+    "earning": {
+      "title": "Tổng quan thanh toán",
+      "paid": "Đã trả",
+      "scheduled": "Đã lên lịch"
+    },
     "breakdown": {
       "title": "Phân tích chi tiêu",
       "total": "Tổng cộng",
-      "categories": { "practice": "Luyện tập", "placement": "Xếp lớp", "progress": "Tiến độ", "other": "Khác" }
+      "categories": {
+        "practice": "Luyện tập",
+        "placement": "Xếp lớp",
+        "progress": "Tiến độ",
+        "other": "Khác"
+      }
     },
-    "trend": { "title": "Xu hướng số dư", "caption": "6 tháng gần nhất" },
+    "trend": {
+      "title": "Xu hướng số dư",
+      "caption": "6 tháng gần nhất"
+    },
     "transactions": {
       "title": "Giao dịch gần đây",
+      "tableRegion": "Bảng giao dịch gần đây",
       "viewAll": "Xem tất cả",
       "columnInvoice": "Hóa đơn",
       "columnDescription": "Mô tả",
       "columnAmount": "Số tiền",
       "columnStatus": "Trạng thái",
       "columnDate": "Ngày",
-      "status": { "paid": "Đã trả", "pending": "Đang chờ", "upcoming": "Sắp tới" },
-      "items": { "practice": "Luyện tập — hàng tháng", "placement": "Bài kiểm tra xếp lớp", "progress": "Theo dõi tiến độ" }
+      "status": {
+        "paid": "Đã trả",
+        "pending": "Đang chờ",
+        "upcoming": "Sắp tới"
+      },
+      "items": {
+        "practice": "Luyện tập — hàng tháng",
+        "placement": "Bài kiểm tra xếp lớp",
+        "progress": "Theo dõi tiến độ"
+      }
     },
     "promo": {
       "eyebrow": "Sắp ra mắt",
@@ -3195,6 +3227,7 @@
     "currentVoice": "Lời giới thiệu bằng giọng nói hiện tại",
     "stepCounter": "Step {current} of {total}",
     "stepProgress": "{percent}% complete",
+    "progressLabel": "Form completion progress",
     "railLabel": "Student profile",
     "railPlaceholder": "New student",
     "editStep": "Edit",
@@ -3782,6 +3815,7 @@
     "kindTuition": "Tuition",
     "kindEnrolment": "Enrolment",
     "kindBoarding": "Boarding",
+    "kindAddOnService": "Add-on service",
     "columnInvoice": "Invoice",
     "columnKind": "Type",
     "columnApplication": "Application",

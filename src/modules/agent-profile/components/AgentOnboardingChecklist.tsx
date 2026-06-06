@@ -73,7 +73,7 @@ export function AgentOnboardingChecklist() {
               </span>
 
               {done ? (
-                <span className='shrink-0 text-xs font-medium text-vivid-mint'>{t('done')}</span>
+                <span className='shrink-0 text-xs font-medium text-vivid-mint-strong'>{t('done')}</span>
               ) : (
                 <Link href={step.href} className='shrink-0 no-underline'>
                   <Button size='sm' variant='outline'>
