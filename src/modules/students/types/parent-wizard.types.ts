@@ -9,6 +9,7 @@ export interface ParentStudentCreatePayload {
   dateOfBirth?: string;
   gender?: ParentStudentFormValues['gender'];
   nationality: string;
+  passportNumber?: string;
   currentSchool?: string;
   currentYearLevel?: string;
   targetEntryYear: string;

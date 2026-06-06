@@ -2212,6 +2212,7 @@
     "applications": "지원서",
     "offers": "오퍼",
     "tours": "투어",
+    "searchSchools": "학교 검색",
     "savedSchools": "저장한 학교",
     "compare": "학교 비교",
     "savedSearches": "저장한 검색",
@@ -2224,6 +2225,17 @@
     "pipeline": "Pipeline",
     "searchSchools": "Search schools",
     "profile": "Profile"
+  },
+  "ParentSearch": {
+    "searchingFor": "{name}을(를) 위해 검색 중",
+    "allChildren": "모든 자녀",
+    "addStudentHint": "검색을 맞춤화하려면 학생을 추가하세요",
+    "addStudent": "학생 추가",
+    "apply": "지원하기",
+    "applyAria": "{school}에 지원하기",
+    "viewApplication": "지원서 보기",
+    "compareAdd": "비교하기",
+    "compareAria": "{school} 비교하기"
   },
   "Tours": {
     "title": "학교 투어",
@@ -2452,47 +2464,40 @@
   },
   "ParentPayments": {
     "title": "결제",
-    "subtitle": "시험 결제 및 청구 정보를 한 곳에서 관리하세요.",
-    "badge": "곧 출시",
-    "heading": "결제 — 곧 출시",
-    "description": "곧 이 페이지에서 시험 결제 및 모든 관리를 할 수 있게 됩니다. 안전한 결제 시스템 마지막 작업 중이니 조금만 기다려 주세요.",
+    "subtitle": "시험 모드 결제와 청구 관리를 한 곳에서 처리하세요.",
     "comingSoon": "곧 출시",
-    "plansTitle": "출시 예정",
-    "plansDisclaimer": "표시된 가격은 미리보기용이며 아직 판매 중이 아닙니다.",
-    "plans": {
-      "practice": {
-        "name": "연습",
-        "price": "A$199 / month",
-        "description": "자녀가 매달 자신감 있게 준비할 수 있도록 지속적인 연습 시험을 제공합니다."
-      },
-      "placement": {
-        "name": "수준 배치",
-        "price": "A$449 one-off",
-        "description": "자녀에게 맞는 시작 수준을 찾기 위한 1회 배치 평가입니다."
-      },
-      "progress": {
-        "name": "진도 관리",
-        "price": "A$399 / year",
-        "description": "자녀의 향상을 연간 추적하는 연중 진도 관리입니다."
-      }
+    "manageMethods": "결제 수단 관리",
+    "previewNotice": "이 화면은 결제 대시보드의 미리보기입니다. 안전한 결제 기능은 아직 활성화되지 않았으며, 여기 표시된 내용은 실제 청구가 아닙니다.",
+    "stats": {
+      "balanceDue": { "label": "미결제 잔액", "sub": "이번 학기 결제 예정" },
+      "totalPaid": { "label": "총 결제액", "sub": "누적 결제 금액" },
+      "upcoming": { "label": "예정", "sub": "예약된 청구" },
+      "methods": { "label": "저장된 수단", "sub": "등록된 카드" }
     },
-    "featuresTitle": "What's coming",
-    "features": {
-      "secure": {
-        "title": "Secure checkout",
-        "description": "Pay safely with bank-grade encryption when checkout goes live."
-      },
-      "receipts": {
-        "title": "Receipts & invoices",
-        "description": "Every payment is documented with a downloadable receipt for your records."
-      },
-      "history": {
-        "title": "Billing history",
-        "description": "Review everything you've paid for, all in one organised place."
-      }
+    "earning": { "title": "결제 개요", "paid": "결제 완료", "scheduled": "예약됨" },
+    "breakdown": {
+      "title": "지출 분류",
+      "total": "합계",
+      "categories": { "practice": "연습", "placement": "수준 배치", "progress": "진도 관리", "other": "기타" }
     },
-    "ledgerEmptyTitle": "No billing history yet",
-    "ledgerEmptyDescription": "There's nothing to pay right now, and you have no past transactions. Once payments are available, anything you pay for will appear here."
+    "trend": { "title": "잔액 추이", "caption": "최근 6개월" },
+    "transactions": {
+      "title": "최근 거래",
+      "viewAll": "전체 보기",
+      "columnInvoice": "청구서",
+      "columnDescription": "설명",
+      "columnAmount": "금액",
+      "columnStatus": "상태",
+      "columnDate": "날짜",
+      "status": { "paid": "결제 완료", "pending": "처리 중", "upcoming": "예정" },
+      "items": { "practice": "연습 — 월간", "placement": "수준 배치 평가", "progress": "진도 관리" }
+    },
+    "promo": {
+      "eyebrow": "곧 출시",
+      "title": "안전한 결제 기능이 곧 제공됩니다",
+      "description": "곧 이곳에서 은행 수준의 암호화로 보호되는 시험 모드 결제와 청구 관리를 직접 처리하실 수 있습니다.",
+      "cta": "알림 받기"
+    }
   },
   "ParentStudents": {
     "title": "학생",
@@ -3202,6 +3207,14 @@
     "placeholderPhone": "+44 7700 900000",
     "placeholderWechat": "WeChat ID",
     "placeholderNationality": "e.g. British",
+    "fieldPassport": "여권 번호",
+    "placeholderPassport": "예: A12345678",
+    "helpPassport": "선택 사항 — 학교에서 입학 서류에 사용합니다.",
+    "selectNationality": "국적 선택",
+    "nationalitySearch": "국가 검색…",
+    "nationalityEmpty": "일치하는 국가가 없습니다.",
+    "selectTargetYear": "학년 선택",
+    "helpContactChannel": "학교와 SchoolGo가 가족에게 연락하는 방법입니다.",
     "placeholderSchool": "e.g. Oakwood Primary",
     "mediaPhotoHint": "JPG or PNG, up to {size}MB.",
     "mediaVoiceHint": "Audio file, up to {size}MB.",
@@ -4161,22 +4174,42 @@
   },
   "Calendar": {
     "title": "캘린더",
-    "subtitle": "예정된 투어, 오픈 데이, 지원 일정을 한곳에서 확인하세요.",
-    "agendaUpcoming": "예정된 일정",
-    "agendaForDay": "이 날의 일정",
-    "showAll": "전체 보기",
-    "emptyTitle": "예정된 일정이 없습니다",
-    "emptySubtitle": "투어를 예약하거나 지원서를 제출하면 일정이 표시됩니다.",
-    "emptyDayTitle": "이 날에는 일정이 없습니다",
-    "browseTours": "투어 둘러보기",
+    "subtitle": "지원 일정, 합격 마감일, 알림을 한곳에서 확인하세요.",
     "errorMessage": "캘린더를 불러올 수 없습니다. 다시 시도해 주세요.",
-    "typeTourBooking": "투어 예약됨",
-    "typeOpenDay": "오픈 데이",
+    "retry": "다시 시도",
+    "today": "오늘",
+    "previousMonth": "이전 달",
+    "nextMonth": "다음 달",
+    "addReminder": "알림 추가",
+    "addReminderForDay": "알림 추가",
+    "moreEvents": "{count, plural, one {일정 #개 더보기} other {일정 #개 더보기}}",
+    "dayPanelEmptyTitle": "예정된 일정이 없습니다",
+    "dayPanelEmptyDescription": "알림을 추가해 이 날 챙겨야 할 일을 관리하세요.",
     "typeApplicationSubmitted": "지원서 제출됨",
     "typeApplicationStatus": "상태 업데이트됨",
-    "retry": "Try again",
-    "moreEvents": "{count, plural, one {+# more event} other {+# more events}}",
-    "typeDeadline": "Deadline"
+    "typeDeadline": "Deadline",
+    "typeOfferDeadline": "합격 마감일",
+    "typeReminder": "알림",
+    "reminderCreateTitle": "새 알림",
+    "reminderEditTitle": "알림 편집",
+    "reminderDialogDescription": "개인 알림을 설정하세요. 선택한 날짜에 캘린더에 표시됩니다.",
+    "reminderTitleLabel": "제목",
+    "reminderTitlePlaceholder": "예: 입학 서류 제출",
+    "reminderDateLabel": "날짜",
+    "reminderTimeLabel": "시간 (선택)",
+    "reminderNoteLabel": "메모 (선택)",
+    "reminderNotePlaceholder": "상세 내용을 입력하세요…",
+    "save": "알림 저장",
+    "cancel": "취소",
+    "editReminderAria": "알림 편집",
+    "deleteReminderAria": "알림 삭제",
+    "deleteReminderTitle": "알림을 삭제할까요?",
+    "deleteReminderDescription": "이 알림이 캘린더에서 영구적으로 삭제됩니다.",
+    "deleteConfirm": "삭제",
+    "reminderCreated": "알림이 추가되었습니다.",
+    "reminderUpdated": "알림이 수정되었습니다.",
+    "reminderDeleted": "알림이 삭제되었습니다.",
+    "reminderError": "문제가 발생했습니다. 다시 시도해 주세요."
   },
   "StudentWizardSchema": {
     "firstNameRequired": "First name is required.",
@@ -4189,6 +4222,7 @@
     "dobTooOld": "Enter a realistic date of birth.",
     "nationalityRequired": "Nationality is required.",
     "nationalityMax": "Nationality must be 100 characters or fewer.",
+    "passportMax": "여권 번호는 50자 이하여야 합니다.",
     "currentSchoolMax": "School name must be 255 characters or fewer.",
     "currentYearMax": "Year level must be 20 characters or fewer.",
     "targetYearRequired": "Target entry year is required.",

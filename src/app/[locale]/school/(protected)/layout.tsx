@@ -7,11 +7,11 @@ import { PORTAL_ALLOWED_ROLES } from '@/modules/auth/constants/auth.constants';
 export default function SchoolProtectedLayout({ children }: { children: React.ReactNode }) {
   return (
     <ProtectedLayout allowedRoles={Array.from(PORTAL_ALLOWED_ROLES.school)}>
-      <div className='flex h-screen overflow-hidden'>
+      <div className='flex h-screen overflow-hidden bg-page-surface'>
         <DashboardSidebar />
-        <div className='flex flex-1 flex-col overflow-hidden'>
+        <div className='my-3 mr-3 flex flex-1 flex-col overflow-hidden rounded-3xl bg-card shadow-4'>
           <DashboardHeader />
-          <main className='relative flex-1 overflow-y-auto bg-page-surface'>
+          <main className='content-cards relative flex-1 overflow-y-auto'>
             <DashboardContent>{children}</DashboardContent>
           </main>
         </div>

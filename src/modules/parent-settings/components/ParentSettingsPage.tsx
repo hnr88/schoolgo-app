@@ -33,7 +33,7 @@ export function ParentSettingsPage() {
 
   return (
     <Tabs defaultValue='profile' className='gap-6'>
-      <TabsList className='max-w-full overflow-x-auto'>
+      <TabsList className='max-w-full overflow-x-auto overflow-y-hidden'>
         <TabsTrigger value='profile' className={TAB_TRIGGER_CLASS}>
           {t('tabProfile')}
         </TabsTrigger>

@@ -24,6 +24,7 @@ const DEFAULT_VALUES: ParentStudentFormValues = {
   dateOfBirth: '',
   gender: undefined,
   nationality: '',
+  passportNumber: '',
   currentSchool: '',
   currentYearLevel: '',
   targetEntryYear: '',

@@ -39,6 +39,7 @@ export interface SearchPageContentProps {
 
 export interface SchoolResultsPanelProps {
   activePortal: Portal;
+  variant?: 'default' | 'parent';
 }
 
 export interface SearchAutocompleteDropdownProps {

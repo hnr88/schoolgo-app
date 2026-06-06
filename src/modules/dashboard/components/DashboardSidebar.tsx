@@ -34,7 +34,7 @@ export function DashboardSidebar() {
   return (
     <aside
       className={cn(
-        'hidden h-full flex-col border-r border-divider bg-sidebar-premium transition-all duration-300 ease-out-quart lg:flex',
+        'sidebar-shell m-3 hidden flex-col overflow-hidden rounded-3xl shadow-4 transition-all duration-300 ease-out-quart lg:flex',
         isCollapsed ? 'w-16' : 'w-64',
       )}
     >
@@ -46,14 +46,23 @@ export function DashboardSidebar() {
             : 'h-16 items-center justify-between px-4',
         )}
       >
-        <Link href={home} className='flex shrink-0 items-center'>
+        <Link href={home} className='flex shrink-0 items-center gap-2'>
           <Image
-            src='/logos/logo-red.png'
+            src='/logos/app-icon-512.png'
             alt='SchoolGo'
-            width={140}
-            height={30}
-            className='h-10 w-auto'
+            width={36}
+            height={36}
+            className='h-9 w-9 shrink-0'
           />
+          {!isCollapsed && (
+            <Image
+              src='/logos/logo-white-text.png'
+              alt=''
+              width={608}
+              height={130}
+              className='h-6 w-auto'
+            />
+          )}
         </Link>
         <button
           type='button'

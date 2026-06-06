@@ -192,12 +192,12 @@ export const PORTAL_NAV: Record<Portal, PortalNav> = {
         items: [
           { href: '/parent/applications', icon: FileText, labelKey: 'applications' },
           { href: '/parent/offers', icon: Gift, labelKey: 'offers' },
-          { href: '/parent/tours', icon: CalendarDays, labelKey: 'tours' },
         ],
       },
       {
         labelKey: 'groupSchools',
         items: [
+          { href: '/parent/search', icon: Search, labelKey: 'searchSchools' },
           { href: '/parent/saved-schools', icon: Heart, labelKey: 'savedSchools' },
           { href: '/parent/compare', icon: Columns3, labelKey: 'compare' },
           { href: '/parent/saved-searches', icon: Bookmark, labelKey: 'savedSearches' },

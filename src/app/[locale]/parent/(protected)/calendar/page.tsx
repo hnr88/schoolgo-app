@@ -23,10 +23,14 @@ export default async function ParentCalendarRoute({
   const t = await getTranslations('Calendar');
 
   return (
-    <div className='flex flex-col gap-6'>
+    <div className='flex flex-col gap-8'>
       <header className='flex flex-col gap-2'>
-        <h1 className='font-display text-2xl font-bold text-ink-900'>{t('title')}</h1>
-        <p className='text-sm text-muted-foreground'>{t('subtitle')}</p>
+        <h1 className='font-display text-2xl font-bold tracking-tight text-ink-900 sm:text-3xl'>
+          {t('title')}
+        </h1>
+        <p className='max-w-prose text-sm leading-relaxed text-muted-foreground'>
+          {t('subtitle')}
+        </p>
       </header>
 
       <CalendarPage />

@@ -86,6 +86,8 @@ export interface SchoolCardProps {
   onShortlistToggle?: () => void;
   shortlistDisabled?: boolean;
   className?: string;
+  statusSlot?: ReactNode;
+  actionSlot?: ReactNode;
 }
 
 export interface SearchInputProps extends InputHTMLAttributes<HTMLInputElement> {

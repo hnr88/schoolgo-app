@@ -22,6 +22,7 @@ export function parentStudentToFormValues(
     dateOfBirth: student.dateOfBirth ?? '',
     gender: student.gender ?? undefined,
     nationality: student.nationality ?? '',
+    passportNumber: '',
     currentSchool: student.currentSchool ?? '',
     currentYearLevel: student.currentYearLevel ?? '',
     targetEntryYear: student.targetEntryYear ?? '',

@@ -29,6 +29,8 @@ export function SchoolCard({
   onShortlistToggle,
   shortlistDisabled = false,
   className,
+  statusSlot,
+  actionSlot,
 }: SchoolCardProps) {
   const [shortlistedLocal, setShortlistedLocal] = useState(false);
   const [photoFailed, setPhotoFailed] = useState(false);
@@ -84,6 +86,8 @@ export function SchoolCard({
         ) : (
           <DefaultPhoto name={name} />
         )}
+
+        {statusSlot && <div className='absolute left-3 top-3 z-[2]'>{statusSlot}</div>}
 
         {topRatedLabel && (
           <span className='absolute left-3 top-3 z-[1] inline-flex items-center gap-1 rounded-pill bg-arches-500 px-2.5 py-1 text-caption font-semibold text-on-primary shadow-brand'>
@@ -142,6 +146,10 @@ export function SchoolCard({
             <TrustBadge variant='cricos' label={cricosLabel} />
           </div>
         )}
+
+        {cricosLabel
+          ? actionSlot && <div className='pt-3'>{actionSlot}</div>
+          : actionSlot && <div className='mt-auto border-t border-divider pt-3'>{actionSlot}</div>}
       </div>
     </article>
   );

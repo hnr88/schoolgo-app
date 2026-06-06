@@ -2212,6 +2212,7 @@
     "applications": "Permohonan",
     "offers": "Tawaran",
     "tours": "Lawatan",
+    "searchSchools": "Cari sekolah",
     "savedSchools": "Sekolah disimpan",
     "compare": "Banding",
     "savedSearches": "Carian disimpan",
@@ -2224,6 +2225,17 @@
     "pipeline": "Pipeline",
     "searchSchools": "Search schools",
     "profile": "Profile"
+  },
+  "ParentSearch": {
+    "searchingFor": "Mencari untuk {name}",
+    "allChildren": "semua anak anda",
+    "addStudentHint": "Tambah pelajar untuk memperibadikan carian anda",
+    "addStudent": "Tambah pelajar",
+    "apply": "Mohon",
+    "applyAria": "Mohon ke {school}",
+    "viewApplication": "Lihat permohonan",
+    "compareAdd": "Banding",
+    "compareAria": "Bandingkan {school}"
   },
   "Tours": {
     "title": "Lawatan Sekolah",
@@ -2453,46 +2465,39 @@
   "ParentPayments": {
     "title": "Pembayaran",
     "subtitle": "Bayar untuk mod ujian dan urus pengebilan anda — semua dalam satu tempat.",
-    "badge": "Akan datang",
-    "heading": "Pembayaran — akan datang",
-    "description": "Tidak lama lagi anda boleh membayar untuk mod ujian dan mengurus semuanya dari sini. Kami sedang menyiapkan proses pembayaran yang selamat, sila tunggu sebentar.",
     "comingSoon": "Akan datang",
-    "plansTitle": "Akan datang",
-    "plansDisclaimer": "Harga yang ditunjukkan adalah anggaran dan untuk pratonton sahaja. Tiada sebarang item untuk dijual buat masa ini.",
-    "plans": {
-      "practice": {
-        "name": "Latihan",
-        "price": "A$199 / month",
-        "description": "Ujian latihan berterusan supaya anak anda boleh bersedia dengan yakin, dari bulan ke bulan."
-      },
-      "placement": {
-        "name": "Penempatan",
-        "price": "A$449 one-off",
-        "description": "Penilaian penempatan satu kali untuk mencari tahap permulaan yang sesuai bagi anak anda."
-      },
-      "progress": {
-        "name": "Kemajuan",
-        "price": "A$399 / year",
-        "description": "Pemantauan kemajuan sepanjang tahun untuk melihat peningkatan anak anda dari masa ke masa."
-      }
+    "manageMethods": "Urus kaedah pembayaran",
+    "previewNotice": "Ini ialah pratonton papan pemuka pembayaran anda. Pembayaran selamat belum aktif lagi — tiada apa-apa di sini yang merupakan caj sebenar.",
+    "stats": {
+      "balanceDue": { "label": "Baki perlu dibayar", "sub": "Perlu dibayar penggal ini" },
+      "totalPaid": { "label": "Jumlah dibayar", "sub": "Pembayaran sepanjang hayat" },
+      "upcoming": { "label": "Akan datang", "sub": "Caj berjadual" },
+      "methods": { "label": "Kaedah disimpan", "sub": "Kad dalam fail" }
     },
-    "featuresTitle": "What's coming",
-    "features": {
-      "secure": {
-        "title": "Secure checkout",
-        "description": "Pay safely with bank-grade encryption when checkout goes live."
-      },
-      "receipts": {
-        "title": "Receipts & invoices",
-        "description": "Every payment is documented with a downloadable receipt for your records."
-      },
-      "history": {
-        "title": "Billing history",
-        "description": "Review everything you've paid for, all in one organised place."
-      }
+    "earning": { "title": "Gambaran keseluruhan pembayaran", "paid": "Dibayar", "scheduled": "Berjadual" },
+    "breakdown": {
+      "title": "Pecahan perbelanjaan",
+      "total": "Jumlah",
+      "categories": { "practice": "Latihan", "placement": "Penempatan", "progress": "Kemajuan", "other": "Lain-lain" }
     },
-    "ledgerEmptyTitle": "No billing history yet",
-    "ledgerEmptyDescription": "There's nothing to pay right now, and you have no past transactions. Once payments are available, anything you pay for will appear here."
+    "trend": { "title": "Aliran baki", "caption": "6 bulan terakhir" },
+    "transactions": {
+      "title": "Transaksi terkini",
+      "viewAll": "Lihat semua",
+      "columnInvoice": "Invois",
+      "columnDescription": "Penerangan",
+      "columnAmount": "Jumlah",
+      "columnStatus": "Status",
+      "columnDate": "Tarikh",
+      "status": { "paid": "Dibayar", "pending": "Belum selesai", "upcoming": "Akan datang" },
+      "items": { "practice": "Latihan — bulanan", "placement": "Penilaian penempatan", "progress": "Pemantauan kemajuan" }
+    },
+    "promo": {
+      "eyebrow": "Akan datang",
+      "title": "Pembayaran selamat akan tiba tidak lama lagi",
+      "description": "Tidak lama lagi anda boleh membayar untuk mod ujian dan mengurus pengebilan anda di sini, dilindungi oleh penyulitan bertaraf bank.",
+      "cta": "Beritahu saya"
+    }
   },
   "ParentStudents": {
     "title": "Pelajar",
@@ -3202,6 +3207,14 @@
     "placeholderPhone": "+44 7700 900000",
     "placeholderWechat": "WeChat ID",
     "placeholderNationality": "e.g. British",
+    "fieldPassport": "Nombor pasport",
+    "placeholderPassport": "cth. A12345678",
+    "helpPassport": "Pilihan — sekolah menggunakan ini untuk dokumen pendaftaran.",
+    "selectNationality": "Pilih kewarganegaraan",
+    "nationalitySearch": "Cari negara…",
+    "nationalityEmpty": "Tiada negara yang sepadan.",
+    "selectTargetYear": "Pilih tahun",
+    "helpContactChannel": "Cara sekolah dan SchoolGo menghubungi keluarga anda.",
     "placeholderSchool": "e.g. Oakwood Primary",
     "mediaPhotoHint": "JPG or PNG, up to {size}MB.",
     "mediaVoiceHint": "Audio file, up to {size}MB.",
@@ -4161,22 +4174,42 @@
   },
   "Calendar": {
     "title": "Kalendar",
-    "subtitle": "Lawatan, hari terbuka dan pencapaian permohonan anda di satu tempat.",
-    "agendaUpcoming": "Acara akan datang",
-    "agendaForDay": "Acara pada hari ini",
-    "showAll": "Tunjuk semua",
-    "emptyTitle": "Tiada acara akan datang",
-    "emptySubtitle": "Tempah lawatan atau hantar permohonan untuk melihat acara di sini.",
-    "emptyDayTitle": "Tiada acara pada hari ini",
-    "browseTours": "Lihat lawatan",
+    "subtitle": "Pencapaian permohonan, tarikh akhir tawaran dan peringatan anda di satu tempat.",
     "errorMessage": "Tidak dapat memuatkan kalendar anda. Sila cuba lagi.",
-    "typeTourBooking": "Lawatan ditempah",
-    "typeOpenDay": "Hari terbuka",
+    "retry": "Cuba lagi",
+    "today": "Hari ini",
+    "previousMonth": "Bulan sebelumnya",
+    "nextMonth": "Bulan seterusnya",
+    "addReminder": "Tambah peringatan",
+    "addReminderForDay": "Tambah peringatan",
+    "moreEvents": "{count, plural, one {+# acara lagi} other {+# acara lagi}}",
+    "dayPanelEmptyTitle": "Tiada apa-apa dijadualkan",
+    "dayPanelEmptyDescription": "Tambah peringatan untuk menjejaki perkara penting pada hari ini.",
     "typeApplicationSubmitted": "Permohonan dihantar",
     "typeApplicationStatus": "Status dikemas kini",
-    "retry": "Try again",
-    "moreEvents": "{count, plural, one {+# more event} other {+# more events}}",
-    "typeDeadline": "Deadline"
+    "typeDeadline": "Deadline",
+    "typeOfferDeadline": "Tarikh akhir tawaran",
+    "typeReminder": "Peringatan",
+    "reminderCreateTitle": "Peringatan baharu",
+    "reminderEditTitle": "Edit peringatan",
+    "reminderDialogDescription": "Tetapkan peringatan peribadi. Ia akan muncul pada kalendar anda pada tarikh yang anda pilih.",
+    "reminderTitleLabel": "Tajuk",
+    "reminderTitlePlaceholder": "cth. Hantar borang pendaftaran",
+    "reminderDateLabel": "Tarikh",
+    "reminderTimeLabel": "Masa (pilihan)",
+    "reminderNoteLabel": "Nota (pilihan)",
+    "reminderNotePlaceholder": "Tambah sebarang butiran…",
+    "save": "Simpan peringatan",
+    "cancel": "Batal",
+    "editReminderAria": "Edit peringatan",
+    "deleteReminderAria": "Padam peringatan",
+    "deleteReminderTitle": "Padam peringatan?",
+    "deleteReminderDescription": "Peringatan ini akan dipadamkan secara kekal daripada kalendar anda.",
+    "deleteConfirm": "Padam",
+    "reminderCreated": "Peringatan ditambah.",
+    "reminderUpdated": "Peringatan dikemas kini.",
+    "reminderDeleted": "Peringatan dipadam.",
+    "reminderError": "Sesuatu telah tidak kena. Sila cuba lagi."
   },
   "StudentWizardSchema": {
     "firstNameRequired": "First name is required.",
@@ -4189,6 +4222,7 @@
     "dobTooOld": "Enter a realistic date of birth.",
     "nationalityRequired": "Nationality is required.",
     "nationalityMax": "Nationality must be 100 characters or fewer.",
+    "passportMax": "Nombor pasport mestilah 50 aksara atau kurang.",
     "currentSchoolMax": "School name must be 255 characters or fewer.",
     "currentYearMax": "Year level must be 20 characters or fewer.",
     "targetYearRequired": "Target entry year is required.",

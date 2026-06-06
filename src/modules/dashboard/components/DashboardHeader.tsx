@@ -41,7 +41,7 @@ export function DashboardHeader() {
       ? tParentNav(titleEntry.key)
       : t(`nav.${titleEntry.key}`);
   const settingsHref = isParent ? '/parent/settings' : '/dashboard/settings';
-  const isSearchPage = pathname.includes('/dashboard/search');
+  const isSearchPage = pathname.includes('/dashboard/search') || pathname.includes('/parent/search');
   const firstName = user?.displayName?.split(' ')[0] || t('greeting.fallbackName');
 
   function handleLogout() {

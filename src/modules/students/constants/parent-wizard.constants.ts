@@ -1,9 +1,13 @@
+import { Mail, MessageCircle, MessageSquare, Smartphone } from 'lucide-react';
+
 import {
   CONTACT_CHANNEL_VALUES,
   GENDER_VALUES,
   PARENT_WIZARD_STEP_IDS,
   type ParentWizardStepId,
 } from '@/modules/students/schemas/parent-student.schema';
+
+type ContactChannel = (typeof CONTACT_CHANNEL_VALUES)[number];
 
 export const PARENT_WIZARD_STEP_TITLE_KEYS: Record<ParentWizardStepId, string> = {
   personal: 'stepPersonal',
@@ -20,6 +24,19 @@ export const PARENT_GENDER_OPTIONS = GENDER_VALUES;
 export const PARENT_CONTACT_CHANNEL_OPTIONS = CONTACT_CHANNEL_VALUES;
 
 export const PARENT_TARGET_TERM_OPTIONS = ['Term 1', 'Term 2', 'Term 3', 'Term 4'] as const;
+
+const CURRENT_YEAR = new Date().getFullYear();
+
+export const PARENT_TARGET_YEAR_OPTIONS = Array.from({ length: 7 }, (_, index) =>
+  String(CURRENT_YEAR + index),
+);
+
+export const PARENT_CONTACT_CHANNEL_ICONS: Record<ContactChannel, typeof Mail> = {
+  whatsapp: MessageCircle,
+  wechat: MessageSquare,
+  email: Mail,
+  sms: Smartphone,
+};
 
 export const PARENT_PHOTO_MAX_MB = 15;
 

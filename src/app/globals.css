@@ -22,6 +22,7 @@
   /* Layout tokens */
   --container-content: 75rem; /* 1200px — Airbnb marketing max */
   --container-wide: 85rem; /* 1360px — dashboards */
+  --container-canvas: 97rem; /* 1552px — full-width surfaces, fills the island at Full-HD then caps */
   --max-width-content: 75rem;
   --max-width-wide: 85rem;
   --spacing-sidebar: 18rem;
@@ -60,6 +61,8 @@
   --color-primary: var(--primary);
   --color-primary-foreground: var(--primary-foreground);
   --color-primary-strong: var(--primary-strong);
+  --color-primary-light: var(--primary-light);
+  --color-primary-light-foreground: var(--primary-light-foreground);
   --color-secondary: var(--secondary);
   --color-secondary-foreground: var(--secondary-foreground);
   --color-muted: var(--muted);
@@ -190,6 +193,8 @@
   --color-foggy: var(--foggy);
   --color-quill: var(--quill);
   --color-divider: var(--divider);
+  --color-gray-50: var(--gray-50);
+  --color-gray-100: var(--gray-100);
 }
 
 :root {
@@ -267,6 +272,8 @@
   --foggy: oklch(0.546 0 0); /* #767676 — secondary */
   --quill: oklch(0.737 0 0); /* #B0B0B0 — disabled / placeholder */
   --divider: oklch(0.931 0 0); /* #EBEBEB — hairline */
+  --gray-50: oklch(0.985 0 0); /* #F9FAFB — subtle card surface */
+  --gray-100: oklch(0.967 0 0); /* #F3F4F6 — subtle card border */
 
   /* ========== Shadcn semantic tokens ========== */
   --background: oklch(1 0 0); /* #FFFFFF */
@@ -332,6 +339,10 @@
   --on-primary: oklch(1 0 0); /* white on Rausch */
   --primary-container: var(--rausch-100);
   --on-primary-container: var(--rausch-800);
+
+  /* Primary light — soft coral surface for backgrounds + AA ink on it */
+  --primary-light: var(--rausch-50); /* #FFF1F2 — light primary background */
+  --primary-light-foreground: var(--rausch-800); /* #8F1F22 — readable coral ink */
 
   /* Secondary extended */
   --secondary-container: oklch(0.972 0 0);
@@ -455,6 +466,29 @@
 @layer components {
   .leaflet-tile-pane {
     filter: grayscale(0.9) contrast(0.85) brightness(1.05);
+  }
+
+  /* Dark, near-black sidebar surface. Overrides the neutral tokens its
+     children read so the shared SidebarNavLinks renders light-on-dark
+     without per-component dark classes. */
+  .sidebar-shell {
+    background-color: oklch(0.205 0 0); /* dark gray, almost black */
+    --card: oklch(0.271 0 0);           /* active / hover chip */
+    --ink-900: oklch(0.985 0 0);        /* active + strong text */
+    --hof: oklch(0.8 0 0);              /* inactive nav text */
+    --foggy: oklch(0.62 0 0);           /* secondary text + icons */
+    --divider: oklch(0.305 0 0);        /* hairline */
+    --border: oklch(0.305 0 0);         /* card / control border */
+    --ring: var(--rausch-400);          /* focus ring on dark */
+    --rausch-50: oklch(0.305 0.03 25);  /* avatar tint */
+    --primary-strong: var(--rausch-300); /* avatar initials */
+  }
+
+  /* Dashboard content cards sit on a super-light gray-50 surface so they read
+     against the white content island. Scoped to the content area so the
+     island, header and popovers stay white. */
+  .content-cards {
+    --card: var(--gray-50);
   }
 
 }
@@ -608,6 +642,24 @@
     border-radius: 10px;
   }
 
+  /* Sidebar rail — near-hidden, ultra-thin scrollbar (both collapsed + expanded) */
+  .sidebar-scroll {
+    scrollbar-width: thin;
+  }
+  .sidebar-scroll::-webkit-scrollbar {
+    width: 3px;
+  }
+  .sidebar-scroll::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .sidebar-scroll::-webkit-scrollbar-thumb {
+    background-color: oklch(0.6 0 0 / 0.3);
+    border-radius: var(--radius-pill);
+  }
+  .sidebar-scroll:hover::-webkit-scrollbar-thumb {
+    background-color: oklch(0.6 0 0 / 0.55);
+  }
+
   .h-content-viewport {
     height: calc(100dvh - var(--header-height-mobile));
   }
@@ -642,4 +694,40 @@ button:not(:disabled):not([aria-haspopup]):active,
 .leaflet-container .leaflet-marker-icon *:active {
   scale: 1 !important;
   box-shadow: unset !important;
+}
+
+/* ========================================================================
+   Global slim, light-gray scrollbar — applies app-wide.
+   Lives in @layer base so the `.no-scrollbar` / `.custom-scrollbar`
+   utilities (in @layer utilities) still override it where opted in.
+   ===================================================================== */
+@layer base {
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--quill) transparent;
+  }
+
+  *::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: var(--quill);
+    border: 2px solid transparent;
+    border-radius: var(--radius-pill);
+    background-clip: padding-box;
+  }
+
+  *::-webkit-scrollbar-thumb:hover {
+    background-color: var(--foggy);
+  }
+
+  *::-webkit-scrollbar-corner {
+    background: transparent;
+  }
 }

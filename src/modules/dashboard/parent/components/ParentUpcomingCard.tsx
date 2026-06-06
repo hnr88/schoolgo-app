@@ -32,16 +32,10 @@ export function ParentUpcomingCard() {
           title={t('upcomingEmptyTitle')}
           description={t('upcomingEmptySubtitle')}
           action={
-            <div className='flex flex-wrap items-center justify-center gap-2'>
-              <Link href='/parent/tours' className={cn(buttonVariants({ variant: 'outline', size: 'sm' }), 'gap-1.5')}>
-                <CalendarDays className='h-4 w-4' aria-hidden='true' />
-                {t('upcomingViewTours')}
-              </Link>
-              <Link href='/parent/offers' className={cn(buttonVariants({ variant: 'outline', size: 'sm' }), 'gap-1.5')}>
-                <Gift className='h-4 w-4' aria-hidden='true' />
-                {t('upcomingViewOffers')}
-              </Link>
-            </div>
+            <Link href='/parent/offers' className={cn(buttonVariants({ variant: 'outline', size: 'sm' }), 'gap-1.5')}>
+              <Gift className='h-4 w-4' aria-hidden='true' />
+              {t('upcomingViewOffers')}
+            </Link>
           }
         />
       ) : (

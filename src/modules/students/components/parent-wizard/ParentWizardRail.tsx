@@ -19,7 +19,7 @@ export function ParentWizardRail({ chrome, studentName }: ParentWizardRailProps)
 
   return (
     <div className='flex flex-col gap-8 lg:sticky lg:top-8'>
-      <div className='flex items-center gap-4 rounded-2xl bg-card p-5 shadow-1'>
+      <div className='flex items-center gap-4 rounded-xl border border-gray-100 bg-card p-5 shadow-1'>
         {initials && (
           <span className='flex size-14 shrink-0 items-center justify-center rounded-full bg-primary text-base font-bold text-primary-foreground'>
             {initials}

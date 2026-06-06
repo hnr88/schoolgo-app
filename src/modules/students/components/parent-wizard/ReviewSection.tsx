@@ -16,7 +16,7 @@ export function ReviewSection({ title, stepIndex, onEdit, children }: ReviewSect
   const t = useTranslations('StudentWizard');
 
   return (
-    <section className='flex flex-col gap-6 rounded-2xl border border-border bg-card p-6 shadow-1 lg:p-8'>
+    <section className='flex flex-col gap-6 rounded-xl border border-gray-100 bg-card p-6 shadow-1 lg:p-8'>
       <div className='flex items-center justify-between gap-4'>
         <h3 className='font-display text-xl font-semibold tracking-tight text-ink-900'>
           {title}

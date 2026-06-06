@@ -28,6 +28,9 @@ export function buildParentStudentPayload(
 
   if (values.gender) payload.gender = values.gender;
 
+  const passportNumber = trimmed(values.passportNumber);
+  if (passportNumber) payload.passportNumber = passportNumber;
+
   const currentSchool = trimmed(values.currentSchool);
   if (currentSchool) payload.currentSchool = currentSchool;
 

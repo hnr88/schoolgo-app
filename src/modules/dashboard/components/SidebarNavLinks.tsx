@@ -29,7 +29,7 @@ export function SidebarNavLinks({ isCollapsed = false, onNavigate }: SidebarNavL
   const sections: NavGroup[] = groups ?? [{ labelKey: '', items: items ?? [] }];
 
   return (
-    <nav className={cn('flex flex-1 flex-col gap-5 overflow-y-auto py-4', isCollapsed ? 'px-2' : 'px-3')}>
+    <nav className={cn('sidebar-scroll flex flex-1 flex-col gap-5 overflow-y-auto py-4', isCollapsed ? 'px-2' : 'px-3')}>
       {sections.map((section, sectionIndex) => (
         <div key={section.labelKey || sectionIndex} className='flex flex-col gap-1'>
           {section.labelKey && !isCollapsed && (
