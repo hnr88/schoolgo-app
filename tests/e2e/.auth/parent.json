@@ -5,7 +5,7 @@
       "value": "parent",
       "domain": "localhost",
       "path": "/",
-      "expires": 1811540741.555435,
+      "expires": 1812234884.920683,
       "httpOnly": false,
       "secure": false,
       "sameSite": "Lax"
@@ -13,11 +13,11 @@
   ],
   "origins": [
     {
-      "origin": "http://localhost:3000",
+      "origin": "http://localhost:3001",
       "localStorage": [
         {
           "name": "schoolgo-auth",
-          "value": "{\"state\":{\"jwt\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzgwMDA0NzQxLCJleHAiOjE3ODA2MDk1NDF9.bVV9q1bpEXNv1b0wlOhISVeEAe1Nz_FSPQSP-CewGmo\",\"userType\":\"parent\",\"user\":{\"id\":1,\"documentId\":\"gmke2n2b28kuaee1lhsxgwyo\",\"username\":\"parent@schoolgo.test\",\"email\":\"parent@schoolgo.test\",\"displayName\":\"parent@schoolgo.test\",\"role\":\"parent\"}},\"version\":0}"
+          "value": "{\"state\":{\"jwt\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzgwNjk4ODg0LCJleHAiOjE3ODEzMDM2ODR9.vvShDGd5UaqJzfgsMyhLtlmvTftmZwJOlWTnpG7smto\",\"userType\":\"parent\",\"user\":{\"id\":1,\"documentId\":\"gmke2n2b28kuaee1lhsxgwyo\",\"username\":\"parent@schoolgo.test\",\"email\":\"parent@schoolgo.test\",\"displayName\":\"parent@schoolgo.test\",\"role\":\"parent\"}},\"version\":0}"
         }
       ]
     }

@@ -16,6 +16,7 @@ import { ParentStudentProfileHeader } from '@/modules/students/components/Parent
 import { ParentStudentInfoSection } from '@/modules/students/components/ParentStudentInfoSection';
 import { ParentStudentCompleteness } from '@/modules/students/components/ParentStudentCompleteness';
 import { ParentStudentApplications } from '@/modules/students/components/ParentStudentApplications';
+import { AgentRepresentationPanel } from '@/modules/students/components/AgentRepresentationPanel';
 import { StudentDocumentsTab } from '@/modules/students/components/StudentDocumentsTab';
 import type { ParentStudentProfileProps } from '@/modules/students/types/parent-component.types';
 
@@ -109,6 +110,8 @@ export function ParentStudentProfile({ documentId }: ParentStudentProfileProps) 
           ]}
         />
       </div>
+
+      <AgentRepresentationPanel studentDocumentId={student.documentId} />
 
       <SurfaceCard padding='lg'>
         <SectionHeading title={t('sectionDocuments')} level={2} className='mb-4' />

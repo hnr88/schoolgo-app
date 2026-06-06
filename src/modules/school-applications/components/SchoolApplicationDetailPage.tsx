@@ -9,7 +9,9 @@ import { ErrorState } from '@/modules/core';
 import { useSchoolApplication } from '@/modules/school-applications/queries/use-school-application.query';
 import { SchoolApplicationHeader } from '@/modules/school-applications/components/SchoolApplicationHeader';
 import { SchoolApplicationActions } from '@/modules/school-applications/components/SchoolApplicationActions';
+import { SchoolServicesSection } from '@/modules/school-applications/components/SchoolServicesSection';
 import { SchoolDetailsTab } from '@/modules/school-applications/components/SchoolDetailsTab';
+import { SchoolVettingTab } from '@/modules/school-applications/components/SchoolVettingTab';
 import { SchoolDocumentsTab } from '@/modules/school-applications/components/SchoolDocumentsTab';
 import { SchoolTimelineTab } from '@/modules/school-applications/components/SchoolTimelineTab';
 import { SchoolMessagesTab } from '@/modules/school-applications/components/SchoolMessagesTab';
@@ -61,10 +63,12 @@ export function SchoolApplicationDetailPage({ documentId }: { documentId: string
       <BackLink label={t('detailBack')} />
       <SchoolApplicationHeader application={application} />
       <SchoolApplicationActions documentId={documentId} status={application.status} />
+      <SchoolServicesSection documentId={documentId} />
 
       <Tabs defaultValue='details'>
         <TabsList>
           <TabsTrigger value='details' className='text-foreground/80'>{t('tabDetails')}</TabsTrigger>
+          <TabsTrigger value='vetting' className='text-foreground/80'>{t('tabVetting')}</TabsTrigger>
           <TabsTrigger value='documents' className='text-foreground/80'>{t('tabDocuments')}</TabsTrigger>
           <TabsTrigger value='timeline' className='text-foreground/80'>{t('tabTimeline')}</TabsTrigger>
           <TabsTrigger value='messages' className='text-foreground/80'>{t('tabMessages')}</TabsTrigger>
@@ -74,6 +78,9 @@ export function SchoolApplicationDetailPage({ documentId }: { documentId: string
 
         <TabsContent value='details' className='mt-6'>
           <SchoolDetailsTab application={application} />
+        </TabsContent>
+        <TabsContent value='vetting' className='mt-6'>
+          <SchoolVettingTab documentId={documentId} />
         </TabsContent>
         <TabsContent value='documents' className='mt-6'>
           <SchoolDocumentsTab application={application} />

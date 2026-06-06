@@ -27,3 +27,5 @@ export const TARGET_INTAKE_OPTIONS = [
 ] as const;
 
 export const SCHOOL_SEARCH_MIN_CHARS = 2;
+
+export const MAX_FANOUT_SCHOOLS = 20;

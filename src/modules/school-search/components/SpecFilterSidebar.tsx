@@ -47,6 +47,7 @@ export function SpecFilterSidebar({ className, alwaysOn = false }: SpecFilterSid
     if (s.programTypes.length > 0) count += 1;
     if (s.atarAvailable) count += 1;
     if (s.englishLanguageSupport) count += 1;
+    if (s.scholarshipAvailable) count += 1;
     if (s.englishTest != null) count += 1;
     if (s.gender.length > 0) count += 1;
     return count;

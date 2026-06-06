@@ -26,6 +26,7 @@ export interface SchoolSearchStoreSnapshot {
   programTypes: ProgramType[];
   atarAvailable: boolean;
   englishLanguageSupport: boolean;
+  scholarshipAvailable: boolean;
   englishTest: EnglishTestScore | null;
   feeMin: number;
   feeMax: number;
@@ -79,6 +80,7 @@ export function mapStoreToTypedRequest(
     programTypes: store.programTypes.length ? store.programTypes : undefined,
     atarAvailable: store.atarAvailable || undefined,
     englishLanguageSupport: store.englishLanguageSupport || undefined,
+    scholarshipAvailable: store.scholarshipAvailable || undefined,
     englishTest: store.englishTest ?? undefined,
     feeMin: store.feeMin > FEE_MIN ? store.feeMin : undefined,
     feeMax: store.feeMax < FEE_MAX ? store.feeMax : undefined,

@@ -1,6 +1,7 @@
 import type { Portal } from '@/lib/portal-url';
 
 import type { TestResult } from '@/modules/test-results/types/test-result.types';
+import type { TestCatalogItem } from '@/modules/test-results/types/test-catalog.types';
 
 export interface TestResultsListProps {
   studentDocumentId?: string;
@@ -19,4 +20,12 @@ export interface StudentSelectorOption {
 export interface TestResultsPanelProps {
   studentDocumentId?: string;
   portal?: Portal;
+}
+
+export interface TestCatalogCardProps {
+  test: TestCatalogItem;
+}
+
+export interface BookTestDialogProps {
+  test: TestCatalogItem;
 }

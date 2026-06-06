@@ -78,6 +78,14 @@ export function proxy(request: NextRequest) {
     return withRobotsHeader(NextResponse.next(), hostname);
   }
 
+  if (pathAfterLocale === 'test' || pathAfterLocale.startsWith('test/')) {
+    if (!hasLocale) {
+      url.pathname = `/${locale}/${pathAfterLocale}`;
+      return withRobotsHeader(NextResponse.rewrite(url), hostname);
+    }
+    return withRobotsHeader(NextResponse.next(), hostname);
+  }
+
   if (pathAfterLocale === 'guides' || pathAfterLocale.startsWith('guides/')) {
     if (!hasLocale) {
       url.pathname = `/${locale}/${pathAfterLocale}`;

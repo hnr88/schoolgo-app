@@ -35,7 +35,7 @@ export function NotificationItem({ notification, onMarkRead, isMarkingRead }: No
 
   const Icon = NOTIFICATION_EVENT_ICON[eventType];
   const isUnread = readAt === null;
-  const href = notificationEntityPath(userType, entityType, entityDocumentId);
+  const href = notificationEntityPath(userType, eventType, entityType, entityDocumentId);
 
   const handleNavigate = () => {
     if (isUnread) onMarkRead(documentId);

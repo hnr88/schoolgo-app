@@ -2,7 +2,8 @@ export type CalendarEventType =
   | 'tour_booking'
   | 'open_day'
   | 'application_submitted'
-  | 'application_status';
+  | 'application_status'
+  | 'deadline';
 
 export interface CalendarEvent {
   id: string;

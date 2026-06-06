@@ -9,6 +9,7 @@ import { DeadlinesList } from '@/modules/dashboard/components/DeadlinesList';
 import { PipelineStatTiles } from '@/modules/dashboard/components/PipelineStatTiles';
 import { QuickActions } from '@/modules/dashboard/components/QuickActions';
 import { useAgentDashboard } from '@/modules/dashboard/queries/use-agent-dashboard.query';
+import { AgentOnboardingChecklist } from '@/modules/agent-profile';
 import { PageHeader } from '@/modules/dashboard/components/PageHeader';
 import {
   mapActionRows,
@@ -60,6 +61,7 @@ export function AgentDashboard() {
   return (
     <div className='flex flex-col gap-8'>
       <PageHeader title={t('nav.dashboard')} description={t('pageSubtitle')} />
+      <AgentOnboardingChecklist />
       <ActionBanner items={actions} />
       <PipelineStatTiles tiles={tiles} />
 

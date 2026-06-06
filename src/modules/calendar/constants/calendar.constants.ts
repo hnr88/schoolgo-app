@@ -1,4 +1,4 @@
-import { CalendarCheck, DoorOpen, RefreshCw, Send } from 'lucide-react';
+import { CalendarCheck, Clock, DoorOpen, RefreshCw, Send } from 'lucide-react';
 
 import type { CalendarEventStyle, CalendarEventType } from '@/modules/calendar/types/calendar.types';
 
@@ -28,5 +28,11 @@ export const EVENT_STYLE: Record<CalendarEventType, CalendarEventStyle> = {
     badge: 'bg-vivid-amber-soft text-arches-700',
     dot: 'bg-vivid-amber',
     labelKey: 'typeApplicationStatus',
+  },
+  deadline: {
+    icon: Clock,
+    badge: 'bg-destructive/10 text-destructive',
+    dot: 'bg-destructive',
+    labelKey: 'typeDeadline',
   },
 };

@@ -1,12 +1,13 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
+import { useDroppable } from '@dnd-kit/core';
 import { Link } from '@/i18n/navigation';
 import { cn } from '@/lib/utils';
 import { Skeleton } from '@/components/ui/skeleton';
 import { KanbanCard } from '@/modules/pipeline/components/KanbanCard';
 import { MAX_CARDS_PER_COLUMN } from '@/modules/pipeline/constants/pipeline.constants';
-import type { KanbanColumnProps } from '@/modules/pipeline/types/component.types';
+import type { ColumnDropData, KanbanColumnProps } from '@/modules/pipeline/types/component.types';
 
 function KanbanColumnSkeleton() {
   return (
@@ -22,11 +23,22 @@ export function KanbanColumn({ column, applications, isLoading }: KanbanColumnPr
   const t = useTranslations('Pipeline');
   const visible = applications.slice(0, MAX_CARDS_PER_COLUMN);
   const overflow = applications.length - MAX_CARDS_PER_COLUMN;
+  const droppable: ColumnDropData = { column };
+  const { setNodeRef, isOver } = useDroppable({
+    id: column.id,
+    disabled: !column.agentToStatus,
+    data: droppable,
+  });
 
   return (
     <section
+      ref={setNodeRef}
       aria-label={t(column.label)}
-      className={cn('flex min-w-72 flex-col rounded-lg border border-border p-3', column.color)}
+      className={cn(
+        'flex min-w-72 flex-col rounded-lg border border-border p-3 transition-shadow duration-200 ease-out-quart',
+        column.color,
+        isOver && column.agentToStatus && 'ring-2 ring-ring ring-offset-2',
+      )}
     >
       <div className="mb-3 flex items-center gap-2">
         <span className={cn('h-2 w-2 shrink-0 rounded-full', column.dotColor)} aria-hidden="true" />

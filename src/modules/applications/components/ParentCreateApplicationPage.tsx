@@ -14,6 +14,7 @@ import { usePresetSchool } from '@/modules/applications/queries/use-preset-schoo
 import { useParentCreateApplication } from '@/modules/applications/queries/use-parent-create-application.mutation';
 import { ParentCreateApplicationForm } from '@/modules/applications/components/ParentCreateApplicationForm';
 import type { ParentCreateApplicationFormValues } from '@/modules/applications/schemas/parent-create-application.schema';
+import type { ParentCreateApplicationError } from '@/modules/applications/types/parent-create-application.types';
 
 export function ParentCreateApplicationPage() {
   const t = useTranslations('ParentApplications');
@@ -34,11 +35,21 @@ export function ParentCreateApplicationPage() {
       const created = await createApplication.mutateAsync({
         student: values.student,
         school: values.school,
+        targetYearLevel: values.targetYearLevel,
+        targetIntake: values.targetIntake,
+        boardingRequired: values.boardingRequired,
       });
       toast.success(t('newCreateSuccess'));
       router.push(`/parent/applications/${created.documentId}`);
-    } catch {
-      toast.error(t('newCreateError'));
+    } catch (error) {
+      const kind = (error as ParentCreateApplicationError | undefined)?.kind;
+      if (kind === 'ageBlock') {
+        toast.error(t('newCreateAgeBlockError'));
+      } else if (kind === 'cricos') {
+        toast.error(t('newCreateCricosError'));
+      } else {
+        toast.error(t('newCreateError'));
+      }
     }
   }
 

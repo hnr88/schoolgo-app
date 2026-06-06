@@ -48,6 +48,7 @@ interface SchoolSearchState {
   programTypes: ProgramType[];
   atarAvailable: boolean;
   englishLanguageSupport: boolean;
+  scholarshipAvailable: boolean;
 
   englishTest: EnglishTestScore | null;
 
@@ -85,6 +86,7 @@ interface SchoolSearchState {
   toggleProgramType: (p: ProgramType) => void;
   setAtarAvailable: (v: boolean) => void;
   setEnglishLanguageSupport: (v: boolean) => void;
+  setScholarshipAvailable: (v: boolean) => void;
   setEnglishTest: (test: EnglishTestScore | null) => void;
   setSortBy: (s: SortOption) => void;
   toggleCompare: (schoolId: string, max?: number) => boolean;
@@ -126,6 +128,7 @@ const initialState = {
   programTypes: [] as ProgramType[],
   atarAvailable: false,
   englishLanguageSupport: false,
+  scholarshipAvailable: false,
   englishTest: null as EnglishTestScore | null,
   quickChips: [] as QuickChipId[],
   gender: [] as Gender[],
@@ -179,6 +182,7 @@ export const useSchoolSearchStore = create<SchoolSearchState>((set, get) => ({
   setAtarAvailable: (atarAvailable) => set({ atarAvailable }),
   setEnglishLanguageSupport: (englishLanguageSupport) =>
     set({ englishLanguageSupport, englishTests: englishLanguageSupport }),
+  setScholarshipAvailable: (scholarshipAvailable) => set({ scholarshipAvailable }),
   setEnglishTest: (englishTest) => set({ englishTest }),
   setSortBy: (sortBy) => set({ sortBy }),
   toggleCompare: (schoolId, max = COMPARE_MAX_ADVANCED) => {

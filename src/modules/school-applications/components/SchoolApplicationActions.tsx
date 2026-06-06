@@ -9,6 +9,7 @@ import { ConfirmActionDialog } from '@/modules/applications/components/ConfirmAc
 import { MakeOfferDialog } from '@/modules/school-applications/components/dialogs/MakeOfferDialog';
 import { DeclineDialog } from '@/modules/school-applications/components/dialogs/DeclineDialog';
 import { FieldDialog } from '@/modules/school-applications/components/dialogs/FieldDialog';
+import { AttachServiceDialog } from '@/modules/school-applications/components/dialogs/AttachServiceDialog';
 import { useSchoolApplicationAction } from '@/modules/school-applications/queries/use-school-application-action.mutation';
 import {
   ACTION_LABEL_KEY,
@@ -121,6 +122,20 @@ function ComplexAction({
   );
 }
 
+function AttachServiceAction({ documentId }: { documentId: string }) {
+  const t = useTranslations('SchoolApplications');
+  const [open, setOpen] = useState(false);
+
+  return (
+    <>
+      <Button variant='outline' onClick={() => setOpen(true)}>
+        {t('actionAttachService')}
+      </Button>
+      <AttachServiceDialog documentId={documentId} open={open} onOpenChange={setOpen} />
+    </>
+  );
+}
+
 export function SchoolApplicationActions({
   documentId,
   status,
@@ -130,8 +145,6 @@ export function SchoolApplicationActions({
 }) {
   const t = useTranslations('SchoolApplications');
   const actions = availableActions(status);
-
-  if (actions.length === 0) return null;
 
   return (
     <SurfaceCard padding='lg' className='flex flex-col gap-3'>
@@ -144,6 +157,7 @@ export function SchoolApplicationActions({
             <ComplexAction key={action} documentId={documentId} action={action} />
           ),
         )}
+        <AttachServiceAction documentId={documentId} />
       </div>
     </SurfaceCard>
   );

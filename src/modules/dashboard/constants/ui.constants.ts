@@ -65,6 +65,7 @@ export const ROUTE_TITLE_MAP: Record<string, string> = {
   '/dashboard/invoices': 'invoices',
   '/dashboard/payouts': 'payouts',
   '/dashboard/pre-enrolment': 'preEnrolment',
+  '/dashboard/analytics': 'analytics',
 };
 
 export const PORTAL_NAV: Record<Portal, PortalNav> = {
@@ -120,7 +121,10 @@ export const PORTAL_NAV: Record<Portal, PortalNav> = {
     groups: [
       {
         labelKey: 'groupOverview',
-        items: [{ href: '/dashboard', icon: LayoutDashboard, labelKey: 'dashboard' }],
+        items: [
+          { href: '/dashboard', icon: LayoutDashboard, labelKey: 'dashboard' },
+          { href: '/dashboard/analytics', icon: BarChart3, labelKey: 'analytics' },
+        ],
       },
       {
         labelKey: 'groupApplications',
@@ -179,6 +183,7 @@ export const PORTAL_NAV: Record<Portal, PortalNav> = {
         items: [
           { href: '/parent/students', icon: GraduationCap, labelKey: 'students' },
           { href: '/parent/documents', icon: FolderOpen, labelKey: 'documents' },
+          { href: '/parent/tests', icon: ClipboardCheck, labelKey: 'tests' },
           { href: '/parent/results', icon: Trophy, labelKey: 'results' },
         ],
       },

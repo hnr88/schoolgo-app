@@ -61,6 +61,17 @@ export function mapApplicationEvents(applications: ParentApplication[]): Calenda
         school: application.school.name,
       });
     }
+
+    if (application.status === 'offer_made' && isValidDate(application.offerDeadline)) {
+      events.push({
+        id: `offer-deadline-${application.documentId}`,
+        date: application.offerDeadline,
+        type: 'deadline',
+        title,
+        href,
+        school: application.school.name,
+      });
+    }
   }
 
   return events;

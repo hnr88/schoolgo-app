@@ -1,5 +1,9 @@
 import type { EntryYearLevel } from '@/modules/school-search/types/filter.types';
 
+// Source of truth: schoolgo-api/src/utils/age-eligibility.ts
+// AGE_BY_YEAR_LEVEL and YEAR_LEVEL_BY_AGE below MUST stay byte-identical to the
+// canonical maps in that engine so the parent guardrail and school age caps
+// share one age-vs-year-level semantics. Do not edit one without the other.
 const AGE_BY_YEAR_LEVEL: Record<EntryYearLevel, number> = {
   gr4: 9,
   gr5: 10,

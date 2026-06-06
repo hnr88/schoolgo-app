@@ -15,4 +15,13 @@ export interface KanbanColumnProps {
 
 export interface KanbanCardProps {
   application: Application;
+  isOverlay?: boolean;
+}
+
+export interface CardDragData {
+  application: Application;
+}
+
+export interface ColumnDropData {
+  column: PipelineColumn;
 }

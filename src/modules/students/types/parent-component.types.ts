@@ -23,6 +23,19 @@ export interface ParentStudentProfileProps {
   documentId: string;
 }
 
+export interface AgentRepresentationPanelProps {
+  studentDocumentId: string;
+}
+
+export interface ShareWithAgentDialogProps {
+  studentDocumentId: string;
+}
+
+export interface RevokeShareButtonProps {
+  studentDocumentId: string;
+  shareDocumentId: string;
+}
+
 export interface ParentStudentStats {
   children: number;
   activeApplications: number;

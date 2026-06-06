@@ -1,5 +1,10 @@
+'use client';
+
+import { DndContext, DragOverlay } from '@dnd-kit/core';
 import { Skeleton } from '@/components/ui/skeleton';
 import { KanbanColumn } from '@/modules/pipeline/components/KanbanColumn';
+import { KanbanCard } from '@/modules/pipeline/components/KanbanCard';
+import { useKanbanDnd } from '@/modules/pipeline/hooks/useKanbanDnd';
 import type { KanbanBoardProps } from '@/modules/pipeline/types/component.types';
 
 function KanbanBoardSkeleton() {
@@ -18,20 +23,34 @@ function KanbanBoardSkeleton() {
 }
 
 export function KanbanBoard({ columns, applicationsByColumn, isLoading }: KanbanBoardProps) {
-  return (
-    <div className="flex gap-5 overflow-x-auto pb-4">
-      {isLoading ? (
+  const { sensors, activeApplication, handleDragStart, handleDragEnd, handleDragCancel } = useKanbanDnd();
+
+  if (isLoading) {
+    return (
+      <div className="flex gap-5 overflow-x-auto pb-4">
         <KanbanBoardSkeleton />
-      ) : (
-        columns.map((column) => (
+      </div>
+    );
+  }
+
+  return (
+    <DndContext
+      sensors={sensors}
+      onDragStart={handleDragStart}
+      onDragEnd={handleDragEnd}
+      onDragCancel={handleDragCancel}
+    >
+      <div className="flex gap-5 overflow-x-auto pb-4">
+        {columns.map((column) => (
           <KanbanColumn
             key={column.id}
             column={column}
             applications={applicationsByColumn[column.id] ?? []}
             isLoading={false}
           />
-        ))
-      )}
-    </div>
+        ))}
+      </div>
+      <DragOverlay>{activeApplication ? <KanbanCard application={activeApplication} isOverlay /> : null}</DragOverlay>
+    </DndContext>
   );
 }

@@ -5,3 +5,5 @@ export const PARENT_STUDENT_POPULATE: Record<string, string> = {
 };
 
 export const PARENT_STUDENTS_DEFAULT_PAGE_SIZE = 12;
+
+export const PARENT_STUDENTS_MAX_PAGE_SIZE = 100;

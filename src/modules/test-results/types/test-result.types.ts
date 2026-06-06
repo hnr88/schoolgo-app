@@ -16,6 +16,12 @@ export type VerificationStatus =
   | 'direct_delivered'
   | 'revoked';
 
+export interface TestResultReportDocument {
+  documentId: string;
+  fileName: string | null;
+  file: { url: string; name: string } | null;
+}
+
 export interface TestResult {
   id: number;
   documentId: string;
@@ -27,6 +33,7 @@ export interface TestResult {
   candidateNumber: string | null;
   notes: string | null;
   verifiedAt: string | null;
+  reportDocument?: TestResultReportDocument | null;
   student: {
     documentId: string;
     firstName: string;

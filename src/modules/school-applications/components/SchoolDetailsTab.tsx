@@ -3,6 +3,7 @@
 import { useTranslations } from 'next-intl';
 import { SurfaceCard } from '@/modules/core';
 import { agentUserName } from '@/modules/school-applications/lib/school-application';
+import { SchoolAgeEligibilityRow } from '@/modules/school-applications/components/SchoolAgeEligibilityRow';
 import type { SchoolApplicationDetail } from '@/modules/school-applications/types/school-applications.types';
 
 function Row({ label, value }: { label: string; value: React.ReactNode }) {
@@ -56,6 +57,9 @@ export function SchoolDetailsTab({ application }: { application: SchoolApplicati
           <Row label={t('labelIntake')} value={application.targetIntake ?? '—'} />
           <Row label={t('labelSubmitted')} value={fmt(application.submittedAt)} />
           {application.offerDeadline && <Row label={t('labelOfferDeadline')} value={fmt(application.offerDeadline)} />}
+        </div>
+        <div className='mt-4'>
+          <SchoolAgeEligibilityRow documentId={application.documentId} />
         </div>
       </section>
 

@@ -1,7 +1,11 @@
 'use client';
 
 import { useEffect, useMemo } from 'react';
-import { useActiveChildStore, useParentStudents } from '@/modules/students';
+import {
+  PARENT_STUDENTS_MAX_PAGE_SIZE,
+  useActiveChildStore,
+  useParentStudents,
+} from '@/modules/students';
 import type { ParentStudent } from '@/modules/students';
 
 interface UseActiveChildResult {
@@ -13,7 +17,9 @@ interface UseActiveChildResult {
 }
 
 export function useActiveChild(): UseActiveChildResult {
-  const { data, isLoading } = useParentStudents();
+  const { data, isLoading, isSuccess } = useParentStudents({
+    pageSize: PARENT_STUDENTS_MAX_PAGE_SIZE,
+  });
   const activeChildId = useActiveChildStore((s) => s.activeChildId);
   const setActiveChild = useActiveChildStore((s) => s.setActiveChild);
 
@@ -21,10 +27,10 @@ export function useActiveChild(): UseActiveChildResult {
   const activeChild = children.find((child) => child.documentId === activeChildId) ?? null;
 
   useEffect(() => {
-    if (isLoading || !activeChildId) return;
+    if (!isSuccess || !activeChildId) return;
     const exists = children.some((child) => child.documentId === activeChildId);
     if (!exists) setActiveChild(null);
-  }, [isLoading, activeChildId, children, setActiveChild]);
+  }, [isSuccess, activeChildId, children, setActiveChild]);
 
   return { children, activeChildId, activeChild, isLoading, setActiveChild };
 }

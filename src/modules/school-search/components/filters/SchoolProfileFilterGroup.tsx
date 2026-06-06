@@ -1,6 +1,8 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
+import { Label } from '@/components/ui/label';
+import { Switch } from '@/components/ui/switch';
 import { FilterChipGroup } from '@/modules/school-search/components/filters/FilterChipGroup';
 import { FilterGroup } from '@/modules/school-search/components/filters/FilterGroup';
 import { ReligiousAffiliationChips } from '@/modules/school-search/components/filters/ReligiousAffiliationChips';
@@ -21,6 +23,8 @@ export function SchoolProfileFilterGroup() {
   const toggleSector = useSchoolSearchStore((s) => s.toggleSector);
   const accommodation = useSchoolSearchStore((s) => s.accommodation);
   const toggleAccommodation = useSchoolSearchStore((s) => s.toggleAccommodation);
+  const scholarshipAvailable = useSchoolSearchStore((s) => s.scholarshipAvailable);
+  const setScholarshipAvailable = useSchoolSearchStore((s) => s.setScholarshipAvailable);
 
   const sectorChange = (next: Sector[] | Sector | null) => {
     const nextArr = Array.isArray(next) ? next : next ? [next] : [];
@@ -76,6 +80,17 @@ export function SchoolProfileFilterGroup() {
             {t('schoolProfile.religionLabel')}
           </span>
           <ReligiousAffiliationChips />
+        </div>
+        <div className="flex items-center justify-between rounded-lg border border-border bg-muted/40 px-3 py-2">
+          <Label htmlFor="spec-scholarship-switch" className="text-sm font-medium">
+            {t('schoolProfile.scholarshipLabel')}
+          </Label>
+          <Switch
+            id="spec-scholarship-switch"
+            checked={scholarshipAvailable}
+            onCheckedChange={setScholarshipAvailable}
+            aria-label={t('schoolProfile.scholarshipLabel')}
+          />
         </div>
       </div>
     </FilterGroup>

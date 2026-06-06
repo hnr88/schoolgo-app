@@ -1,21 +1,22 @@
 'use client';
 
+import { useState } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 import { toast } from 'sonner';
 import { ArrowLeft } from 'lucide-react';
-import { Link, useRouter } from '@/i18n/navigation';
+import { Link } from '@/i18n/navigation';
 import { Button } from '@/components/ui/button';
 import { useStudents } from '@/modules/students/queries/use-students.query';
-import { useCreateApplication } from '@/modules/applications/queries/use-create-application.mutation';
-import { useSubmitApplication } from '@/modules/applications/queries/use-submit-application.mutation';
+import { useBulkCreateApplications } from '@/modules/applications/queries/use-bulk-create-applications.mutation';
 import { usePresetSchool } from '@/modules/applications/queries/use-preset-school.query';
 import { CreateApplicationForm } from '@/modules/applications/components/CreateApplicationForm';
-import type { CreateApplicationFormValues } from '@/modules/applications/schemas/create-application.schema';
+import { BulkCreateResultSummary } from '@/modules/applications/components/BulkCreateResultSummary';
+import type { BulkCreateApplicationFormValues } from '@/modules/applications/schemas/create-application.schema';
+import type { BulkCreateResult } from '@/modules/applications/types/create-application.types';
 
 export function CreateApplicationPage() {
   const t = useTranslations('Applications');
-  const router = useRouter();
   const searchParams = useSearchParams();
   const schoolParam = searchParams.get('school') ?? undefined;
   const slugParam = searchParams.get('slug') ?? undefined;
@@ -23,23 +24,27 @@ export function CreateApplicationPage() {
   const { data: studentsData, isLoading: isLoadingStudents } = useStudents({ pageSize: 100, status: 'active' });
   const { data: presetSchool, isLoading: isLoadingPresetSchool } = usePresetSchool(schoolParam, slugParam);
 
-  const createApplication = useCreateApplication();
-  const submitApplication = useSubmitApplication();
+  const bulkCreate = useBulkCreateApplications();
+  const [result, setResult] = useState<BulkCreateResult | null>(null);
+  const [resultLabels, setResultLabels] = useState<Record<string, string>>({});
 
-  const isSubmitting = createApplication.isPending || submitApplication.isPending;
   const students = studentsData?.data ?? [];
   const isWaitingForPreset = Boolean(schoolParam || slugParam) && isLoadingPresetSchool;
 
-  async function handleSubmit(values: CreateApplicationFormValues) {
+  async function handleSubmit(
+    values: BulkCreateApplicationFormValues,
+    schoolLabels: Record<string, string>,
+  ) {
     try {
-      const created = await createApplication.mutateAsync(values);
-      try {
-        await submitApplication.mutateAsync(created.documentId);
-        toast.success(t('createSubmitSuccess'));
-      } catch {
-        toast.warning(t('createDraftSavedSubmitFailed'));
+      const summary = await bulkCreate.mutateAsync(values);
+      setResult(summary);
+      setResultLabels(schoolLabels);
+      if (summary.created.length > 0) {
+        toast.success(t('fanoutCreatedToast', { count: summary.created.length }));
       }
-      router.push(`/dashboard/applications/${created.documentId}`);
+      if (summary.errors.length > 0) {
+        toast.warning(t('fanoutErrorsToast', { count: summary.errors.length }));
+      }
     } catch {
       toast.error(t('createError'));
     }
@@ -66,11 +71,17 @@ export function CreateApplicationPage() {
             students={students}
             isLoadingStudents={isLoadingStudents}
             presetSchool={presetSchool ?? null}
-            isSubmitting={isSubmitting}
+            isSubmitting={bulkCreate.isPending}
             onSubmit={handleSubmit}
           />
         )}
       </div>
+
+      {result && (
+        <div className='max-w-2xl rounded-lg border border-border bg-card p-6'>
+          <BulkCreateResultSummary result={result} schoolLabels={resultLabels} />
+        </div>
+      )}
     </div>
   );
 }

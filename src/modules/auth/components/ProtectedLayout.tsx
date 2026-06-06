@@ -5,9 +5,9 @@ import { Skeleton } from '@/components/ui/skeleton';
 import type { ProtectedLayoutProps } from '@/modules/auth/types/component.types';
 
 export function ProtectedLayout({ children, allowedRoles }: ProtectedLayoutProps) {
-  const { isAuthenticated, isInitialized } = useRequireAuth({ allowedRoles });
+  const { isAuthenticated, isInitialized, isHydrated } = useRequireAuth({ allowedRoles });
 
-  if (!isInitialized) {
+  if (!isHydrated || !isInitialized) {
     return (
       <div className="flex min-h-screen items-center justify-center">
         <div className="flex w-full max-w-sm flex-col gap-4 p-6">

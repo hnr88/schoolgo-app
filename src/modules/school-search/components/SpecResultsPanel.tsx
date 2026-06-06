@@ -44,6 +44,7 @@ export function SpecResultsPanel({
   const programTypes = useSchoolSearchStore((s) => s.programTypes);
   const atarAvailable = useSchoolSearchStore((s) => s.atarAvailable);
   const englishLanguageSupport = useSchoolSearchStore((s) => s.englishLanguageSupport);
+  const scholarshipAvailable = useSchoolSearchStore((s) => s.scholarshipAvailable);
   const englishTest = useSchoolSearchStore((s) => s.englishTest);
   const feeMin = useSchoolSearchStore((s) => s.feeMin);
   const feeMax = useSchoolSearchStore((s) => s.feeMax);
@@ -63,6 +64,7 @@ export function SpecResultsPanel({
     programTypes,
     atarAvailable,
     englishLanguageSupport,
+    scholarshipAvailable,
     englishTest,
     feeMin,
     feeMax,

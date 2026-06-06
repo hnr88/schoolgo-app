@@ -2,27 +2,35 @@
 
 import { useMemo, useState, useEffect } from 'react';
 import { useSchoolSearchStore } from '@/modules/school-search/stores/use-school-search-store';
-import { useSchoolSearch } from '@/modules/school-search/queries/use-school-search.query';
-import { mapFiltersToRequest } from '@/modules/school-search/lib/map-filters-to-request';
+import { useTypedSchoolSearch } from '@/modules/school-search/queries/use-school-search.query';
+import { mapStoreToTypedRequest } from '@/modules/school-search/lib/store-to-typed-request';
 
 const DEBOUNCE_MS = 300;
-const MAP_DEBOUNCE_MS = 500;
+const RESULTS_PAGE_SIZE = 100;
 
 export function useSearchWithFilters() {
   const query = useSchoolSearchStore((s) => s.query);
-  const priceMin = useSchoolSearchStore((s) => s.priceMin);
-  const priceMax = useSchoolSearchStore((s) => s.priceMax);
-  const curricula = useSchoolSearchStore((s) => s.curricula);
+  const suburb = useSchoolSearchStore((s) => s.suburb);
+  const postcode = useSchoolSearchStore((s) => s.postcode);
   const states = useSchoolSearchStore((s) => s.states);
-  const englishTests = useSchoolSearchStore((s) => s.englishTests);
-  const activeChips = useSchoolSearchStore((s) => s.activeChips);
-  const mapBounds = useSchoolSearchStore((s) => s.mapBounds);
-  const geocodedQuery = useSchoolSearchStore((s) => s.geocodedQuery);
+  const sectors = useSchoolSearchStore((s) => s.sectors);
+  const accommodation = useSchoolSearchStore((s) => s.accommodation);
+  const religiousAffiliations = useSchoolSearchStore((s) => s.religiousAffiliations);
+  const entryYearLevels = useSchoolSearchStore((s) => s.entryYearLevels);
+  const studentAge = useSchoolSearchStore((s) => s.studentAge);
+  const entryTerms = useSchoolSearchStore((s) => s.entryTerms);
+  const programTypes = useSchoolSearchStore((s) => s.programTypes);
+  const atarAvailable = useSchoolSearchStore((s) => s.atarAvailable);
+  const englishLanguageSupport = useSchoolSearchStore((s) => s.englishLanguageSupport);
+  const scholarshipAvailable = useSchoolSearchStore((s) => s.scholarshipAvailable);
+  const englishTest = useSchoolSearchStore((s) => s.englishTest);
+  const feeMin = useSchoolSearchStore((s) => s.feeMin);
+  const feeMax = useSchoolSearchStore((s) => s.feeMax);
+  const sortBy = useSchoolSearchStore((s) => s.sortBy);
 
   const [debouncedQuery, setDebouncedQuery] = useState(query);
-  const [debouncedPriceMin, setDebouncedPriceMin] = useState(priceMin);
-  const [debouncedPriceMax, setDebouncedPriceMax] = useState(priceMax);
-  const [debouncedMapBounds, setDebouncedMapBounds] = useState(mapBounds);
+  const [debouncedFeeMin, setDebouncedFeeMin] = useState(feeMin);
+  const [debouncedFeeMax, setDebouncedFeeMax] = useState(feeMax);
 
   useEffect(() => {
     const timer = setTimeout(() => setDebouncedQuery(query), DEBOUNCE_MS);
@@ -31,32 +39,57 @@ export function useSearchWithFilters() {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setDebouncedPriceMin(priceMin);
-      setDebouncedPriceMax(priceMax);
+      setDebouncedFeeMin(feeMin);
+      setDebouncedFeeMax(feeMax);
     }, DEBOUNCE_MS);
     return () => clearTimeout(timer);
-  }, [priceMin, priceMax]);
+  }, [feeMin, feeMax]);
 
-  useEffect(() => {
-    const timer = setTimeout(() => setDebouncedMapBounds(mapBounds), MAP_DEBOUNCE_MS);
-    return () => clearTimeout(timer);
-  }, [mapBounds]);
-
-  const searchRequest = useMemo(
-    () =>
-      mapFiltersToRequest({
+  const typedRequest = useMemo(
+    () => ({
+      ...mapStoreToTypedRequest({
         query: debouncedQuery,
-        priceMin: debouncedPriceMin,
-        priceMax: debouncedPriceMax,
-        curricula,
+        suburb,
+        postcode,
         states,
-        englishTests,
-        activeChips,
-        mapBounds: debouncedMapBounds,
-        geocodedQuery,
+        sectors,
+        accommodation,
+        religiousAffiliations,
+        entryYearLevels,
+        studentAge,
+        entryTerms,
+        programTypes,
+        atarAvailable,
+        englishLanguageSupport,
+        scholarshipAvailable,
+        englishTest,
+        feeMin: debouncedFeeMin,
+        feeMax: debouncedFeeMax,
+        sortBy,
       }),
-    [debouncedQuery, debouncedPriceMin, debouncedPriceMax, curricula, states, englishTests, activeChips, debouncedMapBounds, geocodedQuery],
+      pageSize: RESULTS_PAGE_SIZE,
+    }),
+    [
+      debouncedQuery,
+      suburb,
+      postcode,
+      states,
+      sectors,
+      accommodation,
+      religiousAffiliations,
+      entryYearLevels,
+      studentAge,
+      entryTerms,
+      programTypes,
+      atarAvailable,
+      englishLanguageSupport,
+      scholarshipAvailable,
+      englishTest,
+      debouncedFeeMin,
+      debouncedFeeMax,
+      sortBy,
+    ],
   );
 
-  return useSchoolSearch(searchRequest);
+  return useTypedSchoolSearch(typedRequest);
 }

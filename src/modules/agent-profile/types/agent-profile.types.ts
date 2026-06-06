@@ -1,3 +1,5 @@
+import type { LucideIcon } from 'lucide-react';
+
 export type AgentVerificationStep =
   | 'email_verified'
   | 'profile_completed'
@@ -24,6 +26,34 @@ export interface AgentVerificationStatus {
   verified: boolean;
   qeacCertified: boolean;
   checklist: AgentVerificationChecklistItem[];
+}
+
+export type AgentOnboardingStepKey =
+  | 'email_verified'
+  | 'profile_completed'
+  | 'document_uploaded'
+  | 'verification_submitted'
+  | 'first_student_added'
+  | 'first_application_created';
+
+export interface AgentOnboardingStep {
+  key: AgentOnboardingStepKey;
+  completed: boolean;
+}
+
+export interface AgentOnboarding {
+  steps: AgentOnboardingStep[];
+  completedCount: number;
+  totalCount: number;
+  allComplete: boolean;
+}
+
+export interface AgentOnboardingStepConfig {
+  key: AgentOnboardingStepKey;
+  labelKey: string;
+  descriptionKey: string;
+  href: string;
+  icon: LucideIcon;
 }
 
 export interface AgentPublicPreview {

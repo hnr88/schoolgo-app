@@ -16,6 +16,11 @@
 # testing
 /coverage
 
+# playwright storageState (contains auth JWTs/cookies — never commit)
+/tests/e2e/.auth/
+/playwright-report/
+/test-results/
+
 # next.js
 /.next/
 /out/

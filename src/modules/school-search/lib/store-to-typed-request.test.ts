@@ -20,6 +20,7 @@ function snapshot(overrides: Partial<SchoolSearchStoreSnapshot>): SchoolSearchSt
     programTypes: [],
     atarAvailable: false,
     englishLanguageSupport: false,
+    scholarshipAvailable: false,
     englishTest: null,
     feeMin: FEE_MIN,
     feeMax: FEE_MAX,
@@ -55,5 +56,14 @@ describe('mapStoreToTypedRequest', () => {
       page: 1,
       pageSize: 24,
     });
+  });
+
+  it('sends scholarshipAvailable only when the toggle is on', () => {
+    expect(
+      mapStoreToTypedRequest(snapshot({ scholarshipAvailable: true })).scholarshipAvailable,
+    ).toBe(true);
+    expect(
+      mapStoreToTypedRequest(snapshot({ scholarshipAvailable: false })).scholarshipAvailable,
+    ).toBeUndefined();
   });
 });

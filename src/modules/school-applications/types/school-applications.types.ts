@@ -252,3 +252,125 @@ export interface SchoolMessageThreadItem {
 export interface SchoolMessageThreadResponse {
   data: SchoolMessageThreadItem[];
 }
+
+export type VettingCheckName =
+  | 'required_documents'
+  | 'english_test'
+  | 'passport_expiry'
+  | 'age_eligibility';
+
+export type VettingCheckStatus = 'pass' | 'fail' | 'warning';
+
+export interface VettingCheck {
+  check: VettingCheckName;
+  status: VettingCheckStatus;
+  message: string;
+}
+
+export type VettingIntegrityStatus = 'clear' | 'flagged' | 'invalidated';
+
+export interface VettingIntegrity {
+  proctoringRiskScore: number | null;
+  integrityStatus: VettingIntegrityStatus | null;
+  hasProctoredSession: boolean;
+}
+
+export type VettingDocVerificationStatus =
+  | 'unverified'
+  | 'verifying'
+  | 'issuer_verified'
+  | 'direct_delivered'
+  | 'revoked';
+
+export interface VettingDocVerification {
+  testType: string;
+  verificationStatus: VettingDocVerificationStatus;
+}
+
+export type VettingOverall = 'pass' | 'review' | 'fail';
+
+export interface VettingResult {
+  applicationDocumentId: string;
+  checks: VettingCheck[];
+  integrity: VettingIntegrity;
+  docVerification: VettingDocVerification[];
+  overall: VettingOverall;
+}
+
+export interface VettingResultResponse {
+  data: VettingResult;
+}
+
+export type AgeEligibilityStatus = VettingCheckStatus;
+
+export interface AgeEligibilityResult {
+  status: AgeEligibilityStatus;
+  message: string;
+}
+
+export type ServiceCatalogCategory =
+  | 'oshc'
+  | 'homestay'
+  | 'guardianship'
+  | 'airport_pickup'
+  | 'insurance'
+  | 'other';
+
+export interface ServiceCatalogItem {
+  documentId: string;
+  name: string;
+  category: ServiceCatalogCategory;
+  description: string | null;
+  priceAud: number;
+  active: boolean;
+}
+
+export interface ServiceCatalogResponse {
+  data: ServiceCatalogItem[];
+}
+
+export interface AttachServiceLineItem {
+  name: string;
+  category: ServiceCatalogCategory;
+  unitPriceAud: number;
+  quantity: number;
+  lineTotalAud: number;
+}
+
+export interface AttachServiceResult {
+  invoiceDocumentId: string;
+  kind: 'add_on_service';
+  amountAud: number;
+  status: 'issued';
+  lineItems: AttachServiceLineItem[];
+  application: string;
+}
+
+export interface AttachServiceResponse {
+  data: AttachServiceResult;
+}
+
+export type ServiceInvoiceStatus =
+  | 'draft'
+  | 'issued'
+  | 'paid'
+  | 'overdue'
+  | 'cancelled'
+  | 'refunded';
+
+export interface ServiceInvoice {
+  documentId: string;
+  invoiceNumber: string | null;
+  kind: string;
+  amountAud: number;
+  currency: string | null;
+  status: ServiceInvoiceStatus;
+  dueDate: string | null;
+  issuedAt: string | null;
+  lineItems: AttachServiceLineItem[] | null;
+  application: { documentId: string } | null;
+}
+
+export interface ServiceInvoicesResponse {
+  data: ServiceInvoice[];
+}

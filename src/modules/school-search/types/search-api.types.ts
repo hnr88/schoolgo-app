@@ -61,6 +61,7 @@ export interface TypedSearchRequest {
   programTypes?: ProgramType[];
   atarAvailable?: boolean;
   englishLanguageSupport?: boolean;
+  scholarshipAvailable?: boolean;
   englishTest?: { type: EnglishTestType; score: number };
   feeMin?: number;
   feeMax?: number;

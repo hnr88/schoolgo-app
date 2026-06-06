@@ -7,6 +7,7 @@ export const PIPELINE_COLUMNS: PipelineColumn[] = [
     statuses: ['draft', 'submitted', 'received'],
     color: 'bg-babu-50',
     dotColor: 'bg-babu-500',
+    agentToStatus: 'submitted',
   },
   {
     id: 'in_review',
@@ -28,6 +29,7 @@ export const PIPELINE_COLUMNS: PipelineColumn[] = [
     statuses: ['offer_made', 'offer_accepted'],
     color: 'bg-vivid-mint-soft',
     dotColor: 'bg-vivid-mint',
+    agentToStatus: 'offer_accepted',
   },
   {
     id: 'pre_enrolment',
@@ -49,6 +51,7 @@ export const PIPELINE_COLUMNS: PipelineColumn[] = [
     statuses: ['withdrawn', 'declined', 'waitlisted'],
     color: 'bg-surface-dim',
     dotColor: 'bg-foggy',
+    agentToStatus: 'withdrawn',
   },
 ];
 

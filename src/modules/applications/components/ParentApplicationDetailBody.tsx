@@ -8,9 +8,11 @@ import { cn } from '@/lib/utils';
 import { SectionHeading, SurfaceCard } from '@/modules/core';
 import { ParentApplicationInfoSection } from '@/modules/applications/components/ParentApplicationInfoSection';
 import { ParentApplicationActions } from '@/modules/applications/components/ParentApplicationActions';
+import { AgentRepresentationPanel } from '@/modules/students';
 import { ParentApplicationTimelineSection } from './ParentApplicationTimelineSection';
 import { ParentPreEnrolmentSection } from './ParentPreEnrolmentSection';
 import { ParentApplicationDocumentsSection } from './ParentApplicationDocumentsSection';
+import { ParentApplicationTestResultsSection } from './ParentApplicationTestResultsSection';
 import { formatDate, formatOfferFee } from '@/modules/applications/lib/parent-format';
 import type { ParentApplication } from '@/modules/applications/types/parent-application.types';
 
@@ -93,6 +95,10 @@ export function ParentApplicationDetailBody({ application }: { application: Pare
         applicationDocumentId={application.documentId}
         studentDocumentId={application.student.documentId}
       />
+
+      <ParentApplicationTestResultsSection studentDocumentId={application.student.documentId} />
+
+      <AgentRepresentationPanel studentDocumentId={application.student.documentId} />
     </div>
   );
 }

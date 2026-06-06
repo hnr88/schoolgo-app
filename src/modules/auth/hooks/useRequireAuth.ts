@@ -18,12 +18,12 @@ interface UseRequireAuthOptions {
 export function useRequireAuth(options: UseRequireAuthOptions = {}) {
   const router = useRouter();
   const locale = useLocale();
-  const { isAuthenticated, user, isLoading, isInitialized, userType } = useAuth();
+  const { isAuthenticated, user, isLoading, isInitialized, isHydrated, userType } = useAuth();
   const { allowedRoles, redirectTo } = options;
   const loginPath = redirectTo ?? '/sign-in';
 
   useEffect(() => {
-    if (!isInitialized) return;
+    if (!isHydrated || !isInitialized) return;
 
     if (!isAuthenticated) {
       router.push(loginPath);
@@ -51,7 +51,7 @@ export function useRequireAuth(options: UseRequireAuthOptions = {}) {
         }
       }
     }
-  }, [isAuthenticated, isInitialized, user?.role, allowedRoles, loginPath, router, userType, locale]);
+  }, [isAuthenticated, isInitialized, isHydrated, user?.role, allowedRoles, loginPath, router, userType, locale]);
 
-  return { isAuthenticated, user, isLoading, isInitialized };
+  return { isAuthenticated, user, isLoading, isInitialized, isHydrated };
 }

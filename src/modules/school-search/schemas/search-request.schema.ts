@@ -106,6 +106,7 @@ export const typedSearchRequestSchema = z
     programTypes: z.array(programTypeSchema).max(3).optional(),
     atarAvailable: z.boolean().optional(),
     englishLanguageSupport: z.boolean().optional(),
+    scholarshipAvailable: z.boolean().optional(),
     englishTest: z
       .object({
         type: englishTestTypeSchema,
