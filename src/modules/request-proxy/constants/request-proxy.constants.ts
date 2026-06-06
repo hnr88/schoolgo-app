@@ -2,6 +2,11 @@ import { env } from '@/lib/env';
 
 export const LAUNCHING_SOON = env.NEXT_PUBLIC_LAUNCHING_SOON === 'true';
 
+// Name of the base-domain-scoped cookie that records which portal a user is
+// logged into. Set client-side (see auth-cookie.ts) so the proxy can read it on
+// EVERY subdomain and redirect a user who lands on the wrong one.
+export const LOGGED_IN_PORTAL_COOKIE = 'schoolgo-logged-in';
+
 export const SECURITY_HEADERS: Readonly<Record<string, string>> = {
   'X-Content-Type-Options': 'nosniff',
   'X-Frame-Options': 'SAMEORIGIN',

@@ -1,4 +1,7 @@
-export { LAUNCHING_SOON } from '@/modules/request-proxy/constants/request-proxy.constants';
+export {
+  LAUNCHING_SOON,
+  LOGGED_IN_PORTAL_COOKIE,
+} from '@/modules/request-proxy/constants/request-proxy.constants';
 export {
   detectLocale,
   isPublicContentPath,

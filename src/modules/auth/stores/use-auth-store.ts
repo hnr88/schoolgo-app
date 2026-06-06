@@ -5,6 +5,10 @@ import { persist, createJSONStorage } from 'zustand/middleware';
 import { isAxiosError } from 'axios';
 import { publicApi, privateApi } from '@/lib/axios';
 import { mapStrapiUser } from '@/modules/auth/lib/map-strapi-user';
+import {
+  clearLoggedInPortalCookie,
+  setLoggedInPortalCookie,
+} from '@/modules/auth/lib/auth-cookie';
 import type { AuthState, LoginCredentials, User } from '@/modules/auth/types/auth.types';
 import type { Portal } from '@/lib/portal-url';
 
@@ -21,13 +25,8 @@ function isInvalidTokenError(error: unknown): boolean {
   return isAxiosError(error) && error.response?.status === 401;
 }
 
-function setAuthCookie(portal: Portal) {
-  document.cookie = `schoolgo-logged-in=${portal}; path=/; max-age=31536000; SameSite=Lax`;
-}
-
-function clearAuthCookie() {
-  document.cookie = 'schoolgo-logged-in=; path=/; max-age=0';
-}
+const setAuthCookie = setLoggedInPortalCookie;
+const clearAuthCookie = clearLoggedInPortalCookie;
 
 export const useAuthStore = create<AuthState>()(
   persist(

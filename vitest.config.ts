@@ -10,6 +10,13 @@ export default defineConfig({
     globals: true,
     include: ['tests/unit/**/*.test.{ts,tsx}', 'src/**/*.test.{ts,tsx}'],
     exclude: ['tests/e2e/**', 'node_modules', '.next'],
+    env: {
+      NEXT_PUBLIC_API_URL: 'http://localhost:1338',
+      NEXT_PUBLIC_BASE_DOMAIN: 'schoolgo.com.au',
+      NEXT_PUBLIC_PARENT_URL: 'https://parent.schoolgo.com.au',
+      NEXT_PUBLIC_AGENT_URL: 'https://agent.schoolgo.com.au',
+      NEXT_PUBLIC_SCHOOL_URL: 'https://school.schoolgo.com.au',
+    },
   },
   resolve: {
     alias: {

@@ -6,6 +6,7 @@ import {
   isPublicStaticContentPath,
   isTrustedHost,
   LAUNCHING_SOON,
+  LOGGED_IN_PORTAL_COOKIE,
   resolvePortal,
   withRobotsHeader,
 } from '@/modules/request-proxy';
@@ -57,14 +58,17 @@ export function proxy(request: NextRequest) {
   const locale = hasLocale ? maybeLocale : routing.defaultLocale;
 
   const isRootPath = hasLocale ? segments.length === 1 : pathname === '/';
-  const loggedInPortal = request.cookies.get('schoolgo-logged-in')?.value;
+  const loggedInPortal = request.cookies.get(LOGGED_IN_PORTAL_COOKIE)?.value;
+  const pathAfterLocale = hasLocale ? segments.slice(1).join('/') : pathname.replace(/^\//, '');
 
+  // Send a user who is logged into THIS portal from its root to its dashboard.
+  // The cookie is host-only, so it only reflects a session on this same
+  // subdomain — cross-portal access is left to the per-origin session checked
+  // client-side in useRequireAuth, which keeps each subdomain's login independent.
   if (loggedInPortal && isRootPath && loggedInPortal === portal) {
     url.pathname = `/${locale}/dashboard`;
     return withRobotsHeader(NextResponse.redirect(url), hostname);
   }
-
-  const pathAfterLocale = hasLocale ? segments.slice(1).join('/') : pathname.replace(/^\//, '');
   if (pathAfterLocale === 'launching-soon') {
     url.pathname = `/${locale}/launching-soon`;
     return withRobotsHeader(NextResponse.rewrite(url), hostname);
