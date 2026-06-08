@@ -6,6 +6,7 @@ import { persist, createJSONStorage } from 'zustand/middleware';
 interface OnboardingState {
   dismissed: boolean;
   dismiss: () => void;
+  reset: () => void;
 }
 
 export const useOnboardingStore = create<OnboardingState>()(
@@ -13,6 +14,7 @@ export const useOnboardingStore = create<OnboardingState>()(
     (set) => ({
       dismissed: false,
       dismiss: () => set({ dismissed: true }),
+      reset: () => set({ dismissed: false }),
     }),
     {
       name: 'schoolgo-onboarding',

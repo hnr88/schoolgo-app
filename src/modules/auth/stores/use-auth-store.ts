@@ -4,6 +4,10 @@ import { create } from 'zustand';
 import { persist, createJSONStorage } from 'zustand/middleware';
 import { isAxiosError } from 'axios';
 import { publicApi, privateApi } from '@/lib/axios';
+import { getQueryClient } from '@/lib/query-client';
+import { useOnboardingStore } from '@/modules/onboarding/stores/use-onboarding-store';
+import { useActiveChildStore } from '@/modules/students/stores/use-active-child-store';
+import { useRecentPagesStore } from '@/modules/command-palette/stores/use-recent-pages-store';
 import { mapStrapiUser } from '@/modules/auth/lib/map-strapi-user';
 import {
   clearLoggedInPortalCookie,
@@ -42,6 +46,9 @@ export const useAuthStore = create<AuthState>()(
       login: async (credentials: LoginCredentials) => {
         try {
           set({ isLoading: true });
+          // Drop any cached per-account data from a prior session so queries
+          // refetch against the new identity instead of serving stale data.
+          getQueryClient().clear();
           const response = await publicApi.post('/api/auth/local', credentials);
           const { jwt } = response.data;
           set({ jwt });
@@ -63,6 +70,14 @@ export const useAuthStore = create<AuthState>()(
 
       logout: () => {
         clearAuthCookie();
+        // Wipe the cache so the next account never sees the previous one's
+        // cached data (e.g. profileCompleted bouncing them to onboarding).
+        getQueryClient().clear();
+        // Reset per-account state persisted in localStorage so it never bleeds
+        // into the next account signing in on the same browser.
+        useOnboardingStore.getState().reset();
+        useActiveChildStore.getState().setActiveChild(null);
+        useRecentPagesStore.getState().clear();
         set({
           user: null,
           jwt: null,

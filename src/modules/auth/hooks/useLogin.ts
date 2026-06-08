@@ -30,6 +30,23 @@ export function useLogin({ portal, setError }: UseLoginOptions) {
       const actualRole = actualUser?.role;
       const actualPortal = actualRole ? getPortalFromRole(actualRole) : portal;
 
+      // The session lives in per-origin localStorage + a host-only cookie, so it
+      // cannot follow a cross-subdomain redirect. If this account belongs to a
+      // different portal than the one being signed into, redirecting to that
+      // portal's dashboard would arrive with no session and bounce back to its
+      // sign-in. Surface the "not authorised for this portal" message and clear
+      // the wrong-origin session instead of stranding the user.
+      if (actualPortal !== portal) {
+        useAuthStore.getState().logout();
+        const message = t('portalUnauthorized');
+        if (setError) {
+          setError('root', { type: 'server', message });
+        } else {
+          toast.error(message);
+        }
+        return;
+      }
+
       setUserType(actualPortal);
       toast.success(t('loginSuccess'));
       const dashboardPath = getPortalDashboardPath(actualPortal);
