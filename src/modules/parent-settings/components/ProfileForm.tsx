@@ -12,7 +12,12 @@ import { Form, FormControl, FormItem, FormLabel } from '@/components/ui/form';
 import { profileSchema, type ProfileValues } from '@/modules/parent-settings/schemas/profile.schema';
 import { useUpdateProfile } from '@/modules/parent-settings/queries/use-update-profile.mutation';
 import { useUnsavedChangesGuard } from '@/modules/parent-settings/hooks/useUnsavedChangesGuard';
-import { SettingsTextField } from '@/modules/parent-settings/components/SettingsTextField';
+import { toProfileDefaults } from '@/modules/parent-settings/lib/parent-profile';
+import { ParentIdentityFields } from '@/modules/parent-settings/components/ParentIdentityFields';
+import { ParentContactFields } from '@/modules/parent-settings/components/ParentContactFields';
+import { ParentAddressFields } from '@/modules/parent-settings/components/ParentAddressFields';
+import { ParentEmergencyFields } from '@/modules/parent-settings/components/ParentEmergencyFields';
+import { ProfileFormSection } from '@/modules/parent-settings/components/ProfileFormSection';
 import { SettingsFormError } from '@/modules/parent-settings/components/SettingsFormError';
 import { ChangeEmailButton } from '@/modules/parent-settings/components/ChangeEmailButton';
 import type { ParentMe } from '@/modules/parent-settings/types/parent-settings.types';
@@ -24,11 +29,7 @@ export function ProfileForm({ me }: { me: ParentMe }) {
 
   const form = useForm<ProfileValues>({
     resolver: zodResolver(profileSchema),
-    defaultValues: {
-      firstName: me.firstName ?? '',
-      lastName: me.lastName ?? '',
-      phone: me.phone ?? '',
-    },
+    defaultValues: toProfileDefaults(me),
   });
 
   const isDirty = form.formState.isDirty;
@@ -37,16 +38,8 @@ export function ProfileForm({ me }: { me: ParentMe }) {
   const handleSubmit = async (values: ProfileValues) => {
     setFormError(null);
     try {
-      const next = await mutateAsync({
-        firstName: values.firstName,
-        lastName: values.lastName,
-        phone: values.phone || '',
-      });
-      form.reset({
-        firstName: next.firstName ?? '',
-        lastName: next.lastName ?? '',
-        phone: next.phone ?? '',
-      });
+      const next = await mutateAsync(values);
+      form.reset(toProfileDefaults(next));
     } catch (error) {
       const status = isAxiosError(error) ? error.response?.status : undefined;
       const apiMessage = isAxiosError(error)
@@ -58,44 +51,36 @@ export function ProfileForm({ me }: { me: ParentMe }) {
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(handleSubmit)} className='flex flex-col gap-6' noValidate>
+      <form onSubmit={form.handleSubmit(handleSubmit)} className='flex flex-col gap-8' noValidate>
         {formError ? <SettingsFormError message={formError} /> : null}
 
-        <div className='grid grid-cols-1 gap-6 sm:grid-cols-2'>
-          <SettingsTextField
-            control={form.control}
-            name='firstName'
-            label={t('firstNameLabel')}
-            autoComplete='given-name'
-          />
-          <SettingsTextField
-            control={form.control}
-            name='lastName'
-            label={t('lastNameLabel')}
-            autoComplete='family-name'
-          />
-        </div>
+        <ProfileFormSection title={t('sectionIdentity')}>
+          <ParentIdentityFields control={form.control} />
+        </ProfileFormSection>
 
-        <SettingsTextField
-          control={form.control}
-          name='phone'
-          label={t('phoneLabel')}
-          type='tel'
-          autoComplete='tel'
-        />
-
-        <div className='flex flex-col gap-2'>
-          <FormItem>
-            <FormLabel>{t('emailLabel')}</FormLabel>
-            <FormControl>
-              <Input value={me.email} readOnly disabled autoComplete='email' />
-            </FormControl>
-          </FormItem>
-          <div className='flex flex-wrap items-center justify-between gap-2'>
-            <p className='text-xs text-muted-foreground'>{t('emailHint')}</p>
-            <ChangeEmailButton />
+        <ProfileFormSection title={t('sectionContact')}>
+          <ParentContactFields control={form.control} />
+          <div className='flex flex-col gap-2'>
+            <FormItem>
+              <FormLabel>{t('emailLabel')}</FormLabel>
+              <FormControl>
+                <Input value={me.email} readOnly disabled autoComplete='email' />
+              </FormControl>
+            </FormItem>
+            <div className='flex flex-wrap items-center justify-between gap-2'>
+              <p className='text-xs text-muted-foreground'>{t('emailHint')}</p>
+              <ChangeEmailButton />
+            </div>
           </div>
-        </div>
+        </ProfileFormSection>
+
+        <ProfileFormSection title={t('sectionAddress')}>
+          <ParentAddressFields control={form.control} />
+        </ProfileFormSection>
+
+        <ProfileFormSection title={t('sectionEmergency')}>
+          <ParentEmergencyFields control={form.control} />
+        </ProfileFormSection>
 
         <Button
           type='submit'

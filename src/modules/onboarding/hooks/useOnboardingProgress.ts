@@ -26,7 +26,7 @@ export function useOnboardingProgress(): UseOnboardingProgressResult {
     me.isLoading || students.isLoading || bookmarks.isLoading || applications.isLoading;
 
   const progress = computeCompleteness({
-    hasProfile: Boolean(me.data?.phone),
+    hasProfile: Boolean(me.data?.profileCompleted),
     hasChild: (students.data?.meta?.pagination?.total ?? 0) > 0,
     hasSavedSchool: (bookmarks.data?.data?.length ?? 0) > 0,
     hasApplication: (applications.data ?? 0) > 0,

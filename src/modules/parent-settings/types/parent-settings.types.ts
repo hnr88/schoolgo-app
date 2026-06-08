@@ -1,5 +1,9 @@
 export type SettingsLocale = 'en' | 'ko' | 'ms' | 'th' | 'vi' | 'zh';
 
+export type ParentRelationship = 'mother' | 'father' | 'guardian' | 'grandparent' | 'other';
+
+export type ParentContactMethod = 'email' | 'phone' | 'whatsapp' | 'wechat';
+
 export interface NotificationPreferences {
   email?: boolean;
   sms?: boolean;
@@ -20,6 +24,19 @@ export interface ParentMe {
   lastName: string | null;
   phone: string | null;
   preferences: ParentPreferences | null;
+  relationshipToStudent: ParentRelationship | null;
+  occupation: string | null;
+  secondaryPhone: string | null;
+  preferredContactMethod: ParentContactMethod | null;
+  addressLine: string | null;
+  city: string | null;
+  stateRegion: string | null;
+  postalCode: string | null;
+  countryOfResidence: string | null;
+  emergencyContactName: string | null;
+  emergencyContactPhone: string | null;
+  emergencyContactRelationship: string | null;
+  profileCompleted: boolean;
   confirmed: boolean;
   blocked: boolean;
 }
@@ -29,6 +46,18 @@ export interface UpdateProfilePayload {
   lastName?: string;
   phone?: string;
   preferences?: ParentPreferences;
+  relationshipToStudent?: string;
+  occupation?: string;
+  secondaryPhone?: string;
+  preferredContactMethod?: string;
+  addressLine?: string;
+  city?: string;
+  stateRegion?: string;
+  postalCode?: string;
+  countryOfResidence?: string;
+  emergencyContactName?: string;
+  emergencyContactPhone?: string;
+  emergencyContactRelationship?: string;
 }
 
 export interface ChangePasswordResponse {
