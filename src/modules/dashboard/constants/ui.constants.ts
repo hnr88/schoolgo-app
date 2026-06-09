@@ -3,10 +3,13 @@ import {
   Award,
   BarChart3,
   Bell,
+  Banknote,
   Bookmark,
   Building2,
   Calculator,
+  CalendarClock,
   CalendarDays,
+  ChartLine,
   CheckCircle,
   ClipboardCheck,
   Columns3,
@@ -20,18 +23,24 @@ import {
   Gift,
   Handshake,
   Heart,
+  History,
   LayoutDashboard,
+  LayoutGrid,
   LayoutTemplate,
+  ListChecks,
   MessageSquare,
   Receipt,
   Search,
   Send,
   Settings,
   ShieldCheck,
+  StickyNote,
+  TrendingUp,
   Trophy,
   UserCircle,
   UserPlus,
   Users,
+  Video,
   Wallet,
 } from 'lucide-react';
 
@@ -69,6 +78,15 @@ export const ROUTE_TITLE_MAP: Record<string, string> = {
   '/dashboard/payments': 'payments',
   '/dashboard/pre-enrolment': 'preEnrolment',
   '/dashboard/analytics': 'analytics',
+  '/dashboard/earnings': 'earnings',
+  '/dashboard/follow-ups': 'followUps',
+  '/dashboard/compliance': 'compliance',
+  '/dashboard/activity': 'activity',
+  '/dashboard/tours': 'tours',
+  '/dashboard/notes': 'notes',
+  '/dashboard/tuition': 'tuition',
+  '/dashboard/agent-performance': 'agentPerformance',
+  '/dashboard/document-requests': 'documentRequests',
 };
 
 export const PORTAL_NAV: Record<Portal, PortalNav> = {
@@ -77,7 +95,10 @@ export const PORTAL_NAV: Record<Portal, PortalNav> = {
     groups: [
       {
         labelKey: 'groupOverview',
-        items: [{ href: '/dashboard', icon: LayoutDashboard, labelKey: 'dashboard' }],
+        items: [
+          { href: '/dashboard', icon: LayoutDashboard, labelKey: 'dashboard' },
+          { href: '/dashboard/activity', icon: History, labelKey: 'activity' },
+        ],
       },
       {
         labelKey: 'groupStudents',
@@ -85,6 +106,7 @@ export const PORTAL_NAV: Record<Portal, PortalNav> = {
           { href: '/dashboard/students', icon: Users, labelKey: 'students' },
           { href: '/dashboard/documents', icon: FolderOpen, labelKey: 'documents' },
           { href: '/dashboard/results', icon: Trophy, labelKey: 'results' },
+          { href: '/dashboard/compliance', icon: ShieldCheck, labelKey: 'compliance' },
         ],
       },
       {
@@ -93,6 +115,8 @@ export const PORTAL_NAV: Record<Portal, PortalNav> = {
           { href: '/dashboard/applications', icon: FileText, labelKey: 'applications' },
           { href: '/dashboard/offers', icon: Gift, labelKey: 'offers' },
           { href: '/dashboard/pipeline', icon: BarChart3, labelKey: 'pipeline' },
+          { href: '/dashboard/follow-ups', icon: ListChecks, labelKey: 'followUps' },
+          { href: '/dashboard/analytics', icon: ChartLine, labelKey: 'analytics' },
         ],
       },
       {
@@ -101,6 +125,7 @@ export const PORTAL_NAV: Record<Portal, PortalNav> = {
           { href: '/dashboard/search', icon: Search, labelKey: 'searchSchools' },
           { href: '/dashboard/saved-schools', icon: Heart, labelKey: 'savedSchools' },
           { href: '/dashboard/saved-searches', icon: Bookmark, labelKey: 'savedSearches' },
+          { href: '/dashboard/partnerships', icon: Handshake, labelKey: 'agentPartnerships' },
         ],
       },
       {
@@ -112,7 +137,11 @@ export const PORTAL_NAV: Record<Portal, PortalNav> = {
       },
       {
         labelKey: 'groupFinance',
-        items: [{ href: '/dashboard/payments', icon: Wallet, labelKey: 'payments' }],
+        items: [
+          { href: '/dashboard/invoices', icon: Receipt, labelKey: 'invoices' },
+          { href: '/dashboard/payments', icon: Wallet, labelKey: 'payments' },
+          { href: '/dashboard/earnings', icon: TrendingUp, labelKey: 'earnings' },
+        ],
       },
       {
         labelKey: 'groupAccount',
@@ -131,13 +160,16 @@ export const PORTAL_NAV: Record<Portal, PortalNav> = {
         items: [
           { href: '/dashboard', icon: LayoutDashboard, labelKey: 'dashboard' },
           { href: '/dashboard/analytics', icon: BarChart3, labelKey: 'analytics' },
+          { href: '/dashboard/agent-performance', icon: Award, labelKey: 'agentPerformance' },
         ],
       },
       {
         labelKey: 'groupApplications',
         items: [
           { href: '/dashboard/applications', icon: FileText, labelKey: 'applications' },
+          { href: '/dashboard/offers', icon: Gift, labelKey: 'offers' },
           { href: '/dashboard/pre-enrolment', icon: ClipboardCheck, labelKey: 'preEnrolment' },
+          { href: '/dashboard/document-requests', icon: FileQuestion, labelKey: 'documentRequests' },
         ],
       },
       {
@@ -159,6 +191,8 @@ export const PORTAL_NAV: Record<Portal, PortalNav> = {
         items: [
           { href: '/dashboard/profile', icon: Building2, labelKey: 'profile' },
           { href: '/dashboard/capacity', icon: FileSpreadsheet, labelKey: 'capacity' },
+          { href: '/dashboard/tuition', icon: Banknote, labelKey: 'tuition' },
+          { href: '/dashboard/tours', icon: CalendarDays, labelKey: 'tours' },
           { href: '/dashboard/staff', icon: Users, labelKey: 'staff' },
         ],
       },
@@ -167,6 +201,7 @@ export const PORTAL_NAV: Record<Portal, PortalNav> = {
         items: [
           { href: '/dashboard/messages', icon: MessageSquare, labelKey: 'messages' },
           { href: '/dashboard/notifications', icon: Bell, labelKey: 'notifications' },
+          { href: '/dashboard/notes', icon: StickyNote, labelKey: 'notes' },
         ],
       },
       {
@@ -189,7 +224,9 @@ export const PORTAL_NAV: Record<Portal, PortalNav> = {
         labelKey: 'groupStudents',
         items: [
           { href: '/parent/students', icon: GraduationCap, labelKey: 'students' },
+          { href: '/parent/family-overview', icon: LayoutGrid, labelKey: 'familyOverview' },
           { href: '/parent/documents', icon: FolderOpen, labelKey: 'documents' },
+          { href: '/parent/document-expiry', icon: CalendarClock, labelKey: 'documentExpiry' },
           { href: '/parent/tests', icon: ClipboardCheck, labelKey: 'tests' },
           { href: '/parent/results', icon: Trophy, labelKey: 'results' },
         ],
@@ -199,6 +236,8 @@ export const PORTAL_NAV: Record<Portal, PortalNav> = {
         items: [
           { href: '/parent/applications', icon: FileText, labelKey: 'applications' },
           { href: '/parent/offers', icon: Gift, labelKey: 'offers' },
+          { href: '/parent/interviews', icon: Video, labelKey: 'interviews' },
+          { href: '/parent/enrolment-readiness', icon: ListChecks, labelKey: 'enrolmentReadiness' },
         ],
       },
       {
@@ -208,6 +247,8 @@ export const PORTAL_NAV: Record<Portal, PortalNav> = {
           { href: '/parent/saved-schools', icon: Heart, labelKey: 'savedSchools' },
           { href: '/parent/compare', icon: Columns3, labelKey: 'compare' },
           { href: '/parent/cost-estimator', icon: Calculator, labelKey: 'costEstimator' },
+          { href: '/parent/fit-report', icon: ClipboardCheck, labelKey: 'fitReport' },
+          { href: '/parent/tours', icon: CalendarDays, labelKey: 'tours' },
           { href: '/parent/saved-searches', icon: Bookmark, labelKey: 'savedSearches' },
         ],
       },
