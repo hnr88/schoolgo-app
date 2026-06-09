@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
+import { useMyAssignedApplications } from '@/modules/school-applications/queries/use-my-assigned-applications.query';
 import { useSchoolApplications } from '@/modules/school-applications/queries/use-school-applications.query';
 import { SCHOOL_STATUS_LABEL_KEY } from '@/modules/school-applications/lib/school-application';
 import type {
@@ -23,13 +24,20 @@ export function useSchoolApplicationList() {
   const [search, setSearch] = useState('');
   const [status, setStatus] = useState(() => initialStatusFromUrl(searchParams.get('status')));
   const [intake, setIntake] = useState(() => searchParams.get('intake') ?? 'all');
+  const [view, setView] = useState<'all' | 'mine'>(() =>
+    searchParams.get('view') === 'mine' ? 'mine' : 'all',
+  );
 
   const statusFilter = status === 'all' ? undefined : status;
+  const intakeFilter = intake === 'all' ? undefined : intake;
 
-  const { data, isLoading, isError, refetch } = useSchoolApplications({
+  const allQuery = useSchoolApplications({ status: statusFilter, intake: intakeFilter });
+  const mineQuery = useMyAssignedApplications({
     status: statusFilter,
-    intake: intake === 'all' ? undefined : intake,
+    intake: intakeFilter,
+    enabled: view === 'mine',
   });
+  const { data, isLoading, isError, refetch } = view === 'mine' ? mineQuery : allQuery;
 
   // Source the intake options from the status-filtered set without the intake
   // filter applied, so selecting an intake never collapses the option list.
@@ -60,6 +68,8 @@ export function useSchoolApplicationList() {
     setStatus,
     intake,
     setIntake,
+    view,
+    setView,
     intakes,
     applications,
     isLoading,

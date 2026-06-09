@@ -30,6 +30,34 @@ export interface SchoolApplicationListItemStudent {
   nationality: string | null;
 }
 
+export interface ApplicationAssignedStaff {
+  documentId: string;
+  roleTitle: string | null;
+  user: { firstName: string | null; lastName: string | null } | null;
+}
+
+export interface AssignApplicationResult {
+  documentId: string;
+  assignedStaff: ApplicationAssignedStaff | null;
+}
+
+export interface AssignApplicationResponse {
+  data: AssignApplicationResult;
+}
+
+export interface SchoolTeamMember {
+  documentId: string;
+  roleTitle: string;
+  permissionLevel: 'admin' | 'staff' | string;
+  status: 'active' | 'pending_verification' | 'deactivated' | string;
+  fullName: string;
+  email: string;
+}
+
+export interface SchoolTeamResponse {
+  data: SchoolTeamMember[];
+}
+
 export interface SchoolApplicationListItem {
   documentId: string;
   status: SchoolApplicationStatus;
@@ -127,6 +155,7 @@ export interface SchoolApplicationDetail {
     qeacNumber: string | null;
     user: { documentId: string; firstName: string; lastName: string } | null;
   } | null;
+  assignedStaff?: ApplicationAssignedStaff | null;
 }
 
 export interface SchoolApplicationDetailResponse {

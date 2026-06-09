@@ -2,6 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import { toast } from 'sonner';
+import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { cn } from '@/lib/utils';
 import { ErrorState, surfaceCardVariants } from '@/modules/core';
 import { useSchoolApplicationList } from '@/modules/school-applications/hooks/useSchoolApplicationList';
@@ -19,6 +20,8 @@ export function SchoolApplicationListPage() {
     setStatus,
     intake,
     setIntake,
+    view,
+    setView,
     intakes,
     applications,
     isLoading,
@@ -47,7 +50,17 @@ export function SchoolApplicationListPage() {
 
   return (
     <div className={cn(surfaceCardVariants({ padding: 'none' }), 'overflow-hidden')}>
-      <div className='border-b border-divider px-5 py-4'>
+      <div className='flex flex-col gap-4 border-b border-divider px-5 py-4'>
+        <Tabs value={view} onValueChange={(v) => setView(v === 'mine' ? 'mine' : 'all')}>
+          <TabsList>
+            <TabsTrigger value='all' className='text-foreground/80'>
+              {t('viewAllApplications')}
+            </TabsTrigger>
+            <TabsTrigger value='mine' className='text-foreground/80'>
+              {t('viewMyQueue')}
+            </TabsTrigger>
+          </TabsList>
+        </Tabs>
         <SchoolApplicationToolbar
           search={search}
           onSearchChange={setSearch}

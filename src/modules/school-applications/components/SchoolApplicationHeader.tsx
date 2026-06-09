@@ -3,6 +3,7 @@
 import { useTranslations } from 'next-intl';
 import { Check } from 'lucide-react';
 import { SurfaceCard } from '@/modules/core';
+import { AssigneeSelect } from '@/modules/school-applications/components/AssigneeSelect';
 import { SchoolStatusBadge } from '@/modules/school-applications/components/SchoolStatusBadge';
 import {
   daysColorClass,
@@ -52,11 +53,17 @@ export function SchoolApplicationHeader({ application }: { application: SchoolAp
             {application.targetYearLevel ?? '—'} · {application.targetIntake ?? '—'}
           </p>
         </div>
-        <div className='flex items-center gap-3'>
-          <SchoolStatusBadge status={application.status} />
-          <span className={`text-sm font-medium ${daysColorClass(application.daysInStatusColor)}`}>
-            {t('daysInStatus', { count: application.daysInStatus })}
-          </span>
+        <div className='flex flex-col items-end gap-2'>
+          <div className='flex items-center gap-3'>
+            <SchoolStatusBadge status={application.status} />
+            <span className={`text-sm font-medium ${daysColorClass(application.daysInStatusColor)}`}>
+              {t('daysInStatus', { count: application.daysInStatus })}
+            </span>
+          </div>
+          <AssigneeSelect
+            documentId={application.documentId}
+            assignedStaff={application.assignedStaff ?? null}
+          />
         </div>
       </div>
 

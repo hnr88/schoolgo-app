@@ -1,4 +1,5 @@
 import type {
+  ApplicationAssignedStaff,
   SchoolActionKey,
   SchoolApplicationStatus,
   DaysInStatusColor,
@@ -124,4 +125,12 @@ export function agentUserName(
 ): string | null {
   if (!user) return null;
   return `${user.firstName} ${user.lastName}`.trim();
+}
+
+export function assigneeDisplayName(
+  staff: ApplicationAssignedStaff | null | undefined,
+): string | null {
+  if (!staff) return null;
+  const name = [staff.user?.firstName, staff.user?.lastName].filter(Boolean).join(' ').trim();
+  return name || staff.roleTitle || null;
 }
