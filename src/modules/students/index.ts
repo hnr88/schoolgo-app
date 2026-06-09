@@ -14,6 +14,7 @@ export { ShareWithAgentDialog } from '@/modules/students/components/ShareWithAge
 export { RevokeShareButton } from '@/modules/students/components/RevokeShareButton';
 export { DocumentUploadDialog } from '@/modules/students/components/DocumentUploadDialog';
 export { useParentStudents } from '@/modules/students/queries/use-parent-students.query';
+export { useStudents } from '@/modules/students/queries/use-students.query';
 export { useAgentShares } from '@/modules/students/queries/use-agent-shares.query';
 export { useShareWithAgent } from '@/modules/students/queries/use-share-with-agent.mutation';
 export { useRevokeShare } from '@/modules/students/queries/use-revoke-share.mutation';
