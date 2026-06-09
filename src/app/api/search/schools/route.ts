@@ -31,6 +31,8 @@ export async function POST(request: NextRequest) {
     );
   }
 
+  const authorization = request.headers.get('authorization');
+
   let body: unknown;
   try {
     body = await request.json();
@@ -67,7 +69,7 @@ export async function POST(request: NextRequest) {
         { status: 400 },
       );
     }
-    return proxyToStrapi(legacyParsed.data);
+    return proxyToStrapi(legacyParsed.data, authorization);
   }
 
   const typedParsed = typedSearchRequestSchema.safeParse(body);
@@ -84,14 +86,19 @@ export async function POST(request: NextRequest) {
     );
   }
 
-  return proxyToStrapi(typedParsed.data);
+  return proxyToStrapi(typedParsed.data, authorization);
 }
 
-async function proxyToStrapi(parsedData: unknown): Promise<NextResponse> {
+async function proxyToStrapi(
+  parsedData: unknown,
+  authorization: string | null,
+): Promise<NextResponse> {
   try {
+    const headers: Record<string, string> = { 'Content-Type': 'application/json' };
+    if (authorization) headers.Authorization = authorization;
     const upstream = await fetch(STRAPI_SEARCH_URL, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers,
       body: JSON.stringify(parsedData),
     });
 
