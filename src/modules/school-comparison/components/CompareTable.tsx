@@ -12,6 +12,7 @@ import {
   TableRow,
 } from '@/components/ui/table';
 import { COMPARE_ATTRIBUTES } from '@/modules/school-comparison/constants/comparison.constants';
+import { CompareProjectedCostRow } from '@/modules/school-comparison/components/CompareProjectedCostRow';
 import { createEnumTranslator } from '@/modules/school-comparison/lib/compare-enum-labels';
 import { formatCompareValue } from '@/modules/school-comparison/lib/format-comparison';
 import type {
@@ -87,6 +88,7 @@ export function CompareTable({ schools, labels, onRemove, schoolKey }: CompareTa
               ))}
             </TableRow>
           ))}
+          <CompareProjectedCostRow schools={schools} schoolKey={schoolKey} />
         </TableBody>
       </Table>
     </div>
