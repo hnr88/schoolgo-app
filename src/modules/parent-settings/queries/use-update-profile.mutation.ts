@@ -27,7 +27,8 @@ export function useUpdateProfile() {
           [data.firstName, data.lastName].filter(Boolean).join(' ') || current.displayName;
         setUser({ ...current, displayName });
       }
-      qc.setQueryData(['parent', 'me'], data);
+      const userId = useAuthStore.getState().user?.id ?? null;
+      qc.setQueryData(['parent', 'me', userId], data);
       qc.invalidateQueries({ queryKey: ['parent', 'me'] });
       toast.success(t('saveSuccess'));
     },

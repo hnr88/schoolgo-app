@@ -46,7 +46,12 @@ export function DashboardHeader() {
 
   function handleLogout() {
     logout();
-    router.push('/sign-in');
+    // Hard reload (not a soft router push) so the singleton QueryClient and the
+    // whole runtime are torn down — the next account starts from a clean slate
+    // and never inherits the previous account's in-memory state.
+    if (typeof window !== 'undefined') {
+      window.location.href = '/sign-in';
+    }
   }
 
   const initials = user?.displayName

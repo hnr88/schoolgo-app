@@ -9,6 +9,7 @@ import { useOnboardingStore } from '@/modules/onboarding/stores/use-onboarding-s
 import { useActiveChildStore } from '@/modules/students/stores/use-active-child-store';
 import { useRecentPagesStore } from '@/modules/command-palette/stores/use-recent-pages-store';
 import { mapStrapiUser } from '@/modules/auth/lib/map-strapi-user';
+import { getPortalFromRole } from '@/modules/auth/lib/get-portal-from-role';
 import {
   clearLoggedInPortalCookie,
   setLoggedInPortalCookie,
@@ -54,14 +55,22 @@ export const useAuthStore = create<AuthState>()(
           set({ jwt });
 
           const meResponse = await privateApi.get('/api/users/me');
+          const user = mapStrapiUser(meResponse.data);
+          // Derive the portal from the validated /me and commit it in the SAME
+          // set() that flips isAuthenticated, so there is never a window where
+          // the session is authenticated but userType (and the portal cookie)
+          // are missing — that gap is what bounced the first login attempt.
+          const resolvedType = getPortalFromRole(user.role);
           set({
-            user: mapStrapiUser(meResponse.data),
+            user,
+            userType: resolvedType,
             isAuthenticated: true,
             isLoading: false,
             isInitialized: true,
           });
-          const { userType: currentType } = get();
-          if (currentType) setAuthCookie(currentType);
+          // Cookie is written from the VALIDATED session (never an unvalidated
+          // JWT) — preserves the documented login<->dashboard loop fix.
+          setAuthCookie(resolvedType);
         } catch (error) {
           set({ isLoading: false });
           throw error;

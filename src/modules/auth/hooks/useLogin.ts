@@ -20,7 +20,6 @@ export function useLogin({ portal, setError }: UseLoginOptions) {
   const t = useTranslations('Auth');
   const locale = useLocale();
   const login = useAuthStore((s) => s.login);
-  const setUserType = useAuthStore((s) => s.setUserType);
 
   const handleLogin = async (data: LoginValues) => {
     try {
@@ -47,7 +46,8 @@ export function useLogin({ portal, setError }: UseLoginOptions) {
         return;
       }
 
-      setUserType(actualPortal);
+      // login() already set userType + the portal cookie atomically with the
+      // session, so there is no separate setUserType step here anymore.
       toast.success(t('loginSuccess'));
       const dashboardPath = getPortalDashboardPath(actualPortal);
       if (dashboardPath) {
