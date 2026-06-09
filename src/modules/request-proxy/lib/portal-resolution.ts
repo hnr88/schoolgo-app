@@ -17,7 +17,7 @@ const knownHosts = new Set<string>(
   [agentHost, schoolHost, parentHost].filter((host): host is string => host !== null),
 );
 
-const baseDomain = env.NEXT_PUBLIC_BASE_DOMAIN.split(':')[0];
+const baseDomain = env.NEXT_PUBLIC_BASE_DOMAIN.split(':')[0].toLowerCase();
 
 // The DNS label that identifies the portal for a host, e.g.
 // `agent.schoolgo.com.au` (base `schoolgo.com.au`) -> `agent`; the apex itself
@@ -42,13 +42,25 @@ function leadingLabel(hostname: string): string | null {
 //      apex/www/preview hosts and when only the base domain is configured);
 //   3. parent as the documented default (the parent portal owns the apex).
 export function resolvePortal(hostname: string): RequestPortal {
-  if (agentHost && hostname === agentHost) return 'agent';
-  if (schoolHost && hostname === schoolHost) return 'school';
-  if (parentHost && hostname === parentHost) return 'parent';
+  const host = hostname.toLowerCase();
 
-  const label = leadingLabel(hostname);
+  if (agentHost && host === agentHost) return 'agent';
+  if (schoolHost && host === schoolHost) return 'school';
+  if (parentHost && host === parentHost) return 'parent';
+
+  const label = leadingLabel(host);
   if (label === 'agent') return 'agent';
   if (label === 'school') return 'school';
+
+  // Deployed environments name portals as flat siblings of the base domain
+  // (e.g. `staging-agent.schoolgo.com.au` with base `staging.schoolgo.com.au`),
+  // so the leftmost label is `staging-agent` rather than a subdomain of the
+  // base. Match a trailing `-portal` on that label before defaulting to parent.
+  const firstLabel = host.split('.')[0];
+  if (firstLabel.endsWith('-agent')) return 'agent';
+  if (firstLabel.endsWith('-school')) return 'school';
+  if (firstLabel.endsWith('-parent')) return 'parent';
+
   return 'parent';
 }
 

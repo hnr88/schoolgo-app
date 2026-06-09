@@ -2462,7 +2462,8 @@
     "stepAddressTitle": "Where you live",
     "stepAddressDescription": "Your residential address for school communications.",
     "stepEmergencyTitle": "Emergency contact",
-    "stepEmergencyDescription": "Someone schools can reach if we can't reach you."
+    "stepEmergencyDescription": "Someone schools can reach if we can't reach you.",
+    "logout": "Log out"
   },
   "ParentSettings": {
     "title": "Settings",

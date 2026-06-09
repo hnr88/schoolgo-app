@@ -2881,7 +2881,8 @@
     "stepAddressTitle": "Tempat tinggal anda",
     "stepAddressDescription": "Alamat kediaman anda untuk komunikasi sekolah.",
     "stepEmergencyTitle": "Kenalan kecemasan",
-    "stepEmergencyDescription": "Seseorang yang boleh dihubungi oleh sekolah jika mereka tidak dapat menghubungi anda."
+    "stepEmergencyDescription": "Seseorang yang boleh dihubungi oleh sekolah jika mereka tidak dapat menghubungi anda.",
+    "logout": "Log keluar"
   },
   "ParentSettings": {
     "title": "Tetapan",

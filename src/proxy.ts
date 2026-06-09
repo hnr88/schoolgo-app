@@ -12,11 +12,11 @@ import {
 } from '@/modules/request-proxy';
 
 export function proxy(request: NextRequest) {
-  const forwardedHost = request.headers.get('x-forwarded-host');
-  const rawHost = (forwardedHost && isTrustedHost(forwardedHost.split(':')[0]))
-    ? forwardedHost
-    : request.headers.get('host') ?? '';
-  const hostname = rawHost.split(':')[0];
+  // Host comparisons are case-insensitive (DNS) and the configured portal hosts
+  // are always lowercase, so normalise the incoming host once at the boundary.
+  const forwardedHost = request.headers.get('x-forwarded-host')?.split(':')[0].toLowerCase();
+  const fallbackHost = (request.headers.get('host') ?? '').split(':')[0].toLowerCase();
+  const hostname = forwardedHost && isTrustedHost(forwardedHost) ? forwardedHost : fallbackHost;
   const portal = resolvePortal(hostname);
 
   if (LAUNCHING_SOON) {

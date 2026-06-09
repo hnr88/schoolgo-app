@@ -15,6 +15,7 @@ export function useMe() {
   return useQuery({
     queryKey: ['parent', 'me', userId],
     enabled: isAuthenticated,
+    staleTime: 0,
     queryFn: async () => {
       const { data } = await privateApi.get<ParentMe>('/api/users/me');
       return data;

@@ -50,10 +50,13 @@ import { useOnboardingStore } from '@/modules/onboarding/stores/use-onboarding-s
 import { useActiveChildStore } from '@/modules/students/stores/use-active-child-store';
 import { useRecentPagesStore } from '@/modules/command-palette/stores/use-recent-pages-store';
 
-const ME_KEY = ['parent', 'me'] as const;
+// Mirror the REAL useMe() key shape: ['parent','me', userId] (use-me.query.ts).
+// A 2-element key would falsely pass via clear() even if userId scoping broke.
+const meKey = (id: number) => ['parent', 'me', id] as const;
 
-// Account A is already onboarded; account B is a fresh identity.
-const ACCOUNT_A_ME = { id: 1, email: 'a@example.com', profileCompleted: true };
+// Account A is NOT onboarded (the case that traps the next account); B is a fresh
+// onboarded identity.
+const ACCOUNT_A_ME = { id: 1, email: 'a@example.com', userType: 'parent', profileCompleted: false };
 const ACCOUNT_B_ME = { id: 2, email: 'b@example.com', userType: 'parent', profileCompleted: true };
 
 beforeEach(() => {
@@ -87,9 +90,18 @@ describe('auth store / query cache identity invariant', () => {
     expect(getQueryClient()).toBe(getQueryClient());
   });
 
-  it('logout() clears the cached ["parent","me"] entry and resets per-account localStorage stores', () => {
+  it('keys me per userId so account A\'s slot can never satisfy account B (no clear() involved)', () => {
+    // A's me sits in A's slot; B reads its own slot, which is a different key, so
+    // A's not-onboarded profileCompleted is unreachable even before any clear().
+    getQueryClient().setQueryData(meKey(1), ACCOUNT_A_ME);
+
+    expect(getQueryClient().getQueryData(meKey(1))).toEqual(ACCOUNT_A_ME);
+    expect(getQueryClient().getQueryData(meKey(2))).toBeUndefined();
+  });
+
+  it('logout() clears the cached ["parent","me",id] entry and resets per-account localStorage stores', () => {
     // Seed account A's me into the exact key useMe() reads.
-    getQueryClient().setQueryData(ME_KEY, ACCOUNT_A_ME);
+    getQueryClient().setQueryData(meKey(1), ACCOUNT_A_ME);
     // Simulate prior-account state persisted in localStorage.
     useOnboardingStore.setState({ dismissed: true });
     useActiveChildStore.setState({ activeChildId: 'child-a' });
@@ -97,12 +109,12 @@ describe('auth store / query cache identity invariant', () => {
       pages: [{ portal: 'parent', href: '/parent/dashboard', label: 'Dashboard' }],
     });
 
-    expect(getQueryClient().getQueryData(ME_KEY)).toEqual(ACCOUNT_A_ME);
+    expect(getQueryClient().getQueryData(meKey(1))).toEqual(ACCOUNT_A_ME);
 
     useAuthStore.getState().logout();
 
     // Stale me is gone -> the gate cannot read a previous account's profileCompleted.
-    expect(getQueryClient().getQueryData(ME_KEY)).toBeUndefined();
+    expect(getQueryClient().getQueryData(meKey(1))).toBeUndefined();
     // Every per-account localStorage store is reset so nothing bleeds into the next account.
     expect(useOnboardingStore.getState().dismissed).toBe(false);
     expect(useActiveChildStore.getState().activeChildId).toBeNull();
@@ -111,10 +123,10 @@ describe('auth store / query cache identity invariant', () => {
     expect(useAuthStore.getState().jwt).toBeNull();
   });
 
-  it('login() clears a stale ["parent","me"] entry seeded by a previous account', async () => {
+  it('login() clears a stale ["parent","me",id] entry seeded by a previous account', async () => {
     // Account A's me is still cached from a prior session in the same SPA tab.
-    getQueryClient().setQueryData(ME_KEY, ACCOUNT_A_ME);
-    expect(getQueryClient().getQueryData(ME_KEY)).toEqual(ACCOUNT_A_ME);
+    getQueryClient().setQueryData(meKey(1), ACCOUNT_A_ME);
+    expect(getQueryClient().getQueryData(meKey(1))).toEqual(ACCOUNT_A_ME);
 
     postMock.mockResolvedValue({ data: { jwt: 'jwt-account-b' } });
     getMock.mockResolvedValue({ data: ACCOUNT_B_ME });
@@ -123,7 +135,7 @@ describe('auth store / query cache identity invariant', () => {
 
     // The stale A entry must be gone after login so the next refetch (useMe)
     // hits the network for account B instead of serving A's profileCompleted.
-    expect(getQueryClient().getQueryData(ME_KEY)).toBeUndefined();
+    expect(getQueryClient().getQueryData(meKey(1))).toBeUndefined();
 
     // login() actually ran against the mocked APIs and adopted account B.
     expect(postMock).toHaveBeenCalledWith('/api/auth/local', {
@@ -138,11 +150,11 @@ describe('auth store / query cache identity invariant', () => {
 
   it('A -> logout -> B -> logout -> A never leaks the previous identity into the cache', async () => {
     // Account A session leaves its me cached.
-    getQueryClient().setQueryData(ME_KEY, ACCOUNT_A_ME);
+    getQueryClient().setQueryData(meKey(1), ACCOUNT_A_ME);
 
     // Log out of A.
     useAuthStore.getState().logout();
-    expect(getQueryClient().getQueryData(ME_KEY)).toBeUndefined();
+    expect(getQueryClient().getQueryData(meKey(1))).toBeUndefined();
 
     // Log into B; login() clears whatever (if anything) was cached first.
     postMock.mockResolvedValue({ data: { jwt: 'jwt-account-b' } });
@@ -150,18 +162,18 @@ describe('auth store / query cache identity invariant', () => {
     await useAuthStore.getState().login({ identifier: 'b@example.com', password: 'pw' });
 
     // While B is active, useMe would populate B's me.
-    getQueryClient().setQueryData(ME_KEY, ACCOUNT_B_ME);
+    getQueryClient().setQueryData(meKey(2), ACCOUNT_B_ME);
 
     // Log out of B, then back into A.
     useAuthStore.getState().logout();
-    expect(getQueryClient().getQueryData(ME_KEY)).toBeUndefined();
+    expect(getQueryClient().getQueryData(meKey(2))).toBeUndefined();
 
     postMock.mockResolvedValue({ data: { jwt: 'jwt-account-a' } });
     getMock.mockResolvedValue({ data: ACCOUNT_A_ME });
     await useAuthStore.getState().login({ identifier: 'a@example.com', password: 'pw' });
 
     // At the moment A logs back in, B's me must NOT be sitting in the cache.
-    expect(getQueryClient().getQueryData(ME_KEY)).toBeUndefined();
+    expect(getQueryClient().getQueryData(meKey(2))).toBeUndefined();
     expect(useAuthStore.getState().jwt).toBe('jwt-account-a');
   });
 });

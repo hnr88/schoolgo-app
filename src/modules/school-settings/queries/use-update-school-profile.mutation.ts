@@ -27,7 +27,8 @@ export function useUpdateSchoolProfile() {
           [data.firstName, data.lastName].filter(Boolean).join(' ') || current.displayName;
         setUser({ ...current, displayName });
       }
-      qc.setQueryData(['school', 'me'], data);
+      const userId = useAuthStore.getState().user?.id ?? null;
+      qc.setQueryData(['school', 'me', userId], data);
       qc.invalidateQueries({ queryKey: ['school', 'me'] });
       toast.success(t('saveSuccess'));
     },

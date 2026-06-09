@@ -2881,7 +2881,8 @@
     "stepAddressTitle": "Nơi bạn sinh sống",
     "stepAddressDescription": "Địa chỉ cư trú của bạn để trường liên lạc.",
     "stepEmergencyTitle": "Liên hệ khẩn cấp",
-    "stepEmergencyDescription": "Người mà trường có thể liên hệ nếu không liên lạc được với bạn."
+    "stepEmergencyDescription": "Người mà trường có thể liên hệ nếu không liên lạc được với bạn.",
+    "logout": "Đăng xuất"
   },
   "ParentSettings": {
     "title": "Cài đặt",

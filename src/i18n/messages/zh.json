@@ -2881,7 +2881,8 @@
     "stepAddressTitle": "您的居住地",
     "stepAddressDescription": "您的住宅地址，用于学校通信。",
     "stepEmergencyTitle": "紧急联系人",
-    "stepEmergencyDescription": "当无法联系到您时，学校可以联系的人。"
+    "stepEmergencyDescription": "当无法联系到您时，学校可以联系的人。",
+    "logout": "退出登录"
   },
   "ParentSettings": {
     "title": "设置",

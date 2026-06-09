@@ -6,6 +6,7 @@ export { useForgotPassword } from '@/modules/auth/hooks/useForgotPassword';
 export { useResetPassword } from '@/modules/auth/hooks/useResetPassword';
 export { useRequireAuth } from '@/modules/auth/hooks/useRequireAuth';
 export { useRedirectIfAuthenticated } from '@/modules/auth/hooks/useRedirectIfAuthenticated';
+export { useLogoutRedirect } from '@/modules/auth/hooks/useLogoutRedirect';
 export { AuthInitProvider } from '@/modules/auth/components/AuthInitProvider';
 export { ProtectedLayout } from '@/modules/auth/components/ProtectedLayout';
 export { AuthRedirectCheck } from '@/modules/auth/components/AuthRedirectCheck';

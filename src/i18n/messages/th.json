@@ -2881,7 +2881,8 @@
     "stepAddressTitle": "ที่อยู่ของคุณ",
     "stepAddressDescription": "ที่อยู่บ้านของคุณสำหรับการติดต่อจากโรงเรียน",
     "stepEmergencyTitle": "ผู้ติดต่อฉุกเฉิน",
-    "stepEmergencyDescription": "บุคคลที่โรงเรียนสามารถติดต่อได้หากไม่สามารถติดต่อคุณได้"
+    "stepEmergencyDescription": "บุคคลที่โรงเรียนสามารถติดต่อได้หากไม่สามารถติดต่อคุณได้",
+    "logout": "ออกจากระบบ"
   },
   "ParentSettings": {
     "title": "การตั้งค่า",

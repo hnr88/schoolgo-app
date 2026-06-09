@@ -7,6 +7,7 @@ import { cn } from '@/lib/utils';
 import { useTranslations } from 'next-intl';
 import { useRouter } from '@/i18n/navigation';
 import { useAuthStore } from '@/modules/auth/stores/use-auth-store';
+import { useLogoutRedirect } from '@/modules/auth';
 import { NotificationBell } from '@/modules/notifications';
 import {
   CommandPalette,
@@ -30,7 +31,8 @@ export function DashboardHeader() {
   const tParentNav = useTranslations('ParentNav');
   const pathname = usePathname();
   const router = useRouter();
-  const { user, userType, logout } = useAuthStore();
+  const { user, userType } = useAuthStore();
+  const { handleLogout } = useLogoutRedirect();
 
   useCommandPaletteHotkey();
 
@@ -43,16 +45,6 @@ export function DashboardHeader() {
   const settingsHref = isParent ? '/parent/settings' : '/dashboard/settings';
   const isSearchPage = pathname.includes('/dashboard/search') || pathname.includes('/parent/search');
   const firstName = user?.displayName?.split(' ')[0] || t('greeting.fallbackName');
-
-  function handleLogout() {
-    logout();
-    // Hard reload (not a soft router push) so the singleton QueryClient and the
-    // whole runtime are torn down — the next account starts from a clean slate
-    // and never inherits the previous account's in-memory state.
-    if (typeof window !== 'undefined') {
-      window.location.href = '/sign-in';
-    }
-  }
 
   const initials = user?.displayName
     ?.split(' ')

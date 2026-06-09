@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { routing } from '@/i18n/routing';
 import { useAuthStore } from '@/modules/auth/stores/use-auth-store';
 
 export const privateApi = axios.create({
@@ -22,7 +23,11 @@ privateApi.interceptors.response.use(
     if (status === 401 && typeof window !== 'undefined') {
       useAuthStore.getState().logout();
       if (!window.location.pathname.includes('/sign-in')) {
-        window.location.href = '/sign-in';
+        // Preserve a non-default locale prefix; the proxy injects the portal
+        // from the host, so the path stays portal-agnostic and same-origin.
+        const seg = window.location.pathname.split('/')[1];
+        const isLocale = (routing.locales as readonly string[]).includes(seg);
+        window.location.href = isLocale ? `/${seg}/sign-in` : '/sign-in';
       }
     }
 

@@ -25,4 +25,16 @@ describe('resolvePortal', () => {
     expect(resolvePortal('schoolgo-app.vercel.app')).toBe('parent');
     expect(resolvePortal('127.0.0.1')).toBe('parent');
   });
+
+  it('resolves hosts case-insensitively', () => {
+    expect(resolvePortal('AGENT.schoolgo.com.au')).toBe('agent');
+    expect(resolvePortal('School.SchoolGo.com.au')).toBe('school');
+    expect(resolvePortal('WWW.schoolgo.com.au')).toBe('parent');
+  });
+
+  it('resolves flat "prefix-portal" sibling hosts (staging naming)', () => {
+    expect(resolvePortal('staging-agent.schoolgo.com.au')).toBe('agent');
+    expect(resolvePortal('staging-school.schoolgo.com.au')).toBe('school');
+    expect(resolvePortal('staging-parent.schoolgo.com.au')).toBe('parent');
+  });
 });
