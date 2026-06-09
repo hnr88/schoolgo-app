@@ -1,5 +1,15 @@
 import type { ApplicationStatus } from '@/modules/applications/types/application.types';
 
+export type InterviewMethod =
+  | 'skype'
+  | 'zoom'
+  | 'wechat_video'
+  | 'teams'
+  | 'phone'
+  | 'in_person';
+
+export type InterviewOutcome = 'pending' | 'passed' | 'further_review' | 'not_recommended';
+
 export interface ParentApplication {
   id: number;
   documentId: string;
@@ -8,6 +18,10 @@ export interface ParentApplication {
   targetIntake: string | null;
   offerAnnualFee: number | null;
   offerDeadline: string | null;
+  interviewScheduledAt: string | null;
+  interviewMethod: InterviewMethod | null;
+  interviewMeetingLink: string | null;
+  interviewOutcome: InterviewOutcome | null;
   submittedAt: string | null;
   statusChangedAt: string | null;
   daysInStatus: number;
