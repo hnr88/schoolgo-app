@@ -10,12 +10,14 @@ import type { PreEnrolmentQueueItem } from '@/modules/school-pre-enrolment-queue
 interface QueueApplicationGroupProps {
   applicationDocumentId: string | null;
   items: PreEnrolmentQueueItem[];
+  canReview: boolean;
   onReview: (item: PreEnrolmentQueueItem, action: 'approved' | 'rejected') => void;
 }
 
 export function QueueApplicationGroup({
   applicationDocumentId,
   items,
+  canReview,
   onReview,
 }: QueueApplicationGroupProps) {
   const t = useTranslations('SchoolPreEnrolmentQueue');
@@ -43,7 +45,7 @@ export function QueueApplicationGroup({
       </div>
       <ul className='flex flex-col gap-3'>
         {items.map((item) => (
-          <QueueItemRow key={item.documentId} item={item} onReview={onReview} />
+          <QueueItemRow key={item.documentId} item={item} canReview={canReview} onReview={onReview} />
         ))}
       </ul>
     </SurfaceCard>

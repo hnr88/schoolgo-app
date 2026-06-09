@@ -5257,7 +5257,8 @@
     "confirmApprove": "Approve",
     "confirmReject": "Reject",
     "reviewSuccess": "Item reviewed.",
-    "reviewError": "Could not review the item. Please try again."
+    "reviewError": "Could not review the item. Please try again.",
+    "adminOnlyHint": "Only school admins can review items"
   },
   "SchoolMessages": {
     "title": "Messages",

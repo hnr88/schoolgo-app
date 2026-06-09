@@ -12,10 +12,11 @@ const TONE = {
 
 interface QueueItemRowProps {
   item: PreEnrolmentQueueItem;
+  canReview: boolean;
   onReview: (item: PreEnrolmentQueueItem, action: 'approved' | 'rejected') => void;
 }
 
-export function QueueItemRow({ item, onReview }: QueueItemRowProps) {
+export function QueueItemRow({ item, canReview, onReview }: QueueItemRowProps) {
   const t = useTranslations('SchoolPreEnrolmentQueue');
   const format = useFormatter();
 
@@ -43,16 +44,19 @@ export function QueueItemRow({ item, onReview }: QueueItemRowProps) {
           )}
         </div>
       </div>
-      {item.status === 'submitted' && (
-        <div className='flex gap-2'>
-          <Button size='sm' variant='outline' onClick={() => onReview(item, 'approved')}>
-            {t('approve')}
-          </Button>
-          <Button size='sm' variant='destructive' onClick={() => onReview(item, 'rejected')}>
-            {t('reject')}
-          </Button>
-        </div>
-      )}
+      {item.status === 'submitted' &&
+        (canReview ? (
+          <div className='flex gap-2'>
+            <Button size='sm' variant='outline' onClick={() => onReview(item, 'approved')}>
+              {t('approve')}
+            </Button>
+            <Button size='sm' variant='destructive' onClick={() => onReview(item, 'rejected')}>
+              {t('reject')}
+            </Button>
+          </div>
+        ) : (
+          <span className='text-xs text-muted-foreground'>{t('adminOnlyHint')}</span>
+        ))}
     </li>
   );
 }

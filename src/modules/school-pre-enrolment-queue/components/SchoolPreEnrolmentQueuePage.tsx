@@ -11,6 +11,7 @@ import {
   type PendingReview,
 } from '@/modules/school-pre-enrolment-queue/components/ReviewQueueItemDialog';
 import { usePreEnrolmentQueue } from '@/modules/school-pre-enrolment-queue/queries/use-pre-enrolment-queue.query';
+import { useQueueStaffMe } from '@/modules/school-pre-enrolment-queue/queries/use-queue-staff-me.query';
 import type { PreEnrolmentQueueItem } from '@/modules/school-pre-enrolment-queue/schemas/pre-enrolment-queue.schema';
 
 function groupByApplication(items: PreEnrolmentQueueItem[]) {
@@ -30,6 +31,8 @@ function groupByApplication(items: PreEnrolmentQueueItem[]) {
 export function SchoolPreEnrolmentQueuePage() {
   const t = useTranslations('SchoolPreEnrolmentQueue');
   const { data: items, isLoading, isError, refetch } = usePreEnrolmentQueue();
+  const { data: me } = useQueueStaffMe();
+  const canReview = me?.permissionLevel === 'admin';
   const [pending, setPending] = useState<PendingReview | null>(null);
 
   return (
@@ -66,6 +69,7 @@ export function SchoolPreEnrolmentQueuePage() {
               key={key}
               applicationDocumentId={groupItems[0]?.application?.documentId ?? null}
               items={groupItems}
+              canReview={canReview}
               onReview={(item, action) => setPending({ item, action })}
             />
           ))}
