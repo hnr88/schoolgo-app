@@ -4,6 +4,7 @@ import { useFormatter, useTranslations } from 'next-intl';
 import { BellRing, Search, Trash2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Switch } from '@/components/ui/switch';
+import { SavedSearchFreshness } from '@/modules/school-search/components/SavedSearchFreshness';
 import { useDeleteSavedSearch } from '@/modules/school-search/queries/use-delete-saved-search.mutation';
 import { useUpdateSavedSearch } from '@/modules/school-search/queries/use-update-saved-search.mutation';
 import type { SavedSearch } from '@/modules/school-search/types/saved-searches.types';
@@ -84,6 +85,7 @@ export function SavedSearchRow({ search, onRun }: SavedSearchRowProps) {
           aria-label={t('alertsLabel')}
         />
       </div>
+      <SavedSearchFreshness search={search} />
     </li>
   );
 }
