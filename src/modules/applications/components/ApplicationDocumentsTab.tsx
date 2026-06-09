@@ -5,6 +5,7 @@ import { FileText, Download } from 'lucide-react';
 import { Skeleton } from '@/components/ui/skeleton';
 import { EmptyState } from '@/modules/core/components/EmptyState';
 import { useApplicationDocuments } from '@/modules/applications/queries/use-application-documents.query';
+import { ApplicationDocumentChecklistCard } from '@/modules/applications/components/ApplicationDocumentChecklistCard';
 import { formatFileSize } from '@/modules/applications/lib/format';
 import type { Application } from '@/modules/applications/types/application.types';
 
@@ -27,32 +28,40 @@ export function ApplicationDocumentsTab({ application }: { application: Applicat
   const documents = data?.data ?? [];
 
   if (documents.length === 0) {
-    return <EmptyState icon={FileText} title={t('documentsEmpty')} />;
+    return (
+      <div className='flex flex-col gap-4'>
+        <ApplicationDocumentChecklistCard applicationDocumentId={application.documentId} />
+        <EmptyState icon={FileText} title={t('documentsEmpty')} />
+      </div>
+    );
   }
 
   return (
-    <div className='flex flex-col gap-2 rounded-xl border border-border bg-card'>
-      {documents.map((doc) => (
-        <div
-          key={doc.id}
-          className='flex items-center justify-between gap-4 border-b border-border px-5 py-4 last:border-b-0'
-        >
-          <div className='flex flex-1 flex-col gap-0.5 min-w-0'>
-            <span className='truncate text-sm font-medium text-ink-900'>{doc.name}</span>
-            <span className='text-xs text-foggy'>
-              {doc.type} · {formatFileSize(doc.size)} · {new Date(doc.uploadedAt).toLocaleDateString()}
-            </span>
-          </div>
-          <a
-            href={doc.url}
-            download
-            aria-label={t('downloadDocument')}
-            className='shrink-0 text-foggy hover:text-ink-900 transition-colors'
+    <div className='flex flex-col gap-4'>
+      <ApplicationDocumentChecklistCard applicationDocumentId={application.documentId} />
+      <div className='flex flex-col gap-2 rounded-xl border border-border bg-card'>
+        {documents.map((doc) => (
+          <div
+            key={doc.id}
+            className='flex items-center justify-between gap-4 border-b border-border px-5 py-4 last:border-b-0'
           >
-            <Download className='h-4 w-4' />
-          </a>
-        </div>
-      ))}
+            <div className='flex flex-1 flex-col gap-0.5 min-w-0'>
+              <span className='truncate text-sm font-medium text-ink-900'>{doc.name}</span>
+              <span className='text-xs text-foggy'>
+                {doc.type} · {formatFileSize(doc.size)} · {new Date(doc.uploadedAt).toLocaleDateString()}
+              </span>
+            </div>
+            <a
+              href={doc.url}
+              download
+              aria-label={t('downloadDocument')}
+              className='shrink-0 text-foggy hover:text-ink-900 transition-colors'
+            >
+              <Download className='h-4 w-4' />
+            </a>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
