@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { StudentListPage } from '@/modules/students/components/StudentListPage';
+import { SharedWithMeSection } from '@/modules/agent-shared-students';
 import { PageHeader } from '@/modules/dashboard';
 
 export async function generateMetadata({
@@ -25,6 +26,7 @@ export default async function StudentsPage({
     <div className='flex flex-col gap-6'>
       <PageHeader title={t('title')} description={t('subtitle')} />
       <StudentListPage />
+      <SharedWithMeSection />
     </div>
   );
 }
