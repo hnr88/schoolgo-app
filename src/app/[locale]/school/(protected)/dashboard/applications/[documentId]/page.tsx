@@ -14,10 +14,13 @@ export async function generateMetadata({
 
 export default async function SchoolApplicationDetailRoute({
   params,
+  searchParams,
 }: {
   params: Promise<{ locale: string; documentId: string }>;
+  searchParams: Promise<{ tab?: string }>;
 }) {
   const { locale, documentId } = await params;
+  const { tab } = await searchParams;
   setRequestLocale(locale);
-  return <SchoolApplicationDetailPage documentId={documentId} />;
+  return <SchoolApplicationDetailPage documentId={documentId} initialTab={tab} />;
 }

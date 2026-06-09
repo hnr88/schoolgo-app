@@ -30,9 +30,28 @@ function BackLink({ label }: { label: string }) {
   );
 }
 
-export function SchoolApplicationDetailPage({ documentId }: { documentId: string }) {
+const TAB_VALUES = [
+  'details',
+  'vetting',
+  'documents',
+  'timeline',
+  'messages',
+  'notes',
+  'preEnrolment',
+] as const;
+
+export function SchoolApplicationDetailPage({
+  documentId,
+  initialTab,
+}: {
+  documentId: string;
+  initialTab?: string;
+}) {
   const t = useTranslations('SchoolApplications');
   const { data: application, isLoading, isError, refetch } = useSchoolApplication(documentId);
+  const defaultTab = (TAB_VALUES as readonly string[]).includes(initialTab ?? '')
+    ? initialTab
+    : 'details';
 
   if (isLoading) {
     return (
@@ -65,7 +84,7 @@ export function SchoolApplicationDetailPage({ documentId }: { documentId: string
       <SchoolApplicationActions documentId={documentId} status={application.status} />
       <SchoolServicesSection documentId={documentId} />
 
-      <Tabs defaultValue='details'>
+      <Tabs defaultValue={defaultTab}>
         <TabsList>
           <TabsTrigger value='details' className='text-foreground/80'>{t('tabDetails')}</TabsTrigger>
           <TabsTrigger value='vetting' className='text-foreground/80'>{t('tabVetting')}</TabsTrigger>
