@@ -18,6 +18,7 @@ import { LocationSection } from '@/modules/school-detail/components/sections/Loc
 import { CompareSection } from '@/modules/school-detail/components/sections/CompareSection';
 import { FaqSchoolSection } from '@/modules/school-detail/components/sections/FaqSchoolSection';
 import { StructuredData } from '@/modules/school-detail/components/sections/StructuredData';
+import { RequestPartnershipCard } from '@/modules/agent-partnerships';
 import { ApplyCard } from '@/modules/school-detail/components/sections/sidebar/ApplyCard';
 import { ContactCard } from '@/modules/school-detail/components/sections/sidebar/ContactCard';
 import { TocCard } from '@/modules/school-detail/components/sections/sidebar/TocCard';
@@ -60,6 +61,9 @@ export async function SchoolDetailPage({ school, activePortal, locale }: SchoolD
 
             <aside className="space-y-4 lg:sticky lg:top-28 lg:self-start">
               <ApplyCard school={school} activePortal={activePortal} />
+              {activePortal === 'agent' && (
+                <RequestPartnershipCard schoolDocumentId={school.documentId} />
+              )}
               <ContactCard school={school} />
               <TocCard />
               <KeyFactsCard school={school} activePortal={activePortal} />
