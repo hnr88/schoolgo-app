@@ -8,6 +8,7 @@ import {
   Wallet,
   GraduationCap,
   ShieldCheck,
+  CalendarCheck,
   Coins,
   Lock,
 } from 'lucide-react';
@@ -22,6 +23,7 @@ import { DescriptionForm } from '@/modules/school-profile/components/Description
 import { FeesForm } from '@/modules/school-profile/components/FeesForm';
 import { AcademicForm } from '@/modules/school-profile/components/AcademicForm';
 import { PoliciesForm } from '@/modules/school-profile/components/PoliciesForm';
+import { AdmissionsControlsForm } from '@/modules/school-profile/components/AdmissionsControlsForm';
 import { TuitionManager } from '@/modules/school-profile/components/TuitionManager';
 
 function ProfileSkeleton() {
@@ -89,6 +91,10 @@ export function SchoolProfilePage() {
 
       <ProfileSection icon={ShieldCheck} title={t('sectionPolicies')} description={t('sectionPoliciesDesc')}>
         <PoliciesForm school={details} disabled={!canEdit} />
+      </ProfileSection>
+
+      <ProfileSection icon={CalendarCheck} title={t('sectionAdmissions')} description={t('sectionAdmissionsDesc')}>
+        <AdmissionsControlsForm school={details} disabled={!canEdit} />
       </ProfileSection>
 
       <ProfileSection icon={Coins} title={t('sectionTuition')} description={t('sectionTuitionDesc')}>

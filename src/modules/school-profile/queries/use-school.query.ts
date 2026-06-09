@@ -24,6 +24,7 @@ const SCHOOL_FIELDS = [
   'ieltsMinScore', 'aeasMinScore', 'pteMinScore', 'duolingoMinScore',
   'curriculumOffered', 'levelsOffered', 'intakePeriods',
   'offerAcceptanceWindowDays', 'autoWaitlistEnabled', 'partnerAgentsOnly', 'oshcArrangement',
+  'enrolmentStatus', 'applicationDeadline', 'nextIntakeDate',
 ];
 
 function buildQuery(documentId: string): string {

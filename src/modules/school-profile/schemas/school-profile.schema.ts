@@ -174,6 +174,26 @@ export function createPoliciesSchema(t: SchemaTranslator) {
   });
 }
 
+const ENROLMENT_STATUSES = ['open', 'limited', 'waitlist', 'closed'] as const;
+const ISO_DATE_PATTERN = /^\d{4}-\d{2}-\d{2}$/;
+
+export function createAdmissionsControlsSchema(t: SchemaTranslator) {
+  const isoDate = z
+    .union([
+      z.literal(''),
+      z.string().trim().regex(ISO_DATE_PATTERN, { message: t('admissionsDateInvalid') }),
+    ])
+    .optional();
+
+  return z.object({
+    enrolmentStatus: z.enum(ENROLMENT_STATUSES).nullable(),
+    partnerAgentsOnly: z.boolean(),
+    autoWaitlistEnabled: z.boolean(),
+    applicationDeadline: isoDate,
+    nextIntakeDate: isoDate,
+  });
+}
+
 export function createTuitionSchema(t: SchemaTranslator) {
   return z.object({
     level: z.enum(TUITION_LEVELS, { message: t('tuitionLevelRequired') }),
@@ -211,5 +231,6 @@ export type DescriptionValues = z.infer<ReturnType<typeof createDescriptionSchem
 export type FeesValues = z.infer<ReturnType<typeof createFeesSchema>>;
 export type AcademicValues = z.infer<ReturnType<typeof createAcademicSchema>>;
 export type PoliciesValues = z.infer<ReturnType<typeof createPoliciesSchema>>;
+export type AdmissionsControlsValues = z.infer<ReturnType<typeof createAdmissionsControlsSchema>>;
 export type TuitionValues = z.infer<ReturnType<typeof createTuitionSchema>>;
 export type CapacityValues = z.infer<ReturnType<typeof createCapacitySchema>>;

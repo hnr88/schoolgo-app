@@ -20,6 +20,8 @@ export type SchoolState =
 
 export type OshcArrangement = 'school_arranged' | 'agent_arranged' | 'either';
 
+export type EnrolmentStatus = 'open' | 'limited' | 'waitlist' | 'closed';
+
 export interface SchoolProfileDetails {
   documentId: string;
   name: string;
@@ -49,6 +51,9 @@ export interface SchoolProfileDetails {
   autoWaitlistEnabled: boolean;
   partnerAgentsOnly: boolean;
   oshcArrangement: OshcArrangement | null;
+  enrolmentStatus: EnrolmentStatus | null;
+  applicationDeadline: string | null;
+  nextIntakeDate: string | null;
   logo: SchoolMedia | null;
   coverImage: SchoolMedia | null;
 }
