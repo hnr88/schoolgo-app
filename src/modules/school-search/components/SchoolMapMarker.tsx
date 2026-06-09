@@ -6,6 +6,7 @@ import { ArrowRight } from 'lucide-react';
 import { Marker, Popup } from 'react-leaflet';
 import { Link } from '@/i18n/navigation';
 import { formatAudCompact } from '@/modules/school-search/lib/format-currency';
+import { HitPersonalizationBadges } from '@/modules/school-search/components/cards/HitPersonalizationBadges';
 import { getSchoolCoords, getSchoolKey, SCHOOL_MAP_ICON } from '@/modules/school-search/components/school-map-utils';
 import type { Portal } from '@/lib/portal-url';
 import type { SchoolHit } from '@/modules/school-search/types/search-api.types';
@@ -48,6 +49,8 @@ function SchoolMapMarkerComponent({ school, activePortal }: SchoolMapMarkerProps
                 {t('popupFeePerYear', { fee: formatAudCompact(school.lowestAnnualTuition) })}
               </span>
             )}
+            <HitPersonalizationBadges school={school} />
+          </div>
           </div>
           <div className='mx-3 border-t border-divider' />
           <div className='flex items-center justify-between px-3 py-2 transition-colors group-hover:bg-muted/60'>

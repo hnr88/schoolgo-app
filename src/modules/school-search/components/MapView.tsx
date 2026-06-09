@@ -6,6 +6,7 @@ import type L from 'leaflet';
 import { useTranslations } from 'next-intl';
 import { Skeleton } from '@/components/ui/skeleton';
 import { cn } from '@/lib/utils';
+import { useAuthStore } from '@/modules/auth';
 import { useTypedSchoolSearch } from '@/modules/school-search/queries/use-school-search.query';
 import { mapStoreToTypedRequest } from '@/modules/school-search/lib/store-to-typed-request';
 import { useMapViewportReporter } from '@/modules/school-search/hooks/useMapViewportReporter';
@@ -53,6 +54,10 @@ export function MapView({ className, activePortal }: MapViewProps) {
   const [map, setMap] = useState<L.Map | null>(null);
   const resetCount = useSchoolSearchStore((s) => s.resetCount);
 
+  const isAuthenticated = useAuthStore((s) => s.isAuthenticated);
+  const isHydrated = useAuthStore((s) => s.isHydrated);
+  const isAdvancedSession = isHydrated && isAuthenticated;
+
   const query = useSchoolSearchStore((s) => s.query);
   const suburb = useSchoolSearchStore((s) => s.suburb);
   const postcode = useSchoolSearchStore((s) => s.postcode);
@@ -93,8 +98,9 @@ export function MapView({ className, activePortal }: MapViewProps) {
         feeMin,
         feeMax,
         sortBy,
-      }),
+      }, isAdvancedSession),
     [
+      isAdvancedSession,
       query,
       suburb,
       postcode,

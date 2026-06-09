@@ -71,7 +71,7 @@ export function SpecResultsPanel({
     sortBy,
   };
 
-  const typedRequest = mapStoreToTypedRequest(snapshot);
+  const typedRequest = mapStoreToTypedRequest(snapshot, isAdvanced);
   const { data, error, isLoading, isError, refetch } = useTypedSchoolSearch(typedRequest);
 
   useEffect(() => {

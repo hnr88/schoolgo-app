@@ -11,6 +11,8 @@ import type { Portal } from '@/lib/portal-url';
 import { COMPARE_MAX_ADVANCED } from '@/modules/school-search/constants/filter-options.constants';
 import { useApplicationStatusBySchool } from '@/modules/school-search/hooks/useApplicationStatusBySchool';
 import { useBookmarkToggle } from '@/modules/school-search/hooks/useBookmarkToggle';
+import { SavedBadge } from '@/modules/school-search/components/cards/SavedBadge';
+import { asApplicationStatus } from '@/modules/school-search/lib/school-hit-guards';
 import { useSchoolSearchStore } from '@/modules/school-search/stores/use-school-search-store';
 import type { SchoolHit } from '@/modules/school-search/types/search-api.types';
 
@@ -40,6 +42,8 @@ export function ParentSearchSchoolCard({
   const compareList = useSchoolSearchStore((s) => s.compareList);
   const toggleCompare = useSchoolSearchStore((s) => s.toggleCompare);
   const isInCompare = compareList.includes(school.documentId);
+  const statusToShow = asApplicationStatus(school.myApplicationStatus) ?? application?.status;
+  const showSavedBadge = school.isBookmarked === true;
 
   const handleCompare = (e: MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
@@ -74,7 +78,12 @@ export function ParentSearchSchoolCard({
       onShortlistToggle={toggle}
       shortlistDisabled={isPending}
       statusSlot={
-        application ? <ApplicationStatusBadge status={application.status} /> : undefined
+        statusToShow || showSavedBadge ? (
+          <div className='flex flex-wrap items-center gap-1.5'>
+            {showSavedBadge && <SavedBadge />}
+            {statusToShow && <ApplicationStatusBadge status={statusToShow} />}
+          </div>
+        ) : undefined
       }
       actionSlot={
         <div className='flex items-center gap-2'>

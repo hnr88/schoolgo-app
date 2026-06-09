@@ -102,6 +102,10 @@ export interface SchoolHit {
   _geo: { lat: number; lng: number } | null;
   _formatted?: Record<string, string>;
 
+  // Personalization (C-MS3): present ONLY on authenticated responses.
+  isBookmarked?: boolean;
+  myApplicationStatus?: string | null;
+
   // Spec-aligned tile-card fields (mock/proxy may not populate every one yet).
   photoUrl?: string | null;
   enrolmentStatus?: EnrolmentStatus;

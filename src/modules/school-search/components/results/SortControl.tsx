@@ -1,6 +1,8 @@
 'use client';
 
+import { Lock } from 'lucide-react';
 import { useTranslations } from 'next-intl';
+import { Link } from '@/i18n/navigation';
 import { cn } from '@/lib/utils';
 import {
   Select,
@@ -9,10 +11,8 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
-import {
-  ADVANCED_SORT_OPTIONS,
-  BASIC_SORT_OPTIONS,
-} from '@/modules/school-search/constants/filter-options.constants';
+import { ADVANCED_SORT_OPTIONS } from '@/modules/school-search/constants/filter-options.constants';
+import { isAdvancedSort } from '@/modules/school-search/lib/search-capabilities';
 import { useSchoolSearchStore } from '@/modules/school-search/stores/use-school-search-store';
 import type { SortOption } from '@/modules/school-search/types/filter.types';
 
@@ -26,10 +26,10 @@ export function SortControl({ isAdvanced, className }: SortControlProps) {
   const sortBy = useSchoolSearchStore((s) => s.sortBy);
   const setSortBy = useSchoolSearchStore((s) => s.setSortBy);
 
-  const options = isAdvanced ? ADVANCED_SORT_OPTIONS : BASIC_SORT_OPTIONS;
-
   const handleChange = (value: SortOption | null) => {
-    if (value) setSortBy(value);
+    if (!value) return;
+    if (!isAdvanced && isAdvancedSort(value)) return;
+    setSortBy(value);
   };
 
   return (
@@ -43,11 +43,42 @@ export function SortControl({ isAdvanced, className }: SortControlProps) {
         <SelectValue />
       </SelectTrigger>
       <SelectContent>
-        {options.map((opt) => (
-          <SelectItem key={opt.value} value={opt.value} className="text-xs">
-            {t(opt.labelKey.split('.').pop() as never)}
-          </SelectItem>
-        ))}
+        {ADVANCED_SORT_OPTIONS.map((opt) => {
+          const locked = !isAdvanced && isAdvancedSort(opt.value);
+          return (
+            <SelectItem
+              key={opt.value}
+              value={opt.value}
+              disabled={locked}
+              className="text-xs"
+            >
+              <span className="inline-flex items-center gap-1.5">
+                {locked && (
+                  <Lock
+                    className="size-3 text-muted-foreground"
+                    aria-label={t('lockedOption')}
+                  />
+                )}
+                {t(opt.labelKey.split('.').pop() as never)}
+              </span>
+            </SelectItem>
+          );
+        })}
+        {!isAdvanced && (
+          <div className="border-t border-divider px-2 py-1.5">
+            <Link
+              href="/sign-in"
+              className={cn(
+                'inline-flex items-center gap-1 text-caption font-medium text-primary',
+                'transition-colors hover:underline',
+                'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1',
+              )}
+            >
+              <Lock className="size-3" aria-hidden="true" />
+              {t('signInCta')}
+            </Link>
+          </div>
+        )}
       </SelectContent>
     </Select>
   );

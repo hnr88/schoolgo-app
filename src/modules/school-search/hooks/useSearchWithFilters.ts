@@ -1,6 +1,7 @@
 'use client';
 
 import { useMemo, useState, useEffect } from 'react';
+import { useAuthStore } from '@/modules/auth';
 import { useSchoolSearchStore } from '@/modules/school-search/stores/use-school-search-store';
 import { useTypedSchoolSearch } from '@/modules/school-search/queries/use-school-search.query';
 import { mapStoreToTypedRequest } from '@/modules/school-search/lib/store-to-typed-request';
@@ -9,6 +10,10 @@ const DEBOUNCE_MS = 300;
 const RESULTS_PAGE_SIZE = 100;
 
 export function useSearchWithFilters() {
+  const isAuthenticated = useAuthStore((s) => s.isAuthenticated);
+  const isHydrated = useAuthStore((s) => s.isHydrated);
+  const isAdvancedSession = isHydrated && isAuthenticated;
+
   const query = useSchoolSearchStore((s) => s.query);
   const suburb = useSchoolSearchStore((s) => s.suburb);
   const postcode = useSchoolSearchStore((s) => s.postcode);
@@ -66,10 +71,11 @@ export function useSearchWithFilters() {
         feeMin: debouncedFeeMin,
         feeMax: debouncedFeeMax,
         sortBy,
-      }),
+      }, isAdvancedSession),
       pageSize: RESULTS_PAGE_SIZE,
     }),
     [
+      isAdvancedSession,
       debouncedQuery,
       suburb,
       postcode,

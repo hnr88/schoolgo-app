@@ -1,4 +1,5 @@
 import { FEE_MAX, FEE_MIN } from '@/modules/school-search/constants/filter-options.constants';
+import { stripAdvancedFields } from '@/modules/school-search/lib/search-capabilities';
 import type {
   Accommodation,
   EnglishTestScore,
@@ -54,6 +55,7 @@ function isLocationDisplayQuery(query: string, suburb: string, postcode: string)
 
 export function mapStoreToTypedRequest(
   store: SchoolSearchStoreSnapshot,
+  isAuthenticated: boolean,
 ): TypedSearchRequest {
   const trimmedQuery = store.query.trim();
   const trimmedSuburb = store.suburb?.trim();
@@ -64,7 +66,7 @@ export function mapStoreToTypedRequest(
     trimmedPostcode,
   );
 
-  return {
+  const request: TypedSearchRequest = {
     q: shouldSendQuery ? trimmedQuery || undefined : undefined,
     states: store.states.length ? store.states : undefined,
     suburb: trimmedSuburb || undefined,
@@ -88,4 +90,6 @@ export function mapStoreToTypedRequest(
     page: 1,
     pageSize: 24,
   };
+
+  return stripAdvancedFields(request, isAuthenticated);
 }

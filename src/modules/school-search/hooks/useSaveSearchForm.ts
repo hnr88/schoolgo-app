@@ -83,7 +83,7 @@ export function useSaveSearchForm({ onSaved }: UseSaveSearchFormArgs) {
       scholarshipAvailable,
       englishTest,
       sortBy,
-    });
+    }, isAuthenticated);
 
     createSavedSearch.mutate(
       { name: values.name.trim(), filterState },
