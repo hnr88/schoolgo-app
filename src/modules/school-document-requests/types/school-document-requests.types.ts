@@ -1,28 +1,21 @@
 import type { z } from 'zod';
 import type { REQUESTABLE_DOCUMENT_TYPES } from '@/modules/school-document-requests/constants/school-document-requests.constants';
-import type { requestDocumentsSchema } from '@/modules/school-document-requests/schemas/request-documents.schema';
+import type {
+  documentRequestStatusSchema,
+  requestDocumentsSchema,
+  schoolDocumentRequestRowSchema,
+  schoolDocumentRequestsResponseSchema,
+} from '@/modules/school-document-requests/schemas/request-documents.schema';
 
 export type RequestableDocumentType = (typeof REQUESTABLE_DOCUMENT_TYPES)[number];
 
-export type DocumentRequestStatus = 'pending' | 'partially_fulfilled' | 'fulfilled';
+export type DocumentRequestStatus = z.infer<typeof documentRequestStatusSchema>;
 
-export interface SchoolDocumentRequestRow {
-  documentId: string;
-  documentTypes: string[];
-  note: string | null;
-  status: DocumentRequestStatus;
-  deadline: string | null;
-  fulfilledAt: string | null;
-  createdAt: string;
-  application: {
-    documentId: string;
-    student: { firstName: string | null; lastName: string | null } | null;
-  } | null;
-}
+export type SchoolDocumentRequestRow = z.infer<typeof schoolDocumentRequestRowSchema>;
 
-export interface SchoolDocumentRequestsResponse {
-  data: SchoolDocumentRequestRow[];
-}
+export type SchoolDocumentRequestsResponse = z.infer<
+  typeof schoolDocumentRequestsResponseSchema
+>;
 
 export interface CreateDocumentRequestPayload {
   applicationDocumentId: string;

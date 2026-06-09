@@ -13,3 +13,22 @@ export const tuitionSavePayloadSchema = z.object({
 });
 
 export type TuitionSaveInput = z.infer<typeof tuitionSavePayloadSchema>;
+
+export const tuitionRowRecordSchema = z.object({
+  documentId: z.string(),
+  level: z.enum(TUITION_LEVELS),
+  annualAmountAud: z.number(),
+});
+
+export const tuitionRowsResponseSchema = z.object({
+  data: z.array(tuitionRowRecordSchema),
+});
+
+export const tuitionStaffMeSchema = z.object({
+  documentId: z.string(),
+  permissionLevel: z.enum(['admin', 'staff']),
+});
+
+export const tuitionStaffMeResponseSchema = z.object({
+  data: tuitionStaffMeSchema,
+});

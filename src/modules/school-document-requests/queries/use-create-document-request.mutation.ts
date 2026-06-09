@@ -3,6 +3,7 @@
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { privateApi } from '@/lib/axios';
 import { SCHOOL_DOCUMENT_REQUESTS_QUERY_KEY } from '@/modules/school-document-requests/queries/use-school-document-requests.query';
+import { createDocumentRequestResponseSchema } from '@/modules/school-document-requests/schemas/request-documents.schema';
 import type { CreateDocumentRequestPayload } from '@/modules/school-document-requests/types/school-document-requests.types';
 
 export function useCreateDocumentRequest() {
@@ -10,8 +11,8 @@ export function useCreateDocumentRequest() {
 
   return useMutation({
     mutationFn: async (payload: CreateDocumentRequestPayload) => {
-      const { data } = await privateApi.post('/api/document-requests', payload);
-      return data;
+      const { data } = await privateApi.post<unknown>('/api/document-requests', payload);
+      return createDocumentRequestResponseSchema.parse(data);
     },
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: SCHOOL_DOCUMENT_REQUESTS_QUERY_KEY });

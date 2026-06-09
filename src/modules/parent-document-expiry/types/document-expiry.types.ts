@@ -1,4 +1,5 @@
-import type { StudentDocument } from '@/modules/students/types/document.types';
+import type { z } from 'zod';
+import type { studentExpiryDocumentSchema } from '@/modules/parent-document-expiry/schemas/document-expiry.schema';
 
 export type ExpirySource = 'vault' | 'student';
 
@@ -26,10 +27,7 @@ export interface ExpiryBuckets {
   untrackedCount: number;
 }
 
-export type StudentExpiryDocument = Pick<
-  StudentDocument,
-  'documentId' | 'documentType' | 'fileName' | 'expiresAt' | 'status'
->;
+export type StudentExpiryDocument = z.infer<typeof studentExpiryDocumentSchema>;
 
 export interface ChildDocumentsResult {
   studentDocumentId: string;

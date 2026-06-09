@@ -13,6 +13,7 @@ export { SchoolServicesSection } from '@/modules/school-applications/components/
 export {
   attachServiceSchema,
 } from '@/modules/school-applications/schemas/attach-service.schema';
+export { schoolApplicationListItemSchema } from '@/modules/school-applications/schemas/application-assignment.schema';
 export type { AttachServiceFormValues } from '@/modules/school-applications/schemas/attach-service.schema';
 
 export type {

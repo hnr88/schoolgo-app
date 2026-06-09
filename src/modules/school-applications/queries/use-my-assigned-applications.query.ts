@@ -4,10 +4,8 @@ import { useQuery } from '@tanstack/react-query';
 import { privateApi } from '@/lib/axios';
 import { useAuthStore } from '@/modules/auth/stores/use-auth-store';
 import { SCHOOL_APPLICATIONS_QUERY_KEY } from '@/modules/school-applications/queries/use-school-applications.query';
-import type {
-  SchoolApplicationListItem,
-  SchoolApplicationListResponse,
-} from '@/modules/school-applications/types/school-applications.types';
+import { schoolApplicationListResponseSchema } from '@/modules/school-applications/schemas/application-assignment.schema';
+import type { SchoolApplicationListItem } from '@/modules/school-applications/types/school-applications.types';
 
 export interface UseMyAssignedApplicationsParams {
   status?: string;
@@ -30,11 +28,11 @@ export function useMyAssignedApplications({
       if (status && status !== 'all') params.status = status;
       if (intake) params.targetIntake = intake;
 
-      const { data } = await privateApi.get<SchoolApplicationListResponse>(
+      const { data } = await privateApi.get<unknown>(
         '/api/school-staffs/me/applications/assigned',
         { params },
       );
-      return data.data;
+      return schoolApplicationListResponseSchema.parse(data).data;
     },
   });
 }

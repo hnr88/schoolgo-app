@@ -1,8 +1,9 @@
-export interface QueueStaffMe {
-  documentId: string;
-  permissionLevel: 'admin' | 'staff';
-}
+import type { z } from 'zod';
+import type {
+  queueStaffMeResponseSchema,
+  queueStaffMeSchema,
+} from '@/modules/school-pre-enrolment-queue/schemas/pre-enrolment-queue.schema';
 
-export interface QueueStaffMeResponse {
-  data: QueueStaffMe;
-}
+export type QueueStaffMe = z.infer<typeof queueStaffMeSchema>;
+
+export type QueueStaffMeResponse = z.infer<typeof queueStaffMeResponseSchema>;

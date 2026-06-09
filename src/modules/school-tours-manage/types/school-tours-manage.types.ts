@@ -1,20 +1,17 @@
-export interface ManagedTour {
-  documentId: string;
-  title: string;
-  startsAt: string;
-  location: string | null;
-  capacity: number;
-  description: string | null;
-  bookingsCount: number;
-}
+import type { z } from 'zod';
+import type {
+  managedTourResponseSchema,
+  managedTourSchema,
+  managedToursResponseSchema,
+  toursStaffMeResponseSchema,
+  toursStaffMeSchema,
+} from '@/modules/school-tours-manage/schemas/school-tours-manage.schema';
 
-export interface ManagedToursResponse {
-  data: ManagedTour[];
-}
+export type ManagedTour = z.infer<typeof managedTourSchema>;
 
-export interface ManagedTourResponse {
-  data: ManagedTour;
-}
+export type ManagedToursResponse = z.infer<typeof managedToursResponseSchema>;
+
+export type ManagedTourResponse = z.infer<typeof managedTourResponseSchema>;
 
 export interface TourWritePayload {
   title: string;
@@ -24,15 +21,6 @@ export interface TourWritePayload {
   description: string | null;
 }
 
-export interface ToursStaffMe {
-  documentId: string;
-  permissionLevel: 'admin' | 'staff';
-  school: {
-    documentId: string;
-    name: string;
-  };
-}
+export type ToursStaffMe = z.infer<typeof toursStaffMeSchema>;
 
-export interface ToursStaffMeResponse {
-  data: ToursStaffMe;
-}
+export type ToursStaffMeResponse = z.infer<typeof toursStaffMeResponseSchema>;

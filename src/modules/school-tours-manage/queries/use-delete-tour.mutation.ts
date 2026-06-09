@@ -9,6 +9,8 @@ export function useDeleteTour() {
 
   return useMutation<string, Error, string>({
     mutationFn: async (documentId) => {
+      // Response body ({ data: { documentId } }) is intentionally ignored;
+      // no Zod parse needed for this delete endpoint.
       await privateApi.delete(`/api/school-tours/${documentId}`);
       return documentId;
     },

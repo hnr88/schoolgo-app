@@ -1,26 +1,15 @@
-export interface SchoolNoteAuthor {
-  documentId: string;
-  roleTitle: string | null;
-  firstName: string | null;
-  lastName: string | null;
-  username: string | null;
-}
+import type { z } from 'zod';
+import type {
+  schoolNoteAuthorSchema,
+  schoolNoteItemSchema,
+  schoolNotesMetaSchema,
+  schoolNotesResponseSchema,
+} from '@/modules/school-notes/schemas/school-note.schema';
 
-export interface SchoolNote {
-  documentId: string;
-  content: string;
-  createdAt: string;
-  author: SchoolNoteAuthor | null;
-}
+export type SchoolNoteAuthor = z.infer<typeof schoolNoteAuthorSchema>;
 
-export interface SchoolNotesMeta {
-  me?: {
-    staffDocumentId: string;
-    isAdmin: boolean;
-  };
-}
+export type SchoolNote = z.infer<typeof schoolNoteItemSchema>;
 
-export interface SchoolNotesResponse {
-  data: SchoolNote[];
-  meta: SchoolNotesMeta;
-}
+export type SchoolNotesMeta = z.infer<typeof schoolNotesMetaSchema>;
+
+export type SchoolNotesResponse = z.infer<typeof schoolNotesResponseSchema>;

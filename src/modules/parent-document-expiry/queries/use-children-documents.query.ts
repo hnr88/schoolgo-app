@@ -3,11 +3,8 @@
 import { useQueries } from '@tanstack/react-query';
 import { privateApi } from '@/lib/axios';
 import { useAuthStore } from '@/modules/auth/stores/use-auth-store';
-import type {
-  ChildDocumentsResult,
-  StudentExpiryDocument,
-} from '@/modules/parent-document-expiry/types/document-expiry.types';
-import type { StrapiListResponse } from '@/modules/students/types/student.types';
+import { studentExpiryDocumentsResponseSchema } from '@/modules/parent-document-expiry/schemas/document-expiry.schema';
+import type { ChildDocumentsResult } from '@/modules/parent-document-expiry/types/document-expiry.types';
 
 export const CHILDREN_DOCUMENTS_QUERY_KEY = ['parent-document-expiry', 'student-documents'] as const;
 
@@ -26,12 +23,10 @@ export function useChildrenDocuments(studentDocumentIds: readonly string[]) {
           'pagination[pageSize]': 100,
         };
 
-        const { data } = await privateApi.get<StrapiListResponse<StudentExpiryDocument>>(
-          '/api/student-documents',
-          { params },
-        );
+        const { data } = await privateApi.get<unknown>('/api/student-documents', { params });
+        const parsed = studentExpiryDocumentsResponseSchema.parse(data);
 
-        return { studentDocumentId, documents: data.data };
+        return { studentDocumentId, documents: parsed.data };
       },
     })),
     combine: (results) => ({

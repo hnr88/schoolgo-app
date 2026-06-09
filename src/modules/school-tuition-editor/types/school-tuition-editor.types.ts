@@ -1,16 +1,17 @@
+import type { z } from 'zod';
 import type { TUITION_LEVELS } from '@/modules/school-tuition-editor/constants/tuition-levels';
+import type {
+  tuitionRowRecordSchema,
+  tuitionRowsResponseSchema,
+  tuitionStaffMeResponseSchema,
+  tuitionStaffMeSchema,
+} from '@/modules/school-tuition-editor/schemas/tuition-row.schema';
 
 export type TuitionLevel = (typeof TUITION_LEVELS)[number];
 
-export interface TuitionRow {
-  documentId: string;
-  level: TuitionLevel;
-  annualAmountAud: number;
-}
+export type TuitionRow = z.infer<typeof tuitionRowRecordSchema>;
 
-export interface TuitionRowsResponse {
-  data: TuitionRow[];
-}
+export type TuitionRowsResponse = z.infer<typeof tuitionRowsResponseSchema>;
 
 export interface TuitionSaveRow {
   level: TuitionLevel;
@@ -21,14 +22,9 @@ export interface TuitionSavePayload {
   rows: TuitionSaveRow[];
 }
 
-export interface TuitionStaffMe {
-  documentId: string;
-  permissionLevel: 'admin' | 'staff';
-}
+export type TuitionStaffMe = z.infer<typeof tuitionStaffMeSchema>;
 
-export interface TuitionStaffMeResponse {
-  data: TuitionStaffMe;
-}
+export type TuitionStaffMeResponse = z.infer<typeof tuitionStaffMeResponseSchema>;
 
 export interface TuitionEditorRow {
   level: TuitionLevel;

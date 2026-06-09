@@ -38,6 +38,15 @@ export const reviewQueueItemSchema = z.object({
   note: z.string().trim().max(2000).optional(),
 });
 
+export const queueStaffMeSchema = z.object({
+  documentId: z.string(),
+  permissionLevel: z.enum(['admin', 'staff']),
+});
+
+export const queueStaffMeResponseSchema = z.object({
+  data: queueStaffMeSchema,
+});
+
 export type PreEnrolmentQueueItemType = z.infer<typeof queueItemTypeSchema>;
 export type PreEnrolmentQueueItem = z.infer<typeof queueItemSchema>;
 export type ReviewQueueItemInput = z.infer<typeof reviewQueueItemSchema>;

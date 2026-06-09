@@ -3,9 +3,9 @@
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { privateApi } from '@/lib/axios';
 import { SCHOOL_TOURS_MANAGE_KEY } from '@/modules/school-tours-manage/queries/use-my-school-tours.query';
+import { managedTourResponseSchema } from '@/modules/school-tours-manage/schemas/school-tours-manage.schema';
 import type {
   ManagedTour,
-  ManagedTourResponse,
   TourWritePayload,
 } from '@/modules/school-tours-manage/types/school-tours-manage.types';
 
@@ -19,10 +19,10 @@ export function useUpdateTour() {
 
   return useMutation<ManagedTour, Error, UpdateTourVariables>({
     mutationFn: async ({ documentId, payload }) => {
-      const res = await privateApi.put<ManagedTourResponse>(`/api/school-tours/${documentId}`, {
+      const res = await privateApi.put<unknown>(`/api/school-tours/${documentId}`, {
         data: payload,
       });
-      return res.data.data;
+      return managedTourResponseSchema.parse(res.data).data;
     },
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: SCHOOL_TOURS_MANAGE_KEY });
