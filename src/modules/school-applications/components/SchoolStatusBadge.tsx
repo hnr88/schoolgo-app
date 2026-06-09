@@ -24,6 +24,7 @@ const STATUS_TONE: Record<
   enrolled: 'enrolled',
   waitlisted: 'featured',
   declined: 'rejected',
+  withdrawn: 'muted',
 };
 
 export function SchoolStatusBadge({ status }: { status: SchoolApplicationStatus }) {

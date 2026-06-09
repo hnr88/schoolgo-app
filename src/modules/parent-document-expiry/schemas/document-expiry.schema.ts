@@ -7,8 +7,16 @@ export const studentExpiryDocumentSchema = z.object({
   fileName: z.string().nullable(),
   expiresAt: z.string().nullable(),
   status: z.enum(DOCUMENT_STATUSES),
+  student: z
+    .object({
+      documentId: z.string(),
+      firstName: z.string().nullable(),
+      lastName: z.string().nullable(),
+    })
+    .nullable(),
 });
 
 export const studentExpiryDocumentsResponseSchema = z.object({
   data: z.array(studentExpiryDocumentSchema),
+  meta: z.object({ truncated: z.boolean().optional() }).optional(),
 });

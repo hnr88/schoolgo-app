@@ -11,11 +11,12 @@ export const schoolApplicationStatusSchema = z.enum([
   'interview_completed',
   'offer_made',
   'offer_accepted',
+  'waitlisted',
   'pre_enrolment',
   'coe_issued',
   'enrolled',
-  'waitlisted',
   'declined',
+  'withdrawn',
 ]);
 
 export const applicationAssignedStaffSchema = z.object({

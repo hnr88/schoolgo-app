@@ -29,11 +29,6 @@ export interface ExpiryBuckets {
 
 export type StudentExpiryDocument = z.infer<typeof studentExpiryDocumentSchema>;
 
-export interface ChildDocumentsResult {
-  studentDocumentId: string;
-  documents: StudentExpiryDocument[];
-}
-
 export interface DocumentExpirySectionProps {
   bucket: ExpiryBucketKey;
   items: BucketedExpiryItem[];

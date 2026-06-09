@@ -21,6 +21,7 @@ export const SCHOOL_STATUS_LABEL_KEY: Record<SchoolApplicationStatus, string> = 
   enrolled: 'statusEnrolled',
   waitlisted: 'statusWaitlisted',
   declined: 'statusDeclined',
+  withdrawn: 'statusWithdrawn',
 };
 
 export function daysColorClass(color: DaysInStatusColor): string {

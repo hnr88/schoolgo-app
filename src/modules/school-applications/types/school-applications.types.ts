@@ -13,7 +13,8 @@ export type SchoolApplicationStatus =
   | 'coe_issued'
   | 'enrolled'
   | 'waitlisted'
-  | 'declined';
+  | 'declined'
+  | 'withdrawn';
 
 export type DaysInStatusColor = 'grey' | 'amber' | 'red';
 

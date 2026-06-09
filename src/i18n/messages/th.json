@@ -3677,6 +3677,7 @@
     "statusEnrolled": "Enrolled",
     "statusWaitlisted": "Waitlisted",
     "statusDeclined": "Declined",
+    "statusWithdrawn": "ถอนใบสมัคร",
     "sectionStudent": "Student",
     "sectionAgent": "Agent",
     "sectionApplication": "Application",
