@@ -4,6 +4,7 @@ import { useTranslations } from 'next-intl';
 import { FileText, CheckCircle2, AlertCircle, XCircle } from 'lucide-react';
 import { Skeleton } from '@/components/ui/skeleton';
 import { EmptyState, SurfaceCard } from '@/modules/core';
+import { RequestDocumentsAction } from '@/modules/school-document-requests';
 import { useSchoolChecklist } from '@/modules/school-applications/queries/use-school-checklist.query';
 import type { SchoolApplicationDetail } from '@/modules/school-applications/types/school-applications.types';
 
@@ -52,7 +53,10 @@ export function SchoolDocumentsTab({ application }: { application: SchoolApplica
       </SurfaceCard>
 
       <SurfaceCard padding='lg'>
-        <h3 className='mb-4 text-sm font-semibold text-ink-900'>{t('documentsTitle')}</h3>
+        <div className='mb-4 flex items-center justify-between gap-3'>
+          <h3 className='text-sm font-semibold text-ink-900'>{t('documentsTitle')}</h3>
+          <RequestDocumentsAction applicationDocumentId={application.documentId} />
+        </div>
         {docs.length === 0 ? (
           <EmptyState framed icon={FileText} title={t('documentsEmpty')} />
         ) : (
