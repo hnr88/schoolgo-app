@@ -11,6 +11,7 @@ import { CurriculumSection } from '@/modules/school-detail/components/sections/C
 import { FeesSection } from '@/modules/school-detail/components/sections/FeesSection';
 import { EnglishRequirementsSection } from '@/modules/school-detail/components/sections/EnglishRequirementsSection';
 import { AdmissionsSection } from '@/modules/school-detail/components/sections/AdmissionsSection';
+import { RequirementsSection } from '@/modules/school-detail/components/sections/RequirementsSection';
 import { BoardingSection } from '@/modules/school-detail/components/sections/BoardingSection';
 import { CoCurricularSection } from '@/modules/school-detail/components/sections/CoCurricularSection';
 import { LocationSection } from '@/modules/school-detail/components/sections/LocationSection';
@@ -47,6 +48,9 @@ export async function SchoolDetailPage({ school, activePortal, locale }: SchoolD
               <FeesSection school={school} />
               <EnglishRequirementsSection school={school} />
               <AdmissionsSection school={school} />
+              {activePortal === 'agent' && (
+                <RequirementsSection schoolDocumentId={school.documentId} />
+              )}
               <BoardingSection school={school} />
               <CoCurricularSection school={school} />
               <LocationSection school={school} />
