@@ -1,6 +1,6 @@
 'use client';
 
-import { Activity, Inbox } from 'lucide-react';
+import { Activity, ArrowRight, Inbox } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import { cn } from '@/lib/utils';
@@ -10,6 +10,7 @@ import type { ActivityRowView } from '@/modules/dashboard/types/agent-dashboard.
 
 export function ActivityFeed({ events }: { events: ActivityRowView[] }) {
   const t = useTranslations('Dashboard.activity');
+  const tHistory = useTranslations('AgentActivity');
   const hasRows = events.length > 0;
 
   return (
@@ -53,6 +54,17 @@ export function ActivityFeed({ events }: { events: ActivityRowView[] }) {
           })
         )}
       </div>
+      {hasRows && (
+        <div className='border-t border-divider px-5 py-3'>
+          <Link
+            href='/dashboard/activity'
+            className='flex items-center gap-1 rounded-md text-sm font-semibold text-primary-strong no-underline hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2'
+          >
+            {tHistory('viewAllHistory')}
+            <ArrowRight className='h-3.5 w-3.5' strokeWidth={2} aria-hidden='true' />
+          </Link>
+        </div>
+      )}
     </section>
   );
 }

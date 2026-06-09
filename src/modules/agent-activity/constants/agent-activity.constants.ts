@@ -1,0 +1,1 @@
+export const AGENT_ACTIVITY_PAGE_SIZE = 10;
