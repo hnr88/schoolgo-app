@@ -79,3 +79,16 @@ export interface PasswordStrength {
   score: number;
   percent: number;
 }
+
+export interface ParentExportData {
+  exportedAt: string;
+  profile: Record<string, unknown>;
+  students: unknown[];
+  applications: unknown[];
+  invoices: unknown[];
+  counts: { students: number; applications: number; invoices: number };
+}
+
+export interface ParentExportResponse {
+  data: ParentExportData;
+}
