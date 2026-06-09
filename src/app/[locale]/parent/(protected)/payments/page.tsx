@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
-import { PaymentsDashboard } from '@/modules/payments';
+import { ParentInvoicesPage } from '@/modules/parent-invoices';
 
 export async function generateMetadata({
   params,
@@ -20,5 +20,5 @@ export default async function ParentPaymentsPage({
   const { locale } = await params;
   setRequestLocale(locale);
 
-  return <PaymentsDashboard />;
+  return <ParentInvoicesPage />;
 }
