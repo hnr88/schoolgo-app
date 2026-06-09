@@ -5,11 +5,11 @@ import { updateSavedSearch } from '@/modules/school-search/lib/saved-searches-ap
 import type {
   SavedSearchResponse,
   SavedSearchesListResponse,
-  UpdateSavedSearchInput,
 } from '@/modules/school-search/types/saved-searches.types';
 
-interface UpdateSavedSearchVariables extends UpdateSavedSearchInput {
+interface UpdateSavedSearchVariables {
   documentId: string;
+  alertsEnabled: boolean;
 }
 
 interface UpdateSavedSearchContext {

@@ -16,7 +16,8 @@ export interface CreateSavedSearchInput {
 }
 
 export interface UpdateSavedSearchInput {
-  alertsEnabled: boolean;
+  alertsEnabled?: boolean;
+  lastResultCount?: number;
 }
 
 export interface SavedSearchResponse {

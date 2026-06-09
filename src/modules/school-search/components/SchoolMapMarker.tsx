@@ -51,7 +51,6 @@ function SchoolMapMarkerComponent({ school, activePortal }: SchoolMapMarkerProps
             )}
             <HitPersonalizationBadges school={school} />
           </div>
-          </div>
           <div className='mx-3 border-t border-divider' />
           <div className='flex items-center justify-between px-3 py-2 transition-colors group-hover:bg-muted/60'>
             <span className='text-caption font-semibold text-primary transition-colors group-hover:text-rausch-600'>
@@ -71,5 +70,7 @@ export const SchoolMapMarker = memo(
   SchoolMapMarkerComponent,
   (prev, next) =>
     getSchoolKey(prev.school) === getSchoolKey(next.school) &&
+    prev.school.isBookmarked === next.school.isBookmarked &&
+    prev.school.myApplicationStatus === next.school.myApplicationStatus &&
     prev.activePortal === next.activePortal,
 );
