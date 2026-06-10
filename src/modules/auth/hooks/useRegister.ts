@@ -11,10 +11,30 @@ import { classifyAuthError } from '@/modules/auth/lib/classify-auth-error';
 import { env } from '@/lib/env';
 import { portalUrl, type Portal } from '@/lib/portal-url';
 import type { RegisterValues } from '@/modules/auth/schemas/register.schema';
+import type { RegisterRequestPayload } from '@/modules/auth/types/auth-api.types';
+
+const ONBOARDING_ROLE_TITLE_KEY = 'schoolgo:onboarding-role-title';
 
 interface UseRegisterOptions {
   portal: Portal;
   setError?: UseFormSetError<RegisterValues>;
+}
+
+function buildRegisterBody(data: RegisterValues, portal: Portal): RegisterRequestPayload {
+  const body: RegisterRequestPayload = {
+    username: data.username,
+    email: data.email,
+    password: data.password,
+    userType: portal,
+  };
+
+  if (portal === 'agent') {
+    if (data.agencyName) body.agencyName = data.agencyName;
+    if (data.countryOfOperation) body.countryOfOperation = data.countryOfOperation;
+    if (data.phone) body.phone = data.phone;
+  }
+
+  return body;
 }
 
 export function useRegister({ portal, setError }: UseRegisterOptions) {
@@ -25,7 +45,7 @@ export function useRegister({ portal, setError }: UseRegisterOptions) {
 
   const handleRegister = async (data: RegisterValues) => {
     try {
-      await registerRequest({ ...data, userType: portal });
+      await registerRequest(buildRegisterBody(data, portal));
       await login({ identifier: data.email, password: data.password });
 
       const actualUser = useAuthStore.getState().user;
@@ -34,6 +54,15 @@ export function useRegister({ portal, setError }: UseRegisterOptions) {
 
       setUserType(actualPortal);
       toast.success(t('registerSuccess'));
+
+      if (portal === 'school') {
+        if (typeof data.roleTitle === 'string' && data.roleTitle.trim() && typeof window !== 'undefined') {
+          sessionStorage.setItem(ONBOARDING_ROLE_TITLE_KEY, data.roleTitle.trim());
+        }
+        window.location.href = `${portalUrl('school', locale)}/onboarding`;
+        return;
+      }
+
       const dashboardPath = getPortalDashboardPath(actualPortal);
       if (dashboardPath) {
         window.location.href = `${portalUrl(actualPortal, locale)}${dashboardPath}`;

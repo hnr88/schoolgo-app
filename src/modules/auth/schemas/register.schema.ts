@@ -1,5 +1,6 @@
 import { z } from 'zod';
 import type { SchemaTranslator } from '@/modules/auth/types/schema.types';
+import type { Portal } from '@/lib/portal-url';
 import {
   PASSWORD_HAS_LOWERCASE,
   PASSWORD_HAS_NUMBER,
@@ -7,7 +8,7 @@ import {
   PASSWORD_MIN_LENGTH,
 } from '@/modules/auth/constants/password-policy.constants';
 
-export const createRegisterSchema = (t: SchemaTranslator) =>
+const createBaseSchema = (t: SchemaTranslator) =>
   z.object({
     username: z.string().min(3, t('usernameMin')),
     email: z.string().min(1, t('emailRequired')).email(t('emailInvalid')),
@@ -19,4 +20,32 @@ export const createRegisterSchema = (t: SchemaTranslator) =>
       .regex(PASSWORD_HAS_NUMBER, t('passwordPolicyNumber')),
   });
 
-export type RegisterValues = z.infer<ReturnType<typeof createRegisterSchema>>;
+export const createRegisterSchema = (t: SchemaTranslator, portal: Portal) => {
+  const base = createBaseSchema(t);
+
+  if (portal === 'agent') {
+    return base.extend({
+      agencyName: z.string().min(1, t('agent.agencyNameRequired')).max(255),
+      countryOfOperation: z.string().max(100).optional().or(z.literal('')),
+      phone: z.string().max(50).optional().or(z.literal('')),
+    });
+  }
+
+  if (portal === 'school') {
+    return base.extend({
+      roleTitle: z.string().max(100).optional().or(z.literal('')),
+    });
+  }
+
+  return base;
+};
+
+export type RegisterValues = {
+  username: string;
+  email: string;
+  password: string;
+  agencyName?: string;
+  countryOfOperation?: string;
+  phone?: string;
+  roleTitle?: string;
+};
