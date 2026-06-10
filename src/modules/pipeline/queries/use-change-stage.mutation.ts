@@ -53,6 +53,7 @@ export function useChangeStage() {
     },
     onSettled: () => {
       queryClient.invalidateQueries({ queryKey: PIPELINE_QUERY_KEY });
+      queryClient.invalidateQueries({ queryKey: ['applications'] });
     },
   });
 }

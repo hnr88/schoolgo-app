@@ -15,7 +15,10 @@ export function useAcceptOffer(applicationDocumentId: string) {
       return data.data;
     },
     onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: ['applications', applicationDocumentId] });
+      queryClient.invalidateQueries({ queryKey: ['applications'] });
+      queryClient.invalidateQueries({ queryKey: ['pipeline'] });
+      queryClient.invalidateQueries({ queryKey: ['agent', 'offers', 'offer_made'] });
+      queryClient.invalidateQueries({ queryKey: ['agent', 'post-offer-applications'] });
     },
   });
 }

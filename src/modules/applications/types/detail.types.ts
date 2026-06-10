@@ -36,7 +36,7 @@ export interface ApplicationMessageAttachment {
   size: number;
 }
 
-export type MessageSenderRole = 'agent' | 'school_staff';
+export type MessageSenderRole = 'agent' | 'school_staff' | 'parent';
 
 export interface MessageThreadSender {
   documentId: string;

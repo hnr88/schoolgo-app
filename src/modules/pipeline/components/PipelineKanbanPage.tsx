@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { LayoutGrid, List, Kanban } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import { EmptyState, SurfaceCard } from '@/modules/core';
+import { EmptyState, ErrorState, SurfaceCard } from '@/modules/core';
 import { ApplicationTable } from '@/modules/applications/components/ApplicationTable';
 import { KanbanBoard } from '@/modules/pipeline/components/KanbanBoard';
 import { PIPELINE_COLUMNS } from '@/modules/pipeline/constants/pipeline.constants';
@@ -13,7 +13,7 @@ import type { ApplicationSortField, SortDirection } from '@/modules/applications
 
 export function PipelineKanbanPage() {
   const t = useTranslations('Pipeline');
-  const { data, isLoading } = usePipeline();
+  const { data, isLoading, isError, refetch } = usePipeline();
   const [view, setView] = useState<'kanban' | 'table'>('kanban');
   const [sortField, setSortField] = useState<ApplicationSortField | null>(null);
   const [sortDirection, setSortDirection] = useState<SortDirection>('asc');
@@ -69,7 +69,14 @@ export function PipelineKanbanPage() {
         </div>
       </div>
 
-      {isEmpty ? (
+      {isError ? (
+        <ErrorState
+          message={t('errorMessage')}
+          onRetry={() => refetch()}
+          retryLabel={t('retry')}
+          framed
+        />
+      ) : isEmpty ? (
         <EmptyState
           icon={Kanban}
           title={t('emptyTitle')}

@@ -19,13 +19,15 @@ export function PreEnrolmentCard({ application }: { application: Application }) 
 
   const items = itemsData?.data ?? [];
   const percent = summary && summary.total > 0 ? (summary.approved / summary.total) * 100 : 0;
-  const studentName = `${application.student.firstName} ${application.student.lastName}`;
+  const studentName = application.student
+    ? `${application.student.firstName} ${application.student.lastName}`
+    : '—';
 
   return (
     <SurfaceCard elevation='interactive' padding='lg' className='flex flex-col gap-4'>
       <div className='flex items-start justify-between gap-3'>
         <div className='flex flex-col gap-1'>
-          <h3 className='font-display text-base font-semibold tracking-tight text-ink-900'>{application.school.name}</h3>
+          <h3 className='font-display text-base font-semibold tracking-tight text-ink-900'>{application.school?.name ?? '—'}</h3>
           <span className='text-sm text-foggy'>{studentName}</span>
         </div>
         <ApplicationStatusBadge status={application.status} />

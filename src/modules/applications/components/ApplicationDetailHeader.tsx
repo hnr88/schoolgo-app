@@ -61,7 +61,7 @@ function ProgressBar({ application }: { application: Application }) {
 
 export function ApplicationDetailHeader({ application }: { application: Application }) {
   const t = useTranslations('Applications');
-  const studentName = `${application.student.firstName} ${application.student.lastName}`;
+  const studentName = `${application.student?.firstName ?? '—'} ${application.student?.lastName ?? '—'}`;
   const submittedValue = application.submittedAt
     ? new Date(application.submittedAt).toLocaleDateString(undefined, { day: 'numeric', month: 'short', year: 'numeric' })
     : '—';
@@ -73,7 +73,7 @@ export function ApplicationDetailHeader({ application }: { application: Applicat
       <div className='flex items-start justify-between gap-4'>
         <div className='flex flex-col gap-1'>
           <h1 className='text-xl font-bold text-ink-900'>
-            {t('studentToSchool', { student: studentName, school: application.school.name })}
+            {t('studentToSchool', { student: studentName, school: application.school?.name ?? '—' })}
           </h1>
           {application.targetYearLevel && (
             <p className='text-sm text-foggy'>{application.targetYearLevel}{application.targetIntake ? ` · ${application.targetIntake}` : ''}</p>

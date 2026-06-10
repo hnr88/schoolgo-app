@@ -16,24 +16,42 @@ export function usePipeline() {
     queryKey: PIPELINE_QUERY_KEY,
     enabled: isAuthenticated,
     queryFn: async () => {
-      const { data } = await privateApi.get<StrapiApplicationListResponse>('/api/applications', {
-        params: {
-          'pagination[pageSize]': 500,
-          'pagination[withCount]': true,
-          'sort[0]': 'createdAt:desc',
-          'populate[student][fields][0]': 'firstName',
-          'populate[student][fields][1]': 'lastName',
-          'populate[student][fields][2]': 'nationality',
-          'populate[school][fields][0]': 'name',
-          'populate[school][fields][1]': 'state',
-          'populate[school][fields][2]': 'cricosCode',
-        },
+      const PAGE_SIZE = 100; // backend hard-caps pageSize at 100
+      const baseParams = {
+        'pagination[pageSize]': PAGE_SIZE,
+        'pagination[withCount]': true,
+        'sort[0]': 'createdAt:desc',
+        'populate[student][fields][0]': 'firstName',
+        'populate[student][fields][1]': 'lastName',
+        'populate[student][fields][2]': 'nationality',
+        'populate[school][fields][0]': 'name',
+        'populate[school][fields][1]': 'state',
+        'populate[school][fields][2]': 'cricosCode',
+      };
+
+      const first = await privateApi.get<StrapiApplicationListResponse>('/api/applications', {
+        params: { ...baseParams, 'pagination[page]': 1 },
       });
-      const applications = data.data.map(withApplicationComputedFields);
+      const total = first.data.meta.pagination.total;
+      const pageCount = first.data.meta.pagination.pageCount;
+      const rows = [...first.data.data];
+
+      if (pageCount > 1) {
+        const rest = await Promise.all(
+          Array.from({ length: pageCount - 1 }, (_, i) =>
+            privateApi.get<StrapiApplicationListResponse>('/api/applications', {
+              params: { ...baseParams, 'pagination[page]': i + 2 },
+            }),
+          ),
+        );
+        for (const res of rest) rows.push(...res.data.data);
+      }
+
+      const applications = rows.map(withApplicationComputedFields);
       return {
         applications,
         byColumn: groupByColumn(applications),
-        total: data.meta.pagination.total,
+        total,
       };
     },
   });

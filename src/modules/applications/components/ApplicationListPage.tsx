@@ -1,11 +1,14 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
+import { ErrorState } from '@/modules/core';
 import { ApplicationListToolbar } from '@/modules/applications/components/ApplicationListToolbar';
 import { ApplicationTable } from '@/modules/applications/components/ApplicationTable';
 import { ApplicationPaginationFooter } from '@/modules/applications/components/ApplicationPaginationFooter';
 import { useApplicationList } from '@/modules/applications/hooks/useApplicationList';
 
 export function ApplicationListPage() {
+  const t = useTranslations('Applications');
   const {
     search,
     status,
@@ -17,12 +20,18 @@ export function ApplicationListPage() {
     pagination,
     showPagination,
     isLoading,
+    isError,
+    refetch,
     setPage,
     handleSort,
     handlePageSizeChange,
     handleSearchChange,
     handleStatusChange,
   } = useApplicationList();
+
+  if (isError) {
+    return <ErrorState message={t('errorMessage')} onRetry={() => refetch()} retryLabel={t('retry')} framed />;
+  }
 
   return (
     <div className='overflow-hidden rounded-xl border border-border bg-card'>

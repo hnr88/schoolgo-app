@@ -16,6 +16,7 @@ import {
   ListChecks,
   LogOut,
   MessageSquare,
+  Search,
   Send,
   ShieldOff,
   Timer,
@@ -72,6 +73,7 @@ export const NOTIFICATION_EVENT_ICON: Record<NotificationEventType, LucideIcon> 
   application_viewed: Eye,
   weekly_pipeline_summary: FileText,
   score_revoked: ShieldOff,
+  saved_search_match: Search,
 };
 
 export const NOTIFICATION_PRIORITY_DOT: Record<NotificationPriority, string> = {

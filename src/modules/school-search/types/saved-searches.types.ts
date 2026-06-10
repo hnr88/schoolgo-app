@@ -4,7 +4,7 @@ export interface SavedSearch {
   documentId: string;
   name: string;
   filterState: TypedSearchRequest;
-  lastResultCount: number;
+  lastResultCount: number | null;
   alertsEnabled: boolean;
   lastNotifiedAt: string | null;
   createdAt: string;

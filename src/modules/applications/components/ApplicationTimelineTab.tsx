@@ -26,9 +26,10 @@ function TimelineSkeleton() {
 
 export function ApplicationTimelineTab({ application }: { application: Application }) {
   const t = useTranslations('Applications');
-  const { data, isLoading } = useApplicationTimeline(application.documentId);
+  const { data, isLoading, isError } = useApplicationTimeline(application.documentId);
 
   if (isLoading) return <TimelineSkeleton />;
+  if (isError) return <p className='text-sm text-foggy'>{t('messagesLoadError')}</p>;
 
   const events = data?.data ?? [];
 

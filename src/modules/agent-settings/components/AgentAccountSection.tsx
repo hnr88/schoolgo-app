@@ -4,12 +4,15 @@ import { Download, Loader2 } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
+import { useAgentVerificationStatus } from '@/modules/agent-profile/queries/use-verification-status.query';
 import { useExportAgentData } from '@/modules/agent-settings/queries/use-export-agent-data.mutation';
 import { DeleteAccountDialog } from '@/modules/agent-settings/components/DeleteAccountDialog';
 
 export function AgentAccountSection() {
   const t = useTranslations('AgentSettings');
   const { mutate: exportData, isPending } = useExportAgentData();
+  const verification = useAgentVerificationStatus();
+  const isVerified = verification.data?.verified === true;
 
   return (
     <div className='flex flex-col gap-8'>
@@ -22,9 +25,11 @@ export function AgentAccountSection() {
           type='button'
           variant='outline'
           className='self-start'
-          disabled={isPending}
+          disabled={isPending || verification.isLoading || !isVerified}
           aria-busy={isPending}
-          onClick={() => exportData()}
+          onClick={() => {
+            if (isVerified) exportData();
+          }}
         >
           {isPending ? (
             <Loader2 className='mr-2 h-4 w-4 animate-spin' aria-hidden='true' />

@@ -1386,7 +1386,11 @@
     "fanoutViewDraft": "View draft",
     "fanoutErrorsHeading": "{count, plural, one {# school could not be added} other {# schools could not be added}}",
     "fanoutCreatedToast": "{count, plural, one {# application created} other {# applications created}}",
-    "fanoutErrorsToast": "{count, plural, one {# school could not be added} other {# schools could not be added}}"
+    "fanoutErrorsToast": "{count, plural, one {# school could not be added} other {# schools could not be added}}",
+    "errorMessage": "[TODO: ko] Couldn't load your applications. Please try again.",
+    "retry": "다시 시도",
+    "documentsLoadError": "[TODO: ko] Couldn't load documents. Please try again.",
+    "senderParent": "Parent"
   },
   "Auth": {
     "forgotPasswordTitle": "Reset your password",
@@ -1738,6 +1742,8 @@
     "updateError": "[TODO: ko] Could not update student. Please try again.",
     "profileTitle": "[TODO: ko] Student Profile",
     "notFound": "[TODO: ko] Student not found.",
+    "loadError": "이 학생을 불러올 수 없습니다. 다시 시도해 주세요.",
+    "retry": "다시 시도",
     "backToList": "[TODO: ko] Back",
     "edit": "[TODO: ko] Edit",
     "archive": "보관",
@@ -1845,7 +1851,10 @@
     "summaryEmptyName": "새 학생",
     "summaryEmptyHint": "세부 정보를 입력하여 이 프로필을 작성하기 시작하세요.",
     "summaryPercent": "{percent}%",
-    "summaryFieldsFilled": "주요 항목 {total}개 중 {completed}개 입력됨"
+    "summaryFieldsFilled": "주요 항목 {total}개 중 {completed}개 입력됨",
+    "docError": "[TODO: ko] Couldn't load documents. Please try again.",
+    "docRetry": "다시 시도",
+    "errorMessage": "[TODO: ko] Couldn't load your students. Please try again."
   },
   "SchoolsFaq": {
     "heading": "[TODO: ko] Frequently Asked Questions",
@@ -1908,7 +1917,9 @@
     "dragInstructions": "Drag to move this application to another stage.",
     "moveSuccess": "Moved to {stage}.",
     "moveNotAllowed": "That move is not allowed.",
-    "moveError": "Could not move the application. Please try again."
+    "moveError": "Could not move the application. Please try again.",
+    "errorMessage": "[TODO: ko] Couldn't load your pipeline. Please try again.",
+    "retry": "다시 시도"
   },
   "SchoolDetail": {
     "backToSearch": "[TODO: ko] Back to search",
@@ -2351,7 +2362,9 @@
     "empty": "아직 저장한 학교가 없습니다",
     "emptyDescription": "검색하는 동안 학교를 북마크하면 나중에 여기에서 비교할 수 있습니다.",
     "browseSchools": "학교 둘러보기",
-    "remove": "삭제"
+    "remove": "삭제",
+    "error": "[TODO: ko] Couldn't load your saved schools. Please try again.",
+    "retry": "다시 시도"
   },
   "SchoolComparison": {
     "attrProjectedCost": "Projected total cost ({years, plural, one {# year} other {# years}})",

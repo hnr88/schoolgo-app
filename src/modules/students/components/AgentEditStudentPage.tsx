@@ -6,6 +6,7 @@ import { ArrowLeft } from 'lucide-react';
 import { Link, useRouter } from '@/i18n/navigation';
 import { Button } from '@/components/ui/button';
 import { Skeleton } from '@/components/ui/skeleton';
+import { ErrorState } from '@/modules/core/components/ErrorState';
 import { StudentForm } from '@/modules/students/components/StudentForm';
 import { useStudent } from '@/modules/students/queries/use-student.query';
 import { useUpdateStudent } from '@/modules/students/queries/use-update-student.mutation';
@@ -16,7 +17,7 @@ import type { StudentProfileProps } from '@/modules/students/types/component.typ
 export function AgentEditStudentPage({ documentId }: StudentProfileProps) {
   const t = useTranslations('Students');
   const router = useRouter();
-  const { data: student, isLoading } = useStudent(documentId);
+  const { data: student, isLoading, isError, refetch } = useStudent(documentId);
   const updateStudent = useUpdateStudent(documentId);
 
   async function handleSubmit(values: StudentFormValues) {
@@ -50,6 +51,8 @@ export function AgentEditStudentPage({ documentId }: StudentProfileProps) {
           <Skeleton className='h-40 w-full rounded-2xl' />
           <Skeleton className='h-32 w-full rounded-2xl' />
         </div>
+      ) : isError ? (
+        <ErrorState message={t('loadError')} onRetry={() => refetch()} retryLabel={t('retry')} framed />
       ) : student ? (
         <StudentForm
           defaultValues={studentToFormValues(student)}

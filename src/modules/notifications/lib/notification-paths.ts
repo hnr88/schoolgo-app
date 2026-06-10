@@ -30,6 +30,7 @@ export function notificationEntityPath(
   if (!entityDocumentId) return null;
 
   if (entityType === 'application') return `${base}/applications/${entityDocumentId}`;
+  if (entityType === 'message') return `${base}/applications/${entityDocumentId}`;
   if (entityType === 'student') return `${base}/students/${entityDocumentId}`;
 
   return null;

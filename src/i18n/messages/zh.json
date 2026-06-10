@@ -1386,7 +1386,11 @@
     "fanoutViewDraft": "View draft",
     "fanoutErrorsHeading": "{count, plural, one {# school could not be added} other {# schools could not be added}}",
     "fanoutCreatedToast": "{count, plural, one {# application created} other {# applications created}}",
-    "fanoutErrorsToast": "{count, plural, one {# school could not be added} other {# schools could not be added}}"
+    "fanoutErrorsToast": "{count, plural, one {# school could not be added} other {# schools could not be added}}",
+    "errorMessage": "[TODO: zh] Couldn't load your applications. Please try again.",
+    "retry": "再试一次",
+    "documentsLoadError": "[TODO: zh] Couldn't load documents. Please try again.",
+    "senderParent": "Parent"
   },
   "Auth": {
     "forgotPasswordTitle": "Reset your password",
@@ -1738,6 +1742,8 @@
     "updateError": "[TODO: zh] Could not update student. Please try again.",
     "profileTitle": "[TODO: zh] Student Profile",
     "notFound": "[TODO: zh] Student not found.",
+    "loadError": "无法加载该学生，请重试。",
+    "retry": "重试",
     "backToList": "[TODO: zh] Back",
     "edit": "[TODO: zh] Edit",
     "archive": "归档",
@@ -1845,7 +1851,10 @@
     "summaryEmptyName": "新学生",
     "summaryEmptyHint": "开始填写详细信息以创建此档案。",
     "summaryPercent": "{percent}%",
-    "summaryFieldsFilled": "已填写 {total} 个关键字段中的 {completed} 个"
+    "summaryFieldsFilled": "已填写 {total} 个关键字段中的 {completed} 个",
+    "docError": "[TODO: zh] Couldn't load documents. Please try again.",
+    "docRetry": "再试一次",
+    "errorMessage": "[TODO: zh] Couldn't load your students. Please try again."
   },
   "SchoolsFaq": {
     "heading": "[TODO: zh] Frequently Asked Questions",
@@ -1908,7 +1917,9 @@
     "dragInstructions": "Drag to move this application to another stage.",
     "moveSuccess": "Moved to {stage}.",
     "moveNotAllowed": "That move is not allowed.",
-    "moveError": "Could not move the application. Please try again."
+    "moveError": "Could not move the application. Please try again.",
+    "errorMessage": "[TODO: zh] Couldn't load your pipeline. Please try again.",
+    "retry": "再试一次"
   },
   "SchoolDetail": {
     "backToSearch": "[TODO: zh] Back to search",
@@ -2351,7 +2362,9 @@
     "empty": "暂无已保存的学校",
     "emptyDescription": "浏览时收藏学校，稍后可在此处进行比较。",
     "browseSchools": "浏览学校",
-    "remove": "移除"
+    "remove": "移除",
+    "error": "[TODO: zh] Couldn't load your saved schools. Please try again.",
+    "retry": "再试一次"
   },
   "SchoolComparison": {
     "attrProjectedCost": "Projected total cost ({years, plural, one {# year} other {# years}})",

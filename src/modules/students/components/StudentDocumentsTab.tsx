@@ -33,6 +33,7 @@ import {
   DialogTitle,
   DialogFooter,
 } from '@/components/ui/dialog';
+import { ErrorState } from '@/modules/core';
 import { useStudentDocuments } from '@/modules/students/queries/use-student-documents.query';
 import { useDeleteDocument } from '@/modules/students/queries/use-delete-document.mutation';
 import { DocumentUploadDialog } from '@/modules/students/components/DocumentUploadDialog';
@@ -47,7 +48,7 @@ export function StudentDocumentsTab({ studentDocumentId }: StudentDocumentsTabPr
   const [deleteTarget, setDeleteTarget] = useState<StudentDocument | null>(null);
   const [typeFilter, setTypeFilter] = useState('all');
 
-  const { data, isLoading } = useStudentDocuments({
+  const { data, isLoading, isError, refetch } = useStudentDocuments({
     studentDocumentId,
     documentType: typeFilter,
   });
@@ -72,6 +73,17 @@ export function StudentDocumentsTab({ studentDocumentId }: StudentDocumentsTabPr
         <Skeleton className='h-10 w-full' />
         <Skeleton className='h-48 w-full rounded-lg' />
       </div>
+    );
+  }
+
+  if (isError) {
+    return (
+      <ErrorState
+        message={t('docError')}
+        onRetry={() => refetch()}
+        retryLabel={t('docRetry')}
+        framed
+      />
     );
   }
 

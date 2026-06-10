@@ -1386,7 +1386,11 @@
     "fanoutViewDraft": "View draft",
     "fanoutErrorsHeading": "{count, plural, one {# school could not be added} other {# schools could not be added}}",
     "fanoutCreatedToast": "{count, plural, one {# application created} other {# applications created}}",
-    "fanoutErrorsToast": "{count, plural, one {# school could not be added} other {# schools could not be added}}"
+    "fanoutErrorsToast": "{count, plural, one {# school could not be added} other {# schools could not be added}}",
+    "errorMessage": "[TODO: th] Couldn't load your applications. Please try again.",
+    "retry": "ลองอีกครั้ง",
+    "documentsLoadError": "[TODO: th] Couldn't load documents. Please try again.",
+    "senderParent": "Parent"
   },
   "Auth": {
     "forgotPasswordTitle": "Reset your password",
@@ -1738,6 +1742,8 @@
     "updateError": "[TODO: th] Could not update student. Please try again.",
     "profileTitle": "[TODO: th] Student Profile",
     "notFound": "[TODO: th] Student not found.",
+    "loadError": "ไม่สามารถโหลดข้อมูลนักเรียนนี้ได้ กรุณาลองอีกครั้ง",
+    "retry": "ลองอีกครั้ง",
     "backToList": "[TODO: th] Back",
     "edit": "[TODO: th] Edit",
     "archive": "เก็บถาวร",
@@ -1845,7 +1851,10 @@
     "summaryEmptyName": "นักเรียนใหม่",
     "summaryEmptyHint": "เริ่มกรอกรายละเอียดเพื่อสร้างโปรไฟล์นี้",
     "summaryPercent": "{percent}%",
-    "summaryFieldsFilled": "กรอกข้อมูลสำคัญแล้ว {completed} จาก {total} ช่อง"
+    "summaryFieldsFilled": "กรอกข้อมูลสำคัญแล้ว {completed} จาก {total} ช่อง",
+    "docError": "[TODO: th] Couldn't load documents. Please try again.",
+    "docRetry": "ลองอีกครั้ง",
+    "errorMessage": "[TODO: th] Couldn't load your students. Please try again."
   },
   "SchoolsFaq": {
     "heading": "[TODO: th] Frequently Asked Questions",
@@ -1908,7 +1917,9 @@
     "dragInstructions": "Drag to move this application to another stage.",
     "moveSuccess": "Moved to {stage}.",
     "moveNotAllowed": "That move is not allowed.",
-    "moveError": "Could not move the application. Please try again."
+    "moveError": "Could not move the application. Please try again.",
+    "errorMessage": "[TODO: th] Couldn't load your pipeline. Please try again.",
+    "retry": "ลองอีกครั้ง"
   },
   "SchoolDetail": {
     "backToSearch": "[TODO: th] Back to search",
@@ -2351,7 +2362,9 @@
     "empty": "ยังไม่มีโรงเรียนที่บันทึกไว้",
     "emptyDescription": "บันทึกโรงเรียนขณะเรียกดูเพื่อเปรียบเทียบที่นี่ในภายหลัง",
     "browseSchools": "เรียกดูโรงเรียน",
-    "remove": "ลบ"
+    "remove": "ลบ",
+    "error": "[TODO: th] Couldn't load your saved schools. Please try again.",
+    "retry": "ลองอีกครั้ง"
   },
   "SchoolComparison": {
     "attrProjectedCost": "Projected total cost ({years, plural, one {# year} other {# years}})",

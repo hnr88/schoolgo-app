@@ -5,7 +5,7 @@ import { Heart } from 'lucide-react';
 import { Link } from '@/i18n/navigation';
 import type { Portal } from '@/lib/portal-url';
 import { Skeleton } from '@/components/ui/skeleton';
-import { EmptyState } from '@/modules/core';
+import { EmptyState, ErrorState } from '@/modules/core';
 import { SearchSchoolCard } from '@/modules/school-search/components/SchoolCard';
 import { useBookmarks } from '@/modules/school-search/queries/use-bookmarks.query';
 import { useDeleteBookmark } from '@/modules/school-search/queries/use-delete-bookmark.mutation';
@@ -45,7 +45,7 @@ function SavedSchoolItem({
 
 export function SavedSchoolsPage({ portal = 'parent' }: { portal?: Portal }) {
   const t = useTranslations('ParentSavedSchools');
-  const { data, isLoading } = useBookmarks();
+  const { data, isLoading, isError, refetch } = useBookmarks();
   const deleteBookmark = useDeleteBookmark();
 
   const schools = data?.data ?? [];
@@ -60,6 +60,13 @@ export function SavedSchoolsPage({ portal = 'parent' }: { portal?: Portal }) {
             <Skeleton key={index} className='h-72 w-full rounded-lg' />
           ))}
         </div>
+      ) : isError ? (
+        <ErrorState
+          framed
+          message={t('error')}
+          onRetry={() => refetch()}
+          retryLabel={t('retry')}
+        />
       ) : schools.length === 0 ? (
         <EmptyState
           framed

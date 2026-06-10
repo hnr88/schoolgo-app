@@ -23,10 +23,10 @@ export function useApplicationList() {
     ? `${SORT_FIELD_TO_API[sortField]}:${sortDirection}`
     : undefined;
 
-  const effectivePageSize = showAll ? 1000 : pageSize;
+  const effectivePageSize = showAll ? 100 : pageSize;
 
-  const { data, isLoading } = useApplications({
-    page: showAll ? 1 : page,
+  const { data, isLoading, isError, refetch } = useApplications({
+    page,
     pageSize: effectivePageSize,
     status,
     search: effectiveSearch,
@@ -35,7 +35,7 @@ export function useApplicationList() {
 
   const applications = data?.data ?? [];
   const pagination = data?.meta?.pagination;
-  const showPagination = !showAll && pagination && pagination.pageCount > 1;
+  const showPagination = !!pagination && pagination.pageCount > 1;
 
   function handleSort(field: ApplicationSortField) {
     if (sortField !== field) {
@@ -81,6 +81,8 @@ export function useApplicationList() {
     pagination,
     showPagination,
     isLoading,
+    isError,
+    refetch,
     setPage,
     handleSort,
     handlePageSizeChange,

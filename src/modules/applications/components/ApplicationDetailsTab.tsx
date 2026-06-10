@@ -25,7 +25,9 @@ function Section({ title, children }: { title: string; children: React.ReactNode
 
 export function ApplicationDetailsTab({ application }: { application: Application }) {
   const t = useTranslations('Applications');
-  const studentName = `${application.student.firstName} ${application.student.lastName}`;
+  const studentName = application.student
+    ? `${application.student.firstName} ${application.student.lastName}`
+    : '—';
   const fmt = (d: string | undefined) =>
     d ? new Date(d).toLocaleDateString() : t('notProvided');
 
@@ -33,25 +35,29 @@ export function ApplicationDetailsTab({ application }: { application: Applicatio
     <div className='flex flex-col gap-6 rounded-xl border border-border bg-card p-6'>
       <Section title={t('sectionStudent')}>
         <InfoRow label={t('labelName')}>
-          <Link
-            href={`/dashboard/students/${application.student.documentId}`}
-            className='text-primary-strong hover:underline'
-          >
-            {studentName}
-          </Link>
+          {application.student ? (
+            <Link
+              href={`/dashboard/students/${application.student.documentId}`}
+              className='text-primary-strong hover:underline'
+            >
+              {studentName}
+            </Link>
+          ) : (
+            '—'
+          )}
         </InfoRow>
         <InfoRow label={t('labelNationality')}>
-          {application.student.nationality ?? t('notProvided')}
+          {application.student?.nationality ?? t('notProvided')}
         </InfoRow>
       </Section>
 
       <Section title={t('sectionSchool')}>
-        <InfoRow label={t('labelSchoolName')}>{application.school.name}</InfoRow>
+        <InfoRow label={t('labelSchoolName')}>{application.school?.name ?? '—'}</InfoRow>
         <InfoRow label={t('labelState')}>
-          {application.school.state ?? t('notProvided')}
+          {application.school?.state ?? t('notProvided')}
         </InfoRow>
         <InfoRow label={t('labelCricosCode')}>
-          {application.school.cricosCode ?? t('notProvided')}
+          {application.school?.cricosCode ?? t('notProvided')}
         </InfoRow>
       </Section>
 

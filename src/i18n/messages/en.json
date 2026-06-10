@@ -1386,7 +1386,11 @@
     "fanoutViewDraft": "View draft",
     "fanoutErrorsHeading": "{count, plural, one {# school could not be added} other {# schools could not be added}}",
     "fanoutCreatedToast": "{count, plural, one {# application created} other {# applications created}}",
-    "fanoutErrorsToast": "{count, plural, one {# school could not be added} other {# schools could not be added}}"
+    "fanoutErrorsToast": "{count, plural, one {# school could not be added} other {# schools could not be added}}",
+    "errorMessage": "Couldn't load your applications. Please try again.",
+    "retry": "Try again",
+    "documentsLoadError": "Couldn't load documents. Please try again.",
+    "senderParent": "Parent"
   },
   "Auth": {
     "forgotPasswordTitle": "Reset your password",
@@ -1777,7 +1781,9 @@
     "empty": "No saved schools yet",
     "emptyDescription": "Bookmark schools while browsing to compare them here later.",
     "browseSchools": "Browse schools",
-    "remove": "Remove"
+    "remove": "Remove",
+    "error": "Couldn't load your saved schools. Please try again.",
+    "retry": "Try again"
   },
   "SchoolComparison": {
     "attrProjectedCost": "Projected total cost ({years, plural, one {# year} other {# years}})",
@@ -2114,6 +2120,8 @@
     "updateError": "Could not update student. Please try again.",
     "profileTitle": "Student Profile",
     "notFound": "Student not found.",
+    "loadError": "Could not load this student. Please try again.",
+    "retry": "Try again",
     "backToList": "Back",
     "edit": "Edit",
     "archive": "Archive",
@@ -2221,7 +2229,10 @@
     "summaryEmptyName": "New student",
     "summaryEmptyHint": "Start filling in the details to build this profile.",
     "summaryPercent": "{percent}%",
-    "summaryFieldsFilled": "{completed} of {total} key fields filled in"
+    "summaryFieldsFilled": "{completed} of {total} key fields filled in",
+    "docError": "Couldn't load documents. Please try again.",
+    "docRetry": "Try again",
+    "errorMessage": "Couldn't load your students. Please try again."
   },
   "ParentStudents": {
     "title": "Students",
@@ -3080,7 +3091,9 @@
     "dragInstructions": "Drag to move this application to another stage.",
     "moveSuccess": "Moved to {stage}.",
     "moveNotAllowed": "That move is not allowed.",
-    "moveError": "Could not move the application. Please try again."
+    "moveError": "Could not move the application. Please try again.",
+    "errorMessage": "Couldn't load your pipeline. Please try again.",
+    "retry": "Try again"
   },
   "SchoolDetail": {
     "backToSearch": "Back to search",

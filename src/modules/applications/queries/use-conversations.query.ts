@@ -13,6 +13,8 @@ export function useConversations() {
   return useQuery({
     queryKey: AGENT_CONVERSATIONS_QUERY_KEY,
     enabled: isAuthenticated,
+    refetchInterval: 30_000,
+    refetchOnWindowFocus: true,
     queryFn: async () => {
       const { data } = await privateApi.get<StrapiConversationsResponse>(
         '/api/messages/conversations',

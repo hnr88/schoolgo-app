@@ -32,7 +32,9 @@ export function OfferCard({ application }: { application: Application }) {
   const deadline = detail?.offerDeadline ?? null;
   const urgency = offerDeadlineUrgency(deadline);
   const days = daysUntilDeadline(deadline);
-  const studentName = `${application.student.firstName} ${application.student.lastName}`;
+  const studentName = application.student
+    ? `${application.student.firstName} ${application.student.lastName}`
+    : '—';
 
   function handleAccept() {
     acceptOffer.mutate(undefined, {
@@ -50,7 +52,7 @@ export function OfferCard({ application }: { application: Application }) {
     <SurfaceCard elevation='interactive' padding='lg' className='flex flex-col gap-4'>
       <div className='flex items-start justify-between gap-3'>
         <div className='flex flex-col gap-1'>
-          <h3 className='font-display text-base font-semibold tracking-tight text-ink-900'>{application.school.name}</h3>
+          <h3 className='font-display text-base font-semibold tracking-tight text-ink-900'>{application.school?.name ?? '—'}</h3>
           <span className='flex items-center gap-1.5 text-sm text-foggy'>
             <GraduationCap className='h-4 w-4' />
             {studentName}
@@ -117,7 +119,7 @@ export function OfferCard({ application }: { application: Application }) {
         open={confirmOpen}
         onOpenChange={setConfirmOpen}
         title={t('acceptConfirmTitle')}
-        description={t('acceptConfirmDescription', { school: application.school.name })}
+        description={t('acceptConfirmDescription', { school: application.school?.name ?? '—' })}
         confirmLabel={t('acceptOffer')}
         isPending={acceptOffer.isPending}
         onConfirm={handleAccept}

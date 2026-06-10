@@ -1386,7 +1386,11 @@
     "fanoutViewDraft": "View draft",
     "fanoutErrorsHeading": "{count, plural, one {# school could not be added} other {# schools could not be added}}",
     "fanoutCreatedToast": "{count, plural, one {# application created} other {# applications created}}",
-    "fanoutErrorsToast": "{count, plural, one {# school could not be added} other {# schools could not be added}}"
+    "fanoutErrorsToast": "{count, plural, one {# school could not be added} other {# schools could not be added}}",
+    "errorMessage": "[TODO: vi] Couldn't load your applications. Please try again.",
+    "retry": "Thử lại",
+    "documentsLoadError": "[TODO: vi] Couldn't load documents. Please try again.",
+    "senderParent": "Parent"
   },
   "Auth": {
     "forgotPasswordTitle": "Reset your password",
@@ -1738,6 +1742,8 @@
     "updateError": "[TODO: vi] Could not update student. Please try again.",
     "profileTitle": "[TODO: vi] Student Profile",
     "notFound": "[TODO: vi] Student not found.",
+    "loadError": "Không thể tải học sinh này. Vui lòng thử lại.",
+    "retry": "Thử lại",
     "backToList": "[TODO: vi] Back",
     "edit": "[TODO: vi] Edit",
     "archive": "Lưu trữ",
@@ -1845,7 +1851,10 @@
     "summaryEmptyName": "Học sinh mới",
     "summaryEmptyHint": "Bắt đầu điền thông tin để xây dựng hồ sơ này.",
     "summaryPercent": "{percent}%",
-    "summaryFieldsFilled": "Đã điền {completed} trên {total} trường thông tin chính"
+    "summaryFieldsFilled": "Đã điền {completed} trên {total} trường thông tin chính",
+    "docError": "[TODO: vi] Couldn't load documents. Please try again.",
+    "docRetry": "Thử lại",
+    "errorMessage": "[TODO: vi] Couldn't load your students. Please try again."
   },
   "SchoolsFaq": {
     "heading": "[TODO: vi] Frequently Asked Questions",
@@ -1908,7 +1917,9 @@
     "dragInstructions": "Drag to move this application to another stage.",
     "moveSuccess": "Moved to {stage}.",
     "moveNotAllowed": "That move is not allowed.",
-    "moveError": "Could not move the application. Please try again."
+    "moveError": "Could not move the application. Please try again.",
+    "errorMessage": "[TODO: vi] Couldn't load your pipeline. Please try again.",
+    "retry": "Thử lại"
   },
   "SchoolDetail": {
     "backToSearch": "[TODO: vi] Back to search",
@@ -2351,7 +2362,9 @@
     "empty": "Chưa có trường nào được lưu",
     "emptyDescription": "Đánh dấu các trường khi duyệt để so sánh chúng tại đây sau này.",
     "browseSchools": "Duyệt trường",
-    "remove": "Xóa"
+    "remove": "Xóa",
+    "error": "[TODO: vi] Couldn't load your saved schools. Please try again.",
+    "retry": "Thử lại"
   },
   "SchoolComparison": {
     "attrProjectedCost": "Projected total cost ({years, plural, one {# year} other {# years}})",

@@ -1386,7 +1386,11 @@
     "fanoutViewDraft": "View draft",
     "fanoutErrorsHeading": "{count, plural, one {# school could not be added} other {# schools could not be added}}",
     "fanoutCreatedToast": "{count, plural, one {# application created} other {# applications created}}",
-    "fanoutErrorsToast": "{count, plural, one {# school could not be added} other {# schools could not be added}}"
+    "fanoutErrorsToast": "{count, plural, one {# school could not be added} other {# schools could not be added}}",
+    "errorMessage": "[TODO: ms] Couldn't load your applications. Please try again.",
+    "retry": "Cuba lagi",
+    "documentsLoadError": "[TODO: ms] Couldn't load documents. Please try again.",
+    "senderParent": "Parent"
   },
   "Auth": {
     "forgotPasswordTitle": "Reset your password",
@@ -1738,6 +1742,8 @@
     "updateError": "[TODO: ms] Could not update student. Please try again.",
     "profileTitle": "[TODO: ms] Student Profile",
     "notFound": "[TODO: ms] Student not found.",
+    "loadError": "Tidak dapat memuatkan pelajar ini. Sila cuba lagi.",
+    "retry": "Cuba lagi",
     "backToList": "[TODO: ms] Back",
     "edit": "[TODO: ms] Edit",
     "archive": "Arkib",
@@ -1845,7 +1851,10 @@
     "summaryEmptyName": "Pelajar baharu",
     "summaryEmptyHint": "Mula isi butiran untuk membina profil ini.",
     "summaryPercent": "{percent}%",
-    "summaryFieldsFilled": "{completed} daripada {total} medan utama telah diisi"
+    "summaryFieldsFilled": "{completed} daripada {total} medan utama telah diisi",
+    "docError": "[TODO: ms] Couldn't load documents. Please try again.",
+    "docRetry": "Cuba lagi",
+    "errorMessage": "[TODO: ms] Couldn't load your students. Please try again."
   },
   "SchoolsFaq": {
     "heading": "[TODO: ms] Frequently Asked Questions",
@@ -1908,7 +1917,9 @@
     "dragInstructions": "Drag to move this application to another stage.",
     "moveSuccess": "Moved to {stage}.",
     "moveNotAllowed": "That move is not allowed.",
-    "moveError": "Could not move the application. Please try again."
+    "moveError": "Could not move the application. Please try again.",
+    "errorMessage": "[TODO: ms] Couldn't load your pipeline. Please try again.",
+    "retry": "Cuba lagi"
   },
   "SchoolDetail": {
     "backToSearch": "[TODO: ms] Back to search",
@@ -2351,7 +2362,9 @@
     "empty": "Tiada sekolah disimpan lagi",
     "emptyDescription": "Tandakan sekolah semasa melayari untuk membandingkannya di sini kemudian.",
     "browseSchools": "Layari sekolah",
-    "remove": "Buang"
+    "remove": "Buang",
+    "error": "[TODO: ms] Couldn't load your saved schools. Please try again.",
+    "retry": "Cuba lagi"
   },
   "SchoolComparison": {
     "attrProjectedCost": "Projected total cost ({years, plural, one {# year} other {# years}})",

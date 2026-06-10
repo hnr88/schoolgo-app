@@ -1,7 +1,7 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { Check, CheckCheck } from 'lucide-react';
+import { Check } from 'lucide-react';
 import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 import { cn } from '@/lib/utils';
 import { messageSenderInitials } from '@/modules/applications/lib/message-sender';
@@ -10,7 +10,12 @@ import type { MessageThreadItem } from '@/modules/applications/types/detail.type
 export function MessageBubble({ message }: { message: MessageThreadItem }) {
   const t = useTranslations('Applications');
   const isAgent = message.senderRole === 'agent';
-  const senderLabel = isAgent ? t('senderAgent') : t('senderSchool');
+  const senderLabel =
+    message.senderRole === 'agent'
+      ? t('senderAgent')
+      : message.senderRole === 'parent'
+        ? t('senderParent')
+        : t('senderSchool');
   const initials = messageSenderInitials(message.sender, senderLabel);
   const timestamp = new Date(message.createdAt).toLocaleString(undefined, {
     day: 'numeric',
@@ -47,12 +52,8 @@ export function MessageBubble({ message }: { message: MessageThreadItem }) {
         </div>
         {isAgent && (
           <span className='flex items-center gap-1 text-xs text-foggy'>
-            {message.readAt ? (
-              <CheckCheck className='h-3.5 w-3.5 text-babu-600' aria-hidden='true' />
-            ) : (
-              <Check className='h-3.5 w-3.5' aria-hidden='true' />
-            )}
-            {message.readAt ? t('messageRead') : t('messageSent')}
+            <Check className='h-3.5 w-3.5' aria-hidden='true' />
+            {t('messageSent')}
           </span>
         )}
       </div>

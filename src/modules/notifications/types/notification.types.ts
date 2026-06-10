@@ -21,7 +21,8 @@ export type NotificationEventType =
   | 'test_results_ready'
   | 'application_viewed'
   | 'weekly_pipeline_summary'
-  | 'score_revoked';
+  | 'score_revoked'
+  | 'saved_search_match';
 
 export type NotificationPriority = 'high' | 'medium' | 'low';
 

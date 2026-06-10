@@ -21,9 +21,18 @@ function DocumentsSkeleton() {
 
 export function ApplicationDocumentsTab({ application }: { application: Application }) {
   const t = useTranslations('Applications');
-  const { data, isLoading } = useApplicationDocuments(application.documentId);
+  const { data, isLoading, isError } = useApplicationDocuments(application.documentId);
 
   if (isLoading) return <DocumentsSkeleton />;
+
+  if (isError) {
+    return (
+      <div className='flex flex-col gap-4'>
+        <ApplicationDocumentChecklistCard applicationDocumentId={application.documentId} />
+        <p className='text-sm text-foggy'>{t('documentsLoadError')}</p>
+      </div>
+    );
+  }
 
   const documents = data?.data ?? [];
 

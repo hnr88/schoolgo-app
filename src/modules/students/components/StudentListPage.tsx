@@ -9,7 +9,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
-import { getPageNumbers } from '@/modules/core';
+import { getPageNumbers, ErrorState } from '@/modules/core';
 import { StudentListToolbar } from '@/modules/students/components/StudentListToolbar';
 import { StudentTable } from '@/modules/students/components/StudentTable';
 import { useStudentList } from '@/modules/students/hooks/useStudentList';
@@ -28,6 +28,8 @@ export function StudentListPage() {
     pagination,
     showPagination,
     isLoading,
+    isError,
+    refetch,
     setPage,
     handleSort,
     handlePageSizeChange,
@@ -46,14 +48,20 @@ export function StudentListPage() {
         />
       </div>
 
-      <StudentTable
-        students={students}
-        isLoading={isLoading}
-        sortField={sortField}
-        sortDirection={sortDirection}
-        onSort={handleSort}
-        pageSize={showAll ? students.length : pageSize}
-      />
+      {isError ? (
+        <div className='px-6 py-12'>
+          <ErrorState message={t('errorMessage')} onRetry={() => refetch()} retryLabel={t('retry')} />
+        </div>
+      ) : (
+        <StudentTable
+          students={students}
+          isLoading={isLoading}
+          sortField={sortField}
+          sortDirection={sortDirection}
+          onSort={handleSort}
+          pageSize={showAll ? students.length : pageSize}
+        />
+      )}
 
       <div className='flex items-center justify-between border-t border-border px-6 py-4'>
         {pagination ? (

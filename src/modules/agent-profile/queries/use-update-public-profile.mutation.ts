@@ -6,6 +6,7 @@ import { useTranslations } from 'next-intl';
 import { privateApi } from '@/lib/axios';
 import { AGENT_PUBLIC_PREVIEW_QUERY_KEY } from '@/modules/agent-profile/queries/use-public-preview.query';
 import { AGENT_VERIFICATION_QUERY_KEY } from '@/modules/agent-profile/queries/use-verification-status.query';
+import { AGENT_ONBOARDING_QUERY_KEY } from '@/modules/agent-profile/queries/use-agent-onboarding.query';
 import type { UpdatePublicProfilePayload } from '@/modules/agent-profile/types/agent-profile.types';
 
 export function useUpdatePublicProfile() {
@@ -20,6 +21,7 @@ export function useUpdatePublicProfile() {
     onSuccess: () => {
       qc.invalidateQueries({ queryKey: AGENT_PUBLIC_PREVIEW_QUERY_KEY });
       qc.invalidateQueries({ queryKey: AGENT_VERIFICATION_QUERY_KEY });
+      qc.invalidateQueries({ queryKey: AGENT_ONBOARDING_QUERY_KEY });
       toast.success(t('saveSuccess'));
     },
     onError: () => {

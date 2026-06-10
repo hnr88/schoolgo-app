@@ -101,9 +101,11 @@ export function SavedSearchesPanel({ className }: SavedSearchesPanelProps) {
               <span className="truncate text-sm font-medium text-foreground">
                 {s.name}
               </span>
-              <span className="text-xs text-muted-foreground">
-                {t('lastResultCount', { count: s.lastResultCount })}
-              </span>
+              {s.lastResultCount != null && (
+                <span className="text-xs text-muted-foreground">
+                  {t('lastResultCount', { count: s.lastResultCount })}
+                </span>
+              )}
             </div>
             <div className="flex shrink-0 items-center gap-1">
               <Button

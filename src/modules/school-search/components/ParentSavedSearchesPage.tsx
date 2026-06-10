@@ -4,7 +4,7 @@ import { useTranslations } from 'next-intl';
 import { Search } from 'lucide-react';
 import { Link, useRouter } from '@/i18n/navigation';
 import type { Portal } from '@/lib/portal-url';
-import { EmptyState } from '@/modules/core';
+import { EmptyState, ErrorState } from '@/modules/core';
 import { useSavedSearches } from '@/modules/school-search/queries/use-saved-searches.query';
 import { useApplySavedSearch } from '@/modules/school-search/hooks/useApplySavedSearch';
 import { SavedSearchRow } from '@/modules/school-search/components/SavedSearchRow';
@@ -14,7 +14,7 @@ import type { SavedSearch } from '@/modules/school-search/types/saved-searches.t
 export function ParentSavedSearchesPage({ portal = 'parent' }: { portal?: Portal }) {
   const t = useTranslations('ParentSavedSearches');
   const router = useRouter();
-  const { data, isLoading } = useSavedSearches();
+  const { data, isLoading, isError, refetch } = useSavedSearches();
   const applySavedSearch = useApplySavedSearch();
 
   const items: SavedSearch[] = data?.data ?? [];
@@ -37,6 +37,13 @@ export function ParentSavedSearchesPage({ portal = 'parent' }: { portal?: Portal
             />
           ))}
         </ul>
+      ) : isError ? (
+        <ErrorState
+          framed
+          message={t('freshnessError')}
+          onRetry={() => refetch()}
+          retryLabel={t('retryCheck')}
+        />
       ) : items.length === 0 ? (
         <EmptyState
           framed

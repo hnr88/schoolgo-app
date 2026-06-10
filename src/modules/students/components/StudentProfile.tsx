@@ -6,6 +6,7 @@ import { ArrowLeft, Pencil } from 'lucide-react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Skeleton } from '@/components/ui/skeleton';
 import { Button } from '@/components/ui/button';
+import { ErrorState } from '@/modules/core';
 import { useStudent } from '@/modules/students/queries/use-student.query';
 import { StudentDocumentsTab } from '@/modules/students/components/StudentDocumentsTab';
 import { STATUS_DOT } from '@/modules/students/constants/profile.constants';
@@ -23,7 +24,7 @@ function InfoItem({ label, value }: { label: string; value: string | null | unde
 
 export function StudentProfile({ documentId }: StudentProfileProps) {
   const t = useTranslations('Students');
-  const { data: student, isLoading } = useStudent(documentId);
+  const { data: student, isLoading, isError, refetch } = useStudent(documentId);
 
   if (isLoading) {
     return (
@@ -43,6 +44,10 @@ export function StudentProfile({ documentId }: StudentProfileProps) {
         <Skeleton className='h-64 w-full rounded-xl' />
       </div>
     );
+  }
+
+  if (isError) {
+    return <ErrorState message={t('loadError')} onRetry={() => refetch()} retryLabel={t('retry')} framed />;
   }
 
   if (!student) {

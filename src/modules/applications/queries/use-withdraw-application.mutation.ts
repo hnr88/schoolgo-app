@@ -17,6 +17,8 @@ export function useWithdrawApplication(applicationDocumentId: string) {
     },
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['applications', applicationDocumentId] });
+      queryClient.invalidateQueries({ queryKey: ['applications'] });
+      queryClient.invalidateQueries({ queryKey: ['pipeline'] });
     },
   });
 }

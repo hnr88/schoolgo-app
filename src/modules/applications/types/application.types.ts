@@ -24,13 +24,13 @@ export interface Application {
     firstName: string;
     lastName: string;
     nationality?: string;
-  };
+  } | null;
   school: {
     documentId: string;
     name: string;
     state?: string;
     cricosCode?: string;
-  };
+  } | null;
   targetYearLevel?: string;
   targetIntake?: string;
   status: ApplicationStatus;
