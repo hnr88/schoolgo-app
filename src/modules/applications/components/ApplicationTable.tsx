@@ -119,7 +119,7 @@ export function ApplicationTable({
           ) : (
             <>
               {applications.map((application) => {
-                const initials = `${application.student.firstName?.[0] ?? ''}${application.student.lastName?.[0] ?? ''}`.toUpperCase();
+                const initials = `${application.student?.firstName?.[0] ?? ''}${application.student?.lastName?.[0] ?? ''}`.toUpperCase();
 
                 return (
                   <TableRow
@@ -127,26 +127,30 @@ export function ApplicationTable({
                     className='group h-14 border-b-border hover:bg-accent/50'
                   >
                     <TableCell className='pl-6'>
-                      <Link
-                        href={`/dashboard/students/${application.student.documentId}`}
-                        className='flex items-center gap-3'
-                      >
-                        <span className='flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-babu-50 text-xs font-semibold text-babu-600'>
-                          {initials}
-                        </span>
-                        <span className='font-medium text-ink-900 group-hover:text-babu-600'>
-                          {application.student.firstName} {application.student.lastName}
-                        </span>
-                      </Link>
+                      {application.student ? (
+                        <Link
+                          href={`/dashboard/students/${application.student.documentId}`}
+                          className='flex items-center gap-3'
+                        >
+                          <span className='flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-babu-50 text-xs font-semibold text-babu-600'>
+                            {initials}
+                          </span>
+                          <span className='font-medium text-ink-900 group-hover:text-babu-600'>
+                            {application.student.firstName} {application.student.lastName}
+                          </span>
+                        </Link>
+                      ) : (
+                        '—'
+                      )}
                     </TableCell>
                     <TableCell className='text-sm text-hof'>
-                      <div>{application.school.name}</div>
-                      {application.school.cricosCode && (
+                      <div>{application.school?.name ?? '—'}</div>
+                      {application.school?.cricosCode && (
                         <div className='text-xs text-foggy'>{application.school.cricosCode}</div>
                       )}
                     </TableCell>
                     <TableCell className='text-sm text-hof'>
-                      {application.school.state ?? '—'}
+                      {application.school?.state ?? '—'}
                     </TableCell>
                     <TableCell className='text-sm text-hof'>
                       {application.targetYearLevel ?? '—'}

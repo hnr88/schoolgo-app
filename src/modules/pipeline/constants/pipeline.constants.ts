@@ -12,7 +12,7 @@ export const PIPELINE_COLUMNS: PipelineColumn[] = [
   {
     id: 'in_review',
     label: 'columnInReview',
-    statuses: ['under_review', 'assessment_required', 'interview_scheduled'],
+    statuses: ['under_review', 'assessment_required', 'interview_scheduled', 'interview_completed'],
     color: 'bg-vivid-iris-soft',
     dotColor: 'bg-vivid-iris',
   },

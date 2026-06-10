@@ -14,8 +14,8 @@ import {
   FormField,
   FormItem,
   FormLabel,
-  FormMessage,
 } from '@/components/ui/form';
+import { AgentProfileFormMessage } from '@/modules/agent-profile/components/AgentProfileFormMessage';
 import {
   publicProfileSchema,
   type PublicProfileValues,
@@ -83,7 +83,7 @@ export function PublicProfileForm({ preview }: PublicProfileFormProps) {
                 <FormControl>
                   <Input autoComplete='organization' {...field} />
                 </FormControl>
-                <FormMessage />
+                <AgentProfileFormMessage />
               </FormItem>
             )}
           />
@@ -96,7 +96,7 @@ export function PublicProfileForm({ preview }: PublicProfileFormProps) {
                 <FormControl>
                   <Input autoComplete='organization-title' {...field} />
                 </FormControl>
-                <FormMessage />
+                <AgentProfileFormMessage />
               </FormItem>
             )}
           />
@@ -109,7 +109,7 @@ export function PublicProfileForm({ preview }: PublicProfileFormProps) {
                 <FormControl>
                   <Input autoComplete='country-name' {...field} />
                 </FormControl>
-                <FormMessage />
+                <AgentProfileFormMessage />
               </FormItem>
             )}
           />
@@ -123,7 +123,7 @@ export function PublicProfileForm({ preview }: PublicProfileFormProps) {
                   <Input {...field} />
                 </FormControl>
                 <FormDescription>{t('qeacNumberHint')}</FormDescription>
-                <FormMessage />
+                <AgentProfileFormMessage />
               </FormItem>
             )}
           />
@@ -137,7 +137,7 @@ export function PublicProfileForm({ preview }: PublicProfileFormProps) {
                   <Input type='tel' autoComplete='tel' placeholder={t('phonePlaceholder')} {...field} />
                 </FormControl>
                 <FormDescription>{t('phoneHint')}</FormDescription>
-                <FormMessage />
+                <AgentProfileFormMessage />
               </FormItem>
             )}
           />
@@ -150,7 +150,7 @@ export function PublicProfileForm({ preview }: PublicProfileFormProps) {
                 <FormControl>
                   <Input type='url' autoComplete='url' {...field} />
                 </FormControl>
-                <FormMessage />
+                <AgentProfileFormMessage />
               </FormItem>
             )}
           />
@@ -166,7 +166,7 @@ export function PublicProfileForm({ preview }: PublicProfileFormProps) {
                 <Textarea rows={4} {...field} />
               </FormControl>
               <FormDescription>{t('bioHint')}</FormDescription>
-              <FormMessage />
+              <AgentProfileFormMessage />
             </FormItem>
           )}
         />

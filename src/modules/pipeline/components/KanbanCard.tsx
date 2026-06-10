@@ -13,7 +13,7 @@ import type { CardDragData, KanbanCardProps } from '@/modules/pipeline/types/com
 export function KanbanCard({ application, isOverlay = false }: KanbanCardProps) {
   const t = useTranslations('Pipeline');
   const { student, school, targetYearLevel, targetIntake, status, daysInStatus } = application;
-  const studentName = `${student.firstName} ${student.lastName}`;
+  const studentName = student ? `${student.firstName} ${student.lastName}` : '—';
   const dragData: CardDragData = { application };
   const { attributes, listeners, setNodeRef, transform, isDragging } = useDraggable({
     id: application.documentId,
@@ -44,12 +44,12 @@ export function KanbanCard({ application, isOverlay = false }: KanbanCardProps) 
 
       <Link
         href={`/dashboard/applications/${application.documentId}`}
-        aria-label={`${studentName} — ${school.name}`}
+        aria-label={`${studentName} — ${school?.name ?? '—'}`}
         className="block rounded-lg p-4 pr-9 no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
       >
         <div className="mb-1.5">
           <p className="truncate text-sm font-semibold text-ink-900">{studentName}</p>
-          <p className="truncate text-xs text-foggy">{school.name}</p>
+          <p className="truncate text-xs text-foggy">{school?.name ?? '—'}</p>
         </div>
 
         {(targetYearLevel ?? targetIntake) && (

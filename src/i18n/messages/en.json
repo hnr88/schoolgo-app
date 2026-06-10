@@ -2845,6 +2845,14 @@
     "languageAppliedHint": "Saving will switch the interface to this language"
   },
   "AgentProfile": {
+    "companyNameRequired": "Company name is required",
+    "companyNameMax": "Company name must be 255 characters or fewer",
+    "roleTitleMax": "Role title must be 100 characters or fewer",
+    "countryMax": "Country must be 100 characters or fewer",
+    "qeacNumberMax": "QEAC number must be 50 characters or fewer",
+    "phoneMax": "Phone must be 50 characters or fewer",
+    "websiteMax": "Website must be 255 characters or fewer",
+    "bioMax": "Bio must be 2000 characters or fewer",
     "title": "Profile & Verification",
     "subtitle": "Manage your public agency profile and track your verification status.",
     "verificationTitle": "Verification",
@@ -3063,7 +3071,7 @@
     "columnPreEnrolment": "Pre-Enrolment",
     "columnEnrolled": "Enrolled",
     "columnClosed": "Closed",
-    "daysLabel": "in status",
+    "daysLabel": "{count}d in status",
     "moreApplications": "more",
     "subtitle": "Track every application through each stage of the enrolment journey.",
     "viewToggleLabel": "Switch pipeline view",

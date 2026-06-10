@@ -1,7 +1,7 @@
 'use client';
 
 import { useFormatter, useNow, useTranslations } from 'next-intl';
-import { Check } from 'lucide-react';
+import { Bell, Check } from 'lucide-react';
 import { Link } from '@/i18n/navigation';
 import { Button } from '@/components/ui/button';
 import { useAuthStore } from '@/modules/auth/stores/use-auth-store';
@@ -33,7 +33,7 @@ export function NotificationItem({ notification, onMarkRead, isMarkingRead }: No
     entityDocumentId,
   } = notification;
 
-  const Icon = NOTIFICATION_EVENT_ICON[eventType];
+  const Icon = NOTIFICATION_EVENT_ICON[eventType] ?? Bell;
   const isUnread = readAt === null;
   const href = notificationEntityPath(userType, eventType, entityType, entityDocumentId);
 
