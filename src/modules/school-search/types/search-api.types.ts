@@ -53,6 +53,7 @@ export interface TypedSearchRequest {
   suburb?: string;
   postcode?: string;
   sectors?: Sector[];
+  gender?: ('co_ed' | 'boys' | 'girls')[];
   accommodation?: Accommodation[];
   religiousAffiliations?: ReligiousAffiliation[];
   entryYearLevels?: EntryYearLevel[];

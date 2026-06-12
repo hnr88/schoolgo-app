@@ -20,7 +20,7 @@ export interface SchoolSearchStoreSnapshot {
   postcode: string;
   states: AustralianState[];
   sectors: Sector[];
-  gender: Gender[];
+  gender?: Gender[];
   accommodation: Accommodation[];
   religiousAffiliations: ReligiousAffiliation[];
   entryYearLevels: EntryYearLevel[];
@@ -74,7 +74,7 @@ export function mapStoreToTypedRequest(
     suburb: trimmedSuburb || undefined,
     postcode: trimmedPostcode || undefined,
     sectors: store.sectors.length ? store.sectors : undefined,
-    gender: store.gender.length
+    gender: store.gender?.length
       ? store.gender.map((g) => (g === 'co-ed' ? 'co_ed' : g))
       : undefined,
     accommodation: store.accommodation.length ? store.accommodation : undefined,
