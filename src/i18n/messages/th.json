@@ -1061,7 +1061,9 @@
         "title": "ที่ตั้ง",
         "stateLabel": "รัฐหรือเขตปกครอง",
         "suburbLabel": "ชานเมืองหรือรหัสไปรษณีย์",
-        "suburbPlaceholder": "เช่น Hawthorn หรือ 3122"
+        "suburbPlaceholder": "เช่น Hawthorn หรือ 3122",
+        "showMore": "Show all ({count})",
+        "showLess": "Show less"
       },
       "schoolProfile": {
         "title": "School profile",

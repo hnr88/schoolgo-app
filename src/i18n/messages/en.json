@@ -1061,7 +1061,9 @@
         "title": "Location",
         "stateLabel": "State or territory",
         "suburbLabel": "Suburb or postcode",
-        "suburbPlaceholder": "e.g. Hawthorn or 3122"
+        "suburbPlaceholder": "e.g. Hawthorn or 3122",
+        "showMore": "Show all ({count})",
+        "showLess": "Show less"
       },
       "schoolProfile": {
         "title": "School profile",

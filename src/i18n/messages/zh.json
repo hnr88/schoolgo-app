@@ -1061,7 +1061,9 @@
         "title": "位置",
         "stateLabel": "州或领地",
         "suburbLabel": "郊区或邮编",
-        "suburbPlaceholder": "例如 Hawthorn 或 3122"
+        "suburbPlaceholder": "例如 Hawthorn 或 3122",
+        "showMore": "Show all ({count})",
+        "showLess": "Show less"
       },
       "schoolProfile": {
         "title": "School profile",

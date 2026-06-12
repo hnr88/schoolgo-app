@@ -1061,7 +1061,9 @@
         "title": "Lokasi",
         "stateLabel": "Negeri atau wilayah",
         "suburbLabel": "Pinggir bandar atau poskod",
-        "suburbPlaceholder": "cth. Hawthorn atau 3122"
+        "suburbPlaceholder": "cth. Hawthorn atau 3122",
+        "showMore": "Show all ({count})",
+        "showLess": "Show less"
       },
       "schoolProfile": {
         "title": "School profile",

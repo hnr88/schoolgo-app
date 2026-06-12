@@ -1061,7 +1061,9 @@
         "title": "위치",
         "stateLabel": "주 또는 준주",
         "suburbLabel": "교외 또는 우편번호",
-        "suburbPlaceholder": "예: Hawthorn 또는 3122"
+        "suburbPlaceholder": "예: Hawthorn 또는 3122",
+        "showMore": "Show all ({count})",
+        "showLess": "Show less"
       },
       "schoolProfile": {
         "title": "School profile",

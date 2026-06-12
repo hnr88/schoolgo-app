@@ -20,6 +20,6 @@ export default async function DashboardSearchPage({
   const { locale } = await params;
   setRequestLocale(locale);
   return (
-    <UnifiedSearchShell activePortal='agent' access='authenticated' defaultMode='schools' />
+    <UnifiedSearchShell activePortal='agent' access='authenticated' defaultMode='schools' hideSearchBar />
   );
 }

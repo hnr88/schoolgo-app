@@ -20,6 +20,6 @@ export default async function ParentSearchPage({
   const { locale } = await params;
   setRequestLocale(locale);
   return (
-    <UnifiedSearchShell activePortal='parent' access='authenticated' defaultMode='schools' />
+    <UnifiedSearchShell activePortal='parent' access='authenticated' defaultMode='schools' hideSearchBar />
   );
 }

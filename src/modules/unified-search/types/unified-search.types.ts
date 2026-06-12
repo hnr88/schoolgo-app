@@ -17,4 +17,5 @@ export interface UnifiedSearchShellProps {
   activePortal: Portal;
   access: SearchAccess;
   defaultMode: SearchMode;
+  hideSearchBar?: boolean;
 }

@@ -10,19 +10,28 @@ import { SearchTypeToggle } from '@/modules/unified-search/components/SearchType
 import { UnifiedSearchBar } from '@/modules/unified-search/components/UnifiedSearchBar';
 import type { UnifiedSearchShellProps } from '@/modules/unified-search/types/unified-search.types';
 
-export function UnifiedSearchShell({ activePortal, access, defaultMode }: UnifiedSearchShellProps) {
+export function UnifiedSearchShell({
+  activePortal,
+  access,
+  defaultMode,
+  hideSearchBar = false,
+}: UnifiedSearchShellProps) {
   const capability = useMemo(() => resolveCapability(access), [access]);
   // Agents only ever search schools — they must never see other agents, so the
   // schools/agents toggle is hidden and the mode is locked to schools for them.
   const canSearchAgents = activePortal !== 'agent';
   const mode = useSearchModeSync(canSearchAgents ? defaultMode : 'schools', canSearchAgents);
+  // When the dashboard header already shows a search box (logged-in school
+  // search), drop the redundant in-shell bar to save space — but keep it in
+  // agents mode, which the header's school-only box can't drive.
+  const showSearchBar = !hideSearchBar || mode === 'agents';
 
   return (
     <div className="flex h-full min-h-0 w-full flex-col">
       <div className="flex shrink-0 flex-col gap-2 px-3 pt-4 pb-2 md:flex-row md:items-center md:gap-3 md:px-4">
         <SearchFiltersToggle className="shrink-0" />
         {canSearchAgents && <SearchTypeToggle className="shrink-0" />}
-        <UnifiedSearchBar className="min-w-0 flex-1" />
+        {showSearchBar && <UnifiedSearchBar className="min-w-0 flex-1" />}
       </div>
 
       {mode === 'schools' ? (

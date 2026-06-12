@@ -41,6 +41,7 @@ export function SpecResultsPanel({
   const postcode = useSchoolSearchStore((s) => s.postcode);
   const states = useSchoolSearchStore((s) => s.states);
   const sectors = useSchoolSearchStore((s) => s.sectors);
+  const gender = useSchoolSearchStore((s) => s.gender);
   const accommodation = useSchoolSearchStore((s) => s.accommodation);
   const religiousAffiliations = useSchoolSearchStore((s) => s.religiousAffiliations);
   const entryYearLevels = useSchoolSearchStore((s) => s.entryYearLevels);
@@ -61,6 +62,7 @@ export function SpecResultsPanel({
     postcode,
     states,
     sectors,
+    gender,
     accommodation,
     religiousAffiliations,
     entryYearLevels,

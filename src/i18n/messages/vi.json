@@ -1061,7 +1061,9 @@
         "title": "Vị trí",
         "stateLabel": "Bang hoặc vùng lãnh thổ",
         "suburbLabel": "Khu vực hoặc mã bưu điện",
-        "suburbPlaceholder": "VD: Hawthorn hoặc 3122"
+        "suburbPlaceholder": "VD: Hawthorn hoặc 3122",
+        "showMore": "Show all ({count})",
+        "showLess": "Show less"
       },
       "schoolProfile": {
         "title": "School profile",

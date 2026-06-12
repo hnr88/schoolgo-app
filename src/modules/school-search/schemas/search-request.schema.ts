@@ -28,6 +28,7 @@ export type SearchRequestInput = z.input<typeof searchRequestSchema>;
 const auStateSchema = z.enum(['VIC', 'NSW', 'QLD', 'SA', 'WA', 'TAS', 'ACT', 'NT']);
 const sectorSchema = z.enum(['government', 'non-government', 'catholic']);
 const accommodationSchema = z.enum(['boarding', 'homestay', 'both', 'none']);
+const genderSchema = z.enum(['co_ed', 'boys', 'girls']);
 const religiousAffiliationSchema = z.enum([
   'non-denominational',
   'anglican',
@@ -98,6 +99,7 @@ export const typedSearchRequestSchema = z
     suburb: z.string().max(120).optional(),
     postcode: z.string().max(8).optional(),
     sectors: z.array(sectorSchema).max(3).optional(),
+    gender: z.array(genderSchema).max(3).optional(),
     accommodation: z.array(accommodationSchema).max(4).optional(),
     religiousAffiliations: z.array(religiousAffiliationSchema).max(14).optional(),
     entryYearLevels: z.array(entryYearLevelSchema).max(9).optional(),
