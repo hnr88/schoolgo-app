@@ -7,7 +7,7 @@ import { Link } from '@/i18n/navigation';
 import { cn } from '@/lib/utils';
 import { DefaultPhoto } from '@/modules/design-system/components/DefaultPhoto';
 import { TrustBadge } from '@/modules/design-system/components/TrustBadge';
-import { getSchoolAvatarColor } from '@/modules/design-system/lib/school-avatar';
+import { getSchoolAvatarTheme } from '@/modules/design-system/lib/school-avatar';
 import type { SchoolCardProps } from '@/modules/design-system/types/design-system.types';
 
 export function SchoolCard({
@@ -70,7 +70,12 @@ export function SchoolCard({
             onError={() => setPhotoFailed(true)}
           />
         ) : logoUrl && !logoFailed ? (
-          <div className={cn('flex h-full w-full items-center justify-center', getSchoolAvatarColor(name))}>
+          <div
+            className={cn(
+              'flex h-full w-full items-center justify-center bg-gradient-to-br',
+              getSchoolAvatarTheme(name).surface,
+            )}
+          >
             <div className='relative h-1/2 w-1/2 max-w-32'>
               <Image
                 src={logoUrl}

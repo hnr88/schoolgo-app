@@ -1,4 +1,6 @@
+import { ArrowRight } from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
+import { Link } from '@/i18n/navigation';
 import { SectionContainer, SectionHeader, AgentCard } from '@/modules/design-system';
 import { getFeaturedAgents } from '../lib/featured-agents';
 
@@ -12,12 +14,21 @@ export async function ParentsAgents() {
   return (
     <section id='trusted-agents' className='bg-muted py-16 md:py-20'>
       <SectionContainer className='flex flex-col gap-10'>
-        <SectionHeader
-          className='max-w-2xl'
-          eyebrow={t('eyebrow')}
-          heading={t('heading')}
-          subheading={t('subheading')}
-        />
+        <div className='flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between'>
+          <SectionHeader
+            className='max-w-2xl'
+            eyebrow={t('eyebrow')}
+            heading={t('heading')}
+            subheading={t('subheading')}
+          />
+          <Link
+            href='/find-an-agent'
+            className='inline-flex shrink-0 items-center gap-1.5 text-body-sm font-semibold text-rausch-700 underline-offset-4 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2'
+          >
+            {t('browseAll')}
+            <ArrowRight className='h-4 w-4' strokeWidth={2} aria-hidden='true' />
+          </Link>
+        </div>
 
         {agents.length === 0 ? (
           <p className='text-body text-foggy'>{t('empty')}</p>

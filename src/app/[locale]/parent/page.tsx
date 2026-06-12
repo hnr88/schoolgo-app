@@ -4,6 +4,8 @@ import { getAlternateLanguages, getCanonicalPath } from '@/modules/seo';
 import { MarketingFooter, MarketingHeader } from '@/modules/marketing-layout';
 import { AuthRedirectCheck } from '@/modules/auth/components/AuthRedirectCheck';
 import {
+  ParentsAgentCta,
+  ParentsAgentHelp,
   ParentsAgents,
   ParentsArticles,
   ParentsComparison,
@@ -54,7 +56,9 @@ export default async function ParentsLandingPage({
       <main>
         <ParentsHero />
         <ParentsStatsBar />
+        <ParentsAgentCta />
         <ParentsAgents />
+        <ParentsAgentHelp />
         <ParentsFourSteps />
         <ParentsComparison />
         <ParentsPickATest />

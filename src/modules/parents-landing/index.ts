@@ -3,6 +3,8 @@ export { ParentsStatsBar } from '@/modules/parents-landing/components/ParentsSta
 export { ParentsFourSteps } from '@/modules/parents-landing/components/ParentsFourSteps';
 export { ParentsVerified } from '@/modules/parents-landing/components/ParentsVerified';
 export { ParentsAgents } from '@/modules/parents-landing/components/ParentsAgents';
+export { ParentsAgentCta } from '@/modules/parents-landing/components/ParentsAgentCta';
+export { ParentsAgentHelp } from '@/modules/parents-landing/components/ParentsAgentHelp';
 export { ParentsComparison } from '@/modules/parents-landing/components/ParentsComparison';
 export { ParentsPickATest } from '@/modules/parents-landing/components/ParentsPickATest';
 export { ParentsSevenLanguages } from '@/modules/parents-landing/components/ParentsSevenLanguages';
