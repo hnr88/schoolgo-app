@@ -4,20 +4,17 @@ import { useCallback } from 'react';
 import L from 'leaflet';
 import { useMap } from 'react-leaflet';
 import MarkerClusterGroup from 'react-leaflet-cluster';
-import { AgentMapMarker } from '@/modules/agent-search/components/AgentMapMarker';
-import {
-  createAgentClusterIcon,
-  getAgentKey,
-} from '@/modules/agent-search/lib/agent-map-utils';
+import { PartnerSchoolMapMarker } from '@/modules/agent-search/components/PartnerSchoolMapMarker';
+import { createAgentClusterIcon } from '@/modules/agent-search/lib/agent-map-utils';
 import type { Portal } from '@/lib/portal-url';
-import type { AgentHit } from '@/modules/agent-search/types/agent-search.types';
+import type { AgentPartnerSchool } from '@/modules/agent-search/types/agent-search.types';
 
 const CLUSTER_FOCUS_PADDING_TOP_LEFT: [number, number] = [50, 50];
 const CLUSTER_FOCUS_PADDING_BOTTOM_RIGHT: [number, number] = [340, 50];
 const CLUSTER_MAX_FOCUS_ZOOM = 15;
 
 interface AgentMapClusterLayerProps {
-  geoAgents: AgentHit[];
+  schools: AgentPartnerSchool[];
   activePortal: Portal;
 }
 
@@ -35,7 +32,7 @@ function isMarkerCluster(layer: unknown): layer is {
   );
 }
 
-export function AgentMapClusterLayer({ geoAgents, activePortal }: AgentMapClusterLayerProps) {
+export function AgentMapClusterLayer({ schools, activePortal }: AgentMapClusterLayerProps) {
   const map = useMap();
 
   const handleClusterClick = useCallback(
@@ -76,8 +73,12 @@ export function AgentMapClusterLayer({ geoAgents, activePortal }: AgentMapCluste
       removeOutsideVisibleBounds={false}
       onClick={handleClusterClick}
     >
-      {geoAgents.map((agent) => (
-        <AgentMapMarker key={getAgentKey(agent)} agent={agent} activePortal={activePortal} />
+      {schools.map((school) => (
+        <PartnerSchoolMapMarker
+          key={school.documentId}
+          school={school}
+          activePortal={activePortal}
+        />
       ))}
     </MarkerClusterGroup>
   );

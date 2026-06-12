@@ -1,25 +1,21 @@
 'use client';
 
-import { useMemo } from 'react';
 import L from 'leaflet';
 import { MapContainer, TileLayer } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import { AgentMapClusterLayer } from '@/modules/agent-search/components/AgentMapClusterLayer';
-import { getAgentCoords } from '@/modules/agent-search/lib/agent-map-utils';
 import type { Portal } from '@/lib/portal-url';
-import type { AgentHit } from '@/modules/agent-search/types/agent-search.types';
+import type { AgentPartnerSchool } from '@/modules/agent-search/types/agent-search.types';
 
 const AUSTRALIA_BOUNDS = L.latLngBounds([-46, 110], [-8, 160]);
 
 interface AgentLeafletMapProps {
-  agents: AgentHit[];
+  schools: AgentPartnerSchool[];
   onMapReady: (map: L.Map) => void;
   activePortal: Portal;
 }
 
-export function AgentLeafletMap({ agents, onMapReady, activePortal }: AgentLeafletMapProps) {
-  const geoAgents = useMemo(() => agents.filter((a) => getAgentCoords(a) != null), [agents]);
-
+export function AgentLeafletMap({ schools, onMapReady, activePortal }: AgentLeafletMapProps) {
   return (
     <div className="relative isolate h-full w-full overflow-hidden rounded-lg">
       <MapContainer
@@ -39,7 +35,7 @@ export function AgentLeafletMap({ agents, onMapReady, activePortal }: AgentLeafl
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
         />
-        <AgentMapClusterLayer geoAgents={geoAgents} activePortal={activePortal} />
+        <AgentMapClusterLayer schools={schools} activePortal={activePortal} />
       </MapContainer>
     </div>
   );

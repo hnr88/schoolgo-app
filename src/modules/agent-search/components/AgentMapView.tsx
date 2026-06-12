@@ -1,6 +1,6 @@
 'use client';
 
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import dynamic from 'next/dynamic';
 import type L from 'leaflet';
 import { Minus, Plus, RotateCcw } from 'lucide-react';
@@ -11,8 +11,7 @@ import type { Portal } from '@/lib/portal-url';
 import { useMapInvalidateSize } from '@/modules/school-search/hooks/useMapInvalidateSize';
 import { useAgentSearchStore } from '@/modules/agent-search/stores/use-agent-search-store';
 import { useAgentSearchWithFilters } from '@/modules/agent-search/hooks/useAgentSearchWithFilters';
-import { getAgentCoords } from '@/modules/agent-search/lib/agent-map-utils';
-import type { AgentHit } from '@/modules/agent-search/types/agent-search.types';
+import type { AgentHit, AgentPartnerSchool } from '@/modules/agent-search/types/agent-search.types';
 import type { SearchCapability } from '@/modules/unified-search';
 
 const EMPTY_AGENTS: AgentHit[] = [];
@@ -53,7 +52,18 @@ export function AgentMapView({ activePortal, capability, className }: AgentMapVi
 
   const { data } = useAgentSearchWithFilters(capability);
   const agents = data?.data?.hits ?? EMPTY_AGENTS;
-  const geoCount = agents.filter((a) => getAgentCoords(a) != null).length;
+  // The agent map plots the agents' Australian partner schools (deduped), not
+  // the agents' own overseas offices.
+  const partnerSchools = useMemo(() => {
+    const byId = new Map<string, AgentPartnerSchool>();
+    for (const agent of agents) {
+      for (const school of agent.partnerSchools ?? []) {
+        if (!byId.has(school.documentId)) byId.set(school.documentId, school);
+      }
+    }
+    return Array.from(byId.values());
+  }, [agents]);
+  const geoCount = partnerSchools.length;
 
   const handleMapReady = useCallback((m: L.Map) => setMap(m), []);
 
@@ -73,7 +83,7 @@ export function AgentMapView({ activePortal, capability, className }: AgentMapVi
         className,
       )}
     >
-      <AgentLeafletMap agents={agents} onMapReady={handleMapReady} activePortal={activePortal} />
+      <AgentLeafletMap schools={partnerSchools} onMapReady={handleMapReady} activePortal={activePortal} />
 
       {map && (
         <div className="absolute bottom-6 left-6 z-map-controls flex flex-col gap-2">

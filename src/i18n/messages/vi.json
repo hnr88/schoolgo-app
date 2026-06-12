@@ -5357,7 +5357,8 @@
       "zoomIn": "Zoom in",
       "zoomOut": "Zoom out",
       "popupViewAgent": "View agent",
-      "popupVerified": "Verified"
+      "popupVerified": "Verified",
+      "popupViewSchool": "Xem trường"
     }
   },
   "AgentDetail": {
