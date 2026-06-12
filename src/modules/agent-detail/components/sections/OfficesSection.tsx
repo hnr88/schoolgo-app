@@ -1,17 +1,9 @@
-import dynamic from 'next/dynamic';
 import { getTranslations } from 'next-intl/server';
 import { Building2, Clock, Mail, MapPin, Phone, UserCheck } from 'lucide-react';
 import { Eyebrow } from '@/modules/design-system';
+import { OfficeMapLoader } from '@/modules/agent-detail/components/sections/OfficeMapLoader';
 import { sortByOrder } from '@/modules/agent-detail/lib/section-utils';
 import type { OfficeLocation } from '@/modules/agent-detail/types/agent-detail.types';
-
-const OfficeMiniMap = dynamic(
-  () =>
-    import('@/modules/agent-detail/components/sections/OfficeMiniMap').then(
-      (mod) => mod.OfficeMiniMap,
-    ),
-  { ssr: false },
-);
 
 interface OfficesSectionProps {
   offices?: OfficeLocation[];
@@ -112,7 +104,7 @@ export async function OfficesSection({ offices }: OfficesSectionProps) {
         })}
       </div>
 
-      {hasGeo ? <OfficeMiniMap offices={items} /> : null}
+      {hasGeo ? <OfficeMapLoader offices={items} /> : null}
     </section>
   );
 }
