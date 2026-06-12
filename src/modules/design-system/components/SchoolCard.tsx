@@ -52,20 +52,15 @@ export function SchoolCard({
   const hasShortlist = Boolean(shortlistAddLabel && shortlistRemoveLabel);
 
   const card = (
-    <article
-      className={cn(
-        'group relative flex flex-col overflow-hidden rounded-xl border border-border bg-card shadow-2 transition-[transform,box-shadow] duration-300 hover:-translate-y-1 hover:shadow-3',
-        className,
-      )}
-    >
-      <div className='relative aspect-[3/2] w-full overflow-hidden bg-muted'>
+    <article className={cn('group flex flex-col gap-2', className)}>
+      <div className='relative aspect-[3/2] w-full overflow-hidden rounded-lg bg-muted transition-shadow duration-300 ease-out-quart group-hover:shadow-2 motion-reduce:transition-none'>
         {photoUrl && !photoFailed ? (
           <Image
             src={photoUrl}
             alt=''
             fill
             sizes='(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px'
-            className='object-cover transition-transform duration-300 group-hover:scale-105'
+            className='object-cover transition-transform duration-300 ease-out-quart group-hover:scale-105 motion-reduce:transition-none'
             aria-hidden='true'
             onError={() => setPhotoFailed(true)}
           />
@@ -82,7 +77,7 @@ export function SchoolCard({
                 alt=''
                 fill
                 sizes='200px'
-                className='object-contain transition-transform duration-300 group-hover:scale-105'
+                className='object-contain transition-transform duration-300 ease-out-quart group-hover:scale-105 motion-reduce:transition-none'
                 aria-hidden='true'
                 onError={() => setLogoFailed(true)}
               />
@@ -122,9 +117,9 @@ export function SchoolCard({
         )}
       </div>
 
-      <div className='flex flex-1 flex-col gap-1 p-5'>
+      <div className='mt-1 flex flex-col gap-1'>
         <div className='flex items-start justify-between gap-3'>
-          <h3 className='line-clamp-1 text-body font-semibold text-ink-900'>{name}</h3>
+          <h3 className='line-clamp-1 text-body-sm font-semibold text-ink-900'>{name}</h3>
           {rating && (
             <span className='flex shrink-0 items-center gap-1 text-body-sm text-ink-900'>
               <Star className='h-3.5 w-3.5 fill-ink-900 text-ink-900' aria-hidden='true' />
@@ -147,14 +142,14 @@ export function SchoolCard({
         )}
 
         {cricosLabel && (
-          <div className='mt-auto border-t border-divider pt-3'>
+          <div className='border-t border-divider pt-3'>
             <TrustBadge variant='cricos' label={cricosLabel} />
           </div>
         )}
 
         {cricosLabel
           ? actionSlot && <div className='pt-3'>{actionSlot}</div>
-          : actionSlot && <div className='mt-auto border-t border-divider pt-3'>{actionSlot}</div>}
+          : actionSlot && <div className='border-t border-divider pt-3'>{actionSlot}</div>}
       </div>
     </article>
   );
@@ -164,7 +159,7 @@ export function SchoolCard({
       <Link
         href={href}
         aria-label={name}
-        className='block rounded-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2'
+        className='block rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2'
       >
         {card}
       </Link>

@@ -20,11 +20,12 @@ import {
   AGENT_SORT_OPTIONS,
 } from '@/modules/agent-search/constants/agent-search.constants';
 import { AgentFilterGroup } from '@/modules/agent-search/components/AgentFilterGroup';
+import { AgentLockedOverlay } from '@/modules/agent-search/components/AgentLockedOverlay';
 import { useAgentSearchStore } from '@/modules/agent-search/stores/use-agent-search-store';
 import type { AgentSortBy } from '@/modules/agent-search/types/agent-search.types';
 import type { AgentFilterSidebarProps } from '@/modules/agent-search/types/component.types';
 
-export function AgentFilterSidebar({ className, cardClassName }: AgentFilterSidebarProps) {
+export function AgentFilterSidebar({ capability, className, cardClassName }: AgentFilterSidebarProps) {
   const t = useTranslations('AgentSearch.filters');
 
   const countriesServed = useAgentSearchStore((s) => s.countriesServed);
@@ -39,13 +40,18 @@ export function AgentFilterSidebar({ className, cardClassName }: AgentFilterSide
   const setSortBy = useAgentSearchStore((s) => s.setSortBy);
   const reset = useAgentSearchStore((s) => s.reset);
 
+  const isAdvanced = capability.isAdvanced;
+  const verifiedLocked = capability.forceVerifiedOnly;
+  const verifiedChecked = verifiedLocked ? true : verifiedOnly;
+
   const optionLabel = (key: string) => t(key as never);
   const hasActiveFilters =
-    countriesServed.length > 0 ||
-    languages.length > 0 ||
-    services.length > 0 ||
-    !verifiedOnly ||
-    sortBy !== 'relevance';
+    isAdvanced &&
+    (countriesServed.length > 0 ||
+      languages.length > 0 ||
+      services.length > 0 ||
+      !verifiedOnly ||
+      sortBy !== 'relevance');
 
   return (
     <aside className={cn('hidden shrink-0 lg:sticky lg:top-[var(--header-height)] lg:block lg:h-[calc(100vh-var(--header-height))] lg:w-[20rem] lg:py-6 lg:pl-6', className)}>
@@ -88,33 +94,36 @@ export function AgentFilterSidebar({ className, cardClassName }: AgentFilterSide
             </div>
             <Switch
               id='agent-verified-switch'
-              checked={verifiedOnly}
+              checked={verifiedChecked}
               onCheckedChange={setVerifiedOnly}
+              disabled={verifiedLocked}
               aria-label={t('verifiedOnlyToggle')}
             />
           </div>
 
-          <AgentFilterGroup
-            label={t('countries')}
-            options={AGENT_COUNTRY_OPTIONS}
-            selected={countriesServed}
-            onToggle={toggleCountry}
-            optionLabel={optionLabel}
-          />
-          <AgentFilterGroup
-            label={t('languages')}
-            options={AGENT_LANGUAGE_OPTIONS}
-            selected={languages}
-            onToggle={toggleLanguage}
-            optionLabel={optionLabel}
-          />
-          <AgentFilterGroup
-            label={t('services')}
-            options={AGENT_SERVICE_OPTIONS}
-            selected={services}
-            onToggle={toggleService}
-            optionLabel={optionLabel}
-          />
+          <AgentLockedOverlay locked={!isAdvanced}>
+            <AgentFilterGroup
+              label={t('countries')}
+              options={AGENT_COUNTRY_OPTIONS}
+              selected={countriesServed}
+              onToggle={toggleCountry}
+              optionLabel={optionLabel}
+            />
+            <AgentFilterGroup
+              label={t('languages')}
+              options={AGENT_LANGUAGE_OPTIONS}
+              selected={languages}
+              onToggle={toggleLanguage}
+              optionLabel={optionLabel}
+            />
+            <AgentFilterGroup
+              label={t('services')}
+              options={AGENT_SERVICE_OPTIONS}
+              selected={services}
+              onToggle={toggleService}
+              optionLabel={optionLabel}
+            />
+          </AgentLockedOverlay>
         </ScrollArea>
 
         {hasActiveFilters && (

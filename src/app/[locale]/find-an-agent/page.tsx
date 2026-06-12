@@ -3,11 +3,8 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { getAlternateLanguages, getCanonicalPath } from '@/modules/seo';
 import { MarketingFooter, MarketingHeader } from '@/modules/marketing-layout';
 import { SectionContainer } from '@/modules/design-system';
-import {
-  AgentDirectoryList,
-  AgentSearchContent,
-  getPublicAgentsInitial,
-} from '@/modules/agent-search';
+import { AgentDirectoryList, getPublicAgentsInitial } from '@/modules/agent-search';
+import { UnifiedSearchShell } from '@/modules/unified-search';
 
 const ROUTE_PATH = '/find-an-agent';
 
@@ -62,7 +59,7 @@ export default async function FindAnAgentPage({
         <h1 className='sr-only'>{t('findAgentTitle')}</h1>
         <AgentDirectoryList hits={initial.hits} activePortal='parent' locale={locale} />
         <SectionContainer size='wide' className='py-6 md:py-8'>
-          <AgentSearchContent activePortal='parent' />
+          <UnifiedSearchShell activePortal='parent' access='public' defaultMode='agents' />
         </SectionContainer>
       </main>
       <MarketingFooter activePortal='parent' />

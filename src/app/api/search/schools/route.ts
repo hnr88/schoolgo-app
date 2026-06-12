@@ -22,6 +22,33 @@ function resolveHitMedia(hit: unknown): unknown {
   return { ...h, logoUrl: resolveMediaUrl(h.logoUrl) };
 }
 
+const ADVANCED_FILTER_FIELDS = ['entryTerms', 'programTypes', 'englishTest'] as const;
+const ADVANCED_SORT_VALUES = [
+  'name-desc',
+  'enrolment-status',
+  'application-deadline-asc',
+  'school-size-asc',
+  'school-size-desc',
+  'international-pct-asc',
+  'international-pct-desc',
+] as const;
+const BASIC_FALLBACK_SORT = 'name-asc';
+
+function stripPublicAdvancedFields(parsedData: unknown): unknown {
+  if (!parsedData || typeof parsedData !== 'object') return parsedData;
+  const stripped = { ...(parsedData as Record<string, unknown>) };
+  for (const field of ADVANCED_FILTER_FIELDS) {
+    delete stripped[field];
+  }
+  if (
+    typeof stripped.sortBy === 'string' &&
+    (ADVANCED_SORT_VALUES as readonly string[]).includes(stripped.sortBy)
+  ) {
+    stripped.sortBy = BASIC_FALLBACK_SORT;
+  }
+  return stripped;
+}
+
 export async function POST(request: NextRequest) {
   const limit = rateLimit(request, 'search-schools', { capacity: 60, refillPerSecond: 2 });
   if (!limit.ok) {
@@ -95,11 +122,12 @@ async function proxyToStrapi(
 ): Promise<NextResponse> {
   try {
     const headers: Record<string, string> = { 'Content-Type': 'application/json' };
+    const forwardedData = authorization ? parsedData : stripPublicAdvancedFields(parsedData);
     if (authorization) headers.Authorization = authorization;
     const upstream = await fetch(STRAPI_SEARCH_URL, {
       method: 'POST',
       headers,
-      body: JSON.stringify(parsedData),
+      body: JSON.stringify(forwardedData),
     });
 
     const data: unknown = await upstream.json();

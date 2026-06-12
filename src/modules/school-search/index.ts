@@ -4,8 +4,6 @@ export { FilterSidebar } from '@/modules/school-search/components/FilterSidebar'
 export { SearchSchoolCard } from '@/modules/school-search/components/SchoolCard';
 export { SchoolResultsPanel } from '@/modules/school-search/components/SchoolResultsPanel';
 export { MapView } from '@/modules/school-search/components/MapView';
-export { SearchPageContent } from '@/modules/school-search/components/SearchPageContent';
-export { ParentDashboardSearchContent } from '@/modules/school-search/components/ParentDashboardSearchContent';
 export { SaveSearchButton } from '@/modules/school-search/components/SaveSearchButton';
 export { SavedSearchesPanel } from '@/modules/school-search/components/SavedSearchesPanel';
 export { SavedSchoolsPage } from '@/modules/school-search/components/SavedSchoolsPage';

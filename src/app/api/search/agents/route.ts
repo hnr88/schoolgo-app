@@ -33,6 +33,20 @@ function resolveHitMedia(hit: unknown): unknown {
   return { ...h, photoUrl: resolveMediaUrl(h.photoUrl) };
 }
 
+const PUBLIC_TEASER_PAGE_SIZE = 12;
+
+function applyPublicTeaser(parsedData: unknown): unknown {
+  if (!parsedData || typeof parsedData !== 'object') return parsedData;
+  const teaser = { ...(parsedData as Record<string, unknown>) };
+  teaser.verifiedOnly = true;
+  const requested = teaser.pageSize;
+  teaser.pageSize =
+    typeof requested === 'number' && requested < PUBLIC_TEASER_PAGE_SIZE
+      ? requested
+      : PUBLIC_TEASER_PAGE_SIZE;
+  return teaser;
+}
+
 export async function POST(request: NextRequest) {
   const limit = rateLimit(request, 'search-agents', { capacity: 60, refillPerSecond: 2 });
   if (!limit.ok) {
@@ -77,11 +91,12 @@ async function proxyToStrapi(
 ): Promise<NextResponse> {
   try {
     const headers: Record<string, string> = { 'Content-Type': 'application/json' };
+    const forwardedData = authorization ? parsedData : applyPublicTeaser(parsedData);
     if (authorization) headers.Authorization = authorization;
     const upstream = await fetch(STRAPI_SEARCH_URL, {
       method: 'POST',
       headers,
-      body: JSON.stringify(parsedData),
+      body: JSON.stringify(forwardedData),
     });
 
     const data: unknown = await upstream.json();

@@ -4,10 +4,11 @@ import { useEffect, useMemo, useState } from 'react';
 import { useAgentSearchStore } from '@/modules/agent-search/stores/use-agent-search-store';
 import { useAgentSearch } from '@/modules/agent-search/queries/use-agent-search.query';
 import { mapAgentStoreToTypedRequest } from '@/modules/agent-search/lib/store-to-typed-request';
+import type { SearchCapability } from '@/modules/unified-search';
 
 const DEBOUNCE_MS = 300;
 
-export function useAgentSearchWithFilters() {
+export function useAgentSearchWithFilters(capability?: SearchCapability) {
   const q = useAgentSearchStore((s) => s.q);
   const countriesServed = useAgentSearchStore((s) => s.countriesServed);
   const languages = useAgentSearchStore((s) => s.languages);
@@ -16,6 +17,9 @@ export function useAgentSearchWithFilters() {
   const sortBy = useAgentSearchStore((s) => s.sortBy);
   const page = useAgentSearchStore((s) => s.page);
   const pageSize = useAgentSearchStore((s) => s.pageSize);
+
+  const forceVerifiedOnly = capability?.forceVerifiedOnly ?? false;
+  const effectiveVerifiedOnly = forceVerifiedOnly ? true : verifiedOnly;
 
   const [debouncedQuery, setDebouncedQuery] = useState(q);
 
@@ -31,7 +35,7 @@ export function useAgentSearchWithFilters() {
         countriesServed,
         languages,
         services,
-        verifiedOnly,
+        verifiedOnly: effectiveVerifiedOnly,
         sortBy,
         page,
         pageSize,
@@ -41,7 +45,7 @@ export function useAgentSearchWithFilters() {
       countriesServed,
       languages,
       services,
-      verifiedOnly,
+      effectiveVerifiedOnly,
       sortBy,
       page,
       pageSize,

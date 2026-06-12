@@ -19,17 +19,22 @@ import type { SpecResultsPanelProps } from '@/modules/school-search/types/compon
 
 export function SpecResultsPanel({
   activePortal,
+  capability,
   className,
   alwaysOn = false,
   floating = false,
+  teaserSlot,
 }: SpecResultsPanelProps) {
   const t = useTranslations('SchoolSearch');
   const searchParams = useSearchParams();
   const isActive = alwaysOn || searchParams.get('preview') === 'spec';
 
-  const isAuthenticated = useAuthStore((s) => s.isAuthenticated);
-  const isHydrated = useAuthStore((s) => s.isHydrated);
-  const isAdvanced = isHydrated && isAuthenticated;
+  const fallbackAuthenticated = useAuthStore((s) => s.isAuthenticated);
+  const fallbackHydrated = useAuthStore((s) => s.isHydrated);
+  const isAdvanced = capability
+    ? capability.isAdvanced
+    : fallbackHydrated && fallbackAuthenticated;
+  const resultCap = capability?.resultCap ?? null;
 
   const query = useSchoolSearchStore((s) => s.query);
   const suburb = useSchoolSearchStore((s) => s.suburb);
@@ -80,8 +85,10 @@ export function SpecResultsPanel({
     }
   }, [error]);
 
-  const hits = data?.data.hits ?? [];
+  const allHits = data?.data.hits ?? [];
   const count = data?.data.total ?? 0;
+  const hits = resultCap != null ? allHits.slice(0, resultCap) : allHits;
+  const isCapped = resultCap != null && allHits.length > resultCap;
   const handleRetry = () => {
     void refetch();
   };
@@ -105,11 +112,13 @@ export function SpecResultsPanel({
           hits={hits}
           isAdvanced={isAdvanced}
           activePortal={activePortal}
+          capability={capability}
           isLoading={isLoading}
           isError={isError}
           onRetry={handleRetry}
           className="flex min-h-0 flex-1 flex-col gap-2 overflow-y-auto px-3 pb-3"
         />
+        {isCapped && teaserSlot}
       </aside>
     );
   }
@@ -129,12 +138,14 @@ export function SpecResultsPanel({
         hits={hits}
         isAdvanced={isAdvanced}
         activePortal={activePortal}
+        capability={capability}
         isLoading={isLoading}
         isError={isError}
         onRetry={handleRetry}
         className="grid min-h-0 flex-1 grid-cols-1 gap-3 overflow-y-auto pb-24 sm:grid-cols-2 xl:grid-cols-3"
         emptyClassName="col-span-full"
       />
+      {isCapped && teaserSlot}
     </div>
   );
 }

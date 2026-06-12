@@ -13,7 +13,7 @@ export function SchoolCardFooter({ tuition }: SchoolCardFooterProps) {
 
   return (
     <div className="flex items-center justify-between">
-      <span className="text-sm font-semibold text-foreground">
+      <span className="text-body-sm font-semibold text-ink-900">
         {tuition != null
           ? t('tuitionFrom', { amount: formatAud(tuition).replace('A$', '$') })
           : ''}

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
-import { ParentDashboardSearchContent } from '@/modules/school-search';
+import { UnifiedSearchShell } from '@/modules/unified-search';
 
 export async function generateMetadata({
   params,
@@ -19,5 +19,7 @@ export default async function ParentSearchPage({
 }) {
   const { locale } = await params;
   setRequestLocale(locale);
-  return <ParentDashboardSearchContent />;
+  return (
+    <UnifiedSearchShell activePortal='parent' access='authenticated' defaultMode='schools' />
+  );
 }

@@ -4,6 +4,7 @@ import { useSearchParams } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 import { RotateCcw } from 'lucide-react';
 import { useAuthStore } from '@/modules/auth';
+import type { SearchCapability } from '@/modules/unified-search';
 import { Badge } from '@/components/ui/badge';
 import { cn } from '@/lib/utils';
 import { AcademicFilterGroup } from '@/modules/school-search/components/filters/AcademicFilterGroup';
@@ -19,17 +20,20 @@ import {
 import { useSchoolSearchStore } from '@/modules/school-search/stores/use-school-search-store';
 
 interface SpecFilterSidebarProps {
+  capability?: SearchCapability;
   className?: string;
   alwaysOn?: boolean;
 }
 
-export function SpecFilterSidebar({ className, alwaysOn = false }: SpecFilterSidebarProps) {
+export function SpecFilterSidebar({ capability, className, alwaysOn = false }: SpecFilterSidebarProps) {
   const t = useTranslations('SchoolSearch.spec');
   const tFilters = useTranslations('SchoolSearch.filters');
   const searchParams = useSearchParams();
-  const isAuthenticated = useAuthStore((s) => s.isAuthenticated);
-  const isHydrated = useAuthStore((s) => s.isHydrated);
-  const isAdvanced = isHydrated && isAuthenticated;
+  const fallbackAuthenticated = useAuthStore((s) => s.isAuthenticated);
+  const fallbackHydrated = useAuthStore((s) => s.isHydrated);
+  const isAdvanced = capability
+    ? capability.isAdvanced
+    : fallbackHydrated && fallbackAuthenticated;
 
   const reset = useSchoolSearchStore((s) => s.reset);
   const activeFilterCount = useSchoolSearchStore((s) => {

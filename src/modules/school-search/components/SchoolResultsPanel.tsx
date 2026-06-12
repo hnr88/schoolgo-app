@@ -6,6 +6,8 @@ import { Skeleton } from '@/components/ui/skeleton';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { EmptyState, ErrorState } from '@/modules/core';
 import { cn } from '@/lib/utils';
+import { useAuthStore } from '@/modules/auth';
+import { resolveCapability } from '@/modules/unified-search';
 import { SearchSchoolCard } from '@/modules/school-search/components/SchoolCard';
 import { ParentSearchSchoolCard } from '@/modules/school-search/components/ParentSearchSchoolCard';
 import { useSearchWithFilters } from '@/modules/school-search/hooks/useSearchWithFilters';
@@ -13,7 +15,12 @@ import type { SchoolResultsPanelProps } from '@/modules/school-search/types/comp
 
 export function SchoolResultsPanel({ activePortal, variant = 'default' }: SchoolResultsPanelProps) {
   const t = useTranslations('SchoolSearch.results');
-  const { data, isLoading, isFetching, isError, refetch } = useSearchWithFilters();
+  const isAuthenticated = useAuthStore((s) => s.isAuthenticated);
+  const isHydrated = useAuthStore((s) => s.isHydrated);
+  const capability = resolveCapability(
+    isHydrated && isAuthenticated ? 'authenticated' : 'public',
+  );
+  const { data, isLoading, isFetching, isError, refetch } = useSearchWithFilters(capability);
 
   const hits = data?.data?.hits ?? [];
   const totalHits = data?.data?.total ?? 0;

@@ -5331,6 +5331,14 @@
     "directory": {
       "label": "Education agent directory",
       "heading": "Education agents"
+    },
+    "gating": {
+      "signInToContact": "Sign in to contact"
+    },
+    "locked": {
+      "title": "Locked filters",
+      "description": "Sign in to unlock advanced agent filters.",
+      "cta": "Sign in"
     }
   },
   "AgentDetail": {
@@ -6085,5 +6093,25 @@
       }
     },
     "ctaPrimary": "Find an agent"
+  },
+  "UnifiedSearch": {
+    "toggle": {
+      "ariaLabel": "Search type",
+      "schools": "Schools",
+      "agents": "Agents"
+    },
+    "bar": {
+      "placeholderSchools": "Search schools by name, city, or curriculum",
+      "placeholderAgents": "Search agents by name, country, or service",
+      "search": "Search"
+    },
+    "teaser": {
+      "title": "Sign in to see every result",
+      "description": "Create a free account to unlock all matches, advanced filters, and saved searches.",
+      "showing": "Showing {shown} of {total}",
+      "cta": "Sign in"
+    },
+    "resultsCount": "{count, plural, =0 {No results} one {# result} other {# results}}",
+    "signInToContact": "Sign in to contact"
   }
 }

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
-import { AgentSearchContent } from '@/modules/agent-search';
+import { UnifiedSearchShell } from '@/modules/unified-search';
 
 export async function generateMetadata({
   params,
@@ -20,5 +20,7 @@ export default async function ParentAgentsPage({
   const { locale } = await params;
   setRequestLocale(locale);
 
-  return <AgentSearchContent activePortal='parent' />;
+  return (
+    <UnifiedSearchShell activePortal='parent' access='authenticated' defaultMode='agents' />
+  );
 }

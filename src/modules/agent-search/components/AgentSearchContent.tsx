@@ -7,18 +7,21 @@ import { AgentResultsPanel } from '@/modules/agent-search/components/AgentResult
 import { AgentSearchBar } from '@/modules/agent-search/components/AgentSearchBar';
 import { AgentPagination } from '@/modules/agent-search/components/AgentPagination';
 import { useAgentSearchWithFilters } from '@/modules/agent-search/hooks/useAgentSearchWithFilters';
+import { resolveCapability } from '@/modules/unified-search';
 import type { AgentSearchContentProps } from '@/modules/agent-search/types/component.types';
+
+const FULL_CAPABILITY = resolveCapability('authenticated');
 
 export function AgentSearchContent({ activePortal, className }: AgentSearchContentProps) {
   const t = useTranslations('AgentSearch.header');
-  const { data, isLoading } = useAgentSearchWithFilters();
+  const { data, isLoading } = useAgentSearchWithFilters(FULL_CAPABILITY);
 
   const total = data?.data?.total ?? 0;
   const pageSize = data?.data?.pageSize ?? 0;
 
   return (
     <div className={cn('flex w-full', className)}>
-      <AgentFilterSidebar />
+      <AgentFilterSidebar capability={FULL_CAPABILITY} />
 
       <section className='flex min-w-0 flex-1 flex-col gap-4 px-4 py-6 sm:px-6'>
         <header className='flex flex-col gap-3'>
@@ -31,7 +34,7 @@ export function AgentSearchContent({ activePortal, className }: AgentSearchConte
           <AgentSearchBar className='max-w-xl' />
         </header>
 
-        <AgentResultsPanel activePortal={activePortal} />
+        <AgentResultsPanel activePortal={activePortal} capability={FULL_CAPABILITY} />
 
         <AgentPagination total={total} pageSize={pageSize} className='pt-2' />
       </section>

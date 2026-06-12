@@ -4,6 +4,7 @@ import { useTranslations } from 'next-intl';
 import { Skeleton } from '@/components/ui/skeleton';
 import { ErrorState } from '@/modules/core';
 import type { Portal } from '@/lib/portal-url';
+import type { SearchCapability } from '@/modules/unified-search';
 import { cn } from '@/lib/utils';
 import { SpecSchoolCard } from '@/modules/school-search/components/cards/SpecSchoolCard';
 import type { SchoolHit } from '@/modules/school-search/types/search-api.types';
@@ -12,37 +13,45 @@ interface SpecResultsListProps {
   hits: readonly SchoolHit[];
   isAdvanced: boolean;
   activePortal: Portal;
+  capability?: SearchCapability;
   isLoading?: boolean;
   isError?: boolean;
   onRetry?: () => void;
+  mapOpen?: boolean;
   className?: string;
   emptyClassName?: string;
 }
 
 const SKELETON_KEYS = ['a', 'b', 'c', 'd', 'e', 'f'] as const;
 
+const GRID_BASE = 'grid grid-cols-1 gap-6 sm:grid-cols-2';
+const GRID_MAP_OPEN = 'lg:grid-cols-2';
+const GRID_MAP_CLOSED = 'lg:grid-cols-3 xl:grid-cols-4';
+
 export function SpecResultsList({
   hits,
   isAdvanced,
   activePortal,
+  capability,
   isLoading = false,
   isError = false,
   onRetry,
+  mapOpen = false,
   className,
   emptyClassName,
 }: SpecResultsListProps) {
   const t = useTranslations('SchoolSearch');
 
+  const gridClassName =
+    className ?? cn(GRID_BASE, mapOpen ? GRID_MAP_OPEN : GRID_MAP_CLOSED);
+
   if (isLoading) {
     return (
-      <div className={className} aria-busy="true" aria-live="polite">
+      <div className={gridClassName} aria-busy="true" aria-live="polite">
         <span className="sr-only">{t('spec.results.loading')}</span>
         {SKELETON_KEYS.map((key) => (
-          <div
-            key={key}
-            className="flex flex-col gap-3 rounded-lg border border-border bg-card p-4 shadow-1"
-          >
-            <Skeleton className="aspect-[16/10] w-full rounded-md" />
+          <div key={key} className="flex flex-col gap-2">
+            <Skeleton className="aspect-[3/2] w-full rounded-lg" />
             <Skeleton className="h-4 w-3/4" />
             <Skeleton className="h-3 w-1/2" />
             <div className="flex flex-wrap gap-1.5">
@@ -77,13 +86,14 @@ export function SpecResultsList({
   }
 
   return (
-    <div className={className}>
+    <div className={gridClassName}>
       {hits.map((hit, index) => (
         <SpecSchoolCard
           key={hit.documentId}
           hit={hit}
           isAdvanced={isAdvanced}
           activePortal={activePortal}
+          capability={capability}
           priority={index < 3}
         />
       ))}

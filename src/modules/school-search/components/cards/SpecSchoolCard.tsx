@@ -2,6 +2,7 @@
 
 import { Link } from '@/i18n/navigation';
 import type { Portal } from '@/lib/portal-url';
+import type { SearchCapability } from '@/modules/unified-search';
 import { cn } from '@/lib/utils';
 import { AccommodationBadge } from '@/modules/school-search/components/cards/AccommodationBadge';
 import { CurriculumBadge } from '@/modules/school-search/components/cards/CurriculumBadge';
@@ -21,6 +22,7 @@ interface SpecSchoolCardProps {
   hit: SchoolHit;
   isAdvanced: boolean;
   activePortal: Portal;
+  capability?: SearchCapability;
   priority?: boolean;
   onUnauthenticatedBookmark?: () => void;
   className?: string;
@@ -30,6 +32,7 @@ export function SpecSchoolCard({
   hit,
   isAdvanced,
   activePortal,
+  capability,
   priority = false,
   onUnauthenticatedBookmark,
   className,
@@ -47,7 +50,7 @@ export function SpecSchoolCard({
     <Link
       href={`/${activePortal}/schools/${hit.slug}`}
       className={cn(
-        'group flex flex-col gap-3 rounded-lg border border-border bg-card p-4 shadow-1 transition-transform duration-200 ease-out-quart hover:-translate-y-0.5 hover:shadow-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2',
+        'group flex flex-col gap-2 rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2',
         className,
       )}
       data-testid={`spec-school-card-${hit.documentId}`}
@@ -57,13 +60,14 @@ export function SpecSchoolCard({
         name={hit.name}
         documentId={hit.documentId}
         isAdvanced={isAdvanced}
+        capability={capability}
         priority={priority}
         onUnauthenticatedBookmark={onUnauthenticatedBookmark}
       />
 
       <div className="flex flex-col gap-1">
-        <h3 className="line-clamp-2 text-sm font-semibold text-foreground">{hit.name}</h3>
-        <p className="text-caption text-muted-foreground">
+        <h3 className="line-clamp-2 text-body-sm font-semibold text-ink-900">{hit.name}</h3>
+        <p className="text-body-sm text-foggy">
           {hit.suburb}
           {hit.state ? `, ${hit.state}` : ''}
         </p>

@@ -1,7 +1,7 @@
 'use client';
 
 import { useMemo, useState, useEffect } from 'react';
-import { useAuthStore } from '@/modules/auth';
+import type { SearchCapability } from '@/modules/unified-search';
 import { useSchoolSearchStore } from '@/modules/school-search/stores/use-school-search-store';
 import { useTypedSchoolSearch } from '@/modules/school-search/queries/use-school-search.query';
 import { mapStoreToTypedRequest } from '@/modules/school-search/lib/store-to-typed-request';
@@ -9,10 +9,8 @@ import { mapStoreToTypedRequest } from '@/modules/school-search/lib/store-to-typ
 const DEBOUNCE_MS = 300;
 const RESULTS_PAGE_SIZE = 100;
 
-export function useSearchWithFilters() {
-  const isAuthenticated = useAuthStore((s) => s.isAuthenticated);
-  const isHydrated = useAuthStore((s) => s.isHydrated);
-  const isAdvancedSession = isHydrated && isAuthenticated;
+export function useSearchWithFilters(capability: SearchCapability) {
+  const isAdvancedSession = capability.isAdvanced;
 
   const query = useSchoolSearchStore((s) => s.query);
   const suburb = useSchoolSearchStore((s) => s.suburb);

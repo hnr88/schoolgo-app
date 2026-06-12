@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { getAlternateLanguages, getCanonicalPath } from '@/modules/seo';
-import { SearchPageContent } from '@/modules/school-search/components/SearchPageContent';
+import { MarketingHeader } from '@/modules/marketing-layout';
+import { UnifiedSearchShell } from '@/modules/unified-search';
 
 export async function generateMetadata({
   params,
@@ -34,5 +35,13 @@ export default async function SearchPage({
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: 'SearchMetadata' });
-  return <SearchPageContent activePortal="agent" title={t('agentTitle')} />;
+  return (
+    <>
+      <h1 className='sr-only'>{t('agentTitle')}</h1>
+      <MarketingHeader activePortal='agent' fullWidth />
+      <main className='flex w-full bg-muted pt-14 md:pt-18'>
+        <UnifiedSearchShell activePortal='agent' access='public' defaultMode='schools' />
+      </main>
+    </>
+  );
 }

@@ -38,7 +38,7 @@ export function AgentCard({
   return (
     <article
       className={cn(
-        'group relative flex flex-col gap-4 rounded-xl border border-border bg-card p-5 shadow-2 transition-[transform,box-shadow] duration-300 hover:-translate-y-1 hover:shadow-3',
+        'group flex flex-col gap-4 rounded-lg transition-shadow duration-300 ease-out-quart hover:shadow-2 motion-reduce:transition-none',
         className,
       )}
     >

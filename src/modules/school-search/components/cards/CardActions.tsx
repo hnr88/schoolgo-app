@@ -3,6 +3,7 @@
 import { useTranslations } from 'next-intl';
 import { Check, GitCompare, Heart } from 'lucide-react';
 import { useAuthStore } from '@/modules/auth/stores/use-auth-store';
+import type { SearchCapability } from '@/modules/unified-search';
 import { cn } from '@/lib/utils';
 import {
   COMPARE_MAX_ADVANCED,
@@ -18,6 +19,7 @@ interface CardActionsProps {
   schoolId: string;
   schoolName: string;
   isAdvanced: boolean;
+  capability?: SearchCapability;
   onUnauthenticatedBookmark?: () => void;
   className?: string;
 }
@@ -26,6 +28,7 @@ export function CardActions({
   schoolId,
   schoolName,
   isAdvanced,
+  capability,
   onUnauthenticatedBookmark,
   className,
 }: CardActionsProps) {
@@ -51,6 +54,9 @@ export function CardActions({
   const isInCompare = compareList.includes(schoolId);
   const max = isAdvanced ? COMPARE_MAX_ADVANCED : COMPARE_MAX_BASIC;
   const isBookmarkPending = createBookmark.isPending || deleteBookmark.isPending;
+
+  const showSave = capability ? capability.canPersonalize : true;
+  const showCompare = capability ? capability.isAdvanced : isAdvanced;
 
   const handleBookmark = (e: React.MouseEvent) => {
     e.stopPropagation();
@@ -79,22 +85,24 @@ export function CardActions({
 
   return (
     <div className={cn('flex items-center gap-1.5', className)}>
-      <button
-        type="button"
-        onClick={handleBookmark}
-        disabled={isBookmarkPending}
-        aria-label={bookmarkLabel}
-        aria-pressed={isBookmarked}
-        className={cn(
-          'flex size-9 items-center justify-center rounded-full border bg-card shadow-1 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-60',
-          isBookmarked
-            ? 'border-rausch-200 bg-rausch-50 text-primary'
-            : 'border-border text-muted-foreground hover:bg-muted',
-        )}
-      >
-        <Heart size={16} fill={isBookmarked ? 'currentColor' : 'none'} aria-hidden />
-      </button>
-      {isAdvanced && (
+      {showSave && (
+        <button
+          type="button"
+          onClick={handleBookmark}
+          disabled={isBookmarkPending}
+          aria-label={bookmarkLabel}
+          aria-pressed={isBookmarked}
+          className={cn(
+            'flex size-9 items-center justify-center rounded-full border bg-card shadow-1 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-60',
+            isBookmarked
+              ? 'border-rausch-200 bg-rausch-50 text-primary'
+              : 'border-border text-muted-foreground hover:bg-muted',
+          )}
+        >
+          <Heart size={16} fill={isBookmarked ? 'currentColor' : 'none'} aria-hidden />
+        </button>
+      )}
+      {showCompare && (
         <button
           type="button"
           onClick={handleCompare}
