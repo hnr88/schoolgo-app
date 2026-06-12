@@ -13,7 +13,15 @@
     "removeFromShortlist": "Remove from shortlist",
     "comingSoon": "Coming soon",
     "skipToContent": "跳至内容",
-    "primaryNavigation": "主导航"
+    "primaryNavigation": "主导航",
+    "title": "SchoolGo",
+    "description": "Find and compare Australian schools and trusted education agents on SchoolGo.",
+    "ogDescription": "Find and compare Australian schools and trusted education agents on SchoolGo.",
+    "featured": {
+      "eyebrow": "Featured schools",
+      "shortlistAdd": "Add {name} to shortlist",
+      "shortlistRemove": "Remove {name} from shortlist"
+    }
   },
   "ParentsMetadata": {
     "title": "SchoolGo – 为孩子寻找澳大利亚学校",
@@ -1717,7 +1725,8 @@
     "expandSidebar": "展开侧边栏",
     "pageSubtitle": "一目了然地掌握动态、截止日期和申请进度。",
     "openMenu": "Open menu",
-    "navTitle": "Navigation menu"
+    "navTitle": "Navigation menu",
+    "sectionError": "Something went wrong loading this section."
   },
   "Students": {
     "title": "[TODO: zh] Students",
@@ -6113,5 +6122,24 @@
     },
     "resultsCount": "{count, plural, =0 {No results} one {# result} other {# results}}",
     "signInToContact": "Sign in to contact"
+  },
+  "AgentLeads": {
+    "title": "Leads",
+    "subtitle": "Parent enquiries sent to you",
+    "columnParent": "Parent",
+    "columnContact": "Contact",
+    "columnChildAge": "Child age",
+    "columnSchool": "School",
+    "columnMessage": "Message",
+    "columnReceived": "Received",
+    "columnStatus": "Status",
+    "columnUpdate": "Update",
+    "statusLabel": "Status",
+    "statusUpdateSuccess": "Status updated",
+    "statusUpdateError": "Couldn't update the status. Please try again.",
+    "emptyTitle": "No leads yet",
+    "emptyDescription": "When a parent contacts you, their enquiry will appear here.",
+    "errorMessage": "We couldn't load your leads.",
+    "retry": "Try again"
   }
 }

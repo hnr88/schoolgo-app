@@ -2,15 +2,22 @@
 
 import { useTranslations } from 'next-intl';
 import { Lock } from 'lucide-react';
+import dynamic from 'next/dynamic';
 import { cn } from '@/lib/utils';
 import type { Portal } from '@/lib/portal-url';
 import { Link } from '@/i18n/navigation';
 import { CompareBar } from '@/modules/school-search/components/CompareBar';
-import { MapView } from '@/modules/school-search/components/MapView';
 import { SpecFilterSidebar } from '@/modules/school-search/components/SpecFilterSidebar';
 import { SpecResultsPanel } from '@/modules/school-search/components/SpecResultsPanel';
 import { SearchTopBar } from '@/modules/school-search/components/topbar/SearchTopBar';
 import type { SearchCapability } from '@/modules/unified-search/types/unified-search.types';
+
+// MapView statically imports leaflet-value hooks (useGeocodeSearch/useMapResultFocus),
+// so it must NOT be in the SSR bundle (leaflet references `window`). Load it client-only.
+const MapView = dynamic(
+  () => import('@/modules/school-search/components/MapView').then((m) => m.MapView),
+  { ssr: false },
+);
 
 interface SchoolsSearchPaneProps {
   activePortal: Portal;
