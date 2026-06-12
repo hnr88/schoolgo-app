@@ -16,7 +16,15 @@ export function usePartnershipStatus(schoolDocumentId: string | undefined) {
       const { data } = await privateApi.get(
         `/api/agent-partnerships/my-status/${schoolDocumentId}`,
       );
-      return partnershipStatusResponseSchema.parse(data).data;
+      const parsed = partnershipStatusResponseSchema.safeParse(data);
+      if (!parsed.success) {
+        console.warn(
+          '[usePartnershipStatus] unexpected response shape',
+          parsed.error.issues,
+        );
+        return { status: 'none' as const, partnershipDocumentId: null };
+      }
+      return parsed.data.data;
     },
     staleTime: 60_000,
   });

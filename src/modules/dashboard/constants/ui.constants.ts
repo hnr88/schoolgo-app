@@ -7,7 +7,6 @@ import {
   Bookmark,
   Building2,
   Calculator,
-  CalendarClock,
   CalendarDays,
   ChartLine,
   CheckCircle,
@@ -24,6 +23,7 @@ import {
   Handshake,
   Heart,
   History,
+  Inbox,
   LayoutDashboard,
   LayoutGrid,
   LayoutTemplate,
@@ -35,13 +35,11 @@ import {
   Settings,
   ShieldCheck,
   StickyNote,
-  TrendingUp,
   Trophy,
   UserCircle,
   UserPlus,
   Users,
   Video,
-  Wallet,
 } from 'lucide-react';
 
 import type { Portal } from '@/lib/portal-url';
@@ -75,10 +73,8 @@ export const ROUTE_TITLE_MAP: Record<string, string> = {
   '/dashboard/capacity': 'capacity',
   '/dashboard/invoices': 'invoices',
   '/dashboard/payouts': 'payouts',
-  '/dashboard/payments': 'payments',
   '/dashboard/pre-enrolment': 'preEnrolment',
   '/dashboard/analytics': 'analytics',
-  '/dashboard/earnings': 'earnings',
   '/dashboard/follow-ups': 'followUps',
   '/dashboard/compliance': 'compliance',
   '/dashboard/activity': 'activity',
@@ -87,6 +83,7 @@ export const ROUTE_TITLE_MAP: Record<string, string> = {
   '/dashboard/tuition': 'tuition',
   '/dashboard/agent-performance': 'agentPerformance',
   '/dashboard/document-requests': 'documentRequests',
+  '/dashboard/leads': 'leads',
 };
 
 export const PORTAL_NAV: Record<Portal, PortalNav> = {
@@ -131,16 +128,9 @@ export const PORTAL_NAV: Record<Portal, PortalNav> = {
       {
         labelKey: 'groupComms',
         items: [
+          { href: '/dashboard/leads', icon: Inbox, labelKey: 'leads' },
           { href: '/dashboard/messages', icon: MessageSquare, labelKey: 'messages' },
           { href: '/dashboard/notifications', icon: Bell, labelKey: 'notifications' },
-        ],
-      },
-      {
-        labelKey: 'groupFinance',
-        items: [
-          { href: '/dashboard/invoices', icon: Receipt, labelKey: 'invoices' },
-          { href: '/dashboard/payments', icon: Wallet, labelKey: 'payments' },
-          { href: '/dashboard/earnings', icon: TrendingUp, labelKey: 'earnings' },
         ],
       },
       {
@@ -226,7 +216,6 @@ export const PORTAL_NAV: Record<Portal, PortalNav> = {
           { href: '/parent/students', icon: GraduationCap, labelKey: 'students' },
           { href: '/parent/family-overview', icon: LayoutGrid, labelKey: 'familyOverview' },
           { href: '/parent/documents', icon: FolderOpen, labelKey: 'documents' },
-          { href: '/parent/document-expiry', icon: CalendarClock, labelKey: 'documentExpiry' },
           { href: '/parent/tests', icon: ClipboardCheck, labelKey: 'tests' },
           { href: '/parent/results', icon: Trophy, labelKey: 'results' },
         ],
@@ -244,6 +233,7 @@ export const PORTAL_NAV: Record<Portal, PortalNav> = {
         labelKey: 'groupSchools',
         items: [
           { href: '/parent/search', icon: Search, labelKey: 'searchSchools' },
+          { href: '/parent/agents', icon: Users, labelKey: 'findAgent' },
           { href: '/parent/saved-schools', icon: Heart, labelKey: 'savedSchools' },
           { href: '/parent/compare', icon: Columns3, labelKey: 'compare' },
           { href: '/parent/cost-estimator', icon: Calculator, labelKey: 'costEstimator' },

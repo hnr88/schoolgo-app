@@ -4,7 +4,7 @@ import { useTranslations } from 'next-intl';
 import { CalendarClock } from 'lucide-react';
 import { Link } from '@/i18n/navigation';
 import { buttonVariants } from '@/components/ui/button';
-import { EmptyState, ErrorState, SectionHeading } from '@/modules/core';
+import { EmptyState, ErrorState } from '@/modules/core';
 import { DocumentExpirySection } from '@/modules/parent-document-expiry/components/DocumentExpirySection';
 import { DocumentExpirySkeleton } from '@/modules/parent-document-expiry/components/DocumentExpirySkeleton';
 import { useDocumentExpiry } from '@/modules/parent-document-expiry/hooks/useDocumentExpiry';
@@ -15,13 +15,6 @@ export function DocumentExpiryPage() {
 
   return (
     <div className='flex flex-col gap-6'>
-      <SectionHeading
-        level={1}
-        icon={CalendarClock}
-        title={t('title')}
-        description={t('subtitle')}
-      />
-
       {isError ? (
         <ErrorState framed message={t('errorMessage')} onRetry={retry} retryLabel={t('retry')} />
       ) : isLoading ? (
@@ -33,7 +26,7 @@ export function DocumentExpiryPage() {
           title={t('emptyTitle')}
           description={t('emptyDescription')}
           action={
-            <Link href='/parent/documents' className={buttonVariants()}>
+            <Link href='/parent/documents?tab=vault' className={buttonVariants()}>
               {t('emptyCta')}
             </Link>
           }

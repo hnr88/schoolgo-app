@@ -14,7 +14,12 @@ async function fetchAgentActivity(
   const { data } = await privateApi.get('/api/agents/me/activity-feed', {
     params: { page, pageSize },
   });
-  const parsed = agentActivityResponseSchema.parse(data);
+  const result = agentActivityResponseSchema.safeParse(data);
+  if (!result.success) {
+    console.warn('[useAgentActivity] unexpected response shape', result.error.issues);
+    return { events: [], pagination: { page, pageSize, total: 0 } };
+  }
+  const parsed = result.data;
 
   return {
     events: parsed.data.map((event) => ({

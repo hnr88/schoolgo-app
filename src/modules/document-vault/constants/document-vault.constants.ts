@@ -12,6 +12,7 @@ import {
 } from 'lucide-react';
 
 import type {
+  DocumentsTab,
   VaultDocumentType,
   VaultExpiryStatus,
   VaultSortOption,
@@ -58,6 +59,9 @@ export const VAULT_REJECTION_MESSAGE_KEY: Record<string, string> = {
 
 export const VAULT_IMAGE_MIME_PREFIX = 'image/';
 export const VAULT_PDF_MIME = 'application/pdf';
+
+export const DOCUMENTS_TAB_PARAM = 'tab';
+export const DOCUMENTS_TAB_DEFAULT: DocumentsTab = 'vault';
 
 export const VAULT_EXPIRY_BADGE_CLASS: Record<
   Exclude<VaultExpiryStatus, 'none' | 'valid'>,

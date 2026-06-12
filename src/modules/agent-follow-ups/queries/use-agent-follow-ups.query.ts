@@ -6,9 +6,19 @@ import { useAuthStore } from '@/modules/auth/stores/use-auth-store';
 import { agentFollowUpsResponseSchema } from '@/modules/agent-follow-ups/schemas/agent-follow-ups.schema';
 import type { AgentFollowUpsResponse } from '@/modules/agent-follow-ups/types/agent-follow-ups.types';
 
+const EMPTY_FOLLOW_UPS: AgentFollowUpsResponse = {
+  data: { staleInReview: [], agingDrafts: [], expiringOffers: [] },
+  meta: { counts: { staleInReview: 0, agingDrafts: 0, expiringOffers: 0 } },
+};
+
 async function fetchAgentFollowUps(): Promise<AgentFollowUpsResponse> {
   const { data } = await privateApi.get('/api/agents/me/follow-ups');
-  return agentFollowUpsResponseSchema.parse(data);
+  const parsed = agentFollowUpsResponseSchema.safeParse(data);
+  if (!parsed.success) {
+    console.warn('[useAgentFollowUps] unexpected response shape', parsed.error.issues);
+    return EMPTY_FOLLOW_UPS;
+  }
+  return parsed.data;
 }
 
 export function useAgentFollowUps() {

@@ -31,6 +31,22 @@ privateApi.interceptors.response.use(
       }
     }
 
+    // A 403 means the session is valid but the role lacks an ACL grant for this
+    // action — NOT an expired token. Never log out (that would mask the gap as a
+    // login bounce). Tag the error with a distinct, diagnosable signal so a
+    // future ACL regression surfaces as "access not provisioned" rather than as
+    // scattered, indistinguishable errors.
+    if (status === 403) {
+      err.isAccessNotProvisioned = true;
+      if (typeof window !== 'undefined') {
+        console.warn(
+          '[privateApi] 403 access not provisioned (ACL gap, not auth failure):',
+          err.config?.method?.toUpperCase(),
+          err.config?.url,
+        );
+      }
+    }
+
     return Promise.reject(err);
   },
 );

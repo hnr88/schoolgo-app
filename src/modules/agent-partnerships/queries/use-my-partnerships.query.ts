@@ -10,7 +10,12 @@ export const MY_PARTNERSHIPS_QUERY_KEY = ['agent', 'partnerships', 'mine'] as co
 
 async function fetchMyPartnerships(): Promise<AgentPartnership[]> {
   const { data } = await privateApi.get('/api/agent-partnerships/mine');
-  return myPartnershipsResponseSchema.parse(data).data;
+  const parsed = myPartnershipsResponseSchema.safeParse(data);
+  if (!parsed.success) {
+    console.warn('[useMyPartnerships] unexpected response shape', parsed.error.issues);
+    return [];
+  }
+  return parsed.data.data;
 }
 
 export function useMyPartnerships() {

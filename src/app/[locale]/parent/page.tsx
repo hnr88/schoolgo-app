@@ -4,6 +4,7 @@ import { getAlternateLanguages, getCanonicalPath } from '@/modules/seo';
 import { MarketingFooter, MarketingHeader } from '@/modules/marketing-layout';
 import { AuthRedirectCheck } from '@/modules/auth/components/AuthRedirectCheck';
 import {
+  ParentsAgents,
   ParentsArticles,
   ParentsComparison,
   ParentsFaq,
@@ -14,7 +15,6 @@ import {
   ParentsTrustBar,
   ParentsPickATest,
   ParentsSevenLanguages,
-  ParentsVerified,
 } from '@/modules/parents-landing';
 
 export async function generateMetadata({
@@ -54,8 +54,8 @@ export default async function ParentsLandingPage({
       <main>
         <ParentsHero />
         <ParentsStatsBar />
+        <ParentsAgents />
         <ParentsFourSteps />
-        <ParentsVerified />
         <ParentsComparison />
         <ParentsPickATest />
         <ParentsSevenLanguages />

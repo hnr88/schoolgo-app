@@ -21,7 +21,9 @@ export const APPLICATION_STATUSES = [
 
 export const followUpItemSchema = z.object({
   documentId: z.string(),
-  status: z.enum(APPLICATION_STATUSES),
+  // Loosened from z.enum(APPLICATION_STATUSES): a backend status outside the
+  // known set must not throw the whole follow-ups page into an error state.
+  status: z.string(),
   statusChangedAt: z.string().nullish(),
   offerDeadline: z.string().nullish(),
   createdAt: z.string().nullish(),

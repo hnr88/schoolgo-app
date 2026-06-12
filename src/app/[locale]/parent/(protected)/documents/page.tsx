@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 
-import { DocumentVaultPage } from '@/modules/document-vault';
+import { DocumentsTabs } from '@/modules/document-vault';
 
 export async function generateMetadata({
   params,
@@ -29,7 +29,7 @@ export default async function ParentDocumentsRoute({
         <p className='text-sm text-muted-foreground'>{t('subtitle')}</p>
       </header>
 
-      <DocumentVaultPage />
+      <DocumentsTabs />
     </div>
   );
 }

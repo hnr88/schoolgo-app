@@ -53,24 +53,33 @@ export function AgentDashboard() {
     );
   }
 
-  const tiles = mapStatTiles(data.stats);
-  const activity = mapActivityRows(data.activity, locale);
-  const deadlines = mapDeadlineRows(data.deadlines.items, locale);
-  const actions = mapActionRows(data.actionItems.items);
+  const tiles = data.stats ? mapStatTiles(data.stats) : [];
+  const activity = data.activity ? mapActivityRows(data.activity, locale) : [];
+  const deadlines = data.deadlines ? mapDeadlineRows(data.deadlines.items, locale) : [];
+  const actions = data.actionItems ? mapActionRows(data.actionItems.items) : [];
+
+  const sectionError = (
+    <ErrorState
+      message={t('sectionError')}
+      onRetry={() => refetch()}
+      retryLabel={t('retry')}
+      framed
+    />
+  );
 
   return (
     <div className='flex flex-col gap-8'>
       <PageHeader title={t('nav.dashboard')} description={t('pageSubtitle')} />
       <AgentOnboardingChecklist />
-      <ActionBanner items={actions} />
-      <PipelineStatTiles tiles={tiles} />
+      {!data.sectionErrors.actionItems && <ActionBanner items={actions} />}
+      {data.sectionErrors.stats ? sectionError : <PipelineStatTiles tiles={tiles} />}
 
       <div className='grid gap-6 lg:grid-cols-5'>
         <div className='lg:col-span-3'>
-          <ActivityFeed events={activity} />
+          {data.sectionErrors.activity ? sectionError : <ActivityFeed events={activity} />}
         </div>
         <div className='lg:col-span-2'>
-          <DeadlinesList deadlines={deadlines} />
+          {data.sectionErrors.deadlines ? sectionError : <DeadlinesList deadlines={deadlines} />}
         </div>
       </div>
 

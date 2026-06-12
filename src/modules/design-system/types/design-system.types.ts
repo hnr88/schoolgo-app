@@ -90,6 +90,25 @@ export interface SchoolCardProps {
   actionSlot?: ReactNode;
 }
 
+export interface AgentCardProps {
+  name: string;
+  href: string;
+  photoUrl?: string | null;
+  headline?: string | null;
+  roleTitle?: string | null;
+  countries?: string[];
+  verified?: boolean;
+  verifiedLabel?: string;
+  partnerSchoolsCount?: number;
+  partnerSchoolsLabel?: string;
+  completenessLabel?: string;
+  className?: string;
+  actionSlot?: ReactNode;
+  agentDocumentId?: string;
+  schoolDocumentId?: string;
+  talkLabel?: string;
+}
+
 export interface SearchInputProps extends InputHTMLAttributes<HTMLInputElement> {
   onSearch?: (value: string) => void;
 }

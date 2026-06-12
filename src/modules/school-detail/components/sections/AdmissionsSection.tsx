@@ -1,6 +1,7 @@
 import { getTranslations } from 'next-intl/server';
 import { Eyebrow } from '@/modules/design-system';
 import type { SchoolDetail } from '@/modules/school-detail/lib/school-detail-api';
+import type { Portal } from '@/lib/portal-url';
 
 function formatLabel(value: string | null | undefined): string | null {
   if (!value) return null;
@@ -24,10 +25,12 @@ function parseSteps(raw: unknown): StepItem[] {
 
 interface AdmissionsSectionProps {
   school: SchoolDetail;
+  activePortal?: Portal;
 }
 
-export async function AdmissionsSection({ school }: AdmissionsSectionProps) {
+export async function AdmissionsSection({ school, activePortal }: AdmissionsSectionProps) {
   const steps = parseSteps(school.admissionsSteps);
+  const showContact = activePortal === 'agent';
 
   const hasTableData = Boolean(
     school.oshcArrangement ||
@@ -35,19 +38,18 @@ export async function AdmissionsSection({ school }: AdmissionsSectionProps) {
       school.applicationDeadline ||
       school.offerAcceptanceWindowDays != null ||
       school.partnerAgentsOnly != null ||
-      school.admissionsEmail ||
-      school.admissionsPhone,
+      (showContact && (school.admissionsEmail || school.admissionsPhone)),
   );
 
   if (steps.length === 0 && !hasTableData) return null;
 
   const t = await getTranslations('SchoolDetail.admissions');
 
-  const emailHref = school.admissionsEmail
+  const emailHref = showContact && school.admissionsEmail
     ? <a href={`mailto:${school.admissionsEmail}`} className="text-primary underline-offset-2 hover:underline">{school.admissionsEmail}</a>
     : null;
 
-  const phoneHref = school.admissionsPhone
+  const phoneHref = showContact && school.admissionsPhone
     ? <a href={`tel:${school.admissionsPhone}`} className="text-primary underline-offset-2 hover:underline">{school.admissionsPhone}</a>
     : null;
 

@@ -1,24 +1,10 @@
-import type { Metadata } from 'next';
-import { getTranslations, setRequestLocale } from 'next-intl/server';
-import { DocumentExpiryPage } from '@/modules/parent-document-expiry';
+import { redirect } from '@/i18n/navigation';
 
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<{ locale: string }>;
-}): Promise<Metadata> {
-  const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'ParentDocumentExpiry' });
-  return { title: t('title'), description: t('subtitle') };
-}
-
-export default async function ParentDocumentExpiryPage({
+export default async function ParentDocumentExpiryRedirect({
   params,
 }: {
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  setRequestLocale(locale);
-
-  return <DocumentExpiryPage />;
+  redirect({ href: '/parent/documents?tab=expiry', locale });
 }

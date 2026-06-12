@@ -1,6 +1,7 @@
-import { Mail, MapPin, Phone } from 'lucide-react';
+import { Mail, MapPin, Phone, Users } from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
 import type { SchoolDetail } from '@/modules/school-detail/lib/school-detail-api';
+import type { Portal } from '@/lib/portal-url';
 
 interface ContactRowProps {
   icon: React.ReactNode;
@@ -22,13 +23,40 @@ function ContactRow({ icon, label, value }: ContactRowProps) {
   );
 }
 
-export async function ContactCard({ school }: { school: SchoolDetail }) {
+export async function ContactCard({
+  school,
+  activePortal,
+}: {
+  school: SchoolDetail;
+  activePortal?: Portal;
+}) {
   const addressParts = [school.suburb, school.state, school.postcode].filter(Boolean);
   const address = addressParts.length > 0 ? addressParts.join(', ') : null;
 
   if (!school.admissionsEmail && !school.admissionsPhone && !address) return null;
 
   const t = await getTranslations('SchoolDetail.sidebar.contact');
+
+  if (activePortal !== 'agent') {
+    return (
+      <section
+        aria-labelledby="contact-heading"
+        className="rounded-lg border border-border bg-card p-5 shadow-1"
+      >
+        <h2 id="contact-heading" className="text-xl font-semibold text-ink-900">
+          {t('agentHeading')}
+        </h2>
+        <p className="mt-4 text-body-sm text-foggy">{t('agentIntro')}</p>
+        <a
+          href="#agents"
+          className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-pill bg-primary px-4 py-3 text-body-sm font-semibold text-on-primary shadow-brand transition-colors hover:bg-rausch-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+        >
+          <Users className="h-4 w-4" aria-hidden="true" />
+          {t('agentCta')}
+        </a>
+      </section>
+    );
+  }
 
   return (
     <section aria-labelledby="contact-heading" className="rounded-lg border border-border bg-card p-5 shadow-1">

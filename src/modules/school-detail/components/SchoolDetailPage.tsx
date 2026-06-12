@@ -11,6 +11,7 @@ import { CurriculumSection } from '@/modules/school-detail/components/sections/C
 import { FeesSection } from '@/modules/school-detail/components/sections/FeesSection';
 import { EnglishRequirementsSection } from '@/modules/school-detail/components/sections/EnglishRequirementsSection';
 import { AdmissionsSection } from '@/modules/school-detail/components/sections/AdmissionsSection';
+import { PartnerAgentsSection } from '@/modules/school-detail/components/sections/PartnerAgentsSection';
 import { RequirementsSection } from '@/modules/school-detail/components/sections/RequirementsSection';
 import { BoardingSection } from '@/modules/school-detail/components/sections/BoardingSection';
 import { CoCurricularSection } from '@/modules/school-detail/components/sections/CoCurricularSection';
@@ -45,10 +46,13 @@ export async function SchoolDetailPage({ school, activePortal, locale }: SchoolD
           <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_22rem]">
             <article className="space-y-6">
               <AboutSection school={school} />
+              {activePortal !== 'agent' && (
+                <PartnerAgentsSection schoolDocumentId={school.documentId} />
+              )}
               <CurriculumSection school={school} />
               <FeesSection school={school} />
               <EnglishRequirementsSection school={school} />
-              <AdmissionsSection school={school} />
+              <AdmissionsSection school={school} activePortal={activePortal} />
               {activePortal === 'agent' && (
                 <RequirementsSection schoolDocumentId={school.documentId} />
               )}
@@ -64,8 +68,8 @@ export async function SchoolDetailPage({ school, activePortal, locale }: SchoolD
               {activePortal === 'agent' && (
                 <RequestPartnershipCard schoolDocumentId={school.documentId} />
               )}
-              <ContactCard school={school} />
-              <TocCard />
+              <ContactCard school={school} activePortal={activePortal} />
+              <TocCard activePortal={activePortal} />
               <KeyFactsCard school={school} activePortal={activePortal} />
             </aside>
           </div>

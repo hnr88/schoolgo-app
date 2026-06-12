@@ -76,11 +76,15 @@ export interface AgentActionItemsPayload {
   overflowCount: number;
 }
 
+export type AgentDashboardSection = 'stats' | 'activity' | 'deadlines' | 'actionItems';
+
 export interface AgentDashboardData {
-  stats: AgentDashboardStats;
-  activity: AgentActivityEvent[];
-  deadlines: AgentDeadlinesPayload;
-  actionItems: AgentActionItemsPayload;
+  stats: AgentDashboardStats | null;
+  activity: AgentActivityEvent[] | null;
+  deadlines: AgentDeadlinesPayload | null;
+  actionItems: AgentActionItemsPayload | null;
+  /** Sections whose fetch rejected — used to render per-section error states. */
+  sectionErrors: Record<AgentDashboardSection, boolean>;
 }
 
 export interface StatCardView {

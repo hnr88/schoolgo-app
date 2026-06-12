@@ -2,6 +2,7 @@ export { ParentsHero } from '@/modules/parents-landing/components/ParentsHero';
 export { ParentsStatsBar } from '@/modules/parents-landing/components/ParentsStatsBar';
 export { ParentsFourSteps } from '@/modules/parents-landing/components/ParentsFourSteps';
 export { ParentsVerified } from '@/modules/parents-landing/components/ParentsVerified';
+export { ParentsAgents } from '@/modules/parents-landing/components/ParentsAgents';
 export { ParentsComparison } from '@/modules/parents-landing/components/ParentsComparison';
 export { ParentsPickATest } from '@/modules/parents-landing/components/ParentsPickATest';
 export { ParentsSevenLanguages } from '@/modules/parents-landing/components/ParentsSevenLanguages';

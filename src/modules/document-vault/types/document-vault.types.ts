@@ -13,6 +13,10 @@ export const VAULT_DOCUMENT_TYPES = [
 
 export type VaultDocumentType = (typeof VAULT_DOCUMENT_TYPES)[number];
 
+export const DOCUMENTS_TABS = ['vault', 'expiry'] as const;
+
+export type DocumentsTab = (typeof DOCUMENTS_TABS)[number];
+
 export interface VaultFile {
   id: number;
   documentId: string;

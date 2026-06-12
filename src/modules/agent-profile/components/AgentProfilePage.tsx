@@ -8,6 +8,7 @@ import { useAgentPublicPreview } from '@/modules/agent-profile/queries/use-publi
 import { VerificationSection } from '@/modules/agent-profile/components/VerificationSection';
 import { PublicProfileForm } from '@/modules/agent-profile/components/PublicProfileForm';
 import { WhatSchoolsSeeCard } from '@/modules/agent-profile/components/WhatSchoolsSeeCard';
+import { AgentProfileBuilder } from '@/modules/agent-profile/components/AgentProfileBuilder';
 
 function ProfileSkeleton() {
   return (
@@ -45,6 +46,8 @@ export function AgentProfilePage() {
   return (
     <div className='flex flex-col gap-6'>
       <VerificationSection verification={verification.data} />
+
+      <AgentProfileBuilder />
 
       <SurfaceCard padding='lg' className='flex flex-col gap-5'>
         <SectionHeading title={t('editorTitle')} description={t('editorSubtitle')} level={2} />
