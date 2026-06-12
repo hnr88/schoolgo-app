@@ -41,9 +41,15 @@ export function AgentsSearchPane({ activePortal, capability, className }: Agents
         <div
           className={cn(
             'flex min-h-0 flex-1 flex-col',
-            showMap && 'lg:grid lg:grid-rows-1 lg:grid-cols-[1fr_minmax(0,40%)] lg:gap-3',
+            showMap && 'lg:grid lg:grid-rows-1 lg:grid-cols-[minmax(0,55%)_1fr] lg:gap-3',
           )}
         >
+          {showMap && (
+            <div className="hidden min-h-0 lg:block lg:h-full">
+              <AgentMapView activePortal={activePortal} capability={capability} />
+            </div>
+          )}
+
           <div className="flex min-h-0 flex-1 flex-col gap-3 overflow-y-auto pb-4">
             <AgentResultsPanel
               activePortal={activePortal}
@@ -52,12 +58,6 @@ export function AgentsSearchPane({ activePortal, capability, className }: Agents
             />
             <AgentPagination total={total} pageSize={pageSize} className="pt-2" />
           </div>
-
-          {showMap && (
-            <div className="hidden min-h-0 lg:block lg:h-full">
-              <AgentMapView activePortal={activePortal} capability={capability} />
-            </div>
-          )}
         </div>
       </section>
     </div>

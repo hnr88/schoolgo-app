@@ -15,7 +15,7 @@ export function UnifiedSearchShell({ activePortal, access, defaultMode }: Unifie
 
   return (
     <div className="flex h-full min-h-0 w-full flex-col">
-      <div className="flex shrink-0 flex-col gap-2 px-3 py-2 md:flex-row md:items-center md:gap-3 md:px-4">
+      <div className="flex shrink-0 flex-col gap-2 px-3 pt-4 pb-2 md:flex-row md:items-center md:gap-3 md:px-4">
         <SearchTypeToggle className="shrink-0" />
         <UnifiedSearchBar className="min-w-0 flex-1" />
       </div>

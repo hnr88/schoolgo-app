@@ -6129,7 +6129,15 @@
       "cta": "Sign in"
     },
     "resultsCount": "{count, plural, =0 {No results} one {# result} other {# results}}",
-    "signInToContact": "Sign in to contact"
+    "signInToContact": "Sign in to contact",
+    "autocomplete": {
+      "schoolsHeading": "โรงเรียน",
+      "locationsHeading": "Locations",
+      "regionsHeading": "Regions",
+      "agentsHeading": "Agents",
+      "loading": "กำลังค้นหา…",
+      "empty": "ไม่พบผลลัพธ์"
+    }
   },
   "AgentLeads": {
     "title": "Leads",

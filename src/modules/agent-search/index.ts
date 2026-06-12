@@ -4,6 +4,8 @@ export { AgentFilterSidebar } from '@/modules/agent-search/components/AgentFilte
 export { getPublicAgentsInitial } from '@/modules/agent-search/lib/public-agents-ssr';
 export type { PublicAgentsInitial } from '@/modules/agent-search/lib/public-agents-ssr';
 export { useAgentSearch } from '@/modules/agent-search/queries/use-agent-search.query';
+export { useAutocompleteAgents } from '@/modules/agent-search/queries/use-autocomplete-agents.query';
+export { autocompleteAgents } from '@/modules/agent-search/lib/autocomplete-agents-api';
 export { useAgentSearchWithFilters } from '@/modules/agent-search/hooks/useAgentSearchWithFilters';
 export { useAgentSearchStore } from '@/modules/agent-search/stores/use-agent-search-store';
 export { searchAgents } from '@/modules/agent-search/lib/agent-search-api';
@@ -24,6 +26,10 @@ export type {
   AgentSearchResponse,
   AgentSortBy,
 } from '@/modules/agent-search/types/agent-search.types';
+export type {
+  AutocompleteAgentHit,
+  AutocompleteAgentsResponse,
+} from '@/modules/agent-search/types/autocomplete-agents.types';
 export type {
   AgentResultsPanelProps,
   AgentFilterSidebarProps,

@@ -61,21 +61,21 @@ export function SchoolsSearchPane({ activePortal, capability, className }: Schoo
         <div
           className={cn(
             'flex min-h-0 flex-1 flex-col',
-            showMap && 'lg:grid lg:grid-rows-1 lg:grid-cols-[1fr_minmax(0,40%)] lg:gap-3',
+            showMap && 'lg:grid lg:grid-rows-1 lg:grid-cols-[minmax(0,55%)_1fr] lg:gap-3',
           )}
         >
+          {showMap && (
+            <div className="hidden min-h-0 lg:block lg:h-full">
+              <MapView activePortal={activePortal} />
+            </div>
+          )}
+
           <SpecResultsPanel
             activePortal={activePortal}
             capability={capability}
             alwaysOn
             teaserSlot={isCapped ? <SchoolsTeaserSlot /> : undefined}
           />
-
-          {showMap && (
-            <div className="hidden min-h-0 lg:block lg:h-full">
-              <MapView activePortal={activePortal} />
-            </div>
-          )}
         </div>
       </section>
 

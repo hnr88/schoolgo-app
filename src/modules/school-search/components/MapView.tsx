@@ -220,12 +220,10 @@ export function MapView({ className, activePortal }: MapViewProps) {
   useMapInvalidateSize(map, schools.length);
 
   return (
-    <>
-      <div className={cn('relative h-full w-full overflow-hidden rounded-lg border border-border shadow-2', className)}>
-        <LeafletMap schools={schools} onMapReady={handleMapReady} activePortal={activePortal} />
-        {map && <ScrollWheelZoomHandler map={map} />}
-      </div>
+    <div className={cn('relative h-full w-full overflow-hidden rounded-lg border border-border shadow-2', className)}>
+      <LeafletMap schools={schools} onMapReady={handleMapReady} activePortal={activePortal} />
+      {map && <ScrollWheelZoomHandler map={map} />}
       {map && <MapZoomControls map={map} />}
-    </>
+    </div>
   );
 }

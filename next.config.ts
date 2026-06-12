@@ -28,6 +28,7 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       { protocol: 'https', hostname: 'picsum.photos' },
       { protocol: 'https', hostname: 'images.unsplash.com' },
+      { protocol: 'https', hostname: 'i.pravatar.cc' },
       { protocol: 'https', hostname: 'staging-api.schoolgo.com.au', pathname: '/uploads/**' },
       { protocol: 'https', hostname: 'api.schoolgo.com.au', pathname: '/uploads/**' },
       ...(isLocalApi
