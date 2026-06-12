@@ -43,7 +43,8 @@ export function AgentsSearchPane({ activePortal, capability, className }: Agents
         <div
           className={cn(
             'flex min-h-0 flex-1 flex-col',
-            showMap && 'lg:grid lg:grid-rows-1 lg:grid-cols-[minmax(0,55%)_1fr] lg:gap-3',
+            showMap &&
+              'lg:grid lg:grid-rows-1 lg:gap-3 lg:grid-cols-[minmax(0,1fr)_17rem] 3xl:grid-cols-[minmax(0,1fr)_40%]',
           )}
         >
           {showMap && (
