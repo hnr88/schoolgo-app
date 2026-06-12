@@ -106,34 +106,39 @@ export function AgentCard({
         </div>
       )}
 
-      <div className='mt-auto flex items-center justify-between gap-3 border-t border-divider pt-3'>
-        {partnerSchoolsCount > 0 && (
-          <span className='inline-flex items-center gap-1.5 text-caption font-medium text-foggy'>
-            <Building2 className='h-3.5 w-3.5' strokeWidth={2} aria-hidden='true' />
-            {partnerSchoolsLabel ?? partnerSchoolsCount}
-          </span>
-        )}
-        {completenessLabel && (
-          <span className='text-caption font-medium text-babu-700'>{completenessLabel}</span>
-        )}
-      </div>
+      {(partnerSchoolsCount > 0 || completenessLabel) && (
+        <div className='mt-auto flex items-center justify-between gap-3 border-t border-divider pt-3'>
+          {partnerSchoolsCount > 0 && (
+            <span className='inline-flex items-center gap-1.5 text-caption font-medium text-foggy'>
+              <Building2 className='h-3.5 w-3.5' strokeWidth={2} aria-hidden='true' />
+              {partnerSchoolsLabel ?? partnerSchoolsCount}
+            </span>
+          )}
+          {completenessLabel && (
+            <span className='text-caption font-medium text-babu-700'>{completenessLabel}</span>
+          )}
+        </div>
+      )}
 
-      {actionSlot && <div>{actionSlot}</div>}
-
-      {agentDocumentId && talkLabel && (
-        <ContactAgentDialog
-          agentDocumentId={agentDocumentId}
-          schoolDocumentId={schoolDocumentId}
-          trigger={
-            <button
-              type='button'
-              className='inline-flex w-full items-center justify-center gap-2 rounded-pill bg-primary px-4 py-2.5 text-body-sm font-semibold text-on-primary shadow-brand transition-colors hover:bg-rausch-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2'
-            >
-              <MessageSquare className='h-4 w-4' aria-hidden='true' />
-              {talkLabel}
-            </button>
-          }
-        />
+      {(actionSlot || (agentDocumentId && talkLabel)) && (
+        <div className='mt-auto flex flex-col gap-2'>
+          {actionSlot}
+          {agentDocumentId && talkLabel && (
+            <ContactAgentDialog
+              agentDocumentId={agentDocumentId}
+              schoolDocumentId={schoolDocumentId}
+              trigger={
+                <button
+                  type='button'
+                  className='inline-flex w-full items-center justify-center gap-2 rounded-pill bg-primary px-4 py-2.5 text-body-sm font-semibold text-on-primary shadow-brand transition-colors hover:bg-rausch-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2'
+                >
+                  <MessageSquare className='h-4 w-4' aria-hidden='true' />
+                  {talkLabel}
+                </button>
+              }
+            />
+          )}
+        </div>
       )}
     </article>
   );

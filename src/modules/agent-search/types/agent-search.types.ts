@@ -31,6 +31,9 @@ export interface AgentHit {
   qeacValidationStatus: string;
   partnerSchoolsCount: number;
   completeness: number;
+  lat: number | null;
+  lng: number | null;
+  city: string | null;
 }
 
 export interface AgentSearchResponse {

@@ -1,4 +1,3 @@
-export { AgentSearchContent } from '@/modules/agent-search/components/AgentSearchContent';
 export { AgentDirectoryList } from '@/modules/agent-search/components/AgentDirectoryList';
 export { AgentResultsPanel } from '@/modules/agent-search/components/AgentResultsPanel';
 export { AgentFilterSidebar } from '@/modules/agent-search/components/AgentFilterSidebar';
@@ -28,6 +27,5 @@ export type {
 export type {
   AgentResultsPanelProps,
   AgentFilterSidebarProps,
-  AgentSearchContentProps,
 } from '@/modules/agent-search/types/component.types';
 export type { AgentSearchStoreSnapshot } from '@/modules/agent-search/lib/store-to-typed-request';

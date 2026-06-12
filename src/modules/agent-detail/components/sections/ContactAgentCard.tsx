@@ -16,7 +16,7 @@ export function ContactAgentCard({ context }: ContactAgentCardProps) {
   return (
     <section
       aria-labelledby="agent-contact-heading"
-      className="rounded-lg border border-border bg-card p-5 shadow-2"
+      className="rounded-lg bg-card p-5 shadow-2"
     >
       <h2 id="agent-contact-heading" className="text-xl font-semibold text-ink-900">
         {t('heading')}

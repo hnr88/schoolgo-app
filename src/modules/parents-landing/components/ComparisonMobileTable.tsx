@@ -7,8 +7,8 @@ import type { ComparisonMobileTableProps } from '@/modules/parents-landing/types
 
 export function ComparisonMobileTable({ schools, rows, t }: ComparisonMobileTableProps) {
   return (
-    <div className='rounded-2xl shadow-4 lg:hidden'>
-      <div className='overflow-hidden rounded-2xl border border-border bg-card'>
+    <div className='lg:hidden'>
+      <div className='overflow-hidden rounded-lg bg-card shadow-2'>
         <table className='w-full'>
           <caption className='px-4 pb-4 pt-6 text-left text-xs font-semibold uppercase tracking-widest text-foggy'>
             {t('compareLabel')}

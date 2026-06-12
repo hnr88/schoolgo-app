@@ -12,6 +12,7 @@ import { mapStoreToTypedRequest } from '@/modules/school-search/lib/store-to-typ
 import { useMapViewportReporter } from '@/modules/school-search/hooks/useMapViewportReporter';
 import { useGeocodeSearch } from '@/modules/school-search/hooks/useGeocodeSearch';
 import { useMapResultFocus } from '@/modules/school-search/hooks/useMapResultFocus';
+import { useMapInvalidateSize } from '@/modules/school-search/hooks/useMapInvalidateSize';
 import { useStateFilterMapSync } from '@/modules/school-search/hooks/useStateFilterMapSync';
 import { MapZoomControls } from '@/modules/school-search/components/MapZoomControls';
 import { ScrollWheelZoomHandler } from '@/modules/school-search/components/ScrollWheelZoomHandler';
@@ -28,11 +29,8 @@ const EMPTY_SCHOOLS: SchoolHit[] = [];
 function MapLoadingFallback() {
   const t = useTranslations('SchoolSearch.map');
   return (
-    <Skeleton className='flex h-full w-full items-center justify-center rounded-lg'>
-      <span
-        className='text-caption font-semibold uppercase tracking-eyebrow text-foggy'
-
-      >
+    <Skeleton className='flex h-full min-h-content-viewport w-full items-center justify-center rounded-lg'>
+      <span className='text-caption font-semibold uppercase tracking-eyebrow text-foggy'>
         {t('loading')}
       </span>
     </Skeleton>
@@ -219,10 +217,11 @@ export function MapView({ className, activePortal }: MapViewProps) {
   useGeocodeSearch(map, freshSchools);
   useStateFilterMapSync(map);
   useMapResultFocus(map, freshSchools, cameraRequestKey, isFetching || isPlaceholderData);
+  useMapInvalidateSize(map, schools.length);
 
   return (
     <>
-      <div className={cn('relative h-full w-full overflow-hidden rounded-lg border border-border shadow-2', className)}>
+      <div className={cn('relative h-full min-h-content-viewport w-full overflow-hidden rounded-lg border border-border shadow-2', className)}>
         <LeafletMap schools={schools} onMapReady={handleMapReady} activePortal={activePortal} />
         {map && <ScrollWheelZoomHandler map={map} />}
       </div>

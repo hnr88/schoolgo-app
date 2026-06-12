@@ -6,8 +6,8 @@ import type { ComparisonDesktopTableProps } from '@/modules/parents-landing/type
 
 export function ComparisonDesktopTable({ schools, rows, t }: ComparisonDesktopTableProps) {
   return (
-    <div className='hidden rounded-2xl shadow-4 lg:block'>
-      <div className='overflow-hidden rounded-2xl border border-border bg-card'>
+    <div className='hidden lg:block'>
+      <div className='overflow-hidden rounded-lg bg-card shadow-2'>
         <table className='w-full'>
           <thead>
             <tr>

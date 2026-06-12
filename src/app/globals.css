@@ -671,6 +671,15 @@
       height: calc(100dvh - var(--header-height));
     }
   }
+
+  .min-h-content-viewport {
+    min-height: calc(100dvh - var(--header-height-mobile));
+  }
+  @media (min-width: 768px) {
+    .min-h-content-viewport {
+      min-height: calc(100dvh - var(--header-height));
+    }
+  }
 }
 
 button:not(:disabled),

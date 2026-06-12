@@ -35,21 +35,21 @@ export async function ParentsArticles() {
             return (
               <article
                 key={key}
-                className='group flex flex-col overflow-hidden rounded-lg border border-border bg-card shadow-2 transition-shadow hover:shadow-3'
+                className='group flex flex-col gap-2'
               >
-                <div className='relative aspect-[4/3] w-full bg-muted'>
+                <div className='relative aspect-[3/2] w-full overflow-hidden rounded-lg bg-muted transition-shadow duration-300 ease-out-quart group-hover:shadow-2 motion-reduce:transition-none'>
                   {cardImage && (
                     <Image
                       src={cardImage}
                       alt=''
                       fill
                       sizes='(max-width: 768px) 100vw, 400px'
-                      className='object-cover transition-transform duration-300 group-hover:scale-105'
+                      className='object-cover transition-transform duration-300 ease-out-quart group-hover:scale-105 motion-reduce:transition-none'
                       aria-hidden='true'
                     />
                   )}
                 </div>
-                <div className='flex flex-1 flex-col gap-3 p-6'>
+                <div className='mt-1 flex flex-1 flex-col gap-2'>
                   <h3 className='text-h4 font-semibold leading-snug text-ink-900'>
                     {guide.hero.breadcrumbLabel}
                   </h3>

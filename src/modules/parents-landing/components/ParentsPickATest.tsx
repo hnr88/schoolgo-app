@@ -34,7 +34,7 @@ export async function ParentsPickATest() {
             {testCards.map((key, index) => (
               <article
                 key={key}
-                className={`flex min-h-32 flex-col gap-1.5 rounded-xl border border-border bg-card p-4 shadow-2 ${
+                className={`flex min-h-32 flex-col gap-1.5 rounded-lg bg-card p-5 shadow-2 ${
                   index === testCards.length - 1 ? 'col-span-2' : ''
                 }`}
               >
@@ -56,7 +56,7 @@ export async function ParentsPickATest() {
               {PICK_A_TEST_FEATURED.map((key) => (
                 <article
                   key={key}
-                  className='flex flex-col gap-2 rounded-lg border border-border bg-card p-5 shadow-2 transition-shadow hover:shadow-3'
+                  className='flex flex-col gap-2 rounded-lg bg-card p-5 shadow-2 transition-shadow duration-300 ease-out-quart hover:shadow-3 motion-reduce:transition-none'
                 >
                   <h3 className='text-lg font-semibold text-ink-900'>
                     {t(`tests.${key}.name`)}
@@ -75,7 +75,7 @@ export async function ParentsPickATest() {
               {PICK_A_TEST_SECONDARY.map((key) => (
                 <article
                   key={key}
-                  className='flex flex-col gap-1 rounded-lg border border-border bg-card px-4 py-3 shadow-1'
+                  className='flex flex-col gap-2 rounded-lg bg-card p-5 shadow-2 transition-shadow duration-300 ease-out-quart hover:shadow-3 motion-reduce:transition-none'
                 >
                   <h3 className='text-body-sm font-semibold text-ink-900'>
                     {t(`tests.${key}.name`)}

@@ -5348,6 +5348,14 @@
       "title": "Locked filters",
       "description": "Sign in to unlock advanced agent filters.",
       "cta": "Sign in"
+    },
+    "map": {
+      "loading": "Loading map…",
+      "reset": "Reset filters and map",
+      "zoomIn": "Zoom in",
+      "zoomOut": "Zoom out",
+      "popupViewAgent": "View agent",
+      "popupVerified": "Verified"
     }
   },
   "AgentDetail": {

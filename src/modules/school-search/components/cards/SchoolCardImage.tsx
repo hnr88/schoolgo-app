@@ -25,7 +25,7 @@ export function SchoolCardImage({
   onUnauthenticatedBookmark,
 }: SchoolCardImageProps) {
   return (
-    <div className="relative flex aspect-[3/2] items-center justify-center overflow-hidden rounded-lg bg-muted transition-shadow duration-300 ease-out-quart group-hover:shadow-2 motion-reduce:transition-none">
+    <div className="relative flex aspect-[3/2] w-full items-center justify-center overflow-hidden rounded-lg bg-muted transition-shadow duration-300 ease-out-quart group-hover:shadow-2 motion-reduce:transition-none">
       {logo ? (
         <div className="flex h-full w-full items-center justify-center bg-muted">
           <div className="relative h-1/2 w-1/2 max-w-32">

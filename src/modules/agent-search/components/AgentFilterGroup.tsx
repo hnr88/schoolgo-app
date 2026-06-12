@@ -1,8 +1,6 @@
 'use client';
 
-import { Check } from 'lucide-react';
-import { cn } from '@/lib/utils';
-import { Label } from '@/components/ui/label';
+import { FilterChipGroup } from '@/modules/school-search/components/filters/FilterChipGroup';
 import type { AgentFilterOption } from '@/modules/agent-search/constants/agent-search.constants';
 
 interface AgentFilterGroupProps {
@@ -20,33 +18,26 @@ export function AgentFilterGroup({
   onToggle,
   optionLabel,
 }: AgentFilterGroupProps) {
+  const handleChange = (next: string[] | string | null) => {
+    const nextArr = Array.isArray(next) ? next : next ? [next] : [];
+    const removed = selected.filter((v) => !nextArr.includes(v));
+    const added = nextArr.filter((v) => !selected.includes(v));
+    removed.forEach(onToggle);
+    added.forEach(onToggle);
+  };
+
   return (
-    <div className='space-y-2 border-t border-divider px-4 py-3'>
-      <Label className='text-body-sm font-semibold text-ink-900'>{label}</Label>
-      <div className='flex flex-col gap-1'>
-        {options.map((opt) => {
-          const isSelected = selected.includes(opt.value);
-          return (
-            <button
-              key={opt.value}
-              type='button'
-              onClick={() => onToggle(opt.value)}
-              aria-pressed={isSelected}
-              className={cn(
-                'flex w-full items-center justify-between rounded-lg border px-2 py-0.5 text-left text-label font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1',
-                isSelected
-                  ? 'border-primary bg-rausch-50 text-primary shadow-1'
-                  : 'border-border bg-background text-foreground hover:border-quill hover:bg-muted',
-              )}
-            >
-              {optionLabel(opt.labelKey)}
-              {isSelected && (
-                <Check className='h-3 w-3 shrink-0 text-primary' strokeWidth={2.25} aria-hidden='true' />
-              )}
-            </button>
-          );
-        })}
-      </div>
+    <div className="flex flex-col gap-2">
+      <span className="text-xs font-medium text-muted-foreground">{label}</span>
+      <FilterChipGroup<string>
+        options={options}
+        value={selected}
+        onChange={handleChange}
+        multi
+        ariaLabel={label}
+        size="sm"
+        getLabel={(option) => optionLabel(option.labelKey)}
+      />
     </div>
   );
 }

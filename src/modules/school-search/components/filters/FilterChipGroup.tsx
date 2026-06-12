@@ -2,6 +2,7 @@
 
 import { cn } from '@/lib/utils';
 import type { FilterOption } from '@/modules/school-search/constants/filter-options.constants';
+import type { IconComponent } from '@/modules/design-system/types/design-system.types';
 
 type FilterChipGroupProps<T extends string> = {
   options: readonly FilterOption<T>[];
@@ -11,6 +12,7 @@ type FilterChipGroupProps<T extends string> = {
   ariaLabel: string;
   size?: 'sm' | 'md';
   getLabel: (option: FilterOption<T>) => string;
+  getIcon?: (option: FilterOption<T>) => IconComponent | undefined;
   className?: string;
   buttonClassName?: string;
 };
@@ -46,8 +48,8 @@ export function FilterChipGroup<T extends string>({
   onChange,
   multi,
   ariaLabel,
-  size = 'md',
   getLabel,
+  getIcon,
   className,
   buttonClassName,
 }: FilterChipGroupProps<T>) {
@@ -55,10 +57,11 @@ export function FilterChipGroup<T extends string>({
     <div
       role="group"
       aria-label={ariaLabel}
-      className={cn('flex flex-wrap gap-2', className)}
+      className={cn('flex flex-wrap items-center gap-2', className)}
     >
       {options.map((option) => {
         const selected = isSelected(value, option.value, multi);
+        const Icon = getIcon?.(option);
         return (
           <button
             key={option.value}
@@ -66,16 +69,17 @@ export function FilterChipGroup<T extends string>({
             aria-pressed={selected}
             onClick={() => onChange(handleToggle(value, option.value, multi))}
             className={cn(
-              'inline-flex shrink-0 cursor-pointer items-center rounded-pill border px-3 font-medium transition-colors',
-              'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1',
+              'inline-flex h-9 shrink-0 cursor-pointer items-center gap-1.5 rounded-pill px-3.5 text-body-sm',
+              'transition-colors ease-out-quart motion-reduce:transition-none',
+              'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2',
               'disabled:pointer-events-none disabled:opacity-50',
-              size === 'sm' ? 'py-1 text-xs' : 'py-1.5 text-sm',
               selected
-                ? 'border-primary bg-primary text-primary-foreground'
-                : 'border-border bg-background text-foreground hover:bg-muted',
+                ? 'bg-ink-900 font-semibold text-card'
+                : 'bg-muted font-medium text-ink-900 hover:bg-divider',
               buttonClassName,
             )}
           >
+            {Icon ? <Icon className="size-4" aria-hidden="true" /> : null}
             {getLabel(option)}
           </button>
         );

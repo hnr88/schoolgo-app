@@ -24,9 +24,8 @@ interface SpecResultsListProps {
 
 const SKELETON_KEYS = ['a', 'b', 'c', 'd', 'e', 'f'] as const;
 
-const GRID_BASE = 'grid grid-cols-1 gap-6 sm:grid-cols-2';
-const GRID_MAP_OPEN = 'lg:grid-cols-2';
-const GRID_MAP_CLOSED = 'lg:grid-cols-3 xl:grid-cols-4';
+const GRID_MAP_OPEN = 'grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3';
+const GRID_MAP_CLOSED = 'grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4';
 
 export function SpecResultsList({
   hits,
@@ -42,8 +41,7 @@ export function SpecResultsList({
 }: SpecResultsListProps) {
   const t = useTranslations('SchoolSearch');
 
-  const gridClassName =
-    className ?? cn(GRID_BASE, mapOpen ? GRID_MAP_OPEN : GRID_MAP_CLOSED);
+  const gridClassName = className ?? (mapOpen ? GRID_MAP_OPEN : GRID_MAP_CLOSED);
 
   if (isLoading) {
     return (

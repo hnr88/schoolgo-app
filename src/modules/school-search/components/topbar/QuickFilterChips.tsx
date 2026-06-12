@@ -74,7 +74,6 @@ export function QuickFilterChips() {
       ariaLabel={t('quickChip.groupAriaLabel')}
       size="sm"
       className="items-center"
-      buttonClassName="h-8 leading-none"
       getLabel={(option) => t(option.labelKey as never)}
     />
   );

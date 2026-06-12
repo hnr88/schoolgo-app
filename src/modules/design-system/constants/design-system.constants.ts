@@ -40,17 +40,17 @@ export const buttonStyles = cva(
 );
 
 export const chipStyles = cva(
-  'inline-flex items-center gap-1.5 rounded-pill text-sm font-semibold transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary',
+  'inline-flex h-9 shrink-0 items-center gap-1.5 rounded-pill px-3.5 text-body-sm transition-colors ease-out-quart focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 motion-reduce:transition-none',
   {
     variants: {
       variant: {
-        default: 'border border-transparent bg-muted text-hof hover:bg-ink-200',
-        selected: 'border border-rausch-700 bg-rausch-700 text-background shadow-brand',
-        soft: 'border border-transparent bg-muted text-hof',
+        default: 'bg-muted font-medium text-ink-900 hover:bg-divider',
+        selected: 'bg-ink-900 font-semibold text-card',
+        soft: 'bg-muted font-medium text-ink-900',
       },
       size: {
-        sm: 'px-2.5 py-1',
-        md: 'px-3.5 py-2',
+        sm: '',
+        md: '',
       },
     },
     defaultVariants: {

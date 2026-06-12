@@ -24,13 +24,13 @@ export function UnifiedSearchBar({ className }: UnifiedSearchBarProps) {
   const isSchools = mode === 'schools';
   const value = isSchools ? schoolQuery : agentQuery;
   const setQuery = isSchools ? setSchoolQuery : setAgentQuery;
-  const placeholder = isSchools ? t('placeholderSchools') : t('placeholderAgents');
+  const placeholder = t('search');
 
   return (
     <div
       className={cn(
-        'group flex items-center gap-3 rounded-pill border border-border bg-card py-2 pr-2 pl-5',
-        'transition-shadow ease-out-quart hover:shadow-2 focus-within:shadow-2 motion-reduce:transition-none',
+        'group flex items-center gap-3 rounded-pill border border-border bg-card py-2 pr-2 pl-5 shadow-2',
+        'transition-shadow ease-out-quart focus-within:shadow-3 motion-reduce:transition-none',
         className,
       )}
     >

@@ -1,8 +1,5 @@
 export { SearchBar } from '@/modules/school-search/components/SearchBar';
-export { FilterChips } from '@/modules/school-search/components/FilterChips';
-export { FilterSidebar } from '@/modules/school-search/components/FilterSidebar';
 export { SearchSchoolCard } from '@/modules/school-search/components/SchoolCard';
-export { SchoolResultsPanel } from '@/modules/school-search/components/SchoolResultsPanel';
 export { SaveSearchButton } from '@/modules/school-search/components/SaveSearchButton';
 export { SavedSearchesPanel } from '@/modules/school-search/components/SavedSearchesPanel';
 export { SavedSchoolsPage } from '@/modules/school-search/components/SavedSchoolsPage';

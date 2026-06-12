@@ -65,9 +65,9 @@ export function SpecSchoolCard({
         onUnauthenticatedBookmark={onUnauthenticatedBookmark}
       />
 
-      <div className="flex flex-col gap-1">
-        <h3 className="line-clamp-2 text-body-sm font-semibold text-ink-900">{hit.name}</h3>
-        <p className="text-body-sm text-foggy">
+      <div className="mt-1 flex flex-col gap-1">
+        <h3 className="line-clamp-1 text-body-sm font-semibold text-ink-900">{hit.name}</h3>
+        <p className="line-clamp-1 text-body-sm text-foggy">
           {hit.suburb}
           {hit.state ? `, ${hit.state}` : ''}
         </p>

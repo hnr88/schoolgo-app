@@ -4,15 +4,6 @@ import type { SearchCapability } from '@/modules/unified-search';
 import type { AutocompleteSchoolHit } from '@/modules/school-search/types/autocomplete-schools.types';
 import type { AutocompleteSuburbHit } from '@/modules/school-search/types/autocomplete-suburbs.types';
 
-export interface FilterChipsProps {
-  className?: string;
-}
-
-export interface FilterSidebarProps {
-  className?: string;
-  cardClassName?: string;
-}
-
 export interface MapViewProps {
   className?: string;
   activePortal: Portal;
@@ -20,16 +11,6 @@ export interface MapViewProps {
 
 export interface SearchBarProps {
   className?: string;
-}
-
-export interface SearchLayoutProps {
-  children: ReactNode;
-  guestAccess?: boolean;
-}
-
-export interface SchoolResultsPanelProps {
-  activePortal: Portal;
-  variant?: 'default' | 'parent';
 }
 
 export interface SearchAutocompleteDropdownProps {
