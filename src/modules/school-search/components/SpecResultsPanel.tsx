@@ -142,7 +142,7 @@ export function SpecResultsPanel({
         isLoading={isLoading}
         isError={isError}
         onRetry={handleRetry}
-        className="grid min-h-0 flex-1 grid-cols-1 gap-3 overflow-y-auto pb-24 sm:grid-cols-2"
+        className="grid min-h-0 flex-1 grid-cols-1 gap-3 overflow-y-auto pb-24 3xl:grid-cols-2"
         emptyClassName="col-span-full"
       />
       {isCapped && teaserSlot}

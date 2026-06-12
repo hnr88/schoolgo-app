@@ -75,7 +75,7 @@ function professionalServiceLd(agent: AgentDetail, url: string): Record<string, 
 function breadcrumbLd(agent: AgentDetail, portal: Portal, locale?: string): Record<string, unknown> {
   const base = portalUrl(portal, locale);
   const homePath = portal === 'parent' ? '' : `/${portal}`;
-  const agentsPath = portal === 'parent' ? '/find-an-agent' : `/${portal}/agents`;
+  const agentsPath = portal === 'parent' ? '/search?mode=agents' : `/${portal}/agents`;
   const li = (position: number, name: string, item?: string): Record<string, unknown> =>
     item ? { '@type': 'ListItem', position, name, item } : { '@type': 'ListItem', position, name };
   return {

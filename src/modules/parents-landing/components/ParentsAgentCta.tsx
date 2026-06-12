@@ -34,7 +34,7 @@ export async function ParentsAgentCta() {
             />
 
             <Link
-              href='/find-an-agent'
+              href='/search?mode=agents'
               role='search'
               aria-label={t('searchAriaLabel')}
               className='flex w-full max-w-2xl items-center gap-3 rounded-pill border border-background/15 bg-background/10 p-1.5 pl-5 text-left transition-colors hover:bg-background/15 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-ink-900'
@@ -54,7 +54,7 @@ export async function ParentsAgentCta() {
             </Link>
 
             <div className='flex flex-wrap items-center justify-center gap-x-3 gap-y-2'>
-              <CtaLink href='/find-an-agent' variant='secondary' size='md'>
+              <CtaLink href='/search?mode=agents' variant='secondary' size='md'>
                 {t('ctaSecondary')}
               </CtaLink>
               <span className='inline-flex items-center gap-1.5 text-body-sm text-background/65'>

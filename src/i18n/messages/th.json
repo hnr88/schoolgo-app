@@ -6112,6 +6112,11 @@
     "ctaPrimary": "Find an agent"
   },
   "UnifiedSearch": {
+    "filters": {
+      "label": "ตัวกรอง",
+      "show": "แสดงตัวกรอง",
+      "hide": "ซ่อนตัวกรอง"
+    },
     "toggle": {
       "ariaLabel": "Search type",
       "schools": "Schools",

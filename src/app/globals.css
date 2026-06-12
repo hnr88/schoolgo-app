@@ -28,6 +28,9 @@
   --spacing-sidebar: 18rem;
   --spacing-results-panel: 18.75rem;
 
+  /* Breakpoints — extend Tailwind defaults (max default is 2xl=1536px) */
+  --breakpoint-3xl: 1921px; /* strictly wider than Full HD (1920px) */
+
   /* Display heading tokens */
   --leading-display: 1.1;
   --leading-display-lg: 1.05;

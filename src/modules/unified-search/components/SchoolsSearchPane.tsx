@@ -10,6 +10,7 @@ import { CompareBar } from '@/modules/school-search/components/CompareBar';
 import { SpecFilterSidebar } from '@/modules/school-search/components/SpecFilterSidebar';
 import { SpecResultsPanel } from '@/modules/school-search/components/SpecResultsPanel';
 import { SearchTopBar } from '@/modules/school-search/components/topbar/SearchTopBar';
+import { useSearchFiltersStore } from '@/modules/unified-search/stores/use-search-filters-store';
 import type { SearchCapability } from '@/modules/unified-search/types/unified-search.types';
 
 // MapView statically imports leaflet-value hooks (useGeocodeSearch/useMapResultFocus),
@@ -50,10 +51,11 @@ function SchoolsTeaserSlot() {
 export function SchoolsSearchPane({ activePortal, capability, className }: SchoolsSearchPaneProps) {
   const showMap = capability.canMap;
   const isCapped = capability.resultCap != null;
+  const filtersOpen = useSearchFiltersStore((s) => s.open);
 
   return (
     <div className={cn('flex min-h-0 w-full flex-1', className)}>
-      <SpecFilterSidebar capability={capability} alwaysOn />
+      <SpecFilterSidebar capability={capability} alwaysOn open={filtersOpen} />
 
       <section className="flex min-h-0 min-w-0 flex-1 flex-col gap-2 p-2 md:p-3">
         <SearchTopBar />

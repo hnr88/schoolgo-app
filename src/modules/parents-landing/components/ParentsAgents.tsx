@@ -22,7 +22,7 @@ export async function ParentsAgents() {
             subheading={t('subheading')}
           />
           <Link
-            href='/find-an-agent'
+            href='/search?mode=agents'
             className='inline-flex shrink-0 items-center gap-1.5 text-body-sm font-semibold text-rausch-700 underline-offset-4 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2'
           >
             {t('browseAll')}

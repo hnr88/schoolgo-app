@@ -1,8 +1,5 @@
-export { AgentDirectoryList } from '@/modules/agent-search/components/AgentDirectoryList';
 export { AgentResultsPanel } from '@/modules/agent-search/components/AgentResultsPanel';
 export { AgentFilterSidebar } from '@/modules/agent-search/components/AgentFilterSidebar';
-export { getPublicAgentsInitial } from '@/modules/agent-search/lib/public-agents-ssr';
-export type { PublicAgentsInitial } from '@/modules/agent-search/lib/public-agents-ssr';
 export { useAgentSearch } from '@/modules/agent-search/queries/use-agent-search.query';
 export { useAutocompleteAgents } from '@/modules/agent-search/queries/use-autocomplete-agents.query';
 export { autocompleteAgents } from '@/modules/agent-search/lib/autocomplete-agents-api';

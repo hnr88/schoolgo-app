@@ -14,7 +14,7 @@ import { AgentSortControl } from '@/modules/agent-search/components/AgentSortCon
 import type { AgentResultsPanelProps } from '@/modules/agent-search/types/component.types';
 
 const GRID_TRANSITION = 'transition-opacity duration-200';
-const GRID_MAP_OPEN = 'grid grid-cols-1 gap-4 sm:grid-cols-2';
+const GRID_MAP_OPEN = 'grid grid-cols-1 gap-4 3xl:grid-cols-2';
 const GRID_MAP_CLOSED = 'grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4';
 
 export function AgentResultsPanel({

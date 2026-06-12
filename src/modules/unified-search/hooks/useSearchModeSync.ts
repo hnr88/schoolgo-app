@@ -8,7 +8,7 @@ import { resolveSearchMode } from '@/modules/unified-search/lib/resolve-search-m
 import { useSearchModeStore } from '@/modules/unified-search/stores/use-search-mode-store';
 import type { SearchMode } from '@/modules/unified-search/types/unified-search.types';
 
-export function useSearchModeSync(defaultMode: SearchMode): SearchMode {
+export function useSearchModeSync(defaultMode: SearchMode, enabled = true): SearchMode {
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
@@ -20,17 +20,19 @@ export function useSearchModeSync(defaultMode: SearchMode): SearchMode {
   const isSeeded = useRef(false);
 
   useEffect(() => {
-    if (isSeeded.current) return;
+    if (!enabled || isSeeded.current) return;
     isSeeded.current = true;
     setMode(resolveSearchMode(paramValue, defaultMode));
-  }, [paramValue, defaultMode, setMode]);
+  }, [enabled, paramValue, defaultMode, setMode]);
 
   useEffect(() => {
-    if (!isSeeded.current || paramValue === mode) return;
+    if (!enabled || !isSeeded.current || paramValue === mode) return;
     const params = new URLSearchParams(searchParams.toString());
     params.set(SEARCH_MODE_PARAM, mode);
     router.replace(`${pathname}?${params.toString()}`);
-  }, [mode, paramValue, pathname, router, searchParams]);
+  }, [enabled, mode, paramValue, pathname, router, searchParams]);
 
-  return mode;
+  // When disabled (e.g. agent viewers, who only ever search schools) the mode is
+  // locked to schools and the URL is never rewritten to ?mode=agents.
+  return enabled ? mode : 'schools';
 }

@@ -24,7 +24,7 @@ const PARENT_SECONDARY_COLUMN: FooterColumn = {
   links: [
     { label: 'How it works', path: '/#how-it-works' },
     { label: 'Trusted agents', path: '/#trusted-agents' },
-    { label: 'Find an agent', path: '/find-an-agent' },
+    { label: 'Find an agent', path: '/search?mode=agents' },
     { label: 'FAQ', path: '/#faq' },
     { label: 'Parent sign in', path: '/sign-in' },
     { label: 'Create parent account', path: '/sign-up' },

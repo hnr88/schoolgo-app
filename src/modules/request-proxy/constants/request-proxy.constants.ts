@@ -50,5 +50,4 @@ export const PUBLIC_CONTENT_PREFIXES = [
   'pathways',
   'company',
   'school-search',
-  'find-an-agent',
 ] as const;

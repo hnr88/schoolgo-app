@@ -6112,6 +6112,11 @@
     "ctaPrimary": "Find an agent"
   },
   "UnifiedSearch": {
+    "filters": {
+      "label": "필터",
+      "show": "필터 표시",
+      "hide": "필터 숨기기"
+    },
     "toggle": {
       "ariaLabel": "Search type",
       "schools": "Schools",

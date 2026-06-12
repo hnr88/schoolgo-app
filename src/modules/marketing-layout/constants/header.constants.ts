@@ -12,7 +12,7 @@ export const SUB_MENU_ITEMS: Record<
     { key: 'compareSchools', href: '/search', icon: 'compare' },
     { key: 'schoolTypes', href: '/school-search/religious-and-independent-schools', icon: 'school' },
     { key: 'englishRequirements', href: '/international/english-test-pathways', icon: 'languages' },
-    { key: 'findAgent', href: '/find-an-agent', icon: 'users' },
+    { key: 'findAgent', href: '/search?mode=agents', icon: 'users' },
   ],
   guides: [
     { key: 'chooseSchool', href: '/guides/choose-a-school', icon: 'book' },

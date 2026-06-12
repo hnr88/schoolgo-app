@@ -54,7 +54,7 @@ export default async function NotFound() {
             {t('goHome')}
           </Link>
           <Link
-            href='/find-an-agent'
+            href='/search?mode=agents'
             data-slot='button'
             className={buttonVariants({ variant: 'outline', className: 'h-auto rounded-xl px-8 py-3 text-sm font-semibold' })}
           >

@@ -8,6 +8,7 @@ import { AgentPagination } from '@/modules/agent-search/components/AgentPaginati
 import { AgentResultsPanel } from '@/modules/agent-search/components/AgentResultsPanel';
 import { AgentSearchTopBar } from '@/modules/agent-search/components/AgentSearchTopBar';
 import { useAgentSearchWithFilters } from '@/modules/agent-search/hooks/useAgentSearchWithFilters';
+import { useSearchFiltersStore } from '@/modules/unified-search/stores/use-search-filters-store';
 import type { SearchCapability } from '@/modules/unified-search/types/unified-search.types';
 
 // AgentMapView statically imports leaflet (references `window`), so it must NOT
@@ -30,10 +31,11 @@ export function AgentsSearchPane({ activePortal, capability, className }: Agents
   const total = data?.data?.total ?? 0;
   const pageSize = data?.data?.pageSize ?? 0;
   const showMap = capability.canMap;
+  const filtersOpen = useSearchFiltersStore((s) => s.open);
 
   return (
     <div className={cn('flex min-h-0 w-full flex-1', className)}>
-      <AgentFilterSidebar capability={capability} />
+      <AgentFilterSidebar capability={capability} open={filtersOpen} />
 
       <section className="flex min-h-0 min-w-0 flex-1 flex-col gap-2 p-2 md:p-3">
         <AgentSearchTopBar />

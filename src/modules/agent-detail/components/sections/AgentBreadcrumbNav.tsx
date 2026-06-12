@@ -25,7 +25,7 @@ export async function AgentBreadcrumbNav({ agent, activePortal }: AgentBreadcrum
   const t = await getTranslations('AgentDetail.breadcrumbs');
 
   const homeHref = activePortal === 'parent' ? '/' : `/${activePortal}`;
-  const agentsHref = activePortal === 'parent' ? '/find-an-agent' : `/${activePortal}/agents`;
+  const agentsHref = activePortal === 'parent' ? '/search?mode=agents' : `/${activePortal}/agents`;
 
   return (
     <Breadcrumb>

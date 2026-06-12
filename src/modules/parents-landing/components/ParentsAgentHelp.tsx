@@ -44,7 +44,7 @@ export async function ParentsAgentHelp() {
         </div>
 
         <div className='flex flex-wrap gap-3'>
-          <CtaLink href='/find-an-agent' size='lg' arrow>
+          <CtaLink href='/search?mode=agents' size='lg' arrow>
             {t('ctaPrimary')}
           </CtaLink>
         </div>

@@ -6112,6 +6112,11 @@
     "ctaPrimary": "Find an agent"
   },
   "UnifiedSearch": {
+    "filters": {
+      "label": "Penapis",
+      "show": "Tunjukkan penapis",
+      "hide": "Sembunyikan penapis"
+    },
     "toggle": {
       "ariaLabel": "Search type",
       "schools": "Schools",

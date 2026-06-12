@@ -12,4 +12,5 @@ export interface AgentFilterSidebarProps {
   capability: SearchCapability;
   className?: string;
   cardClassName?: string;
+  open?: boolean;
 }

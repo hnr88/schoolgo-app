@@ -23,9 +23,10 @@ interface SpecFilterSidebarProps {
   capability?: SearchCapability;
   className?: string;
   alwaysOn?: boolean;
+  open?: boolean;
 }
 
-export function SpecFilterSidebar({ capability, className, alwaysOn = false }: SpecFilterSidebarProps) {
+export function SpecFilterSidebar({ capability, className, alwaysOn = false, open = true }: SpecFilterSidebarProps) {
   const t = useTranslations('SchoolSearch.spec');
   const tFilters = useTranslations('SchoolSearch.filters');
   const searchParams = useSearchParams();
@@ -63,12 +64,15 @@ export function SpecFilterSidebar({ capability, className, alwaysOn = false }: S
   return (
     <aside
       className={cn(
-        'hidden shrink-0 lg:block lg:h-full lg:w-[22rem] lg:py-2 lg:pl-3',
+        'hidden shrink-0 overflow-hidden transition-all duration-300 ease-out-quart lg:block lg:h-full lg:py-2',
+        open
+          ? 'lg:w-[22rem] lg:pl-3 lg:opacity-100'
+          : 'lg:w-0 lg:pl-0 lg:opacity-0 lg:pointer-events-none',
         className,
       )}
       data-testid="spec-filter-sidebar"
     >
-      <div className="flex h-full min-h-0 flex-col overflow-hidden rounded-lg border border-border bg-card shadow-2">
+      <div className="flex h-full w-[21.25rem] min-h-0 flex-col overflow-hidden rounded-lg border border-border bg-card shadow-2">
         <div className="flex shrink-0 items-center justify-between gap-2 border-b border-divider bg-rausch-50 px-4 py-2.5">
           <div className="flex items-center gap-2">
             <span className="text-caption font-semibold uppercase text-rausch-700">
