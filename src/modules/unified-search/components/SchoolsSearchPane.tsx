@@ -36,7 +36,7 @@ function SchoolsTeaserSlot() {
       <Link
         href="/sign-in"
         className={cn(
-          'inline-flex items-center rounded-pill bg-primary px-6 py-2.5 text-body-sm font-medium text-on-primary',
+          'inline-flex items-center rounded-pill bg-primary px-6 py-3 text-body font-semibold text-on-primary',
           'transition ease-out-quart hover:bg-primary-strong active:scale-95 motion-reduce:transition-none',
           'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2',
         )}
@@ -52,16 +52,16 @@ export function SchoolsSearchPane({ activePortal, capability, className }: Schoo
   const isCapped = capability.resultCap != null;
 
   return (
-    <div className={cn('flex w-full', className)}>
+    <div className={cn('flex min-h-0 w-full flex-1', className)}>
       <SpecFilterSidebar capability={capability} alwaysOn />
 
-      <section className="flex min-w-0 flex-1 flex-col gap-3 p-3 md:p-4">
+      <section className="flex min-h-0 min-w-0 flex-1 flex-col gap-2 p-2 md:p-3">
         <SearchTopBar />
 
         <div
           className={cn(
-            'min-h-0 flex-1',
-            showMap && 'lg:grid lg:grid-cols-[1fr_minmax(0,40%)] lg:gap-4',
+            'flex min-h-0 flex-1 flex-col',
+            showMap && 'lg:grid lg:grid-rows-1 lg:grid-cols-[1fr_minmax(0,40%)] lg:gap-3',
           )}
         >
           <SpecResultsPanel
@@ -72,7 +72,7 @@ export function SchoolsSearchPane({ activePortal, capability, className }: Schoo
           />
 
           {showMap && (
-            <div className="hidden lg:sticky lg:top-[var(--header-height)] lg:block lg:h-content-viewport">
+            <div className="hidden min-h-0 lg:block lg:h-full">
               <MapView activePortal={activePortal} />
             </div>
           )}

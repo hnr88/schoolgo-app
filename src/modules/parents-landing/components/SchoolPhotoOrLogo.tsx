@@ -17,7 +17,7 @@ export function SchoolPhotoOrLogo({
         <div
           className={cn(
             'flex h-full w-full items-center justify-center bg-gradient-to-br',
-            getSchoolAvatarTheme(name).surface,
+            getSchoolAvatarTheme(name).logoSurface,
           )}
         >
           <div className='relative h-1/2 w-1/2 max-w-32'>

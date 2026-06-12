@@ -5,6 +5,7 @@ export { Chip } from '@/modules/design-system/components/Chip';
 export { SchoolCard } from '@/modules/design-system/components/SchoolCard';
 export { AgentCard } from '@/modules/design-system/components/AgentCard';
 export { DefaultPhoto } from '@/modules/design-system/components/DefaultPhoto';
+export { getSchoolAvatarTheme, getSchoolInitials } from '@/modules/design-system/lib/school-avatar';
 export { SectionContainer } from '@/modules/design-system/components/SectionContainer';
 export { SectionHeader } from '@/modules/design-system/components/SectionHeader';
 export { CtaLink } from '@/modules/design-system/components/CtaLink';

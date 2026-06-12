@@ -12,13 +12,13 @@ export function SearchTopBar({ className }: SearchTopBarProps) {
   return (
     <div
       className={cn(
-        'flex flex-col gap-4 rounded-lg border border-border bg-card px-4 py-3 shadow-1',
+        'flex shrink-0 flex-col gap-2 rounded-lg border border-border bg-card px-3 py-2 shadow-1',
         className,
       )}
       data-testid="spec-top-bar"
     >
       <AnnualFeeSlider />
-      <div className="flex flex-wrap items-center gap-2">
+      <div className="flex flex-wrap items-center gap-1.5">
         <QuickFilterChips />
       </div>
     </div>

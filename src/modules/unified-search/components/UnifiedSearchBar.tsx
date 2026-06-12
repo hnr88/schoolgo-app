@@ -29,7 +29,7 @@ export function UnifiedSearchBar({ className }: UnifiedSearchBarProps) {
   return (
     <div
       className={cn(
-        'group flex items-center gap-3 rounded-pill border border-border bg-card py-2 pr-2 pl-5 shadow-2',
+        'group flex items-center gap-2 rounded-pill border border-border bg-card py-1.5 pr-1.5 pl-4 shadow-2',
         'transition-shadow ease-out-quart focus-within:shadow-3 motion-reduce:transition-none',
         className,
       )}
@@ -51,7 +51,7 @@ export function UnifiedSearchBar({ className }: UnifiedSearchBarProps) {
         type="button"
         aria-label={t('search')}
         className={cn(
-          'grid size-12 shrink-0 place-items-center rounded-pill bg-primary text-on-primary',
+          'grid size-10 shrink-0 place-items-center rounded-pill bg-primary text-on-primary',
           'transition ease-out-quart hover:bg-primary-strong active:scale-95 motion-reduce:transition-none',
           'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2',
         )}

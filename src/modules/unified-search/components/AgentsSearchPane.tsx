@@ -32,19 +32,19 @@ export function AgentsSearchPane({ activePortal, capability, className }: Agents
   const showMap = capability.canMap;
 
   return (
-    <div className={cn('flex w-full', className)}>
+    <div className={cn('flex min-h-0 w-full flex-1', className)}>
       <AgentFilterSidebar capability={capability} />
 
-      <section className="flex min-w-0 flex-1 flex-col gap-3 p-3 md:p-4">
+      <section className="flex min-h-0 min-w-0 flex-1 flex-col gap-2 p-2 md:p-3">
         <AgentSearchTopBar />
 
         <div
           className={cn(
-            'min-h-0 flex-1',
-            showMap && 'lg:grid lg:grid-cols-[1fr_minmax(0,40%)] lg:gap-4',
+            'flex min-h-0 flex-1 flex-col',
+            showMap && 'lg:grid lg:grid-rows-1 lg:grid-cols-[1fr_minmax(0,40%)] lg:gap-3',
           )}
         >
-          <div className="flex flex-col gap-6">
+          <div className="flex min-h-0 flex-1 flex-col gap-3 overflow-y-auto pb-4">
             <AgentResultsPanel
               activePortal={activePortal}
               capability={capability}
@@ -54,7 +54,7 @@ export function AgentsSearchPane({ activePortal, capability, className }: Agents
           </div>
 
           {showMap && (
-            <div className="hidden lg:sticky lg:top-[var(--header-height)] lg:block lg:h-content-viewport">
+            <div className="hidden min-h-0 lg:block lg:h-full">
               <AgentMapView activePortal={activePortal} capability={capability} />
             </div>
           )}

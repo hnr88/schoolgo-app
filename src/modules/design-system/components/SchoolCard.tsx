@@ -52,8 +52,13 @@ export function SchoolCard({
   const hasShortlist = Boolean(shortlistAddLabel && shortlistRemoveLabel);
 
   const card = (
-    <article className={cn('group flex flex-col gap-2', className)}>
-      <div className='relative aspect-[3/2] w-full overflow-hidden rounded-lg bg-muted transition-shadow duration-300 ease-out-quart group-hover:shadow-2 motion-reduce:transition-none'>
+    <article
+      className={cn(
+        'group flex flex-col gap-2 rounded-2xl bg-card p-2.5 shadow-1 transition-shadow duration-300 ease-out-quart hover:shadow-2 motion-reduce:transition-none',
+        className,
+      )}
+    >
+      <div className='relative aspect-[3/2] w-full overflow-hidden rounded-lg bg-muted'>
         {photoUrl && !photoFailed ? (
           <Image
             src={photoUrl}
@@ -68,7 +73,7 @@ export function SchoolCard({
           <div
             className={cn(
               'flex h-full w-full items-center justify-center bg-gradient-to-br',
-              getSchoolAvatarTheme(name).surface,
+              getSchoolAvatarTheme(name).logoSurface,
             )}
           >
             <div className='relative h-1/2 w-1/2 max-w-32'>
@@ -159,7 +164,7 @@ export function SchoolCard({
       <Link
         href={href}
         aria-label={name}
-        className='block rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2'
+        className='block rounded-2xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2'
       >
         {card}
       </Link>

@@ -50,7 +50,7 @@ export function SpecSchoolCard({
     <Link
       href={`/${activePortal}/schools/${hit.slug}`}
       className={cn(
-        'group flex flex-col gap-2 rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2',
+        'group flex flex-col gap-2 rounded-2xl bg-card p-2.5 shadow-1 transition-shadow ease-out-quart hover:shadow-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 motion-reduce:transition-none',
         className,
       )}
       data-testid={`spec-school-card-${hit.documentId}`}

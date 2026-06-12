@@ -24,7 +24,7 @@ export function SearchTypeToggle({ className }: SearchTypeToggleProps) {
     <div
       role="group"
       aria-label={t('ariaLabel')}
-      className={cn('inline-flex shrink-0 items-center gap-1 rounded-pill bg-muted p-1', className)}
+      className={cn('inline-flex shrink-0 items-center gap-0.5 rounded-pill bg-muted p-0.5', className)}
     >
       {OPTIONS.map(({ mode: optionMode, icon: Icon, labelKey }) => {
         const isActive = mode === optionMode;
@@ -35,7 +35,7 @@ export function SearchTypeToggle({ className }: SearchTypeToggleProps) {
             aria-pressed={isActive}
             onClick={() => setMode(optionMode)}
             className={cn(
-              'inline-flex h-9 items-center gap-2 rounded-pill px-4 text-body-sm font-medium',
+              'inline-flex h-8 items-center gap-1.5 rounded-pill px-3 text-body-sm font-medium',
               'transition ease-out-quart motion-reduce:transition-none',
               'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-muted',
               isActive

@@ -37,12 +37,12 @@ export function SortControl({ isAdvanced, className }: SortControlProps) {
       <SelectTrigger
         size="sm"
         aria-label={t('label')}
-        className={cn('gap-1.5 rounded-pill text-xs font-medium', className)}
+        className={cn('h-9! gap-1.5 rounded-pill text-body-sm font-medium', className)}
       >
         <span className="text-muted-foreground">{t('label')}</span>
         <SelectValue />
       </SelectTrigger>
-      <SelectContent>
+      <SelectContent className="min-w-64 p-1">
         {ADVANCED_SORT_OPTIONS.map((opt) => {
           const locked = !isAdvanced && isAdvancedSort(opt.value);
           return (
@@ -50,7 +50,7 @@ export function SortControl({ isAdvanced, className }: SortControlProps) {
               key={opt.value}
               value={opt.value}
               disabled={locked}
-              className="text-xs"
+              className="min-h-9 gap-1.5 py-1.5 pl-3 text-body-sm"
             >
               <span className="inline-flex items-center gap-1.5">
                 {locked && (
@@ -65,16 +65,16 @@ export function SortControl({ isAdvanced, className }: SortControlProps) {
           );
         })}
         {!isAdvanced && (
-          <div className="border-t border-divider px-2 py-1.5">
+          <div className="mt-1 border-t border-divider px-1 pt-1">
             <Link
               href="/sign-in"
               className={cn(
-                'inline-flex items-center gap-1 text-caption font-medium text-primary',
-                'transition-colors hover:underline',
+                'flex w-full items-center gap-2 rounded-md px-2 py-2 text-body-sm font-medium text-primary',
+                'transition-colors hover:bg-accent',
                 'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1',
               )}
             >
-              <Lock className="size-3" aria-hidden="true" />
+              <Lock className="size-3.5 shrink-0" aria-hidden="true" />
               {t('signInCta')}
             </Link>
           </div>

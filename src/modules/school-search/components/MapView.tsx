@@ -29,7 +29,7 @@ const EMPTY_SCHOOLS: SchoolHit[] = [];
 function MapLoadingFallback() {
   const t = useTranslations('SchoolSearch.map');
   return (
-    <Skeleton className='flex h-full min-h-content-viewport w-full items-center justify-center rounded-lg'>
+    <Skeleton className='flex h-full w-full items-center justify-center rounded-lg'>
       <span className='text-caption font-semibold uppercase tracking-eyebrow text-foggy'>
         {t('loading')}
       </span>
@@ -221,7 +221,7 @@ export function MapView({ className, activePortal }: MapViewProps) {
 
   return (
     <>
-      <div className={cn('relative h-full min-h-content-viewport w-full overflow-hidden rounded-lg border border-border shadow-2', className)}>
+      <div className={cn('relative h-full w-full overflow-hidden rounded-lg border border-border shadow-2', className)}>
         <LeafletMap schools={schools} onMapReady={handleMapReady} activePortal={activePortal} />
         {map && <ScrollWheelZoomHandler map={map} />}
       </div>

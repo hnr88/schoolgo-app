@@ -125,7 +125,7 @@ export function SpecResultsPanel({
 
   return (
     <div
-      className={cn('flex flex-1 flex-col gap-3 overflow-hidden', className)}
+      className={cn('flex min-h-0 flex-1 flex-col gap-3 overflow-hidden', className)}
       data-testid="spec-results-panel"
     >
       <div className="flex items-center justify-between gap-3 px-1">

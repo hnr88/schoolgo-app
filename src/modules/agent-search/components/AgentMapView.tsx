@@ -69,7 +69,7 @@ export function AgentMapView({ activePortal, capability, className }: AgentMapVi
   return (
     <div
       className={cn(
-        'relative h-full min-h-content-viewport w-full overflow-hidden rounded-lg border border-border shadow-2',
+        'relative h-full w-full overflow-hidden rounded-lg border border-border shadow-2',
         className,
       )}
     >

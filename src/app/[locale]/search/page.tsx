@@ -50,7 +50,7 @@ export default async function SearchPage({
     <>
       <h1 className='sr-only'>{t('parentTitle')}</h1>
       <MarketingHeader activePortal='parent' fullWidth />
-      <main className='flex w-full bg-muted pt-14 md:pt-18'>
+      <main className='flex h-dvh w-full overflow-hidden bg-muted pt-14 md:pt-18'>
         <UnifiedSearchShell activePortal='parent' access='public' defaultMode='schools' />
       </main>
     </>
