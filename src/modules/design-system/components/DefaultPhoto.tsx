@@ -5,27 +5,27 @@ import {
   getSchoolAvatarTheme,
   getSchoolInitials,
 } from '@/modules/design-system/lib/school-avatar';
-import type { IconComponent } from '@/modules/design-system/types/design-system.types';
 
 interface DefaultPhotoProps {
   className?: string;
   name?: string;
 }
 
-const WATERMARK_ICONS: IconComponent[] = [GraduationCap, Building2, School];
+const WATERMARK_CLASS = 'pointer-events-none absolute -bottom-6 -right-6 h-40 w-40 opacity-25';
 
-function getWatermarkIcon(name: string): IconComponent {
+function getWatermarkIndex(name: string): number {
   let sum = 0;
   for (let i = 0; i < name.length; i++) {
     sum += name.charCodeAt(i);
   }
-  return WATERMARK_ICONS[sum % WATERMARK_ICONS.length];
+  return sum % 3;
 }
 
 export function DefaultPhoto({ className, name }: DefaultPhotoProps) {
   if (name) {
     const theme = getSchoolAvatarTheme(name);
-    const Watermark = getWatermarkIcon(name);
+    const watermarkClassName = cn(WATERMARK_CLASS, theme.watermark);
+    const watermarkIndex = getWatermarkIndex(name);
 
     return (
       <div
@@ -62,14 +62,15 @@ export function DefaultPhoto({ className, name }: DefaultPhotoProps) {
           <rect width='100%' height='100%' fill='url(#default-photo-name-waves)' />
         </svg>
 
-        <Watermark
-          className={cn(
-            'pointer-events-none absolute -bottom-6 -right-6 h-40 w-40 opacity-25',
-            theme.watermark,
-          )}
-          strokeWidth={1.25}
-          aria-hidden='true'
-        />
+        {watermarkIndex === 0 && (
+          <GraduationCap className={watermarkClassName} strokeWidth={1.25} aria-hidden='true' />
+        )}
+        {watermarkIndex === 1 && (
+          <Building2 className={watermarkClassName} strokeWidth={1.25} aria-hidden='true' />
+        )}
+        {watermarkIndex === 2 && (
+          <School className={watermarkClassName} strokeWidth={1.25} aria-hidden='true' />
+        )}
 
         <span
           className={cn(

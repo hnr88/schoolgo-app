@@ -354,7 +354,8 @@
     "verifiedLabel": "[TODO: th] QEAC verified",
     "partnerSchools": "[TODO: th] {count, plural, one {# partner school} other {# partner schools}}",
     "empty": "[TODO: th] Verified agents are coming soon. Check back shortly.",
-    "viewAll": "[TODO: th] Find an agent"
+    "viewAll": "[TODO: th] Find an agent",
+    "browseAll": "Browse all agents"
   },
   "ParentsComparison": {
     "compareLabel": "เปรียบเทียบ",
@@ -6048,5 +6049,41 @@
     "customSectionFile": "File",
     "customSectionMedia": "Media",
     "customSectionVisible": "Visible"
+  },
+  "ParentsAgentCta": {
+    "eyebrow": "Start with an agent",
+    "headingPrefix": "Find your",
+    "headingEmphasis": "education agent",
+    "headingSuffix": "and let the experts guide you",
+    "subheading": "A trusted local agent matches your child to the right school, handles the paperwork, and supports your family every step of the way — free for parents.",
+    "searchPlaceholder": "Where are you moving? e.g. Sydney, Melbourne",
+    "searchAriaLabel": "Find an education agent",
+    "ctaPrimary": "Find an agent",
+    "ctaSecondary": "Browse all agents",
+    "reassurance": "100% free for families · Verified, QEAC-qualified agents"
+  },
+  "ParentsAgentHelp": {
+    "eyebrow": "Why go through an agent",
+    "heading": "How an agent helps your family",
+    "subheading": "Agents do the heavy lifting so you can focus on your child. Here is what a good education agent takes off your plate.",
+    "benefits": {
+      "free": {
+        "title": "Free for families",
+        "description": "Agents are paid by schools, never by you. Expert guidance comes at no cost to your family."
+      },
+      "matching": {
+        "title": "Expert school matching",
+        "description": "They know the schools, the suburbs and the curricula — and match your child to the right fit, not just the first option."
+      },
+      "applications": {
+        "title": "Application & visa guidance",
+        "description": "From enrolment forms to student visa requirements, your agent prepares and checks the paperwork with you."
+      },
+      "welfare": {
+        "title": "Under-18 welfare support",
+        "description": "Need a guardian or homestay for a younger student? Agents arrange compliant welfare and accommodation."
+      }
+    },
+    "ctaPrimary": "Find an agent"
   }
 }
