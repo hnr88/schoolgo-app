@@ -16,6 +16,14 @@ export interface AgentSearchRequest {
   pageSize?: number;
 }
 
+export interface AgentPartnerSchool {
+  documentId: string;
+  lat: number;
+  lng: number;
+  name: string;
+  slug: string | null;
+}
+
 export interface AgentHit {
   documentId: string;
   slug: string | null;
@@ -34,6 +42,7 @@ export interface AgentHit {
   lat: number | null;
   lng: number | null;
   city: string | null;
+  partnerSchools: AgentPartnerSchool[];
 }
 
 export interface AgentSearchResponse {
