@@ -46,16 +46,16 @@ export function AgentFilterSidebar({ capability, className, cardClassName, open 
   return (
     <aside
       className={cn(
-        'hidden shrink-0 overflow-hidden transition-all duration-300 ease-out-quart lg:block lg:h-full lg:py-2',
+        'hidden shrink-0 overflow-hidden transition-all duration-300 ease-out-quart motion-reduce:transition-none lg:block lg:h-full lg:py-2',
         open
-          ? 'lg:w-[22rem] lg:pl-3 lg:opacity-100'
+          ? 'lg:w-88 lg:pl-3 lg:opacity-100'
           : 'lg:w-0 lg:pl-0 lg:opacity-0 lg:pointer-events-none',
         className,
       )}
     >
       <div
         className={cn(
-          'flex h-full w-[21.25rem] min-h-0 flex-col overflow-hidden rounded-lg border border-border bg-card shadow-2',
+          'flex h-full w-85 min-h-0 flex-col overflow-hidden rounded-lg border border-border bg-card shadow-2',
           cardClassName,
         )}
       >

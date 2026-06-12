@@ -20,19 +20,33 @@ export function useSearchModeSync(defaultMode: SearchMode, enabled = true): Sear
   const isSeeded = useRef(false);
 
   useEffect(() => {
-    if (!enabled || isSeeded.current) return;
+    if (isSeeded.current) return;
     isSeeded.current = true;
-    setMode(resolveSearchMode(paramValue, defaultMode));
+    // Agents only ever search schools: lock the shared store to schools so every
+    // reader (e.g. the unified autocomplete) stays schools-only regardless of any
+    // URL mode param.
+    setMode(enabled ? resolveSearchMode(paramValue, defaultMode) : 'schools');
   }, [enabled, paramValue, defaultMode, setMode]);
 
   useEffect(() => {
-    if (!enabled || !isSeeded.current || paramValue === mode) return;
+    if (!isSeeded.current) return;
+    if (!enabled) {
+      // Locked (agent) view: never surface ?mode=agents in the URL.
+      if (paramValue && paramValue !== 'schools') {
+        const params = new URLSearchParams(searchParams.toString());
+        params.delete(SEARCH_MODE_PARAM);
+        const qs = params.toString();
+        router.replace(qs ? `${pathname}?${qs}` : pathname);
+      }
+      return;
+    }
+    if (paramValue === mode) return;
     const params = new URLSearchParams(searchParams.toString());
     params.set(SEARCH_MODE_PARAM, mode);
     router.replace(`${pathname}?${params.toString()}`);
   }, [enabled, mode, paramValue, pathname, router, searchParams]);
 
-  // When disabled (e.g. agent viewers, who only ever search schools) the mode is
+  // When disabled (agent viewers, who only ever search schools) the mode is
   // locked to schools and the URL is never rewritten to ?mode=agents.
   return enabled ? mode : 'schools';
 }

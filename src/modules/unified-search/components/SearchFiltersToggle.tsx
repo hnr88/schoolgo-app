@@ -30,7 +30,7 @@ export function SearchFiltersToggle({ className }: SearchFiltersToggleProps) {
       onClick={handleClick}
       className={cn(
         'hidden h-9 shrink-0 items-center gap-1.5 rounded-pill border px-3 text-body-sm font-medium lg:inline-flex',
-        'transition ease-out-quart motion-reduce:transition-none',
+        'transition duration-300 ease-out-quart motion-reduce:transition-none',
         'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2',
         open
           ? 'border-transparent bg-rausch-50 text-rausch-700'
