@@ -4,6 +4,7 @@ import { useTranslations } from 'next-intl';
 import { Lock } from 'lucide-react';
 import dynamic from 'next/dynamic';
 import { cn } from '@/lib/utils';
+import { FOCUS_RING } from '@/modules/core';
 import type { Portal } from '@/lib/portal-url';
 import { Link } from '@/i18n/navigation';
 import { CompareBar } from '@/modules/school-search/components/CompareBar';
@@ -37,9 +38,9 @@ function SchoolsTeaserSlot() {
       <Link
         href="/sign-in"
         className={cn(
-          'inline-flex items-center rounded-pill bg-primary px-6 py-3 text-body font-semibold text-on-primary',
+          'inline-flex h-12 items-center rounded-pill bg-primary px-6 text-body font-semibold text-on-primary',
           'transition ease-out-quart hover:bg-primary-strong active:scale-95 motion-reduce:transition-none',
-          'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2',
+          FOCUS_RING,
         )}
       >
         {t('cta')}

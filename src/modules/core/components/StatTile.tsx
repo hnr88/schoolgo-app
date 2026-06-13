@@ -3,6 +3,7 @@ import { Link } from '@/i18n/navigation';
 import { cn } from '@/lib/utils';
 import { Skeleton } from '@/components/ui/skeleton';
 import { surfaceCardVariants } from '@/modules/core/components/SurfaceCard';
+import { FOCUS_RING } from '@/modules/core/lib/focus-ring';
 import type { StatTileProps } from '@/modules/core/types/component.types';
 
 function DeltaChip({ delta }: { delta: NonNullable<StatTileProps['delta']> }) {
@@ -12,9 +13,9 @@ function DeltaChip({ delta }: { delta: NonNullable<StatTileProps['delta']> }) {
   return (
     <span
       className={cn(
-        'inline-flex items-center gap-0.5 rounded-md px-1.5 py-0.5 text-xs font-semibold tabular-nums',
-        isUp && 'bg-vivid-mint-soft text-vivid-mint',
-        isDown && 'bg-vivid-coral-soft text-vivid-coral-strong',
+        'inline-flex items-center gap-0.5 rounded-pill px-2 py-0.5 text-xs font-semibold tabular-nums',
+        isUp && 'bg-vivid-mint-soft text-vivid-mint-strong',
+        isDown && 'bg-vivid-coral-soft text-primary-strong',
         !isUp && !isDown && 'bg-muted text-foggy',
       )}
     >
@@ -43,30 +44,33 @@ function TileInner({
   isLoading,
   href,
 }: StatTileProps) {
+  const tint = iconTint(iconClassName);
   return (
     <>
       <div className='flex items-start justify-between gap-2'>
-        <span className='text-xs font-semibold uppercase tracking-wide text-foggy'>{label}</span>
-        <span className='flex items-center gap-2'>
-          {delta ? <DeltaChip delta={delta} /> : null}
+        <span className='flex size-9 shrink-0 items-center justify-center rounded-md bg-gray-50'>
           <Icon
-            className={cn('h-4 w-4 shrink-0', iconTint(iconClassName))}
+            className={cn('size-5 shrink-0', tint)}
             strokeWidth={1.75}
             aria-hidden='true'
           />
+        </span>
+        <span className='flex items-center gap-2'>
+          {delta ? <DeltaChip delta={delta} /> : null}
           {href ? (
             <ArrowRight
-              className='h-4 w-4 -translate-x-1 text-foggy opacity-0 transition duration-200 ease-out-quart group-hover:translate-x-0 group-hover:opacity-100'
+              className='h-4 w-4 -translate-x-1 text-foggy opacity-0 transition duration-200 ease-out-quart group-hover:translate-x-0 group-hover:opacity-100 motion-reduce:transition-none'
               strokeWidth={2}
               aria-hidden='true'
             />
           ) : null}
         </span>
       </div>
+      <span className='text-xs font-semibold uppercase tracking-wide text-foggy'>{label}</span>
       {isLoading ? (
         <Skeleton className='mt-1 h-9 w-16' />
       ) : (
-        <span className='font-display text-3xl font-bold leading-none tracking-tight text-ink-900 tabular-nums'>
+        <span className='font-display text-display-h1 font-bold leading-none tracking-tight text-ink-900 tabular-nums'>
           {value}
         </span>
       )}
@@ -80,20 +84,14 @@ function TileInner({
 export function StatTile(props: StatTileProps) {
   const { href, className } = props;
   const base = cn(
-    surfaceCardVariants({ elevation: href ? 'interactive' : 'flat', padding: 'sm' }),
-    'group flex flex-col gap-2',
+    surfaceCardVariants({ elevation: href ? 'interactive' : 'flat', padding: 'md' }),
+    'group flex min-h-32 flex-col gap-2',
     className,
   );
 
   if (href) {
     return (
-      <Link
-        href={href}
-        className={cn(
-          base,
-          'no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2',
-        )}
-      >
+      <Link href={href} className={cn(base, 'no-underline', FOCUS_RING)}>
         <TileInner {...props} />
       </Link>
     );

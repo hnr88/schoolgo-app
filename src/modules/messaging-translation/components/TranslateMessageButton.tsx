@@ -50,7 +50,7 @@ export function TranslateMessageButton({
   return (
     <div className='flex flex-col gap-1'>
       {!showOriginal && (
-        <div className='rounded-lg border border-border bg-background px-3 py-2 text-sm whitespace-pre-wrap text-foreground'>
+        <div className='rounded-xl bg-gray-50 px-4 py-3 text-sm whitespace-pre-wrap text-foreground'>
           {result.translated}
         </div>
       )}

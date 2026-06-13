@@ -41,7 +41,7 @@ export async function ContactCard({
     return (
       <section
         aria-labelledby="contact-heading"
-        className="rounded-lg border border-border bg-card p-5 shadow-1"
+        className="rounded-lg border border-divider bg-card p-6 shadow-2"
       >
         <h2 id="contact-heading" className="text-xl font-semibold text-ink-900">
           {t('agentHeading')}
@@ -59,7 +59,7 @@ export async function ContactCard({
   }
 
   return (
-    <section aria-labelledby="contact-heading" className="rounded-lg border border-border bg-card p-5 shadow-1">
+    <section aria-labelledby="contact-heading" className="rounded-lg border border-divider bg-card p-6 shadow-2">
       <h2 id="contact-heading" className="text-xl font-semibold text-ink-900">{t('heading')}</h2>
 
       <div className="mt-5 space-y-4">

@@ -23,7 +23,7 @@ export function StageStatsPanel({ schools }: StageStatsPanelProps) {
   const stages = query.data?.stages ?? [];
 
   return (
-    <section className='flex flex-col gap-4 rounded-xl border border-divider bg-card p-6 shadow-1'>
+    <section className='flex flex-col gap-4 rounded-lg border border-divider bg-card p-6 shadow-2'>
       <div className='flex flex-wrap items-start justify-between gap-3'>
         <div className='flex flex-col gap-1'>
           <h2 className='text-base font-semibold text-ink-900'>{t('stageStatsTitle')}</h2>

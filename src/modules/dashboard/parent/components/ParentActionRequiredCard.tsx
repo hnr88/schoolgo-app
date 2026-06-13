@@ -3,7 +3,8 @@
 import { useTranslations } from 'next-intl';
 import { CheckCircle2, ChevronRight, ShieldAlert } from 'lucide-react';
 import { Link } from '@/i18n/navigation';
-import { ErrorState } from '@/modules/core';
+import { cn } from '@/lib/utils';
+import { ErrorState, FOCUS_RING } from '@/modules/core';
 import { ParentDashboardCard } from '@/modules/dashboard/parent/components/ParentDashboardCard';
 import { ParentSummaryRowsSkeleton } from '@/modules/dashboard/parent/components/ParentSummaryStates';
 import { useParentDerivedApplications } from '@/modules/dashboard/parent/hooks/useParentDerivedApplications';
@@ -23,7 +24,7 @@ export function ParentActionRequiredCard() {
           retryLabel={t('retry')}
         />
       ) : actionItems.length === 0 ? (
-        <div className='flex items-center gap-3 rounded-xl bg-muted px-4 py-4 shadow-1'>
+        <div className='flex items-center gap-3 rounded-xl bg-gray-50 px-4 py-4'>
           <CheckCircle2 className='h-5 w-5 shrink-0 text-foggy' strokeWidth={1.75} aria-hidden='true' />
           <span className='flex flex-col'>
             <span className='text-sm font-semibold text-ink-900'>
@@ -33,14 +34,17 @@ export function ParentActionRequiredCard() {
           </span>
         </div>
       ) : (
-        <ul className='flex flex-col gap-1.5'>
+        <ul className='-mx-2 flex flex-col gap-1'>
           {actionItems.map((item) => {
             const Icon = item.icon;
             return (
               <li key={item.id}>
                 <Link
                   href={item.href}
-                  className='group flex items-center gap-3 rounded-xl px-3 py-3 no-underline transition-colors duration-200 ease-out-quart hover:bg-muted'
+                  className={cn(
+                    'group flex items-center gap-3 rounded-xl px-2 py-3 no-underline transition-colors duration-200 ease-out-quart hover:bg-gray-50',
+                    FOCUS_RING,
+                  )}
                 >
                   <Icon
                     className='h-4 w-4 shrink-0 text-foggy'

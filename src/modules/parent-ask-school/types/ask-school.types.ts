@@ -1,6 +1,7 @@
 import type { z } from 'zod';
 import type {
   askSchoolFormSchema,
+  askAboutSchoolFormSchema,
   answerQuestionFormSchema,
   questionTopicSchema,
   questionStatusSchema,
@@ -16,6 +17,7 @@ export type ParentQuestion = z.infer<typeof parentQuestionSchema>;
 export type SchoolQuestion = z.infer<typeof schoolQuestionSchema>;
 
 export type AskSchoolFormValues = z.infer<typeof askSchoolFormSchema>;
+export type AskAboutSchoolFormValues = z.infer<typeof askAboutSchoolFormSchema>;
 export type AnswerQuestionFormValues = z.infer<typeof answerQuestionFormSchema>;
 
 export interface AskQuestionPayload {

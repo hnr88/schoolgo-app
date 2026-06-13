@@ -11,7 +11,7 @@ import {
   TableRow,
 } from '@/components/ui/table';
 import { Button } from '@/components/ui/button';
-import { StatusBadge } from '@/modules/core';
+import { DataTableShell, StatusBadge } from '@/modules/core';
 import { formatComplianceDate } from '@/modules/school-compliance/lib/format-compliance-date';
 import {
   LIFECYCLE_LABEL_KEY,
@@ -32,7 +32,7 @@ export function ComplianceTable({ entries, onAnnotate }: Props) {
   const t = useTranslations('SchoolCompliance');
 
   return (
-    <div className='overflow-x-auto rounded-xl border border-divider bg-card shadow-1'>
+    <DataTableShell className='overflow-x-auto'>
       <Table>
         <TableHeader>
           <TableRow>
@@ -87,6 +87,6 @@ export function ComplianceTable({ entries, onAnnotate }: Props) {
           ))}
         </TableBody>
       </Table>
-    </div>
+    </DataTableShell>
   );
 }

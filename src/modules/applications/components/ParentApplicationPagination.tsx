@@ -16,7 +16,7 @@ export function ParentApplicationPagination({
   if (!pagination) return null;
 
   return (
-    <div className='flex items-center justify-between border-t border-border px-6 py-4'>
+    <div className='flex items-center justify-between px-2'>
       <span className='text-sm text-foggy'>{t('paginationOf', { total: pagination.total })}</span>
 
       {showPagination ? (

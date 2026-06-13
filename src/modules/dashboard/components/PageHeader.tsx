@@ -24,9 +24,9 @@ export function PageHeader({
         className,
       )}
     >
-      <div className='flex min-w-0 flex-col gap-1.5'>
+      <div className='flex min-w-0 flex-col gap-2'>
         {eyebrow && <Eyebrow tone='brand'>{eyebrow}</Eyebrow>}
-        <h1 className='font-display text-2xl font-bold tracking-tight text-ink-900'>
+        <h1 className='font-display text-display-h1 font-bold tracking-tight text-ink-900'>
           {title}
         </h1>
         {description && (

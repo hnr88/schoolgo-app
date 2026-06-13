@@ -23,8 +23,8 @@ export interface ParentStatTileConfig {
   href: LinkHref;
   icon: IconComponent;
   labelKey: string;
-  /** brand gradient color-stop classes for the bold stat card surface */
-  gradient: string;
+  /** semantic text-color token tinting the tile's icon chip (§3.7) */
+  iconClassName: string;
 }
 
 export type ParentStatCounts = Record<ParentStatTileKey, number>;

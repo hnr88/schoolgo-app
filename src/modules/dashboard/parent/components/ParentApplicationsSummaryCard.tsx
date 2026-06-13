@@ -4,7 +4,8 @@ import { useTranslations } from 'next-intl';
 import { FileText, Search } from 'lucide-react';
 import { Link } from '@/i18n/navigation';
 import { Button } from '@/components/ui/button';
-import { EmptyState, ErrorState } from '@/modules/core';
+import { cn } from '@/lib/utils';
+import { EmptyState, ErrorState, FOCUS_RING } from '@/modules/core';
 import { ParentStudentAvatar } from '@/modules/students';
 import { ApplicationStatusBadge, useParentApplications } from '@/modules/applications';
 import { ParentDashboardCard } from '@/modules/dashboard/parent/components/ParentDashboardCard';
@@ -41,7 +42,7 @@ export function ParentApplicationsSummaryCard() {
           description={t('applicationsEmptySubtitle')}
           action={
             <Link href='/parent/search'>
-              <Button variant='outline' className='gap-1.5'>
+              <Button variant='outline' className='gap-2'>
                 <Search className='h-4 w-4' aria-hidden='true' />
                 {t('searchSchools')}
               </Button>
@@ -49,12 +50,15 @@ export function ParentApplicationsSummaryCard() {
           }
         />
       ) : (
-        <ul className='-mx-3 flex flex-col gap-1'>
+        <ul className='-mx-2 flex flex-col gap-1'>
           {applications.map((application) => (
             <li key={application.documentId}>
               <Link
                 href={`/parent/applications/${application.documentId}`}
-                className='group flex items-center gap-4 rounded-xl px-3 py-2.5 no-underline transition-colors duration-200 ease-out-quart hover:bg-muted'
+                className={cn(
+                  'group flex items-center gap-4 rounded-xl px-2 py-4 no-underline transition-colors duration-200 ease-out-quart hover:bg-gray-50',
+                  FOCUS_RING,
+                )}
               >
                 <ParentStudentAvatar
                   firstName={application.student.firstName}

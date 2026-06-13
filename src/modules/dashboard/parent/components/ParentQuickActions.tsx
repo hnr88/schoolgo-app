@@ -3,13 +3,17 @@
 import { useTranslations } from 'next-intl';
 import { ArrowUpRight } from 'lucide-react';
 import { Link } from '@/i18n/navigation';
+import { cn } from '@/lib/utils';
+import { FOCUS_RING } from '@/modules/core';
 import {
   PARENT_PAYMENTS_ACTION,
   PARENT_QUICK_ACTIONS,
 } from '@/modules/dashboard/parent/constants/parent-dashboard.constants';
 
-const TILE_CLASS =
-  'group flex items-center gap-3 rounded-xl bg-muted px-5 py-4 no-underline transition-[transform,background-color,box-shadow] duration-300 ease-out-quart hover:-translate-y-0.5 hover:bg-rausch-50 hover:shadow-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40 focus-visible:ring-offset-2 focus-visible:ring-offset-card';
+const TILE_CLASS = cn(
+  'group flex items-center gap-3 rounded-xl bg-gray-50 px-6 py-4 no-underline transition-[transform,background-color,box-shadow] duration-300 ease-out-quart hover:-translate-y-0.5 hover:bg-rausch-50 hover:shadow-2 motion-reduce:transition-none motion-reduce:hover:translate-y-0',
+  FOCUS_RING,
+);
 
 export function ParentQuickActions() {
   const t = useTranslations('ParentDashboard');

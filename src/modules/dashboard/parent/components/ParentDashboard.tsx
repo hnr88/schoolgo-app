@@ -76,8 +76,8 @@ export function ParentDashboard() {
         </div>
       </div>
 
-      <section className='overflow-hidden rounded-3xl border border-gray-100 bg-card shadow-2'>
-        <div className='relative overflow-hidden border-b border-rausch-100 bg-primary-light p-6 md:p-7'>
+      <section className='overflow-hidden rounded-2xl bg-card shadow-2'>
+        <div className='relative overflow-hidden border-b border-rausch-100 bg-primary-light p-6 md:p-8'>
           <span
             aria-hidden='true'
             className='pointer-events-none absolute -right-10 -top-12 h-36 w-36 rounded-full bg-rausch-100/70'
@@ -88,11 +88,11 @@ export function ParentDashboard() {
           />
 
           <div className='relative flex items-center gap-3'>
-            <span className='flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-primary text-primary-foreground'>
-              <Zap className='h-5 w-5' strokeWidth={2} aria-hidden='true' />
+            <span className='flex size-11 shrink-0 items-center justify-center rounded-md bg-primary text-primary-foreground'>
+              <Zap className='h-5 w-5' strokeWidth={1.75} aria-hidden='true' />
             </span>
             <div className='min-w-0 flex-1'>
-              <h2 className='font-display text-xl font-bold tracking-tight text-ink-900'>
+              <h2 className='font-display text-section-h2 font-semibold tracking-tight text-ink-900'>
                 {t('quickActionsTitle')}
               </h2>
               <p className='truncate text-sm text-foggy'>{t('subtitle')}</p>
@@ -100,7 +100,7 @@ export function ParentDashboard() {
           </div>
         </div>
 
-        <div className='p-6 md:p-7'>
+        <div className='p-6 md:p-8'>
           <ParentCardBoundary>
             <ParentQuickActions />
           </ParentCardBoundary>

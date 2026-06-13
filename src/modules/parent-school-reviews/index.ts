@@ -1,5 +1,6 @@
 export { ParentReviewsPage } from '@/modules/parent-school-reviews/components/ParentReviewsPage';
 export { ParentReviewsSkeleton } from '@/modules/parent-school-reviews/components/ParentReviewsSkeleton';
+export { SchoolReviewsPublic } from '@/modules/parent-school-reviews/components/SchoolReviewsPublic';
 
 export type {
   ParentReviewWithSchool,

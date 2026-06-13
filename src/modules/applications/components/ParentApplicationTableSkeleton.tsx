@@ -5,20 +5,26 @@ export function ParentApplicationTableSkeletonRows({ rowCount }: { rowCount: num
   return (
     <>
       {Array.from({ length: rowCount }).map((_, i) => (
-        <TableRow key={`skeleton-${i}`} className='h-14 hover:bg-transparent'>
-          <TableCell className='pl-6'>
-            <Skeleton className='h-4 w-28' />
+        <TableRow key={`skeleton-${i}`} className='hover:bg-transparent'>
+          <TableCell>
+            <div className='flex items-center gap-3'>
+              <Skeleton className='size-9 rounded-full' />
+              <Skeleton className='h-4 w-28' />
+            </div>
           </TableCell>
           <TableCell>
-            <Skeleton className='h-4 w-32' />
+            <div className='flex items-center gap-3'>
+              <Skeleton className='size-9 rounded-md' />
+              <Skeleton className='h-4 w-32' />
+            </div>
           </TableCell>
           <TableCell>
-            <Skeleton className='h-5 w-24 rounded-full' />
+            <Skeleton className='h-6 w-24 rounded-pill' />
           </TableCell>
           <TableCell>
             <Skeleton className='h-4 w-20' />
           </TableCell>
-          <TableCell className='pr-6'>
+          <TableCell>
             <Skeleton className='h-4 w-24' />
           </TableCell>
         </TableRow>

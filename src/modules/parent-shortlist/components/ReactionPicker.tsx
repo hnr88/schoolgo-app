@@ -34,7 +34,7 @@ export function ReactionPicker({ value, onChange }: ReactionPickerProps) {
             aria-label={t(`reaction_${reaction}`)}
             onClick={() => onChange(isActive ? undefined : reaction)}
             className={cn(
-              'flex items-center gap-1.5 rounded-full border px-3 py-1.5 text-xs font-medium transition-colors ease-out-quart',
+              'flex items-center gap-1.5 rounded-pill border px-3 py-2 text-xs font-medium transition-colors ease-out-quart',
               isActive
                 ? 'border-primary bg-rausch-50 text-primary-strong'
                 : 'border-divider bg-card text-foggy hover:bg-muted',

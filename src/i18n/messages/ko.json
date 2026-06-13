@@ -1236,6 +1236,7 @@
       },
       "tileCard": {
         "tuitionFrom": "From ${amount} / year",
+        "allIn": "From ${amount} / year",
         "viewSchool": "View school",
         "bookmark": "Bookmark",
         "bookmarkRemove": "Remove bookmark",
@@ -2246,7 +2247,9 @@
         "location": "[TODO: ko] Location",
         "compare": "[TODO: ko] Similar schools",
         "faq": "[TODO: ko] FAQ",
-        "agents": "Partner agents"
+        "agents": "Partner agents",
+        "reviews": "Parent reviews",
+        "questions": "Q&A"
       },
       "keyFacts": {
         "heading": "[TODO: ko] Key facts",
@@ -2320,6 +2323,19 @@
       "verifiedLabel": "QEAC verified",
       "viewProfile": "View profile",
       "talkCta": "Talk to this agent"
+    },
+    "heroApplyCta": "Start an application",
+    "heroFindAgentCta": "Find an agent",
+    "heroReviewsCta": "Read reviews",
+    "reviews": {
+      "eyebrow": "Parent reviews",
+      "heading": "What families say",
+      "intro": "Verified ratings and reviews from parents across academics, pastoral care, value, facilities, communication, and EAL support."
+    },
+    "questions": {
+      "eyebrow": "Ask the school",
+      "heading": "Questions & answers",
+      "intro": "Browse published questions answered by the school, or ask your own."
     }
   },
   "SearchMetadata": {
@@ -6500,7 +6516,9 @@
     "publishLabel": "Publish to public Q&A",
     "publishDescription": "When on, this question and answer appear on your public school page.",
     "inboxEmptyTitle": "No questions here",
-    "inboxEmptySubtitle": "There are no questions matching this filter yet."
+    "inboxEmptySubtitle": "There are no questions matching this filter yet.",
+    "publicEmptyTitle": "No questions yet",
+    "publicEmptySubtitle": "Be the first to ask this school a question."
   },
   "AgentCommissions": {
     "title": "Commissions",

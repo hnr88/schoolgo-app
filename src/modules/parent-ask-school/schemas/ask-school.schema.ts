@@ -67,6 +67,11 @@ export const askSchoolFormSchema = z.object({
   body: z.string().trim().min(1).max(QUESTION_BODY_MAX),
 });
 
+export const askAboutSchoolFormSchema = z.object({
+  topic: questionTopicSchema,
+  body: z.string().trim().min(1).max(QUESTION_BODY_MAX),
+});
+
 export const answerQuestionFormSchema = z.object({
   body: z.string().trim().min(1).max(ANSWER_BODY_MAX),
   publish: z.boolean(),

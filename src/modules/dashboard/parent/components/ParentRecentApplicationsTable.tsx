@@ -32,7 +32,7 @@ export function ParentRecentApplicationsTable() {
   const hasRows = applications.length > 0;
 
   return (
-    <section className='flex h-full flex-col overflow-hidden rounded-xl border border-gray-100 bg-gray-50'>
+    <section className='flex h-full flex-col overflow-hidden rounded-lg bg-card shadow-2'>
       <div className='px-6 pt-6 pb-5'>
         <ParentSectionHeader
           title={t('recentApplicationsTitle')}
@@ -59,7 +59,7 @@ export function ParentRecentApplicationsTable() {
             action={
               <Link
                 href='/parent/search'
-                className={cn(buttonVariants({ variant: 'outline' }), 'gap-1.5')}
+                className={cn(buttonVariants({ variant: 'outline' }), 'gap-2')}
               >
                 <Search className='h-4 w-4' aria-hidden='true' />
                 {t('searchSchools')}
@@ -70,17 +70,17 @@ export function ParentRecentApplicationsTable() {
       ) : (
         <Table>
           <TableHeader>
-            <TableRow className='bg-muted/40 hover:bg-muted/40'>
-              <TableHead className='h-11 px-6 text-label font-semibold uppercase tracking-eyebrow text-foggy'>
+            <TableRow className='border-divider hover:bg-transparent'>
+              <TableHead className='h-12 px-6 text-label font-semibold uppercase tracking-eyebrow text-foggy'>
                 {t('tableChild')}
               </TableHead>
-              <TableHead className='h-11 px-6 text-label font-semibold uppercase tracking-eyebrow text-foggy'>
+              <TableHead className='h-12 px-6 text-label font-semibold uppercase tracking-eyebrow text-foggy'>
                 {t('tableSchool')}
               </TableHead>
-              <TableHead className='h-11 px-6 text-label font-semibold uppercase tracking-eyebrow text-foggy'>
+              <TableHead className='h-12 px-6 text-label font-semibold uppercase tracking-eyebrow text-foggy'>
                 {t('tableStatus')}
               </TableHead>
-              <TableHead className='h-11 px-6'>
+              <TableHead className='h-12 px-6'>
                 <span className='sr-only'>{t('tableView')}</span>
               </TableHead>
             </TableRow>
@@ -90,17 +90,17 @@ export function ParentRecentApplicationsTable() {
           ) : (
             <TableBody>
               {applications.map((application) => (
-                <TableRow key={application.documentId} className='group transition-colors hover:bg-muted/40'>
-                  <TableCell className='px-6 py-4 font-semibold text-ink-900'>
+                <TableRow key={application.documentId} className='group border-divider transition-colors hover:bg-gray-50'>
+                  <TableCell className='h-16 px-6 font-semibold text-ink-900'>
                     {application.student.firstName} {application.student.lastName}
                   </TableCell>
-                  <TableCell className='max-w-0 truncate px-6 py-4 text-foggy'>
+                  <TableCell className='h-16 max-w-0 truncate px-6 text-foggy'>
                     {application.school.name}
                   </TableCell>
-                  <TableCell className='px-6 py-4'>
+                  <TableCell className='h-16 px-6'>
                     <ApplicationStatusBadge status={application.status} />
                   </TableCell>
-                  <TableCell className='px-6 py-4 text-right'>
+                  <TableCell className='h-16 px-6 text-right'>
                     <Link
                       href={`/parent/applications/${application.documentId}`}
                       className='inline-flex items-center gap-1 text-sm font-semibold text-primary-strong no-underline transition-colors hover:text-ink-900'

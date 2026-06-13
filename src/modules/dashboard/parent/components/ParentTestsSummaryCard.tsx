@@ -3,7 +3,8 @@
 import { useTranslations } from 'next-intl';
 import { ClipboardCheck } from 'lucide-react';
 import { Link } from '@/i18n/navigation';
-import { EmptyState, ErrorState, StatusBadge } from '@/modules/core';
+import { cn } from '@/lib/utils';
+import { EmptyState, ErrorState, FOCUS_RING, StatusBadge } from '@/modules/core';
 import { ParentStudentAvatar, useParentStudents } from '@/modules/students';
 import { VERIFICATION_STATUS_STYLES } from '@/modules/test-results';
 import { ParentDashboardCard } from '@/modules/dashboard/parent/components/ParentDashboardCard';
@@ -41,14 +42,17 @@ export function ParentTestsSummaryCard() {
           description={t('testsEmptySubtitle')}
         />
       ) : (
-        <ul className='-mx-3 flex flex-col gap-1'>
+        <ul className='-mx-2 flex flex-col gap-1'>
           {withTests.map((student) => {
             const summary = student.englishTestSummary!;
             return (
               <li key={student.documentId}>
                 <Link
                   href={{ pathname: '/parent/results', query: { student: student.documentId } }}
-                  className='group flex items-center gap-4 rounded-xl px-3 py-2.5 no-underline transition-colors duration-200 ease-out-quart hover:bg-muted'
+                  className={cn(
+                    'group flex items-center gap-4 rounded-xl px-2 py-4 no-underline transition-colors duration-200 ease-out-quart hover:bg-gray-50',
+                    FOCUS_RING,
+                  )}
                 >
                   <ParentStudentAvatar
                     firstName={student.firstName}

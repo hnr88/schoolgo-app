@@ -1,7 +1,7 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { ParentStatTile } from '@/modules/dashboard/parent/components/ParentStatTile';
+import { StatTile } from '@/modules/core';
 import { useParentStatCounts } from '@/modules/dashboard/parent/hooks/useParentStatCounts';
 import { PARENT_STAT_TILES } from '@/modules/dashboard/parent/constants/parent-dashboard.constants';
 
@@ -14,11 +14,13 @@ export function ParentStatTiles() {
       {PARENT_STAT_TILES.map((config) => {
         const state = states[config.key];
         return (
-          <ParentStatTile
+          <StatTile
             key={config.key}
-            config={config}
+            icon={config.icon}
+            iconClassName={config.iconClassName}
             label={t(config.labelKey)}
-            count={state.count}
+            value={state.count}
+            href={config.href as string}
             isLoading={state.isLoading}
           />
         );

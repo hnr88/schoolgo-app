@@ -4,6 +4,7 @@ import { Link } from '@/i18n/navigation';
 import type { Portal } from '@/lib/portal-url';
 import type { SearchCapability } from '@/modules/unified-search';
 import { cn } from '@/lib/utils';
+import { FOCUS_RING } from '@/modules/core';
 import { AccommodationBadge } from '@/modules/school-search/components/cards/AccommodationBadge';
 import { CurriculumBadge } from '@/modules/school-search/components/cards/CurriculumBadge';
 import { EnrolmentStatusBadge } from '@/modules/school-search/components/cards/EnrolmentStatusBadge';
@@ -50,7 +51,10 @@ export function SpecSchoolCard({
     <Link
       href={`/${activePortal}/schools/${hit.slug}`}
       className={cn(
-        'group flex flex-col gap-2 rounded-2xl bg-card p-2.5 shadow-1 transition-shadow ease-out-quart hover:shadow-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 motion-reduce:transition-none',
+        'group flex flex-col gap-2 rounded-xl bg-card p-3 shadow-2',
+        'transition-[transform,box-shadow] duration-300 ease-out-quart hover:-translate-y-0.5 hover:shadow-3',
+        'motion-reduce:transition-none motion-reduce:hover:translate-y-0',
+        FOCUS_RING,
         className,
       )}
       data-testid={`spec-school-card-${hit.documentId}`}
@@ -62,18 +66,19 @@ export function SpecSchoolCard({
         isAdvanced={isAdvanced}
         capability={capability}
         priority={priority}
+        tuition={tuition}
         onUnauthenticatedBookmark={onUnauthenticatedBookmark}
       />
 
       <div className="mt-1 flex flex-col gap-1">
-        <h3 className="line-clamp-1 text-body-sm font-semibold text-ink-900">{hit.name}</h3>
+        <h3 className="line-clamp-1 text-card-title font-semibold text-ink-900">{hit.name}</h3>
         <p className="line-clamp-1 text-body-sm text-foggy">
           {hit.suburb}
           {hit.state ? `, ${hit.state}` : ''}
         </p>
       </div>
 
-      <div className="flex flex-wrap items-center gap-1">
+      <div className="flex flex-wrap items-center gap-2">
         {status && <EnrolmentStatusBadge status={status} />}
         {sector && <SectorBadge sector={sector} />}
         {curriculumCodes.length > 0 && <CurriculumBadge codes={curriculumCodes} />}

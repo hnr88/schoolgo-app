@@ -19,7 +19,7 @@ export function ForecastTable({ items }: ForecastTableProps) {
   const t = useTranslations('AgentForecast');
 
   return (
-    <section className='flex flex-col gap-4 rounded-xl border border-divider bg-card p-6 shadow-1'>
+    <section className='flex flex-col gap-4 rounded-lg border border-divider bg-card p-6 shadow-2'>
       <div className='flex flex-col gap-1'>
         <h2 className='text-base font-semibold text-ink-900'>{t('tableTitle')}</h2>
         <p className='text-sm text-foggy'>{t('tableCaption')}</p>

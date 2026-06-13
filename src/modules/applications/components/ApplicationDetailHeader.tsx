@@ -5,6 +5,7 @@ import { CalendarDays, CheckIcon, Clock, Hash, RefreshCw } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { StatTile } from '@/modules/core';
 import { ApplicationStatusBadge } from '@/modules/applications/components/ApplicationStatusBadge';
+import { ApplicationAvatar, ApplicationLogo } from '@/modules/applications/components/ApplicationTableCells';
 import { PROGRESS_STEPS, TERMINAL_STATUSES } from '@/modules/applications/constants/detail.constants';
 import {
   daysToneFromCount,
@@ -69,15 +70,25 @@ export function ApplicationDetailHeader({ application }: { application: Applicat
   const daysTone = daysToneFromCount(application.daysInStatus);
 
   return (
-    <div className='flex flex-col gap-5 rounded-xl border border-border bg-card p-6'>
+    <div className='flex flex-col gap-5 rounded-lg border border-divider bg-card p-6 shadow-2'>
       <div className='flex items-start justify-between gap-4'>
-        <div className='flex flex-col gap-1'>
-          <h1 className='text-xl font-bold text-ink-900'>
-            {t('studentToSchool', { student: studentName, school: application.school?.name ?? '—' })}
-          </h1>
-          {application.targetYearLevel && (
-            <p className='text-sm text-foggy'>{application.targetYearLevel}{application.targetIntake ? ` · ${application.targetIntake}` : ''}</p>
-          )}
+        <div className='flex items-start gap-4'>
+          <span className='flex items-center -space-x-2'>
+            <ApplicationLogo name={application.school?.name} className='size-12 rounded-lg text-sm ring-2 ring-card' />
+            <ApplicationAvatar
+              firstName={application.student?.firstName}
+              lastName={application.student?.lastName}
+              className='size-12 text-sm ring-2 ring-card'
+            />
+          </span>
+          <div className='flex flex-col gap-1'>
+            <h1 className='font-display text-display-h1 font-bold tracking-tight text-ink-900'>
+              {t('studentToSchool', { student: studentName, school: application.school?.name ?? '—' })}
+            </h1>
+            {application.targetYearLevel && (
+              <p className='text-sm text-foggy'>{application.targetYearLevel}{application.targetIntake ? ` · ${application.targetIntake}` : ''}</p>
+            )}
+          </div>
         </div>
         <ApplicationStatusBadge status={application.status} />
       </div>

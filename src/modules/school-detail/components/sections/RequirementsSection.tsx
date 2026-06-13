@@ -28,7 +28,7 @@ export function RequirementsSection({ schoolDocumentId }: { schoolDocumentId: st
     <section
       id='requirements'
       aria-labelledby='requirements-heading'
-      className='rounded-lg border border-border bg-card py-10 px-6 shadow-1 md:py-14 md:px-8'
+      className='rounded-lg border border-divider bg-card py-10 px-6 shadow-2 md:py-14 md:px-8'
     >
       <Eyebrow>{t('eyebrow')}</Eyebrow>
       <h2 id='requirements-heading' className='text-2xl font-bold text-ink-900 mt-2 md:text-3xl'>

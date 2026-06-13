@@ -1,6 +1,7 @@
 'use client';
 
 import { cn } from '@/lib/utils';
+import { FOCUS_RING } from '@/modules/core';
 import type { FilterOption } from '@/modules/school-search/constants/filter-options.constants';
 import type { IconComponent } from '@/modules/design-system/types/design-system.types';
 
@@ -57,7 +58,7 @@ export function FilterChipGroup<T extends string>({
     <div
       role="group"
       aria-label={ariaLabel}
-      className={cn('flex flex-wrap items-center gap-1.5', className)}
+      className={cn('flex flex-wrap items-center gap-2', className)}
     >
       {options.map((option) => {
         const selected = isSelected(value, option.value, multi);
@@ -69,13 +70,13 @@ export function FilterChipGroup<T extends string>({
             aria-pressed={selected}
             onClick={() => onChange(handleToggle(value, option.value, multi))}
             className={cn(
-              'inline-flex h-8 shrink-0 cursor-pointer items-center gap-1.5 rounded-pill px-3 text-body-sm',
+              'inline-flex h-9 shrink-0 cursor-pointer items-center gap-1.5 rounded-pill px-3 text-body-sm',
               'transition-colors ease-out-quart motion-reduce:transition-none',
-              'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2',
+              FOCUS_RING,
               'disabled:pointer-events-none disabled:opacity-50',
               selected
-                ? 'bg-ink-900 font-semibold text-card'
-                : 'bg-muted font-medium text-ink-900 hover:bg-divider',
+                ? 'bg-rausch-50 font-semibold text-primary-strong ring-1 ring-inset ring-rausch-200'
+                : 'bg-gray-50 font-medium text-ink-900 hover:bg-divider',
               buttonClassName,
             )}
           >

@@ -14,6 +14,8 @@ import {
   DialogTrigger,
 } from '@/components/ui/dialog';
 import { useAuthStore } from '@/modules/auth/stores/use-auth-store';
+import { cn } from '@/lib/utils';
+import { FOCUS_RING } from '@/modules/core';
 import { PORTAL_NAV } from '../constants/ui.constants';
 import { SidebarNavLinks } from './SidebarNavLinks';
 
@@ -28,7 +30,10 @@ export function DashboardMobileNav() {
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger
-        className='flex size-10 shrink-0 items-center justify-center rounded-full text-ink-900 transition-colors duration-200 ease-out-quart hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1 lg:hidden'
+        className={cn(
+          'flex size-11 shrink-0 items-center justify-center rounded-full text-ink-900 transition-colors duration-200 ease-out-quart hover:bg-muted lg:hidden',
+          FOCUS_RING,
+        )}
         aria-label={t('openMenu')}
       >
         <Menu className='h-5 w-5' strokeWidth={1.75} />
@@ -41,7 +46,7 @@ export function DashboardMobileNav() {
           className='sidebar-shell fixed inset-y-0 left-0 z-50 flex w-72 max-w-full flex-col shadow-3 outline-none duration-150 data-open:animate-in data-open:slide-in-from-left data-closed:animate-out data-closed:slide-out-to-left'
         >
           <DialogTitle className='sr-only'>{t('navTitle')}</DialogTitle>
-          <div className='flex h-16 items-center px-5'>
+          <div className='flex h-16 items-center px-6'>
             <Link href={home} onClick={() => setOpen(false)} className='flex shrink-0 items-center gap-2'>
               <Image
                 src='/logos/app-icon-512.png'

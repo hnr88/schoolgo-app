@@ -12,9 +12,9 @@ interface SectionHeadingProps {
 }
 
 const TITLE_STYLES: Record<1 | 2 | 3, string> = {
-  1: 'font-display text-2xl font-bold tracking-tight text-ink-900 sm:text-3xl',
-  2: 'font-display text-lg font-bold tracking-tight text-ink-900',
-  3: 'text-base font-semibold text-ink-900',
+  1: 'font-display text-display-h1 font-bold tracking-tight text-ink-900',
+  2: 'font-display text-section-h2 font-semibold tracking-tight text-ink-900',
+  3: 'text-card-title font-semibold text-ink-900',
 };
 
 export function SectionHeading({

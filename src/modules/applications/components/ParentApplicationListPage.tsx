@@ -61,19 +61,17 @@ export function ParentApplicationListPage({ studentDocumentId }: ParentApplicati
   }
 
   return (
-    <div className='overflow-hidden rounded-lg border border-border bg-card shadow-1'>
-      <div className='border-b border-border px-6 py-4'>
-        <ParentApplicationToolbar
-          status={status}
-          onStatusChange={handleStatusChange}
-          search={search}
-          onSearchChange={handleSearchChange}
-          childFilter={childFilter}
-          onChildFilterChange={handleChildFilterChange}
-          childOptions={childOptions}
-          showChildFilter={showChildFilter}
-        />
-      </div>
+    <div className='flex flex-col gap-4'>
+      <ParentApplicationToolbar
+        status={status}
+        onStatusChange={handleStatusChange}
+        search={search}
+        onSearchChange={handleSearchChange}
+        childFilter={childFilter}
+        onChildFilterChange={handleChildFilterChange}
+        childOptions={childOptions}
+        showChildFilter={showChildFilter}
+      />
 
       <ParentApplicationTable
         applications={applications}

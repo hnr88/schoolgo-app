@@ -24,6 +24,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
+import { FOCUS_RING } from '@/modules/core';
 import { resolvePageTitleEntry } from '../lib/resolve-page-title';
 
 export function DashboardHeader() {
@@ -56,11 +57,11 @@ export function DashboardHeader() {
   return (
     <header className='relative z-10 shrink-0 bg-card shadow-1'>
       <CommandPalette />
-      <div className={cn('flex h-16 items-center gap-4', isSearchPage ? 'px-4' : 'px-6')}>
+      <div className={cn('flex min-h-18 items-center gap-4', isSearchPage ? 'px-4' : 'px-6')}>
         <DashboardMobileNav />
         <h1
           className={cn(
-            'shrink-0 truncate text-lg font-bold tracking-tight text-ink-900',
+            'shrink-0 truncate font-display text-section-h2 font-semibold tracking-tight text-ink-900',
             isSearchPage && 'w-80',
           )}
         >
@@ -78,8 +79,13 @@ export function DashboardHeader() {
           <CommandPaletteTrigger />
           {(userType === 'parent' || userType === 'agent') && <NotificationBell />}
           <DropdownMenu>
-            <DropdownMenuTrigger className='group flex items-center gap-2.5 rounded-full bg-muted py-1 pl-1 pr-2.5 text-sm font-medium text-ink-900 outline-none transition-[color,box-shadow,background-color] duration-200 ease-out-quart hover:bg-rausch-50 hover:shadow-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1 sm:pr-3'>
-              <Avatar className='h-8 w-8'>
+            <DropdownMenuTrigger
+              className={cn(
+                'group flex h-11 items-center gap-2 rounded-pill bg-muted py-1 pl-1 pr-3 text-sm font-medium text-ink-900 outline-none transition-[color,box-shadow,background-color] duration-200 ease-out-quart hover:bg-rausch-50 hover:shadow-1',
+                FOCUS_RING,
+              )}
+            >
+              <Avatar className='size-8'>
                 <AvatarFallback className='bg-primary/10 text-xs font-bold text-primary-strong'>
                   {initials}
                 </AvatarFallback>
@@ -89,14 +95,14 @@ export function DashboardHeader() {
               </span>
               <ChevronDown
                 className='h-4 w-4 text-foggy transition-transform duration-200 ease-out-quart group-data-popup-open:rotate-180'
-                strokeWidth={1.5}
+                strokeWidth={1.75}
               />
             </DropdownMenuTrigger>
 
             <DropdownMenuContent align='end' sideOffset={10} className='w-60 bg-card shadow-3'>
               {user?.displayName && (
-                <div className='flex items-center gap-3 px-2 py-2.5'>
-                  <Avatar className='h-9 w-9'>
+                <div className='flex items-center gap-3 px-2 py-3'>
+                  <Avatar className='size-9'>
                     <AvatarFallback className='bg-primary/10 text-xs font-bold text-primary-strong'>
                       {initials}
                     </AvatarFallback>
@@ -113,18 +119,18 @@ export function DashboardHeader() {
               )}
               <DropdownMenuSeparator />
               <DropdownMenuItem onClick={() => router.push(settingsHref)}>
-                <Settings className='h-4 w-4' strokeWidth={1.5} />
+                <Settings className='h-4 w-4' strokeWidth={1.75} />
                 {t('nav.settings')}
               </DropdownMenuItem>
               {!isParent && (
                 <DropdownMenuItem onClick={() => router.push('/dashboard/profile')}>
-                  <User className='h-4 w-4' strokeWidth={1.5} />
+                  <User className='h-4 w-4' strokeWidth={1.75} />
                   {t('nav.profile')}
                 </DropdownMenuItem>
               )}
               <DropdownMenuSeparator />
               <DropdownMenuItem onClick={handleLogout}>
-                <LogOut className='h-4 w-4' strokeWidth={1.5} />
+                <LogOut className='h-4 w-4' strokeWidth={1.75} />
                 {t('nav.logout')}
               </DropdownMenuItem>
             </DropdownMenuContent>

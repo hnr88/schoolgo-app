@@ -17,7 +17,7 @@ export function ReviewResponseBlock({ response }: ReviewResponseBlockProps) {
   const stamp = response.publishedAt ?? response.createdAt;
 
   return (
-    <div className='rounded-lg border border-divider bg-muted/40 p-4'>
+    <div className='rounded-xl bg-gray-50 p-4'>
       <div className='flex items-center gap-2 text-xs font-semibold text-ink-900'>
         <MessageSquareReply className='h-4 w-4 text-primary-strong' aria-hidden='true' />
         {t('officialResponse')}

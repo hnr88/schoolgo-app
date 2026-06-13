@@ -16,6 +16,8 @@ import { RequirementsSection } from '@/modules/school-detail/components/sections
 import { BoardingSection } from '@/modules/school-detail/components/sections/BoardingSection';
 import { CoCurricularSection } from '@/modules/school-detail/components/sections/CoCurricularSection';
 import { LocationSection } from '@/modules/school-detail/components/sections/LocationSection';
+import { ReviewsSection } from '@/modules/school-detail/components/sections/ReviewsSection';
+import { AskSchoolSection } from '@/modules/school-detail/components/sections/AskSchoolSection';
 import { CompareSection } from '@/modules/school-detail/components/sections/CompareSection';
 import { FaqSchoolSection } from '@/modules/school-detail/components/sections/FaqSchoolSection';
 import { StructuredData } from '@/modules/school-detail/components/sections/StructuredData';
@@ -59,6 +61,8 @@ export async function SchoolDetailPage({ school, activePortal, locale }: SchoolD
               <BoardingSection school={school} />
               <CoCurricularSection school={school} />
               <LocationSection school={school} />
+              <ReviewsSection schoolDocumentId={school.documentId} />
+              <AskSchoolSection schoolDocumentId={school.documentId} />
               <CompareSection similarSchools={similarSchools} activePortal={activePortal} />
               <FaqSchoolSection school={school} />
             </article>

@@ -11,7 +11,7 @@ export function CurriculumBadge({ codes, className }: CurriculumBadgeProps) {
   return (
     <span
       className={cn(
-        'inline-flex items-center rounded-pill bg-indigo-100 px-2 py-0.5 text-xs font-medium text-indigo-800',
+        'inline-flex h-6 items-center rounded-pill bg-indigo-100 px-2.5 text-xs font-semibold text-indigo-800',
         className,
       )}
     >

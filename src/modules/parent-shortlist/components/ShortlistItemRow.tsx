@@ -19,7 +19,7 @@ export function ShortlistItemRow({ item }: ShortlistItemRowProps) {
   const schoolLabel = t('schoolRef', { id: item.schoolId.slice(0, 8) });
 
   return (
-    <div className='flex items-center justify-between gap-3 rounded-lg border border-divider bg-card px-3 py-2'>
+    <div className='flex items-center justify-between gap-3 rounded-xl bg-gray-50 px-4 py-3'>
       <div className='flex min-w-0 items-center gap-2'>
         <span className='truncate text-sm font-medium text-ink-900'>{schoolLabel}</span>
         <StatusBadge

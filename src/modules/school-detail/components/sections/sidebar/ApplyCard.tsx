@@ -18,7 +18,7 @@ export async function ApplyCard({
   const isAgent = activePortal === 'agent';
 
   return (
-    <section aria-labelledby="apply-heading" className="rounded-lg border border-border bg-card p-5 shadow-1">
+    <section id="apply" aria-labelledby="apply-heading" className="rounded-lg border border-divider bg-card p-6 shadow-2">
       <h2 id="apply-heading" className="text-xl font-semibold text-ink-900">
         {isAgent ? t('heading') : t('agentHeading')}
       </h2>

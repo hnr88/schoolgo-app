@@ -10,7 +10,7 @@ export function IntakeScenarios({ scenarios }: { scenarios: YieldScenario[] }) {
       {scenarios.map((scenario) => (
         <div
           key={scenario.label}
-          className='flex flex-col gap-1 rounded-lg bg-page-surface p-3'
+          className='flex flex-col gap-1 rounded-xl bg-gray-50 p-4'
         >
           <span className='text-xs font-semibold uppercase tracking-wide text-foggy'>
             {t(`scenario_${scenario.label}`)}

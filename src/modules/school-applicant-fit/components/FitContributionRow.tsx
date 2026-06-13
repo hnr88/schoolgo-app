@@ -17,7 +17,7 @@ export function FitContributionRow({ contribution, contributions }: FitContribut
   const share = contributionShare(contribution, contributions);
 
   return (
-    <li className='flex flex-col gap-2 rounded-lg border border-divider bg-card p-4'>
+    <li className='flex flex-col gap-2 rounded-xl bg-gray-50 p-4'>
       <div className='flex flex-wrap items-center justify-between gap-2'>
         <span className='flex items-center gap-2 text-sm font-semibold text-ink-900'>
           {t(`criterion_${contribution.criterion}`)}

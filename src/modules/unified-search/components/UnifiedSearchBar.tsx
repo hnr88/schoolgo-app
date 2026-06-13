@@ -4,6 +4,7 @@ import { useId } from 'react';
 import { Search } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { cn } from '@/lib/utils';
+import { FOCUS_RING } from '@/modules/core';
 import { Input } from '@/components/ui/input';
 import { UnifiedSearchAutocomplete } from '@/modules/unified-search/components/UnifiedSearchAutocomplete';
 import { useUnifiedAutocomplete } from '@/modules/unified-search/hooks/useUnifiedAutocomplete';
@@ -23,8 +24,8 @@ export function UnifiedSearchBar({ className }: UnifiedSearchBarProps) {
     <div className={cn('relative', className)}>
       <div
         className={cn(
-          'group flex items-center gap-2 rounded-pill border border-border bg-card py-1 pr-1 pl-4 shadow-2',
-          'transition-shadow ease-out-quart focus-within:shadow-3 motion-reduce:transition-none',
+          'group flex h-12 items-center gap-2 rounded-pill border border-border bg-card pr-1 pl-4 shadow-2',
+          'transition-shadow ease-out-quart focus-within:border-primary focus-within:shadow-3 motion-reduce:transition-none',
         )}
       >
         <Search
@@ -53,9 +54,9 @@ export function UnifiedSearchBar({ className }: UnifiedSearchBarProps) {
           type="button"
           aria-label={t('search')}
           className={cn(
-            'grid size-9 shrink-0 place-items-center rounded-pill bg-primary text-on-primary',
+            'grid size-10 shrink-0 place-items-center rounded-pill bg-primary text-on-primary',
             'transition ease-out-quart hover:bg-primary-strong active:scale-95 motion-reduce:transition-none',
-            'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2',
+            FOCUS_RING,
           )}
         >
           <Search className="size-5" strokeWidth={2} aria-hidden="true" />

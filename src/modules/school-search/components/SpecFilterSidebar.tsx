@@ -7,6 +7,7 @@ import { useAuthStore } from '@/modules/auth';
 import type { SearchCapability } from '@/modules/unified-search';
 import { Badge } from '@/components/ui/badge';
 import { cn } from '@/lib/utils';
+import { FOCUS_RING } from '@/modules/core';
 import { AcademicFilterGroup } from '@/modules/school-search/components/filters/AcademicFilterGroup';
 import { EnglishTestFilterGroup } from '@/modules/school-search/components/filters/EnglishTestFilterGroup';
 import { EnrolmentFilterGroup } from '@/modules/school-search/components/filters/EnrolmentFilterGroup';
@@ -73,7 +74,7 @@ export function SpecFilterSidebar({ capability, className, alwaysOn = false, ope
       data-testid="spec-filter-sidebar"
     >
       <div className="flex h-full w-85 min-h-0 flex-col overflow-hidden rounded-lg border border-border bg-card shadow-2">
-        <div className="flex shrink-0 items-center justify-between gap-2 border-b border-divider bg-rausch-50 px-4 py-2.5">
+        <div className="flex shrink-0 items-center justify-between gap-2 border-b border-divider bg-rausch-50 px-4 py-3">
           <div className="flex items-center gap-2">
             <span className="text-caption font-semibold uppercase text-rausch-700">
               {t(isAdvanced ? 'modeBadge.advanced' : 'modeBadge.basic')}
@@ -89,9 +90,9 @@ export function SpecFilterSidebar({ capability, className, alwaysOn = false, ope
               type="button"
               onClick={() => reset()}
               className={cn(
-                'inline-flex items-center gap-1 rounded text-caption text-muted-foreground',
+                'inline-flex items-center gap-1 rounded-sm text-caption text-muted-foreground',
                 'transition-colors hover:text-foreground',
-                'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1',
+                FOCUS_RING,
               )}
             >
               <RotateCcw className="size-3" aria-hidden="true" />
@@ -100,15 +101,23 @@ export function SpecFilterSidebar({ capability, className, alwaysOn = false, ope
           )}
         </div>
 
-        <div className="min-h-0 flex-1 divide-y divide-divider overflow-y-auto px-4">
-          <LocationFilterGroup />
-          <SchoolProfileFilterGroup />
-          <EnrolmentFilterGroup isAdvanced={isAdvanced} />
-          <AcademicFilterGroup isAdvanced={isAdvanced} />
-          <EnglishTestFilterGroup isAdvanced={isAdvanced} />
-          <div className="py-4">
-            <SaveSearchButton />
+        <div className="min-h-0 flex-1 space-y-4 overflow-y-auto p-4">
+          <div className="rounded-lg bg-gray-50 px-4 py-2">
+            <LocationFilterGroup />
           </div>
+          <div className="rounded-lg bg-gray-50 px-4 py-2">
+            <SchoolProfileFilterGroup />
+          </div>
+          <div className="rounded-lg bg-gray-50 px-4 py-2">
+            <EnrolmentFilterGroup isAdvanced={isAdvanced} />
+          </div>
+          <div className="rounded-lg bg-gray-50 px-4 py-2">
+            <AcademicFilterGroup isAdvanced={isAdvanced} />
+          </div>
+          <div className="rounded-lg bg-gray-50 px-4 py-2">
+            <EnglishTestFilterGroup isAdvanced={isAdvanced} />
+          </div>
+          <SaveSearchButton />
         </div>
       </div>
     </aside>

@@ -65,7 +65,7 @@ export function SchoolApplicantFitPage() {
       ) : (
         <>
           <FitBandSummary rows={data.data} total={data.meta.pagination.total} />
-          <div className='flex flex-col rounded-xl border border-divider bg-card shadow-1'>
+          <div className='flex flex-col overflow-hidden rounded-lg border border-divider bg-card shadow-2'>
             <FitTriageTable
               rows={data.data}
               params={params}

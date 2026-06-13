@@ -1,8 +1,9 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
+import { SearchX } from 'lucide-react';
 import { Skeleton } from '@/components/ui/skeleton';
-import { ErrorState } from '@/modules/core';
+import { EmptyState, ErrorState } from '@/modules/core';
 import type { Portal } from '@/lib/portal-url';
 import type { SearchCapability } from '@/modules/unified-search';
 import { cn } from '@/lib/utils';
@@ -48,13 +49,13 @@ export function SpecResultsList({
       <div className={gridClassName} aria-busy="true" aria-live="polite">
         <span className="sr-only">{t('spec.results.loading')}</span>
         {SKELETON_KEYS.map((key) => (
-          <div key={key} className="flex flex-col gap-2">
+          <div key={key} className="flex flex-col gap-2 rounded-xl bg-card p-3 shadow-2">
             <Skeleton className="aspect-[3/2] w-full rounded-lg" />
             <Skeleton className="h-4 w-3/4" />
             <Skeleton className="h-3 w-1/2" />
-            <div className="flex flex-wrap gap-1.5">
-              <Skeleton className="h-4 w-12 rounded-pill" />
-              <Skeleton className="h-4 w-14 rounded-pill" />
+            <div className="flex flex-wrap gap-2">
+              <Skeleton className="h-6 w-12 rounded-pill" />
+              <Skeleton className="h-6 w-14 rounded-pill" />
             </div>
           </div>
         ))}
@@ -77,9 +78,9 @@ export function SpecResultsList({
 
   if (hits.length === 0) {
     return (
-      <p className={cn('py-12 text-center text-sm text-muted-foreground', emptyClassName)}>
-        {t('results.empty')}
-      </p>
+      <div className={cn(emptyClassName)}>
+        <EmptyState icon={SearchX} title={t('results.empty')} />
+      </div>
     );
   }
 

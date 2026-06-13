@@ -24,11 +24,11 @@ export function ParentDashboardHeader() {
 
   return (
     <div className='flex flex-wrap items-center justify-between gap-4'>
-      <div className='flex flex-col gap-1.5'>
-        <h1 className='font-display text-2xl font-bold tracking-tight text-ink-900 sm:text-3xl'>
+      <div className='flex flex-col gap-2'>
+        <h1 className='font-display text-display-h1 font-bold tracking-tight text-ink-900'>
           {greeting} <span className='text-primary'>{firstName}</span>
         </h1>
-        <p className='flex flex-wrap items-center gap-x-2.5 gap-y-1 text-sm text-foggy'>
+        <p className='flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-foggy'>
           <span className='inline-flex items-center gap-1.5'>
             <CalendarDays className='h-4 w-4 text-foggy' strokeWidth={1.75} aria-hidden='true' />
             {today}

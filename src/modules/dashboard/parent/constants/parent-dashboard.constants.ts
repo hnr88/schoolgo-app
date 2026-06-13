@@ -34,28 +34,28 @@ export const PARENT_STAT_TILES: ParentStatTileConfig[] = [
     href: '/parent/applications',
     icon: FileText,
     labelKey: 'statApplicationsInProgress',
-    gradient: 'from-rausch-500 to-rausch-700',
+    iconClassName: 'text-primary',
   },
   {
     key: 'children',
     href: '/parent/students',
     icon: Users,
     labelKey: 'statChildren',
-    gradient: 'from-babu-500 to-babu-700',
+    iconClassName: 'text-babu-700',
   },
   {
     key: 'savedSchools',
     href: '/parent/saved-schools',
     icon: Heart,
     labelKey: 'statSavedSchools',
-    gradient: 'from-arches-600 to-arches-700',
+    iconClassName: 'text-arches-700',
   },
   {
     key: 'offers',
     href: '/parent/offers',
     icon: Award,
     labelKey: 'statOffers',
-    gradient: 'from-vivid-iris to-vivid-iris-strong',
+    iconClassName: 'text-vivid-iris-strong',
   },
 ];
 

@@ -11,6 +11,8 @@ const TOC_ITEMS = [
   'boarding',
   'cocurricular',
   'location',
+  'reviews',
+  'questions',
   'compare',
   'faq',
 ] as const;
@@ -23,7 +25,7 @@ export async function TocCard({ activePortal }: { activePortal?: Portal }) {
   const items = TOC_ITEMS.filter((id) => id !== 'agents' || activePortal !== 'agent');
 
   return (
-    <section aria-labelledby="toc-heading" className="rounded-lg border border-border bg-card p-5 shadow-1">
+    <section aria-labelledby="toc-heading" className="rounded-lg border border-divider bg-card p-6 shadow-2">
       <h2 id="toc-heading" className="mb-5 text-xl font-semibold text-ink-900">{t('heading')}</h2>
       <nav aria-labelledby="toc-heading">
         <ul className="space-y-2">

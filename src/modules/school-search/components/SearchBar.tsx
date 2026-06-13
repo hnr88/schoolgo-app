@@ -3,6 +3,7 @@ import { useRef, useState } from 'react';
 import { Search, X } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { cn } from '@/lib/utils';
+import { FOCUS_RING } from '@/modules/core';
 import { Input } from '@/components/ui/input';
 import { SearchAutocompleteDropdown } from '@/modules/school-search/components/SearchAutocompleteDropdown';
 import { useSearchShortcut } from '@/modules/school-search/hooks/use-search-shortcut';
@@ -42,9 +43,9 @@ export function SearchBar({ className }: SearchBarProps) {
 
   return (
     <div className={cn('relative', className)}>
-      <div className='group relative flex items-center gap-3 rounded-pill border border-border bg-card px-5 py-3 shadow-2 transition-shadow focus-within:border-primary focus-within:shadow-3'>
+      <div className='group relative flex h-12 items-center gap-3 rounded-pill border border-border bg-card px-5 shadow-2 transition-shadow ease-out-quart focus-within:border-primary focus-within:shadow-3 motion-reduce:transition-none'>
         <Search
-          className='h-4 w-4 shrink-0 text-foggy transition-colors group-focus-within:text-primary'
+          className='size-5 shrink-0 text-foggy transition-colors group-focus-within:text-primary'
           strokeWidth={1.75}
           aria-hidden='true'
         />
@@ -72,7 +73,10 @@ export function SearchBar({ className }: SearchBarProps) {
             type='button'
             onClick={handleClearSearch}
             aria-label={t('clearSearch')}
-            className='flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-muted text-foggy transition-colors hover:bg-ink-200 hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1'
+            className={cn(
+              'flex size-8 shrink-0 items-center justify-center rounded-pill bg-muted text-foggy transition-colors hover:bg-ink-200 hover:text-foreground',
+              FOCUS_RING,
+            )}
           >
             <X className='h-3 w-3' strokeWidth={2.5} aria-hidden='true' />
           </button>

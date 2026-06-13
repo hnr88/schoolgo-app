@@ -16,14 +16,14 @@ export function EngagementDeliverables({
   if (entries.length === 0) return null;
 
   return (
-    <div className='flex flex-col gap-2 rounded-lg bg-muted/40 p-3'>
+    <div className='flex flex-col gap-2 rounded-xl bg-gray-50 p-4'>
       <span className='text-xs font-semibold uppercase tracking-wide text-foggy'>
         {t('deliverablesLabel')}
       </span>
       <ul className='flex flex-col gap-1.5'>
         {entries.map(([key, value]) => (
           <li key={key} className='flex items-start gap-2 text-sm text-foreground'>
-            <CheckCircle2 className='mt-0.5 h-4 w-4 shrink-0 text-vivid-mint' aria-hidden='true' />
+            <CheckCircle2 className='mt-0.5 h-4 w-4 shrink-0 text-vivid-mint-strong' aria-hidden='true' />
             <span className='min-w-0 break-words'>
               <span className='font-medium text-ink-900'>{key}: </span>
               {stringifyDeliverable(value)}

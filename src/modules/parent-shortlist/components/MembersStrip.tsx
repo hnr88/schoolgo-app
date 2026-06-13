@@ -26,7 +26,7 @@ export function MembersStrip({ members }: MembersStripProps) {
       {members.map((member) => (
         <span
           key={member.userDocumentId}
-          className='inline-flex items-center gap-1 rounded-full bg-muted px-2 py-0.5 text-xs font-medium text-foggy'
+          className='inline-flex h-6 items-center gap-1 rounded-pill bg-muted px-2.5 text-xs font-medium text-foggy'
         >
           {t(`role_${member.role}`)}
         </span>

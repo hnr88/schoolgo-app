@@ -1,9 +1,11 @@
 'use client';
 
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 import { cn } from '@/lib/utils';
 import type { SearchCapability } from '@/modules/unified-search';
 import { CardActions } from '@/modules/school-search/components/cards/CardActions';
+import { formatAud } from '@/modules/school-search/lib/format-currency';
 import { DefaultPhoto, getSchoolAvatarTheme } from '@/modules/design-system';
 
 interface SchoolCardImageProps {
@@ -13,6 +15,7 @@ interface SchoolCardImageProps {
   isAdvanced: boolean;
   capability?: SearchCapability;
   priority?: boolean;
+  tuition?: number | null;
   onUnauthenticatedBookmark?: () => void;
 }
 
@@ -23,8 +26,10 @@ export function SchoolCardImage({
   isAdvanced,
   capability,
   priority = false,
+  tuition,
   onUnauthenticatedBookmark,
 }: SchoolCardImageProps) {
+  const t = useTranslations('SchoolSearch.spec.tileCard');
   return (
     <div className="relative flex aspect-[3/2] w-full items-center justify-center overflow-hidden rounded-lg bg-muted">
       {logo ? (
@@ -57,6 +62,11 @@ export function SchoolCardImage({
           onUnauthenticatedBookmark={onUnauthenticatedBookmark}
         />
       </div>
+      {tuition != null && (
+        <span className="absolute bottom-2 left-2 z-10 inline-flex items-center rounded-pill bg-card/95 px-2.5 py-1 text-caption font-semibold text-ink-900 shadow-1 backdrop-blur-sm">
+          {t('allIn', { amount: formatAud(tuition).replace('A$', '$') })}
+        </span>
+      )}
     </div>
   );
 }

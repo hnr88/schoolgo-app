@@ -4,7 +4,7 @@ import { CalendarClock, CheckCircle } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import { cn } from '@/lib/utils';
-import { EmptyState } from '@/modules/core';
+import { EmptyState, FOCUS_RING_INSET } from '@/modules/core';
 import { DashboardSectionHeader } from '@/modules/dashboard/components/DashboardSectionHeader';
 import type { DeadlineRowView } from '@/modules/dashboard/types/agent-dashboard.types';
 
@@ -13,17 +13,20 @@ export function DeadlinesList({ deadlines }: { deadlines: DeadlineRowView[] }) {
   const hasRows = deadlines.length > 0;
 
   return (
-    <section className='flex flex-col overflow-hidden rounded-lg border border-border bg-card shadow-1'>
+    <section className='flex flex-col overflow-hidden rounded-lg bg-card shadow-2'>
       <DashboardSectionHeader title={t('title')} icon={CalendarClock} />
       {!hasRows ? (
         <EmptyState icon={CheckCircle} title={t('empty')} />
       ) : (
-        <div className='flex flex-col divide-y divide-divider'>
+        <div className='flex flex-col gap-1 p-3'>
           {deadlines.map((d) => (
             <Link
               key={d.id}
               href={d.href}
-              className='group flex items-center gap-4 px-5 py-3.5 no-underline transition-colors hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-ring'
+              className={cn(
+                'group flex items-center gap-4 rounded-xl px-3 py-4 no-underline transition-colors duration-200 ease-out-quart hover:bg-gray-50',
+                FOCUS_RING_INSET,
+              )}
             >
               <span
                 className={cn(

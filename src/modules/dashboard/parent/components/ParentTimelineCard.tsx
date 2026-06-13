@@ -3,7 +3,8 @@
 import { useFormatter, useTranslations } from 'next-intl';
 import { History, Inbox } from 'lucide-react';
 import { Link } from '@/i18n/navigation';
-import { EmptyState, ErrorState } from '@/modules/core';
+import { cn } from '@/lib/utils';
+import { EmptyState, ErrorState, FOCUS_RING } from '@/modules/core';
 import { ParentDashboardCard } from '@/modules/dashboard/parent/components/ParentDashboardCard';
 import { ParentSummaryRowsSkeleton } from '@/modules/dashboard/parent/components/ParentSummaryStates';
 import { useParentDerivedApplications } from '@/modules/dashboard/parent/hooks/useParentDerivedApplications';
@@ -40,7 +41,10 @@ export function ParentTimelineCard() {
               <li key={event.id}>
                 <Link
                   href={event.href}
-                  className='group flex items-center gap-3 rounded-xl px-2 py-2.5 no-underline transition-colors duration-200 ease-out-quart hover:bg-muted'
+                  className={cn(
+                    'group flex items-center gap-3 rounded-xl px-2 py-3 no-underline transition-colors duration-200 ease-out-quart hover:bg-gray-50',
+                    FOCUS_RING,
+                  )}
                 >
                   <Icon
                     className='h-4 w-4 shrink-0 text-foggy transition-colors duration-200 ease-out-quart group-hover:text-ink-900'

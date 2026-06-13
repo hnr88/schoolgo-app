@@ -1,5 +1,26 @@
+import type { StatusTone } from '@/modules/core';
 import type { ApplicationStatus } from '@/modules/applications/types/application.types';
 import type { ApplicationSortField } from '@/modules/applications/types/component.types';
+
+/** Maps each application status onto a canonical semantic pill tone (§2.5 / §3.10). */
+export const APPLICATION_STATUS_TONES: Record<ApplicationStatus, StatusTone> = {
+  draft: 'neutral',
+  submitted: 'in-progress',
+  received: 'in-progress',
+  under_review: 'in-progress',
+  documents_requested: 'action',
+  assessment_required: 'in-progress',
+  interview_scheduled: 'in-progress',
+  interview_completed: 'in-progress',
+  offer_made: 'success',
+  offer_accepted: 'success',
+  pre_enrolment: 'in-progress',
+  coe_issued: 'in-progress',
+  enrolled: 'success',
+  withdrawn: 'neutral',
+  declined: 'urgent',
+  waitlisted: 'action',
+};
 
 export const APPLICATION_STATUS_STYLES: Record<
   ApplicationStatus,

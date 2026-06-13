@@ -3,7 +3,8 @@
 import { useTranslations } from 'next-intl';
 import { CheckCircle2, GaugeCircle, Users } from 'lucide-react';
 import { Link } from '@/i18n/navigation';
-import { EmptyState, ErrorState } from '@/modules/core';
+import { cn } from '@/lib/utils';
+import { EmptyState, ErrorState, FOCUS_RING } from '@/modules/core';
 import { ParentStudentAvatar } from '@/modules/students';
 import { ParentDashboardCard } from '@/modules/dashboard/parent/components/ParentDashboardCard';
 import { ParentCompletenessRing } from '@/modules/dashboard/parent/components/ParentCompletenessRing';
@@ -31,12 +32,15 @@ export function ParentCompletenessCard() {
           description={t('completenessEmptySubtitle')}
         />
       ) : (
-        <ul className='-mx-3 flex flex-col gap-1'>
+        <ul className='-mx-2 flex flex-col gap-1'>
           {items.map((item) => (
             <li key={item.documentId}>
               <Link
                 href={`/parent/students/${item.documentId}`}
-                className='group flex items-center gap-4 rounded-xl px-3 py-2.5 no-underline transition-colors duration-200 ease-out-quart hover:bg-muted'
+                className={cn(
+                  'group flex items-center gap-4 rounded-xl px-2 py-4 no-underline transition-colors duration-200 ease-out-quart hover:bg-gray-50',
+                  FOCUS_RING,
+                )}
               >
                 <ParentStudentAvatar
                   firstName={item.name.split(' ')[0] ?? ''}

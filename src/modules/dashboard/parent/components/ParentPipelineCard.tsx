@@ -32,10 +32,10 @@ export function ParentPipelineCard() {
           description={t('pipelineEmptySubtitle')}
         />
       ) : (
-        <div className='flex flex-col gap-5'>
+        <div className='flex flex-col gap-6'>
           <div className='flex flex-col gap-1'>
             <Eyebrow>{t('pipelineTitle')}</Eyebrow>
-            <p className='font-display text-3xl font-bold tracking-tight text-ink-900 tabular-nums'>
+            <p className='font-display text-display-h1 font-bold tracking-tight text-ink-900 tabular-nums'>
               {t('pipelineTotal', { count: total })}
             </p>
           </div>

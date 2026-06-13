@@ -1,6 +1,8 @@
 import { ArrowRight } from 'lucide-react';
 import { Link } from '@/i18n/navigation';
 import type { ComponentProps } from 'react';
+import { FOCUS_RING } from '@/modules/core';
+import { cn } from '@/lib/utils';
 import type { IconComponent } from '@/modules/design-system';
 
 interface ParentSectionHeaderProps {
@@ -18,14 +20,17 @@ export function ParentSectionHeader({
 }: ParentSectionHeaderProps) {
   return (
     <div className='flex items-center justify-between gap-3'>
-      <h2 className='flex items-center gap-2 font-display text-lg font-bold tracking-tight text-ink-900'>
-        <Icon className='h-4 w-4 text-foggy' strokeWidth={1.75} aria-hidden='true' />
+      <h2 className='flex items-center gap-2 text-card-title font-semibold text-ink-900'>
+        <Icon className='h-5 w-5 text-foggy' strokeWidth={1.75} aria-hidden='true' />
         {title}
       </h2>
       {viewAllHref && viewAllLabel && (
         <Link
           href={viewAllHref}
-          className='group inline-flex items-center gap-1 text-sm font-semibold text-primary-strong no-underline transition-colors duration-200 ease-out-quart hover:text-ink-900'
+          className={cn(
+            'group inline-flex items-center gap-1 rounded-md text-sm font-semibold text-primary-strong no-underline transition-colors duration-200 ease-out-quart hover:text-ink-900',
+            FOCUS_RING,
+          )}
         >
           {viewAllLabel}
           <ArrowRight

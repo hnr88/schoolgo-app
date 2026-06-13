@@ -43,7 +43,7 @@ export function AgentDashboard() {
 
   if (isError || !data) {
     return (
-      <div className='rounded-lg border border-border bg-card shadow-1'>
+      <div className='rounded-lg bg-card shadow-2'>
         <ErrorState
           message={t('loadError')}
           onRetry={() => refetch()}
@@ -84,7 +84,9 @@ export function AgentDashboard() {
       </div>
 
       <section className='flex flex-col gap-4'>
-        <h2 className='text-base font-bold text-ink-900'>{t('quickActionsTitle')}</h2>
+        <h2 className='font-display text-section-h2 font-semibold tracking-tight text-ink-900'>
+          {t('quickActionsTitle')}
+        </h2>
         <QuickActions />
       </section>
     </div>

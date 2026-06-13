@@ -15,7 +15,7 @@ export function PartnerAgentsSection({ schoolDocumentId }: { schoolDocumentId: s
     <section
       id="agents"
       aria-labelledby="agents-heading"
-      className="rounded-lg border border-border bg-card py-10 px-6 shadow-1 md:py-14 md:px-8"
+      className="rounded-lg border border-divider bg-card py-10 px-6 shadow-2 md:py-14 md:px-8"
     >
       <Eyebrow>{t('eyebrow')}</Eyebrow>
       <h2 id="agents-heading" className="mt-2 text-2xl font-bold text-ink-900 md:text-3xl">

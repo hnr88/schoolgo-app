@@ -34,8 +34,8 @@ export function ApplicationListPage() {
   }
 
   return (
-    <div className='overflow-hidden rounded-xl border border-border bg-card'>
-      <div className='border-b border-border px-6 py-4'>
+    <div className='overflow-hidden rounded-lg border border-divider bg-card shadow-2'>
+      <div className='border-b border-divider px-6 py-4'>
         <ApplicationListToolbar
           search={search}
           onSearchChange={handleSearchChange}

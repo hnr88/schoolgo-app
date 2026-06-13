@@ -40,7 +40,7 @@ export function DemandSignalRow({ demand, isLoading }: DemandSignalRowProps) {
       </span>
       <span
         className={cn(
-          'inline-flex items-center rounded-full px-2 py-0.5 font-semibold',
+          'inline-flex h-6 items-center rounded-pill px-2.5 font-semibold',
           COMPETITION_STYLES[demand.competition],
         )}
       >

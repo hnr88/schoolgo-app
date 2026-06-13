@@ -4,6 +4,7 @@ import { ArrowUpRight } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import { cn } from '@/lib/utils';
+import { FOCUS_RING } from '@/modules/core';
 import { QUICK_ACTIONS } from '@/modules/dashboard/constants/ui.constants';
 
 export function QuickActions() {
@@ -15,11 +16,14 @@ export function QuickActions() {
         <Link
           key={href}
           href={href}
-          className='group flex flex-col gap-5 rounded-2xl border border-divider bg-card p-5 no-underline shadow-1 transition-transform duration-200 ease-out-quart hover:-translate-y-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2'
+          className={cn(
+            'group flex flex-col gap-6 rounded-lg bg-card p-6 no-underline shadow-2 transition-[transform,box-shadow] duration-300 ease-out-quart hover:-translate-y-0.5 hover:shadow-3 motion-reduce:transition-none motion-reduce:hover:translate-y-0',
+            FOCUS_RING,
+          )}
         >
           <span
             className={cn(
-              'flex h-12 w-12 shrink-0 items-center justify-center rounded-xl',
+              'flex size-12 shrink-0 items-center justify-center rounded-md',
               bg,
               color,
             )}

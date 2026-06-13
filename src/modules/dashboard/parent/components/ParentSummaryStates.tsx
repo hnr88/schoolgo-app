@@ -6,7 +6,7 @@ export function ParentSummaryRowsSkeleton({ rows = 3 }: { rows?: number }) {
       {Array.from({ length: rows }).map((_, index) => (
         <div key={index} className='flex items-center gap-3 rounded-lg px-1 py-2'>
           <Skeleton className='h-9 w-9 shrink-0 rounded-full' />
-          <div className='flex flex-1 flex-col gap-1.5'>
+          <div className='flex flex-1 flex-col gap-2'>
             <Skeleton className='h-3.5 w-2/5' />
             <Skeleton className='h-3 w-1/4' />
           </div>

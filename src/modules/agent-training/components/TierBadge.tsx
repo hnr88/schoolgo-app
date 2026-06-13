@@ -19,11 +19,11 @@ export function TierBadge({ tier }: { tier: TrainingTier }) {
   return (
     <span
       className={cn(
-        'inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-sm font-semibold',
+        'inline-flex h-6 items-center gap-1.5 rounded-pill px-2.5 text-xs font-semibold',
         TIER_STYLES[tier],
       )}
     >
-      <Award className='h-4 w-4' strokeWidth={2} aria-hidden='true' />
+      <Award className='size-3 shrink-0' strokeWidth={1.75} aria-hidden='true' />
       {t(resolveTierLabelKey(tier))}
     </span>
   );

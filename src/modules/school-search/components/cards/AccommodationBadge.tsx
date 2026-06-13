@@ -22,7 +22,7 @@ export function AccommodationBadge({ value, className }: AccommodationBadgeProps
   return (
     <span
       className={cn(
-        'inline-flex items-center rounded-pill bg-stone-100 px-2 py-0.5 text-xs font-medium text-stone-700',
+        'inline-flex h-6 items-center rounded-pill bg-stone-100 px-2.5 text-xs font-semibold text-stone-700',
         className,
       )}
     >

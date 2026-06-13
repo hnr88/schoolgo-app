@@ -2,14 +2,15 @@ import { cva, type VariantProps } from 'class-variance-authority';
 import { cn } from '@/lib/utils';
 
 export const surfaceCardVariants = cva(
-  'rounded-xl bg-card ease-out-quart',
+  // Canonical card (§3.3): 16px radius (--radius-lg) on white.
+  'rounded-lg bg-card ease-out-quart',
   {
     variants: {
       elevation: {
-        flat: 'shadow-1',
-        raised: 'shadow-1',
+        flat: 'shadow-2',
+        raised: 'shadow-2',
         interactive:
-          'shadow-1 transition-[transform,box-shadow] duration-300 ease-out-quart hover:-translate-y-0.5 hover:shadow-2 focus-within:-translate-y-0.5 focus-within:shadow-2',
+          'shadow-2 transition-[transform,box-shadow] duration-300 ease-out-quart hover:-translate-y-0.5 hover:shadow-3 focus-within:-translate-y-0.5 focus-within:shadow-3 motion-reduce:transition-none motion-reduce:hover:translate-y-0 motion-reduce:focus-within:translate-y-0',
       },
       accent: {
         none: '',

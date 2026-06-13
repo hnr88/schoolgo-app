@@ -28,11 +28,11 @@ export function BandBadge({ band, score }: BandBadgeProps) {
   return (
     <span
       className={cn(
-        'inline-flex shrink-0 items-center gap-1.5 rounded-full border px-2.5 py-0.5 text-xs font-semibold',
+        'inline-flex h-6 shrink-0 items-center gap-1.5 rounded-pill border px-2.5 text-xs font-semibold',
         BAND_STYLES[band],
       )}
     >
-      <Icon className='h-3.5 w-3.5' strokeWidth={1.75} aria-hidden='true' />
+      <Icon className='size-3 shrink-0' strokeWidth={1.75} aria-hidden='true' />
       {t(BAND_LABEL_KEYS[band])}
       <span className='tabular-nums opacity-70'>{t('scoreSuffix', { score })}</span>
     </span>

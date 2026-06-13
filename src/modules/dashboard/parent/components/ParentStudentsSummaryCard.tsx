@@ -6,7 +6,7 @@ import { Link } from '@/i18n/navigation';
 import { buttonVariants } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { Eyebrow } from '@/modules/design-system';
-import { EmptyState, ErrorState } from '@/modules/core';
+import { EmptyState, ErrorState, FOCUS_RING } from '@/modules/core';
 import { ParentStudentAvatar, useParentStudents } from '@/modules/students';
 import { ParentDashboardCard } from '@/modules/dashboard/parent/components/ParentDashboardCard';
 import { ParentSummaryRowsSkeleton } from '@/modules/dashboard/parent/components/ParentSummaryStates';
@@ -38,7 +38,7 @@ export function ParentStudentsSummaryCard() {
           title={t('studentsEmptyTitle')}
           description={t('studentsEmptySubtitle')}
           action={
-            <Link href='/parent/students/new' className={cn(buttonVariants(), 'gap-1.5')}>
+            <Link href='/parent/students/new' className={cn(buttonVariants(), 'gap-2')}>
               <UserPlus className='h-4 w-4' aria-hidden='true' />
               {t('addStudent')}
             </Link>
@@ -47,12 +47,15 @@ export function ParentStudentsSummaryCard() {
       ) : (
         <div className='flex flex-col gap-2'>
           <Eyebrow>{t('studentsCount', { count: total })}</Eyebrow>
-          <ul className='-mx-3 flex flex-col gap-1'>
+          <ul className='-mx-2 flex flex-col gap-1'>
             {students.map((student) => (
               <li key={student.documentId}>
                 <Link
                   href={`/parent/students/${student.documentId}`}
-                  className='group flex items-center gap-4 rounded-xl px-3 py-2.5 no-underline transition-colors duration-200 ease-out-quart hover:bg-muted'
+                  className={cn(
+                    'group flex items-center gap-4 rounded-xl px-2 py-4 no-underline transition-colors duration-200 ease-out-quart hover:bg-gray-50',
+                    FOCUS_RING,
+                  )}
                 >
                   <ParentStudentAvatar
                     firstName={student.firstName}

@@ -19,9 +19,9 @@ export function BenchmarkDeltaChip({ delta, emptyLabel }: BenchmarkDeltaChipProp
   return (
     <span
       className={cn(
-        'inline-flex items-center gap-0.5 rounded-md px-1.5 py-0.5 text-xs font-semibold tabular-nums',
-        isUp && 'bg-vivid-mint-soft text-vivid-mint',
-        isDown && 'bg-vivid-coral-soft text-vivid-coral-strong',
+        'inline-flex items-center gap-0.5 rounded-pill px-2 py-0.5 text-xs font-semibold tabular-nums',
+        isUp && 'bg-vivid-mint-soft text-vivid-mint-strong',
+        isDown && 'bg-vivid-coral-soft text-primary-strong',
         !isUp && !isDown && 'bg-muted text-foggy',
       )}
     >

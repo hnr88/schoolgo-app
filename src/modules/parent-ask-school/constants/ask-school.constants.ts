@@ -9,6 +9,7 @@ export const ANSWER_BODY_MAX = 4000;
 
 export const PARENT_QUESTIONS_QUERY_KEY = ['parent', 'ask-school', 'questions'] as const;
 export const SCHOOL_QUESTIONS_QUERY_KEY = ['school', 'ask-school', 'questions'] as const;
+export const PUBLIC_SCHOOL_QUESTIONS_QUERY_KEY = ['public', 'ask-school', 'questions'] as const;
 
 export const QUESTION_TOPICS: readonly QuestionTopic[] = [
   'admissions',

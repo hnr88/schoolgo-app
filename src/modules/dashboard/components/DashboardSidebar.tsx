@@ -9,6 +9,7 @@ import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 import { useAuthStore } from '@/modules/auth/stores/use-auth-store';
 import { useSidebarStore } from '@/modules/dashboard/stores/use-sidebar-store';
 import { getUserInitials } from '@/modules/dashboard/lib/get-user-initials';
+import { FOCUS_RING } from '@/modules/core';
 import { cn } from '@/lib/utils';
 import { PORTAL_NAV } from '../constants/ui.constants';
 import { SidebarNavLinks } from './SidebarNavLinks';
@@ -68,7 +69,10 @@ export function DashboardSidebar() {
           type='button'
           aria-label={t(isCollapsed ? 'expandSidebar' : 'collapseSidebar')}
           onClick={() => setCollapsed(!isCollapsed)}
-          className='flex shrink-0 items-center justify-center rounded-lg p-2 text-foggy transition-colors hover:bg-card hover:text-ink-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring'
+          className={cn(
+            'flex shrink-0 items-center justify-center rounded-md p-2 text-foggy transition-colors hover:bg-card hover:text-ink-900',
+            FOCUS_RING,
+          )}
         >
           {isCollapsed ? (
             <PanelLeftOpen className='h-5 w-5' strokeWidth={1.75} />
@@ -86,8 +90,9 @@ export function DashboardSidebar() {
             href={settingsHref}
             title={isCollapsed ? displayName : undefined}
             className={cn(
-              'group flex items-center gap-3 rounded-xl border border-border bg-card no-underline shadow-1 transition-[box-shadow,background-color] duration-200 ease-out-quart hover:shadow-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring',
-              isCollapsed ? 'justify-center p-1.5' : 'p-2',
+              'group flex min-h-11 items-center gap-3 rounded-md border border-border bg-card no-underline shadow-2 transition-[box-shadow,background-color] duration-200 ease-out-quart hover:shadow-3',
+              FOCUS_RING,
+              isCollapsed ? 'justify-center p-2' : 'p-2',
             )}
           >
             <Avatar className='h-9 w-9 shrink-0'>

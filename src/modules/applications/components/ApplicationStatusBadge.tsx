@@ -1,38 +1,17 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { StatusBadge } from '@/modules/design-system';
-import { APPLICATION_STATUS_LABELS } from '@/modules/applications/constants/application.constants';
+import { StatusPill } from '@/modules/core';
+import {
+  APPLICATION_STATUS_LABELS,
+  APPLICATION_STATUS_TONES,
+} from '@/modules/applications/constants/application.constants';
 import type { ApplicationStatusBadgeProps } from '@/modules/applications/types/component.types';
-import type { ApplicationStatus } from '@/modules/applications/types/application.types';
-
-const STATUS_TO_TONE: Record<ApplicationStatus, NonNullable<React.ComponentProps<typeof StatusBadge>['tone']>> = {
-  draft: 'muted',
-  submitted: 'submitted',
-  received: 'submitted',
-  under_review: 'underReview',
-  documents_requested: 'featured',
-  assessment_required: 'underReview',
-  interview_scheduled: 'underReview',
-  interview_completed: 'underReview',
-  offer_made: 'accepted',
-  offer_accepted: 'accepted',
-  pre_enrolment: 'submitted',
-  coe_issued: 'submitted',
-  enrolled: 'enrolled',
-  withdrawn: 'muted',
-  declined: 'rejected',
-  waitlisted: 'featured',
-};
 
 export function ApplicationStatusBadge({ status }: ApplicationStatusBadgeProps) {
   const t = useTranslations('Applications');
   const labelKey = APPLICATION_STATUS_LABELS[status] ?? 'statusDraft';
-  const tone = STATUS_TO_TONE[status] ?? 'muted';
+  const tone = APPLICATION_STATUS_TONES[status] ?? 'neutral';
 
-  return (
-    <StatusBadge tone={tone}>
-      {t(labelKey)}
-    </StatusBadge>
-  );
+  return <StatusPill tone={tone}>{t(labelKey)}</StatusPill>;
 }
