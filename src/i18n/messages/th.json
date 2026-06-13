@@ -1697,7 +1697,8 @@
       "reputation": "Reputation",
       "capacityPlanner": "Capacity planner",
       "growthServices": "Growth services",
-      "groupEarnings": "Earnings"
+      "groupEarnings": "Earnings",
+      "questions": "คำถาม"
     },
     "greeting": {
       "morning": "สวัสดีตอนเช้า",
@@ -6758,13 +6759,15 @@
     "cancel": "Cancel",
     "configSaved": "Applicant fit configuration saved.",
     "configSaveError": "We could not save the configuration. Please try again.",
-    "formErrors.weightRequired": "Enter a weight.",
-    "formErrors.weightMin": "Weight cannot be below 0.",
-    "formErrors.weightMax": "Weight cannot exceed 100.",
-    "formErrors.thresholdRequired": "Enter a threshold.",
-    "formErrors.thresholdMin": "Threshold cannot be below 0.",
-    "formErrors.thresholdMax": "Threshold cannot exceed 1.",
-    "formErrors.thresholdsMonotonic": "Safety must be at least match, and match at least reach."
+    "formErrors": {
+      "weightRequired": "Enter a weight.",
+      "weightMin": "Weight cannot be below 0.",
+      "weightMax": "Weight cannot exceed 100.",
+      "thresholdRequired": "Enter a threshold.",
+      "thresholdMin": "Threshold cannot be below 0.",
+      "thresholdMax": "Threshold cannot exceed 1.",
+      "thresholdsMonotonic": "Safety must be at least match, and match at least reach."
+    }
   },
   "SchoolReputation": {
     "title": "Reputation desk",
@@ -6973,13 +6976,17 @@
     "catalogEmptyTitle": "No services available",
     "catalogEmptyDescription": "There are no growth services offered to your school yet. Check back soon.",
     "retry": "Try again",
-    "category.profile": "Profile boost",
-    "category.featured_placement": "Featured placement",
-    "category.agent_activation": "Agent activation",
-    "category.compliance_audit": "Compliance audit",
-    "category.marketing": "Marketing",
-    "billing.oneoff": "One-off payment",
-    "billing.recurring": "Recurring",
+    "category": {
+      "profile": "Profile boost",
+      "featured_placement": "Featured placement",
+      "agent_activation": "Agent activation",
+      "compliance_audit": "Compliance audit",
+      "marketing": "Marketing"
+    },
+    "billing": {
+      "oneoff": "One-off payment",
+      "recurring": "Recurring"
+    },
     "purchaseDialogTitle": "Request this service",
     "purchaseDialogDescription": "Request \"{name}\" for {price}. This creates an invoice and a new engagement for your school.",
     "purchaseInvoiceNote": "An invoice will be issued to your school and the engagement will start as Requested.",
@@ -6996,9 +7003,11 @@
     "engagementStartedOn": "Started {date}",
     "invoiceNumber": "Invoice {number}",
     "deliverablesLabel": "Deliverables",
-    "status.requested": "Requested",
-    "status.active": "Active",
-    "status.delivered": "Delivered",
-    "status.cancelled": "Cancelled"
+    "status": {
+      "requested": "Requested",
+      "active": "Active",
+      "delivered": "Delivered",
+      "cancelled": "Cancelled"
+    }
   }
 }

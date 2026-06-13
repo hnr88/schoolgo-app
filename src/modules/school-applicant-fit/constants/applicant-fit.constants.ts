@@ -20,6 +20,25 @@ export const FIT_BANDS: readonly FitBand[] = ['safety', 'match', 'reach'];
 
 export const THRESHOLD_KEYS = ['reach', 'match', 'safety'] as const;
 
+// Valid keys under the SchoolApplicantFit.formErrors namespace. The config form's
+// Zod messages map 1:1 to these; any other field error (e.g. an empty native error)
+// must NOT be passed to the scoped translator or next-intl throws INVALID_KEY.
+export const FIT_FORM_ERROR_KEYS = [
+  'weightRequired',
+  'weightMin',
+  'weightMax',
+  'thresholdRequired',
+  'thresholdMin',
+  'thresholdMax',
+  'thresholdsMonotonic',
+] as const;
+
+export type FitFormErrorKey = (typeof FIT_FORM_ERROR_KEYS)[number];
+
+export function isFitFormErrorKey(value: string | undefined): value is FitFormErrorKey {
+  return value !== undefined && (FIT_FORM_ERROR_KEYS as readonly string[]).includes(value);
+}
+
 // StatusBadge style maps (dot / bg / text) for the band pill and the
 // per-criterion fit status — colour tokens only, no copy.
 export const FIT_BAND_STYLES: Record<FitBand, { dot: string; bg: string; text: string }> = {

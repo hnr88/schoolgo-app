@@ -209,6 +209,7 @@ export const PORTAL_NAV: Record<Portal, PortalNav> = {
         labelKey: 'groupComms',
         items: [
           { href: '/dashboard/messages', icon: MessageSquare, labelKey: 'messages' },
+          { href: '/dashboard/questions', icon: MessageCircleQuestion, labelKey: 'questions' },
           { href: '/dashboard/notifications', icon: Bell, labelKey: 'notifications' },
           { href: '/dashboard/notes', icon: StickyNote, labelKey: 'notes' },
         ],

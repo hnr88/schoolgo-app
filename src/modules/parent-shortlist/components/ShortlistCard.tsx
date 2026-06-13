@@ -10,18 +10,20 @@ import { ShortlistItemRow } from '@/modules/parent-shortlist/components/Shortlis
 import { AddItemDialog } from '@/modules/parent-shortlist/components/AddItemDialog';
 import { InviteMemberDialog } from '@/modules/parent-shortlist/components/InviteMemberDialog';
 import { useShortlistItemsStore } from '@/modules/parent-shortlist/stores/use-shortlist-items-store';
-import type { Shortlist } from '@/modules/parent-shortlist/types/shortlist.types';
+import type { Shortlist, ShortlistItem } from '@/modules/parent-shortlist/types/shortlist.types';
 
 interface ShortlistCardProps {
   shortlist: Shortlist;
 }
+
+const EMPTY_ITEMS: ShortlistItem[] = [];
 
 export function ShortlistCard({ shortlist }: ShortlistCardProps) {
   const t = useTranslations('ParentShortlist');
   const format = useFormatter();
   const [addOpen, setAddOpen] = useState(false);
   const [inviteOpen, setInviteOpen] = useState(false);
-  const items = useShortlistItemsStore((s) => s.itemsByShortlist[shortlist.documentId] ?? []);
+  const items = useShortlistItemsStore((s) => s.itemsByShortlist[shortlist.documentId]) ?? EMPTY_ITEMS;
   const isOwner = shortlist.access === 'owner';
 
   return (

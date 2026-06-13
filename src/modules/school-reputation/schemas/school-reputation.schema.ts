@@ -32,7 +32,7 @@ export const reputationReviewSchema = z.object({
   body: z.string().nullable(),
   wouldRecommend: z.boolean(),
   consideredSwitching: z.boolean(),
-  dimensionScores: z.record(reviewDimensionSchema, z.number()).nullable(),
+  dimensionScores: z.partialRecord(reviewDimensionSchema, z.number()).nullable(),
   status: reviewStatusSchema.or(z.string()),
   verifiedRelationship: z.boolean(),
   helpfulCount: z.number().int(),
@@ -45,7 +45,7 @@ export const reputationReviewSchema = z.object({
 export const reputationAggregateSchema = z.object({
   count: z.number().int(),
   avgRating: z.number().nullable(),
-  dimensionAverages: z.record(reviewDimensionSchema, z.number().nullable()),
+  dimensionAverages: z.partialRecord(reviewDimensionSchema, z.number().nullable()),
 });
 
 export const reputationReviewsResponseSchema = z.object({
@@ -64,7 +64,7 @@ export const reputationReviewsResponseSchema = z.object({
 const dimensionAveragesGroupSchema = z.object({
   count: z.number().int(),
   avgRating: z.number().nullable(),
-  dimensionAverages: z.record(reviewDimensionSchema, z.number().nullable()),
+  dimensionAverages: z.partialRecord(reviewDimensionSchema, z.number().nullable()),
 });
 
 export const benchmarkResponseSchema = z.object({

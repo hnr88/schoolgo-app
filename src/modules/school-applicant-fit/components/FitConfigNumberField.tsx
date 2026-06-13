@@ -10,6 +10,7 @@ import {
   FormMessage,
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
+import { isFitFormErrorKey } from '@/modules/school-applicant-fit/constants/applicant-fit.constants';
 import type { FitConfigFormValues } from '@/modules/school-applicant-fit/schemas/fit-config-form.schema';
 
 interface FitConfigNumberFieldProps {
@@ -43,7 +44,7 @@ export function FitConfigNumberField({ control, name, label, max, step }: FitCon
               ref={field.ref}
             />
           </FormControl>
-          {fieldState.error?.message ? (
+          {isFitFormErrorKey(fieldState.error?.message) ? (
             <p className='text-sm text-destructive'>{tErrors(fieldState.error.message)}</p>
           ) : (
             <FormMessage />
