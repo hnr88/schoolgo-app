@@ -1,4 +1,4 @@
-import type { ComponentProps } from 'react';
+import type { ComponentProps, ReactNode } from 'react';
 import type { Portal } from '@/lib/portal-url';
 import type { IconComponent } from '@/modules/design-system';
 import type { Link } from '@/i18n/navigation';
@@ -6,6 +6,18 @@ import type { Link } from '@/i18n/navigation';
 export interface BreadcrumbItemEntry {
   label: string;
   href?: ComponentProps<typeof Link>['href'];
+}
+
+export interface DashboardCardBoundaryProps {
+  /** Localized message shown when a wrapped card throws during render. */
+  fallbackMessage: string;
+  /** Localized label for the retry button that remounts the wrapped card. */
+  retryLabel: string;
+  children: ReactNode;
+}
+
+export interface DashboardCardBoundaryState {
+  hasError: boolean;
 }
 
 export interface DashboardPlaceholderProps {

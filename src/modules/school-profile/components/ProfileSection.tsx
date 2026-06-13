@@ -6,15 +6,17 @@ interface ProfileSectionProps {
   title: string;
   description: string;
   icon?: ComponentType<{ className?: string }>;
+  id?: string;
   children: ReactNode;
 }
 
-export function ProfileSection({ title, description, icon, children }: ProfileSectionProps) {
+export function ProfileSection({ title, description, icon, id, children }: ProfileSectionProps) {
   return (
     <SurfaceCard
+      id={id}
       elevation='raised'
       padding='lg'
-      className='flex flex-col gap-5'
+      className='flex scroll-mt-6 flex-col gap-5'
     >
       <SectionHeading
         title={title}

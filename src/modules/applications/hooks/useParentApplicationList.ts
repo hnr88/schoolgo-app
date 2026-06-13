@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 import { useDebouncedValue } from '@/modules/core/client';
 import { useParentStudents } from '@/modules/students';
 import { useParentApplications } from '@/modules/applications/queries/use-parent-applications.query';
@@ -25,7 +25,10 @@ export function useParentApplicationList(studentDocumentId?: string) {
   const [sortDirection, setSortDirection] = useState<ParentApplicationSortDirection>('asc');
 
   const studentsQuery = useParentStudents({ pageSize: 100 });
-  const children = studentsQuery.data?.data ?? [];
+  const children = useMemo(
+    () => studentsQuery.data?.data ?? [],
+    [studentsQuery.data],
+  );
 
   const debouncedSearch = useDebouncedValue(search, SEARCH_DEBOUNCE_MS);
   const effectiveSearch = debouncedSearch.trim().length >= SEARCH_MIN_LENGTH ? debouncedSearch : '';

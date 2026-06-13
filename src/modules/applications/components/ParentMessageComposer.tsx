@@ -38,6 +38,7 @@ export function ParentMessageComposer({
                 <Textarea
                   {...field}
                   autoFocus={autoFocus}
+                  maxLength={PARENT_MESSAGE_MAX_LENGTH}
                   placeholder={t('composerPlaceholder')}
                   disabled={isPending}
                   aria-label={t('composerPlaceholder')}

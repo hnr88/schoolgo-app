@@ -4,6 +4,7 @@ export { DashboardSidebar } from '@/modules/dashboard/components/DashboardSideba
 export { PageHeader } from '@/modules/dashboard/components/PageHeader';
 export { Breadcrumbs } from '@/modules/dashboard/components/Breadcrumbs';
 export { PortalSwitcher } from '@/modules/dashboard/components/PortalSwitcher';
+export { DashboardCardBoundary } from '@/modules/dashboard/components/DashboardCardBoundary';
 export { ParentDashboard } from '@/modules/dashboard/parent/components/ParentDashboard';
 export { ParentSearchContextBar } from '@/modules/dashboard/parent/components/ParentSearchContextBar';
 export type { BreadcrumbItemEntry } from '@/modules/dashboard/types/dashboard.types';

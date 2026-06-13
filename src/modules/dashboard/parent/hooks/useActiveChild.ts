@@ -24,13 +24,16 @@ export function useActiveChild(): UseActiveChildResult {
   const setActiveChild = useActiveChildStore((s) => s.setActiveChild);
 
   const children = useMemo(() => data?.data ?? [], [data]);
-  const activeChild = children.find((child) => child.documentId === activeChildId) ?? null;
+  const activeChild = useMemo(
+    () => children.find((child) => child.documentId === activeChildId) ?? null,
+    [children, activeChildId],
+  );
+  const activeChildExists = activeChild !== null;
 
   useEffect(() => {
-    if (!isSuccess || !activeChildId) return;
-    const exists = children.some((child) => child.documentId === activeChildId);
-    if (!exists) setActiveChild(null);
-  }, [isSuccess, activeChildId, children, setActiveChild]);
+    if (!isSuccess || !activeChildId || activeChildExists) return;
+    setActiveChild(null);
+  }, [isSuccess, activeChildId, activeChildExists, setActiveChild]);
 
   return { children, activeChildId, activeChild, isLoading, setActiveChild };
 }

@@ -37,9 +37,11 @@ export function ParentQuickActions() {
         <span className='flex-1 text-sm font-semibold text-ink-900'>
           {t(PARENT_PAYMENTS_ACTION.labelKey)}
         </span>
-        <span className='shrink-0 rounded-full border border-border bg-card px-2 py-0.5 text-xs font-medium text-foggy'>
-          {t('comingSoon')}
-        </span>
+        <ArrowUpRight
+          className='h-4 w-4 shrink-0 text-foggy transition-transform duration-200 ease-out-quart group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-primary-strong'
+          strokeWidth={2}
+          aria-hidden='true'
+        />
       </Link>
     </div>
   );

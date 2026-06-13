@@ -25,6 +25,18 @@ const SCHOOL_FIELDS = [
   'curriculumOffered', 'levelsOffered', 'intakePeriods',
   'offerAcceptanceWindowDays', 'autoWaitlistEnabled', 'partnerAgentsOnly', 'oshcArrangement',
   'enrolmentStatus', 'applicationDeadline', 'nextIntakeDate',
+  // keyFacts
+  'welcomeMessage', 'schoolType', 'sector', 'gender', 'accommodation', 'religiousAffiliation',
+  // scholarships
+  'scholarshipAvailable',
+  // location
+  'latitude', 'longitude', 'distanceToCbd',
+  // international students
+  'cricosAgeRange', 'yearLevelsInternational', 'languagesOffered', 'elicosEslSupport',
+  'internationalStudentCapacity', 'internationalStudentPercentage', 'totalEnrolment',
+  'oshcPreferredProvider', 'atarAvailable', 'postSubmissionMessage', 'proposedEntryLevel',
+  // co-curricular (backed by the programTypes JSON array)
+  'programTypes',
 ];
 
 function buildQuery(documentId: string): string {

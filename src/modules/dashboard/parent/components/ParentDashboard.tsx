@@ -13,6 +13,7 @@ import { ParentRecentApplicationsTable } from '@/modules/dashboard/parent/compon
 import { ParentStudentsSummaryCard } from '@/modules/dashboard/parent/components/ParentStudentsSummaryCard';
 import { ParentTestsSummaryCard } from '@/modules/dashboard/parent/components/ParentTestsSummaryCard';
 import { ParentQuickActions } from '@/modules/dashboard/parent/components/ParentQuickActions';
+import { ParentCardBoundary } from '@/modules/dashboard/parent/components/ParentCardBoundary';
 import { ParentOnboardingSection } from '@/modules/onboarding';
 
 export function ParentDashboard() {
@@ -24,36 +25,54 @@ export function ParentDashboard() {
 
       <ParentOnboardingSection />
 
-      <ParentStatTiles />
+      <ParentCardBoundary>
+        <ParentStatTiles />
+      </ParentCardBoundary>
 
       <div className='grid grid-cols-1 gap-6 lg:grid-cols-3'>
         <div className='lg:col-span-2'>
-          <ParentPipelineCard />
+          <ParentCardBoundary>
+            <ParentPipelineCard />
+          </ParentCardBoundary>
         </div>
         <div className='lg:col-span-1'>
-          <ParentActionRequiredCard />
+          <ParentCardBoundary>
+            <ParentActionRequiredCard />
+          </ParentCardBoundary>
         </div>
       </div>
 
       <div className='grid grid-cols-1 gap-6 lg:grid-cols-3'>
         <div className='lg:col-span-2'>
-          <ParentRecentApplicationsTable />
+          <ParentCardBoundary>
+            <ParentRecentApplicationsTable />
+          </ParentCardBoundary>
         </div>
         <div className='flex flex-col gap-6 lg:col-span-1 lg:grid lg:auto-rows-fr'>
-          <ParentTimelineCard />
-          <ParentUpcomingCard />
+          <ParentCardBoundary>
+            <ParentTimelineCard />
+          </ParentCardBoundary>
+          <ParentCardBoundary>
+            <ParentUpcomingCard />
+          </ParentCardBoundary>
         </div>
       </div>
 
       <div className='grid grid-cols-1 gap-6 lg:grid-cols-3'>
         <div className='lg:col-span-1'>
-          <ParentCompletenessCard />
+          <ParentCardBoundary>
+            <ParentCompletenessCard />
+          </ParentCardBoundary>
         </div>
         <div className='lg:col-span-1'>
-          <ParentStudentsSummaryCard />
+          <ParentCardBoundary>
+            <ParentStudentsSummaryCard />
+          </ParentCardBoundary>
         </div>
         <div className='lg:col-span-1'>
-          <ParentTestsSummaryCard />
+          <ParentCardBoundary>
+            <ParentTestsSummaryCard />
+          </ParentCardBoundary>
         </div>
       </div>
 
@@ -82,7 +101,9 @@ export function ParentDashboard() {
         </div>
 
         <div className='p-6 md:p-7'>
-          <ParentQuickActions />
+          <ParentCardBoundary>
+            <ParentQuickActions />
+          </ParentCardBoundary>
         </div>
       </section>
     </div>

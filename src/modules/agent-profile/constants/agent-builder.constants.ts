@@ -17,7 +17,6 @@ import {
   Newspaper,
   PanelsTopLeft,
   Quote,
-  Scale,
   ShieldCheck,
   Sparkles,
   Users,
@@ -40,7 +39,6 @@ export const AGENT_BUILDER_SECTIONS: readonly AgentBuilderSectionConfig[] = [
   { id: 'basics', labelKey: 'sectionBasics', icon: PanelsTopLeft },
   { id: 'credentials', labelKey: 'sectionCredentials', icon: FileBadge },
   { id: 'schoolAuthorisations', labelKey: 'sectionSchoolAuthorisations', icon: GraduationCap },
-  { id: 'legalIdentity', labelKey: 'sectionLegalIdentity', icon: Scale },
   { id: 'offices', labelKey: 'sectionOffices', icon: MapPin },
   { id: 'contactChannels', labelKey: 'sectionContactChannels', icon: Contact },
   { id: 'languages', labelKey: 'sectionLanguages', icon: Languages },
@@ -168,5 +166,4 @@ export const AGENT_VISIBILITY_SECTIONS: readonly AgentVisibilitySectionConfig[] 
   { key: 'showMediaGallery', labelKey: 'sectionMediaGallery' },
   { key: 'showPressAndPartners', labelKey: 'sectionPressAndPartners' },
   { key: 'showFaqs', labelKey: 'sectionFaqs' },
-  { key: 'showResponsiveness', labelKey: 'sectionResponsiveness' },
 ] as const;

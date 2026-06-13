@@ -22,6 +22,30 @@ export type OshcArrangement = 'school_arranged' | 'agent_arranged' | 'either';
 
 export type EnrolmentStatus = 'open' | 'limited' | 'waitlist' | 'closed';
 
+export type SchoolType = 'combined' | 'primary' | 'secondary';
+
+export type SchoolSector = 'government' | 'non-government' | 'catholic';
+
+export type SchoolGender = 'co_ed' | 'boys' | 'girls';
+
+export type SchoolAccommodation = 'boarding' | 'homestay' | 'both' | 'none';
+
+export type ReligiousAffiliation =
+  | 'non-denominational'
+  | 'anglican'
+  | 'baptist'
+  | 'lutheran'
+  | 'uniting-church'
+  | 'presbyterian'
+  | 'islamic'
+  | 'jewish'
+  | 'buddhist'
+  | 'coptic-orthodox'
+  | 'greek-orthodox'
+  | 'seventh-day-adventist'
+  | 'quaker'
+  | 'interdenominational-christian';
+
 export interface SchoolProfileDetails {
   documentId: string;
   name: string;
@@ -54,6 +78,28 @@ export interface SchoolProfileDetails {
   enrolmentStatus: EnrolmentStatus | null;
   applicationDeadline: string | null;
   nextIntakeDate: string | null;
+  welcomeMessage: string | null;
+  schoolType: SchoolType | null;
+  sector: SchoolSector | null;
+  gender: SchoolGender | null;
+  accommodation: SchoolAccommodation | null;
+  religiousAffiliation: ReligiousAffiliation | null;
+  scholarshipAvailable: boolean;
+  latitude: number | null;
+  longitude: number | null;
+  distanceToCbd: number | null;
+  cricosAgeRange: string | null;
+  yearLevelsInternational: string[] | null;
+  languagesOffered: string | null;
+  elicosEslSupport: boolean;
+  internationalStudentCapacity: number | null;
+  internationalStudentPercentage: number | null;
+  totalEnrolment: number | null;
+  oshcPreferredProvider: string | null;
+  atarAvailable: boolean;
+  postSubmissionMessage: string | null;
+  proposedEntryLevel: string | null;
+  programTypes: string[] | null;
   logo: SchoolMedia | null;
   coverImage: SchoolMedia | null;
 }
