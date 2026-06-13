@@ -231,7 +231,7 @@ export const PORTAL_NAV: Record<Portal, PortalNav> = {
         labelKey: 'groupSchools',
         items: [
           { href: '/parent/search', icon: Search, labelKey: 'searchSchools' },
-          { href: '/parent/agents', icon: Users, labelKey: 'findAgent' },
+          { href: '/parent/search?mode=agents', icon: Users, labelKey: 'findAgent' },
           { href: '/parent/saved-schools', icon: Heart, labelKey: 'savedSchools' },
           { href: '/parent/compare', icon: Columns3, labelKey: 'compare' },
           { href: '/parent/cost-estimator', icon: Calculator, labelKey: 'costEstimator' },
