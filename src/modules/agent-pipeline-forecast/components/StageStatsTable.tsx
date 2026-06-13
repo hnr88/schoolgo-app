@@ -25,7 +25,12 @@ export function StageStatsTable({ stages }: StageStatsTableProps) {
   const locale = useLocale();
 
   return (
-    <div className='overflow-x-auto'>
+    <div
+      tabIndex={0}
+      role='region'
+      aria-label={t('stageStatsRegion')}
+      className='table-scroll-region overflow-x-auto focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring'
+    >
       <Table>
         <TableHeader>
           <TableRow>

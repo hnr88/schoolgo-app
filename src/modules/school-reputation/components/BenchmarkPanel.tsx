@@ -35,36 +35,43 @@ export function BenchmarkPanel({ benchmark }: BenchmarkPanelProps) {
           state: benchmark.school.state ?? dash,
         })}
       />
-      <Table>
-        <TableHeader>
-          <TableRow>
-            <TableHead>{t('dimensionHeader')}</TableHead>
-            <TableHead className='text-right'>{t('ownHeader')}</TableHead>
-            <TableHead className='text-right'>{t('sectorHeader')}</TableHead>
-            <TableHead className='text-right'>{t('stateHeader')}</TableHead>
-            <TableHead className='text-right'>{t('vsPeersHeader')}</TableHead>
-          </TableRow>
-        </TableHeader>
-        <TableBody>
-          {rows.map((row) => (
-            <TableRow key={row.dimension}>
-              <TableCell className='font-medium text-ink-900'>{t(`dimension_${row.dimension}`)}</TableCell>
-              <TableCell className='text-right font-semibold tabular-nums text-ink-900'>
-                {formatScore(row.own) ?? dash}
-              </TableCell>
-              <TableCell className='text-right tabular-nums text-foggy'>
-                {formatScore(row.sector) ?? dash}
-              </TableCell>
-              <TableCell className='text-right tabular-nums text-foggy'>
-                {formatScore(row.state) ?? dash}
-              </TableCell>
-              <TableCell className='text-right'>
-                <BenchmarkDeltaChip delta={scoreDelta(row.own, row.sector)} emptyLabel={dash} />
-              </TableCell>
+      <div
+        tabIndex={0}
+        role='region'
+        aria-label={t('benchmarkTableRegion')}
+        className='table-scroll-region overflow-x-auto focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring'
+      >
+        <Table>
+          <TableHeader>
+            <TableRow>
+              <TableHead>{t('dimensionHeader')}</TableHead>
+              <TableHead className='text-right'>{t('ownHeader')}</TableHead>
+              <TableHead className='text-right'>{t('sectorHeader')}</TableHead>
+              <TableHead className='text-right'>{t('stateHeader')}</TableHead>
+              <TableHead className='text-right'>{t('vsPeersHeader')}</TableHead>
             </TableRow>
-          ))}
-        </TableBody>
-      </Table>
+          </TableHeader>
+          <TableBody>
+            {rows.map((row) => (
+              <TableRow key={row.dimension}>
+                <TableCell className='font-medium text-ink-900'>{t(`dimension_${row.dimension}`)}</TableCell>
+                <TableCell className='text-right font-semibold tabular-nums text-ink-900'>
+                  {formatScore(row.own) ?? dash}
+                </TableCell>
+                <TableCell className='text-right tabular-nums text-foggy'>
+                  {formatScore(row.sector) ?? dash}
+                </TableCell>
+                <TableCell className='text-right tabular-nums text-foggy'>
+                  {formatScore(row.state) ?? dash}
+                </TableCell>
+                <TableCell className='text-right'>
+                  <BenchmarkDeltaChip delta={scoreDelta(row.own, row.sector)} emptyLabel={dash} />
+                </TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </div>
       <p className='text-xs text-foggy'>
         {t('benchmarkPeerCounts', {
           sector: benchmark.sector.count,

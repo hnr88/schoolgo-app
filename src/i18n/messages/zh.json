@@ -2844,6 +2844,9 @@
     "retry": "重试",
     "loadError": "无法加载此申请。",
     "paginationOf": "共 {total} 条",
+    "previousPage": "上一页",
+    "nextPage": "下一页",
+    "goToPage": "转到第 {page} 页",
     "backToList": "返回申请列表",
     "notFoundTitle": "未找到申请",
     "notFoundSubtitle": "该申请不存在或您没有访问权限。",
@@ -6556,7 +6559,8 @@
     "emptyTitle": "No commissions yet",
     "emptyDescription": "Commissions appear here as your applications progress through offer, enrolment, and payment milestones.",
     "errorMessage": "We couldn't load your commissions.",
-    "retry": "Try again"
+    "retry": "Try again",
+    "tableRegion": "佣金表格"
   },
   "AgentApplicationQa": {
     "title": "Application QA",
@@ -6665,7 +6669,9 @@
     "statusWithdrawn": "Withdrawn",
     "statusDeclined": "Declined",
     "statusWaitlisted": "Waitlisted",
-    "statusUnknown": "Unknown"
+    "statusUnknown": "Unknown",
+    "tableRegion": "预测表格",
+    "stageStatsRegion": "阶段转换统计表格"
   },
   "AgentTraining": {
     "title": "Training & accreditation",
@@ -6801,6 +6807,7 @@
     "statVsSector": "vs sector peers",
     "statVsSectorHint": "Difference in average rating",
     "benchmarkTitle": "Peer benchmark",
+    "benchmarkTableRegion": "Peer benchmark scores table",
     "benchmarkSubtitle": "Your averages vs {sector} sector and {state} state peers",
     "benchmarkPeerCounts": "Based on {sector} sector peer reviews and {state} state peer reviews",
     "dimensionHeader": "Dimension",

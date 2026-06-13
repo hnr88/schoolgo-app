@@ -11,9 +11,11 @@ export function DataTableShell({
   children,
   stickyHeader = true,
   className,
+  ...rest
 }: DataTableShellProps) {
   return (
     <div
+      {...rest}
       className={cn(
         'overflow-hidden rounded-lg bg-card shadow-2',
         // Quiet header: drop the gray strip + per-th border, uppercase --foggy labels.

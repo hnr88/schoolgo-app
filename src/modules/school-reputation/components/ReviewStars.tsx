@@ -10,7 +10,11 @@ interface ReviewStarsProps {
 
 export function ReviewStars({ value, label, className }: ReviewStarsProps) {
   return (
-    <span className={cn('inline-flex items-center gap-0.5', className)} aria-label={label}>
+    <span
+      role='img'
+      className={cn('inline-flex items-center gap-0.5', className)}
+      aria-label={label}
+    >
       {REVIEW_STAR_VALUES.map((star) => (
         <Star
           key={star}

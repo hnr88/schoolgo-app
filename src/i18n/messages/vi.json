@@ -2844,6 +2844,9 @@
     "retry": "Thử lại",
     "loadError": "Không thể tải hồ sơ này.",
     "paginationOf": "{total} tổng cộng",
+    "previousPage": "Trang trước",
+    "nextPage": "Trang sau",
+    "goToPage": "Đi tới trang {page}",
     "backToList": "Quay lại danh sách hồ sơ",
     "notFoundTitle": "Không tìm thấy hồ sơ",
     "notFoundSubtitle": "Hồ sơ này không tồn tại hoặc bạn không có quyền truy cập.",
@@ -6556,7 +6559,8 @@
     "emptyTitle": "No commissions yet",
     "emptyDescription": "Commissions appear here as your applications progress through offer, enrolment, and payment milestones.",
     "errorMessage": "We couldn't load your commissions.",
-    "retry": "Try again"
+    "retry": "Try again",
+    "tableRegion": "Bảng hoa hồng"
   },
   "AgentApplicationQa": {
     "title": "Application QA",
@@ -6665,7 +6669,9 @@
     "statusWithdrawn": "Withdrawn",
     "statusDeclined": "Declined",
     "statusWaitlisted": "Waitlisted",
-    "statusUnknown": "Unknown"
+    "statusUnknown": "Unknown",
+    "tableRegion": "Bảng dự báo",
+    "stageStatsRegion": "Bảng thống kê chuyển giai đoạn"
   },
   "AgentTraining": {
     "title": "Training & accreditation",
@@ -6801,6 +6807,7 @@
     "statVsSector": "vs sector peers",
     "statVsSectorHint": "Difference in average rating",
     "benchmarkTitle": "Peer benchmark",
+    "benchmarkTableRegion": "Peer benchmark scores table",
     "benchmarkSubtitle": "Your averages vs {sector} sector and {state} state peers",
     "benchmarkPeerCounts": "Based on {sector} sector peer reviews and {state} state peer reviews",
     "dimensionHeader": "Dimension",

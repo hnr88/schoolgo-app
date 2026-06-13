@@ -44,7 +44,7 @@ export function resolveMilestoneLabelKey(milestone: string): string {
 
 export const COMMISSION_STATUS_BADGE_STYLES: StatusBadgeProps['styles'] = {
   pending: { dot: 'bg-foggy/50', bg: 'bg-muted', text: 'text-foggy' },
-  accrued: { dot: 'bg-vivid-iris', bg: 'bg-vivid-iris-soft', text: 'text-vivid-iris' },
+  accrued: { dot: 'bg-vivid-iris', bg: 'bg-vivid-iris-soft', text: 'text-vivid-iris-strong' },
   invoiced: { dot: 'bg-vivid-amber', bg: 'bg-vivid-amber-soft', text: 'text-vivid-amber' },
   received: { dot: 'bg-vivid-mint', bg: 'bg-vivid-mint-soft', text: 'text-babu-700' },
   disputed: { dot: 'bg-vivid-coral', bg: 'bg-vivid-coral-soft', text: 'text-vivid-coral-strong' },

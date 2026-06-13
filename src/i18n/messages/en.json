@@ -2378,6 +2378,9 @@
     "retry": "Try again",
     "loadError": "Could not load this application.",
     "paginationOf": "{total} total",
+    "previousPage": "Previous page",
+    "nextPage": "Next page",
+    "goToPage": "Go to page {page}",
     "backToList": "Back to applications",
     "notFoundTitle": "Application not found",
     "notFoundSubtitle": "This application doesn't exist or you don't have access to it.",
@@ -6556,7 +6559,8 @@
     "emptyTitle": "No commissions yet",
     "emptyDescription": "Commissions appear here as your applications progress through offer, enrolment, and payment milestones.",
     "errorMessage": "We couldn't load your commissions.",
-    "retry": "Try again"
+    "retry": "Try again",
+    "tableRegion": "Commissions table"
   },
   "AgentApplicationQa": {
     "title": "Application QA",
@@ -6665,7 +6669,9 @@
     "statusWithdrawn": "Withdrawn",
     "statusDeclined": "Declined",
     "statusWaitlisted": "Waitlisted",
-    "statusUnknown": "Unknown"
+    "statusUnknown": "Unknown",
+    "tableRegion": "Forecast table",
+    "stageStatsRegion": "Stage transition statistics table"
   },
   "AgentTraining": {
     "title": "Training & accreditation",
@@ -6801,6 +6807,7 @@
     "statVsSector": "vs sector peers",
     "statVsSectorHint": "Difference in average rating",
     "benchmarkTitle": "Peer benchmark",
+    "benchmarkTableRegion": "Peer benchmark scores table",
     "benchmarkSubtitle": "Your averages vs {sector} sector and {state} state peers",
     "benchmarkPeerCounts": "Based on {sector} sector peer reviews and {state} state peer reviews",
     "dimensionHeader": "Dimension",

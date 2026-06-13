@@ -65,12 +65,12 @@ export const LEVEL_ORDER = COURSE_LEVELS;
 
 export const LEVEL_BADGE_STYLES: StatusBadgeProps['styles'] = {
   foundation: { dot: 'bg-babu-500', bg: 'bg-babu-50', text: 'text-babu-700' },
-  intermediate: { dot: 'bg-vivid-iris', bg: 'bg-vivid-iris-soft', text: 'text-vivid-iris' },
+  intermediate: { dot: 'bg-vivid-iris', bg: 'bg-vivid-iris-soft', text: 'text-vivid-iris-strong' },
   advanced: { dot: 'bg-vivid-mint', bg: 'bg-vivid-mint-soft', text: 'text-babu-700' },
 };
 
 export const CERT_STATUS_BADGE_STYLES: StatusBadgeProps['styles'] = {
   passed: { dot: 'bg-vivid-mint', bg: 'bg-vivid-mint-soft', text: 'text-babu-700' },
-  in_progress: { dot: 'bg-vivid-iris', bg: 'bg-vivid-iris-soft', text: 'text-vivid-iris' },
+  in_progress: { dot: 'bg-vivid-iris', bg: 'bg-vivid-iris-soft', text: 'text-vivid-iris-strong' },
   expired: { dot: 'bg-vivid-coral', bg: 'bg-vivid-coral-soft', text: 'text-vivid-coral-strong' },
 };

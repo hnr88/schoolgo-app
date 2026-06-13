@@ -10,7 +10,7 @@ import type { TrainingTier } from '@/modules/agent-training/types/agent-training
 const TIER_STYLES: Record<TrainingTier, string> = {
   none: 'bg-muted text-foggy',
   foundation: 'bg-babu-50 text-babu-700',
-  intermediate: 'bg-vivid-iris-soft text-vivid-iris',
+  intermediate: 'bg-vivid-iris-soft text-vivid-iris-strong',
   advanced: 'bg-vivid-mint-soft text-babu-700',
 };
 

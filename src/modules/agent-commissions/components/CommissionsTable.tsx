@@ -21,7 +21,12 @@ export function CommissionsTable({ rows }: CommissionsTableProps) {
   const t = useTranslations('AgentCommissions');
 
   return (
-    <DataTableShell className='overflow-x-auto'>
+    <DataTableShell
+      tabIndex={0}
+      role='region'
+      aria-label={t('tableRegion')}
+      className='table-scroll-region overflow-x-auto focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring'
+    >
       <Table>
         <TableHeader>
           <TableRow>

@@ -25,15 +25,17 @@ export function ParentApplicationPagination({
             variant='ghost'
             size='icon'
             className='h-8 w-8'
+            aria-label={t('previousPage')}
             disabled={pagination.page <= 1}
             onClick={() => setPage((p) => p - 1)}
           >
-            <ChevronLeft className='h-4 w-4' />
+            <ChevronLeft className='h-4 w-4' aria-hidden />
           </Button>
           {getPageNumbers(pagination.page, pagination.pageCount).map((p, i) =>
             p === '...' ? (
               <span
                 key={`dots-${i}`}
+                aria-hidden
                 className='flex h-8 w-8 items-center justify-center text-xs text-foggy'
               >
                 ...
@@ -44,6 +46,8 @@ export function ParentApplicationPagination({
                 variant={p === pagination.page ? 'default' : 'ghost'}
                 size='icon'
                 className='h-8 w-8 text-xs'
+                aria-label={t('goToPage', { page: p })}
+                aria-current={p === pagination.page ? 'page' : undefined}
                 onClick={() => setPage(p as number)}
               >
                 {p}
@@ -54,10 +58,11 @@ export function ParentApplicationPagination({
             variant='ghost'
             size='icon'
             className='h-8 w-8'
+            aria-label={t('nextPage')}
             disabled={pagination.page >= pagination.pageCount}
             onClick={() => setPage((p) => p + 1)}
           >
-            <ChevronRight className='h-4 w-4' />
+            <ChevronRight className='h-4 w-4' aria-hidden />
           </Button>
         </div>
       ) : (

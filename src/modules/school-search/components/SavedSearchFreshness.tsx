@@ -52,7 +52,7 @@ export function SavedSearchFreshness({ search }: { search: SavedSearch }) {
   return (
     <div className='flex items-center justify-between gap-3 border-t border-border pt-3'>
       {freshness.kind === 'new' ? (
-        <span className='inline-flex items-center gap-1 rounded-pill bg-primary/10 px-2 py-0.5 text-xs font-semibold text-primary'>
+        <span className='inline-flex items-center gap-1 rounded-pill bg-primary/10 px-2 py-0.5 text-xs font-semibold text-primary-strong'>
           <Sparkles size={12} aria-hidden />
           {t('newResults', { count: freshness.newCount })}
         </span>

@@ -55,7 +55,7 @@ export interface ListRowProps {
   className?: string;
 }
 
-export interface DataTableShellProps {
+export interface DataTableShellProps extends React.ComponentProps<'div'> {
   children: React.ReactNode;
   /** Sticky quiet header (default true). */
   stickyHeader?: boolean;

@@ -59,7 +59,7 @@ export async function KeyFactsCard({ school, activePortal }: { school: SchoolDet
         )}
         {school.cricosCode && (
           <FactRow label={t('cricos')}>
-            <span className="text-primary">{school.cricosCode}</span>
+            <span className="text-rausch-300">{school.cricosCode}</span>
           </FactRow>
         )}
         {school.curriculumOffered && (

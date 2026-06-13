@@ -2844,6 +2844,9 @@
     "retry": "Cuba lagi",
     "loadError": "Tidak dapat memuatkan permohonan ini.",
     "paginationOf": "{total} jumlah",
+    "previousPage": "Halaman sebelumnya",
+    "nextPage": "Halaman seterusnya",
+    "goToPage": "Pergi ke halaman {page}",
     "backToList": "Kembali ke senarai permohonan",
     "notFoundTitle": "Permohonan tidak dijumpai",
     "notFoundSubtitle": "Permohonan ini tidak wujud atau anda tidak mempunyai akses kepadanya.",
@@ -6556,7 +6559,8 @@
     "emptyTitle": "No commissions yet",
     "emptyDescription": "Commissions appear here as your applications progress through offer, enrolment, and payment milestones.",
     "errorMessage": "We couldn't load your commissions.",
-    "retry": "Try again"
+    "retry": "Try again",
+    "tableRegion": "Jadual komisen"
   },
   "AgentApplicationQa": {
     "title": "Application QA",
@@ -6665,7 +6669,9 @@
     "statusWithdrawn": "Withdrawn",
     "statusDeclined": "Declined",
     "statusWaitlisted": "Waitlisted",
-    "statusUnknown": "Unknown"
+    "statusUnknown": "Unknown",
+    "tableRegion": "Jadual ramalan",
+    "stageStatsRegion": "Jadual statistik peralihan peringkat"
   },
   "AgentTraining": {
     "title": "Training & accreditation",
@@ -6801,6 +6807,7 @@
     "statVsSector": "vs sector peers",
     "statVsSectorHint": "Difference in average rating",
     "benchmarkTitle": "Peer benchmark",
+    "benchmarkTableRegion": "Peer benchmark scores table",
     "benchmarkSubtitle": "Your averages vs {sector} sector and {state} state peers",
     "benchmarkPeerCounts": "Based on {sector} sector peer reviews and {state} state peer reviews",
     "dimensionHeader": "Dimension",

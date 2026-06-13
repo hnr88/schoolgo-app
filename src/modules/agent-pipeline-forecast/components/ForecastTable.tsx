@@ -24,7 +24,12 @@ export function ForecastTable({ items }: ForecastTableProps) {
         <h2 className='text-base font-semibold text-ink-900'>{t('tableTitle')}</h2>
         <p className='text-sm text-foggy'>{t('tableCaption')}</p>
       </div>
-      <div className='overflow-x-auto'>
+      <div
+        tabIndex={0}
+        role='region'
+        aria-label={t('tableRegion')}
+        className='table-scroll-region overflow-x-auto focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring'
+      >
         <Table>
           <TableHeader>
             <TableRow>
