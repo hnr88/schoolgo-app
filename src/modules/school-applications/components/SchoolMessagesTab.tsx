@@ -6,6 +6,7 @@ import { Skeleton } from '@/components/ui/skeleton';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { cn } from '@/lib/utils';
 import { EmptyState, ErrorState, SurfaceCard } from '@/modules/core';
+import { TranslateMessageButton } from '@/modules/messaging-translation';
 import { useSchoolMessages } from '@/modules/school-applications/queries/use-school-messages.query';
 import { useSchoolThreadView } from '@/modules/school-applications/hooks/useSchoolThreadView';
 import { SchoolMessageComposer } from '@/modules/school-applications/components/SchoolMessageComposer';
@@ -24,6 +25,9 @@ function MessageBubble({ message }: { message: SchoolMessageThreadItem }) {
       <p className={cn('mt-1 text-xs', isSchool ? 'text-background/80' : 'text-foggy')}>
         {new Date(message.createdAt).toLocaleString('en-AU')}
       </p>
+      <div className='mt-1'>
+        <TranslateMessageButton messageDocumentId={message.documentId} content={message.content} />
+      </div>
     </div>
   );
 }

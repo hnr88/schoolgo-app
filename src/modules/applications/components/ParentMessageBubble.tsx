@@ -4,6 +4,7 @@ import { useTranslations } from 'next-intl';
 import { Check, CheckCheck } from 'lucide-react';
 import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 import { cn } from '@/lib/utils';
+import { TranslateMessageButton } from '@/modules/messaging-translation';
 import { initialsFromLabel } from '@/modules/applications/lib/message-sender';
 import type { ParentMessageThreadItem } from '@/modules/applications/types/parent-message.types';
 
@@ -48,6 +49,7 @@ export function ParentMessageBubble({ message }: { message: ParentMessageThreadI
         >
           {message.content}
         </div>
+        <TranslateMessageButton messageDocumentId={message.documentId} content={message.content} />
         {isOwn && (
           <span className='flex items-center gap-1 text-xs text-foggy'>
             {message.readAt ? (

@@ -4,6 +4,7 @@ import { useTranslations } from 'next-intl';
 import { Check } from 'lucide-react';
 import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 import { cn } from '@/lib/utils';
+import { TranslateMessageButton } from '@/modules/messaging-translation';
 import { messageSenderInitials } from '@/modules/applications/lib/message-sender';
 import type { MessageThreadItem } from '@/modules/applications/types/detail.types';
 
@@ -50,6 +51,7 @@ export function MessageBubble({ message }: { message: MessageThreadItem }) {
         >
           {message.content}
         </div>
+        <TranslateMessageButton messageDocumentId={message.documentId} content={message.content} />
         {isAgent && (
           <span className='flex items-center gap-1 text-xs text-foggy'>
             <Check className='h-3.5 w-3.5' aria-hidden='true' />
