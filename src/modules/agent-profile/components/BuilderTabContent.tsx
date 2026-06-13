@@ -42,8 +42,8 @@ export function BuilderTabContent({ tabId, label, preview }: BuilderTabContentPr
   if (tabId === 'marketsAndDestinations') {
     return (
       <MarketsDestinationsTab
-        marketsRaw={preview.sections.marketsServed}
-        destinationsRaw={preview.sections.destinations}
+        marketsRaw={preview.editorSections.marketsServed}
+        destinationsRaw={preview.editorSections.destinations}
       />
     );
   }
@@ -51,7 +51,8 @@ export function BuilderTabContent({ tabId, label, preview }: BuilderTabContentPr
   if (tabId === 'successMetrics') return <SuccessMetricsTab />;
 
   const entry = BUILDER_REPEATABLE_SECTIONS[tabId];
-  if (entry) return <RepeatableEditorTab entry={entry} raw={preview.sections[entry.payloadKey]} />;
+  if (entry)
+    return <RepeatableEditorTab entry={entry} raw={preview.editorSections[entry.payloadKey]} />;
 
   if (MANAGED_ELSEWHERE.has(tabId)) {
     return <BuilderSectionPlaceholder title={label} note={t(`${tabId}Note`)} />;

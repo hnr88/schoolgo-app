@@ -37,6 +37,8 @@ const SCHOOL_FIELDS = [
   'oshcPreferredProvider', 'atarAvailable', 'postSubmissionMessage', 'proposedEntryLevel',
   // co-curricular (backed by the programTypes JSON array)
   'programTypes',
+  // boarding features (plain JSON string array)
+  'boardingFeatures',
 ];
 
 function buildQuery(documentId: string): string {
@@ -45,6 +47,14 @@ function buildQuery(documentId: string): string {
   SCHOOL_FIELDS.forEach((f, i) => params.set(`fields[${i}]`, f));
   params.set('populate[logo][fields][0]', 'url');
   params.set('populate[coverImage][fields][0]', 'url');
+  params.set('populate[faqs][fields][0]', 'question');
+  params.set('populate[faqs][fields][1]', 'answer');
+  params.set('populate[faqs][fields][2]', 'topicTag');
+  params.set('populate[faqs][fields][3]', 'order');
+  params.set('populate[admissionsSteps][fields][0]', 'stepNumber');
+  params.set('populate[admissionsSteps][fields][1]', 'title');
+  params.set('populate[admissionsSteps][fields][2]', 'description');
+  params.set('populate[admissionsSteps][fields][3]', 'order');
   params.set('pagination[pageSize]', '1');
   return params.toString();
 }

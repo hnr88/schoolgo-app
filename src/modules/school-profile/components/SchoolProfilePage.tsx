@@ -21,6 +21,9 @@ import { InternationalForm } from '@/modules/school-profile/components/Internati
 import { LocationForm } from '@/modules/school-profile/components/LocationForm';
 import { PoliciesForm } from '@/modules/school-profile/components/PoliciesForm';
 import { AdmissionsControlsForm } from '@/modules/school-profile/components/AdmissionsControlsForm';
+import { AdmissionsStepsForm } from '@/modules/school-profile/components/AdmissionsStepsForm';
+import { FaqsForm } from '@/modules/school-profile/components/FaqsForm';
+import { BoardingFeaturesForm } from '@/modules/school-profile/components/BoardingFeaturesForm';
 import { TuitionManager } from '@/modules/school-profile/components/TuitionManager';
 import { PROFILE_SECTIONS } from '@/modules/school-profile/constants/profile-sections.constants';
 
@@ -96,6 +99,7 @@ export function SchoolProfilePage() {
         {renderSection('description', <DescriptionForm school={details} disabled={disabled} />)}
         {renderSection('keyFacts', <KeyFactsForm school={details} disabled={disabled} />)}
         {renderSection('fees', <FeesForm school={details} disabled={disabled} />)}
+        {renderSection('boardingFeatures', <BoardingFeaturesForm school={details} disabled={disabled} />)}
         {renderSection('scholarships', <ScholarshipsForm school={details} disabled={disabled} />)}
         {renderSection('academic', <AcademicForm school={details} disabled={disabled} />)}
         {renderSection('cocurricular', <CoCurricularForm school={details} disabled={disabled} />)}
@@ -103,6 +107,8 @@ export function SchoolProfilePage() {
         {renderSection('location', <LocationForm school={details} disabled={disabled} />)}
         {renderSection('policies', <PoliciesForm school={details} disabled={disabled} />)}
         {renderSection('admissions', <AdmissionsControlsForm school={details} disabled={disabled} />)}
+        {renderSection('admissionsSteps', <AdmissionsStepsForm school={details} disabled={disabled} />)}
+        {renderSection('faqs', <FaqsForm school={details} disabled={disabled} />)}
         {renderSection('tuition', <TuitionManager canEdit={canEdit} />)}
       </div>
     </div>

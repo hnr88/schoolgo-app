@@ -7,17 +7,17 @@ import type {
 } from '@/modules/agent-profile/types/agent-profile.types';
 
 /**
- * Hydrates the ComplianceEditor's scalar slice from the read-side projection.
- * `feeTransparency` / `ethicsCommitments` / `responsiveness` are present only
- * when their visibility toggle is on; the always-exposed top-level scalars
- * (`availabilityStatus`, `handlesUnder18`) backfill when a block is hidden.
+ * Hydrates the ComplianceEditor's scalar slice from the ungated `editorSections`
+ * so the editor loads saved fee/ethics/responsiveness data regardless of each
+ * block's visibility toggle. The always-exposed top-level scalars
+ * (`availabilityStatus`, `handlesUnder18`) still backfill when a block is absent.
  */
 export function hydrateComplianceValues(
   preview: AgentPublicProfilePreview,
 ): AgentComplianceValues {
-  const fee = asRecord(preview.sections.feeTransparency);
-  const ethics = asRecord(preview.sections.ethicsCommitments);
-  const responsiveness = asRecord(preview.sections.responsiveness);
+  const fee = asRecord(preview.editorSections.feeTransparency);
+  const ethics = asRecord(preview.editorSections.ethicsCommitments);
+  const responsiveness = asRecord(preview.editorSections.responsiveness);
 
   const availability =
     pickStr(responsiveness, 'availabilityStatus') || (preview.availabilityStatus ?? '');

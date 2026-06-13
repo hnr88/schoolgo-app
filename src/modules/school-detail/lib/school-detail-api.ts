@@ -94,8 +94,65 @@ export interface SchoolDetail {
   sourceNote?: string | null;
 }
 
+interface RawFaq {
+  question?: string | null;
+  answer?: string | null;
+  topicTag?: string | null;
+  order?: number | null;
+}
+
+interface RawAdmissionsStep {
+  stepNumber?: number | null;
+  title?: string | null;
+  description?: string | null;
+  order?: number | null;
+}
+
+interface RawSchoolDetail extends Omit<SchoolDetail, 'admissionsSteps' | 'boardingFeatures' | 'faqItems'> {
+  faqs?: RawFaq[] | null;
+  admissionsSteps?: RawAdmissionsStep[] | null;
+  boardingFeatures?: string[] | null;
+}
+
 interface SchoolsResponse {
-  data?: SchoolDetail[];
+  data?: RawSchoolDetail[];
+}
+
+function byOrder<T extends { order?: number | null }>(a: T, b: T): number {
+  return (a.order ?? Number.MAX_SAFE_INTEGER) - (b.order ?? Number.MAX_SAFE_INTEGER);
+}
+
+function mapFaqItems(faqs: RawFaq[] | null | undefined): { q: string; a: string }[] {
+  if (!Array.isArray(faqs)) return [];
+  return [...faqs]
+    .sort(byOrder)
+    .map((f) => ({ q: f.question ?? '', a: f.answer ?? '' }))
+    .filter((f) => f.q && f.a);
+}
+
+function mapAdmissionsSteps(
+  steps: RawAdmissionsStep[] | null | undefined,
+): { title: string; desc: string }[] {
+  if (!Array.isArray(steps)) return [];
+  return [...steps]
+    .sort((a, b) => (a.stepNumber ?? a.order ?? 0) - (b.stepNumber ?? b.order ?? 0))
+    .map((s) => ({ title: s.title ?? '', desc: s.description ?? '' }))
+    .filter((s) => s.title && s.desc);
+}
+
+function mapBoardingFeatures(features: string[] | null | undefined): string[] {
+  if (!Array.isArray(features)) return [];
+  return features.filter((f): f is string => typeof f === 'string' && f.trim().length > 0);
+}
+
+function normalizeSchoolDetail(raw: RawSchoolDetail): SchoolDetail {
+  const { faqs, admissionsSteps, boardingFeatures, ...rest } = raw;
+  return {
+    ...rest,
+    faqItems: mapFaqItems(faqs),
+    admissionsSteps: mapAdmissionsSteps(admissionsSteps),
+    boardingFeatures: mapBoardingFeatures(boardingFeatures),
+  };
 }
 
 function buildSchoolQuery(slug: string): string {
@@ -106,6 +163,14 @@ function buildSchoolQuery(slug: string): string {
   params.set('populate[logo][fields][1]', 'alternativeText');
   params.set('populate[coverImage][fields][0]', 'url');
   params.set('populate[coverImage][fields][1]', 'alternativeText');
+  params.set('populate[faqs][fields][0]', 'question');
+  params.set('populate[faqs][fields][1]', 'answer');
+  params.set('populate[faqs][fields][2]', 'topicTag');
+  params.set('populate[faqs][fields][3]', 'order');
+  params.set('populate[admissionsSteps][fields][0]', 'stepNumber');
+  params.set('populate[admissionsSteps][fields][1]', 'title');
+  params.set('populate[admissionsSteps][fields][2]', 'description');
+  params.set('populate[admissionsSteps][fields][3]', 'order');
   return params.toString();
 }
 
@@ -137,7 +202,8 @@ export const getSchoolBySlug = cache(async function getSchoolBySlug(
     const { data: payload } = await publicApi.get<SchoolsResponse>(
       `${env.NEXT_PUBLIC_API_URL}/api/schools?${buildSchoolQuery(slug)}`,
     );
-    return payload.data?.[0] ?? null;
+    const raw = payload.data?.[0];
+    return raw ? normalizeSchoolDetail(raw) : null;
   } catch {
     return null;
   }
@@ -151,7 +217,7 @@ export const getSimilarSchools = cache(async function getSimilarSchools(
     const { data: payload } = await publicApi.get<SchoolsResponse>(
       `${env.NEXT_PUBLIC_API_URL}/api/schools?${buildSimilarSchoolsQuery(school)}`,
     );
-    return payload.data ?? [];
+    return (payload.data ?? []).map(normalizeSchoolDetail);
   } catch {
     return [];
   }

@@ -19,6 +19,11 @@ interface BoardingFeature {
 function parseFeatures(raw: unknown): BoardingFeature[] {
   if (!raw) return [];
   if (Array.isArray(raw)) {
+    if (raw.every((f) => typeof f === 'string')) {
+      return raw
+        .filter((f): f is string => f.trim().length > 0)
+        .map((f) => ({ title: f, desc: '' }));
+    }
     return raw
       .filter((f): f is { title: unknown; desc: unknown } => typeof f === 'object' && f !== null && 'title' in f && 'desc' in f)
       .map((f) => ({
@@ -104,7 +109,9 @@ export async function BoardingSection({ school }: BoardingSectionProps) {
           {features.map((f, i) => (
             <div key={i} className="rounded-lg bg-muted p-4">
               <p className="text-body-sm font-semibold text-ink-900">{f.title}</p>
-              <p className="mt-1 text-body-sm leading-relaxed text-foggy">{f.desc}</p>
+              {f.desc && (
+                <p className="mt-1 text-body-sm leading-relaxed text-foggy">{f.desc}</p>
+              )}
             </div>
           ))}
         </div>

@@ -26,7 +26,7 @@ const TEXT_FIELDS = [
 ] as const;
 
 function legalSlice(preview: AgentPublicProfilePreview): Record<string, unknown> {
-  const value = preview.sections.legalIdentity;
+  const value = preview.editorSections.legalIdentity;
   return value && typeof value === 'object' ? (value as Record<string, unknown>) : {};
 }
 

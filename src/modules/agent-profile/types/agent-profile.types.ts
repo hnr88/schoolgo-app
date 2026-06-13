@@ -124,6 +124,11 @@ export type AgentBuilderSectionKey =
  * `completeness`, the stored `completenessScore`, `publicProfileEnabled`, and
  * `status`. The projection's `sections` is intentionally loose — round 2 builds
  * the typed per-section editors that read it.
+ *
+ * `sections` is VISIBILITY-GATED: a section whose per-section toggle is off is
+ * omitted, so it drives only the public projection. `editorSections` is the same
+ * shape UNGATED (every section regardless of toggle) and is what the builder's
+ * editors hydrate from, so saved data loads for editing even while hidden.
  */
 export interface AgentPublicProfilePreview {
   documentId: string;
@@ -152,6 +157,9 @@ export interface AgentPublicProfilePreview {
   platformAuthorisedBadge: boolean;
   esosPrismsRecorded: boolean;
   sections: Record<string, unknown>;
+  // ungated mirror of `sections` (every section regardless of visibility) — the
+  // editors hydrate from this so hidden-but-filled sections still load to edit
+  editorSections: Record<string, unknown>;
   // self-only builder context
   publicProfileEnabled: boolean;
   status: string;

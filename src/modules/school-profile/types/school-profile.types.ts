@@ -46,6 +46,33 @@ export type ReligiousAffiliation =
   | 'quaker'
   | 'interdenominational-christian';
 
+export interface SchoolFaqItem {
+  question: string;
+  answer: string;
+  topicTag?: string | null;
+  order?: number | null;
+}
+
+export interface SchoolAdmissionsStepItem {
+  stepNumber?: number | null;
+  title: string;
+  description?: string | null;
+  order?: number | null;
+}
+
+export interface SchoolFaqInput {
+  question: string;
+  answer: string;
+  order?: number;
+}
+
+export interface SchoolAdmissionsStepInput {
+  stepNumber?: number;
+  title: string;
+  description?: string;
+  order?: number;
+}
+
 export interface SchoolProfileDetails {
   documentId: string;
   name: string;
@@ -100,6 +127,9 @@ export interface SchoolProfileDetails {
   postSubmissionMessage: string | null;
   proposedEntryLevel: string | null;
   programTypes: string[] | null;
+  faqs: SchoolFaqItem[];
+  admissionsSteps: SchoolAdmissionsStepItem[];
+  boardingFeatures: string[] | null;
   logo: SchoolMedia | null;
   coverImage: SchoolMedia | null;
 }
@@ -130,6 +160,9 @@ export interface SchoolCapacity {
 }
 
 export interface UpdateSchoolPayload {
+  faqs?: SchoolFaqInput[];
+  admissionsSteps?: SchoolAdmissionsStepInput[];
+  boardingFeatures?: string[] | null;
   [key: string]: unknown;
 }
 

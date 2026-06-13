@@ -3,8 +3,9 @@ import type { RepeatableEditorProps } from '@/modules/agent-profile/types/editor
 
 /**
  * The `UpdateAgentProfilePayload` keys whose value is a repeatable component
- * array (replace-array semantics). Each maps 1:1 to a `sections` projection key
- * the builder hydrates from `GET /api/agents/me/public-preview`.
+ * array (replace-array semantics). Each maps 1:1 to an `editorSections` key the
+ * builder hydrates from `GET /api/agents/me/public-preview` (the ungated mirror
+ * of `sections`, so hidden-but-filled sections still load to edit).
  */
 export type RepeatablePayloadKey =
   | 'credentials'

@@ -11,9 +11,11 @@ export const AGENT_PUBLIC_PROFILE_QUERY_KEY = ['agent-public-profile'] as const;
 /**
  * Self preview/editor source for the profile builder. Hits the extended
  * `GET /api/agents/me/public-preview` (privateApi → authed agent) which returns
- * the full public projection PLUS the builder-only context: `sectionVisibility`
- * map, the live `completeness`, the stored `completenessScore`, and
- * `publicProfileEnabled` / `status`. Edit + preview share one source.
+ * the full public projection (gated `sections`) PLUS the builder-only context:
+ * the ungated `editorSections` mirror the editors hydrate from, the
+ * `sectionVisibility` map, the live `completeness`, the stored
+ * `completenessScore`, and `publicProfileEnabled` / `status`. Edit + preview
+ * share one source.
  */
 export function useAgentPublicProfile() {
   const isAuthenticated = useAuthStore((s) => s.isAuthenticated);

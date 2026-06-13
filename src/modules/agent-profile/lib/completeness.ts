@@ -5,26 +5,26 @@ import type {
 } from '@/modules/agent-profile/types/agent-profile.types';
 
 function sectionLength(preview: AgentPublicProfilePreview, field: string): number {
-  const value = preview.sections[field];
+  const value = preview.editorSections[field];
   return Array.isArray(value) ? value.length : 0;
 }
 
 function hasFeeTransparency(preview: AgentPublicProfilePreview): boolean {
-  const fee = preview.sections.feeTransparency as
+  const fee = preview.editorSections.feeTransparency as
     | { feeModel?: unknown; feeTransparencyStatement?: unknown }
     | undefined;
   return Boolean(fee?.feeModel && fee?.feeTransparencyStatement);
 }
 
 function hasEthics(preview: AgentPublicProfilePreview): boolean {
-  const ethics = preview.sections.ethicsCommitments as
+  const ethics = preview.editorSections.ethicsCommitments as
     | { agentCodeOfEthicsSigned?: boolean; protectsMinorsCommitment?: boolean }
     | undefined;
   return Boolean(ethics?.agentCodeOfEthicsSigned && ethics?.protectsMinorsCommitment);
 }
 
 function hasExternalRating(preview: AgentPublicProfilePreview): boolean {
-  const metrics = preview.sections.successMetrics as
+  const metrics = preview.editorSections.successMetrics as
     | { googleRating?: unknown; externalReviewUrl?: unknown }
     | undefined;
   return Boolean(metrics?.googleRating || metrics?.externalReviewUrl);
@@ -33,9 +33,9 @@ function hasExternalRating(preview: AgentPublicProfilePreview): boolean {
 /**
  * Whether each weighted completeness bucket is satisfied by the current preview.
  * Mirrors AGENT-PROFILE-MODEL.json `trustAndCompleteness` thresholds. Component
- * buckets read the projection's `sections` arrays (present when their section is
- * toggled on); scalar buckets read always-exposed top-level fields, so the photo
- * and credential checks stay reliable regardless of visibility.
+ * buckets read the ungated `editorSections` arrays, so completeness reflects the
+ * agent's real saved data regardless of each section's visibility toggle; scalar
+ * buckets read always-exposed top-level fields.
  */
 function isBucketMet(preview: AgentPublicProfilePreview, key: string): boolean {
   switch (key) {
