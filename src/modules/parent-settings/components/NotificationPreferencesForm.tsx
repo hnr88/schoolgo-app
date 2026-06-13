@@ -37,7 +37,6 @@ export function NotificationPreferencesForm({
       offers: preferences.offers,
       messages: preferences.messages,
       deadlines: preferences.deadlines,
-      tours: preferences.tours,
       marketing: preferences.marketing,
       digestFrequency: preferences.digestFrequency,
     },

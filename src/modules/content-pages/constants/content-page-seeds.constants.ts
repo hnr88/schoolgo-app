@@ -79,7 +79,6 @@ const contentPageSeedRows = [
   ['media-room', 'company', 'directory', 'all', 'Media room', 'A press and media page for company summary, boilerplate, logos, leadership contacts, and story angles.', '/images/auth/school.jpg', 'featured'],
   ['family-guide-start', 'school-search', 'overview', 'families', 'For families', 'A family landing page for search, shortlist, admissions readiness, fees, international support, and next-step routing.', '/images/auth/parent.jpg', 'brand'],
   ['request-information', 'admissions', 'admissions', 'families', 'Request information', 'A conversion page for families to ask about schools, fees, documents, availability, and admissions timing.', '/images/auth/parent.jpg', 'brand'],
-  ['book-a-tour', 'events', 'events', 'families', 'Book a tour', 'A visit-planning page for campus tours, virtual tours, open days, webinars, and family briefing sessions.', '/images/auth/school.jpg', 'featured'],
   ['application-requirements', 'admissions', 'admissions', 'families', 'Application requirements', 'A requirements page for reports, identity documents, English evidence, recommendations, interviews, and offer acceptance.', '/images/auth/parent.jpg', 'trust'],
   ['payment-options', 'fees', 'fees', 'families', 'Payment options', 'A tuition payment page for deposits, instalments, refunds, late fees, payment channels, and family finance planning.', '/images/auth/parent.jpg', 'featured'],
 ] as const;

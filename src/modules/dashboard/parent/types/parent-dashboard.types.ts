@@ -101,7 +101,7 @@ export interface ParentActionItem {
   href: LinkHref;
 }
 
-export type ParentUpcomingKind = 'tour' | 'offerDeadline';
+export type ParentUpcomingKind = 'offerDeadline';
 
 export interface ParentUpcomingItem {
   id: string;

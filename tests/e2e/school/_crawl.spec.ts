@@ -19,7 +19,6 @@ const ROUTES = [
   '/en/school/dashboard/settings',
   '/en/school/dashboard/staff',
   '/en/school/dashboard/templates',
-  '/en/school/dashboard/tours',
   '/en/school/dashboard/tuition',
 ];
 

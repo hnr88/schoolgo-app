@@ -9,7 +9,6 @@ export const schoolNotificationPreferencesSchema = z.object({
   offers: z.boolean(),
   messages: z.boolean(),
   deadlines: z.boolean(),
-  tours: z.boolean(),
   marketing: z.boolean(),
   digestFrequency: z.enum(SCHOOL_DIGEST_FREQUENCIES),
 });

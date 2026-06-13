@@ -15,7 +15,6 @@ export const SCHOOL_NOTIFICATION_TOPICS = [
   'offers',
   'messages',
   'deadlines',
-  'tours',
   'marketing',
 ] as const satisfies readonly SchoolNotificationTopic[];
 

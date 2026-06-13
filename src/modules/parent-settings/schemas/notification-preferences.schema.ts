@@ -9,7 +9,6 @@ export const notificationPreferencesSchema = z.object({
   offers: z.boolean(),
   messages: z.boolean(),
   deadlines: z.boolean(),
-  tours: z.boolean(),
   marketing: z.boolean(),
   digestFrequency: z.enum(DIGEST_FREQUENCIES),
 });

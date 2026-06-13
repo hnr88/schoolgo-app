@@ -51,21 +51,19 @@ export function SchoolCard({
 
   const hasShortlist = Boolean(shortlistAddLabel && shortlistRemoveLabel);
 
+  // Airbnb-style listing card: the image is the hero (floats with its own soft
+  // shadow that lifts on hover), text sits plainly beneath with generous air and
+  // no boxed card chrome.
   const card = (
-    <article
-      className={cn(
-        'group flex flex-col gap-2 rounded-2xl bg-card p-2.5 shadow-1 transition-shadow duration-300 ease-out-quart hover:shadow-2 motion-reduce:transition-none',
-        className,
-      )}
-    >
-      <div className='relative aspect-[3/2] w-full overflow-hidden rounded-lg bg-muted'>
+    <article className={cn('group flex flex-col gap-3', className)}>
+      <div className='relative aspect-[3/2] w-full overflow-hidden rounded-2xl bg-muted shadow-1 transition-shadow duration-300 ease-out-quart group-hover:shadow-3 motion-reduce:transition-none'>
         {photoUrl && !photoFailed ? (
           <Image
             src={photoUrl}
             alt=''
             fill
             sizes='(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px'
-            className='object-cover transition-transform duration-300 ease-out-quart group-hover:scale-105 motion-reduce:transition-none'
+            className='object-cover transition-transform duration-500 ease-out-quart group-hover:scale-105 motion-reduce:transition-none'
             aria-hidden='true'
             onError={() => setPhotoFailed(true)}
           />
@@ -82,7 +80,7 @@ export function SchoolCard({
                 alt=''
                 fill
                 sizes='200px'
-                className='object-contain transition-transform duration-300 ease-out-quart group-hover:scale-105 motion-reduce:transition-none'
+                className='object-contain transition-transform duration-500 ease-out-quart group-hover:scale-105 motion-reduce:transition-none'
                 aria-hidden='true'
                 onError={() => setLogoFailed(true)}
               />
@@ -108,7 +106,7 @@ export function SchoolCard({
             disabled={shortlistDisabled}
             aria-pressed={shortlisted}
             aria-label={shortlisted ? shortlistRemoveLabel : shortlistAddLabel}
-            className='absolute right-3 top-3 z-[2] flex h-8 w-8 items-center justify-center rounded-full bg-card/90 text-foreground shadow-2 backdrop-blur-sm transition-transform hover:bg-card active:scale-95 disabled:cursor-not-allowed disabled:opacity-70'
+            className='absolute right-3 top-3 z-[2] flex h-9 w-9 items-center justify-center rounded-full bg-card/90 text-foreground shadow-2 backdrop-blur-sm transition ease-out-quart hover:scale-105 hover:bg-card active:scale-95 disabled:cursor-not-allowed disabled:opacity-70 motion-reduce:transition-none'
           >
             <Heart
               className={cn(
@@ -122,11 +120,11 @@ export function SchoolCard({
         )}
       </div>
 
-      <div className='mt-1 flex flex-col gap-1'>
+      <div className='flex flex-col gap-1 px-0.5'>
         <div className='flex items-start justify-between gap-3'>
-          <h3 className='line-clamp-1 text-body-sm font-semibold text-ink-900'>{name}</h3>
+          <h3 className='line-clamp-1 text-body font-semibold text-ink-900'>{name}</h3>
           {rating && (
-            <span className='flex shrink-0 items-center gap-1 text-body-sm text-ink-900'>
+            <span className='flex shrink-0 items-center gap-1 text-body-sm font-medium text-ink-900'>
               <Star className='h-3.5 w-3.5 fill-ink-900 text-ink-900' aria-hidden='true' />
               {rating}
             </span>
@@ -147,14 +145,12 @@ export function SchoolCard({
         )}
 
         {cricosLabel && (
-          <div className='border-t border-divider pt-3'>
+          <div className='pt-1'>
             <TrustBadge variant='cricos' label={cricosLabel} />
           </div>
         )}
 
-        {cricosLabel
-          ? actionSlot && <div className='pt-3'>{actionSlot}</div>
-          : actionSlot && <div className='border-t border-divider pt-3'>{actionSlot}</div>}
+        {actionSlot && <div className='pt-2'>{actionSlot}</div>}
       </div>
     </article>
   );

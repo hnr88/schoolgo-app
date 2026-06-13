@@ -22,7 +22,6 @@ const ROUTES = [
   '/en/parent/enrolment-readiness',
   '/en/parent/tests',
   '/en/parent/results',
-  '/en/parent/tours',
   '/en/parent/notifications',
 ];
 

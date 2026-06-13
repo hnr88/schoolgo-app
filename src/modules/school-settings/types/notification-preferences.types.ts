@@ -12,7 +12,6 @@ export type SchoolNotificationTopic =
   | 'offers'
   | 'messages'
   | 'deadlines'
-  | 'tours'
   | 'marketing';
 
 export interface SchoolNotificationPreferencesData {
@@ -25,7 +24,6 @@ export interface SchoolNotificationPreferencesData {
   offers: boolean;
   messages: boolean;
   deadlines: boolean;
-  tours: boolean;
   marketing: boolean;
   digestFrequency: SchoolDigestFrequency;
   createdAt: string;
@@ -40,7 +38,6 @@ export interface UpdateSchoolNotificationPreferencesPayload {
   offers?: boolean;
   messages?: boolean;
   deadlines?: boolean;
-  tours?: boolean;
   marketing?: boolean;
   digestFrequency?: SchoolDigestFrequency;
 }

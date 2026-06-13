@@ -41,7 +41,6 @@ export function SchoolNotificationPreferencesForm({
       offers: preferences.offers,
       messages: preferences.messages,
       deadlines: preferences.deadlines,
-      tours: preferences.tours,
       marketing: preferences.marketing,
       digestFrequency: preferences.digestFrequency,
     },
@@ -59,7 +58,6 @@ export function SchoolNotificationPreferencesForm({
         offers: data.offers,
         messages: data.messages,
         deadlines: data.deadlines,
-        tours: data.tours,
         marketing: data.marketing,
         digestFrequency: data.digestFrequency,
       });

@@ -7,7 +7,7 @@ import type { ComparisonDesktopTableProps } from '@/modules/parents-landing/type
 export function ComparisonDesktopTable({ schools, rows, t }: ComparisonDesktopTableProps) {
   return (
     <div className='hidden lg:block'>
-      <div className='overflow-hidden rounded-lg bg-card shadow-2'>
+      <div className='overflow-hidden rounded-2xl bg-card shadow-1'>
         <table className='w-full'>
           <thead>
             <tr>
@@ -39,7 +39,7 @@ export function ComparisonDesktopTable({ schools, rows, t }: ComparisonDesktopTa
                         {s.name}
                       </Link>
                       <span className='flex items-center gap-1 text-xs text-foggy'>
-                        {s.suburb}, {s.state} \u00B7{' '}
+                        {s.suburb}, {s.state} ·{' '}
                         <Star className='inline h-3 w-3 fill-ink-900 text-ink-900' aria-hidden='true' />
                         {RATINGS[i]}
                       </span>

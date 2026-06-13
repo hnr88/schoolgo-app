@@ -7,7 +7,6 @@ export type NotificationTopic =
   | 'offers'
   | 'messages'
   | 'deadlines'
-  | 'tours'
   | 'marketing';
 
 export interface NotificationPreferencesData {
@@ -20,7 +19,6 @@ export interface NotificationPreferencesData {
   offers: boolean;
   messages: boolean;
   deadlines: boolean;
-  tours: boolean;
   marketing: boolean;
   digestFrequency: DigestFrequency;
   createdAt: string;
@@ -35,7 +33,6 @@ export interface UpdateNotificationPreferencesPayload {
   offers?: boolean;
   messages?: boolean;
   deadlines?: boolean;
-  tours?: boolean;
   marketing?: boolean;
   digestFrequency?: DigestFrequency;
 }

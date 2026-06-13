@@ -8,7 +8,7 @@ import type { ComparisonMobileTableProps } from '@/modules/parents-landing/types
 export function ComparisonMobileTable({ schools, rows, t }: ComparisonMobileTableProps) {
   return (
     <div className='lg:hidden'>
-      <div className='overflow-hidden rounded-lg bg-card shadow-2'>
+      <div className='overflow-hidden rounded-2xl bg-card shadow-1'>
         <table className='w-full'>
           <caption className='px-4 pb-4 pt-6 text-left text-xs font-semibold uppercase tracking-widest text-foggy'>
             {t('compareLabel')}
@@ -31,7 +31,7 @@ export function ComparisonMobileTable({ schools, rows, t }: ComparisonMobileTabl
                         {s.name}
                       </Link>
                       <span className='flex items-center gap-1 text-xs text-foggy'>
-                        {s.suburb}, {s.state} \u00B7{' '}
+                        {s.suburb}, {s.state} ·{' '}
                         <Star className='inline h-3 w-3 fill-ink-900 text-ink-900' aria-hidden='true' />
                         {RATINGS[i]}
                       </span>
