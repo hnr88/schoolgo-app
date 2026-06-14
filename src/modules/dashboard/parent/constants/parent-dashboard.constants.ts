@@ -1,4 +1,4 @@
-import { Award, CreditCard, FileText, Heart, Search, Settings, UserPlus, Users } from 'lucide-react';
+import { Award, FileText, Heart, Search, Settings, UserPlus, Users } from 'lucide-react';
 import type { ApplicationStatus } from '@/modules/applications/types/application.types';
 import type {
   ParentActionKind,
@@ -82,13 +82,6 @@ export const PARENT_QUICK_ACTIONS: ParentQuickAction[] = [
     color: 'text-foggy',
   },
 ];
-
-export const PARENT_PAYMENTS_ACTION = {
-  icon: CreditCard,
-  labelKey: 'quickPayments',
-  bg: 'bg-transparent',
-  color: 'text-foggy',
-} as const;
 
 /** Status -> pipeline stage bucket for the segmented-bar visualization. */
 export const PARENT_PIPELINE_STAGE_BY_STATUS: Record<ApplicationStatus, ParentPipelineStageKey> = {

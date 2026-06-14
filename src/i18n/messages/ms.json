@@ -1446,6 +1446,14 @@
     "passwordLabel": "Kata Laluan",
     "passwordPlaceholder": "Masukkan kata laluan anda",
     "signInButton": "Log Masuk",
+    "continueButton": "Teruskan",
+    "changeEmail": "Tukar e-mel",
+    "choosePortal": "Pilih jenis akaun anda",
+    "portalChip": {
+      "parent": "Ibu bapa",
+      "agent": "Ejen",
+      "school": "Sekolah"
+    },
     "loginSuccess": "Selamat kembali!",
     "loginError": "E-mel atau kata laluan tidak sah. Sila cuba lagi.",
     "noAccount": "Tiada akaun?",
@@ -6103,7 +6111,11 @@
     "emptyTitle": "No leads yet",
     "emptyDescription": "When a parent contacts you, their enquiry will appear here.",
     "errorMessage": "We couldn't load your leads.",
-    "retry": "Try again"
+    "retry": "Try again",
+    "status_new": "Baharu",
+    "status_read": "Dibaca",
+    "status_responded": "Dibalas",
+    "status_closed": "Ditutup"
   },
   "ParentReviews": {
     "title": "My reviews",

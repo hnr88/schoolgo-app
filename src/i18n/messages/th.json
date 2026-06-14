@@ -1446,6 +1446,14 @@
     "passwordLabel": "รหัสผ่าน",
     "passwordPlaceholder": "กรอกรหัสผ่านของคุณ",
     "signInButton": "เข้าสู่ระบบ",
+    "continueButton": "ดำเนินการต่อ",
+    "changeEmail": "เปลี่ยนอีเมล",
+    "choosePortal": "เลือกประเภทบัญชีของคุณ",
+    "portalChip": {
+      "parent": "ผู้ปกครอง",
+      "agent": "ตัวแทน",
+      "school": "โรงเรียน"
+    },
     "loginSuccess": "ยินดีต้อนรับกลับ!",
     "loginError": "อีเมลหรือรหัสผ่านไม่ถูกต้อง กรุณาลองอีกครั้ง",
     "noAccount": "ยังไม่มีบัญชี?",
@@ -6103,7 +6111,11 @@
     "emptyTitle": "No leads yet",
     "emptyDescription": "When a parent contacts you, their enquiry will appear here.",
     "errorMessage": "We couldn't load your leads.",
-    "retry": "Try again"
+    "retry": "Try again",
+    "status_new": "ใหม่",
+    "status_read": "อ่านแล้ว",
+    "status_responded": "ตอบกลับแล้ว",
+    "status_closed": "ปิดแล้ว"
   },
   "ParentReviews": {
     "title": "My reviews",

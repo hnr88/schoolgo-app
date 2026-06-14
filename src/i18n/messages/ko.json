@@ -1446,6 +1446,14 @@
     "passwordLabel": "비밀번호",
     "passwordPlaceholder": "비밀번호를 입력하세요",
     "signInButton": "로그인",
+    "continueButton": "계속",
+    "changeEmail": "이메일 변경",
+    "choosePortal": "계정 유형 선택",
+    "portalChip": {
+      "parent": "학부모",
+      "agent": "에이전트",
+      "school": "학교"
+    },
     "loginSuccess": "다시 오셨군요!",
     "loginError": "이메일 또는 비밀번호가 올바르지 않습니다. 다시 시도해주세요.",
     "noAccount": "계정이 없으신가요?",
@@ -6103,7 +6111,11 @@
     "emptyTitle": "No leads yet",
     "emptyDescription": "When a parent contacts you, their enquiry will appear here.",
     "errorMessage": "We couldn't load your leads.",
-    "retry": "Try again"
+    "retry": "Try again",
+    "status_new": "신규",
+    "status_read": "읽음",
+    "status_responded": "응답함",
+    "status_closed": "종료"
   },
   "ParentReviews": {
     "title": "My reviews",

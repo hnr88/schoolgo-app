@@ -1446,6 +1446,14 @@
     "passwordLabel": "密码",
     "passwordPlaceholder": "请输入密码",
     "signInButton": "登录",
+    "continueButton": "继续",
+    "changeEmail": "更改邮箱",
+    "choosePortal": "选择您的账户类型",
+    "portalChip": {
+      "parent": "家长",
+      "agent": "代理",
+      "school": "学校"
+    },
     "loginSuccess": "欢迎回来！",
     "loginError": "邮箱或密码错误，请重试。",
     "noAccount": "还没有账户？",
@@ -6103,7 +6111,11 @@
     "emptyTitle": "No leads yet",
     "emptyDescription": "When a parent contacts you, their enquiry will appear here.",
     "errorMessage": "We couldn't load your leads.",
-    "retry": "Try again"
+    "retry": "Try again",
+    "status_new": "新",
+    "status_read": "已读",
+    "status_responded": "已回复",
+    "status_closed": "已关闭"
   },
   "ParentReviews": {
     "title": "My reviews",

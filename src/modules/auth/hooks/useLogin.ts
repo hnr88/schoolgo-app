@@ -2,7 +2,7 @@
 
 import { toast } from 'sonner';
 import { useTranslations, useLocale } from 'next-intl';
-import type { UseFormSetError } from 'react-hook-form';
+import type { FieldValues, UseFormSetError } from 'react-hook-form';
 import { useAuthStore } from '@/modules/auth/stores/use-auth-store';
 import { env } from '@/lib/env';
 import { portalUrl, type Portal } from '@/lib/portal-url';
@@ -11,12 +11,17 @@ import { getPortalFromRole } from '@/modules/auth/lib/get-portal-from-role';
 import { classifyAuthError } from '@/modules/auth/lib/classify-auth-error';
 import type { LoginValues } from '@/modules/auth/schemas/login.schema';
 
-interface UseLoginOptions {
+// The hook only ever sets the form-level `root` error, so it accepts any RHF
+// form's setError (login uses `identifier`, the unified login uses `email`).
+interface UseLoginOptions<TFieldValues extends FieldValues> {
   portal: Portal;
-  setError?: UseFormSetError<LoginValues>;
+  setError?: UseFormSetError<TFieldValues>;
 }
 
-export function useLogin({ portal, setError }: UseLoginOptions) {
+export function useLogin<TFieldValues extends FieldValues = LoginValues>({
+  portal,
+  setError,
+}: UseLoginOptions<TFieldValues>) {
   const t = useTranslations('Auth');
   const locale = useLocale();
   const login = useAuthStore((s) => s.login);

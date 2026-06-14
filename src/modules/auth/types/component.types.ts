@@ -33,6 +33,15 @@ export interface LoginFormProps {
   userType: Portal;
 }
 
+export interface UnifiedLoginFormProps {
+  currentPortal: Portal;
+}
+
+export interface PortalChipsProps {
+  value: Portal;
+  onSelect: (portal: Portal) => void;
+}
+
 export interface ProtectedLayoutProps {
   children: ReactNode;
   allowedRoles?: UserRole[];

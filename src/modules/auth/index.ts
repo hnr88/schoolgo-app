@@ -11,6 +11,7 @@ export { AuthInitProvider } from '@/modules/auth/components/AuthInitProvider';
 export { ProtectedLayout } from '@/modules/auth/components/ProtectedLayout';
 export { AuthRedirectCheck } from '@/modules/auth/components/AuthRedirectCheck';
 export { SignInCard } from '@/modules/auth/components/SignInCard';
+export { UnifiedSignInCard } from '@/modules/auth/components/UnifiedSignInCard';
 export { SignUpCard } from '@/modules/auth/components/SignUpCard';
 export { ForgotPasswordCard } from '@/modules/auth/components/ForgotPasswordCard';
 export { ResetPasswordCard } from '@/modules/auth/components/ResetPasswordCard';

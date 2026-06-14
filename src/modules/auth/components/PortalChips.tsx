@@ -2,7 +2,6 @@
 
 import { useTranslations } from 'next-intl';
 import { cn } from '@/lib/utils';
-import type { Portal } from '@/lib/portal-url';
 import { USER_TYPES } from '@/modules/auth/constants/portal.constants';
 import type { PortalChipsProps } from '@/modules/auth/types/component.types';
 

@@ -1446,6 +1446,14 @@
     "passwordLabel": "Mật khẩu",
     "passwordPlaceholder": "Nhập mật khẩu của bạn",
     "signInButton": "Đăng nhập",
+    "continueButton": "Tiếp tục",
+    "changeEmail": "Đổi email",
+    "choosePortal": "Chọn loại tài khoản của bạn",
+    "portalChip": {
+      "parent": "Phụ huynh",
+      "agent": "Đại lý",
+      "school": "Trường học"
+    },
     "loginSuccess": "Chào mừng trở lại!",
     "loginError": "Email hoặc mật khẩu không hợp lệ. Vui lòng thử lại.",
     "noAccount": "Chưa có tài khoản?",
@@ -6103,7 +6111,11 @@
     "emptyTitle": "No leads yet",
     "emptyDescription": "When a parent contacts you, their enquiry will appear here.",
     "errorMessage": "We couldn't load your leads.",
-    "retry": "Try again"
+    "retry": "Try again",
+    "status_new": "Mới",
+    "status_read": "Đã đọc",
+    "status_responded": "Đã phản hồi",
+    "status_closed": "Đã đóng"
   },
   "ParentReviews": {
     "title": "My reviews",

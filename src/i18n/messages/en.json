@@ -1446,6 +1446,14 @@
     "passwordLabel": "Password",
     "passwordPlaceholder": "Enter your password",
     "signInButton": "Sign in",
+    "continueButton": "Continue",
+    "changeEmail": "Change email",
+    "choosePortal": "Choose your account type",
+    "portalChip": {
+      "parent": "Parent",
+      "agent": "Agent",
+      "school": "School"
+    },
     "loginSuccess": "Welcome back!",
     "loginError": "Invalid email or password. Please try again.",
     "noAccount": "Don't have an account?",
@@ -6103,7 +6111,11 @@
     "emptyTitle": "No leads yet",
     "emptyDescription": "When a parent contacts you, their enquiry will appear here.",
     "errorMessage": "We couldn't load your leads.",
-    "retry": "Try again"
+    "retry": "Try again",
+    "status_new": "New",
+    "status_read": "Read",
+    "status_responded": "Responded",
+    "status_closed": "Closed"
   },
   "ParentReviews": {
     "title": "My reviews",
