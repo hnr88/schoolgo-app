@@ -1,3 +1,5 @@
+import type { Portal } from '@/lib/portal-url';
+
 export interface RegisterRequestPayload {
   username: string;
   email: string;
@@ -6,4 +8,10 @@ export interface RegisterRequestPayload {
   agencyName?: string;
   countryOfOperation?: string;
   phone?: string;
+}
+
+export interface IdentifyResponse {
+  exists: boolean;
+  portal: Portal | null;
+  role: string | null;
 }

@@ -12,9 +12,7 @@ import {
   CheckCircle,
   ClipboardCheck,
   ClipboardList,
-  Coins,
   Columns3,
-  CreditCard,
   FileQuestion,
   FilePlus,
   FileSpreadsheet,
@@ -33,7 +31,6 @@ import {
   ListChecks,
   MessageCircleQuestion,
   MessageSquare,
-  Receipt,
   Search,
   Send,
   Settings,
@@ -78,8 +75,6 @@ export const ROUTE_TITLE_MAP: Record<string, string> = {
   '/dashboard/templates': 'templates',
   '/dashboard/staff': 'staff',
   '/dashboard/capacity': 'capacity',
-  '/dashboard/invoices': 'invoices',
-  '/dashboard/payouts': 'payouts',
   '/dashboard/pre-enrolment': 'preEnrolment',
   '/dashboard/analytics': 'analytics',
   '/dashboard/follow-ups': 'followUps',
@@ -136,7 +131,6 @@ export const PORTAL_NAV: Record<Portal, PortalNav> = {
       {
         labelKey: 'groupEarnings',
         items: [
-          { href: '/dashboard/commissions', icon: Coins, labelKey: 'commissions' },
           { href: '/dashboard/training', icon: GraduationCap, labelKey: 'training' },
         ],
       },
@@ -189,8 +183,6 @@ export const PORTAL_NAV: Record<Portal, PortalNav> = {
       {
         labelKey: 'groupFinance',
         items: [
-          { href: '/dashboard/invoices', icon: Receipt, labelKey: 'invoices' },
-          { href: '/dashboard/payouts', icon: CreditCard, labelKey: 'payouts' },
           { href: '/dashboard/growth-services', icon: TrendingUp, labelKey: 'growthServices' },
         ],
       },
@@ -277,7 +269,6 @@ export const PORTAL_NAV: Record<Portal, PortalNav> = {
         labelKey: 'groupAccount',
         items: [
           { href: '/parent/settings', icon: Settings, labelKey: 'settings' },
-          { href: '/parent/payments', icon: CreditCard, labelKey: 'payments' },
         ],
       },
     ],

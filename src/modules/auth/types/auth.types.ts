@@ -2,8 +2,12 @@ import type { Portal } from '@/lib/portal-url';
 
 export enum UserRole {
   SUPER_ADMIN = 'super-admin',
+  ADMIN = 'admin',
   SCHOOL_ADMIN = 'school-admin',
+  SCHOOL_GOVERNMENT = 'school-government',
+  SCHOOL_EMPLOYEE = 'school-employee',
   PARENT = 'parent',
+  STUDENT = 'student',
   AGENT = 'agent',
 }
 

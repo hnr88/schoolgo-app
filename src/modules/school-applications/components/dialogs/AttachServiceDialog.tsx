@@ -30,7 +30,7 @@ import {
   FormLabel,
   FormMessage,
 } from '@/components/ui/form';
-import { formatAud } from '@/modules/school-invoices/lib/format-finance';
+import { formatAud } from '@/modules/school-applications/lib/format-currency';
 import { useServiceCatalog } from '@/modules/school-applications/queries/use-service-catalog.query';
 import { useAttachService } from '@/modules/school-applications/queries/use-attach-service.mutation';
 import {

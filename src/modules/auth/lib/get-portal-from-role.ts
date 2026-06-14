@@ -6,9 +6,13 @@ export function getPortalFromRole(role: UserRole): Portal {
     case UserRole.AGENT:
       return 'agent';
     case UserRole.SCHOOL_ADMIN:
+    case UserRole.SCHOOL_EMPLOYEE:
+    case UserRole.SCHOOL_GOVERNMENT:
     case UserRole.SUPER_ADMIN:
+    case UserRole.ADMIN:
       return 'school';
     case UserRole.PARENT:
+    case UserRole.STUDENT:
     default:
       return 'parent';
   }

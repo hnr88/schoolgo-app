@@ -5,7 +5,7 @@ import { Sparkles } from 'lucide-react';
 import { Skeleton } from '@/components/ui/skeleton';
 import { EmptyState, SurfaceCard } from '@/modules/core';
 import { StatusBadge } from '@/modules/design-system';
-import { formatAud, formatFinanceDate } from '@/modules/school-invoices/lib/format-finance';
+import { formatAud, formatFinanceDate } from '@/modules/school-applications/lib/format-currency';
 import { useApplicationServices } from '@/modules/school-applications/queries/use-application-services.query';
 import { SERVICE_INVOICE_STATUS_TONE } from '@/modules/school-applications/constants/service-invoice.constants';
 import type { ServiceInvoice } from '@/modules/school-applications/types/school-applications.types';

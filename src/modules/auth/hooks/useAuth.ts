@@ -16,12 +16,19 @@ export function useAuth() {
   const computed = useMemo(
     () => ({
       isParent: user?.role === UserRole.PARENT,
+      isStudent: user?.role === UserRole.STUDENT,
       isAgent: user?.role === UserRole.AGENT,
       isSchoolAdmin: user?.role === UserRole.SCHOOL_ADMIN,
+      isSchoolEmployee: user?.role === UserRole.SCHOOL_EMPLOYEE,
+      isSchoolGovernment: user?.role === UserRole.SCHOOL_GOVERNMENT,
       isSuperAdmin: user?.role === UserRole.SUPER_ADMIN,
-      isAdmin: [UserRole.SCHOOL_ADMIN, UserRole.SUPER_ADMIN].includes(
-        user?.role || ('' as UserRole),
-      ),
+      isAdmin: [
+        UserRole.SCHOOL_ADMIN,
+        UserRole.SCHOOL_EMPLOYEE,
+        UserRole.SCHOOL_GOVERNMENT,
+        UserRole.ADMIN,
+        UserRole.SUPER_ADMIN,
+      ].includes(user?.role || ('' as UserRole)),
     }),
     [user?.role],
   );
