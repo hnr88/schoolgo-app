@@ -9,7 +9,7 @@ export type Plan = {
   ctaHref: string;
 };
 
-export type TimelineStepKey = 'receive' | 'review' | 'decide' | 'onboard';
+export type TimelineStepKey = 'find' | 'understand' | 'connect' | 'apply';
 
 export type TimelineStep = {
   key: TimelineStepKey;
@@ -19,5 +19,24 @@ export type TimelineStep = {
 
 export type ToolItem = {
   key: string;
+  icon: IconComponent;
+};
+
+export type AppQualityKey = 'english' | 'costs' | 'accommodation' | 'agents';
+
+export type AppQualityItem = {
+  key: AppQualityKey;
+  icon: IconComponent;
+};
+
+export type AgentRelationshipKey =
+  | 'approve'
+  | 'connect'
+  | 'agreements'
+  | 'performance'
+  | 'remove';
+
+export type AgentRelationshipBullet = {
+  key: AgentRelationshipKey;
   icon: IconComponent;
 };

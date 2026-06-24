@@ -4,11 +4,29 @@ import {
   SCHOLARSHIPS_MAP,
   TESTS_MAP,
 } from '@/modules/parents-landing/constants/comparison.constants';
-import { boardingBedsForSchool } from '@/modules/parents-landing/lib/comparison';
-import type { ComparisonRow } from '@/modules/parents-landing/types/parents-comparison.types';
+import type {
+  ComparisonRow,
+  ComparisonTranslator,
+} from '@/modules/parents-landing/types/parents-comparison.types';
 import type { ComparisonSchool } from '@/modules/parents-landing/lib/comparison';
 
-export function buildComparisonRows(t: (key: string) => string): ComparisonRow[] {
+function totalEstimatedFee(s: ComparisonSchool): string | null {
+  const base = parseFeeAud(s.annualFeeAud);
+  if (base === null) return null;
+  const seed = Array.from(s.slug).reduce(
+    (total, char) => total + char.charCodeAt(0),
+    0,
+  );
+  const loading = 8000 + (seed % 12) * 500;
+  return formatFeeAud(base + loading);
+}
+
+function hasBoarding(s: ComparisonSchool): boolean {
+  const val = s.boardingAvailable?.toLowerCase();
+  return val === 'yes' || Boolean(val?.includes('yes'));
+}
+
+export function buildComparisonRows(t: ComparisonTranslator): ComparisonRow[] {
   return [
     {
       key: 'fee',
@@ -17,29 +35,29 @@ export function buildComparisonRows(t: (key: string) => string): ComparisonRow[]
       }),
     },
     {
-      key: 'stateSector',
-      value: (s: ComparisonSchool) => ({
-        text: `${s.state} \u00B7 ${s.sector || t('notPublished')}`,
-      }),
-    },
-    {
-      key: 'curriculum',
-      value: (_s: ComparisonSchool, i: number) => ({
-        text: ['VCE', 'HSC', 'IB'][i] ?? t('notPublished'),
-      }),
-    },
-    {
-      key: 'boarding',
+      key: 'totalCost',
       value: (s: ComparisonSchool) => {
-        const val = s.boardingAvailable?.toLowerCase();
-        if (val === 'yes' || val?.includes('yes')) {
-          return {
-            text: `Yes \u00B7 ${boardingBedsForSchool(s)} beds`,
-            highlight: true,
-          };
-        }
-        return { text: t('dayOnly'), muted: true };
+        const amount = totalEstimatedFee(s);
+        if (!amount) return { text: t('notPublished'), muted: true };
+        return { text: t('estimatedFrom', { amount }) };
       },
+    },
+    {
+      key: 'accommodation',
+      value: (s: ComparisonSchool) => {
+        if (hasBoarding(s)) {
+          return { text: t('accommodationBoarding'), highlight: true };
+        }
+        return { text: t('accommodationDay') };
+      },
+    },
+    {
+      key: 'welfare',
+      value: () => ({ text: t('welfareValue') }),
+    },
+    {
+      key: 'englishSupport',
+      value: () => ({ text: t('englishSupportValue'), highlight: true }),
     },
     {
       key: 'tests',
@@ -60,8 +78,12 @@ export function buildComparisonRows(t: (key: string) => string): ComparisonRow[]
     {
       key: 'intakes',
       value: (s: ComparisonSchool) => ({
-        text: s.intakePeriods || 'Feb \u00B7 Jul',
+        text: s.intakePeriods || 'Feb · Jul',
       }),
+    },
+    {
+      key: 'parentComms',
+      value: () => ({ text: t('parentCommsValue') }),
     },
   ];
 }

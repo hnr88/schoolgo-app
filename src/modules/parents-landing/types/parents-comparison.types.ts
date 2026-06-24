@@ -1,5 +1,10 @@
 import type { ComparisonSchool } from '@/modules/parents-landing/lib/comparison';
 
+export type ComparisonTranslator = (
+  key: string,
+  values?: Record<string, string | number>,
+) => string;
+
 export interface SchoolPhotoOrLogoProps {
   logoUrl: string | null;
   name: string;
@@ -25,11 +30,11 @@ export interface ComparisonSchoolCardsProps {
 export interface ComparisonDesktopTableProps {
   schools: ComparisonSchool[];
   rows: ComparisonRow[];
-  t: (key: string) => string;
+  t: ComparisonTranslator;
 }
 
 export interface ComparisonMobileTableProps {
   schools: ComparisonSchool[];
   rows: ComparisonRow[];
-  t: (key: string) => string;
+  t: ComparisonTranslator;
 }

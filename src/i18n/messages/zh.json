@@ -24,9 +24,9 @@
     }
   },
   "ParentsMetadata": {
-    "title": "SchoolGo – 为孩子寻找澳大利亚学校",
-    "description": "搜索每一所CRICOS注册的澳大利亚学校。免费比较学费、英语考试要求及入学时间––支持七种语言。",
-    "ogDescription": "每一所CRICOS学校。已认证。用您的语言。"
+    "title": "SchoolGo — 满怀信心选对澳大利亚学校",
+    "description": "搜索并比较每一所注册的澳大利亚学校——学费、住宿、英语要求和学生支持——用您的语言。免费，无需登录。",
+    "ogDescription": "为您的孩子选对学校——满怀信心。免费，用您的语言。"
   },
   "MarketingHeader": {
     "findSchools": "查找学校",
@@ -204,10 +204,10 @@
       "brandAccent": "注册认证",
       "source": "数据来源 data.gov.au"
     },
-    "headlinePrefix": "为您的孩子找到",
-    "headlineEmphasis": "澳大利亚",
-    "headlineSuffix": "学校。",
-    "lede": "在一处搜索澳大利亚每一所 CRICOS 注册的 K–12 学校。免费比较学费、寄宿、英语考试要求––支持普通话、韩语、泰语、越南语、马来语或英语搜索。",
+    "headlinePrefix": "为",
+    "headlineEmphasis": "您的孩子",
+    "headlineSuffix": "选对学校——满怀信心。",
+    "lede": "选对学校，能够塑造孩子的自信、身心健康、升学选择和未来机遇。搜索每一所注册的澳大利亚学校，比较学费、住宿、英语要求和学生支持——用您的语言。",
     "searchAriaLabel": "搜索学校",
     "searchFields": {
       "where": {
@@ -235,7 +235,7 @@
           "location": "Darlinghurst, NSW",
           "curriculum": "HSC",
           "fee": "$41.2k AUD",
-          "boarding": "Day only",
+          "boarding": "仅走读",
           "rating": "4.8"
         },
         "b": {
@@ -243,7 +243,7 @@
           "location": "Melbourne, VIC",
           "curriculum": "VCE/IB",
           "fee": "$42.5k AUD",
-          "boarding": "Boarding",
+          "boarding": "寄宿",
           "rating": "4.8"
         },
         "c": {
@@ -259,72 +259,72 @@
   },
   "ParentsStatsBar": {
     "eyebrow": "数据一览",
-    "heading": "澳大利亚最大的CRICOS学校目录。",
-    "subheading": "每一所注册学校，经过验证且可搜索––从公立到私立，覆盖全部八个州和领地。",
+    "heading": "面向国际学生的每一所注册学校。尽在一处。",
+    "subheading": "搜索、筛选并比较每一所注册的澳大利亚学校——学费、住宿、英语要求和学生支持——全部集中在一处，用您的语言。",
     "items": {
       "schools": {
         "value": "{count, number}+",
-        "label": "CRICOS Schools"
+        "label": "注册学校"
       },
       "states": {
         "value": "8",
-        "label": "States & Territories"
+        "label": "州与领地"
       },
       "sectors": {
-        "value": "All 3 Sectors",
-        "label": "Government · Independent · Catholic"
+        "value": "全部 3 大类别",
+        "label": "公立 · 私立 · 天主教"
       },
       "fees": {
         "value": "$3.5k – $78k",
-        "label": "Annual Fee Range"
+        "label": "年费区间"
       }
     }
   },
   "ParentsFourSteps": {
-    "eyebrow": "使用方法",
-    "heading": "从初次浏览到录取通知––四个简单步骤。",
-    "subheading": "无隐藏费用。申请前无需登录。",
+    "eyebrow": "运作方式",
+    "heading": "从首次搜索到笃定决策——四个简单步骤。",
+    "subheading": "每个环节都透明公开。没有隐藏费用。提交申请前无需登录。",
     "steps": {
       "browse": {
-        "title": "浏览每一所 CRICOS 学校",
-        "description": "按州份、学费、类别、课程、寄宿和奖学金筛选 {count, number} 所学校––用您的语言。"
+        "title": "浏览每一所注册学校",
+        "description": "按州、学费、课程体系、寄宿、寄宿家庭、英语考试、福利支持和奖学金筛选 {count, number}+ 所学校——支持普通话、韩语、泰语、越南语、马来语、印尼语或英语。"
       },
       "shortlist": {
-        "title": "收藏四所，并排比较",
-        "description": "对比学费、入学时间、ICSEA 及认可英语考试。几分钟内做决定，无需数月等待。"
+        "title": "并排比较学校",
+        "description": "将学费、住宿、英语支持、学生福利和入学要求并排呈现——让您看出哪所真正合适，而不只是排名靠前。"
       },
       "prepare": {
-        "title": "查看精确要求",
-        "description": "每条学校信息均列明认可考试、最低分数、所需材料及入学窗口。"
+        "title": "了解全貌",
+        "description": "查看总费用（不只是学费）、住宿选项、福利安排、英语支持项目，以及孩子需要帮助时会有怎样的应对。"
       },
       "apply": {
-        "title": "通过认证中介申请",
-        "description": "您的中介持有 QEAC 认证徽章。申请全程在一个控制台跟踪。",
+        "title": "与值得信赖的中介对接",
+        "description": "SchoolGo 为您对接经学校认可、熟悉招生流程的教育顾问——让您获得专业指导，且对您完全免费。",
         "comingSoon": "即将推出"
       }
     },
     "ctaBrowse": "开始浏览",
-    "ctaLearn": "查看使用方法",
+    "ctaLearn": "了解运作方式",
     "badge": {
-      "cricosVerified": "CRICOS Verified · Claimed by school",
-      "updated": "Updated April 2026"
+      "cricosVerified": "政府注册 · 已由学校认领",
+      "updated": "更新于 2026 年 4 月"
     },
     "visuals": {
       "browse": {
-        "title": "[TODO: zh] 695 schools loaded",
-        "subtitle": "[TODO: zh] Filtered by state, fees & curriculum"
+        "title": "已加载 695 所学校",
+        "subtitle": "按州、学费及课程体系筛选"
       },
       "shortlist": {
-        "title": "[TODO: zh] Wei's shortlist",
-        "subtitle": "[TODO: zh] 3 schools in Victoria · All accept AEAS"
+        "title": "Wei 的候选名单",
+        "subtitle": "维多利亚州 3 所学校 · 均接受 AEAS"
       },
       "prepare": {
-        "title": "[TODO: zh] Requirements matched",
-        "subtitle": "[TODO: zh] AEAS 70+ · IELTS 5.5+ · Documents ready"
+        "title": "要求已匹配",
+        "subtitle": "AEAS 70+ · IELTS 5.5+ · 材料已备齐"
       },
       "apply": {
-        "title": "[TODO: zh] Application submitted",
-        "subtitle": "[TODO: zh] Tracked end-to-end · Status: Under review"
+        "title": "申请已提交",
+        "subtitle": "全程跟踪 · 状态：审核中"
       }
     }
   },
@@ -356,78 +356,90 @@
     }
   },
   "ParentsAgents": {
-    "eyebrow": "[TODO: zh] Get expert help",
-    "heading": "[TODO: zh] Meet your verified education agents.",
-    "subheading": "[TODO: zh] Every family is matched with a specialist education consultant who knows the admissions process inside out. Browse QEAC-verified agents and find the right one to guide you – from choosing a school to submitting your application, at no cost to you.",
-    "verifiedLabel": "[TODO: zh] QEAC verified",
-    "partnerSchools": "[TODO: zh] {count, plural, one {# partner school} other {# partner schools}}",
-    "empty": "[TODO: zh] Verified agents are coming soon. Check back shortly.",
-    "viewAll": "[TODO: zh] Find an agent",
-    "browseAll": "Browse all agents"
+    "eyebrow": "获得专业帮助",
+    "heading": "认识您的认证教育中介。",
+    "subheading": "SchoolGo 上的每位中介都获得了其所代表学校的认可。您可根据中介的经验、所讲语言和合作的学校，选择与谁对接——随后他们会从选校到提交申请全程为您提供指导，且对您完全免费。",
+    "verifiedLabel": "已认证",
+    "partnerSchools": "{count, plural, other {# 所合作学校}}",
+    "empty": "认证中介即将上线。请稍后再来查看。",
+    "viewAll": "寻找中介",
+    "browseAll": "浏览全部中介"
   },
   "ParentsComparison": {
     "compareLabel": "对比",
-    "eyebrow": "比较",
-    "heading": "Put three schools next to each other.",
-    "headingAccent": "几分钟内做出决定，无需数月等待。",
-    "shortlistLabel": "[TODO: zh] Shortlist · {count} schools",
+    "eyebrow": "并排比较",
+    "heading": "把学校放在一起比较。",
+    "headingAccent": "看清真正重要的差异。",
+    "shortlistLabel": "候选名单 · {count} 所学校",
     "columns": {
-      "fee": "年费",
-      "stateSector": "[TODO: zh] State & sector",
-      "curriculum": "[TODO: zh] Curriculum",
-      "boarding": "[TODO: zh] Boarding",
-      "tests": "认可考试",
-      "minScore": "[TODO: zh] Min. AEAS score",
-      "scholarships": "[TODO: zh] Scholarships",
-      "intakes": "入学时间"
+      "fee": "年费（国际生）",
+      "totalCost": "预估总费用",
+      "accommodation": "住宿选项",
+      "welfare": "福利与监护支持",
+      "englishSupport": "英语支持项目",
+      "tests": "认可的英语考试",
+      "minScore": "英语最低分数",
+      "scholarships": "奖学金",
+      "intakes": "入学时间",
+      "parentComms": "家长沟通"
     },
-    "notPublished": "未公开",
-    "dayOnly": "[TODO: zh] – Day only",
-    "noneIntl": "[TODO: zh] – None intl."
+    "estimatedFrom": "{amount} 起",
+    "accommodationBoarding": "寄宿 · 寄宿家庭",
+    "accommodationDay": "寄宿家庭 · 亲属",
+    "welfareValue": "18 岁以下监护 · 寄宿家庭审核",
+    "englishSupportValue": "ELICOS / EAL 支持",
+    "parentCommsValue": "学期报告 · 家长门户",
+    "notPublished": "–",
+    "dayOnly": "– 仅走读",
+    "noneIntl": "– 无国际生"
   },
   "ParentsPickATest": {
     "eyebrow": "英语水平",
-    "heading": "Find out which English test the school requires –",
-    "headingAccent": "and the score your child needs to get in.",
-    "subheading": "我们在每所学校的主页上列明认可的英语考试。无需再逐一浏览50个学校网站。",
+    "heading": "了解您的孩子需要哪项英语考试——",
+    "headingAccent": "以及可获得哪些支持。",
+    "subheading": "每所学校认可的英语考试和分数要求各不相同。我们将它们全部梳理清楚——让您一眼看出哪些学校与孩子的成绩相匹配。如果孩子的英语尚未达标，许多学校提供英语语言支持项目或衔接预备课程。",
     "tests": {
       "aeas": {
         "name": "AEAS",
         "fullName": "Australian Education Assessment Services",
-        "description": "Most commonly accepted by Australian independent schools"
+        "description": "澳大利亚私立学校最普遍认可"
       },
       "idat": {
         "name": "iDAT",
         "fullName": "International Digital Admissions Test",
-        "description": "Growing in popularity for K–12 admissions"
+        "description": "在 K–12 招生中日益普及"
       },
       "duolingo": {
         "name": "Duolingo",
         "fullName": "Duolingo English Test",
-        "description": "Accepted by an increasing number of schools"
+        "description": "越来越多学校予以认可"
       },
       "ielts": {
         "name": "IELTS",
         "fullName": "International English Language Testing System",
-        "description": "Standard for senior secondary entry (Year 11+)"
+        "description": "高中阶段入学的标准考试（11 年级及以上）"
       },
       "pte": {
         "name": "PTE Academic",
         "fullName": "Pearson Test of English Academic",
-        "description": "Accepted by some schools for Year 11–12 entry"
+        "description": "部分学校认可，用于 11–12 年级入学"
       },
       "cambridge": {
         "name": "Cambridge",
         "fullName": "Cambridge English Qualifications",
-        "description": "Accepted by select schools"
+        "description": "部分学校认可"
       },
       "toefl": {
         "name": "TOEFL",
         "fullName": "Test of English as a Foreign Language",
-        "description": "Accepted by select schools for senior entry"
+        "description": "部分学校认可，用于高中阶段入学"
       }
     },
-    "cta": "Check your school's English requirements"
+    "reassurance": {
+      "title": "不确定孩子的英语是否已准备好？",
+      "body": "许多学校接收英语仍在提升中的学生，并提供强化支持。使用我们的筛选功能，找到设有英语预备课程的学校。"
+    },
+    "cta": "查看您目标学校的英语要求"
   },
   "ParentsSevenLanguages": {
     "eyebrow": "七种语言",
@@ -445,137 +457,191 @@
   },
   "ParentsArticles": {
     "eyebrow": "招生资料库",
-    "heading": "由招生官撰写，翻译成七种语言。",
-    "subheading": "关于签证、入学时间、英语考试和学费的简明指南。免费，无需登录。",
+    "heading": "解答每个家庭都会问到的问题的指南。",
+    "subheading": "总费用、福利与监护安排、入学时间、英语考试、住宿、所需材料——由招生官撰写的通俗易懂的指南。免费，无需登录。",
     "items": {
       "intakes": {
-        "title": "了解澳大利亚学校入学时间",
-        "meta": "阅读约6分钟 · 每月更新"
+        "title": "了解澳大利亚学校的入学时间",
+        "meta": "6 分钟阅读 · 每月更新"
       },
       "englishTests": {
-        "title": "您的学校接受哪种英语考试？",
-        "meta": "阅读约8分钟 · 逐项考试分析"
+        "title": "您的目标学校认可哪项英语考试？",
+        "meta": "8 分钟阅读 · 逐项考试解析"
       },
       "boarding": {
-        "title": "寄宿还是走读：家庭的选择与原因",
-        "meta": "阅读约5分钟 · 案例研究"
+        "title": "寄宿还是走读：家庭如何选择，以及为什么",
+        "meta": "5 分钟阅读 · 案例分析"
       }
     },
     "readMore": "阅读文章"
   },
   "ParentsTrustBar": {
     "eyebrow": "信任与合规",
-    "heading": "Data you can trust – so you know you're looking at legitimate institutions and accurate information.",
-    "subheading": "SchoolGo 上的每一条学校信息均来自官方政府数据来源––经过验证、持有授权，并每月更新。",
+    "heading": "值得信赖的数据——并对 SchoolGo 的运作方式开诚布公。",
+    "subheading": "所列每一所学校都已对照澳大利亚政府官方注册信息进行核验，我们也会坦诚说明 SchoolGo 究竟做什么——以及不做什么。",
     "items": {
       "cricos": {
         "label": "政府注册学校",
-        "description": "每所学校均与官方联邦注册信息进行交叉核验。"
+        "description": "SchoolGo 上的每所学校均已在澳大利亚政府注册，可招收国际学生。"
       },
       "datagov": {
-        "label": "持续更新",
-        "description": "依据 CC BY 2.5 AU 授权的开放数据––透明且可公开审查。"
+        "label": "保持更新",
+        "description": "学校数据定期从政府官方注册信息刷新——确保您看到的是最新内容。"
       },
       "acara": {
         "label": "国家课程数据",
-        "description": "课程体系、ICSEA 分数及招生数据均来源于澳大利亚国家权威机构。"
+        "description": "课程体系、学校表现及招生数据均来源于澳大利亚国家教育权威机构。"
       },
       "esos": {
         "label": "学生保护",
-        "description": "SchoolGo 在澳大利亚《海外学生教育服务法》框架内运营。"
+        "description": "所列所有学校均在澳大利亚保护国际学生的法律框架下运营。"
       }
     },
-    "attribution": "学校数据来源于澳大利亚海外学生机构及课程联邦注册处（CRICOS）和澳大利亚课程、评估与报告局（ACARA）。更新至 2026 年 4 月。"
+    "attribution": "学校数据来源于澳大利亚政府官方注册信息及国家课程权威机构（ACARA）。更新于 2026 年 4 月。",
+    "about": {
+      "heading": "什么是 SchoolGo？",
+      "intro": "SchoolGo 为家庭对接合适的学校和合适的中介。这是一个免费平台，家长可以在此：",
+      "points": {
+        "search": "在一处搜索并比较每一所注册学校",
+        "understand": "了解费用、要求和支持选项",
+        "connect": "在准备好申请时，对接一位经学校认可的教育中介"
+      },
+      "closing": "中介会处理您的申请并引导您完成整个流程。学校自行认可哪些中介可代表他们——因此您可以确信，与您合作的是学校信任的人。除非您选择对接，否则没有人会联系您。"
+    }
   },
   "ParentsFaq": {
-    "heading": "Frequently Asked Questions",
+    "heading": "常见问题",
     "items": {
       "enrol": {
-        "question": "How do I enrol my child in an Australian school from overseas?",
-        "answer": "Start by shortlisting schools that fit your child's year level, location, and budget on SchoolGo. Each school's profile shows the documents, English test scores, and intake dates you'll need to apply. Once you've chosen a school, an education agent or the school's admissions office will guide you through the application and student visa process."
+        "question": "我如何从海外为孩子申请澳大利亚学校？",
+        "answer": "首先在 SchoolGo 上筛选符合孩子年级、地点和预算的学校。每所学校的档案都会显示申请所需的材料、英语考试分数和入学日期。选定学校后，教育中介或学校招生办公室会引导您完成申请和学生签证流程。"
       },
       "cost": {
-        "question": "How much does it cost to send my child to school in Australia?",
-        "answer": "International student tuition typically ranges from about A$15,000 to A$45,000 per year, depending on the school, year level, and sector. On top of tuition, plan for application fees, uniforms, technology, boarding (if applicable), and Overseas Student Health Cover. Every SchoolGo profile shows the school's published international fees so you can compare like-for-like."
+        "question": "送孩子去澳大利亚上学要花多少钱？",
+        "answer": "国际学生学费通常每年约为 15,000 至 45,000 澳元，具体取决于学校、年级和类别。学费之外，还应预留申请费、校服、电子设备、寄宿（如适用）以及海外学生健康保险的费用。每个 SchoolGo 档案都会显示学校公布的国际生费用，便于您进行同口径比较。"
       },
       "englishTest": {
-        "question": "What English test does my child need for an Australian school?",
-        "answer": "Different schools accept different tests – the most common are AEAS, iDAT, Duolingo English Test, IELTS, and PTE Academic, with minimum scores that vary by year level. SchoolGo shows the exact tests and minimum scores each school accepts on its profile."
+        "question": "孩子申请澳大利亚学校需要哪项英语考试？",
+        "answer": "不同学校认可不同的考试——最常见的是 AEAS、iDAT、Duolingo English Test、IELTS 和 PTE Academic，最低分数因年级而异。SchoolGo 会在每所学校的档案中显示其认可的具体考试和最低分数。"
       },
       "visa": {
-        "question": "Do international students need a visa to study at an Australian school?",
-        "answer": "Yes – full-fee international school students study on a Student visa (subclass 500), which requires a Confirmation of Enrolment from a CRICOS-registered school. You'll also need health cover (OSHC) for the duration of the visa. See our student visa guide for the full step-by-step."
+        "question": "国际学生在澳大利亚学校就读需要签证吗？",
+        "answer": "需要——全额付费的国际学校学生持学生签证（500 类）就读，该签证需要由 CRICOS 注册学校出具的入学确认书（CoE）。在签证有效期内，您还需要购买健康保险（OSHC）。完整的分步说明请参阅我们的学生签证指南。"
       },
       "agent": {
-        "question": "What is an education agent and do I need one?",
-        "answer": "Education agents are licensed consultants who help families choose schools, prepare documents, and manage the application and visa process. You don't have to use one, but most international families do – and it's free for you, since agents are paid by the schools. SchoolGo shows you which agents each school works with so you can pick someone with a proven track record."
+        "question": "什么是教育中介，我需要吗？",
+        "answer": "教育中介是持牌顾问，帮助家庭选校、准备材料并管理申请和签证流程。您不一定要用，但大多数国际家庭都会用——而且对您免费，因为中介由学校付费。SchoolGo 会向您显示每所学校合作的中介，让您可以挑选有可靠业绩记录的人。"
       },
       "schoolTypes": {
-        "question": "What types of schools are there in Australia?",
-        "answer": "Australian schools fall into three sectors – government (public), Catholic, and independent – and may be co-educational, single-sex, day-only, or boarding. Curricula include state certificates like the VCE, HSC, and QCE, plus the International Baccalaureate at many independent schools. Our school types guide explains how each sector works for international students."
+        "question": "澳大利亚有哪些类型的学校？",
+        "answer": "澳大利亚学校分为三大类别——公立、天主教和私立——并可能为男女合校、单一性别、仅走读或寄宿。课程体系包括 VCE、HSC、QCE 等州证书，以及许多私立学校开设的 IB 国际文凭。我们的学校类型指南会说明各类别对国际学生而言是如何运作的。"
       },
       "free": {
-        "question": "Is SchoolGo free?",
-        "answer": "Yes. SchoolGo is completely free for parents, education agents, and schools. There are no listing fees, application fees, or subscription costs."
+        "question": "SchoolGo 免费吗？",
+        "answer": "是的。SchoolGo 对家长、教育中介和学校完全免费。没有挂牌费、申请费或订阅费用。"
+      },
+      "startEarly": {
+        "question": "我们应该提前多久开始申请？",
+        "answer": "大多数家庭会在期望的入学时间前 6 至 12 个月开始。热门学校的国际生名额很早就会满，您也需要时间参加英语考试、准备材料并安排学生签证和住宿。提前开始能让您有更多选择、节奏更从容——不过许多学校在仍有名额时也接受较晚的申请。"
+      },
+      "weakEnglish": {
+        "question": "如果孩子的英语还不够好，可以申请吗？",
+        "answer": "可以。许多学校接收英语仍在提升中的学生，并在主流课程之前或同步提供强化英语支持或衔接预备课程。使用我们的筛选功能，找到设有英语预备课程、与孩子当前水平相匹配的学校。"
+      },
+      "midYear": {
+        "question": "孩子可以年中入学吗？",
+        "answer": "通常可以。澳大利亚学校全年一般有多个入学时段，许多学校会视名额和年级情况接收年中入学的国际学生。SchoolGo 上每所学校的档案都会显示其入学时段，便于您围绕孩子的入学日期作出规划。"
+      },
+      "documents": {
+        "question": "申请需要哪些材料？",
+        "answer": "大多数学校要求提供近期成绩单、护照复印件、英语考试成绩（如需），有时还需推荐信或一份简短陈述。办理学生签证还需要入学确认书（CoE）和健康保险证明。每所学校的档案都会列出该校的要求，您的中介也可以确认完整的清单。"
+      },
+      "boardingVsHomestay": {
+        "question": "寄宿和寄宿家庭有什么区别？",
+        "answer": "寄宿是指住在校内，配有规范的监管、餐食和活动。寄宿家庭是指与经学校认可的当地家庭同住。寄宿更有规律、配有驻校人员，而寄宿家庭提供家庭式环境——如何选择取决于孩子的年龄、独立程度和个人偏好。"
+      },
+      "under18Responsible": {
+        "question": "如果孩子未满 18 岁，谁来对其负责？",
+        "answer": "18 岁以下学生必须有经认可的福利安排——通常是身在澳大利亚的父母或符合条件的亲属，或经学校认可的监护人及住宿。学校与指定监护人共同负责孩子的照料和身心健康，学校是您的主要联系方。"
+      },
+      "englishHelp": {
+        "question": "如果孩子在英语方面有困难，学校能提供帮助吗？",
+        "answer": "可以。许多学校提供持续的英语作为附加语言（EAL）支持、辅导和强化英语课程，帮助仍在提升英语的学生跟上课堂。您可以在 SchoolGo 上筛选设有英语支持项目的学校。"
+      },
+      "transfer": {
+        "question": "孩子日后可以转到另一所学校吗？",
+        "answer": "可以，学生可以在学校之间转学，但有相关规定——尤其是在课程开始的前六个月内——并且通常需要一份新的入学确认书（CoE）。您的中介或相关学校可以指导您完成转学及任何签证方面的影响。"
+      },
+      "refundVisa": {
+        "question": "如果签证被拒，学费可以退吗？",
+        "answer": "大多数学校都有书面退款政策，说明学生签证被拒时可退还的部分。退款条款因学校而异，因此请务必在付款前查看学校的退款条件。SchoolGo 建议您在了解总费用时一并审阅各学校的退款政策。"
+      },
+      "agentSelection": {
+        "question": "SchoolGo 如何挑选为我对接的中介？",
+        "answer": "SchoolGo 上的每位中介都经过认证，并获得其合作学校的认可。SchoolGo 不会随机分配中介——您可根据中介的经验、所讲语言和所代表的学校，选择与谁对接。"
+      },
+      "agentOrSchool": {
+        "question": "SchoolGo 是中介，还是某所学校的一部分？",
+        "answer": "都不是。SchoolGo 是一个独立、免费的平台，帮助家庭搜索并比较每一所注册的澳大利亚学校，并在准备好时对接一位经学校认可的教育中介。我们自己不招收学生——由学校和您选择的中介处理申请。除非您选择对接，否则没有人会联系您。"
       }
     }
   },
   "ParentsFinalCta": {
     "eyebrow": "从这里开始",
-    "headingPrefix": "您的搜索，",
-    "headingEmphasis": "就此",
-    "headingSuffix": "开始，支持七种语言。",
-    "subheading": "免费。无需登录。更新至 {month} {year, number}。",
-    "ctaPrimary": "Find the right school"
+    "headingPrefix": "他们的未来",
+    "headingEmphasis": "始于",
+    "headingSuffix": "选对学校——和合适的支持。",
+    "subheading": "搜索每一所注册学校。了解全部费用。确信孩子会得到照顾。免费，无需登录。",
+    "ctaPrimary": "找到合适的学校"
   },
   "AgentsMetadata": {
-    "title": "SchoolGo – 像管理投资组合一样经营您的中介业务",
-    "description": "面向将学生送入澳大利亚学校的教育中介的 QEAC 认证工具。标准化申请、实时进度追踪、全额佣金。",
-    "ogDescription": "像管理投资组合一样经营您的业务。保留 100% 的佣金。"
+    "title": "SchoolGo 中介版 — 对接家庭，更快整理候选名单。",
+    "description": "面向教育中介免费。搜索澳大利亚学校，在咨询中整理候选名单，对接家庭。佣金始终归您所有。",
+    "ogDescription": "对接已准备好申请的家庭。数分钟内整理出澳大利亚候选学校名单。面向中介免费——佣金始终归您所有。"
   },
   "AgentsHero": {
-    "eyebrow": "面向教育中介 · QEAC 认证",
-    "headlinePrefix": "All Australian schools. All your students.",
-    "headlineEmphasis": "经营您的业务。",
-    "lede": "Every Australian school has different fees, English tests, entry requirements, and application forms. SchoolGo brings them all into one place – so you can match, compare, and apply without the guesswork.",
-    "ctaPrimary": "申请认证",
-    "ctaSecondary": "查看运作方式",
-    "badgeMeta": "Sample agent profile",
+    "eyebrow": "面向教育中介",
+    "headlinePrefix": "对接已准备好申请的家庭。",
+    "headlineEmphasis": "数分钟内整理出候选学校名单。",
+    "lede": "SchoolGo 帮助家长找到合适的澳大利亚学校，并将他们与您对接。在一个平台上搜索 {count, number}+ 所注册学校，在咨询过程中建立候选名单，并向学校提交申请。完全免费。佣金始终归您所有。",
+    "ctaPrimary": "创建您的中介档案",
+    "ctaSecondary": "了解运作方式",
+    "badgeMeta": "中介档案示例",
     "stats": {
       "schools": {
         "value": "{count, number}",
-        "label": "已认证 CRICOS 学校"
+        "label": "CRICOS 注册学校"
       },
       "sectors": {
         "value": "3",
-        "label": "Sectors – Gov, Independent, Catholic"
+        "label": "三大类别 — 公立、私立、天主教"
       },
       "commission": {
         "value": "100%",
-        "label": "佣金完整保留"
+        "label": "免费 — 佣金始终归您所有"
       }
     }
   },
   "AgentsPainPoints": {
-    "eyebrow": "What you can do",
-    "heading": "Everything you need to place students into Australian schools.",
-    "subheading": "Search, match, apply, and track – every part of the placement workflow, in one platform.",
+    "eyebrow": "中介为何选择 SchoolGo",
+    "heading": "为您真实的工作方式而打造——而非取代您。",
+    "subheading": "76% 的国际学校入学申请通过教育中介完成。SchoolGo 的存在是为了让您更高效、更易被家庭看到——而不是把您排除在外。",
     "items": {
       "email": {
-        "question": "Search 695 schools by what matters",
-        "answer": "Filter by fees, English tests, intakes, boarding, and scholarships. Compare side by side. No more digging through school websites one at a time."
+        "question": "需要快速回答具体问题？",
+        "answer": "家长会询问学费、英语要求、寄宿、名额、截止日期和所需材料——往往就在一通电话里。SchoolGo 让您在数秒内筛选全部 695 所学校，而不必逐一查阅各家学校官网。"
       },
       "status": {
-        "question": "One student profile, every school",
-        "answer": "Enter your student's details once. SchoolGo maps them to each school's requirements – so you see which schools fit and apply without re-entering data."
+        "question": "在咨询开始前就要在行政事务上花太多时间？",
+        "answer": "只需录入一次学生档案。SchoolGo 会将其与学校要求进行匹配，让您在拿起电话之前就能看出哪些学校切实合适。"
       },
       "trust": {
-        "question": "Documents organised, scores verified",
-        "answer": "Passports, transcripts, and test scores uploaded once, tracked for expiry. English scores checked against official records automatically."
+        "question": "厌倦了每次都从头解释总费用？",
+        "answer": "SchoolGo 在家长联系您之前就向他们展示完整的费用构成——学费、寄宿、寄宿家庭、OSHC、校服、监护费用。家庭到来时已了解真实数字，您因此能少花时间应对价格冲击，多花时间探讨是否合适。"
       },
       "requirements": {
-        "question": "Your commission stays yours",
-        "answer": "SchoolGo is free. No platform fees, no commission splits, no per-student charges. Your relationship with schools stays direct."
+        "question": "家长把您和谷歌相提并论？",
+        "answer": "通过 SchoolGo 找到您的家庭，已经明白与中介合作的价值。他们看到了其中的复杂之处，并选择与一位专业人士对接。"
       }
     }
   },
@@ -588,26 +654,35 @@
     }
   },
   "AgentsMatching": {
-    "eyebrow": "匹配 · 申请 · 追踪",
-    "heading": "上午10点家长来电，10:30前匹配三所学校。",
-    "subheading": "SchoolGo 按州份、学费、英语水平和入学时间筛选出最合适的学校，并在几分钟内完成标准化申请提交。",
+    "eyebrow": "SchoolGo 如何运作",
+    "heading": "家庭上午 10 点来电。10:30 前给出三所匹配学校。",
+    "subheading": "家长常常会问非常具体的问题：哪所学校能在明年一月接收他们的孩子读 10 年级，并满足特定的英语水平和预算要求？SchoolGo 帮助您更快作答——让您少花时间查阅学校官网，多花时间为家庭提供建议。",
     "steps": {
       "listen": {
-        "title": "记录家庭需求",
-        "description": "Budget, location, intake."
+        "title": "记录家庭的需求",
+        "description": "预算、地点、英语水平、年级、期望入学时间、住宿类型及福利优先事项——一张表单，在实时咨询中即可填写。"
       },
       "match": {
-        "title": "查看最匹配的学校",
-        "description": "Including English test scores.",
+        "title": "即时查看最匹配的学校",
+        "description": "根据学生档案筛选。查看每所学校认可的英语考试、最低分数、学费、寄宿/寄宿家庭选项、福利与监护安排以及名额情况。再也不用打开 15 个标签页。",
         "comingSoon": "即将推出"
       },
       "deliver": {
-        "title": "交付精准候选名单，而非杂乱材料",
-        "description": "A branded PDF the family can screenshot and send to Mum and Dad. No PDFs from fifteen different schools.",
+        "title": "提供带品牌标识的候选名单",
+        "description": "一份带有您机构品牌标识的简洁 PDF，家庭可以截图、分享给伴侣，或在家中比较。而不是 15 份学校宣传册。",
+        "comingSoon": "即将推出"
+      },
+      "connect": {
+        "title": "家庭主动与您对接",
+        "description": "当家长在 SchoolGo 上搜索并找到您所代表的学校时，他们会根据您的经验、语言能力和专长，选择与您对接。"
+      },
+      "apply": {
+        "title": "通过 SchoolGo 提交学校申请",
+        "description": "准备并提交符合学校要求的申请——材料齐全、英语成绩经过核实、学生档案清晰明确。学校无需以往那样反复沟通，即可收到所需的全部信息。",
         "comingSoon": "即将推出"
       }
     },
-    "inboxLabel": "招生收件箱",
+    "inboxLabel": "最匹配的学校",
     "inboxRows": {
       "scotch": {
         "school": "Scotch College",
@@ -627,274 +702,285 @@
     }
   },
   "AgentsCommission": {
-    "eyebrow": "定价",
-    "heading": "您保留 100% 的学校佣金。",
-    "subheading": "我们向学校收费，不向您收费。您与学校的商业关系保持直接。",
+    "eyebrow": "运作方式",
+    "heading": "中介如何使用 SchoolGo。",
+    "subheading": "SchoolGo 帮助家庭寻找并比较学校，将他们与中介对接，并为中介提供整理候选名单和向学校申请的工具——全部集中在一个平台。费用由学校承担。您保留自己的佣金、与学生的关系以及您的学校网络。",
     "statValue": "$0",
-    "statLabel": "Platform cost per agent. Zero fees, zero commission splits – ever.",
+    "statLabel": "每位中介的平台费用。无佣金分成、无安置费、无订阅费。",
     "bullets": {
-      "zero": {
-        "title": "零每生收费",
-        "description": "无佣金分成。无安置费。无订阅费。"
+      "free": {
+        "title": "免费使用",
+        "description": "无佣金分成、无安置费、无订阅费。"
       },
-      "direct": {
-        "title": "与学校直接合作关系",
-        "description": "提交申请的瞬间，您的归属即已锁定。"
+      "students": {
+        "title": "您的学生，您的关系",
+        "description": "学生数据仅对您可见。其他中介无法接触与您合作的家庭。"
       },
-      "audit": {
-        "title": "完整审计记录",
-        "description": "每次状态变更均带时间戳。争议止于文件记录。"
+      "attribution": {
+        "title": "清晰的学校归属",
+        "description": "学校可看到每一条咨询背后是哪位中介。"
+      },
+      "approved": {
+        "title": "经学校认可",
+        "description": "由学校自行决定哪些中介可以在 SchoolGo 上代表他们。如果您已与某所学校合作，可立即获得认证。"
+      },
+      "network": {
+        "title": "您的学校网络始终归您所有",
+        "description": "SchoolGo 不会代表您联系学校，也不会分享您的合作关系。"
+      },
+      "privacy": {
+        "title": "您的数据保密",
+        "description": "未经您的同意，客户信息和学校网络细节绝不会与其他中介分享或对外公开。"
       }
     }
   },
   "AgentsQeacTrust": {
-    "eyebrow": "已认证",
-    "heading": "一个家长––和学校––真正信任的主页。",
-    "subheading": "您的 QEAC 资质一次性核实完成。您的徽章和业绩记录将出现在每一份申请中。",
-    "sampleLabel": "Sample profile",
+    "eyebrow": "您的中介档案",
+    "heading": "建立您的口碑——按您自己的方式。",
+    "subheading": "您的 SchoolGo 档案帮助新家庭找到并信任您。但展示哪些内容由您掌控。展示您的优势，同时不必向竞争对手暴露您的全部网络。",
+    "sampleLabel": "档案示例",
     "profile": {
-      "name": "中介主页",
+      "name": "中介档案",
       "agentName": "Mei Lin",
-      "qeac": "QEAC 已认证",
-      "yearsActive": "从业年限",
-      "students": "已安置学生",
-      "placements": "已安置学校",
-      "languages": "所用语言",
-      "languagesValue": "中 · EN"
-    }
+      "qeac": "QEAC 已认证"
+    },
+    "visibility": {
+      "public": {
+        "label": "公开",
+        "items": "您的姓名、语言、QEAC 认证状态、从业年限、服务地区。"
+      },
+      "optional": {
+        "label": "可选",
+        "items": "已安置的学生数量、学校类别、专长——由您选择。"
+      },
+      "private": {
+        "label": "始终保密",
+        "items": "具体的学校合作关系、学生姓名、佣金安排、目标市场、进行中的申请。"
+      }
+    },
+    "qeacNote": "通过 QEAC 认证的中介会获得认证徽章。但每位中介的成绩都不言自明——无论是否持有认证，家庭都能看到您的响应速度、语言能力和专长。"
   },
   "AgentsScale": {
     "eyebrow": "网络",
-    "heading": "Agents across APAC are joining. Australia's international school sector is growing fast – be one of the first.",
-    "subheading": "From Shanghai to Jakarta, Ho Chi Minh to Seoul – agents placing families into Australian K–12.",
+    "heading": "APAC 各地的中介正在加入。",
+    "subheading": "从上海到雅加达，从胡志明市到首尔——独立中介和多分支机构正将家庭送入澳大利亚 K-12 学校。",
     "agents": {
       "a": {
         "name": "Li Wei",
         "region": "Shanghai · 中国",
-        "meta": "QEAC verified · Independent schools"
+        "meta": "已认证 · 私立学校"
       },
       "b": {
         "name": "Nguyễn Minh",
         "region": "Ho Chi Minh · Việt Nam",
-        "meta": "QEAC verified · All sectors"
+        "meta": "QEAC 认证 · 全部类别"
       },
       "c": {
         "name": "Siti Rahman",
         "region": "Kuala Lumpur · Malaysia",
-        "meta": "QEAC verified · Boarding specialist"
+        "meta": "已认证 · 寄宿专家"
       },
       "d": {
         "name": "Ji-eun Park",
         "region": "Seoul · 대한민국",
-        "meta": "QEAC verified · VIC & NSW"
+        "meta": "QEAC 认证 · VIC 与 NSW"
       }
     },
-    "cta": "申请认证"
+    "cta": "创建您的档案"
   },
   "AgentsTestimonial": {
-    "eyebrow": "[TODO: zh] From the field",
-    "heading": "[TODO: zh] What agents are saying",
+    "eyebrow": "来自一线",
+    "heading": "中介们怎么说",
     "items": {
       "a": {
-        "quote": "Every school wants a different form, different documents, different English scores. I spend more time on admin than actually helping families.",
-        "attribution": "[TODO: zh] Agency director, Shanghai",
-        "meta": "[TODO: zh] 60+ students · 3 counsellors"
+        "quote": "过去每次与家长通话前，我都要查六个学校网站。现在我在一次搜索里就能按预算、英语水平和入学时间筛选——家庭还没说完需求，我就已经有了候选名单。",
+        "attribution": "机构总监，上海",
+        "meta": "60+ 名学生"
       },
       "b": {
-        "quote": "A parent asks which English test their child needs and I have to check three different school websites to give them an answer. That should take ten seconds.",
-        "attribution": "[TODO: zh] Independent agent, Ho Chi Minh City",
-        "meta": "Solo practice"
+        "quote": "我的家庭想比较学校，但我不可能发给他们 15 份 PDF。一份带品牌标识、三所学校并排呈现的单页材料，才是他们真正会看的。",
+        "attribution": "独立中介，胡志明市",
+        "meta": "25+ 名学生"
       },
       "c": {
-        "quote": "I've placed into the same twelve schools for years because I know their process. A platform that maps every school's requirements would let me place into hundreds.",
-        "attribution": "[TODO: zh] Senior counsellor, Kuala Lumpur",
-        "meta": "[TODO: zh] 40+ students · 2 branches"
+        "quote": "我曾担心又一个平台会抽走我的佣金或暴露我的学校关系。SchoolGo 两者都不碰。它只是把已准备好沟通的家庭送到我面前。",
+        "attribution": "资深顾问，吉隆坡",
+        "meta": "40+ 名学生"
       }
     },
-    "disclaimer": "[TODO: zh] Composite quotes based on agent interviews"
+    "disclaimer": "综合自中介访谈的合成引述"
   },
   "AgentsFinalCta": {
-    "eyebrow": "获得认证",
-    "headingPrefix": "You deserve",
-    "headingEmphasis": "better tools",
-    "headingSuffix": "to build a better business.",
-    "subheading": "免费。需要 QEAC 认证。入驻流程 48 小时内完成。",
-    "ctaPrimary": "申请认证"
+    "eyebrow": "立即开始",
+    "headingPrefix": "让家庭找到您。",
+    "headingEmphasis": "更快整理候选名单。",
+    "headingSuffix": "保留您的佣金。",
+    "subheading": "免费。无佣金分成。您的学校关系始终归您所有。",
+    "ctaPrimary": "创建您的中介档案",
+    "ctaSecondary": "预约演示"
   },
   "AgentsFaq": {
-    "heading": "Frequently Asked Questions",
+    "heading": "常见问题",
     "items": {
-      "find": {
-        "question": "How do education agents find Australian schools for international students?",
-        "answer": "Agents typically build long-term relationships with a handful of schools and check each school's website, fees, and English requirements one at a time. SchoolGo replaces that workflow with a single searchable database of every CRICOS-registered school – filterable by fees, English tests, intakes, boarding, and scholarships."
+      "free": {
+        "question": "SchoolGo 对中介真的免费吗？",
+        "answer": "是的。SchoolGo 由学校出资，而非中介。没有佣金分成、安置费、订阅费或任何隐藏费用。"
       },
-      "englishTests": {
-        "question": "What English tests do Australian schools accept for international admissions?",
-        "answer": "Most Australian schools accept AEAS, with a growing number accepting iDAT, Duolingo English Test, IELTS, PTE Academic, Cambridge English, and TOEFL. Minimum scores vary by school and year level. SchoolGo lists the exact accepted tests and minimum scores on every school profile."
+      "makesMoney": {
+        "question": "如果对中介免费，SchoolGo 如何盈利？",
+        "answer": "学校付费以增强其档案并触达更多家庭。中介从不付费。"
       },
-      "verifyScores": {
-        "question": "How do education agents verify student English test scores?",
-        "answer": "Most test providers offer an official verification portal where agents and schools can confirm a score against the candidate's record. SchoolGo automates this – uploaded English scores are checked against the official record so you and the school know the result is genuine."
+      "contactStudents": {
+        "question": "其他中介能联系到我的学生吗？",
+        "answer": "不能。您与学生的关系是保密的。其他中介无法看到或接触与您对接的家庭。"
       },
-      "becomeAgent": {
-        "question": "How do I become an education agent for Australian schools?",
-        "answer": "There's no single licence to become an Australian education agent, but most schools and the AAERI/QEAC quality frameworks expect training in Australian education, ethical practice, and student welfare. The QEAC (Qualified Education Agent Counsellor) certification is the most widely recognised credential."
+      "attribution": {
+        "question": "学校能看到是哪位中介带来的学生吗？",
+        "answer": "可以。家庭与您对接的瞬间，您的归属即被锁定。学校始终清楚是哪位中介负责。"
       },
-      "fees": {
-        "question": "Do education agents pay fees to use SchoolGo?",
-        "answer": "No. SchoolGo is free for every agent – no platform fees, no commission splits, no per-student charges. Your commercial relationship with schools stays direct."
+      "interfere": {
+        "question": "SchoolGo 会干预我现有的学校关系吗？",
+        "answer": "不会。SchoolGo 不会代表您联系学校、重新协商协议，也不会分享您的网络信息。"
       },
-      "manage": {
-        "question": "How do education agents manage multiple student applications at once?",
-        "answer": "SchoolGo gives you one student profile per family that maps to every school's requirements automatically – so you don't re-key passport numbers, transcripts, or English scores into 15 different forms. Documents are organised, version-controlled, and tracked for expiry, with every status change timestamped for audit."
+      "publicInfo": {
+        "question": "我的档案上哪些信息是公开的？",
+        "answer": "这由您掌控。您的姓名、语言和 QEAC 认证状态是公开的。其余一切（安置数量、学校关系、专长）均为可选。"
+      },
+      "competes": {
+        "question": "SchoolGo 自己是中介吗？它会与我竞争吗？",
+        "answer": "不会。SchoolGo 将家庭与中介对接，并为中介提供整理候选名单和向学校申请的工具。它不招收学生，也不赚取佣金。"
+      },
+      "howConnected": {
+        "question": "家庭是如何与中介对接的？",
+        "answer": "当家长在 SchoolGo 上找到一所学校并想要申请时，他们会浏览可对接的中介，并根据经验、所讲语言和所代表的学校选择与谁对接。绝不会随机分配——家庭主动选择您。"
+      },
+      "futureCharging": {
+        "question": "SchoolGo 将来会开始收费吗？",
+        "answer": "没有向中介收费的计划。其商业模式由学校出资。"
       }
     }
   },
   "SchoolsMetadata": {
-    "title": "SchoolGo – 用更少的邮件填满您的国际生名额",
-    "description": "为澳大利亚学校提供统一的招生收件箱。QEAC 认证中介、真实申请，无需按生收费。",
-    "ogDescription": "填满您的国际生名额。用更少的邮件。"
+    "title": "SchoolGo 学校版 — 更优质、更合适的申请",
+    "description": "帮助国际家庭和中介在申请之前了解您的要求。认可您信任的中介。对每一所澳大利亚学校免费。",
+    "ogDescription": "更优质的申请。合适的学生。更少往返沟通。"
   },
   "SchoolsHero": {
     "eyebrow": "面向澳大利亚学校",
-    "headlinePrefix": "填满您的",
-    "headlineEmphasis": "国际生",
-    "headlineSuffix": "cohort. Simplify admissions.",
-    "lede": "一个认证主页，被七个国家的家庭看到。从 QEAC 认证中介收取标准化申请––格式与您招生团队已在使用的一致。",
-    "ctaPrimary": "认领您的学校主页",
-    "inbox": {
-      "eyebrow": "Applications inbox – preview",
-      "countLabel": "本月",
-      "rows": {
-        "a": {
-          "name": "Sophie Chen",
-          "status": "新申请",
-          "meta": "VIC · Year 9 · AEAS 78"
-        },
-        "b": {
-          "name": "Minh Tran",
-          "status": "审核中",
-          "meta": "VIC · Year 11 · IELTS 6.5"
-        },
-        "c": {
-          "name": "Ji-woo Park",
-          "status": "已发放录取",
-          "meta": "NSW · Year 10 · AEAS 74"
-        }
-      }
-    }
+    "headlinePrefix": "更优质的申请。",
+    "headlineEmphasis": "合适的学生。",
+    "headlineSuffix": "更少往返沟通。",
+    "lede": "SchoolGo 帮助国际家庭和教育中介找到您的学校、了解您的要求，并与您认可的中介对接。当学生联系到您的招生团队时，他们已经清楚您的学费、英语要求、住宿选项和入学流程——因此您的团队能少花时间追问缺失的信息。",
+    "ctaPrimary": "认领您的学校档案",
+    "ctaSecondary": "预约演示"
   },
   "SchoolsStats": {
-    "eyebrow": "网络效应",
-    "heading": "一个主页。被七个国家的家庭看到。",
-    "subheading": "您的学校信息出现在每一次搜索、每一次比较、每一份匹配候选名单中––以家庭的语言呈现。",
+    "eyebrow": "网络",
+    "heading": "一个档案。被您想触达的家庭和中介看到。",
+    "subheading": "您的档案会出现在每一次搜索、比较和中介候选名单中——翻译成亚太地区的七种语言——让合适的家庭在咨询之前就了解您的要求。",
     "items": {
       "schools": {
         "value": "695+",
-        "label": "CRICOS-registered schools"
+        "label": "CRICOS 注册学校"
       },
       "states": {
         "value": "8",
-        "label": "States & territories"
+        "label": "州与领地"
       },
       "sectors": {
         "value": "3",
-        "label": "Sectors – Government, Independent, Catholic"
+        "label": "三大类别 — 公立、私立、天主教"
       },
       "feeRange": {
         "value": "$3.5k – $78k",
-        "label": "Annual fee range (AUD)"
+        "label": "年费区间（AUD）"
       }
     }
   },
   "SchoolsThreeTools": {
-    "eyebrow": "工具包",
-    "heading": "三项工具。一个目标：用更少的工作招到合适的学生。",
-    "subheading": "SchoolGo 为您的招生团队提供三项真正需要的功能。",
+    "eyebrow": "您的学校档案",
+    "heading": "您的学校。您的信息。由您掌控。",
+    "subheading": "每一所注册学校在 SchoolGo 上都有一个基础档案，由政府官方数据自动发布。当您认领档案后，便可全面掌控您的学校在全球家庭和中介面前的呈现方式。",
     "tools": {
       "profile": {
-        "title": "持续更新的学校主页",
-        "description": "学费、入学时间、认可考试、奖学金及相关文件––由您更新，以家庭语言展示。"
+        "title": "您的档案，由您做主",
+        "description": "掌控您的学校简介与定位、照片与品牌标识、费用明细、入学日期和申请截止日期——以家庭的语言呈现。您的学校如何呈现，由您决定。"
       },
-      "applications": {
-        "title": "标准化申请",
-        "description": "每份申请均采用相同格式，附有 QEAC 认证中介归属及完整材料。"
+      "requirements": {
+        "title": "家庭可据以行动的要求",
+        "description": "按年级设定您认可的英语考试和最低分数、住宿及 18 岁以下福利安排，以及申请所需材料——让家庭和中介在申请之前就了解您的要求。"
       },
-      "inbox": {
-        "title": "统一的招生收件箱",
-        "description": "追踪每份申请的状态。一键发放录取、候补或拒绝通知。家庭和中介即时看到状态更新。"
+      "agents": {
+        "title": "认可的中介与数据分析",
+        "description": "选择哪些中介获准代表您的学校，并设定申请处于开放还是关闭状态。在您的仪表盘中跟踪档案浏览量、咨询来源和中介活动。"
       }
     }
   },
   "SchoolsTimeline": {
-    "eyebrow": "招生旅程",
-    "heading": "From first application to first day of term – without the back 'n forth.",
-    "subheading": "国际招生全流程，尽在一处。",
+    "eyebrow": "运作方式",
+    "heading": "SchoolGo 位于您招生流程之前——而非其中。",
+    "subheading": "SchoolGo 不是招生平台，也不会取代您现有的流程。它帮助家庭和中介在咨询之前了解您的要求——这样当他们联系您时，对话便从正确的起点开始。",
     "steps": {
-      "receive": {
-        "title": "收取",
-        "description": "申请附带英语成绩、相关材料及认证中介信息，直接进入您的收件箱。",
-        "comingSoon": "即将推出"
+      "find": {
+        "title": "家庭找到您的学校",
+        "description": "您的档案会出现在按学费、英语要求、年级、住宿、课程体系和地点筛选的搜索结果中——翻译成亚太地区的七种语言。"
       },
-      "review": {
-        "title": "审核",
-        "description": "您的团队按照自有标准进行评估。备注仅对内部可见。",
-        "comingSoon": "即将推出"
+      "understand": {
+        "title": "他们事先了解您的要求",
+        "description": "家庭和中介在联系您之前，便能看到您认可的英语考试、最低分数、费用构成、住宿选项、福利安排和所需材料。"
       },
-      "decide": {
-        "title": "决定",
-        "description": "一键发放录取、候补或拒绝通知。状态即时同步至家庭和中介。",
-        "comingSoon": "即将推出"
+      "connect": {
+        "title": "他们与您认可的中介对接",
+        "description": "当家庭决定申请时，SchoolGo 会将他们与您认可的教育中介对接。哪些中介可以在平台上代表您的学校，由您掌控。"
       },
-      "onboard": {
-        "title": "入学",
-        "description": "在同一线程中分享入学手续材料、住宿信息及迎新链接。",
-        "comingSoon": "即将推出"
+      "apply": {
+        "title": "中介向您提交申请",
+        "description": "中介使用 SchoolGo 准备并提交符合您要求的申请——材料齐全、英语成绩经核验、学生档案清晰。您的团队仍按自己的招生流程进行审核。"
       }
     }
   },
   "SchoolsPricing": {
     "eyebrow": "定价",
-    "heading": "无中介费。无佣金。一项年度套餐。",
-    "subheading": "支持 SchoolGo 的学校支付一项透明年费。家庭和中介无需付费。",
+    "heading": "对每所学校免费。",
+    "subheading": "您的学校档案免费发布和维护——没有挂牌费、按生收费或佣金。SchoolGo 的资金来自面向希望增强曝光的学校的可选高级功能，例如优先展示和推广档案。核心平台免费，并将始终免费。",
     "plans": {
       "listing": {
-        "name": "基础列表",
-        "price": "Free",
-        "priceMeta": "永久免费",
+        "name": "自动发布",
+        "price": "免费",
+        "priceMeta": "永久",
         "features": {
-          "a": "自动发布您的 CRICOS 主页",
-          "b": "认可英语考试及最低分数",
-          "c": "标准化申请收件箱"
+          "a": "您的学校档案，由政府官方数据自动发布",
+          "b": "面向亚太地区的家庭和中介可见",
+          "c": "显示认可的英语考试和最低分数"
         },
-        "cta": "认领您的主页"
+        "cta": "认领您的档案"
       },
       "admissions": {
-        "name": "招生版",
-        "price": "$12,800",
-        "priceMeta": "AUD / 年",
-        "badge": "最受欢迎",
+        "name": "已认领",
+        "price": "免费",
+        "priceMeta": "认领您的档案",
+        "badge": "推荐",
         "features": {
-          "a": "基础列表的全部功能",
-          "b": "录取 / 候补 / 拒绝工作流",
-          "c": "QEAC 认证中介目录",
-          "d": "每个主页页面的七语言翻译"
+          "a": "全面掌控您的档案、照片和品牌标识",
+          "b": "自行设定费用明细、英语要求和住宿详情",
+          "c": "批准或屏蔽中介",
+          "d": "查看档案分析——浏览量、咨询来源和中介活动"
         },
-        "cta": "开启招生版"
+        "cta": "认领您的档案"
       }
     }
   },
   "SchoolsTestimonial": {
-    "quote": "Finding the right students is hard enough. Processing their applications shouldn't be. A single inbox with complete, verified applications changes everything.",
-    "attribution": "– Composite quote based on admissions officer interviews"
+    "quote": "我们不需要更多咨询——我们需要的是信息齐全的合适学生。当家庭在申请之前就已了解我们的学费和英语要求时，我们的团队便能大幅减少追问缺失信息的时间。",
+    "attribution": "— 综合自招生官访谈的合成引述"
   },
   "SchoolsFinalCta": {
     "eyebrow": "从这里开始",
-    "headingPrefix": "您的下一届入学",
-    "headingEmphasis": "就此",
-    "headingSuffix": "开始。",
-    "subheading": "免费列表。无需信用卡。认领仅需10分钟。",
-    "ctaPrimary": "认领您的学校主页",
+    "headingPrefix": "准备更充分的家庭。",
+    "headingEmphasis": "更清晰的申请。",
+    "headingSuffix": "更少行政事务。",
+    "subheading": "对每所学校免费。10 分钟即可认领您的档案。",
+    "ctaPrimary": "认领您的学校档案",
     "ctaSecondary": "预约演示"
   },
   "Navbar": {
@@ -1895,31 +1981,47 @@
     "errorMessage": "[TODO: zh] Couldn't load your students. Please try again."
   },
   "SchoolsFaq": {
-    "heading": "[TODO: zh] Frequently Asked Questions",
+    "heading": "常见问题",
     "items": {
-      "attract": {
-        "question": "How do Australian schools attract more international students?",
-        "answer": "Schools grow their international cohort by being visible to families and agents in the markets they want to reach, and by making it easy to apply once a family is interested. SchoolGo lists every CRICOS-registered school in seven languages, with translated profiles, fees, and English requirements – so families and agents can find and shortlist your school directly."
+      "claim": {
+        "question": "我如何认领本校的档案？",
+        "answer": "在 SchoolGo 上搜索您的学校，并选择“认领此档案”。您将验证自己的教职员工身份，并获得完整的编辑控制权。"
       },
-      "verify": {
-        "question": "How do schools verify international students' English test scores?",
-        "answer": "Each English test provider (AEAS, IELTS, PTE, Duolingo, Cambridge, TOEFL) offers an official verification portal where schools can confirm a candidate's score against the original record. SchoolGo automates this – every English score on an application is checked against the official record before it lands in your inbox."
+      "whoCreated": {
+        "question": "如果我尚未认领，本校的档案是谁创建的？",
+        "answer": "自动发布的档案由公开的政府数据（CRICOS 注册处、ACARA）生成。SchoolGo 不会添加或更改任何信息。认领后您将获得完整控制权。"
       },
-      "agents": {
-        "question": "[TODO: zh] How does SchoolGo work with education agents?",
-        "answer": "[TODO: zh] By default, your profile works with your school's existing agents. You can see which agents have placed students with you, invite new agents, or manage agent relationships from your dashboard."
+      "charge": {
+        "question": "SchoolGo 会向学校或中介收费吗？",
+        "answer": "不会。核心平台对学校、中介和家长免费。SchoolGo 的资金来自面向希望增强曝光的学校的可选高级功能。"
       },
-      "documents": {
-        "question": "What documents do schools need for an international student application?",
-        "answer": "Standard documents include the student's passport, last two years of school reports, an English test result, proof of guardianship for younger students, and any additional medical or character documents your school requires. SchoolGo arrives applications complete – passports, transcripts, English scores, and required forms in one packaged record."
+      "verifyAgents": {
+        "question": "中介在 SchoolGo 上如何获得认证？",
+        "answer": "中介创建档案，并可持有 QEAC 认证。不过，无论其认证状态如何，哪些中介获准代表您的学校均由您掌控。"
       },
-      "cost": {
-        "question": "How much does it cost to list on SchoolGo?",
-        "answer": "Nothing. SchoolGo is free for every school – no listing fees, no per-student fees, no commissions. Your profile auto-publishes from official government data, and claiming it unlocks full editing, applications, and analytics at no cost."
+      "interfere": {
+        "question": "SchoolGo 会干预我们现有的中介关系吗？",
+        "answer": "不会。您现有的协议、佣金结构和中介网络不受影响。SchoolGo 不会重新分配中介或分享您的中介名单。"
       },
-      "diversify": {
-        "question": "How do schools diversify their international student intake beyond China?",
-        "answer": "Diversification starts with visibility in the markets you want to grow – Vietnam, Korea, Indonesia, Malaysia, Thailand, and beyond. SchoolGo translates your profile into seven languages and surfaces it to families and agents across the Asia-Pacific, so you can build a balanced cohort across multiple source countries."
+      "beforeClaim": {
+        "question": "在我们认领之前，会显示关于本校的哪些信息？",
+        "answer": "仅显示来自政府注册处的公开数据：校名、地点、类别、CRICOS 状态、课程体系和基础费用区间。在您认领并添加之前，不会显示任何编辑内容、照片或详细要求。"
+      },
+      "studentData": {
+        "question": "SchoolGo 如何保护学生信息？",
+        "answer": "学生数据仅在家庭、其选择的中介和学校之间共享。绝不会与其他学校、其他中介分享，也不会对外公开。"
+      },
+      "replaceAdmissions": {
+        "question": "SchoolGo 会取代我们的招生流程吗？",
+        "answer": "不会。SchoolGo 位于您招生流程之前。它帮助家庭了解您的要求并与您认可的中介对接。申请通过您的中介提交给您，您的团队仍按自己的流程进行审核。"
+      },
+      "openClosed": {
+        "question": "我们可以控制申请处于开放还是关闭状态吗？",
+        "answer": "可以。您可以设定入学状态和申请截止日期。当申请关闭时，家庭和中介仍可查看您的档案，但会看到该入学时段当前未开放。"
+      },
+      "capacity": {
+        "question": "SchoolGo 如何处理市场平衡和寄宿名额？",
+        "answer": "显示哪些内容由您掌控。如果寄宿名额有限，或您正在管理各生源市场之间的群体平衡，您可随时更新名额和入学信息。"
       }
     }
   },
@@ -6026,40 +6128,44 @@
     "customSectionVisible": "Visible"
   },
   "ParentsAgentCta": {
-    "eyebrow": "Start with an agent",
-    "headingPrefix": "Find your",
-    "headingEmphasis": "education agent",
-    "headingSuffix": "and let the experts guide you",
-    "subheading": "A trusted local agent matches your child to the right school, handles the paperwork, and supports your family every step of the way — free for parents.",
-    "searchPlaceholder": "Where are you moving? e.g. Sydney, Melbourne",
-    "searchAriaLabel": "Find an education agent",
-    "ctaPrimary": "Find an agent",
-    "ctaSecondary": "Browse all agents",
-    "reassurance": "100% free for families · Verified, QEAC-qualified agents"
+    "eyebrow": "从中介开始",
+    "headingPrefix": "获得专业帮助——",
+    "headingEmphasis": "免费",
+    "headingSuffix": "。",
+    "subheading": "不知道从何入手？SchoolGo 为您对接经所代表学校认可的教育顾问。他们熟悉招生流程和签证要求，能从选校到提交申请全程为您提供指导——且对您完全免费。",
+    "searchPlaceholder": "您要搬到哪里？例如 Sydney、Melbourne",
+    "searchAriaLabel": "寻找教育中介",
+    "ctaPrimary": "寻找中介",
+    "ctaSecondary": "浏览全部中介",
+    "reassurance": "对家庭 100% 免费 · 经认证、获学校认可的中介"
   },
   "ParentsAgentHelp": {
-    "eyebrow": "Why go through an agent",
-    "heading": "How an agent helps your family",
-    "subheading": "Agents do the heavy lifting so you can focus on your child. Here is what a good education agent takes off your plate.",
+    "eyebrow": "为何通过中介",
+    "heading": "中介如何帮助您的家庭",
+    "subheading": "中介承担繁重的工作，让您能专注于孩子。以下是经学校认可的教育中介为您分担的事项。",
     "benefits": {
       "free": {
-        "title": "Free for families",
-        "description": "Agents are paid by schools, never by you. Expert guidance comes at no cost to your family."
+        "title": "对家庭免费",
+        "description": "中介由学校付费，绝不向您收费。专业指导对您的家庭完全免费。"
       },
       "matching": {
-        "title": "Expert school matching",
-        "description": "They know the schools, the suburbs and the curricula — and match your child to the right fit, not just the first option."
+        "title": "专业的学校匹配",
+        "description": "他们熟悉学校、社区和课程体系——为孩子匹配真正合适的学校，而不只是第一个选项。"
       },
       "applications": {
-        "title": "Application & visa guidance",
-        "description": "From enrolment forms to student visa requirements, your agent prepares and checks the paperwork with you."
+        "title": "申请与签证指导",
+        "description": "从注册表格到学生签证要求，您的中介会与您一同准备并核对各项材料。"
       },
       "welfare": {
-        "title": "Under-18 welfare support",
-        "description": "Need a guardian or homestay for a younger student? Agents arrange compliant welfare and accommodation."
+        "title": "18 岁以下福利支持",
+        "description": "需要为年龄较小的学生安排监护人或寄宿家庭？中介会安排符合规定的福利和住宿。"
       }
     },
-    "ctaPrimary": "Find an agent"
+    "selection": {
+      "title": "SchoolGo 如何挑选中介？",
+      "body": "SchoolGo 上的每位中介都经过认证，并获得其合作学校的认可。SchoolGo 不会随机分配中介——您可根据中介的经验、所讲语言和所代表的学校，选择与谁对接。"
+    },
+    "ctaPrimary": "寻找中介"
   },
   "UnifiedSearch": {
     "filters": {
@@ -6848,5 +6954,91 @@
       "delivered": "Delivered",
       "cancelled": "Cancelled"
     }
+  },
+  "ParentsFees": {
+    "eyebrow": "费用",
+    "heading": "了解真实成本——不只是学费。",
+    "body": "学费只是其中一部分。家长往往会被一些意料之外的额外费用惊到。SchoolGo 为您展示完整的费用明细，让日后不再有意外。",
+    "items": {
+      "tuition": "学费",
+      "accommodation": "寄宿或寄宿家庭费用",
+      "enrolment": "注册费和申请费",
+      "health": "健康保险（OSHC）",
+      "uniforms": "校服、教材和笔记本电脑",
+      "excursions": "校外活动及课外活动",
+      "guardian": "监护安排（如需）",
+      "airport": "机场接机",
+      "refund": "签证被拒时的退款条件"
+    },
+    "cta": "阅读完整费用指南"
+  },
+  "ParentsAccommodationWelfare": {
+    "eyebrow": "住宿与福利",
+    "heading": "孩子将住在哪里——又由谁来照顾？",
+    "body": "对于送孩子出国的家庭来说，住宿和福利其实是同一个问题。SchoolGo 帮助您了解可选方案，以及每所学校提供哪些支持。",
+    "accommodation": {
+      "boarding": {
+        "title": "寄宿",
+        "description": "住在校内，配有规范的监管、餐食和活动。"
+      },
+      "homestay": {
+        "title": "寄宿家庭",
+        "description": "与经学校认可的当地家庭同住。"
+      },
+      "family": {
+        "title": "亲属安排",
+        "description": "与已在澳大利亚的亲属同住。"
+      },
+      "guardians": {
+        "title": "经学校认可的监护人",
+        "description": "面向在澳大利亚没有家人陪伴的 18 岁以下学生。"
+      }
+    },
+    "welfareHeading": "福利与支持信息",
+    "welfare": {
+      "responsibleUnder18": "如果孩子未满 18 岁，谁来对其负责？",
+      "sickOrHomesick": "孩子生病、想家或遇到问题时会怎么办？",
+      "contactPerson": "家长的联系人是谁？",
+      "communication": "学校如何与身在海外的家长沟通？",
+      "sameCountryPeers": "是否有来自孩子母国的其他学生？",
+      "adjustmentSupport": "如果孩子难以适应，能获得哪些支持？"
+    }
+  },
+  "SchoolsApplicationQuality": {
+    "eyebrow": "申请质量",
+    "heading": "要合适的学生，而不只是更多学生。",
+    "subheading": "学校不需要更多不完整的咨询。SchoolGo 通过确保家庭和中介在申请之前了解您的要求，提升送达招生团队的申请质量。",
+    "items": {
+      "english": {
+        "title": "英语要求事先可见",
+        "description": "家庭和中介在咨询之前，便能按年级看到您认可的考试和最低分数。未达门槛的学生则可转而看到设有英语预备衔接课程的学校。"
+      },
+      "costs": {
+        "title": "总费用透明",
+        "description": "家庭在与中介对接之前，便能看到学费、寄宿、申请费和必缴费用。因意外费用而中断的对话更少。"
+      },
+      "accommodation": {
+        "title": "住宿与福利清晰明了",
+        "description": "家长在申请之前便了解寄宿、寄宿家庭和监护安排。对寄宿有特定年龄要求的学校可以予以展示。"
+      },
+      "agents": {
+        "title": "中介经过认证",
+        "description": "由您认可哪些中介可以代表您的学校。每一条咨询上都可见中介归属。"
+      }
+    }
+  },
+  "SchoolsAgentRelationships": {
+    "eyebrow": "中介关系",
+    "heading": "您的中介。您的认可。您的关系。",
+    "subheading": "SchoolGo 不会为您的学校分配中介，也不会干预您现有的中介关系。由您决定哪些中介获准代表您的学校。您已合作的中介可立即获得认证，新的中介可通过您的档案申请认可。",
+    "bullets": {
+      "approve": "您可批准或拒绝中介的申请。",
+      "connect": "只有获认可的中介才能通过 SchoolGo 将家庭对接到您的学校。",
+      "agreements": "您现有的中介协议和佣金结构不受影响。",
+      "performance": "中介表现——响应速度和申请完整度——对您可见。",
+      "remove": "您可随时撤销某个中介的认可。"
+    },
+    "cardTitle": "每位中介都由您认可。",
+    "cardBody": "SchoolGo 绝不会重新分配中介或分享您的中介名单。您的关系始终归您所有。"
   }
 }

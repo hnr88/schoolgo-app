@@ -1,7 +1,28 @@
 import { Database, Lock, School, ShieldCheck } from 'lucide-react';
 import type { IconComponent } from '@/modules/design-system';
 
-export const FAQ_KEYS = ['enrol', 'cost', 'englishTest', 'visa', 'agent', 'schoolTypes', 'free'] as const;
+export const FAQ_KEYS = [
+  'enrol',
+  'cost',
+  'englishTest',
+  'visa',
+  'agent',
+  'schoolTypes',
+  'free',
+  'startEarly',
+  'weakEnglish',
+  'midYear',
+  'documents',
+  'boardingVsHomestay',
+  'under18Responsible',
+  'englishHelp',
+  'transfer',
+  'refundVisa',
+  'agentSelection',
+  'agentOrSchool',
+] as const;
+
+export const ABOUT_POINT_KEYS = ['search', 'understand', 'connect'] as const;
 
 export const PICK_A_TEST_FEATURED: Array<'aeas' | 'idat' | 'duolingo' | 'ielts'> = [
   'aeas',

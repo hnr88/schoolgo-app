@@ -24,9 +24,9 @@
     }
   },
   "ParentsMetadata": {
-    "title": "SchoolGo – 자녀를 위한 호주 학교 찾기",
-    "description": "모든 CRICOS 등록 호주 학교를 검색하세요. 학비, 영어 시험 요건, 입학 일정을 7개 언어로 무료 비교하세요.",
-    "ogDescription": "모든 CRICOS 학교. 검증 완료. 내 언어로."
+    "title": "SchoolGo – 알맞은 호주 학교를 자신 있게 선택하세요",
+    "description": "등록된 모든 호주 학교를 검색하고 비교하세요 – 학비, 숙소, 영어 요건, 학생 지원까지 – 내 언어로. 무료, 로그인 불필요.",
+    "ogDescription": "자녀에게 맞는 학교를 자신 있게 선택하세요. 무료, 내 언어로."
   },
   "MarketingHeader": {
     "findSchools": "학교 찾기",
@@ -201,22 +201,22 @@
   "ParentsHero": {
     "trustPill": {
       "brand": "CRICOS",
-      "brandAccent": "등록 인증",
+      "brandAccent": "등록",
       "source": "data.gov.au 데이터"
     },
-    "headlinePrefix": "자녀를 위한",
-    "headlineEmphasis": "호주",
-    "headlineSuffix": "학교를 찾아보세요.",
-    "lede": "모든 CRICOS 등록 K–12 학교를 한곳에서 검색하세요. 학비, 기숙사, 영어 시험을 비교하세요 – 중국어, 한국어, 태국어, 베트남어, 말레이어 또는 영어로 검색하세요.",
+    "headlinePrefix": "자녀에게 맞는 학교를",
+    "headlineEmphasis": "자신 있게",
+    "headlineSuffix": "선택하세요.",
+    "lede": "올바른 학교 선택은 자녀의 자신감, 정서적 안정, 대학 선택지, 그리고 미래의 기회를 좌우할 수 있습니다. 등록된 모든 호주 학교를 검색하고, 학비, 숙소, 영어 요건, 학생 지원을 비교하세요 – 내 언어로.",
     "searchAriaLabel": "학교 검색",
     "searchFields": {
       "where": {
         "label": "지역",
-        "value": "호주 어디서나"
+        "value": "호주 전역"
       },
       "yearLevel": {
         "label": "학년",
-        "value": "Year 7 – Year 12"
+        "value": "7학년 – 12학년"
       },
       "fees": {
         "label": "학비",
@@ -228,14 +228,14 @@
     "featured": {
       "eyebrow": "추천",
       "shortlistAdd": "{name}을(를) 후보 목록에 추가",
-      "shortlistRemove": "후보 목록에서 {name} 제거",
+      "shortlistRemove": "{name}을(를) 후보 목록에서 제거",
       "cards": {
         "a": {
           "name": "Sydney Grammar School",
           "location": "Darlinghurst, NSW",
           "curriculum": "HSC",
           "fee": "$41.2k AUD",
-          "boarding": "Day only",
+          "boarding": "통학만",
           "rating": "4.8"
         },
         "b": {
@@ -243,7 +243,7 @@
           "location": "Melbourne, VIC",
           "curriculum": "VCE/IB",
           "fee": "$42.5k AUD",
-          "boarding": "Boarding",
+          "boarding": "기숙",
           "rating": "4.8"
         },
         "c": {
@@ -258,73 +258,73 @@
     }
   },
   "ParentsStatsBar": {
-    "eyebrow": "주요 수치",
-    "heading": "호주 최대 CRICOS 학교 디렉토리.",
-    "subheading": "모든 등록 학교를 검증하고 검색할 수 있습니다 – 공립부터 사립까지, 8개 주와 준주 전체를 포함합니다.",
+    "eyebrow": "숫자로 보기",
+    "heading": "유학생을 위한 모든 등록 학교. 한곳에서.",
+    "subheading": "등록된 모든 호주 학교를 검색하고, 필터링하고, 비교하세요 – 학비, 숙소, 영어 요건, 학생 지원까지 – 모든 것을 한곳에서, 내 언어로.",
     "items": {
       "schools": {
         "value": "{count, number}+",
-        "label": "CRICOS Schools"
+        "label": "등록 학교"
       },
       "states": {
         "value": "8",
-        "label": "States & Territories"
+        "label": "주 및 준주"
       },
       "sectors": {
-        "value": "All 3 Sectors",
-        "label": "Government · Independent · Catholic"
+        "value": "3개 부문 전체",
+        "label": "공립 · 사립 · 가톨릭"
       },
       "fees": {
         "value": "$3.5k – $78k",
-        "label": "Annual Fee Range"
+        "label": "연간 학비 범위"
       }
     }
   },
   "ParentsFourSteps": {
     "eyebrow": "이용 방법",
-    "heading": "첫 탐색부터 합격 통보까지 – 네 가지 간단한 단계.",
-    "subheading": "숨겨진 비용 없음. 지원 전까지 로그인 불필요.",
+    "heading": "첫 검색부터 확신에 찬 결정까지 – 간단한 4단계.",
+    "subheading": "모든 단계가 투명합니다. 숨은 비용 없음. 지원 전까지 로그인 불필요.",
     "steps": {
       "browse": {
-        "title": "모든 CRICOS 학교 둘러보기",
-        "description": "주, 학비, 교육 부문, 커리큘럼, 기숙사, 장학금으로 {count, number}개 학교를 필터링하세요 – 내 언어로."
+        "title": "등록된 모든 학교 둘러보기",
+        "description": "{count, number}개 이상의 학교를 주, 학비, 커리큘럼, 기숙, 홈스테이, 영어 시험, 복지 지원, 장학금으로 필터링하세요 – 중국어, 한국어, 태국어, 베트남어, 말레이어, 인도네시아어, 또는 영어로."
       },
       "shortlist": {
-        "title": "4개 후보 선정, 나란히 비교",
-        "description": "학비, 입학 일정, ICSEA, 인정 영어 시험을 한눈에 비교하세요. 몇 달이 아닌 몇 분 안에 결정하세요."
+        "title": "학교를 나란히 비교하기",
+        "description": "학비, 숙소, 영어 지원, 학생 복지, 입학 요건을 나란히 확인하세요 – 단순히 순위가 높은 곳이 아니라, 진짜 잘 맞는 학교를 가려낼 수 있도록."
       },
       "prepare": {
-        "title": "정확한 요건 확인",
-        "description": "모든 프로필에 인정 시험, 최저 점수, 필요 서류, 입학 기간이 명시되어 있습니다."
+        "title": "전체 그림 이해하기",
+        "description": "학비뿐 아니라 총비용, 숙소 옵션, 복지 체계, 영어 지원 프로그램, 그리고 자녀에게 도움이 필요할 때 어떻게 되는지까지 확인하세요."
       },
       "apply": {
-        "title": "인증된 에이전트를 통해 지원",
-        "description": "에이전트는 QEAC 인증 배지를 보유합니다. 지원서는 하나의 대시보드에서 처음부터 끝까지 추적됩니다.",
-        "comingSoon": "Coming soon"
+        "title": "믿을 수 있는 에이전트와 연결하기",
+        "description": "SchoolGo는 입학 절차를 잘 아는 학교 승인 교육 컨설턴트와 가족을 연결합니다 – 비용 부담 없이 전문가의 안내를 받으세요.",
+        "comingSoon": "출시 예정"
       }
     },
-    "ctaBrowse": "학교 둘러보기",
+    "ctaBrowse": "둘러보기 시작",
     "ctaLearn": "이용 방법 보기",
     "badge": {
-      "cricosVerified": "CRICOS Verified · Claimed by school",
-      "updated": "Updated April 2026"
+      "cricosVerified": "정부 등록 · 학교가 직접 관리",
+      "updated": "2026년 4월 업데이트"
     },
     "visuals": {
       "browse": {
-        "title": "[TODO: ko] 695 schools loaded",
-        "subtitle": "[TODO: ko] Filtered by state, fees & curriculum"
+        "title": "695개 학교 로드 완료",
+        "subtitle": "주, 학비, 커리큘럼으로 필터링됨"
       },
       "shortlist": {
-        "title": "[TODO: ko] Wei's shortlist",
-        "subtitle": "[TODO: ko] 3 schools in Victoria · All accept AEAS"
+        "title": "Wei의 후보 목록",
+        "subtitle": "빅토리아주 3개 학교 · 모두 AEAS 인정"
       },
       "prepare": {
-        "title": "[TODO: ko] Requirements matched",
-        "subtitle": "[TODO: ko] AEAS 70+ · IELTS 5.5+ · Documents ready"
+        "title": "요건 매칭 완료",
+        "subtitle": "AEAS 70+ · IELTS 5.5+ · 서류 준비 완료"
       },
       "apply": {
-        "title": "[TODO: ko] Application submitted",
-        "subtitle": "[TODO: ko] Tracked end-to-end · Status: Under review"
+        "title": "지원서 제출 완료",
+        "subtitle": "처음부터 끝까지 추적 · 상태: 심사 중"
       }
     }
   },
@@ -356,78 +356,90 @@
     }
   },
   "ParentsAgents": {
-    "eyebrow": "[TODO: ko] Get expert help",
-    "heading": "[TODO: ko] Meet your verified education agents.",
-    "subheading": "[TODO: ko] Every family is matched with a specialist education consultant who knows the admissions process inside out. Browse QEAC-verified agents and find the right one to guide you – from choosing a school to submitting your application, at no cost to you.",
-    "verifiedLabel": "[TODO: ko] QEAC verified",
-    "partnerSchools": "[TODO: ko] {count, plural, one {# partner school} other {# partner schools}}",
-    "empty": "[TODO: ko] Verified agents are coming soon. Check back shortly.",
-    "viewAll": "[TODO: ko] Find an agent",
-    "browseAll": "Browse all agents"
+    "eyebrow": "전문가의 도움 받기",
+    "heading": "인증된 교육 에이전트를 만나보세요.",
+    "subheading": "SchoolGo의 모든 에이전트는 자신이 대표하는 학교의 승인을 받았습니다. 가족은 에이전트의 경력, 구사 언어, 협력 학교를 바탕으로 누구와 연결할지 선택합니다 – 그러면 그 에이전트가 학교 선택부터 지원서 제출까지 안내해 드립니다. 비용 부담 없이.",
+    "verifiedLabel": "인증 완료",
+    "partnerSchools": "{count, plural, other {파트너 학교 #곳}}",
+    "empty": "인증된 에이전트가 곧 등록됩니다. 잠시 후 다시 확인해 주세요.",
+    "viewAll": "에이전트 찾기",
+    "browseAll": "모든 에이전트 둘러보기"
   },
   "ParentsComparison": {
     "compareLabel": "비교",
-    "eyebrow": "비교",
-    "heading": "Put three schools next to each other.",
-    "headingAccent": "몇 달이 아닌 몇 분 안에 결정하세요.",
-    "shortlistLabel": "[TODO: ko] Shortlist · {count} schools",
+    "eyebrow": "나란히 비교",
+    "heading": "학교를 나란히 놓고 보세요.",
+    "headingAccent": "중요한 차이를 확인하세요.",
+    "shortlistLabel": "후보 목록 · {count}개 학교",
     "columns": {
-      "fee": "연간 학비",
-      "stateSector": "[TODO: ko] State & sector",
-      "curriculum": "[TODO: ko] Curriculum",
-      "boarding": "[TODO: ko] Boarding",
-      "tests": "인정 시험",
-      "minScore": "[TODO: ko] Min. AEAS score",
-      "scholarships": "[TODO: ko] Scholarships",
-      "intakes": "입학 일정"
+      "fee": "연간 학비(유학생)",
+      "totalCost": "예상 총비용",
+      "accommodation": "숙소 옵션",
+      "welfare": "복지 및 보호자 지원",
+      "englishSupport": "영어 지원 프로그램",
+      "tests": "인정 영어 시험",
+      "minScore": "최저 영어 점수",
+      "scholarships": "장학금",
+      "intakes": "입학 일정",
+      "parentComms": "학부모 소통"
     },
-    "notPublished": "미공개",
-    "dayOnly": "[TODO: ko] – Day only",
-    "noneIntl": "[TODO: ko] – None intl."
+    "estimatedFrom": "{amount}부터",
+    "accommodationBoarding": "기숙 · 홈스테이",
+    "accommodationDay": "홈스테이 · 친지 거주",
+    "welfareValue": "만 18세 미만 보호자 · 홈스테이 심사",
+    "englishSupportValue": "ELICOS / EAL 지원",
+    "parentCommsValue": "학기별 리포트 · 학부모 포털",
+    "notPublished": "–",
+    "dayOnly": "– 통학만",
+    "noneIntl": "– 유학생 대상 없음"
   },
   "ParentsPickATest": {
     "eyebrow": "영어 능력",
-    "heading": "Find out which English test the school requires –",
-    "headingAccent": "and the score your child needs to get in.",
-    "subheading": "모든 프로필에서 인정 영어 시험을 확인할 수 있습니다. 50개 학교 웹사이트를 일일이 뒤질 필요가 없습니다.",
+    "heading": "자녀에게 필요한 영어 시험을 알아보세요 –",
+    "headingAccent": "그리고 어떤 지원이 있는지도.",
+    "subheading": "학교마다 인정하는 영어 시험과 요구 수준이 다릅니다. 저희가 이를 모두 정리해 드립니다 – 자녀의 점수에 맞는 학교를 한눈에 확인할 수 있도록. 자녀의 영어 실력이 아직 충분하지 않더라도, 많은 학교가 영어 지원 프로그램이나 준비 과정을 제공합니다.",
     "tests": {
       "aeas": {
         "name": "AEAS",
         "fullName": "Australian Education Assessment Services",
-        "description": "Most commonly accepted by Australian independent schools"
+        "description": "호주 사립 학교에서 가장 널리 인정됩니다"
       },
       "idat": {
         "name": "iDAT",
         "fullName": "International Digital Admissions Test",
-        "description": "Growing in popularity for K–12 admissions"
+        "description": "K–12 입학에서 점점 인기를 얻고 있습니다"
       },
       "duolingo": {
         "name": "Duolingo",
         "fullName": "Duolingo English Test",
-        "description": "Accepted by an increasing number of schools"
+        "description": "점점 더 많은 학교에서 인정합니다"
       },
       "ielts": {
         "name": "IELTS",
         "fullName": "International English Language Testing System",
-        "description": "Standard for senior secondary entry (Year 11+)"
+        "description": "고등 과정 입학(11학년 이상)의 표준입니다"
       },
       "pte": {
         "name": "PTE Academic",
         "fullName": "Pearson Test of English Academic",
-        "description": "Accepted by some schools for Year 11–12 entry"
+        "description": "일부 학교에서 11–12학년 입학에 인정합니다"
       },
       "cambridge": {
         "name": "Cambridge",
         "fullName": "Cambridge English Qualifications",
-        "description": "Accepted by select schools"
+        "description": "일부 학교에서 인정합니다"
       },
       "toefl": {
         "name": "TOEFL",
         "fullName": "Test of English as a Foreign Language",
-        "description": "Accepted by select schools for senior entry"
+        "description": "일부 학교에서 고등 과정 입학에 인정합니다"
       }
     },
-    "cta": "Check your school's English requirements"
+    "reassurance": {
+      "title": "자녀의 영어가 준비되었는지 확신이 서지 않나요?",
+      "body": "많은 학교가 아직 영어를 키워가는 학생을 받아들이고 집중 지원을 제공합니다. 필터를 사용해 영어 준비 프로그램이 있는 학교를 찾아보세요."
+    },
+    "cta": "학교의 영어 요건 확인하기"
   },
   "ParentsSevenLanguages": {
     "eyebrow": "7개 언어",
@@ -445,137 +457,191 @@
   },
   "ParentsArticles": {
     "eyebrow": "입학 자료실",
-    "heading": "입학 담당자가 작성하고 7개 언어로 번역했습니다.",
-    "subheading": "비자, 입학 일정, 영어 시험, 학비 안내에 대한 쉬운 가이드. 무료, 로그인 불필요.",
+    "heading": "모든 가족이 묻는 질문에 답하는 가이드.",
+    "subheading": "총비용, 복지 및 보호자 지정, 입학 일정, 영어 시험, 숙소, 필요 서류 – 입학 담당자가 쉬운 말로 작성한 가이드. 무료, 로그인 불필요.",
     "items": {
       "intakes": {
         "title": "호주 학교 입학 일정 이해하기",
-        "meta": "6분 읽기 · 매월 업데이트"
+        "meta": "6 min read · 매월 업데이트"
       },
       "englishTests": {
-        "title": "내 학교가 인정하는 영어 시험은?",
-        "meta": "8분 읽기 · 시험별 상세 비교"
+        "title": "우리 학교가 인정하는 영어 시험은?",
+        "meta": "8 min read · 시험별 정리"
       },
       "boarding": {
-        "title": "기숙 vs 통학: 가족들의 선택과 이유",
-        "meta": "5분 읽기 · 사례 연구"
+        "title": "기숙 vs 통학: 가족들의 선택과 그 이유",
+        "meta": "5 min read · 사례 연구"
       }
     },
     "readMore": "기사 읽기"
   },
   "ParentsTrustBar": {
-    "eyebrow": "신뢰와 규정 준수",
-    "heading": "Data you can trust – so you know you're looking at legitimate institutions and accurate information.",
-    "subheading": "SchoolGo의 모든 학교 정보는 공식 정부 데이터 출처를 기반으로 – 검증되고, 라이선스가 부여되며, 매월 갱신됩니다.",
+    "eyebrow": "신뢰 및 규정 준수",
+    "heading": "믿을 수 있는 데이터 – 그리고 SchoolGo의 작동 방식에 대한 투명함.",
+    "subheading": "모든 등록 학교는 호주 정부 공식 등록부와 대조하여 검증되며, SchoolGo가 무엇을 하고 – 또 무엇을 하지 않는지 – 명확히 밝힙니다.",
     "items": {
       "cricos": {
         "label": "정부 등록 학교",
-        "description": "모든 학교 정보는 공식 연방 등록부와 교차 검증됩니다."
+        "description": "SchoolGo의 모든 학교는 유학생을 받기 위해 호주 정부에 등록되어 있습니다."
       },
       "datagov": {
-        "label": "최신 상태 유지",
-        "description": "CC BY 2.5 AU 라이선스로 제공되는 공개 데이터 – 투명하고 누구나 감사 가능합니다."
+        "label": "항상 최신 상태 유지",
+        "description": "학교 데이터는 공식 정부 등록부에서 정기적으로 갱신됩니다 – 그래서 보시는 정보가 항상 최신입니다."
       },
       "acara": {
-        "label": "국가 교육과정 데이터",
-        "description": "커리큘럼, ICSEA 점수, 입학 데이터는 국가 권위 기관에서 제공합니다."
+        "label": "국가 커리큘럼 데이터",
+        "description": "커리큘럼, 학교 성과, 등록 데이터는 호주 국가 교육 기관에서 제공합니다."
       },
       "esos": {
         "label": "학생 보호",
-        "description": "SchoolGo는 호주 해외 학생 교육 서비스(ESOS) 법률 체계 내에서 운영됩니다."
+        "description": "등록된 모든 학교는 유학생을 보호하기 위한 호주의 법적 체계 아래 운영됩니다."
       }
     },
-    "attribution": "학교 데이터는 호주 해외 학생 기관 및 과정 연방 등록부(CRICOS)와 호주 교육과정·평가·보고 기관(ACARA) 공개 데이터셋을 출처로 합니다. 2026년 4월 업데이트."
+    "attribution": "학교 데이터는 호주 정부 공식 등록부와 국가 커리큘럼 기관(ACARA)을 출처로 합니다. 2026년 4월 업데이트.",
+    "about": {
+      "heading": "SchoolGo란 무엇인가요?",
+      "intro": "SchoolGo는 가족을 알맞은 학교, 그리고 알맞은 에이전트와 연결합니다. 학부모가 다음을 할 수 있는 무료 플랫폼입니다:",
+      "points": {
+        "search": "등록된 모든 학교를 한곳에서 검색하고 비교하기",
+        "understand": "학비, 요건, 지원 옵션 이해하기",
+        "connect": "지원할 준비가 되면 학교 승인 교육 에이전트와 연결하기"
+      },
+      "closing": "에이전트가 지원을 처리하고 전 과정을 안내합니다. 어떤 에이전트가 학교를 대표할지는 학교가 승인하므로 – 학교가 신뢰하는 사람과 함께한다는 것을 알 수 있습니다. 직접 연결을 선택하지 않는 한, 아무도 먼저 연락하지 않습니다."
+    }
   },
   "ParentsFaq": {
-    "heading": "Frequently Asked Questions",
+    "heading": "자주 묻는 질문",
     "items": {
       "enrol": {
-        "question": "How do I enrol my child in an Australian school from overseas?",
-        "answer": "Start by shortlisting schools that fit your child's year level, location, and budget on SchoolGo. Each school's profile shows the documents, English test scores, and intake dates you'll need to apply. Once you've chosen a school, an education agent or the school's admissions office will guide you through the application and student visa process."
+        "question": "해외에서 호주 학교에 자녀를 어떻게 등록하나요?",
+        "answer": "먼저 SchoolGo에서 자녀의 학년, 지역, 예산에 맞는 학교를 후보 목록으로 추리는 것부터 시작하세요. 각 학교 프로필에는 지원에 필요한 서류, 영어 시험 점수, 입학 일정이 표시됩니다. 학교를 선택하면 교육 에이전트 또는 학교 입학처가 지원과 학생 비자 절차를 안내해 드립니다."
       },
       "cost": {
-        "question": "How much does it cost to send my child to school in Australia?",
-        "answer": "International student tuition typically ranges from about A$15,000 to A$45,000 per year, depending on the school, year level, and sector. On top of tuition, plan for application fees, uniforms, technology, boarding (if applicable), and Overseas Student Health Cover. Every SchoolGo profile shows the school's published international fees so you can compare like-for-like."
+        "question": "호주에서 자녀를 학교에 보내는 데 비용이 얼마나 드나요?",
+        "answer": "유학생 학비는 학교, 학년, 부문에 따라 보통 연간 약 A$15,000에서 A$45,000 사이입니다. 학비 외에도 지원비, 교복, 기기, 기숙(해당 시), 해외 유학생 의료보험을 고려하세요. 모든 SchoolGo 프로필에는 학교가 공개한 유학생 학비가 표시되어 동일 조건으로 비교할 수 있습니다."
       },
       "englishTest": {
-        "question": "What English test does my child need for an Australian school?",
-        "answer": "Different schools accept different tests – the most common are AEAS, iDAT, Duolingo English Test, IELTS, and PTE Academic, with minimum scores that vary by year level. SchoolGo shows the exact tests and minimum scores each school accepts on its profile."
+        "question": "호주 학교에 가려면 자녀에게 어떤 영어 시험이 필요한가요?",
+        "answer": "학교마다 인정하는 시험이 다릅니다 – 가장 흔한 것은 AEAS, iDAT, Duolingo English Test, IELTS, PTE Academic이며, 최저 점수는 학년에 따라 다릅니다. SchoolGo는 각 학교 프로필에 그 학교가 인정하는 정확한 시험과 최저 점수를 표시합니다."
       },
       "visa": {
-        "question": "Do international students need a visa to study at an Australian school?",
-        "answer": "Yes – full-fee international school students study on a Student visa (subclass 500), which requires a Confirmation of Enrolment from a CRICOS-registered school. You'll also need health cover (OSHC) for the duration of the visa. See our student visa guide for the full step-by-step."
+        "question": "유학생이 호주 학교에서 공부하려면 비자가 필요한가요?",
+        "answer": "네 – 전액 납부 유학생은 학생 비자(서브클래스 500)로 공부하며, 이를 위해서는 CRICOS 등록 학교의 입학 확인서(CoE)가 필요합니다. 또한 비자 기간 동안 건강보험(OSHC)도 필요합니다. 자세한 단계별 안내는 학생 비자 가이드를 참고하세요."
       },
       "agent": {
-        "question": "What is an education agent and do I need one?",
-        "answer": "Education agents are licensed consultants who help families choose schools, prepare documents, and manage the application and visa process. You don't have to use one, but most international families do – and it's free for you, since agents are paid by the schools. SchoolGo shows you which agents each school works with so you can pick someone with a proven track record."
+        "question": "교육 에이전트란 무엇이며 꼭 필요한가요?",
+        "answer": "교육 에이전트는 가족이 학교를 선택하고, 서류를 준비하며, 지원 및 비자 절차를 관리하도록 돕는 면허를 갖춘 컨설턴트입니다. 반드시 이용해야 하는 것은 아니지만, 대부분의 유학 가족이 이용합니다 – 에이전트는 학교로부터 비용을 받으므로 가족에게는 무료입니다. SchoolGo는 각 학교가 어떤 에이전트와 협력하는지 보여드려, 검증된 실적을 가진 사람을 고를 수 있도록 합니다."
       },
       "schoolTypes": {
-        "question": "What types of schools are there in Australia?",
-        "answer": "Australian schools fall into three sectors – government (public), Catholic, and independent – and may be co-educational, single-sex, day-only, or boarding. Curricula include state certificates like the VCE, HSC, and QCE, plus the International Baccalaureate at many independent schools. Our school types guide explains how each sector works for international students."
+        "question": "호주에는 어떤 유형의 학교가 있나요?",
+        "answer": "호주 학교는 세 부문 – 공립, 가톨릭, 사립 – 으로 나뉘며, 남녀공학, 단성 학교, 통학 전용, 또는 기숙 학교일 수 있습니다. 커리큘럼에는 VCE, HSC, QCE 같은 주 수료 과정과 더불어 많은 사립 학교에서 운영하는 국제 바칼로레아(IB)가 포함됩니다. 저희 학교 유형 가이드에서 각 부문이 유학생에게 어떻게 운영되는지 설명합니다."
       },
       "free": {
-        "question": "Is SchoolGo free?",
-        "answer": "Yes. SchoolGo is completely free for parents, education agents, and schools. There are no listing fees, application fees, or subscription costs."
+        "question": "SchoolGo는 무료인가요?",
+        "answer": "네. SchoolGo는 학부모, 교육 에이전트, 학교 모두에게 완전히 무료입니다. 등록비, 지원비, 구독료가 일절 없습니다."
+      },
+      "startEarly": {
+        "question": "지원은 얼마나 일찍 시작해야 하나요?",
+        "answer": "대부분의 가족은 원하는 입학 시기보다 6~12개월 전에 시작합니다. 인기 학교는 유학생 정원이 일찍 차며, 영어 시험 응시, 서류 준비, 학생 비자 및 숙소 마련에 시간이 필요합니다. 일찍 시작하면 선택지가 많아지고 일정에 여유가 생깁니다 – 다만 자리가 남아 있는 경우 많은 학교가 늦은 지원도 받습니다."
+      },
+      "weakEnglish": {
+        "question": "자녀의 영어가 아직 충분하지 않아도 지원할 수 있나요?",
+        "answer": "네. 많은 학교가 아직 영어를 키워가는 학생을 받아들이고, 정규 수업 전이나 병행하여 집중 영어 지원 또는 준비 과정을 제공합니다. 필터를 사용해 자녀의 현재 수준에 맞는 영어 준비 프로그램이 있는 학교를 찾아보세요."
+      },
+      "midYear": {
+        "question": "자녀가 학년 중간에 시작할 수 있나요?",
+        "answer": "대개 가능합니다. 호주 학교는 보통 한 해에 여러 입학 시기가 있으며, 정원과 학년에 따라 많은 학교가 학년 중간에도 유학생을 받습니다. SchoolGo의 각 학교 프로필에는 입학 기간이 표시되어 자녀의 시작 시기에 맞춰 계획할 수 있습니다."
+      },
+      "documents": {
+        "question": "지원에 필요한 서류는 무엇인가요?",
+        "answer": "대부분의 학교는 최근 성적표, 여권 사본, 영어 시험 결과(요구 시), 그리고 때로는 추천서나 짧은 자기소개서를 요구합니다. 학생 비자를 위해서는 입학 확인서(CoE)와 건강보험 증빙도 필요합니다. 각 학교 프로필에 해당 학교가 요구하는 사항이 나와 있으며, 에이전트가 전체 체크리스트를 확인해 드립니다."
+      },
+      "boardingVsHomestay": {
+        "question": "기숙과 홈스테이의 차이는 무엇인가요?",
+        "answer": "기숙은 체계적인 관리, 식사, 활동과 함께 캠퍼스에서 생활하는 것을 뜻합니다. 홈스테이는 학교가 승인한 현지 가정에서 생활하는 것을 뜻합니다. 기숙은 더 체계적이며 교내 직원이 상주하고, 홈스테이는 가정적인 환경을 제공합니다 – 알맞은 선택은 자녀의 나이, 독립성, 성향에 따라 달라집니다."
+      },
+      "under18Responsible": {
+        "question": "자녀가 만 18세 미만일 경우 누가 책임을 지나요?",
+        "answer": "만 18세 미만 학생은 승인된 복지 체계를 갖춰야 합니다 – 보통 호주에 있는 부모나 자격을 갖춘 친척, 또는 학교가 승인한 보호자와 숙소입니다. 학교와 지정된 보호자가 자녀의 돌봄과 안녕에 대한 책임을 함께 지며, 학교가 주요 연락처가 됩니다."
+      },
+      "englishHelp": {
+        "question": "자녀가 영어에 어려움을 겪으면 학교가 도와줄 수 있나요?",
+        "answer": "네. 많은 학교가 아직 영어를 키워가는 학생이 수업을 따라갈 수 있도록 추가 언어로서의 영어(EAL) 지원, 개별 지도, 집중 영어 프로그램을 지속적으로 제공합니다. SchoolGo에서 영어 지원 프로그램이 있는 학교로 필터링할 수 있습니다."
+      },
+      "transfer": {
+        "question": "자녀가 나중에 다른 학교로 전학할 수 있나요?",
+        "answer": "네, 학생은 학교 간 전학이 가능하지만 규정이 있으며 – 특히 과정 시작 후 첫 6개월 이내에는 더욱 그렇습니다 – 보통 새 입학 확인서(CoE)가 필요합니다. 에이전트나 관련 학교가 전학 절차와 비자 관련 사항을 안내해 드립니다."
+      },
+      "refundVisa": {
+        "question": "비자가 거절되면 학비를 환불받을 수 있나요?",
+        "answer": "대부분의 학교는 학생 비자가 거절될 경우 환불 내용을 명시한 서면 환불 정책을 갖추고 있습니다. 환불 조건은 학교마다 다르므로, 납부 전에 반드시 학교의 환불 조건을 확인하세요. SchoolGo는 총비용을 이해하는 과정의 일부로 각 학교의 환불 정책을 검토하실 것을 권장합니다."
+      },
+      "agentSelection": {
+        "question": "SchoolGo는 연결해 주는 에이전트를 어떻게 선정하나요?",
+        "answer": "SchoolGo의 모든 에이전트는 함께 일하는 학교로부터 인증받고 승인받았습니다. SchoolGo는 에이전트를 무작위로 배정하지 않으며 – 가족이 에이전트의 경력, 구사 언어, 대표하는 학교를 바탕으로 누구와 연결할지 직접 선택합니다."
+      },
+      "agentOrSchool": {
+        "question": "SchoolGo는 에이전트인가요, 아니면 학교의 일부인가요?",
+        "answer": "둘 다 아닙니다. SchoolGo는 가족이 등록된 모든 호주 학교를 검색하고 비교한 뒤, 준비가 되면 학교 승인 교육 에이전트와 연결되도록 돕는 독립적인 무료 플랫폼입니다. 저희가 직접 학생을 등록하지 않으며 – 학교와 가족이 선택한 에이전트가 지원을 처리합니다. 직접 연결을 선택하지 않는 한, 아무도 먼저 연락하지 않습니다."
       }
     }
   },
   "ParentsFinalCta": {
     "eyebrow": "여기서 시작하세요",
-    "headingPrefix": "검색이",
+    "headingPrefix": "자녀의 미래는",
     "headingEmphasis": "시작됩니다",
-    "headingSuffix": "7개 언어로.",
-    "subheading": "무료. 로그인 불필요. {month} {year, number} 업데이트.",
-    "ctaPrimary": "Find the right school"
+    "headingSuffix": "알맞은 학교 – 그리고 알맞은 지원과 함께.",
+    "subheading": "등록된 모든 학교를 검색하세요. 전체 비용을 이해하세요. 자녀가 잘 보살핌받을 것을 아세요. 무료, 로그인 불필요.",
+    "ctaPrimary": "알맞은 학교 찾기"
   },
   "AgentsMetadata": {
-    "title": "SchoolGo – 포트폴리오처럼 운영하는 유학원 비즈니스",
-    "description": "호주 학교로 학생을 보내는 교육 에이전트를 위한 QEAC 인증 도구. 표준화된 지원서, 실시간 파이프라인, 전액 수수료.",
-    "ogDescription": "포트폴리오처럼 비즈니스를 운영하세요. 수수료 100% 보전."
+    "title": "에이전트를 위한 SchoolGo – 연결되고, 더 빠르게 후보를 추리세요.",
+    "description": "교육 에이전트에게 무료입니다. 호주 학교를 검색하고, 상담 중에 후보를 추리고, 지원 준비가 된 가족과 연결되세요. 수수료는 온전히 에이전트의 몫입니다.",
+    "ogDescription": "지원 준비가 된 가족과 연결되세요. 호주 학교를 몇 분 만에 추려보세요. 에이전트에게 무료 – 수수료는 온전히 여러분의 몫입니다."
   },
   "AgentsHero": {
-    "eyebrow": "교육 에이전트 전용 · QEAC 인증",
-    "headlinePrefix": "All Australian schools. All your students.",
-    "headlineEmphasis": "비즈니스를 운영하세요.",
-    "lede": "Every Australian school has different fees, English tests, entry requirements, and application forms. SchoolGo brings them all into one place – so you can match, compare, and apply without the guesswork.",
-    "ctaPrimary": "인증 신청",
-    "ctaSecondary": "운영 방식 보기",
-    "badgeMeta": "Sample agent profile",
+    "eyebrow": "교육 에이전트를 위한 서비스",
+    "headlinePrefix": "지원을 준비 중인 가족과 연결되세요.",
+    "headlineEmphasis": "몇 분 만에 학교 후보를 추려보세요.",
+    "lede": "SchoolGo는 학부모가 자녀에게 맞는 호주 학교를 찾도록 돕고, 그들을 에이전트와 연결합니다. {count, number}개 이상의 등록 학교를 검색하고, 상담 중에 후보 목록을 만들고, 학교에 지원서를 제출하세요 – 모든 것을 하나의 플랫폼에서. 무료입니다. 수수료는 온전히 에이전트의 몫입니다.",
+    "ctaPrimary": "에이전트 프로필 만들기",
+    "ctaSecondary": "이용 방법 보기",
+    "badgeMeta": "에이전트 프로필 예시",
     "stats": {
       "schools": {
         "value": "{count, number}",
-        "label": "인증된 CRICOS 학교"
+        "label": "CRICOS 등록 학교"
       },
       "sectors": {
         "value": "3",
-        "label": "Sectors – Gov, Independent, Catholic"
+        "label": "부문 – 공립, 사립, 가톨릭"
       },
       "commission": {
         "value": "100%",
-        "label": "수수료 전액 보전"
+        "label": "무료 – 수수료는 온전히 에이전트의 몫"
       }
     }
   },
   "AgentsPainPoints": {
-    "eyebrow": "What you can do",
-    "heading": "Everything you need to place students into Australian schools.",
-    "subheading": "Search, match, apply, and track – every part of the placement workflow, in one platform.",
+    "eyebrow": "에이전트가 SchoolGo를 사용하는 이유",
+    "heading": "에이전트를 대체하기 위해서가 아니라, 실제 업무 방식에 맞춰 만들었습니다.",
+    "subheading": "국제 학교 등록의 76%는 교육 에이전트를 통해 이뤄집니다. SchoolGo는 에이전트를 배제하기 위해서가 아니라, 더 빠르게 일하고 가족에게 더 잘 보이도록 돕기 위해 존재합니다.",
     "items": {
       "email": {
-        "question": "Search 695 schools by what matters",
-        "answer": "Filter by fees, English tests, intakes, boarding, and scholarships. Compare side by side. No more digging through school websites one at a time."
+        "question": "구체적인 질문에 빠르게 답해야 하나요?",
+        "answer": "학부모는 학비, 영어 요건, 기숙, 정원 현황, 마감일, 서류에 대해 묻습니다 – 종종 한 통의 전화 안에서요. SchoolGo를 사용하면 학교 웹사이트를 하나씩 확인하는 대신 695개 학교 전체를 단 몇 초 만에 필터링할 수 있습니다."
       },
       "status": {
-        "question": "One student profile, every school",
-        "answer": "Enter your student's details once. SchoolGo maps them to each school's requirements – so you see which schools fit and apply without re-entering data."
+        "question": "상담을 시작하기도 전에 행정 업무에 너무 많은 시간을 쓰고 있나요?",
+        "answer": "학생 프로필을 한 번만 입력하세요. SchoolGo가 이를 학교 요건과 대조해, 전화를 걸기도 전에 현실적으로 적합한 학교가 어디인지 보여줍니다."
       },
       "trust": {
-        "question": "Documents organised, scores verified",
-        "answer": "Passports, transcripts, and test scores uploaded once, tracked for expiry. English scores checked against official records automatically."
+        "question": "총비용을 처음부터 일일이 설명하는 데 지치셨나요?",
+        "answer": "SchoolGo는 학부모가 에이전트에게 연락하기 전에 전체 비용 그림 – 학비, 기숙, 홈스테이, OSHC, 교복, 보호자 비용 – 을 보여줍니다. 가족이 실제 비용을 이해한 상태로 찾아오므로, 가격 충격을 설명하는 시간은 줄이고 적합성에 더 집중할 수 있습니다."
       },
       "requirements": {
-        "question": "Your commission stays yours",
-        "answer": "SchoolGo is free. No platform fees, no commission splits, no per-student charges. Your relationship with schools stays direct."
+        "question": "학부모가 에이전트를 구글과 비교하나요?",
+        "answer": "SchoolGo를 통해 에이전트를 찾은 가족은 이미 에이전트와 함께하는 것의 가치를 이해하고 있습니다. 그들은 그 복잡함을 직접 보고, 전문가와 연결되기로 선택한 사람들입니다."
       }
     }
   },
@@ -588,26 +654,35 @@
     }
   },
   "AgentsMatching": {
-    "eyebrow": "매칭 · 지원 · 추적",
-    "heading": "오전 10시 부모 통화. 10시 30분까지 매칭된 학교 3곳.",
-    "subheading": "SchoolGo가 주, 학비, 영어 수준, 입학 시기에 맞는 학교를 추려낸 뒤, 몇 분 안에 표준화된 지원서를 제출할 수 있도록 합니다.",
+    "eyebrow": "SchoolGo 이용 방법",
+    "heading": "오전 10시에 걸려온 가족의 전화. 10시 30분이면 매칭된 학교 3곳.",
+    "subheading": "학부모는 종종 매우 구체적인 질문을 합니다. 특정 영어 수준과 예산에 맞춰, 내년 1월에 우리 아이를 10학년으로 받아줄 수 있는 학교는 어디일까요? SchoolGo는 더 빠르게 답할 수 있도록 도와줍니다 – 학교 웹사이트를 일일이 확인하는 시간은 줄이고, 가족에게 조언하는 시간은 늘리세요.",
     "steps": {
       "listen": {
-        "title": "가족의 요구 사항 파악",
-        "description": "Budget, location, intake."
+        "title": "가족이 원하는 것을 파악하세요",
+        "description": "예산, 지역, 영어 수준, 학년, 희망 입학 시기, 숙소 유형, 복지 우선순위 – 하나의 양식으로, 실시간 상담 중에도 작동합니다."
       },
       "match": {
-        "title": "최적 학교 확인",
-        "description": "Including English test scores.",
-        "comingSoon": "Coming soon"
+        "title": "가장 잘 맞는 학교를 즉시 확인하세요",
+        "description": "학생 프로필 기준으로 필터링됩니다. 인정 영어 시험, 최저 점수, 학비, 기숙/홈스테이 옵션, 복지 및 보호자 지원, 학교별 정원 현황까지 확인하세요. 더 이상 탭 15개를 열 필요가 없습니다.",
+        "comingSoon": "출시 예정"
       },
       "deliver": {
-        "title": "정리된 후보 목록 제공",
-        "description": "A branded PDF the family can screenshot and send to Mum and Dad. No PDFs from fifteen different schools.",
-        "comingSoon": "Coming soon"
+        "title": "브랜드가 담긴 후보 목록을 전달하세요",
+        "description": "유학원 브랜딩이 들어간 깔끔한 PDF로, 가족이 화면을 캡처하고 배우자와 공유하거나 집에서 비교할 수 있습니다. 학교 브로슈어 15개가 아닙니다.",
+        "comingSoon": "출시 예정"
+      },
+      "connect": {
+        "title": "가족이 에이전트와 연결됩니다",
+        "description": "SchoolGo에서 검색하던 학부모가 에이전트가 대표하는 학교를 발견하면, 그 에이전트의 경력, 구사 언어, 전문 분야를 바탕으로 연결을 선택합니다."
+      },
+      "apply": {
+        "title": "SchoolGo를 통해 지원서를 제출하세요",
+        "description": "학교의 요건에 맞는 지원서를 준비해 제출하세요 – 완비된 서류, 검증된 영어 점수, 명확한 학생 프로필까지. 학교는 번거로운 주고받기 없이 필요한 것을 받습니다.",
+        "comingSoon": "출시 예정"
       }
     },
-    "inboxLabel": "입학 수신함",
+    "inboxLabel": "가장 잘 맞는 학교",
     "inboxRows": {
       "scotch": {
         "school": "Scotch College",
@@ -627,275 +702,286 @@
     }
   },
   "AgentsCommission": {
-    "eyebrow": "요금제",
-    "heading": "학교 수수료의 100%를 에이전트가 받습니다.",
-    "subheading": "SchoolGo는 학교에 청구합니다. 에이전트에게는 청구하지 않습니다. 학교와의 상업적 관계는 그대로 유지됩니다.",
+    "eyebrow": "이용 방법",
+    "heading": "에이전트를 위한 이용 방법.",
+    "subheading": "SchoolGo는 가족이 학교를 찾아 비교하도록 돕고, 그들을 에이전트와 연결하며, 에이전트에게는 학교 후보를 추리고 지원할 수 있는 도구를 제공합니다 – 모든 것을 하나의 플랫폼에서. 비용은 학교가 부담합니다. 에이전트는 수수료, 학생과의 관계, 그리고 학교 네트워크를 그대로 지킵니다.",
     "statValue": "$0",
-    "statLabel": "Platform cost per agent. Zero fees, zero commission splits – ever.",
+    "statLabel": "에이전트당 플랫폼 비용. 수수료 분할, 배치 수수료, 구독료 없음.",
     "bullets": {
-      "zero": {
-        "title": "학생 1인당 수수료 없음",
-        "description": "수수료 분할 없음. 배치 수수료 없음. 구독료 없음."
+      "free": {
+        "title": "무료 이용",
+        "description": "수수료 분할, 배치 수수료, 구독료 없음."
       },
-      "direct": {
-        "title": "학교와의 직접적 관계 유지",
-        "description": "지원서를 제출하는 순간 에이전트 귀속이 확정됩니다."
+      "students": {
+        "title": "내 학생, 내 관계",
+        "description": "학생 데이터는 에이전트 본인에게만 공개됩니다. 함께 진행 중인 가족에게 다른 에이전트가 접근할 수 없습니다."
       },
-      "audit": {
-        "title": "완전한 감사 기록",
-        "description": "모든 상태 변경에 타임스탬프가 찍힙니다. 분쟁은 기록으로 해결됩니다."
+      "attribution": {
+        "title": "명확한 학교 귀속",
+        "description": "학교는 모든 문의 뒤에 어떤 에이전트가 있는지 확인할 수 있습니다."
+      },
+      "approved": {
+        "title": "학교 승인 기반",
+        "description": "어떤 에이전트가 SchoolGo에서 자신을 대표할 수 있는지는 학교가 선택합니다. 이미 학교와 협력하고 있다면 즉시 인증받을 수 있습니다."
+      },
+      "network": {
+        "title": "학교 네트워크는 그대로 내 것",
+        "description": "SchoolGo는 에이전트를 대신해 학교에 연락하거나 에이전트의 관계를 공유하지 않습니다."
+      },
+      "privacy": {
+        "title": "데이터는 비공개",
+        "description": "고객 정보와 학교 네트워크 세부 사항은 에이전트의 동의 없이 다른 에이전트와 공유되거나 공개되지 않습니다."
       }
     }
   },
   "AgentsQeacTrust": {
-    "eyebrow": "인증 완료",
-    "heading": "부모와 학교가 실제로 신뢰하는 프로필.",
-    "subheading": "QEAC 자격은 한 번만 검증합니다. 제출하는 모든 지원서에 배지와 실적이 표시됩니다.",
-    "sampleLabel": "Sample profile",
+    "eyebrow": "에이전트 프로필",
+    "heading": "내 방식대로 – 평판을 쌓아가세요.",
+    "subheading": "SchoolGo 프로필은 새로운 가족이 에이전트를 찾고 신뢰하도록 돕습니다. 하지만 무엇을 공개할지는 에이전트가 직접 정합니다. 경쟁자에게 전체 네트워크를 드러내지 않고도 강점을 보여주세요.",
+    "sampleLabel": "프로필 예시",
     "profile": {
       "name": "에이전트 프로필",
       "agentName": "Mei Lin",
-      "qeac": "QEAC 인증",
-      "yearsActive": "활동 연수",
-      "students": "배치 학생 수",
-      "placements": "배치 학교 수",
-      "languages": "사용 언어",
-      "languagesValue": "中 · EN"
-    }
+      "qeac": "QEAC 인증"
+    },
+    "visibility": {
+      "public": {
+        "label": "공개",
+        "items": "이름, 구사 언어, QEAC 상태, 활동 연수, 담당 지역."
+      },
+      "optional": {
+        "label": "선택 공개",
+        "items": "배치한 학생 수, 학교 부문, 전문 분야 – 직접 선택하세요."
+      },
+      "private": {
+        "label": "항상 비공개",
+        "items": "구체적인 학교 관계, 학생 이름, 수수료 계약, 타깃 시장, 진행 중인 지원."
+      }
+    },
+    "qeacNote": "QEAC 인증 에이전트는 인증 배지를 받습니다. 하지만 모든 에이전트의 성과는 스스로 증명됩니다 – 인증 여부와 관계없이, 가족은 에이전트의 응답 속도, 구사 언어, 전문 분야를 확인할 수 있습니다."
   },
   "AgentsScale": {
     "eyebrow": "네트워크",
-    "heading": "Agents across APAC are joining. Australia's international school sector is growing fast – be one of the first.",
-    "subheading": "From Shanghai to Jakarta, Ho Chi Minh to Seoul – agents placing families into Australian K–12.",
+    "heading": "APAC 전역의 에이전트가 합류하고 있습니다.",
+    "subheading": "상하이에서 자카르타까지, 호치민에서 서울까지 – 1인 에이전트부터 다지점 유학원까지, 호주 K-12로 가족을 안내합니다.",
     "agents": {
       "a": {
         "name": "Li Wei",
         "region": "Shanghai · 中国",
-        "meta": "QEAC verified · Independent schools"
+        "meta": "인증 완료 · 사립 학교"
       },
       "b": {
         "name": "Nguyễn Minh",
         "region": "Ho Chi Minh · Việt Nam",
-        "meta": "QEAC verified · All sectors"
+        "meta": "QEAC 인증 · 전 부문"
       },
       "c": {
         "name": "Siti Rahman",
         "region": "Kuala Lumpur · Malaysia",
-        "meta": "QEAC verified · Boarding specialist"
+        "meta": "인증 완료 · 기숙 전문"
       },
       "d": {
         "name": "Ji-eun Park",
         "region": "Seoul · 대한민국",
-        "meta": "QEAC verified · VIC & NSW"
+        "meta": "QEAC 인증 · VIC & NSW"
       }
     },
-    "cta": "인증 신청"
+    "cta": "프로필 만들기"
   },
   "AgentsTestimonial": {
-    "eyebrow": "[TODO: ko] From the field",
-    "heading": "[TODO: ko] What agents are saying",
+    "eyebrow": "현장의 목소리",
+    "heading": "에이전트들의 이야기",
     "items": {
       "a": {
-        "quote": "Every school wants a different form, different documents, different English scores. I spend more time on admin than actually helping families.",
-        "attribution": "[TODO: ko] Agency director, Shanghai",
-        "meta": "[TODO: ko] 60+ students · 3 counsellors"
+        "quote": "예전에는 학부모와 통화하기 전마다 학교 웹사이트 여섯 곳을 확인했습니다. 이제는 예산, 영어 수준, 입학 시기로 한 번에 검색합니다 – 가족이 원하는 바를 다 설명하기도 전에 후보 목록이 나옵니다.",
+        "attribution": "유학원 대표, 상하이",
+        "meta": "60+ 학생"
       },
       "b": {
-        "quote": "A parent asks which English test their child needs and I have to check three different school websites to give them an answer. That should take ten seconds.",
-        "attribution": "[TODO: ko] Independent agent, Ho Chi Minh City",
-        "meta": "Solo practice"
+        "quote": "제 고객들은 학교를 비교하고 싶어 하지만, PDF 15개를 보낼 수는 없죠. 세 학교를 나란히 담은 브랜드 한 장짜리 자료가 실제로 그들이 읽는 것입니다.",
+        "attribution": "독립 에이전트, 호치민시",
+        "meta": "25+ 학생"
       },
       "c": {
-        "quote": "I've placed into the same twelve schools for years because I know their process. A platform that maps every school's requirements would let me place into hundreds.",
-        "attribution": "[TODO: ko] Senior counsellor, Kuala Lumpur",
-        "meta": "[TODO: ko] 40+ students · 2 branches"
+        "quote": "또 다른 플랫폼이 제 수수료를 가져가거나 학교 관계를 노출시킬까 봐 걱정했습니다. SchoolGo는 둘 다 건드리지 않습니다. 그저 상담할 준비가 된 가족을 보내줄 뿐입니다.",
+        "attribution": "선임 상담사, 쿠알라룸푸르",
+        "meta": "40+ 학생"
       }
     },
-    "disclaimer": "[TODO: ko] Composite quotes based on agent interviews"
+    "disclaimer": "에이전트 인터뷰를 바탕으로 재구성한 인용입니다"
   },
   "AgentsFinalCta": {
-    "eyebrow": "인증 받기",
-    "headingPrefix": "You deserve",
-    "headingEmphasis": "better tools",
-    "headingSuffix": "to build a better business.",
-    "subheading": "무료. QEAC 인증 필요. 온보딩은 48시간 이내.",
-    "ctaPrimary": "인증 신청"
+    "eyebrow": "시작하기",
+    "headingPrefix": "가족에게 발견되세요.",
+    "headingEmphasis": "더 빠르게 후보를 추리세요.",
+    "headingSuffix": "수수료는 그대로 지키세요.",
+    "subheading": "무료. 수수료 분할 없음. 학교 관계는 그대로 에이전트의 것입니다.",
+    "ctaPrimary": "에이전트 프로필 만들기",
+    "ctaSecondary": "안내 미팅 예약하기"
   },
   "AgentsFaq": {
-    "heading": "Frequently Asked Questions",
+    "heading": "자주 묻는 질문",
     "items": {
-      "find": {
-        "question": "How do education agents find Australian schools for international students?",
-        "answer": "Agents typically build long-term relationships with a handful of schools and check each school's website, fees, and English requirements one at a time. SchoolGo replaces that workflow with a single searchable database of every CRICOS-registered school – filterable by fees, English tests, intakes, boarding, and scholarships."
+      "free": {
+        "question": "SchoolGo는 에이전트에게 정말 무료인가요?",
+        "answer": "네. SchoolGo는 에이전트가 아니라 학교의 비용으로 운영됩니다. 수수료 분할, 배치 수수료, 구독료, 숨은 비용이 일절 없습니다."
       },
-      "englishTests": {
-        "question": "What English tests do Australian schools accept for international admissions?",
-        "answer": "Most Australian schools accept AEAS, with a growing number accepting iDAT, Duolingo English Test, IELTS, PTE Academic, Cambridge English, and TOEFL. Minimum scores vary by school and year level. SchoolGo lists the exact accepted tests and minimum scores on every school profile."
+      "makesMoney": {
+        "question": "에이전트에게 무료라면 SchoolGo는 어떻게 수익을 내나요?",
+        "answer": "학교가 프로필을 강화하고 더 많은 가족에게 도달하기 위해 비용을 지불합니다. 에이전트는 절대 지불하지 않습니다."
       },
-      "verifyScores": {
-        "question": "How do education agents verify student English test scores?",
-        "answer": "Most test providers offer an official verification portal where agents and schools can confirm a score against the candidate's record. SchoolGo automates this – uploaded English scores are checked against the official record so you and the school know the result is genuine."
+      "contactStudents": {
+        "question": "다른 에이전트가 제 학생에게 연락할 수 있나요?",
+        "answer": "아니요. 학생과의 관계는 비공개입니다. 다른 어떤 에이전트도 에이전트와 연결된 가족을 보거나 접근할 수 없습니다."
       },
-      "becomeAgent": {
-        "question": "How do I become an education agent for Australian schools?",
-        "answer": "There's no single licence to become an Australian education agent, but most schools and the AAERI/QEAC quality frameworks expect training in Australian education, ethical practice, and student welfare. The QEAC (Qualified Education Agent Counsellor) certification is the most widely recognised credential."
+      "attribution": {
+        "question": "학교가 어떤 에이전트가 학생을 데려왔는지 알 수 있나요?",
+        "answer": "네. 가족이 에이전트와 연결되는 순간 귀속이 확정됩니다. 학교는 어떤 에이전트가 담당하는지 항상 알 수 있습니다."
       },
-      "fees": {
-        "question": "Do education agents pay fees to use SchoolGo?",
-        "answer": "No. SchoolGo is free for every agent – no platform fees, no commission splits, no per-student charges. Your commercial relationship with schools stays direct."
+      "interfere": {
+        "question": "SchoolGo가 기존 학교 관계에 개입하나요?",
+        "answer": "아니요. SchoolGo는 에이전트를 대신해 학교에 연락하거나, 계약을 재협상하거나, 네트워크 정보를 공유하지 않습니다."
       },
-      "manage": {
-        "question": "How do education agents manage multiple student applications at once?",
-        "answer": "SchoolGo gives you one student profile per family that maps to every school's requirements automatically – so you don't re-key passport numbers, transcripts, or English scores into 15 different forms. Documents are organised, version-controlled, and tracked for expiry, with every status change timestamped for audit."
+      "publicInfo": {
+        "question": "프로필에서 공개되는 정보는 무엇인가요?",
+        "answer": "직접 정합니다. 이름, 구사 언어, QEAC 상태는 공개됩니다. 그 외 모든 것(배치 실적, 학교 관계, 전문 분야)은 선택 사항입니다."
+      },
+      "competes": {
+        "question": "SchoolGo도 에이전트인가요? 저와 경쟁하나요?",
+        "answer": "아니요. SchoolGo는 가족을 에이전트와 연결하고, 에이전트에게 학교 후보를 추리고 지원할 수 있는 도구를 제공합니다. 학생을 모집하거나 수수료를 받지 않습니다."
+      },
+      "howConnected": {
+        "question": "가족은 어떻게 에이전트와 연결되나요?",
+        "answer": "학부모가 SchoolGo에서 학교를 찾아 지원하고자 할 때, 가능한 에이전트를 살펴보고 경력, 구사 언어, 대표하는 학교를 바탕으로 누구와 연결할지 선택합니다. 무작위로 배정되는 일은 절대 없으며 – 가족이 능동적으로 에이전트를 선택합니다."
+      },
+      "futureCharging": {
+        "question": "SchoolGo가 향후 요금을 부과하게 되나요?",
+        "answer": "에이전트에게 요금을 부과할 계획은 없습니다. 비즈니스 모델은 학교 부담 방식입니다."
       }
     }
   },
   "SchoolsMetadata": {
-    "title": "SchoolGo – 더 적은 이메일로 국제 학생 정원을 채우세요",
-    "description": "호주 학교를 위한 하나의 표준화된 입학 수신함. QEAC 인증 에이전트, 실제 지원서, 학생 1인당 수수료 없음.",
-    "ogDescription": "국제 학생 정원을 채우세요. 이메일은 줄이고."
+    "title": "학교를 위한 SchoolGo – 더 낫고, 더 적합한 지원서",
+    "description": "유학 가족과 에이전트가 지원 전에 귀교의 요건을 이해하도록 도우세요. 신뢰하는 에이전트를 승인하세요. 모든 호주 학교에 무료입니다.",
+    "ogDescription": "더 나은 지원서. 적합한 학생. 줄어든 번거로움."
   },
   "SchoolsHero": {
-    "eyebrow": "호주 학교 전용",
-    "headlinePrefix": "채우세요",
-    "headlineEmphasis": "국제 학생",
-    "headlineSuffix": "cohort. Simplify admissions.",
-    "lede": "7개국 가족들이 보는 하나의 인증된 프로필. QEAC 인증 에이전트로부터 표준화된 지원서를 받으세요 – 입학팀이 이미 사용하는 형식으로.",
-    "ctaPrimary": "학교 프로필 등록",
-    "inbox": {
-      "eyebrow": "Applications inbox – preview",
-      "countLabel": "이번 달",
-      "rows": {
-        "a": {
-          "name": "Sophie Chen",
-          "status": "신규",
-          "meta": "VIC · Year 9 · AEAS 78"
-        },
-        "b": {
-          "name": "Minh Tran",
-          "status": "검토 중",
-          "meta": "VIC · Year 11 · IELTS 6.5"
-        },
-        "c": {
-          "name": "Ji-woo Park",
-          "status": "합격 통보 완료",
-          "meta": "NSW · Year 10 · AEAS 74"
-        }
-      }
-    }
+    "eyebrow": "호주 학교를 위한 서비스",
+    "headlinePrefix": "더 나은 지원서.",
+    "headlineEmphasis": "적합한 학생.",
+    "headlineSuffix": "줄어든 번거로움.",
+    "lede": "SchoolGo는 유학 가족과 교육 에이전트가 귀교를 찾고, 요건을 이해하고, 귀교의 승인 에이전트와 연결되도록 돕습니다. 학생이 입학팀에 연락할 즈음이면 이미 학비, 영어 요건, 숙소 옵션, 입학 절차를 알고 있습니다 – 그래서 팀이 누락된 정보를 쫓는 데 쓰는 시간이 줄어듭니다.",
+    "ctaPrimary": "학교 프로필 등록하기",
+    "ctaSecondary": "안내 미팅 예약하기"
   },
   "SchoolsStats": {
-    "eyebrow": "네트워크 효과",
-    "heading": "프로필 하나. 7개국 가족들이 봅니다.",
-    "subheading": "학교 정보가 모든 검색, 모든 비교, 모든 매칭 후보 목록에 – 가족의 언어로 노출됩니다.",
+    "eyebrow": "네트워크",
+    "heading": "하나의 프로필. 도달하고자 하는 가족과 에이전트에게 보입니다.",
+    "subheading": "귀교의 프로필은 모든 검색, 비교, 에이전트 후보 목록에 나타납니다 – 아시아·태평양 전역 7개 언어로 번역되어 – 그래서 알맞은 가족이 문의하기 전에 귀교의 요건을 이해합니다.",
     "items": {
       "schools": {
         "value": "695+",
-        "label": "CRICOS-registered schools"
+        "label": "CRICOS 등록 학교"
       },
       "states": {
         "value": "8",
-        "label": "States & territories"
+        "label": "주 및 준주"
       },
       "sectors": {
         "value": "3",
-        "label": "Sectors – Government, Independent, Catholic"
+        "label": "부문 – 공립, 사립, 가톨릭"
       },
       "feeRange": {
         "value": "$3.5k – $78k",
-        "label": "Annual fee range (AUD)"
+        "label": "연간 학비 범위(AUD)"
       }
     }
   },
   "SchoolsThreeTools": {
-    "eyebrow": "도구 모음",
-    "heading": "세 가지 도구. 하나의 목표: 더 적은 수고로 적합한 학생을.",
-    "subheading": "SchoolGo는 입학팀이 실제로 필요한 세 가지를 제공합니다.",
+    "eyebrow": "학교 프로필",
+    "heading": "귀교의 학교. 귀교의 정보. 귀교의 통제.",
+    "subheading": "모든 등록 학교는 공식 정부 데이터에서 자동 게시된 기본 프로필을 SchoolGo에 갖고 있습니다. 프로필을 등록하면, 전 세계 가족과 에이전트에게 귀교가 어떻게 보일지 완전히 통제할 수 있습니다.",
     "tools": {
       "profile": {
-        "title": "살아있는 학교 프로필",
-        "description": "학비, 입학 일정, 인정 시험, 장학금, 서류 – 직접 업데이트하면 가족의 언어로 표시됩니다."
+        "title": "귀교의 프로필, 귀교의 방식대로",
+        "description": "학교 소개와 포지셔닝, 사진과 브랜딩, 학비 항목, 입학 일정과 지원 마감일을 관리하세요 – 가족의 언어로 표시됩니다. 귀교가 어떻게 보일지 직접 결정합니다."
       },
-      "applications": {
-        "title": "표준화된 지원서",
-        "description": "모든 지원서가 동일한 형식으로 도착하며, QEAC 인증 에이전트 귀속 및 완전한 서류가 포함됩니다."
+      "requirements": {
+        "title": "가족이 행동에 옮길 수 있는 요건",
+        "description": "학년별 인정 영어 시험과 최저 점수, 숙소 및 만 18세 미만 복지 체계, 지원에 필요한 서류를 설정하세요 – 그래서 가족과 에이전트가 지원 전에 귀교의 요건을 이해합니다."
       },
-      "inbox": {
-        "title": "단일 입학 수신함",
-        "description": "모든 지원서의 상태를 추적하세요. 한 번의 클릭으로 합격, 대기, 불합격 처리. 가족과 에이전트가 상태를 즉시 확인합니다."
+      "agents": {
+        "title": "승인 에이전트 및 분석",
+        "description": "어떤 에이전트가 귀교를 대표하도록 승인할지 선택하고, 지원 접수를 열지 닫을지 설정하세요. 대시보드에서 프로필 조회수, 문의 출처, 에이전트 활동을 추적하세요."
       }
     }
   },
   "SchoolsTimeline": {
-    "eyebrow": "입학 여정",
-    "heading": "From first application to first day of term – without the back 'n forth.",
-    "subheading": "국제 입학 전 과정을 한 곳에서.",
+    "eyebrow": "이용 방법",
+    "heading": "SchoolGo는 귀교의 입학 절차 안이 아니라 – 그 앞에 자리합니다.",
+    "subheading": "SchoolGo는 입학 플랫폼이 아니며 기존 절차를 대체하지 않습니다. 가족과 에이전트가 문의하기 전에 귀교의 요건을 이해하도록 도울 뿐입니다 – 그래서 그들이 연락할 때 대화가 알맞은 지점에서 시작됩니다.",
     "steps": {
-      "receive": {
-        "title": "접수",
-        "description": "영어 점수, 서류, 인증 에이전트 정보와 함께 지원서가 수신함에 도착합니다.",
-        "comingSoon": "Coming soon"
+      "find": {
+        "title": "가족이 귀교를 찾습니다",
+        "description": "귀교의 프로필은 학비, 영어 요건, 학년, 숙소, 커리큘럼, 위치로 필터링된 검색에 나타납니다 – 아시아·태평양 전역 7개 언어로 번역되어."
       },
-      "review": {
-        "title": "검토",
-        "description": "팀이 자체 기준에 따라 평가합니다. 메모는 내부 전용으로 유지됩니다.",
-        "comingSoon": "Coming soon"
+      "understand": {
+        "title": "그들이 요건을 미리 이해합니다",
+        "description": "가족과 에이전트는 연락하기 전에 귀교의 인정 영어 시험, 최저 점수, 학비 구조, 숙소 옵션, 복지 체계, 필요 서류를 확인합니다."
       },
-      "decide": {
-        "title": "결정",
-        "description": "한 번의 클릭으로 합격, 대기, 불합격 처리. 상태가 가족과 에이전트에게 즉시 전달됩니다.",
-        "comingSoon": "Coming soon"
+      "connect": {
+        "title": "그들이 귀교의 승인 에이전트와 연결됩니다",
+        "description": "가족이 지원을 결정하면, SchoolGo는 귀교가 승인한 교육 에이전트와 그들을 연결합니다. 어떤 에이전트가 플랫폼에서 귀교를 대표할 수 있는지는 귀교가 관리합니다."
       },
-      "onboard": {
-        "title": "온보딩",
-        "description": "입학 서류, 숙소 정보, 오리엔테이션 링크를 하나의 스레드에서 공유하세요.",
-        "comingSoon": "Coming soon"
+      "apply": {
+        "title": "에이전트가 귀교에 지원서를 제출합니다",
+        "description": "에이전트는 SchoolGo를 사용해 귀교의 요건에 맞는 지원서를 준비하고 제출합니다 – 완비된 서류, 검증된 영어 점수, 명확한 학생 프로필과 함께. 귀교의 팀은 자체 입학 절차로 심사합니다."
       }
     }
   },
   "SchoolsPricing": {
-    "eyebrow": "요금제",
-    "heading": "에이전트 수수료 없음. 커미션 없음. 연간 요금제 하나.",
-    "subheading": "SchoolGo를 지원하는 학교는 하나의 투명한 연간 비용을 납부합니다. 가족과 에이전트는 비용을 내지 않습니다.",
+    "eyebrow": "요금",
+    "heading": "모든 학교에 무료.",
+    "subheading": "귀교의 프로필은 비용 없이 게시되고 유지됩니다 – 등록비, 학생당 비용, 수수료 없음. SchoolGo는 우선 노출과 프로필 홍보처럼 더 높은 가시성을 원하는 학교를 위한 선택형 프리미엄 기능으로 운영됩니다. 핵심 플랫폼은 무료이며 앞으로도 무료로 유지됩니다.",
     "plans": {
       "listing": {
-        "name": "기본 등록",
-        "price": "Free",
-        "priceMeta": "영구 무료",
+        "name": "자동 게시",
+        "price": "무료",
+        "priceMeta": "영구",
         "features": {
-          "a": "CRICOS 프로필 자동 게시",
-          "b": "인정 영어 시험 + 최저 점수",
-          "c": "표준화된 지원 수신함"
+          "a": "공식 정부 데이터에서 자동 게시되는 학교 프로필",
+          "b": "아시아·태평양 전역의 가족과 에이전트에게 노출",
+          "c": "인정 영어 시험과 최저 점수 표시"
         },
-        "cta": "프로필 등록"
+        "cta": "프로필 등록하기"
       },
       "admissions": {
-        "name": "입학 관리",
-        "price": "$12,800",
-        "priceMeta": "AUD / 년",
-        "badge": "가장 인기",
+        "name": "등록 완료",
+        "price": "무료",
+        "priceMeta": "프로필 등록하기",
+        "badge": "추천",
         "features": {
-          "a": "기본 등록의 모든 기능",
-          "b": "합격 / 대기 / 불합격 워크플로",
-          "c": "QEAC 인증 에이전트 디렉토리",
-          "d": "모든 프로필 페이지 7개 언어 번역"
+          "a": "프로필, 사진, 브랜딩에 대한 완전한 통제",
+          "b": "학비 항목, 영어 요건, 숙소 정보를 직접 설정",
+          "c": "에이전트 승인 또는 차단",
+          "d": "프로필 분석 보기 – 조회수, 문의 출처, 에이전트 활동"
         },
-        "cta": "입학 관리 시작"
+        "cta": "프로필 등록하기"
       }
     }
   },
   "SchoolsTestimonial": {
-    "quote": "Finding the right students is hard enough. Processing their applications shouldn't be. A single inbox with complete, verified applications changes everything.",
-    "attribution": "– Composite quote based on admissions officer interviews"
+    "quote": "더 많은 문의가 필요한 것이 아닙니다 – 완전한 정보를 갖춘 알맞은 학생이 필요합니다. 가족이 지원 전에 이미 우리 학비와 영어 요건을 이해하고 있으면, 팀이 누락된 정보를 쫓는 데 쓰는 시간이 훨씬 줄어듭니다.",
+    "attribution": "– 입학 담당자 인터뷰를 바탕으로 재구성한 인용"
   },
   "SchoolsFinalCta": {
     "eyebrow": "여기서 시작하세요",
-    "headingPrefix": "다음 학기 입학이",
-    "headingEmphasis": "시작됩니다",
-    "headingSuffix": "여기서.",
-    "subheading": "무료 등록. 신용카드 불필요. 등록 10분이면 완료.",
-    "ctaPrimary": "학교 프로필 등록",
-    "ctaSecondary": "데모 예약"
+    "headingPrefix": "더 잘 준비된 가족.",
+    "headingEmphasis": "더 깔끔한 지원서.",
+    "headingSuffix": "줄어든 행정 업무.",
+    "subheading": "모든 학교에 무료. 10분 만에 프로필을 등록하세요.",
+    "ctaPrimary": "학교 프로필 등록하기",
+    "ctaSecondary": "안내 미팅 예약하기"
   },
   "Navbar": {
     "brand": "School",
@@ -1895,31 +1981,47 @@
     "errorMessage": "[TODO: ko] Couldn't load your students. Please try again."
   },
   "SchoolsFaq": {
-    "heading": "[TODO: ko] Frequently Asked Questions",
+    "heading": "자주 묻는 질문",
     "items": {
-      "attract": {
-        "question": "How do Australian schools attract more international students?",
-        "answer": "Schools grow their international cohort by being visible to families and agents in the markets they want to reach, and by making it easy to apply once a family is interested. SchoolGo lists every CRICOS-registered school in seven languages, with translated profiles, fees, and English requirements – so families and agents can find and shortlist your school directly."
+      "claim": {
+        "question": "학교 프로필을 어떻게 등록하나요?",
+        "answer": "SchoolGo에서 귀교를 검색한 뒤 “이 프로필 등록하기”를 선택하세요. 교직원으로서 신원을 확인하면 프로필에 대한 완전한 편집 권한을 갖게 됩니다."
       },
-      "verify": {
-        "question": "How do schools verify international students' English test scores?",
-        "answer": "Each English test provider (AEAS, IELTS, PTE, Duolingo, Cambridge, TOEFL) offers an official verification portal where schools can confirm a candidate's score against the original record. SchoolGo automates this – every English score on an application is checked against the official record before it lands in your inbox."
+      "whoCreated": {
+        "question": "제가 등록하지 않았는데 학교 프로필은 누가 만들었나요?",
+        "answer": "자동 게시 프로필은 공개된 정부 데이터(CRICOS 등록부, ACARA)에서 생성됩니다. SchoolGo가 정보를 추가하거나 변경하지 않습니다. 등록하면 완전한 통제 권한을 갖게 됩니다."
       },
-      "agents": {
-        "question": "[TODO: ko] How does SchoolGo work with education agents?",
-        "answer": "[TODO: ko] By default, your profile works with your school's existing agents. You can see which agents have placed students with you, invite new agents, or manage agent relationships from your dashboard."
+      "charge": {
+        "question": "SchoolGo는 학교나 에이전트에게 요금을 부과하나요?",
+        "answer": "아니요. 핵심 플랫폼은 학교, 에이전트, 학부모에게 무료입니다. SchoolGo는 더 높은 가시성을 원하는 학교를 위한 선택형 프리미엄 기능으로 운영됩니다."
       },
-      "documents": {
-        "question": "What documents do schools need for an international student application?",
-        "answer": "Standard documents include the student's passport, last two years of school reports, an English test result, proof of guardianship for younger students, and any additional medical or character documents your school requires. SchoolGo arrives applications complete – passports, transcripts, English scores, and required forms in one packaged record."
+      "verifyAgents": {
+        "question": "SchoolGo에서 에이전트는 어떻게 인증되나요?",
+        "answer": "에이전트는 프로필을 만들고 QEAC 인증을 보유할 수 있습니다. 다만 어떤 에이전트가 귀교를 대표하도록 승인할지는 – 인증 여부와 관계없이 – 귀교가 관리합니다."
       },
-      "cost": {
-        "question": "How much does it cost to list on SchoolGo?",
-        "answer": "Nothing. SchoolGo is free for every school – no listing fees, no per-student fees, no commissions. Your profile auto-publishes from official government data, and claiming it unlocks full editing, applications, and analytics at no cost."
+      "interfere": {
+        "question": "SchoolGo가 기존 에이전트 관계에 개입하나요?",
+        "answer": "아니요. 기존 계약, 수수료 구조, 에이전트 네트워크에는 영향을 주지 않습니다. SchoolGo는 에이전트를 재배정하거나 귀교의 에이전트 목록을 공유하지 않습니다."
       },
-      "diversify": {
-        "question": "How do schools diversify their international student intake beyond China?",
-        "answer": "Diversification starts with visibility in the markets you want to grow – Vietnam, Korea, Indonesia, Malaysia, Thailand, and beyond. SchoolGo translates your profile into seven languages and surfaces it to families and agents across the Asia-Pacific, so you can build a balanced cohort across multiple source countries."
+      "beforeClaim": {
+        "question": "등록 전에 우리 학교에 대해 어떤 정보가 표시되나요?",
+        "answer": "정부 등록부의 공개 데이터만 표시됩니다: 학교명, 위치, 부문, CRICOS 상태, 커리큘럼, 기본 학비 범위. 귀교가 등록하고 추가하기 전까지는 편집 콘텐츠, 사진, 상세 요건이 표시되지 않습니다."
+      },
+      "studentData": {
+        "question": "SchoolGo는 학생 정보를 어떻게 보호하나요?",
+        "answer": "학생 데이터는 가족, 가족이 선택한 에이전트, 학교 사이에서만 공유됩니다. 다른 학교나 다른 에이전트와 공유되거나 공개되지 않습니다."
+      },
+      "replaceAdmissions": {
+        "question": "SchoolGo가 우리 입학 절차를 대체하게 되나요?",
+        "answer": "아니요. SchoolGo는 귀교의 입학 절차 앞에 자리합니다. 가족이 귀교의 요건을 이해하고 귀교의 승인 에이전트와 연결되도록 돕습니다. 지원서는 에이전트를 통해 귀교에 제출되며, 귀교의 팀은 자체 절차로 심사합니다."
+      },
+      "openClosed": {
+        "question": "지원 접수를 열거나 닫을지 직접 관리할 수 있나요?",
+        "answer": "네. 입학 상태와 지원 마감일을 설정할 수 있습니다. 지원이 마감되면 가족과 에이전트는 여전히 프로필을 볼 수 있지만, 현재 입학 접수가 열려 있지 않다는 것을 확인하게 됩니다."
+      },
+      "capacity": {
+        "question": "SchoolGo는 시장 균형과 기숙 정원을 어떻게 처리하나요?",
+        "answer": "표시되는 내용은 귀교가 관리합니다. 기숙 자리가 한정적이거나 출신 시장별 코호트 균형을 조정하고 있다면, 언제든지 정원과 입학 정보를 업데이트할 수 있습니다."
       }
     }
   },
@@ -6026,40 +6128,44 @@
     "customSectionVisible": "Visible"
   },
   "ParentsAgentCta": {
-    "eyebrow": "Start with an agent",
-    "headingPrefix": "Find your",
-    "headingEmphasis": "education agent",
-    "headingSuffix": "and let the experts guide you",
-    "subheading": "A trusted local agent matches your child to the right school, handles the paperwork, and supports your family every step of the way — free for parents.",
-    "searchPlaceholder": "Where are you moving? e.g. Sydney, Melbourne",
-    "searchAriaLabel": "Find an education agent",
-    "ctaPrimary": "Find an agent",
-    "ctaSecondary": "Browse all agents",
-    "reassurance": "100% free for families · Verified, QEAC-qualified agents"
+    "eyebrow": "에이전트와 시작하기",
+    "headingPrefix": "전문가의 도움을 받으세요 –",
+    "headingEmphasis": "무료로",
+    "headingSuffix": ".",
+    "subheading": "어디서부터 시작해야 할지 모르시겠나요? SchoolGo는 자신이 대표하는 학교의 승인을 받은 교육 컨설턴트와 가족을 연결합니다. 그들은 입학 절차와 비자 요건을 잘 알고 있으며, 학교 선택부터 지원서 제출까지 안내해 드립니다 – 비용 부담 없이.",
+    "searchPlaceholder": "어디로 이주하시나요? 예: Sydney, Melbourne",
+    "searchAriaLabel": "교육 에이전트 찾기",
+    "ctaPrimary": "에이전트 찾기",
+    "ctaSecondary": "모든 에이전트 둘러보기",
+    "reassurance": "가족에게 100% 무료 · 인증된 학교 승인 에이전트"
   },
   "ParentsAgentHelp": {
-    "eyebrow": "Why go through an agent",
-    "heading": "How an agent helps your family",
-    "subheading": "Agents do the heavy lifting so you can focus on your child. Here is what a good education agent takes off your plate.",
+    "eyebrow": "에이전트를 통해야 하는 이유",
+    "heading": "에이전트가 우리 가족을 돕는 방법",
+    "subheading": "에이전트가 어려운 일을 도맡아, 가족은 자녀에게 집중할 수 있습니다. 학교 승인 교육 에이전트가 대신 처리해 주는 일은 다음과 같습니다.",
     "benefits": {
       "free": {
-        "title": "Free for families",
-        "description": "Agents are paid by schools, never by you. Expert guidance comes at no cost to your family."
+        "title": "가족에게 무료",
+        "description": "에이전트는 학교로부터 비용을 받으며, 가족에게는 절대 받지 않습니다. 전문가의 안내를 가족 부담 없이 받으세요."
       },
       "matching": {
-        "title": "Expert school matching",
-        "description": "They know the schools, the suburbs and the curricula — and match your child to the right fit, not just the first option."
+        "title": "전문적인 학교 매칭",
+        "description": "에이전트는 학교, 지역, 커리큘럼을 잘 알고 있으며 – 단순히 첫 번째 선택지가 아니라, 자녀에게 진짜 맞는 학교를 찾아줍니다."
       },
       "applications": {
-        "title": "Application & visa guidance",
-        "description": "From enrolment forms to student visa requirements, your agent prepares and checks the paperwork with you."
+        "title": "지원 및 비자 안내",
+        "description": "등록 양식부터 학생 비자 요건까지, 에이전트가 함께 서류를 준비하고 확인합니다."
       },
       "welfare": {
-        "title": "Under-18 welfare support",
-        "description": "Need a guardian or homestay for a younger student? Agents arrange compliant welfare and accommodation."
+        "title": "만 18세 미만 복지 지원",
+        "description": "어린 학생을 위한 보호자나 홈스테이가 필요하신가요? 에이전트가 규정에 맞는 복지와 숙소를 마련해 드립니다."
       }
     },
-    "ctaPrimary": "Find an agent"
+    "selection": {
+      "title": "SchoolGo는 어떻게 에이전트를 선정하나요?",
+      "body": "SchoolGo의 모든 에이전트는 함께 일하는 학교로부터 인증받고 승인받았습니다. SchoolGo는 에이전트를 무작위로 배정하지 않으며 – 가족이 에이전트의 경력, 구사 언어, 대표하는 학교를 바탕으로 누구와 연결할지 직접 선택합니다."
+    },
+    "ctaPrimary": "에이전트 찾기"
   },
   "UnifiedSearch": {
     "filters": {
@@ -6848,5 +6954,91 @@
       "delivered": "Delivered",
       "cancelled": "Cancelled"
     }
+  },
+  "ParentsFees": {
+    "eyebrow": "학비",
+    "heading": "학비만이 아닌 – 실제 비용을 이해하세요.",
+    "body": "학비는 전체의 일부일 뿐입니다. 학부모는 예상치 못한 추가 비용에 놀라는 경우가 많습니다. SchoolGo는 전체 항목을 보여드려 나중에 놀랄 일이 없도록 합니다.",
+    "items": {
+      "tuition": "학비",
+      "accommodation": "기숙 또는 홈스테이 비용",
+      "enrolment": "등록비 및 지원비",
+      "health": "건강보험(OSHC)",
+      "uniforms": "교복, 교재, 노트북",
+      "excursions": "현장 학습 및 활동",
+      "guardian": "보호자 지정(필요한 경우)",
+      "airport": "공항 픽업",
+      "refund": "비자 거절 시 환불 조건"
+    },
+    "cta": "전체 학비 가이드 읽기"
+  },
+  "ParentsAccommodationWelfare": {
+    "eyebrow": "숙소 및 복지",
+    "heading": "자녀는 어디서 지내고 – 누가 돌볼까요?",
+    "body": "자녀를 해외로 보내는 가족에게 숙소와 복지는 같은 질문입니다. SchoolGo는 선택지와 각 학교가 제공하는 지원을 이해하도록 돕습니다.",
+    "accommodation": {
+      "boarding": {
+        "title": "기숙",
+        "description": "체계적인 관리, 식사, 활동과 함께 캠퍼스에서 생활합니다."
+      },
+      "homestay": {
+        "title": "홈스테이",
+        "description": "학교가 승인한 현지 가정에서 생활합니다."
+      },
+      "family": {
+        "title": "친지 거주",
+        "description": "이미 호주에 거주 중인 친척과 함께 지냅니다."
+      },
+      "guardians": {
+        "title": "학교 승인 보호자",
+        "description": "호주에 가족이 없는 만 18세 미만 학생을 위한 제도입니다."
+      }
+    },
+    "welfareHeading": "복지 및 지원 정보",
+    "welfare": {
+      "responsibleUnder18": "자녀가 만 18세 미만일 경우 누가 책임을 지나요?",
+      "sickOrHomesick": "자녀가 아프거나, 향수병을 앓거나, 문제가 생기면 어떻게 되나요?",
+      "contactPerson": "학부모를 위한 연락 담당자는 누구인가요?",
+      "communication": "학교는 해외에 있는 학부모와 어떻게 소통하나요?",
+      "sameCountryPeers": "자녀의 모국 출신 학생들이 있나요?",
+      "adjustmentSupport": "자녀가 적응에 어려움을 겪을 경우 어떤 지원이 가능한가요?"
+    }
+  },
+  "SchoolsApplicationQuality": {
+    "eyebrow": "지원서 품질",
+    "heading": "더 많은 학생이 아니라, 알맞은 학생.",
+    "subheading": "학교에 필요한 것은 불완전한 문의가 늘어나는 것이 아닙니다. SchoolGo는 가족과 에이전트가 지원 전에 귀교의 요건을 확실히 이해하도록 함으로써, 입학팀에 도달하는 지원의 품질을 높입니다.",
+    "items": {
+      "english": {
+        "title": "영어 요건이 미리 공개됩니다",
+        "description": "가족과 에이전트는 문의 전에 학년별 인정 시험과 최저 점수를 확인할 수 있습니다. 기준에 미치지 못하는 학생은 대신 영어 준비 과정이 있는 학교를 볼 수 있습니다."
+      },
+      "costs": {
+        "title": "총비용이 투명합니다",
+        "description": "가족은 에이전트와 연결되기 전에 학비, 기숙, 지원비, 필수 비용을 확인합니다. 예상치 못한 비용으로 대화가 멈추는 경우가 줄어듭니다."
+      },
+      "accommodation": {
+        "title": "숙소와 복지가 명확합니다",
+        "description": "학부모는 지원 전에 기숙, 홈스테이, 보호자 체계를 이해합니다. 기숙에 특정 연령 요건이 있는 학교는 이를 표시할 수 있습니다."
+      },
+      "agents": {
+        "title": "에이전트가 인증됩니다",
+        "description": "어떤 에이전트가 귀교를 대표할 수 있는지 귀교가 승인합니다. 모든 문의에 에이전트 귀속이 표시됩니다."
+      }
+    }
+  },
+  "SchoolsAgentRelationships": {
+    "eyebrow": "에이전트 관계",
+    "heading": "귀교의 에이전트. 귀교의 승인. 귀교의 관계.",
+    "subheading": "SchoolGo는 귀교에 에이전트를 배정하거나 기존 에이전트 관계에 개입하지 않습니다. 어떤 에이전트가 귀교를 대표하도록 승인할지는 귀교가 결정합니다. 이미 협력 중인 에이전트는 즉시 인증할 수 있고, 새 에이전트는 프로필을 통해 승인을 요청할 수 있습니다.",
+    "bullets": {
+      "approve": "에이전트 요청을 귀교가 승인하거나 거절합니다.",
+      "connect": "승인된 에이전트만 SchoolGo를 통해 가족을 귀교와 연결할 수 있습니다.",
+      "agreements": "기존 에이전트 계약과 수수료 구조에는 영향을 주지 않습니다.",
+      "performance": "에이전트 성과 – 응답 속도와 지원서 완성도 – 를 귀교가 확인할 수 있습니다.",
+      "remove": "언제든지 에이전트의 승인을 철회할 수 있습니다."
+    },
+    "cardTitle": "모든 에이전트를 귀교가 승인합니다.",
+    "cardBody": "SchoolGo는 에이전트를 재배정하거나 귀교의 에이전트 목록을 공유하지 않습니다. 귀교의 관계는 그대로 귀교의 것입니다."
   }
 }

@@ -24,9 +24,9 @@
     }
   },
   "ParentsMetadata": {
-    "title": "SchoolGo – Tìm trường Úc cho con bạn",
-    "description": "Tìm kiếm mọi trường học Úc đăng ký CRICOS. So sánh học phí, yêu cầu thi tiếng Anh và kỳ tuyển sinh – bằng bảy ngôn ngữ, miễn phí.",
-    "ogDescription": "Mọi trường CRICOS. Đã xác minh. Bằng ngôn ngữ của bạn."
+    "title": "SchoolGo – Chọn đúng trường học Úc một cách tự tin",
+    "description": "Tìm kiếm và so sánh mọi trường học Úc đã đăng ký – học phí, chỗ ở, yêu cầu tiếng Anh và hỗ trợ học sinh – bằng ngôn ngữ của bạn. Miễn phí, không cần đăng nhập.",
+    "ogDescription": "Chọn đúng trường cho con bạn – một cách tự tin. Miễn phí, bằng ngôn ngữ của bạn."
   },
   "MarketingHeader": {
     "findSchools": "Tìm trường",
@@ -204,19 +204,19 @@
       "brandAccent": "Đã đăng ký",
       "source": "dữ liệu từ data.gov.au"
     },
-    "headlinePrefix": "Tìm trường",
-    "headlineEmphasis": "Úc",
-    "headlineSuffix": "cho con bạn.",
-    "lede": "Mọi trường K–12 đăng ký CRICOS tại một nơi. So sánh học phí, nội trú, thi tiếng Anh – tìm kiếm bằng tiếng Trung, Hàn, Thái, Việt, Mã Lai, Bahasa hoặc tiếng Anh.",
+    "headlinePrefix": "Chọn đúng trường cho",
+    "headlineEmphasis": "con bạn",
+    "headlineSuffix": "– một cách tự tin.",
+    "lede": "Chọn đúng trường có thể định hình sự tự tin, sức khỏe tinh thần, lựa chọn đại học và cơ hội tương lai của con bạn. Tìm kiếm mọi trường học Úc đã đăng ký, so sánh học phí, chỗ ở, yêu cầu tiếng Anh và hỗ trợ học sinh – bằng ngôn ngữ của bạn.",
     "searchAriaLabel": "Tìm kiếm trường học",
     "searchFields": {
       "where": {
-        "label": "Nơi",
-        "value": "Bất kỳ nơi nào tại Úc"
+        "label": "Ở đâu",
+        "value": "Bất kỳ đâu tại Úc"
       },
       "yearLevel": {
-        "label": "Năm học",
-        "value": "Year 7 – Year 12"
+        "label": "Khối lớp",
+        "value": "Lớp 7 – Lớp 12"
       },
       "fees": {
         "label": "Học phí",
@@ -227,15 +227,15 @@
     "searchClearLabel": "Xóa tìm kiếm",
     "featured": {
       "eyebrow": "Nổi bật",
-      "shortlistAdd": "Thêm {name} vào danh sách chọn",
-      "shortlistRemove": "Xóa {name} khỏi danh sách chọn",
+      "shortlistAdd": "Thêm {name} vào danh sách rút gọn",
+      "shortlistRemove": "Xóa {name} khỏi danh sách rút gọn",
       "cards": {
         "a": {
           "name": "Sydney Grammar School",
           "location": "Darlinghurst, NSW",
           "curriculum": "HSC",
           "fee": "$41.2k AUD",
-          "boarding": "Day only",
+          "boarding": "Chỉ ngoại trú",
           "rating": "4.8"
         },
         "b": {
@@ -243,7 +243,7 @@
           "location": "Melbourne, VIC",
           "curriculum": "VCE/IB",
           "fee": "$42.5k AUD",
-          "boarding": "Boarding",
+          "boarding": "Nội trú",
           "rating": "4.8"
         },
         "c": {
@@ -258,73 +258,73 @@
     }
   },
   "ParentsStatsBar": {
-    "eyebrow": "Con số nổi bật",
-    "heading": "Danh bạ trường CRICOS lớn nhất Úc.",
-    "subheading": "Mọi trường đã đăng ký, được xác minh và có thể tìm kiếm – từ công lập đến tư thục, trên toàn bộ tám bang và vùng lãnh thổ.",
+    "eyebrow": "Những con số",
+    "heading": "Mọi trường đã đăng ký dành cho học sinh quốc tế. Tại một nơi.",
+    "subheading": "Tìm kiếm, lọc và so sánh mọi trường học Úc đã đăng ký – học phí, chỗ ở, yêu cầu tiếng Anh và hỗ trợ học sinh – tất cả tại một nơi, bằng ngôn ngữ của bạn.",
     "items": {
       "schools": {
         "value": "{count, number}+",
-        "label": "CRICOS Schools"
+        "label": "Trường đã đăng ký"
       },
       "states": {
         "value": "8",
-        "label": "States & Territories"
+        "label": "Bang & Vùng lãnh thổ"
       },
       "sectors": {
-        "value": "All 3 Sectors",
-        "label": "Government · Independent · Catholic"
+        "value": "Cả 3 loại hình",
+        "label": "Công lập · Độc lập · Công giáo"
       },
       "fees": {
         "value": "$3.5k – $78k",
-        "label": "Annual Fee Range"
+        "label": "Khoảng học phí hằng năm"
       }
     }
   },
   "ParentsFourSteps": {
-    "eyebrow": "Cách thức hoạt động",
-    "heading": "Từ lần duyệt đầu tiên đến thư mời nhập học – bốn bước đơn giản.",
-    "subheading": "Không phí ẩn. Không cần đăng nhập cho đến khi nộp đơn.",
+    "eyebrow": "Cách hoạt động",
+    "heading": "Từ lần tìm kiếm đầu tiên đến quyết định tự tin – bốn bước đơn giản.",
+    "subheading": "Minh bạch ở mọi giai đoạn. Không phí ẩn. Không cần đăng nhập cho đến khi bạn nộp hồ sơ.",
     "steps": {
       "browse": {
-        "title": "Duyệt mọi trường CRICOS",
-        "description": "Lọc {count, number} trường theo bang, học phí, loại hình, chương trình, nội trú và học bổng – bằng ngôn ngữ của bạn."
+        "title": "Duyệt mọi trường đã đăng ký",
+        "description": "Lọc hơn {count, number} trường theo bang, học phí, chương trình, nội trú, homestay, bài thi tiếng Anh, hỗ trợ phúc lợi và học bổng – bằng tiếng Trung, Hàn, Thái, Việt, Mã Lai, Bahasa hoặc tiếng Anh."
       },
       "shortlist": {
-        "title": "Chọn bốn trường. So sánh song song",
-        "description": "Đặt học phí, kỳ tuyển sinh, ICSEA và bài thi tiếng Anh được chấp nhận cạnh nhau. Quyết định trong vài phút, không phải vài tháng."
+        "title": "So sánh các trường cạnh nhau",
+        "description": "Xem học phí, chỗ ở, hỗ trợ tiếng Anh, phúc lợi học sinh và yêu cầu tuyển sinh đặt cạnh nhau – để bạn nhận ra sự phù hợp đúng đắn, chứ không chỉ là thứ hạng cao."
       },
       "prepare": {
-        "title": "Xem yêu cầu chính xác",
-        "description": "Mỗi hồ sơ trường đều hiển thị bài thi được chấp nhận, điểm tối thiểu, tài liệu và thời gian tuyển sinh."
+        "title": "Hiểu bức tranh toàn cảnh",
+        "description": "Xem tổng chi phí (không chỉ học phí), các lựa chọn chỗ ở, sắp xếp phúc lợi, chương trình hỗ trợ tiếng Anh, và điều gì sẽ xảy ra nếu con bạn cần giúp đỡ."
       },
       "apply": {
-        "title": "Nộp đơn qua tư vấn đã xác minh",
-        "description": "Tư vấn của bạn có huy hiệu QEAC. Hồ sơ được theo dõi từ đầu đến cuối trên một bảng điều khiển.",
-        "comingSoon": "Coming soon"
+        "title": "Kết nối với một tư vấn đáng tin cậy",
+        "description": "SchoolGo kết nối bạn với những tư vấn giáo dục được trường phê duyệt, am hiểu quy trình tuyển sinh – để bạn nhận được hướng dẫn từ chuyên gia mà không tốn chi phí.",
+        "comingSoon": "Sắp ra mắt"
       }
     },
     "ctaBrowse": "Bắt đầu duyệt",
     "ctaLearn": "Xem cách hoạt động",
     "badge": {
-      "cricosVerified": "CRICOS Verified · Claimed by school",
-      "updated": "Updated April 2026"
+      "cricosVerified": "Đăng ký với Chính phủ · Được trường xác nhận",
+      "updated": "Cập nhật tháng 4 năm 2026"
     },
     "visuals": {
       "browse": {
-        "title": "[TODO: vi] 695 schools loaded",
-        "subtitle": "[TODO: vi] Filtered by state, fees & curriculum"
+        "title": "Đã tải 695 trường",
+        "subtitle": "Lọc theo bang, học phí & chương trình"
       },
       "shortlist": {
-        "title": "[TODO: vi] Wei's shortlist",
-        "subtitle": "[TODO: vi] 3 schools in Victoria · All accept AEAS"
+        "title": "Danh sách rút gọn của Wei",
+        "subtitle": "3 trường ở Victoria · Đều chấp nhận AEAS"
       },
       "prepare": {
-        "title": "[TODO: vi] Requirements matched",
-        "subtitle": "[TODO: vi] AEAS 70+ · IELTS 5.5+ · Documents ready"
+        "title": "Yêu cầu đã khớp",
+        "subtitle": "AEAS 70+ · IELTS 5.5+ · Giấy tờ sẵn sàng"
       },
       "apply": {
-        "title": "[TODO: vi] Application submitted",
-        "subtitle": "[TODO: vi] Tracked end-to-end · Status: Under review"
+        "title": "Đã nộp hồ sơ",
+        "subtitle": "Theo dõi toàn trình · Trạng thái: Đang xét duyệt"
       }
     }
   },
@@ -356,78 +356,90 @@
     }
   },
   "ParentsAgents": {
-    "eyebrow": "[TODO: vi] Get expert help",
-    "heading": "[TODO: vi] Meet your verified education agents.",
-    "subheading": "[TODO: vi] Every family is matched with a specialist education consultant who knows the admissions process inside out. Browse QEAC-verified agents and find the right one to guide you – from choosing a school to submitting your application, at no cost to you.",
-    "verifiedLabel": "[TODO: vi] QEAC verified",
-    "partnerSchools": "[TODO: vi] {count, plural, one {# partner school} other {# partner schools}}",
-    "empty": "[TODO: vi] Verified agents are coming soon. Check back shortly.",
-    "viewAll": "[TODO: vi] Find an agent",
-    "browseAll": "Browse all agents"
+    "eyebrow": "Nhận trợ giúp từ chuyên gia",
+    "heading": "Gặp gỡ các tư vấn giáo dục đã được xác minh của bạn.",
+    "subheading": "Mọi tư vấn trên SchoolGo đều được chính các trường họ đại diện phê duyệt. Bạn chọn ai để kết nối dựa trên kinh nghiệm, ngôn ngữ họ sử dụng và các trường họ hợp tác – rồi họ đồng hành cùng bạn từ khâu chọn trường đến nộp hồ sơ, mà không tốn chi phí.",
+    "verifiedLabel": "Đã xác minh",
+    "partnerSchools": "{count, plural, other {# trường đối tác}}",
+    "empty": "Các tư vấn đã xác minh sắp ra mắt. Vui lòng quay lại sau ít lâu.",
+    "viewAll": "Tìm một tư vấn",
+    "browseAll": "Duyệt tất cả tư vấn"
   },
   "ParentsComparison": {
     "compareLabel": "So sánh",
-    "eyebrow": "So sánh",
-    "heading": "Put three schools next to each other.",
-    "headingAccent": "Quyết định trong vài phút, không phải vài tháng.",
-    "shortlistLabel": "[TODO: vi] Shortlist · {count} schools",
+    "eyebrow": "So sánh cạnh nhau",
+    "heading": "Đặt các trường cạnh nhau.",
+    "headingAccent": "Thấy những khác biệt quan trọng.",
+    "shortlistLabel": "Danh sách rút gọn · {count} trường",
     "columns": {
-      "fee": "Học phí hàng năm",
-      "stateSector": "[TODO: vi] State & sector",
-      "curriculum": "[TODO: vi] Curriculum",
-      "boarding": "[TODO: vi] Boarding",
-      "tests": "Bài thi được chấp nhận",
-      "minScore": "[TODO: vi] Min. AEAS score",
-      "scholarships": "[TODO: vi] Scholarships",
-      "intakes": "Kỳ tuyển sinh"
+      "fee": "Học phí hằng năm (quốc tế)",
+      "totalCost": "Tổng chi phí ước tính",
+      "accommodation": "Lựa chọn chỗ ở",
+      "welfare": "Hỗ trợ phúc lợi & giám hộ",
+      "englishSupport": "Chương trình hỗ trợ tiếng Anh",
+      "tests": "Bài thi tiếng Anh được chấp nhận",
+      "minScore": "Điểm tiếng Anh tối thiểu",
+      "scholarships": "Học bổng",
+      "intakes": "Kỳ tuyển sinh",
+      "parentComms": "Liên lạc với phụ huynh"
     },
-    "notPublished": "Chưa công bố",
-    "dayOnly": "[TODO: vi] – Day only",
-    "noneIntl": "[TODO: vi] – None intl."
+    "estimatedFrom": "Từ {amount}",
+    "accommodationBoarding": "Nội trú · Homestay",
+    "accommodationDay": "Homestay · Người thân",
+    "welfareValue": "Giám hộ dưới 18 · Thẩm định homestay",
+    "englishSupportValue": "Hỗ trợ ELICOS / EAL",
+    "parentCommsValue": "Báo cáo theo học kỳ · Cổng phụ huynh",
+    "notPublished": "–",
+    "dayOnly": "– Chỉ ngoại trú",
+    "noneIntl": "– Không có cho quốc tế"
   },
   "ParentsPickATest": {
-    "eyebrow": "Năng lực tiếng Anh",
-    "heading": "Find out which English test the school requires –",
-    "headingAccent": "and the score your child needs to get in.",
-    "subheading": "Chúng tôi tổng hợp bài thi tiếng Anh được chấp nhận trên mọi hồ sơ trường. Không còn phải lướt qua 50 website trường.",
+    "eyebrow": "Trình độ tiếng Anh",
+    "heading": "Tìm hiểu con bạn cần bài thi tiếng Anh nào –",
+    "headingAccent": "và có những hỗ trợ gì.",
+    "subheading": "Mỗi trường chấp nhận các bài thi tiếng Anh khác nhau ở những mức điểm khác nhau. Chúng tôi tổng hợp tất cả – để bạn thấy ngay trường nào phù hợp với điểm số của con. Nếu tiếng Anh của con chưa đủ tốt, nhiều trường có chương trình hỗ trợ ngôn ngữ tiếng Anh hoặc lộ trình dự bị.",
     "tests": {
       "aeas": {
         "name": "AEAS",
         "fullName": "Australian Education Assessment Services",
-        "description": "Most commonly accepted by Australian independent schools"
+        "description": "Được các trường độc lập tại Úc chấp nhận phổ biến nhất"
       },
       "idat": {
         "name": "iDAT",
         "fullName": "International Digital Admissions Test",
-        "description": "Growing in popularity for K–12 admissions"
+        "description": "Ngày càng phổ biến cho tuyển sinh K–12"
       },
       "duolingo": {
         "name": "Duolingo",
         "fullName": "Duolingo English Test",
-        "description": "Accepted by an increasing number of schools"
+        "description": "Được ngày càng nhiều trường chấp nhận"
       },
       "ielts": {
         "name": "IELTS",
         "fullName": "International English Language Testing System",
-        "description": "Standard for senior secondary entry (Year 11+)"
+        "description": "Tiêu chuẩn cho tuyển sinh trung học phổ thông (từ Lớp 11)"
       },
       "pte": {
         "name": "PTE Academic",
         "fullName": "Pearson Test of English Academic",
-        "description": "Accepted by some schools for Year 11–12 entry"
+        "description": "Được một số trường chấp nhận cho tuyển sinh Lớp 11–12"
       },
       "cambridge": {
         "name": "Cambridge",
         "fullName": "Cambridge English Qualifications",
-        "description": "Accepted by select schools"
+        "description": "Được một số trường chấp nhận"
       },
       "toefl": {
         "name": "TOEFL",
         "fullName": "Test of English as a Foreign Language",
-        "description": "Accepted by select schools for senior entry"
+        "description": "Được một số trường chấp nhận cho tuyển sinh bậc cao"
       }
     },
-    "cta": "Check your school's English requirements"
+    "reassurance": {
+      "title": "Chưa chắc tiếng Anh của con bạn đã sẵn sàng?",
+      "body": "Nhiều trường chấp nhận những học sinh vẫn đang phát triển tiếng Anh và cung cấp hỗ trợ chuyên sâu. Hãy dùng bộ lọc của chúng tôi để tìm các trường có chương trình dự bị tiếng Anh."
+    },
+    "cta": "Kiểm tra yêu cầu tiếng Anh của trường bạn"
   },
   "ParentsSevenLanguages": {
     "eyebrow": "Bảy ngôn ngữ",
@@ -445,137 +457,191 @@
   },
   "ParentsArticles": {
     "eyebrow": "Thư viện tuyển sinh",
-    "heading": "Do nhân viên tuyển sinh viết. Dịch sang bảy ngôn ngữ.",
-    "subheading": "Hướng dẫn đơn giản về visa, kỳ tuyển sinh, thi tiếng Anh và học phí. Miễn phí, không cần đăng nhập.",
+    "heading": "Những hướng dẫn giải đáp các câu hỏi mà mọi gia đình đều hỏi.",
+    "subheading": "Tổng chi phí, sắp xếp phúc lợi và giám hộ, kỳ tuyển sinh, bài thi tiếng Anh, chỗ ở, giấy tờ cần thiết – những hướng dẫn dễ hiểu được viết bởi các cán bộ tuyển sinh. Miễn phí, không cần đăng nhập.",
     "items": {
       "intakes": {
-        "title": "Hiểu kỳ tuyển sinh của các trường Úc",
-        "meta": "6 phút đọc · Cập nhật hàng tháng"
+        "title": "Hiểu về các kỳ tuyển sinh của trường học Úc",
+        "meta": "Đọc 6 phút · Cập nhật hằng tháng"
       },
       "englishTests": {
-        "title": "Trường bạn chấp nhận bài thi tiếng Anh nào?",
-        "meta": "8 phút đọc · Phân tích từng bài thi"
+        "title": "Trường của bạn chấp nhận bài thi tiếng Anh nào?",
+        "meta": "Đọc 8 phút · Phân tích từng bài thi"
       },
       "boarding": {
-        "title": "Nội trú hay ngoại trú: lựa chọn của gia đình và lý do",
-        "meta": "5 phút đọc · Các trường hợp thực tế"
+        "title": "Nội trú hay ngoại trú: các gia đình chọn gì và vì sao",
+        "meta": "Đọc 5 phút · Tình huống thực tế"
       }
     },
     "readMore": "Đọc bài viết"
   },
   "ParentsTrustBar": {
     "eyebrow": "Tin cậy & tuân thủ",
-    "heading": "Data you can trust – so you know you're looking at legitimate institutions and accurate information.",
-    "subheading": "Mọi thông tin trường trên SchoolGo đều được hỗ trợ bởi các nguồn dữ liệu chính phủ chính thức – đã xác minh, được cấp phép và cập nhật hàng tháng.",
+    "heading": "Dữ liệu bạn có thể tin cậy – và sự minh bạch về cách SchoolGo hoạt động.",
+    "subheading": "Mọi trường được liệt kê đều được xác minh với các cơ quan đăng ký chính thức của Chính phủ Úc, và chúng tôi nói thẳng về chính xác những gì SchoolGo làm – và không làm.",
     "items": {
       "cricos": {
-        "label": "Trường đăng ký với chính phủ",
-        "description": "Mọi thông tin trường đều được đối chiếu với Sổ đăng ký Liên bang chính thức."
+        "label": "Trường đăng ký với Chính phủ",
+        "description": "Mọi trường trên SchoolGo đều được Chính phủ Úc cấp phép tuyển sinh học sinh quốc tế."
       },
       "datagov": {
-        "label": "Luôn cập nhật",
-        "description": "Dữ liệu mở được cấp phép theo CC BY 2.5 AU – minh bạch và có thể kiểm tra công khai."
+        "label": "Luôn được cập nhật",
+        "description": "Dữ liệu trường học được làm mới thường xuyên từ các cơ quan đăng ký chính thức của chính phủ – nên những gì bạn thấy là mới nhất."
       },
       "acara": {
         "label": "Dữ liệu chương trình quốc gia",
-        "description": "Chương trình học, điểm ICSEA và dữ liệu tuyển sinh lấy từ cơ quan quốc gia."
+        "description": "Dữ liệu về chương trình học, kết quả của trường và số liệu tuyển sinh lấy từ cơ quan giáo dục quốc gia của Úc."
       },
       "esos": {
         "label": "Bảo vệ học sinh",
-        "description": "SchoolGo hoạt động trong khuôn khổ Đạo luật Dịch vụ Giáo dục cho Học sinh Nước ngoài của Úc."
+        "description": "Mọi trường được liệt kê đều hoạt động theo khung pháp lý của Úc về bảo vệ học sinh quốc tế."
       }
     },
-    "attribution": "Dữ liệu trường lấy từ Sổ đăng ký Liên bang về Cơ sở và Khóa học cho Học sinh Nước ngoài (CRICOS) và Cơ quan Chương trình, Đánh giá và Báo cáo Úc (ACARA). Cập nhật tháng 4 năm 2026."
+    "attribution": "Dữ liệu trường học lấy từ các cơ quan đăng ký chính thức của Chính phủ Úc và cơ quan chương trình quốc gia (ACARA). Cập nhật tháng 4 năm 2026.",
+    "about": {
+      "heading": "SchoolGo là gì?",
+      "intro": "SchoolGo kết nối các gia đình với đúng trường và đúng tư vấn. Đây là một nền tảng miễn phí nơi phụ huynh có thể:",
+      "points": {
+        "search": "Tìm kiếm và so sánh mọi trường đã đăng ký tại một nơi",
+        "understand": "Hiểu học phí, yêu cầu và các lựa chọn hỗ trợ",
+        "connect": "Kết nối với một tư vấn giáo dục được trường phê duyệt khi họ sẵn sàng nộp hồ sơ"
+      },
+      "closing": "Tư vấn xử lý hồ sơ và hướng dẫn bạn qua từng bước. Các trường phê duyệt tư vấn nào được đại diện cho họ – nên bạn biết mình đang làm việc với người mà trường tin tưởng. Không ai liên hệ với bạn trừ khi bạn chủ động chọn kết nối."
+    }
   },
   "ParentsFaq": {
-    "heading": "Frequently Asked Questions",
+    "heading": "Câu hỏi thường gặp",
     "items": {
       "enrol": {
-        "question": "How do I enrol my child in an Australian school from overseas?",
-        "answer": "Start by shortlisting schools that fit your child's year level, location, and budget on SchoolGo. Each school's profile shows the documents, English test scores, and intake dates you'll need to apply. Once you've chosen a school, an education agent or the school's admissions office will guide you through the application and student visa process."
+        "question": "Làm sao để ghi danh cho con vào một trường học Úc từ nước ngoài?",
+        "answer": "Hãy bắt đầu bằng cách lập danh sách rút gọn những trường phù hợp với khối lớp, địa điểm và ngân sách của con bạn trên SchoolGo. Hồ sơ của mỗi trường cho thấy giấy tờ, điểm thi tiếng Anh và các kỳ tuyển sinh bạn cần để nộp hồ sơ. Sau khi đã chọn được trường, một tư vấn giáo dục hoặc bộ phận tuyển sinh của trường sẽ hướng dẫn bạn qua quy trình nộp hồ sơ và xin visa du học."
       },
       "cost": {
-        "question": "How much does it cost to send my child to school in Australia?",
-        "answer": "International student tuition typically ranges from about A$15,000 to A$45,000 per year, depending on the school, year level, and sector. On top of tuition, plan for application fees, uniforms, technology, boarding (if applicable), and Overseas Student Health Cover. Every SchoolGo profile shows the school's published international fees so you can compare like-for-like."
+        "question": "Chi phí cho con đi học tại Úc là bao nhiêu?",
+        "answer": "Học phí cho học sinh quốc tế thường dao động từ khoảng 15.000 đến 45.000 đô la Úc mỗi năm, tùy theo trường, khối lớp và loại hình. Ngoài học phí, hãy dự trù phí nộp hồ sơ, đồng phục, thiết bị công nghệ, nội trú (nếu có) và Bảo hiểm Y tế Du học sinh. Mỗi hồ sơ trên SchoolGo đều hiển thị học phí quốc tế đã công bố của trường để bạn so sánh tương đương."
       },
       "englishTest": {
-        "question": "What English test does my child need for an Australian school?",
-        "answer": "Different schools accept different tests – the most common are AEAS, iDAT, Duolingo English Test, IELTS, and PTE Academic, with minimum scores that vary by year level. SchoolGo shows the exact tests and minimum scores each school accepts on its profile."
+        "question": "Con tôi cần bài thi tiếng Anh nào để vào một trường học Úc?",
+        "answer": "Các trường khác nhau chấp nhận những bài thi khác nhau – phổ biến nhất là AEAS, iDAT, Duolingo English Test, IELTS và PTE Academic, với điểm tối thiểu thay đổi theo khối lớp. SchoolGo hiển thị chính xác các bài thi và điểm tối thiểu mà mỗi trường chấp nhận trên hồ sơ của trường."
       },
       "visa": {
-        "question": "Do international students need a visa to study at an Australian school?",
-        "answer": "Yes – full-fee international school students study on a Student visa (subclass 500), which requires a Confirmation of Enrolment from a CRICOS-registered school. You'll also need health cover (OSHC) for the duration of the visa. See our student visa guide for the full step-by-step."
+        "question": "Học sinh quốc tế có cần visa để học tại một trường học Úc không?",
+        "answer": "Có – học sinh quốc tế đóng học phí đầy đủ học theo visa Du học (subclass 500), vốn yêu cầu Xác nhận Ghi danh (CoE) từ một trường đăng ký CRICOS. Bạn cũng sẽ cần bảo hiểm y tế (OSHC) trong suốt thời gian hiệu lực của visa. Xem hướng dẫn về visa du học của chúng tôi để biết đầy đủ từng bước."
       },
       "agent": {
-        "question": "What is an education agent and do I need one?",
-        "answer": "Education agents are licensed consultants who help families choose schools, prepare documents, and manage the application and visa process. You don't have to use one, but most international families do – and it's free for you, since agents are paid by the schools. SchoolGo shows you which agents each school works with so you can pick someone with a proven track record."
+        "question": "Tư vấn giáo dục là gì và tôi có cần một tư vấn không?",
+        "answer": "Tư vấn giáo dục là những chuyên gia được cấp phép, giúp các gia đình chọn trường, chuẩn bị giấy tờ và xử lý quy trình nộp hồ sơ cùng visa. Bạn không bắt buộc phải dùng, nhưng hầu hết các gia đình quốc tế đều làm vậy – và điều đó miễn phí với bạn, vì tư vấn được các trường trả công. SchoolGo cho bạn thấy mỗi trường hợp tác với tư vấn nào để bạn chọn được người có thành tích đã được kiểm chứng."
       },
       "schoolTypes": {
-        "question": "What types of schools are there in Australia?",
-        "answer": "Australian schools fall into three sectors – government (public), Catholic, and independent – and may be co-educational, single-sex, day-only, or boarding. Curricula include state certificates like the VCE, HSC, and QCE, plus the International Baccalaureate at many independent schools. Our school types guide explains how each sector works for international students."
+        "question": "Tại Úc có những loại trường học nào?",
+        "answer": "Trường học Úc thuộc ba loại hình – công lập, Công giáo và độc lập – và có thể là trường nam nữ chung, trường nam riêng/nữ riêng, chỉ ngoại trú hoặc có nội trú. Chương trình học bao gồm các chứng chỉ của bang như VCE, HSC và QCE, cùng Tú tài Quốc tế (IB) tại nhiều trường độc lập. Hướng dẫn về các loại trường của chúng tôi giải thích cách mỗi loại hình vận hành đối với học sinh quốc tế."
       },
       "free": {
-        "question": "Is SchoolGo free?",
-        "answer": "Yes. SchoolGo is completely free for parents, education agents, and schools. There are no listing fees, application fees, or subscription costs."
+        "question": "SchoolGo có miễn phí không?",
+        "answer": "Có. SchoolGo hoàn toàn miễn phí cho phụ huynh, tư vấn giáo dục và các trường. Không có phí niêm yết, phí nộp hồ sơ hay phí đăng ký."
+      },
+      "startEarly": {
+        "question": "Chúng tôi nên bắt đầu nộp hồ sơ sớm bao nhiêu?",
+        "answer": "Hầu hết các gia đình bắt đầu từ 6 đến 12 tháng trước kỳ tuyển sinh mong muốn. Các trường được ưa chuộng thường lấp đầy suất quốc tế sớm, và bạn sẽ cần thời gian để thi tiếng Anh, thu thập giấy tờ cũng như sắp xếp visa du học và chỗ ở. Bắt đầu sớm cho bạn nhiều lựa chọn hơn và một lịch trình thư thả hơn – nhưng nhiều trường vẫn nhận hồ sơ muộn khi còn chỗ trống."
+      },
+      "weakEnglish": {
+        "question": "Con tôi có thể nộp hồ sơ nếu tiếng Anh chưa tốt không?",
+        "answer": "Được. Nhiều trường nhận những học sinh vẫn đang phát triển tiếng Anh và cung cấp hỗ trợ tiếng Anh chuyên sâu hoặc lộ trình dự bị trước hoặc song song với các lớp chính khóa. Hãy dùng bộ lọc của chúng tôi để tìm các trường có chương trình dự bị tiếng Anh phù hợp với trình độ hiện tại của con bạn."
+      },
+      "midYear": {
+        "question": "Con tôi có thể nhập học giữa năm không?",
+        "answer": "Thường là được. Trường học Úc thường có nhiều kỳ tuyển sinh trong năm, và nhiều trường nhận học sinh quốc tế giữa năm tùy theo chỗ trống và khối lớp. Mỗi hồ sơ trường trên SchoolGo đều hiển thị các kỳ tuyển sinh để bạn lên kế hoạch quanh ngày nhập học của con."
+      },
+      "documents": {
+        "question": "Cần những giấy tờ gì để nộp hồ sơ?",
+        "answer": "Hầu hết các trường yêu cầu học bạ gần đây, bản sao hộ chiếu, kết quả thi tiếng Anh (khi cần) và đôi khi là thư giới thiệu hoặc một bài luận ngắn. Đối với visa du học, bạn cũng sẽ cần Xác nhận Ghi danh (CoE) và bằng chứng về bảo hiểm y tế. Mỗi hồ sơ trường liệt kê những gì trường đó yêu cầu, và tư vấn của bạn có thể xác nhận danh sách đầy đủ."
+      },
+      "boardingVsHomestay": {
+        "question": "Sự khác biệt giữa nội trú và homestay là gì?",
+        "answer": "Nội trú nghĩa là sống trong khuôn viên trường với sự giám sát có tổ chức, bữa ăn và các hoạt động. Homestay nghĩa là sống cùng một gia đình bản xứ được trường phê duyệt. Nội trú mang lại nhiều khuôn khổ hơn và có nhân viên ngay tại chỗ, trong khi homestay mang lại môi trường gia đình – lựa chọn đúng đắn tùy thuộc vào độ tuổi, tính tự lập và sở thích của con bạn."
+      },
+      "under18Responsible": {
+        "question": "Ai chịu trách nhiệm cho con tôi nếu các em dưới 18 tuổi?",
+        "answer": "Học sinh dưới 18 tuổi phải có sắp xếp phúc lợi được phê duyệt – thường là cha mẹ hoặc người thân đủ điều kiện tại Úc, hoặc một giám hộ và chỗ ở được trường phê duyệt. Trường và người giám hộ được chỉ định cùng chia sẻ trách nhiệm chăm sóc và bảo đảm sức khỏe cho con bạn, và trường là đầu mối liên hệ chính của bạn."
+      },
+      "englishHelp": {
+        "question": "Trường có thể giúp đỡ nếu con tôi gặp khó khăn với tiếng Anh không?",
+        "answer": "Có. Nhiều trường cung cấp hỗ trợ Tiếng Anh như Ngôn ngữ Bổ sung (EAL) liên tục, kèm cặp và các chương trình tiếng Anh chuyên sâu để giúp những học sinh vẫn đang trau dồi tiếng Anh theo kịp bài trên lớp. Bạn có thể lọc tìm các trường có chương trình hỗ trợ tiếng Anh trên SchoolGo."
+      },
+      "transfer": {
+        "question": "Con tôi có thể chuyển sang trường khác sau này không?",
+        "answer": "Có, học sinh có thể chuyển giữa các trường, dù có những quy định – đặc biệt trong sáu tháng đầu của một khóa học – và thường cần một Xác nhận Ghi danh (CoE) mới. Tư vấn của bạn hoặc các trường liên quan có thể hướng dẫn bạn qua việc chuyển trường và mọi ảnh hưởng đến visa."
+      },
+      "refundVisa": {
+        "question": "Học phí có được hoàn lại nếu bị từ chối visa không?",
+        "answer": "Hầu hết các trường có chính sách hoàn phí bằng văn bản quy định rõ những gì được hoàn nếu visa du học bị từ chối. Điều khoản hoàn phí khác nhau giữa các trường, nên hãy luôn kiểm tra điều kiện hoàn phí của trường trước khi thanh toán. SchoolGo khuyến khích bạn xem kỹ chính sách hoàn phí của mỗi trường như một phần của việc nắm rõ tổng chi phí."
+      },
+      "agentSelection": {
+        "question": "SchoolGo chọn các tư vấn để kết nối với tôi như thế nào?",
+        "answer": "Mọi tư vấn trên SchoolGo đều được xác minh và phê duyệt bởi các trường họ hợp tác. SchoolGo không chỉ định tư vấn ngẫu nhiên – bạn chọn ai để kết nối dựa trên kinh nghiệm, ngôn ngữ họ sử dụng và các trường họ đại diện."
+      },
+      "agentOrSchool": {
+        "question": "SchoolGo có phải là một tư vấn hay một bộ phận của trường không?",
+        "answer": "Không phải. SchoolGo là một nền tảng độc lập, miễn phí, giúp các gia đình tìm kiếm và so sánh mọi trường học Úc đã đăng ký và kết nối với một tư vấn giáo dục được trường phê duyệt khi họ sẵn sàng. Chúng tôi không tự tuyển sinh học sinh – trường và tư vấn bạn chọn xử lý hồ sơ của bạn. Không ai liên hệ với bạn trừ khi bạn chủ động chọn kết nối."
       }
     }
   },
   "ParentsFinalCta": {
     "eyebrow": "Bắt đầu tại đây",
-    "headingPrefix": "Hành trình tìm kiếm của bạn",
+    "headingPrefix": "Tương lai của con",
     "headingEmphasis": "bắt đầu",
-    "headingSuffix": "bằng bảy ngôn ngữ.",
-    "subheading": "Miễn phí. Không cần đăng nhập. Cập nhật {month} {year, number}.",
-    "ctaPrimary": "Find the right school"
+    "headingSuffix": "với đúng trường – và đúng sự hỗ trợ.",
+    "subheading": "Tìm kiếm mọi trường đã đăng ký. Hiểu rõ tổng chi phí. Yên tâm rằng con bạn sẽ được chăm sóc. Miễn phí, không cần đăng nhập.",
+    "ctaPrimary": "Tìm đúng trường"
   },
   "AgentsMetadata": {
-    "title": "SchoolGo – Vận hành công ty tư vấn như một danh mục đầu tư",
-    "description": "Công cụ được xác minh QEAC dành cho tư vấn giáo dục đưa học sinh vào các trường Úc. Hồ sơ chuẩn hóa, theo dõi tiến trình trực tiếp, hoa hồng đầy đủ.",
-    "ogDescription": "Vận hành công việc như một danh mục đầu tư. Giữ lại 100% hoa hồng của bạn."
+    "title": "SchoolGo dành cho Tư vấn - Kết nối. Lập danh sách nhanh hơn.",
+    "description": "Miễn phí cho tư vấn giáo dục. Tìm kiếm trường học Úc, lập danh sách rút gọn ngay trong buổi tư vấn, kết nối với các gia đình. Hoa hồng của bạn vẫn là của bạn.",
+    "ogDescription": "Kết nối với những gia đình sẵn sàng nộp hồ sơ. Lập danh sách trường học Úc chỉ trong vài phút. Miễn phí cho tư vấn - hoa hồng của bạn vẫn là của bạn."
   },
   "AgentsHero": {
-    "eyebrow": "Dành cho tư vấn giáo dục · Được hỗ trợ bởi QEAC",
-    "headlinePrefix": "All Australian schools. All your students.",
-    "headlineEmphasis": "như một danh mục đầu tư.",
-    "lede": "Every Australian school has different fees, English tests, entry requirements, and application forms. SchoolGo brings them all into one place – so you can match, compare, and apply without the guesswork.",
-    "ctaPrimary": "Đăng ký xác minh",
+    "eyebrow": "Dành cho tư vấn giáo dục",
+    "headlinePrefix": "Kết nối với những gia đình sẵn sàng nộp hồ sơ.",
+    "headlineEmphasis": "Lập danh sách trường chỉ trong vài phút.",
+    "lede": "SchoolGo giúp phụ huynh tìm đúng trường học tại Úc và kết nối họ với bạn. Tìm kiếm hơn {count, number} trường đã đăng ký, lập danh sách rút gọn ngay trong buổi tư vấn và gửi hồ sơ đến trường - tất cả trên một nền tảng. Miễn phí. Hoa hồng của bạn vẫn là của bạn.",
+    "ctaPrimary": "Tạo hồ sơ tư vấn của bạn",
     "ctaSecondary": "Xem cách hoạt động",
-    "badgeMeta": "Sample agent profile",
+    "badgeMeta": "Hồ sơ tư vấn mẫu",
     "stats": {
       "schools": {
         "value": "{count, number}",
-        "label": "Trường CRICOS đã xác minh"
+        "label": "Trường đăng ký CRICOS"
       },
       "sectors": {
         "value": "3",
-        "label": "Sectors – Gov, Independent, Catholic"
+        "label": "Loại hình - Công lập, Độc lập, Công giáo"
       },
       "commission": {
         "value": "100%",
-        "label": "Hoa hồng được giữ lại hoàn toàn"
+        "label": "Miễn phí - hoa hồng của bạn vẫn là của bạn"
       }
     }
   },
   "AgentsPainPoints": {
-    "eyebrow": "What you can do",
-    "heading": "Everything you need to place students into Australian schools.",
-    "subheading": "Search, match, apply, and track – every part of the placement workflow, in one platform.",
+    "eyebrow": "Vì sao tư vấn chọn SchoolGo",
+    "heading": "Được xây dựng theo cách bạn thực sự làm việc - không phải để thay thế bạn.",
+    "subheading": "76% lượt nhập học vào các trường quốc tế đến qua tư vấn giáo dục. SchoolGo tồn tại để giúp bạn làm việc nhanh hơn và được các gia đình nhìn thấy nhiều hơn - chứ không phải để loại bỏ bạn.",
     "items": {
       "email": {
-        "question": "Search 695 schools by what matters",
-        "answer": "Filter by fees, English tests, intakes, boarding, and scholarships. Compare side by side. No more digging through school websites one at a time."
+        "question": "Cần trả lời nhanh những câu hỏi cụ thể?",
+        "answer": "Phụ huynh hỏi về học phí, yêu cầu tiếng Anh, nội trú, chỗ trống, hạn chót và giấy tờ - thường chỉ trong một cuộc gọi điện thoại. SchoolGo cho phép bạn lọc cả 695 trường trong vài giây thay vì phải tra cứu từng website của trường."
       },
       "status": {
-        "question": "One student profile, every school",
-        "answer": "Enter your student's details once. SchoolGo maps them to each school's requirements – so you see which schools fit and apply without re-entering data."
+        "question": "Dành quá nhiều thời gian cho việc hành chính trước khi buổi tư vấn còn chưa bắt đầu?",
+        "answer": "Nhập hồ sơ của một học sinh một lần. SchoolGo đối chiếu hồ sơ đó với yêu cầu của các trường để bạn thấy được trường nào thực sự phù hợp trước cả khi bạn nhấc máy."
       },
       "trust": {
-        "question": "Documents organised, scores verified",
-        "answer": "Passports, transcripts, and test scores uploaded once, tracked for expiry. English scores checked against official records automatically."
+        "question": "Mệt mỏi vì phải giải thích lại tổng chi phí từ đầu?",
+        "answer": "SchoolGo cho phụ huynh thấy bức tranh chi phí đầy đủ - học phí, nội trú, homestay, OSHC, đồng phục, phí giám hộ - trước khi họ tìm đến bạn. Các gia đình đến với sự hiểu biết về những con số thực tế, nên bạn bớt thời gian xử lý cú sốc về giá và dành nhiều thời gian hơn cho sự phù hợp."
       },
       "requirements": {
-        "question": "Your commission stays yours",
-        "answer": "SchoolGo is free. No platform fees, no commission splits, no per-student charges. Your relationship with schools stays direct."
+        "question": "Phụ huynh đang so sánh bạn với Google?",
+        "answer": "Những gia đình tìm thấy bạn qua SchoolGo đã hiểu rõ giá trị của việc làm việc cùng một tư vấn. Họ đã thấy được sự phức tạp và chọn kết nối với một chuyên gia."
       }
     }
   },
@@ -588,26 +654,35 @@
     }
   },
   "AgentsMatching": {
-    "eyebrow": "Ghép trường · Nộp hồ sơ · Theo dõi",
-    "heading": "Phụ huynh gọi lúc 10 giờ sáng. Ba trường phù hợp trước 10:30.",
-    "subheading": "SchoolGo gợi ý các trường phù hợp theo bang, học phí, trình độ tiếng Anh và kỳ tuyển sinh – rồi cho phép bạn nộp hồ sơ chuẩn hóa trong vài phút.",
+    "eyebrow": "Cách SchoolGo hoạt động",
+    "heading": "Gia đình gọi lúc 10am. Ba trường phù hợp trước 10:30.",
+    "subheading": "Phụ huynh thường đặt những câu hỏi rất cụ thể: trường nào có thể nhận con họ vào Lớp 10 vào tháng Một tới với một trình độ tiếng Anh và ngân sách nhất định? SchoolGo giúp bạn trả lời nhanh hơn - để bạn bớt thời gian tra cứu website của trường và dành nhiều thời gian hơn để tư vấn cho các gia đình.",
     "steps": {
       "listen": {
-        "title": "Ghi lại nhu cầu của gia đình",
-        "description": "Budget, location, intake."
+        "title": "Nắm bắt mong muốn của gia đình",
+        "description": "Ngân sách, địa điểm, trình độ tiếng Anh, khối lớp, kỳ nhập học mong muốn, loại hình chỗ ở và ưu tiên về phúc lợi - một biểu mẫu, dùng được ngay trong buổi tư vấn trực tiếp."
       },
       "match": {
-        "title": "Xem các trường phù hợp nhất",
-        "description": "Including English test scores.",
-        "comingSoon": "Coming soon"
+        "title": "Xem ngay các trường phù hợp nhất",
+        "description": "Được lọc theo hồ sơ của học sinh. Xem các bài thi tiếng Anh được chấp nhận, điểm tối thiểu, học phí, lựa chọn nội trú/homestay, phúc lợi và sắp xếp giám hộ, cùng tình trạng chỗ trống của từng trường. Không cần mở 15 tab nữa.",
+        "comingSoon": "Sắp ra mắt"
       },
       "deliver": {
-        "title": "Giao danh sách gọn gàng, không lộn xộn",
-        "description": "A branded PDF the family can screenshot and send to Mum and Dad. No PDFs from fifteen different schools.",
-        "comingSoon": "Coming soon"
+        "title": "Gửi danh sách rút gọn mang thương hiệu của bạn",
+        "description": "Một file PDF gọn gàng mang thương hiệu công ty bạn để gia đình có thể chụp màn hình, chia sẻ với bạn đời, hoặc so sánh tại nhà. Không phải 15 tờ brochure của trường.",
+        "comingSoon": "Sắp ra mắt"
+      },
+      "connect": {
+        "title": "Gia đình kết nối với bạn",
+        "description": "Khi một phụ huynh tìm kiếm trên SchoolGo tìm thấy trường bạn đại diện, họ chủ động chọn kết nối với bạn dựa trên kinh nghiệm, ngôn ngữ và lĩnh vực chuyên môn của bạn."
+      },
+      "apply": {
+        "title": "Nộp hồ sơ qua SchoolGo",
+        "description": "Chuẩn bị và nộp hồ sơ đáp ứng yêu cầu của trường - đầy đủ giấy tờ, điểm tiếng Anh đã xác minh và hồ sơ học sinh rõ ràng. Các trường nhận được đúng những gì họ cần mà không phải trao đổi qua lại như thường lệ.",
+        "comingSoon": "Sắp ra mắt"
       }
     },
-    "inboxLabel": "Hộp thư tuyển sinh",
+    "inboxLabel": "Trường phù hợp nhất",
     "inboxRows": {
       "scotch": {
         "school": "Scotch College",
@@ -627,275 +702,286 @@
     }
   },
   "AgentsCommission": {
-    "eyebrow": "Phí dịch vụ",
-    "heading": "Bạn giữ lại 100% hoa hồng từ trường.",
-    "subheading": "Chúng tôi thu phí từ trường, không từ bạn. Mối quan hệ thương mại của bạn với các trường vẫn trực tiếp.",
+    "eyebrow": "Cách hoạt động",
+    "heading": "Cách SchoolGo hoạt động dành cho tư vấn.",
+    "subheading": "SchoolGo giúp các gia đình tìm và so sánh trường, kết nối họ với tư vấn, đồng thời trang bị cho tư vấn công cụ để lập danh sách rút gọn và nộp hồ sơ đến trường - tất cả trên một nền tảng. Các trường tài trợ chi phí. Bạn giữ lại hoa hồng, mối quan hệ với học sinh và mạng lưới trường học của mình.",
     "statValue": "$0",
-    "statLabel": "Platform cost per agent. Zero fees, zero commission splits – ever.",
+    "statLabel": "Chi phí nền tảng cho mỗi tư vấn. Không chia hoa hồng, không phí xếp chỗ, không phí đăng ký.",
     "bullets": {
-      "zero": {
-        "title": "Không phí theo từng học sinh",
-        "description": "Không chia hoa hồng. Không phí xếp chỗ. Không phí đăng ký."
+      "free": {
+        "title": "Miễn phí sử dụng",
+        "description": "Không chia hoa hồng, không phí xếp chỗ, không phí đăng ký."
       },
-      "direct": {
-        "title": "Quan hệ trực tiếp với trường",
-        "description": "Quyền ghi nhận của bạn được khóa vào hồ sơ ngay khi bạn nộp."
+      "students": {
+        "title": "Học sinh của bạn, mối quan hệ của bạn",
+        "description": "Dữ liệu học sinh là riêng tư của bạn. Không tư vấn nào khác có thể tiếp cận những gia đình bạn đang làm việc cùng."
       },
-      "audit": {
-        "title": "Lịch sử kiểm tra đầy đủ",
-        "description": "Mọi thay đổi trạng thái đều có dấu thời gian. Tranh chấp kết thúc tại hồ sơ giấy tờ."
+      "attribution": {
+        "title": "Ghi nhận rõ ràng với trường",
+        "description": "Trường biết được tư vấn nào đứng sau mỗi yêu cầu liên hệ."
+      },
+      "approved": {
+        "title": "Được trường phê duyệt",
+        "description": "Trường chọn tư vấn nào được phép đại diện cho họ trên SchoolGo. Nếu bạn đã hợp tác với một trường, bạn có thể được xác minh ngay lập tức."
+      },
+      "network": {
+        "title": "Mạng lưới trường học của bạn vẫn là của bạn",
+        "description": "SchoolGo không liên hệ với trường thay mặt bạn, cũng không chia sẻ các mối quan hệ của bạn."
+      },
+      "privacy": {
+        "title": "Dữ liệu của bạn được bảo mật",
+        "description": "Thông tin khách hàng và chi tiết mạng lưới trường học không bao giờ được chia sẻ với tư vấn khác hay công khai nếu chưa có sự đồng ý của bạn."
       }
     }
   },
   "AgentsQeacTrust": {
-    "eyebrow": "Đã xác minh",
-    "heading": "Một hồ sơ mà phụ huynh – và nhà trường – thực sự tin tưởng.",
-    "subheading": "Chứng chỉ QEAC của bạn được xác minh một lần. Huy hiệu và thành tích của bạn sẽ xuất hiện trên mọi hồ sơ bạn nộp.",
-    "sampleLabel": "Sample profile",
+    "eyebrow": "Hồ sơ tư vấn của bạn",
+    "heading": "Xây dựng uy tín của bạn - theo cách của bạn.",
+    "subheading": "Hồ sơ SchoolGo giúp các gia đình mới tìm thấy và tin tưởng bạn. Nhưng bạn kiểm soát những gì được hiển thị. Thể hiện thế mạnh của mình mà không phải phơi bày toàn bộ mạng lưới cho đối thủ.",
+    "sampleLabel": "Hồ sơ mẫu",
     "profile": {
       "name": "Hồ sơ tư vấn",
       "agentName": "Mei Lin",
-      "qeac": "QEAC đã xác minh",
-      "yearsActive": "Năm hoạt động",
-      "students": "Học sinh đã xếp chỗ",
-      "placements": "Trường đã xếp chỗ",
-      "languages": "Ngôn ngữ sử dụng",
-      "languagesValue": "中 · EN"
-    }
+      "qeac": "Đã xác minh QEAC"
+    },
+    "visibility": {
+      "public": {
+        "label": "Công khai",
+        "items": "Tên, ngôn ngữ, trạng thái QEAC, số năm hoạt động và các khu vực bạn phục vụ."
+      },
+      "optional": {
+        "label": "Tùy chọn",
+        "items": "Số học sinh đã sắp xếp, loại hình trường, lĩnh vực chuyên môn - do bạn quyết định."
+      },
+      "private": {
+        "label": "Luôn riêng tư",
+        "items": "Các mối quan hệ trường cụ thể, tên học sinh, thỏa thuận hoa hồng, thị trường mục tiêu, hồ sơ đang xử lý."
+      }
+    },
+    "qeacNote": "Tư vấn được chứng nhận QEAC sẽ nhận huy hiệu xác minh. Nhưng kết quả của mỗi tư vấn tự nói lên tất cả - các gia đình có thể thấy mức độ phản hồi, ngôn ngữ và lĩnh vực chuyên môn của bạn, bất kể chứng nhận."
   },
   "AgentsScale": {
     "eyebrow": "Mạng lưới",
-    "heading": "Agents across APAC are joining. Australia's international school sector is growing fast – be one of the first.",
-    "subheading": "From Shanghai to Jakarta, Ho Chi Minh to Seoul – agents placing families into Australian K–12.",
+    "heading": "Các tư vấn khắp APAC đang tham gia.",
+    "subheading": "Từ Thượng Hải đến Jakarta, Hồ Chí Minh đến Seoul - những tư vấn cá nhân và công ty nhiều chi nhánh đưa các gia đình vào hệ thống K-12 tại Úc.",
     "agents": {
       "a": {
         "name": "Li Wei",
-        "region": "Shanghai · 中国",
-        "meta": "QEAC verified · Independent schools"
+        "region": "Thượng Hải · 中国",
+        "meta": "Đã xác minh · Trường độc lập"
       },
       "b": {
         "name": "Nguyễn Minh",
-        "region": "Ho Chi Minh · Việt Nam",
-        "meta": "QEAC verified · All sectors"
+        "region": "Hồ Chí Minh · Việt Nam",
+        "meta": "Chứng nhận QEAC · Mọi loại hình"
       },
       "c": {
         "name": "Siti Rahman",
         "region": "Kuala Lumpur · Malaysia",
-        "meta": "QEAC verified · Boarding specialist"
+        "meta": "Đã xác minh · Chuyên về nội trú"
       },
       "d": {
         "name": "Ji-eun Park",
         "region": "Seoul · 대한민국",
-        "meta": "QEAC verified · VIC & NSW"
+        "meta": "Chứng nhận QEAC · VIC & NSW"
       }
     },
-    "cta": "Đăng ký xác minh"
+    "cta": "Tạo hồ sơ của bạn"
   },
   "AgentsTestimonial": {
-    "eyebrow": "[TODO: vi] From the field",
-    "heading": "[TODO: vi] What agents are saying",
+    "eyebrow": "Từ thực tế",
+    "heading": "Các tư vấn nói gì",
     "items": {
       "a": {
-        "quote": "Every school wants a different form, different documents, different English scores. I spend more time on admin than actually helping families.",
-        "attribution": "[TODO: vi] Agency director, Shanghai",
-        "meta": "[TODO: vi] 60+ students · 3 counsellors"
+        "quote": "Trước đây tôi phải tra cứu sáu website trường trước mỗi cuộc gọi với phụ huynh. Giờ tôi lọc theo ngân sách, trình độ tiếng Anh và kỳ nhập học chỉ trong một lần tìm kiếm - tôi đã có danh sách rút gọn trước cả khi gia đình nói xong họ muốn gì.",
+        "attribution": "Giám đốc công ty tư vấn, Thượng Hải",
+        "meta": "60+ học sinh"
       },
       "b": {
-        "quote": "A parent asks which English test their child needs and I have to check three different school websites to give them an answer. That should take ten seconds.",
-        "attribution": "[TODO: vi] Independent agent, Ho Chi Minh City",
-        "meta": "Solo practice"
+        "quote": "Các gia đình của tôi muốn so sánh trường nhưng tôi không thể gửi cho họ 15 file PDF. Một tờ thông tin mang thương hiệu với ba trường đặt cạnh nhau mới là thứ họ thực sự đọc.",
+        "attribution": "Tư vấn độc lập, Thành phố Hồ Chí Minh",
+        "meta": "25+ học sinh"
       },
       "c": {
-        "quote": "I've placed into the same twelve schools for years because I know their process. A platform that maps every school's requirements would let me place into hundreds.",
-        "attribution": "[TODO: vi] Senior counsellor, Kuala Lumpur",
-        "meta": "[TODO: vi] 40+ students · 2 branches"
+        "quote": "Tôi từng lo một nền tảng khác sẽ lấy hoa hồng hoặc phơi bày mối quan hệ trường học của mình. SchoolGo không động đến cả hai. Nó chỉ đưa đến cho tôi những gia đình sẵn sàng trao đổi.",
+        "attribution": "Tư vấn cấp cao, Kuala Lumpur",
+        "meta": "40+ học sinh"
       }
     },
-    "disclaimer": "[TODO: vi] Composite quotes based on agent interviews"
+    "disclaimer": "Trích dẫn tổng hợp dựa trên các cuộc phỏng vấn tư vấn"
   },
   "AgentsFinalCta": {
-    "eyebrow": "Được xác minh",
-    "headingPrefix": "You deserve",
-    "headingEmphasis": "better tools",
-    "headingSuffix": "to build a better business.",
-    "subheading": "Miễn phí. Yêu cầu xác minh QEAC. Onboarding trong 48 giờ.",
-    "ctaPrimary": "Đăng ký xác minh"
+    "eyebrow": "Bắt đầu",
+    "headingPrefix": "Được các gia đình tìm thấy.",
+    "headingEmphasis": "Lập danh sách nhanh hơn.",
+    "headingSuffix": "Giữ lại hoa hồng của bạn.",
+    "subheading": "Miễn phí. Không chia hoa hồng. Các mối quan hệ trường học vẫn là của bạn.",
+    "ctaPrimary": "Tạo hồ sơ tư vấn của bạn",
+    "ctaSecondary": "Đặt lịch hướng dẫn"
   },
   "AgentsFaq": {
-    "heading": "Frequently Asked Questions",
+    "heading": "Câu hỏi thường gặp",
     "items": {
-      "find": {
-        "question": "How do education agents find Australian schools for international students?",
-        "answer": "Agents typically build long-term relationships with a handful of schools and check each school's website, fees, and English requirements one at a time. SchoolGo replaces that workflow with a single searchable database of every CRICOS-registered school – filterable by fees, English tests, intakes, boarding, and scholarships."
+      "free": {
+        "question": "SchoolGo có thực sự miễn phí cho tư vấn không?",
+        "answer": "Có. SchoolGo được các trường tài trợ, không phải tư vấn. Không có chia hoa hồng, phí xếp chỗ, phí đăng ký hay chi phí ẩn nào."
       },
-      "englishTests": {
-        "question": "What English tests do Australian schools accept for international admissions?",
-        "answer": "Most Australian schools accept AEAS, with a growing number accepting iDAT, Duolingo English Test, IELTS, PTE Academic, Cambridge English, and TOEFL. Minimum scores vary by school and year level. SchoolGo lists the exact accepted tests and minimum scores on every school profile."
+      "makesMoney": {
+        "question": "SchoolGo kiếm tiền bằng cách nào nếu miễn phí cho tư vấn?",
+        "answer": "Các trường trả phí để nâng cấp hồ sơ và tiếp cận nhiều gia đình hơn. Tư vấn không bao giờ phải trả tiền."
       },
-      "verifyScores": {
-        "question": "How do education agents verify student English test scores?",
-        "answer": "Most test providers offer an official verification portal where agents and schools can confirm a score against the candidate's record. SchoolGo automates this – uploaded English scores are checked against the official record so you and the school know the result is genuine."
+      "contactStudents": {
+        "question": "Liệu tư vấn khác có thể liên hệ với học sinh của tôi không?",
+        "answer": "Không. Mối quan hệ với học sinh của bạn là riêng tư. Không tư vấn nào khác có thể thấy hay tiếp cận các gia đình đã kết nối với bạn."
       },
-      "becomeAgent": {
-        "question": "How do I become an education agent for Australian schools?",
-        "answer": "There's no single licence to become an Australian education agent, but most schools and the AAERI/QEAC quality frameworks expect training in Australian education, ethical practice, and student welfare. The QEAC (Qualified Education Agent Counsellor) certification is the most widely recognised credential."
+      "attribution": {
+        "question": "Trường có thấy được tư vấn nào đã đưa học sinh đến không?",
+        "answer": "Có. Ghi nhận của bạn được khóa lại ngay khoảnh khắc một gia đình kết nối với bạn. Trường luôn biết được tư vấn nào chịu trách nhiệm."
       },
-      "fees": {
-        "question": "Do education agents pay fees to use SchoolGo?",
-        "answer": "No. SchoolGo is free for every agent – no platform fees, no commission splits, no per-student charges. Your commercial relationship with schools stays direct."
+      "interfere": {
+        "question": "SchoolGo có can thiệp vào các mối quan hệ trường học sẵn có của tôi không?",
+        "answer": "Không. SchoolGo không liên hệ với trường thay mặt bạn, không đàm phán lại thỏa thuận, cũng không chia sẻ thông tin mạng lưới của bạn."
       },
-      "manage": {
-        "question": "How do education agents manage multiple student applications at once?",
-        "answer": "SchoolGo gives you one student profile per family that maps to every school's requirements automatically – so you don't re-key passport numbers, transcripts, or English scores into 15 different forms. Documents are organised, version-controlled, and tracked for expiry, with every status change timestamped for audit."
+      "publicInfo": {
+        "question": "Những thông tin nào được công khai trên hồ sơ của tôi?",
+        "answer": "Bạn kiểm soát điều này. Tên, ngôn ngữ và trạng thái QEAC của bạn được công khai. Mọi thứ khác (số lượng sắp xếp, mối quan hệ trường học, lĩnh vực chuyên môn) là tùy chọn."
+      },
+      "competes": {
+        "question": "Bản thân SchoolGo có phải là một tư vấn không? Nó có cạnh tranh với tôi không?",
+        "answer": "Không. SchoolGo kết nối các gia đình với tư vấn và trang bị cho tư vấn công cụ để lập danh sách rút gọn và nộp hồ sơ đến trường. Nó không tuyển sinh học sinh hay nhận hoa hồng."
+      },
+      "howConnected": {
+        "question": "Các gia đình được kết nối với tư vấn như thế nào?",
+        "answer": "Khi một phụ huynh tìm thấy trường trên SchoolGo và muốn nộp hồ sơ, họ duyệt qua các tư vấn hiện có và chọn ai để kết nối dựa trên kinh nghiệm, ngôn ngữ sử dụng và các trường đại diện. Bạn không bao giờ bị chỉ định ngẫu nhiên - các gia đình chủ động chọn bạn."
+      },
+      "futureCharging": {
+        "question": "Liệu SchoolGo có bắt đầu thu phí trong tương lai không?",
+        "answer": "Không có kế hoạch thu phí tư vấn. Mô hình kinh doanh được các trường tài trợ."
       }
     }
   },
   "SchoolsMetadata": {
-    "title": "SchoolGo – Lấp đầy chỉ tiêu quốc tế với ít email hơn",
-    "description": "Hộp thư tuyển sinh thống nhất cho các trường Úc. Tư vấn được xác minh QEAC, hồ sơ thực, không phí theo từng học sinh.",
-    "ogDescription": "Lấp đầy chỉ tiêu quốc tế của bạn. Với ít email hơn."
+    "title": "SchoolGo dành cho các Trường – Hồ sơ tốt hơn, phù hợp hơn",
+    "description": "Giúp các gia đình và tư vấn quốc tế hiểu yêu cầu của bạn trước khi nộp hồ sơ. Phê duyệt những tư vấn bạn tin tưởng. Miễn phí cho mọi trường học Úc.",
+    "ogDescription": "Hồ sơ tốt hơn. Học sinh phù hợp. Bớt qua lại nhiều lần."
   },
   "SchoolsHero": {
-    "eyebrow": "Dành cho các trường Úc",
-    "headlinePrefix": "Lấp đầy",
-    "headlineEmphasis": "chỉ tiêu quốc tế",
-    "headlineSuffix": "cohort. Simplify admissions.",
-    "lede": "Một hồ sơ được xác minh, được các gia đình ở bảy quốc gia nhìn thấy. Nhận hồ sơ chuẩn hóa từ tư vấn được xác minh QEAC – đúng định dạng mà đội tuyển sinh của bạn đang dùng.",
-    "ctaPrimary": "Xác nhận hồ sơ trường",
-    "inbox": {
-      "eyebrow": "Applications inbox – preview",
-      "countLabel": "Tháng này",
-      "rows": {
-        "a": {
-          "name": "Sophie Chen",
-          "status": "Mới",
-          "meta": "VIC · Year 9 · AEAS 78"
-        },
-        "b": {
-          "name": "Minh Tran",
-          "status": "Đang xét",
-          "meta": "VIC · Year 11 · IELTS 6.5"
-        },
-        "c": {
-          "name": "Ji-woo Park",
-          "status": "Đã gửi thư mời",
-          "meta": "NSW · Year 10 · AEAS 74"
-        }
-      }
-    }
+    "eyebrow": "Dành cho các trường học Úc",
+    "headlinePrefix": "Hồ sơ tốt hơn.",
+    "headlineEmphasis": "Học sinh phù hợp.",
+    "headlineSuffix": "Bớt qua lại nhiều lần.",
+    "lede": "SchoolGo giúp các gia đình quốc tế và tư vấn giáo dục tìm thấy trường của bạn, hiểu các yêu cầu của bạn và kết nối với những tư vấn đã được bạn phê duyệt. Khi một học sinh tìm đến đội ngũ tuyển sinh của bạn, em đã biết rõ học phí, yêu cầu tiếng Anh, các lựa chọn chỗ ở và quy trình nhập học của bạn – nên đội ngũ của bạn bớt thời gian truy tìm những thông tin còn thiếu.",
+    "ctaPrimary": "Nhận hồ sơ trường của bạn",
+    "ctaSecondary": "Đặt lịch hướng dẫn"
   },
   "SchoolsStats": {
-    "eyebrow": "Hiệu ứng mạng lưới",
-    "heading": "Một hồ sơ. Được các gia đình ở bảy quốc gia nhìn thấy.",
-    "subheading": "Thông tin trường của bạn xuất hiện trong mọi tìm kiếm, mọi so sánh, mọi danh sách gợi ý – bằng ngôn ngữ của gia đình.",
+    "eyebrow": "Mạng lưới",
+    "heading": "Một hồ sơ. Được nhìn thấy bởi đúng những gia đình và tư vấn bạn muốn tiếp cận.",
+    "subheading": "Hồ sơ của bạn xuất hiện trong mọi lượt tìm kiếm, so sánh và danh sách rút gọn của tư vấn – được dịch sang bảy ngôn ngữ khắp khu vực Châu Á – Thái Bình Dương – để đúng những gia đình hiểu rõ yêu cầu của bạn trước khi liên hệ.",
     "items": {
       "schools": {
         "value": "695+",
-        "label": "CRICOS-registered schools"
+        "label": "Trường đăng ký CRICOS"
       },
       "states": {
         "value": "8",
-        "label": "States & territories"
+        "label": "Bang & vùng lãnh thổ"
       },
       "sectors": {
         "value": "3",
-        "label": "Sectors – Government, Independent, Catholic"
+        "label": "Loại hình – Công lập, Độc lập, Công giáo"
       },
       "feeRange": {
         "value": "$3.5k – $78k",
-        "label": "Annual fee range (AUD)"
+        "label": "Khoảng học phí hằng năm (AUD)"
       }
     }
   },
   "SchoolsThreeTools": {
-    "eyebrow": "Bộ công cụ",
-    "heading": "Ba công cụ. Một mục tiêu: đúng học sinh, ít việc hơn.",
-    "subheading": "SchoolGo cung cấp cho đội tuyển sinh ba thứ họ thực sự cần.",
+    "eyebrow": "Hồ sơ trường của bạn",
+    "heading": "Trường của bạn. Thông tin của bạn. Quyền kiểm soát của bạn.",
+    "subheading": "Mọi trường đã đăng ký đều có một hồ sơ cơ bản trên SchoolGo, được tự động công bố từ dữ liệu chính thức của chính phủ. Khi bạn nhận hồ sơ của mình, bạn nắm toàn quyền kiểm soát cách trường bạn xuất hiện trước các gia đình và tư vấn trên toàn cầu.",
     "tools": {
       "profile": {
-        "title": "Hồ sơ trường luôn cập nhật",
-        "description": "Học phí, kỳ tuyển sinh, bài thi được chấp nhận, học bổng và tài liệu – do bạn cập nhật, hiển thị bằng ngôn ngữ của gia đình."
+        "title": "Hồ sơ của bạn, theo cách của bạn",
+        "description": "Kiểm soát phần mô tả và định vị trường, hình ảnh và thương hiệu, bảng chi tiết học phí, các kỳ tuyển sinh và hạn chót nộp hồ sơ – hiển thị bằng ngôn ngữ của gia đình. Bạn quyết định cách trường mình xuất hiện."
       },
-      "applications": {
-        "title": "Hồ sơ được chuẩn hóa",
-        "description": "Mọi hồ sơ đều đến theo cùng định dạng, với quy gán tư vấn được xác minh QEAC và đầy đủ tài liệu."
+      "requirements": {
+        "title": "Những yêu cầu mà các gia đình có thể hành động dựa trên đó",
+        "description": "Thiết lập các bài thi tiếng Anh bạn chấp nhận và điểm tối thiểu theo khối lớp, sắp xếp chỗ ở và phúc lợi cho học sinh dưới 18 tuổi, cùng giấy tờ cần thiết để nộp hồ sơ – để các gia đình và tư vấn hiểu yêu cầu của bạn trước khi nộp."
       },
-      "inbox": {
-        "title": "Hộp thư tuyển sinh duy nhất",
-        "description": "Theo dõi trạng thái mọi hồ sơ. Mời nhập học, xếp danh sách chờ hoặc từ chối chỉ bằng một cú nhấp. Gia đình và tư vấn nhận cập nhật ngay lập tức."
+      "agents": {
+        "title": "Tư vấn được phê duyệt và phân tích dữ liệu",
+        "description": "Chọn tư vấn nào được phê duyệt để đại diện cho trường của bạn, và đặt trạng thái nhận hồ sơ là mở hay đóng. Theo dõi lượt xem hồ sơ, nguồn yêu cầu liên hệ và hoạt động của tư vấn ngay từ bảng điều khiển của bạn."
       }
     }
   },
   "SchoolsTimeline": {
-    "eyebrow": "Hành trình tuyển sinh",
-    "heading": "From first application to first day of term – without the back 'n forth.",
-    "subheading": "Toàn bộ chu trình tuyển sinh quốc tế, trong một nơi.",
+    "eyebrow": "Cách hoạt động",
+    "heading": "SchoolGo đứng trước quy trình tuyển sinh của bạn – không phải bên trong nó.",
+    "subheading": "SchoolGo không phải là một nền tảng tuyển sinh và không thay thế quy trình hiện có của bạn. Nó giúp các gia đình và tư vấn hiểu yêu cầu của bạn trước khi liên hệ – để khi họ tìm đến, cuộc trao đổi bắt đầu đúng chỗ.",
     "steps": {
-      "receive": {
-        "title": "Nhận hồ sơ",
-        "description": "Hồ sơ đến hộp thư kèm điểm tiếng Anh, tài liệu và tư vấn đã xác minh.",
-        "comingSoon": "Coming soon"
+      "find": {
+        "title": "Các gia đình tìm thấy trường của bạn",
+        "description": "Hồ sơ của bạn xuất hiện trong các lượt tìm kiếm được lọc theo học phí, yêu cầu tiếng Anh, khối lớp, chỗ ở, chương trình học và địa điểm – được dịch sang bảy ngôn ngữ khắp khu vực Châu Á – Thái Bình Dương."
       },
-      "review": {
-        "title": "Xét duyệt",
-        "description": "Đội của bạn đánh giá theo tiêu chí riêng. Ghi chú chỉ hiển thị nội bộ.",
-        "comingSoon": "Coming soon"
+      "understand": {
+        "title": "Họ hiểu rõ yêu cầu của bạn ngay từ đầu",
+        "description": "Các gia đình và tư vấn thấy được các bài thi tiếng Anh bạn chấp nhận, điểm tối thiểu, cơ cấu học phí, các lựa chọn chỗ ở, sắp xếp phúc lợi và giấy tờ cần thiết trước khi họ liên hệ."
       },
-      "decide": {
-        "title": "Quyết định",
-        "description": "Mời nhập học, xếp danh sách chờ hoặc từ chối chỉ bằng một cú nhấp. Trạng thái gửi ngay đến gia đình và tư vấn.",
-        "comingSoon": "Coming soon"
+      "connect": {
+        "title": "Họ kết nối với những tư vấn đã được bạn phê duyệt",
+        "description": "Khi một gia đình quyết định nộp hồ sơ, SchoolGo kết nối họ với những tư vấn giáo dục bạn đã phê duyệt. Bạn kiểm soát tư vấn nào được phép đại diện cho trường của bạn trên nền tảng."
       },
-      "onboard": {
-        "title": "Nhập học",
-        "description": "Chia sẻ giấy tờ ngày nhập học, thông tin chỗ ở và đường dẫn định hướng – tất cả trong một luồng hội thoại.",
-        "comingSoon": "Coming soon"
+      "apply": {
+        "title": "Tư vấn nộp hồ sơ đến bạn",
+        "description": "Tư vấn dùng SchoolGo để chuẩn bị và nộp những hồ sơ đáp ứng yêu cầu của bạn – giấy tờ đầy đủ, điểm tiếng Anh đã được xác minh và hồ sơ học sinh rõ ràng. Đội ngũ của bạn xét duyệt bằng chính quy trình tuyển sinh của mình."
       }
     }
   },
   "SchoolsPricing": {
-    "eyebrow": "Bảng giá",
-    "heading": "Không phí theo tư vấn. Không hoa hồng. Một gói hàng năm.",
-    "subheading": "Các trường hỗ trợ SchoolGo trả một khoản phí hàng năm minh bạch. Gia đình và tư vấn không phải trả.",
+    "eyebrow": "Chi phí",
+    "heading": "Miễn phí cho mọi trường.",
+    "subheading": "Hồ sơ trường của bạn được công bố và duy trì miễn phí – không phí niêm yết, phí theo từng học sinh hay hoa hồng. SchoolGo được tài trợ bởi các tính năng cao cấp tùy chọn dành cho những trường muốn tăng độ hiển thị, chẳng hạn như ưu tiên vị trí và quảng bá hồ sơ. Nền tảng cốt lõi miễn phí và sẽ luôn miễn phí.",
     "plans": {
       "listing": {
-        "name": "Đăng ký cơ bản",
-        "price": "Free",
-        "priceMeta": "Vĩnh viễn",
+        "name": "Tự động công bố",
+        "price": "Miễn phí",
+        "priceMeta": "Mãi mãi",
         "features": {
-          "a": "Hồ sơ CRICOS của bạn, tự động xuất bản",
-          "b": "Bài thi tiếng Anh được chấp nhận + điểm tối thiểu",
-          "c": "Hộp thư hồ sơ chuẩn hóa"
+          "a": "Hồ sơ trường của bạn, được tự động công bố từ dữ liệu chính thức của chính phủ",
+          "b": "Hiển thị với các gia đình và tư vấn khắp khu vực Châu Á – Thái Bình Dương",
+          "c": "Hiển thị các bài thi tiếng Anh được chấp nhận và điểm tối thiểu"
         },
-        "cta": "Xác nhận hồ sơ của bạn"
+        "cta": "Nhận hồ sơ của bạn"
       },
       "admissions": {
-        "name": "Tuyển sinh",
-        "price": "$12,800",
-        "priceMeta": "AUD / năm",
-        "badge": "Phổ biến nhất",
+        "name": "Đã nhận",
+        "price": "Miễn phí",
+        "priceMeta": "Nhận hồ sơ của bạn",
+        "badge": "Khuyên dùng",
         "features": {
-          "a": "Tất cả trong Đăng ký cơ bản",
-          "b": "Quy trình mời / danh sách chờ / từ chối",
-          "c": "Thư mục tư vấn được xác minh QEAC",
-          "d": "Dịch sang bảy ngôn ngữ trên mọi trang hồ sơ"
+          "a": "Toàn quyền kiểm soát hồ sơ, hình ảnh và thương hiệu của bạn",
+          "b": "Tự thiết lập bảng chi tiết học phí, yêu cầu tiếng Anh và thông tin chỗ ở của riêng bạn",
+          "c": "Phê duyệt hoặc chặn tư vấn",
+          "d": "Xem phân tích hồ sơ – lượt xem, nguồn yêu cầu liên hệ và hoạt động của tư vấn"
         },
-        "cta": "Bắt đầu tuyển sinh"
+        "cta": "Nhận hồ sơ của bạn"
       }
     }
   },
   "SchoolsTestimonial": {
-    "quote": "Finding the right students is hard enough. Processing their applications shouldn't be. A single inbox with complete, verified applications changes everything.",
-    "attribution": "– Composite quote based on admissions officer interviews"
+    "quote": "Chúng tôi không cần thêm yêu cầu liên hệ – chúng tôi cần đúng học sinh với thông tin đầy đủ. Khi các gia đình đã hiểu rõ học phí và yêu cầu tiếng Anh của chúng tôi trước khi nộp hồ sơ, đội ngũ của chúng tôi tốn ít thời gian hơn nhiều để truy tìm những gì còn thiếu.",
+    "attribution": "– Trích dẫn tổng hợp dựa trên các cuộc phỏng vấn cán bộ tuyển sinh"
   },
   "SchoolsFinalCta": {
     "eyebrow": "Bắt đầu tại đây",
-    "headingPrefix": "Kỳ tuyển sinh tiếp theo của bạn",
-    "headingEmphasis": "bắt đầu",
-    "headingSuffix": "ở đây.",
-    "subheading": "Đăng ký miễn phí. Không cần thẻ tín dụng. Xác nhận trong 10 phút.",
-    "ctaPrimary": "Xác nhận hồ sơ trường",
-    "ctaSecondary": "Đặt lịch giới thiệu"
+    "headingPrefix": "Các gia đình chuẩn bị kỹ hơn.",
+    "headingEmphasis": "Hồ sơ gọn gàng hơn.",
+    "headingSuffix": "Ít việc hành chính hơn.",
+    "subheading": "Miễn phí cho mọi trường. Nhận hồ sơ của bạn trong 10 phút.",
+    "ctaPrimary": "Nhận hồ sơ trường của bạn",
+    "ctaSecondary": "Đặt lịch hướng dẫn"
   },
   "Navbar": {
     "brand": "School",
@@ -1895,31 +1981,47 @@
     "errorMessage": "[TODO: vi] Couldn't load your students. Please try again."
   },
   "SchoolsFaq": {
-    "heading": "[TODO: vi] Frequently Asked Questions",
+    "heading": "Câu hỏi thường gặp",
     "items": {
-      "attract": {
-        "question": "How do Australian schools attract more international students?",
-        "answer": "Schools grow their international cohort by being visible to families and agents in the markets they want to reach, and by making it easy to apply once a family is interested. SchoolGo lists every CRICOS-registered school in seven languages, with translated profiles, fees, and English requirements – so families and agents can find and shortlist your school directly."
+      "claim": {
+        "question": "Làm sao để nhận hồ sơ trường của tôi?",
+        "answer": "Tìm trường của bạn trên SchoolGo và chọn “Nhận hồ sơ này.” Bạn sẽ xác minh danh tính với tư cách là nhân viên của trường và có toàn quyền biên tập."
       },
-      "verify": {
-        "question": "How do schools verify international students' English test scores?",
-        "answer": "Each English test provider (AEAS, IELTS, PTE, Duolingo, Cambridge, TOEFL) offers an official verification portal where schools can confirm a candidate's score against the original record. SchoolGo automates this – every English score on an application is checked against the official record before it lands in your inbox."
+      "whoCreated": {
+        "question": "Ai đã tạo hồ sơ trường của tôi nếu tôi chưa nhận?",
+        "answer": "Các hồ sơ tự động công bố được tạo từ dữ liệu công khai của chính phủ (cơ quan đăng ký CRICOS, ACARA). SchoolGo không thêm hay thay đổi bất kỳ thông tin nào. Việc nhận hồ sơ cho bạn toàn quyền kiểm soát."
       },
-      "agents": {
-        "question": "[TODO: vi] How does SchoolGo work with education agents?",
-        "answer": "[TODO: vi] By default, your profile works with your school's existing agents. You can see which agents have placed students with you, invite new agents, or manage agent relationships from your dashboard."
+      "charge": {
+        "question": "SchoolGo có thu phí các trường hay tư vấn không?",
+        "answer": "Không. Nền tảng cốt lõi miễn phí cho các trường, tư vấn và phụ huynh. SchoolGo được tài trợ bởi các tính năng cao cấp tùy chọn dành cho những trường muốn tăng độ hiển thị."
       },
-      "documents": {
-        "question": "What documents do schools need for an international student application?",
-        "answer": "Standard documents include the student's passport, last two years of school reports, an English test result, proof of guardianship for younger students, and any additional medical or character documents your school requires. SchoolGo arrives applications complete – passports, transcripts, English scores, and required forms in one packaged record."
+      "verifyAgents": {
+        "question": "Tư vấn được xác minh trên SchoolGo như thế nào?",
+        "answer": "Tư vấn tạo hồ sơ và có thể nắm giữ chứng nhận QEAC. Tuy nhiên, bạn kiểm soát tư vấn nào được phê duyệt để đại diện cho trường của bạn – bất kể trạng thái chứng nhận của họ."
       },
-      "cost": {
-        "question": "How much does it cost to list on SchoolGo?",
-        "answer": "Nothing. SchoolGo is free for every school – no listing fees, no per-student fees, no commissions. Your profile auto-publishes from official government data, and claiming it unlocks full editing, applications, and analytics at no cost."
+      "interfere": {
+        "question": "SchoolGo có can thiệp vào các mối quan hệ tư vấn sẵn có của chúng tôi không?",
+        "answer": "Không. Các thỏa thuận, cơ cấu hoa hồng và mạng lưới tư vấn sẵn có của bạn không bị ảnh hưởng. SchoolGo không chỉ định lại tư vấn hay chia sẻ danh sách tư vấn của bạn."
       },
-      "diversify": {
-        "question": "How do schools diversify their international student intake beyond China?",
-        "answer": "Diversification starts with visibility in the markets you want to grow – Vietnam, Korea, Indonesia, Malaysia, Thailand, and beyond. SchoolGo translates your profile into seven languages and surfaces it to families and agents across the Asia-Pacific, so you can build a balanced cohort across multiple source countries."
+      "beforeClaim": {
+        "question": "Những thông tin nào về trường của chúng tôi được hiển thị trước khi nhận hồ sơ?",
+        "answer": "Chỉ dữ liệu công khai từ các cơ quan đăng ký của chính phủ: tên trường, địa điểm, loại hình, trạng thái CRICOS, chương trình học và khoảng học phí cơ bản. Không có nội dung biên tập, hình ảnh hay yêu cầu chi tiết nào được hiển thị cho đến khi bạn nhận hồ sơ và bổ sung chúng."
+      },
+      "studentData": {
+        "question": "SchoolGo bảo vệ thông tin học sinh như thế nào?",
+        "answer": "Dữ liệu học sinh chỉ được chia sẻ giữa gia đình, tư vấn họ chọn và trường. Dữ liệu này không bao giờ được chia sẻ với các trường khác, tư vấn khác hay công khai."
+      },
+      "replaceAdmissions": {
+        "question": "SchoolGo có thay thế quy trình tuyển sinh của chúng tôi không?",
+        "answer": "Không. SchoolGo đứng trước quy trình tuyển sinh của bạn. Nó giúp các gia đình hiểu yêu cầu của bạn và kết nối với những tư vấn đã được bạn phê duyệt. Hồ sơ được nộp đến bạn thông qua tư vấn của bạn, và đội ngũ của bạn xét duyệt chúng bằng chính quy trình của mình."
+      },
+      "openClosed": {
+        "question": "Chúng tôi có thể kiểm soát việc nhận hồ sơ là mở hay đóng không?",
+        "answer": "Có. Bạn có thể đặt trạng thái kỳ tuyển sinh và hạn chót nộp hồ sơ. Khi đóng nhận hồ sơ, các gia đình và tư vấn vẫn có thể xem hồ sơ của bạn nhưng sẽ thấy rằng kỳ tuyển sinh hiện chưa mở."
+      },
+      "capacity": {
+        "question": "SchoolGo xử lý cân bằng thị trường và sức chứa nội trú như thế nào?",
+        "answer": "Bạn kiểm soát những gì được hiển thị. Nếu số chỗ nội trú có hạn hoặc bạn đang cân đối tỷ lệ học sinh giữa các thị trường nguồn, bạn có thể cập nhật thông tin về chỗ trống và kỳ tuyển sinh bất cứ lúc nào."
       }
     }
   },
@@ -6026,40 +6128,44 @@
     "customSectionVisible": "Visible"
   },
   "ParentsAgentCta": {
-    "eyebrow": "Start with an agent",
-    "headingPrefix": "Find your",
-    "headingEmphasis": "education agent",
-    "headingSuffix": "and let the experts guide you",
-    "subheading": "A trusted local agent matches your child to the right school, handles the paperwork, and supports your family every step of the way — free for parents.",
-    "searchPlaceholder": "Where are you moving? e.g. Sydney, Melbourne",
-    "searchAriaLabel": "Find an education agent",
-    "ctaPrimary": "Find an agent",
-    "ctaSecondary": "Browse all agents",
-    "reassurance": "100% free for families · Verified, QEAC-qualified agents"
+    "eyebrow": "Bắt đầu cùng một tư vấn",
+    "headingPrefix": "Nhận trợ giúp từ chuyên gia –",
+    "headingEmphasis": "miễn phí",
+    "headingSuffix": ".",
+    "subheading": "Chưa biết bắt đầu từ đâu? SchoolGo kết nối bạn với những tư vấn giáo dục được chính các trường họ đại diện phê duyệt. Họ am hiểu quy trình tuyển sinh, yêu cầu visa và có thể đồng hành cùng bạn từ khâu chọn trường đến nộp hồ sơ – mà không tốn chi phí.",
+    "searchPlaceholder": "Bạn đang chuyển đến đâu? vd. Sydney, Melbourne",
+    "searchAriaLabel": "Tìm một tư vấn giáo dục",
+    "ctaPrimary": "Tìm một tư vấn",
+    "ctaSecondary": "Duyệt tất cả tư vấn",
+    "reassurance": "100% miễn phí cho các gia đình · Tư vấn đã được xác minh và phê duyệt bởi trường"
   },
   "ParentsAgentHelp": {
-    "eyebrow": "Why go through an agent",
-    "heading": "How an agent helps your family",
-    "subheading": "Agents do the heavy lifting so you can focus on your child. Here is what a good education agent takes off your plate.",
+    "eyebrow": "Vì sao nên thông qua một tư vấn",
+    "heading": "Một tư vấn giúp gia đình bạn như thế nào",
+    "subheading": "Tư vấn lo phần việc nặng nhọc để bạn có thể tập trung vào con mình. Đây là những gì một tư vấn giáo dục được trường phê duyệt gánh vác giúp bạn.",
     "benefits": {
       "free": {
-        "title": "Free for families",
-        "description": "Agents are paid by schools, never by you. Expert guidance comes at no cost to your family."
+        "title": "Miễn phí cho các gia đình",
+        "description": "Tư vấn được các trường trả công, không bao giờ thu của bạn. Hướng dẫn từ chuyên gia mà không tốn chi phí cho gia đình bạn."
       },
       "matching": {
-        "title": "Expert school matching",
-        "description": "They know the schools, the suburbs and the curricula — and match your child to the right fit, not just the first option."
+        "title": "Ghép trường bởi chuyên gia",
+        "description": "Họ am hiểu các trường, các khu vực và chương trình học — và ghép con bạn với sự phù hợp đúng đắn, chứ không chỉ là lựa chọn đầu tiên."
       },
       "applications": {
-        "title": "Application & visa guidance",
-        "description": "From enrolment forms to student visa requirements, your agent prepares and checks the paperwork with you."
+        "title": "Hướng dẫn hồ sơ & visa",
+        "description": "Từ biểu mẫu ghi danh đến yêu cầu visa du học, tư vấn của bạn chuẩn bị và kiểm tra giấy tờ cùng bạn."
       },
       "welfare": {
-        "title": "Under-18 welfare support",
-        "description": "Need a guardian or homestay for a younger student? Agents arrange compliant welfare and accommodation."
+        "title": "Hỗ trợ phúc lợi dưới 18 tuổi",
+        "description": "Cần giám hộ hoặc homestay cho học sinh nhỏ tuổi? Tư vấn sắp xếp phúc lợi và chỗ ở tuân thủ quy định."
       }
     },
-    "ctaPrimary": "Find an agent"
+    "selection": {
+      "title": "SchoolGo chọn tư vấn như thế nào?",
+      "body": "Mọi tư vấn trên SchoolGo đều được xác minh và phê duyệt bởi các trường họ hợp tác. SchoolGo không chỉ định tư vấn ngẫu nhiên – bạn chọn ai để kết nối dựa trên kinh nghiệm, ngôn ngữ họ sử dụng và các trường họ đại diện."
+    },
+    "ctaPrimary": "Tìm một tư vấn"
   },
   "UnifiedSearch": {
     "filters": {
@@ -6848,5 +6954,91 @@
       "delivered": "Delivered",
       "cancelled": "Cancelled"
     }
+  },
+  "ParentsFees": {
+    "eyebrow": "Học phí",
+    "heading": "Hiểu chi phí thực tế – không chỉ là học phí.",
+    "body": "Học phí chỉ là một phần của bức tranh. Phụ huynh thường bất ngờ trước những chi phí phát sinh mà họ không lường trước. SchoolGo cho bạn thấy bảng chi tiết đầy đủ để không có bất ngờ về sau.",
+    "items": {
+      "tuition": "Học phí",
+      "accommodation": "Phí nội trú hoặc homestay",
+      "enrolment": "Phí ghi danh và nộp hồ sơ",
+      "health": "Bảo hiểm y tế (OSHC)",
+      "uniforms": "Đồng phục, sách giáo khoa và laptop",
+      "excursions": "Dã ngoại và hoạt động ngoại khóa",
+      "guardian": "Sắp xếp giám hộ (nếu cần)",
+      "airport": "Đón sân bay",
+      "refund": "Điều kiện hoàn phí nếu bị từ chối visa"
+    },
+    "cta": "Đọc hướng dẫn học phí đầy đủ"
+  },
+  "ParentsAccommodationWelfare": {
+    "eyebrow": "Chỗ ở & phúc lợi",
+    "heading": "Con bạn sẽ sống ở đâu – và ai sẽ chăm sóc các em?",
+    "body": "Với những gia đình gửi con ra nước ngoài, chỗ ở và phúc lợi là cùng một câu hỏi. SchoolGo giúp bạn hiểu các lựa chọn của mình và mức hỗ trợ mà mỗi trường cung cấp.",
+    "accommodation": {
+      "boarding": {
+        "title": "Nội trú",
+        "description": "Sống trong khuôn viên trường với sự giám sát có tổ chức, bữa ăn và các hoạt động."
+      },
+      "homestay": {
+        "title": "Homestay",
+        "description": "Sống cùng một gia đình bản xứ được trường phê duyệt."
+      },
+      "family": {
+        "title": "Sắp xếp với người thân",
+        "description": "Ở cùng họ hàng đã định cư tại Úc."
+      },
+      "guardians": {
+        "title": "Giám hộ được trường phê duyệt",
+        "description": "Dành cho học sinh dưới 18 tuổi không có người thân tại Úc."
+      }
+    },
+    "welfareHeading": "Thông tin phúc lợi & hỗ trợ",
+    "welfare": {
+      "responsibleUnder18": "Ai chịu trách nhiệm cho con bạn nếu các em dưới 18 tuổi?",
+      "sickOrHomesick": "Điều gì xảy ra nếu con bạn bị ốm, nhớ nhà hoặc gặp vấn đề?",
+      "contactPerson": "Ai là người liên hệ dành cho phụ huynh?",
+      "communication": "Trường liên lạc với phụ huynh ở nước ngoài như thế nào?",
+      "sameCountryPeers": "Có học sinh nào khác đến từ quê hương của con bạn không?",
+      "adjustmentSupport": "Có hỗ trợ nào nếu con bạn gặp khó khăn trong việc thích nghi không?"
+    }
+  },
+  "SchoolsApplicationQuality": {
+    "eyebrow": "Chất lượng hồ sơ",
+    "heading": "Đúng học sinh, không chỉ là nhiều học sinh hơn.",
+    "subheading": "Các trường không cần thêm những yêu cầu liên hệ dở dang. SchoolGo nâng cao chất lượng những gì đến với đội ngũ tuyển sinh của bạn bằng cách bảo đảm các gia đình và tư vấn hiểu yêu cầu của bạn trước khi nộp hồ sơ.",
+    "items": {
+      "english": {
+        "title": "Yêu cầu tiếng Anh được hiển thị ngay từ đầu",
+        "description": "Các gia đình và tư vấn có thể thấy các bài thi bạn chấp nhận và điểm tối thiểu theo khối lớp trước khi họ liên hệ. Những học sinh chưa đạt ngưỡng có thể thấy các trường có lộ trình dự bị tiếng Anh thay thế."
+      },
+      "costs": {
+        "title": "Tổng chi phí minh bạch",
+        "description": "Các gia đình thấy học phí, nội trú, phí nộp hồ sơ và các khoản bắt buộc trước khi kết nối với một tư vấn. Ít cuộc trao đổi bị đình trệ vì những khoản phí bất ngờ hơn."
+      },
+      "accommodation": {
+        "title": "Chỗ ở và phúc lợi rõ ràng",
+        "description": "Phụ huynh hiểu rõ về nội trú, homestay và sắp xếp giám hộ trước khi nộp hồ sơ. Các trường có yêu cầu độ tuổi cụ thể cho nội trú có thể hiển thị những điều này."
+      },
+      "agents": {
+        "title": "Tư vấn được xác minh",
+        "description": "Bạn phê duyệt tư vấn nào được đại diện cho trường của bạn. Việc ghi nhận tư vấn được hiển thị trên mọi yêu cầu liên hệ."
+      }
+    }
+  },
+  "SchoolsAgentRelationships": {
+    "eyebrow": "Quan hệ với tư vấn",
+    "heading": "Tư vấn của bạn. Sự phê duyệt của bạn. Quan hệ của bạn.",
+    "subheading": "SchoolGo không chỉ định tư vấn cho trường của bạn hay can thiệp vào các mối quan hệ tư vấn sẵn có. Bạn quyết định tư vấn nào được phê duyệt để đại diện cho trường mình. Những tư vấn bạn đã hợp tác có thể được xác minh ngay lập tức, và tư vấn mới có thể gửi yêu cầu phê duyệt qua hồ sơ của bạn.",
+    "bullets": {
+      "approve": "Bạn phê duyệt hoặc từ chối yêu cầu của tư vấn.",
+      "connect": "Chỉ những tư vấn đã được phê duyệt mới có thể kết nối các gia đình với trường của bạn qua SchoolGo.",
+      "agreements": "Các thỏa thuận tư vấn và cơ cấu hoa hồng sẵn có của bạn không bị ảnh hưởng.",
+      "performance": "Hiệu suất của tư vấn – mức độ phản hồi và sự đầy đủ của hồ sơ – được hiển thị cho bạn.",
+      "remove": "Bạn có thể thu hồi phê duyệt của một tư vấn bất cứ lúc nào."
+    },
+    "cardTitle": "Bạn phê duyệt mọi tư vấn.",
+    "cardBody": "SchoolGo không bao giờ chỉ định lại tư vấn hay chia sẻ danh sách tư vấn của bạn. Các mối quan hệ của bạn vẫn là của bạn."
   }
 }

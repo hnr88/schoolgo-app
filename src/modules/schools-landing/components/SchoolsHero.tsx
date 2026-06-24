@@ -40,8 +40,11 @@ export async function SchoolsHero() {
             {t('lede')}
           </p>
           <div className='flex flex-wrap gap-3 pt-2'>
-            <CtaLink href='/search' size='lg' arrow>
+            <CtaLink href='/school/sign-up' size='lg' arrow>
               {t('ctaPrimary')}
+            </CtaLink>
+            <CtaLink href='/contact' variant='secondary' size='lg'>
+              {t('ctaSecondary')}
             </CtaLink>
           </div>
         </div>

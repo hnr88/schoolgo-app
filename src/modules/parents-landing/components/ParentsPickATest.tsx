@@ -88,6 +88,13 @@ export async function ParentsPickATest() {
             </div>
           </div>
         </div>
+
+        <div className='rounded-lg border border-border bg-card p-5 shadow-2 md:p-6'>
+          <p className='text-body-sm text-ink-900'>
+            <span className='font-semibold'>{t('reassurance.title')}</span>{' '}
+            {t('reassurance.body')}
+          </p>
+        </div>
       </SectionContainer>
     </section>
   );

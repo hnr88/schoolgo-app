@@ -43,6 +43,11 @@ export async function ParentsAgentHelp() {
           ))}
         </div>
 
+        <div className='rounded-xl border border-border bg-card p-6 shadow-2 md:p-8'>
+          <h3 className='text-h4 font-semibold text-ink-900'>{t('selection.title')}</h3>
+          <p className='mt-2 text-body-sm text-foggy'>{t('selection.body')}</p>
+        </div>
+
         <div className='flex flex-wrap gap-3'>
           <CtaLink href='/search?mode=agents' size='lg' arrow>
             {t('ctaPrimary')}

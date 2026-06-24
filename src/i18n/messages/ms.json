@@ -24,9 +24,9 @@
     }
   },
   "ParentsMetadata": {
-    "title": "SchoolGo – Cari sekolah Australia untuk anak anda",
-    "description": "Cari setiap sekolah Australia berdaftar CRICOS. Bandingkan yuran, keperluan ujian Bahasa Inggeris, dan sesi pengambilan – dalam tujuh bahasa, percuma.",
-    "ogDescription": "Setiap sekolah CRICOS. Disahkan. Dalam bahasa anda."
+    "title": "SchoolGo – Pilih sekolah Australia yang tepat dengan penuh yakin",
+    "description": "Cari dan bandingkan setiap sekolah Australia yang berdaftar – yuran, penginapan, syarat Bahasa Inggeris dan sokongan pelajar – dalam bahasa anda. Percuma, tanpa log masuk.",
+    "ogDescription": "Pilih sekolah yang tepat untuk anak anda – dengan penuh yakin. Percuma, dalam bahasa anda."
   },
   "MarketingHeader": {
     "findSchools": "Cari Sekolah",
@@ -204,10 +204,10 @@
       "brandAccent": "Berdaftar",
       "source": "data dari data.gov.au"
     },
-    "headlinePrefix": "Cari sekolah",
-    "headlineEmphasis": "Australia",
-    "headlineSuffix": "untuk anak anda.",
-    "lede": "Setiap sekolah K–12 berdaftar CRICOS dalam satu tempat. Bandingkan yuran, asrama, ujian Bahasa Inggeris – cari dalam Mandarin, Korea, Thai, Vietnam, Melayu, Bahasa, atau Inggeris.",
+    "headlinePrefix": "Pilih sekolah yang tepat untuk",
+    "headlineEmphasis": "anak anda",
+    "headlineSuffix": "– dengan penuh yakin.",
+    "lede": "Memilih sekolah yang tepat boleh membentuk keyakinan, kesejahteraan, pilihan universiti dan peluang masa depan anak anda. Cari setiap sekolah Australia yang berdaftar, bandingkan yuran, penginapan, syarat Bahasa Inggeris dan sokongan pelajar – dalam bahasa anda.",
     "searchAriaLabel": "Cari sekolah",
     "searchFields": {
       "where": {
@@ -235,7 +235,7 @@
           "location": "Darlinghurst, NSW",
           "curriculum": "HSC",
           "fee": "$41.2k AUD",
-          "boarding": "Day only",
+          "boarding": "Harian sahaja",
           "rating": "4.8"
         },
         "b": {
@@ -243,7 +243,7 @@
           "location": "Melbourne, VIC",
           "curriculum": "VCE/IB",
           "fee": "$42.5k AUD",
-          "boarding": "Boarding",
+          "boarding": "Asrama",
           "rating": "4.8"
         },
         "c": {
@@ -258,73 +258,73 @@
     }
   },
   "ParentsStatsBar": {
-    "eyebrow": "Angka utama",
-    "heading": "Direktori sekolah CRICOS terbesar di Australia.",
-    "subheading": "Setiap sekolah berdaftar, disahkan dan boleh dicari – dari kerajaan hingga swasta, merentasi lapan negeri dan wilayah.",
+    "eyebrow": "Angka-angka",
+    "heading": "Setiap sekolah berdaftar untuk pelajar antarabangsa. Dalam satu tempat.",
+    "subheading": "Cari, tapis dan bandingkan setiap sekolah Australia yang berdaftar – yuran, penginapan, syarat Bahasa Inggeris dan sokongan pelajar – semuanya dalam satu tempat, dalam bahasa anda.",
     "items": {
       "schools": {
         "value": "{count, number}+",
-        "label": "CRICOS Schools"
+        "label": "Sekolah Berdaftar"
       },
       "states": {
         "value": "8",
-        "label": "States & Territories"
+        "label": "Negeri & Wilayah"
       },
       "sectors": {
-        "value": "All 3 Sectors",
-        "label": "Government · Independent · Catholic"
+        "value": "Kesemua 3 Sektor",
+        "label": "Kerajaan · Bebas · Katolik"
       },
       "fees": {
         "value": "$3.5k – $78k",
-        "label": "Annual Fee Range"
+        "label": "Julat Yuran Tahunan"
       }
     }
   },
   "ParentsFourSteps": {
     "eyebrow": "Cara penggunaan",
-    "heading": "Dari pelayaran pertama hingga surat tawaran – empat langkah mudah.",
-    "subheading": "Tiada yuran tersembunyi. Log masuk tidak diperlukan sehingga anda memohon.",
+    "heading": "Dari carian pertama hingga keputusan yang yakin – empat langkah mudah.",
+    "subheading": "Telus pada setiap peringkat. Tiada yuran tersembunyi. Log masuk tidak diperlukan sehingga anda memohon.",
     "steps": {
       "browse": {
-        "title": "Semak imbas setiap sekolah CRICOS",
-        "description": "Tapis {count, number} sekolah mengikut negeri, yuran, sektor, kurikulum, asrama, dan biasiswa – dalam bahasa anda."
+        "title": "Semak imbas setiap sekolah berdaftar",
+        "description": "Tapis {count, number}+ sekolah mengikut negeri, yuran, kurikulum, asrama, homestay, ujian Bahasa Inggeris, sokongan kebajikan dan biasiswa – dalam Mandarin, Korea, Thai, Vietnam, Melayu, Bahasa, atau Inggeris."
       },
       "shortlist": {
-        "title": "Senarai pendek empat. Bandingkan serentak",
-        "description": "Susun yuran, sesi pengambilan, ICSEA, dan ujian Bahasa Inggeris yang diterima. Buat keputusan dalam minit, bukan bulan."
+        "title": "Bandingkan sekolah secara bersebelahan",
+        "description": "Lihat yuran, penginapan, sokongan Bahasa Inggeris, kebajikan pelajar dan syarat kemasukan secara bersebelahan – supaya anda dapat mengenal pasti kesesuaian yang tepat, bukan sekadar kedudukan yang tinggi."
       },
       "prepare": {
-        "title": "Semak syarat tepat",
-        "description": "Setiap penyenaraian menunjukkan ujian yang diterima, markah minimum, dokumen, dan tempoh pengambilan."
+        "title": "Fahami gambaran penuh",
+        "description": "Lihat jumlah kos (bukan sekadar yuran pengajian), pilihan penginapan, pengaturan kebajikan, program sokongan Bahasa Inggeris, dan apa yang berlaku jika anak anda memerlukan bantuan."
       },
       "apply": {
-        "title": "Mohon melalui ejen yang disahkan",
-        "description": "Ejen anda membawa lencana QEAC. Permohonan dipantau dari awal hingga akhir dalam satu papan pemuka.",
-        "comingSoon": "Coming soon"
+        "title": "Berhubung dengan ejen yang dipercayai",
+        "description": "SchoolGo menghubungkan anda dengan perunding pendidikan yang diluluskan sekolah dan memahami proses kemasukan – jadi anda mendapat panduan pakar tanpa kos kepada anda.",
+        "comingSoon": "Akan datang"
       }
     },
     "ctaBrowse": "Mula semak imbas",
     "ctaLearn": "Lihat cara penggunaan",
     "badge": {
-      "cricosVerified": "CRICOS Verified · Claimed by school",
-      "updated": "Updated April 2026"
+      "cricosVerified": "Berdaftar Kerajaan · Dituntut oleh sekolah",
+      "updated": "Dikemas kini April 2026"
     },
     "visuals": {
       "browse": {
-        "title": "[TODO: ms] 695 schools loaded",
-        "subtitle": "[TODO: ms] Filtered by state, fees & curriculum"
+        "title": "695 sekolah dimuatkan",
+        "subtitle": "Ditapis mengikut negeri, yuran & kurikulum"
       },
       "shortlist": {
-        "title": "[TODO: ms] Wei's shortlist",
-        "subtitle": "[TODO: ms] 3 schools in Victoria · All accept AEAS"
+        "title": "Senarai pendek Wei",
+        "subtitle": "3 sekolah di Victoria · Semuanya menerima AEAS"
       },
       "prepare": {
-        "title": "[TODO: ms] Requirements matched",
-        "subtitle": "[TODO: ms] AEAS 70+ · IELTS 5.5+ · Documents ready"
+        "title": "Syarat dipadankan",
+        "subtitle": "AEAS 70+ · IELTS 5.5+ · Dokumen sedia"
       },
       "apply": {
-        "title": "[TODO: ms] Application submitted",
-        "subtitle": "[TODO: ms] Tracked end-to-end · Status: Under review"
+        "title": "Permohonan dihantar",
+        "subtitle": "Dipantau dari awal hingga akhir · Status: Sedang disemak"
       }
     }
   },
@@ -356,78 +356,90 @@
     }
   },
   "ParentsAgents": {
-    "eyebrow": "[TODO: ms] Get expert help",
-    "heading": "[TODO: ms] Meet your verified education agents.",
-    "subheading": "[TODO: ms] Every family is matched with a specialist education consultant who knows the admissions process inside out. Browse QEAC-verified agents and find the right one to guide you – from choosing a school to submitting your application, at no cost to you.",
-    "verifiedLabel": "[TODO: ms] QEAC verified",
-    "partnerSchools": "[TODO: ms] {count, plural, one {# partner school} other {# partner schools}}",
-    "empty": "[TODO: ms] Verified agents are coming soon. Check back shortly.",
-    "viewAll": "[TODO: ms] Find an agent",
-    "browseAll": "Browse all agents"
+    "eyebrow": "Dapatkan bantuan pakar",
+    "heading": "Temui ejen pendidikan anda yang disahkan.",
+    "subheading": "Setiap ejen di SchoolGo diluluskan oleh sekolah yang mereka wakili. Anda memilih dengan siapa hendak berhubung berdasarkan pengalaman, bahasa yang mereka tuturkan dan sekolah yang mereka kerjakan – kemudian mereka membimbing anda dari memilih sekolah hingga menghantar permohonan, tanpa kos kepada anda.",
+    "verifiedLabel": "Disahkan",
+    "partnerSchools": "{count, plural, other {# sekolah rakan kongsi}}",
+    "empty": "Ejen yang disahkan akan datang tidak lama lagi. Sila semak semula sebentar lagi.",
+    "viewAll": "Cari ejen",
+    "browseAll": "Layari semua ejen"
   },
   "ParentsComparison": {
     "compareLabel": "Bandingkan",
-    "eyebrow": "Bandingkan",
-    "heading": "Put three schools next to each other.",
-    "headingAccent": "Buat keputusan dalam minit, bukan bulan.",
-    "shortlistLabel": "[TODO: ms] Shortlist · {count} schools",
+    "eyebrow": "Perbandingan bersebelahan",
+    "heading": "Letakkan sekolah bersebelahan antara satu sama lain.",
+    "headingAccent": "Lihat perbezaan yang penting.",
+    "shortlistLabel": "Senarai pendek · {count} sekolah",
     "columns": {
-      "fee": "Yuran tahunan",
-      "stateSector": "[TODO: ms] State & sector",
-      "curriculum": "[TODO: ms] Curriculum",
-      "boarding": "[TODO: ms] Boarding",
-      "tests": "Ujian diterima",
-      "minScore": "[TODO: ms] Min. AEAS score",
-      "scholarships": "[TODO: ms] Scholarships",
-      "intakes": "Sesi pengambilan"
+      "fee": "Yuran tahunan (antarabangsa)",
+      "totalCost": "Anggaran jumlah kos",
+      "accommodation": "Pilihan penginapan",
+      "welfare": "Sokongan kebajikan & penjaga",
+      "englishSupport": "Program sokongan Bahasa Inggeris",
+      "tests": "Ujian Bahasa Inggeris yang diterima",
+      "minScore": "Markah Bahasa Inggeris min.",
+      "scholarships": "Biasiswa",
+      "intakes": "Sesi pengambilan",
+      "parentComms": "Komunikasi ibu bapa"
     },
-    "notPublished": "Tidak diterbitkan",
-    "dayOnly": "[TODO: ms] – Day only",
-    "noneIntl": "[TODO: ms] – None intl."
+    "estimatedFrom": "Dari {amount}",
+    "accommodationBoarding": "Asrama · Homestay",
+    "accommodationDay": "Homestay · Keluarga",
+    "welfareValue": "Penjaga bawah 18 · Tapisan homestay",
+    "englishSupportValue": "Sokongan ELICOS / EAL",
+    "parentCommsValue": "Laporan setiap penggal · Portal ibu bapa",
+    "notPublished": "–",
+    "dayOnly": "– Harian sahaja",
+    "noneIntl": "– Tiada antarabangsa"
   },
   "ParentsPickATest": {
     "eyebrow": "Kemahiran Bahasa Inggeris",
-    "heading": "Find out which English test the school requires –",
-    "headingAccent": "and the score your child needs to get in.",
-    "subheading": "Kami memetakan ujian Bahasa Inggeris yang diterima merentas setiap profil. Tidak perlu lagi menggali 50 laman web sekolah.",
+    "heading": "Ketahui ujian Bahasa Inggeris yang diperlukan oleh anak anda –",
+    "headingAccent": "dan sokongan yang tersedia.",
+    "subheading": "Setiap sekolah menerima ujian Bahasa Inggeris yang berbeza pada tahap yang berbeza. Kami memetakan kesemuanya – supaya anda dapat melihat sepintas lalu sekolah mana yang sepadan dengan markah anak anda. Jika Bahasa Inggeris anak anda belum cukup kuat, banyak sekolah menawarkan program sokongan bahasa Inggeris atau laluan persediaan.",
     "tests": {
       "aeas": {
         "name": "AEAS",
         "fullName": "Australian Education Assessment Services",
-        "description": "Most commonly accepted by Australian independent schools"
+        "description": "Paling kerap diterima oleh sekolah bebas Australia"
       },
       "idat": {
         "name": "iDAT",
         "fullName": "International Digital Admissions Test",
-        "description": "Growing in popularity for K–12 admissions"
+        "description": "Semakin popular untuk kemasukan K–12"
       },
       "duolingo": {
         "name": "Duolingo",
         "fullName": "Duolingo English Test",
-        "description": "Accepted by an increasing number of schools"
+        "description": "Diterima oleh semakin banyak sekolah"
       },
       "ielts": {
         "name": "IELTS",
         "fullName": "International English Language Testing System",
-        "description": "Standard for senior secondary entry (Year 11+)"
+        "description": "Standard untuk kemasukan menengah atas (Year 11+)"
       },
       "pte": {
         "name": "PTE Academic",
         "fullName": "Pearson Test of English Academic",
-        "description": "Accepted by some schools for Year 11–12 entry"
+        "description": "Diterima oleh sesetengah sekolah untuk kemasukan Year 11–12"
       },
       "cambridge": {
         "name": "Cambridge",
         "fullName": "Cambridge English Qualifications",
-        "description": "Accepted by select schools"
+        "description": "Diterima oleh sekolah terpilih"
       },
       "toefl": {
         "name": "TOEFL",
         "fullName": "Test of English as a Foreign Language",
-        "description": "Accepted by select schools for senior entry"
+        "description": "Diterima oleh sekolah terpilih untuk kemasukan peringkat atas"
       }
     },
-    "cta": "Check your school's English requirements"
+    "reassurance": {
+      "title": "Tidak pasti sama ada Bahasa Inggeris anak anda sudah bersedia?",
+      "body": "Banyak sekolah menerima pelajar yang masih mengembangkan Bahasa Inggeris mereka dan menyediakan sokongan intensif. Gunakan penapis kami untuk mencari sekolah dengan program persediaan Bahasa Inggeris."
+    },
+    "cta": "Semak syarat Bahasa Inggeris sekolah anda"
   },
   "ParentsSevenLanguages": {
     "eyebrow": "Tujuh bahasa",
@@ -445,137 +457,191 @@
   },
   "ParentsArticles": {
     "eyebrow": "Perpustakaan kemasukan",
-    "heading": "Ditulis oleh pegawai kemasukan. Diterjemah ke dalam tujuh bahasa.",
-    "subheading": "Panduan mudah tentang visa, sesi pengambilan, ujian Bahasa Inggeris, dan jadual yuran. Percuma, tanpa log masuk.",
+    "heading": "Panduan yang menjawab soalan yang ditanya oleh setiap keluarga.",
+    "subheading": "Jumlah kos, pengaturan kebajikan dan penjaga, sesi pengambilan, ujian Bahasa Inggeris, penginapan, dokumen yang diperlukan – panduan dalam bahasa yang mudah ditulis oleh pegawai kemasukan. Percuma, tanpa log masuk.",
     "items": {
       "intakes": {
         "title": "Memahami sesi pengambilan sekolah Australia",
-        "meta": "6 min baca · Dikemas kini setiap bulan"
+        "meta": "6 min bacaan · Dikemas kini setiap bulan"
       },
       "englishTests": {
-        "title": "Ujian Bahasa Inggeris mana yang diterima sekolah anda?",
-        "meta": "8 min baca · Pecahan mengikut ujian"
+        "title": "Ujian Bahasa Inggeris manakah yang diterima sekolah anda?",
+        "meta": "8 min bacaan · Perincian ujian demi ujian"
       },
       "boarding": {
-        "title": "Asrama vs harian: pilihan keluarga dan sebabnya",
-        "meta": "5 min baca · Kajian kes"
+        "title": "Asrama lawan harian: apa yang dipilih keluarga dan mengapa",
+        "meta": "5 min bacaan · Kajian kes"
       }
     },
     "readMore": "Baca artikel"
   },
   "ParentsTrustBar": {
     "eyebrow": "Kepercayaan & pematuhan",
-    "heading": "Data you can trust – so you know you're looking at legitimate institutions and accurate information.",
-    "subheading": "Setiap penyenaraian di SchoolGo disokong oleh sumber data kerajaan rasmi – disahkan, berlesen, dan dikemas kini setiap bulan.",
+    "heading": "Data yang boleh anda percayai – dan kejelasan tentang cara SchoolGo berfungsi.",
+    "subheading": "Setiap sekolah yang disenaraikan disahkan berdasarkan daftar rasmi kerajaan Australia, dan kami berterus terang tentang apa yang SchoolGo lakukan – dan tidak lakukan.",
     "items": {
       "cricos": {
         "label": "Sekolah berdaftar kerajaan",
-        "description": "Setiap penyenaraian sekolah disemak silang dengan Daftar Komanwel rasmi."
+        "description": "Setiap sekolah di SchoolGo berdaftar dengan Kerajaan Australia untuk mengambil pelajar antarabangsa."
       },
       "datagov": {
         "label": "Sentiasa dikemas kini",
-        "description": "Data terbuka berlesen di bawah CC BY 2.5 AU – telus dan boleh diaudit secara umum."
+        "description": "Data sekolah disegarkan secara berkala daripada daftar rasmi kerajaan – jadi apa yang anda lihat adalah terkini."
       },
       "acara": {
         "label": "Data kurikulum kebangsaan",
-        "description": "Kurikulum, skor ICSEA, dan data enrolmen bersumber daripada pihak berkuasa kebangsaan."
+        "description": "Data kurikulum, prestasi sekolah, dan enrolmen bersumber daripada pihak berkuasa pendidikan kebangsaan Australia."
       },
       "esos": {
         "label": "Perlindungan pelajar",
-        "description": "SchoolGo beroperasi dalam rangka kerja Akta Perkhidmatan Pendidikan untuk Pelajar Luar Negeri Australia."
+        "description": "Semua sekolah yang disenaraikan beroperasi di bawah rangka kerja perundangan Australia untuk melindungi pelajar antarabangsa."
       }
     },
-    "attribution": "Data sekolah bersumber daripada Daftar Komanwel Institusi dan Kursus untuk Pelajar Luar Negeri (CRICOS) dan Pihak Berkuasa Kurikulum, Penilaian dan Pelaporan Australia (ACARA). Dikemas kini April 2026."
+    "attribution": "Data sekolah bersumber daripada daftar rasmi Kerajaan Australia dan pihak berkuasa kurikulum kebangsaan (ACARA). Dikemas kini April 2026.",
+    "about": {
+      "heading": "Apakah itu SchoolGo?",
+      "intro": "SchoolGo menghubungkan keluarga dengan sekolah yang tepat dan ejen yang tepat. Ia adalah platform percuma di mana ibu bapa boleh:",
+      "points": {
+        "search": "Mencari dan membandingkan setiap sekolah berdaftar dalam satu tempat",
+        "understand": "Memahami yuran, syarat dan pilihan sokongan",
+        "connect": "Berhubung dengan ejen pendidikan yang diluluskan sekolah apabila mereka bersedia untuk memohon"
+      },
+      "closing": "Ejen menguruskan permohonan anda dan membimbing anda melalui prosesnya. Sekolah meluluskan ejen mana yang mewakili mereka – jadi anda tahu anda sedang bekerjasama dengan seseorang yang dipercayai oleh sekolah. Tiada sesiapa yang menghubungi anda melainkan anda memilih untuk berhubung."
+    }
   },
   "ParentsFaq": {
-    "heading": "Frequently Asked Questions",
+    "heading": "Soalan Lazim",
     "items": {
       "enrol": {
-        "question": "How do I enrol my child in an Australian school from overseas?",
-        "answer": "Start by shortlisting schools that fit your child's year level, location, and budget on SchoolGo. Each school's profile shows the documents, English test scores, and intake dates you'll need to apply. Once you've chosen a school, an education agent or the school's admissions office will guide you through the application and student visa process."
+        "question": "Bagaimana cara saya mendaftarkan anak saya di sekolah Australia dari luar negara?",
+        "answer": "Mulakan dengan membuat senarai pendek sekolah yang sesuai dengan tahap tahun, lokasi, dan bajet anak anda di SchoolGo. Profil setiap sekolah menunjukkan dokumen, markah ujian Bahasa Inggeris, dan tarikh pengambilan yang anda perlukan untuk memohon. Setelah anda memilih sebuah sekolah, seorang ejen pendidikan atau pejabat kemasukan sekolah akan membimbing anda melalui proses permohonan dan visa pelajar."
       },
       "cost": {
-        "question": "How much does it cost to send my child to school in Australia?",
-        "answer": "International student tuition typically ranges from about A$15,000 to A$45,000 per year, depending on the school, year level, and sector. On top of tuition, plan for application fees, uniforms, technology, boarding (if applicable), and Overseas Student Health Cover. Every SchoolGo profile shows the school's published international fees so you can compare like-for-like."
+        "question": "Berapakah kos untuk menghantar anak saya ke sekolah di Australia?",
+        "answer": "Yuran pengajian pelajar antarabangsa biasanya berkisar antara kira-kira A$15,000 hingga A$45,000 setahun, bergantung pada sekolah, tahap tahun, dan sektor. Selain yuran pengajian, sediakan peruntukan untuk yuran permohonan, pakaian seragam, teknologi, asrama (jika berkenaan), dan Perlindungan Kesihatan Pelajar Luar Negeri. Setiap profil SchoolGo menunjukkan yuran antarabangsa rasmi sekolah supaya anda dapat membuat perbandingan setara."
       },
       "englishTest": {
-        "question": "What English test does my child need for an Australian school?",
-        "answer": "Different schools accept different tests – the most common are AEAS, iDAT, Duolingo English Test, IELTS, and PTE Academic, with minimum scores that vary by year level. SchoolGo shows the exact tests and minimum scores each school accepts on its profile."
+        "question": "Ujian Bahasa Inggeris apakah yang diperlukan anak saya untuk sekolah Australia?",
+        "answer": "Sekolah yang berbeza menerima ujian yang berbeza – yang paling biasa ialah AEAS, iDAT, Duolingo English Test, IELTS, dan PTE Academic, dengan markah minimum yang berbeza mengikut tahap tahun. SchoolGo menunjukkan ujian tepat dan markah minimum yang diterima setiap sekolah pada profilnya."
       },
       "visa": {
-        "question": "Do international students need a visa to study at an Australian school?",
-        "answer": "Yes – full-fee international school students study on a Student visa (subclass 500), which requires a Confirmation of Enrolment from a CRICOS-registered school. You'll also need health cover (OSHC) for the duration of the visa. See our student visa guide for the full step-by-step."
+        "question": "Adakah pelajar antarabangsa memerlukan visa untuk belajar di sekolah Australia?",
+        "answer": "Ya – pelajar sekolah antarabangsa yuran penuh belajar dengan visa Pelajar (subkelas 500), yang memerlukan Pengesahan Pendaftaran daripada sekolah berdaftar CRICOS. Anda juga memerlukan perlindungan kesihatan (OSHC) sepanjang tempoh visa. Lihat panduan visa pelajar kami untuk langkah demi langkah yang lengkap."
       },
       "agent": {
-        "question": "What is an education agent and do I need one?",
-        "answer": "Education agents are licensed consultants who help families choose schools, prepare documents, and manage the application and visa process. You don't have to use one, but most international families do – and it's free for you, since agents are paid by the schools. SchoolGo shows you which agents each school works with so you can pick someone with a proven track record."
+        "question": "Apakah itu ejen pendidikan dan adakah saya memerlukannya?",
+        "answer": "Ejen pendidikan ialah perunding berlesen yang membantu keluarga memilih sekolah, menyediakan dokumen, dan menguruskan proses permohonan serta visa. Anda tidak semestinya perlu menggunakannya, tetapi kebanyakan keluarga antarabangsa melakukannya – dan ia percuma untuk anda, kerana ejen dibayar oleh sekolah. SchoolGo menunjukkan kepada anda ejen mana yang dikerjakan oleh setiap sekolah supaya anda boleh memilih seseorang dengan rekod prestasi yang terbukti."
       },
       "schoolTypes": {
-        "question": "What types of schools are there in Australia?",
-        "answer": "Australian schools fall into three sectors – government (public), Catholic, and independent – and may be co-educational, single-sex, day-only, or boarding. Curricula include state certificates like the VCE, HSC, and QCE, plus the International Baccalaureate at many independent schools. Our school types guide explains how each sector works for international students."
+        "question": "Apakah jenis-jenis sekolah yang terdapat di Australia?",
+        "answer": "Sekolah Australia terbahagi kepada tiga sektor – kerajaan (awam), Katolik, dan bebas – dan mungkin koedukasi, satu jantina, harian sahaja, atau berasrama. Kurikulum termasuk sijil negeri seperti VCE, HSC, dan QCE, serta International Baccalaureate di banyak sekolah bebas. Panduan jenis sekolah kami menerangkan cara setiap sektor berfungsi untuk pelajar antarabangsa."
       },
       "free": {
-        "question": "Is SchoolGo free?",
-        "answer": "Yes. SchoolGo is completely free for parents, education agents, and schools. There are no listing fees, application fees, or subscription costs."
+        "question": "Adakah SchoolGo percuma?",
+        "answer": "Ya. SchoolGo adalah percuma sepenuhnya untuk ibu bapa, ejen pendidikan, dan sekolah. Tiada yuran penyenaraian, yuran permohonan, atau kos langganan."
+      },
+      "startEarly": {
+        "question": "Seberapa awal kami patut mula memohon?",
+        "answer": "Kebanyakan keluarga bermula 6 hingga 12 bulan sebelum sesi pengambilan pilihan mereka. Sekolah popular memenuhi tempat antarabangsa mereka lebih awal, dan anda memerlukan masa untuk menduduki ujian Bahasa Inggeris, mengumpul dokumen, serta mengaturkan visa pelajar dan penginapan. Bermula awal memberi anda lebih banyak pilihan dan jadual yang lebih tenang – tetapi banyak sekolah juga menerima permohonan lewat selagi ada tempat yang berbaki."
+      },
+      "weakEnglish": {
+        "question": "Bolehkah anak saya memohon jika Bahasa Inggerisnya belum kuat?",
+        "answer": "Ya. Banyak sekolah menerima pelajar yang masih mengembangkan Bahasa Inggeris mereka dan menyediakan sokongan bahasa Inggeris intensif atau laluan persediaan sebelum atau seiring dengan kelas arus perdana. Gunakan penapis kami untuk mencari sekolah dengan program persediaan Bahasa Inggeris yang sepadan dengan tahap semasa anak anda."
+      },
+      "midYear": {
+        "question": "Bolehkah anak saya mula pada pertengahan tahun?",
+        "answer": "Selalunya, ya. Sekolah Australia biasanya mempunyai beberapa sesi pengambilan sepanjang tahun, dan banyak yang menerima pelajar antarabangsa pada pertengahan tahun bergantung pada ketersediaan dan tahap tahun. Setiap profil sekolah di SchoolGo menunjukkan tempoh pengambilannya supaya anda dapat merancang mengikut tarikh mula anak anda."
+      },
+      "documents": {
+        "question": "Dokumen apakah yang diperlukan untuk memohon?",
+        "answer": "Kebanyakan sekolah meminta laporan sekolah terkini, salinan pasport, keputusan ujian Bahasa Inggeris (jika diperlukan), dan kadangkala surat rujukan atau pernyataan ringkas. Untuk visa pelajar anda juga memerlukan Pengesahan Pendaftaran dan bukti perlindungan kesihatan. Setiap profil sekolah menyenaraikan apa yang diperlukan oleh sekolah itu, dan ejen anda boleh mengesahkan senarai semak yang lengkap."
+      },
+      "boardingVsHomestay": {
+        "question": "Apakah perbezaan antara asrama dan homestay?",
+        "answer": "Asrama bermaksud tinggal di kampus dengan pengawasan berstruktur, makanan dan aktiviti. Homestay bermaksud tinggal bersama keluarga tempatan yang diluluskan oleh sekolah. Asrama menawarkan lebih banyak struktur dan kakitangan di tapak, manakala homestay menawarkan suasana kekeluargaan – pilihan yang tepat bergantung pada umur, kebebasan dan keutamaan anak anda."
+      },
+      "under18Responsible": {
+        "question": "Siapa yang bertanggungjawab terhadap anak saya jika dia berumur di bawah 18 tahun?",
+        "answer": "Pelajar di bawah 18 tahun mesti mempunyai pengaturan kebajikan yang diluluskan – biasanya ibu bapa atau saudara-mara yang layak di Australia, atau penjaga dan penginapan yang diluluskan sekolah. Sekolah dan penjaga yang dilantik berkongsi tanggungjawab terhadap penjagaan dan kesejahteraan anak anda, dan sekolah ialah titik hubungan utama anda."
+      },
+      "englishHelp": {
+        "question": "Bolehkah sekolah membantu jika anak saya bergelut dengan Bahasa Inggeris?",
+        "answer": "Ya. Banyak sekolah menyediakan sokongan Bahasa Inggeris sebagai Bahasa Tambahan (EAL) yang berterusan, tunjuk ajar dan program Bahasa Inggeris intensif untuk membantu pelajar yang masih membina Bahasa Inggeris mereka mengikut pelajaran di dalam kelas. Anda boleh menapis sekolah dengan program sokongan Bahasa Inggeris di SchoolGo."
+      },
+      "transfer": {
+        "question": "Bolehkah anak saya berpindah ke sekolah lain kemudian?",
+        "answer": "Ya, pelajar boleh berpindah antara sekolah, walaupun ada peraturan – terutamanya dalam tempoh enam bulan pertama sesuatu kursus – dan Pengesahan Pendaftaran baharu biasanya diperlukan. Ejen anda atau sekolah yang terlibat boleh membimbing anda melalui proses perpindahan dan sebarang implikasi visa."
+      },
+      "refundVisa": {
+        "question": "Adakah yuran sekolah boleh dibayar balik jika visa ditolak?",
+        "answer": "Kebanyakan sekolah mempunyai polisi bayaran balik bertulis yang menyatakan apa yang akan dibayar balik jika visa pelajar ditolak. Syarat bayaran balik berbeza antara sekolah, jadi sentiasa semak syarat bayaran balik sekolah sebelum membayar. SchoolGo menggalakkan anda menyemak polisi bayaran balik setiap sekolah sebagai sebahagian daripada memahami jumlah kos."
+      },
+      "agentSelection": {
+        "question": "Bagaimana SchoolGo memilih ejen yang dihubungkan dengan saya?",
+        "answer": "Setiap ejen di SchoolGo disahkan dan diluluskan oleh sekolah yang mereka kerjakan. SchoolGo tidak menugaskan ejen secara rawak – anda memilih dengan siapa hendak berhubung berdasarkan pengalaman, bahasa yang dituturkan dan sekolah yang mereka wakili."
+      },
+      "agentOrSchool": {
+        "question": "Adakah SchoolGo seorang ejen atau sebahagian daripada sebuah sekolah?",
+        "answer": "Bukan kedua-duanya. SchoolGo adalah platform bebas dan percuma yang membantu keluarga mencari dan membandingkan setiap sekolah Australia yang berdaftar serta berhubung dengan ejen pendidikan yang diluluskan sekolah apabila mereka bersedia. Kami tidak mendaftarkan pelajar sendiri – sekolah dan ejen pilihan anda yang menguruskan permohonan anda. Tiada sesiapa yang menghubungi anda melainkan anda memilih untuk berhubung."
       }
     }
   },
   "ParentsFinalCta": {
     "eyebrow": "Mulakan di sini",
-    "headingPrefix": "Carian anda",
+    "headingPrefix": "Masa depan mereka",
     "headingEmphasis": "bermula",
-    "headingSuffix": "dalam tujuh bahasa.",
-    "subheading": "Percuma. Tiada log masuk diperlukan. Dikemas kini {month} {year, number}.",
-    "ctaPrimary": "Find the right school"
+    "headingSuffix": "dengan sekolah yang tepat – dan sokongan yang tepat.",
+    "subheading": "Cari setiap sekolah berdaftar. Fahami jumlah kos. Yakin anak anda akan dijaga. Percuma, tanpa log masuk diperlukan.",
+    "ctaPrimary": "Cari sekolah yang tepat"
   },
   "AgentsMetadata": {
-    "title": "SchoolGo – Uruskan amalan ejen anda seperti portfolio",
-    "description": "Alat disahkan QEAC untuk ejen pendidikan yang menempatkan pelajar ke sekolah Australia. Permohonan piawai, saluran langsung, komisen penuh.",
-    "ogDescription": "Uruskan amalan anda seperti portfolio. Simpan 100% komisen anda."
+    "title": "SchoolGo untuk Ejen - Berhubung. Senarai pendek lebih pantas.",
+    "description": "Percuma untuk ejen pendidikan. Cari sekolah Australia, buat senarai pendek semasa sesi perundingan, berhubung dengan keluarga. Komisen anda kekal milik anda.",
+    "ogDescription": "Berhubung dengan keluarga yang bersedia memohon. Senarai pendek sekolah Australia dalam beberapa minit. Percuma untuk ejen - komisen anda kekal milik anda."
   },
   "AgentsHero": {
-    "eyebrow": "Untuk ejen pendidikan · Disokong QEAC",
-    "headlinePrefix": "All Australian schools. All your students.",
-    "headlineEmphasis": "seperti portfolio.",
-    "lede": "Every Australian school has different fees, English tests, entry requirements, and application forms. SchoolGo brings them all into one place – so you can match, compare, and apply without the guesswork.",
-    "ctaPrimary": "Mohon pengesahan",
+    "eyebrow": "Untuk ejen pendidikan",
+    "headlinePrefix": "Berhubung dengan keluarga yang bersedia memohon.",
+    "headlineEmphasis": "Senarai pendek sekolah dalam beberapa minit.",
+    "lede": "SchoolGo membantu ibu bapa mencari sekolah Australia yang tepat dan menghubungkan mereka dengan anda. Cari {count, number}+ sekolah berdaftar, bina senarai pendek semasa sesi perundingan dan hantar permohonan ke sekolah - semuanya dalam satu platform. Percuma. Komisen anda kekal milik anda.",
+    "ctaPrimary": "Cipta profil ejen anda",
     "ctaSecondary": "Lihat cara ia berfungsi",
-    "badgeMeta": "Sample agent profile",
+    "badgeMeta": "Contoh profil ejen",
     "stats": {
       "schools": {
         "value": "{count, number}",
-        "label": "Sekolah CRICOS yang disahkan"
+        "label": "Sekolah berdaftar CRICOS"
       },
       "sectors": {
         "value": "3",
-        "label": "Sectors – Gov, Independent, Catholic"
+        "label": "Sektor - Kerajaan, Bebas, Katolik"
       },
       "commission": {
         "value": "100%",
-        "label": "Komisen anda disimpan sepenuhnya"
+        "label": "Percuma - komisen anda kekal milik anda"
       }
     }
   },
   "AgentsPainPoints": {
-    "eyebrow": "What you can do",
-    "heading": "Everything you need to place students into Australian schools.",
-    "subheading": "Search, match, apply, and track – every part of the placement workflow, in one platform.",
+    "eyebrow": "Mengapa ejen menggunakan SchoolGo",
+    "heading": "Dibina untuk cara anda benar-benar bekerja - bukan untuk menggantikan anda.",
+    "subheading": "76% pendaftaran sekolah antarabangsa datang melalui ejen pendidikan. SchoolGo wujud untuk menjadikan anda lebih pantas dan lebih kelihatan kepada keluarga - bukan untuk menyingkirkan anda.",
     "items": {
       "email": {
-        "question": "Search 695 schools by what matters",
-        "answer": "Filter by fees, English tests, intakes, boarding, and scholarships. Compare side by side. No more digging through school websites one at a time."
+        "question": "Perlu menjawab soalan khusus dengan pantas?",
+        "answer": "Ibu bapa bertanya tentang yuran, syarat Bahasa Inggeris, asrama, ketersediaan, tarikh akhir dan dokumen - selalunya dalam satu panggilan telefon. SchoolGo membolehkan anda menapis kesemua 695 sekolah dalam beberapa saat dan bukannya menyemak laman web sekolah satu per satu."
       },
       "status": {
-        "question": "One student profile, every school",
-        "answer": "Enter your student's details once. SchoolGo maps them to each school's requirements – so you see which schools fit and apply without re-entering data."
+        "question": "Terlalu banyak masa dihabiskan untuk kerja pentadbiran sebelum sesi perundingan pun bermula?",
+        "answer": "Masukkan profil pelajar sekali sahaja. SchoolGo memetakannya berdasarkan syarat sekolah supaya anda dapat melihat sekolah mana yang benar-benar sesuai sebelum anda mengangkat telefon lagi."
       },
       "trust": {
-        "question": "Documents organised, scores verified",
-        "answer": "Passports, transcripts, and test scores uploaded once, tracked for expiry. English scores checked against official records automatically."
+        "question": "Bosan menerangkan jumlah kos dari awal setiap kali?",
+        "answer": "SchoolGo menunjukkan kepada ibu bapa gambaran kos penuh - yuran pengajian, asrama, homestay, OSHC, pakaian seragam, yuran penjaga - sebelum mereka menghubungi anda. Keluarga datang dengan memahami angka sebenar, jadi anda kurang menghabiskan masa untuk terkejut dengan harga dan lebih banyak masa untuk memastikan kesesuaian."
       },
       "requirements": {
-        "question": "Your commission stays yours",
-        "answer": "SchoolGo is free. No platform fees, no commission splits, no per-student charges. Your relationship with schools stays direct."
+        "question": "Ibu bapa membandingkan anda dengan Google?",
+        "answer": "Keluarga yang menjumpai anda melalui SchoolGo sudah memahami nilai bekerjasama dengan seorang ejen. Mereka telah melihat kerumitannya dan memilih untuk berhubung dengan seorang profesional."
       }
     }
   },
@@ -588,26 +654,35 @@
     }
   },
   "AgentsMatching": {
-    "eyebrow": "Padanan · Mohon · Jejak",
-    "heading": "Panggilan ibu bapa pukul 10 pagi. Tiga sekolah sepadan menjelang 10:30.",
-    "subheading": "SchoolGo mengemukakan sekolah yang sesuai mengikut negeri, yuran, tahap Bahasa Inggeris, dan pengambilan – kemudian membolehkan anda menyerahkan permohonan piawai dalam beberapa minit.",
+    "eyebrow": "Cara SchoolGo berfungsi",
+    "heading": "Keluarga menelefon pada 10am. Tiga sekolah sepadan menjelang 10:30.",
+    "subheading": "Ibu bapa sering bertanya soalan yang sangat khusus: sekolah mana yang boleh menerima anak mereka untuk Year 10 Januari depan dengan tahap Bahasa Inggeris dan bajet tertentu? SchoolGo membantu anda menjawab dengan lebih pantas - jadi anda kurang menghabiskan masa menyemak laman web sekolah dan lebih banyak masa menasihati keluarga.",
     "steps": {
       "listen": {
-        "title": "Tangkap keperluan keluarga",
-        "description": "Budget, location, intake."
+        "title": "Tangkap apa yang dikehendaki keluarga",
+        "description": "Bajet, lokasi, tahap Bahasa Inggeris, tahap tahun, sesi pengambilan yang diingini, jenis penginapan dan keutamaan kebajikan - satu borang, berfungsi semasa sesi perundingan secara langsung."
       },
       "match": {
-        "title": "Lihat sekolah yang paling sesuai",
-        "description": "Including English test scores.",
-        "comingSoon": "Coming soon"
+        "title": "Lihat sekolah paling sesuai dengan serta-merta",
+        "description": "Ditapis mengikut profil pelajar. Lihat ujian Bahasa Inggeris yang diterima, markah minimum, yuran, pilihan asrama/homestay, kebajikan dan pengaturan penjaga, serta ketersediaan bagi setiap sekolah. Tidak perlu lagi membuka 15 tab.",
+        "comingSoon": "Akan datang"
       },
       "deliver": {
-        "title": "Hantar senarai pendek, bukan kekacauan",
-        "description": "A branded PDF the family can screenshot and send to Mum and Dad. No PDFs from fifteen different schools.",
-        "comingSoon": "Coming soon"
+        "title": "Hantar senarai pendek berjenama",
+        "description": "PDF kemas dengan jenama agensi anda yang boleh keluarga tangkap skrin, kongsi dengan pasangan mereka, atau bandingkan di rumah. Bukan 15 risalah sekolah.",
+        "comingSoon": "Akan datang"
+      },
+      "connect": {
+        "title": "Keluarga berhubung dengan anda",
+        "description": "Apabila seorang ibu bapa yang sedang mencari di SchoolGo menjumpai sekolah yang anda wakili, mereka memilih untuk berhubung dengan anda berdasarkan pengalaman, bahasa dan bidang kepakaran anda."
+      },
+      "apply": {
+        "title": "Hantar permohonan melalui SchoolGo",
+        "description": "Sediakan dan hantar permohonan yang memenuhi keperluan sekolah - dokumen lengkap, markah Bahasa Inggeris yang disahkan dan profil pelajar yang jelas. Sekolah menerima apa yang mereka perlukan tanpa pertukaran maklumat berulang-alik seperti biasa.",
+        "comingSoon": "Akan datang"
       }
     },
-    "inboxLabel": "Peti masuk kemasukan",
+    "inboxLabel": "Sekolah paling sesuai",
     "inboxRows": {
       "scotch": {
         "school": "Scotch College",
@@ -627,275 +702,286 @@
     }
   },
   "AgentsCommission": {
-    "eyebrow": "Harga",
-    "heading": "Anda menyimpan 100% komisen sekolah anda.",
-    "subheading": "Kami mengenakan bayaran kepada sekolah, bukan anda. Hubungan komersial anda dengan sekolah kekal terus.",
+    "eyebrow": "Cara ia berfungsi",
+    "heading": "Cara ia berfungsi untuk ejen.",
+    "subheading": "SchoolGo membantu keluarga mencari dan membandingkan sekolah, menghubungkan mereka dengan ejen, dan memberi ejen alat untuk membuat senarai pendek serta memohon ke sekolah - semuanya dalam satu platform. Sekolah yang membiayainya. Anda mengekalkan komisen, hubungan dengan pelajar dan rangkaian sekolah anda.",
     "statValue": "$0",
-    "statLabel": "Platform cost per agent. Zero fees, zero commission splits – ever.",
+    "statLabel": "Kos platform bagi setiap ejen. Tiada pembahagian komisen, yuran penempatan atau langganan.",
     "bullets": {
-      "zero": {
-        "title": "Sifar yuran per pelajar",
-        "description": "Tiada pembahagian komisen. Tiada yuran penempatan. Tiada langganan."
+      "free": {
+        "title": "Percuma untuk digunakan",
+        "description": "Tiada pembahagian komisen, yuran penempatan atau langganan."
       },
-      "direct": {
-        "title": "Hubungan terus dengan sekolah",
-        "description": "Atribusi anda dikunci pada permohonan pada saat anda menyerahkannya."
+      "students": {
+        "title": "Pelajar anda, hubungan anda",
+        "description": "Data pelajar adalah peribadi untuk anda. Tiada ejen lain boleh mendekati keluarga yang sedang anda uruskan."
       },
-      "audit": {
-        "title": "Jejak audit penuh",
-        "description": "Setiap perubahan status dicap masa. Pertikaian tamat pada rekod bertulis."
+      "attribution": {
+        "title": "Atribusi sekolah yang jelas",
+        "description": "Sekolah dapat melihat ejen mana yang berada di sebalik setiap pertanyaan."
+      },
+      "approved": {
+        "title": "Diluluskan sekolah",
+        "description": "Sekolah memilih ejen mana yang boleh mewakili mereka di SchoolGo. Jika anda sudah bekerjasama dengan sebuah sekolah, anda boleh disahkan dengan segera."
+      },
+      "network": {
+        "title": "Rangkaian sekolah anda kekal milik anda",
+        "description": "SchoolGo tidak menghubungi sekolah bagi pihak anda atau berkongsi hubungan anda."
+      },
+      "privacy": {
+        "title": "Data anda adalah peribadi",
+        "description": "Maklumat klien dan butiran rangkaian sekolah tidak pernah dikongsi dengan ejen lain atau didedahkan kepada umum tanpa persetujuan anda."
       }
     }
   },
   "AgentsQeacTrust": {
-    "eyebrow": "Disahkan",
-    "heading": "Profil yang ibu bapa – dan sekolah – benar-benar percayai.",
-    "subheading": "Kelayakan QEAC anda disahkan sekali sahaja. Lencana dan rekod prestasi anda akan terpapar pada setiap permohonan yang anda serahkan.",
-    "sampleLabel": "Sample profile",
+    "eyebrow": "Profil ejen anda",
+    "heading": "Bina reputasi anda - mengikut syarat anda.",
+    "subheading": "Profil SchoolGo anda membantu keluarga baharu menjumpai dan mempercayai anda. Tetapi anda mengawal apa yang kelihatan. Tunjukkan kekuatan anda tanpa mendedahkan seluruh rangkaian anda kepada pesaing.",
+    "sampleLabel": "Contoh profil",
     "profile": {
       "name": "Profil ejen",
       "agentName": "Mei Lin",
-      "qeac": "QEAC Disahkan",
-      "yearsActive": "Tahun aktif",
-      "students": "Pelajar ditempatkan",
-      "placements": "Sekolah ditempatkan",
-      "languages": "Bahasa yang dituturkan",
-      "languagesValue": "中 · EN"
-    }
+      "qeac": "Disahkan QEAC"
+    },
+    "visibility": {
+      "public": {
+        "label": "Awam",
+        "items": "Nama, bahasa, status QEAC, tahun aktif, dan wilayah yang anda layani."
+      },
+      "optional": {
+        "label": "Pilihan",
+        "items": "Bilangan pelajar yang ditempatkan, sektor sekolah, bidang kepakaran - anda yang memilih."
+      },
+      "private": {
+        "label": "Sentiasa peribadi",
+        "items": "Hubungan dengan sekolah tertentu, nama pelajar, pengaturan komisen, pasaran sasaran, dan permohonan aktif."
+      }
+    },
+    "qeacNote": "Ejen yang disahkan QEAC mendapat lencana pengesahan. Tetapi keputusan setiap ejen berbicara untuk diri mereka sendiri - keluarga dapat melihat tahap respons, bahasa dan bidang kepakaran anda tanpa mengira pensijilan."
   },
   "AgentsScale": {
     "eyebrow": "Rangkaian",
-    "heading": "Agents across APAC are joining. Australia's international school sector is growing fast – be one of the first.",
-    "subheading": "From Shanghai to Jakarta, Ho Chi Minh to Seoul – agents placing families into Australian K–12.",
+    "heading": "Ejen di seluruh APAC sedang menyertai.",
+    "subheading": "Dari Shanghai ke Jakarta, Ho Chi Minh ke Seoul - ejen perseorangan dan agensi pelbagai cawangan yang menempatkan keluarga ke dalam K-12 Australia.",
     "agents": {
       "a": {
         "name": "Li Wei",
         "region": "Shanghai · 中国",
-        "meta": "QEAC verified · Independent schools"
+        "meta": "Disahkan · Sekolah bebas"
       },
       "b": {
         "name": "Nguyễn Minh",
         "region": "Ho Chi Minh · Việt Nam",
-        "meta": "QEAC verified · All sectors"
+        "meta": "Disahkan QEAC · Semua sektor"
       },
       "c": {
         "name": "Siti Rahman",
         "region": "Kuala Lumpur · Malaysia",
-        "meta": "QEAC verified · Boarding specialist"
+        "meta": "Disahkan · Pakar asrama"
       },
       "d": {
         "name": "Ji-eun Park",
         "region": "Seoul · 대한민국",
-        "meta": "QEAC verified · VIC & NSW"
+        "meta": "Disahkan QEAC · VIC & NSW"
       }
     },
-    "cta": "Mohon pengesahan"
+    "cta": "Cipta profil anda"
   },
   "AgentsTestimonial": {
-    "eyebrow": "[TODO: ms] From the field",
-    "heading": "[TODO: ms] What agents are saying",
+    "eyebrow": "Dari lapangan",
+    "heading": "Apa kata para ejen",
     "items": {
       "a": {
-        "quote": "Every school wants a different form, different documents, different English scores. I spend more time on admin than actually helping families.",
-        "attribution": "[TODO: ms] Agency director, Shanghai",
-        "meta": "[TODO: ms] 60+ students · 3 counsellors"
+        "quote": "Dulu saya menyemak enam laman web sekolah sebelum setiap panggilan dengan ibu bapa. Kini saya menapis mengikut bajet, tahap Bahasa Inggeris dan sesi pengambilan dalam satu carian - saya sudah ada senarai pendek sebelum keluarga selesai menerangkan apa yang mereka mahukan.",
+        "attribution": "Pengarah agensi, Shanghai",
+        "meta": "60+ pelajar"
       },
       "b": {
-        "quote": "A parent asks which English test their child needs and I have to check three different school websites to give them an answer. That should take ten seconds.",
-        "attribution": "[TODO: ms] Independent agent, Ho Chi Minh City",
-        "meta": "Solo practice"
+        "quote": "Keluarga saya mahu membandingkan sekolah tetapi saya tidak boleh menghantar 15 PDF kepada mereka. Satu helaian berjenama dengan tiga sekolah bersebelahan itulah yang benar-benar mereka baca.",
+        "attribution": "Ejen bebas, Bandar Ho Chi Minh",
+        "meta": "25+ pelajar"
       },
       "c": {
-        "quote": "I've placed into the same twelve schools for years because I know their process. A platform that maps every school's requirements would let me place into hundreds.",
-        "attribution": "[TODO: ms] Senior counsellor, Kuala Lumpur",
-        "meta": "[TODO: ms] 40+ students · 2 branches"
+        "quote": "Saya gusar platform lain akan mengambil komisen saya atau mendedahkan hubungan saya dengan sekolah. SchoolGo tidak menyentuh kedua-duanya. Ia hanya menghantar kepada saya keluarga yang sudah bersedia untuk berbincang.",
+        "attribution": "Kaunselor kanan, Kuala Lumpur",
+        "meta": "40+ pelajar"
       }
     },
-    "disclaimer": "[TODO: ms] Composite quotes based on agent interviews"
+    "disclaimer": "Petikan komposit berdasarkan temu bual dengan ejen"
   },
   "AgentsFinalCta": {
-    "eyebrow": "Dapatkan pengesahan",
-    "headingPrefix": "You deserve",
-    "headingEmphasis": "better tools",
-    "headingSuffix": "to build a better business.",
-    "subheading": "Percuma. Pengesahan QEAC diperlukan. Onboarding mengambil masa 48 jam.",
-    "ctaPrimary": "Mohon pengesahan"
+    "eyebrow": "Mulakan",
+    "headingPrefix": "Dijumpai oleh keluarga.",
+    "headingEmphasis": "Senarai pendek lebih pantas.",
+    "headingSuffix": "Kekalkan komisen anda.",
+    "subheading": "Percuma. Tiada pembahagian komisen. Hubungan anda dengan sekolah kekal milik anda.",
+    "ctaPrimary": "Cipta profil ejen anda",
+    "ctaSecondary": "Tempah sesi panduan"
   },
   "AgentsFaq": {
-    "heading": "Frequently Asked Questions",
+    "heading": "Soalan Lazim",
     "items": {
-      "find": {
-        "question": "How do education agents find Australian schools for international students?",
-        "answer": "Agents typically build long-term relationships with a handful of schools and check each school's website, fees, and English requirements one at a time. SchoolGo replaces that workflow with a single searchable database of every CRICOS-registered school – filterable by fees, English tests, intakes, boarding, and scholarships."
+      "free": {
+        "question": "Adakah SchoolGo benar-benar percuma untuk ejen?",
+        "answer": "Ya. SchoolGo dibiayai oleh sekolah, bukan ejen. Tiada pembahagian komisen, yuran penempatan, langganan atau caj tersembunyi."
       },
-      "englishTests": {
-        "question": "What English tests do Australian schools accept for international admissions?",
-        "answer": "Most Australian schools accept AEAS, with a growing number accepting iDAT, Duolingo English Test, IELTS, PTE Academic, Cambridge English, and TOEFL. Minimum scores vary by school and year level. SchoolGo lists the exact accepted tests and minimum scores on every school profile."
+      "makesMoney": {
+        "question": "Bagaimana SchoolGo memperoleh pendapatan jika ia percuma untuk ejen?",
+        "answer": "Sekolah membayar untuk meningkatkan profil mereka dan menjangkau lebih banyak keluarga. Ejen tidak pernah membayar."
       },
-      "verifyScores": {
-        "question": "How do education agents verify student English test scores?",
-        "answer": "Most test providers offer an official verification portal where agents and schools can confirm a score against the candidate's record. SchoolGo automates this – uploaded English scores are checked against the official record so you and the school know the result is genuine."
+      "contactStudents": {
+        "question": "Adakah ejen lain boleh menghubungi pelajar saya?",
+        "answer": "Tidak. Hubungan anda dengan pelajar adalah peribadi. Tiada ejen lain boleh melihat atau mendekati keluarga yang berhubung dengan anda."
       },
-      "becomeAgent": {
-        "question": "How do I become an education agent for Australian schools?",
-        "answer": "There's no single licence to become an Australian education agent, but most schools and the AAERI/QEAC quality frameworks expect training in Australian education, ethical practice, and student welfare. The QEAC (Qualified Education Agent Counsellor) certification is the most widely recognised credential."
+      "attribution": {
+        "question": "Bolehkah sekolah melihat ejen mana yang membawa seorang pelajar?",
+        "answer": "Ya. Atribusi anda dikunci pada saat seorang keluarga berhubung dengan anda. Sekolah sentiasa tahu ejen mana yang bertanggungjawab."
       },
-      "fees": {
-        "question": "Do education agents pay fees to use SchoolGo?",
-        "answer": "No. SchoolGo is free for every agent – no platform fees, no commission splits, no per-student charges. Your commercial relationship with schools stays direct."
+      "interfere": {
+        "question": "Adakah SchoolGo mengganggu hubungan sedia ada saya dengan sekolah?",
+        "answer": "Tidak. SchoolGo tidak menghubungi sekolah bagi pihak anda, merundingkan semula perjanjian, atau berkongsi maklumat rangkaian anda."
       },
-      "manage": {
-        "question": "How do education agents manage multiple student applications at once?",
-        "answer": "SchoolGo gives you one student profile per family that maps to every school's requirements automatically – so you don't re-key passport numbers, transcripts, or English scores into 15 different forms. Documents are organised, version-controlled, and tracked for expiry, with every status change timestamped for audit."
+      "publicInfo": {
+        "question": "Maklumat apakah yang dipaparkan secara umum pada profil saya?",
+        "answer": "Anda yang mengawalnya. Nama, bahasa dan status QEAC anda dipaparkan secara umum. Selebihnya (bilangan penempatan, hubungan dengan sekolah, bidang kepakaran) adalah pilihan."
+      },
+      "competes": {
+        "question": "Adakah SchoolGo itu sendiri seorang ejen? Adakah ia bersaing dengan saya?",
+        "answer": "Tidak. SchoolGo menghubungkan keluarga dengan ejen dan memberi ejen alat untuk membuat senarai pendek serta memohon ke sekolah. Ia tidak merekrut pelajar atau memperoleh komisen."
+      },
+      "howConnected": {
+        "question": "Bagaimana keluarga dihubungkan dengan ejen?",
+        "answer": "Apabila seorang ibu bapa menjumpai sekolah di SchoolGo dan ingin memohon, mereka melayari ejen yang tersedia dan memilih dengan siapa hendak berhubung berdasarkan pengalaman, bahasa yang dituturkan dan sekolah yang diwakili. Anda tidak pernah ditugaskan secara rawak - keluarga sendiri yang memilih anda."
+      },
+      "futureCharging": {
+        "question": "Adakah SchoolGo akan mula mengenakan bayaran pada masa hadapan?",
+        "answer": "Tiada rancangan untuk mengenakan bayaran kepada ejen. Model perniagaannya dibiayai oleh sekolah."
       }
     }
   },
   "SchoolsMetadata": {
-    "title": "SchoolGo – Penuhkan tempat antarabangsa anda dengan lebih sedikit e-mel",
-    "description": "Satu peti masuk kemasukan yang diseragamkan untuk sekolah Australia. Ejen disahkan QEAC, permohonan sebenar, tiada yuran per pelajar.",
-    "ogDescription": "Penuhkan tempat antarabangsa anda. Dengan lebih sedikit e-mel."
+    "title": "SchoolGo untuk Sekolah - Permohonan yang lebih baik dan lebih sesuai",
+    "description": "Bantu keluarga antarabangsa dan ejen memahami syarat anda sebelum mereka memohon. Luluskan ejen yang anda percayai. Percuma untuk setiap sekolah Australia.",
+    "ogDescription": "Permohonan yang lebih baik. Pelajar yang sesuai. Kurang ulang-alik."
   },
   "SchoolsHero": {
     "eyebrow": "Untuk sekolah Australia",
-    "headlinePrefix": "Penuhkan",
-    "headlineEmphasis": "tempat antarabangsa",
-    "headlineSuffix": "cohort. Simplify admissions.",
-    "lede": "Satu profil yang disahkan, dilihat oleh keluarga di tujuh negara. Terima permohonan yang diseragamkan daripada ejen disahkan QEAC – dalam format yang sudah digunakan oleh pasukan kemasukan anda.",
+    "headlinePrefix": "Permohonan yang lebih baik.",
+    "headlineEmphasis": "Pelajar yang sesuai.",
+    "headlineSuffix": "Kurang ulang-alik.",
+    "lede": "SchoolGo membantu keluarga antarabangsa dan ejen pendidikan menjumpai sekolah anda, memahami syarat anda dan berhubung dengan ejen anda yang diluluskan. Apabila seorang pelajar menghubungi pasukan kemasukan anda, mereka sudah mengetahui yuran, syarat Bahasa Inggeris, pilihan penginapan dan proses kemasukan anda – jadi pasukan anda kurang menghabiskan masa mengejar maklumat yang tiada.",
     "ctaPrimary": "Tuntut profil sekolah anda",
-    "inbox": {
-      "eyebrow": "Applications inbox – preview",
-      "countLabel": "Bulan ini",
-      "rows": {
-        "a": {
-          "name": "Sophie Chen",
-          "status": "Baharu",
-          "meta": "VIC · Year 9 · AEAS 78"
-        },
-        "b": {
-          "name": "Minh Tran",
-          "status": "Sedang disemak",
-          "meta": "VIC · Year 11 · IELTS 6.5"
-        },
-        "c": {
-          "name": "Ji-woo Park",
-          "status": "Tawaran dihantar",
-          "meta": "NSW · Year 10 · AEAS 74"
-        }
-      }
-    }
+    "ctaSecondary": "Tempah sesi panduan"
   },
   "SchoolsStats": {
-    "eyebrow": "Kesan rangkaian",
-    "heading": "Satu profil. Dilihat oleh keluarga di tujuh negara.",
-    "subheading": "Penyenaraian anda muncul dalam setiap carian, setiap perbandingan, setiap senarai pendek yang dipadankan – dalam bahasa keluarga.",
+    "eyebrow": "Rangkaian",
+    "heading": "Satu profil. Dilihat oleh keluarga dan ejen yang ingin anda jangkau.",
+    "subheading": "Profil anda muncul dalam setiap carian, perbandingan dan senarai pendek ejen – diterjemahkan ke dalam tujuh bahasa di seluruh Asia-Pasifik – supaya keluarga yang tepat memahami syarat anda sebelum mereka membuat pertanyaan.",
     "items": {
       "schools": {
         "value": "695+",
-        "label": "CRICOS-registered schools"
+        "label": "Sekolah berdaftar CRICOS"
       },
       "states": {
         "value": "8",
-        "label": "States & territories"
+        "label": "Negeri & wilayah"
       },
       "sectors": {
         "value": "3",
-        "label": "Sectors – Government, Independent, Catholic"
+        "label": "Sektor – Kerajaan, Bebas, Katolik"
       },
       "feeRange": {
         "value": "$3.5k – $78k",
-        "label": "Annual fee range (AUD)"
+        "label": "Julat yuran tahunan (AUD)"
       }
     }
   },
   "SchoolsThreeTools": {
-    "eyebrow": "Peralatan",
-    "heading": "Tiga alat. Satu matlamat: pelajar yang tepat, dengan lebih sedikit kerja.",
-    "subheading": "SchoolGo memberi pasukan kemasukan anda tiga perkara yang benar-benar diperlukan.",
+    "eyebrow": "Profil sekolah anda",
+    "heading": "Sekolah anda. Maklumat anda. Kawalan anda.",
+    "subheading": "Setiap sekolah berdaftar mempunyai profil asas di SchoolGo, diterbitkan secara automatik daripada data rasmi kerajaan. Apabila anda menuntut profil anda, anda mengambil kawalan penuh ke atas cara sekolah anda dipaparkan kepada keluarga dan ejen di seluruh dunia.",
     "tools": {
       "profile": {
-        "title": "Profil sekolah yang sentiasa dikemas kini",
-        "description": "Yuran, sesi pengambilan, ujian yang diterima, tawaran biasiswa, dan dokumen – dikemas kini oleh anda, dipaparkan dalam bahasa keluarga."
+        "title": "Profil anda, mengikut cara anda",
+        "description": "Kawal penerangan dan kedudukan sekolah anda, foto dan jenama, perincian yuran, tarikh pengambilan dan tarikh akhir permohonan – dipaparkan dalam bahasa keluarga itu. Anda yang menentukan cara sekolah anda dipaparkan."
       },
-      "applications": {
-        "title": "Permohonan yang diseragamkan",
-        "description": "Setiap permohonan tiba dalam format yang sama, dengan atribusi ejen disahkan QEAC dan dokumentasi lengkap."
+      "requirements": {
+        "title": "Syarat yang boleh ditindaki keluarga",
+        "description": "Tetapkan ujian Bahasa Inggeris yang anda terima dan markah minimum mengikut tahap tahun, pengaturan penginapan dan kebajikan bawah 18, serta dokumen yang diperlukan untuk memohon – supaya keluarga dan ejen memahami syarat anda sebelum mereka memohon."
       },
-      "inbox": {
-        "title": "Satu peti masuk kemasukan",
-        "description": "Jejak status setiap permohonan. Tawarkan, senarai tunggu, atau tolak dalam satu klik. Keluarga dan ejen melihat kemas kini status serta-merta."
+      "agents": {
+        "title": "Ejen yang diluluskan dan analitik",
+        "description": "Pilih ejen mana yang diluluskan untuk mewakili sekolah anda, dan tetapkan sama ada permohonan dibuka atau ditutup. Pantau paparan profil, sumber pertanyaan dan aktiviti ejen dari papan pemuka anda."
       }
     }
   },
   "SchoolsTimeline": {
-    "eyebrow": "Perjalanan kemasukan",
-    "heading": "From first application to first day of term – without the back 'n forth.",
-    "subheading": "Setiap langkah kitaran kemasukan antarabangsa, di satu tempat.",
+    "eyebrow": "Cara ia berfungsi",
+    "heading": "SchoolGo berada sebelum proses kemasukan anda – bukan di dalamnya.",
+    "subheading": "SchoolGo bukan platform kemasukan dan tidak menggantikan proses sedia ada anda. Ia membantu keluarga dan ejen memahami syarat anda sebelum mereka membuat pertanyaan – jadi apabila mereka menghubungi, perbualan bermula di tempat yang betul.",
     "steps": {
-      "receive": {
-        "title": "Terima",
-        "description": "Permohonan tiba dalam peti masuk anda bersama markah Bahasa Inggeris, dokumen, dan ejen yang disahkan.",
-        "comingSoon": "Coming soon"
+      "find": {
+        "title": "Keluarga menjumpai sekolah anda",
+        "description": "Profil anda muncul dalam carian yang ditapis mengikut yuran, syarat Bahasa Inggeris, tahap tahun, penginapan, kurikulum dan lokasi – diterjemahkan ke dalam tujuh bahasa di seluruh Asia-Pasifik."
       },
-      "review": {
-        "title": "Semak",
-        "description": "Pasukan anda menilai mengikut rubrik sendiri. Nota kekal dalaman.",
-        "comingSoon": "Coming soon"
+      "understand": {
+        "title": "Mereka memahami syarat anda lebih awal",
+        "description": "Keluarga dan ejen melihat ujian Bahasa Inggeris yang anda terima, markah minimum, struktur yuran, pilihan penginapan, pengaturan kebajikan dan dokumen yang diperlukan sebelum mereka membuat hubungan."
       },
-      "decide": {
-        "title": "Putuskan",
-        "description": "Tawarkan, senarai tunggu, atau tolak dalam satu klik. Status dihantar kepada keluarga dan ejen serta-merta.",
-        "comingSoon": "Coming soon"
+      "connect": {
+        "title": "Mereka berhubung dengan ejen anda yang diluluskan",
+        "description": "Apabila sebuah keluarga membuat keputusan untuk memohon, SchoolGo menghubungkan mereka dengan ejen pendidikan yang telah anda luluskan. Anda mengawal ejen mana yang boleh mewakili sekolah anda di platform ini."
       },
-      "onboard": {
-        "title": "Daftarkan",
-        "description": "Kongsi kertas kerja hari pengambilan, maklumat penginapan, dan pautan orientasi – semuanya dalam satu utas.",
-        "comingSoon": "Coming soon"
+      "apply": {
+        "title": "Ejen menghantar permohonan kepada anda",
+        "description": "Ejen menggunakan SchoolGo untuk menyediakan dan menghantar permohonan yang memenuhi syarat anda – dokumen lengkap, markah Bahasa Inggeris yang disahkan dan profil pelajar yang jelas. Pasukan anda menyemak menggunakan proses kemasukan anda sendiri."
       }
     }
   },
   "SchoolsPricing": {
     "eyebrow": "Harga",
-    "heading": "Tiada yuran per ejen. Tiada komisen. Satu pelan tahunan.",
-    "subheading": "Sekolah yang menyokong SchoolGo membayar satu yuran tahunan yang telus. Keluarga dan ejen tidak perlu membayar.",
+    "heading": "Percuma untuk setiap sekolah.",
+    "subheading": "Profil sekolah anda diterbitkan dan diselenggara tanpa kos – tiada yuran penyenaraian, yuran setiap pelajar atau komisen. SchoolGo dibiayai oleh ciri premium pilihan untuk sekolah yang mahukan keterlihatan yang dipertingkatkan, seperti penempatan keutamaan dan profil yang dipromosikan. Platform teras adalah percuma dan akan kekal percuma.",
     "plans": {
       "listing": {
-        "name": "Penyenaraian",
-        "price": "Free",
+        "name": "Diterbitkan automatik",
+        "price": "Percuma",
         "priceMeta": "Selamanya",
         "features": {
-          "a": "Profil CRICOS anda, diterbitkan secara automatik",
-          "b": "Ujian Bahasa Inggeris yang diterima + markah minimum",
-          "c": "Peti masuk permohonan yang diseragamkan"
+          "a": "Profil sekolah anda, diterbitkan secara automatik daripada data rasmi kerajaan",
+          "b": "Kelihatan kepada keluarga dan ejen di seluruh Asia-Pasifik",
+          "c": "Ujian Bahasa Inggeris yang diterima dan markah minimum dipaparkan"
         },
         "cta": "Tuntut profil anda"
       },
       "admissions": {
-        "name": "Kemasukan",
-        "price": "$12,800",
-        "priceMeta": "AUD / tahun",
-        "badge": "Paling popular",
+        "name": "Dituntut",
+        "price": "Percuma",
+        "priceMeta": "Tuntut profil anda",
+        "badge": "Disyorkan",
         "features": {
-          "a": "Semua dalam Penyenaraian",
-          "b": "Aliran kerja tawaran / senarai tunggu / tolak",
-          "c": "Direktori ejen disahkan QEAC",
-          "d": "Terjemahan tujuh bahasa pada setiap halaman profil"
+          "a": "Kawalan penuh ke atas profil, foto dan jenama anda",
+          "b": "Tetapkan perincian yuran, syarat Bahasa Inggeris dan butiran penginapan anda sendiri",
+          "c": "Luluskan atau sekat ejen",
+          "d": "Lihat analitik profil – paparan, sumber pertanyaan dan aktiviti ejen"
         },
-        "cta": "Mulakan kemasukan"
+        "cta": "Tuntut profil anda"
       }
     }
   },
   "SchoolsTestimonial": {
-    "quote": "Finding the right students is hard enough. Processing their applications shouldn't be. A single inbox with complete, verified applications changes everything.",
-    "attribution": "– Composite quote based on admissions officer interviews"
+    "quote": "Kami tidak memerlukan lebih banyak pertanyaan – kami memerlukan pelajar yang tepat dengan maklumat yang lengkap. Apabila keluarga sudah memahami yuran dan syarat Bahasa Inggeris kami sebelum mereka memohon, pasukan kami menghabiskan jauh lebih sedikit masa mengejar apa yang tiada.",
+    "attribution": "– Petikan komposit berdasarkan temu bual dengan pegawai kemasukan"
   },
   "SchoolsFinalCta": {
     "eyebrow": "Mulakan di sini",
-    "headingPrefix": "Pengambilan seterusnya anda",
-    "headingEmphasis": "bermula",
-    "headingSuffix": "di sini.",
-    "subheading": "Penyenaraian percuma. Tiada kad kredit. Tuntutan mengambil masa 10 minit.",
+    "headingPrefix": "Keluarga yang lebih bersedia.",
+    "headingEmphasis": "Permohonan yang lebih kemas.",
+    "headingSuffix": "Kurang kerja pentadbiran.",
+    "subheading": "Percuma untuk setiap sekolah. Tuntut profil anda dalam 10 minit.",
     "ctaPrimary": "Tuntut profil sekolah anda",
-    "ctaSecondary": "Tempah walkthrough"
+    "ctaSecondary": "Tempah sesi panduan"
   },
   "Navbar": {
     "brand": "School",
@@ -1895,31 +1981,47 @@
     "errorMessage": "[TODO: ms] Couldn't load your students. Please try again."
   },
   "SchoolsFaq": {
-    "heading": "[TODO: ms] Frequently Asked Questions",
+    "heading": "Soalan Lazim",
     "items": {
-      "attract": {
-        "question": "How do Australian schools attract more international students?",
-        "answer": "Schools grow their international cohort by being visible to families and agents in the markets they want to reach, and by making it easy to apply once a family is interested. SchoolGo lists every CRICOS-registered school in seven languages, with translated profiles, fees, and English requirements – so families and agents can find and shortlist your school directly."
+      "claim": {
+        "question": "Bagaimana cara saya menuntut profil sekolah saya?",
+        "answer": "Cari sekolah anda di SchoolGo dan pilih “Tuntut profil ini.” Anda akan mengesahkan identiti anda sebagai kakitangan dan memperoleh kawalan editorial penuh."
       },
-      "verify": {
-        "question": "How do schools verify international students' English test scores?",
-        "answer": "Each English test provider (AEAS, IELTS, PTE, Duolingo, Cambridge, TOEFL) offers an official verification portal where schools can confirm a candidate's score against the original record. SchoolGo automates this – every English score on an application is checked against the official record before it lands in your inbox."
+      "whoCreated": {
+        "question": "Siapa yang mencipta profil sekolah saya jika saya belum menuntutnya?",
+        "answer": "Profil yang diterbitkan secara automatik dijana daripada data kerajaan yang tersedia secara umum (daftar CRICOS, ACARA). Tiada maklumat ditambah atau diubah oleh SchoolGo. Menuntutnya memberi anda kawalan penuh."
       },
-      "agents": {
-        "question": "[TODO: ms] How does SchoolGo work with education agents?",
-        "answer": "[TODO: ms] By default, your profile works with your school's existing agents. You can see which agents have placed students with you, invite new agents, or manage agent relationships from your dashboard."
+      "charge": {
+        "question": "Adakah SchoolGo mengenakan bayaran kepada sekolah atau ejen?",
+        "answer": "Tidak. Platform teras adalah percuma untuk sekolah, ejen dan ibu bapa. SchoolGo dibiayai oleh ciri premium pilihan untuk sekolah yang mahukan keterlihatan yang dipertingkatkan."
       },
-      "documents": {
-        "question": "What documents do schools need for an international student application?",
-        "answer": "Standard documents include the student's passport, last two years of school reports, an English test result, proof of guardianship for younger students, and any additional medical or character documents your school requires. SchoolGo arrives applications complete – passports, transcripts, English scores, and required forms in one packaged record."
+      "verifyAgents": {
+        "question": "Bagaimana ejen disahkan di SchoolGo?",
+        "answer": "Ejen mencipta profil dan boleh memegang pensijilan QEAC. Walau bagaimanapun, anda yang mengawal ejen mana yang diluluskan untuk mewakili sekolah anda – tanpa mengira status pensijilan mereka."
       },
-      "cost": {
-        "question": "How much does it cost to list on SchoolGo?",
-        "answer": "Nothing. SchoolGo is free for every school – no listing fees, no per-student fees, no commissions. Your profile auto-publishes from official government data, and claiming it unlocks full editing, applications, and analytics at no cost."
+      "interfere": {
+        "question": "Adakah SchoolGo mengganggu hubungan sedia ada kami dengan ejen?",
+        "answer": "Tidak. Perjanjian, struktur komisen dan rangkaian ejen sedia ada anda tidak terjejas. SchoolGo tidak menugaskan semula ejen atau berkongsi senarai ejen anda."
       },
-      "diversify": {
-        "question": "How do schools diversify their international student intake beyond China?",
-        "answer": "Diversification starts with visibility in the markets you want to grow – Vietnam, Korea, Indonesia, Malaysia, Thailand, and beyond. SchoolGo translates your profile into seven languages and surfaces it to families and agents across the Asia-Pacific, so you can build a balanced cohort across multiple source countries."
+      "beforeClaim": {
+        "question": "Maklumat apakah yang dipaparkan tentang sekolah kami sebelum kami menuntutnya?",
+        "answer": "Hanya data yang tersedia secara umum daripada daftar kerajaan: nama sekolah, lokasi, sektor, status CRICOS, kurikulum dan julat yuran asas. Tiada kandungan editorial, foto atau syarat terperinci dipaparkan sehingga anda menuntut dan menambahkannya."
+      },
+      "studentData": {
+        "question": "Bagaimana SchoolGo melindungi maklumat pelajar?",
+        "answer": "Data pelajar dikongsi hanya antara keluarga, ejen pilihan mereka dan sekolah. Ia tidak pernah dikongsi dengan sekolah lain, ejen lain atau didedahkan kepada umum."
+      },
+      "replaceAdmissions": {
+        "question": "Adakah SchoolGo akan menggantikan proses kemasukan kami?",
+        "answer": "Tidak. SchoolGo berada sebelum proses kemasukan anda. Ia membantu keluarga memahami syarat anda dan berhubung dengan ejen anda yang diluluskan. Permohonan dihantar kepada anda melalui ejen anda, dan pasukan anda menyemaknya menggunakan proses anda sendiri."
+      },
+      "openClosed": {
+        "question": "Bolehkah kami mengawal sama ada permohonan dibuka atau ditutup?",
+        "answer": "Ya. Anda boleh menetapkan status pengambilan dan tarikh akhir permohonan anda. Apabila permohonan ditutup, keluarga dan ejen masih boleh melihat profil anda tetapi akan melihat bahawa sesi pengambilan belum dibuka pada masa ini."
+      },
+      "capacity": {
+        "question": "Bagaimana SchoolGo mengendalikan keseimbangan pasaran dan kapasiti asrama?",
+        "answer": "Anda yang mengawal apa yang dipaparkan. Jika tempat asrama terhad atau anda sedang menguruskan keseimbangan kohort merentas pasaran sumber, anda boleh mengemas kini maklumat ketersediaan dan pengambilan pada bila-bila masa."
       }
     }
   },
@@ -6026,40 +6128,44 @@
     "customSectionVisible": "Visible"
   },
   "ParentsAgentCta": {
-    "eyebrow": "Start with an agent",
-    "headingPrefix": "Find your",
-    "headingEmphasis": "education agent",
-    "headingSuffix": "and let the experts guide you",
-    "subheading": "A trusted local agent matches your child to the right school, handles the paperwork, and supports your family every step of the way — free for parents.",
-    "searchPlaceholder": "Where are you moving? e.g. Sydney, Melbourne",
-    "searchAriaLabel": "Find an education agent",
-    "ctaPrimary": "Find an agent",
-    "ctaSecondary": "Browse all agents",
-    "reassurance": "100% free for families · Verified, QEAC-qualified agents"
+    "eyebrow": "Mulakan dengan ejen",
+    "headingPrefix": "Dapatkan bantuan pakar –",
+    "headingEmphasis": "percuma",
+    "headingSuffix": ".",
+    "subheading": "Tidak pasti di mana hendak bermula? SchoolGo menghubungkan anda dengan perunding pendidikan yang diluluskan oleh sekolah yang mereka wakili. Mereka memahami proses kemasukan, syarat visa dan boleh membimbing anda dari memilih sekolah hingga menghantar permohonan – tanpa kos kepada anda.",
+    "searchPlaceholder": "Ke mana anda berpindah? cth. Sydney, Melbourne",
+    "searchAriaLabel": "Cari ejen pendidikan",
+    "ctaPrimary": "Cari ejen",
+    "ctaSecondary": "Layari semua ejen",
+    "reassurance": "100% percuma untuk keluarga · Ejen yang disahkan dan diluluskan sekolah"
   },
   "ParentsAgentHelp": {
-    "eyebrow": "Why go through an agent",
-    "heading": "How an agent helps your family",
-    "subheading": "Agents do the heavy lifting so you can focus on your child. Here is what a good education agent takes off your plate.",
+    "eyebrow": "Mengapa melalui ejen",
+    "heading": "Bagaimana ejen membantu keluarga anda",
+    "subheading": "Ejen melakukan kerja-kerja berat supaya anda boleh menumpukan perhatian kepada anak anda. Inilah perkara yang diuruskan oleh ejen pendidikan yang diluluskan sekolah bagi pihak anda.",
     "benefits": {
       "free": {
-        "title": "Free for families",
-        "description": "Agents are paid by schools, never by you. Expert guidance comes at no cost to your family."
+        "title": "Percuma untuk keluarga",
+        "description": "Ejen dibayar oleh sekolah, bukan oleh anda. Panduan pakar datang tanpa kos kepada keluarga anda."
       },
       "matching": {
-        "title": "Expert school matching",
-        "description": "They know the schools, the suburbs and the curricula — and match your child to the right fit, not just the first option."
+        "title": "Pemadanan sekolah oleh pakar",
+        "description": "Mereka mengenali sekolah, kawasan dan kurikulum — dan memadankan anak anda dengan kesesuaian yang tepat, bukan sekadar pilihan pertama."
       },
       "applications": {
-        "title": "Application & visa guidance",
-        "description": "From enrolment forms to student visa requirements, your agent prepares and checks the paperwork with you."
+        "title": "Panduan permohonan & visa",
+        "description": "Dari borang pendaftaran hingga syarat visa pelajar, ejen anda menyediakan dan menyemak dokumen bersama anda."
       },
       "welfare": {
-        "title": "Under-18 welfare support",
-        "description": "Need a guardian or homestay for a younger student? Agents arrange compliant welfare and accommodation."
+        "title": "Sokongan kebajikan bawah 18",
+        "description": "Memerlukan penjaga atau homestay untuk pelajar yang lebih muda? Ejen mengaturkan kebajikan dan penginapan yang mematuhi syarat."
       }
     },
-    "ctaPrimary": "Find an agent"
+    "selection": {
+      "title": "Bagaimana SchoolGo memilih ejen?",
+      "body": "Setiap ejen di SchoolGo disahkan dan diluluskan oleh sekolah yang mereka kerjakan. SchoolGo tidak menugaskan ejen secara rawak – anda memilih dengan siapa hendak berhubung berdasarkan pengalaman, bahasa yang dituturkan dan sekolah yang mereka wakili."
+    },
+    "ctaPrimary": "Cari ejen"
   },
   "UnifiedSearch": {
     "filters": {
@@ -6848,5 +6954,91 @@
       "delivered": "Delivered",
       "cancelled": "Cancelled"
     }
+  },
+  "ParentsFees": {
+    "eyebrow": "Yuran",
+    "heading": "Fahami kos sebenar – bukan sekadar yuran pengajian.",
+    "body": "Yuran pengajian hanyalah sebahagian daripada gambaran. Ibu bapa sering terkejut dengan kos tambahan yang tidak mereka jangkakan. SchoolGo menunjukkan kepada anda perincian penuh supaya tiada kejutan di kemudian hari.",
+    "items": {
+      "tuition": "Yuran pengajian",
+      "accommodation": "Yuran asrama atau homestay",
+      "enrolment": "Yuran pendaftaran dan permohonan",
+      "health": "Perlindungan kesihatan (OSHC)",
+      "uniforms": "Pakaian seragam, buku teks dan komputer riba",
+      "excursions": "Lawatan sambil belajar dan aktiviti",
+      "guardian": "Pengaturan penjaga (jika diperlukan)",
+      "airport": "Penjemputan lapangan terbang",
+      "refund": "Syarat bayaran balik jika visa ditolak"
+    },
+    "cta": "Baca panduan yuran penuh"
+  },
+  "ParentsAccommodationWelfare": {
+    "eyebrow": "Penginapan & kebajikan",
+    "heading": "Di mana anak anda akan tinggal – dan siapa yang akan menjaganya?",
+    "body": "Bagi keluarga yang menghantar anak ke luar negara, penginapan dan kebajikan adalah persoalan yang sama. SchoolGo membantu anda memahami pilihan anda dan sokongan yang disediakan oleh setiap sekolah.",
+    "accommodation": {
+      "boarding": {
+        "title": "Asrama",
+        "description": "Tinggal di kampus dengan pengawasan berstruktur, makanan dan aktiviti."
+      },
+      "homestay": {
+        "title": "Homestay",
+        "description": "Tinggal bersama keluarga tempatan yang diluluskan oleh sekolah."
+      },
+      "family": {
+        "title": "Pengaturan bersama keluarga",
+        "description": "Tinggal bersama saudara-mara yang sudah berada di Australia."
+      },
+      "guardians": {
+        "title": "Penjaga yang diluluskan sekolah",
+        "description": "Untuk pelajar di bawah 18 tahun yang tiada keluarga di Australia."
+      }
+    },
+    "welfareHeading": "Maklumat kebajikan & sokongan",
+    "welfare": {
+      "responsibleUnder18": "Siapa yang bertanggungjawab terhadap anak anda jika dia berumur di bawah 18 tahun?",
+      "sickOrHomesick": "Apa yang berlaku jika anak anda jatuh sakit, rindukan rumah atau menghadapi masalah?",
+      "contactPerson": "Siapakah orang yang boleh dihubungi untuk ibu bapa?",
+      "communication": "Bagaimana sekolah berkomunikasi dengan ibu bapa di luar negara?",
+      "sameCountryPeers": "Adakah terdapat pelajar lain dari negara asal anak anda?",
+      "adjustmentSupport": "Sokongan apakah yang tersedia jika anak anda sukar menyesuaikan diri?"
+    }
+  },
+  "SchoolsApplicationQuality": {
+    "eyebrow": "Kualiti permohonan",
+    "heading": "Pelajar yang tepat, bukan sekadar lebih ramai pelajar.",
+    "subheading": "Sekolah tidak memerlukan lebih banyak pertanyaan yang tidak lengkap. SchoolGo meningkatkan kualiti perkara yang sampai kepada pasukan kemasukan anda dengan memastikan keluarga dan ejen memahami syarat anda sebelum mereka memohon.",
+    "items": {
+      "english": {
+        "title": "Syarat Bahasa Inggeris kelihatan lebih awal",
+        "description": "Keluarga dan ejen dapat melihat ujian yang anda terima dan markah minimum mengikut tahap tahun sebelum mereka membuat pertanyaan. Pelajar yang tidak memenuhi ambang boleh melihat sekolah dengan laluan persediaan Bahasa Inggeris sebagai gantinya."
+      },
+      "costs": {
+        "title": "Jumlah kos adalah telus",
+        "description": "Keluarga melihat yuran pengajian, asrama, yuran permohonan dan kos wajib sebelum mereka berhubung dengan seorang ejen. Lebih sedikit perbualan tergendala kerana yuran yang tidak dijangka."
+      },
+      "accommodation": {
+        "title": "Penginapan dan kebajikan adalah jelas",
+        "description": "Ibu bapa memahami pengaturan asrama, homestay dan penjaga sebelum memohon. Sekolah dengan syarat umur tertentu untuk asrama boleh memaparkannya."
+      },
+      "agents": {
+        "title": "Ejen disahkan",
+        "description": "Anda meluluskan ejen mana yang boleh mewakili sekolah anda. Atribusi ejen kelihatan pada setiap pertanyaan."
+      }
+    }
+  },
+  "SchoolsAgentRelationships": {
+    "eyebrow": "Hubungan dengan ejen",
+    "heading": "Ejen anda. Kelulusan anda. Hubungan anda.",
+    "subheading": "SchoolGo tidak menugaskan ejen kepada sekolah anda atau mengganggu hubungan sedia ada anda dengan ejen. Anda yang menentukan ejen mana yang diluluskan untuk mewakili sekolah anda. Ejen yang sudah anda kerjakan boleh disahkan dengan segera, dan ejen baharu boleh memohon kelulusan melalui profil anda.",
+    "bullets": {
+      "approve": "Anda meluluskan atau menolak permohonan ejen.",
+      "connect": "Hanya ejen yang diluluskan boleh menghubungkan keluarga ke sekolah anda melalui SchoolGo.",
+      "agreements": "Perjanjian ejen dan struktur komisen sedia ada anda tidak terjejas.",
+      "performance": "Prestasi ejen – tahap respons dan kelengkapan permohonan – kelihatan kepada anda.",
+      "remove": "Anda boleh menarik balik kelulusan seorang ejen pada bila-bila masa."
+    },
+    "cardTitle": "Anda meluluskan setiap ejen.",
+    "cardBody": "SchoolGo tidak pernah menugaskan semula ejen atau berkongsi senarai ejen anda. Hubungan anda kekal milik anda."
   }
 }

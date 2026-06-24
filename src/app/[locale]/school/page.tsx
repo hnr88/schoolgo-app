@@ -4,6 +4,8 @@ import { getAlternateLanguages, getCanonicalPath } from '@/modules/seo';
 import { MarketingFooter, MarketingHeader } from '@/modules/marketing-layout';
 import { AuthRedirectCheck } from '@/modules/auth/components/AuthRedirectCheck';
 import {
+  SchoolsAgentRelationships,
+  SchoolsApplicationQuality,
   SchoolsFaq,
   SchoolsFinalCta,
   SchoolsHero,
@@ -51,8 +53,10 @@ export default async function SchoolsLandingPage({
       <main>
         <SchoolsHero />
         <SchoolsStats />
-        <SchoolsThreeTools />
         <SchoolsTimeline />
+        <SchoolsThreeTools />
+        <SchoolsApplicationQuality />
+        <SchoolsAgentRelationships />
         <SchoolsPricing />
         <SchoolsTestimonial />
         <SchoolsFaq />

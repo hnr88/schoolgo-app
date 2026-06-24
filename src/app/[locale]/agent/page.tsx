@@ -51,9 +51,9 @@ export default async function AgentsLandingPage({
       <MarketingHeader activePortal="agent" />
       <main>
         <AgentsHero />
-        <AgentsPainPoints />
-        <AgentsMatching />
         <AgentsCommission />
+        <AgentsMatching />
+        <AgentsPainPoints />
         <AgentsQeacTrust />
         <AgentsScale />
         <AgentsTestimonial />

@@ -1,6 +1,7 @@
+import { Check } from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
 import { SectionContainer, SectionHeader } from '@/modules/design-system';
-import { TRUST_BAR_ITEMS } from '../constants/parents-landing.constants';
+import { ABOUT_POINT_KEYS, TRUST_BAR_ITEMS } from '../constants/parents-landing.constants';
 
 export async function ParentsTrustBar() {
   const t = await getTranslations('ParentsTrustBar');
@@ -41,6 +42,27 @@ export async function ParentsTrustBar() {
         <p className='border-t border-background/10 pt-6 text-caption text-background/55'>
           {t('attribution')}
         </p>
+
+        <div className='rounded-xl border border-background/10 bg-background/5 p-6 md:p-8'>
+          <h3 className='font-display text-h3 font-bold text-background'>{t('about.heading')}</h3>
+          <p className='mt-3 text-body text-background/75'>{t('about.intro')}</p>
+          <ul className='mt-4 flex flex-col gap-2'>
+            {ABOUT_POINT_KEYS.map((key) => (
+              <li
+                key={key}
+                className='flex items-start gap-3 text-body-sm text-background/80'
+              >
+                <Check
+                  className='mt-0.5 h-4 w-4 shrink-0 text-babu-300'
+                  strokeWidth={2}
+                  aria-hidden='true'
+                />
+                {t(`about.points.${key}`)}
+              </li>
+            ))}
+          </ul>
+          <p className='mt-4 text-body-sm text-background/65'>{t('about.closing')}</p>
+        </div>
       </SectionContainer>
     </section>
   );

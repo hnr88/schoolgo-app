@@ -1,6 +1,12 @@
 import type { IconComponent } from '@/modules/design-system';
 
-export type CommissionBulletKey = 'zero' | 'direct' | 'audit';
+export type CommissionBulletKey =
+  | 'free'
+  | 'students'
+  | 'attribution'
+  | 'approved'
+  | 'network'
+  | 'privacy';
 
 export type CommissionBullet = {
   key: CommissionBulletKey;
@@ -14,7 +20,7 @@ export type PainPointItem = {
   icon: IconComponent;
 };
 
-export type MatchingStepKey = 'listen' | 'match' | 'deliver';
+export type MatchingStepKey = 'listen' | 'match' | 'deliver' | 'connect' | 'apply';
 
 export type MatchingStep = {
   key: MatchingStepKey;
@@ -28,4 +34,4 @@ export type HeroStatKey = 'schools' | 'sectors' | 'commission';
 
 export type StatsBarItemKey = 'schools' | 'requirements' | 'tests' | 'free';
 
-export type QeacProfileStatKey = 'yearsActive' | 'students' | 'placements' | 'languages';
+export type QeacVisibilityKey = 'public' | 'optional' | 'private';

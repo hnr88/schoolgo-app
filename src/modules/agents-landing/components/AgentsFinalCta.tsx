@@ -22,8 +22,11 @@ export async function AgentsFinalCta() {
         />
 
         <div className='mt-4 flex flex-wrap justify-center gap-3'>
-          <CtaLink href='/search' size='lg' arrow>
+          <CtaLink href='/agent/sign-up' size='lg' arrow>
             {t('ctaPrimary')}
+          </CtaLink>
+          <CtaLink href='/contact' variant='secondary' size='lg'>
+            {t('ctaSecondary')}
           </CtaLink>
         </div>
       </SectionContainer>

@@ -17,6 +17,8 @@ import {
   ParentsTrustBar,
   ParentsPickATest,
   ParentsSevenLanguages,
+  ParentsFees,
+  ParentsAccommodationWelfare,
 } from '@/modules/parents-landing';
 
 export async function generateMetadata({
@@ -56,12 +58,14 @@ export default async function ParentsLandingPage({
       <main>
         <ParentsHero />
         <ParentsStatsBar />
+        <ParentsFourSteps />
+        <ParentsFees />
+        <ParentsAccommodationWelfare />
+        <ParentsPickATest />
+        <ParentsComparison />
         <ParentsAgentCta />
         <ParentsAgents />
         <ParentsAgentHelp />
-        <ParentsFourSteps />
-        <ParentsComparison />
-        <ParentsPickATest />
         <ParentsSevenLanguages />
         <ParentsArticles />
         <ParentsTrustBar />

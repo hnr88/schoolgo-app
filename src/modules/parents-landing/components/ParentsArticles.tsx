@@ -11,6 +11,10 @@ const ARTICLE_GUIDE_MAP: Array<{ key: string; slug: string }> = [
   { key: 'intakes', slug: 'term-dates-intakes' },
   { key: 'englishTests', slug: 'english-requirements' },
   { key: 'boarding', slug: 'accommodation' },
+  { key: 'totalCosts', slug: 'school-fees' },
+  { key: 'welfareGuardian', slug: 'student-welfare' },
+  { key: 'whenToApply', slug: 'high-school-preparation' },
+  { key: 'documents', slug: 'student-visa' },
 ];
 
 export async function ParentsArticles() {

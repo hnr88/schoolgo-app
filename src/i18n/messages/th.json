@@ -24,9 +24,9 @@
     }
   },
   "ParentsMetadata": {
-    "title": "SchoolGo – ค้นหาโรงเรียนออสเตรเลียสำหรับบุตรหลานของคุณ",
-    "description": "ค้นหาทุกโรงเรียนออสเตรเลียที่จดทะเบียน CRICOS เปรียบเทียบค่าเล่าเรียน ข้อกำหนดการทดสอบภาษาอังกฤษ และรอบรับสมัคร – ในเจ็ดภาษา ฟรี",
-    "ogDescription": "ทุกโรงเรียน CRICOS ผ่านการรับรอง ในภาษาของคุณ"
+    "title": "SchoolGo – เลือกโรงเรียนออสเตรเลียที่ใช่ได้อย่างมั่นใจ",
+    "description": "ค้นหาและเปรียบเทียบทุกโรงเรียนออสเตรเลียที่จดทะเบียน – ค่าเล่าเรียน ที่พัก ข้อกำหนดภาษาอังกฤษ และการสนับสนุนนักเรียน – ในภาษาของคุณ ฟรี ไม่ต้องล็อกอิน",
+    "ogDescription": "เลือกโรงเรียนที่ใช่สำหรับบุตรหลานของคุณ – ด้วยความมั่นใจ ฟรี ในภาษาของคุณ"
   },
   "MarketingHeader": {
     "findSchools": "ค้นหาโรงเรียน",
@@ -204,10 +204,10 @@
       "brandAccent": "จดทะเบียน",
       "source": "ข้อมูลจาก data.gov.au"
     },
-    "headlinePrefix": "ค้นหาโรงเรียน",
-    "headlineEmphasis": "ออสเตรเลีย",
-    "headlineSuffix": "ให้บุตรหลานของคุณ",
-    "lede": "ทุกโรงเรียน K–12 ที่จดทะเบียน CRICOS ในที่เดียว เปรียบเทียบค่าเล่าเรียน หอพัก การสอบภาษาอังกฤษ – ค้นหาเป็นภาษาจีนกลาง เกาหลี ไทย เวียดนาม มาเลย์ บาฮาซา หรืออังกฤษ",
+    "headlinePrefix": "เลือกโรงเรียนที่ใช่สำหรับ",
+    "headlineEmphasis": "บุตรหลานของคุณ",
+    "headlineSuffix": "– ด้วยความมั่นใจ",
+    "lede": "การเลือกโรงเรียนที่ใช่สามารถหล่อหลอมความมั่นใจ ความเป็นอยู่ ทางเลือกในการเรียนต่อมหาวิทยาลัย และโอกาสในอนาคตของบุตรหลานคุณ ค้นหาทุกโรงเรียนออสเตรเลียที่จดทะเบียน เปรียบเทียบค่าเล่าเรียน ที่พัก ข้อกำหนดภาษาอังกฤษ และการสนับสนุนนักเรียน – ในภาษาของคุณ",
     "searchAriaLabel": "ค้นหาโรงเรียน",
     "searchFields": {
       "where": {
@@ -235,7 +235,7 @@
           "location": "Darlinghurst, NSW",
           "curriculum": "HSC",
           "fee": "$41.2k AUD",
-          "boarding": "Day only",
+          "boarding": "ไป-กลับเท่านั้น",
           "rating": "4.8"
         },
         "b": {
@@ -243,7 +243,7 @@
           "location": "Melbourne, VIC",
           "curriculum": "VCE/IB",
           "fee": "$42.5k AUD",
-          "boarding": "Boarding",
+          "boarding": "หอพัก",
           "rating": "4.8"
         },
         "c": {
@@ -258,73 +258,73 @@
     }
   },
   "ParentsStatsBar": {
-    "eyebrow": "ตัวเลขสำคัญ",
-    "heading": "ไดเรกทอรีโรงเรียน CRICOS ที่ใหญ่ที่สุดในออสเตรเลีย",
-    "subheading": "โรงเรียนที่ลงทะเบียนทุกแห่ง ผ่านการตรวจสอบและค้นหาได้ – ตั้งแต่โรงเรียนรัฐบาลถึงเอกชน ครอบคลุมทั้ง 8 รัฐและเขตปกครอง",
+    "eyebrow": "ตัวเลข",
+    "heading": "ทุกโรงเรียนที่จดทะเบียนสำหรับนักเรียนต่างชาติ ในที่เดียว",
+    "subheading": "ค้นหา กรอง และเปรียบเทียบทุกโรงเรียนออสเตรเลียที่จดทะเบียน – ค่าเล่าเรียน ที่พัก ข้อกำหนดภาษาอังกฤษ และการสนับสนุนนักเรียน – ครบในที่เดียว ในภาษาของคุณ",
     "items": {
       "schools": {
         "value": "{count, number}+",
-        "label": "CRICOS Schools"
+        "label": "โรงเรียนที่จดทะเบียน"
       },
       "states": {
         "value": "8",
-        "label": "States & Territories"
+        "label": "รัฐและดินแดน"
       },
       "sectors": {
-        "value": "All 3 Sectors",
-        "label": "Government · Independent · Catholic"
+        "value": "ครบทั้ง 3 ภาคการศึกษา",
+        "label": "รัฐบาล · เอกชน · คาทอลิก"
       },
       "fees": {
         "value": "$3.5k – $78k",
-        "label": "Annual Fee Range"
+        "label": "ช่วงค่าเล่าเรียนรายปี"
       }
     }
   },
   "ParentsFourSteps": {
-    "eyebrow": "วิธีการใช้งาน",
-    "heading": "จากการเรียกดูครั้งแรกสู่จดหมายตอบรับ – สี่ขั้นตอนง่าย ๆ",
-    "subheading": "ไม่มีค่าธรรมเนียมซ่อนเร้น ไม่ต้องเข้าสู่ระบบจนกว่าจะสมัคร",
+    "eyebrow": "วิธีการทำงาน",
+    "heading": "จากการค้นหาครั้งแรกสู่การตัดสินใจอย่างมั่นใจ – สี่ขั้นตอนง่ายๆ",
+    "subheading": "โปร่งใสในทุกขั้นตอน ไม่มีค่าใช้จ่ายแอบแฝง ไม่ต้องล็อกอินจนกว่าคุณจะยื่นสมัคร",
     "steps": {
       "browse": {
-        "title": "เรียกดูทุกโรงเรียน CRICOS",
-        "description": "กรอง {count, number} โรงเรียนตามรัฐ ค่าเล่าเรียน ประเภท หลักสูตร หอพัก และทุนการศึกษา – ในภาษาของคุณ"
+        "title": "เลือกดูทุกโรงเรียนที่จดทะเบียน",
+        "description": "กรองโรงเรียนกว่า {count, number} แห่ง ตามรัฐ ค่าเล่าเรียน หลักสูตร หอพัก โฮมสเตย์ การสอบภาษาอังกฤษ การสนับสนุนด้านสวัสดิภาพ และทุนการศึกษา – ในภาษาจีนกลาง เกาหลี ไทย เวียดนาม มาเลย์ บาฮาซา หรืออังกฤษ"
       },
       "shortlist": {
-        "title": "เลือกสี่แห่ง เปรียบเทียบเคียงกัน",
-        "description": "วางค่าเล่าเรียน รอบรับสมัคร ICSEA และการสอบภาษาอังกฤษที่รับไว้เคียงกัน ตัดสินใจในไม่กี่นาที ไม่ใช่หลายเดือน"
+        "title": "เปรียบเทียบโรงเรียนแบบเคียงข้างกัน",
+        "description": "ดูค่าเล่าเรียน ที่พัก การสนับสนุนภาษาอังกฤษ สวัสดิภาพนักเรียน และข้อกำหนดในการเข้าเรียน เทียบกันได้ทันที – คุณจึงเห็นโรงเรียนที่เหมาะสม ไม่ใช่แค่อันดับที่ดี"
       },
       "prepare": {
-        "title": "ดูข้อกำหนดที่แน่ชัด",
-        "description": "ทุกหน้าข้อมูลโรงเรียนแสดงการสอบที่รับ คะแนนขั้นต่ำ เอกสารที่ต้องใช้ และช่วงเวลารับสมัคร"
+        "title": "เข้าใจภาพรวมทั้งหมด",
+        "description": "ดูค่าใช้จ่ายทั้งหมด (ไม่ใช่แค่ค่าเล่าเรียน) ตัวเลือกที่พัก การจัดการด้านสวัสดิภาพ โปรแกรมสนับสนุนภาษาอังกฤษ และสิ่งที่จะเกิดขึ้นหากบุตรหลานต้องการความช่วยเหลือ"
       },
       "apply": {
-        "title": "สมัครผ่านตัวแทนที่ผ่านการรับรอง",
-        "description": "ตัวแทนของคุณมีป้ายรับรอง QEAC ใบสมัครถูกติดตามตั้งแต่ต้นจนจบในแดชบอร์ดเดียว",
-        "comingSoon": "Coming soon"
+        "title": "เชื่อมต่อกับตัวแทนที่เชื่อถือได้",
+        "description": "SchoolGo เชื่อมต่อคุณกับที่ปรึกษาการศึกษาที่ได้รับการอนุมัติจากโรงเรียน ผู้รู้กระบวนการรับสมัคร คุณจึงได้รับคำแนะนำจากผู้เชี่ยวชาญโดยไม่มีค่าใช้จ่าย",
+        "comingSoon": "เร็วๆ นี้"
       }
     },
-    "ctaBrowse": "เริ่มเรียกดู",
-    "ctaLearn": "ดูวิธีการใช้งาน",
+    "ctaBrowse": "เริ่มค้นหา",
+    "ctaLearn": "ดูวิธีการทำงาน",
     "badge": {
-      "cricosVerified": "CRICOS Verified · Claimed by school",
-      "updated": "Updated April 2026"
+      "cricosVerified": "จดทะเบียนกับรัฐบาล · ยืนยันโดยโรงเรียน",
+      "updated": "อัปเดตเมื่อ April 2026"
     },
     "visuals": {
       "browse": {
-        "title": "[TODO: th] 695 schools loaded",
-        "subtitle": "[TODO: th] Filtered by state, fees & curriculum"
+        "title": "โหลดแล้ว 695 โรงเรียน",
+        "subtitle": "กรองตามรัฐ ค่าเล่าเรียน และหลักสูตร"
       },
       "shortlist": {
-        "title": "[TODO: th] Wei's shortlist",
-        "subtitle": "[TODO: th] 3 schools in Victoria · All accept AEAS"
+        "title": "รายการคัดเลือกของ Wei",
+        "subtitle": "3 โรงเรียนใน Victoria · รับ AEAS ทั้งหมด"
       },
       "prepare": {
-        "title": "[TODO: th] Requirements matched",
-        "subtitle": "[TODO: th] AEAS 70+ · IELTS 5.5+ · Documents ready"
+        "title": "ตรงตามข้อกำหนด",
+        "subtitle": "AEAS 70+ · IELTS 5.5+ · เอกสารพร้อม"
       },
       "apply": {
-        "title": "[TODO: th] Application submitted",
-        "subtitle": "[TODO: th] Tracked end-to-end · Status: Under review"
+        "title": "ยื่นใบสมัครแล้ว",
+        "subtitle": "ติดตามครบทุกขั้นตอน · สถานะ: กำลังพิจารณา"
       }
     }
   },
@@ -356,78 +356,90 @@
     }
   },
   "ParentsAgents": {
-    "eyebrow": "[TODO: th] Get expert help",
-    "heading": "[TODO: th] Meet your verified education agents.",
-    "subheading": "[TODO: th] Every family is matched with a specialist education consultant who knows the admissions process inside out. Browse QEAC-verified agents and find the right one to guide you – from choosing a school to submitting your application, at no cost to you.",
-    "verifiedLabel": "[TODO: th] QEAC verified",
-    "partnerSchools": "[TODO: th] {count, plural, one {# partner school} other {# partner schools}}",
-    "empty": "[TODO: th] Verified agents are coming soon. Check back shortly.",
-    "viewAll": "[TODO: th] Find an agent",
-    "browseAll": "Browse all agents"
+    "eyebrow": "รับความช่วยเหลือจากผู้เชี่ยวชาญ",
+    "heading": "พบกับตัวแทนการศึกษาที่ผ่านการรับรองของคุณ",
+    "subheading": "ตัวแทนทุกคนบน SchoolGo ได้รับการอนุมัติจากโรงเรียนที่พวกเขาเป็นตัวแทน คุณเลือกได้ว่าจะเชื่อมต่อกับใคร โดยพิจารณาจากประสบการณ์ ภาษาที่พูดได้ และโรงเรียนที่ทำงานด้วย – จากนั้นพวกเขาจะแนะนำคุณตั้งแต่การเลือกโรงเรียนจนถึงการยื่นใบสมัคร โดยไม่มีค่าใช้จ่ายสำหรับคุณ",
+    "verifiedLabel": "ผ่านการรับรอง",
+    "partnerSchools": "{count, plural, other {โรงเรียนพันธมิตร # แห่ง}}",
+    "empty": "ตัวแทนที่ผ่านการรับรองกำลังจะมาเร็วๆ นี้ โปรดกลับมาตรวจสอบอีกครั้ง",
+    "viewAll": "ค้นหาตัวแทน",
+    "browseAll": "เลือกดูตัวแทนทั้งหมด"
   },
   "ParentsComparison": {
     "compareLabel": "เปรียบเทียบ",
-    "eyebrow": "เปรียบเทียบ",
-    "heading": "Put three schools next to each other.",
-    "headingAccent": "ตัดสินใจในไม่กี่นาที ไม่ใช่หลายเดือน",
-    "shortlistLabel": "[TODO: th] Shortlist · {count} schools",
+    "eyebrow": "เปรียบเทียบแบบเคียงข้างกัน",
+    "heading": "วางโรงเรียนเทียบกัน",
+    "headingAccent": "เห็นความแตกต่างที่สำคัญ",
+    "shortlistLabel": "รายการคัดเลือก · {count} โรงเรียน",
     "columns": {
-      "fee": "ค่าเล่าเรียนต่อปี",
-      "stateSector": "[TODO: th] State & sector",
-      "curriculum": "[TODO: th] Curriculum",
-      "boarding": "[TODO: th] Boarding",
-      "tests": "การสอบที่รับ",
-      "minScore": "[TODO: th] Min. AEAS score",
-      "scholarships": "[TODO: th] Scholarships",
-      "intakes": "รอบรับสมัคร"
+      "fee": "ค่าเล่าเรียนรายปี (ต่างชาติ)",
+      "totalCost": "ค่าใช้จ่ายรวมโดยประมาณ",
+      "accommodation": "ตัวเลือกที่พัก",
+      "welfare": "สวัสดิภาพและการดูแลโดยผู้ปกครองตามกฎหมาย",
+      "englishSupport": "โปรแกรมสนับสนุนภาษาอังกฤษ",
+      "tests": "การสอบภาษาอังกฤษที่รับ",
+      "minScore": "คะแนนภาษาอังกฤษขั้นต่ำ",
+      "scholarships": "ทุนการศึกษา",
+      "intakes": "ภาคเรียน",
+      "parentComms": "การสื่อสารกับผู้ปกครอง"
     },
-    "notPublished": "ไม่ได้เผยแพร่",
-    "dayOnly": "[TODO: th] – Day only",
-    "noneIntl": "[TODO: th] – None intl."
+    "estimatedFrom": "เริ่มต้น {amount}",
+    "accommodationBoarding": "หอพัก · โฮมสเตย์",
+    "accommodationDay": "โฮมสเตย์ · ครอบครัว",
+    "welfareValue": "ผู้ปกครองตามกฎหมายสำหรับอายุต่ำกว่า 18 · การตรวจสอบโฮมสเตย์",
+    "englishSupportValue": "การสนับสนุน ELICOS / EAL",
+    "parentCommsValue": "รายงานรายภาคเรียน · พอร์ทัลผู้ปกครอง",
+    "notPublished": "–",
+    "dayOnly": "– ไป-กลับเท่านั้น",
+    "noneIntl": "– ไม่มีสำหรับต่างชาติ"
   },
   "ParentsPickATest": {
     "eyebrow": "ความสามารถภาษาอังกฤษ",
-    "heading": "Find out which English test the school requires –",
-    "headingAccent": "and the score your child needs to get in.",
-    "subheading": "เรารวบรวมการสอบภาษาอังกฤษที่รับในทุกหน้าโปรไฟล์ ไม่ต้องค้นหาจาก 50 เว็บไซต์โรงเรียนอีกต่อไป",
+    "heading": "ค้นหาว่าบุตรหลานของคุณต้องสอบภาษาอังกฤษแบบใด –",
+    "headingAccent": "และมีการสนับสนุนใดบ้าง",
+    "subheading": "แต่ละโรงเรียนรับการสอบภาษาอังกฤษต่างกันในระดับที่ต่างกัน เราจับคู่ให้ทั้งหมด – คุณจึงเห็นได้ในพริบตาว่าโรงเรียนใดตรงกับคะแนนของบุตรหลานคุณ หากภาษาอังกฤษของบุตรหลานยังไม่แข็งแรงพอ หลายโรงเรียนมีโปรแกรมสนับสนุนภาษาอังกฤษหรือเส้นทางเตรียมความพร้อม",
     "tests": {
       "aeas": {
         "name": "AEAS",
         "fullName": "Australian Education Assessment Services",
-        "description": "Most commonly accepted by Australian independent schools"
+        "description": "โรงเรียนเอกชนออสเตรเลียยอมรับมากที่สุด"
       },
       "idat": {
         "name": "iDAT",
         "fullName": "International Digital Admissions Test",
-        "description": "Growing in popularity for K–12 admissions"
+        "description": "กำลังได้รับความนิยมเพิ่มขึ้นสำหรับการรับเข้าเรียน K–12"
       },
       "duolingo": {
         "name": "Duolingo",
         "fullName": "Duolingo English Test",
-        "description": "Accepted by an increasing number of schools"
+        "description": "โรงเรียนยอมรับเพิ่มขึ้นเรื่อยๆ"
       },
       "ielts": {
         "name": "IELTS",
         "fullName": "International English Language Testing System",
-        "description": "Standard for senior secondary entry (Year 11+)"
+        "description": "มาตรฐานสำหรับการเข้าเรียนมัธยมปลาย (Year 11+)"
       },
       "pte": {
         "name": "PTE Academic",
         "fullName": "Pearson Test of English Academic",
-        "description": "Accepted by some schools for Year 11–12 entry"
+        "description": "บางโรงเรียนยอมรับสำหรับการเข้าเรียน Year 11–12"
       },
       "cambridge": {
         "name": "Cambridge",
         "fullName": "Cambridge English Qualifications",
-        "description": "Accepted by select schools"
+        "description": "โรงเรียนบางแห่งยอมรับ"
       },
       "toefl": {
         "name": "TOEFL",
         "fullName": "Test of English as a Foreign Language",
-        "description": "Accepted by select schools for senior entry"
+        "description": "โรงเรียนบางแห่งยอมรับสำหรับการเข้าเรียนมัธยมปลาย"
       }
     },
-    "cta": "Check your school's English requirements"
+    "reassurance": {
+      "title": "ไม่แน่ใจว่าภาษาอังกฤษของบุตรหลานพร้อมหรือยัง?",
+      "body": "หลายโรงเรียนรับนักเรียนที่ยังพัฒนาภาษาอังกฤษอยู่ และจัดการสนับสนุนอย่างเข้มข้น ใช้ตัวกรองของเราเพื่อค้นหาโรงเรียนที่มีโปรแกรมเตรียมความพร้อมภาษาอังกฤษ"
+    },
+    "cta": "ตรวจสอบข้อกำหนดภาษาอังกฤษของโรงเรียน"
   },
   "ParentsSevenLanguages": {
     "eyebrow": "เจ็ดภาษา",
@@ -444,138 +456,192 @@
     }
   },
   "ParentsArticles": {
-    "eyebrow": "ห้องสมุดการรับสมัคร",
-    "heading": "เขียนโดยเจ้าหน้าที่รับสมัคร แปลเป็นเจ็ดภาษา",
-    "subheading": "คู่มือภาษาง่ายเกี่ยวกับวีซ่า รอบรับสมัคร การสอบภาษาอังกฤษ และตารางค่าเล่าเรียน ฟรี ไม่ต้องเข้าสู่ระบบ",
+    "eyebrow": "คลังข้อมูลการรับสมัคร",
+    "heading": "คู่มือที่ตอบทุกคำถามที่ทุกครอบครัวถาม",
+    "subheading": "ค่าใช้จ่ายทั้งหมด สวัสดิภาพและการจัดผู้ปกครองตามกฎหมาย ภาคเรียน การสอบภาษาอังกฤษ ที่พัก เอกสารที่ต้องใช้ – คู่มือภาษาเข้าใจง่ายที่เขียนโดยเจ้าหน้าที่รับสมัคร ฟรี ไม่ต้องล็อกอิน",
     "items": {
       "intakes": {
-        "title": "ทำความเข้าใจรอบรับสมัครของโรงเรียนออสเตรเลีย",
+        "title": "ทำความเข้าใจภาคเรียนของโรงเรียนออสเตรเลีย",
         "meta": "อ่าน 6 นาที · อัปเดตทุกเดือน"
       },
       "englishTests": {
-        "title": "โรงเรียนของคุณรับการสอบภาษาอังกฤษใด?",
-        "meta": "อ่าน 8 นาที · เปรียบเทียบแต่ละการสอบ"
+        "title": "โรงเรียนของคุณรับการสอบภาษาอังกฤษแบบใด?",
+        "meta": "อ่าน 8 นาที · แยกตามการสอบแต่ละแบบ"
       },
       "boarding": {
-        "title": "หอพักกับไป-กลับ: ครอบครัวเลือกอะไรและทำไม",
+        "title": "หอพักหรือไป-กลับ: ครอบครัวเลือกแบบไหนและเพราะอะไร",
         "meta": "อ่าน 5 นาที · กรณีศึกษา"
       }
     },
     "readMore": "อ่านบทความ"
   },
   "ParentsTrustBar": {
-    "eyebrow": "ความน่าเชื่อถือและการปฏิบัติตามกฎหมาย",
-    "heading": "Data you can trust – so you know you're looking at legitimate institutions and accurate information.",
-    "subheading": "ทุกรายชื่อโรงเรียนบน SchoolGo มาจากแหล่งข้อมูลรัฐบาลอย่างเป็นทางการ – ผ่านการตรวจสอบ ได้รับอนุญาต และอัปเดตทุกเดือน",
+    "eyebrow": "ความน่าเชื่อถือและการปฏิบัติตามข้อกำหนด",
+    "heading": "ข้อมูลที่คุณเชื่อถือได้ – และความชัดเจนว่า SchoolGo ทำงานอย่างไร",
+    "subheading": "ทุกโรงเรียนที่แสดงรายการได้รับการตรวจสอบกับทะเบียนทางการของรัฐบาลออสเตรเลีย และเราตรงไปตรงมาว่า SchoolGo ทำอะไร – และไม่ทำอะไร",
     "items": {
       "cricos": {
-        "label": "โรงเรียนจดทะเบียนกับรัฐบาล",
-        "description": "ข้อมูลโรงเรียนทุกแห่งถูกตรวจสอบกับทะเบียนเครือจักรภพอย่างเป็นทางการ"
+        "label": "โรงเรียนที่จดทะเบียนกับรัฐบาล",
+        "description": "ทุกโรงเรียนบน SchoolGo จดทะเบียนกับรัฐบาลออสเตรเลียเพื่อรับนักเรียนต่างชาติ"
       },
       "datagov": {
-        "label": "ข้อมูลอัปเดตล่าสุด",
-        "description": "ข้อมูลเปิดที่ได้รับอนุญาตภายใต้ CC BY 2.5 AU – โปร่งใสและตรวจสอบได้สาธารณะ"
+        "label": "อัปเดตให้ทันสมัยอยู่เสมอ",
+        "description": "ข้อมูลโรงเรียนได้รับการอัปเดตเป็นประจำจากทะเบียนทางการของรัฐบาล – สิ่งที่คุณเห็นจึงเป็นข้อมูลปัจจุบัน"
       },
       "acara": {
-        "label": "ข้อมูลหลักสูตรแห่งชาติ",
-        "description": "หลักสูตร คะแนน ICSEA และข้อมูลนักเรียนมาจากหน่วยงานระดับชาติ"
+        "label": "ข้อมูลหลักสูตรระดับชาติ",
+        "description": "หลักสูตร ผลการดำเนินงานของโรงเรียน และข้อมูลการรับนักเรียน มาจากหน่วยงานการศึกษาระดับชาติของออสเตรเลีย"
       },
       "esos": {
         "label": "การคุ้มครองนักเรียน",
-        "description": "SchoolGo ดำเนินงานภายในกรอบกฎหมาย ESOS ว่าด้วยบริการการศึกษาสำหรับนักเรียนต่างชาติของออสเตรเลีย"
+        "description": "ทุกโรงเรียนที่แสดงรายการดำเนินงานภายใต้กรอบกฎหมายของออสเตรเลียในการคุ้มครองนักเรียนต่างชาติ"
       }
     },
-    "attribution": "ข้อมูลโรงเรียนมาจากทะเบียนสถาบันและหลักสูตรเครือจักรภพสำหรับนักเรียนต่างชาติ (CRICOS) และสำนักงานหลักสูตร การประเมิน และการรายงานของออสเตรเลีย (ACARA) อัปเดตเมษายน 2026"
+    "attribution": "ข้อมูลโรงเรียนมาจากทะเบียนทางการของรัฐบาลออสเตรเลียและหน่วยงานหลักสูตรระดับชาติ (ACARA) อัปเดตเมื่อ April 2026",
+    "about": {
+      "heading": "SchoolGo คืออะไร?",
+      "intro": "SchoolGo เชื่อมต่อครอบครัวกับโรงเรียนที่ใช่และตัวแทนที่ใช่ เป็นแพลตฟอร์มฟรีที่ผู้ปกครองสามารถ:",
+      "points": {
+        "search": "ค้นหาและเปรียบเทียบทุกโรงเรียนที่จดทะเบียนในที่เดียว",
+        "understand": "เข้าใจค่าเล่าเรียน ข้อกำหนด และตัวเลือกการสนับสนุน",
+        "connect": "เชื่อมต่อกับตัวแทนการศึกษาที่ได้รับการอนุมัติจากโรงเรียนเมื่อพร้อมยื่นสมัคร"
+      },
+      "closing": "ตัวแทนจะจัดการใบสมัครของคุณและแนะนำคุณตลอดกระบวนการ โรงเรียนเป็นผู้อนุมัติว่าตัวแทนคนใดเป็นตัวแทนของตน – คุณจึงรู้ว่ากำลังทำงานกับคนที่โรงเรียนไว้ใจ จะไม่มีใครติดต่อคุณ เว้นแต่คุณจะเลือกเชื่อมต่อ"
+    }
   },
   "ParentsFaq": {
-    "heading": "Frequently Asked Questions",
+    "heading": "คำถามที่พบบ่อย",
     "items": {
       "enrol": {
-        "question": "How do I enrol my child in an Australian school from overseas?",
-        "answer": "Start by shortlisting schools that fit your child's year level, location, and budget on SchoolGo. Each school's profile shows the documents, English test scores, and intake dates you'll need to apply. Once you've chosen a school, an education agent or the school's admissions office will guide you through the application and student visa process."
+        "question": "ฉันจะให้บุตรหลานเข้าเรียนโรงเรียนในออสเตรเลียจากต่างประเทศได้อย่างไร?",
+        "answer": "เริ่มจากการคัดเลือกโรงเรียนที่เหมาะกับระดับชั้นปี ทำเล และงบประมาณของบุตรหลานบน SchoolGo โปรไฟล์ของแต่ละโรงเรียนจะแสดงเอกสาร คะแนนการสอบภาษาอังกฤษ และวันเปิดรับสมัครที่คุณต้องใช้ในการยื่นสมัคร เมื่อคุณเลือกโรงเรียนแล้ว ตัวแทนการศึกษาหรือฝ่ายรับสมัครของโรงเรียนจะแนะนำคุณตลอดกระบวนการสมัครและวีซ่านักเรียน"
       },
       "cost": {
-        "question": "How much does it cost to send my child to school in Australia?",
-        "answer": "International student tuition typically ranges from about A$15,000 to A$45,000 per year, depending on the school, year level, and sector. On top of tuition, plan for application fees, uniforms, technology, boarding (if applicable), and Overseas Student Health Cover. Every SchoolGo profile shows the school's published international fees so you can compare like-for-like."
+        "question": "การส่งบุตรหลานไปเรียนที่ออสเตรเลียมีค่าใช้จ่ายเท่าไหร่?",
+        "answer": "ค่าเล่าเรียนสำหรับนักเรียนต่างชาติโดยทั่วไปอยู่ที่ประมาณ A$15,000 ถึง A$45,000 ต่อปี ขึ้นอยู่กับโรงเรียน ระดับชั้นปี และภาคการศึกษา นอกเหนือจากค่าเล่าเรียน ควรเตรียมงบสำหรับค่าสมัคร ชุดนักเรียน อุปกรณ์เทคโนโลยี หอพัก (ถ้ามี) และประกันสุขภาพนักเรียนต่างชาติ ทุกโปรไฟล์บน SchoolGo แสดงค่าเล่าเรียนสำหรับต่างชาติที่โรงเรียนประกาศไว้ คุณจึงเปรียบเทียบได้อย่างเป็นธรรม"
       },
       "englishTest": {
-        "question": "What English test does my child need for an Australian school?",
-        "answer": "Different schools accept different tests – the most common are AEAS, iDAT, Duolingo English Test, IELTS, and PTE Academic, with minimum scores that vary by year level. SchoolGo shows the exact tests and minimum scores each school accepts on its profile."
+        "question": "บุตรหลานของฉันต้องสอบภาษาอังกฤษแบบใดเพื่อเข้าเรียนโรงเรียนในออสเตรเลีย?",
+        "answer": "แต่ละโรงเรียนรับการสอบต่างกัน – ที่พบบ่อยที่สุดคือ AEAS, iDAT, Duolingo English Test, IELTS และ PTE Academic โดยมีคะแนนขั้นต่ำที่แตกต่างกันตามระดับชั้นปี SchoolGo แสดงการสอบและคะแนนขั้นต่ำที่แต่ละโรงเรียนรับไว้บนโปรไฟล์อย่างชัดเจน"
       },
       "visa": {
-        "question": "Do international students need a visa to study at an Australian school?",
-        "answer": "Yes – full-fee international school students study on a Student visa (subclass 500), which requires a Confirmation of Enrolment from a CRICOS-registered school. You'll also need health cover (OSHC) for the duration of the visa. See our student visa guide for the full step-by-step."
+        "question": "นักเรียนต่างชาติต้องมีวีซ่าเพื่อเรียนที่โรงเรียนในออสเตรเลียหรือไม่?",
+        "answer": "ใช่ – นักเรียนต่างชาติที่จ่ายค่าเล่าเรียนเต็มจำนวนเรียนด้วยวีซ่านักเรียน (subclass 500) ซึ่งต้องมีเอกสารยืนยันการลงทะเบียน (Confirmation of Enrolment) จากโรงเรียนที่จดทะเบียน CRICOS คุณจะต้องมีประกันสุขภาพ (OSHC) ตลอดระยะเวลาของวีซ่าด้วย ดูคู่มือวีซ่านักเรียนของเราสำหรับขั้นตอนทั้งหมด"
       },
       "agent": {
-        "question": "What is an education agent and do I need one?",
-        "answer": "Education agents are licensed consultants who help families choose schools, prepare documents, and manage the application and visa process. You don't have to use one, but most international families do – and it's free for you, since agents are paid by the schools. SchoolGo shows you which agents each school works with so you can pick someone with a proven track record."
+        "question": "ตัวแทนการศึกษาคืออะไรและฉันจำเป็นต้องมีหรือไม่?",
+        "answer": "ตัวแทนการศึกษาคือที่ปรึกษาที่มีใบอนุญาตซึ่งช่วยครอบครัวเลือกโรงเรียน จัดเตรียมเอกสาร และจัดการกระบวนการสมัครและวีซ่า คุณไม่จำเป็นต้องใช้ก็ได้ แต่ครอบครัวต่างชาติส่วนใหญ่ใช้บริการ – และฟรีสำหรับคุณ เพราะตัวแทนได้รับค่าตอบแทนจากโรงเรียน SchoolGo แสดงให้คุณเห็นว่าแต่ละโรงเรียนทำงานกับตัวแทนคนใด คุณจึงเลือกคนที่มีผลงานพิสูจน์แล้วได้"
       },
       "schoolTypes": {
-        "question": "What types of schools are there in Australia?",
-        "answer": "Australian schools fall into three sectors – government (public), Catholic, and independent – and may be co-educational, single-sex, day-only, or boarding. Curricula include state certificates like the VCE, HSC, and QCE, plus the International Baccalaureate at many independent schools. Our school types guide explains how each sector works for international students."
+        "question": "ในออสเตรเลียมีโรงเรียนประเภทใดบ้าง?",
+        "answer": "โรงเรียนออสเตรเลียแบ่งเป็นสามภาคการศึกษา – รัฐบาล (รัฐ) คาทอลิก และเอกชน – และอาจเป็นแบบสหศึกษา แยกเพศ ไป-กลับเท่านั้น หรือมีหอพัก หลักสูตรรวมถึงประกาศนียบัตรของรัฐ เช่น VCE, HSC และ QCE รวมถึง International Baccalaureate ในโรงเรียนเอกชนหลายแห่ง คู่มือประเภทโรงเรียนของเราอธิบายว่าแต่ละภาคการศึกษาทำงานอย่างไรสำหรับนักเรียนต่างชาติ"
       },
       "free": {
-        "question": "Is SchoolGo free?",
-        "answer": "Yes. SchoolGo is completely free for parents, education agents, and schools. There are no listing fees, application fees, or subscription costs."
+        "question": "SchoolGo ฟรีหรือไม่?",
+        "answer": "ฟรี SchoolGo ฟรีอย่างสมบูรณ์สำหรับผู้ปกครอง ตัวแทนการศึกษา และโรงเรียน ไม่มีค่าลงรายการ ค่าสมัคร หรือค่าสมาชิก"
+      },
+      "startEarly": {
+        "question": "เราควรเริ่มยื่นสมัครล่วงหน้านานแค่ไหน?",
+        "answer": "ครอบครัวส่วนใหญ่เริ่ม 6 ถึง 12 เดือนก่อนภาคเรียนที่ต้องการ โรงเรียนยอดนิยมเต็มที่นั่งสำหรับนักเรียนต่างชาติเร็ว และคุณต้องใช้เวลาในการสอบภาษาอังกฤษ รวบรวมเอกสาร และจัดการวีซ่านักเรียนและที่พัก การเริ่มแต่เนิ่นๆ ทำให้คุณมีตัวเลือกมากขึ้นและตารางเวลาที่สบายกว่า – แต่หลายโรงเรียนก็รับใบสมัครภายหลังได้เช่นกันหากยังมีที่ว่าง"
+      },
+      "weakEnglish": {
+        "question": "บุตรหลานของฉันสมัครได้ไหมหากภาษาอังกฤษยังไม่แข็งแรง?",
+        "answer": "ได้ หลายโรงเรียนรับนักเรียนที่ยังพัฒนาภาษาอังกฤษอยู่ และจัดการสนับสนุนภาษาอังกฤษอย่างเข้มข้นหรือเส้นทางเตรียมความพร้อม ก่อนหรือควบคู่ไปกับชั้นเรียนปกติ ใช้ตัวกรองของเราเพื่อค้นหาโรงเรียนที่มีโปรแกรมเตรียมความพร้อมภาษาอังกฤษที่เหมาะกับระดับปัจจุบันของบุตรหลานคุณ"
+      },
+      "midYear": {
+        "question": "บุตรหลานของฉันเริ่มเรียนกลางปีได้ไหม?",
+        "answer": "บ่อยครั้งได้ โรงเรียนออสเตรเลียมักมีหลายภาคเรียนตลอดทั้งปี และหลายแห่งรับนักเรียนต่างชาติกลางปีได้ ขึ้นอยู่กับที่ว่างและระดับชั้นปี โปรไฟล์ของแต่ละโรงเรียนบน SchoolGo แสดงช่วงภาคเรียนไว้ คุณจึงวางแผนตามวันเริ่มเรียนของบุตรหลานได้"
+      },
+      "documents": {
+        "question": "ต้องใช้เอกสารใดบ้างในการสมัคร?",
+        "answer": "โรงเรียนส่วนใหญ่ขอผลการเรียนล่าสุด สำเนาหนังสือเดินทาง ผลการสอบภาษาอังกฤษ (ในกรณีที่กำหนด) และบางครั้งก็ขอหนังสือรับรองหรือเรียงความสั้นๆ สำหรับวีซ่านักเรียน คุณยังต้องมีเอกสารยืนยันการลงทะเบียนและหลักฐานประกันสุขภาพด้วย โปรไฟล์ของแต่ละโรงเรียนระบุสิ่งที่โรงเรียนนั้นต้องการไว้ และตัวแทนของคุณสามารถยืนยันรายการตรวจสอบทั้งหมดได้"
+      },
+      "boardingVsHomestay": {
+        "question": "หอพักกับโฮมสเตย์แตกต่างกันอย่างไร?",
+        "answer": "หอพักหมายถึงการพักในโรงเรียนพร้อมการดูแลอย่างเป็นระบบ อาหาร และกิจกรรมต่างๆ โฮมสเตย์หมายถึงการพักกับครอบครัวท้องถิ่นที่ได้รับการอนุมัติจากโรงเรียน หอพักมีความเป็นระบบมากกว่าและมีเจ้าหน้าที่ประจำที่ ส่วนโฮมสเตย์ให้บรรยากาศแบบครอบครัว – ตัวเลือกที่เหมาะสมขึ้นอยู่กับอายุ ความเป็นอิสระ และความชอบของบุตรหลานคุณ"
+      },
+      "under18Responsible": {
+        "question": "ใครรับผิดชอบบุตรหลานของฉันหากอายุต่ำกว่า 18 ปี?",
+        "answer": "นักเรียนอายุต่ำกว่า 18 ปีต้องมีการจัดการด้านสวัสดิภาพที่ได้รับการอนุมัติ – โดยปกติคือพ่อแม่หรือญาติที่มีคุณสมบัติในออสเตรเลีย หรือผู้ปกครองตามกฎหมายและที่พักที่โรงเรียนอนุมัติ โรงเรียนและผู้ปกครองตามกฎหมายที่ได้รับการแต่งตั้งร่วมกันรับผิดชอบการดูแลและความเป็นอยู่ของบุตรหลานคุณ และโรงเรียนเป็นจุดติดต่อหลักของคุณ"
+      },
+      "englishHelp": {
+        "question": "โรงเรียนช่วยได้ไหมหากบุตรหลานของฉันมีปัญหาเรื่องภาษาอังกฤษ?",
+        "answer": "ได้ หลายโรงเรียนจัดการสนับสนุนภาษาอังกฤษในฐานะภาษาเพิ่มเติม (EAL) อย่างต่อเนื่อง การติว และโปรแกรมภาษาอังกฤษเข้มข้น เพื่อช่วยนักเรียนที่ยังพัฒนาภาษาอังกฤษให้เรียนตามทันในชั้นเรียน คุณสามารถกรองหาโรงเรียนที่มีโปรแกรมสนับสนุนภาษาอังกฤษได้บน SchoolGo"
+      },
+      "transfer": {
+        "question": "บุตรหลานของฉันย้ายไปโรงเรียนอื่นในภายหลังได้ไหม?",
+        "answer": "ได้ นักเรียนสามารถย้ายระหว่างโรงเรียนได้ แม้จะมีกฎเกณฑ์ – โดยเฉพาะในช่วงหกเดือนแรกของหลักสูตร – และโดยปกติต้องมีเอกสารยืนยันการลงทะเบียนฉบับใหม่ ตัวแทนของคุณหรือโรงเรียนที่เกี่ยวข้องสามารถแนะนำคุณเรื่องการย้ายและผลกระทบต่อวีซ่าได้"
+      },
+      "refundVisa": {
+        "question": "ค่าเล่าเรียนสามารถขอคืนได้ไหมหากวีซ่าถูกปฏิเสธ?",
+        "answer": "โรงเรียนส่วนใหญ่มีนโยบายการคืนเงินเป็นลายลักษณ์อักษรที่ระบุว่าจะคืนเงินส่วนใดหากวีซ่านักเรียนถูกปฏิเสธ เงื่อนไขการคืนเงินแตกต่างกันไปในแต่ละโรงเรียน ดังนั้นควรตรวจสอบเงื่อนไขการคืนเงินของโรงเรียนก่อนชำระเงินเสมอ SchoolGo แนะนำให้คุณตรวจสอบนโยบายการคืนเงินของแต่ละโรงเรียนเป็นส่วนหนึ่งของการทำความเข้าใจค่าใช้จ่ายทั้งหมด"
+      },
+      "agentSelection": {
+        "question": "SchoolGo คัดเลือกตัวแทนที่จะเชื่อมต่อกับฉันอย่างไร?",
+        "answer": "ตัวแทนทุกคนบน SchoolGo ผ่านการรับรองและได้รับการอนุมัติจากโรงเรียนที่ทำงานด้วย SchoolGo ไม่จัดให้ตัวแทนแบบสุ่ม – คุณเลือกได้ว่าจะเชื่อมต่อกับใคร โดยพิจารณาจากประสบการณ์ ภาษาที่พูดได้ และโรงเรียนที่เป็นตัวแทน"
+      },
+      "agentOrSchool": {
+        "question": "SchoolGo เป็นตัวแทนหรือเป็นส่วนหนึ่งของโรงเรียนหรือไม่?",
+        "answer": "ไม่ทั้งสองอย่าง SchoolGo เป็นแพลตฟอร์มอิสระที่ฟรี ซึ่งช่วยให้ครอบครัวค้นหาและเปรียบเทียบทุกโรงเรียนออสเตรเลียที่จดทะเบียน และเชื่อมต่อกับตัวแทนการศึกษาที่ได้รับการอนุมัติจากโรงเรียนเมื่อพร้อม เราไม่รับนักเรียนเอง – โรงเรียนและตัวแทนที่คุณเลือกจะจัดการใบสมัครของคุณ จะไม่มีใครติดต่อคุณ เว้นแต่คุณจะเลือกเชื่อมต่อ"
       }
     }
   },
   "ParentsFinalCta": {
-    "eyebrow": "เริ่มที่นี่",
-    "headingPrefix": "การค้นหาของคุณ",
+    "eyebrow": "เริ่มต้นที่นี่",
+    "headingPrefix": "อนาคตของพวกเขา",
     "headingEmphasis": "เริ่มต้น",
-    "headingSuffix": "ในเจ็ดภาษา",
-    "subheading": "ฟรี ไม่ต้องเข้าสู่ระบบ อัปเดต {month} {year, number}",
-    "ctaPrimary": "Find the right school"
+    "headingSuffix": "ด้วยโรงเรียนที่ใช่ – และการสนับสนุนที่ใช่",
+    "subheading": "ค้นหาทุกโรงเรียนที่จดทะเบียน เข้าใจค่าใช้จ่ายทั้งหมด มั่นใจว่าบุตรหลานของคุณจะได้รับการดูแล ฟรี ไม่ต้องล็อกอิน",
+    "ctaPrimary": "ค้นหาโรงเรียนที่ใช่"
   },
   "AgentsMetadata": {
-    "title": "SchoolGo – บริหารธุรกิจตัวแทนของคุณเหมือนพอร์ตโฟลิโอ",
-    "description": "เครื่องมือที่ผ่านการรับรอง QEAC สำหรับตัวแทนการศึกษาที่วางนักเรียนเข้าโรงเรียนออสเตรเลีย ใบสมัครมาตรฐาน ไปป์ไลน์สด รับค่าคอมมิชชันเต็มจำนวน",
-    "ogDescription": "บริหารธุรกิจเหมือนพอร์ตโฟลิโอ เก็บค่าคอมมิชชัน 100% ของคุณ"
+    "title": "SchoolGo สำหรับตัวแทน – เชื่อมต่อ คัดเลือกได้เร็วขึ้น",
+    "description": "ฟรีสำหรับตัวแทนการศึกษา ค้นหาโรงเรียนออสเตรเลีย คัดเลือกระหว่างให้คำปรึกษา เชื่อมต่อกับครอบครัว ค่าคอมมิชชันยังเป็นของคุณ",
+    "ogDescription": "เชื่อมต่อกับครอบครัวที่พร้อมยื่นสมัคร คัดเลือกโรงเรียนออสเตรเลียได้ในไม่กี่นาที ฟรีสำหรับตัวแทน ค่าคอมมิชชันยังเป็นของคุณ"
   },
   "AgentsHero": {
-    "eyebrow": "สำหรับตัวแทนการศึกษา · รับรองโดย QEAC",
-    "headlinePrefix": "All Australian schools. All your students.",
-    "headlineEmphasis": "เหมือนพอร์ตโฟลิโอ",
-    "lede": "Every Australian school has different fees, English tests, entry requirements, and application forms. SchoolGo brings them all into one place – so you can match, compare, and apply without the guesswork.",
-    "ctaPrimary": "สมัครขอการรับรอง",
+    "eyebrow": "สำหรับตัวแทนการศึกษา",
+    "headlinePrefix": "เชื่อมต่อกับครอบครัวที่พร้อมยื่นสมัคร",
+    "headlineEmphasis": "คัดเลือกโรงเรียนได้ในไม่กี่นาที",
+    "lede": "SchoolGo ช่วยให้ผู้ปกครองค้นหาโรงเรียนออสเตรเลียที่ใช่ และเชื่อมต่อพวกเขากับคุณ ค้นหาโรงเรียนที่จดทะเบียนกว่า {count, number} แห่ง สร้างรายการคัดเลือกระหว่างให้คำปรึกษา และยื่นใบสมัครไปยังโรงเรียน ครบในแพลตฟอร์มเดียว ฟรี และค่าคอมมิชชันยังเป็นของคุณเช่นเดิม",
+    "ctaPrimary": "สร้างโปรไฟล์ตัวแทนของคุณ",
     "ctaSecondary": "ดูวิธีการทำงาน",
-    "badgeMeta": "Sample agent profile",
+    "badgeMeta": "ตัวอย่างโปรไฟล์ตัวแทน",
     "stats": {
       "schools": {
         "value": "{count, number}",
-        "label": "โรงเรียน CRICOS ที่ผ่านการรับรอง"
+        "label": "โรงเรียนที่จดทะเบียน CRICOS"
       },
       "sectors": {
         "value": "3",
-        "label": "Sectors – Gov, Independent, Catholic"
+        "label": "ภาคการศึกษา – รัฐบาล เอกชน คาทอลิก"
       },
       "commission": {
         "value": "100%",
-        "label": "ค่าคอมมิชชันที่คุณเก็บได้ทั้งหมด"
+        "label": "ฟรี – ค่าคอมมิชชันยังเป็นของคุณ"
       }
     }
   },
   "AgentsPainPoints": {
-    "eyebrow": "What you can do",
-    "heading": "Everything you need to place students into Australian schools.",
-    "subheading": "Search, match, apply, and track – every part of the placement workflow, in one platform.",
+    "eyebrow": "ทำไมตัวแทนจึงใช้ SchoolGo",
+    "heading": "สร้างขึ้นเพื่อวิธีการทำงานจริงของคุณ ไม่ใช่เพื่อมาแทนที่คุณ",
+    "subheading": "76% ของการรับนักเรียนต่างชาติเข้าโรงเรียนมาจากตัวแทนการศึกษา SchoolGo มีอยู่เพื่อทำให้คุณทำงานเร็วขึ้นและเป็นที่รู้จักของครอบครัวมากขึ้น ไม่ใช่เพื่อตัดคุณออกไป",
     "items": {
       "email": {
-        "question": "Search 695 schools by what matters",
-        "answer": "Filter by fees, English tests, intakes, boarding, and scholarships. Compare side by side. No more digging through school websites one at a time."
+        "question": "ต้องตอบคำถามเจาะจงให้เร็วใช่ไหม?",
+        "answer": "ผู้ปกครองถามเรื่องค่าเล่าเรียน ข้อกำหนดภาษาอังกฤษ หอพัก ที่ว่าง กำหนดส่ง และเอกสาร บ่อยครั้งในการโทรเพียงครั้งเดียว SchoolGo ช่วยให้คุณกรองโรงเรียนทั้ง 695 แห่งได้ในไม่กี่วินาที แทนที่จะต้องไล่เช็กเว็บไซต์โรงเรียนทีละแห่ง"
       },
       "status": {
-        "question": "One student profile, every school",
-        "answer": "Enter your student's details once. SchoolGo maps them to each school's requirements – so you see which schools fit and apply without re-entering data."
+        "question": "เสียเวลากับงานเอกสารมากเกินไปตั้งแต่ก่อนเริ่มให้คำปรึกษาด้วยซ้ำ?",
+        "answer": "ป้อนโปรไฟล์ของนักเรียนเพียงครั้งเดียว SchoolGo จะจับคู่กับข้อกำหนดของโรงเรียน คุณจึงเห็นว่าโรงเรียนใดเหมาะสมจริงตั้งแต่ก่อนยกหูโทรศัพท์"
       },
       "trust": {
-        "question": "Documents organised, scores verified",
-        "answer": "Passports, transcripts, and test scores uploaded once, tracked for expiry. English scores checked against official records automatically."
+        "question": "เบื่อกับการอธิบายค่าใช้จ่ายทั้งหมดตั้งแต่ต้นใช่ไหม?",
+        "answer": "SchoolGo แสดงภาพรวมค่าใช้จ่ายทั้งหมดให้ผู้ปกครองเห็น ทั้งค่าเล่าเรียน หอพัก โฮมสเตย์ OSHC ชุดนักเรียน และค่าผู้ปกครองตามกฎหมาย ก่อนที่พวกเขาจะมาถึงคุณ ครอบครัวจึงเข้าใจตัวเลขจริงตั้งแต่แรก คุณจะใช้เวลาน้อยลงกับความตกใจในราคา และมีเวลามากขึ้นกับเรื่องความเหมาะสม"
       },
       "requirements": {
-        "question": "Your commission stays yours",
-        "answer": "SchoolGo is free. No platform fees, no commission splits, no per-student charges. Your relationship with schools stays direct."
+        "question": "ผู้ปกครองเอาคุณไปเทียบกับ Google?",
+        "answer": "ครอบครัวที่พบคุณผ่าน SchoolGo เข้าใจคุณค่าของการทำงานกับตัวแทนอยู่แล้ว พวกเขาได้เห็นความซับซ้อนและเลือกที่จะเชื่อมต่อกับมืออาชีพ"
       }
     }
   },
@@ -588,314 +654,334 @@
     }
   },
   "AgentsMatching": {
-    "eyebrow": "จับคู่ · สมัคร · ติดตาม",
-    "heading": "ผู้ปกครองโทรมา 10 โมงเช้า จับคู่โรงเรียนได้สามแห่งก่อน 10:30",
-    "subheading": "SchoolGo แนะนำโรงเรียนที่เหมาะสมตามรัฐ ค่าเล่าเรียน ระดับภาษาอังกฤษ และรอบรับสมัคร – แล้วให้คุณส่งใบสมัครมาตรฐานได้ในไม่กี่นาที",
+    "eyebrow": "SchoolGo ทำงานอย่างไร",
+    "heading": "ครอบครัวโทรมา 10am ได้โรงเรียนที่ตรงใจสามแห่งภายใน 10:30",
+    "subheading": "ผู้ปกครองมักถามคำถามที่เจาะจงมาก เช่น โรงเรียนใดรับบุตรหลานเข้า Year 10 เดือนมกราคมปีหน้าได้ ด้วยระดับภาษาอังกฤษและงบประมาณที่กำหนด SchoolGo ช่วยให้คุณตอบได้เร็วขึ้น คุณจึงใช้เวลาน้อยลงในการตรวจสอบเว็บไซต์โรงเรียน และมีเวลาให้คำปรึกษาครอบครัวมากขึ้น",
     "steps": {
       "listen": {
-        "title": "บันทึกความต้องการของครอบครัว",
-        "description": "Budget, location, intake."
+        "title": "บันทึกสิ่งที่ครอบครัวต้องการ",
+        "description": "งบประมาณ ทำเล ระดับภาษาอังกฤษ ระดับชั้นปี ภาคเรียนที่ต้องการ ประเภทที่พัก และความสำคัญด้านสวัสดิภาพ ในแบบฟอร์มเดียว ใช้ได้ระหว่างให้คำปรึกษาแบบเรียลไทม์"
       },
       "match": {
-        "title": "ดูโรงเรียนที่เหมาะสมที่สุด",
-        "description": "Including English test scores.",
-        "comingSoon": "Coming soon"
+        "title": "เห็นโรงเรียนที่เหมาะที่สุดได้ทันที",
+        "description": "กรองตามโปรไฟล์ของนักเรียน ดูการสอบภาษาอังกฤษที่รับ คะแนนขั้นต่ำ ค่าเล่าเรียน ตัวเลือกหอพัก/โฮมสเตย์ สวัสดิภาพและการจัดผู้ปกครองตามกฎหมาย รวมถึงที่ว่างของแต่ละโรงเรียน ไม่ต้องเปิด 15 แท็บอีกต่อไป",
+        "comingSoon": "เร็วๆ นี้"
       },
       "deliver": {
-        "title": "ส่งมอบรายชื่อที่เรียบร้อย ไม่ใช่ความวุ่นวาย",
-        "description": "A branded PDF the family can screenshot and send to Mum and Dad. No PDFs from fifteen different schools.",
-        "comingSoon": "Coming soon"
+        "title": "ส่งมอบรายการคัดเลือกพร้อมแบรนด์ของคุณ",
+        "description": "ไฟล์ PDF ที่สะอาดตาพร้อมแบรนด์เอเจนซีของคุณ ที่ครอบครัวสามารถแคปหน้าจอ แชร์ให้คู่สมรส หรือนำไปเปรียบเทียบที่บ้านได้ ไม่ใช่โบรชัวร์โรงเรียน 15 ฉบับ",
+        "comingSoon": "เร็วๆ นี้"
+      },
+      "connect": {
+        "title": "ครอบครัวเชื่อมต่อกับคุณ",
+        "description": "เมื่อผู้ปกครองที่ค้นหาบน SchoolGo พบโรงเรียนที่คุณเป็นตัวแทน พวกเขาจะเลือกเชื่อมต่อกับคุณจากประสบการณ์ ภาษาที่คุณพูด และความเชี่ยวชาญของคุณ"
+      },
+      "apply": {
+        "title": "ยื่นใบสมัครผ่าน SchoolGo",
+        "description": "เตรียมและยื่นใบสมัครที่ตรงตามข้อกำหนดของโรงเรียน ทั้งเอกสารครบถ้วน คะแนนภาษาอังกฤษที่ผ่านการตรวจสอบ และโปรไฟล์นักเรียนที่ชัดเจน โรงเรียนได้รับสิ่งที่ต้องการโดยไม่ต้องติดต่อไปมาเหมือนเดิม",
+        "comingSoon": "เร็วๆ นี้"
       }
     },
-    "inboxLabel": "กล่องจดหมายรับสมัคร",
+    "inboxLabel": "โรงเรียนที่เหมาะที่สุด",
     "inboxRows": {
       "scotch": {
         "school": "Scotch College",
         "location": "Hawthorn, VIC",
-        "status": "จับคู่ · AEAS 70+"
+        "status": "ตรงใจ · AEAS 70+"
       },
       "brisbane": {
         "school": "Brisbane Grammar",
         "location": "Spring Hill, QLD",
-        "status": "จับคู่ · AEAS 68+"
+        "status": "ตรงใจ · AEAS 68+"
       },
       "sydney": {
         "school": "Sydney Grammar",
         "location": "Darlinghurst, NSW",
-        "status": "จับคู่ · AEAS 65+"
+        "status": "ตรงใจ · AEAS 65+"
       }
     }
   },
   "AgentsCommission": {
-    "eyebrow": "การกำหนดราคา",
-    "heading": "คุณเก็บค่าคอมมิชชันจากโรงเรียน 100%",
-    "subheading": "เราเรียกเก็บจากโรงเรียน ไม่ใช่จากคุณ ความสัมพันธ์เชิงพาณิชย์ของคุณกับโรงเรียนยังคงตรง",
+    "eyebrow": "วิธีการทำงาน",
+    "heading": "ทำงานอย่างไรสำหรับตัวแทน",
+    "subheading": "SchoolGo ช่วยให้ครอบครัวค้นหาและเปรียบเทียบโรงเรียน เชื่อมต่อพวกเขากับตัวแทน และมอบเครื่องมือให้ตัวแทนคัดเลือกและยื่นสมัครไปยังโรงเรียน ครบในแพลตฟอร์มเดียว โรงเรียนเป็นผู้สนับสนุนค่าใช้จ่าย คุณยังเก็บค่าคอมมิชชัน ความสัมพันธ์กับนักเรียน และเครือข่ายโรงเรียนของคุณไว้ได้ทั้งหมด",
     "statValue": "$0",
-    "statLabel": "Platform cost per agent. Zero fees, zero commission splits – ever.",
+    "statLabel": "ค่าใช้จ่ายแพลตฟอร์มต่อตัวแทนหนึ่งราย ไม่มีการแบ่งค่าคอมมิชชัน ค่าจัดหา หรือค่าสมาชิก",
     "bullets": {
-      "zero": {
-        "title": "ไม่มีค่าธรรมเนียมต่อนักเรียน",
-        "description": "ไม่มีการแบ่งค่าคอมมิชชัน ไม่มีค่าจัดวาง ไม่มีค่าสมัครสมาชิก"
+      "free": {
+        "title": "ใช้งานฟรี",
+        "description": "ไม่มีการแบ่งค่าคอมมิชชัน ค่าจัดหา หรือค่าสมาชิก"
       },
-      "direct": {
-        "title": "ความสัมพันธ์ตรงกับโรงเรียน",
-        "description": "การระบุที่มาของคุณถูกล็อคกับใบสมัครในขณะที่คุณส่ง"
+      "students": {
+        "title": "นักเรียนของคุณ ความสัมพันธ์ของคุณ",
+        "description": "ข้อมูลนักเรียนเป็นความลับเฉพาะคุณ ไม่มีตัวแทนรายอื่นเข้าถึงครอบครัวที่คุณกำลังดูแลอยู่ได้"
       },
-      "audit": {
-        "title": "บันทึกการตรวจสอบครบถ้วน",
-        "description": "ทุกการเปลี่ยนแปลงสถานะมีการประทับเวลา ข้อพิพาทจบลงที่เส้นทางเอกสาร"
+      "attribution": {
+        "title": "ระบุตัวแทนชัดเจนต่อโรงเรียน",
+        "description": "โรงเรียนเห็นว่าตัวแทนคนใดอยู่เบื้องหลังทุกการสอบถาม"
+      },
+      "approved": {
+        "title": "ได้รับการอนุมัติจากโรงเรียน",
+        "description": "โรงเรียนเป็นผู้เลือกว่าตัวแทนคนใดสามารถเป็นตัวแทนของตนบน SchoolGo ได้ หากคุณทำงานกับโรงเรียนอยู่แล้ว คุณสามารถได้รับการรับรองได้ทันที"
+      },
+      "network": {
+        "title": "เครือข่ายโรงเรียนของคุณยังเป็นของคุณ",
+        "description": "SchoolGo ไม่ติดต่อโรงเรียนแทนคุณ และไม่เปิดเผยความสัมพันธ์ของคุณ"
+      },
+      "privacy": {
+        "title": "ข้อมูลของคุณเป็นความลับ",
+        "description": "ข้อมูลลูกค้าและรายละเอียดเครือข่ายโรงเรียนจะไม่ถูกแบ่งปันกับตัวแทนรายอื่น หรือเปิดเผยต่อสาธารณะโดยไม่ได้รับความยินยอมจากคุณ"
       }
     }
   },
   "AgentsQeacTrust": {
-    "eyebrow": "ผ่านการรับรอง",
-    "heading": "โปรไฟล์ที่ผู้ปกครอง – และโรงเรียน – เชื่อถือได้จริง",
-    "subheading": "ใบรับรอง QEAC ของคุณผ่านการยืนยันครั้งเดียว ป้ายและประวัติผลงานของคุณจะปรากฏในใบสมัครทุกใบที่คุณส่ง",
-    "sampleLabel": "Sample profile",
+    "eyebrow": "โปรไฟล์ตัวแทนของคุณ",
+    "heading": "สร้างชื่อเสียงของคุณ ในแบบที่คุณกำหนดเอง",
+    "subheading": "โปรไฟล์ SchoolGo ช่วยให้ครอบครัวใหม่ค้นพบและเชื่อใจคุณ แต่คุณเป็นผู้ควบคุมว่าจะให้เห็นอะไร แสดงจุดแข็งของคุณได้โดยไม่ต้องเปิดเผยเครือข่ายทั้งหมดให้คู่แข่ง",
+    "sampleLabel": "ตัวอย่างโปรไฟล์",
     "profile": {
       "name": "โปรไฟล์ตัวแทน",
       "agentName": "Mei Lin",
-      "qeac": "รับรองโดย QEAC",
-      "yearsActive": "ปีที่ทำงาน",
-      "students": "นักเรียนที่จัดวางแล้ว",
-      "placements": "โรงเรียนที่จัดวางแล้ว",
-      "languages": "ภาษาที่พูด",
-      "languagesValue": "中 · EN"
-    }
+      "qeac": "ผ่านการรับรอง QEAC"
+    },
+    "visibility": {
+      "public": {
+        "label": "สาธารณะ",
+        "items": "ชื่อของคุณ ภาษา สถานะ QEAC จำนวนปีที่ทำงาน และภูมิภาคที่คุณให้บริการ"
+      },
+      "optional": {
+        "label": "เลือกได้",
+        "items": "จำนวนนักเรียนที่จัดให้ ภาคการศึกษาของโรงเรียน และความเชี่ยวชาญ คุณเป็นผู้เลือกเอง"
+      },
+      "private": {
+        "label": "เป็นความลับเสมอ",
+        "items": "ความสัมพันธ์กับโรงเรียนแต่ละแห่ง ชื่อนักเรียน ข้อตกลงค่าคอมมิชชัน ตลาดเป้าหมาย และใบสมัครที่กำลังดำเนินอยู่"
+      }
+    },
+    "qeacNote": "ตัวแทนที่ผ่านการรับรอง QEAC จะได้รับตราการรับรอง แต่ผลงานของตัวแทนทุกคนพิสูจน์ตัวเองได้ ครอบครัวเห็นความรวดเร็วในการตอบกลับ ภาษา และความเชี่ยวชาญของคุณได้ ไม่ว่าจะมีการรับรองหรือไม่ก็ตาม"
   },
   "AgentsScale": {
     "eyebrow": "เครือข่าย",
-    "heading": "Agents across APAC are joining. Australia's international school sector is growing fast – be one of the first.",
-    "subheading": "From Shanghai to Jakarta, Ho Chi Minh to Seoul – agents placing families into Australian K–12.",
+    "heading": "ตัวแทนทั่ว APAC กำลังเข้าร่วม",
+    "subheading": "ตั้งแต่เซี่ยงไฮ้ถึงจาการ์ตา โฮจิมินห์ถึงโซล ทั้งตัวแทนเดี่ยวและเอเจนซีหลายสาขาที่จัดให้ครอบครัวเข้าเรียน K-12 ในออสเตรเลีย",
     "agents": {
       "a": {
         "name": "Li Wei",
         "region": "Shanghai · 中国",
-        "meta": "QEAC verified · Independent schools"
+        "meta": "ผ่านการรับรอง · โรงเรียนเอกชน"
       },
       "b": {
         "name": "Nguyễn Minh",
         "region": "Ho Chi Minh · Việt Nam",
-        "meta": "QEAC verified · All sectors"
+        "meta": "รับรอง QEAC · ทุกภาคการศึกษา"
       },
       "c": {
         "name": "Siti Rahman",
         "region": "Kuala Lumpur · Malaysia",
-        "meta": "QEAC verified · Boarding specialist"
+        "meta": "ผ่านการรับรอง · ผู้เชี่ยวชาญด้านหอพัก"
       },
       "d": {
         "name": "Ji-eun Park",
         "region": "Seoul · 대한민국",
-        "meta": "QEAC verified · VIC & NSW"
+        "meta": "รับรอง QEAC · VIC และ NSW"
       }
     },
-    "cta": "สมัครขอการรับรอง"
+    "cta": "สร้างโปรไฟล์ของคุณ"
   },
   "AgentsTestimonial": {
-    "eyebrow": "[TODO: th] From the field",
-    "heading": "[TODO: th] What agents are saying",
+    "eyebrow": "เสียงจากหน้างาน",
+    "heading": "ตัวแทนพูดถึงเราอย่างไร",
     "items": {
       "a": {
-        "quote": "Every school wants a different form, different documents, different English scores. I spend more time on admin than actually helping families.",
-        "attribution": "[TODO: th] Agency director, Shanghai",
-        "meta": "[TODO: th] 60+ students · 3 counsellors"
+        "quote": "เมื่อก่อนฉันต้องเช็กเว็บไซต์โรงเรียนหกแห่งก่อนคุยกับผู้ปกครองทุกครั้ง ตอนนี้กรองตามงบประมาณ ระดับภาษาอังกฤษ และภาคเรียนได้ในการค้นหาเดียว ฉันมีรายการคัดเลือกก่อนที่ครอบครัวจะอธิบายความต้องการเสร็จเสียอีก",
+        "attribution": "ผู้อำนวยการเอเจนซี เซี่ยงไฮ้",
+        "meta": "นักเรียน 60+ คน"
       },
       "b": {
-        "quote": "A parent asks which English test their child needs and I have to check three different school websites to give them an answer. That should take ten seconds.",
-        "attribution": "[TODO: th] Independent agent, Ho Chi Minh City",
-        "meta": "Solo practice"
+        "quote": "ครอบครัวของฉันอยากเปรียบเทียบโรงเรียน แต่ฉันส่ง PDF ให้พวกเขา 15 ไฟล์ไม่ได้ เอกสารหน้าเดียวพร้อมแบรนด์ที่วางสามโรงเรียนเทียบกันคือสิ่งที่พวกเขาอ่านจริง",
+        "attribution": "ตัวแทนอิสระ นครโฮจิมินห์",
+        "meta": "นักเรียน 25+ คน"
       },
       "c": {
-        "quote": "I've placed into the same twelve schools for years because I know their process. A platform that maps every school's requirements would let me place into hundreds.",
-        "attribution": "[TODO: th] Senior counsellor, Kuala Lumpur",
-        "meta": "[TODO: th] 40+ students · 2 branches"
+        "quote": "ฉันกังวลว่าจะมีอีกแพลตฟอร์มมาแบ่งค่าคอมมิชชันหรือเปิดเผยความสัมพันธ์กับโรงเรียนของฉัน SchoolGo ไม่แตะทั้งสองอย่างเลย มันแค่ส่งครอบครัวที่พร้อมพูดคุยมาให้ฉัน",
+        "attribution": "ที่ปรึกษาอาวุโส กัวลาลัมเปอร์",
+        "meta": "นักเรียน 40+ คน"
       }
     },
-    "disclaimer": "[TODO: th] Composite quotes based on agent interviews"
+    "disclaimer": "ข้อความรวมที่อ้างอิงจากการสัมภาษณ์ตัวแทน"
   },
   "AgentsFinalCta": {
-    "eyebrow": "รับการรับรอง",
-    "headingPrefix": "You deserve",
-    "headingEmphasis": "better tools",
-    "headingSuffix": "to build a better business.",
-    "subheading": "ฟรี ต้องมีการรับรอง QEAC การเริ่มต้นใช้งานใช้เวลา 48 ชั่วโมง",
-    "ctaPrimary": "สมัครขอการรับรอง"
+    "eyebrow": "เริ่มต้นใช้งาน",
+    "headingPrefix": "ให้ครอบครัวค้นพบคุณ",
+    "headingEmphasis": "คัดเลือกได้เร็วขึ้น",
+    "headingSuffix": "เก็บค่าคอมมิชชันของคุณไว้",
+    "subheading": "ฟรี ไม่มีการแบ่งค่าคอมมิชชัน ความสัมพันธ์กับโรงเรียนของคุณยังเป็นของคุณ",
+    "ctaPrimary": "สร้างโปรไฟล์ตัวแทนของคุณ",
+    "ctaSecondary": "นัดดูการใช้งาน"
   },
   "AgentsFaq": {
-    "heading": "Frequently Asked Questions",
+    "heading": "คำถามที่พบบ่อย",
     "items": {
-      "find": {
-        "question": "How do education agents find Australian schools for international students?",
-        "answer": "Agents typically build long-term relationships with a handful of schools and check each school's website, fees, and English requirements one at a time. SchoolGo replaces that workflow with a single searchable database of every CRICOS-registered school – filterable by fees, English tests, intakes, boarding, and scholarships."
+      "free": {
+        "question": "SchoolGo ฟรีสำหรับตัวแทนจริงหรือ?",
+        "answer": "ใช่ SchoolGo ได้รับการสนับสนุนค่าใช้จ่ายจากโรงเรียน ไม่ใช่จากตัวแทน ไม่มีการแบ่งค่าคอมมิชชัน ค่าจัดหา ค่าสมาชิก หรือค่าใช้จ่ายแอบแฝงใดๆ"
       },
-      "englishTests": {
-        "question": "What English tests do Australian schools accept for international admissions?",
-        "answer": "Most Australian schools accept AEAS, with a growing number accepting iDAT, Duolingo English Test, IELTS, PTE Academic, Cambridge English, and TOEFL. Minimum scores vary by school and year level. SchoolGo lists the exact accepted tests and minimum scores on every school profile."
+      "makesMoney": {
+        "question": "ถ้าฟรีสำหรับตัวแทน แล้ว SchoolGo มีรายได้อย่างไร?",
+        "answer": "โรงเรียนจ่ายเพื่อยกระดับโปรไฟล์ของตนและเข้าถึงครอบครัวได้มากขึ้น ตัวแทนไม่ต้องจ่ายเลย"
       },
-      "verifyScores": {
-        "question": "How do education agents verify student English test scores?",
-        "answer": "Most test providers offer an official verification portal where agents and schools can confirm a score against the candidate's record. SchoolGo automates this – uploaded English scores are checked against the official record so you and the school know the result is genuine."
+      "contactStudents": {
+        "question": "ตัวแทนรายอื่นจะติดต่อนักเรียนของฉันได้ไหม?",
+        "answer": "ไม่ได้ ความสัมพันธ์กับนักเรียนของคุณเป็นความลับ ไม่มีตัวแทนรายอื่นเห็นหรือเข้าถึงครอบครัวที่เชื่อมต่อกับคุณได้"
       },
-      "becomeAgent": {
-        "question": "How do I become an education agent for Australian schools?",
-        "answer": "There's no single licence to become an Australian education agent, but most schools and the AAERI/QEAC quality frameworks expect training in Australian education, ethical practice, and student welfare. The QEAC (Qualified Education Agent Counsellor) certification is the most widely recognised credential."
+      "attribution": {
+        "question": "โรงเรียนเห็นไหมว่าตัวแทนคนใดเป็นผู้นำนักเรียนมา?",
+        "answer": "เห็น การระบุตัวแทนของคุณจะถูกล็อกในทันทีที่ครอบครัวเชื่อมต่อกับคุณ โรงเรียนจะรู้เสมอว่าตัวแทนคนใดเป็นผู้รับผิดชอบ"
       },
-      "fees": {
-        "question": "Do education agents pay fees to use SchoolGo?",
-        "answer": "No. SchoolGo is free for every agent – no platform fees, no commission splits, no per-student charges. Your commercial relationship with schools stays direct."
+      "interfere": {
+        "question": "SchoolGo เข้าไปยุ่งกับความสัมพันธ์ที่ฉันมีกับโรงเรียนอยู่แล้วหรือไม่?",
+        "answer": "ไม่ SchoolGo ไม่ติดต่อโรงเรียนแทนคุณ ไม่เจรจาข้อตกลงใหม่ และไม่เปิดเผยข้อมูลเครือข่ายของคุณ"
       },
-      "manage": {
-        "question": "How do education agents manage multiple student applications at once?",
-        "answer": "SchoolGo gives you one student profile per family that maps to every school's requirements automatically – so you don't re-key passport numbers, transcripts, or English scores into 15 different forms. Documents are organised, version-controlled, and tracked for expiry, with every status change timestamped for audit."
+      "publicInfo": {
+        "question": "ข้อมูลใดบ้างที่เป็นสาธารณะบนโปรไฟล์ของฉัน?",
+        "answer": "คุณเป็นผู้ควบคุมเรื่องนี้ ชื่อ ภาษา และสถานะ QEAC ของคุณเป็นสาธารณะ ส่วนที่เหลือ (จำนวนนักเรียนที่จัดให้ ความสัมพันธ์กับโรงเรียน ความเชี่ยวชาญ) เป็นทางเลือก"
+      },
+      "competes": {
+        "question": "SchoolGo เป็นตัวแทนเองหรือไม่? มาแข่งกับฉันหรือเปล่า?",
+        "answer": "ไม่ SchoolGo เชื่อมต่อครอบครัวกับตัวแทน และมอบเครื่องมือให้ตัวแทนคัดเลือกและยื่นสมัครไปยังโรงเรียน เราไม่รับนักเรียนเองและไม่รับค่าคอมมิชชัน"
+      },
+      "howConnected": {
+        "question": "ครอบครัวเชื่อมต่อกับตัวแทนได้อย่างไร?",
+        "answer": "เมื่อผู้ปกครองพบโรงเรียนบน SchoolGo และต้องการยื่นสมัคร พวกเขาจะดูตัวแทนที่มีอยู่และเลือกว่าจะเชื่อมต่อกับใคร โดยพิจารณาจากประสบการณ์ ภาษาที่พูดได้ และโรงเรียนที่เป็นตัวแทน คุณจะไม่ถูกจัดให้แบบสุ่ม ครอบครัวเป็นผู้เลือกคุณเอง"
+      },
+      "futureCharging": {
+        "question": "SchoolGo จะเริ่มเก็บค่าใช้จ่ายในอนาคตหรือไม่?",
+        "answer": "ไม่มีแผนที่จะเก็บค่าใช้จ่ายจากตัวแทน รูปแบบธุรกิจคือได้รับการสนับสนุนจากโรงเรียน"
       }
     }
   },
   "SchoolsMetadata": {
-    "title": "SchoolGo – เติมเต็มที่นั่งนักเรียนต่างชาติด้วยอีเมลที่น้อยลง",
-    "description": "กล่องจดหมายรับสมัครแบบเดียวสำหรับโรงเรียนออสเตรเลีย ตัวแทนที่ผ่านการรับรอง QEAC ใบสมัครจริง ไม่มีค่าธรรมเนียมต่อนักเรียน",
-    "ogDescription": "เติมเต็มที่นั่งนักเรียนต่างชาติ ด้วยอีเมลที่น้อยลง"
+    "title": "SchoolGo สำหรับโรงเรียน – ใบสมัครที่ดีขึ้นและเหมาะสมยิ่งขึ้น",
+    "description": "ช่วยให้ครอบครัวต่างชาติและตัวแทนเข้าใจข้อกำหนดของคุณก่อนยื่นสมัคร อนุมัติตัวแทนที่คุณไว้ใจ ฟรีสำหรับทุกโรงเรียนออสเตรเลีย",
+    "ogDescription": "ใบสมัครที่ดีขึ้น นักเรียนที่เหมาะสม ลดการตอบโต้ไปมา"
   },
   "SchoolsHero": {
     "eyebrow": "สำหรับโรงเรียนออสเตรเลีย",
-    "headlinePrefix": "เติมเต็ม",
-    "headlineEmphasis": "ที่นั่งนักเรียนต่างชาติ",
-    "headlineSuffix": "cohort. Simplify admissions.",
-    "lede": "โปรไฟล์ที่ผ่านการรับรองหนึ่งโปรไฟล์ เข้าถึงครอบครัวใน 7 ประเทศ รับใบสมัครมาตรฐานจากตัวแทนที่ผ่านการรับรอง QEAC – ในรูปแบบที่ทีมรับสมัครของคุณใช้อยู่แล้ว",
+    "headlinePrefix": "ใบสมัครที่ดีขึ้น",
+    "headlineEmphasis": "นักเรียนที่เหมาะสม",
+    "headlineSuffix": "ลดการตอบโต้ไปมา",
+    "lede": "SchoolGo ช่วยให้ครอบครัวต่างชาติและตัวแทนการศึกษาค้นพบโรงเรียนของคุณ เข้าใจข้อกำหนดของคุณ และเชื่อมต่อกับตัวแทนที่คุณอนุมัติ เมื่อนักเรียนติดต่อทีมรับสมัครของคุณ พวกเขารู้ค่าเล่าเรียน ข้อกำหนดภาษาอังกฤษ ตัวเลือกที่พัก และกระบวนการเข้าเรียนของคุณอยู่แล้ว – ทีมของคุณจึงใช้เวลาน้อยลงในการตามหาข้อมูลที่ขาดหาย",
     "ctaPrimary": "ยืนยันโปรไฟล์โรงเรียนของคุณ",
-    "inbox": {
-      "eyebrow": "Applications inbox – preview",
-      "countLabel": "เดือนนี้",
-      "rows": {
-        "a": {
-          "name": "Sophie Chen",
-          "status": "ใหม่",
-          "meta": "VIC · Year 9 · AEAS 78"
-        },
-        "b": {
-          "name": "Minh Tran",
-          "status": "กำลังพิจารณา",
-          "meta": "VIC · Year 11 · IELTS 6.5"
-        },
-        "c": {
-          "name": "Ji-woo Park",
-          "status": "ส่งข้อเสนอแล้ว",
-          "meta": "NSW · Year 10 · AEAS 74"
-        }
-      }
-    }
+    "ctaSecondary": "นัดดูการใช้งาน"
   },
   "SchoolsStats": {
-    "eyebrow": "ผลของเครือข่าย",
-    "heading": "โปรไฟล์เดียว เข้าถึงครอบครัวใน 7 ประเทศ",
-    "subheading": "รายชื่อโรงเรียนของคุณปรากฏในทุกการค้นหา ทุกการเปรียบเทียบ ทุกรายการที่แนะนำ – ในภาษาของครอบครัว",
+    "eyebrow": "เครือข่าย",
+    "heading": "โปรไฟล์เดียว ที่ครอบครัวและตัวแทนที่คุณต้องการเข้าถึงได้เห็น",
+    "subheading": "โปรไฟล์ของคุณปรากฏในทุกการค้นหา การเปรียบเทียบ และรายการคัดเลือกของตัวแทน – แปลเป็นเจ็ดภาษาทั่วเอเชียแปซิฟิก – ครอบครัวที่ใช่จึงเข้าใจข้อกำหนดของคุณก่อนที่จะสอบถาม",
     "items": {
       "schools": {
         "value": "695+",
-        "label": "CRICOS-registered schools"
+        "label": "โรงเรียนที่จดทะเบียน CRICOS"
       },
       "states": {
         "value": "8",
-        "label": "States & territories"
+        "label": "รัฐและดินแดน"
       },
       "sectors": {
         "value": "3",
-        "label": "Sectors – Government, Independent, Catholic"
+        "label": "ภาคการศึกษา – รัฐบาล เอกชน คาทอลิก"
       },
       "feeRange": {
         "value": "$3.5k – $78k",
-        "label": "Annual fee range (AUD)"
+        "label": "ช่วงค่าเล่าเรียนรายปี (AUD)"
       }
     }
   },
   "SchoolsThreeTools": {
-    "eyebrow": "ชุดเครื่องมือ",
-    "heading": "สามเครื่องมือ เป้าหมายเดียว: นักเรียนที่ใช่ ด้วยงานที่น้อยลง",
-    "subheading": "SchoolGo มอบสิ่งที่ทีมรับสมัครของคุณต้องการจริง ๆ สามอย่าง",
+    "eyebrow": "โปรไฟล์โรงเรียนของคุณ",
+    "heading": "โรงเรียนของคุณ ข้อมูลของคุณ การควบคุมของคุณ",
+    "subheading": "ทุกโรงเรียนที่จดทะเบียนมีโปรไฟล์พื้นฐานบน SchoolGo ที่เผยแพร่อัตโนมัติจากข้อมูลทางการของรัฐบาล เมื่อคุณยืนยันโปรไฟล์ คุณจะได้ควบคุมอย่างเต็มที่ว่าโรงเรียนของคุณปรากฏต่อครอบครัวและตัวแทนทั่วโลกอย่างไร",
     "tools": {
       "profile": {
-        "title": "โปรไฟล์โรงเรียนที่ทันสมัยอยู่เสมอ",
-        "description": "ค่าเล่าเรียน รอบรับสมัคร การสอบที่รับ ทุนการศึกษา และเอกสาร – อัปเดตโดยคุณ แสดงผลในภาษาของครอบครัว"
+        "title": "โปรไฟล์ของคุณ ในแบบของคุณ",
+        "description": "ควบคุมคำอธิบายและการวางตำแหน่งโรงเรียน ภาพถ่ายและแบรนด์ รายละเอียดค่าเล่าเรียน วันเปิดภาคเรียน และกำหนดส่งใบสมัคร – แสดงในภาษาของครอบครัว คุณเป็นผู้ตัดสินว่าโรงเรียนของคุณปรากฏอย่างไร"
       },
-      "applications": {
-        "title": "ใบสมัครมาตรฐาน",
-        "description": "ทุกใบสมัครมาในรูปแบบเดียวกัน พร้อมการระบุตัวตนตัวแทนที่ผ่านการรับรอง QEAC และเอกสารครบถ้วน"
+      "requirements": {
+        "title": "ข้อกำหนดที่ครอบครัวนำไปปฏิบัติได้",
+        "description": "กำหนดการสอบภาษาอังกฤษที่คุณรับและคะแนนขั้นต่ำตามระดับชั้นปี ที่พักและการจัดการด้านสวัสดิภาพสำหรับผู้ที่อายุต่ำกว่า 18 และเอกสารที่ต้องใช้ในการสมัคร – ครอบครัวและตัวแทนจึงเข้าใจข้อกำหนดของคุณก่อนยื่นสมัคร"
       },
-      "inbox": {
-        "title": "กล่องจดหมายรับสมัครเดียว",
-        "description": "ติดตามสถานะทุกใบสมัคร เสนอรับ ขึ้นรายการรอ หรือปฏิเสธด้วยคลิกเดียว ครอบครัวและตัวแทนเห็นการอัปเดตสถานะทันที"
+      "agents": {
+        "title": "ตัวแทนที่อนุมัติและการวิเคราะห์ข้อมูล",
+        "description": "เลือกว่าตัวแทนคนใดได้รับอนุมัติให้เป็นตัวแทนโรงเรียนของคุณ และกำหนดว่าการสมัครเปิดหรือปิด ติดตามจำนวนการเข้าชมโปรไฟล์ แหล่งที่มาของการสอบถาม และกิจกรรมของตัวแทนจากแดชบอร์ดของคุณ"
       }
     }
   },
   "SchoolsTimeline": {
-    "eyebrow": "เส้นทางการรับสมัคร",
-    "heading": "From first application to first day of term – without the back 'n forth.",
-    "subheading": "ทุกขั้นตอนของวงจรรับสมัครนักเรียนต่างชาติ ในที่เดียว",
+    "eyebrow": "วิธีการทำงาน",
+    "heading": "SchoolGo อยู่ก่อนกระบวนการรับสมัครของคุณ – ไม่ใช่ภายในกระบวนการนั้น",
+    "subheading": "SchoolGo ไม่ใช่แพลตฟอร์มรับสมัครและไม่ได้มาแทนที่กระบวนการที่คุณมีอยู่ มันช่วยให้ครอบครัวและตัวแทนเข้าใจข้อกำหนดของคุณก่อนที่จะสอบถาม – เมื่อพวกเขาติดต่อมา การสนทนาจึงเริ่มต้นในจุดที่ถูกต้อง",
     "steps": {
-      "receive": {
-        "title": "รับใบสมัคร",
-        "description": "ใบสมัครเข้ากล่องจดหมายพร้อมคะแนนภาษาอังกฤษ เอกสาร และตัวแทนที่ผ่านการรับรอง",
-        "comingSoon": "Coming soon"
+      "find": {
+        "title": "ครอบครัวค้นพบโรงเรียนของคุณ",
+        "description": "โปรไฟล์ของคุณปรากฏในการค้นหาที่กรองตามค่าเล่าเรียน ข้อกำหนดภาษาอังกฤษ ระดับชั้นปี ที่พัก หลักสูตร และทำเล – แปลเป็นเจ็ดภาษาทั่วเอเชียแปซิฟิก"
       },
-      "review": {
-        "title": "พิจารณา",
-        "description": "ทีมของคุณประเมินตามเกณฑ์ของตัวเอง บันทึกเก็บไว้ภายในเท่านั้น",
-        "comingSoon": "Coming soon"
+      "understand": {
+        "title": "พวกเขาเข้าใจข้อกำหนดของคุณตั้งแต่แรก",
+        "description": "ครอบครัวและตัวแทนเห็นการสอบภาษาอังกฤษที่คุณรับ คะแนนขั้นต่ำ โครงสร้างค่าเล่าเรียน ตัวเลือกที่พัก การจัดการด้านสวัสดิภาพ และเอกสารที่ต้องใช้ ก่อนที่จะติดต่อมา"
       },
-      "decide": {
-        "title": "ตัดสินใจ",
-        "description": "เสนอรับ ขึ้นรายการรอ หรือปฏิเสธด้วยคลิกเดียว สถานะส่งถึงครอบครัวและตัวแทนทันที",
-        "comingSoon": "Coming soon"
+      "connect": {
+        "title": "พวกเขาเชื่อมต่อกับตัวแทนที่คุณอนุมัติ",
+        "description": "เมื่อครอบครัวตัดสินใจยื่นสมัคร SchoolGo จะเชื่อมต่อพวกเขากับตัวแทนการศึกษาที่คุณอนุมัติไว้ คุณเป็นผู้ควบคุมว่าตัวแทนคนใดสามารถเป็นตัวแทนโรงเรียนของคุณบนแพลตฟอร์มได้"
       },
-      "onboard": {
-        "title": "ต้อนรับนักเรียน",
-        "description": "แชร์เอกสารวันรับเข้า ข้อมูลที่พัก และลิงก์ปฐมนิเทศ – ทั้งหมดในหนึ่งเธรด",
-        "comingSoon": "Coming soon"
+      "apply": {
+        "title": "ตัวแทนยื่นใบสมัครมายังคุณ",
+        "description": "ตัวแทนใช้ SchoolGo ในการจัดเตรียมและยื่นใบสมัครที่ตรงตามข้อกำหนดของคุณ – เอกสารครบถ้วน คะแนนภาษาอังกฤษที่ผ่านการตรวจสอบ และโปรไฟล์นักเรียนที่ชัดเจน ทีมของคุณพิจารณาด้วยกระบวนการรับสมัครของคุณเอง"
       }
     }
   },
   "SchoolsPricing": {
-    "eyebrow": "การกำหนดราคา",
-    "heading": "ไม่มีค่าธรรมเนียมต่อตัวแทน ไม่มีคอมมิชชัน แผนรายปีเดียว",
-    "subheading": "โรงเรียนที่สนับสนุน SchoolGo จ่ายค่าธรรมเนียมรายปีที่โปร่งใสหนึ่งรายการ ครอบครัวและตัวแทนไม่ต้องจ่าย",
+    "eyebrow": "ราคา",
+    "heading": "ฟรีสำหรับทุกโรงเรียน",
+    "subheading": "โปรไฟล์โรงเรียนของคุณได้รับการเผยแพร่และดูแลโดยไม่มีค่าใช้จ่าย – ไม่มีค่าลงรายการ ค่าใช้จ่ายต่อนักเรียน หรือค่าคอมมิชชัน SchoolGo ได้รับการสนับสนุนค่าใช้จ่ายจากฟีเจอร์พรีเมียมเสริมสำหรับโรงเรียนที่ต้องการการมองเห็นที่มากขึ้น เช่น การจัดวางในลำดับสำคัญและโปรไฟล์ที่ได้รับการโปรโมต แพลตฟอร์มหลักฟรีและจะฟรีต่อไป",
     "plans": {
       "listing": {
-        "name": "รายการพื้นฐาน",
-        "price": "Free",
+        "name": "เผยแพร่อัตโนมัติ",
+        "price": "ฟรี",
         "priceMeta": "ตลอดไป",
         "features": {
-          "a": "โปรไฟล์ CRICOS ของคุณ เผยแพร่อัตโนมัติ",
-          "b": "การสอบภาษาอังกฤษที่รับ + คะแนนขั้นต่ำ",
-          "c": "กล่องจดหมายรับใบสมัครมาตรฐาน"
+          "a": "โปรไฟล์โรงเรียนของคุณ เผยแพร่อัตโนมัติจากข้อมูลทางการของรัฐบาล",
+          "b": "ครอบครัวและตัวแทนทั่วเอเชียแปซิฟิกมองเห็นได้",
+          "c": "แสดงการสอบภาษาอังกฤษที่รับและคะแนนขั้นต่ำ"
         },
         "cta": "ยืนยันโปรไฟล์ของคุณ"
       },
       "admissions": {
-        "name": "การรับสมัคร",
-        "price": "$12,800",
-        "priceMeta": "AUD / ปี",
-        "badge": "ยอดนิยมที่สุด",
+        "name": "ยืนยันแล้ว",
+        "price": "ฟรี",
+        "priceMeta": "ยืนยันโปรไฟล์ของคุณ",
+        "badge": "แนะนำ",
         "features": {
-          "a": "ทุกอย่างในรายการพื้นฐาน",
-          "b": "ขั้นตอนเสนอรับ / รายการรอ / ปฏิเสธ",
-          "c": "ไดเรกทอรีตัวแทนที่ผ่านการรับรอง QEAC",
-          "d": "การแปลเจ็ดภาษาในทุกหน้าโปรไฟล์"
+          "a": "ควบคุมโปรไฟล์ ภาพถ่าย และแบรนด์ของคุณได้อย่างเต็มที่",
+          "b": "กำหนดรายละเอียดค่าเล่าเรียน ข้อกำหนดภาษาอังกฤษ และรายละเอียดที่พักของคุณเอง",
+          "c": "อนุมัติหรือบล็อกตัวแทน",
+          "d": "ดูการวิเคราะห์โปรไฟล์ – จำนวนการเข้าชม แหล่งที่มาของการสอบถาม และกิจกรรมของตัวแทน"
         },
-        "cta": "เริ่มการรับสมัคร"
+        "cta": "ยืนยันโปรไฟล์ของคุณ"
       }
     }
   },
   "SchoolsTestimonial": {
-    "quote": "Finding the right students is hard enough. Processing their applications shouldn't be. A single inbox with complete, verified applications changes everything.",
-    "attribution": "– Composite quote based on admissions officer interviews"
+    "quote": "เราไม่ได้ต้องการการสอบถามมากขึ้น – เราต้องการนักเรียนที่ใช่พร้อมข้อมูลที่ครบถ้วน เมื่อครอบครัวเข้าใจค่าเล่าเรียนและข้อกำหนดภาษาอังกฤษของเราก่อนยื่นสมัคร ทีมของเราใช้เวลาน้อยลงมากในการตามหาสิ่งที่ขาดหาย",
+    "attribution": "– ข้อความรวมที่อ้างอิงจากการสัมภาษณ์เจ้าหน้าที่รับสมัคร"
   },
   "SchoolsFinalCta": {
-    "eyebrow": "เริ่มที่นี่",
-    "headingPrefix": "รอบรับสมัครถัดไปของคุณ",
-    "headingEmphasis": "เริ่มต้น",
-    "headingSuffix": "ที่นี่",
-    "subheading": "ลงรายการฟรี ไม่ต้องใช้บัตรเครดิต การยืนยันใช้เวลา 10 นาที",
+    "eyebrow": "เริ่มต้นที่นี่",
+    "headingPrefix": "ครอบครัวที่เตรียมพร้อมดีขึ้น",
+    "headingEmphasis": "ใบสมัครที่ชัดเจนขึ้น",
+    "headingSuffix": "งานเอกสารน้อยลง",
+    "subheading": "ฟรีสำหรับทุกโรงเรียน ยืนยันโปรไฟล์ของคุณใน 10 นาที",
     "ctaPrimary": "ยืนยันโปรไฟล์โรงเรียนของคุณ",
-    "ctaSecondary": "จองการสาธิต"
+    "ctaSecondary": "นัดดูการใช้งาน"
   },
   "Navbar": {
     "brand": "School",
@@ -1895,31 +1981,47 @@
     "errorMessage": "[TODO: th] Couldn't load your students. Please try again."
   },
   "SchoolsFaq": {
-    "heading": "[TODO: th] Frequently Asked Questions",
+    "heading": "คำถามที่พบบ่อย",
     "items": {
-      "attract": {
-        "question": "How do Australian schools attract more international students?",
-        "answer": "Schools grow their international cohort by being visible to families and agents in the markets they want to reach, and by making it easy to apply once a family is interested. SchoolGo lists every CRICOS-registered school in seven languages, with translated profiles, fees, and English requirements – so families and agents can find and shortlist your school directly."
+      "claim": {
+        "question": "ฉันจะยืนยันโปรไฟล์ของโรงเรียนได้อย่างไร?",
+        "answer": "ค้นหาโรงเรียนของคุณบน SchoolGo แล้วเลือก “ยืนยันโปรไฟล์นี้” คุณจะยืนยันตัวตนในฐานะบุคลากรของโรงเรียน และได้รับสิทธิ์ควบคุมการแก้ไขอย่างเต็มที่"
       },
-      "verify": {
-        "question": "How do schools verify international students' English test scores?",
-        "answer": "Each English test provider (AEAS, IELTS, PTE, Duolingo, Cambridge, TOEFL) offers an official verification portal where schools can confirm a candidate's score against the original record. SchoolGo automates this – every English score on an application is checked against the official record before it lands in your inbox."
+      "whoCreated": {
+        "question": "ใครสร้างโปรไฟล์โรงเรียนของฉันหากฉันยังไม่ได้ยืนยัน?",
+        "answer": "โปรไฟล์ที่เผยแพร่อัตโนมัติสร้างขึ้นจากข้อมูลรัฐบาลที่เปิดเผยต่อสาธารณะ (ทะเบียน CRICOS, ACARA) SchoolGo ไม่ได้เพิ่มหรือเปลี่ยนแปลงข้อมูลใดๆ การยืนยันจะมอบสิทธิ์ควบคุมอย่างเต็มที่ให้คุณ"
       },
-      "agents": {
-        "question": "[TODO: th] How does SchoolGo work with education agents?",
-        "answer": "[TODO: th] By default, your profile works with your school's existing agents. You can see which agents have placed students with you, invite new agents, or manage agent relationships from your dashboard."
+      "charge": {
+        "question": "SchoolGo เก็บค่าใช้จ่ายจากโรงเรียนหรือตัวแทนหรือไม่?",
+        "answer": "ไม่ แพลตฟอร์มหลักฟรีสำหรับโรงเรียน ตัวแทน และผู้ปกครอง SchoolGo ได้รับการสนับสนุนค่าใช้จ่ายจากฟีเจอร์พรีเมียมเสริมสำหรับโรงเรียนที่ต้องการการมองเห็นที่มากขึ้น"
       },
-      "documents": {
-        "question": "What documents do schools need for an international student application?",
-        "answer": "Standard documents include the student's passport, last two years of school reports, an English test result, proof of guardianship for younger students, and any additional medical or character documents your school requires. SchoolGo arrives applications complete – passports, transcripts, English scores, and required forms in one packaged record."
+      "verifyAgents": {
+        "question": "ตัวแทนได้รับการรับรองบน SchoolGo อย่างไร?",
+        "answer": "ตัวแทนสร้างโปรไฟล์และสามารถถือการรับรอง QEAC ได้ อย่างไรก็ตาม คุณเป็นผู้ควบคุมว่าตัวแทนคนใดได้รับอนุมัติให้เป็นตัวแทนโรงเรียนของคุณ – ไม่ว่าสถานะการรับรองของพวกเขาจะเป็นอย่างไร"
       },
-      "cost": {
-        "question": "How much does it cost to list on SchoolGo?",
-        "answer": "Nothing. SchoolGo is free for every school – no listing fees, no per-student fees, no commissions. Your profile auto-publishes from official government data, and claiming it unlocks full editing, applications, and analytics at no cost."
+      "interfere": {
+        "question": "SchoolGo เข้าไปยุ่งกับความสัมพันธ์ที่เรามีกับตัวแทนอยู่แล้วหรือไม่?",
+        "answer": "ไม่ ข้อตกลง โครงสร้างค่าคอมมิชชัน และเครือข่ายตัวแทนที่คุณมีอยู่แล้วจะไม่ได้รับผลกระทบ SchoolGo ไม่มีการจัดตัวแทนใหม่หรือเปิดเผยรายชื่อตัวแทนของคุณ"
       },
-      "diversify": {
-        "question": "How do schools diversify their international student intake beyond China?",
-        "answer": "Diversification starts with visibility in the markets you want to grow – Vietnam, Korea, Indonesia, Malaysia, Thailand, and beyond. SchoolGo translates your profile into seven languages and surfaces it to families and agents across the Asia-Pacific, so you can build a balanced cohort across multiple source countries."
+      "beforeClaim": {
+        "question": "มีข้อมูลใดบ้างที่แสดงเกี่ยวกับโรงเรียนของเราก่อนที่เราจะยืนยัน?",
+        "answer": "เฉพาะข้อมูลที่เปิดเผยต่อสาธารณะจากทะเบียนของรัฐบาลเท่านั้น: ชื่อโรงเรียน ทำเล ภาคการศึกษา สถานะ CRICOS หลักสูตร และช่วงค่าเล่าเรียนพื้นฐาน จะไม่มีการแสดงเนื้อหาเชิงบรรณาธิการ ภาพถ่าย หรือข้อกำหนดโดยละเอียดจนกว่าคุณจะยืนยันและเพิ่มข้อมูลเหล่านั้น"
+      },
+      "studentData": {
+        "question": "SchoolGo คุ้มครองข้อมูลนักเรียนอย่างไร?",
+        "answer": "ข้อมูลนักเรียนถูกแบ่งปันเฉพาะระหว่างครอบครัว ตัวแทนที่พวกเขาเลือก และโรงเรียนเท่านั้น จะไม่มีการแบ่งปันกับโรงเรียนอื่น ตัวแทนรายอื่น หรือเปิดเผยต่อสาธารณะ"
+      },
+      "replaceAdmissions": {
+        "question": "SchoolGo จะมาแทนที่กระบวนการรับสมัครของเราหรือไม่?",
+        "answer": "ไม่ SchoolGo อยู่ก่อนกระบวนการรับสมัครของคุณ มันช่วยให้ครอบครัวเข้าใจข้อกำหนดของคุณและเชื่อมต่อกับตัวแทนที่คุณอนุมัติ ใบสมัครจะถูกยื่นมายังคุณผ่านตัวแทนของคุณ และทีมของคุณพิจารณาด้วยกระบวนการของคุณเอง"
+      },
+      "openClosed": {
+        "question": "เราสามารถควบคุมได้ไหมว่าการสมัครเปิดหรือปิด?",
+        "answer": "ได้ คุณสามารถกำหนดสถานะภาคเรียนและกำหนดส่งใบสมัครได้ เมื่อการสมัครปิด ครอบครัวและตัวแทนยังสามารถดูโปรไฟล์ของคุณได้ แต่จะเห็นว่าภาคเรียนยังไม่เปิดรับในขณะนี้"
+      },
+      "capacity": {
+        "question": "SchoolGo จัดการเรื่องความสมดุลของตลาดและจำนวนที่นั่งหอพักอย่างไร?",
+        "answer": "คุณเป็นผู้ควบคุมสิ่งที่แสดง หากที่นั่งหอพักมีจำกัด หรือคุณกำลังจัดการความสมดุลของกลุ่มนักเรียนจากตลาดต้นทางต่างๆ คุณสามารถอัปเดตข้อมูลที่ว่างและภาคเรียนได้ตลอดเวลา"
       }
     }
   },
@@ -6026,40 +6128,44 @@
     "customSectionVisible": "Visible"
   },
   "ParentsAgentCta": {
-    "eyebrow": "Start with an agent",
-    "headingPrefix": "Find your",
-    "headingEmphasis": "education agent",
-    "headingSuffix": "and let the experts guide you",
-    "subheading": "A trusted local agent matches your child to the right school, handles the paperwork, and supports your family every step of the way — free for parents.",
-    "searchPlaceholder": "Where are you moving? e.g. Sydney, Melbourne",
-    "searchAriaLabel": "Find an education agent",
-    "ctaPrimary": "Find an agent",
-    "ctaSecondary": "Browse all agents",
-    "reassurance": "100% free for families · Verified, QEAC-qualified agents"
+    "eyebrow": "เริ่มต้นกับตัวแทน",
+    "headingPrefix": "รับความช่วยเหลือจากผู้เชี่ยวชาญ –",
+    "headingEmphasis": "ฟรี",
+    "headingSuffix": "",
+    "subheading": "ไม่แน่ใจว่าจะเริ่มตรงไหน? SchoolGo เชื่อมต่อคุณกับที่ปรึกษาการศึกษาที่ได้รับการอนุมัติจากโรงเรียนที่พวกเขาเป็นตัวแทน พวกเขารู้กระบวนการรับสมัคร ข้อกำหนดวีซ่า และสามารถแนะนำคุณตั้งแต่การเลือกโรงเรียนจนถึงการยื่นใบสมัคร – โดยไม่มีค่าใช้จ่ายสำหรับคุณ",
+    "searchPlaceholder": "คุณกำลังจะย้ายไปที่ไหน? เช่น Sydney, Melbourne",
+    "searchAriaLabel": "ค้นหาตัวแทนการศึกษา",
+    "ctaPrimary": "ค้นหาตัวแทน",
+    "ctaSecondary": "เลือกดูตัวแทนทั้งหมด",
+    "reassurance": "ฟรี 100% สำหรับครอบครัว · ตัวแทนที่ผ่านการรับรองและได้รับการอนุมัติจากโรงเรียน"
   },
   "ParentsAgentHelp": {
-    "eyebrow": "Why go through an agent",
-    "heading": "How an agent helps your family",
-    "subheading": "Agents do the heavy lifting so you can focus on your child. Here is what a good education agent takes off your plate.",
+    "eyebrow": "ทำไมจึงควรผ่านตัวแทน",
+    "heading": "ตัวแทนช่วยครอบครัวของคุณอย่างไร",
+    "subheading": "ตัวแทนรับงานหนักไปทำ คุณจึงมีเวลาโฟกัสกับบุตรหลานได้ นี่คือสิ่งที่ตัวแทนการศึกษาที่ได้รับการอนุมัติจากโรงเรียนช่วยแบ่งเบาภาระให้คุณ",
     "benefits": {
       "free": {
-        "title": "Free for families",
-        "description": "Agents are paid by schools, never by you. Expert guidance comes at no cost to your family."
+        "title": "ฟรีสำหรับครอบครัว",
+        "description": "ตัวแทนได้รับค่าตอบแทนจากโรงเรียน ไม่ใช่จากคุณ คำแนะนำจากผู้เชี่ยวชาญมาโดยไม่มีค่าใช้จ่ายสำหรับครอบครัวของคุณ"
       },
       "matching": {
-        "title": "Expert school matching",
-        "description": "They know the schools, the suburbs and the curricula — and match your child to the right fit, not just the first option."
+        "title": "จับคู่โรงเรียนโดยผู้เชี่ยวชาญ",
+        "description": "พวกเขารู้จักโรงเรียน ย่านต่างๆ และหลักสูตร และจับคู่บุตรหลานของคุณกับโรงเรียนที่เหมาะสม ไม่ใช่แค่ตัวเลือกแรก"
       },
       "applications": {
-        "title": "Application & visa guidance",
-        "description": "From enrolment forms to student visa requirements, your agent prepares and checks the paperwork with you."
+        "title": "คำแนะนำเรื่องการสมัครและวีซ่า",
+        "description": "ตั้งแต่แบบฟอร์มลงทะเบียนจนถึงข้อกำหนดวีซ่านักเรียน ตัวแทนของคุณจะจัดเตรียมและตรวจสอบเอกสารร่วมกับคุณ"
       },
       "welfare": {
-        "title": "Under-18 welfare support",
-        "description": "Need a guardian or homestay for a younger student? Agents arrange compliant welfare and accommodation."
+        "title": "การสนับสนุนด้านสวัสดิภาพสำหรับผู้ที่อายุต่ำกว่า 18",
+        "description": "ต้องการผู้ปกครองตามกฎหมายหรือโฮมสเตย์สำหรับนักเรียนที่อายุน้อยกว่าใช่ไหม? ตัวแทนจัดการเรื่องสวัสดิภาพและที่พักที่เป็นไปตามข้อกำหนดให้"
       }
     },
-    "ctaPrimary": "Find an agent"
+    "selection": {
+      "title": "SchoolGo คัดเลือกตัวแทนอย่างไร?",
+      "body": "ตัวแทนทุกคนบน SchoolGo ผ่านการรับรองและได้รับการอนุมัติจากโรงเรียนที่ทำงานด้วย SchoolGo ไม่จัดให้ตัวแทนแบบสุ่ม – คุณเลือกได้ว่าจะเชื่อมต่อกับใคร โดยพิจารณาจากประสบการณ์ ภาษาที่พูดได้ และโรงเรียนที่เป็นตัวแทน"
+    },
+    "ctaPrimary": "ค้นหาตัวแทน"
   },
   "UnifiedSearch": {
     "filters": {
@@ -6848,5 +6954,91 @@
       "delivered": "Delivered",
       "cancelled": "Cancelled"
     }
+  },
+  "ParentsFees": {
+    "eyebrow": "ค่าใช้จ่าย",
+    "heading": "เข้าใจค่าใช้จ่ายที่แท้จริง – ไม่ใช่แค่ค่าเล่าเรียน",
+    "body": "ค่าเล่าเรียนเป็นเพียงส่วนหนึ่งของภาพทั้งหมด ผู้ปกครองมักประหลาดใจกับค่าใช้จ่ายเพิ่มเติมที่ไม่ได้คาดคิด SchoolGo แสดงรายละเอียดทั้งหมดให้คุณเห็น เพื่อไม่ให้มีเรื่องเซอร์ไพรส์ในภายหลัง",
+    "items": {
+      "tuition": "ค่าเล่าเรียน",
+      "accommodation": "ค่าหอพักหรือโฮมสเตย์",
+      "enrolment": "ค่าลงทะเบียนและค่าสมัคร",
+      "health": "ประกันสุขภาพ (OSHC)",
+      "uniforms": "ชุดนักเรียน หนังสือเรียน และแล็ปท็อป",
+      "excursions": "ทัศนศึกษาและกิจกรรม",
+      "guardian": "การจัดผู้ปกครองตามกฎหมาย (หากจำเป็น)",
+      "airport": "การรับส่งสนามบิน",
+      "refund": "เงื่อนไขการคืนเงินหากวีซ่าถูกปฏิเสธ"
+    },
+    "cta": "อ่านคู่มือค่าใช้จ่ายฉบับเต็ม"
+  },
+  "ParentsAccommodationWelfare": {
+    "eyebrow": "ที่พักและสวัสดิภาพ",
+    "heading": "บุตรหลานของคุณจะพักที่ไหน – และใครจะดูแลพวกเขา?",
+    "body": "สำหรับครอบครัวที่ส่งบุตรหลานไปต่างประเทศ ที่พักและสวัสดิภาพคือคำถามเดียวกัน SchoolGo ช่วยให้คุณเข้าใจตัวเลือกที่มี และการสนับสนุนที่แต่ละโรงเรียนจัดให้",
+    "accommodation": {
+      "boarding": {
+        "title": "หอพัก",
+        "description": "พักในโรงเรียนพร้อมการดูแลอย่างเป็นระบบ อาหาร และกิจกรรมต่างๆ"
+      },
+      "homestay": {
+        "title": "โฮมสเตย์",
+        "description": "พักกับครอบครัวท้องถิ่นที่ได้รับการอนุมัติจากโรงเรียน"
+      },
+      "family": {
+        "title": "พักกับครอบครัว",
+        "description": "พักกับญาติที่อยู่ในออสเตรเลียอยู่แล้ว"
+      },
+      "guardians": {
+        "title": "ผู้ปกครองตามกฎหมายที่โรงเรียนอนุมัติ",
+        "description": "สำหรับนักเรียนอายุต่ำกว่า 18 ปีที่ไม่มีครอบครัวในออสเตรเลีย"
+      }
+    },
+    "welfareHeading": "ข้อมูลด้านสวัสดิภาพและการสนับสนุน",
+    "welfare": {
+      "responsibleUnder18": "ใครรับผิดชอบบุตรหลานของคุณหากอายุต่ำกว่า 18 ปี?",
+      "sickOrHomesick": "จะเกิดอะไรขึ้นหากบุตรหลานป่วย คิดถึงบ้าน หรือมีปัญหา?",
+      "contactPerson": "ใครเป็นผู้ติดต่อสำหรับผู้ปกครอง?",
+      "communication": "โรงเรียนสื่อสารกับผู้ปกครองที่อยู่ต่างประเทศอย่างไร?",
+      "sameCountryPeers": "มีนักเรียนคนอื่นจากประเทศบ้านเกิดของบุตรหลานคุณหรือไม่?",
+      "adjustmentSupport": "มีการสนับสนุนใดบ้างหากบุตรหลานปรับตัวลำบาก?"
+    }
+  },
+  "SchoolsApplicationQuality": {
+    "eyebrow": "คุณภาพของใบสมัคร",
+    "heading": "นักเรียนที่ใช่ ไม่ใช่แค่นักเรียนมากขึ้น",
+    "subheading": "โรงเรียนไม่ได้ต้องการการสอบถามที่ไม่ครบถ้วนมากขึ้น SchoolGo ยกระดับคุณภาพของสิ่งที่ไปถึงทีมรับสมัครของคุณ ด้วยการทำให้แน่ใจว่าครอบครัวและตัวแทนเข้าใจข้อกำหนดของคุณก่อนยื่นสมัคร",
+    "items": {
+      "english": {
+        "title": "ข้อกำหนดภาษาอังกฤษมองเห็นได้ตั้งแต่แรก",
+        "description": "ครอบครัวและตัวแทนเห็นการสอบที่คุณรับและคะแนนขั้นต่ำตามระดับชั้นปีก่อนที่จะสอบถาม นักเรียนที่ยังไม่ถึงเกณฑ์สามารถเห็นโรงเรียนที่มีเส้นทางเตรียมความพร้อมภาษาอังกฤษแทนได้"
+      },
+      "costs": {
+        "title": "ค่าใช้จ่ายทั้งหมดโปร่งใส",
+        "description": "ครอบครัวเห็นค่าเล่าเรียน หอพัก ค่าสมัคร และค่าใช้จ่ายภาคบังคับก่อนที่จะเชื่อมต่อกับตัวแทน การสนทนาจึงสะดุดเพราะค่าใช้จ่ายที่ไม่คาดคิดน้อยลง"
+      },
+      "accommodation": {
+        "title": "ที่พักและสวัสดิภาพชัดเจน",
+        "description": "ผู้ปกครองเข้าใจการจัดการเรื่องหอพัก โฮมสเตย์ และผู้ปกครองตามกฎหมายก่อนยื่นสมัคร โรงเรียนที่มีข้อกำหนดอายุเฉพาะสำหรับหอพักสามารถแสดงข้อมูลเหล่านี้ได้"
+      },
+      "agents": {
+        "title": "ตัวแทนผ่านการรับรอง",
+        "description": "คุณเป็นผู้อนุมัติว่าตัวแทนคนใดสามารถเป็นตัวแทนโรงเรียนของคุณได้ การระบุตัวแทนปรากฏในทุกการสอบถาม"
+      }
+    }
+  },
+  "SchoolsAgentRelationships": {
+    "eyebrow": "ความสัมพันธ์กับตัวแทน",
+    "heading": "ตัวแทนของคุณ การอนุมัติของคุณ ความสัมพันธ์ของคุณ",
+    "subheading": "SchoolGo ไม่จัดตัวแทนให้โรงเรียนของคุณ และไม่เข้าไปยุ่งกับความสัมพันธ์ที่คุณมีกับตัวแทนอยู่แล้ว คุณเป็นผู้ตัดสินว่าตัวแทนคนใดได้รับอนุมัติให้เป็นตัวแทนโรงเรียนของคุณ ตัวแทนที่คุณทำงานด้วยอยู่แล้วสามารถได้รับการรับรองได้ทันที และตัวแทนใหม่สามารถขออนุมัติผ่านโปรไฟล์ของคุณได้",
+    "bullets": {
+      "approve": "คุณเป็นผู้อนุมัติหรือปฏิเสธคำขอของตัวแทน",
+      "connect": "เฉพาะตัวแทนที่ได้รับอนุมัติเท่านั้นที่สามารถเชื่อมต่อครอบครัวกับโรงเรียนของคุณผ่าน SchoolGo ได้",
+      "agreements": "ข้อตกลงและโครงสร้างค่าคอมมิชชันที่คุณมีกับตัวแทนอยู่แล้วจะไม่ได้รับผลกระทบ",
+      "performance": "ผลงานของตัวแทน – ความรวดเร็วในการตอบกลับและความครบถ้วนของใบสมัคร – คุณมองเห็นได้",
+      "remove": "คุณสามารถยกเลิกการอนุมัติตัวแทนได้ตลอดเวลา"
+    },
+    "cardTitle": "คุณเป็นผู้อนุมัติตัวแทนทุกคน",
+    "cardBody": "SchoolGo ไม่มีการจัดตัวแทนใหม่หรือเปิดเผยรายชื่อตัวแทนของคุณ ความสัมพันธ์ของคุณยังเป็นของคุณ"
   }
 }

@@ -1,22 +1,17 @@
 import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
-import { loadSchools, computeSchoolStats } from '@/lib/schools';
 import { SectionContainer, SectionHeader, StatusBadge, TrustBadge } from '@/modules/design-system';
-import { QEAC_PROFILE_STAT_KEYS } from '../constants/agents-landing.constants';
+import { QEAC_VISIBILITY_ROWS } from '../constants/agents-landing.constants';
+import type { QeacVisibilityKey } from '../types/agents-landing.types';
+
+const VISIBILITY_TONES: Record<QeacVisibilityKey, 'trust' | 'muted'> = {
+  public: 'trust',
+  optional: 'muted',
+  private: 'muted',
+};
 
 export async function AgentsQeacTrust() {
-  const [t, schools] = await Promise.all([
-    getTranslations('AgentsQeacTrust'),
-    loadSchools(),
-  ]);
-  const stats = computeSchoolStats(schools);
-
-  const statValues: Record<string, string> = {
-    yearsActive: String(stats.statesCount),
-    students: String(stats.totalSchools),
-    placements: String(stats.sectors.length),
-    languages: t('profile.languagesValue'),
-  };
+  const t = await getTranslations('AgentsQeacTrust');
 
   return (
     <section id='trust' className='py-16 md:py-20'>
@@ -45,10 +40,7 @@ export async function AgentsQeacTrust() {
                 />
               </div>
               <div className='flex min-w-0 flex-1 flex-col'>
-                <span
-                  className='text-caption font-semibold uppercase tracking-eyebrow text-foggy'
-
-                >
+                <span className='text-caption font-semibold uppercase tracking-eyebrow text-foggy'>
                   {t('profile.name')}
                 </span>
                 <span className='text-h4 font-semibold text-ink-900'>{t('profile.agentName')}</span>
@@ -56,21 +48,20 @@ export async function AgentsQeacTrust() {
               <TrustBadge variant='qeac' label={t('profile.qeac')} />
             </header>
 
-            <dl className='grid grid-cols-2 gap-5 pt-5 sm:grid-cols-4'>
-              {QEAC_PROFILE_STAT_KEYS.map((key) => (
-                <div key={key} className='flex flex-col gap-1'>
-                  <dt
-                    className='text-caption font-semibold uppercase tracking-eyebrow text-foggy'
-
-                  >
-                    {t(`profile.${key}`)}
-                  </dt>
-                  <dd className='text-h3 font-bold text-ink-900'>
-                    {statValues[key]}
-                  </dd>
-                </div>
+            <ul className='flex flex-col gap-5 pt-5'>
+              {QEAC_VISIBILITY_ROWS.map((key) => (
+                <li key={key} className='flex flex-col gap-1'>
+                  <StatusBadge tone={VISIBILITY_TONES[key]} size='md' className='self-start px-3'>
+                    {t(`visibility.${key}.label`)}
+                  </StatusBadge>
+                  <p className='text-body-sm text-foggy'>{t(`visibility.${key}.items`)}</p>
+                </li>
               ))}
-            </dl>
+            </ul>
+
+            <p className='mt-5 border-t border-divider pt-5 text-body-sm text-foggy'>
+              {t('qeacNote')}
+            </p>
           </article>
         </div>
       </SectionContainer>
