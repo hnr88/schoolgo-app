@@ -1,10 +1,23 @@
+import { redirect } from '@/i18n/navigation';
+import { PUBLIC_ONLY } from '@/lib/deliverable-config';
 import { DashboardSidebar } from '@/modules/dashboard/components/DashboardSidebar';
 import { DashboardHeader } from '@/modules/dashboard/components/DashboardHeader';
 import { DashboardContent } from '@/modules/dashboard/components/DashboardContent';
 import { ProtectedLayout } from '@/modules/auth/components/ProtectedLayout';
 import { PORTAL_ALLOWED_ROLES } from '@/modules/auth/constants/auth.constants';
 
-export default function AgentProtectedLayout({ children }: { children: React.ReactNode }) {
+export default async function AgentProtectedLayout({
+  children,
+  params,
+}: {
+  children: React.ReactNode;
+  params: Promise<{ locale: string }>;
+}) {
+  if (PUBLIC_ONLY) {
+    const { locale } = await params;
+    redirect({ href: '/', locale });
+  }
+
   return (
     <ProtectedLayout allowedRoles={Array.from(PORTAL_ALLOWED_ROLES.agent)}>
       <div className='flex h-screen overflow-hidden bg-page-surface'>

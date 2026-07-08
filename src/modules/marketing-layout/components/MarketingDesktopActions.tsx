@@ -1,5 +1,6 @@
 import { Link } from '@/i18n/navigation';
 import { LanguageSelector } from '@/modules/layout/components/LanguageSelector';
+import { PUBLIC_ONLY } from '@/lib/deliverable-config';
 import type { Portal } from '@/lib/portal-url';
 import type { MarketingDesktopActionsProps } from '@/modules/marketing-layout/types/header.types';
 
@@ -12,13 +13,15 @@ export function MarketingDesktopActions({ isSearchPage, labels, activePortal }: 
 
   return (
     <div className='ml-auto hidden shrink-0 items-center gap-2 md:flex'>
-      <Link
-        href='/sign-in'
-        data-slot='button'
-        className='inline-flex h-9 items-center justify-center rounded-pill px-3 text-sm font-medium text-foreground no-underline transition-colors hover:bg-muted'
-      >
-        {labels.signIn}
-      </Link>
+      {!PUBLIC_ONLY && (
+        <Link
+          href='/sign-in'
+          data-slot='button'
+          className='inline-flex h-9 items-center justify-center rounded-pill px-3 text-sm font-medium text-foreground no-underline transition-colors hover:bg-muted'
+        >
+          {labels.signIn}
+        </Link>
+      )}
       {showFindSchools && (
         <Link
           href='/search'

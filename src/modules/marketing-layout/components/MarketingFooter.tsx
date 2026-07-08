@@ -3,6 +3,7 @@ import { getLocale, getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import { routing } from '@/i18n/routing';
 import { portalUrl } from '@/lib/portal-url';
+import { PUBLIC_ONLY } from '@/lib/deliverable-config';
 import { SectionContainer } from '@/modules/design-system';
 import type { MarketingFooterProps } from '@/modules/marketing-layout/types/footer.types';
 import { FOOTER_COLUMNS_BY_PORTAL, LANGUAGES } from '../constants/footer.constants';
@@ -14,7 +15,15 @@ export async function MarketingFooter({ activePortal }: MarketingFooterProps) {
     getLocale(),
   ]);
   const year = new Date().getFullYear();
-  const footerColumns = FOOTER_COLUMNS_BY_PORTAL[activePortal];
+  // Public-only deliverable: strip login / create-account links from the footer.
+  const footerColumns = PUBLIC_ONLY
+    ? FOOTER_COLUMNS_BY_PORTAL[activePortal].map((col) => ({
+        ...col,
+        links: col.links.filter(
+          (l) => l.path !== '/sign-in' && l.path !== '/sign-up',
+        ),
+      }))
+    : FOOTER_COLUMNS_BY_PORTAL[activePortal];
 
   return (
     <footer className='bg-ink-900 text-white/80'>

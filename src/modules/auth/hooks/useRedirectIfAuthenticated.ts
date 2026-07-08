@@ -3,6 +3,7 @@
 import { useEffect } from 'react';
 import { useLocale } from 'next-intl';
 import { portalUrl, type Portal } from '@/lib/portal-url';
+import { PUBLIC_ONLY } from '@/lib/deliverable-config';
 import { useAuthStore } from '@/modules/auth/stores/use-auth-store';
 import { getPortalDashboardPath } from '@/modules/auth/lib/get-portal-dashboard-path';
 
@@ -15,6 +16,7 @@ export function useRedirectIfAuthenticated(currentPortal?: Portal) {
   const dashboardPath = userType ? getPortalDashboardPath(userType) : null;
 
   const shouldRedirect =
+    !PUBLIC_ONLY &&
     isInitialized &&
     isAuthenticated &&
     !!userType &&

@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { routing } from '@/i18n/routing';
+import { PUBLIC_ONLY } from '@/lib/deliverable-config';
 import {
   detectLocale,
   isPublicContentPath,
@@ -10,6 +11,16 @@ import {
   resolvePortal,
   withRobotsHeader,
 } from '@/modules/request-proxy';
+
+// Auth-flow routes deactivated in the public-only deliverable. Matched on the
+// final path segment so it works regardless of host->portal rewriting.
+const PUBLIC_ONLY_DEACTIVATED_SEGMENTS = new Set([
+  'sign-in',
+  'sign-up',
+  'forgot-password',
+  'reset-password',
+  'onboarding',
+]);
 
 export function proxy(request: NextRequest) {
   // Host comparisons are case-insensitive (DNS) and the configured portal hosts
@@ -58,8 +69,23 @@ export function proxy(request: NextRequest) {
   const locale = hasLocale ? maybeLocale : routing.defaultLocale;
 
   const isRootPath = hasLocale ? segments.length === 1 : pathname === '/';
-  const loggedInPortal = request.cookies.get(LOGGED_IN_PORTAL_COOKIE)?.value;
+  // In the public-only deliverable no login can occur, so ignore any stale
+  // portal-marker cookie — otherwise the root->/dashboard redirect below would
+  // bounce against the deactivated dashboard and loop.
+  const loggedInPortal = PUBLIC_ONLY
+    ? undefined
+    : request.cookies.get(LOGGED_IN_PORTAL_COOKIE)?.value;
   const pathAfterLocale = hasLocale ? segments.slice(1).join('/') : pathname.replace(/^\//, '');
+
+  // Deactivate auth-flow routes (login/register/reset/onboarding) -> landing.
+  if (PUBLIC_ONLY) {
+    const lastSegment = pathAfterLocale.split('/').filter(Boolean).pop() ?? '';
+    if (PUBLIC_ONLY_DEACTIVATED_SEGMENTS.has(lastSegment)) {
+      url.pathname = `/${locale}`;
+      url.search = '';
+      return withRobotsHeader(NextResponse.redirect(url), hostname);
+    }
+  }
 
   // Send a user who is logged into THIS portal from its root to its dashboard.
   // The cookie is host-only, so it only reflects a session on this same
