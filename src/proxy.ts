@@ -108,6 +108,17 @@ export function proxy(request: NextRequest) {
     return withRobotsHeader(NextResponse.next(), hostname);
   }
 
+  // Public-only deliverable: compare is unlocked for everyone, so serve the
+  // public /compare route directly instead of rewriting it to the per-portal
+  // (protected) compare page (which would redirect to the landing / 404).
+  if (PUBLIC_ONLY && pathAfterLocale === 'compare') {
+    if (!hasLocale) {
+      url.pathname = `/${locale}/compare`;
+      return withRobotsHeader(NextResponse.rewrite(url), hostname);
+    }
+    return withRobotsHeader(NextResponse.next(), hostname);
+  }
+
   if (pathAfterLocale === 'test' || pathAfterLocale.startsWith('test/')) {
     if (!hasLocale) {
       url.pathname = `/${locale}/${pathAfterLocale}`;

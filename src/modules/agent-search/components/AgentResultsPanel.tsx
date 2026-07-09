@@ -3,6 +3,7 @@
 import { LogIn, UserSearch } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
+import { PUBLIC_ONLY } from '@/lib/deliverable-config';
 import { cn } from '@/lib/utils';
 import { Skeleton } from '@/components/ui/skeleton';
 import { EmptyState, ErrorState } from '@/modules/core';
@@ -116,7 +117,7 @@ export function AgentResultsPanel({
                 partnerSchoolsLabel={t('partnerSchools', { count: agent.partnerSchoolsCount })}
                 agentDocumentId={canContact ? agent.documentId : undefined}
                 talkLabel={canContact ? tContact('cardTriggerLabel') : undefined}
-                actionSlot={canContact ? undefined : signInCta}
+                actionSlot={canContact || PUBLIC_ONLY ? undefined : signInCta}
               />
             ))}
           </div>

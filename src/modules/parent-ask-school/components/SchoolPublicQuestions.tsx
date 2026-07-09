@@ -3,6 +3,7 @@
 import { useTranslations } from 'next-intl';
 import { MessageCircleQuestion } from 'lucide-react';
 import { Link } from '@/i18n/navigation';
+import { PUBLIC_ONLY } from '@/lib/deliverable-config';
 import { Button } from '@/components/ui/button';
 import { EmptyState, ErrorState } from '@/modules/core';
 import { useAuthStore } from '@/modules/auth/stores/use-auth-store';
@@ -20,7 +21,9 @@ export function SchoolPublicQuestions({ schoolDocumentId }: SchoolPublicQuestion
   const isAuthenticated = useAuthStore((s) => s.isAuthenticated);
   const { data, isLoading, isError, refetch } = usePublicSchoolQuestions(schoolDocumentId);
 
-  const askSlot = isAuthenticated ? (
+  // Public-only deliverable: asking a school is account-bound (no anonymous
+  // session), so render no ask CTA and no sign-in link at all.
+  const askSlot = PUBLIC_ONLY ? null : isAuthenticated ? (
     <AskAboutSchoolDialog schoolDocumentId={schoolDocumentId} />
   ) : (
     <Button type="button" className="gap-2" render={<Link href="/sign-in" />}>
@@ -31,7 +34,7 @@ export function SchoolPublicQuestions({ schoolDocumentId }: SchoolPublicQuestion
 
   return (
     <div className="flex flex-col gap-4">
-      <div className="flex justify-end">{askSlot}</div>
+      {askSlot && <div className="flex justify-end">{askSlot}</div>}
 
       {isLoading ? (
         <QuestionsSkeleton />
@@ -42,7 +45,7 @@ export function SchoolPublicQuestions({ schoolDocumentId }: SchoolPublicQuestion
           icon={MessageCircleQuestion}
           title={t('publicEmptyTitle')}
           description={t('publicEmptySubtitle')}
-          action={askSlot}
+          action={askSlot ?? undefined}
         />
       ) : (
         <div className="flex flex-col gap-4">

@@ -4,6 +4,7 @@ import { useTranslations } from 'next-intl';
 import { Lock } from 'lucide-react';
 import dynamic from 'next/dynamic';
 import { cn } from '@/lib/utils';
+import { PUBLIC_ONLY } from '@/lib/deliverable-config';
 import { FOCUS_RING } from '@/modules/core';
 import type { Portal } from '@/lib/portal-url';
 import { Link } from '@/i18n/navigation';
@@ -83,7 +84,10 @@ export function SchoolsSearchPane({ activePortal, capability, className }: Schoo
         </div>
       </section>
 
-      <CompareBar isAdvanced={capability.isAdvanced} comparePath={`/${activePortal}/compare`} />
+      <CompareBar
+        isAdvanced={capability.isAdvanced}
+        comparePath={PUBLIC_ONLY ? '/compare' : `/${activePortal}/compare`}
+      />
     </div>
   );
 }

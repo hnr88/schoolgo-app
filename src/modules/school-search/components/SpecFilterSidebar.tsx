@@ -7,6 +7,7 @@ import { useAuthStore } from '@/modules/auth';
 import type { SearchCapability } from '@/modules/unified-search';
 import { Badge } from '@/components/ui/badge';
 import { cn } from '@/lib/utils';
+import { PUBLIC_ONLY } from '@/lib/deliverable-config';
 import { FOCUS_RING } from '@/modules/core';
 import { AcademicFilterGroup } from '@/modules/school-search/components/filters/AcademicFilterGroup';
 import { EnglishTestFilterGroup } from '@/modules/school-search/components/filters/EnglishTestFilterGroup';
@@ -117,7 +118,7 @@ export function SpecFilterSidebar({ capability, className, alwaysOn = false, ope
           <div className="rounded-lg bg-gray-50 px-4 py-2">
             <EnglishTestFilterGroup isAdvanced={isAdvanced} />
           </div>
-          <SaveSearchButton />
+          {!PUBLIC_ONLY && <SaveSearchButton />}
         </div>
       </div>
     </aside>

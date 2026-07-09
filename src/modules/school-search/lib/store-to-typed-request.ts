@@ -1,3 +1,4 @@
+import { PUBLIC_ONLY } from '@/lib/deliverable-config';
 import { FEE_MAX, FEE_MIN } from '@/modules/school-search/constants/filter-options.constants';
 import { stripAdvancedFields } from '@/modules/school-search/lib/search-capabilities';
 import type {
@@ -96,5 +97,5 @@ export function mapStoreToTypedRequest(
     pageSize: 24,
   };
 
-  return stripAdvancedFields(request, isAuthenticated);
+  return stripAdvancedFields(request, PUBLIC_ONLY || isAuthenticated);
 }

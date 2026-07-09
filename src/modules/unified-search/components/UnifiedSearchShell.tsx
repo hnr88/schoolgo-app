@@ -1,6 +1,7 @@
 'use client';
 
 import { useMemo } from 'react';
+import { PUBLIC_ONLY } from '@/lib/deliverable-config';
 import { resolveCapability } from '@/modules/unified-search/lib/resolve-capability';
 import { useSearchModeSync } from '@/modules/unified-search/hooks/useSearchModeSync';
 import { AgentsSearchPane } from '@/modules/unified-search/components/AgentsSearchPane';
@@ -16,7 +17,15 @@ export function UnifiedSearchShell({
   defaultMode,
   hideSearchBar = false,
 }: UnifiedSearchShellProps) {
-  const capability = useMemo(() => resolveCapability(access), [access]);
+  const capability = useMemo(() => {
+    const base = resolveCapability(access);
+    // Public-only deliverable: unlock every premium SEARCH capability for the
+    // anonymous public — advanced filters + sorting, full uncapped results, map,
+    // and no forced verified-only. Account-bound actions (canContact/
+    // canPersonalize) stay off: there is no session to contact or save with.
+    if (!PUBLIC_ONLY) return base;
+    return { ...base, isAdvanced: true, canMap: true, forceVerifiedOnly: false, resultCap: null };
+  }, [access]);
   // Agents only ever search schools — they must never see other agents, so the
   // schools/agents toggle is hidden and the mode is locked to schools for them.
   const canSearchAgents = activePortal !== 'agent';
