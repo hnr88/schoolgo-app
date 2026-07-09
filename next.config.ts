@@ -51,6 +51,23 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+  async headers() {
+    return [
+      {
+        // Stale-HTML-after-deploy hardening: a browser reusing a previous build's
+        // HTML document requests /_next/static chunks the new build no longer has
+        // (a 404 on a healthy server). Forcing navigation documents to always
+        // revalidate means a returning client refetches HTML that points at chunks
+        // that currently exist. Scoped to text/html so hashed assets, next/image,
+        // fonts, RSC and the API stay fully cacheable. (This is distinct from the
+        // deploy-availability 502, which is addressed by the Dockerfile HEALTHCHECK
+        // plus allowing old/new containers to overlap.)
+        source: '/:path*',
+        has: [{ type: 'header', key: 'accept', value: '(.*text/html.*)' }],
+        headers: [{ key: 'Cache-Control', value: 'no-cache, must-revalidate' }],
+      },
+    ];
+  },
 };
 
 export default withNextIntl(nextConfig);

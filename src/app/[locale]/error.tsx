@@ -6,6 +6,7 @@ import { useTranslations } from 'next-intl';
 import { RefreshCw } from 'lucide-react';
 import { buttonVariants } from '@/components/ui/button';
 import { Button } from '@/components/ui/button';
+import { useChunkErrorRecovery } from '@/modules/chunk-recovery';
 import { Link } from '@/i18n/navigation';
 
 export default function ErrorBoundary({
@@ -16,6 +17,8 @@ export default function ErrorBoundary({
   unstable_retry: () => void;
 }) {
   const t = useTranslations('Errors');
+
+  useChunkErrorRecovery(error);
 
   useEffect(() => {
     console.error(error);

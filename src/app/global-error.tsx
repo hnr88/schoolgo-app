@@ -1,5 +1,7 @@
 'use client';
 
+import { useChunkErrorRecovery } from '@/modules/chunk-recovery';
+
 export default function GlobalError({
   error,
   unstable_retry,
@@ -7,7 +9,7 @@ export default function GlobalError({
   error: Error & { digest?: string };
   unstable_retry: () => void;
 }) {
-  void error;
+  useChunkErrorRecovery(error);
   return (
     <html lang='en'>
       <body>

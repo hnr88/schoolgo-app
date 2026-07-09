@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
 import localFont from 'next/font/local';
+import { ChunkErrorListener } from '@/modules/chunk-recovery';
 import { robotsPolicy, siteUrl } from '@/modules/seo';
 
 const googleSans = localFont({
@@ -35,7 +36,12 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
-  return <>{children}</>;
+  return (
+    <>
+      <ChunkErrorListener />
+      {children}
+    </>
+  );
 }
 
 export { googleSans };
