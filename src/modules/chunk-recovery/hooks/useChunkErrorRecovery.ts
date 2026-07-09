@@ -1,3 +1,5 @@
+'use client';
+
 import { useEffect } from 'react';
 import { isChunkLoadError } from '@/modules/chunk-recovery/lib/is-chunk-load-error';
 import { recoverFromChunkError } from '@/modules/chunk-recovery/lib/recover-from-chunk-error';
